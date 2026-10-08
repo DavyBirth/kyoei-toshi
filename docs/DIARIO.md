@@ -57,3 +57,41 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   Não feita reinserção, tradução, alteração de fonte ou trabalho no M6.
 - Próximo marco: M2, documentar contêineres `.luc`/`.csh`, extrair e
   reinserir textos, começando com a prova sem alterações no shadPS4.
+
+## 08/10/2026 — M2, ferramentas e prova de identidade
+
+- Documentados envelopes BILZ, bytecode Lua 5.2 variante float32 e tabelas
+  CSH. Corrigida a interpretação da tag CSH: três bits de tipo, 29 bits
+  de comprimento. Dois valores opacos de oito bytes em item_data são
+  preservados; o significado deles ainda é desconhecido.
+- Implementadas extração e reinserção por IDs estáveis, com SHA-256 da base,
+  verificação dos originais, preservação de dados não textuais e rejeição
+  de IDs inválidos. Textos originais exportados ficam somente fora do Git.
+- Auditoria completa: 2.032 CSH e 299 LUC, total 2.331 recursos; 235.069
+  ocorrências de strings e 17.866 candidatas com caracteres japoneses.
+  Zero falhas; todos idênticos após ida e volta estrutural e via JSON.
+  Essas contagens incluem identificadores e listas; não são falas únicas.
+- Seis testes sintéticos de texto e quatro de atualização PSARC passaram,
+  incluindo acentos, crescimento, redução, aliases, dados opacos, bytecode,
+  hashes, corrupção, blocos zlib/brutos e preservação de recursos vizinhos.
+- Atualizador PSARC preserva o corpo original e anexa recursos alterados,
+  ajustando a TOC. Sem alterações, mantém o pacote inteiro byte a byte.
+- Construída cópia completa em
+  `G:\kyoei-toshi-work\m2\prova-01\CUSA03562` após extrair e reinserir
+  os 2.331 recursos. Os 87 arquivos (17.798.062.971 bytes) coincidem em
+  tamanho e SHA-256 com o M0. Relatório em `docs/m2/dump-proof.json`.
+- Tentativa isolada com shadPS4 instalado, usando diretório local separado
+  `G:\kyoei-toshi-work\m2\shad-prova-01`; não foram copiados saves.
+  O processo 37520 ficou num diálogo antes de iniciar o jogo, com log vazio.
+  Backtrace confirmou espera em DialogBox; o processo depois encerrou sem
+  uma janela de jogo confirmada nessa tentativa.
+- Segunda tentativa com janela visível: shadPS4 0.16.0 reconheceu CUSA03562
+  01.03 e executou a cópia até a cena inicial. Captura inspecionada mostra
+  cenário renderizado e narração japonesa legível. Hashes do executável e
+  da captura registrados em `docs/m2/runtime-proof.json`; imagem só local.
+  Log contém erros sceKernelStat (arquivo não encontrado); não afirmar
+  execução sem erros nem regressão completa. Não comparada execução da base.
+- M2 NÃO concluído: execução inicial da cópia foi observada, mas falta
+  confirmação da cobertura de todos os textos visíveis. Nada de tradução definitiva,
+  alteração de fontes ou M6. Nenhum dado do jogo adicionado ao Git.
+- Ferramentas e limites documentados em `docs/m2/README.md`.

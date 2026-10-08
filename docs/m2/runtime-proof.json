@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-08",
+  "dump_proof": "dump-proof.json",
+  "emulator": "G:\\GodzillaShadPS4PC\\launcher\\versions\\shadPS4.exe",
+  "emulator_version": "0.16.0",
+  "emulator_sha256": "8322df62e4bdb2e7d7e8a783c54b0b5f5b486d78e3b847f1ce244ba6b9d5d66e",
+  "working_directory": "G:\\kyoei-toshi-work\\m2\\shad-prova-01",
+  "arguments": ["-g", "G:/kyoei-toshi-work/m2/prova-01/CUSA03562/eboot.bin", "-f", "false", "-i"],
+  "observed_pid": 38132,
+  "initial_scene_visually_verified": true,
+  "observations": ["CUSA03562 version 01.03 identified", "Rendered opening environment", "Legible Japanese narration"],
+  "capture": "G:\\kyoei-toshi-work\\m2\\shad-prova-01\\game-window.png",
+  "capture_sha256": "9e189f68f0214f61390bd8221da4ce8fbfd65b27b7dc7949ab6f8d69f83bb039",
+  "full_game_regression_completed": false,
+  "all_visible_text_formats_identified": false,
+  "log_has_missing_file_errors": true,
+  "original_dump_runtime_comparison_completed": false
+}
