@@ -5,3 +5,4 @@ work/
 *.bin
 *.prx
 *.sprx
+__pycache__/

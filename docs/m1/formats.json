@@ -1,0 +1,422 @@
+{
+  "catalog_sha256": "7060a3cffe96b1be7b13a4255f35a7ddb5eb3cc80055b8dfbbf65db89155b880",
+  "extraction": "G:\\kyoei-toshi-work\\m1",
+  "verified_files": 72961,
+  "verified_bytes": 19327950739,
+  "extensions": {
+    ".tex": {
+      "files": 51266,
+      "bytes": 15281285124,
+      "prefixes": {
+        "00786574": 51266
+      }
+    },
+    ".msq": {
+      "files": 2955,
+      "bytes": 587243,
+      "prefixes": {
+        "7173746d": 2955
+      }
+    },
+    ".mdc": {
+      "files": 3685,
+      "bytes": 6810479,
+      "prefixes": {
+        "0063646d": 3685
+      }
+    },
+    ".m3r": {
+      "files": 390,
+      "bytes": 3145059,
+      "prefixes": {
+        "0052334d": 390
+      }
+    },
+    ".csh": {
+      "files": 2032,
+      "bytes": 3020568,
+      "prefixes": {
+        "00687363": 2032
+      }
+    },
+    ".mdl": {
+      "files": 3682,
+      "bytes": 1808654925,
+      "prefixes": {
+        "006c646d": 3682
+      }
+    },
+    ".crv": {
+      "files": 357,
+      "bytes": 154505,
+      "prefixes": {
+        "00767263": 357
+      }
+    },
+    ".mpk": {
+      "files": 1862,
+      "bytes": 591245050,
+      "prefixes": {
+        "006b706d": 1862
+      }
+    },
+    ".eff": {
+      "files": 903,
+      "bytes": 1336131,
+      "prefixes": {
+        "00666665": 903
+      }
+    },
+    ".luc": {
+      "files": 299,
+      "bytes": 3926165,
+      "prefixes": {
+        "0063756c": 299
+      }
+    },
+    ".mvw": {
+      "files": 402,
+      "bytes": 102893,
+      "prefixes": {
+        "0077766d": 402
+      }
+    },
+    ".hud": {
+      "files": 149,
+      "bytes": 235030,
+      "prefixes": {
+        "00647568": 149
+      }
+    },
+    ".tbl": {
+      "files": 7,
+      "bytes": 1792,
+      "prefixes": {
+        "006c6274": 7
+      }
+    },
+    ".msqp": {
+      "files": 404,
+      "bytes": 126755,
+      "prefixes": {
+        "7071736d": 404
+      }
+    },
+    ".coj": {
+      "files": 770,
+      "bytes": 394835,
+      "prefixes": {
+        "006a6f63": 770
+      }
+    },
+    ".rsc": {
+      "files": 29,
+      "bytes": 10356,
+      "prefixes": {
+        "00435352": 29
+      }
+    },
+    ".msi": {
+      "files": 397,
+      "bytes": 101632,
+      "prefixes": {
+        "00000000": 397
+      }
+    },
+    ".spk": {
+      "files": 30,
+      "bytes": 4919505,
+      "prefixes": {
+        "006b7073": 30
+      }
+    },
+    ".mcv": {
+      "files": 28,
+      "bytes": 8782,
+      "prefixes": {
+        "0076636d": 28
+      }
+    },
+    ".bch": {
+      "files": 116,
+      "bytes": 31272,
+      "prefixes": {
+        "00000000": 116
+      }
+    },
+    ".rrd": {
+      "files": 2,
+      "bytes": 1893,
+      "prefixes": {
+        "00445252": 2
+      }
+    },
+    ".rss": {
+      "files": 34,
+      "bytes": 23797,
+      "prefixes": {
+        "00535352": 34
+      }
+    },
+    ".tip": {
+      "files": 4,
+      "bytes": 1048,
+      "prefixes": {
+        "00706974": 4
+      }
+    },
+    ".cht": {
+      "files": 115,
+      "bytes": 30475,
+      "prefixes": {
+        "00000000": 115
+      }
+    },
+    ".cms": {
+      "files": 118,
+      "bytes": 7105392,
+      "prefixes": {
+        "00736d63": 118
+      }
+    },
+    ".tik": {
+      "files": 3,
+      "bytes": 759,
+      "prefixes": {
+        "006b6974": 3
+      }
+    },
+    ".mbl": {
+      "files": 7,
+      "bytes": 1412,
+      "prefixes": {
+        "006c626d": 7
+      }
+    },
+    ".mik": {
+      "files": 3,
+      "bytes": 750,
+      "prefixes": {
+        "006b696d": 3
+      }
+    },
+    ".hfp": {
+      "files": 2,
+      "bytes": 492,
+      "prefixes": {
+        "00706668": 2
+      }
+    },
+    ".mip": {
+      "files": 4,
+      "bytes": 777,
+      "prefixes": {
+        "0070696d": 4
+      }
+    },
+    ".pln": {
+      "files": 1,
+      "bytes": 194,
+      "prefixes": {
+        "006e6c70": 1
+      }
+    },
+    ".scb": {
+      "files": 2,
+      "bytes": 24598,
+      "prefixes": {
+        "00626373": 2
+      }
+    },
+    ".pak": {
+      "files": 45,
+      "bytes": 303633536,
+      "prefixes": {
+        "19000000": 45
+      }
+    },
+    ".nam": {
+      "files": 45,
+      "bytes": 256222,
+      "prefixes": {
+        "4d30325f": 7,
+        "4f6e6275": 2,
+        "6368725f": 17,
+        "4779616f": 4,
+        "504c5f68": 3,
+        "4d30315f": 7,
+        "4630315f": 3,
+        "4c656769": 2
+      }
+    },
+    ".lst": {
+      "files": 45,
+      "bytes": 193216,
+      "prefixes": {
+        "00000000": 45
+      }
+    },
+    ".usm": {
+      "files": 3,
+      "bytes": 327157024,
+      "prefixes": {
+        "43524944": 3
+      }
+    },
+    ".mp4": {
+      "files": 1,
+      "bytes": 1959100,
+      "prefixes": {
+        "0000001c": 1
+      }
+    },
+    ".h": {
+      "files": 143,
+      "bytes": 507013,
+      "prefixes": {
+        "2f2a3d3d": 143
+      }
+    },
+    ".awb": {
+      "files": 54,
+      "bytes": 548954774,
+      "prefixes": {
+        "41465332": 54
+      }
+    },
+    ".acb": {
+      "files": 142,
+      "bytes": 411406176,
+      "prefixes": {
+        "40555446": 142
+      }
+    },
+    ".acb_tmp": {
+      "files": 5,
+      "bytes": 14388384,
+      "prefixes": {
+        "40555446": 5
+      }
+    },
+    ".acf": {
+      "files": 1,
+      "bytes": 7488,
+      "prefixes": {
+        "40555446": 1
+      }
+    },
+    ".rtd": {
+      "files": 256,
+      "bytes": 305932,
+      "prefixes": {
+        "00647472": 256
+      }
+    },
+    ".csd": {
+      "files": 194,
+      "bytes": 1664609,
+      "prefixes": {
+        "00647363": 194
+      }
+    },
+    ".psd": {
+      "files": 20,
+      "bytes": 154268,
+      "prefixes": {
+        "00647370": 20
+      }
+    },
+    ".po": {
+      "files": 1564,
+      "bytes": 2927016,
+      "prefixes": {
+        "44584243": 784,
+        "0004cb54": 780
+      }
+    },
+    ".vo": {
+      "files": 356,
+      "bytes": 1105132,
+      "prefixes": {
+        "44584243": 179,
+        "0004cb54": 177
+      }
+    },
+    ".psb": {
+      "files": 14,
+      "bytes": 9687,
+      "prefixes": {
+        "00627370": 14
+      }
+    },
+    ".vsb": {
+      "files": 6,
+      "bytes": 5062,
+      "prefixes": {
+        "00627376": 6
+      }
+    },
+    ".go": {
+      "files": 6,
+      "bytes": 20732,
+      "prefixes": {
+        "44584243": 5,
+        "0004cb54": 1
+      }
+    },
+    ".co": {
+      "files": 2,
+      "bytes": 4508,
+      "prefixes": {
+        "0004cb54": 2
+      }
+    },
+    ".eo": {
+      "files": 1,
+      "bytes": 1172,
+      "prefixes": {
+        "0004cb54": 1
+      }
+    }
+  },
+  "root_components": {
+    "texture": 33727,
+    "motionSequence": 2014,
+    "model": 25007,
+    "effect": 1505,
+    "csv": 74,
+    "hud": 492,
+    "motion": 2076,
+    "lua": 299,
+    "motionSequencePackage": 712,
+    "motionBlend": 14,
+    "font": 62,
+    "collision": 756,
+    "shader_5_0": 8,
+    "Ragdoll": 2,
+    "motionInterpolation": 8,
+    "map": 102,
+    "develop": 1,
+    "motionIK": 6,
+    "flag": 1,
+    "collisionBackground": 1,
+    "plan": 1,
+    "LE64": 135,
+    "Title01.usm": 1,
+    "Gzcm.usm": 1,
+    "test.mp4": 1,
+    "201news.usm": 1,
+    "adx2": 345,
+    "rtd": 3399,
+    "charset": 197,
+    "pathset": 20,
+    "map214_building_koware_01_c.tex": 1,
+    "motionpackage": 4,
+    "GxEffect": 1929,
+    "GxShader": 24,
+    "GxCore": 27,
+    "GxHud": 3,
+    "GxMovie": 4,
+    "GxFilter": 1
+  }
+}
