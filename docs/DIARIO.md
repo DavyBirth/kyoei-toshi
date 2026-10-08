@@ -95,3 +95,56 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   confirmação da cobertura de todos os textos visíveis. Nada de tradução definitiva,
   alteração de fontes ou M6. Nenhum dado do jogo adicionado ao Git.
 - Ferramentas e limites documentados em `docs/m2/README.md`.
+
+## 08/10/2026 — reaproveitamento nativo do Godzilla
+
+- Davy pediu priorizar a base do Godzilla seguindo Bloodborne/P.T.
+  Conferido diário oficial: GPU funcionando, missões/ondas, controle e
+  saves aprovados; condição M5 para iniciar M6 do Kyoei atendida.
+- Primeiro snapshot recusou mudanças não salvas da sessão do Godzilla.
+  Depois do commit oficial, fixado `e976b59a3f056c5ea5d0ddfe1c5ef566cce2f45e`
+  em `third_party/godzilla-core`, ignorado pelo Git. Fonte oficial não editada.
+- Referências fixas: Bloodborne `daa71654083b42ea0730b3f0fecee2fc20942d02`
+  e shadPS4 `3d03375a5bbfa52772a2142e151d6b73af48dc8d`. Hashes em
+  `docs/godzilla-core.json`; licença GPL-2.0 incluída na raiz.
+- Reaproveitadas bibliotecas gráficas já compiladas, copiadas com hashes.
+  Compilados aqui carregador/runtime e adaptador de identidade CUSA03562.
+  Nenhum fonte da cópia fixa alterado.
+- Preparador usa código fixo com política Kyoei: SFO 01.03, hashes M0 dos
+  executáveis usados e hash da imagem. Não ignorada checagem do jogo.
+- Primeira preparação parou ao imprimir título japonês com cp1252,
+  deixando native-01/out parcial. Adaptador corrigido para UTF-8;
+  preparação completa em `G:\kyoei-toshi-work\native-02\out`.
+- Eboot: imagem 22.408.592 bytes, 704 importações e 82.840 relocações.
+  Com módulos ligados, tabela tem 939 importações e 335 ligações nativas;
+  isso não comprova que as demais estejam todas resolvidas pelo runtime.
+- `build/kyoei.exe` compilado e executado sem iniciar shadPS4.exe.
+  App0 explícito do Kyoei; usuário isolado em native-02/user.
+  Saída 1 antes da janela: carregador rejeita TLS estático do eboot.
+- TLS medido: vaddr 19.906.656, filesz 0, memsz 40, alinhamento 8.
+  Bloodborne já possui suporte ao TLS principal; adaptação Windows falta.
+  Não removida a rejeição para executar com TLS inválido.
+- Conferidos 1.834 arquivos da base fixa, todos com hashes intactos.
+  Provas em `docs/native-prepare.json` e `docs/native-proof.json`;
+  integração e próxima correção em `docs/PORT-NATIVO.md`.
+- M6 iniciado, ainda SEM janela/jogo nativo. A correção compartilhada deve
+  entrar primeiro na sessão do Godzilla, depois renovar a cópia daqui.
+  P.T. é referência futura, sem código incorporado nesta etapa.
+
+## 08/10/2026 — resultados M2 preservados antes da mudança de foco
+
+- Índice local text-index-01.jsonl: 17.866 ocorrências japonesas UTF-8,
+  13.712 strings únicas em 140 recursos. Metadados em docs/m2/text-map.json;
+  texto completo só fora do Git. Categorias por nomes ainda são indicativas.
+- Há 4.447 strings não UTF-8, principalmente flags/configurações; amostras
+  aparentam codificação japonesa antiga, ainda não certificada. Preservadas.
+- sceKernelStat também apresentou erros com o dump original. Rastreio
+  mostrou consultas masterPS4/finalizedPS4 e DAT/module.psarc. Não criados
+  arquivos falsos nem alterado o dump.
+- Cópia no emulador terminou com Out of order flip IRQ depois da abertura;
+  FIFO também reproduziu a falha. Original foi fechado normalmente após
+  cerca de seis minutos; não afirmar reprodução da falha gráfica nele.
+  Log separado original-baseline.log preservado fora do repositório.
+- A tentativa de versão alternativa foi interrompida pelo pedido de mudar
+  o foco. Conferência posterior não encontrou shadPS4 aberto. M2 continua
+  pendente; não foram aprovados M3/M4.

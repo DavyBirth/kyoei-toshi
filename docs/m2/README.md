@@ -24,8 +24,18 @@ Não há dados do jogo nem textos originais completos no repositório.
 A captura local foi inspecionada; os hashes e o escopo da observação estão
 em [runtime-proof.json](runtime-proof.json). A primeira tentativa ficou num
 diálogo antes de gerar log; a segunda executou o jogo. O log apresentou
-erros `sceKernelStat` (arquivo não encontrado), ainda sem comparação com
-uma execução da base. Não foi realizada uma regressão do jogo inteiro.
+erros `sceKernelStat` (arquivo não encontrado), que apareceram também na
+comparação posterior com o dump original. A cópia encerrou mais tarde
+com `Out of order flip IRQ`; FIFO não resolveu. O original foi fechado
+normalmente após cerca de seis minutos, sem reprodução observada dessa
+falha gráfica. Não foi realizada regressão do jogo inteiro. O foco atual
+é o [port nativo com a base do Godzilla](../PORT-NATIVO.md).
+
+O [mapa local de textos](text-map.json) registra 13.712 strings japonesas
+UTF-8 únicas em 140 recursos. As categorias são indicações por nome de
+arquivo, ainda não confirmação de cada tela. Há 4.447 strings não UTF-8
+preservadas, principalmente configurações/flags; a codificação ainda não
+foi certificada. O texto completo do índice fica fora do Git.
 
 ## Uso
 

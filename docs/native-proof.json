@@ -1,0 +1,22 @@
+{
+  "core_commit": "e976b59a3f056c5ea5d0ddfe1c5ef566cce2f45e",
+  "fixed_files_verified": 1834,
+  "executable": "G:\\kyoei-toshi\\build\\kyoei.exe",
+  "executable_sha256": "23e7977d34e74450c7bdaf08b54a245ba4f6a360a474591bcee9e7cee22b6b25",
+  "boot_image_sha256": "8f5a17199ae4ae9d2577359d146410634a47a51be91e8d8eb320d1bb6b945e61",
+  "imports": 939,
+  "native_bindings": 335,
+  "main_tls": {
+    "vaddr": 19906656,
+    "filesz": 0,
+    "memsz": 40,
+    "align": 8
+  },
+  "log": "G:\\kyoei-toshi-work\\native-02\\logs\\boot-01.log",
+  "log_sha256": "6af2b18520f1d6271ea47dbb525d871d42b254f974dfed44568a10092d67cf83",
+  "first_execution_exit_code": 1,
+  "first_execution_blocker": "this eboot has static TLS; the Windows loader does not support it yet",
+  "game_window_opened": false,
+  "shared_sources_modified": false,
+  "graphics_library_reused": true
+}
