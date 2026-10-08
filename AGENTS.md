@@ -26,9 +26,9 @@
 - **M6 em diante, port para PC:** adaptar o carregador e o runtime do projeto do Godzilla, com a escolha de idioma no próprio port.
 
 ## Código compartilhado com o Godzilla
-- O carregador, o runtime e a parte gráfica moram no projeto do Godzilla (`G:\godzilla-port-codex`), que é a **fonte oficial**.
+- O carregador, o runtime e a parte gráfica do Godzilla (`G:\godzilla-port-codex`) são a **base de partida** do Kyoei, por já estarem mais avançados.
 - Aqui fica uma **cópia fixa** desse código em `third_party/godzilla-core`, com a versão (commit) anotada no diário.
-- Se o Kyoei precisar de algo novo ou de uma correção nesse código, a mudança é feita **primeiro no projeto do Godzilla**, numa sessão de lá, e só depois a cópia daqui é atualizada. Nunca editar a cópia diretamente.
+- Por orientação explícita de Davy em 08/10/2026, melhorias necessárias ao Kyoei são feitas e testadas **neste projeto**, sem exigir mudanças prévias no Godzilla. Preservar a cópia fixa de referência; adaptações próprias ficam em `src/` e na integração de compilação. Não modificar o projeto do Godzilla nesta sessão.
 - O port do Kyoei (M6) só começa depois que o Godzilla tiver a parte gráfica funcionando (M5 de lá).
 
 ## Regras

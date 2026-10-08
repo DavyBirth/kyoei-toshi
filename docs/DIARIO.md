@@ -148,3 +148,39 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - A tentativa de versão alternativa foi interrompida pelo pedido de mudar
   o foco. Conferência posterior não encontrou shadPS4 aberto. M2 continua
   pendente; não foram aprovados M3/M4.
+
+## 08/10/2026 — autorização de desenvolvimento independente e TLS local
+
+- Davy corrigiu explicitamente a regra anterior: o Godzilla é a base de
+  partida, NÃO uma dependência de aprovação ou de receber correções antes
+  do Kyoei. As melhorias necessárias são feitas e testadas aqui. Esta
+  orientação substitui a exigência anterior de mudar primeiro o Godzilla.
+- Snapshot oficial continua intacto. CMake gera uma adaptação local do
+  loader em build, com validação TLS, configuração do template e handler
+  de FS; implementação própria em src/kyoei_tls.c/h. Nenhum fonte oficial
+  ou da cópia fixa foi alterado.
+- TLS variante II segue o desenho do Bloodborne, adaptado para FLS Windows:
+  template, parte zerada, alinhamento e bloco independente por thread;
+  destruição automática na saída. Módulo 1 atendido por __tls_get_addr.
+  A instrução medida mov r64, fs:[0] é tratada somente em código guest;
+  GS/TEB do Windows permanecem intactos. Outros acessos não suportados
+  continuam falhando explicitamente, sem valores inventados.
+- Teste Windows real PASS: template de 8 bytes, total 40 bytes, padding
+  zero, alinhamento e duas threads simultâneas com valores independentes;
+  execução de instrução FS real e retorno do TCB. Binário test_kyoei_tls.
+- Primeiro boot após TLS revelou três nomes vazios no aerolib. Adaptador
+  do preparador normaliza só o símbolo textual como ?, preservando NID,
+  biblioteca e posição. Reparadas as posições 95, 105 e 107 da saída local.
+- Implementado sceLibcHeapGetTraceInfo com layout de 32 bytes e tabelas
+  persistentes de mask/64 estados segundo kernel.cpp da referência.
+  Implementado sceKernelIsNeoMode como PS4 padrão (0).
+- Boot real: janela SDL 1280x720, Vulkan na RTX 2060, módulos libc/Fios2,
+  fontes e áudio inicializados; entrou no eboot+0x80. 357 importações pelo
+  runtime, 335 nativas e 247 ainda sem implementação nesse estágio.
+- Após consulta do modelo e carga dos módulos de sistema, próximo bloqueio
+  sceKernelLoadStartModule para /app0/module/prx/libSceSecure.prx, presente
+  no M0 (119.054 bytes, SHA256 50196e67ca822d77d5fa5c47651ef08f25af4bdd5a232d107085ac1a777d8251).
+  Não simulado sucesso: ainda falta suporte à carga desse módulo.
+- TLS inicial superado; cena do jogo ainda não renderizada e M6 não concluído.
+  Logs externos native-02/logs/20261008_203518.log, 203728.log e 203811.log.
+  Não aguardar mudanças do Godzilla para continuar este projeto.

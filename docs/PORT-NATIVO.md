@@ -43,10 +43,15 @@ bytes, 704 importações e 82.840 relocações. Ligados os módulos próprios
 libc/Fios2 e os módulos externos de fontes/áudio já usados no Godzilla.
 `native-prepare.json` registra a identidade e o hash da imagem.
 
-**O jogo ainda não abriu pelo port.** A primeira execução terminou com
+**Ainda não apareceu a cena do jogo pelo port.** A primeira execução terminou com
 código 1, antes da janela, porque o carregador rejeita TLS estático do
 eboot. `native-proof.json` registra o executável, os hashes e o bloqueio.
-Não confundir a execução anterior no emulador com execução deste port.
+Esse bloqueio inicial já foi superado pelo adaptador local de TLS.
+A versão seguinte abriu a janela SDL/Vulkan, iniciou todos os módulos
+ligados e entrou no eboot. O próximo bloqueio observado é
+`sceKernelLoadStartModule`, solicitado para `/app0/module/prx/libSceSecure.prx`,
+que existe no dump próprio. Ainda falta atender seu carregamento dinâmico.
+Não confundir janela gráfica criada com uma cena do jogo renderizada.
 
 O TLS guarda valores separados para cada thread do jogo. O Godzilla
 não precisava desse caso no eboot, então a implementação Windows o
@@ -56,26 +61,42 @@ suporte ao TLS principal em `src/runtime.c`, `src/runtime_thread.c` e
 GS para seu próprio TEB, portanto a solução Linux não pode ser copiada
 como uma troca simples de FS por GS.
 
-## Correção compartilhada necessária
+## Desenvolvimento independente autorizado por Davy
 
-Pela regra de código compartilhado do projeto, implementar **primeiro na
-sessão do Godzilla** e depois renovar esta cópia fixa:
+Em 08/10/2026, Davy revogou expressamente a dependência de corrigir primeiro
+o Godzilla: ele é a base de partida e continua intacto. Melhorias necessárias
+ao Kyoei são implementadas e testadas **neste projeto**. O snapshot original
+continua fixo; adaptações ficam em `src/` e no arquivo gerado em `build/`.
+
+O adaptador local já implementa:
 
 1. Validar e registrar o template TLS do eboot, tamanho e alinhamento,
    conservando módulo 1 para o eboot e 2..7 para módulos ligados.
 2. Criar uma cópia por thread, inicializando os bytes do template e zerando
    a parte sem dados; assegurar isolamento entre threads e alinhamento.
-3. Atender `__tls_get_addr` para o módulo 1 e os acessos diretos FS do
-   executável sem alterar o TEB do Windows ou o TLS das bibliotecas host.
-4. Integrar criação e liberação de TLS na thread principal e nas threads
-   PS4 criadas pelo runtime. Não remover apenas a rejeição do carregador.
-5. Testar com template sintético, parte zerada e duas threads; repetir o
-   teste integrado e uma execução do Godzilla para evitar regressão.
-6. Commitar na fonte oficial, renovar o snapshot e repetir o boot do Kyoei.
+3. Atender `__tls_get_addr` para o módulo 1 e a instrução medida
+   `mov r64, fs:[0]`, sem alterar o TEB/GS do Windows. Outros tipos de
+   instrução TLS continuam falhando explicitamente quando não suportados.
+4. Criar TLS sob demanda por thread e liberar via FLS na saída. Isso
+   também cobre threads host que chamam código do jogo. Não foi removida
+   apenas a rejeição: o template é validado e o armazenamento existe.
+5. Teste Windows real com template sintético, parte zerada, alinhamento,
+   acesso FS e duas threads simultâneas: PASS. O boot real avançou além
+   de TLS, libc/Fios2/fontes/áudio e entrou no eboot.
+
+Não é uma implementação completa de todas as instruções FS ou formatos
+TLS possíveis. O adaptador atende a forma observada e mantém os demais
+casos como falhas identificáveis.
 
 Dados reais do template estão em `native-proof.json`, seção `main_tls`;
 o relatório detalhado local fica em `native-02/out/link.json`.
-Esta sessão não alterou o projeto oficial nem a cópia fixa.
+O projeto oficial e a cópia fixa não foram alterados.
+
+Também normalizados três nomes vazios vindos do índice aerolib como `?`
+na tabela local; seus NIDs e posições são preservados. Implementados
+`sceLibcHeapGetTraceInfo` com tabelas persistentes conforme a referência
+e `sceKernelIsNeoMode` como PS4 padrão. Não foi ligado o modo de retornar
+sucesso para todas as funções ausentes.
 
 ## Comandos locais
 
@@ -93,6 +114,6 @@ instalação já foram executados; não é preciso repeti-los para compilar.
 japonês com a codificação do terminal. `native-02/out` é a preparação
 concluída. O adaptador agora configura a saída do Python como UTF-8.
 
-Ao executar a versão atual, espera-se a mensagem de TLS e código 1;
-ainda não se espera a tela do jogo. Após a correção compartilhada, o
-próximo teste deve mostrar avanço do carregador além desse ponto.
+Ao executar a versão atual, espera-se a janela gráfica ser criada e o
+carregador entrar no eboot; o próximo bloqueio é a carga do módulo Secure.
+Ainda não se espera uma cena jogável.

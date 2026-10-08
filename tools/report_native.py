@@ -1,6 +1,8 @@
 """Registra a prova nativa e verifica que a base fixa permaneceu intacta."""
 import hashlib
 import json
+import argparse
+import re
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
@@ -12,6 +14,30 @@ def digest(path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--current', action='store_true')
+    args = parser.parse_args()
+    if args.current:
+        prepare = json.loads((REPO/'docs/native-prepare.json').read_text())
+        out = Path(prepare['prepared_out'])
+        log = max((out.parent/'logs').glob('20*.log'), key=lambda p: p.name)
+        text = log.read_text(encoding='utf8')
+        stop = re.findall(r'^STOP: (.+)$', text, re.MULTILINE)
+        codes = re.findall(r'^Exit code (\d+)', text, re.MULTILINE)
+        report = dict(core_commit=prepare['core_commit'], base_integrity_reference='native-proof.json',
+                      executable_sha256=digest(REPO/'build/kyoei.exe'),
+                      log=str(log), log_sha256=digest(log),
+                      exit_code=int(codes[-1]) if codes else None,
+                      latest_blocker=stop[-1] if stop else None,
+                      main_tls_configured='Kyoei TLS: 40 bytes per thread' in text,
+                      graphics_window_created='GPU: SDL window created' in text,
+                      eboot_entered="Entering the game's code" in text,
+                      rendered_scene_verified=False, game_ready=False)
+        (REPO/'docs/native-current.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf8')
+        print(json.dumps(report, indent=2))
+        return
+    if (REPO/'docs/native-proof.json').exists():
+        raise ValueError('Prova histórica já existe; use --current para a versão atual')
     snapshot = json.loads((REPO/'docs/godzilla-core.json').read_text())
     core = REPO/'third_party/godzilla-core'
     count = 0

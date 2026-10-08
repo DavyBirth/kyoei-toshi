@@ -1,0 +1,14 @@
+{
+  "core_commit": "e976b59a3f056c5ea5d0ddfe1c5ef566cce2f45e",
+  "base_integrity_reference": "native-proof.json",
+  "executable_sha256": "0b986fdefca2207c31af547e76660b16890fe88e59b6f9372204c9f403b2d552",
+  "log": "G:\\kyoei-toshi-work\\native-02\\logs\\20261008_203811.log",
+  "log_sha256": "a7d00771f3ac5d4d73d85e7ff60c2f11a78b46238e7b4ad1a798df5b53b07f72",
+  "exit_code": 20,
+  "latest_blocker": "first unimplemented PS4 function: libkernel::sceKernelLoadStartModule (wzvqT4UqKX8#BH#K)",
+  "main_tls_configured": true,
+  "graphics_window_created": true,
+  "eboot_entered": true,
+  "rendered_scene_verified": false,
+  "game_ready": false
+}
