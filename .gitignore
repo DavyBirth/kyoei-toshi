@@ -1,0 +1,7 @@
+third_party/
+build/
+work/
+*.psarc
+*.bin
+*.prx
+*.sprx

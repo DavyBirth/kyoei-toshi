@@ -1,0 +1,5764 @@
+{
+ "libs": {
+  "19": "StageModule",
+  "12320": "libSceGameCustomDataDialog",
+  "62": "libSceAppContent",
+  "12335": "libSceAudioOut",
+  "12334": "libSceAvPlayer",
+  "12340": "libSceCamera",
+  "12341": "libSceCommonDialog",
+  "38": "libSceContentExport",
+  "68": "libSceErrorDialog",
+  "23": "libSceFios2",
+  "36": "libSceGameLiveStreaming",
+  "20": "libSceGnmDriver",
+  "12337": "libSceHmd",
+  "12343": "libSceHmdSetupDialog",
+  "12324": "libSceHttp",
+  "35": "libSceImeDialog",
+  "12319": "libSceInvitationDialog",
+  "12312": "libSceJson2",
+  "12344": "libSceMove",
+  "12345": "libSceMoveTracker",
+  "69": "libSceMsgDialog",
+  "25": "libSceNet",
+  "26": "libSceNetCtl",
+  "12317": "libSceNpAuth",
+  "12322": "libSceNpCommerce",
+  "12326": "libSceNpCommon",
+  "12327": "libSceNpManager",
+  "12311": "libSceNpSns",
+  "12328": "libSceNpMatching2",
+  "12331": "libSceNpScore",
+  "12310": "libSceNpSnsFacebookDialog",
+  "12309": "libSceNpToolkit2",
+  "12318": "libSceNpTrophy",
+  "12329": "libSceNpTus",
+  "12330": "libSceNpUtility",
+  "12316": "libSceNpWebApi",
+  "21": "libScePad",
+  "45": "libScePlayGo",
+  "46": "libScePlayGoDialog",
+  "41": "libScePngEnc",
+  "70": "libSceRazorCpu",
+  "31": "libSceRemoteplay",
+  "12321": "libSceRtc",
+  "39": "libSceSaveData",
+  "40": "libSceSaveDataDialog",
+  "32": "libSceScreenShot",
+  "67": "libSceSecure",
+  "64": "libSceSharePlay",
+  "65": "libSceShareUtility",
+  "12313": "libSceSigninDialog",
+  "12325": "libSceSsl",
+  "12336": "libSceSysmodule",
+  "12342": "libSceSystemService",
+  "12338": "libSceUserService",
+  "22": "libSceVideoOut",
+  "37": "libSceVideoRecording",
+  "61": "libSceVideodec",
+  "63": "libSceVideodec2",
+  "12339": "libSceVrTracker",
+  "12315": "libSceXml",
+  "72": "libc",
+  "12314": "libScePosix",
+  "71": "libkernel"
+ },
+ "mods": {
+  "1": "StageModule",
+  "2": "libSceGnmDriver",
+  "3": "libScePad",
+  "4": "libSceVideoOut",
+  "5": "libSceFios2",
+  "6": "libSceRtc",
+  "7": "libSceNet",
+  "8": "libSceNetCtl",
+  "9": "libSceUserService",
+  "10": "libkernel",
+  "11": "libSceAudioOut",
+  "12": "libSceSysmodule",
+  "13": "libSceRemoteplay",
+  "14": "libSceScreenShot",
+  "15": "libSceSystemService",
+  "16": "libSceCommonDialog",
+  "17": "libSceImeDialog",
+  "18": "libSceGameLiveStreaming",
+  "19": "libSceVideoRecording",
+  "20": "libSceContentExport",
+  "21": "libSceSaveData",
+  "22": "libSceSaveDataDialog",
+  "23": "libScePngEnc",
+  "24": "libSceNpManager",
+  "25": "libSceNpCommon",
+  "26": "libSceNpTus",
+  "27": "libScePlayGo",
+  "28": "libScePlayGoDialog",
+  "29": "libSceNpTrophy",
+  "30": "libSceNpToolkit2",
+  "31": "libSceNpMatching2",
+  "32": "libSceNpWebApi",
+  "33": "libSceNpUtility",
+  "34": "libSceNpScore",
+  "35": "libSceNpSnsFacebookDialog",
+  "36": "libSceNpAuth",
+  "37": "libSceNpCommerce",
+  "38": "libSceHttp",
+  "39": "libSceSsl",
+  "40": "libSceInvitationDialog",
+  "41": "libGameCustomDataDialog",
+  "42": "libSceVideodec",
+  "43": "libSceAppContentUtil",
+  "44": "libSceVideodec2",
+  "45": "libSceSharePlay",
+  "46": "libSceShareUtility",
+  "47": "libSceJson",
+  "48": "libSceSecure",
+  "49": "libSceErrorDialog",
+  "50": "libSceMsgDialog",
+  "51": "libSceRazorCpu",
+  "52": "libc",
+  "53": "libSceSigninDialog",
+  "54": "libSceXml",
+  "55": "libSceAvPlayer",
+  "56": "libSceHmd",
+  "57": "libSceVrTracker",
+  "58": "libSceCamera",
+  "59": "libSceHmdSetupDialog",
+  "60": "libSceMove",
+  "61": "libSceMoveTracker"
+ },
+ "imports": [
+  {
+   "nid": "6rNUbZHCWM0",
+   "scoped": "6rNUbZHCWM0#T#B",
+   "lib": "StageModule",
+   "module": "StageModule",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "m47juOmH0VE",
+   "scoped": "m47juOmH0VE#+#r",
+   "lib": "libSceAppContent",
+   "module": "libSceAppContentUtil",
+   "name": "sceAppContentGetAddcontInfo",
+   "type": 2
+  },
+  {
+   "nid": "VANhIWcqYak",
+   "scoped": "VANhIWcqYak#+#r",
+   "lib": "libSceAppContent",
+   "module": "libSceAppContentUtil",
+   "name": "sceAppContentAddcontMount",
+   "type": 2
+  },
+  {
+   "nid": "R9lA82OraNs",
+   "scoped": "R9lA82OraNs#+#r",
+   "lib": "libSceAppContent",
+   "module": "libSceAppContentUtil",
+   "name": "sceAppContentInitialize",
+   "type": 2
+  },
+  {
+   "nid": "3rHWaV-1KC4",
+   "scoped": "3rHWaV-1KC4#+#r",
+   "lib": "libSceAppContent",
+   "module": "libSceAppContentUtil",
+   "name": "sceAppContentAddcontUnmount",
+   "type": 2
+  },
+  {
+   "nid": "99b82IKXpH4",
+   "scoped": "99b82IKXpH4#+#r",
+   "lib": "libSceAppContent",
+   "module": "libSceAppContentUtil",
+   "name": "sceAppContentAppParamGetInt",
+   "type": 2
+  },
+  {
+   "nid": "xnd8BJzAxmk",
+   "scoped": "xnd8BJzAxmk#+#r",
+   "lib": "libSceAppContent",
+   "module": "libSceAppContentUtil",
+   "name": "sceAppContentGetAddcontInfoList",
+   "type": 2
+  },
+  {
+   "nid": "Gl6w5i0JokY",
+   "scoped": "Gl6w5i0JokY#+#r",
+   "lib": "libSceAppContent",
+   "module": "libSceAppContentUtil",
+   "name": "sceAppContentDownloadDataGetAvailableSpaceKb",
+   "type": 2
+  },
+  {
+   "nid": "s1--uE9mBFw",
+   "scoped": "s1--uE9mBFw#DAv#L",
+   "lib": "libSceAudioOut",
+   "module": "libSceAudioOut",
+   "name": "sceAudioOutClose",
+   "type": 2
+  },
+  {
+   "nid": "ekNvsT22rsY",
+   "scoped": "ekNvsT22rsY#DAv#L",
+   "lib": "libSceAudioOut",
+   "module": "libSceAudioOut",
+   "name": "sceAudioOutOpen",
+   "type": 2
+  },
+  {
+   "nid": "JfEPXVxhFqA",
+   "scoped": "JfEPXVxhFqA#DAv#L",
+   "lib": "libSceAudioOut",
+   "module": "libSceAudioOut",
+   "name": "sceAudioOutInit",
+   "type": 2
+  },
+  {
+   "nid": "QOQtbeDqsT4",
+   "scoped": "QOQtbeDqsT4#DAv#L",
+   "lib": "libSceAudioOut",
+   "module": "libSceAudioOut",
+   "name": "sceAudioOutOutput",
+   "type": 2
+  },
+  {
+   "nid": "w3PdaSTSwGE",
+   "scoped": "w3PdaSTSwGE#DAv#L",
+   "lib": "libSceAudioOut",
+   "module": "libSceAudioOut",
+   "name": "sceAudioOutOutputs",
+   "type": 2
+  },
+  {
+   "nid": "b+uAV89IlxE",
+   "scoped": "b+uAV89IlxE#DAv#L",
+   "lib": "libSceAudioOut",
+   "module": "libSceAudioOut",
+   "name": "sceAudioOutSetVolume",
+   "type": 2
+  },
+  {
+   "nid": "KMcEa+rHsIo",
+   "scoped": "KMcEa+rHsIo#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerAddSource",
+   "type": 2
+  },
+  {
+   "nid": "NkJwDzKmIlw",
+   "scoped": "NkJwDzKmIlw#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerClose",
+   "type": 2
+  },
+  {
+   "nid": "wwM99gjFf1Y",
+   "scoped": "wwM99gjFf1Y#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerCurrentTime",
+   "type": 2
+  },
+  {
+   "nid": "ODJK2sn9w4A",
+   "scoped": "ODJK2sn9w4A#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerEnableStream",
+   "type": 2
+  },
+  {
+   "nid": "d8FcbzfAdQw",
+   "scoped": "d8FcbzfAdQw#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerGetStreamInfo",
+   "type": 2
+  },
+  {
+   "nid": "o9eWRkSL+M4",
+   "scoped": "o9eWRkSL+M4#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerInitEx",
+   "type": 2
+  },
+  {
+   "nid": "UbQoYawOsfY",
+   "scoped": "UbQoYawOsfY#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerIsActive",
+   "type": 2
+  },
+  {
+   "nid": "XC9wM+xULz8",
+   "scoped": "XC9wM+xULz8#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerJumpToTime",
+   "type": 2
+  },
+  {
+   "nid": "9y5v+fGN4Wk",
+   "scoped": "9y5v+fGN4Wk#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerPause",
+   "type": 2
+  },
+  {
+   "nid": "HD1YKVU26-M",
+   "scoped": "HD1YKVU26-M#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerPostInit",
+   "type": 2
+  },
+  {
+   "nid": "w5moABNwnRY",
+   "scoped": "w5moABNwnRY#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerResume",
+   "type": 2
+  },
+  {
+   "nid": "OVths0xGfho",
+   "scoped": "OVths0xGfho#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerSetLooping",
+   "type": 2
+  },
+  {
+   "nid": "ET4Gr-Uu07s",
+   "scoped": "ET4Gr-Uu07s#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerStart",
+   "type": 2
+  },
+  {
+   "nid": "ZC17w3vB5Lo",
+   "scoped": "ZC17w3vB5Lo#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerStop",
+   "type": 2
+  },
+  {
+   "nid": "hdTyRzCXQeQ",
+   "scoped": "hdTyRzCXQeQ#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerStreamCount",
+   "type": 2
+  },
+  {
+   "nid": "Wnp1OVcrZgk",
+   "scoped": "Wnp1OVcrZgk#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerGetAudioData",
+   "type": 2
+  },
+  {
+   "nid": "JdksQu8pNdQ",
+   "scoped": "JdksQu8pNdQ#DAu#3",
+   "lib": "libSceAvPlayer",
+   "module": "libSceAvPlayer",
+   "name": "sceAvPlayerGetVideoDataEx",
+   "type": 2
+  },
+  {
+   "nid": "BHn83xrF92E",
+   "scoped": "BHn83xrF92E#DA0#6",
+   "lib": "libSceCamera",
+   "module": "libSceCamera",
+   "name": "sceCameraOpen",
+   "type": 2
+  },
+  {
+   "nid": "mxgMmR+1Kr0",
+   "scoped": "mxgMmR+1Kr0#DA0#6",
+   "lib": "libSceCamera",
+   "module": "libSceCamera",
+   "name": "sceCameraGetFrameData",
+   "type": 2
+  },
+  {
+   "nid": "VQ+5kAqsE2Q",
+   "scoped": "VQ+5kAqsE2Q#DA0#6",
+   "lib": "libSceCamera",
+   "module": "libSceCamera",
+   "name": "sceCameraSetConfig",
+   "type": 2
+  },
+  {
+   "nid": "wpeyFwJ+UEI",
+   "scoped": "wpeyFwJ+UEI#DA0#6",
+   "lib": "libSceCamera",
+   "module": "libSceCamera",
+   "name": "sceCameraSetVideoSync",
+   "type": 2
+  },
+  {
+   "nid": "9EpRYMy7rHU",
+   "scoped": "9EpRYMy7rHU#DA0#6",
+   "lib": "libSceCamera",
+   "module": "libSceCamera",
+   "name": "sceCameraStart",
+   "type": 2
+  },
+  {
+   "nid": "2G2C0nmd++M",
+   "scoped": "2G2C0nmd++M#DA0#6",
+   "lib": "libSceCamera",
+   "module": "libSceCamera",
+   "name": "sceCameraStop",
+   "type": 2
+  },
+  {
+   "nid": "BQ3tey0JmQM",
+   "scoped": "BQ3tey0JmQM#DA1#Q",
+   "lib": "libSceCommonDialog",
+   "module": "libSceCommonDialog",
+   "name": "sceCommonDialogIsUsed",
+   "type": 2
+  },
+  {
+   "nid": "uoUpLGNkygk",
+   "scoped": "uoUpLGNkygk#DA1#Q",
+   "lib": "libSceCommonDialog",
+   "module": "libSceCommonDialog",
+   "name": "sceCommonDialogInitialize",
+   "type": 2
+  },
+  {
+   "nid": "I88KChlynSs",
+   "scoped": "I88KChlynSs#BE#x",
+   "lib": "libSceErrorDialog",
+   "module": "libSceErrorDialog",
+   "name": "sceErrorDialogInitialize",
+   "type": 2
+  },
+  {
+   "nid": "M2ZF-ClLhgY",
+   "scoped": "M2ZF-ClLhgY#BE#x",
+   "lib": "libSceErrorDialog",
+   "module": "libSceErrorDialog",
+   "name": "sceErrorDialogOpen",
+   "type": 2
+  },
+  {
+   "nid": "t2FvHRXzgqk",
+   "scoped": "t2FvHRXzgqk#BE#x",
+   "lib": "libSceErrorDialog",
+   "module": "libSceErrorDialog",
+   "name": "sceErrorDialogGetStatus",
+   "type": 2
+  },
+  {
+   "nid": "WWiGuh9XfgQ",
+   "scoped": "WWiGuh9XfgQ#BE#x",
+   "lib": "libSceErrorDialog",
+   "module": "libSceErrorDialog",
+   "name": "sceErrorDialogUpdateStatus",
+   "type": 2
+  },
+  {
+   "nid": "9XAxK2PMwk8",
+   "scoped": "9XAxK2PMwk8#BE#x",
+   "lib": "libSceErrorDialog",
+   "module": "libSceErrorDialog",
+   "name": "sceErrorDialogTerminate",
+   "type": 2
+  },
+  {
+   "nid": "OIGbkgGOu6E",
+   "scoped": "OIGbkgGOu6E#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosIOFilterPsarcDearchiver",
+   "type": 2
+  },
+  {
+   "nid": "yy6C7k7FPZY",
+   "scoped": "yy6C7k7FPZY#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosArchiveUnmountSync",
+   "type": 2
+  },
+  {
+   "nid": "lAikj8EfcJg",
+   "scoped": "lAikj8EfcJg#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosIOFilterCache",
+   "type": 2
+  },
+  {
+   "nid": "lgITuBsRo2o",
+   "scoped": "lgITuBsRo2o#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosIOFilterAdd",
+   "type": 2
+  },
+  {
+   "nid": "3HAgZPl1v+4",
+   "scoped": "3HAgZPl1v+4#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosTerminate",
+   "type": 2
+  },
+  {
+   "nid": "UUriaXy7G90",
+   "scoped": "UUriaXy7G90#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosArchiveGetMountBufferSizeSync",
+   "type": 2
+  },
+  {
+   "nid": "xutLbQdqyb4",
+   "scoped": "xutLbQdqyb4#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosArchiveMountSync",
+   "type": 2
+  },
+  {
+   "nid": "wAKZ-det+yo",
+   "scoped": "wAKZ-det+yo#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosInitialize",
+   "type": 2
+  },
+  {
+   "nid": "G-39lsdSgXo",
+   "scoped": "G-39lsdSgXo#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosRenameSync",
+   "type": 2
+  },
+  {
+   "nid": "xReSebwKApA",
+   "scoped": "xReSebwKApA#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHSeek",
+   "type": 2
+  },
+  {
+   "nid": "b44anV2D7K0",
+   "scoped": "b44anV2D7K0#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHOpenSync",
+   "type": 2
+  },
+  {
+   "nid": "NwOHMRM2Ppw",
+   "scoped": "NwOHMRM2Ppw#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFileExistsSync",
+   "type": 2
+  },
+  {
+   "nid": "2JtEQrjeUR4",
+   "scoped": "2JtEQrjeUR4#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosSetGlobalDefaultOpAttr",
+   "type": 2
+  },
+  {
+   "nid": "AOujSGqU+ms",
+   "scoped": "AOujSGqU+ms#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHCloseSync",
+   "type": 2
+  },
+  {
+   "nid": "bfgo2Otmqz0",
+   "scoped": "bfgo2Otmqz0#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosOpIsDone",
+   "type": 2
+  },
+  {
+   "nid": "+FRvKknUj1I",
+   "scoped": "+FRvKknUj1I#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosOpGetActualCount",
+   "type": 2
+  },
+  {
+   "nid": "urUHkGGweA4",
+   "scoped": "urUHkGGweA4#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHWrite",
+   "type": 2
+  },
+  {
+   "nid": "FdjoqFQOlt0",
+   "scoped": "FdjoqFQOlt0#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHGetSize",
+   "type": 2
+  },
+  {
+   "nid": "cg-VoPqZYss",
+   "scoped": "cg-VoPqZYss#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHRead",
+   "type": 2
+  },
+  {
+   "nid": "dQnI6o2OEC8",
+   "scoped": "dQnI6o2OEC8#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHSync",
+   "type": 2
+  },
+  {
+   "nid": "X+7rIfY97Ps",
+   "scoped": "X+7rIfY97Ps#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosOpGetError",
+   "type": 2
+  },
+  {
+   "nid": "bDupEgbQ6Fk",
+   "scoped": "bDupEgbQ6Fk#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFileDeleteSync",
+   "type": 2
+  },
+  {
+   "nid": "5cyEcilO-J0",
+   "scoped": "5cyEcilO-J0#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosOpDelete",
+   "type": 2
+  },
+  {
+   "nid": "2ZaHWy3IhKQ",
+   "scoped": "2ZaHWy3IhKQ#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosExistsSync",
+   "type": 2
+  },
+  {
+   "nid": "0-p4O8FINmU",
+   "scoped": "0-p4O8FINmU#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosDHCloseSync",
+   "type": 2
+  },
+  {
+   "nid": "uCkgJOrYUL4",
+   "scoped": "uCkgJOrYUL4#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosDHOpen",
+   "type": 2
+  },
+  {
+   "nid": "GGqucL9F+YI",
+   "scoped": "GGqucL9F+YI#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosDHOpenSync",
+   "type": 2
+  },
+  {
+   "nid": "odjOGg8harg",
+   "scoped": "odjOGg8harg#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosDHReadSync",
+   "type": 2
+  },
+  {
+   "nid": "Rm+hiwvSnxw",
+   "scoped": "Rm+hiwvSnxw#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosDateToComponents",
+   "type": 2
+  },
+  {
+   "nid": "nWuza0ZdfqA",
+   "scoped": "nWuza0ZdfqA#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosDirectoryCreateSync",
+   "type": 2
+  },
+  {
+   "nid": "n5TUlwdhGSA",
+   "scoped": "n5TUlwdhGSA#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosDirectoryDeleteSync",
+   "type": 2
+  },
+  {
+   "nid": "Bn2ZF4ZjeuQ",
+   "scoped": "Bn2ZF4ZjeuQ#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHReadSync",
+   "type": 2
+  },
+  {
+   "nid": "xP45eIntEis",
+   "scoped": "xP45eIntEis#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHStatSync",
+   "type": 2
+  },
+  {
+   "nid": "EzzSJz6yuMc",
+   "scoped": "EzzSJz6yuMc#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHSyncSync",
+   "type": 2
+  },
+  {
+   "nid": "Kl-TbrDU9YM",
+   "scoped": "Kl-TbrDU9YM#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFHWriteSync",
+   "type": 2
+  },
+  {
+   "nid": "zF8-CRvRXnM",
+   "scoped": "zF8-CRvRXnM#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosFileGetSizeSync",
+   "type": 2
+  },
+  {
+   "nid": "SnoQQWnGK9I",
+   "scoped": "SnoQQWnGK9I#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosOpWait",
+   "type": 2
+  },
+  {
+   "nid": "jayvY07C5dk",
+   "scoped": "jayvY07C5dk#X#F",
+   "lib": "libSceFios2",
+   "module": "libSceFios2",
+   "name": "sceFiosStatSync",
+   "type": 2
+  },
+  {
+   "nid": "dWM80AX39o4",
+   "scoped": "dWM80AX39o4#k#S",
+   "lib": "libSceGameLiveStreaming",
+   "module": "libSceGameLiveStreaming",
+   "name": "sceGameLiveStreamingEnableLiveStreaming",
+   "type": 2
+  },
+  {
+   "nid": "PMx7N4WqNdo",
+   "scoped": "PMx7N4WqNdo#k#S",
+   "lib": "libSceGameLiveStreaming",
+   "module": "libSceGameLiveStreaming",
+   "name": "sceGameLiveStreamingGetSocialFeedbackMessages",
+   "type": 2
+  },
+  {
+   "nid": "lK8dLBNp9OE",
+   "scoped": "lK8dLBNp9OE#k#S",
+   "lib": "libSceGameLiveStreaming",
+   "module": "libSceGameLiveStreaming",
+   "name": "sceGameLiveStreamingGetCurrentStatus2",
+   "type": 2
+  },
+  {
+   "nid": "yeQKjHETi40",
+   "scoped": "yeQKjHETi40#k#S",
+   "lib": "libSceGameLiveStreaming",
+   "module": "libSceGameLiveStreaming",
+   "name": "sceGameLiveStreamingGetSocialFeedbackMessagesCount",
+   "type": 2
+  },
+  {
+   "nid": "ycodiP2I0xo",
+   "scoped": "ycodiP2I0xo#k#S",
+   "lib": "libSceGameLiveStreaming",
+   "module": "libSceGameLiveStreaming",
+   "name": "sceGameLiveStreamingSetPresetSocialFeedbackCommands",
+   "type": 2
+  },
+  {
+   "nid": "kvYEw2lBndk",
+   "scoped": "kvYEw2lBndk#k#S",
+   "lib": "libSceGameLiveStreaming",
+   "module": "libSceGameLiveStreaming",
+   "name": "sceGameLiveStreamingInitialize",
+   "type": 2
+  },
+  {
+   "nid": "x6deXUpQbBo",
+   "scoped": "x6deXUpQbBo#k#S",
+   "lib": "libSceGameLiveStreaming",
+   "module": "libSceGameLiveStreaming",
+   "name": "sceGameLiveStreamingSetPresetSocialFeedbackCommandsDescription",
+   "type": 2
+  },
+  {
+   "nid": "9yK6Fk8mKOQ",
+   "scoped": "9yK6Fk8mKOQ#k#S",
+   "lib": "libSceGameLiveStreaming",
+   "module": "libSceGameLiveStreaming",
+   "name": "sceGameLiveStreamingTerminate",
+   "type": 2
+  },
+  {
+   "nid": "b0xyllnVY-I",
+   "scoped": "b0xyllnVY-I#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmAddEqEvent",
+   "type": 2
+  },
+  {
+   "nid": "+AFvOEXrKJk",
+   "scoped": "+AFvOEXrKJk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetEmbeddedVsShader",
+   "type": 2
+  },
+  {
+   "nid": "b08AgtPlHPg",
+   "scoped": "b08AgtPlHPg#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmAreSubmitsAllowed",
+   "type": 2
+  },
+  {
+   "nid": "ihxrbsoSKWc",
+   "scoped": "ihxrbsoSKWc#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmBeginWorkload",
+   "type": 2
+  },
+  {
+   "nid": "FUHG8sQ3R58",
+   "scoped": "FUHG8sQ3R58#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetEsShader",
+   "type": 2
+  },
+  {
+   "nid": "ffrNQOshows",
+   "scoped": "ffrNQOshows#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmComputeWaitOnAddress",
+   "type": 2
+  },
+  {
+   "nid": "EJapNl2+pgU",
+   "scoped": "EJapNl2+pgU#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmComputeWaitSemaphore",
+   "type": 2
+  },
+  {
+   "nid": "5udAm+6boVg",
+   "scoped": "5udAm+6boVg#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmCreateWorkloadStream",
+   "type": 2
+  },
+  {
+   "nid": "qpGITzPE+Zc",
+   "scoped": "qpGITzPE+Zc#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDebugHardwareStatus",
+   "type": 2
+  },
+  {
+   "nid": "jtkqXpAOY6w",
+   "scoped": "jtkqXpAOY6w#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetGsRingSizes",
+   "type": 2
+  },
+  {
+   "nid": "UJwNuMBcUAk",
+   "scoped": "UJwNuMBcUAk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetGsShader",
+   "type": 2
+  },
+  {
+   "nid": "VJNjFtqiF5w",
+   "scoped": "VJNjFtqiF5w#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetHsShader",
+   "type": 2
+  },
+  {
+   "nid": "5uFKckiJYRM",
+   "scoped": "5uFKckiJYRM#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetPsShader350",
+   "type": 2
+  },
+  {
+   "nid": "q-qhDxP67Hg",
+   "scoped": "q-qhDxP67Hg#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetResourceRegistrationUserMemory",
+   "type": 2
+  },
+  {
+   "nid": "K3BKBBYKUSE",
+   "scoped": "K3BKBBYKUSE#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetResourceUserData",
+   "type": 2
+  },
+  {
+   "nid": "cFCp0NX8wf0",
+   "scoped": "cFCp0NX8wf0#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetVgtControl",
+   "type": 2
+  },
+  {
+   "nid": "gAhCn6UiU4Y",
+   "scoped": "gAhCn6UiU4Y#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetVsShader",
+   "type": 2
+  },
+  {
+   "nid": "XiyzNZ9J4nQ",
+   "scoped": "XiyzNZ9J4nQ#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetWaveLimitMultipliers",
+   "type": 2
+  },
+  {
+   "nid": "+xuDhxlWRPg",
+   "scoped": "+xuDhxlWRPg#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetupMipStatsReport",
+   "type": 2
+  },
+  {
+   "nid": "zwY0YV91TTI",
+   "scoped": "zwY0YV91TTI#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSubmitCommandBuffers",
+   "type": 2
+  },
+  {
+   "nid": "xbxNatawohc",
+   "scoped": "xbxNatawohc#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSubmitAndFlipCommandBuffers",
+   "type": 2
+  },
+  {
+   "nid": "Ga6r7H6Y0RI",
+   "scoped": "Ga6r7H6Y0RI#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSubmitAndFlipCommandBuffersForWorkload",
+   "type": 2
+  },
+  {
+   "nid": "f33OrruQYbM",
+   "scoped": "f33OrruQYbM#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceRazorIsLoaded",
+   "type": 2
+  },
+  {
+   "nid": "jRcI8VcgTz4",
+   "scoped": "jRcI8VcgTz4#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSubmitCommandBuffersForWorkload",
+   "type": 2
+  },
+  {
+   "nid": "PVT+fuoS9gU",
+   "scoped": "PVT+fuoS9gU#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDeleteEqEvent",
+   "type": 2
+  },
+  {
+   "nid": "yvZ73uQUqrk",
+   "scoped": "yvZ73uQUqrk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSubmitDone",
+   "type": 2
+  },
+  {
+   "nid": "UtObDRQiGbs",
+   "scoped": "UtObDRQiGbs#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDestroyWorkloadStream",
+   "type": 2
+  },
+  {
+   "nid": "bX5IbRvECXk",
+   "scoped": "bX5IbRvECXk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDingDong",
+   "type": 2
+  },
+  {
+   "nid": "byXlqupd8cE",
+   "scoped": "byXlqupd8cE#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDingDongForWorkload",
+   "type": 2
+  },
+  {
+   "nid": "HHo1BAljZO8",
+   "scoped": "HHo1BAljZO8#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDisableMipStatsReport",
+   "type": 2
+  },
+  {
+   "nid": "0BzLGljcwBo",
+   "scoped": "0BzLGljcwBo#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDispatchDirect",
+   "type": 2
+  },
+  {
+   "nid": "Z43vKp5k7r0",
+   "scoped": "Z43vKp5k7r0#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDispatchIndirect",
+   "type": 2
+  },
+  {
+   "nid": "wED4ZXCFJT0",
+   "scoped": "wED4ZXCFJT0#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDispatchIndirectOnMec",
+   "type": 2
+  },
+  {
+   "nid": "nF6bFRUBRAU",
+   "scoped": "nF6bFRUBRAU#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDispatchInitDefaultHardwareState",
+   "type": 2
+  },
+  {
+   "nid": "HlTPoZ-oY7Y",
+   "scoped": "HlTPoZ-oY7Y#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawIndex",
+   "type": 2
+  },
+  {
+   "nid": "GGsn7jMTxw4",
+   "scoped": "GGsn7jMTxw4#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawIndexAuto",
+   "type": 2
+  },
+  {
+   "nid": "ED9-Fjr8Ta4",
+   "scoped": "ED9-Fjr8Ta4#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawIndexIndirect",
+   "type": 2
+  },
+  {
+   "nid": "thbPcG7E7qk",
+   "scoped": "thbPcG7E7qk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawIndexIndirectCountMulti",
+   "type": 2
+  },
+  {
+   "nid": "jHdPvIzlpKc",
+   "scoped": "jHdPvIzlpKc#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawIndexMultiInstanced",
+   "type": 2
+  },
+  {
+   "nid": "oYM+YzfCm2Y",
+   "scoped": "oYM+YzfCm2Y#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawIndexOffset",
+   "type": 2
+  },
+  {
+   "nid": "4v+otIIdjqg",
+   "scoped": "4v+otIIdjqg#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawIndirect",
+   "type": 2
+  },
+  {
+   "nid": "cUCo8OvArrw",
+   "scoped": "cUCo8OvArrw#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawIndirectCountMulti",
+   "type": 2
+  },
+  {
+   "nid": "yb2cRhagD1I",
+   "scoped": "yb2cRhagD1I#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawInitDefaultHardwareState350",
+   "type": 2
+  },
+  {
+   "nid": "im2ZuItabu4",
+   "scoped": "im2ZuItabu4#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawInitToDefaultContextState400",
+   "type": 2
+  },
+  {
+   "nid": "stDSYW2SBVM",
+   "scoped": "stDSYW2SBVM#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDrawOpaqueAuto",
+   "type": 2
+  },
+  {
+   "nid": "TLV4mswiZ4A",
+   "scoped": "TLV4mswiZ4A#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDriverCaptureInProgress",
+   "type": 2
+  },
+  {
+   "nid": "ArSg-TGinhk",
+   "scoped": "ArSg-TGinhk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmUnmapComputeQueue",
+   "type": 2
+  },
+  {
+   "nid": "yhFCnaz5daw",
+   "scoped": "yhFCnaz5daw#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmUnregisterAllResourcesForOwner",
+   "type": 2
+  },
+  {
+   "nid": "fhKwCVVj9nk",
+   "scoped": "fhKwCVVj9nk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmUnregisterOwnerAndResources",
+   "type": 2
+  },
+  {
+   "nid": "k8EXkhIP+lM",
+   "scoped": "k8EXkhIP+lM#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmUnregisterResource",
+   "type": 2
+  },
+  {
+   "nid": "nLM2i2+65hA",
+   "scoped": "nLM2i2+65hA#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmUpdateGsShader",
+   "type": 2
+  },
+  {
+   "nid": "GNlx+y7xPdE",
+   "scoped": "GNlx+y7xPdE#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmUpdateHsShader",
+   "type": 2
+  },
+  {
+   "nid": "R6z1xM3pW-w",
+   "scoped": "R6z1xM3pW-w#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDriverTraceInProgress",
+   "type": 2
+  },
+  {
+   "nid": "d88anrgNoKY",
+   "scoped": "d88anrgNoKY#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmDriverTriggerCapture",
+   "type": 2
+  },
+  {
+   "nid": "mLVL7N7BVBg",
+   "scoped": "mLVL7N7BVBg#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmUpdatePsShader350",
+   "type": 2
+  },
+  {
+   "nid": "Fa3x75OOLRA",
+   "scoped": "Fa3x75OOLRA#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmEndWorkload",
+   "type": 2
+  },
+  {
+   "nid": "4Mv9OXypBG8",
+   "scoped": "4Mv9OXypBG8#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmFindResourcesPublic",
+   "type": 2
+  },
+  {
+   "nid": "iBt3Oe00Kvc",
+   "scoped": "iBt3Oe00Kvc#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmFlushGarlic",
+   "type": 2
+  },
+  {
+   "nid": "V31V01UiScY",
+   "scoped": "V31V01UiScY#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmUpdateVsShader",
+   "type": 2
+  },
+  {
+   "nid": "UoYY0DWMC0U",
+   "scoped": "UoYY0DWMC0U#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetEqEventType",
+   "type": 2
+  },
+  {
+   "nid": "H7-fgvEutM0",
+   "scoped": "H7-fgvEutM0#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetEqTimeStamp",
+   "type": 2
+  },
+  {
+   "nid": "oL4hGI1PMpw",
+   "scoped": "oL4hGI1PMpw#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetGpuBlockStatus",
+   "type": 2
+  },
+  {
+   "nid": "tZCSL5ulnB4",
+   "scoped": "tZCSL5ulnB4#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetGpuInfoStatus",
+   "type": 2
+  },
+  {
+   "nid": "iFirFzgYsvw",
+   "scoped": "iFirFzgYsvw#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetLastWaitedAddress",
+   "type": 2
+  },
+  {
+   "nid": "KnldROUkWJY",
+   "scoped": "KnldROUkWJY#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetNumTcaUnits",
+   "type": 2
+  },
+  {
+   "nid": "FFVZcCu3zWU",
+   "scoped": "FFVZcCu3zWU#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetOffChipTessellationBufferSize",
+   "type": 2
+  },
+  {
+   "nid": "QJjPjlmPAL0",
+   "scoped": "QJjPjlmPAL0#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetOwnerName",
+   "type": 2
+  },
+  {
+   "nid": "dewXw5roLs0",
+   "scoped": "dewXw5roLs0#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetPhysicalCounterFromVirtualized",
+   "type": 2
+  },
+  {
+   "nid": "fzJdEihTFV4",
+   "scoped": "fzJdEihTFV4#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetProtectionFaultTimeStamp",
+   "type": 2
+  },
+  {
+   "nid": "4PKnYXOhcx4",
+   "scoped": "4PKnYXOhcx4#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetResourceBaseAddressAndSizeInBytes",
+   "type": 2
+  },
+  {
+   "nid": "O0S96YnD04U",
+   "scoped": "O0S96YnD04U#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetResourceName",
+   "type": 2
+  },
+  {
+   "nid": "UBv7FkVfzcQ",
+   "scoped": "UBv7FkVfzcQ#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetResourceShaderGuid",
+   "type": 2
+  },
+  {
+   "nid": "bdqdvIkLPIU",
+   "scoped": "bdqdvIkLPIU#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetResourceType",
+   "type": 2
+  },
+  {
+   "nid": "UoBuWAhKk7U",
+   "scoped": "UoBuWAhKk7U#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetResourceUserData",
+   "type": 2
+  },
+  {
+   "nid": "nEyFbYUloIM",
+   "scoped": "nEyFbYUloIM#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetShaderProgramBaseAddress",
+   "type": 2
+  },
+  {
+   "nid": "k7iGTvDQPLQ",
+   "scoped": "k7iGTvDQPLQ#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetShaderStatus",
+   "type": 2
+  },
+  {
+   "nid": "ln33zjBrfjk",
+   "scoped": "ln33zjBrfjk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmGetTheTessellationFactorRingBufferBaseAddress",
+   "type": 2
+  },
+  {
+   "nid": "NfvOrNzy6sk",
+   "scoped": "NfvOrNzy6sk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmInsertDingDongMarker",
+   "type": 2
+  },
+  {
+   "nid": "7qZVNgEu+SY",
+   "scoped": "7qZVNgEu+SY#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmInsertPopMarker",
+   "type": 2
+  },
+  {
+   "nid": "aPIZJTXC+cU",
+   "scoped": "aPIZJTXC+cU#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmInsertPushColorMarker",
+   "type": 2
+  },
+  {
+   "nid": "W1Etj-jlW7Y",
+   "scoped": "W1Etj-jlW7Y#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmInsertPushMarker",
+   "type": 2
+  },
+  {
+   "nid": "aj3L-iaFmyk",
+   "scoped": "aj3L-iaFmyk#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmInsertSetColorMarker",
+   "type": 2
+  },
+  {
+   "nid": "jiItzS6+22g",
+   "scoped": "jiItzS6+22g#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmInsertSetMarker",
+   "type": 2
+  },
+  {
+   "nid": "URDgJcXhQOs",
+   "scoped": "URDgJcXhQOs#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmInsertThreadTraceMarker",
+   "type": 2
+  },
+  {
+   "nid": "1qXLHIpROPE",
+   "scoped": "1qXLHIpROPE#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmInsertWaitFlipDone",
+   "type": 2
+  },
+  {
+   "nid": "jg33rEKLfVs",
+   "scoped": "jg33rEKLfVs#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmIsUserPaEnabled",
+   "type": 2
+  },
+  {
+   "nid": "26PM5Mzl8zc",
+   "scoped": "26PM5Mzl8zc#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmLogicalCuIndexToPhysicalCuIndex",
+   "type": 2
+  },
+  {
+   "nid": "RU74kek-N0c",
+   "scoped": "RU74kek-N0c#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmLogicalCuMaskToPhysicalCuMask",
+   "type": 2
+  },
+  {
+   "nid": "Kl0Z3LH07QI",
+   "scoped": "Kl0Z3LH07QI#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmLogicalTcaUnitToPhysical",
+   "type": 2
+  },
+  {
+   "nid": "29oKvKXzEZo",
+   "scoped": "29oKvKXzEZo#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmMapComputeQueue",
+   "type": 2
+  },
+  {
+   "nid": "A+uGq+3KFtQ",
+   "scoped": "A+uGq+3KFtQ#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmMapComputeQueueWithPriority",
+   "type": 2
+  },
+  {
+   "nid": "u9YKpRRHe-M",
+   "scoped": "u9YKpRRHe-M#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceRazorCaptureImmediate",
+   "type": 2
+  },
+  {
+   "nid": "vckdzbQ46SI",
+   "scoped": "vckdzbQ46SI#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetLsShader",
+   "type": 2
+  },
+  {
+   "nid": "6IMbpR7nTzA",
+   "scoped": "6IMbpR7nTzA#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmQueryResourceRegistrationUserMemoryRequirements",
+   "type": 2
+  },
+  {
+   "nid": "9Mv61HaMhfA",
+   "scoped": "9Mv61HaMhfA#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmRegisterGdsResource",
+   "type": 2
+  },
+  {
+   "nid": "ZFqKFl23aMc",
+   "scoped": "ZFqKFl23aMc#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmRegisterOwner",
+   "type": 2
+  },
+  {
+   "nid": "nvEwfYAImTs",
+   "scoped": "nvEwfYAImTs#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmRegisterResource",
+   "type": 2
+  },
+  {
+   "nid": "gObODli-OH8",
+   "scoped": "gObODli-OH8#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmRequestFlipAndSubmitDone",
+   "type": 2
+  },
+  {
+   "nid": "6YRHhh5mHCs",
+   "scoped": "6YRHhh5mHCs#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmRequestFlipAndSubmitDoneForWorkload",
+   "type": 2
+  },
+  {
+   "nid": "f85orjx7qts",
+   "scoped": "f85orjx7qts#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmRequestMipStatsReportAndReset",
+   "type": 2
+  },
+  {
+   "nid": "MYRtYhojKdA",
+   "scoped": "MYRtYhojKdA#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmResetVgtControl",
+   "type": 2
+  },
+  {
+   "nid": "Kx-h-nWQJ8A",
+   "scoped": "Kx-h-nWQJ8A#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetCsShaderWithModifier",
+   "type": 2
+  },
+  {
+   "nid": "X9Omw9dwv5M",
+   "scoped": "X9Omw9dwv5M#U#C",
+   "lib": "libSceGnmDriver",
+   "module": "libSceGnmDriver",
+   "name": "sceGnmSetEmbeddedPsShader",
+   "type": 2
+  },
+  {
+   "nid": "6biw1XHTSqQ",
+   "scoped": "6biw1XHTSqQ#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdClose",
+   "type": 2
+  },
+  {
+   "nid": "thDt9upZlp8",
+   "scoped": "thDt9upZlp8#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdGetDeviceInformation",
+   "type": 2
+  },
+  {
+   "nid": "1pxQfif1rkE",
+   "scoped": "1pxQfif1rkE#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdGetDeviceInformationByHandle",
+   "type": 2
+  },
+  {
+   "nid": "NPQwYFqi0bs",
+   "scoped": "NPQwYFqi0bs#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdGetFieldOfView",
+   "type": 2
+  },
+  {
+   "nid": "s-J66ar9g50",
+   "scoped": "s-J66ar9g50#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdInitialize315",
+   "type": 2
+  },
+  {
+   "nid": "d2g5Ij7EUzo",
+   "scoped": "d2g5Ij7EUzo#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdOpen",
+   "type": 2
+  },
+  {
+   "nid": "vzMEkwBQciM",
+   "scoped": "vzMEkwBQciM#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionStop",
+   "type": 2
+  },
+  {
+   "nid": "z-RMILqP6tE",
+   "scoped": "z-RMILqP6tE#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdTerminate",
+   "type": 2
+  },
+  {
+   "nid": "ZrV5YIqD09I",
+   "scoped": "ZrV5YIqD09I#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionFinalize",
+   "type": 2
+  },
+  {
+   "nid": "OuygGEWkins",
+   "scoped": "OuygGEWkins#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionInitialize",
+   "type": 2
+  },
+  {
+   "nid": "TkcANcGM0s8",
+   "scoped": "TkcANcGM0s8#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionQueryGarlicBuffAlign",
+   "type": 2
+  },
+  {
+   "nid": "z0KtN1vqF2E",
+   "scoped": "z0KtN1vqF2E#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionQueryGarlicBuffSize",
+   "type": 2
+  },
+  {
+   "nid": "IWybWbR-xvA",
+   "scoped": "IWybWbR-xvA#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionQueryOnionBuffAlign",
+   "type": 2
+  },
+  {
+   "nid": "kLUAkN6a1e8",
+   "scoped": "kLUAkN6a1e8#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionQueryOnionBuffSize",
+   "type": 2
+  },
+  {
+   "nid": "E+dPfjeQLHI",
+   "scoped": "E+dPfjeQLHI#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionSetDisplayBuffers",
+   "type": 2
+  },
+  {
+   "nid": "7as0CjXW1B8",
+   "scoped": "7as0CjXW1B8#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionSetUserEventStart",
+   "type": 2
+  },
+  {
+   "nid": "dntZTJ7meIU",
+   "scoped": "dntZTJ7meIU#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionStart",
+   "type": 2
+  },
+  {
+   "nid": "iGNNpDDjcwo",
+   "scoped": "iGNNpDDjcwo#DAx#4",
+   "lib": "libSceHmd",
+   "module": "libSceHmd",
+   "name": "sceHmdReprojectionUnsetDisplayBuffers",
+   "type": 2
+  },
+  {
+   "nid": "6lVRHMV5LY0",
+   "scoped": "6lVRHMV5LY0#DA3#7",
+   "lib": "libSceHmdSetupDialog",
+   "module": "libSceHmdSetupDialog",
+   "name": "sceHmdSetupDialogGetResult",
+   "type": 2
+  },
+  {
+   "nid": "NB1Y2kA2jCY",
+   "scoped": "NB1Y2kA2jCY#DA3#7",
+   "lib": "libSceHmdSetupDialog",
+   "module": "libSceHmdSetupDialog",
+   "name": "sceHmdSetupDialogInitialize",
+   "type": 2
+  },
+  {
+   "nid": "NNgiV4T+akU",
+   "scoped": "NNgiV4T+akU#DA3#7",
+   "lib": "libSceHmdSetupDialog",
+   "module": "libSceHmdSetupDialog",
+   "name": "sceHmdSetupDialogOpen",
+   "type": 2
+  },
+  {
+   "nid": "+z4OJmFreZc",
+   "scoped": "+z4OJmFreZc#DA3#7",
+   "lib": "libSceHmdSetupDialog",
+   "module": "libSceHmdSetupDialog",
+   "name": "sceHmdSetupDialogTerminate",
+   "type": 2
+  },
+  {
+   "nid": "Ud7j3+RDIBg",
+   "scoped": "Ud7j3+RDIBg#DA3#7",
+   "lib": "libSceHmdSetupDialog",
+   "module": "libSceHmdSetupDialog",
+   "name": "sceHmdSetupDialogUpdateStatus",
+   "type": 2
+  },
+  {
+   "nid": "x01jxu+vxlc",
+   "scoped": "x01jxu+vxlc#j#R",
+   "lib": "libSceImeDialog",
+   "module": "libSceImeDialog",
+   "name": "sceImeDialogGetResult",
+   "type": 2
+  },
+  {
+   "nid": "IADmD4tScBY",
+   "scoped": "IADmD4tScBY#j#R",
+   "lib": "libSceImeDialog",
+   "module": "libSceImeDialog",
+   "name": "sceImeDialogGetStatus",
+   "type": 2
+  },
+  {
+   "nid": "NUeBrN7hzf0",
+   "scoped": "NUeBrN7hzf0#j#R",
+   "lib": "libSceImeDialog",
+   "module": "libSceImeDialog",
+   "name": "sceImeDialogInit",
+   "type": 2
+  },
+  {
+   "nid": "gyTyVn+bXMw",
+   "scoped": "gyTyVn+bXMw#j#R",
+   "lib": "libSceImeDialog",
+   "module": "libSceImeDialog",
+   "name": "sceImeDialogTerm",
+   "type": 2
+  },
+  {
+   "nid": "oBmw4xrmfKs",
+   "scoped": "oBmw4xrmfKs#j#R",
+   "lib": "libSceImeDialog",
+   "module": "libSceImeDialog",
+   "name": "sceImeDialogAbort",
+   "type": 2
+  },
+  {
+   "nid": "cG1VE2HMl6c",
+   "scoped": "cG1VE2HMl6c#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json6StringD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "5JmzZt8twAo",
+   "scoped": "5JmzZt8twAo#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json6ObjectD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "oH8aBmLU+fc",
+   "scoped": "oH8aBmLU+fc#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json6Object5clearEv",
+   "type": 2
+  },
+  {
+   "nid": "Cxwy7wHq4J0",
+   "scoped": "Cxwy7wHq4J0#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json11Initializer10initializeEPKNS0_13InitParameterE",
+   "type": 2
+  },
+  {
+   "nid": "R7FDWtcN6f8",
+   "scoped": "R7FDWtcN6f8#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5Value9serializeERNS0_6StringE",
+   "type": 2
+  },
+  {
+   "nid": "qVOSuDRHCpA",
+   "scoped": "qVOSuDRHCpA#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5Array5clearEv",
+   "type": 2
+  },
+  {
+   "nid": "ERuf9y0DY84",
+   "scoped": "ERuf9y0DY84#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json6ObjectixERKNS0_6StringE",
+   "type": 2
+  },
+  {
+   "nid": "HJ8GpRT1aiw",
+   "scoped": "HJ8GpRT1aiw#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5ArrayD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "RujUxbr3haM",
+   "scoped": "RujUxbr3haM#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json11InitializerD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "OJPTonqdg0I",
+   "scoped": "OJPTonqdg0I#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json6ObjectC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "qSmqLXXCPas",
+   "scoped": "qSmqLXXCPas#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json6StringC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "WTtYf+cNnXI",
+   "scoped": "WTtYf+cNnXI#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5ValueD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "JP-PtKMiI1E",
+   "scoped": "JP-PtKMiI1E#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5ArrayC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "FIjXN2TkuTs",
+   "scoped": "FIjXN2TkuTs#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5Value5clearEv",
+   "type": 2
+  },
+  {
+   "nid": "iZeYfOxtMRg",
+   "scoped": "iZeYfOxtMRg#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5ValueC1ERKNS0_5ArrayE",
+   "type": 2
+  },
+  {
+   "nid": "OcAgPxcq5Vk",
+   "scoped": "OcAgPxcq5Vk#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json12MemAllocatorD2Ev",
+   "type": 2
+  },
+  {
+   "nid": "cK6bYHf-Q5E",
+   "scoped": "cK6bYHf-Q5E#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json11InitializerC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "qBMjqyBn3OM",
+   "scoped": "qBMjqyBn3OM#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5ValueC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "L1KAkYWml-M",
+   "scoped": "L1KAkYWml-M#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZNK3sce4Json6String5c_strEv",
+   "type": 2
+  },
+  {
+   "nid": "9KUZFjI1IxA",
+   "scoped": "9KUZFjI1IxA#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json6StringC1EPKc",
+   "type": 2
+  },
+  {
+   "nid": "sZIoMRGO+jk",
+   "scoped": "sZIoMRGO+jk#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5ValueC1ERKNS0_6StringE",
+   "type": 2
+  },
+  {
+   "nid": "4zrm6VrgIAw",
+   "scoped": "4zrm6VrgIAw#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5ValueaSERKS1_",
+   "type": 2
+  },
+  {
+   "nid": "3xUXnmUkXfo",
+   "scoped": "3xUXnmUkXfo#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5ValueC1ERKNS0_6ObjectE",
+   "type": 2
+  },
+  {
+   "nid": "-hJRce8wn1U",
+   "scoped": "-hJRce8wn1U#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json12MemAllocatorC2Ev",
+   "type": 2
+  },
+  {
+   "nid": "dFCphqnd+a4",
+   "scoped": "dFCphqnd+a4#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5Value3setERKNS0_6ObjectE",
+   "type": 2
+  },
+  {
+   "nid": "zQtLRTqceMY",
+   "scoped": "zQtLRTqceMY#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json5Array9push_backERKNS0_5ValueE",
+   "type": 2
+  },
+  {
+   "nid": "i-XwZjw0OOY",
+   "scoped": "i-XwZjw0OOY#DAY#v",
+   "lib": "libSceJson2",
+   "module": "libSceJson",
+   "name": "_ZN3sce4Json12MemAllocator11notifyErrorEimPv",
+   "type": 2
+  },
+  {
+   "nid": "GWXTyxs4QbE",
+   "scoped": "GWXTyxs4QbE#DA4#8",
+   "lib": "libSceMove",
+   "module": "libSceMove",
+   "name": "sceMoveGetDeviceInfo",
+   "type": 2
+  },
+  {
+   "nid": "ttU+JOhShl4",
+   "scoped": "ttU+JOhShl4#DA4#8",
+   "lib": "libSceMove",
+   "module": "libSceMove",
+   "name": "sceMoveReadStateLatest",
+   "type": 2
+  },
+  {
+   "nid": "lDqxaY1UbEo",
+   "scoped": "lDqxaY1UbEo#BF#y",
+   "lib": "libSceMsgDialog",
+   "module": "libSceMsgDialog",
+   "name": "sceMsgDialogInitialize",
+   "type": 2
+  },
+  {
+   "nid": "b06Hh0DPEaE",
+   "scoped": "b06Hh0DPEaE#BF#y",
+   "lib": "libSceMsgDialog",
+   "module": "libSceMsgDialog",
+   "name": "sceMsgDialogOpen",
+   "type": 2
+  },
+  {
+   "nid": "HTrcDKlFKuM",
+   "scoped": "HTrcDKlFKuM#BF#y",
+   "lib": "libSceMsgDialog",
+   "module": "libSceMsgDialog",
+   "name": "sceMsgDialogClose",
+   "type": 2
+  },
+  {
+   "nid": "Lr8ovHH9l6A",
+   "scoped": "Lr8ovHH9l6A#BF#y",
+   "lib": "libSceMsgDialog",
+   "module": "libSceMsgDialog",
+   "name": "sceMsgDialogGetResult",
+   "type": 2
+  },
+  {
+   "nid": "CWVW78Qc3fI",
+   "scoped": "CWVW78Qc3fI#BF#y",
+   "lib": "libSceMsgDialog",
+   "module": "libSceMsgDialog",
+   "name": "sceMsgDialogGetStatus",
+   "type": 2
+  },
+  {
+   "nid": "6fIC3XKt2k0",
+   "scoped": "6fIC3XKt2k0#BF#y",
+   "lib": "libSceMsgDialog",
+   "module": "libSceMsgDialog",
+   "name": "sceMsgDialogUpdateStatus",
+   "type": 2
+  },
+  {
+   "nid": "ePw-kqZmelo",
+   "scoped": "ePw-kqZmelo#BF#y",
+   "lib": "libSceMsgDialog",
+   "module": "libSceMsgDialog",
+   "name": "sceMsgDialogTerminate",
+   "type": 2
+  },
+  {
+   "nid": "45ggEzakPJQ",
+   "scoped": "45ggEzakPJQ#Z#H",
+   "lib": "libSceNet",
+   "module": "libSceNet",
+   "name": "sceNetSocketClose",
+   "type": 2
+  },
+  {
+   "nid": "ZVw46bsasAk",
+   "scoped": "ZVw46bsasAk#Z#H",
+   "lib": "libSceNet",
+   "module": "libSceNet",
+   "name": "sceNetEpollControl",
+   "type": 2
+  },
+  {
+   "nid": "SF47kB2MNTo",
+   "scoped": "SF47kB2MNTo#Z#H",
+   "lib": "libSceNet",
+   "module": "libSceNet",
+   "name": "sceNetEpollCreate",
+   "type": 2
+  },
+  {
+   "nid": "Inp1lfL+Jdw",
+   "scoped": "Inp1lfL+Jdw#Z#H",
+   "lib": "libSceNet",
+   "module": "libSceNet",
+   "name": "sceNetEpollDestroy",
+   "type": 2
+  },
+  {
+   "nid": "drjIbDbA7UQ",
+   "scoped": "drjIbDbA7UQ#Z#H",
+   "lib": "libSceNet",
+   "module": "libSceNet",
+   "name": "sceNetEpollWait",
+   "type": 2
+  },
+  {
+   "nid": "cTGkc6-TBlI",
+   "scoped": "cTGkc6-TBlI#Z#H",
+   "lib": "libSceNet",
+   "module": "libSceNet",
+   "name": "sceNetTerm",
+   "type": 2
+  },
+  {
+   "nid": "Nlev7Lg8k3A",
+   "scoped": "Nlev7Lg8k3A#Z#H",
+   "lib": "libSceNet",
+   "module": "libSceNet",
+   "name": "sceNetInit",
+   "type": 2
+  },
+  {
+   "nid": "obuxdTiwkF8",
+   "scoped": "obuxdTiwkF8#a#I",
+   "lib": "libSceNetCtl",
+   "module": "libSceNetCtl",
+   "name": "sceNetCtlGetInfo",
+   "type": 2
+  },
+  {
+   "nid": "gky0+oaNM4k",
+   "scoped": "gky0+oaNM4k#a#I",
+   "lib": "libSceNetCtl",
+   "module": "libSceNetCtl",
+   "name": "sceNetCtlInit",
+   "type": 2
+  },
+  {
+   "nid": "Z4wwCFiBELQ",
+   "scoped": "Z4wwCFiBELQ#a#I",
+   "lib": "libSceNetCtl",
+   "module": "libSceNetCtl",
+   "name": "sceNetCtlTerm",
+   "type": 2
+  },
+  {
+   "nid": "eQH7nWPcAgc",
+   "scoped": "eQH7nWPcAgc#DAn#Y",
+   "lib": "libSceNpManager",
+   "module": "libSceNpManager",
+   "name": "sceNpGetState",
+   "type": 2
+  },
+  {
+   "nid": "p-o74CnoNzY",
+   "scoped": "p-o74CnoNzY#DAn#Y",
+   "lib": "libSceNpManager",
+   "module": "libSceNpManager",
+   "name": "sceNpGetNpId",
+   "type": 2
+  },
+  {
+   "nid": "rbknaUjpqWo",
+   "scoped": "rbknaUjpqWo#DAn#Y",
+   "lib": "libSceNpManager",
+   "module": "libSceNpManager",
+   "name": "sceNpGetAccountIdA",
+   "type": 2
+  },
+  {
+   "nid": "5-UHpg8s00I",
+   "scoped": "5-UHpg8s00I#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core12ResponseBase13getReturnCodeEv",
+   "type": 2
+  },
+  {
+   "nid": "vbh-MWtjMh4",
+   "scoped": "vbh-MWtjMh4#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core7Request10InitParamsC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "-bAjEe-hdCg",
+   "scoped": "-bAjEe-hdCg#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core7Request10InitParamsD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "s0u30pOfi9Q",
+   "scoped": "s0u30pOfi9Q#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core7Request10TermParamsC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "vycUuYWwilI",
+   "scoped": "vycUuYWwilI#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core7Request10TermParamsD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "LLdnqVnnNBQ",
+   "scoped": "LLdnqVnnNBQ#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core4initERKNS3_7Request10InitParamsE",
+   "type": 2
+  },
+  {
+   "nid": "IcuECtP3L0E",
+   "scoped": "IcuECtP3L0E#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core4termERKNS3_7Request10TermParamsE",
+   "type": 2
+  },
+  {
+   "nid": "K3jkvDXyOHc",
+   "scoped": "K3jkvDXyOHc#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "589Hj6gCFu0",
+   "scoped": "589Hj6gCFu0#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "ESmRsPD6RRs",
+   "scoped": "ESmRsPD6RRs#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "uS05QSvf+tY",
+   "scoped": "uS05QSvf+tY#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request6UnlockC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "-A0EiAdM3tI",
+   "scoped": "-A0EiAdM3tI#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request6UnlockD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "QJWQZHC0y4Q",
+   "scoped": "QJWQZHC0y4Q#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "buMmdpEwRuM",
+   "scoped": "buMmdpEwRuM#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "5eo3yRQ09IU",
+   "scoped": "5eo3yRQ09IU#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request19GetUnlockedTrophiesC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "04SGUwIDmfE",
+   "scoped": "04SGUwIDmfE#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request19GetUnlockedTrophiesD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "wkgY4lDEV9k",
+   "scoped": "wkgY4lDEV9k#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request18RegisterTrophyPackC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "ItZXngg8tfo",
+   "scoped": "ItZXngg8tfo#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request18RegisterTrophyPackD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "iPDEu4fu2jM",
+   "scoped": "iPDEu4fu2jM#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request20GetTrophyPackSummaryC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "P21OxFwKDac",
+   "scoped": "P21OxFwKDac#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request20GetTrophyPackSummaryD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "AiQVTEwWQ5w",
+   "scoped": "AiQVTEwWQ5w#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request19GetTrophyPackTrophyD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "8Mio51rNcJQ",
+   "scoped": "8Mio51rNcJQ#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V26Trophy7Request19GetTrophyPackTrophyC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "+9j+VbOE+xQ",
+   "scoped": "+9j+VbOE+xQ#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "3uIwm8ckbVc",
+   "scoped": "3uIwm8ckbVc#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "ZpzDxqY5Zcw",
+   "scoped": "ZpzDxqY5Zcw#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "9IKooW79-AM",
+   "scoped": "9IKooW79-AM#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "?",
+   "type": 2
+  },
+  {
+   "nid": "F8luFJ2FEPY",
+   "scoped": "F8luFJ2FEPY#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V23TUS7Request12SetVariablesC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "oF9eBV9eolI",
+   "scoped": "oF9eBV9eolI#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V28Presence8PresenceD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "mIinAn8TvdY",
+   "scoped": "mIinAn8TvdY#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core12ResponseBase8isLockedEv",
+   "type": 2
+  },
+  {
+   "nid": "t0eLBGKYT1E",
+   "scoped": "t0eLBGKYT1E#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_6Trophy17TrophyPackSummaryEED1Ev",
+   "type": 2
+  },
+  {
+   "nid": "D1+5LUUSWHo",
+   "scoped": "D1+5LUUSWHo#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_6Trophy17TrophyPackSummaryEE5resetEv",
+   "type": 2
+  },
+  {
+   "nid": "tlpXm5KLgqk",
+   "scoped": "tlpXm5KLgqk#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS3_5EmptyEEC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "Z5UwZfm7vUY",
+   "scoped": "Z5UwZfm7vUY#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V28Presence8PresenceC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "TK6fX5Lm-6A",
+   "scoped": "TK6fX5Lm-6A#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_6Trophy17TrophyPackSummaryEEC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "7ONbnvN2brw",
+   "scoped": "7ONbnvN2brw#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V23TUS7Request7GetDataD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "XaKJqdhjD88",
+   "scoped": "XaKJqdhjD88#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_3TUS7TusDataEED1Ev",
+   "type": 2
+  },
+  {
+   "nid": "ebvI2g6M6HE",
+   "scoped": "ebvI2g6M6HE#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_3TUS7TusDataEE5resetEv",
+   "type": 2
+  },
+  {
+   "nid": "6ZKsmn9DS0Y",
+   "scoped": "6ZKsmn9DS0Y#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V23TUS7Request7SetDataD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "83lbPafRjgU",
+   "scoped": "83lbPafRjgU#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_6Trophy16UnlockedTrophiesEED1Ev",
+   "type": 2
+  },
+  {
+   "nid": "WqSxu7Had0Q",
+   "scoped": "WqSxu7Had0Q#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_6Trophy16UnlockedTrophiesEE5resetEv",
+   "type": 2
+  },
+  {
+   "nid": "6ClJwE3AiGs",
+   "scoped": "6ClJwE3AiGs#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V23TUS7Request7GetDataC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "zuftnZ9BD9w",
+   "scoped": "zuftnZ9BD9w#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_3TUS7TusDataEEC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "W2D0GnkDQoY",
+   "scoped": "W2D0GnkDQoY#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_6Trophy16UnlockedTrophiesEEC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "Foc0YVGG9s8",
+   "scoped": "Foc0YVGG9s8#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V23TUS7Request7SetDataC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "n7RJkfW-9oE",
+   "scoped": "n7RJkfW-9oE#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_3TUS12TusVariablesEE5resetEv",
+   "type": 2
+  },
+  {
+   "nid": "mXJwKDDXQ3s",
+   "scoped": "mXJwKDDXQ3s#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_3TUS12TusVariablesEE3getEv",
+   "type": 2
+  },
+  {
+   "nid": "i51FQZY--Sw",
+   "scoped": "i51FQZY--Sw#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V23TUS7Request12GetVariablesD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "IGc6FTBp6jE",
+   "scoped": "IGc6FTBp6jE#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V23TUS7Request12SetVariablesD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "jmiUcZi+ONI",
+   "scoped": "jmiUcZi+ONI#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_3TUS12TusVariablesEED1Ev",
+   "type": 2
+  },
+  {
+   "nid": "kxzokJHZ2nY",
+   "scoped": "kxzokJHZ2nY#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core12ResponseBase14getServerErrorEv",
+   "type": 2
+  },
+  {
+   "nid": "NhyOMK5FxAk",
+   "scoped": "NhyOMK5FxAk#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_3TUS7TusDataEE3getEv",
+   "type": 2
+  },
+  {
+   "nid": "evQPB2JiOTo",
+   "scoped": "evQPB2JiOTo#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V23TUS7Request12GetVariablesC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "30Zxe35LtBg",
+   "scoped": "30Zxe35LtBg#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS3_5EmptyEED1Ev",
+   "type": 2
+  },
+  {
+   "nid": "gpSEllb2338",
+   "scoped": "gpSEllb2338#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS2_3TUS12TusVariablesEEC1Ev",
+   "type": 2
+  },
+  {
+   "nid": "GvxTh5+CttM",
+   "scoped": "GvxTh5+CttM#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core11RequestBaseaSERKS4_",
+   "type": 2
+  },
+  {
+   "nid": "dB9nauAWtgg",
+   "scoped": "dB9nauAWtgg#DAV#e",
+   "lib": "libSceNpToolkit2",
+   "module": "libSceNpToolkit2",
+   "name": "_ZN3sce7Toolkit2NP2V24Core8ResponseINS3_5EmptyEE5resetEv",
+   "type": 2
+  },
+  {
+   "nid": "gjP9-KQzoUk",
+   "scoped": "gjP9-KQzoUk#V#D",
+   "lib": "libScePad",
+   "module": "libScePad",
+   "name": "scePadGetControllerInformation",
+   "type": 2
+  },
+  {
+   "nid": "6ncge5+l5Qs",
+   "scoped": "6ncge5+l5Qs#V#D",
+   "lib": "libScePad",
+   "module": "libScePad",
+   "name": "scePadClose",
+   "type": 2
+  },
+  {
+   "nid": "u1GRHp+oWoY",
+   "scoped": "u1GRHp+oWoY#V#D",
+   "lib": "libScePad",
+   "module": "libScePad",
+   "name": "scePadGetHandle",
+   "type": 2
+  },
+  {
+   "nid": "hv1luiJrqQM",
+   "scoped": "hv1luiJrqQM#V#D",
+   "lib": "libScePad",
+   "module": "libScePad",
+   "name": "scePadInit",
+   "type": 2
+  },
+  {
+   "nid": "xk0AcarP3V4",
+   "scoped": "xk0AcarP3V4#V#D",
+   "lib": "libScePad",
+   "module": "libScePad",
+   "name": "scePadOpen",
+   "type": 2
+  },
+  {
+   "nid": "YndgXqQVV7c",
+   "scoped": "YndgXqQVV7c#V#D",
+   "lib": "libScePad",
+   "module": "libScePad",
+   "name": "scePadReadState",
+   "type": 2
+  },
+  {
+   "nid": "yFVnOdGxvZY",
+   "scoped": "yFVnOdGxvZY#V#D",
+   "lib": "libScePad",
+   "module": "libScePad",
+   "name": "scePadSetVibration",
+   "type": 2
+  },
+  {
+   "nid": "v6EZ-YWRdMs",
+   "scoped": "v6EZ-YWRdMs#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoGetEta",
+   "type": 2
+  },
+  {
+   "nid": "gUPGiOQ1tmQ",
+   "scoped": "gUPGiOQ1tmQ#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoSetToDoList",
+   "type": 2
+  },
+  {
+   "nid": "rvBSfTimejE",
+   "scoped": "rvBSfTimejE#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoGetInstallSpeed",
+   "type": 2
+  },
+  {
+   "nid": "ts6GlZOKRrE",
+   "scoped": "ts6GlZOKRrE#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoInitialize",
+   "type": 2
+  },
+  {
+   "nid": "4AAcTU9R3XM",
+   "scoped": "4AAcTU9R3XM#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoSetInstallSpeed",
+   "type": 2
+  },
+  {
+   "nid": "-RJWNMK3fC8",
+   "scoped": "-RJWNMK3fC8#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoGetProgress",
+   "type": 2
+  },
+  {
+   "nid": "Uco1I0dlDi8",
+   "scoped": "Uco1I0dlDi8#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoClose",
+   "type": 2
+  },
+  {
+   "nid": "73fF1MFU8hA",
+   "scoped": "73fF1MFU8hA#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoGetChunkId",
+   "type": 2
+  },
+  {
+   "nid": "uWIYLFkkwqk",
+   "scoped": "uWIYLFkkwqk#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoGetLocus",
+   "type": 2
+  },
+  {
+   "nid": "MPe0EeBGM-E",
+   "scoped": "MPe0EeBGM-E#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoTerminate",
+   "type": 2
+  },
+  {
+   "nid": "Nn7zKwnA5q0",
+   "scoped": "Nn7zKwnA5q0#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoGetToDoList",
+   "type": 2
+  },
+  {
+   "nid": "M1Gma1ocrGE",
+   "scoped": "M1Gma1ocrGE#t#b",
+   "lib": "libScePlayGo",
+   "module": "libScePlayGo",
+   "name": "scePlayGoOpen",
+   "type": 2
+  },
+  {
+   "nid": "okgIGdr5Iz0",
+   "scoped": "okgIGdr5Iz0#u#c",
+   "lib": "libScePlayGoDialog",
+   "module": "libScePlayGoDialog",
+   "name": "scePlayGoDialogTerminate",
+   "type": 2
+  },
+  {
+   "nid": "kHd72ukqbxw",
+   "scoped": "kHd72ukqbxw#u#c",
+   "lib": "libScePlayGoDialog",
+   "module": "libScePlayGoDialog",
+   "name": "scePlayGoDialogOpen",
+   "type": 2
+  },
+  {
+   "nid": "Yb60K7BST48",
+   "scoped": "Yb60K7BST48#u#c",
+   "lib": "libScePlayGoDialog",
+   "module": "libScePlayGoDialog",
+   "name": "scePlayGoDialogUpdateStatus",
+   "type": 2
+  },
+  {
+   "nid": "fECamTJKpsM",
+   "scoped": "fECamTJKpsM#u#c",
+   "lib": "libScePlayGoDialog",
+   "module": "libScePlayGoDialog",
+   "name": "scePlayGoDialogInitialize",
+   "type": 2
+  },
+  {
+   "nid": "wx9TDplJKB4",
+   "scoped": "wx9TDplJKB4#u#c",
+   "lib": "libScePlayGoDialog",
+   "module": "libScePlayGoDialog",
+   "name": "scePlayGoDialogGetResult",
+   "type": 2
+  },
+  {
+   "nid": "9030RnBDoh4",
+   "scoped": "9030RnBDoh4#p#X",
+   "lib": "libScePngEnc",
+   "module": "libScePngEnc",
+   "name": "scePngEncQueryMemorySize",
+   "type": 2
+  },
+  {
+   "nid": "xgDjJKpcyHo",
+   "scoped": "xgDjJKpcyHo#p#X",
+   "lib": "libScePngEnc",
+   "module": "libScePngEnc",
+   "name": "scePngEncEncode",
+   "type": 2
+  },
+  {
+   "nid": "RUrWdwTWZy8",
+   "scoped": "RUrWdwTWZy8#p#X",
+   "lib": "libScePngEnc",
+   "module": "libScePngEnc",
+   "name": "scePngEncDelete",
+   "type": 2
+  },
+  {
+   "nid": "7aGTPfrqT9s",
+   "scoped": "7aGTPfrqT9s#p#X",
+   "lib": "libScePngEnc",
+   "module": "libScePngEnc",
+   "name": "scePngEncCreate",
+   "type": 2
+  },
+  {
+   "nid": "YpkGsMXP3ew",
+   "scoped": "YpkGsMXP3ew#BG#z",
+   "lib": "libSceRazorCpu",
+   "module": "libSceRazorCpu",
+   "name": "sceRazorCpuPopMarker",
+   "type": 2
+  },
+  {
+   "nid": "uZrOwuNJX-M",
+   "scoped": "uZrOwuNJX-M#BG#z",
+   "lib": "libSceRazorCpu",
+   "module": "libSceRazorCpu",
+   "name": "sceRazorCpuPushMarkerStatic",
+   "type": 2
+  },
+  {
+   "nid": "BOwybKVa3Do",
+   "scoped": "BOwybKVa3Do#f#N",
+   "lib": "libSceRemoteplay",
+   "module": "libSceRemoteplay",
+   "name": "sceRemoteplayTerminate",
+   "type": 2
+  },
+  {
+   "nid": "7QLrixwVHcU",
+   "scoped": "7QLrixwVHcU#f#N",
+   "lib": "libSceRemoteplay",
+   "module": "libSceRemoteplay",
+   "name": "sceRemoteplayProhibitStreaming",
+   "type": 2
+  },
+  {
+   "nid": "k1SwgkMSOM8",
+   "scoped": "k1SwgkMSOM8#f#N",
+   "lib": "libSceRemoteplay",
+   "module": "libSceRemoteplay",
+   "name": "sceRemoteplayInitialize",
+   "type": 2
+  },
+  {
+   "nid": "g3PNjYKWqnQ",
+   "scoped": "g3PNjYKWqnQ#f#N",
+   "lib": "libSceRemoteplay",
+   "module": "libSceRemoteplay",
+   "name": "sceRemoteplayGetConnectionStatus",
+   "type": 2
+  },
+  {
+   "nid": "18B2NS1y9UU",
+   "scoped": "18B2NS1y9UU#DAh#G",
+   "lib": "libSceRtc",
+   "module": "libSceRtc",
+   "name": "sceRtcGetCurrentTick",
+   "type": 2
+  },
+  {
+   "nid": "ZPD1YOKI+Kw",
+   "scoped": "ZPD1YOKI+Kw#DAh#G",
+   "lib": "libSceRtc",
+   "module": "libSceRtc",
+   "name": "sceRtcGetCurrentClockLocalTime",
+   "type": 2
+  },
+  {
+   "nid": "8w-H19ip48I",
+   "scoped": "8w-H19ip48I#DAh#G",
+   "lib": "libSceRtc",
+   "module": "libSceRtc",
+   "name": "sceRtcGetTick",
+   "type": 2
+  },
+  {
+   "nid": "jMNwqYr4R-k",
+   "scoped": "jMNwqYr4R-k#DAh#G",
+   "lib": "libSceRtc",
+   "module": "libSceRtc",
+   "name": "sceRtcGetTickResolution",
+   "type": 2
+  },
+  {
+   "nid": "ANmSWUiyyGQ",
+   "scoped": "ANmSWUiyyGQ#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataGetProgress",
+   "type": 2
+  },
+  {
+   "nid": "Wz-4JZfeO9g",
+   "scoped": "Wz-4JZfeO9g#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataClearProgress",
+   "type": 2
+  },
+  {
+   "nid": "TywrFKCoLGY",
+   "scoped": "TywrFKCoLGY#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataInitialize3",
+   "type": 2
+  },
+  {
+   "nid": "yKDy8S5yLA0",
+   "scoped": "yKDy8S5yLA0#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataTerminate",
+   "type": 2
+  },
+  {
+   "nid": "85zul--eGXs",
+   "scoped": "85zul--eGXs#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataSetParam",
+   "type": 2
+  },
+  {
+   "nid": "0z45PIH+SNI",
+   "scoped": "0z45PIH+SNI#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataMount2",
+   "type": 2
+  },
+  {
+   "nid": "BMR4F-Uek3E",
+   "scoped": "BMR4F-Uek3E#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataUmount",
+   "type": 2
+  },
+  {
+   "nid": "RQOqDbk3bSU",
+   "scoped": "RQOqDbk3bSU#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataCheckBackupData",
+   "type": 2
+  },
+  {
+   "nid": "S1GkePI17zQ",
+   "scoped": "S1GkePI17zQ#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataDelete",
+   "type": 2
+  },
+  {
+   "nid": "lU9YRFsgwSU",
+   "scoped": "lU9YRFsgwSU#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataRestoreBackupData",
+   "type": 2
+  },
+  {
+   "nid": "dyIhnXq-0SM",
+   "scoped": "dyIhnXq-0SM#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataDirNameSearch",
+   "type": 2
+  },
+  {
+   "nid": "c88Yy54Mx0w",
+   "scoped": "c88Yy54Mx0w#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataSaveIcon",
+   "type": 2
+  },
+  {
+   "nid": "VwadwBBBJ80",
+   "scoped": "VwadwBBBJ80#n#V",
+   "lib": "libSceSaveData",
+   "module": "libSceSaveData",
+   "name": "sceSaveDataUmountWithBackup",
+   "type": 2
+  },
+  {
+   "nid": "fH46Lag88XY",
+   "scoped": "fH46Lag88XY#o#W",
+   "lib": "libSceSaveDataDialog",
+   "module": "libSceSaveDataDialog",
+   "name": "sceSaveDataDialogClose",
+   "type": 2
+  },
+  {
+   "nid": "yEiJ-qqr6Cg",
+   "scoped": "yEiJ-qqr6Cg#o#W",
+   "lib": "libSceSaveDataDialog",
+   "module": "libSceSaveDataDialog",
+   "name": "sceSaveDataDialogGetResult",
+   "type": 2
+  },
+  {
+   "nid": "KK3Bdg1RWK0",
+   "scoped": "KK3Bdg1RWK0#o#W",
+   "lib": "libSceSaveDataDialog",
+   "module": "libSceSaveDataDialog",
+   "name": "sceSaveDataDialogUpdateStatus",
+   "type": 2
+  },
+  {
+   "nid": "en7gNVnh878",
+   "scoped": "en7gNVnh878#o#W",
+   "lib": "libSceSaveDataDialog",
+   "module": "libSceSaveDataDialog",
+   "name": "sceSaveDataDialogIsReadyToDisplay",
+   "type": 2
+  },
+  {
+   "nid": "hay1CfTmLyA",
+   "scoped": "hay1CfTmLyA#o#W",
+   "lib": "libSceSaveDataDialog",
+   "module": "libSceSaveDataDialog",
+   "name": "sceSaveDataDialogProgressBarSetValue",
+   "type": 2
+  },
+  {
+   "nid": "s9e3+YpRnzw",
+   "scoped": "s9e3+YpRnzw#o#W",
+   "lib": "libSceSaveDataDialog",
+   "module": "libSceSaveDataDialog",
+   "name": "sceSaveDataDialogInitialize",
+   "type": 2
+  },
+  {
+   "nid": "YuH2FA7azqQ",
+   "scoped": "YuH2FA7azqQ#o#W",
+   "lib": "libSceSaveDataDialog",
+   "module": "libSceSaveDataDialog",
+   "name": "sceSaveDataDialogTerminate",
+   "type": 2
+  },
+  {
+   "nid": "4tPhsP6FpDI",
+   "scoped": "4tPhsP6FpDI#o#W",
+   "lib": "libSceSaveDataDialog",
+   "module": "libSceSaveDataDialog",
+   "name": "sceSaveDataDialogOpen",
+   "type": 2
+  },
+  {
+   "nid": "tIYf0W5VTi8",
+   "scoped": "tIYf0W5VTi8#g#O",
+   "lib": "libSceScreenShot",
+   "module": "libSceScreenShot",
+   "name": "sceScreenShotDisable",
+   "type": 2
+  },
+  {
+   "nid": "2xxUtuC-RzE",
+   "scoped": "2xxUtuC-RzE#g#O",
+   "lib": "libSceScreenShot",
+   "module": "libSceScreenShot",
+   "name": "sceScreenShotEnable",
+   "type": 2
+  },
+  {
+   "nid": "G7KlmIYFIZc",
+   "scoped": "G7KlmIYFIZc#g#O",
+   "lib": "libSceScreenShot",
+   "module": "libSceScreenShot",
+   "name": "sceScreenShotSetParam",
+   "type": 2
+  },
+  {
+   "nid": "ahHhOf+QNkQ",
+   "scoped": "ahHhOf+QNkQ#g#O",
+   "lib": "libSceScreenShot",
+   "module": "libSceScreenShot",
+   "name": "sceScreenShotSetOverlayImage",
+   "type": 2
+  },
+  {
+   "nid": "73WQ4Jj0nJI",
+   "scoped": "73WQ4Jj0nJI#g#O",
+   "lib": "libSceScreenShot",
+   "module": "libSceScreenShot",
+   "name": "sceScreenShotSetOverlayImageWithOrigin",
+   "type": 2
+  },
+  {
+   "nid": "hMYgMP-Vuno",
+   "scoped": "hMYgMP-Vuno#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographyDecrypt",
+   "type": 2
+  },
+  {
+   "nid": "XKDzFiGAvhU",
+   "scoped": "XKDzFiGAvhU#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographyMessagePadding",
+   "type": 2
+  },
+  {
+   "nid": "nMFArZfMy7U",
+   "scoped": "nMFArZfMy7U#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographyMessageUnpadding",
+   "type": 2
+  },
+  {
+   "nid": "pT4ViD0o-bM",
+   "scoped": "pT4ViD0o-bM#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographyGetContextSize",
+   "type": 2
+  },
+  {
+   "nid": "aEoi0u2FOiQ",
+   "scoped": "aEoi0u2FOiQ#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographyEncrypt",
+   "type": 2
+  },
+  {
+   "nid": "TtV6Hg4hWo4",
+   "scoped": "TtV6Hg4hWo4#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographyGetBlockSize",
+   "type": 2
+  },
+  {
+   "nid": "fIqNvkKIUPQ",
+   "scoped": "fIqNvkKIUPQ#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureInit",
+   "type": 2
+  },
+  {
+   "nid": "hyfPWjJB8pI",
+   "scoped": "hyfPWjJB8pI#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographySetContext",
+   "type": 2
+  },
+  {
+   "nid": "NpcegFLFQpg",
+   "scoped": "NpcegFLFQpg#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographyMessagePaddingSize",
+   "type": 2
+  },
+  {
+   "nid": "RsiCFJMIGHw",
+   "scoped": "RsiCFJMIGHw#BD#w",
+   "lib": "libSceSecure",
+   "module": "libSceSecure",
+   "name": "sceLibSecureCryptographyDeleteContext",
+   "type": 2
+  },
+  {
+   "nid": "UaLjloJinow",
+   "scoped": "UaLjloJinow#BA#t",
+   "lib": "libSceSharePlay",
+   "module": "libSceSharePlay",
+   "name": "sceSharePlayTerminate",
+   "type": 2
+  },
+  {
+   "nid": "isruqthpYcw",
+   "scoped": "isruqthpYcw#BA#t",
+   "lib": "libSceSharePlay",
+   "module": "libSceSharePlay",
+   "name": "sceSharePlayInitialize",
+   "type": 2
+  },
+  {
+   "nid": "co2NCj--pnc",
+   "scoped": "co2NCj--pnc#BA#t",
+   "lib": "libSceSharePlay",
+   "module": "libSceSharePlay",
+   "name": "sceSharePlaySetProhibition",
+   "type": 2
+  },
+  {
+   "nid": "u4bCGkqhOB4",
+   "scoped": "u4bCGkqhOB4#BB#u",
+   "lib": "libSceShareUtility",
+   "module": "libSceShareUtility",
+   "name": "sceShareUtilityAdvanceInitialize",
+   "type": 2
+  },
+  {
+   "nid": "karnJhakdKg",
+   "scoped": "karnJhakdKg#BB#u",
+   "lib": "libSceShareUtility",
+   "module": "libSceShareUtility",
+   "name": "sceShareUtilityAdvanceSetUploadContentData",
+   "type": 2
+  },
+  {
+   "nid": "wcxz4F94s6k",
+   "scoped": "wcxz4F94s6k#BB#u",
+   "lib": "libSceShareUtility",
+   "module": "libSceShareUtility",
+   "name": "sceShareUtilityAdvanceWakeUpShareMenuDefault",
+   "type": 2
+  },
+  {
+   "nid": "xfB04bSjrZY",
+   "scoped": "xfB04bSjrZY#BB#u",
+   "lib": "libSceShareUtility",
+   "module": "libSceShareUtility",
+   "name": "sceShareUtilityAdvanceTerminate",
+   "type": 2
+  },
+  {
+   "nid": "g8cM39EUZ6o",
+   "scoped": "g8cM39EUZ6o#DAw#M",
+   "lib": "libSceSysmodule",
+   "module": "libSceSysmodule",
+   "name": "sceSysmoduleLoadModule",
+   "type": 2
+  },
+  {
+   "nid": "eR2bZFAAU0Q",
+   "scoped": "eR2bZFAAU0Q#DAw#M",
+   "lib": "libSceSysmodule",
+   "module": "libSceSysmodule",
+   "name": "sceSysmoduleUnloadModule",
+   "type": 2
+  },
+  {
+   "nid": "fMP5NHUOaMk",
+   "scoped": "fMP5NHUOaMk#DAw#M",
+   "lib": "libSceSysmodule",
+   "module": "libSceSysmodule",
+   "name": "sceSysmoduleIsLoaded",
+   "type": 2
+  },
+  {
+   "nid": "3s8cHiCBKBE",
+   "scoped": "3s8cHiCBKBE#DA2#P",
+   "lib": "libSceSystemService",
+   "module": "libSceSystemService",
+   "name": "sceSystemServiceReportAbnormalTermination",
+   "type": 2
+  },
+  {
+   "nid": "rPo6tV8D9bM",
+   "scoped": "rPo6tV8D9bM#DA2#P",
+   "lib": "libSceSystemService",
+   "module": "libSceSystemService",
+   "name": "sceSystemServiceGetStatus",
+   "type": 2
+  },
+  {
+   "nid": "656LMQSrg6U",
+   "scoped": "656LMQSrg6U#DA2#P",
+   "lib": "libSceSystemService",
+   "module": "libSceSystemService",
+   "name": "sceSystemServiceReceiveEvent",
+   "type": 2
+  },
+  {
+   "nid": "Vo5V8KAwCmk",
+   "scoped": "Vo5V8KAwCmk#DA2#P",
+   "lib": "libSceSystemService",
+   "module": "libSceSystemService",
+   "name": "sceSystemServiceHideSplashScreen",
+   "type": 2
+  },
+  {
+   "nid": "CdWp0oHWGr0",
+   "scoped": "CdWp0oHWGr0#DAy#J",
+   "lib": "libSceUserService",
+   "module": "libSceUserService",
+   "name": "sceUserServiceGetInitialUser",
+   "type": 2
+  },
+  {
+   "nid": "yH17Q6NWtVg",
+   "scoped": "yH17Q6NWtVg#DAy#J",
+   "lib": "libSceUserService",
+   "module": "libSceUserService",
+   "name": "sceUserServiceGetEvent",
+   "type": 2
+  },
+  {
+   "nid": "bwFjS+bX9mA",
+   "scoped": "bwFjS+bX9mA#DAy#J",
+   "lib": "libSceUserService",
+   "module": "libSceUserService",
+   "name": "sceUserServiceTerminate",
+   "type": 2
+  },
+  {
+   "nid": "j3YMu1MVNNo",
+   "scoped": "j3YMu1MVNNo#DAy#J",
+   "lib": "libSceUserService",
+   "module": "libSceUserService",
+   "name": "sceUserServiceInitialize",
+   "type": 2
+  },
+  {
+   "nid": "fPhymKNvK-A",
+   "scoped": "fPhymKNvK-A#DAy#J",
+   "lib": "libSceUserService",
+   "module": "libSceUserService",
+   "name": "sceUserServiceGetLoginUserIdList",
+   "type": 2
+  },
+  {
+   "nid": "DYhhWbJSeRg",
+   "scoped": "DYhhWbJSeRg#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutColorSettingsSetGamma_",
+   "type": 2
+  },
+  {
+   "nid": "pv9CI5VC+R0",
+   "scoped": "pv9CI5VC+R0#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutAdjustColor_",
+   "type": 2
+  },
+  {
+   "nid": "N1bEoJ4SRw4",
+   "scoped": "N1bEoJ4SRw4#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutConfigureOutputMode_",
+   "type": 2
+  },
+  {
+   "nid": "CBiu4mCE1DA",
+   "scoped": "CBiu4mCE1DA#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutSetFlipRate",
+   "type": 2
+  },
+  {
+   "nid": "N5KDtkIjjJ4",
+   "scoped": "N5KDtkIjjJ4#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutUnregisterBuffers",
+   "type": 2
+  },
+  {
+   "nid": "pjkDsgxli6c",
+   "scoped": "pjkDsgxli6c#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutModeSetAny_",
+   "type": 2
+  },
+  {
+   "nid": "HXzjK9yI30k",
+   "scoped": "HXzjK9yI30k#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutAddFlipEvent",
+   "type": 2
+  },
+  {
+   "nid": "IOdgHlCGU-k",
+   "scoped": "IOdgHlCGU-k#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutSubmitChangeBufferAttribute",
+   "type": 2
+  },
+  {
+   "nid": "kGVLc3htQE8",
+   "scoped": "kGVLc3htQE8#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutGetDeviceCapabilityInfo_",
+   "type": 2
+  },
+  {
+   "nid": "U46NwOiJpys",
+   "scoped": "U46NwOiJpys#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutSubmitFlip",
+   "type": 2
+  },
+  {
+   "nid": "Up36PTk687E",
+   "scoped": "Up36PTk687E#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutOpen",
+   "type": 2
+  },
+  {
+   "nid": "j6RaAUlaLv0",
+   "scoped": "j6RaAUlaLv0#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutWaitVblank",
+   "type": 2
+  },
+  {
+   "nid": "SbU3dwp80lQ",
+   "scoped": "SbU3dwp80lQ#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutGetFlipStatus",
+   "type": 2
+  },
+  {
+   "nid": "6kPnj51T62Y",
+   "scoped": "6kPnj51T62Y#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutGetResolutionStatus",
+   "type": 2
+  },
+  {
+   "nid": "w3BY+tAEiQY",
+   "scoped": "w3BY+tAEiQY#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutRegisterBuffers",
+   "type": 2
+  },
+  {
+   "nid": "i6-sR91Wt-4",
+   "scoped": "i6-sR91Wt-4#W#E",
+   "lib": "libSceVideoOut",
+   "module": "libSceVideoOut",
+   "name": "sceVideoOutSetBufferAttribute",
+   "type": 2
+  },
+  {
+   "nid": "Fc8qxlKINYQ",
+   "scoped": "Fc8qxlKINYQ#l#T",
+   "lib": "libSceVideoRecording",
+   "module": "libSceVideoRecording",
+   "name": "sceVideoRecordingSetInfo",
+   "type": 2
+  },
+  {
+   "nid": "KHvkPQJDMLk",
+   "scoped": "KHvkPQJDMLk#l#T",
+   "lib": "libSceVideoRecording",
+   "module": "libSceVideoRecording",
+   "name": "sceVideoRecordingClose",
+   "type": 2
+  },
+  {
+   "nid": "s28dalBwp2g",
+   "scoped": "s28dalBwp2g#l#T",
+   "lib": "libSceVideoRecording",
+   "module": "libSceVideoRecording",
+   "name": "sceVideoRecordingOpen2",
+   "type": 2
+  },
+  {
+   "nid": "OOFxrMY+mfI",
+   "scoped": "OOFxrMY+mfI#l#T",
+   "lib": "libSceVideoRecording",
+   "module": "libSceVideoRecording",
+   "name": "sceVideoRecordingStop",
+   "type": 2
+  },
+  {
+   "nid": "fZJQzFK4Gv4",
+   "scoped": "fZJQzFK4Gv4#l#T",
+   "lib": "libSceVideoRecording",
+   "module": "libSceVideoRecording",
+   "name": "sceVideoRecordingGetStatus",
+   "type": 2
+  },
+  {
+   "nid": "tWoe9IlGAhs",
+   "scoped": "tWoe9IlGAhs#l#T",
+   "lib": "libSceVideoRecording",
+   "module": "libSceVideoRecording",
+   "name": "sceVideoRecordingStart",
+   "type": 2
+  },
+  {
+   "nid": "76OBvrrQXUc",
+   "scoped": "76OBvrrQXUc#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerGetResult",
+   "type": 2
+  },
+  {
+   "nid": "XoeWzXlrnMw",
+   "scoped": "XoeWzXlrnMw#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerGetTime",
+   "type": 2
+  },
+  {
+   "nid": "TVegDMLaBB8",
+   "scoped": "TVegDMLaBB8#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerGpuSubmit",
+   "type": 2
+  },
+  {
+   "nid": "ARhgpXvwoR0",
+   "scoped": "ARhgpXvwoR0#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerGpuWaitAndCpuProcess",
+   "type": 2
+  },
+  {
+   "nid": "QkRl7pART9M",
+   "scoped": "QkRl7pART9M#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerInit",
+   "type": 2
+  },
+  {
+   "nid": "K7yhYrsIBPc",
+   "scoped": "K7yhYrsIBPc#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerQueryMemory",
+   "type": 2
+  },
+  {
+   "nid": "EUCaQtXXYNI",
+   "scoped": "EUCaQtXXYNI#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerRecalibrate",
+   "type": 2
+  },
+  {
+   "nid": "sIh8GwcevaQ",
+   "scoped": "sIh8GwcevaQ#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerRegisterDevice",
+   "type": 2
+  },
+  {
+   "nid": "IBv4P3q1pQ0",
+   "scoped": "IBv4P3q1pQ0#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerTerm",
+   "type": 2
+  },
+  {
+   "nid": "Q8skQqEwn5c",
+   "scoped": "Q8skQqEwn5c#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerUnregisterDevice",
+   "type": 2
+  },
+  {
+   "nid": "9fvHMUbsom4",
+   "scoped": "9fvHMUbsom4#DAz#5",
+   "lib": "libSceVrTracker",
+   "module": "libSceVrTracker",
+   "name": "sceVrTrackerUpdateMotionSensorData",
+   "type": 2
+  },
+  {
+   "nid": "w1NxRBQqfmQ",
+   "scoped": "w1NxRBQqfmQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "printf_s",
+   "type": 2
+  },
+  {
+   "nid": "tsvEmnenz48",
+   "scoped": "tsvEmnenz48#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "__cxa_atexit",
+   "type": 2
+  },
+  {
+   "nid": "9rAeANT2tyE",
+   "scoped": "9rAeANT2tyE#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "__cxa_guard_release",
+   "type": 2
+  },
+  {
+   "nid": "3GPpjQdAMTw",
+   "scoped": "3GPpjQdAMTw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "__cxa_guard_acquire",
+   "type": 2
+  },
+  {
+   "nid": "ozMAr28BwSY",
+   "scoped": "ozMAr28BwSY#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZSt14_Xout_of_rangePKc",
+   "type": 2
+  },
+  {
+   "nid": "j4ViWNHEgww",
+   "scoped": "j4ViWNHEgww#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strlen",
+   "type": 2
+  },
+  {
+   "nid": "DfivPArhucg",
+   "scoped": "DfivPArhucg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "memcmp",
+   "type": 2
+  },
+  {
+   "nid": "eT2UsmTewbU",
+   "scoped": "eT2UsmTewbU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZSt11_Xbad_allocv",
+   "type": 2
+  },
+  {
+   "nid": "tQIo+GIPklo",
+   "scoped": "tQIo+GIPklo#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZSt14_Xlength_errorPKc",
+   "type": 2
+  },
+  {
+   "nid": "tIhsqj0qsFE",
+   "scoped": "tIhsqj0qsFE#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "free",
+   "type": 2
+  },
+  {
+   "nid": "QW2jL1J5rwY",
+   "scoped": "QW2jL1J5rwY#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNSt6locale5facet9_RegisterEv",
+   "type": 2
+  },
+  {
+   "nid": "Qoo175Ig+-k",
+   "scoped": "Qoo175Ig+-k#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZSt21_sceLibcClassicLocale",
+   "type": 1
+  },
+  {
+   "nid": "kALvdgEv5ME",
+   "scoped": "kALvdgEv5ME#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Locksyslock",
+   "type": 2
+  },
+  {
+   "nid": "sUP1hBaouOw",
+   "scoped": "sUP1hBaouOw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Getpctype",
+   "type": 2
+  },
+  {
+   "nid": "yLE5H3058Ao",
+   "scoped": "yLE5H3058Ao#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZTVNSt8ios_base7failureE",
+   "type": 1
+  },
+  {
+   "nid": "-L+-8F0+gBc",
+   "scoped": "-L+-8F0+gBc#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZTVSt13runtime_error",
+   "type": 1
+  },
+  {
+   "nid": "p6LrHjIQMdk",
+   "scoped": "p6LrHjIQMdk#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNSt8_LocinfoD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "iPBqs+YUUFw",
+   "scoped": "iPBqs+YUUFw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Atomic_fetch_add_4",
+   "type": 2
+  },
+  {
+   "nid": "2HnmKiLmV6s",
+   "scoped": "2HnmKiLmV6s#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Atomic_fetch_sub_4",
+   "type": 2
+  },
+  {
+   "nid": "hqi8yMOCmG0",
+   "scoped": "hqi8yMOCmG0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNSt8_LocinfoC1EPKc",
+   "type": 2
+  },
+  {
+   "nid": "1uJgoVq3bQU",
+   "scoped": "1uJgoVq3bQU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Getptolower",
+   "type": 2
+  },
+  {
+   "nid": "P8F2oavZXtY",
+   "scoped": "P8F2oavZXtY#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNSt8ios_baseD2Ev",
+   "type": 2
+  },
+  {
+   "nid": "FQ9NFbBHb5Y",
+   "scoped": "FQ9NFbBHb5Y#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZSt7_BADOFF",
+   "type": 1
+  },
+  {
+   "nid": "V23qt24VPVs",
+   "scoped": "V23qt24VPVs#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZSt17iostream_categoryv",
+   "type": 2
+  },
+  {
+   "nid": "H4fcpQOpc08",
+   "scoped": "H4fcpQOpc08#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNSt6locale2id7_Id_cntE",
+   "type": 1
+  },
+  {
+   "nid": "wiR+rIcbnlc",
+   "scoped": "wiR+rIcbnlc#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZSt4_Fpz",
+   "type": 1
+  },
+  {
+   "nid": "DuW5ZqZv-70",
+   "scoped": "DuW5ZqZv-70#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNKSt9exception6_RaiseEv",
+   "type": 2
+  },
+  {
+   "nid": "9nf8joUTSaQ",
+   "scoped": "9nf8joUTSaQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Unlocksyslock",
+   "type": 2
+  },
+  {
+   "nid": "hEQ2Yi4PJXA",
+   "scoped": "hEQ2Yi4PJXA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNSt6locale16_GetgloballocaleEv",
+   "type": 2
+  },
+  {
+   "nid": "N2f485TmJms",
+   "scoped": "N2f485TmJms#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNSt8ios_base7failureD1Ev",
+   "type": 2
+  },
+  {
+   "nid": "Bq8m04PN1zw",
+   "scoped": "Bq8m04PN1zw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZTVSt12system_error",
+   "type": 1
+  },
+  {
+   "nid": "Cv+zC4EjGMA",
+   "scoped": "Cv+zC4EjGMA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZNSt5ctypeIcE2idE",
+   "type": 1
+  },
+  {
+   "nid": "rcQCUr0EaRU",
+   "scoped": "rcQCUr0EaRU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Getptoupper",
+   "type": 2
+  },
+  {
+   "nid": "Ovb2dSJOAuE",
+   "scoped": "Ovb2dSJOAuE#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strcmp",
+   "type": 2
+  },
+  {
+   "nid": "eLdDw6l0-bU",
+   "scoped": "eLdDw6l0-bU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "snprintf",
+   "type": 2
+  },
+  {
+   "nid": "sZLrjx-yEx4",
+   "scoped": "sZLrjx-yEx4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wcstombs_s",
+   "type": 2
+  },
+  {
+   "nid": "0nV21JjYCH8",
+   "scoped": "0nV21JjYCH8#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wcsncpy",
+   "type": 2
+  },
+  {
+   "nid": "6f5f-qx4ucA",
+   "scoped": "6f5f-qx4ucA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wcscpy_s",
+   "type": 2
+  },
+  {
+   "nid": "FM5NPnLqBc8",
+   "scoped": "FM5NPnLqBc8#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wcscpy",
+   "type": 2
+  },
+  {
+   "nid": "KZm8HUIX2Rw",
+   "scoped": "KZm8HUIX2Rw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wcscat",
+   "type": 2
+  },
+  {
+   "nid": "Q2V+iqvjgC0",
+   "scoped": "Q2V+iqvjgC0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "vsnprintf",
+   "type": 2
+  },
+  {
+   "nid": "Ujf3KzMvRmI",
+   "scoped": "Ujf3KzMvRmI#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "memalign",
+   "type": 2
+  },
+  {
+   "nid": "6sJWiWSRuqk",
+   "scoped": "6sJWiWSRuqk#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strncpy",
+   "type": 2
+  },
+  {
+   "nid": "kHg45qPC6f0",
+   "scoped": "kHg45qPC6f0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strncat",
+   "type": 2
+  },
+  {
+   "nid": "zr094EQ39Ww",
+   "scoped": "zr094EQ39Ww#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "__cxa_pure_virtual",
+   "type": 2
+  },
+  {
+   "nid": "NFLs+dRJGNg",
+   "scoped": "NFLs+dRJGNg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "memcpy_s",
+   "type": 2
+  },
+  {
+   "nid": "gQX+4GDQjpM",
+   "scoped": "gQX+4GDQjpM#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "malloc",
+   "type": 2
+  },
+  {
+   "nid": "9yDWMxEFdJU",
+   "scoped": "9yDWMxEFdJU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strrchr",
+   "type": 2
+  },
+  {
+   "nid": "YQ0navp+YIc",
+   "scoped": "YQ0navp+YIc#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "puts",
+   "type": 2
+  },
+  {
+   "nid": "gNQ1V2vfXDE",
+   "scoped": "gNQ1V2vfXDE#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "setjmp",
+   "type": 2
+  },
+  {
+   "nid": "QI-x0SL8jhw",
+   "scoped": "QI-x0SL8jhw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "acosf",
+   "type": 2
+  },
+  {
+   "nid": "MELi-cKqWq0",
+   "scoped": "MELi-cKqWq0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_ZSt19_Xbad_function_callv",
+   "type": 2
+  },
+  {
+   "nid": "GZWjF-YIFFk",
+   "scoped": "GZWjF-YIFFk#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "asinf",
+   "type": 2
+  },
+  {
+   "nid": "ZtjspkJQ+vw",
+   "scoped": "ZtjspkJQ+vw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_FSin",
+   "type": 2
+  },
+  {
+   "nid": "EH-x713A99c",
+   "scoped": "EH-x713A99c#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "atan2f",
+   "type": 2
+  },
+  {
+   "nid": "NC4MSB+BRQg",
+   "scoped": "NC4MSB+BRQg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strncat_s",
+   "type": 2
+  },
+  {
+   "nid": "mKhVDmYciWA",
+   "scoped": "mKhVDmYciWA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "floorf",
+   "type": 2
+  },
+  {
+   "nid": "tcVi5SivF7Q",
+   "scoped": "tcVi5SivF7Q#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "sprintf",
+   "type": 2
+  },
+  {
+   "nid": "fmT2cjPoWBs",
+   "scoped": "fmT2cjPoWBs#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fabsf",
+   "type": 2
+  },
+  {
+   "nid": "hew0fReI2H0",
+   "scoped": "hew0fReI2H0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "mblen",
+   "type": 2
+  },
+  {
+   "nid": "viiwFMaNamA",
+   "scoped": "viiwFMaNamA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strstr",
+   "type": 2
+  },
+  {
+   "nid": "tdcAqgCS+uI",
+   "scoped": "tdcAqgCS+uI#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "mbstowcs_s",
+   "type": 2
+  },
+  {
+   "nid": "3BytPOQgVKc",
+   "scoped": "3BytPOQgVKc#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "snprintf_s",
+   "type": 2
+  },
+  {
+   "nid": "zlfEH8FmyUA",
+   "scoped": "zlfEH8FmyUA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Stoul",
+   "type": 2
+  },
+  {
+   "nid": "5jNubw4vlAA",
+   "scoped": "5jNubw4vlAA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strnlen",
+   "type": 2
+  },
+  {
+   "nid": "aesyjrHVWy4",
+   "scoped": "aesyjrHVWy4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strncmp",
+   "type": 2
+  },
+  {
+   "nid": "YNzNkJzYqEg",
+   "scoped": "YNzNkJzYqEg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strncpy_s",
+   "type": 2
+  },
+  {
+   "nid": "88Vv-AzHVj8",
+   "scoped": "88Vv-AzHVj8#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fmodf",
+   "type": 2
+  },
+  {
+   "nid": "cpCOXWMgha0",
+   "scoped": "cpCOXWMgha0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "rand",
+   "type": 2
+  },
+  {
+   "nid": "efhK-YSUYYQ",
+   "scoped": "efhK-YSUYYQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "localtime",
+   "type": 2
+  },
+  {
+   "nid": "VPbJwTCgME0",
+   "scoped": "VPbJwTCgME0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "srand",
+   "type": 2
+  },
+  {
+   "nid": "jbz9I9vkqkk",
+   "scoped": "jbz9I9vkqkk#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "vsprintf",
+   "type": 2
+  },
+  {
+   "nid": "8u8lPzUEq+U",
+   "scoped": "8u8lPzUEq+U#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "memchr",
+   "type": 2
+  },
+  {
+   "nid": "weDug8QD-lE",
+   "scoped": "weDug8QD-lE#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "atanf",
+   "type": 2
+  },
+  {
+   "nid": "SfQIZcqvvms",
+   "scoped": "SfQIZcqvvms#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strlcpy",
+   "type": 2
+  },
+  {
+   "nid": "ZE6RNL+eLbk",
+   "scoped": "ZE6RNL+eLbk#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "tanf",
+   "type": 2
+  },
+  {
+   "nid": "WkkeywLJcgU",
+   "scoped": "WkkeywLJcgU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wcslen",
+   "type": 2
+  },
+  {
+   "nid": "fL3O02ypZFE",
+   "scoped": "fL3O02ypZFE#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wmemcpy",
+   "type": 2
+  },
+  {
+   "nid": "Noj9PsJrsa8",
+   "scoped": "Noj9PsJrsa8#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wmemmove",
+   "type": 2
+  },
+  {
+   "nid": "QJ5xVfKkni0",
+   "scoped": "QJ5xVfKkni0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wmemcmp",
+   "type": 2
+  },
+  {
+   "nid": "fnUEjBCNRVU",
+   "scoped": "fnUEjBCNRVU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wmemchr",
+   "type": 2
+  },
+  {
+   "nid": "wLlFkwG9UcQ",
+   "scoped": "wLlFkwG9UcQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "time",
+   "type": 2
+  },
+  {
+   "nid": "-VVn74ZyhEs",
+   "scoped": "-VVn74ZyhEs#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "difftime",
+   "type": 2
+  },
+  {
+   "nid": "GAUuLKGhsCw",
+   "scoped": "GAUuLKGhsCw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "ceilf",
+   "type": 2
+  },
+  {
+   "nid": "Q+xU11-h0xQ",
+   "scoped": "Q+xU11-h0xQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "sqrtf",
+   "type": 2
+  },
+  {
+   "nid": "P330P3dFF68",
+   "scoped": "P330P3dFF68#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "Need_sceLibc",
+   "type": 1
+  },
+  {
+   "nid": "bzQExy189ZI",
+   "scoped": "bzQExy189ZI#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_init_env",
+   "type": 2
+  },
+  {
+   "nid": "8G2LB+A3rzg",
+   "scoped": "8G2LB+A3rzg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "atexit",
+   "type": 2
+  },
+  {
+   "nid": "XKRegsFpEpk",
+   "scoped": "XKRegsFpEpk#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "catchReturnFromMain",
+   "type": 2
+  },
+  {
+   "nid": "uMei1W9uyNo",
+   "scoped": "uMei1W9uyNo#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "exit",
+   "type": 2
+  },
+  {
+   "nid": "-QgqOT5u2Vk",
+   "scoped": "-QgqOT5u2Vk#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Assert",
+   "type": 2
+  },
+  {
+   "nid": "jjjRS7l1MPM",
+   "scoped": "jjjRS7l1MPM#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_FLog",
+   "type": 2
+  },
+  {
+   "nid": "NVadfnzQhHQ",
+   "scoped": "NVadfnzQhHQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "exp",
+   "type": 2
+  },
+  {
+   "nid": "8zsu04XNsZ4",
+   "scoped": "8zsu04XNsZ4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "expf",
+   "type": 2
+  },
+  {
+   "nid": "Q3VBxCXhUHs",
+   "scoped": "Q3VBxCXhUHs#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "memcpy",
+   "type": 2
+  },
+  {
+   "nid": "8zTFvBIAIN8",
+   "scoped": "8zTFvBIAIN8#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "memset",
+   "type": 2
+  },
+  {
+   "nid": "9LCjpWyQ5Zc",
+   "scoped": "9LCjpWyQ5Zc#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "pow",
+   "type": 2
+  },
+  {
+   "nid": "1D0H2KNjshE",
+   "scoped": "1D0H2KNjshE#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "powf",
+   "type": 2
+  },
+  {
+   "nid": "zXCi78bYrEI",
+   "scoped": "zXCi78bYrEI#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Log",
+   "type": 2
+  },
+  {
+   "nid": "+P6FRGH4LfA",
+   "scoped": "+P6FRGH4LfA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "memmove",
+   "type": 2
+  },
+  {
+   "nid": "Ls4tzzhimqQ",
+   "scoped": "Ls4tzzhimqQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strcat",
+   "type": 2
+  },
+  {
+   "nid": "AEJdIVZTEmo",
+   "scoped": "AEJdIVZTEmo#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "qsort",
+   "type": 2
+  },
+  {
+   "nid": "Y7aJ1uydPMo",
+   "scoped": "Y7aJ1uydPMo#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "realloc",
+   "type": 2
+  },
+  {
+   "nid": "kiZSXIWd9vg",
+   "scoped": "kiZSXIWd9vg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strcpy",
+   "type": 2
+  },
+  {
+   "nid": "uodLYyUip20",
+   "scoped": "uodLYyUip20#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fclose",
+   "type": 2
+  },
+  {
+   "nid": "KdP-nULpuGw",
+   "scoped": "KdP-nULpuGw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fgets",
+   "type": 2
+  },
+  {
+   "nid": "xeYO4u7uyJ0",
+   "scoped": "xeYO4u7uyJ0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fopen",
+   "type": 2
+  },
+  {
+   "nid": "QrZZdJ8XsX0",
+   "scoped": "QrZZdJ8XsX0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fputs",
+   "type": 2
+  },
+  {
+   "nid": "lbB+UlZqVG0",
+   "scoped": "lbB+UlZqVG0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fread",
+   "type": 2
+  },
+  {
+   "nid": "1Pk0qZQGeWo",
+   "scoped": "1Pk0qZQGeWo#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "sscanf",
+   "type": 2
+  },
+  {
+   "nid": "SRI6S9B+-a4",
+   "scoped": "SRI6S9B+-a4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "atof",
+   "type": 2
+  },
+  {
+   "nid": "wuAQt-j+p4o",
+   "scoped": "wuAQt-j+p4o#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "exp2f",
+   "type": 2
+  },
+  {
+   "nid": "m-Bu5Tzr82A",
+   "scoped": "m-Bu5Tzr82A#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_LSin",
+   "type": 2
+  },
+  {
+   "nid": "kn0yiYeExgA",
+   "scoped": "kn0yiYeExgA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "ldexpf",
+   "type": 2
+  },
+  {
+   "nid": "SAd0Z3wKwLA",
+   "scoped": "SAd0Z3wKwLA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "tanhf",
+   "type": 2
+  },
+  {
+   "nid": "dhK16CKwhQg",
+   "scoped": "dhK16CKwhQg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "__isfinite",
+   "type": 2
+  },
+  {
+   "nid": "n7AepwR0s34",
+   "scoped": "n7AepwR0s34#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "mktime",
+   "type": 2
+  },
+  {
+   "nid": "pXvbDfchu6k",
+   "scoped": "pXvbDfchu6k#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strncasecmp",
+   "type": 2
+  },
+  {
+   "nid": "pNtJdE3x49E",
+   "scoped": "pNtJdE3x49E#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wcscmp",
+   "type": 2
+  },
+  {
+   "nid": "cCXjU72Z0Ow",
+   "scoped": "cCXjU72Z0Ow#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Sin",
+   "type": 2
+  },
+  {
+   "nid": "AV6ipCNa4Rw",
+   "scoped": "AV6ipCNa4Rw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strcasecmp",
+   "type": 2
+  },
+  {
+   "nid": "2sWzhYqFH4E",
+   "scoped": "2sWzhYqFH4E#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Stdout",
+   "type": 1
+  },
+  {
+   "nid": "MUjC4lbHrK4",
+   "scoped": "MUjC4lbHrK4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fflush",
+   "type": 2
+  },
+  {
+   "nid": "m5wN+SwZOR4",
+   "scoped": "m5wN+SwZOR4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "putchar",
+   "type": 2
+  },
+  {
+   "nid": "H8AprKeZtNg",
+   "scoped": "H8AprKeZtNg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Stderr",
+   "type": 1
+  },
+  {
+   "nid": "fffwELXNVFA",
+   "scoped": "fffwELXNVFA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fprintf",
+   "type": 2
+  },
+  {
+   "nid": "lKEN2IebgJ0",
+   "scoped": "lKEN2IebgJ0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "longjmp",
+   "type": 2
+  },
+  {
+   "nid": "2vDqwBlpF-o",
+   "scoped": "2vDqwBlpF-o#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strtod",
+   "type": 2
+  },
+  {
+   "nid": "MpxhMh8QFro",
+   "scoped": "MpxhMh8QFro#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fwrite",
+   "type": 2
+  },
+  {
+   "nid": "1mecP7RgI2A",
+   "scoped": "1mecP7RgI2A#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "gmtime",
+   "type": 2
+  },
+  {
+   "nid": "aZK8lNei-Qw",
+   "scoped": "aZK8lNei-Qw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fputc",
+   "type": 2
+  },
+  {
+   "nid": "Qazy8LmXTvw",
+   "scoped": "Qazy8LmXTvw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "ftell",
+   "type": 2
+  },
+  {
+   "nid": "ob5xAW4ln-0",
+   "scoped": "ob5xAW4ln-0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strchr",
+   "type": 2
+  },
+  {
+   "nid": "NesIgTmfF0Q",
+   "scoped": "NesIgTmfF0Q#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "bsearch",
+   "type": 2
+  },
+  {
+   "nid": "NDcSfcYZRC8",
+   "scoped": "NDcSfcYZRC8#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "malloc_usable_size",
+   "type": 2
+  },
+  {
+   "nid": "2X5agFjKxMc",
+   "scoped": "2X5agFjKxMc#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "calloc",
+   "type": 2
+  },
+  {
+   "nid": "GMpvxPFW924",
+   "scoped": "GMpvxPFW924#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "vprintf",
+   "type": 2
+  },
+  {
+   "nid": "OGVdXU3E-xg",
+   "scoped": "OGVdXU3E-xg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "wprintf",
+   "type": 2
+  },
+  {
+   "nid": "nJz16JE1txM",
+   "scoped": "nJz16JE1txM#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "swprintf",
+   "type": 2
+  },
+  {
+   "nid": "rQFVBXp-Cxg",
+   "scoped": "rQFVBXp-Cxg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "fseek",
+   "type": 2
+  },
+  {
+   "nid": "PdnFCFqKGqA",
+   "scoped": "PdnFCFqKGqA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_FCosh",
+   "type": 2
+  },
+  {
+   "nid": "O4L+0oCN9zA",
+   "scoped": "O4L+0oCN9zA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_FSinh",
+   "type": 2
+  },
+  {
+   "nid": "1TDo-ImqkJc",
+   "scoped": "1TDo-ImqkJc#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "_Stdin",
+   "type": 1
+  },
+  {
+   "nid": "LxcEU+ICu8U",
+   "scoped": "LxcEU+ICu8U#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "feof",
+   "type": 2
+  },
+  {
+   "nid": "AHxyhN96dy4",
+   "scoped": "AHxyhN96dy4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "ferror",
+   "type": 2
+  },
+  {
+   "nid": "gkWgn0p1AfU",
+   "scoped": "gkWgn0p1AfU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "freopen",
+   "type": 2
+  },
+  {
+   "nid": "8Q60JLJ6Rv4",
+   "scoped": "8Q60JLJ6Rv4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "getc",
+   "type": 2
+  },
+  {
+   "nid": "RIa6GnWp+iU",
+   "scoped": "RIa6GnWp+iU#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strerror",
+   "type": 2
+  },
+  {
+   "nid": "L1SBTkC+Cvw",
+   "scoped": "L1SBTkC+Cvw#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "abort",
+   "type": 2
+  },
+  {
+   "nid": "RCQAffkEh9A",
+   "scoped": "RCQAffkEh9A#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "coshf",
+   "type": 2
+  },
+  {
+   "nid": "aaDMGGkXFxo",
+   "scoped": "aaDMGGkXFxo#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "frexpf",
+   "type": 2
+  },
+  {
+   "nid": "lhpd6Wk6ccs",
+   "scoped": "lhpd6Wk6ccs#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "log10f",
+   "type": 2
+  },
+  {
+   "nid": "3+UPM-9E6xY",
+   "scoped": "3+UPM-9E6xY#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "modff",
+   "type": 2
+  },
+  {
+   "nid": "1t1-JoZ0sZQ",
+   "scoped": "1t1-JoZ0sZQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "sinhf",
+   "type": 2
+  },
+  {
+   "nid": "JrwFIMzKNr0",
+   "scoped": "JrwFIMzKNr0#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "ldexp",
+   "type": 2
+  },
+  {
+   "nid": "kDZvoVssCgQ",
+   "scoped": "kDZvoVssCgQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strpbrk",
+   "type": 2
+  },
+  {
+   "nid": "kA-TdiOCsaY",
+   "scoped": "kA-TdiOCsaY#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "frexp",
+   "type": 2
+  },
+  {
+   "nid": "gjbmYpP-XJQ",
+   "scoped": "gjbmYpP-XJQ#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strcoll",
+   "type": 2
+  },
+  {
+   "nid": "-kU6bB4M-+k",
+   "scoped": "-kU6bB4M-+k#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "strspn",
+   "type": 2
+  },
+  {
+   "nid": "0hlfW1O4Aa4",
+   "scoped": "0hlfW1O4Aa4#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "localeconv",
+   "type": 2
+  },
+  {
+   "nid": "dnaeGXbjP6E",
+   "scoped": "dnaeGXbjP6E#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "exp2",
+   "type": 2
+  },
+  {
+   "nid": "0WMHDb5Dt94",
+   "scoped": "0WMHDb5Dt94#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "modf",
+   "type": 2
+  },
+  {
+   "nid": "T7uyNqP7vQA",
+   "scoped": "T7uyNqP7vQA#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "tan",
+   "type": 2
+  },
+  {
+   "nid": "HUbZmOnT-Dg",
+   "scoped": "HUbZmOnT-Dg#BI#0",
+   "lib": "libc",
+   "module": "libc",
+   "name": "atan2",
+   "type": 2
+  },
+  {
+   "nid": "3e+4Iv7IJ8U",
+   "scoped": "3e+4Iv7IJ8U#DAa#K",
+   "lib": "libScePosix",
+   "module": "libkernel",
+   "name": "accept",
+   "type": 2
+  },
+  {
+   "nid": "KuOmgKoqCdY",
+   "scoped": "KuOmgKoqCdY#DAa#K",
+   "lib": "libScePosix",
+   "module": "libkernel",
+   "name": "bind",
+   "type": 2
+  },
+  {
+   "nid": "pxnCmagrtao",
+   "scoped": "pxnCmagrtao#DAa#K",
+   "lib": "libScePosix",
+   "module": "libkernel",
+   "name": "listen",
+   "type": 2
+  },
+  {
+   "nid": "Ez8xjo9UF4E",
+   "scoped": "Ez8xjo9UF4E#DAa#K",
+   "lib": "libScePosix",
+   "module": "libkernel",
+   "name": "recv",
+   "type": 2
+  },
+  {
+   "nid": "fZOeZIOEmLw",
+   "scoped": "fZOeZIOEmLw#DAa#K",
+   "lib": "libScePosix",
+   "module": "libkernel",
+   "name": "send",
+   "type": 2
+  },
+  {
+   "nid": "fFxGkxF2bVo",
+   "scoped": "fFxGkxF2bVo#DAa#K",
+   "lib": "libScePosix",
+   "module": "libkernel",
+   "name": "setsockopt",
+   "type": 2
+  },
+  {
+   "nid": "TUuiYS2kE8s",
+   "scoped": "TUuiYS2kE8s#DAa#K",
+   "lib": "libScePosix",
+   "module": "libkernel",
+   "name": "shutdown",
+   "type": 2
+  },
+  {
+   "nid": "TU-d9PfIHPM",
+   "scoped": "TU-d9PfIHPM#DAa#K",
+   "lib": "libScePosix",
+   "module": "libkernel",
+   "name": "socket",
+   "type": 2
+  },
+  {
+   "nid": "4czppHBiriw",
+   "scoped": "4czppHBiriw#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelSignalSema",
+   "type": 2
+  },
+  {
+   "nid": "2Of0f+3mhhE",
+   "scoped": "2Of0f+3mhhE#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexDestroy",
+   "type": 2
+  },
+  {
+   "nid": "tn3VlD0hG60",
+   "scoped": "tn3VlD0hG60#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexUnlock",
+   "type": 2
+  },
+  {
+   "nid": "eXbUSpEaTsA",
+   "scoped": "eXbUSpEaTsA#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrSetinheritsched",
+   "type": 2
+  },
+  {
+   "nid": "F8bUHwAG284",
+   "scoped": "F8bUHwAG284#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexattrInit",
+   "type": 2
+  },
+  {
+   "nid": "kDh-NfxgMtE",
+   "scoped": "kDh-NfxgMtE#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCondSignal",
+   "type": 2
+  },
+  {
+   "nid": "EI-5-jlq2dE",
+   "scoped": "EI-5-jlq2dE#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadGetthreadid",
+   "type": 2
+  },
+  {
+   "nid": "62KCwEMmzcM",
+   "scoped": "62KCwEMmzcM#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrDestroy",
+   "type": 2
+  },
+  {
+   "nid": "4J2sUJmuHZQ",
+   "scoped": "4J2sUJmuHZQ#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelGetProcessTime",
+   "type": 2
+  },
+  {
+   "nid": "waPcxYiR3WA",
+   "scoped": "waPcxYiR3WA#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCondattrDestroy",
+   "type": 2
+  },
+  {
+   "nid": "aI+OeCz8xrQ",
+   "scoped": "aI+OeCz8xrQ#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadSelf",
+   "type": 2
+  },
+  {
+   "nid": "g+PZd2hiacg",
+   "scoped": "g+PZd2hiacg#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCondDestroy",
+   "type": 2
+  },
+  {
+   "nid": "onNY9Byn-W8",
+   "scoped": "onNY9Byn-W8#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadJoin",
+   "type": 2
+  },
+  {
+   "nid": "R1Jvn8bSCW8",
+   "scoped": "R1Jvn8bSCW8#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelDeleteSema",
+   "type": 2
+  },
+  {
+   "nid": "188x57JYp0g",
+   "scoped": "188x57JYp0g#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelCreateSema",
+   "type": 2
+  },
+  {
+   "nid": "Zxa0VhQVTsk",
+   "scoped": "Zxa0VhQVTsk#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelWaitSema",
+   "type": 2
+  },
+  {
+   "nid": "JGgj7Uvrl+A",
+   "scoped": "JGgj7Uvrl+A#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCondBroadcast",
+   "type": 2
+  },
+  {
+   "nid": "2Tb92quprl0",
+   "scoped": "2Tb92quprl0#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCondInit",
+   "type": 2
+  },
+  {
+   "nid": "WKAXJ4XBPQ4",
+   "scoped": "WKAXJ4XBPQ4#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCondWait",
+   "type": 2
+  },
+  {
+   "nid": "1tKyG7RlMJo",
+   "scoped": "1tKyG7RlMJo#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadGetprio",
+   "type": 2
+  },
+  {
+   "nid": "4+h9EzwKF4I",
+   "scoped": "4+h9EzwKF4I#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrSetschedpolicy",
+   "type": 2
+  },
+  {
+   "nid": "DzES9hQF4f4",
+   "scoped": "DzES9hQF4f4#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrSetschedparam",
+   "type": 2
+  },
+  {
+   "nid": "3qxgM4ezETA",
+   "scoped": "3qxgM4ezETA#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrSetaffinity",
+   "type": 2
+  },
+  {
+   "nid": "1jfXLRVzisc",
+   "scoped": "1jfXLRVzisc#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelUsleep",
+   "type": 2
+  },
+  {
+   "nid": "cmo1RIYva9o",
+   "scoped": "cmo1RIYva9o#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexInit",
+   "type": 2
+  },
+  {
+   "nid": "nsYoNRywwNg",
+   "scoped": "nsYoNRywwNg#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrInit",
+   "type": 2
+  },
+  {
+   "nid": "m5-2bsNfv7s",
+   "scoped": "m5-2bsNfv7s#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCondattrInit",
+   "type": 2
+  },
+  {
+   "nid": "6UgtwV+0zb4",
+   "scoped": "6UgtwV+0zb4#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCreate",
+   "type": 2
+  },
+  {
+   "nid": "UTXzJbWhhTE",
+   "scoped": "UTXzJbWhhTE#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrSetstacksize",
+   "type": 2
+  },
+  {
+   "nid": "smWEktiyyG0",
+   "scoped": "smWEktiyyG0#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexattrDestroy",
+   "type": 2
+  },
+  {
+   "nid": "3kg7rT0NQIs",
+   "scoped": "3kg7rT0NQIs#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadExit",
+   "type": 2
+  },
+  {
+   "nid": "9UK1vLZQft4",
+   "scoped": "9UK1vLZQft4#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexLock",
+   "type": 2
+  },
+  {
+   "nid": "IWIBBdTHit4",
+   "scoped": "IWIBBdTHit4#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelMapFlexibleMemory",
+   "type": 2
+  },
+  {
+   "nid": "QKd0qM58Qes",
+   "scoped": "QKd0qM58Qes#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelStopUnloadModule",
+   "type": 2
+  },
+  {
+   "nid": "wzvqT4UqKX8",
+   "scoped": "wzvqT4UqKX8#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelLoadStartModule",
+   "type": 2
+  },
+  {
+   "nid": "4wSze92BhLI",
+   "scoped": "4wSze92BhLI#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelWrite",
+   "type": 2
+  },
+  {
+   "nid": "1G3lF1Gg1k8",
+   "scoped": "1G3lF1Gg1k8#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelOpen",
+   "type": 2
+  },
+  {
+   "nid": "eV9wAD2riIA",
+   "scoped": "eV9wAD2riIA#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelStat",
+   "type": 2
+  },
+  {
+   "nid": "Cg4srZ6TKbU",
+   "scoped": "Cg4srZ6TKbU#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelRead",
+   "type": 2
+  },
+  {
+   "nid": "UK2Tl2DWUns",
+   "scoped": "UK2Tl2DWUns#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelClose",
+   "type": 2
+  },
+  {
+   "nid": "WslcK1FQcGI",
+   "scoped": "WslcK1FQcGI#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelIsNeoMode",
+   "type": 2
+  },
+  {
+   "nid": "-Wreprtu0Qs",
+   "scoped": "-Wreprtu0Qs#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrSetdetachstate",
+   "type": 2
+  },
+  {
+   "nid": "Ou3iL1abvng",
+   "scoped": "Ou3iL1abvng#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "__stack_chk_fail",
+   "type": 2
+  },
+  {
+   "nid": "f7uOxY9mM1U",
+   "scoped": "f7uOxY9mM1U#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "__stack_chk_guard",
+   "type": 1
+  },
+  {
+   "nid": "uWyW3v98sU4",
+   "scoped": "uWyW3v98sU4#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelCheckReachability",
+   "type": 2
+  },
+  {
+   "nid": "kBwCPsYX-m4",
+   "scoped": "kBwCPsYX-m4#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelFstat",
+   "type": 2
+  },
+  {
+   "nid": "fTx66l5iWIA",
+   "scoped": "fTx66l5iWIA#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelFsync",
+   "type": 2
+  },
+  {
+   "nid": "VW3TVZiM4-E",
+   "scoped": "VW3TVZiM4-E#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelFtruncate",
+   "type": 2
+  },
+  {
+   "nid": "oib76F-12fk",
+   "scoped": "oib76F-12fk#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelLseek",
+   "type": 2
+  },
+  {
+   "nid": "1-LFLmRFxxM",
+   "scoped": "1-LFLmRFxxM#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelMkdir",
+   "type": 2
+  },
+  {
+   "nid": "52NcYU9+lEo",
+   "scoped": "52NcYU9+lEo#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelRename",
+   "type": 2
+  },
+  {
+   "nid": "AUXVxWeJU-A",
+   "scoped": "AUXVxWeJU-A#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelUnlink",
+   "type": 2
+  },
+  {
+   "nid": "1FGvU0i9saQ",
+   "scoped": "1FGvU0i9saQ#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexattrSetprotocol",
+   "type": 2
+  },
+  {
+   "nid": "iMp8QpE+XO4",
+   "scoped": "iMp8QpE+XO4#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexattrSettype",
+   "type": 2
+  },
+  {
+   "nid": "rcrVFJsQWRY",
+   "scoped": "rcrVFJsQWRY#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadGetaffinity",
+   "type": 2
+  },
+  {
+   "nid": "How7B8Oet6k",
+   "scoped": "How7B8Oet6k#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadGetname",
+   "type": 2
+  },
+  {
+   "nid": "GBUY7ywdULE",
+   "scoped": "GBUY7ywdULE#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadRename",
+   "type": 2
+  },
+  {
+   "nid": "bt3CTBKmGyI",
+   "scoped": "bt3CTBKmGyI#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadSetaffinity",
+   "type": 2
+  },
+  {
+   "nid": "W0Hpm2X0uPE",
+   "scoped": "W0Hpm2X0uPE#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadSetprio",
+   "type": 2
+  },
+  {
+   "nid": "fgxnMeTNUtY",
+   "scoped": "fgxnMeTNUtY#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelGetProcessTimeCounter",
+   "type": 2
+  },
+  {
+   "nid": "BNowx2l588E",
+   "scoped": "BNowx2l588E#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelGetProcessTimeCounterFrequency",
+   "type": 2
+  },
+  {
+   "nid": "vNe1w4diLCs",
+   "scoped": "vNe1w4diLCs#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "__tls_get_addr",
+   "type": 2
+  },
+  {
+   "nid": "rTXw65xmLIA",
+   "scoped": "rTXw65xmLIA#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelAllocateDirectMemory",
+   "type": 2
+  },
+  {
+   "nid": "C0f7TJcbfac",
+   "scoped": "C0f7TJcbfac#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelAvailableDirectMemorySize",
+   "type": 2
+  },
+  {
+   "nid": "pO96TwzOm5E",
+   "scoped": "pO96TwzOm5E#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelGetDirectMemorySize",
+   "type": 2
+  },
+  {
+   "nid": "L-Q3LEjIbgA",
+   "scoped": "L-Q3LEjIbgA#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelMapDirectMemory",
+   "type": 2
+  },
+  {
+   "nid": "cQke9UuBQOk",
+   "scoped": "cQke9UuBQOk#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelMunmap",
+   "type": 2
+  },
+  {
+   "nid": "MBuItvba6z8",
+   "scoped": "MBuItvba6z8#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelReleaseDirectMemory",
+   "type": 2
+  },
+  {
+   "nid": "rVjRvHJ0X6c",
+   "scoped": "rVjRvHJ0X6c#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelVirtualQuery",
+   "type": 2
+  },
+  {
+   "nid": "BmMjYxmew1w",
+   "scoped": "BmMjYxmew1w#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadCondTimedwait",
+   "type": 2
+  },
+  {
+   "nid": "upoVrzMHFeE",
+   "scoped": "upoVrzMHFeE#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadMutexTrylock",
+   "type": 2
+  },
+  {
+   "nid": "8+s5BzZjxSg",
+   "scoped": "8+s5BzZjxSg#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadAttrGetaffinity",
+   "type": 2
+  },
+  {
+   "nid": "9BcDykPmo1I",
+   "scoped": "9BcDykPmo1I#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "__error",
+   "type": 2
+  },
+  {
+   "nid": "fzyMKs9kim0",
+   "scoped": "fzyMKs9kim0#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelWaitEqueue",
+   "type": 2
+  },
+  {
+   "nid": "D0OdFMjp46I",
+   "scoped": "D0OdFMjp46I#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelCreateEqueue",
+   "type": 2
+  },
+  {
+   "nid": "jpFjmgAC5AE",
+   "scoped": "jpFjmgAC5AE#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelDeleteEqueue",
+   "type": 2
+  },
+  {
+   "nid": "-ZR+hG7aDHw",
+   "scoped": "-ZR+hG7aDHw#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelSleep",
+   "type": 2
+  },
+  {
+   "nid": "4R6-OvI2cEA",
+   "scoped": "4R6-OvI2cEA#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelAddUserEvent",
+   "type": 2
+  },
+  {
+   "nid": "LJDwdSNTnDg",
+   "scoped": "LJDwdSNTnDg#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "sceKernelDeleteUserEvent",
+   "type": 2
+  },
+  {
+   "nid": "T72hz6ffq08",
+   "scoped": "T72hz6ffq08#BH#K",
+   "lib": "libkernel",
+   "module": "libkernel",
+   "name": "scePthreadYield",
+   "type": 2
+  }
+ ]
+}
