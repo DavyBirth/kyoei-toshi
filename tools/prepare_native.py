@@ -51,7 +51,8 @@ def main():
     prepare = importlib.import_module('prepare')
     linker = importlib.import_module('link_modules')
     expected = {r['path']: r['sha256'] for r in inventory['files']}
-    deferred = ['module/prx/libSceSecure.prx']
+    deferred = ['module/prx/libSceSecure.prx',
+                'module/MasterORBIS/stage201/StageModule.prx']
     bundled = list(linker.DEFAULT_MODULES) + ['libSceNpToolkit2.prx']
     for name in ['eboot.bin', 'sce_sys/param.sfo'] + ['sce_module/'+n for n in bundled] + deferred:
         with (game/name).open('rb') as stream:

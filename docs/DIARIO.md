@@ -273,3 +273,62 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   Retomar de build/native-latest.console.log e das capturas externas
   G:/kyoei-toshi-work/native-04/play-01.png a play-05.png; manter extração
   M1 parcial e não recriar grandes cópias de dados.
+
+## 09/10/2026 — primeira fase e personagem controlável; pausa de Davy
+
+- Pedido: superar a abertura que parecia uma sequência de wallpapers e
+  chegar ao gameplay. Usado somente o dump original CUSA03562 01.03.
+- Corrigido o diálogo de mensagem NONE (tipo 2, sem botões): permanece
+  aberto até o jogo fechar, sem fabricar uma escolha. Adicionada a função
+  sceMsgDialogGetStatus, compartilhando o estado de UpdateStatus.
+  Adaptações de services/dialog_ui são geradas em build pelo CMake;
+  snapshot e projeto do Godzilla permanecem intactos.
+- Preparação externa nova native-05 inclui o módulo real adiado
+  module/MasterORBIS/stage201/StageModule.prx. Hash M0 conferido:
+  134260577eb0b9ac10f484d25fa33f05772c3a59917806fbee24afc84e4ddb8a.
+  Inicializador real retornou 0, handle 0x4001. native-04 preservado.
+  docs/native-prepare.json agora aponta para native-05/out. O preparador
+  atual inclui somente a primeira fase, não todas as fases do jogo.
+- Marcadores RazorCpu PushMarkerStatic/PopMarker atendidos sem coletor,
+  retorno 0 como na referência; nenhuma lógica de gameplay substituída.
+- Implementado src/kyoei_ime.c: teclado de nomes nativo do Windows,
+  UTF16, limites, confirmação/cancelamento/aborto, estados e resultado.
+  Filtro real do jogo chamado na thread guest por GetResult. Teste real:
+  sobrenome e nome com limite de quatro caracteres, filtro e opções 0;
+  ambos confirmados, resultado 0, e a introdução continuou. Parâmetros
+  estendidos, outros tipos e opções ainda não suportados são rejeitados.
+- Prova real em native-05/logs/20261009_164159.log: carregamento chegou a
+  100%, scripts registraram stage start e StageTitle_end 201. Capturas
+  gameplay-15/17/18 mostram carga e primeira rua; gameplay-21 mostra
+  personagem, HP 100/100 e minimapa. Controle físico gerou deslocamento
+  no analógico e ação de esquiva. Primeira chegada ao gameplay comprovada;
+  missão inteira e salvamentos/recarregamento ainda não validados.
+- Mundo 3D fica desfocado durante gameplay; a ajuda de controle e o HUD
+  aparecem. Não determinada a causa do desfoque. Menu inicial também
+  apresentou opções invisíveis sobre o fundo, embora fosse navegável.
+- Falha intermitente fatal da GPU: Out of order flip IRQ (saída 23),
+  reproduzida na abertura e depois do início do gameplay. Experimento
+  de um quadro pendente por vez, esperando count e liberação da superfície,
+  passou no teste isolado mas NÃO resolveu o jogo: falhou novamente em
+  20261009_164802.log. Experimento e teste removidos dos fontes finais.
+- Diagnóstico local de VideoOut compila a unidade da cópia fixa, mantendo
+  o assert. Depende apenas de headers do cache externo configurável
+  KYOEI_GPU_HEADERS (padrão G:/godzilla-port-codex/build/_deps), lidos sem
+  alterar o Godzilla. Demais unidades GPU continuam na biblioteca fixa.
+  ABI STL dessa unidade configurada como na biblioteca (iterator level 0).
+- Última prova 20261009_165400.log: buffer=1, label=0, previous=0,
+  count=2115, pending=0, gc=0, arg=0 antes do assert. Próxima investigação:
+  comparar registro dos callbacks de flip com a ordem dos pacotes NOP
+  PatchedFlip e das escritas de etiquetas; verificar reuso/submissão dos
+  command buffers. Isso é hipótese, não causa confirmada. Não remover o
+  assert nem inventar valor 1 para a etiqueta.
+- Build final compilou; teste TLS Windows PASS e prepare_native.py passou
+  na compilação Python. Executável final com diagnóstico:
+  SHA256 74dd4d4c2225cb27256ffa7317db078fda1543aa4c3e6e4fdcaafe505ad751e1.
+  Capturas e provas externas preservadas em native-05/session-20261009;
+  docs/native-gameplay.json registra os hashes, sem arquivos do jogo.
+- Davy pediu salvar e interromper. Nenhum processo Kyoei, LLDB, Ninja
+  ou Clang ativo na conferência final. Não executar novos testes ou
+  recompilar após essa pausa; retomar dos logs/capturas acima quando
+  solicitado. M6 continua em desenvolvimento: gameplay inicial funciona,
+  mas o port ainda não é estável nem completo.

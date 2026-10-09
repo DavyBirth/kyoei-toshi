@@ -8,9 +8,42 @@ set(CMAKE_C_STANDARD 11)
 set(KYOEI_CORE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/godzilla-core")
 include("${KYOEI_CORE}/prebuilt/libraries.cmake")
 set(CORE_FILES rt_core rt_sync rt_thread rt_memory rt_vmem rt_sema
-  rt_services rt_file rt_savedata rt_kernel rt_rtc dialog_ui)
+  rt_file rt_savedata rt_kernel rt_rtc)
 list(TRANSFORM CORE_FILES PREPEND "${KYOEI_CORE}/src/")
 list(TRANSFORM CORE_FILES APPEND ".c")
+# Kyoei uses the PS4 NONE message type while checking installed content.
+# Adapt build copies only; keep the fixed Godzilla snapshot unchanged.
+file(READ "${KYOEI_CORE}/src/rt_services.c" KYOEI_SERVICES)
+file(READ "${KYOEI_CORE}/src/dialog_ui.c" KYOEI_DIALOG_UI)
+function(kyoei_replace_checked variable before after)
+  string(FIND "${${variable}}" "${before}" position)
+  if(position EQUAL -1)
+    message(FATAL_ERROR "Review message dialog adapter: missing anchor ${before}")
+  endif()
+  string(REPLACE "${before}" "${after}" adapted "${${variable}}")
+  set(${variable} "${adapted}" PARENT_SCOPE)
+endfunction()
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "int gz_dialog_input(uint32_t buttons) {"
+  "int kyoei_ime_input(uint32_t buttons);\nint gz_dialog_input(uint32_t buttons) {\n    if (kyoei_ime_input(buttons)) { release_gate = 1; return 1; }")
+kyoei_replace_checked(KYOEI_SERVICES
+  "case 0: case 1: case 3: case 7: case 8: break;"
+  "case 0: case 1: case 2: case 3: case 7: case 8: break;")
+kyoei_replace_checked(KYOEI_SERVICES
+  "msg_result_code = msg_button ? 0 : 1;"
+  "msg_result_code = work->type == 2 ? 0 : msg_button ? 0 : 1;")
+kyoei_replace_checked(KYOEI_SERVICES
+  "{NULL, \"sceMsgDialogUpdateStatus\", (void *)msg_status}"
+  "{NULL, \"sceMsgDialogGetStatus\", (void *)msg_status}, {NULL, \"sceMsgDialogUpdateStatus\", (void *)msg_status}")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "type == 256 ? 0 : type == 0 ? 1 : 2"
+  "type == 256 || type == 2 ? 0 : type == 0 ? 1 : 2")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "d->type == 256 ? L\"Aguarde...\""
+  "d->type == 256 || d->type == 2 ? L\"Aguarde...\"")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" CONTENT "${KYOEI_SERVICES}" @ONLY)
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c" CONTENT "${KYOEI_DIALOG_UI}" @ONLY)
+list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c")
 file(READ "${KYOEI_CORE}/src/loader.c" KYOEI_LOADER)
 set(TLS_REJECTION "    if (main_tls[2]) fail(\"this eboot has static TLS; the Windows loader does not support it yet\");")
 string(FIND "${KYOEI_LOADER}" "${TLS_REJECTION}" TLS_ANCHOR)
@@ -31,7 +64,7 @@ foreach(REQUIRED_ADAPTER "kyoei_tls_configure(image, image_size, main_tls);" "if
   endif()
 endforeach()
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
-add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c)
+add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 set_source_files_properties("${KYOEI_CORE}/src/rt_core.c" PROPERTIES
   COMPILE_DEFINITIONS "gz_resolve=kyoei_shared_resolve")
 set_source_files_properties("${KYOEI_CORE}/src/rt_kernel.c" PROPERTIES
@@ -41,6 +74,36 @@ target_compile_definitions(kyoei PRIVATE GZ_GPU=1 WIN32_LEAN_AND_MEAN _CRT_SECUR
 target_compile_options(kyoei PRIVATE -Wall -Wextra)
 set_target_properties(kyoei PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(kyoei PRIVATE ${KYOEI_GPU_LIBRARIES} ${KYOEI_SYSTEM_LIBRARIES})
+# Compile just VideoOut from the fixed snapshot for local diagnostics. The
+# external cache supplies dependency headers only; no sibling sources are built.
+set(KYOEI_GPU_HEADERS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
+set(KYOEI_SHAD "${KYOEI_CORE}/third_party/shadPS4")
+file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/video_out.cpp" KYOEI_VIDEOOUT)
+kyoei_replace_checked(KYOEI_VIDEOOUT
+  "#include \"common/assert.h\""
+  "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"common/assert.h\"")
+kyoei_replace_checked(KYOEI_VIDEOOUT
+  "    driver = std::make_unique<VideoOutDriver>"
+  "    if (presenter) driver = std::make_unique<VideoOutDriver>")
+kyoei_replace_checked(KYOEI_VIDEOOUT
+  "            ASSERT_MSG(port->buffer_labels[buf_id] == 1, \"Out of order flip IRQ\");"
+  "            if (port->buffer_labels[buf_id] != 1) {\n                gz_log(\"Kyoei flip failure: buffer=%u label=0x%llx previous=%d count=%llu pending=%d gc=%d arg=%lld\", buf_id, (unsigned long long)port->buffer_labels[buf_id], port->prev_index, (unsigned long long)port->flip_status.count, port->flip_status.flip_pending_num, port->flip_status.gc_queue_num, (long long)flip_arg);\n            }\n            ASSERT_MSG(port->buffer_labels[buf_id] == 1, \"Out of order flip IRQ\");")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp" CONTENT "${KYOEI_VIDEOOUT}" @ONLY)
+add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp")
+target_sources(kyoei PRIVATE $<TARGET_OBJECTS:kyoei_videoout>)
+target_compile_features(kyoei_videoout PRIVATE cxx_std_23)
+target_compile_options(kyoei_videoout PRIVATE -O2 -DNDEBUG -U_DEBUG -D_ITERATOR_DEBUG_LEVEL=0)
+target_compile_definitions(kyoei_videoout PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS VULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1)
+target_include_directories(kyoei_videoout PRIVATE
+  "${KYOEI_CORE}/gpu/shim" "${KYOEI_SHAD}/src" "${KYOEI_SHAD}" "${KYOEI_CORE}/src"
+  "${KYOEI_SHAD}/externals/gcn/include"
+  "${KYOEI_GPU_HEADERS}/gz_vulkan-src/include" "${KYOEI_GPU_HEADERS}/gz_fmt-src/include"
+  "${KYOEI_GPU_HEADERS}/gz_magic-src/include" "${KYOEI_GPU_HEADERS}/gz_robin-src/include"
+  "${KYOEI_GPU_HEADERS}/gz_vma-src/include" "${KYOEI_GPU_HEADERS}/gz_sdl-src/include"
+  "${KYOEI_GPU_HEADERS}/gz_boost-src"
+  "${KYOEI_GPU_HEADERS}/gz_sdl-build/include-revision" "${KYOEI_GPU_HEADERS}/gz_xbyak-src")
+file(GLOB KYOEI_BOOST_INCLUDES "${KYOEI_GPU_HEADERS}/gz_boost-src/libs/*/include")
+target_include_directories(kyoei_videoout SYSTEM PRIVATE ${KYOEI_BOOST_INCLUDES})
 add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 target_include_directories(test_kyoei_tls PRIVATE "${KYOEI_CORE}/src" src)
 file(GLOB GPU_DLLS "${KYOEI_CORE}/prebuilt/*.dll")

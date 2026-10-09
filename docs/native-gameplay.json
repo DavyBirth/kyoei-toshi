@@ -1,0 +1,47 @@
+﻿{
+    "logs":  [
+                 {
+                     "sha256":  "bb9e99ef53b266dc0d0acc7653bbb4ba6e3875c2b5411beabe9391f727fb83d1",
+                     "path":  "G:\\kyoei-toshi-work\\native-05\\logs\\20261009_164159.log"
+                 },
+                 {
+                     "sha256":  "8d62bb5517af47821ce2c3969f98d55000523003f726db2e5c7cc0e59dd50324",
+                     "path":  "G:\\kyoei-toshi-work\\native-05\\logs\\20261009_164802.log"
+                 },
+                 {
+                     "sha256":  "1974240d9ce64de28b0c608246670da719fb4e9cbda83a56883946f4e5fee83f",
+                     "path":  "G:\\kyoei-toshi-work\\native-05\\logs\\20261009_165400.log"
+                 }
+             ],
+    "captures":  [
+                     {
+                         "sha256":  "7eb99ef4039e2dc26d29034ec8030826f31b67b5b834d7dd49478ddc72effe55",
+                         "path":  "G:\\kyoei-toshi-work\\native-05\\session-20261009\\gameplay-15.png"
+                     },
+                     {
+                         "sha256":  "8109270f0620307edfe7acb99eb680f36dead0d6c64f45e0af5f8e1a06813eb3",
+                         "path":  "G:\\kyoei-toshi-work\\native-05\\session-20261009\\gameplay-17.png"
+                     },
+                     {
+                         "sha256":  "88c3a647faffb9dddef8608cc48bb3ecaf5425346a4e5d454ab2b1e61491890b",
+                         "path":  "G:\\kyoei-toshi-work\\native-05\\session-20261009\\gameplay-18.png"
+                     },
+                     {
+                         "sha256":  "6fefe79c260004fcd5274a0e0ed162bf0b98a6bcfc941dc38c2e7db6bad66fa6",
+                         "path":  "G:\\kyoei-toshi-work\\native-05\\session-20261009\\gameplay-21.png"
+                     },
+                     {
+                         "sha256":  "0757206261300cc955ba74f55a2c3c1d0a378d2c4054bfea6008faf6b94ec0eb",
+                         "path":  "G:\\kyoei-toshi-work\\native-05\\session-20261009\\gameplay-24.png"
+                     }
+                 ],
+    "saves_validated":  false,
+    "paused_by_user":  true,
+    "version":  "01.03",
+    "stable":  false,
+    "date":  "2026-10-09",
+    "first_stage":  201,
+    "title":  "CUSA03562",
+    "executable_sha256":  "74dd4d4c2225cb27256ffa7317db078fda1543aa4c3e6e4fdcaafe505ad751e1",
+    "gameplay_reached":  true
+}

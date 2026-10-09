@@ -7,6 +7,7 @@
 
 uintptr_t kyoei_shared_kernel_resolve(const char *library, const char *symbol);
 uintptr_t kyoei_shared_resolve(const char *library, const char *symbol, int is_data);
+uintptr_t kyoei_ime_resolve(const char *symbol);
 
 static ABI int32_t installed_todo(int32_t handle, void *list, uint32_t capacity, uint32_t *entries) {
     typedef int32_t (ABI *Chunks)(int32_t, uint16_t *, uint32_t, uint32_t *);
@@ -45,6 +46,9 @@ typedef struct {
 _Static_assert(sizeof(HeapTraceInfo) == 32, "heap trace ABI");
 static uint64_t heap_mspace_mask, heap_mstates[64];
 static ABI int32_t standard_ps4_mode(void) { return 0; }
+/* Debug profiling annotations have no side effects without a Razor collector. */
+static ABI int32_t razor_push_marker(const char *name, uint32_t color) { (void)name; (void)color; return 0; }
+static ABI int32_t razor_pop_marker(void) { return 0; }
 static ABI int32_t recording_unsupported(void) { return (int32_t)0x80a80008; }
 static ABI int32_t login_users(int32_t *users) {
     if (!users) return (int32_t)0x80960005;
@@ -95,6 +99,11 @@ static ABI int32_t kyoei_app_info(int32_t pid, void *info) {
 }
 
 uintptr_t gz_kernel_resolve(const char *library, const char *symbol) {
+    if (!strcmp(library, "libSceImeDialog")) return kyoei_ime_resolve(symbol);
+    if (!strcmp(library, "libSceRazorCpu")) {
+        if (!strcmp(symbol, "sceRazorCpuPushMarkerStatic")) return (uintptr_t)razor_push_marker;
+        if (!strcmp(symbol, "sceRazorCpuPopMarker")) return (uintptr_t)razor_pop_marker;
+    }
     if (!strcmp(library, "libSceVideoRecording")) {
         if (!strcmp(symbol, "sceVideoRecordingGetStatus")) return (uintptr_t)standard_ps4_mode; /* None */
         if (!strcmp(symbol, "sceVideoRecordingOpen2") || !strcmp(symbol, "sceVideoRecordingStart")) return (uintptr_t)recording_unsupported;
