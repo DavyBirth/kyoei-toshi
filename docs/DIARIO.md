@@ -216,3 +216,36 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Pedido de abertura alcançado. Não declarar port completo, missão jogável,
   tradução pronta ou salvamentos validados. M6 continua em desenvolvimento;
   deixar o jogo aberto para Davy testar.
+
+## 09/10/2026 — varredura e limpeza de armazenamento
+
+- Davy pediu limpeza antes de avançar no port. Medidas iniciais: projeto
+  454.478.418 bytes; pasta de trabalho 37.980.574.605 bytes (total 38,44 GB).
+  Os maiores responsáveis eram o dump duplicado da prova M2 (17,80 GB) e
+  a extração completa M1 (19,32 GB); não o código nem a compilação.
+- Antes de remover derivados, verify_m0.py passou: 87 arquivos do dump
+  original, todos os hashes iguais ao M0, CUSA03562 APP_VER 01.03.
+- Plano detalhado externo em cleanup-20261009/plan.json; remoção em
+  PowerShell com validação de caminho absoluto, raiz, reparse points,
+  lista fixa de diretórios e extensões de mídia. Uma validação inicial
+  de DirectoryInfo interrompeu antes de apagar arquivos; corrigida e
+  operação completa registrada em completed.json.
+- Removidos 57.060 recursos extraídos de mídia (texturas/modelos/pacotes,
+  sons/vídeos), a cópia m2/prova-01/CUSA03562 e native-01/02/03/out.
+  Liberação: 37.290.822.447 bytes. Nenhum dado original foi apagado.
+- Mantidos 15.901 recursos pequenos da extração, incluindo todos os 2.331
+  CSH/LUC; catálogos completos, índices, provas, logs, capturas e saves.
+  Base fixa, build e native-04/out/user preservados; executável permanece
+  com SHA256 d0aa33bba7c3cf12c87cee3816c7263af120e2efd5733130784b7aa7604b83e4.
+- restore_m1.py recupera um recurso ou pacote ausente a partir do dump,
+  valida catálogo/PSARC e hash do recurso, sem sobrescrever. Prova real:
+  system.psarc:GxCore/texture/null-black.tex recuperado e conferido (165 bytes).
+- audit_m2.py novamente PASS: 2.331 recursos idênticos, 17.866 strings
+  japonesas, zero falhas. Extração M1 agora parcial; verificação completa
+  de M1 requer reextrair recursos ausentes. Não alterar a prova histórica.
+- Medição final: projeto 454.489.617 bytes; trabalho 707.036.026 bytes;
+  total 1,16 GB (redução de aproximadamente 97%). Inventário adiciona alguns
+  MB de metadados e o log pode crescer; números representam o momento medido.
+- Jogo continuou aberto durante a limpeza e depois foi fechado pelo usuário:
+  log window closed by user, saída 0; 3.134 leituras / 169.224.749 bytes.
+  Não avançado em novos recursos de gameplay nesta etapa.

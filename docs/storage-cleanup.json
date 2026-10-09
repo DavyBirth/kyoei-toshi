@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-09",
+  "units": "bytes (GB = 1000000000 bytes)",
+  "before": {
+    "G:\\kyoei-toshi": 454478418,
+    "G:\\kyoei-toshi-work": 37980574605
+  },
+  "after": {
+    "G:\\kyoei-toshi": 454489617,
+    "G:\\kyoei-toshi-work": 707036026
+  },
+  "file_counts_after": {
+    "G:\\kyoei-toshi": 2095,
+    "G:\\kyoei-toshi-work": 16492
+  },
+  "deleted_bytes": 37290822447,
+  "preserved_text_resources": 2331,
+  "text_roundtrip_verification": "audit_m2.py PASS: 2331 identical resources, 17866 Japanese strings, zero failures",
+  "native_last_shutdown": "window closed by user; exit code 0",
+  "original_dump_verification": "verify_m0.py PASS: 87 files, all SHA256 match M0",
+  "native_executable_unchanged": true,
+  "selective_restore_test": "system.psarc:GxCore/texture/null-black.tex PASS",
+  "detailed_manifest": "G:\\kyoei-toshi-work\\cleanup-20261009\\plan.json",
+  "m1_extraction_now_partial": true
+}
