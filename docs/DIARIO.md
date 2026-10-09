@@ -249,3 +249,27 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Jogo continuou aberto durante a limpeza e depois foi fechado pelo usuário:
   log window closed by user, saída 0; 3.134 leituras / 169.224.749 bytes.
   Não avançado em novos recursos de gameplay nesta etapa.
+
+## 09/10/2026 — pausa solicitada por Davy; retomada pelo menu
+
+- Davy autorizou avançar até a primeira missão e validar salvamentos.
+  O port foi reaberto; somente o dump original e native-04 foram usados.
+- Corrigido capture_native.ps1 para coordenadas físicas com consciência de
+  DPI por thread. A escala do Windows cortava parte da captura anterior;
+  play-04.png/play-05.png externos agora mostram a janela inteira.
+- Criado input_native.ps1: valida PID, caminho do executável e janela;
+  envia pressionar/soltar somente ao Kyoei via PostMessage, sem teclas globais.
+  Testes reais de Enter, Z e Space chegaram ao scePadReadState como
+  0x8, 0x8000 e 0x4000, seguidos de liberação 0. DualSense também responde.
+- A abertura animada continua repetindo (cidade/monstro), porém não foi
+  comprovado menu de jogo novo nem controle do personagem. Não declarar
+  primeira missão, salvamentos ou jogabilidade validados.
+- Próxima investigação: localizar o que segura a transição da abertura
+  para o menu (threads/serviços ou desenho da interface). Comando LLDB de
+  inspeção foi interrompido pelo pedido de encerrar; nenhuma pilha foi
+  obtida. Conferência após interrupção não encontrou LLDB ativo.
+- Davy pediu encerrar por hoje e retomar amanhã. Jogo fechado, ferramentas
+  e diário salvos. Não alterar o runtime nem recompilar nesta pausa.
+  Retomar de build/native-latest.console.log e das capturas externas
+  G:/kyoei-toshi-work/native-04/play-01.png a play-05.png; manter extração
+  M1 parcial e não recriar grandes cópias de dados.

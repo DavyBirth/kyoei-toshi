@@ -5,6 +5,7 @@ Add-Type @'
 using System;
 using System.Runtime.InteropServices;
 public class KyoeiWindow {
+ [DllImport("user32.dll")] public static extern IntPtr SetThreadDpiAwarenessContext(IntPtr context);
  [StructLayout(LayoutKind.Sequential)] public struct Rect { public int L,T,R,B; }
  [DllImport("user32.dll")] public static extern bool GetWindowRect(IntPtr h,out Rect r);
  [DllImport("user32.dll")] public static extern bool PrintWindow(IntPtr h,IntPtr dc,uint flags);
@@ -18,6 +19,8 @@ $kyoeiExe = [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) 'build/
 if ($kyoeiProcess.ProcessName -ne 'kyoei' -or $kyoeiProcess.Path -ne $kyoeiExe) { throw 'Processo diferente do port Kyoei' }
 $kyoeiWindow = $kyoeiProcess.MainWindowHandle
 if (-not $kyoeiWindow) { throw 'Sem janela' }
+# PrintWindow writes physical pixels; use the same units for GetWindowRect.
+[KyoeiWindow]::SetThreadDpiAwarenessContext([IntPtr](-4)) | Out-Null
 [KyoeiWindow]::SetWindowText($kyoeiWindow,'Kyoei Toshi - Port para PC') | Out-Null
 if ($Focus) {
  [KyoeiWindow]::ShowWindow($kyoeiWindow,9) | Out-Null
