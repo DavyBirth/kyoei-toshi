@@ -16,6 +16,8 @@ def digest(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--current', action='store_true')
+    parser.add_argument('--verified-window', type=Path,
+                        help='Captura externa ja conferida visualmente pelo agente; nao inferir pelo log')
     args = parser.parse_args()
     if args.current:
         prepare = json.loads((REPO/'docs/native-prepare.json').read_text())
@@ -33,6 +35,14 @@ def main():
                       graphics_window_created='GPU: SDL window created' in text,
                       eboot_entered="Entering the game's code" in text,
                       rendered_scene_verified=False, game_ready=False)
+        if args.verified_window:
+            window = args.verified_window.resolve(strict=True)
+            if window.is_relative_to(REPO) or window.suffix.lower() != '.png':
+                raise ValueError('Captura deve permanecer fora do repositorio, em PNG')
+            report.update(rendered_scene_verified=True,
+                          visual_evidence=dict(path=str(window), sha256=digest(window),
+                                               verification='agent visual inspection',
+                                               scope='opening screen or intro; gameplay not validated'))
         (REPO/'docs/native-current.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf8')
         print(json.dumps(report, indent=2))
         return

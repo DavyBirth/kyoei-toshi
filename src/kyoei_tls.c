@@ -83,6 +83,39 @@ int kyoei_tls_fault(EXCEPTION_POINTERS *exception) {
 }
 
 uintptr_t kyoei_shared_resolve(const char *library, const char *symbol, int is_data);
+/* The local session keeps user 1 logged in throughout its lifetime. Keep
+ * registrations, but no user-change events are generated in this session. */
+static SRWLOCK user_callback_lock = SRWLOCK_INIT;
+static struct { uintptr_t callback, argument; } user_callbacks[16];
+static uintptr_t np_callback, np_argument;
+static ABI int32_t register_np_callback(uintptr_t callback, uintptr_t argument) {
+    if (!callback) return (int32_t)0x80550003;
+    AcquireSRWLockExclusive(&user_callback_lock);
+    np_callback = callback; np_argument = argument;
+    ReleaseSRWLockExclusive(&user_callback_lock); return 0;
+}
+static ABI int32_t unregister_np_callback(void) {
+    AcquireSRWLockExclusive(&user_callback_lock);
+    if (!np_callback) { ReleaseSRWLockExclusive(&user_callback_lock); return (int32_t)0x80550009; }
+    np_callback = np_argument = 0;
+    ReleaseSRWLockExclusive(&user_callback_lock); return 0;
+}
+static ABI int32_t register_user_callback(uintptr_t callback, uintptr_t argument, int32_t *id) {
+    if (!callback || !id) return (int32_t)0x80960005;
+    AcquireSRWLockExclusive(&user_callback_lock);
+    for (int i = 0; i < 16; ++i) if (!user_callbacks[i].callback) {
+        user_callbacks[i].callback = callback; user_callbacks[i].argument = argument;
+        *id = i + 1; ReleaseSRWLockExclusive(&user_callback_lock); return 0;
+    }
+    ReleaseSRWLockExclusive(&user_callback_lock);
+    return (int32_t)0x80960006;
+}
+static ABI int32_t unregister_user_callback(int32_t id) {
+    if (id < 1 || id > 16) return (int32_t)0x80960005;
+    AcquireSRWLockExclusive(&user_callback_lock);
+    memset(&user_callbacks[id - 1], 0, sizeof(user_callbacks[0]));
+    ReleaseSRWLockExclusive(&user_callback_lock); return 0;
+}
 static ABI void *main_tls_get_addr(const uint64_t *index) {
     if (!index) gz_stop(21, "STOP: null TLS index");
     if (index[0] == 1) return kyoei_tls_address(index[1]);
@@ -91,6 +124,35 @@ static ABI void *main_tls_get_addr(const uint64_t *index) {
     return original(index);
 }
 uintptr_t gz_resolve(const char *library, const char *symbol, int is_data) {
+    /* aerolib appends underscores to several VideoOut names; the native GPU
+     * table uses the public API spelling. Resolve only existing functions. */
+    if (!is_data && !strcmp(library, "libSceVideoOut")) {
+        size_t length = strlen(symbol);
+        if (length > 1 && length < 128 && symbol[length - 1] == '_') {
+            char public_name[128]; memcpy(public_name, symbol, length - 1); public_name[length - 1] = 0;
+            uintptr_t implementation = kyoei_shared_resolve(library, public_name, 0);
+            if (implementation) return implementation;
+        }
+    }
+    if (!is_data && !strcmp(library, "libSceScreenShot") && !strcmp(symbol, "sceScreenShotSetOverlayImageWithOrigin"))
+        return kyoei_shared_resolve(library, "sceScreenShotSetOverlayImage", 0);
+    if (!is_data && !strcmp(library, "libSceNpManagerForToolkit")) {
+        if (!strcmp(symbol, "sceNpRegisterStateCallbackForToolkit")) return (uintptr_t)register_np_callback;
+        if (!strcmp(symbol, "sceNpUnregisterStateCallbackForToolkit")) return (uintptr_t)unregister_np_callback;
+        if (!strcmp(symbol, "sceNpCheckCallbackForToolkit") || !strcmp(symbol, "sceNpCheckCallbackForLib")) return kyoei_shared_resolve("libSceNpManager", "sceNpCheckCallback", 0);
+    }
+    if (!is_data && !strcmp(library, "libSceUserServiceForNpToolkit")) {
+        if (!strcmp(symbol, "sceUserServiceRegisterEventCallback")) return (uintptr_t)register_user_callback;
+        if (!strcmp(symbol, "sceUserServiceUnregisterEventCallback")) return (uintptr_t)unregister_user_callback;
+    }
+    if (!is_data && !strcmp(library, "libSceNetCtlForNpToolkit")) {
+        static const char *toolkit[] = {"sceNetCtlRegisterCallbackForNpToolkit", "sceNetCtlCheckCallbackForNpToolkit", "sceNetCtlUnregisterCallbackForNpToolkit"};
+        static const char *ordinary[] = {"sceNetCtlRegisterCallback", "sceNetCtlCheckCallback", "sceNetCtlUnregisterCallback"};
+        for (unsigned i = 0; i < 3; ++i)
+            if (!strcmp(symbol, toolkit[i])) return kyoei_shared_resolve("libSceNetCtl", ordinary[i], 0);
+    }
+    if (!is_data && !strcmp(library, "libSceVideoOut") && !strcmp(symbol, "sceVideoOutGetDeviceCapabilityInfo_"))
+        return kyoei_shared_resolve(library, "sceVideoOutGetDeviceCapabilityInfo", 0);
     if (!is_data && !strcmp(library, "libkernel") && !strcmp(symbol, "__tls_get_addr"))
         return (uintptr_t)main_tls_get_addr;
     return kyoei_shared_resolve(library, symbol, is_data);

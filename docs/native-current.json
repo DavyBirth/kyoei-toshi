@@ -1,14 +1,20 @@
 {
   "core_commit": "e976b59a3f056c5ea5d0ddfe1c5ef566cce2f45e",
   "base_integrity_reference": "native-proof.json",
-  "executable_sha256": "0b986fdefca2207c31af547e76660b16890fe88e59b6f9372204c9f403b2d552",
-  "log": "G:\\kyoei-toshi-work\\native-02\\logs\\20261008_203811.log",
-  "log_sha256": "a7d00771f3ac5d4d73d85e7ff60c2f11a78b46238e7b4ad1a798df5b53b07f72",
-  "exit_code": 20,
-  "latest_blocker": "first unimplemented PS4 function: libkernel::sceKernelLoadStartModule (wzvqT4UqKX8#BH#K)",
+  "executable_sha256": "d0aa33bba7c3cf12c87cee3816c7263af120e2efd5733130784b7aa7604b83e4",
+  "log": "G:\\kyoei-toshi-work\\native-04\\logs\\20261009_011550.log",
+  "log_sha256": "6d19a7f1073f5966872a6ab668d4c679e7880c8a81fcac47ae2b635874e0b422",
+  "exit_code": null,
+  "latest_blocker": null,
   "main_tls_configured": true,
   "graphics_window_created": true,
   "eboot_entered": true,
-  "rendered_scene_verified": false,
-  "game_ready": false
+  "rendered_scene_verified": true,
+  "game_ready": false,
+  "visual_evidence": {
+    "path": "G:\\kyoei-toshi-work\\native-04\\window-02.png",
+    "sha256": "5df5ec0dacdd97af53ab4ec4d270f15adc0a3316e8364fb2986b85cc114d635e",
+    "verification": "agent visual inspection",
+    "scope": "opening screen or intro; gameplay not validated"
+  }
 }

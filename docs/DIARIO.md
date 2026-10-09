@@ -184,3 +184,35 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - TLS inicial superado; cena do jogo ainda não renderizada e M6 não concluído.
   Logs externos native-02/logs/20261008_203518.log, 203728.log e 203811.log.
   Não aguardar mudanças do Godzilla para continuar este projeto.
+
+## 09/10/2026 — primeira imagem do jogo no port nativo
+
+- Pedido de Davy: abrir o jogo na tela dele. Implementações próprias aqui,
+  preservando Godzilla e snapshot; nenhum executável shadPS4 foi lançado.
+- Preparação native-04 inclui libc/Fios2/NpToolkit2 do dump com hashes M0,
+  firmware externo já existente e Secure ligado com inicialização adiada.
+  `deferred.tsv` guarda endereços relativos e NIDs externamente. LoadStartModule
+  chamou o inicializador real do Secure (retorno 0); resolução Dlsym por
+  SHA1/salt/base64 PS4, handles próprios e rejeição de módulos desconhecidos.
+- Adaptadas consultas de PlayGo (dump totalmente instalado), DiscMap local,
+  carga interna de módulos, modo padrão/sem ASAN, usuários e serviços offline.
+  Corrigidas diferenças de nomes no VideoOut e na configuração de screenshot.
+  NpToolkit2 iniciou suas threads; callbacks de usuário/rede não anunciam
+  transições de serviços online inexistentes. Troféus sem banco registrado
+  retornam erro NOT_REGISTERED; gravação de vídeo não está disponível.
+- Consulta de armazenamento usa espaço real via GetDiskFreeSpaceExW.
+  Corrigida a interpretação de gz_widen (0 significa sucesso).
+- Primeira abertura: `native-04/logs/20261009_011201.log`. Captura externa
+  `native-04/window-01.png`: logo de Kyoei sobre cidade, conferido visualmente.
+  DualSense reconhecido, botões físicos entregues ao jogo. Depois houve parada
+  explícita na consulta de DLCs: 815 leituras / 104.056.609 bytes até essa falha.
+- Implementado GetAddcontInfoList como lista vazia para a sessão sem DLCs;
+  reaberto em `20261009_011550.log`. Captura `native-04/window-02.png` mostra
+  prédios e a silhueta de monstro na abertura, confirmando renderização real.
+  Janela trazida para frente e renomeada Kyoei Toshi - Port para PC.
+- Compilação concluída; teste TLS real PASS novamente; diff --check sem erro.
+  `native-current.json` registra hashes do executável e captura externa,
+  e o hash do log no momento da consulta (o processo ainda escreve nele).
+- Pedido de abertura alcançado. Não declarar port completo, missão jogável,
+  tradução pronta ou salvamentos validados. M6 continua em desenvolvimento;
+  deixar o jogo aberto para Davy testar.

@@ -28,7 +28,7 @@ o carregamento nativo inicial segue a base Windows do Godzilla/Bloodborne.
   O símbolo do resolvedor compartilhado é renomeado na compilação; nenhum
   fonte da cópia fixa é editado.
 - `--app0` aponta explicitamente para o dump próprio do Kyoei.
-  `--user` fica em `G:\kyoei-toshi-work\native-02\user`.
+  `--user` fica em `G:\kyoei-toshi-work\native-04\user`.
   O runtime de salvamento lê a identificação do SFO. Dados do Godzilla
   não são usados como diretório de saves do Kyoei.
 - A GPU foi reaproveitada como bibliotecas locais com hashes. O CMake
@@ -43,15 +43,18 @@ bytes, 704 importações e 82.840 relocações. Ligados os módulos próprios
 libc/Fios2 e os módulos externos de fontes/áudio já usados no Godzilla.
 `native-prepare.json` registra a identidade e o hash da imagem.
 
-**Ainda não apareceu a cena do jogo pelo port.** A primeira execução terminou com
-código 1, antes da janela, porque o carregador rejeita TLS estático do
-eboot. `native-proof.json` registra o executável, os hashes e o bloqueio.
-Esse bloqueio inicial já foi superado pelo adaptador local de TLS.
-A versão seguinte abriu a janela SDL/Vulkan, iniciou todos os módulos
-ligados e entrou no eboot. O próximo bloqueio observado é
-`sceKernelLoadStartModule`, solicitado para `/app0/module/prx/libSceSecure.prx`,
-que existe no dump próprio. Ainda falta atender seu carregamento dinâmico.
-Não confundir janela gráfica criada com uma cena do jogo renderizada.
+**09/10/2026: a tela de título foi renderizada pelo port nativo.** Captura
+externa `native-04/window-01.png` conferida visualmente: logo de Kyoei Toshi
+sobre a cidade. O DualSense foi reconhecido e seus botões chegaram ao jogo.
+Depois dessa primeira abertura, uma consulta de DLCs ainda não implementada
+encerrou a execução; a lista vazia de conteúdo extra foi adaptada e o jogo
+foi reaberto. A abertura não prova que uma missão inteira seja jogável.
+
+`native-proof.json` conserva a falha histórica de TLS; `native-current.json`
+registra a execução atual. O módulo Secure do dump tem inicialização adiada
+até `sceKernelLoadStartModule`, com exports resolvidos por NID e handles
+próprios. O NpToolkit2 também é ligado do dump original. Rede e transmissão
+permanecem offline; não foi habilitado retorno zero geral para funções ausentes.
 
 O TLS guarda valores separados para cada thread do jogo. O Godzilla
 não precisava desse caso no eboot, então a implementação Windows o
@@ -111,9 +114,9 @@ powershell -ExecutionPolicy Bypass -File scripts/run_native.ps1
 Snapshot e preparação recusam sobrescrever uma saída existente. Nesta
 instalação já foram executados; não é preciso repeti-los para compilar.
 `native-01/out` é uma tentativa parcial que parou ao imprimir o título
-japonês com a codificação do terminal. `native-02/out` é a preparação
-concluída. O adaptador agora configura a saída do Python como UTF-8.
+japonês com a codificação do terminal. `native-04/out` é a preparação atual,
+incluindo Secure e NpToolkit2. O adaptador configura a saída do Python como UTF-8.
 
-Ao executar a versão atual, espera-se a janela gráfica ser criada e o
-carregador entrar no eboot; o próximo bloqueio é a carga do módulo Secure.
-Ainda não se espera uma cena jogável.
+Ao executar a versão atual, espera-se a tela de título com o logo sobre a
+cidade. O controle conectado é reconhecido. Jogabilidade, missões e gravação
+de saves ainda precisam ser validadas por avanço real dentro do jogo.

@@ -21,6 +21,8 @@ def normalize_imports(out):
         if not fields[3]:
             fields[3] = '?'
             unnamed.append(index)
+        if fields[1].split('#')[0] == 'fJgP+wqifno' and fields[2] == 'libSceDiscMap':
+            fields[3] = 'sceDiscMap_7C980FFB0AA27E7A'
         rows.append('\t'.join(fields))
     path.write_text('\n'.join(rows)+'\n', encoding='utf8')
     return unnamed
@@ -30,7 +32,7 @@ def main():
     sys.stdout.reconfigure(encoding='utf8')
     sys.stderr.reconfigure(encoding='utf8')
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--out', type=Path, default=Path('G:/kyoei-toshi-work/native-02/out'))
+    parser.add_argument('--out', type=Path, default=Path('G:/kyoei-toshi-work/native-04/out'))
     parser.add_argument('--firmware', type=Path, default=Path('G:/GodzillaShadPS4PC/user/sys_modules'))
     parser.add_argument('--repair-imports', action='store_true', help='normalize only the already prepared local TSV')
     args = parser.parse_args()
@@ -49,7 +51,9 @@ def main():
     prepare = importlib.import_module('prepare')
     linker = importlib.import_module('link_modules')
     expected = {r['path']: r['sha256'] for r in inventory['files']}
-    for name in ['eboot.bin', 'sce_sys/param.sfo'] + ['sce_module/'+n for n in linker.DEFAULT_MODULES]:
+    deferred = ['module/prx/libSceSecure.prx']
+    bundled = list(linker.DEFAULT_MODULES) + ['libSceNpToolkit2.prx']
+    for name in ['eboot.bin', 'sce_sys/param.sfo'] + ['sce_module/'+n for n in bundled] + deferred:
         with (game/name).open('rb') as stream:
             if hashlib.file_digest(stream, 'sha256').hexdigest() != expected[name]:
                 raise ValueError('Arquivo executável diferente do M0: '+name)
@@ -69,7 +73,19 @@ def main():
     prepare.game_check = KyoeiCheck
     prepare.prepare(game, out)
     firmware = [str(args.firmware/name) for name in linker.FIRMWARE_MODULES]
-    linker.link(game, out, list(linker.DEFAULT_MODULES)+firmware)
+    linker.link(game, out, bundled+firmware+[str(game/p) for p in deferred])
+    linked = json.loads((out/'link.json').read_text(encoding='utf8'))
+    metadata = []
+    for relative in deferred:
+        module_path = game/relative
+        record = next(r for r in linked['modules'] if Path(r['file']) == module_path)
+        base = int(record['base'], 16)
+        metadata.append(f'M\t/app0/{relative}\t{base:x}\t{int(record["init"],16):x}')
+        module = linker.module(module_path)
+        for symbol in module['symbols']:
+            if symbol['section'] and symbol['binding'] in (1,2) and symbol['identity']:
+                metadata.append(f'E\t{symbol["identity"][0]}\t{base+symbol["value"]:x}')
+    (out/'deferred.tsv').write_text('\n'.join(metadata)+'\n', encoding='utf8')
     unnamed = normalize_imports(out)
     report = dict(source=str(game), title='CUSA03562', version='01.03',
                   image_sha256=image_hash, core_commit=json.loads((REPO/'docs/godzilla-core.json').read_text())['core']['commit'],
