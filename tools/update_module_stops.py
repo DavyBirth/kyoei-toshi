@@ -7,6 +7,7 @@ import sys
 root = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(root/'third_party/godzilla-core/scripts'))
 import link_modules
+from native_module_metadata import records
 
 proof = json.loads((root/'docs/native-prepare.json').read_text())
 inventory = json.loads((root/'docs/m0/inventory.json').read_text())
@@ -18,7 +19,7 @@ hashes = {f['path']: f['sha256'] for f in inventory['files']}
 table = out/'deferred.tsv'
 rows = []
 for line in table.read_text().splitlines():
-    if line.startswith('F\t'):
+    if line[:2] in ('F\t','S\t','H\t'):
         continue
     rows.append(line)
     if not line.startswith('M\t'):
@@ -29,8 +30,6 @@ for line in table.read_text().splitlines():
     assert path.is_relative_to(game)
     assert hashlib.sha256(path.read_bytes()).hexdigest() == hashes[relative]
     module = link_modules.module(path)
-    fini = module['tags'].get(13, 0)
-    if fini:
-        rows.append(f'F\t{int(base,16)+fini:x}')
-        print(relative, 'verified finalizer', hex(fini))
+    rows.extend(records(int(base,16), module))
+    print(relative, 'verified finalizer/segments/unwind metadata')
 table.write_text('\n'.join(rows)+'\n', encoding='utf8')

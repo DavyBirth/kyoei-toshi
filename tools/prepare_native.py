@@ -5,6 +5,7 @@ import importlib
 import json
 from pathlib import Path
 import sys
+from native_module_metadata import records
 
 REPO = Path(__file__).resolve().parents[1]
 CORE = REPO/'third_party/godzilla-core'
@@ -83,8 +84,7 @@ def main():
         base = int(record['base'], 16)
         metadata.append(f'M\t/app0/{relative}\t{base:x}\t{int(record["init"],16):x}')
         module = linker.module(module_path)
-        if module['tags'].get(13):
-            metadata.append(f'F\t{base+module["tags"][13]:x}')
+        metadata.extend(records(base, module))
         for symbol in module['symbols']:
             if symbol['section'] and symbol['binding'] in (1,2) and symbol['identity']:
                 metadata.append(f'E\t{symbol["identity"][0]}\t{base+symbol["value"]:x}')

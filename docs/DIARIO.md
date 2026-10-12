@@ -667,3 +667,39 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   não otimizado esse caminho nem feita afirmação de ganho de FPS.
 - Nova partida aberta: build/native-mount2.console.log, stress=0, métricas=1.
   Retestar save e load no jogo; estabilidade completa e performance pendentes.
+
+### 12/10/2026 — gravação confirmada; consulta de módulo ao dar load
+
+- Davy relatou fechamento ao dar load e leve melhora de desempenho.
+  Execução 20261012_203450.log confirma gravação real: SAVEDATA.DAT
+  254.576 bytes, SYSTEM.DAT 26.344 bytes, dois param.bin de 1.328 bytes,
+  ícones PNG. Ambos os jobs de gravação retornaram 0. Runtime registrou
+  138 escritas. Arquivos ficaram no user separado, não no dump/repositório.
+- Load selecionou SAVEDATA-000, montou existente read-only, terminou
+  o diálogo e começou desmontagem da fase. Fechou depois em
+  libc.prx+0x71178 por sceKernelGetModuleInfoFromAddr, addr=0x801c2c020,
+  flags=2. Consulta foi feita dentro do finalizador real de StageModule.
+  Não há evidência de save corrompido; gameplay restaurado ainda não provado.
+- Implementada consulta por endereço com ABI de 424 bytes, segmentos
+  offset 352, limites exatos, flags 0..2 e erros reais para parâmetros
+  inválidos/endereço desconhecido. Responde só módulos diferidos cujos
+  metadados foram certificados; outros endereços retornam ESRCH.
+  Não pega lock de ciclo de vida, pois finalizador já o possui.
+- tools/native_module_metadata.py deriva segmentos PT_LOAD/SCE_RELRO,
+  finalizador e EH frame de ELF próprio verificado. Aceita EH versão 1 com
+  ponteiro pcrel sdata4 observado; rejeita outros formatos. Segmentos usam
+  bytes efetivamente preparados, sem anunciar páginas extras do emulador.
+  Preparador e atualizador de metadados usam o mesmo gerador. Nenhum código
+  ou texto de jogo foi versionado; tabela fica na saída privada preparada.
+- test_kyoei_modules PASS: fronteiras, flags, nulo, chamada de info dentro
+  de finalizador sem deadlock, estado/erros de stop. Build e --list-stubs
+  passaram: 460 runtime, 418 módulos do jogo, 288 stubs restantes.
+- Executável SHA256
+  037a4cbfd892604d1fbb618d8c6429d1004570a1c8d9d9738a711844ce994878.
+  Nova partida aberta em build/native-load-info.console.log, stress=0,
+  métricas=1; saves anteriores preservados. Load completo continua pendente.
+- Performance: medição anterior mostrou aproximadamente 21.000 exceções
+  TLS tratadas por apresentação em alguns trechos; linear-downloads chegou
+  a média 9,90 ms/p95 15,93 ms. TLS é forte candidato de custo CPU a otimizar;
+  ainda não foi alterado o mecanismo nem comprovado ganho controlado.
+  Leve melhora percebida por Davy é relato de teste, não benchmark.
