@@ -449,3 +449,23 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   de falha IRQ ou stall nesta execução; deixar aberto para Davy testar.
 - Continuam pendentes: validar essa corrida em jogo, diagnosticar stall,
   corrigir desfoque/menu inicial invisível e validar missão/salvar/recarregar.
+
+## 12/10/2026 — retorno de Davy: câmeras e nova falha no gameplay
+
+- Davy confirmou gameplay nesta execução. L1 alterna três modos de câmera:
+  dois ficam nítidos e o modo normal permanece desfocado. Esse resultado
+  restringe a investigação ao comportamento específico da câmera/efeitos;
+  não comprova ainda erro de profundidade de campo ou causa no shader.
+- A execução 20261012_152834.log terminou novamente com Out of order flip
+  IRQ, saída 23. Último pedido 20623, buffer 0, etiqueta 1 ao registrar e 0
+  no callback, previous=1, count=20622, pending=0. Uma única thread registradora
+  nos últimos 64 eventos, callbacks na mesma ordem. 8.723 leituras,
+  1.344.730.149 bytes, zero escritas. Não houve minidump: caminho atual de
+  captura cobre fault/stall, enquanto esta saída é assert GPU.
+- As duas adaptações de superfície passaram nos testes isolados, porém
+  NÃO eliminaram a falha real; não declarar correção concluída. Investigar
+  também as escritas reais de etiquetas e a condição de entrada da espera
+  no Liverpool, além da sequência de liberação pelo driver. Histórico atual
+  não registra essas operações e não permite atribuir a causa final.
+- Preservados console build/native-surface-wait.console.log e log externo.
+  Nenhum novo executável aberto nesta conferência; processo anterior saiu.
