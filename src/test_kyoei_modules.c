@@ -17,6 +17,10 @@ int main(void) {
     modules[0].info.segment_count=1; modules[0].info.segments[0]=(ModuleSegment){0x1000,16,5};
     ModuleInfo info; memset(&info,0x5a,sizeof(info));
     CHECK(!info_from_address(0x100f,2,&info) && info.segments[0].size==16);
+    CHECK(elf_match_address(&info,0x1000)==1 && elf_match_address(&info,0x1007)==1);
+    CHECK(!elf_match_address(&info,0x1008) && !elf_match_address(&info,0x0fff));
+    info.segments[0].protection=6; CHECK(!elf_match_address(&info,0x1000));
+    CHECK(!elf_match_address(NULL,0x1000));
     CHECK(info_from_address(0x1010,2,&info)==(int32_t)0x80020003);
     CHECK(info_from_address(0x1000,3,&info)==(int32_t)0x80020016 && !info.size);
     CHECK(info_from_address(0x1000,2,NULL)==(int32_t)0x8002000e);

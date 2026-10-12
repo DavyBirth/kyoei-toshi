@@ -5,7 +5,7 @@ import importlib
 import json
 from pathlib import Path
 import sys
-from native_module_metadata import records
+from native_module_metadata import records, write_tls_sites
 
 REPO = Path(__file__).resolve().parents[1]
 CORE = REPO/'third_party/godzilla-core'
@@ -89,6 +89,7 @@ def main():
             if symbol['section'] and symbol['binding'] in (1,2) and symbol['identity']:
                 metadata.append(f'E\t{symbol["identity"][0]}\t{base+symbol["value"]:x}')
     (out/'deferred.tsv').write_text('\n'.join(metadata)+'\n', encoding='utf8')
+    write_tls_sites(out)
     unnamed = normalize_imports(out)
     report = dict(source=str(game), title='CUSA03562', version='01.03',
                   image_sha256=image_hash, core_commit=json.loads((REPO/'docs/godzilla-core.json').read_text())['core']['commit'],

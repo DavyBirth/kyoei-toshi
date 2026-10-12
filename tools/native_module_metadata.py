@@ -1,5 +1,14 @@
 """Deferred module metadata derived from the verified original ELF."""
 import struct
+import json
+
+def write_tls_sites(out):
+    linked = json.loads((out/'link.json').read_text())
+    sites = sorted(int(value,16) for values in linked['fs_loads_not_patched'].values() for value in values)
+    if len(sites) != len(set(sites)) or len(sites) > 4096:
+        raise ValueError('Invalid TLS instruction metadata')
+    (out/'tls-sites.tsv').write_text(''.join(f'{site:x}\n' for site in sites))
+    return len(sites)
 
 def records(base, module):
     rows = []

@@ -7,7 +7,7 @@ endif()
 set(CMAKE_C_STANDARD 11)
 set(KYOEI_CORE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/godzilla-core")
 include("${KYOEI_CORE}/prebuilt/libraries.cmake")
-set(CORE_FILES rt_core rt_sync rt_thread rt_memory rt_vmem rt_sema
+set(CORE_FILES rt_core rt_sync rt_memory rt_vmem rt_sema
   rt_file rt_kernel rt_rtc)
 list(TRANSFORM CORE_FILES PREPEND "${KYOEI_CORE}/src/")
 list(TRANSFORM CORE_FILES APPEND ".c")
@@ -23,6 +23,12 @@ function(kyoei_replace_checked variable before after)
   string(REPLACE "${before}" "${after}" adapted "${${variable}}")
   set(${variable} "${adapted}" PARENT_SCOPE)
 endfunction()
+file(READ "${KYOEI_CORE}/src/rt_thread.c" KYOEI_THREADS)
+kyoei_replace_checked(KYOEI_THREADS
+  "    t->result = t->entry(t->argument);"
+  "    extern void kyoei_tls_enter(void);\n    kyoei_tls_enter();\n    t->result = t->entry(t->argument);")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_threads.c" CONTENT "${KYOEI_THREADS}" @ONLY)
+list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_threads.c")
 file(READ "${KYOEI_CORE}/src/rt_savedata.c" KYOEI_SAVEDATA)
 kyoei_replace_checked(KYOEI_SAVEDATA
   "static const GzExport exports[] = {"
@@ -108,6 +114,12 @@ kyoei_replace_checked(KYOEI_LOADER
 kyoei_replace_checked(KYOEI_LOADER
   "    gz_stop(GZ_EXIT_FAULT, \"STOP: fault\");"
   "    kyoei_capture_failure(\"fault\", e);\n    gz_stop(GZ_EXIT_FAULT, \"STOP: fault\");")
+kyoei_replace_checked(KYOEI_LOADER
+  "    kyoei_tls_configure(image, image_size, main_tls);"
+  "    kyoei_tls_configure(image, image_size, main_tls);\n    kyoei_tls_optimize(out);")
+kyoei_replace_checked(KYOEI_LOADER
+  "    gz_thread_attach_main();"
+  "    gz_thread_attach_main();\n    kyoei_tls_enter();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 target_sources(kyoei PRIVATE src/kyoei_crash.c)

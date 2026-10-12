@@ -6,10 +6,12 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 static unsigned char *guest_image;
 static uint64_t image_bytes, template_offset, template_bytes, memory_bytes, alignment;
 static DWORD tls_slot = FLS_OUT_OF_INDEXES;
+static DWORD native_slot = TLS_OUT_OF_INDEXES;
 static volatile LONG64 tls_faults;
 uint64_t kyoei_tls_fault_count(void) { return (uint64_t)InterlockedCompareExchange64(&tls_faults, 0, 0); }
 typedef struct { unsigned char *allocation; uint64_t *tcb; uint64_t dtv[4]; } LocalTls;
@@ -52,10 +54,69 @@ static LocalTls *current_tls(void) {
     Self self = (Self)gz_thread_resolve("libkernel", "scePthreadSelf");
     tls->tcb[2] = self ? (uintptr_t)self() : 0;
     if (!FlsSetValue(tls_slot, tls)) gz_stop(21, "STOP: cannot publish main TLS");
+    if (native_slot != TLS_OUT_OF_INDEXES && !TlsSetValue(native_slot, tls->tcb))
+        gz_stop(21, "STOP: cannot publish native guest TLS");
     return tls;
 }
 
 void *kyoei_tls_tcb(void) { return current_tls()->tcb; }
+void kyoei_tls_enter(void) {
+    LocalTls *tls=current_tls();
+    if (native_slot != TLS_OUT_OF_INDEXES && !TlsSetValue(native_slot,tls->tcb))
+        gz_stop(21,"STOP: cannot enter guest TLS");
+}
+static uintptr_t native_slot_value(void) {
+    uintptr_t value, offset=0x1480u+(uintptr_t)native_slot*8;
+    __asm__("movq %%gs:(%1), %0" : "=r"(value) : "r"(offset));
+    return value;
+}
+unsigned kyoei_tls_patch_sites(const uint64_t *sites, unsigned count) {
+    static const unsigned char original[9]={0x64,0x48,0x8b,0x04,0x25,0,0,0,0};
+    if (!count) return 0;
+    if (native_slot != TLS_OUT_OF_INDEXES) gz_stop(21,"STOP: native TLS configured twice");
+    for (unsigned i=0;i<count;++i)
+        if (sites[i] > image_bytes || image_bytes-sites[i] < 9 ||
+            memcmp(guest_image+sites[i],original,9)) gz_stop(21,"STOP: TLS instruction signature mismatch");
+    native_slot=TlsAlloc();
+    if (native_slot == TLS_OUT_OF_INDEXES || native_slot >= 64) {
+        if (native_slot != TLS_OUT_OF_INDEXES) TlsFree(native_slot);
+        native_slot=TLS_OUT_OF_INDEXES;
+        gz_log("Kyoei TLS: inline Windows slot unavailable, retaining exception adapter");
+        return 0;
+    }
+    /* The x64 TEB inline TLS layout is checked against the Windows API before
+     * any guest code is changed. Only our TlsAlloc slot is used; GS is unchanged. */
+    void *probe=&native_slot;
+    if (!TlsSetValue(native_slot,probe) || native_slot_value()!=(uintptr_t)TlsGetValue(native_slot) ||
+        native_slot_value()!=(uintptr_t)probe) {
+        TlsSetValue(native_slot,NULL); TlsFree(native_slot); native_slot=TLS_OUT_OF_INDEXES;
+        gz_log("Kyoei TLS: Windows slot layout probe failed, retaining exception adapter"); return 0;
+    }
+    TlsSetValue(native_slot,NULL);
+    const uint32_t displacement=0x1480u+native_slot*8;
+    for (unsigned i=0;i<count;++i) {
+        unsigned char *code=guest_image+sites[i]; DWORD old, restored;
+        if (!VirtualProtect(code,9,PAGE_EXECUTE_READWRITE,&old)) gz_stop(21,"STOP: TLS patch protection failed");
+        code[0]=0x65; memcpy(code+5,&displacement,4);
+        if (!VirtualProtect(code,9,old,&restored)) gz_stop(21,"STOP: TLS patch restore failed");
+        FlushInstructionCache(GetCurrentProcess(),code,9);
+    }
+    gz_log("Kyoei TLS: %u verified FS loads use native thread slot %lu; guest entries initialized",count,(unsigned long)native_slot);
+    return count;
+}
+void kyoei_tls_optimize(const char *out) {
+    const char *enabled=getenv("KYOEI_TLS_FAST");
+    if (enabled && !strcmp(enabled,"0")) { gz_log("Kyoei TLS: fast path disabled for comparison"); return; }
+    char path[1024]; snprintf(path,sizeof(path),"%s/tls-sites.tsv",out);
+    FILE *file=fopen(path,"r");
+    if (!file) { gz_log("Kyoei TLS: site metadata absent, retaining exception adapter"); return; }
+    uint64_t sites[4096]; unsigned count=0; unsigned long long site; char line[64];
+    while (fgets(line,sizeof(line),file)) {
+        if (count==4096 || sscanf(line,"%llx",&site)!=1) gz_stop(21,"STOP: invalid TLS site metadata");
+        sites[count++]=(uint64_t)site;
+    }
+    fclose(file); kyoei_tls_patch_sites(sites,count);
+}
 void *kyoei_tls_address(uint64_t offset) {
     if (offset >= memory_bytes) gz_stop(21, "STOP: main TLS offset out of range");
     return current_tls()->allocation + offset;

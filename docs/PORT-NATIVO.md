@@ -78,13 +78,18 @@ O adaptador local já implementa:
 2. Criar uma cópia por thread, inicializando os bytes do template e zerando
    a parte sem dados; assegurar isolamento entre threads e alinhamento.
 3. Atender `__tls_get_addr` para o módulo 1 e a instrução medida
-   `mov r64, fs:[0]`, sem alterar o TEB/GS do Windows. Outros tipos de
-   instrução TLS continuam falhando explicitamente quando não suportados.
-4. Criar TLS sob demanda por thread e liberar via FLS na saída. Isso
-   também cobre threads host que chamam código do jogo. Não foi removida
-   apenas a rejeição: o template é validado e o armazenamento existe.
+   `mov r64, fs:[0]`. A versão inicial atende por exceção; a otimizada
+   troca os 580 `mov rax, fs:[0]` catalogados por leitura GS do slot que
+   `TlsAlloc` reservou para o jogo. Não muda o registro GS nem dados de
+   outros slots. Confere assinatura, limites e layout contra `TlsGetValue`
+   antes de alterar código somente em memória, antes das threads guest.
+4. Criar TLS por thread e liberar via FLS na saída. Entradas do eboot e
+   pthreads guest inicializam seu bloco antes de executar instruções
+   otimizadas. Novos caminhos de callback host para guest devem fazer o
+   mesmo. `KYOEI_TLS_FAST=0` mantém o caminho por exceção para comparação;
+   metadados ausentes ou slot/layout incompatível também usam esse caminho.
 5. Teste Windows real com template sintético, parte zerada, alinhamento,
-   acesso FS e duas threads simultâneas: PASS. O boot real avançou além
+   acesso FS legado/direto e duas threads simultâneas: PASS. O boot real avançou além
    de TLS, libc/Fios2/fontes/áudio e entrou no eboot.
 
 Não é uma implementação completa de todas as instruções FS ou formatos

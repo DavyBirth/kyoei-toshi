@@ -703,3 +703,44 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   a média 9,90 ms/p95 15,93 ms. TLS é forte candidato de custo CPU a otimizar;
   ainda não foi alterado o mecanismo nem comprovado ganho controlado.
   Leve melhora percebida por Davy é relato de teste, não benchmark.
+
+### 12/10/2026 — load confirmado; Continue e TLS direto
+
+- Davy confirmou que load restaurou gameplay, jogou, morreu e o Continue
+  fechou. Save/load inicial agora tem confirmação humana; retomada após
+  morte e missão completa permanecem pendentes. Partida anterior
+  20261012_204140.log fechou por __elf_phdr_match_addr dentro de
+  libc+0x711e4, durante StopUnloadModule da fase, não por leitura do save.
+- Implementada comparação real de endereço contra segmentos executáveis
+  de ModuleInfoEx. Fonte primária de comportamento FreeBSD:
+  https://lists.freebsd.org/pipermail/svn-src-head/2010-August/019849.html
+  Disassembly do libc próprio em build/libc-inspect.elf confirmou que o
+  PS4 passa o mesmo ModuleInfoEx devolvido por GetModuleInfoFromAddr,
+  e não o dl_phdr_info do FreeBSD. Não retornar sucesso fixo para ignorar
+  destructors. Testes de segmento executável/dados, limites e nulo PASS.
+- Performance anterior: 19–33 mil exceções TLS por apresentação em
+  vários trechos; linear-downloads média 15,12 ms/p95 24,28 ms em relatório.
+  Implementado caminho direto para as 580 leituras RAX FS:[0] já catalogadas.
+  Slot próprio TlsAlloc abaixo de 64, layout x64 TEB inline conferido contra
+  TlsGetValue com sentinela antes de patch. Instrução GS mantém registrador,
+  tamanho e flags; nenhuma chamada/trampoline/red-zone. Proteções restauradas
+  e instruction cache limpo. Alteração em memória antes das threads guest;
+  dump e arquivo preparado intactos. Entradas main/pthread preinicializam
+  TCB. Outros caminhos host->guest novos precisam do mesmo cuidado.
+- KYOEI_TLS_FAST=0 permite baseline. Sem metadados ou slot/layout compatível
+  mantém exceções. Gerador/update_tls_sites.py verifica eboot M0 e exporta
+  só offsets privados para tls-sites.tsv; runtime verifica assinatura exata
+  de cada instrução, recusa incompatibilidade. Cópia de rt_thread gerada
+  no build; core fixo e Godzilla preservados.
+- Teste TLS com duas threads e 10.000 leituras por thread: legado
+  32,37/32,74 ms e 20.002 exceções; direto 0,02/0,10 ms e zero exceções.
+  Template, zeragem, isolamento, alinhamento e cleanup PASS nos dois modos.
+  Ganho é do teste de TLS; ainda não é comparação controlada de FPS na cidade.
+- Build, test_kyoei_modules, test_kyoei_tls nos dois modos e --list-stubs
+  PASS. 461 runtime, 418 módulos, 287 stubs. As 580 assinaturas reais
+  foram aceitas; slot 8. Executável SHA256
+  82e1714070e7c6e420a365320cac389de907f73d0f9cc418aeee7faea6b548c8.
+- Nova execução build/native-continue-fast.console.log, PID inicial 32680,
+  fast=1, métricas=1, stress=0. Abertura com handled_total=0. Relatórios
+  iniciais de 60 FPS ainda são abertura, não prova de desempenho na cidade.
+  Partida deixada aberta para confirmar Continue e fluidez após load.

@@ -152,6 +152,18 @@ static void symbol_nid(const char *name, char output[12]) {
     if (bits) output[position++] = alphabet[(value << (6-bits))&63];
     output[position] = 0;
 }
+/* PS4 libc passes ModuleInfoEx here (verified at libc+0x711d5),
+ * rather than FreeBSD's dl_phdr_info. Match executable ELF segments. */
+static ABI int32_t elf_match_address(const ModuleInfo *info, uint64_t address) {
+    if (!info || info->segment_count > 4) return 0;
+    for (unsigned i=0;i<info->segment_count;++i) {
+        const ModuleSegment *segment=&info->segments[i];
+        if ((segment->protection & 1) && segment->size > sizeof(void *) &&
+            address >= segment->address && address-segment->address < segment->size-sizeof(void *))
+            return 1;
+    }
+    return 0;
+}
 static ABI int32_t module_symbol(int32_t handle, const char *name, void **address) {
     if (!name || !address) return (int32_t)0x8002000e;
     unsigned index = (unsigned)handle - 0x4000u;
@@ -172,6 +184,7 @@ uintptr_t kyoei_modules_resolve(const char *symbol) {
     if (!strcmp(symbol, "sceKernelLoadStartModule")) return (uintptr_t)load_module;
     if (!strcmp(symbol, "sceKernelStopUnloadModule")) return (uintptr_t)stop_module;
     if (!strcmp(symbol, "sceKernelGetModuleInfoFromAddr")) return (uintptr_t)info_from_address;
+    if (!strcmp(symbol, "__elf_phdr_match_addr")) return (uintptr_t)elf_match_address;
     if (!strcmp(symbol, "sceKernelDlsym")) return (uintptr_t)module_symbol;
     return 0;
 }
