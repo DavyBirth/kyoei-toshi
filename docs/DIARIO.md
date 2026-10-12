@@ -634,3 +634,36 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   Ajuste posterior de conversão de handle evita overflow de inteiro no fonte;
   test_kyoei_modules já o compila, executável da partida ainda é o anterior.
   Não recompilar/substituir o executável em uso para não interromper Davy.
+
+### 12/10/2026 — Mount2 após escolha de slot e medição de TLS
+
+- Davy confirmou novo fechamento ao clicar para salvar e nenhuma melhora
+  de desempenho percebida. Execução 20261012_202521.log mostrou cancelamento
+  da lista funcionando e, na tentativa seguinte, seleção de novo slot
+  funcionando: selected=0, directory vazio, result=0. Gerou PNG 228x128
+  de 51.699 bytes e entrou no progresso de gravação. Fechou por stub
+  sceSaveDataMount2 em eboot+0x6d2826, não por falha da lista. Writes=0.
+- src/kyoei_savedata.c implementa Mount2 (64 bytes, mode offset 24) adaptando
+  ao Mount real já existente (80 bytes, mode offset 40). Preserva usuário,
+  diretório, blocos, modo, ponteiro de resultado e erros do backend. Usando
+  título configurado a partir do SFO, não o título do Godzilla.
+- Conferidas todas as 13 importações libSceSaveData do eboot. As duas outras
+  ausentes eram GetProgress/ClearProgress, relativas ao backup assíncrono.
+  Cópia adaptada rt_savedata em build adiciona consultas com validação de
+  inicialização e ponteiro; zero representa ausência de trabalho de backup.
+  Não reporta sucesso de gravação nem implementa backups inexistentes.
+- Build passou. test_kyoei_savedata PASS (ABI/encaminhamento e erros),
+  test_kyoei_tls PASS. tools/test_savedata_storage.py usa o backend real
+  e pasta isolada build/test-save-storage/user, sem tocar nos saves de Davy:
+  payload e metadados escritos, desmontados, terminados, reabertos e lidos
+  idênticos; traversal inválido recusado, progresso e inicialização conferidos.
+  Mapeamento guest no teste é controlado; isso não comprova save/load do jogo.
+- Profiling da partida anterior: grupos de leitura linear com média 23,39 ms
+  no primeiro relatório e 12,35 ms no seguinte, p95 18 ms no segundo.
+  Prepare/Present perto de 0,15/0,5 ms. Readback tem custo relevante, mas
+  ainda não explica sozinho a lentidão. Não removido, preservando visual.
+- Adicionado contador de exceções FS:[0] tratadas por TLS e relatório por
+  120 apresentações, para investigar custo CPU específico do Kyoei. Ainda
+  não otimizado esse caminho nem feita afirmação de ganho de FPS.
+- Nova partida aberta: build/native-mount2.console.log, stress=0, métricas=1.
+  Retestar save e load no jogo; estabilidade completa e performance pendentes.

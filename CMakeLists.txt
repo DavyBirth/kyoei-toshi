@@ -8,7 +8,7 @@ set(CMAKE_C_STANDARD 11)
 set(KYOEI_CORE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/godzilla-core")
 include("${KYOEI_CORE}/prebuilt/libraries.cmake")
 set(CORE_FILES rt_core rt_sync rt_thread rt_memory rt_vmem rt_sema
-  rt_file rt_savedata rt_kernel rt_rtc)
+  rt_file rt_kernel rt_rtc)
 list(TRANSFORM CORE_FILES PREPEND "${KYOEI_CORE}/src/")
 list(TRANSFORM CORE_FILES APPEND ".c")
 # Kyoei uses the PS4 NONE message type while checking installed content.
@@ -23,6 +23,12 @@ function(kyoei_replace_checked variable before after)
   string(REPLACE "${before}" "${after}" adapted "${${variable}}")
   set(${variable} "${adapted}" PARENT_SCOPE)
 endfunction()
+file(READ "${KYOEI_CORE}/src/rt_savedata.c" KYOEI_SAVEDATA)
+kyoei_replace_checked(KYOEI_SAVEDATA
+  "static const GzExport exports[] = {"
+  "/* No asynchronous backups are scheduled by this folder backend. */\nstatic ABI int32_t save_clear_progress(void) { return initialized ? 0 : ERR_NOT_INITIALIZED; }\nstatic ABI int32_t save_get_progress(float *progress) {\n    if (!initialized) return ERR_NOT_INITIALIZED;\n    if (!progress) return ERR_PARAMETER;\n    *progress = 0.0f; return 0;\n}\nstatic const GzExport exports[] = {\n    {NULL, \"sceSaveDataGetProgress\", (void *)save_get_progress},\n    {NULL, \"sceSaveDataClearProgress\", (void *)save_clear_progress},")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_savedata_backend.c" CONTENT "${KYOEI_SAVEDATA}" @ONLY)
+list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_savedata_backend.c")
 kyoei_replace_checked(KYOEI_DIALOG_UI
   "#include \"dialog_ui.h\""
   "#include \"dialog_ui.h\"\n#include \"kyoei_dialog_list.h\"")
@@ -107,6 +113,8 @@ add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" 
 target_sources(kyoei PRIVATE src/kyoei_crash.c)
 target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
 target_sources(kyoei PRIVATE src/kyoei_png.c)
+target_sources(kyoei PRIVATE src/kyoei_savedata.c)
+target_compile_definitions(kyoei PRIVATE KYOEI_SAVE_ADAPTER=1)
 target_compile_definitions(kyoei PRIVATE KYOEI_PNG_ENCODER=1 MINIZ_STATIC_DEFINE=1)
 target_compile_definitions(kyoei PRIVATE KYOEI_CRASH_CAPTURE=1)
 set_source_files_properties("${KYOEI_CORE}/src/rt_core.c" PROPERTIES
@@ -272,6 +280,8 @@ add_executable(test_kyoei_gpu_wait src/test_kyoei_gpu_wait.c src/kyoei_gpu_wait.
 target_include_directories(test_kyoei_gpu_wait PRIVATE "${KYOEI_CORE}/src" src)
 add_executable(test_kyoei_png src/test_kyoei_png.c src/kyoei_png.c)
 add_executable(test_kyoei_modules src/test_kyoei_modules.c)
+add_executable(test_kyoei_savedata src/test_kyoei_savedata.c)
+target_include_directories(test_kyoei_savedata PRIVATE "${KYOEI_CORE}/src" src)
 target_include_directories(test_kyoei_modules PRIVATE "${KYOEI_CORE}/src" src)
 target_compile_definitions(test_kyoei_modules PRIVATE _CRT_SECURE_NO_WARNINGS)
 target_link_libraries(test_kyoei_modules PRIVATE bcrypt)

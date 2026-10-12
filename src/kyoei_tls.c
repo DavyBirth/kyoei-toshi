@@ -10,6 +10,8 @@
 static unsigned char *guest_image;
 static uint64_t image_bytes, template_offset, template_bytes, memory_bytes, alignment;
 static DWORD tls_slot = FLS_OUT_OF_INDEXES;
+static volatile LONG64 tls_faults;
+uint64_t kyoei_tls_fault_count(void) { return (uint64_t)InterlockedCompareExchange64(&tls_faults, 0, 0); }
 typedef struct { unsigned char *allocation; uint64_t *tcb; uint64_t dtv[4]; } LocalTls;
 
 static VOID CALLBACK release_tls(PVOID value) {
@@ -78,6 +80,7 @@ int kyoei_tls_fault(EXCEPTION_POINTERS *exception) {
         &context->Rsp, &context->Rbp, &context->Rsi, &context->Rdi, &context->R8, &context->R9,
         &context->R10, &context->R11, &context->R12, &context->R13, &context->R14, &context->R15};
     *registers[reg] = (uintptr_t)kyoei_tls_tcb();
+    InterlockedIncrement64(&tls_faults);
     context->Rip += 9;
     return 1;
 }
@@ -124,6 +127,13 @@ static ABI void *main_tls_get_addr(const uint64_t *index) {
     return original(index);
 }
 uintptr_t gz_resolve(const char *library, const char *symbol, int is_data) {
+#ifdef KYOEI_SAVE_ADAPTER
+    if (!is_data && !strcmp(library, "libSceSaveData")) {
+        extern uintptr_t kyoei_savedata_resolve(const char *);
+        uintptr_t save = kyoei_savedata_resolve(symbol);
+        if (save) return save;
+    }
+#endif
 #ifdef KYOEI_PNG_ENCODER
     if (!is_data && !strcmp(library, "libScePngEnc")) {
         extern uintptr_t kyoei_png_resolve(const char *symbol);

@@ -3,6 +3,8 @@
 #include <array>
 #include <chrono>
 #include <cstdlib>
+#include <cstdint>
+extern "C" uint64_t kyoei_tls_fault_count(void);
 
 // Intervals between completed game presents, excluding idle redraws.
 // Opt-in; reports every 120 intervals, with no per-frame log traffic.
@@ -57,6 +59,12 @@ inline void Presented() {
     std::sort(sorted.begin(), sorted.end());
     gz_log("Kyoei frame stats: intervals=120 fps=%.2f mean_ms=%.2f p50_ms=%.2f p95_ms=%.2f max_ms=%.2f",
            count * 1000.0 / total, total / count, sorted[59], sorted[113], sorted.back());
+    static uint64_t previous_faults = 0;
+    const uint64_t faults = kyoei_tls_fault_count();
+    gz_log("Kyoei TLS stats: handled_total=%llu delta=%llu per_present=%.2f",
+           (unsigned long long)faults, (unsigned long long)(faults - previous_faults),
+           (faults - previous_faults) / 120.0);
+    previous_faults = faults;
     count = 0;
 }
 }
