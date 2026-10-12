@@ -590,3 +590,47 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   relatório caiu a 13,14 FPS (p95 234,82 ms, máximo 665,95 ms); isso reforça
   separar carga/transição de gameplay. Os ~60 FPS anteriores não são
   evidência de desempenho na cidade. Partida deixada aberta para Davy.
+
+### 12/10/2026 — erro real de salvamento, parada de módulo e profiling
+
+- Davy relatou visual correto, desempenho abaixo de 30 FPS e fechamento
+  após problema ao salvar. Log 20261012_201311 confirma vários relatórios
+  de 9,77–21,42 FPS durante a fase, além de trechos perto de 30. Não houve
+  melhora de fluidez comprovada pela compilação otimizada.
+- PNG realmente exercitado: 228x128 RGB, 51.699 bytes. Depois o jogo pediu
+  SaveDataDialog LIST (mode=1), não suportado no runtime fixo. Open retornou
+  0x80b8000f, erro mostrado ao usuário; nenhuma escrita de save nessa partida.
+  Mais tarde limpou os recursos da fase e fechou por stub de
+  libkernel::sceKernelStopUnloadModule, eboot+0x6c31ac, handle 0x4001.
+  O fechamento não foi uma prova de corrupção de save nem falha do PNG.
+- Adaptação local de services/dialog_ui: lista de slots com navegação pelo
+  controle/setas, OK/cancelar e novo save quando permitido. Resultado preserva
+  ponteiros do chamador, usa diretório vazio para novo slot e buttonId INVALID
+  conforme referência. Confirmações SYSTEM_MSG CONFIRM/OVERWRITE têm escolha
+  real Sim/Não; demais tipos ainda são recusados explicitamente. A lista
+  mostra nomes de diretórios, sem miniaturas/metadados de título; parâmetros
+  do save selecionado ainda não são copiados para result.param. Carregamento
+  e salvamento completos dependem de validação real, não declarar M6 concluído.
+- Teste tools/test_save_list.py usa funções reais do services adaptado com
+  UI controlada: novo/existente, cancelar, limites, ponteiros preservados,
+  retorno Não e mensagem não suportada PASS.
+- kyoei_modules suporta StopUnloadModule chamando DT_FINI real do módulo.
+  Finalizadores verificados contra hashes M0 por tools/update_module_stops.py:
+  libSceSecure offset 0x157a0; StageModule offset 0x140. Metadados F registrados
+  só na saída preparada, preparador atualizado para futuras saídas. Após
+  parada bem-sucedida marca módulo parado, impede dlsym e admite novo start;
+  imagem fixa continua mapeada, não fingir que memória foi desmapeada.
+  test_kyoei_modules PASS: argumentos/resultado, falha preservando estado,
+  handle inválido e parada duplicada. Finalizador real na partida pendente.
+- Profiling opcional: custo de PrepareFrame, Present e ProcessDownloadImages
+  em médias/p95/máximo de 120 chamadas. TextureCache copiado/adaptado localmente;
+  nenhuma mudança no algoritmo de leitura. Caminho existente espera GPU por
+  imagem; hipótese de gargalo, ainda sem medição de gameplay que a confirme.
+  Preparação/apresentação iniciais abaixo de 1 ms em média, carga posterior
+  apresentou 17–26 FPS, ainda não atribuir causa. Readback continua habilitado.
+- Execução nova: build/native-save-profile.console.log, PID inicial 32544,
+  KYOEI_FRAME_STATS=1, stress=0. Executável em uso SHA256
+  ae57e0f4d0e71f70a872faf936ed2e4ad537fbcacb5ce68f0a36e894ea0ae4ff.
+  Ajuste posterior de conversão de handle evita overflow de inteiro no fonte;
+  test_kyoei_modules já o compila, executável da partida ainda é o anterior.
+  Não recompilar/substituir o executável em uso para não interromper Davy.

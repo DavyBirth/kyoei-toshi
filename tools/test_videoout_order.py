@@ -18,7 +18,7 @@ PRELUDE = r'''
 #include <vector>
 using u64 = uint64_t;
 namespace KyoeiFlipTrace { template<class... T> void Action(T...) {} }
-namespace KyoeiFrameStats { void Presented() {} }
+namespace KyoeiFrameStats { void Presented() {} struct Work { Work(int) {} }; }
 struct Presenter { void SetHDR(bool) {} void Present(void*) {} } instance;
 auto* presenter = &instance;
 namespace Libraries::Kernel {

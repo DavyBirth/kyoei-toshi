@@ -8,7 +8,7 @@
 #include <string.h>
 
 typedef struct { char nid[32]; uintptr_t address; } Symbol;
-typedef struct { char path[256]; uint64_t base; uintptr_t init; int started; Symbol symbols[128]; unsigned count; } Module;
+typedef struct { char path[256]; uint64_t base; uintptr_t init, fini; int started; Symbol symbols[128]; unsigned count; } Module;
 static Module modules[8];
 static unsigned count;
 static SRWLOCK lock = SRWLOCK_INIT;
@@ -27,6 +27,10 @@ void kyoei_modules_configure(const char *out, void *image, uint64_t size) {
             if (sscanf(line, "M\t%255[^\t]\t%llx\t%llx", current->path, &base, &init) != 3 || base >= size || init >= size)
                 gz_stop(21, "STOP: invalid deferred module");
             current->base = base; current->init = (uintptr_t)image + init;
+        } else if (line[0] == 'F') {
+            if (!current || sscanf(line, "F\t%llx", &address) != 1 || address >= size)
+                gz_stop(21, "STOP: invalid deferred finalizer");
+            current->fini = (uintptr_t)image + address;
         } else if (line[0] == 'E') {
             if (!current || current->count == 128) gz_stop(21, "STOP: invalid deferred exports");
             Symbol *entry = &current->symbols[current->count++];
@@ -63,6 +67,27 @@ static ABI int32_t load_module(const char *path, uint64_t args, const void *argp
     gz_stop(21, "STOP: native module not prepared: %s", path);
 }
 
+static ABI int32_t stop_module(int32_t handle, uint64_t args, const void *argp,
+                              uint32_t flags, const void *options, int32_t *result) {
+    unsigned index = (unsigned)handle - 0x4000u;
+    if (flags || options) return (int32_t)0x80020016;
+    AcquireSRWLockExclusive(&lock);
+    if (index >= count || !modules[index].started) {
+        ReleaseSRWLockExclusive(&lock); return (int32_t)0x80020003;
+    }
+    Module *module = &modules[index];
+    if (!module->fini) {
+        ReleaseSRWLockExclusive(&lock);
+        gz_stop(21, "STOP: module finalizer metadata missing: %s", module->path);
+    }
+    typedef int32_t (ABI *Fini)(uint64_t, const void *, const void *);
+    int32_t value = ((Fini)module->fini)(args, argp, options);
+    if (!value) module->started = 0;
+    if (result) *result = value;
+    gz_log("Kyoei module: %s native finalizer returned %d; fixed linked image retained", module->path, value);
+    ReleaseSRWLockExclusive(&lock);
+    return value;
+}
 static void symbol_nid(const char *name, char output[12]) {
     static const unsigned char salt[] = {0x51,0x8d,0x64,0xa6,0x35,0xde,0xd8,0xc1,0xe6,0xb0,0x39,0xb1,0xc3,0xe5,0x52,0x30};
     static const char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-";
@@ -86,7 +111,7 @@ static void symbol_nid(const char *name, char output[12]) {
 }
 static ABI int32_t module_symbol(int32_t handle, const char *name, void **address) {
     if (!name || !address) return (int32_t)0x8002000e;
-    unsigned index = (unsigned)(handle-0x4000);
+    unsigned index = (unsigned)handle - 0x4000u;
     if (index >= count || !modules[index].started) return (int32_t)0x80020003;
     char nid[12]; symbol_nid(name, nid);
     for (unsigned i = 0; i < modules[index].count; ++i) {
@@ -102,6 +127,7 @@ static ABI int32_t module_symbol(int32_t handle, const char *name, void **addres
 }
 uintptr_t kyoei_modules_resolve(const char *symbol) {
     if (!strcmp(symbol, "sceKernelLoadStartModule")) return (uintptr_t)load_module;
+    if (!strcmp(symbol, "sceKernelStopUnloadModule")) return (uintptr_t)stop_module;
     if (!strcmp(symbol, "sceKernelDlsym")) return (uintptr_t)module_symbol;
     return 0;
 }

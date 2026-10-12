@@ -24,6 +24,30 @@ function(kyoei_replace_checked variable before after)
   set(${variable} "${adapted}" PARENT_SCOPE)
 endfunction()
 kyoei_replace_checked(KYOEI_DIALOG_UI
+  "#include \"dialog_ui.h\""
+  "#include \"dialog_ui.h\"\n#include \"kyoei_dialog_list.h\"")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "    if (pressed & (0x10 | 0x20 | 0x40 | 0x80))"
+  "    if (d->type == 512) kyoei_list_move(window, pressed);\n    else if (pressed & (0x10 | 0x20 | 0x40 | 0x80))")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "        if (d->type == 256) {"
+  "        if (d->type == 512) kyoei_list_draw(dc, &r);\n        if (d->type == 256) {")
+kyoei_replace_checked(KYOEI_SERVICES
+  "static ABI int32_t save_open(const SaveParam *p) {"
+  "#include \"kyoei_save_list.h\"\nstatic ABI int32_t save_open(const SaveParam *p) {")
+kyoei_replace_checked(KYOEI_SERVICES
+  "    if (p->mode != 2 && p->mode != 4 && p->mode != 5) {"
+  "    if (p->mode == 1) {\n        KyoeiSaveList *list = kyoei_save_list_copy(p);\n        if (!list) return (int32_t)0x80B8000A;\n        if (save_worker) CloseHandle(save_worker);\n        save_mode = 1; save_user_data = p->user_data; save_button = 0; save_result_code = 1;\n        memset(kyoei_save_selected, 0, 32);\n        InterlockedExchange(&save_closed, 0);\n        gz_dialog_prepare(); InterlockedExchange(&save_running, 1); dialog_state[DLG_SAVE] = 2;\n        save_worker = CreateThread(NULL, 0, kyoei_save_list_show, list, 0, NULL);\n        if (!save_worker) { kyoei_save_list_free(list); InterlockedExchange(&save_running, 0); dialog_state[DLG_SAVE] = 1; return (int32_t)0x80B80009; }\n        return 0;\n    }\n    if (p->mode != 2 && p->mode != 4 && p->mode != 5) {")
+kyoei_replace_checked(KYOEI_SERVICES
+  "    r->user_data = save_user_data;"
+  "    r->user_data = save_user_data;\n    if (save_mode == 1 && r->directory) memcpy(r->directory, kyoei_save_selected, 32);")
+kyoei_replace_checked(KYOEI_SERVICES
+  "    if (p->mode != 2 && p->mode != 4 && p->mode != 5) {"
+  "    if (p->mode != 2 && p->mode != 3 && p->mode != 4 && p->mode != 5) {")
+kyoei_replace_checked(KYOEI_SERVICES
+  "    if (p->mode == 2) {"
+  "    if (p->mode == 3) {\n        const uint32_t *system = p->system;\n        if (!system || p->display < 1 || p->display > 3 || (system[0] != 2 && system[0] != 3)) { free(work); return (int32_t)0x80B8000F; }\n        work->type = 1;\n        wcscpy(work->text, system[0] == 3 ? L\"Substituir este save?\" : p->display == 1 ? L\"Salvar neste slot?\" : p->display == 2 ? L\"Carregar este save?\" : L\"Excluir este save?\");\n    } else if (p->mode == 2) {")
+kyoei_replace_checked(KYOEI_DIALOG_UI
   "int gz_dialog_input(uint32_t buttons) {"
   "int kyoei_ime_input(uint32_t buttons);\nint gz_dialog_input(uint32_t buttons) {\n    if (kyoei_ime_input(buttons)) { release_gate = 1; return 1; }")
 kyoei_replace_checked(KYOEI_SERVICES
@@ -147,7 +171,10 @@ kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
   "#include \"kyoei_flip_trace.h\"\n#include \"kyoei_frame_stats.h\"")
 kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
   "    presenter->Present(req.frame);"
-  "    presenter->Present(req.frame);\n    KyoeiFrameStats::Presented();")
+  "    { KyoeiFrameStats::Work measurement(1); presenter->Present(req.frame); }\n    KyoeiFrameStats::Presented();")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "    Vulkan::Frame* frame;"
+  "    KyoeiFrameStats::Work preparation_measurement(0);\n    Vulkan::Frame* frame;")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp" CONTENT "${KYOEI_VIDEOOUT_DRIVER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp")
 # The emulated command processor can reach the next flip's WRITE_DATA while
@@ -216,6 +243,13 @@ kyoei_replace_checked(KYOEI_GNM
   "    return sceGnmSubmitCommandBuffers(count, const_cast<const u32**>(kyoei_dcb_addresses.data()),")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp" CONTENT "${KYOEI_GNM}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp")
+file(READ "${KYOEI_SHAD}/src/video_core/texture_cache/texture_cache.cpp" KYOEI_TEXTURE_CACHE)
+set(KYOEI_TEXTURE_CACHE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n${KYOEI_TEXTURE_CACHE}")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "void TextureCache::ProcessDownloadImages() {"
+  "void TextureCache::ProcessDownloadImages() {\n    if (download_images.empty()) return;\n    KyoeiFrameStats::Work download_measurement(2);")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
 target_sources(kyoei PRIVATE $<TARGET_OBJECTS:kyoei_videoout>)
 target_compile_features(kyoei_videoout PRIVATE cxx_std_23)
 target_compile_options(kyoei_videoout PRIVATE -O2 -DNDEBUG -U_DEBUG -D_ITERATOR_DEBUG_LEVEL=0)
@@ -237,6 +271,10 @@ add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 add_executable(test_kyoei_gpu_wait src/test_kyoei_gpu_wait.c src/kyoei_gpu_wait.c)
 target_include_directories(test_kyoei_gpu_wait PRIVATE "${KYOEI_CORE}/src" src)
 add_executable(test_kyoei_png src/test_kyoei_png.c src/kyoei_png.c)
+add_executable(test_kyoei_modules src/test_kyoei_modules.c)
+target_include_directories(test_kyoei_modules PRIVATE "${KYOEI_CORE}/src" src)
+target_compile_definitions(test_kyoei_modules PRIVATE _CRT_SECURE_NO_WARNINGS)
+target_link_libraries(test_kyoei_modules PRIVATE bcrypt)
 target_include_directories(test_kyoei_png PRIVATE "${KYOEI_CORE}/src" src "${KYOEI_GPU_HEADERS}/gz_miniz-src" "${KYOEI_GPU_HEADERS}/gz_miniz-build")
 target_compile_definitions(test_kyoei_png PRIVATE MINIZ_STATIC_DEFINE=1)
 target_link_libraries(test_kyoei_png PRIVATE "${KYOEI_CORE}/prebuilt/_deps/gz_miniz-build/miniz.lib")
