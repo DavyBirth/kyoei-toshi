@@ -17,6 +17,7 @@ PRELUDE = r'''
 #include <mutex>
 #include <vector>
 using u64 = uint64_t;
+namespace KyoeiFlipTrace { template<class... T> void Action(T...) {} }
 struct Presenter { void SetHDR(bool) {} void Present(void*) {} } instance;
 auto* presenter = &instance;
 namespace Libraries::Kernel {
@@ -99,6 +100,10 @@ def run_gate(name, path, expected):
 #include <cstring>
 #include <exception>
 using u64=uint64_t;
+namespace KyoeiFlipTrace {
+ template<class... T> void Action(T...) {}
+ int LabelIndex(const void*) { return -1; }
+}
 u64 label=1;
 struct Port { bool IsVoLabel(const u64* p) { return p==&label; } } port;
 auto* vo_port=&port;

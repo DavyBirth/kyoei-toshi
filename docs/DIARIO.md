@@ -469,3 +469,77 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   não registra essas operações e não permite atribuir a causa final.
 - Preservados console build/native-surface-wait.console.log e log externo.
   Nenhum novo executável aberto nesta conferência; processo anterior saiu.
+
+## 12/10/2026 — marcas de flip privadas e espera cooperativa da GPU
+
+- Davy pediu corrigir os fechamentos e o desfoque. Histórico ampliado para
+  256 eventos: escritas de etiquetas, correspondência do port, liberações,
+  submissões e NOPs PatchedFlip. KYOEI_FLIP_STRESS=1 acrescenta 2 ms após
+  escritas de etiqueta somente para reprodução; padrão desativado.
+- Teste direto 20261012_154718.log: pedido 2344 falhou sem WRITE_DATA
+  correspondente. Port e endereço de etiqueta conferidos pelo rastreamento.
+  Cópia compartilhada original (GZ_COPY_GPU_BUFFERS=1) também falhou em
+  20261012_154856.log, pedido 9521, durante a transição para a fase.
+- Liverpool agora conserva cópias próprias de DCB/CCB como parâmetros de
+  uma coroutine por envio, até processamento completo. Não usa a arena
+  compartilhada que SubmitDone reinicia. Teste isolado comprova conservação
+  após reutilização da origem, suspensão de dois envios e liberação dos
+  frames de coroutine. Essa mudança sozinha ainda falhou em
+  20261012_155436.log, pedido 8696.
+- Esse último histórico identificou NOP PatchedFlip com header c09e1000,
+  fora do NOP específico produzido pelo patch, sem trava precedente. Causa
+  investigada: PatchFlipRequest modificava a memória do jogo e deixava sua
+  marca interna ali; reutilização do NOP podia conservar o payload antigo.
+- GNM local gerado em build passa a aplicar PatchFlipRequest numa cópia
+  privada do último DCB e encaminhar essa cópia ao Liverpool, que a conserva.
+  Arrays e comandos originais intactos. Preservados retornos de erro e
+  callbacks reais, sem fabricar etiquetas ou retirar o assert de flip.
+  Guards sem janela mantidos; reserva da antiga arena removida na unidade
+  local. Godzilla e snapshot intactos; unidades adaptadas: VideoOut, driver,
+  Liverpool e GNM. Não depende de GZ_COPY_GPU_BUFFERS para copiar envios.
+- tools/test_flip_patch.py usa o wrapper real com patch mutante controlado:
+  referência deixa marca na origem (falha esperada); adaptação mantém origem,
+  encaminha comandos alterados e propaga erro sem submeter (PASS).
+  tools/test_gpu_snapshot.py, test_videoout_order.py e test_kyoei_tls PASS.
+- Execução 20261012_160128.log com patch privado e stress atingiu gameplay
+  e menus. Não falhou por flip nessa tentativa, mas saiu 30 por stall ao
+  aproximar-se de Ultraman; Davy relatou fechamento quando foi pisado.
+  syncLabel=45535, expectedLabel=45543, trap em eboot+0x4331ba.
+- Captura interna comprovada: render-stall e fault .dmp em build, cerca de
+  0,9 MB cada. Análise LLDB offline funcionou sem conectar a processo vivo.
+  No dump de fault, etiqueta real em 0x1038255300 já tinha 0xb1e7 (45543),
+  exatamente o esperado. Thread Liverpool ociosa no dump de stall. O trabalho
+  terminou depois do limite de tentativas, antes do encerramento; isso
+  fundamenta adaptar a espera, sem falsificar conclusão gráfica.
+- src/kyoei_gpu_wait.c/h: antes da rotina original de espera, lê a etiqueta
+  real e cede CPU com Sleep(1), por até 3000 ms. Ao terminar/expirar entra
+  na rotina original: comparação, 10 milhões de tentativas e int 0x41
+  preservados. Caso de etiqueta nula segue a seleção frame-local original.
+  Relay de 29 bytes próximo à imagem, argumentos SysV preservados, código
+  RX após montagem e proteção da página original restaurada.
+- Adaptação só aceita a assinatura dos 316 bytes de eboot+0x4330b0:
+  FNV64 fa40be72aa1369e9, SHA256
+  f70d547733e932e9a82473aeed96abb2658b1c393b02ce235f5e0ab699de872d.
+  Não muda os arquivos preparados nem o dump; instala desvio na memória.
+  test_kyoei_gpu_wait PASS: fence atrasada, timeout sem escrever etiquetas,
+  relay preservando três argumentos mesmo com callback que os altera.
+- Executável final desta etapa SHA256
+  1382c5f4995a13303866919d87761d41cdad2b43e39dd5025dcc5868088ddee0.
+  Diagnóstico --list-stubs sem janela passou após GNM local (451 runtime,
+  418 módulos do jogo, 297 stubs); esses números não validam gameplay.
+- Execução com espera e sem stress abriu, assinatura aceita; fechada
+  normalmente pelo agente (CloseMainWindow) para comparar opção gráfica,
+  saída 0. Nenhuma falha observada nesse teste limitado de abertura.
+- Davy confirmou em vídeo do PS4 que câmera normal fica nítida; aqui dois
+  modos alternativos são nítidos e o normal ainda desfocado. Q adicionado
+  ao input_native.ps1 para L1. Capturas camera-private-01/02 em build; a
+  segunda coincidiu com menu aberto por Davy, não é comparação controlada.
+- Pista externa, não comprovação: issue shadPS4 #5057 relata névoa incorreta
+  em CUSA03562 01.00 sem Readback Linear Graphics. Fonte:
+  https://github.com/shadps4-emu/shadps4/issues/5057 . Nosso dump é 01.03.
+  Opção existente GZ_READBACK_LINEAR=1 testada, sem desativar efeito do jogo.
+- Nova execução de comparação: PID 28832, 20261012_161617.log,
+  build/native-linear-wait.console.log, sem stress, com leitura linear e
+  espera cooperativa. Ainda falta conferir câmera normal e passar pelos
+  efeitos/Ultraman nessa execução. Não declarar estabilidade ou missão
+  completa; salvamento/recarregamento seguem pendentes.

@@ -67,11 +67,18 @@ kyoei_replace_checked(KYOEI_LOADER
   "#include \"kyoei_tls.h\""
   "#include \"kyoei_tls.h\"\n#include \"kyoei_crash.h\"")
 kyoei_replace_checked(KYOEI_LOADER
+  "#include \"kyoei_crash.h\""
+  "#include \"kyoei_crash.h\"\n#include \"kyoei_gpu_wait.h\"")
+kyoei_replace_checked(KYOEI_LOADER
+  "    kyoei_tls_configure(image, image_size, main_tls);"
+  "    kyoei_tls_configure(image, image_size, main_tls);\n    kyoei_gpu_wait_configure(image, image_size);")
+kyoei_replace_checked(KYOEI_LOADER
   "    gz_stop(GZ_EXIT_FAULT, \"STOP: fault\");"
   "    kyoei_capture_failure(\"fault\", e);\n    gz_stop(GZ_EXIT_FAULT, \"STOP: fault\");")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 target_sources(kyoei PRIVATE src/kyoei_crash.c)
+target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
 target_compile_definitions(kyoei PRIVATE KYOEI_CRASH_CAPTURE=1)
 set_source_files_properties("${KYOEI_CORE}/src/rt_core.c" PROPERTIES
   COMPILE_DEFINITIONS "gz_resolve=kyoei_shared_resolve")
@@ -88,6 +95,9 @@ target_link_libraries(kyoei PRIVATE dbghelp)
 set(KYOEI_GPU_HEADERS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
 set(KYOEI_SHAD "${KYOEI_CORE}/third_party/shadPS4")
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/video_out.cpp" KYOEI_VIDEOOUT)
+kyoei_replace_checked(KYOEI_VIDEOOUT
+  "    *label_addr = reinterpret_cast<uintptr_t>(port->buffer_labels.data());"
+  "    KyoeiFlipTrace::Bind(port->buffer_labels.data(), port->buffer_labels.size());\n    *label_addr = reinterpret_cast<uintptr_t>(port->buffer_labels.data());")
 kyoei_replace_checked(KYOEI_VIDEOOUT
   "    Platform::IrqC::Instance()->RegisterOnce("
   "    const auto kyoei_request = KyoeiFlipTrace::Record(false, 0, buf_id, port->buffer_labels[buf_id]);\n    Platform::IrqC::Instance()->RegisterOnce(")
@@ -108,6 +118,9 @@ add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cp
 # Release the old surface before publishing completion. Otherwise a guest
 # woken by the event can lock it for a new flip before the late reset to zero.
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/driver.cpp" KYOEI_VIDEOOUT_DRIVER)
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "#include \"common/assert.h\""
+  "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_flip_trace.h\"\n#include \"common/assert.h\"")
 set(KYOEI_RELEASE_OLD [=[    // Reset prev flip label
     if (port->prev_index != -1) {
         port->buffer_labels[port->prev_index] = 0;
@@ -120,17 +133,77 @@ kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER "${KYOEI_RELEASE_OLD}" "")
 kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
   "        auto& flip_status = port->flip_status;"
   "        // Finish surface release before publishing completion to the guest.\n        if (port->prev_index != -1) {\n            port->buffer_labels[port->prev_index] = 0;\n            port->SignalVoLabel();\n        }\n        port->prev_index = req.index;\n        auto& flip_status = port->flip_status;")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "            port->buffer_labels[port->prev_index] = 0;"
+  "            KyoeiFlipTrace::Action(\"release-before\", port->prev_index, port->buffer_labels[port->prev_index], &port->buffer_labels[port->prev_index], req.index);\n            port->buffer_labels[port->prev_index] = 0;\n            KyoeiFlipTrace::Action(\"release-after\", port->prev_index, port->buffer_labels[port->prev_index], &port->buffer_labels[port->prev_index], req.index);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp" CONTENT "${KYOEI_VIDEOOUT_DRIVER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp")
 # The emulated command processor can reach the next flip's WRITE_DATA while
 # the presentation thread still owns that surface. Respect its label before
 # writing the new lock; never overwrite or fabricate the expected label.
 file(READ "${KYOEI_SHAD}/src/video_core/amdgpu/liverpool.cpp" KYOEI_LIVERPOOL)
+set(KYOEI_SUBMIT_BORROWED [=[    if (EmulatorSettings.IsCopyGpuBuffers()) {
+        std::tie(dcb, ccb) = CopyCmdBuffers(dcb, ccb);
+    }
+
+    auto task = ProcessGraphics(dcb, ccb);
+]=])
+set(KYOEI_SUBMIT_OWNED [=[    Task task{};
+    {
+        // Parameters live in the coroutine frame. Each submission owns its
+        // snapshot until processing finishes, independently of SubmitDone.
+        const auto make_owned_task = [](Liverpool* owner, std::vector<u32> owned_dcb,
+                                       std::vector<u32> owned_ccb) -> Task {
+            auto inner = owner->ProcessGraphics(owned_dcb, owned_ccb);
+            while (!inner.handle.done()) {
+                inner.handle.resume();
+                if (!inner.handle.done()) co_yield {};
+            }
+            inner.handle.destroy();
+        };
+        task = make_owned_task(this, {dcb.begin(), dcb.end()}, {ccb.begin(), ccb.end()});
+        KyoeiFlipTrace::Action("submit-owned", 0, dcb.size_bytes(), dcb.data(), ccb.size_bytes());
+    }
+]=])
+kyoei_replace_checked(KYOEI_LIVERPOOL "${KYOEI_SUBMIT_BORROWED}" "${KYOEI_SUBMIT_OWNED}")
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "                    Platform::IrqC::Instance()->Signal(Platform::InterruptId::GfxFlip);"
+  "                    KyoeiFlipTrace::Action(\"patched-flip\", 0, nop->header.raw, nop, base_addr);\n                    Platform::IrqC::Instance()->Signal(Platform::InterruptId::GfxFlip);")
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "#include \"common/assert.h\""
+  "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_flip_trace.h\"\n#include \"common/assert.h\"")
 kyoei_replace_checked(KYOEI_LIVERPOOL
   "                u64* address = write_data->Address<u64*>();"
   "                u64* address = write_data->Address<u64*>();\n                if (vo_port && vo_port->IsVoLabel(address) && data_size == 4 && write_data->data[0] == 1) {\n                    while (*address != 0) {\n                        YIELD_GFX();\n                    }\n                }")
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "                if (!write_data->wr_one_addr.Value()) {"
+  "                if (const auto kyoei_index = KyoeiFlipTrace::LabelIndex(address); kyoei_index >= 0) {\n                    KyoeiFlipTrace::Action(\"write-before\", kyoei_index, *address, address, (static_cast<u64>(data_size) << 32) | write_data->data[0]);\n                    KyoeiFlipTrace::Action(vo_port && vo_port->IsVoLabel(address) ? \"port-match\" : \"port-mismatch\", kyoei_index, *address, address);\n                }\n                if (!write_data->wr_one_addr.Value()) {")
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "                    std::memcpy(address, write_data->data, data_size);"
+  "                    std::memcpy(address, write_data->data, data_size);\n                    if (const auto kyoei_index = KyoeiFlipTrace::LabelIndex(address); kyoei_index >= 0) {\n                        KyoeiFlipTrace::Action(\"write-after\", kyoei_index, *address, address);\n                        KyoeiFlipTrace::StressAfterWrite();\n                    }")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp" CONTENT "${KYOEI_LIVERPOOL}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp")
+# Patch only a private snapshot. The guest can reuse NOP storage by changing
+# its header without clearing its old payload, so host markers must never
+# remain in that storage after this API returns.
+file(READ "${KYOEI_SHAD}/src/core/libraries/gnmdriver/gnmdriver.cpp" KYOEI_GNM)
+kyoei_replace_checked(KYOEI_GNM
+  "liverpool = std::make_unique<AmdGpu::Liverpool>();"
+  "if (g_window) liverpool = std::make_unique<AmdGpu::Liverpool>();")
+kyoei_replace_checked(KYOEI_GNM
+  "presenter = std::make_unique<Vulkan::Presenter>(*g_window, liverpool.get());"
+  "if (g_window) presenter = std::make_unique<Vulkan::Presenter>(*g_window, liverpool.get());")
+kyoei_replace_checked(KYOEI_GNM
+  "    if (EmulatorSettings.IsCopyGpuBuffers()) {\n        liverpool->ReserveCopyBufferSpace();\n    }"
+  "    /* Kyoei SubmitGfx owns each command snapshot; no shared copy arena. */")
+kyoei_replace_checked(KYOEI_GNM
+  "    auto* cmdbuf = dcb_gpu_addrs[count - 1];\n    const auto size_dw = dcb_sizes_in_bytes[count - 1] / 4;"
+  "    const auto size_dw = dcb_sizes_in_bytes[count - 1] / 4;\n    std::vector<u32> kyoei_flip_commands(dcb_gpu_addrs[count - 1], dcb_gpu_addrs[count - 1] + size_dw);\n    std::vector<u32*> kyoei_dcb_addresses(dcb_gpu_addrs, dcb_gpu_addrs + count);\n    kyoei_dcb_addresses[count - 1] = kyoei_flip_commands.data();\n    auto* cmdbuf = kyoei_flip_commands.data();")
+kyoei_replace_checked(KYOEI_GNM
+  "    return sceGnmSubmitCommandBuffers(count, const_cast<const u32**>(dcb_gpu_addrs),"
+  "    return sceGnmSubmitCommandBuffers(count, const_cast<const u32**>(kyoei_dcb_addresses.data()),")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp" CONTENT "${KYOEI_GNM}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp")
 target_sources(kyoei PRIVATE $<TARGET_OBJECTS:kyoei_videoout>)
 target_compile_features(kyoei_videoout PRIVATE cxx_std_23)
 target_compile_options(kyoei_videoout PRIVATE -O2 -DNDEBUG -U_DEBUG -D_ITERATOR_DEBUG_LEVEL=0)
@@ -139,6 +212,7 @@ target_include_directories(kyoei_videoout PRIVATE
   "${CMAKE_CURRENT_SOURCE_DIR}/src"
   "${KYOEI_CORE}/gpu/shim" "${KYOEI_SHAD}/src" "${KYOEI_SHAD}" "${KYOEI_CORE}/src"
   "${KYOEI_SHAD}/externals/gcn/include"
+  "${KYOEI_SHAD}/src/core/libraries/gnmdriver"
   "${KYOEI_GPU_HEADERS}/gz_vulkan-src/include" "${KYOEI_GPU_HEADERS}/gz_fmt-src/include"
   "${KYOEI_GPU_HEADERS}/gz_magic-src/include" "${KYOEI_GPU_HEADERS}/gz_robin-src/include"
   "${KYOEI_GPU_HEADERS}/gz_vma-src/include" "${KYOEI_GPU_HEADERS}/gz_sdl-src/include"
@@ -148,6 +222,8 @@ target_include_directories(kyoei_videoout PRIVATE
 file(GLOB KYOEI_BOOST_INCLUDES "${KYOEI_GPU_HEADERS}/gz_boost-src/libs/*/include")
 target_include_directories(kyoei_videoout SYSTEM PRIVATE ${KYOEI_BOOST_INCLUDES})
 add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
+add_executable(test_kyoei_gpu_wait src/test_kyoei_gpu_wait.c src/kyoei_gpu_wait.c)
+target_include_directories(test_kyoei_gpu_wait PRIVATE "${KYOEI_CORE}/src" src)
 target_include_directories(test_kyoei_tls PRIVATE "${KYOEI_CORE}/src" src)
 file(GLOB GPU_DLLS "${KYOEI_CORE}/prebuilt/*.dll")
 foreach(DLL IN LISTS GPU_DLLS)
