@@ -332,3 +332,46 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   recompilar após essa pausa; retomar dos logs/capturas acima quando
   solicitado. M6 continua em desenvolvimento: gameplay inicial funciona,
   mas o port ainda não é estável nem completo.
+
+## 12/10/2026 — retomada e histórico de callbacks de apresentação
+
+- Davy pediu continuar. Retomada pela falha intermitente Out of order flip
+  IRQ, ainda sem causa confirmada. Snapshot e projeto Godzilla preservados.
+- Adicionado src/kyoei_flip_trace.h, integrado somente à unidade VideoOut
+  gerada em build. Guarda os últimos 64 registros/execuções de callbacks,
+  com sequência, identificação do pedido, thread, tempo, buffer e etiqueta.
+  Histórico impresso se a etiqueta falhar; assert e agendamento preservados.
+  Registro ocorre antes da inserção na fila IRQ: em chamadas concorrentes,
+  a sequência observada não prova sozinha a ordem de inserção da fila.
+- Inspeção confirmou: GNM registra callback e modifica o command buffer
+  para escrever etiqueta 1 antes do NOP PatchedFlip; Liverpool sinaliza
+  GfxFlip nesse NOP e consome um callback da fila global. Próximo diagnóstico
+  deve distinguir reordenação de pedidos, reuso de command buffers e
+  alteração da etiqueta pela apresentação. Nenhuma dessas causas comprovada.
+- Compilação passou, test_kyoei_tls.exe PASS, git diff --check sem erros.
+  Executável SHA256:
+  20f36412562d717abc6044c4ab4e9f1e7009f0cec7ade35fd35d3a61b8ed7364.
+- Port aberto com scripts/run_native.ps1, PID 21776, registro externo
+  native-05/logs/20261012_150241.log e console build/native-latest.console.log.
+  Captura local ignorada build/resume-20261012-01.png mostra personagem na
+  rua, HP 100/100 e menu de pausa com opções visíveis. Controle físico
+  entregou botões e movimentos do analógico ao jogo durante a observação.
+- A execução terminou com saída 30: após movimento pelo controle e eventos
+  da fase, o jogo registrou Stall during rendering at flush, syncLabel=61096,
+  expectedLabel=61104. Interrupção guest `cd 41` em eboot+0x4331ba, thread
+  11140, reportada pelo Windows como access violation. Não houve mensagem
+  Out of order flip IRQ nem descarga do novo histórico nesta execução.
+  Não tratar essa interrupção deliberada após o stall como simples leitura
+  de ponteiro inválido; causa da espera gráfica ainda desconhecida.
+- Console registra 8.312 leituras / 1.236.744.684 bytes, zero escritas de
+  arquivos. Desfoque, missão completa e salvar/recarregar continuam pendentes.
+  Alteração desta sessão é diagnóstico, não correção comprovada.
+- Terminal isolado falhou ao iniciar (setup refresh); comandos precisaram
+  de execução aprovada fora do isolamento. Git usou safe.directory apenas
+  por comando; nenhuma configuração global alterada. Política de scripts
+  contornada somente no processo de teste com ExecutionPolicy Bypass.
+- Davy pediu salvar para iniciar outro comando e resolver as permissões.
+  Não abrir outra execução nesta pausa. Retomar do log acima: investigar
+  stall de flush/syncLabel e chamada GNM imediatamente anterior ao `cd 41`,
+  além da falha IRQ anterior. Última busca de fontes foi interrompida;
+  nenhuma nova correção aplicada depois da parada do jogo.

@@ -80,14 +80,20 @@ set(KYOEI_GPU_HEADERS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing 
 set(KYOEI_SHAD "${KYOEI_CORE}/third_party/shadPS4")
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/video_out.cpp" KYOEI_VIDEOOUT)
 kyoei_replace_checked(KYOEI_VIDEOOUT
+  "    Platform::IrqC::Instance()->RegisterOnce("
+  "    const auto kyoei_request = KyoeiFlipTrace::Record(false, 0, buf_id, port->buffer_labels[buf_id]);\n    Platform::IrqC::Instance()->RegisterOnce(")
+kyoei_replace_checked(KYOEI_VIDEOOUT
+  "            ASSERT_MSG(irq == Platform::InterruptId::GfxFlip,"
+  "            KyoeiFlipTrace::Record(true, kyoei_request, buf_id, port->buffer_labels[buf_id]);\n            ASSERT_MSG(irq == Platform::InterruptId::GfxFlip,")
+kyoei_replace_checked(KYOEI_VIDEOOUT
   "#include \"common/assert.h\""
-  "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"common/assert.h\"")
+  "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_flip_trace.h\"\n#include \"common/assert.h\"")
 kyoei_replace_checked(KYOEI_VIDEOOUT
   "    driver = std::make_unique<VideoOutDriver>"
   "    if (presenter) driver = std::make_unique<VideoOutDriver>")
 kyoei_replace_checked(KYOEI_VIDEOOUT
   "            ASSERT_MSG(port->buffer_labels[buf_id] == 1, \"Out of order flip IRQ\");"
-  "            if (port->buffer_labels[buf_id] != 1) {\n                gz_log(\"Kyoei flip failure: buffer=%u label=0x%llx previous=%d count=%llu pending=%d gc=%d arg=%lld\", buf_id, (unsigned long long)port->buffer_labels[buf_id], port->prev_index, (unsigned long long)port->flip_status.count, port->flip_status.flip_pending_num, port->flip_status.gc_queue_num, (long long)flip_arg);\n            }\n            ASSERT_MSG(port->buffer_labels[buf_id] == 1, \"Out of order flip IRQ\");")
+  "            if (port->buffer_labels[buf_id] != 1) {\n                KyoeiFlipTrace::Dump();\n                gz_log(\"Kyoei flip failure: buffer=%u label=0x%llx previous=%d count=%llu pending=%d gc=%d arg=%lld\", buf_id, (unsigned long long)port->buffer_labels[buf_id], port->prev_index, (unsigned long long)port->flip_status.count, port->flip_status.flip_pending_num, port->flip_status.gc_queue_num, (long long)flip_arg);\n            }\n            ASSERT_MSG(port->buffer_labels[buf_id] == 1, \"Out of order flip IRQ\");")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp" CONTENT "${KYOEI_VIDEOOUT}" @ONLY)
 add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp")
 target_sources(kyoei PRIVATE $<TARGET_OBJECTS:kyoei_videoout>)
@@ -95,6 +101,7 @@ target_compile_features(kyoei_videoout PRIVATE cxx_std_23)
 target_compile_options(kyoei_videoout PRIVATE -O2 -DNDEBUG -U_DEBUG -D_ITERATOR_DEBUG_LEVEL=0)
 target_compile_definitions(kyoei_videoout PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS VULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1)
 target_include_directories(kyoei_videoout PRIVATE
+  "${CMAKE_CURRENT_SOURCE_DIR}/src"
   "${KYOEI_CORE}/gpu/shim" "${KYOEI_SHAD}/src" "${KYOEI_SHAD}" "${KYOEI_CORE}/src"
   "${KYOEI_SHAD}/externals/gcn/include"
   "${KYOEI_GPU_HEADERS}/gz_vulkan-src/include" "${KYOEI_GPU_HEADERS}/gz_fmt-src/include"
