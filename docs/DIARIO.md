@@ -375,3 +375,72 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   stall de flush/syncLabel e chamada GNM imediatamente anterior ao `cd 41`,
   além da falha IRQ anterior. Última busca de fontes foi interrompida;
   nenhuma nova correção aplicada depois da parada do jogo.
+
+## 12/10/2026 — corrida de liberação de superfície e novo teste
+
+- Davy relatou que o fechamento no gameplay anterior ocorreu ao andar
+  perto da luta de Ultraman e de explosões na cidade; mundo ainda desfocado.
+  Comparou também o áudio caótico com vídeo do PS4 e confirmou comportamento
+  semelhante na cena. Não alterar áudio só por sobreposição de vozes.
+- Desmontagem local do dump confirmou loop em eboot+0x4330b0: após
+  10.000.000 leituras sem atingir o valor esperado, imprime stall, chama
+  sceGnmDebugHardwareStatus e executa int 0x41. Limite de iterações,
+  não timeout em segundos. Compilação de efeitos pode atrasar a thread GPU,
+  mas essa causa ainda não foi comprovada. Não pular a interrupção.
+- Tentativa LLDB: primeiro faltou python3.dll; PATH do processo com Python
+  3.14 existente permitiu conectar. Porém lldb-server falhou com C0000005
+  durante o teste, perdeu a conexão; jogo saiu com -1073740972 (C0000374).
+  Nenhuma pilha válida capturada. Prova build/render-stall-threads.log e
+  log externo 20261012_151249.log. Ferramenta LLDB experimental removida.
+- Adicionados kyoei_crash.c/h: MiniDumpWriteDump na chamada de diagnóstico
+  de stall e no encerramento por fault. Encaminha diagnóstico GNM ao
+  original; não substitui sua resposta. Integração no loader gerado e
+  resolver só no executável principal (KYOEI_CRASH_CAPTURE), teste TLS
+  separado. Dumps na pasta do executável, atualmente build, nunca distribuir;
+  .dmp/.mdmp ignorados globalmente por poderem conter memória do jogo.
+  Compilação passou; captura de dump em falha real ainda não comprovada.
+- Execução 20261012_152005.log fechou com saída 23, na abertura/transição:
+  Out of order flip IRQ. Histórico de 64 eventos mostrou registros e IRQs
+  na mesma ordem, todos pela mesma thread registradora; último pedido 4531,
+  buffer=0, etiqueta 1 no registro e 0 no IRQ, previous=1, count=4530,
+  pending=0. Não houve fault/stall: caminho do minidump não foi chamado.
+- Identificada janela de corrida no driver de referência: Flip publica
+  status e dispara eventos antes de zerar etiqueta da superfície anterior.
+  Consumidor acordado pode reusar essa superfície, escrever 1 para seu
+  próximo quadro e ter essa escrita apagada pelo reset atrasado para 0.
+- Adaptação local do driver.cpp gerada em build pelo CMake: liberação da
+  superfície anterior e atualização de prev_index passam a ocorrer dentro
+  do port_mutex, antes da publicação do status e dos eventos. Nenhuma escrita
+  artificial de etiqueta 1; assert de ordem continua. Snapshot e Godzilla
+  intactos; nova unidade usa os mesmos includes/ABI do VideoOut local.
+- tools/test_videoout_order.py compila o método Flip real de cada fonte
+  contra consumidor imediato do evento: referência perde a nova etiqueta
+  (falha esperada), adaptação preserva (PASS). Não usa dados do jogo.
+  Compilação final passou, teste TLS PASS, diff --check sem erros.
+- Execução com apenas a ordem corrigida: PID 23040, 20261012_152415.log,
+  console build/native-release-order.console.log. Falhou novamente na
+  transição, pedido 4101, buffer 0 etiqueta 0, previous=1, count=4100,
+  saída 23. A correção da notificação sozinha NÃO resolve o jogo.
+  SHA256 desse executável intermediário:
+  71f82a3055e4033398110b58c7091b545e430d6199b75cb81e9b9e245029cbf1.
+- Adaptação adicional do Liverpool gerada em build: WRITE_DATA de 4 bytes
+  com valor 1 para endereço de etiqueta VideoOut espera o valor real 0 antes
+  de escrever. Usa YIELD_GFX da própria coroutine para permitir a liberação
+  pela apresentação. Outros WRITE_DATA não alterados; nenhum valor forjado
+  nem assert removido. Cabeçalho xxHash lido do cache externo existente.
+- Teste ampliado compila o trecho real antes do WRITE_DATA contra coroutine
+  e liberação tardia da superfície: referência perde trava antecipada,
+  adaptação espera a liberação e preserva a nova trava. Ambos os cenários
+  de teste (evento e escrita antecipada) PASS; TLS PASS novamente.
+- Executável com as duas adaptações:
+  39d27a785202a59b9cffa0f564619a749b6fe7810656b0fb9150b4865237024f.
+  Execução PID 29280, log 20261012_152834.log, console
+  build/native-surface-wait.console.log. Captura build/surface-wait-01.png
+  confirma abertura renderizada e botões enviados chegam ao jogo. Ainda
+  falta comprovar estabilidade durante gameplay e reproduzir o stall de
+  flush; não declarar o port ou a primeira missão completos.
+- Captura posterior build/surface-wait-02.png mostra o menu inicial inteiro
+  com New Game, Load Game, Option e ???? legíveis; progresso visual observado
+  com a espera de superfície. Processo segue aberto para teste, sem LLDB.
+- Continuam pendentes: validar essa corrida em jogo, diagnosticar stall,
+  corrigir desfoque/menu inicial invisível e validar missão/salvar/recarregar.

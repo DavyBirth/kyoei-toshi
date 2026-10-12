@@ -124,6 +124,12 @@ static ABI void *main_tls_get_addr(const uint64_t *index) {
     return original(index);
 }
 uintptr_t gz_resolve(const char *library, const char *symbol, int is_data) {
+#ifdef KYOEI_CRASH_CAPTURE
+    if (!is_data && !strcmp(library, "libSceGnmDriver") && !strcmp(symbol, "sceGnmDebugHardwareStatus")) {
+        extern ABI int32_t kyoei_render_debug_status(void);
+        return (uintptr_t)kyoei_render_debug_status;
+    }
+#endif
     /* aerolib appends underscores to several VideoOut names; the native GPU
      * table uses the public API spelling. Resolve only existing functions. */
     if (!is_data && !strcmp(library, "libSceVideoOut")) {

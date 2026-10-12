@@ -63,8 +63,16 @@ foreach(REQUIRED_ADAPTER "kyoei_tls_configure(image, image_size, main_tls);" "if
     message(FATAL_ERROR "Review TLS adapter: missing integration ${REQUIRED_ADAPTER}")
   endif()
 endforeach()
+kyoei_replace_checked(KYOEI_LOADER
+  "#include \"kyoei_tls.h\""
+  "#include \"kyoei_tls.h\"\n#include \"kyoei_crash.h\"")
+kyoei_replace_checked(KYOEI_LOADER
+  "    gz_stop(GZ_EXIT_FAULT, \"STOP: fault\");"
+  "    kyoei_capture_failure(\"fault\", e);\n    gz_stop(GZ_EXIT_FAULT, \"STOP: fault\");")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
+target_sources(kyoei PRIVATE src/kyoei_crash.c)
+target_compile_definitions(kyoei PRIVATE KYOEI_CRASH_CAPTURE=1)
 set_source_files_properties("${KYOEI_CORE}/src/rt_core.c" PROPERTIES
   COMPILE_DEFINITIONS "gz_resolve=kyoei_shared_resolve")
 set_source_files_properties("${KYOEI_CORE}/src/rt_kernel.c" PROPERTIES
@@ -74,7 +82,8 @@ target_compile_definitions(kyoei PRIVATE GZ_GPU=1 WIN32_LEAN_AND_MEAN _CRT_SECUR
 target_compile_options(kyoei PRIVATE -Wall -Wextra)
 set_target_properties(kyoei PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(kyoei PRIVATE ${KYOEI_GPU_LIBRARIES} ${KYOEI_SYSTEM_LIBRARIES})
-# Compile just VideoOut from the fixed snapshot for local diagnostics. The
+target_link_libraries(kyoei PRIVATE dbghelp)
+# Compile adapted GPU units from the fixed snapshot locally. The
 # external cache supplies dependency headers only; no sibling sources are built.
 set(KYOEI_GPU_HEADERS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
 set(KYOEI_SHAD "${KYOEI_CORE}/third_party/shadPS4")
@@ -96,6 +105,32 @@ kyoei_replace_checked(KYOEI_VIDEOOUT
   "            if (port->buffer_labels[buf_id] != 1) {\n                KyoeiFlipTrace::Dump();\n                gz_log(\"Kyoei flip failure: buffer=%u label=0x%llx previous=%d count=%llu pending=%d gc=%d arg=%lld\", buf_id, (unsigned long long)port->buffer_labels[buf_id], port->prev_index, (unsigned long long)port->flip_status.count, port->flip_status.flip_pending_num, port->flip_status.gc_queue_num, (long long)flip_arg);\n            }\n            ASSERT_MSG(port->buffer_labels[buf_id] == 1, \"Out of order flip IRQ\");")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp" CONTENT "${KYOEI_VIDEOOUT}" @ONLY)
 add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp")
+# Release the old surface before publishing completion. Otherwise a guest
+# woken by the event can lock it for a new flip before the late reset to zero.
+file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/driver.cpp" KYOEI_VIDEOOUT_DRIVER)
+set(KYOEI_RELEASE_OLD [=[    // Reset prev flip label
+    if (port->prev_index != -1) {
+        port->buffer_labels[port->prev_index] = 0;
+        port->SignalVoLabel();
+    }
+    // save to prev buf index
+    port->prev_index = req.index;
+]=])
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER "${KYOEI_RELEASE_OLD}" "")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "        auto& flip_status = port->flip_status;"
+  "        // Finish surface release before publishing completion to the guest.\n        if (port->prev_index != -1) {\n            port->buffer_labels[port->prev_index] = 0;\n            port->SignalVoLabel();\n        }\n        port->prev_index = req.index;\n        auto& flip_status = port->flip_status;")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp" CONTENT "${KYOEI_VIDEOOUT_DRIVER}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp")
+# The emulated command processor can reach the next flip's WRITE_DATA while
+# the presentation thread still owns that surface. Respect its label before
+# writing the new lock; never overwrite or fabricate the expected label.
+file(READ "${KYOEI_SHAD}/src/video_core/amdgpu/liverpool.cpp" KYOEI_LIVERPOOL)
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "                u64* address = write_data->Address<u64*>();"
+  "                u64* address = write_data->Address<u64*>();\n                if (vo_port && vo_port->IsVoLabel(address) && data_size == 4 && write_data->data[0] == 1) {\n                    while (*address != 0) {\n                        YIELD_GFX();\n                    }\n                }")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp" CONTENT "${KYOEI_LIVERPOOL}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp")
 target_sources(kyoei PRIVATE $<TARGET_OBJECTS:kyoei_videoout>)
 target_compile_features(kyoei_videoout PRIVATE cxx_std_23)
 target_compile_options(kyoei_videoout PRIVATE -O2 -DNDEBUG -U_DEBUG -D_ITERATOR_DEBUG_LEVEL=0)
@@ -108,7 +143,8 @@ target_include_directories(kyoei_videoout PRIVATE
   "${KYOEI_GPU_HEADERS}/gz_magic-src/include" "${KYOEI_GPU_HEADERS}/gz_robin-src/include"
   "${KYOEI_GPU_HEADERS}/gz_vma-src/include" "${KYOEI_GPU_HEADERS}/gz_sdl-src/include"
   "${KYOEI_GPU_HEADERS}/gz_boost-src"
-  "${KYOEI_GPU_HEADERS}/gz_sdl-build/include-revision" "${KYOEI_GPU_HEADERS}/gz_xbyak-src")
+  "${KYOEI_GPU_HEADERS}/gz_sdl-build/include-revision" "${KYOEI_GPU_HEADERS}/gz_xbyak-src"
+  "${KYOEI_GPU_HEADERS}/gz_xxhash-src")
 file(GLOB KYOEI_BOOST_INCLUDES "${KYOEI_GPU_HEADERS}/gz_boost-src/libs/*/include")
 target_include_directories(kyoei_videoout SYSTEM PRIVATE ${KYOEI_BOOST_INCLUDES})
 add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
