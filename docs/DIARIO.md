@@ -543,3 +543,50 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   espera cooperativa. Ainda falta conferir câmera normal e passar pelos
   efeitos/Ultraman nessa execução. Não declarar estabilidade ou missão
   completa; salvamento/recarregamento seguem pendentes.
+
+### 12/10/2026 — câmera nítida, PNG e primeira medição de desempenho
+
+- Conclusão da execução 20261012_161617.log: captura
+  build/linear-wait-06.png mostrou gameplay com câmera normal nítida,
+  antes de alternar L1. Um modo alternativo também foi capturado nítido;
+  a captura do terceiro estava minimizada e não serve de prova.
+  GZ_READBACK_LINEAR=1 agora é padrão no lançador e na integração nativa;
+  valor explícito 0 continua disponível para diagnóstico. Não removemos
+  o efeito de foco do jogo. Capturador agora rejeita janela minimizada.
+- Nessa execução a espera real de GPU terminou após 78 ms,
+  expected=actual=192888, reached=1, sem forjar etiquetas. O jogo avançou
+  até pedir scePngEncQueryMemorySize e encerrou com stub ausente (saída 20).
+  Houve escrita de imagens em download0 e referência a
+  SV_ID_201_AFTER_POLICE, mas isso não comprova save/load completo.
+- Implementado src/kyoei_png.c/h: QueryMemorySize, Create, Encode e Delete,
+  ABI SysV, codificação PNG real com miniz já existente, RGB/RGBA a partir
+  de RGBA/BGRA, pitch e filtros PNG, limites e erros sem sobrescrever a
+  saída quando o buffer é insuficiente. Sem nova biblioteca baixada.
+- Testes: 64 PNGs decodificados independentemente com Python/zlib, CRC,
+  pixels e filtros conferidos; formato, alpha, padding, buffer pequeno,
+  entrada truncada e ciclo de handles PASS. Testes flip privado, snapshots,
+  ordenação VideoOut, espera GPU e TLS PASS na compilação otimizada.
+- Encontrado build local em Debug. Reconfigurado para RelWithDebInfo
+  (otimização com símbolos), alinhado ao CRT release da biblioteca GPU.
+  Build final passou; SHA256 do executável:
+  3869508734a87cc6e06175978ca772ce7695226ae7967f0895f22b64e45f8aeb.
+  --list-stubs passou: 455 runtime, 418 módulos, 293 stubs restantes.
+- KYOEI_FRAME_STATS=1 mede intervalos entre apresentações concluídas do
+  jogo, sem contar redesenhos ociosos. Relatório a cada 120 intervalos:
+  FPS médio, média, p50/p95 e máximo. Não mede CPU/GPU separadamente.
+  Nova execução em build/native-png-release.console.log, PID inicial
+  22556, sem stress. Primeiras janelas após abertura perto de 60 FPS,
+  mas tela/cena não certificada; não usar como ganho de gameplay.
+  Primeira captura release-png-open.png preta, não comprova renderização.
+- Pedido de Davy: começar inglês e melhorar desempenho. Plano salvo em
+  docs/PLANO.md: estabilidade/save-load e medição em paralelo a um piloto
+  de uma frase, depois 20–30 textos, cobertura M2/fontes M3 e revisão por
+  cena; só depois tradução ampla/patch. Nenhuma tradução visível validada
+  ainda. PNG precisa ser exercitado na partida; missão completa e ganho
+  de FPS em percurso controlado continuam pendentes.
+- Registro da nova execução: 20261012_201311.log. Captura posterior
+  build/release-png-stage.png mostra tela de carregamento da primeira fase,
+  58%, cenário da estação e narração visíveis. Durante esse carregamento
+  relatório caiu a 13,14 FPS (p95 234,82 ms, máximo 665,95 ms); isso reforça
+  separar carga/transição de gameplay. Os ~60 FPS anteriores não são
+  evidência de desempenho na cidade. Partida deixada aberta para Davy.

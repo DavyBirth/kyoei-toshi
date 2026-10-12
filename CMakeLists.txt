@@ -45,6 +45,9 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" CONTENT "${
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c" CONTENT "${KYOEI_DIALOG_UI}" @ONLY)
 list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c")
 file(READ "${KYOEI_CORE}/src/loader.c" KYOEI_LOADER)
+kyoei_replace_checked(KYOEI_LOADER
+  "    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);"
+  "    if (!no_gpu && !list_stubs && !getenv(\"GZ_READBACK_LINEAR\") && _putenv_s(\"GZ_READBACK_LINEAR\", \"1\")) fail(\"cannot configure linear image readback\");\n    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);")
 set(TLS_REJECTION "    if (main_tls[2]) fail(\"this eboot has static TLS; the Windows loader does not support it yet\");")
 string(FIND "${KYOEI_LOADER}" "${TLS_REJECTION}" TLS_ANCHOR)
 if(TLS_ANCHOR EQUAL -1)
@@ -79,6 +82,8 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KY
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 target_sources(kyoei PRIVATE src/kyoei_crash.c)
 target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
+target_sources(kyoei PRIVATE src/kyoei_png.c)
+target_compile_definitions(kyoei PRIVATE KYOEI_PNG_ENCODER=1 MINIZ_STATIC_DEFINE=1)
 target_compile_definitions(kyoei PRIVATE KYOEI_CRASH_CAPTURE=1)
 set_source_files_properties("${KYOEI_CORE}/src/rt_core.c" PROPERTIES
   COMPILE_DEFINITIONS "gz_resolve=kyoei_shared_resolve")
@@ -93,6 +98,7 @@ target_link_libraries(kyoei PRIVATE dbghelp)
 # Compile adapted GPU units from the fixed snapshot locally. The
 # external cache supplies dependency headers only; no sibling sources are built.
 set(KYOEI_GPU_HEADERS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
+target_include_directories(kyoei PRIVATE "${KYOEI_GPU_HEADERS}/gz_miniz-src" "${KYOEI_GPU_HEADERS}/gz_miniz-build")
 set(KYOEI_SHAD "${KYOEI_CORE}/third_party/shadPS4")
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/video_out.cpp" KYOEI_VIDEOOUT)
 kyoei_replace_checked(KYOEI_VIDEOOUT
@@ -136,6 +142,12 @@ kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
 kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
   "            port->buffer_labels[port->prev_index] = 0;"
   "            KyoeiFlipTrace::Action(\"release-before\", port->prev_index, port->buffer_labels[port->prev_index], &port->buffer_labels[port->prev_index], req.index);\n            port->buffer_labels[port->prev_index] = 0;\n            KyoeiFlipTrace::Action(\"release-after\", port->prev_index, port->buffer_labels[port->prev_index], &port->buffer_labels[port->prev_index], req.index);")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "#include \"kyoei_flip_trace.h\""
+  "#include \"kyoei_flip_trace.h\"\n#include \"kyoei_frame_stats.h\"")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "    presenter->Present(req.frame);"
+  "    presenter->Present(req.frame);\n    KyoeiFrameStats::Presented();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp" CONTENT "${KYOEI_VIDEOOUT_DRIVER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp")
 # The emulated command processor can reach the next flip's WRITE_DATA while
@@ -224,6 +236,10 @@ target_include_directories(kyoei_videoout SYSTEM PRIVATE ${KYOEI_BOOST_INCLUDES}
 add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 add_executable(test_kyoei_gpu_wait src/test_kyoei_gpu_wait.c src/kyoei_gpu_wait.c)
 target_include_directories(test_kyoei_gpu_wait PRIVATE "${KYOEI_CORE}/src" src)
+add_executable(test_kyoei_png src/test_kyoei_png.c src/kyoei_png.c)
+target_include_directories(test_kyoei_png PRIVATE "${KYOEI_CORE}/src" src "${KYOEI_GPU_HEADERS}/gz_miniz-src" "${KYOEI_GPU_HEADERS}/gz_miniz-build")
+target_compile_definitions(test_kyoei_png PRIVATE MINIZ_STATIC_DEFINE=1)
+target_link_libraries(test_kyoei_png PRIVATE "${KYOEI_CORE}/prebuilt/_deps/gz_miniz-build/miniz.lib")
 target_include_directories(test_kyoei_tls PRIVATE "${KYOEI_CORE}/src" src)
 file(GLOB GPU_DLLS "${KYOEI_CORE}/prebuilt/*.dll")
 foreach(DLL IN LISTS GPU_DLLS)

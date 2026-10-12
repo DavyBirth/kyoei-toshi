@@ -11,6 +11,7 @@ public class KyoeiWindow {
  [DllImport("user32.dll")] public static extern bool PrintWindow(IntPtr h,IntPtr dc,uint flags);
  [DllImport("user32.dll",CharSet=CharSet.Unicode)] public static extern bool SetWindowText(IntPtr h,string text);
  [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr h,int command);
+ [DllImport("user32.dll")] public static extern bool IsIconic(IntPtr h);
  [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr h);
 }
 '@
@@ -26,6 +27,7 @@ if ($Focus) {
  [KyoeiWindow]::ShowWindow($kyoeiWindow,9) | Out-Null
  [KyoeiWindow]::SetForegroundWindow($kyoeiWindow) | Out-Null
 }
+if ([KyoeiWindow]::IsIconic($kyoeiWindow)) { throw 'Janela minimizada: use -Focus para restaurar antes da captura' }
 $kyoeiRect = New-Object KyoeiWindow+Rect
 if (-not [KyoeiWindow]::GetWindowRect($kyoeiWindow,[ref]$kyoeiRect)) { throw 'Sem retangulo da janela' }
 if (Test-Path -LiteralPath $Out) { throw 'Saida ja existe' }

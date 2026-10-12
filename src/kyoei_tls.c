@@ -124,6 +124,13 @@ static ABI void *main_tls_get_addr(const uint64_t *index) {
     return original(index);
 }
 uintptr_t gz_resolve(const char *library, const char *symbol, int is_data) {
+#ifdef KYOEI_PNG_ENCODER
+    if (!is_data && !strcmp(library, "libScePngEnc")) {
+        extern uintptr_t kyoei_png_resolve(const char *symbol);
+        uintptr_t png = kyoei_png_resolve(symbol);
+        if (png) return png;
+    }
+#endif
 #ifdef KYOEI_CRASH_CAPTURE
     if (!is_data && !strcmp(library, "libSceGnmDriver") && !strcmp(symbol, "sceGnmDebugHardwareStatus")) {
         extern ABI int32_t kyoei_render_debug_status(void);
