@@ -442,5 +442,10 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Captura posterior build/surface-wait-02.png mostra o menu inicial inteiro
   com New Game, Load Game, Option e ???? legíveis; progresso visual observado
   com a espera de superfície. Processo segue aberto para teste, sem LLDB.
+- Confirmação de New Game avançou ao carregamento e ao stage start da fase
+  201. Captura build/surface-wait-03.png mostra a primeira rua na introdução,
+  com prédios/placas definidos; ainda não é prova do desfoque resolvido no
+  gameplay controlável. Última conferência: PID 29280 ativo, sem mensagem
+  de falha IRQ ou stall nesta execução; deixar aberto para Davy testar.
 - Continuam pendentes: validar essa corrida em jogo, diagnosticar stall,
   corrigir desfoque/menu inicial invisível e validar missão/salvar/recarregar.
