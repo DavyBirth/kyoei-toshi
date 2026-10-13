@@ -8,6 +8,7 @@
   "resources": [
     {
       "path": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
       "entries": [
         {"id":"p0/k15","en":"Park: meet the woman","pt-BR":"Parque: encontrar a mulher"},
         {"id":"p0/k17","en":"Park: meet your friend","pt-BR":"Parque: encontrar sua amiga"},
@@ -22,6 +23,7 @@
     },
     {
       "path": "common/lua/Text_Stage_201.luc",
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
       "entries": [
         {"id":"p0/k4","en":"This isn't the way to our meeting spot...","pt-BR":"Não é por aqui que vou encontrá-la..."},
         {"id":"p0/k9","en":"This isn't the way to our meeting spot...","pt-BR":"Não é por aqui que vou encontrá-la..."},

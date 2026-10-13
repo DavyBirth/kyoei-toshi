@@ -7,12 +7,13 @@ from fontTools.ttLib import TTFont
 ROOT=Path(__file__).resolve().parents[1]
 
 def main():
-    draft=json.loads((ROOT/'translations/pilot-opening.json').read_text(encoding='utf8'))
     required=set(chr(i) for i in range(32,127))
     required.update('ÀÁÂÃÄÅàáâãäåÈÉÊËèéêëÌÍÎÏìíîïÒÓÔÕÖòóôõöÙÚÛÜùúûüÇçÑñ“”‘’…–—')
-    for resource in draft['resources']:
-        for entry in resource['entries']:
-            for language in ('en','pt-BR'): required.update(entry[language])
+    for path in (ROOT/'translations').glob('pilot-*.json'):
+        draft=json.loads(path.read_text(encoding='utf8'))
+        for resource in draft['resources']:
+            for entry in resource['entries']:
+                for language in ('en','pt-BR'): required.update(entry[language])
     required.difference_update('\n\r\t')
     fonts=ROOT/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts'
     rows=[]; combined=set()
@@ -30,7 +31,7 @@ def main():
         runtime_verified=False)
     target=ROOT/'docs/m3/fallback-coverage.json'; target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-    print(json.dumps(report,ensure_ascii=False,indent=2))
+    print(json.dumps(report,indent=2))
     if report['combined_missing']: raise SystemExit(1)
 
 if __name__=='__main__': main()

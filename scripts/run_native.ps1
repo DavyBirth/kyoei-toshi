@@ -1,5 +1,6 @@
 # Run only the prepared Kyoei, with separate writable data. No shadPS4 executable.
-param([string]$Work = '', [switch]$CheckOnly)
+param([string]$Work = '', [switch]$CheckOnly, [ValidateSet('ja','en','pt-BR')][string]$Language='ja',
+      [ValidateRange(640,8192)][int]$Width=1280,[ValidateRange(360,4320)][int]$Height=720,[switch]$Fullscreen)
 $ErrorActionPreference = 'Stop'
 $kyoeiRoot = Split-Path $PSScriptRoot
 $kyoeiProof = Get-Content -LiteralPath "$kyoeiRoot\docs\native-prepare.json" -Raw | ConvertFrom-Json
@@ -10,8 +11,22 @@ $kyoeiFonts = "$kyoeiRoot\third_party\godzilla-core\third_party\shadPS4\src\imgu
 foreach ($kyoeiRequired in @("$kyoeiRoot\build\kyoei.exe", "$Work\out\boot-linked.bin", "$Work\out\entry.bin", "$Work\out\imports.tsv", "$Work\out\link.json", "$kyoeiFonts\NotoSans-Regular.ttf", "$kyoeiFonts\NotoSansCJK-Regular.ttc", "$($kyoeiProof.source)\eboot.bin", "$($kyoeiProof.source)\sce_sys\param.sfo")) {
     if (-not (Test-Path -LiteralPath $kyoeiRequired -PathType Leaf)) { throw "Arquivo necessario ausente: $kyoeiRequired" }
 }
+$env:KYOEI_LANGUAGE=$Language
+Remove-Item Env:KYOEI_TRANSLATION_ARCHIVE -ErrorAction SilentlyContinue
+if ($Language -ne 'ja') {
+    $kyoeiTranslation=Get-Content -LiteralPath "$kyoeiRoot\docs\m4\runtime-preview.json" -Raw | ConvertFrom-Json
+    if ($kyoeiTranslation.title -ne 'CUSA03562' -or $kyoeiTranslation.version -ne '01.03') { throw 'Traducao para outro jogo ou versao' }
+    $kyoeiArchive=$kyoeiTranslation.languages.$Language
+    if (-not $kyoeiArchive -or -not (Test-Path -LiteralPath $kyoeiArchive.archive -PathType Leaf)) { throw 'Previa de idioma ainda nao preparada' }
+    if ((Get-Item -LiteralPath $kyoeiArchive.archive).Length -ne $kyoeiArchive.bytes) { throw 'Pacote de traducao alterado; reconstruir a previa' }
+    $env:KYOEI_TRANSLATION_ARCHIVE=$kyoeiArchive.archive
+}
+$env:KYOEI_WINDOW_WIDTH=[string]$Width
+$env:KYOEI_WINDOW_HEIGHT=[string]$Height
+$env:KYOEI_FULLSCREEN=if ($Fullscreen) { '1' } else { '0' }
+$env:KYOEI_WINDOW_ICON="$kyoeiRoot\build\launcher-assets\game.ico"
 if ($CheckOnly) {
-    Write-Output "Launcher OK; CUSA03562 01.03; saves: $Work\user; nenhum jogo iniciado."
+    Write-Output "Launcher OK; CUSA03562 01.03; idioma: $Language; saida: ${Width}x${Height}; fullscreen: $Fullscreen; saves: $Work\user; nenhum jogo iniciado."
     exit 0
 }
 if (-not $env:GZ_PRESENT_MODE) { $env:GZ_PRESENT_MODE = 'Fifo' }

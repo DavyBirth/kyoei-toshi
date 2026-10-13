@@ -1,0 +1,29 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "notes": "Option descriptions only; image-based labels still require editing. Layout and scene font remain unverified.",
+  "resources": [{
+    "path": "common/lua/option_menu_text.luc",
+    "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+    "entries": [
+      {"id":"p0/k4","en":"Turn controller vibration on or off.","pt-BR":"Ativa ou desativa a vibração do controle."},
+      {"id":"p0/k10","en":"Choose vertical camera controls.\nNormal: up looks up; down looks down.\nInverted: up looks down; down looks up.","pt-BR":"Escolha o controle vertical da câmera.\nNormal: para cima olha para cima; para baixo olha para baixo.\nInvertido: para cima olha para baixo; para baixo olha para cima."},
+      {"id":"p0/k12","en":"Choose horizontal camera controls.\nNormal: right looks right; left looks left.\nInverted: right looks left; left looks right.","pt-BR":"Escolha o controle horizontal da câmera.\nNormal: direita olha à direita; esquerda olha à esquerda.\nInvertido: direita olha à esquerda; esquerda olha à direita."},
+      {"id":"p0/k14","en":"Turn the protagonist's voice on or off.","pt-BR":"Ativa ou desativa a voz do protagonista."},
+      {"id":"p0/k16","en":"Turn other characters' voices on or off.","pt-BR":"Ativa ou desativa as vozes dos outros personagens."},
+      {"id":"p0/k18","en":"Show or hide the health and stamina gauges.","pt-BR":"Mostra ou oculta as barras de vida e vigor."},
+      {"id":"p0/k20","en":"Choose the camera view.\nYou can switch views during gameplay with [i10]/[i11].","pt-BR":"Escolha o tipo de câmera.\nDurante o jogo, alterne as câmeras com [i10]/[i11]."},
+      {"id":"p0/k22","en":"Show or hide the map.\nYou can also toggle it during gameplay with the touch pad button.","pt-BR":"Mostra ou oculta o mapa.\nDurante o jogo, também é possível alternar a exibição pelo botão do touchpad."},
+      {"id":"p0/k24","en":"Choose the size of the on-screen control guide.\nDetailed shows the control diagram; Simple shows its icon.\n","pt-BR":"Escolha o tamanho do guia de controles na tela.\nDetalhado mostra o diagrama; Simples mostra seu ícone.\n"},
+      {"id":"p0/k26","en":"Adjust screen brightness.","pt-BR":"Ajusta o brilho da tela."},
+      {"id":"p0/k28","en":"Adjust character voice volume.","pt-BR":"Ajusta o volume das vozes dos personagens."},
+      {"id":"p0/k30","en":"Adjust music volume.","pt-BR":"Ajusta o volume da música."},
+      {"id":"p0/k32","en":"Adjust sound effects volume.","pt-BR":"Ajusta o volume dos efeitos sonoros."},
+      {"id":"p0/k34","en":"Turn map rotation on or off.","pt-BR":"Ativa ou desativa a rotação do mapa."},
+      {"id":"p0/k36","en":"Turn cutscene subtitles on or off.","pt-BR":"Ativa ou desativa as legendas das cenas."}
+    ]
+  }]
+}

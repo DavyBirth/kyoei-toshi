@@ -18,6 +18,6 @@ def validate_names(original, translated, language, glossary, protected_literals=
             raise ValueError('Player/custom name differs')
     # Percent/brace placeholders are checked separately by the draft validator.
     # Preserve engine name references even when the surrounding prose changes.
-    references = re.compile(r'<[^>]+>|\[[A-Z_0-9]+\]')
+    references = re.compile(r'<[^>]+>|\[[A-Za-z_0-9]+\]')
     if Counter(references.findall(original)) != Counter(references.findall(translated)):
         raise ValueError('Protected engine reference differs')

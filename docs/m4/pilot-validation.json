@@ -2,7 +2,7 @@
   "draft": "translations\\pilot-opening.json",
   "status": "draft_requires_human_review",
   "runtime_verified": false,
-  "private_output": "None",
+  "private_output": null,
   "records": [
     {
       "resource": "common/lua/map_goal_text.luc",

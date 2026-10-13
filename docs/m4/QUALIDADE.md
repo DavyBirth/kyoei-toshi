@@ -22,3 +22,12 @@ O piloto atual é rascunho estrutural, não tradução final aprovada ou aplicad
 Imagens de interface com instruções entram na revisão. Propagandas e placas
 ambientais japonesas ficam preservadas. As prévias não são arquivos prontos
 para reinserção: ainda faltam edição, recompressão e validação dos mipmaps.
+
+O piloto agora inclui 94 entradas por idioma, inclusive descrições de opções e
+narração de abertura. Os pacotes locais são experimentais e mantêm os demais
+textos originais. A validação estrutural não representa aprovação editorial.
+
+As páginas privadas por recurso permitem exportar/importar os rascunhos sem
+incluir o japonês no arquivo exportado. A galeria de imagens também exporta
+classificações com hashes; preservar o JSON fora do navegador. Classificação
+para traduzir não significa que uma imagem já tenha sido editada.

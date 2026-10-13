@@ -1,0 +1,229 @@
+{
+  "private_output": "G:\\kyoei-toshi-work\\translation\\scene-review-02",
+  "resources": [
+    {
+      "resource": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "entries": 200,
+      "private_page": "a9efb8be4aa7da7c.html",
+      "excluded_internal_ids": []
+    },
+    {
+      "resource": "common/lua/Text_Stage_202.luc",
+      "source_sha256": "88cb6fa67d7c5988d44c1af7be81289d01e078dfe2f978734c2d3fe947086766",
+      "entries": 612,
+      "private_page": "c1f41caebb9fe02e.html",
+      "excluded_internal_ids": [
+        "p0/k45",
+        "p0/k48"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_213.luc",
+      "source_sha256": "774ab7f5569ebf728de073c3736748507a4b315603b57ab5ff9118d4a728c96e",
+      "entries": 373,
+      "private_page": "06a74ac1b55d0315.html",
+      "excluded_internal_ids": [
+        "p0/k587",
+        "p0/k589"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_207.luc",
+      "source_sha256": "603aa30eb7daf17377811f372335f25a2e3b36002105db33c2a40f5148780969",
+      "entries": 232,
+      "private_page": "be5eff64501a8255.html",
+      "excluded_internal_ids": [
+        "p0/k310",
+        "p0/k313"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_218.luc",
+      "source_sha256": "e2cd50ee0dcafbeb37650762d0635d15bcd477c352023d7a13bb0e81677282c6",
+      "entries": 523,
+      "private_page": "adaacea85382e7bc.html",
+      "excluded_internal_ids": [
+        "p0/k251",
+        "p0/k254"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_212.luc",
+      "source_sha256": "3af3b860839559bd0e120981237f27c0c97f3c8a265b43dc4801e05214d2c46c",
+      "entries": 480,
+      "private_page": "71c2806e1684ed3f.html",
+      "excluded_internal_ids": [
+        "p0/k638",
+        "p0/k641"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_210_2.luc",
+      "source_sha256": "aea85d2f9baa389566b12f9064f3f40b673308d0d98af2bc70c024301d1047f3",
+      "entries": 306,
+      "private_page": "58bb4116a710fb25.html",
+      "excluded_internal_ids": [
+        "p0/k414",
+        "p0/k416"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_201.luc",
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "entries": 746,
+      "private_page": "bb8be8ff8a90276e.html",
+      "excluded_internal_ids": [
+        "p0/k91",
+        "p0/k100",
+        "p0/k103"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_217.luc",
+      "source_sha256": "6812f18912bb7f782cbc28b6a625e626ddcef293dcfd59b1760ba31b70e8e10a",
+      "entries": 0,
+      "private_page": "160b4281c14e2099.html",
+      "excluded_internal_ids": []
+    },
+    {
+      "resource": "common/lua/Text_Stage_206.luc",
+      "source_sha256": "ec99884b400f9c1fa52fc68f5636ff7f524e798527101cdfebd6d8c07fefbe56",
+      "entries": 706,
+      "private_page": "2eaeca94ca8cf810.html",
+      "excluded_internal_ids": [
+        "p0/k556",
+        "p0/k559"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_210_3.luc",
+      "source_sha256": "1c3e9ed7336488e9eed7d6af8656355b1d2659f08b5f5292034e95880efa9579",
+      "entries": 128,
+      "private_page": "0ab61c6fe9fb9470.html",
+      "excluded_internal_ids": [
+        "p0/k10",
+        "p0/k15"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_208.luc",
+      "source_sha256": "952fa3013f36035ee9f4940bb4d60f4b8ffa2e8c524d38b6121777f5583689e8",
+      "entries": 337,
+      "private_page": "26dcb8c70478b15c.html",
+      "excluded_internal_ids": [
+        "p0/k193",
+        "p0/k196"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_216.luc",
+      "source_sha256": "5a841ee447ca8cc328a0432aeccc8f3b3a973f8e5a5ef8617633313ec9b3ad73",
+      "entries": 113,
+      "private_page": "34d393f0c7407b25.html",
+      "excluded_internal_ids": [
+        "p0/k105",
+        "p0/k108"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_214.luc",
+      "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+      "entries": 415,
+      "private_page": "12e5d6a98c342fbb.html",
+      "excluded_internal_ids": [
+        "p0/k605",
+        "p0/k608"
+      ]
+    },
+    {
+      "resource": "common/lua/option_menu_text.luc",
+      "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+      "entries": 16,
+      "private_page": "e2b7ba1d90a4621e.html",
+      "excluded_internal_ids": []
+    },
+    {
+      "resource": "common/lua/Text_Stage_215.luc",
+      "source_sha256": "063da08a76a3abae15ddb198b0594957c8aa6811419b4eab0d4a8142cee59ff7",
+      "entries": 205,
+      "private_page": "99b4ef491e50be45.html",
+      "excluded_internal_ids": [
+        "p0/k102",
+        "p0/k104"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_Tv.luc",
+      "source_sha256": "a292425f57c79eaac1ab8901cf70aeea207abd9ba346581a5db1d5d0a9c3e826",
+      "entries": 3,
+      "private_page": "d9c78c3ea9d43598.html",
+      "excluded_internal_ids": [
+        "p0/k44",
+        "p0/k46"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_203.luc",
+      "source_sha256": "4ee99ba7841105d66fc189a01204cdabadf530192d675b9544a097159bf3d809",
+      "entries": 359,
+      "private_page": "c861840fdebfecb2.html",
+      "excluded_internal_ids": [
+        "p0/k360",
+        "p0/k363"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_205.luc",
+      "source_sha256": "c6d3241b28c9e1ce5e4e176fad8110770d372eb812a6d026b6619801baf6d70b",
+      "entries": 306,
+      "private_page": "46cb450f5b4c8e90.html",
+      "excluded_internal_ids": [
+        "p0/k309",
+        "p0/k312"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_211.luc",
+      "source_sha256": "f39f5287339dbe3d42edcb4da942e995822f43e19151d7afe35b874fc142c929",
+      "entries": 368,
+      "private_page": "797ca470b3e0764b.html",
+      "excluded_internal_ids": [
+        "p0/k293",
+        "p0/k295"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_204.luc",
+      "source_sha256": "24e892d1979af5bca0df524f6cb06002166ee4099db4f1038492d5df53712ad2",
+      "entries": 1046,
+      "private_page": "3ee1655678446f79.html",
+      "excluded_internal_ids": [
+        "p0/k1442",
+        "p0/k1451"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_210.luc",
+      "source_sha256": "4d25399f57494444eff5bd384c56c801405fabba95d98a196a56803094b93aa9",
+      "entries": 368,
+      "private_page": "cad9919d4822a1b7.html",
+      "excluded_internal_ids": [
+        "p0/k372",
+        "p0/k377"
+      ]
+    },
+    {
+      "resource": "common/lua/Text_Stage_209.luc",
+      "source_sha256": "41ade45c2c29bad9b125a846627dcfb1ff534c7cb90c04a13c6a81f0545adf8d",
+      "entries": 104,
+      "private_page": "79252c4c3effbc4d.html",
+      "excluded_internal_ids": [
+        "p0/k105",
+        "p0/k108"
+      ]
+    }
+  ],
+  "layout_verified": false,
+  "chronological_order_verified": false
+}

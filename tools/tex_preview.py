@@ -1,4 +1,4 @@
-"""Read-only preview of measured TEX/BILZ BC3 images. No reinsertion yet."""
+"""Read-only preview of measured TEX/BILZ BC3, RGBA8 and R8 masks."""
 import argparse
 import io
 from pathlib import Path
@@ -17,6 +17,7 @@ def unpack_tex(data):
     width,height=struct.unpack_from('<HH',raw)
     if not 0<width<=8192 or not 0<height<=8192: raise ValueError('Invalid TEX dimensions')
     return dict(width=width,height=height,pixel_code=raw[4],levels=raw[5]&15,
+                storage_family=raw[7]&15,channel_layout=raw[6]&0x30,
                 descriptor=raw[:12].hex(),payload_bytes=len(raw)-12),raw[12:]
 
 def dds_bc(width,height,body,fourcc):
@@ -29,10 +30,23 @@ def dds_bc(width,height,body,fourcc):
 def preview(data):
     from PIL import Image
     info,body=unpack_tex(data)
-    if info['pixel_code']!=0x12: raise ValueError(f'Pixel code not certified: {info["pixel_code"]:#x}')
-    count=((info['width']+3)//4)*((info['height']+3)//4)*16
-    if len(body)<count: raise ValueError('BC3 base level truncated')
-    image=Image.open(io.BytesIO(dds_bc(info['width'],info['height'],body[:count],b'DXT5')))
+    if info['pixel_code']!=0x12: raise ValueError('Unsupported measured layout byte')
+    size=(info['width'],info['height'])
+    if info['storage_family']==13 and info['channel_layout'] in (0x10,0x20):
+        count=((size[0]+3)//4)*((size[1]+3)//4)*16
+        if len(body)<count: raise ValueError('BC3 base level truncated')
+        image=Image.open(io.BytesIO(dds_bc(*size,body[:count],b'DXT5')))
+        info['decoded_format']='bc3'
+    elif info['storage_family']==1 and info['channel_layout'] in (0,0x10):
+        count=size[0]*size[1]*4
+        if len(body)<count: raise ValueError('RGBA8 base level truncated')
+        image=Image.frombytes('RGBA',size,body[:count]); info['decoded_format']='rgba8'
+    elif info['storage_family']==1 and info['channel_layout']==0x30:
+        count=size[0]*size[1]
+        if len(body)<count: raise ValueError('R8 base level truncated')
+        alpha=Image.frombytes('L',size,body[:count]); image=Image.new('RGBA',size,'white'); image.putalpha(alpha)
+        info['decoded_format']='r8_mask'
+    else: raise ValueError('Storage family/channel layout not certified')
     image.load(); return image,info
 
 def main():

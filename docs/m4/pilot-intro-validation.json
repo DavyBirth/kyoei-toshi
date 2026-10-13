@@ -1,0 +1,22 @@
+{
+  "draft": "translations\\pilot-intro.json",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "private_output": "G:\\kyoei-toshi-work\\translation\\pilot-intro-01",
+  "records": [
+    {
+      "resource": "common/lua/Text_Stage_201.luc",
+      "language": "en",
+      "translated_entries": 49,
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "rebuilt_sha256": "512feab515375ed0a3547c48a8badcac2985a52c8b4263cf3fce6ed94b080a94"
+    },
+    {
+      "resource": "common/lua/Text_Stage_201.luc",
+      "language": "pt-BR",
+      "translated_entries": 49,
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "rebuilt_sha256": "4c1070d708bba1b954b22274b04b9ecb41327e9e49c41eb30cac43ad8d348f89"
+    }
+  ]
+}

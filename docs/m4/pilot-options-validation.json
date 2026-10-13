@@ -1,0 +1,22 @@
+{
+  "draft": "translations\\pilot-options.json",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "private_output": null,
+  "records": [
+    {
+      "resource": "common/lua/option_menu_text.luc",
+      "language": "en",
+      "translated_entries": 15,
+      "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+      "rebuilt_sha256": "0f814eaffd70b7499df8a9a6db4a62161eb58fbfcead4514c14bdd655c08a308"
+    },
+    {
+      "resource": "common/lua/option_menu_text.luc",
+      "language": "pt-BR",
+      "translated_entries": 15,
+      "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+      "rebuilt_sha256": "048ff8db5e0df92761c5af9dc08f30a52f040e4e496f24e16212a6f5d42eb36f"
+    }
+  ]
+}

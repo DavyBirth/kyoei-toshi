@@ -13,7 +13,7 @@ import re
 from text_tool import REPO, decode, export, output_path
 from text_formats import JAPANESE
 
-TOKENS=re.compile(r'%[-+0-9.*]*[sdfiu]|\{[^{}\n]+\}|<[^<>\n]+>|\[[A-Z_0-9]+\]|\\[nrt]')
+TOKENS=re.compile(r'%[-+0-9.*]*[sdfiu]|\{[^{}\n]+\}|<[^<>\n]+>|\[#[0-9a-fA-F]{8}\]|\[/#\]|\[[A-Za-z_0-9]+\]|\\[nrt]')
 def classify(path,text):
     name=path.lower()
     if 'bannedwords' in name: return 'name_filter','excluded'

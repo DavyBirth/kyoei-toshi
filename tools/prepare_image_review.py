@@ -57,7 +57,7 @@ def main():
             try:
                 image,info=preview(data); asset.update(info)
                 image.thumbnail((640,640)); image.save(preview_dir/(asset['id']+'.png'))
-                asset['preview']='previews/'+asset['id']+'.png'; asset['preview_status']='decoded_bc3'
+                asset['preview']='previews/'+asset['id']+'.png'; asset['preview_status']='decoded_'+info['decoded_format']
             except ValueError as error:
                 asset['preview_status']='unsupported_format'; errors.append(dict(id=asset['id'],resource=asset['resource'],error=str(error)))
         else: asset['preview_status']='not_generated'

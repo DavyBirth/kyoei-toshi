@@ -20,6 +20,7 @@ def main():
     records=[]
     for resource in draft['resources']:
         row=expected[resource['path']]; data=(root/row['path']).read_bytes()
+        if resource.get('source_sha256')!=row['sha256']: raise ValueError('Draft targets a different resource revision')
         if hashlib.sha256(data).hexdigest()!=row['sha256']: raise ValueError('Source differs from M2')
         canonical=export(data); originals={r['id']:r['original'] for r in canonical['strings']}
         entries={r['id']:r for r in resource['entries']}
@@ -31,6 +32,11 @@ def main():
                 value=entries[string['id']][language]
                 if not isinstance(value,str) or '\0' in value or TOKENS.findall(value)!=TOKENS.findall(string['original']):
                     raise ValueError('Invalid translated text/tokens')
+                if not value and string['original'] and not entries[string['id']].get('allow_empty'):
+                    raise ValueError('Empty translation requires explicit editorial approval')
+                text_hash=entries[string['id']].get('source_text_sha256')
+                if text_hash and text_hash!=hashlib.sha256(string['original'].encode('utf8')).hexdigest():
+                    raise ValueError('Draft source text differs')
                 validate_names(string['original'],value,language,glossary,
                                entries[string['id']].get('protected_literals',[]))
                 string['translation']=value
@@ -43,7 +49,8 @@ def main():
                 target.write_bytes(rebuilt); target.with_suffix(target.suffix+'.json').write_text(json.dumps(document,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
             records.append(dict(resource=row['path'],language=language,translated_entries=len(entries),
                                 source_sha256=row['sha256'],rebuilt_sha256=hashlib.sha256(rebuilt).hexdigest()))
-    report=dict(draft=str(args.draft),status=draft['status'],runtime_verified=False,private_output=str(output),records=records)
-    (REPO/'docs/m4/pilot-validation.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+    report=dict(draft=str(args.draft),status=draft['status'],runtime_verified=False,private_output=str(output) if output else None,records=records)
+    report_name='pilot-validation.json' if args.draft.stem=='pilot-opening' else args.draft.stem+'-validation.json'
+    (REPO/'docs/m4'/report_name).write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
     print(json.dumps(report,indent=2))
 if __name__=='__main__': main()

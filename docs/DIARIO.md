@@ -913,3 +913,53 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   Analisador de desempenho coleta o diagnóstico e amostras dos lotes.
 - Regressões de ordem de VideoOut, gate de labels e patch privado de comandos
   PASS, reproduzindo as falhas da referência nos testes sintéticos.
+
+### 12/10/2026 — revisão por cena, prévias corrigidas e fontes nativas
+
+- Páginas privadas de revisão com importação/exportação de traduções e hashes.
+  Atualização scene-review-02: 23 recursos e 7.946 candidatos, excluindo alguns
+  rótulos internos de debug/protagonista. Ordem de constantes não certifica
+  cronologia. Japonês fica só nas páginas privadas, não no rascunho exportado.
+- Galeria portátil com classificação, observações e importação/exportação.
+  Primeira folha: 36 imagens inspecionadas, 25 preservadas, dez com texto para
+  edição e uma pendente. Instruções de controle examinadas em prévia separada.
+  Não houve edição IA nem aplicação de imagens traduzidas.
+- Investigação do atlas mostrou limite do primeiro decodificador: ele tratava
+  toda textura como BC3. Algumas texturas usam RGBA8 ou máscaras R8. Corrigido
+  o despacho pela família/canais medidos; cinco testes sintéticos PASS. Todas
+  as 1.412 candidatas reprocessadas em catalog-01/images-v2; 1.411 prévias,
+  uma textura legada pendente. Galeria nova: images-v2/review-portable.html.
+  Prévia BC3 de fonte era inválida, não evidência de corrupção do jogo.
+- Fonte principal: 11.303 chaves, bytes UTF-8 com padding em inteiros CSH.
+  Seus 153 caracteres necessários estão presentes; atlas R8 inspecionado e
+  acentos confirmados visualmente. Sete tabelas alternativas common/font e
+  uma de sistema faltam 52 caracteres do conjunto. M3 ainda não completo:
+  aplicação das variantes e correção dos atlas/fontes exigem investigação.
+  Docs/m3/FONTES.md registra limites; não converter nomes ou remover acentos.
+
+### 12/10/2026 — launcher visual e idiomas parciais
+
+- Davy informou 17% de quota e pediu idioma/resolução/tela e identidade visual.
+  Launcher recompilado com arte original sce_sys/icon0.png, ícone multirresolução
+  Windows, cores noturnas/ciano/coral, opções JA/EN/PT-BR e botão Iniciar jogo.
+  Renderização de prévia oculta inspecionada; nenhum kyoei iniciado.
+- Resoluções de saída 720p, 900p, 1080p, 1440p e 2160p em janela. Tela cheia
+  sem bordas usa a resolução do monitor. Renderização interna não alterada;
+  não prometer ganho de FPS pela resolução de saída. Preferências em build.
+- Rascunhos: 30 objetivos/ações, 15 descrições de opções e 49 entradas da
+  narração/criação do personagem: 94 entradas em cada idioma, 188 traduções.
+  Variáveis de nome, cores [#...]/[/#] e ícones [i10]/[i11] preservados e
+  testados. Rótulos internos e nomes personalizados não traduzidos.
+- Gerados e verificados dois common.psarc privados em runtime-preview-02.
+  Provas de hash/leitura/reinserção e manifesto local em docs/m4/runtime-preview.json.
+  São arquivos derivados do jogo, não distribuíveis; Git contém só rascunhos,
+  ferramentas e metadados. Dump original intacto. Versão anterior privada 01
+  também permanece como checkpoint, ocupando ~12,7 GB adicionais.
+- Runtime local monta apenas /app0/DAT/common.psarc e /hostapp/DAT/common.psarc
+  da língua selecionada. Outros arquivos vêm do dump e saves ficam no mesmo
+  lugar. Teste usando backend real e arquivos sintéticos: JA/EN/PT-BR PASS,
+  abertura/leitura, somente leitura, outros arquivos e rejeição de travessia.
+- Build do port PASS. CheckOnly EN/PT-BR com configurações passou sem jogo.
+  Prévia ainda exige revisão humana, teste visual de layout/acentos e gameplay;
+  não declarar menus totalmente traduzidos, imagens traduzidas ou abertura
+  real do novo launcher certificada. instruções em docs/ABRIR-JOGO.md.

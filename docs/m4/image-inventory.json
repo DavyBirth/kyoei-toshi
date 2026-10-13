@@ -1,5 +1,5 @@
 {
-  "private_output": "G:\\kyoei-toshi-work\\translation\\catalog-01\\images",
+  "private_output": "G:\\kyoei-toshi-work\\translation\\catalog-01\\images-v2",
   "textures_in_catalog": 51266,
   "interface_review_candidates": 1412,
   "excluded_environment_or_nontext": 49854,
@@ -9,7 +9,7 @@
     {
       "id": "1dbb0d6a0516f22a",
       "resource": "texture/2D/title_01_ps3.tex",
-      "error": "BC3 base level truncated"
+      "error": "Storage family/channel layout not certified"
     }
   ],
   "japanese_ocr_available": false,

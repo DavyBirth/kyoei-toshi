@@ -1,0 +1,370 @@
+{
+  "format": "kyoei-image-review-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "evidence": "Manual inspection of sheet-000; controller preview inspected separately.",
+  "images": [
+    {
+      "id": "77122168da47ac39",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_214_045.tex",
+      "source_sha256": "f13815043978a108de67ed609fb287b305c9a4bf35154c2a99143caf3169e7da",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "ce12d20b75b103b0",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_215_after_coveni.tex",
+      "source_sha256": "d288c3b732e45fc17dfc10cb81cb860d4257a7b116c5cfa20a17e1ae9a478047",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "afcab67a3abfa154",
+      "archive": "common.psarc",
+      "resource": "texture/menu_option/M_option_01.tex",
+      "source_sha256": "62660d27f506bd8760504294278fc7ea707097c5a76214814838823753a7ee78",
+      "width": 208,
+      "height": 44,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "418abd541097ad6e",
+      "archive": "common.psarc",
+      "resource": "texture/controller_operation/operation_204_syorui.tex",
+      "source_sha256": "b20efae0e11aadb940914cc301bf6b612cd5722f38a8bd05d76cd4d72284c680",
+      "width": 1920,
+      "height": 1080,
+      "decision": "translate",
+      "notes": "Controller instructions: text requires a separate full-resolution reading."
+    },
+    {
+      "id": "c6636813c4b7b64c",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_217.tex",
+      "source_sha256": "81632eca665e18aba081348d77531467792fffa1402a3f9159dca66f853942aa",
+      "width": 888,
+      "height": 500,
+      "decision": "pending",
+      "notes": "Placeholder image: confirm whether ever visible."
+    },
+    {
+      "id": "a679035c6d3b7a84",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_210_After_Out_Of_2nd_Bldh_Gate_90.tex",
+      "source_sha256": "0b4f830fa484dd0050e0948ad95204d43e4a1ab80900b59ae4df9284afbdfb18",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "9475d1761b378b99",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_icon_focus_2_02.tex",
+      "source_sha256": "8059b18e01aabcca6ae8afca3ad30f0ada155851efffdf63188a600a4f08d3ca",
+      "width": 56,
+      "height": 68,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "25d367af5eb28187",
+      "archive": "common.psarc",
+      "resource": "texture/menu_option/M_option_select_02.tex",
+      "source_sha256": "aec843641af4acda84b47af6424b04199d3d8238dba40832d94a3b9494aad764",
+      "width": 208,
+      "height": 44,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "f41664aebef3ae33",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_201_shirimochi.tex",
+      "source_sha256": "476f78fc45ac94eec6c19896b5a4d2e67f86f561adab27119281c8677b50b320",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "a0748a1cf43d81ad",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_216_wp_car.tex",
+      "source_sha256": "62fd42c1b75597d24c4d125a68adc757a5b834d2bfa2c25acb787dbb22736b2e",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "692782ae34a860b8",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_202_ground.tex",
+      "source_sha256": "4437f1e5bc48ca2b54c726ac131b81af7dfe1d693caabdd730be59cf1564d918",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "e7ca0b83a91ff3aa",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_210_2_gate_75_After_Tekkotsu.tex",
+      "source_sha256": "fd2e4ed21331e97253e256853579446b57aa1349c6d10f9810b19701a105aa33",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "213f8adffeb95401",
+      "archive": "common.psarc",
+      "resource": "texture/menu_option/M_option_09.tex",
+      "source_sha256": "24f70f4150d19a3c0623e7b5115e59c17cb200b11e7634d65d0d2c443b043a25",
+      "width": 208,
+      "height": 44,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "14219276a148a27f",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_201_last.tex",
+      "source_sha256": "55051d1c7d45cfacd0b723e5d69d5e835c6a93f51f1e1e5c18edb059d3992a5e",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "2ed0f5f6fb2d091d",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_icon_06 .tex",
+      "source_sha256": "20d6c5a1d5760873c53c9468bf3fef526692dfeb8b96d129659a5860402d3c6a",
+      "width": 16,
+      "height": 16,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "fbe8e0bac4164770",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_201_office_8f.tex",
+      "source_sha256": "2f00a719d2d55896acbcd2b70261b5560dd458f1365632b6f516dac8d9ef745c",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "d8025c5f5d589687",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_cycle.tex",
+      "source_sha256": "6a43ce1e6c3e654560c83a26b349148047fc860ee1fa7b727448248b4b107189",
+      "width": 188,
+      "height": 188,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "96298695dd1f671d",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_207_in_warehouse.tex",
+      "source_sha256": "d1a380f8e7fde4162f9d328a818114ecefeaadd997ac73ec8c4b1c713b392ab1",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "073ba2a447832cae",
+      "archive": "common.psarc",
+      "resource": "texture/menu_option/M_option_select_11.tex",
+      "source_sha256": "74a11705113a042ae44a16782bacf5e8fa5769eb1e42d62a376358778a691947",
+      "width": 208,
+      "height": 44,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "245169d472c8d5b8",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_209_break_train.tex",
+      "source_sha256": "d0df2c900f18a92d9433d58c140b4d8543df6424c794772c2e1391d9c3b65945",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "1a1edbdc094706a2",
+      "archive": "common.psarc",
+      "resource": "texture/menu_option/M_option_05.tex",
+      "source_sha256": "162c96fdd3a2f59c1b04033dee4fcc50c3b4be01c0390727c3de1f33b635847c",
+      "width": 208,
+      "height": 44,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "fbef5d355091c524",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_icon_focus_2_09.tex",
+      "source_sha256": "9eccf13f0fefa018da3fc5959fc97acb8ef6d8e7d433168501065d140d38c9dd",
+      "width": 56,
+      "height": 68,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "a1614f4877db6943",
+      "archive": "common.psarc",
+      "resource": "texture/treasure_change/TC_scroll_bar_01.tex",
+      "source_sha256": "7b0ae6ef7c4856e089fac27a83e69b1c4f6d8ff6a249aa314c70a410ae998154",
+      "width": 4,
+      "height": 4,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "04bd9fcff29f9332",
+      "archive": "common.psarc",
+      "resource": "texture/game_over/GO_game_over.tex",
+      "source_sha256": "4820c364c71fcda1dc2fde2b5dba01d4896ddca944eb5db07c15140ed2e5b36d",
+      "width": 816,
+      "height": 156,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "4ed2726d59407ad4",
+      "archive": "common.psarc",
+      "resource": "texture/menu_option/M_option_select_01.tex",
+      "source_sha256": "00668be97bce3ded9340901b962f2046f33eed85f78676e81b63955b1092c937",
+      "width": 208,
+      "height": 44,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "9971aea9deb2b404",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_icon_focus_2_07.tex",
+      "source_sha256": "6c5b3660422f6d18fe30826f1518a9c6fa8209c20aac3513fa0f6ea1cc330139",
+      "width": 56,
+      "height": 68,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "0cd0aa946b3a7b38",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_218_after_police.tex",
+      "source_sha256": "eccc761a3899acb4d6099bb50746c74b8d676fe15d695f6d18625ec646888fea",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "aebc37f6e66ca795",
+      "archive": "common.psarc",
+      "resource": "texture/menu_option/M_option_select_06.tex",
+      "source_sha256": "53ea41dd994a5505fa5cff43d98c8f9fddf860e762b6a89cfe1044705a27d572",
+      "width": 208,
+      "height": 44,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "5ec5cd8b49870165",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_202_tunnel.tex",
+      "source_sha256": "ba1a171b30420a2ad0303d527faac6dc646f4df6fe000f34a0ad2e7118448bd2",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "b64beb5869f1c03b",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_213_muto.tex",
+      "source_sha256": "185152f270c6cee6f7dd4fb8105c8e4bb6ff4bc3c63b13b4ed80a4c423f74f54",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "bbf15f4895cc1a24",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_icon_focus_05.tex",
+      "source_sha256": "3602f7814fef2ccd836b08c211dc829c8762a5277a8c406672e86734572a1138",
+      "width": 56,
+      "height": 68,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "e29a0f250038709a",
+      "archive": "common.psarc",
+      "resource": "texture/game_over/GO_yes_f.tex",
+      "source_sha256": "18b60704486a106f7fd90aac1b10f59bc160b477e3949214f57c7590bd883f58",
+      "width": 100,
+      "height": 64,
+      "decision": "translate",
+      "notes": "Text-bearing UI asset; translation and layout review pending."
+    },
+    {
+      "id": "62c040921b2dd3f5",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_icon_number_06.tex",
+      "source_sha256": "a175dd04c409d4d18e4d26220b70a0714e3f1588e92ec8a31a78eb5a4cf47d6e",
+      "width": 36,
+      "height": 40,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "e18b640a290b261e",
+      "archive": "common.psarc",
+      "resource": "texture/game_over/GO_cursor_f.tex",
+      "source_sha256": "4c18c6c63f2f1e413811479b7ffff89f787600831244a7ff3cadbc7936879696",
+      "width": 156,
+      "height": 32,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "1c7cf3490ec1b7d9",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_216_eva.tex",
+      "source_sha256": "10d4af3a73788637ca34baf3680600b5f26c526abb89d59f43465669f6170245",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    },
+    {
+      "id": "647554c884e22139",
+      "archive": "common.psarc",
+      "resource": "texture/loading/loading_image_215.tex",
+      "source_sha256": "55072ac9c511c96f750d6be3889cec9b81b578d00fdc2767e2e438f9715d9e66",
+      "width": 1920,
+      "height": 1080,
+      "decision": "preserve",
+      "notes": "Visual inspection: scenery screenshot or decorative icon; preserve Japanese environment."
+    }
+  ],
+  "ai_edits_applied": false,
+  "reinsertion_verified": false
+}

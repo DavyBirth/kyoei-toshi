@@ -8,7 +8,7 @@ set(CMAKE_C_STANDARD 11)
 set(KYOEI_CORE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/godzilla-core")
 include("${KYOEI_CORE}/prebuilt/libraries.cmake")
 set(CORE_FILES rt_core rt_sync rt_memory rt_sema
-  rt_file rt_kernel rt_rtc)
+  rt_kernel rt_rtc)
 list(TRANSFORM CORE_FILES PREPEND "${KYOEI_CORE}/src/")
 list(TRANSFORM CORE_FILES APPEND ".c")
 # Kyoei uses the PS4 NONE message type while checking installed content.
@@ -23,6 +23,15 @@ function(kyoei_replace_checked variable before after)
   string(REPLACE "${before}" "${after}" adapted "${${variable}}")
   set(${variable} "${adapted}" PARENT_SCOPE)
 endfunction()
+file(READ "${KYOEI_CORE}/src/rt_file.c" KYOEI_FILES)
+kyoei_replace_checked(KYOEI_FILES
+  "void gz_file_configure(const char *app0, const char *user) {"
+  "#include \"kyoei_translation_mount.h\"\nvoid gz_file_configure(const char *app0, const char *user) {")
+kyoei_replace_checked(KYOEI_FILES
+  "    gz_file_mount(\"/hostapp\", app0);"
+  "    gz_file_mount(\"/hostapp\", app0);\n    kyoei_translation_mount();")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_files.c" CONTENT "${KYOEI_FILES}" @ONLY)
+list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_files.c")
 file(READ "${KYOEI_CORE}/src/rt_vmem.c" KYOEI_VMEM)
 kyoei_replace_checked(KYOEI_VMEM
   "    Region *r = &regions[placeholder(address, address + size)];"
@@ -342,12 +351,19 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE "${KYOEI_DOWNLOAD_ORIGINAL}" "${KYOEI_
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
+set(KYOEI_WINDOW "#include \"kyoei_window_options.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "base_title{title}"
   "base_title{\"City Shrouded in Shadow - Kyoei Toshi | PC Port\"}")
 kyoei_replace_checked(KYOEI_WINDOW
   "    window = SDL_CreateWindow(title,"
   "    (void)title;\n    window = SDL_CreateWindow(base_title.c_str(),")
+kyoei_replace_checked(KYOEI_WINDOW
+  "    (void)title;\n    window = SDL_CreateWindow(base_title.c_str(), w, h, SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE);"
+  "    (void)title;\n    const auto options=KyoeiWindowOptions::Read(w,h);\n    w=options.width; h=options.height; width.store(w); height.store(h);\n    window = SDL_CreateWindow(base_title.c_str(), w, h, SDL_WINDOW_VULKAN | SDL_WINDOW_RESIZABLE | (options.fullscreen ? SDL_WINDOW_FULLSCREEN : 0));")
+kyoei_replace_checked(KYOEI_WINDOW
+  "    gz_log(\"GPU: SDL window created (%dx%d)\", w, h);"
+  "    int pixels_w=w,pixels_h=h; SDL_GetWindowSizeInPixels(window,&pixels_w,&pixels_h);\n    width.store(pixels_w); height.store(pixels_h);\n    const char* icon_path=std::getenv(\"KYOEI_WINDOW_ICON\");\n    if (icon_path && *icon_path) {\n        wchar_t icon_wide[1024];\n        if (!gz_widen(icon_path,icon_wide,1024)) {\n            static HICON game_icon=(HICON)LoadImageW(nullptr,icon_wide,IMAGE_ICON,0,0,LR_LOADFROMFILE|LR_DEFAULTSIZE);\n            if (game_icon) {\n                SendMessageW((HWND)window_info.render_surface,WM_SETICON,ICON_BIG,(LPARAM)game_icon);\n                SendMessageW((HWND)window_info.render_surface,WM_SETICON,ICON_SMALL,(LPARAM)game_icon);\n            }\n        }\n    }\n    gz_log(\"GPU: SDL window created (%dx%d), output=%dx%d fullscreen=%u\", w,h,pixels_w,pixels_h,options.fullscreen);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
 target_include_directories(kyoei_videoout PRIVATE "${KYOEI_CORE}/gpu")

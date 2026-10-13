@@ -1,0 +1,78 @@
+"""Prepare local experimental translated archives from translation-only drafts.
+
+Does not modify the dump. Generated game archives remain private and may not
+be distributed. Requires --preview while editorial/runtime review is pending.
+"""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+from prepare_translation_catalog import TOKENS
+from psarc_patch import patch
+from text_tool import REPO,decode,export,insert,output_path
+from translation_names import validate_names
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('output',type=Path);parser.add_argument('drafts',nargs='+',type=Path)
+    parser.add_argument('--preview',action='store_true',required=True)
+    args=parser.parse_args();output=output_path(args.output)
+    audit=json.loads((REPO/'docs/m2/audit.json').read_text(encoding='utf8'))
+    inventory=json.loads((REPO/'docs/m0/inventory.json').read_text(encoding='utf8'))
+    glossary=json.loads((REPO/'translations/glossary.json').read_text(encoding='utf8'))
+    audited={r['path']:r for r in audit['records']}; resources={}
+    for path in args.drafts:
+        draft=json.loads(path.read_text(encoding='utf8'))
+        if (draft.get('format'),draft.get('title'),draft.get('version'))!=('kyoei-translation-draft-v1','CUSA03562','01.03'):
+            raise ValueError('Draft identity differs')
+        for resource in draft['resources']:
+            name=resource['path'];row=audited[name]
+            if not name.startswith('common/') or resource.get('source_sha256')!=row['sha256']:
+                raise ValueError('Unsupported archive or resource revision')
+            target=resources.setdefault(name,dict(source_sha256=row['sha256'],entries={}))
+            for entry in resource['entries']:
+                if entry['id'] in target['entries']: raise ValueError('Duplicate translation ID')
+                target['entries'][entry['id']]=entry
+    compiled={'en':{},'pt-BR':{}}; reports=[]
+    for name,resource in resources.items():
+        data=(Path(audit['source'])/name).read_bytes()
+        if hashlib.sha256(data).hexdigest()!=resource['source_sha256']:raise ValueError('M2 source differs')
+        canonical=export(data);originals={r['id']:r['original'] for r in canonical['strings']}
+        if not resource['entries'].keys()<=originals.keys():raise ValueError('Unknown string ID')
+        for language in compiled:
+            document=export(data)
+            for string in document['strings']:
+                if string['id'] not in resource['entries']:continue
+                entry=resource['entries'][string['id']];value=entry[language]
+                if not isinstance(value,str) or '\0' in value or (not value and string['original'] and not entry.get('allow_empty')):
+                    raise ValueError('Invalid/empty translation')
+                if TOKENS.findall(value)!=TOKENS.findall(string['original']):raise ValueError('Control tokens differ')
+                validate_names(string['original'],value,language,glossary,entry.get('protected_literals',[]))
+                if entry.get('source_text_sha256') and entry['source_text_sha256']!=hashlib.sha256(string['original'].encode('utf8')).hexdigest():
+                    raise ValueError('Original text hash differs')
+                string['translation']=value
+            rebuilt=insert(data,document);_,parsed=decode(rebuilt)
+            decoded={s.id:s.text() for s in parsed.strings}
+            for id,original in originals.items():
+                expected=resource['entries'][id][language] if id in resource['entries'] else original
+                if decoded[id]!=expected:raise ValueError('Roundtrip differs')
+            compiled[language][name.split('/',1)[1]]=rebuilt
+        reports.append(dict(resource=name,source_sha256=resource['source_sha256'],entries=len(resource['entries'])))
+    source=Path(inventory['source'])/'DAT/common.psarc'
+    expected=next(r['sha256'] for r in inventory['files'] if r['path']=='DAT/common.psarc')
+    output.mkdir(parents=True);languages={}
+    for language,replacements in compiled.items():
+        target=output/language/'common.psarc';print(f'Building private preview: {language}',flush=True)
+        proof=patch(source,target,replacements,expected)
+        (target.parent/'proof.json').write_text(json.dumps(proof,indent=2)+'\n',encoding='utf8')
+        languages[language]=dict(archive=str(target),sha256=proof['output_sha256'],bytes=target.stat().st_size,
+                                 status='experimental_partial_translation',runtime_verified=False)
+    report=dict(format='kyoei-runtime-preview-v1',title='CUSA03562',version='01.03',
+        source_archive_sha256=expected,languages=languages,resources=reports,
+        entries_per_language=sum(r['entries'] for r in reports),human_review_complete=False,
+        runtime_verified=False,original_dump_modified=False)
+    (output/'manifest.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+    (REPO/'docs/m4/runtime-preview.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+    print(f'Local previews ready: {report["entries_per_language"]} entries per language',flush=True)
+
+if __name__=='__main__':main()
