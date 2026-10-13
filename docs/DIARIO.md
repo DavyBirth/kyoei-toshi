@@ -1,5 +1,21 @@
 # Diário do projeto
 
+### 13/10/2026 — entrega externa de tradução do catálogo completo
+
+- Davy pediu arquivos para outro ChatGPT rascunhar inglês enquanto continua
+  a investigação da HUD. Pacote privado external-en-full-01 preparado com
+  16.100 candidatos, 138 recursos/20 Text_Stage, 173 JSONs; ZIP verificado.
+  130 rascunhos existentes seguem como contexto. Texto em imagens/vídeos,
+  HUD binário e encodings permanece pendente; não alegar cobertura total.
+- tools/external_translation.py exporta somente para fora do Git/dump/M1 e
+  importa retorno com hashes, IDs, tokens, nomes e reinserção verificados,
+  sem trazer originais ao patch. Oito testes PASS e fixture real PASS.
+  Entrega não será modificada enquanto Davy a envia; ver TRADUCAO-EXTERNA.md.
+- HUD: comprovada carga cmnd_marker em 0xa6cf3b e ligação do nó texto ao
+  truncador 0xa6d9a0. Restam métricas/escala reais e limites de tela antes
+  de aplicar correção. Não trocar esse trabalho por tradução sem concluí-lo,
+  conforme orientação posterior de Davy.
+
 ### 13/10/2026 — retorno ao vivo de Davy, 12:38 Bahia
 
 - Investigação posterior encontrou truncamento anterior ao desenho na rotina

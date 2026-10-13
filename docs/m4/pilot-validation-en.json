@@ -1,0 +1,22 @@
+{
+  "draft": "translations\\pilot-opening.json",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "private_output": null,
+  "records": [
+    {
+      "resource": "common/lua/map_goal_text.luc",
+      "language": "en",
+      "translated_entries": 9,
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "rebuilt_sha256": "94aea9670e75f458abe328615795758711262f89fe9d954611761f6ffa6c4fb7"
+    },
+    {
+      "resource": "common/lua/Text_Stage_201.luc",
+      "language": "en",
+      "translated_entries": 21,
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "rebuilt_sha256": "ea377b3e2fe7a26f35803fef0de5f154298df75a7128276d77ffe205b9866ffb"
+    }
+  ]
+}

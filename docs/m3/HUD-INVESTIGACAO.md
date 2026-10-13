@@ -122,3 +122,18 @@ Outros consumidores de text_marker: LEAs confirmadas em `0xaea76c` e
 Logo não há um único limite global para todas as caixas. Relatório técnico
 privado: build/interaction-hud-references.json. Não reutilizar números de
 uma rotina como correção universal.
+
+Ligação ao recurso confirmada em seguida: LEA `0xa6cf3b` carrega
+`common/hud/cmnd_marker/cmnd_marker`, chamada `0xa6cf47` -> `0x350e40`.
+O consumidor atribui o nó índice 0 a objeto+0x238 (base), índice 1 a
+objeto+0x230 (pino) e índice 2 a objeto+0x278 (texto). Após criar/ligar os
+nós, `0xa6d2cf` chama a rotina de truncamento `0xa6d9a0`. O recurso contém
+exatamente esses três nós técnicos. O outro chamador `0xa1de11` atualiza o
+mesmo objeto recebido do controlador. A ligação está demonstrada no código;
+a execução específica ainda não foi registrada por trace.
+
+Restante antes da correção: identificar a escala/métrica de fonte efetiva
+e o limite de tela. Advances das duas tabelas para o texto inteiro são
+481/518 unidades; para os 11 caracteres, 179/196. Esses valores diferem
+da contagem multiplicada por largura fixa. Não usar a escala deduzida de uma
+captura como medida geral para todas as resoluções.

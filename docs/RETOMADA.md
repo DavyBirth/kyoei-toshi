@@ -1,5 +1,13 @@
 # Retomada — 13/10/2026
 
+Entrega externa pronta e enviada em links: docs/m4/TRADUCAO-EXTERNA.md.
+ZIP privado external-en-full-01: 16.100 candidatos/173 JSONs, inglês primeiro,
+138 recursos incluindo 20 Text_Stage; não modificar a entrega já enviada.
+Davy está em casa e disponível para testes; pediu manter o trabalho da HUD
+até terminar antes de mudar para ampliar tradução. Instrumentação/escala ainda
+necessárias para corrigir cmnd_marker. Partida PID 28332 deixou de aparecer
+na observação posterior; não foi encerrada pelo agente.
+
 Atualização 12:38 Bahia: Davy abriu o jogo, PID 28332, EN 1280×720 com diálogos
 internos; preservar a partida. Não recompilar/substituir build/kyoei.exe em uso.
 Capturas sem controles confirmam cortes de interação/objetivo; ver
