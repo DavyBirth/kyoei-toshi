@@ -1,6 +1,10 @@
 # Retomada — 12/10/2026
 
 Atualização em 13/10/2026: plano offline salvo em `docs/PLANO-MANHA.md`.
+Primeiro checkpoint de execução: construtor/validador aceitam --language en;
+construtor --validate-only validou 94 entradas EN sem criar pacote nem alterar
+manifesto. Dez regressões sintéticas PASS. Diagnóstico e caixas de interação
+com corte em docs/m3/HUD-INVESTIGACAO.md. Sem correção visual certificada.
 Na próxima sessão da escola, não abrir o jogo. Por pedido explícito de Davy,
 fazer primeiro a tradução inglesa, salvar/validar essa etapa e somente depois
 passar ao português. O plano não agenda execução. Os 4% abaixo são históricos.

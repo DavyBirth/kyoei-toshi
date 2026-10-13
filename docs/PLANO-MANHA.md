@@ -32,6 +32,10 @@ sem iniciar uma segunda rodada de tradução. Não apagar os rascunhos PT atuais
 
 ## 1. Fontes e minimapa
 
+- Incluir caixas de interação próximas aos personagens: Davy relatou texto
+  inglês cortado com `...`. Medir texto/fonte e ajustar placa/quebra de linha;
+  não confundir truncamento do HUD com reticências narrativas da tradução.
+
 - Rastrear a fonte do objetivo p0/k36 em common/lua/map_goal_text.luc.
   O texto preserva o à; o atlas principal tem o glifo, variantes têm lacunas.
   Demonstrar qual fonte é usada antes de escolher a correção.

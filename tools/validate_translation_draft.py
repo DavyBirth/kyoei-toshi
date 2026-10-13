@@ -9,6 +9,7 @@ from translation_names import validate_names
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('draft',type=Path); parser.add_argument('--output',type=Path)
+    parser.add_argument('--language',action='append',choices=('en','pt-BR'))
     args=parser.parse_args(); draft=json.loads(args.draft.read_text(encoding='utf8'))
     glossary=json.loads((REPO/'translations/glossary.json').read_text(encoding='utf8'))
     if draft['format']!='kyoei-translation-draft-v1' or draft['title']!='CUSA03562' or draft['version']!='01.03':
@@ -25,7 +26,7 @@ def main():
         canonical=export(data); originals={r['id']:r['original'] for r in canonical['strings']}
         entries={r['id']:r for r in resource['entries']}
         if len(entries)!=len(resource['entries']) or not entries.keys()<=originals.keys(): raise ValueError('Duplicate/unknown IDs')
-        for language in ('en','pt-BR'):
+        for language in dict.fromkeys(args.language or ('en','pt-BR')):
             document=export(data)
             for string in document['strings']:
                 if string['id'] not in entries: continue
@@ -50,7 +51,10 @@ def main():
             records.append(dict(resource=row['path'],language=language,translated_entries=len(entries),
                                 source_sha256=row['sha256'],rebuilt_sha256=hashlib.sha256(rebuilt).hexdigest()))
     report=dict(draft=str(args.draft),status=draft['status'],runtime_verified=False,private_output=str(output) if output else None,records=records)
-    report_name='pilot-validation.json' if args.draft.stem=='pilot-opening' else args.draft.stem+'-validation.json'
+    report_name='pilot-validation' if args.draft.stem=='pilot-opening' else args.draft.stem+'-validation'
+    if args.language:
+        report_name+='-'+ '-'.join(dict.fromkeys(args.language))
+    report_name+='.json'
     (REPO/'docs/m4'/report_name).write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
     print(json.dumps(report,indent=2))
 if __name__=='__main__': main()

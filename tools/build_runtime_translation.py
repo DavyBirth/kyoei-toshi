@@ -16,7 +16,12 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output',type=Path);parser.add_argument('drafts',nargs='+',type=Path)
     parser.add_argument('--preview',action='store_true',required=True)
+    parser.add_argument('--language',action='append',choices=('en','pt-BR'),
+                        help='Build only the selected language; repeat to select both')
+    parser.add_argument('--validate-only',action='store_true',
+                        help='Verify resource roundtrips without creating archives or publishing a manifest')
     args=parser.parse_args();output=output_path(args.output)
+    selected=tuple(dict.fromkeys(args.language or ('en','pt-BR')))
     audit=json.loads((REPO/'docs/m2/audit.json').read_text(encoding='utf8'))
     inventory=json.loads((REPO/'docs/m0/inventory.json').read_text(encoding='utf8'))
     glossary=json.loads((REPO/'translations/glossary.json').read_text(encoding='utf8'))
@@ -33,7 +38,7 @@ def main():
             for entry in resource['entries']:
                 if entry['id'] in target['entries']: raise ValueError('Duplicate translation ID')
                 target['entries'][entry['id']]=entry
-    compiled={'en':{},'pt-BR':{}}; reports=[]
+    compiled={language:{} for language in selected}; reports=[]
     for name,resource in resources.items():
         data=(Path(audit['source'])/name).read_bytes()
         if hashlib.sha256(data).hexdigest()!=resource['source_sha256']:raise ValueError('M2 source differs')
@@ -58,6 +63,12 @@ def main():
                 if decoded[id]!=expected:raise ValueError('Roundtrip differs')
             compiled[language][name.split('/',1)[1]]=rebuilt
         reports.append(dict(resource=name,source_sha256=resource['source_sha256'],entries=len(resource['entries'])))
+    if args.validate_only:
+        print(json.dumps(dict(languages=list(selected),resources=reports,
+            entries_per_language=sum(r['entries'] for r in reports),
+            resource_roundtrip_verified=True,archives_created=False,
+            manifest_published=False,runtime_verified=False),indent=2))
+        return
     source=Path(inventory['source'])/'DAT/common.psarc'
     expected=next(r['sha256'] for r in inventory['files'] if r['path']=='DAT/common.psarc')
     output.mkdir(parents=True);languages={}

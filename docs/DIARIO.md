@@ -964,6 +964,22 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   não declarar menus totalmente traduzidos, imagens traduzidas ou abertura
   real do novo launcher certificada. instruções em docs/ABRIR-JOGO.md.
 
+### 13/10/2026 — execução offline: inglês isolado e diagnóstico HUD
+
+- Nenhum processo kyoei/shadPS4 encontrado na preparação; não abrir jogo.
+  Espaço observado em G: ~47 GB. Dump/saves/core/Godzilla preservados.
+- Construtor de prévias e validador agora aceitam --language en (ou pt-BR),
+  sem exigir tradução da outra língua. Construtor aceita --validate-only:
+  verifica hashes/tokens/nomes/reinserção sem criar PSARC ou publicar manifesto.
+- As 94 entradas EN atuais passaram a reinserção dos três recursos. Dez
+  testes sintéticos passaram: três de idioma isolado, dois tokens e cinco nomes.
+  Nenhum novo pacote publicado; manifesto e prévias 02 permanecem vigentes.
+- Davy acrescentou corte com reticências nas caixas de interação inglesas.
+  Registrar ajuste de placa/medição/quebra como requisito; não encurtar por atalho.
+- Identificados nós de texto/placa do minimapa em uma segunda versão HUD;
+  estrutura BILZ confirmada, seletor de fonte e semântica dos campos pendentes.
+  Investigação e próximo passo em docs/m3/HUD-INVESTIGACAO.md.
+
 ### 13/10/2026 — plano offline e ordem dos idiomas
 
 - Recriado docs/PLANO-MANHA.md após confirmar que a gravação anterior não
