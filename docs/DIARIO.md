@@ -773,3 +773,40 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Nova execução build/native-pthread-finalize.console.log, fast=1,
   métricas=1, stress=0. Saves preservados. Continue precisa de nova validação
   no jogo; não declarar estabilidade completa. Godzilla/core fixo intactos.
+
+### 12/10/2026 — título, botões japoneses e reuso de memória no Continue
+
+- Davy pediu nome do Kyoei na janela e círculo confirmar/X voltar no save/load,
+  como no jogo. Também relatou Continue passando à tela de carga e fechando;
+  informou depois que velocidade estava bem melhor.
+- 20261012_210849.log avançou além do finalizador de threads; fechamento
+  agora é MapViewOfFile3, Windows 487, ao mapear 0x113d220000+0x10000 na
+  recarga. Não é stub ausente nessa tentativa. TLS direto preservado.
+- Reproduzido em teste sem jogo: map/unmap fragmentado com a implementação
+  fixa falha no mesmo Windows 487, tabela com 512 regiões. Diagnóstico mostrou
+  placeholder real de 0x8000 contra requisição de 0x4000. Expressão original
+  &regions[placeholder(...)] permite ler o ponteiro da tabela antes de
+  placeholder realocar essa tabela. Ponteiro pode ficar obsoleto no crescimento.
+- Cópia local rt_vmem: primeiro calcula índice com placeholder, depois lê
+  a base atual da tabela. Teste tools/test_vmem.py reproduz falha esperada no
+  core original e passa 20.000 operações no adaptado, conferindo conteúdo de
+  regiões ainda mapeadas. Teste usa processo/pool próprios, não saves/dump.
+  Diagnóstico de VirtualQuery/offset físico adicionado só em falha.
+  Contrato Windows consultado: placeholder deve casar exatamente com a view:
+  https://learn.microsoft.com/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile3
+- Janela criada pelo adaptador local window.cpp com título
+  "City Shrouded in Shadow - Kyoei Toshi | PC Port", incluindo base_title.
+  Capturador não renomeia mais a janela. Core de referência continua intacto.
+- Diálogos nativos: círculo (0x2000) confirma, X (0x4000) cancela/volta;
+  Enter/Space confirmam, Esc volta. Indicação na tela atualizada. X em aviso
+  com só um botão retorna cancelamento, não confirmação. IME também usa
+  círculo confirmar e X cancelar, sem aceitar ambos como confirmação.
+  Mapeamento dos botões do próprio jogo não foi invertido.
+- Build PASS. tools/test_dialog_buttons.py valida navigate real em listas
+  e avisos de um/dois botões e indicação UTF-8; test_save_list PASS.
+  Novo executável SHA256
+  dee729ed8fd2d1cf6be007ef63b2ee9ec2faa967c6d961380ee3a68266b93fb2.
+- Execução aberta: build/native-title-buttons-vmem.console.log, PID inicial
+  33432, fast=1, métricas=1, stress=0. Get-Process confirmou título novo
+  na criação real da janela. Continuar após morrer ainda exige validação
+  de gameplay; ganho relatado por Davy registrado sem prometer FPS fixo.

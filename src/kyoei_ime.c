@@ -96,7 +96,8 @@ int kyoei_ime_input(uint32_t buttons) {
     uint32_t pressed = buttons & ~previous_buttons; previous_buttons = buttons;
     if (InterlockedCompareExchange(&status, 0, 0) != 1) return 0;
     HWND window = (HWND)InterlockedCompareExchangePointer((void *volatile *)&panel, NULL, NULL);
-    if (window && (pressed & (8 | 0x4000 | 0x2000))) PostMessageW(window, IME_CONFIRM, 0, 0);
+    if (window && (pressed & (8 | 0x2000))) PostMessageW(window, IME_CONFIRM, 0, 0);
+    else if (window && (pressed & 0x4000)) PostMessageW(window, IME_CONFIRM, 1, 0);
     return 1;
 }
 static ABI int32_t ime_init(const ImeParam *p, const void *extended) {

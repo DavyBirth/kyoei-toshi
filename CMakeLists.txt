@@ -7,7 +7,7 @@ endif()
 set(CMAKE_C_STANDARD 11)
 set(KYOEI_CORE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/godzilla-core")
 include("${KYOEI_CORE}/prebuilt/libraries.cmake")
-set(CORE_FILES rt_core rt_sync rt_memory rt_vmem rt_sema
+set(CORE_FILES rt_core rt_sync rt_memory rt_sema
   rt_file rt_kernel rt_rtc)
 list(TRANSFORM CORE_FILES PREPEND "${KYOEI_CORE}/src/")
 list(TRANSFORM CORE_FILES APPEND ".c")
@@ -23,6 +23,24 @@ function(kyoei_replace_checked variable before after)
   string(REPLACE "${before}" "${after}" adapted "${${variable}}")
   set(${variable} "${adapted}" PARENT_SCOPE)
 endfunction()
+file(READ "${KYOEI_CORE}/src/rt_vmem.c" KYOEI_VMEM)
+kyoei_replace_checked(KYOEI_VMEM
+  "    Region *r = &regions[placeholder(address, address + size)];"
+  "    /* placeholder can realloc the table; read its base only afterwards. */\n    size_t index = placeholder(address, address + size);\n    Region *r = &regions[index];")
+kyoei_replace_checked(KYOEI_VMEM
+  "        vmem_fail(\"MapViewOfFile3\", r->base, r->size);"
+  "        {\n            DWORD error=GetLastError(); MEMORY_BASIC_INFORMATION state={0};\n            VirtualQuery((void*)r->base,&state,sizeof(state));\n            gz_log(\"Kyoei map failure: requested=%p size=0x%llx phys=0x%llx OSbase=%p allocation=%p size=0x%llx state=0x%lx type=0x%lx regions=%zu\",(void*)r->base,(unsigned long long)r->size,(unsigned long long)r->phys,state.BaseAddress,state.AllocationBase,(unsigned long long)state.RegionSize,state.State,state.Type,region_count);\n            SetLastError(error); vmem_fail(\"MapViewOfFile3\",r->base,r->size);\n        }")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_vmem.c" CONTENT "${KYOEI_VMEM}" @ONLY)
+list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_vmem.c")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "    if (pressed & (0x4000 | 8)) choose(window, d, d->selected + 1);\n    else if (pressed & 0x2000) choose(window, d, d->choices == 2 ? 2 : 1);"
+  "    if (pressed & (0x2000 | 8)) choose(window, d, d->selected + 1);\n    else if (pressed & 0x4000) choose(window, d, d->choices == 2 ? 2 : 0);")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "w == VK_RETURN || w == VK_SPACE ? 0x4000 : w == VK_ESCAPE ? 0x2000"
+  "w == VK_RETURN || w == VK_SPACE ? 0x2000 : w == VK_ESCAPE ? 0x4000")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "X / Enter: confirmar     Setas: escolher     Círculo / Esc: voltar"
+  "Círculo / Enter: confirmar     Setas: escolher     X / Esc: voltar")
 file(READ "${KYOEI_CORE}/src/rt_thread.c" KYOEI_THREADS)
 kyoei_replace_checked(KYOEI_THREADS
   "static const GzExport exports[] = {"
@@ -273,6 +291,16 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "void TextureCache::ProcessDownloadImages() {\n    if (download_images.empty()) return;\n    KyoeiFrameStats::Work download_measurement(2);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
+file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
+kyoei_replace_checked(KYOEI_WINDOW
+  "base_title{title}"
+  "base_title{\"City Shrouded in Shadow - Kyoei Toshi | PC Port\"}")
+kyoei_replace_checked(KYOEI_WINDOW
+  "    window = SDL_CreateWindow(title,"
+  "    (void)title;\n    window = SDL_CreateWindow(base_title.c_str(),")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
+target_include_directories(kyoei_videoout PRIVATE "${KYOEI_CORE}/gpu")
 target_sources(kyoei PRIVATE $<TARGET_OBJECTS:kyoei_videoout>)
 target_compile_features(kyoei_videoout PRIVATE cxx_std_23)
 target_compile_options(kyoei_videoout PRIVATE -O2 -DNDEBUG -U_DEBUG -D_ITERATOR_DEBUG_LEVEL=0)
@@ -295,6 +323,8 @@ add_executable(test_kyoei_gpu_wait src/test_kyoei_gpu_wait.c src/kyoei_gpu_wait.
 target_include_directories(test_kyoei_gpu_wait PRIVATE "${KYOEI_CORE}/src" src)
 add_executable(test_kyoei_png src/test_kyoei_png.c src/kyoei_png.c)
 add_executable(test_kyoei_modules src/test_kyoei_modules.c)
+add_executable(test_kyoei_vmem src/test_kyoei_vmem.c)
+target_include_directories(test_kyoei_vmem PRIVATE "${KYOEI_CORE}/src" "${CMAKE_CURRENT_BINARY_DIR}")
 add_executable(test_kyoei_savedata src/test_kyoei_savedata.c)
 target_include_directories(test_kyoei_savedata PRIVATE "${KYOEI_CORE}/src" src)
 target_include_directories(test_kyoei_modules PRIVATE "${KYOEI_CORE}/src" src)

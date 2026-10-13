@@ -22,7 +22,6 @@ $kyoeiWindow = $kyoeiProcess.MainWindowHandle
 if (-not $kyoeiWindow) { throw 'Sem janela' }
 # PrintWindow writes physical pixels; use the same units for GetWindowRect.
 [KyoeiWindow]::SetThreadDpiAwarenessContext([IntPtr](-4)) | Out-Null
-[KyoeiWindow]::SetWindowText($kyoeiWindow,'Kyoei Toshi - Port para PC') | Out-Null
 if ($Focus) {
  [KyoeiWindow]::ShowWindow($kyoeiWindow,9) | Out-Null
  [KyoeiWindow]::SetForegroundWindow($kyoeiWindow) | Out-Null
