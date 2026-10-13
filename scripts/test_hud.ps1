@@ -1,7 +1,7 @@
 # User-run diagnostic launch; never invoked for gameplay by the agent.
 param([switch]$CheckOnly,[switch]$NativeDialogs,[switch]$FitHud,[switch]$BatchReadback)
 $ErrorActionPreference='Stop'
-if (-not $CheckOnly -and @(Get-Process kyoei -ErrorAction SilentlyContinue).Count) {
+if (-not $CheckOnly -and @(Get-Process kyoei,kyoei-orb-trace -ErrorAction SilentlyContinue).Count) {
     throw 'Já existe uma partida aberta. Feche pelo próprio jogo antes de iniciar este teste.'
 }
 $kyoeiArguments=@{Language='en';Width=1280;Height=720;Diagnostics=$true;CheckOnly=$CheckOnly}

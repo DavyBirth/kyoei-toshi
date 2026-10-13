@@ -171,6 +171,11 @@ kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
+set(KYOEI_PORT_EXE_NAME "kyoei" CACHE STRING "Prepared port binary: kyoei or kyoei-orb-trace")
+if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace)$")
+  message(FATAL_ERROR "Unsupported port executable name")
+endif()
+set_target_properties(kyoei PROPERTIES OUTPUT_NAME "${KYOEI_PORT_EXE_NAME}")
 target_sources(kyoei PRIVATE src/kyoei_crash.c)
 target_sources(kyoei PRIVATE src/kyoei_hud_trace.c)
 target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
@@ -386,8 +391,18 @@ set(KYOEI_DOWNLOAD_ADAPTED [=[    // Host cache invalidation belongs after GPU c
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE "${KYOEI_DOWNLOAD_ORIGINAL}" "${KYOEI_DOWNLOAD_ADAPTED}")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
+file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_rasterizer.cpp" KYOEI_RASTERIZER)
+set(KYOEI_RASTERIZER "#include \"kyoei_raster_trace.h\"\n${KYOEI_RASTERIZER}")
+set(KYOEI_SCISSOR_PUSH [=[        scissors.push_back({
+            .offset = {vp_scsr.top_left_x, vp_scsr.top_left_y},
+            .extent = {vp_scsr.GetWidth(), vp_scsr.GetHeight()},
+        });]=])
+kyoei_replace_checked(KYOEI_RASTERIZER "${KYOEI_SCISSOR_PUSH}"
+  "${KYOEI_SCISSOR_PUSH}\n        if (KyoeiRasterTrace::Capturing()) KyoeiRasterTrace::Record(KyoeiRasterTrace::MakeProfile(regs,viewport,scissors.back(),i));")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasterizer.cpp" CONTENT "${KYOEI_RASTERIZER}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasterizer.cpp")
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
-set(KYOEI_WINDOW "#include \"kyoei_overlay_gpu.h\"\n${KYOEI_WINDOW}")
+set(KYOEI_WINDOW "#include \"kyoei_raster_trace.h\"\n#include \"kyoei_overlay_gpu.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "    SDL_Event event;"
   "    KyoeiOverlay::UpdateTextInput(window);\n    SDL_Event event;")
@@ -408,6 +423,9 @@ kyoei_replace_checked(KYOEI_WINDOW
 kyoei_replace_checked(KYOEI_WINDOW
   "    gz_log(\"GPU: SDL window created (%dx%d)\", w, h);"
   "    int pixels_w=w,pixels_h=h; SDL_GetWindowSizeInPixels(window,&pixels_w,&pixels_h);\n    width.store(pixels_w); height.store(pixels_h);\n    const char* icon_path=std::getenv(\"KYOEI_WINDOW_ICON\");\n    if (icon_path && *icon_path) {\n        wchar_t icon_wide[1024];\n        if (!gz_widen(icon_path,icon_wide,1024)) {\n            static HICON game_icon=(HICON)LoadImageW(nullptr,icon_wide,IMAGE_ICON,0,0,LR_LOADFROMFILE|LR_DEFAULTSIZE);\n            if (game_icon) {\n                SendMessageW((HWND)window_info.render_surface,WM_SETICON,ICON_BIG,(LPARAM)game_icon);\n                SendMessageW((HWND)window_info.render_surface,WM_SETICON,ICON_SMALL,(LPARAM)game_icon);\n            }\n        }\n    }\n    gz_log(\"GPU: SDL window created (%dx%d), output=%dx%d fullscreen=%u\", w,h,pixels_w,pixels_h,options.fullscreen);")
+kyoei_replace_checked(KYOEI_WINDOW
+  "        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT)"
+  "        if (event.type == SDL_EVENT_KEY_DOWN && event.key.key == SDLK_F9 && KyoeiRasterTrace::Enabled()) { if (!event.key.repeat) KyoeiRasterTrace::Request(); continue; }\n        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT)")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
 file(READ "${KYOEI_CORE}/gpu/vendor/vk_presenter.cpp" KYOEI_PRESENTER)
@@ -442,6 +460,10 @@ set(KYOEI_OVERLAY_PRESENT [=[    if (kyoei_modal) {
 kyoei_replace_checked(KYOEI_PRESENTER
   "    SubmitInfo info{};\n    info.AddWait(swapchain.GetImageAcquiredSemaphore());"
   "${KYOEI_OVERLAY_PRESENT}")
+set(KYOEI_PRESENTER "#include \"kyoei_raster_trace.h\"\n${KYOEI_PRESENTER}")
+kyoei_replace_checked(KYOEI_PRESENTER
+  "    kyoei_overlay_presented(kyoei_modal_revision);"
+  "    kyoei_overlay_presented(kyoei_modal_revision);\n    KyoeiRasterTrace::Presented();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp" CONTENT "${KYOEI_PRESENTER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp"
   src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp")
@@ -489,6 +511,10 @@ get_target_property(KYOEI_OVERLAY_GPU_INCLUDES kyoei_videoout INCLUDE_DIRECTORIE
 target_include_directories(test_kyoei_overlay_barriers PRIVATE ${KYOEI_OVERLAY_GPU_INCLUDES})
 target_compile_features(test_kyoei_overlay_barriers PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_overlay_barriers PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX VULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1)
+add_executable(test_kyoei_raster_trace src/test_kyoei_raster_trace.cpp)
+target_include_directories(test_kyoei_raster_trace PRIVATE src ${KYOEI_OVERLAY_GPU_INCLUDES})
+target_compile_features(test_kyoei_raster_trace PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_raster_trace PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_readback_batch src/test_kyoei_readback_batch.cpp)
 target_compile_features(test_kyoei_readback_batch PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_readback_batch PRIVATE _CRT_SECURE_NO_WARNINGS)

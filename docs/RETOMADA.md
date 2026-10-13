@@ -1,5 +1,13 @@
 # Retomada — 13/10/2026
 
+Diagnóstico do orbe pronto: Testar orbe EN.cmd usa kyoei-orb-trace.exe separado,
+normal kyoei.exe com hash preservado. F9 antes de pegar e F9 no tutorial
+registra viewport/scissor/offset/target/blend/endereço dos shaders de dois
+quadros. Compilado/CheckOnly e testes offline PASS; nenhum jogo iniciado.
+Próximo: comparar captures begin/end no novo log com analyze_raster_trace.py.
+Não atribuir causa só pela borda de imagem, não usar captura para medir FPS.
+Build configurado de volta ao nome kyoei para próximos trabalhos normais.
+
 Mais recente: Davy testou e pediu olhar orbe. Defeito é camada alaranjada
 sobre cenário deixando faixa limpa na esquerda; foto do tutorial íntegra.
 Capturas privadas build/orb-user-20261013-01/-02.png e comparação original.

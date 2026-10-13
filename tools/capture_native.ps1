@@ -16,8 +16,8 @@ public class KyoeiWindow {
 }
 '@
 $kyoeiProcess = Get-Process -Id $TargetId -ErrorAction Stop
-$kyoeiExe = [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) 'build/kyoei.exe'))
-if ($kyoeiProcess.ProcessName -ne 'kyoei' -or $kyoeiProcess.Path -ne $kyoeiExe) { throw 'Processo diferente do port Kyoei' }
+$kyoeiAllowed = @('kyoei.exe','kyoei-orb-trace.exe') | ForEach-Object { [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) "build/$_")) }
+if ($kyoeiProcess.Path -notin $kyoeiAllowed) { throw 'Processo diferente do port Kyoei' }
 $kyoeiWindow = $kyoeiProcess.MainWindowHandle
 if (-not $kyoeiWindow) { throw 'Sem janela' }
 # PrintWindow writes physical pixels; use the same units for GetWindowRect.

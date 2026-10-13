@@ -1,5 +1,19 @@
 # Diário do projeto
 
+### 13/10/2026 — diagnóstico do orbe pronto, acionado por F9
+
+- Davy autorizou preparar o diagnóstico. Build separado kyoei-orb-trace.exe
+  pronto, mantendo SHA256 do kyoei.exe normal. Código do core fixo intacto;
+  rasterizer adaptado em cópia de build, sem alterar cálculos/efeitos.
+- F9 captura dois quadros de viewport/scissor/offset/target/shaders por
+  endereço/blend/depth. Perfis deduplicados, limite 256/descartes visíveis.
+  Desligado por padrão. Teste com Regs real e modo desligado PASS, sem GPU.
+- Testar orbe EN.cmd e scripts/test_orb.ps1 prontos; CheckOnly PASS. Davy
+  fará F9 antes da coleta e outra vez na tela do tutorial, sem enviar logs.
+- Leitor de capturas e seis regressões PASS; candidatos de recorte não são
+  prova da causa. Próximo passo comparar os dois registros reais. Não
+  executar jogo automaticamente; não medir FPS durante a captura diagnóstica.
+
 ### 13/10/2026 — bug do orbe esclarecido e retorno dos testes
 
 - Davy pediu observar o defeito e esclareceu camada alaranjada que não cobre

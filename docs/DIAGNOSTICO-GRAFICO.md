@@ -18,6 +18,28 @@ pretos, porque isso poderia esconder transições necessárias.
 
 ## Tutorial do orbe
 
+Diagnóstico separado pronto: Testar orbe EN.cmd usa build/kyoei-orb-trace.exe,
+em EN 1280×720, FitHud e frame stats; agrupamento desligado para a observação.
+Apertar F9 antes de pegar o orbe, esperar dois segundos, pegar e apertar F9
+novamente com o tutorial/camada alaranjada visível. F9 só aciona registro;
+não fecha o tutorial nem altera viewport/scissor/blend. Arquivo normal
+build/kyoei.exe preservado por comparação de SHA256, configuração de build
+normal restaurada depois. Nenhuma partida iniciada pelo agente.
+
+Captura estados dos próximos dois presents após o primeiro draw: shaders
+por endereço, target 0, blend/depth/primitive, viewport real, recorte final e
+bounds screen/window/generic/viewport com flags independentes de offset.
+Deduplica perfis, limita a 256 e registra descartes. Não contém textura,
+shader original ou falas. Captura é opt-in via KYOEI_RASTER_TRACE; padrão
+desligado. Hotkey/registro entre threads usa contador atômico e mutex.
+
+test_kyoei_raster_trace PASS com registradores reais, coordinates/flags,
+deduplicação, dois quadros, limite/rearm e desligado, sem GPU/janela.
+Build separado e CheckOnly PASS. Analyze_raster_trace.py preserva completude
+e descartes e lista recortes à esquerda como candidatos, sem atribuir causa.
+Seis testes de leitura PASS. Não tirar conclusão de FPS durante a captura,
+porque a escrita desses registros pode pausar a apresentação.
+
 Atualização 13/10, teste de Davy: defeito esclarecido como camada alaranjada
 sobre o cenário, que não cobre toda a tela e deixa uma faixa limpa à esquerda.
 Não é corrupção da imagem dos três orbes. Capturas privadas sem foco/controles:
