@@ -18,6 +18,34 @@ pretos, porque isso poderia esconder transições necessárias.
 
 ## Tutorial do orbe
 
+Capturas reais de Davy: log 20261013_143716.log. Capture 1: 3.754 draws,
+256 perfis e 1.045 ocorrências descartadas pelo limite. Capture 2: 3.241
+draws, 255 perfis, nenhum descarte. Ambos os logs completos, mas somente a
+segunda amostragem completa. Relatórios privados orb-raster-report-01/02.json.
+Nenhum perfil da segunda captura tem offset de janela diferente de zero;
+screen/generic/window/scissor nos alvos 1920×1080 não mostram corte horizontal
+que explique a faixa de ~102 pixels na saída. Viewports com altura negativa
+são inversão Y, não sinal de recorte lateral. Não alterar scissor com esses dados.
+
+A primeira captura perdeu parte dos passes finais; 38 perfis presentes só no
+registro 2 não comprovam que surgiram no tutorial. Passes finais de UI usam
+VS 0x103924c800, PS 0x103924d000/400 e dois alvos 1920×1080 nessa execução;
+há também passes pós-processados menores. Endereços são deste processo,
+não patches/IDs estáveis. Causa ainda não provada: investigar geometria e
+amostragem/composição dos passes, em vez de aumentar recortes globalmente.
+
+Complemento compilado no mesmo executável separado: limite 2.048 perfis,
+parâmetros VS/PS em draws de UI/pós-processamento e até quatro atributos com
+as primeiras quatro posições XY em formatos float32 compatíveis. São registros
+do buffer, sem resolver índices nem aplicar transformação VS; não chamar
+esses valores de limites finais de tela sem seguir a transformação.
+Buffers GPU-modificados, instanciados, formatos incompatíveis e ranges não
+residentes são marcados/ignorados, sem download ou espera adicional. Falha de
+cópia não produz posição zero válida. Dados somente numéricos no log privado.
+Testes de limites/cópia/falha/GPU dirty PASS e parser oito testes PASS.
+Próximo: repetir F9 antes e na tela do tutorial com esse complemento pronto;
+somente então escolher uma correção. Executável normal continua preservado.
+
 Diagnóstico separado pronto: Testar orbe EN.cmd usa build/kyoei-orb-trace.exe,
 em EN 1280×720, FitHud e frame stats; agrupamento desligado para a observação.
 Apertar F9 antes de pegar o orbe, esperar dois segundos, pegar e apertar F9

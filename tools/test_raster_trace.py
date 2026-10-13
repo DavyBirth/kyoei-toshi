@@ -35,5 +35,18 @@ class CaptureReports(unittest.TestCase):
         text='\n'.join(line for line in CAPTURE.splitlines() if 'raster bounds:' not in line)
         self.assertFalse(analyze(text)['captures'][0]['complete'])
 
+    def test_sampling_loss_distinct_from_log_completion(self):
+        row=analyze(CAPTURE.replace('dropped=0','dropped=9'))['captures'][0]
+        self.assertTrue(row['log_complete']);self.assertFalse(row['sampling_complete'])
+
+    def test_vertex_samples_and_parameters_retained(self):
+        extra='''Kyoei raster vertex: p=0 slot=0 location=0 address=abc bytes=32 stride=8 format=103 status=1 first4_xy=0,0,1920,0,0,1080,1920,1080
+Kyoei raster parameters: p=0 stage=vs start=0 words=00000000,00000000
+'''
+        report=analyze(CAPTURE.replace('Kyoei raster capture end:',extra+'Kyoei raster capture end:'))
+        row=report['captures'][0]['profiles'][0]
+        self.assertEqual(row['vertex_samples'][0]['status'],'1')
+        self.assertEqual(row['shader_parameters'][0]['stage'],'vs')
+
 
 if __name__=='__main__':unittest.main()

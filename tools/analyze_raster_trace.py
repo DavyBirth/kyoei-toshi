@@ -21,12 +21,20 @@ def analyze(text):
         elif current and ('Kyoei raster viewport:' in line or 'Kyoei raster bounds:' in line):
             values=dict(re.findall(r'(\w+)=([^\s]+)',line));index=int(values['p'])
             if index in current['profiles']:current['profiles'][index].update(values)
+        elif current and 'Kyoei raster vertex:' in line:
+            values=dict(re.findall(r'(\w+)=([^\s]+)',line));index=int(values['p'])
+            if index in current['profiles']:current['profiles'][index].setdefault('vertex_samples',[]).append(values)
+        elif current and 'Kyoei raster parameters:' in line:
+            values=dict(re.findall(r'(\w+)=([^\s]+)',line));index=int(values['p'])
+            if index in current['profiles']:current['profiles'][index].setdefault('shader_parameters',[]).append(values)
         elif current and 'Kyoei raster capture end:' in line:
             end=int(re.search(r'id=(\d+)',line).group(1))
             required={'xywh','scissor_xywh','screen','window','generic','viewport'}
             current['complete']=end==current['id'] and len(current['profiles'])==current['expected_profiles'] and all(
                 required<=row.keys() for row in current['profiles'].values())
     for capture in captures:
+        capture['log_complete']=capture['complete']
+        capture['sampling_complete']=capture['complete'] and capture['dropped']==0
         rows=list(capture['profiles'].values());capture['profiles']=rows
         candidates=[]
         for row in rows:

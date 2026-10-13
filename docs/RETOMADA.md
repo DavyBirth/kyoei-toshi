@@ -1,5 +1,13 @@
 # Retomada — 13/10/2026
 
+Capturas 20261013_143716 analisadas: tutorial sem perdas (255 perfis), recorte
+não mostra faixa/offset; baseline perdeu 1.045 ocorrências acima de 256 perfis.
+Não mudar scissor com esses dados. Complemento kyoei-orb-trace.exe compilado:
+2.048 perfis, XY numérico de buffers float compatíveis e parâmetros VS/PS,
+sem GPU waits. Testes de cópia/guardas/disabled e parser oito PASS. Próximo:
+F9 antes + no tutorial com o complemento, comparar geometria/transformação/
+amostragem. Dados XY não resolvem índices nem são pós-VS. Causa não provada.
+
 Diagnóstico do orbe pronto: Testar orbe EN.cmd usa kyoei-orb-trace.exe separado,
 normal kyoei.exe com hash preservado. F9 antes de pegar e F9 no tutorial
 registra viewport/scissor/offset/target/blend/endereço dos shaders de dois

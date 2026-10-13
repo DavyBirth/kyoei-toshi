@@ -345,6 +345,35 @@ kyoei_replace_checked(KYOEI_GNM
   "    return sceGnmSubmitCommandBuffers(count, const_cast<const u32**>(kyoei_dcb_addresses.data()),")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp" CONTENT "${KYOEI_GNM}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp")
+file(READ "${KYOEI_SHAD}/src/video_core/buffer_cache/buffer_cache.cpp" KYOEI_BUFFER_CACHE)
+set(KYOEI_BUFFER_CACHE "#include \"kyoei_raster_trace.h\"\n${KYOEI_BUFFER_CACHE}")
+set(KYOEI_VERTEX_INPUTS [=[    pipeline.GetVertexInputs(attributes, bindings, divisors, guest_buffers,
+                             regs.vgt_instance_step_rate_0, regs.vgt_instance_step_rate_1);]=])
+set(KYOEI_VERTEX_PROBE [=[
+    if (KyoeiRasterTrace::Capturing()) {
+        KyoeiRasterTrace::current_vertices={};KyoeiRasterTrace::current_vertex_count=0;
+        u32 blend_word{},depth_word{};std::memcpy(&blend_word,&regs.blend_control[0],4);std::memcpy(&depth_word,&regs.depth_control,4);
+        if ((blend_word || regs.primitive_type==AmdGpu::PrimitiveType::RectList ||
+            (regs.primitive_type==AmdGpu::PrimitiveType::TriangleStrip && depth_word==0)) &&
+            (std::fabs(regs.viewports[0].xscale)>=64 || regs.IsClipDisabled())) {
+            for (size_t slot=0;slot<guest_buffers.size() && slot<4;++slot) {
+                const auto &buffer=guest_buffers[slot];
+                auto &probe=KyoeiRasterTrace::current_vertices[slot];
+                probe.address=buffer.base_address;probe.bytes=buffer.GetSize();probe.stride=buffer.GetStride();
+                probe.location=attributes[slot].location;probe.format=static_cast<u32>(attributes[slot].format);
+                if (bindings[slot].inputRate!=vk::VertexInputRate::eVertex) probe.status=6;
+                else KyoeiRasterTrace::SampleXY(probe,
+                    [this](uint64_t addr,uint64_t bytes) { return memory->ClampRangeSize(addr,bytes)==bytes; },
+                    [this](uint64_t addr,uint64_t bytes) { return IsRegionGpuModified(addr,bytes); },
+                    [](uint64_t addr,void *dest,uint64_t bytes) { return gz_memory_copy(static_cast<uintptr_t>(addr),dest,bytes,0)!=0; });
+                ++KyoeiRasterTrace::current_vertex_count;
+            }
+        }
+    }
+]=])
+kyoei_replace_checked(KYOEI_BUFFER_CACHE "${KYOEI_VERTEX_INPUTS}" "${KYOEI_VERTEX_INPUTS}\n${KYOEI_VERTEX_PROBE}")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp" CONTENT "${KYOEI_BUFFER_CACHE}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/texture_cache/texture_cache.cpp" KYOEI_TEXTURE_CACHE)
 set(KYOEI_TEXTURE_CACHE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n#include \"kyoei_readback_batch.h\"\n${KYOEI_TEXTURE_CACHE}")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE "namespace VideoCore {" "#include <vk_mem_alloc.h>\nnamespace VideoCore {")

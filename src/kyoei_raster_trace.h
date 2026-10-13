@@ -7,14 +7,43 @@
 #include <cstdlib>
 #include <cstring>
 #include <mutex>
+#include <cmath>
+#include <algorithm>
 extern "C" void gz_log(const char *,...);
+extern "C" int gz_memory_copy(uintptr_t,void *,uint64_t,int);
 namespace KyoeiRasterTrace {
+struct VertexProbe {
+    uint64_t address{},bytes{};
+    unsigned location{},stride{},format{},status{};
+    std::array<float,8> xy{};
+    bool operator==(const VertexProbe &) const=default;
+};
+template<class Readable,class Dirty,class Copy>
+void SampleXY(VertexProbe &probe,Readable readable,Dirty dirty,Copy copy) {
+    probe.xy.fill(0);
+    if (probe.format!=103 && probe.format!=106 && probe.format!=109) { probe.status=3;return; }
+    uint64_t need=uint64_t(probe.stride)*3+8;
+    if (probe.stride<8 || probe.stride>256 || probe.bytes<need ||
+        probe.address>UINT64_MAX-need || !readable(probe.address,need)) { probe.status=4;return; }
+    if (dirty(probe.address,need)) { probe.status=2;return; }
+    for (unsigned i=0;i<4;++i) if (!copy(probe.address+uint64_t(i)*probe.stride,&probe.xy[i*2],8)) {
+        probe.xy.fill(0);probe.status=7;return;
+    }
+    for (float value:probe.xy) if (!std::isfinite(value)) { probe.xy.fill(0);probe.status=5;return; }
+    probe.status=1;
+}
+inline thread_local std::array<VertexProbe,4> current_vertices{};
+inline thread_local unsigned current_vertex_count{};
 struct Profile {
     uint64_t target{},vs{},ps{};
     std::array<int,4> screen{},window{},generic{},viewport_scissor{},scissor{};
     std::array<float,4> viewport{};
     std::array<int,2> offset{};
     unsigned viewport_index{},window_disable{},generic_disable{},viewport_enable{},blend{},depth{},primitive{};
+    unsigned vertex_count{};
+    std::array<VertexProbe,4> vertices{};
+    unsigned parameter_count{};
+    std::array<uint32_t,16> vs_parameters{},ps_parameters{};
     bool operator==(const Profile &) const=default;
 };
 inline bool Enabled() {
@@ -25,8 +54,8 @@ inline std::atomic<uint64_t> requested{},completed{};
 inline std::mutex mutex;
 inline uint64_t recording{};
 inline unsigned frames{},draws{},size{},dropped{};
-inline std::array<Profile,256> profiles;
-inline std::array<unsigned,256> repetitions;
+inline std::array<Profile,2048> profiles;
+inline std::array<unsigned,2048> repetitions;
 inline bool Request() {
     if (!Enabled()) return false;
     uint64_t id=requested.fetch_add(1)+1;
@@ -62,6 +91,18 @@ inline void Presented() {
         gz_log("Kyoei raster bounds: p=%u screen=%d,%d,%d,%d window=%d,%d,%d,%d generic=%d,%d,%d,%d viewport=%d,%d,%d,%d",
             i,p.screen[0],p.screen[1],p.screen[2],p.screen[3],p.window[0],p.window[1],p.window[2],p.window[3],
             p.generic[0],p.generic[1],p.generic[2],p.generic[3],p.viewport_scissor[0],p.viewport_scissor[1],p.viewport_scissor[2],p.viewport_scissor[3]);
+        for(unsigned slot=0;slot<p.vertex_count;++slot) {
+            const auto &v=p.vertices[slot];
+            gz_log("Kyoei raster vertex: p=%u slot=%u location=%u address=%llx bytes=%llu stride=%u format=%u status=%u first4_xy=%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f",
+                i,slot,v.location,(unsigned long long)v.address,(unsigned long long)v.bytes,v.stride,v.format,v.status,
+                v.xy[0],v.xy[1],v.xy[2],v.xy[3],v.xy[4],v.xy[5],v.xy[6],v.xy[7]);
+        }
+        for(unsigned j=0;j<p.parameter_count;j+=8) {
+            gz_log("Kyoei raster parameters: p=%u stage=vs start=%u words=%08x,%08x,%08x,%08x,%08x,%08x,%08x,%08x",
+                i,j,p.vs_parameters[j],p.vs_parameters[j+1],p.vs_parameters[j+2],p.vs_parameters[j+3],p.vs_parameters[j+4],p.vs_parameters[j+5],p.vs_parameters[j+6],p.vs_parameters[j+7]);
+            gz_log("Kyoei raster parameters: p=%u stage=ps start=%u words=%08x,%08x,%08x,%08x,%08x,%08x,%08x,%08x",
+                i,j,p.ps_parameters[j],p.ps_parameters[j+1],p.ps_parameters[j+2],p.ps_parameters[j+3],p.ps_parameters[j+4],p.ps_parameters[j+5],p.ps_parameters[j+6],p.ps_parameters[j+7]);
+        }
     }
     gz_log("Kyoei raster capture end: id=%llu",(unsigned long long)recording);
     completed.store(recording);
@@ -79,6 +120,11 @@ Profile MakeProfile(const Regs &r,const Viewport &v,const Rect &rect,unsigned i)
     p.window_disable=r.window_scissor.window_offset_disable;p.generic_disable=r.generic_scissor.window_offset_disable;
     p.viewport_enable=r.mode_control.vport_scissor_enable;p.viewport_index=i;p.primitive=(unsigned)r.primitive_type;
     std::memcpy(&p.blend,&r.blend_control[0],4);std::memcpy(&p.depth,&r.depth_control,4);
+    p.vertex_count=current_vertex_count;p.vertices=current_vertices;
+    if ((p.blend || p.primitive==17 || (p.primitive==6 && p.depth==0)) && std::fabs(v.width)>=128) {
+        p.parameter_count=16;std::copy_n(r.vs_program.user_data.begin(),16,p.vs_parameters.begin());
+        std::copy_n(r.ps_program.user_data.begin(),16,p.ps_parameters.begin());
+    }
     return p;
 }
 }

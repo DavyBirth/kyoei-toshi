@@ -1,5 +1,21 @@
 # Diário do projeto
 
+### 13/10/2026 — leitura das capturas do orbe e complemento de geometria
+
+- Davy informou capturei. Log 20261013_143716 analisado: registro 1 atingiu
+  limite 256 e perdeu 1.045 ocorrências; registro 2 capturou 255 perfis sem
+  perdas. Janela/recortes do tutorial não mostram a faixa deslocada; offsets
+  zero. Não fazer mudança global de scissor. Causa permanece desconhecida.
+- Parser distingue log completo de sampling_complete; 38 perfis exclusivos
+  do registro 2 não são necessariamente novos no tutorial, pois baseline
+  perdeu passes. Relatórios privados em build/orb-raster-report-01/02.json.
+- Diagnóstico ampliado para 2.048 perfis, posições de buffers float compatíveis
+  e parâmetros dos shaders. CPU reads limitados, sem espera GPU; dados GPU
+  modificados/incompatíveis/indisponíveis marcados, falha não vira zero válido.
+- Teste de registradores/coordenadas/cópia e modo desligado PASS; oito testes
+  do parser PASS; build separado PASS. Normal preservado. Próximo teste F9
+  para separar geometria de amostragem/composição, sem presumir correção.
+
 ### 13/10/2026 — diagnóstico do orbe pronto, acionado por F9
 
 - Davy autorizou preparar o diagnóstico. Build separado kyoei-orb-trace.exe

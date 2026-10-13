@@ -27,9 +27,19 @@ int main(int argc,char **) {
     CHECK(size==1 && repetitions[0]==3 && draws==3);
     bool end=false;for(const auto &line:logs) if(line.find("capture end")!=std::string::npos)end=true;CHECK(end);
     CHECK(Request());
-    for(unsigned i=0;i<300;++i) { p.ps=i;Record(p); }
-    Presented();Presented();CHECK(size==256 && dropped==44 && !Capturing());
+    for(unsigned i=0;i<profiles.size()+44;++i) { p.ps=i;Record(p); }
+    Presented();Presented();CHECK(size==profiles.size() && dropped==44 && !Capturing());
     CHECK(Request());Record(p);CHECK(Request());Presented();CHECK(Capturing());
     Record(p);Presented();Presented();CHECK(!Capturing());
+    VertexProbe vertex;vertex.address=100;vertex.bytes=32;vertex.stride=8;vertex.format=103;
+    unsigned copies=0;SampleXY(vertex,[](auto,auto){return true;},[](auto,auto){return false;},[&](uint64_t address,void *out,auto){
+        float xy[]={float(address-100),42};std::memcpy(out,xy,8);++copies;return true;});
+    CHECK(vertex.status==1 && copies==4 && vertex.xy[6]==24);
+    SampleXY(vertex,[](auto,auto){return true;},[](auto,auto){return true;},[&](auto,void *,auto){++copies;return true;});
+    CHECK(vertex.status==2 && copies==4);
+    vertex.bytes=4;SampleXY(vertex,[](auto,auto){return true;},[](auto,auto){return false;},[&](auto,void *,auto){++copies;return true;});
+    CHECK(vertex.status==4 && copies==4);
+    vertex.bytes=32;SampleXY(vertex,[](auto,auto){return true;},[](auto,auto){return false;},[](auto,void *,auto){return false;});
+    CHECK(vertex.status==7 && vertex.xy[0]==0);
     std::puts("RASTER TRACE PASS: real registers, independent flags, exact coordinates, deduplication, two frames, bounded profiles and retrigger; no GPU/window");
 }
