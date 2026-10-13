@@ -21,6 +21,8 @@ Original intacto; textos e arte completos ficam fora do Git.
 ## Próxima prioridade: defeitos relatados por Davy
 
 1. Marcador "Parque: encontrar sua amiga" se move estranhamente com a câmera.
+   Davy esclareceu: texto não acompanha bem o indicador. Corrigir e verificar
+   tanto inglês quanto português, sem assumir que ambos foram testados.
    Fonte do texto: `common/lua/map_goal_text.luc`, variante p0/k17. Investigar
    medidas/âncora/transformação do rótulo com texto latino; causa não provada.
 2. Objetivo "Encontre sua amiga. Primeiro, chegue à avenida." perde o "à".
@@ -31,6 +33,23 @@ Original intacto; textos e arte completos ficam fora do Git.
    no tutorial do orbe. Fonte original da imagem do orbe está limpa.
 4. Desempenho: última medição limpa anterior deu ~22,74/25,41 FPS em janelas
    mistas de cidade/eventos. Nenhum ganho novo de FPS comprovado nesta etapa.
+
+## Novos requisitos de interface e nomes
+
+- Davy confirmou que conseguiu entender a seleção de personagem e gostou
+  da tradução. Isso é retorno positivo desse trecho, não aprovação completa.
+- Implementar teclado de nome dentro da imagem do jogo, navegável com controle.
+  Detectar modalidade ativa de entrada, permitindo alternar teclado/controle;
+  não basta detectar se há um controle conectado. Entrada física de teclado
+  continua disponível, com interface adequada à modalidade usada.
+- Integrar também save/load na interface do jogo, conforme pedido de Davy.
+  Hoje usam diálogos nativos. Preservar funcionalidade atual, slots, saves,
+  círculo para confirmar e X para voltar. Não refazer backend sem necessidade.
+- Nomes padrão de personagens em romaji nas versões EN/PT-BR: localizar os
+  valores iniciais, confirmar leituras/grafias e proteger identidade. Não
+  traduzir significado, inventar leituras ou mudar nomes personalizados.
+  Conferir tamanho, exibição, entrada e persistência nos saves.
+- Esses itens foram registrados perto do limite; ainda não implementados.
 
 ## O que já existe
 

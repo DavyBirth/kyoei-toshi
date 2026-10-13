@@ -983,3 +983,18 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   PT-BR montado de runtime-preview-01 (45 entradas), fullscreen=1 e saída
   1920x1080. A partida começou antes da publicação do pacote 02 (94 entradas);
   a próxima abertura usará 02. Não reiniciar a partida atual para trocar.
+- Davy esclareceu o defeito do minimapa: o texto não acompanha corretamente
+  o indicador ao mover a câmera. Corrigir/verificar tanto EN quanto PT-BR;
+  o relato não certifica que ambas tenham sido testadas. Não tratar apenas
+  como problema de tradução ou de comprimento sem diagnosticar a ancoragem.
+- Davy gostou do resultado e confirmou conseguir selecionar o personagem
+  entendendo tudo. Falta entrada de nome dentro do jogo, controlável pelo
+  controle: detectar modalidade de entrada ativa (teclado ou controle) e
+  apresentar a interface adequada. Pediu também save/load dentro do jogo,
+  em vez das janelas nativas atuais. Preservar círculo confirmar/X voltar,
+  navegação e funcionamento de save/load já conquistados.
+- Nomes padrão precisam de romaji nas versões EN/PT-BR. Confirmar leitura e
+  grafia antes de romanizar; nunca traduzir o significado ou substituir nomes
+  personalizados do jogador. Localizar defaults fora dos diálogos e verificar
+  entrada, exibição e persistência nos saves. Nenhuma implementação nova neste
+  checkpoint; registrar para a próxima etapa, sem abrir/reiniciar jogo.
