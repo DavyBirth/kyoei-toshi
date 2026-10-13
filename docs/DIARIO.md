@@ -882,3 +882,14 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   seis PASS; proteção de nomes: cinco PASS; compilação Python PASS.
 - Readback em lote permanece opt-in KYOEI_BATCH_READBACK=1 até validação
   comparativa de execução. Nenhuma nova execução do jogo nesta continuidade.
+
+### 12/10/2026 — launcher local por duplo clique
+
+- Davy pediu poder abrir o jogo sem voltar à conversa. Criado o launcher
+  City Shrouded in Shadow.exe na raiz, ignorado pelo Git; fonte C# e compilador
+  em tools/build_launcher.ps1. Usa scripts/run_native.ps1, preparação native-05
+  e os saves atuais. Sem terminal adicional; logs capturados e erro indicado.
+- scripts/run_native.ps1 valida arquivos essenciais e oferece -CheckOnly.
+  Launcher --check retornou 0 e gravou confirmação em build/launcher-last.log.
+  Nenhum processo kyoei aberto. Abertura real não testada por orientação atual.
+  Instruções em docs/ABRIR-JOGO.md. Executável não inclui dados do jogo.
