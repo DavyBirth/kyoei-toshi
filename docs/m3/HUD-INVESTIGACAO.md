@@ -151,3 +151,21 @@ Teste oferecido a Davy: Testar HUD EN.cmd (EN 1280×720, diálogos internos,
 frame stats e HUD trace). O agente compilou e executou apenas -CheckOnly.
 O teste visual ainda deve confirmar escala/fonte e medir fluidez. O atalho
 recusa iniciar com outra partida aberta; não fecha nenhuma partida.
+
+Minimapa também tem cálculo por contagem: `0xa5bff0` conta a string do nó,
+`0xa5c028` multiplica pelo campo nó+0x19c e constante; depois usa a extensão
+em clamps contra as bordas, escrevendo posição em +0x60/+0x64. Outro caminho
+em `0xa5f4a5` multiplica contagem pelo mesmo campo para calcular a placa.
+Isso aponta um mecanismo concreto para investigar a posição deslocada com
+latim; ainda não prova que toda diferença ao girar é defeito. O diagnóstico
+da interação registra também +0x19c e os campos vizinhos para identificar
+tamanho/seletor antes de substituir contagem por advances efetivos.
+
+Primeiro runtime observado no teste de Davy (log 20261013_130354): rótulo
+Listen, seis caracteres, scale_x=5,7222, base x=24 e texto x=50. O limite
+de 24 eventos foi atingido repetindo o mesmo rótulo. Corrigida a seleção dos
+registros para mudanças de conteúdo/nó; hashes somente, sem texto no log.
+Setter de string 0x31e4a0 confirma comprimento em bytes em +8 e dados em +0,
+com buffer inline +0x10 para strings curtas. Diagnóstico usa esse comprimento
+com guardas em vez de VirtualQuery por caractere. Parte de fonte +0x19c
+preparada para uma próxima execução; não trocar binário durante a partida.

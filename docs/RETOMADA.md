@@ -1,5 +1,12 @@
 # Retomada — 13/10/2026
 
+Teste de Davy disponível: native-05/logs/20261013_130354.log, PID histórico
+5432, depois deixou de aparecer. Rua ~21–29 FPS; readback ~10,5–11 ms; não
+é comparação anterior/atual. Trace consumiu 24 updates iguais de Listen;
+código agora deduplica conteúdo/nó, lê tamanho +0x19c e campos de fonte,
+build PASS após fechamento pelo usuário. Davy não precisa de novo teste por
+enquanto; continuar análise independente antes de pedir repetição.
+
 Checkpoint posterior: diagnóstico cmnd_marker compilado, padrão desligado.
 Testar HUD EN.cmd permite a Davy testar com frame stats/HUD trace; o agente
 não o executou. Relay/assinatura/instalação PASS, build/CheckOnly PASS.

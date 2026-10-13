@@ -1,5 +1,22 @@
 # Diário do projeto
 
+### 13/10/2026 — primeiro teste diagnóstico feito por Davy
+
+- Davy iniciou Testar HUD EN.cmd por conta própria às 13:03:54, PID 5432;
+  log native-05/logs/20261013_130354.log. Nenhum comando de gameplay enviado.
+- Medição inicial tinha menus/transições (pausas até ~434 ms); depois há
+  janelas na rua de ~21–29 FPS, com readbacks lineares ~10,5–11 ms médios.
+  Prepare/present geralmente menores que 1 ms. Sem comparação da mesma cena
+  com versão anterior/diálogos desligados, não atribuir regressão à tradução.
+- Diagnóstico funcionou, mas 24 registros foram consumidos repetindo Listen:
+  seis caracteres, placa scale_x=5,7222, x=24 e texto x=50. Ajustado para
+  registrar mudanças de conteúdo/nó, usando comprimento em bytes verificado
+  no setter nativo 0x31e4a0 e hash sem copiar fala para o log. Campo +0x19c
+  e vizinhos adicionados para investigar tamanho/fonte.
+- Davy perguntou se precisava fazer mais: informado que não por enquanto.
+  Partida deixou de aparecer depois; build novo PASS só após conferir isso.
+  Relay/instalação offline PASS. HUD continua sem correção visual aplicada.
+
 ### 13/10/2026 — diagnóstico concreto para teste da HUD
 
 - Diagnóstico opt-in da rotina cmnd_marker 0xa6d9a0 preparado com assinatura

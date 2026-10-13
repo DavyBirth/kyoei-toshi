@@ -11,6 +11,9 @@
 typedef uintptr_t (ABI *GuestMarker)(void *, const void *);
 static GuestMarker original_marker;
 static volatile LONG reports;
+static SRWLOCK trace_lock=SRWLOCK_INIT;
+static uint64_t last_input_hash;
+static void *last_label;
 
 static int readable(const void *pointer, size_t size) {
     MEMORY_BASIC_INFORMATION info;
@@ -26,16 +29,22 @@ static void *field_pointer(const void *object, size_t offset) {
         memcpy(&value,(const char *)object+offset,sizeof(value));
     return value;
 }
-static unsigned string_characters(const void *object) {
+static unsigned string_characters(const void *object,uint64_t *hash) {
     const unsigned char *text=field_pointer(object,0);
+    unsigned bytes=0;
+    if (!object || !readable((const char *)object+8,sizeof(bytes))) return UINT_MAX;
+    memcpy(&bytes,(const char *)object+8,sizeof(bytes));
+    if (bytes>4096 || !readable(text,(size_t)bytes+1) || text[bytes]) return UINT_MAX;
     unsigned count=0;
-    for (size_t offset=0; offset<4096; ++offset) {
-        if (!readable(text ? text+offset : NULL,1)) return UINT_MAX;
+    uint64_t digest=UINT64_C(14695981039346656037);
+    for (size_t offset=0; offset<bytes; ++offset) {
         unsigned char value=text[offset];
-        if (!value) return count;
+        if (!value) return UINT_MAX;
         if ((value&0xc0)!=0x80) ++count;
+        digest=(digest^value)*UINT64_C(1099511628211);
     }
-    return UINT_MAX;
+    if (hash) *hash=digest;
+    return count;
 }
 static float float_field(const void *object,size_t offset) {
     float value=0;
@@ -45,12 +54,20 @@ static float float_field(const void *object,size_t offset) {
 }
 static ABI uintptr_t trace_marker(void *object,const void *text) {
     uintptr_t result=original_marker(object,text);
-    if (InterlockedIncrement(&reports)<=24 && readable(object,0x280)) {
+    if (InterlockedCompareExchange(&reports,0,0)>=24 || !readable(object,0x280)) return result;
+    uint64_t input_hash=0;
+    unsigned input_count=string_characters(text,&input_hash);
+    void *label=field_pointer(object,0x278);
+    AcquireSRWLockExclusive(&trace_lock);
+    if ((reports && input_hash==last_input_hash && label==last_label) || reports>=24) {
+        ReleaseSRWLockExclusive(&trace_lock); return result;
+    }
+    last_input_hash=input_hash; last_label=label; InterlockedIncrement(&reports);
+    {
         void *plate=field_pointer(object,0x238);
-        void *label=field_pointer(object,0x278);
-        gz_log("Kyoei HUD trace: input_chars=%u shown_chars=%u plate_scale_x=%.4f plate_x=%.3f text_x=%.3f",
-            string_characters(text),label?string_characters((char *)label+0x110):UINT_MAX,
-            float_field(plate,0x80),float_field(plate,0x60),float_field(label,0x60));
+        gz_log("Kyoei HUD trace: input_chars=%u shown_chars=%u plate_scale_x=%.4f plate_x=%.3f text_x=%.3f text_size_19c=%.3f",
+            input_count,label?string_characters((char *)label+0x110,NULL):UINT_MAX,
+            float_field(plate,0x80),float_field(plate,0x60),float_field(label,0x60),float_field(label,0x19c));
         // Raw technical fields for identifying font/size. Never log source prose.
         if (label && readable((char *)label+0x98,0x78)) {
             unsigned fields[30]; memcpy(fields,(char *)label+0x98,sizeof(fields));
@@ -58,7 +75,13 @@ static ABI uintptr_t trace_marker(void *object,const void *text) {
                 gz_log("Kyoei HUD fields: offset=0x%x %08x %08x %08x %08x %08x %08x",
                     0x98+i*4,fields[i],fields[i+1],fields[i+2],fields[i+3],fields[i+4],fields[i+5]);
         }
+        if (label && readable((char *)label+0x188,0x20)) {
+            unsigned fields[8]; memcpy(fields,(char *)label+0x188,sizeof(fields));
+            gz_log("Kyoei HUD font fields: offset=0x188 %08x %08x %08x %08x %08x %08x %08x %08x",
+                fields[0],fields[1],fields[2],fields[3],fields[4],fields[5],fields[6],fields[7]);
+        }
     }
+    ReleaseSRWLockExclusive(&trace_lock);
     return result;
 }
 
@@ -101,5 +124,5 @@ void kyoei_hud_trace_configure(void *image,uint64_t size) {
     if (!VirtualProtect(code,6,prior,&ignored)) gz_stop(21,"STOP: cannot restore HUD trace code protection");
     FlushInstructionCache(GetCurrentProcess(),relay,46);
     FlushInstructionCache(GetCurrentProcess(),code,6);
-    gz_log("Kyoei HUD trace: command marker verified; original behavior retained; first 24 updates only");
+    gz_log("Kyoei HUD trace: command marker verified; original behavior retained; first 24 text changes only");
 }
