@@ -24,17 +24,17 @@ def source_resource(name):
     return data, export(data)
 
 
-def known_ids(name):
+def known_ids(name, language='en'):
     ids = set()
     for path in (REPO/'translations').glob('*.json'):
         draft = json.loads(path.read_text(encoding='utf8'))
         for resource in draft.get('resources', []):
             if resource['path'] == name:
-                ids.update(row['id'] for row in resource['entries'] if 'en' in row)
+                ids.update(row['id'] for row in resource['entries'] if language in row)
     return ids
 
 
-def audit_rows(resource, canonical, glossary, existing=()):
+def audit_rows(resource, canonical, glossary, existing=(), language='en'):
     if resource.get('source_sha256') != canonical['source_sha256']:
         raise ValueError('Resource hash differs')
     originals = {row['id']: row['original'] for row in canonical['strings']}
@@ -48,20 +48,22 @@ def audit_rows(resource, canonical, glossary, existing=()):
         original = originals[key]
         if row.get('source_text_sha256') != digest(original) or row.get('original') != original:
             raise ValueError('Original or text hash differs')
-        translated = row.get('en')
+        translated = row.get(language)
         if not isinstance(translated, str) or '\0' in translated:
-            raise ValueError('Invalid English value')
+            raise ValueError('Invalid translated value')
         if not translated.strip():
             continue  # Uncertain rows may be returned untranslated.
         if TOKENS.findall(translated) != TOKENS.findall(original):
             raise ValueError('Formatting tokens differ')
-        validate_names(original, translated, 'en', glossary)
+        validate_names(original, translated, language, glossary)
         notes = row.get('notes', '')
         if not isinstance(notes, str):
             raise ValueError('Invalid notes')
         # Construct an allowlist rather than copying GPT's fields/originals.
-        result.append(dict(id=key, source_text_sha256=digest(original), en=translated,
-                           notes=notes, editorial_status='pending'))
+        entry=dict(id=key, source_text_sha256=digest(original),
+                   notes=notes, editorial_status='pending')
+        entry[language]=translated
+        result.append(entry)
     return result
 
 
@@ -103,21 +105,24 @@ def prepare(args):
 
 def prepare_all(args):
     folder = output_path(args.output)
+    language = args.language
+    context_key = 'existing_english_drafts' if language=='en' else 'existing_portuguese_drafts'
     audit = json.loads((REPO/'docs/m2/audit.json').read_text(encoding='utf8'))
     root = Path(audit['source'])
     known = {}
     for path in (REPO/'translations').glob('*.json'):
         for resource in json.loads(path.read_text(encoding='utf8')).get('resources', []):
-            known.setdefault(resource['path'], {}).update({row['id']: row['en']
-                for row in resource['entries'] if 'en' in row})
+            known.setdefault(resource['path'], {}).update({row['id']: row[language]
+                for row in resource['entries'] if language in row})
     folder.mkdir(parents=True)
-    manifest = dict(title='CUSA03562', version='01.03', language='en',
+    manifest = dict(title='CUSA03562', version='01.03', language=language,
         complete_visible_text_coverage_verified=False,
-        scope='All remaining Japanese candidates in audited Lua/CSH, excluding font data/name filters. Known English drafts included separately for context.',
+        scope='All remaining Japanese candidates in audited Lua/CSH, excluding font data/name filters. Known target-language drafts included separately for context.',
         unresolved=['Text baked into textures', 'Videos/subtitles not yet classified',
                     'HUD binary labels and runtime-generated strings', 'Non-UTF8 encodings',
                     'Technical/debug constants mixed with dialogue; skip and annotate'],
-        files=[], resources=[], excluded=[], existing_english_drafts=[])
+        files=[], resources=[], excluded=[])
+    manifest[context_key]=[]
     number = 0
     for record in audit['records']:
         name = record['path']
@@ -139,15 +144,16 @@ def prepare_all(args):
             if status == 'excluded':
                 continue
             entry = dict(id=row['id'], original=row['original'],
-                         source_text_sha256=digest(row['original']), en='', notes='',
+                         source_text_sha256=digest(row['original']), notes='',
                          category=category)
+            entry[language]=''
             if row['id'] in known.get(name, {}):
-                entry['en'] = known[name][row['id']]
+                entry[language] = known[name][row['id']]
                 previous.append(entry)
             else:
                 rows.append(entry)
         if previous:
-            manifest['existing_english_drafts'].append(dict(path=name,
+            manifest[context_key].append(dict(path=name,
                 source_sha256=record['sha256'], entries=previous))
         if not rows:
             continue
@@ -156,38 +162,45 @@ def prepare_all(args):
         for start in range(0, len(rows), args.limit):
             chunk = rows[start:start+args.limit]
             number += 1
-            filename = f'translate-en-{number:04d}.json'
+            filename = f'translate-{language}-{number:04d}.json'
             document = dict(format='kyoei-external-translation-v1', title='CUSA03562',
-                version='01.03', language='en', resources=[dict(path=name,
+                version='01.03', language=language, resources=[dict(path=name,
                 source_sha256=record['sha256'], entries=chunk)])
             (folder/filename).write_text(json.dumps(document, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
             manifest['files'].append(dict(file=filename, resource=name, entries=len(chunk)))
     manifest['new_candidates'] = sum(row['entries'] for row in manifest['files'])
-    manifest['existing_english_entries'] = sum(len(row['entries']) for row in manifest['existing_english_drafts'])
+    manifest['existing_target_entries'] = sum(len(row['entries']) for row in manifest[context_key])
     (folder/'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+'\n', encoding='utf8')
-    instruction = PROMPT + '''\nStart with dialogue/objectives/tutorials/shared_ui/shop/items files.
+    prompt = PROMPT if language=='en' else PROMPT.replace('natural English','natural Brazilian Portuguese').replace(
+        'Fill only en and notes','Fill only pt-BR and notes').replace('leave en empty','leave pt-BR empty').replace(
+        'English only; Portuguese is a later pass.',
+        'Brazilian Portuguese only, with correct accents. This pass follows the English pass. Translate from Japanese; completed English may serve as context, not as a substitute for the source.')
+    instruction = prompt + '''\nStart with dialogue/objectives/tutorials/shared_ui/shop/items files.
 The ZIP contains many files: process them in batches and return each completed JSON
 with its original filename. Do not pretend all files fit in one answer. Track completed
 and pending filenames in a progress note. manifest.json identifies resources and gaps.
-existing_english_drafts in the manifest are context only: do not return them as new work.
-Unclassified Japanese may be internal data; leave en empty whenever uncertain.
+Existing target-language drafts in the manifest are context only: do not return them as new work.
+Unclassified Japanese may be internal data; leave the translation empty whenever uncertain.
 Translate the whole supplied collection over successive batches, not only the opening.
 '''
     (folder/'INSTRUCTIONS.txt').write_text(instruction, encoding='utf8')
     (folder/'glossary.json').write_bytes((REPO/'translations/glossary.json').read_bytes())
-    archive = folder/'Kyoei-English-handoff.zip'
+    archive = folder/('Kyoei-English-handoff.zip' if language=='en' else 'Kyoei-Portugues-handoff.zip')
     with zipfile.ZipFile(archive, 'x', compression=zipfile.ZIP_DEFLATED) as bundle:
         for path in sorted(folder.iterdir()):
             if path.is_file() and path != archive:
                 bundle.write(path, path.name)
     print(f'Full extracted-text handoff: {manifest["new_candidates"]} new candidates, '
-          f'{manifest["existing_english_entries"]} prior drafts, {number} files; {archive}')
+          f'{manifest["existing_target_entries"]} prior drafts, {number} files; {archive}')
 
 
 def import_result(args):
     incoming = json.loads(args.input.read_text(encoding='utf-8-sig'))
+    language=incoming.get('language')
+    if language not in ('en','pt-BR'):
+        raise ValueError('Unsupported handoff language')
     if (incoming.get('format'), incoming.get('title'), incoming.get('version'), incoming.get('language')) != (
-            'kyoei-external-translation-v1', 'CUSA03562', '01.03', 'en'):
+            'kyoei-external-translation-v1', 'CUSA03562', '01.03', language):
         raise ValueError('Wrong handoff identity or language')
     target = args.output.resolve()
     if target.parent != (REPO/'translations').resolve() or target.suffix != '.json' or target.exists():
@@ -201,10 +214,10 @@ def import_result(args):
             raise ValueError('Duplicate resource')
         seen.add(name)
         data, canonical = source_resource(name)
-        rows = audit_rows(resource, canonical, glossary, known_ids(name))
+        rows = audit_rows(resource, canonical, glossary, known_ids(name,language),language)
         if not rows:
             continue
-        changes = {row['id']: row['en'] for row in rows}
+        changes = {row['id']: row[language] for row in rows}
         for row in canonical['strings']:
             if row['id'] in changes:
                 row['translation'] = changes[row['id']]
@@ -235,6 +248,7 @@ def main():
     full = sub.add_parser('prepare-all')
     full.add_argument('output', type=Path)
     full.add_argument('--limit', type=int, choices=range(1, 1001), default=300, metavar='1..1000')
+    full.add_argument('--language', choices=('en','pt-BR'),default='en')
     imp = sub.add_parser('import')
     imp.add_argument('input', type=Path)
     imp.add_argument('output', type=Path)

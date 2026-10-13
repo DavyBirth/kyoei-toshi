@@ -1,5 +1,15 @@
 # Entrega de tradução inglesa para o ChatGPT
 
+Atualização: Davy pediu português também, depois do inglês que já está em
+andamento. Entrega EN anterior permanece intacta. Pacote PT separado:
+`G:\kyoei-toshi-work\translation\external-pt-full-01\Kyoei-Portugues-handoff.zip`.
+São 16.136 candidatos novos e 94 rascunhos PT como contexto, 173 JSONs.
+O importador aceita en/pt-BR separadamente; duplicidade é verificada por
+idioma, permitindo adicionar PT a um ID cujo inglês já existe. Nove testes
+PASS e fixture real com acentos/reinserção PASS. Davy retorna os ZIPs/JSONs
+anexando nesta conversa, inclusive lotes parciais. Mesmo limite de cobertura
+de imagens/vídeos/HUD binário do pacote EN.
+
 Preparada a pedido de Davy em 13/10/2026. Somente rascunho; tradução final
 depende de revisão humana e layout. Não compartilhar os arquivos do dump.
 Os arquivos desta entrega contêm texto original privado e ficam fora do Git.

@@ -58,6 +58,15 @@ class HandoffAudit(unittest.TestCase):
         self.resource['entries'][0]['en'] = 'Shout to <P_FNAME> [i4].'
         with self.assertRaises(ValueError): self.audit()
 
+    def test_portuguese_import_is_separate(self):
+        self.resource['entries'][0]['pt-BR']='Fale com <P_FNAME> [i4].'
+        rows=audit_rows(self.resource,self.canonical,self.glossary,language='pt-BR')
+        self.assertEqual(rows[0]['pt-BR'],'Fale com <P_FNAME> [i4].')
+        self.assertNotIn('en',rows[0])
+        self.resource['entries'][0]['pt-BR']='Fale com [i4].'
+        with self.assertRaises(ValueError):
+            audit_rows(self.resource,self.canonical,self.glossary,language='pt-BR')
+
 
 if __name__ == '__main__':
     unittest.main()

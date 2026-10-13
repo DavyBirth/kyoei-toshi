@@ -1,5 +1,11 @@
 # Retomada — 13/10/2026
 
+Outro GPT já trabalha na entrega inglesa. Davy pediu PT depois: pacote
+separado external-pt-full-01/Kyoei-Portugues-handoff.zip pronto, 16.136 IDs
+candidatos/173 arquivos. Original EN intacto. Importador suporta idioma en
+ou pt-BR, auditados separadamente; nove testes e fixture PT real PASS.
+Receber ZIPs/JSONs como anexos aqui, inclusive parciais; revisão ainda exigida.
+
 Teste de Davy disponível: native-05/logs/20261013_130354.log, PID histórico
 5432, depois deixou de aparecer. Rua ~21–29 FPS; readback ~10,5–11 ms; não
 é comparação anterior/atual. Trace consumiu 24 updates iguais de Listen;

@@ -1,5 +1,16 @@
 # Diário do projeto
 
+### 13/10/2026 — português para o outro GPT após o inglês
+
+- Davy informou que o lote inglês já está rodando no outro GPT. Preservado
+  external-en-full-01; preparado external-pt-full-01 com 16.136 candidatos,
+  94 rascunhos PT como contexto e 173 JSONs. Inglês primeiro, depois PT-BR.
+- Exportador/importador suporta idioma separado, proteção de nomes/tokens
+  e duplicidade por idioma. Nove testes PASS; ZIP/IDs e fixture real de
+  importação PT com acentos/reinserção PASS, sem sobrepor EN existente.
+- Retorno combinado ou em lotes pode ser anexado nesta conversa; o agente
+  audita antes de publicar pacote. Nenhuma tradução nova ativada no jogo.
+
 ### 13/10/2026 — primeiro teste diagnóstico feito por Davy
 
 - Davy iniciou Testar HUD EN.cmd por conta própria às 13:03:54, PID 5432;
