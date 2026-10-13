@@ -1,5 +1,17 @@
 # Diário do projeto
 
+### 13/10/2026 — trabalho offline: edição completa pelo teclado
+
+- Davy pediu continuar durante a aula sem abrir o jogo. Sem novas capturas
+  após 172251; não exigir testes dele neste período nem alterar diagnóstico
+  gráfico por hipótese. Não iniciar nenhuma partida.
+- Entrada de nomes no overlay agora trata Delete, Home e End. Delete mantém
+  cursor e apaga o caractere seguinte inteiro, inclusive par UTF-16; seleção
+  total é apagada inteira. Navegação existente por controle preservada.
+- Build normal PASS; modelo de nome, overlay real em 640×360 e adapter IME
+  via ABI PASS. Edição de sequência A/emoji/é/Z verificada sem janela, saves
+  ou execução de código do jogo. Visual/gameplay permanece pendente.
+
 ### 13/10/2026 — filtro de constantes corrigido com recurso real do renderer
 
 - Captura 20261013_172251: 1.885/1.781 perfis, sem perdas, mas zero uniform_samples.

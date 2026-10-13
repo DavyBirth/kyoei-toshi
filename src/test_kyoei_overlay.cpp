@@ -70,6 +70,18 @@ int main() {
     CHECK(kyoei_overlay_name_result(result,7,&status) && status==1);
     kyoei_overlay_release_name();
     std::vector<std::wstring> storage(1025);
+    const uint16_t unicode_name[]={'A',0xd83d,0xde00,0xe9,'Z'};
+    CHECK(kyoei_overlay_begin_name(L"Unicode editing",unicode_name,5,6));
+    kyoei_overlay_key(KYOEI_OVERLAY_KEY_HOME);
+    kyoei_overlay_key(KYOEI_OVERLAY_KEY_RIGHT);
+    kyoei_overlay_key(KYOEI_OVERLAY_KEY_DELETE);
+    kyoei_overlay_key(KYOEI_OVERLAY_KEY_END);
+    CHECK(kyoei_overlay_text("!"));
+    check_draw(640,360,true);
+    kyoei_overlay_key(KYOEI_OVERLAY_KEY_ACCEPT);
+    CHECK(kyoei_overlay_name_result(result,7,&status) && status==0);
+    CHECK(result[0]=='A' && result[1]==0xe9 && result[2]=='Z' && result[3]=='!' && result[4]==0);
+    kyoei_overlay_release_name();
     std::vector<const wchar_t *> labels;
     for (unsigned index=0;index<storage.size();++index) { storage[index]=L"Synthetic slot "+std::to_wstring(index); labels.push_back(storage[index].c_str()); }
     auto list=std::async(std::launch::async,[&]{return kyoei_overlay_select(L"Choose a synthetic slot",labels.data(),1025,1024);});

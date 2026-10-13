@@ -42,6 +42,11 @@ filtro convidado sintético. Prova filtro na thread convidada, publicação apen
 em GetResult, limites/surrogates, palavras de guarda, cancelar/abortar e lifecycle.
 Não abre a janela Win32 nem escreve saves.
 
+Edição física de nome aceita Delete (caractere seguinte), Home e End, além
+das setas/Backspace/Ctrl+A. Delete preserva pares UTF-16 e não avança cursor;
+Home/End desfazem seleção e vão às extremidades. Testes do modelo e do overlay
+real cobrem edição no meio de nome Unicode e resultado com terminador.
+
 Os testes detectaram e corrigiram terminador residual ao substituir seleção
 inicial, máscaras trocadas de Square/Triangle e escala acumulativa que zerava
 propriedades ImGui ao redimensionar repetidamente.

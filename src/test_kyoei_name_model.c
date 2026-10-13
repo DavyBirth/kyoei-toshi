@@ -24,6 +24,16 @@ int main(void) {
     kyoei_name_backspace(&m); CHECK(m.length==1 && m.text[0]==0x00e0 && m.cursor==0);
     CHECK(!kyoei_name_insert(&m,invalid,1));
     CHECK(!kyoei_name_begin(&m,invalid,1,8));
+    const uint16_t mixed[]={'A',0xd83d,0xde00,0xe9,'Z'};
+    CHECK(kyoei_name_begin(&m,mixed,5,8));
+    kyoei_name_boundary(&m,0);CHECK(m.cursor==0 && !m.select_all);
+    kyoei_name_cursor(&m,1);kyoei_name_delete(&m);
+    CHECK(m.cursor==1 && m.length==3 && m.text[1]==0xe9 && m.text[2]=='Z' && !m.text[3]);
+    kyoei_name_boundary(&m,1);kyoei_name_delete(&m);CHECK(m.cursor==3 && m.length==3);
+    kyoei_name_boundary(&m,0);kyoei_name_delete(&m);CHECK(m.length==2 && m.text[0]==0xe9);
+    m.select_all=1;kyoei_name_delete(&m);CHECK(!m.length && !m.cursor && !m.select_all && !m.text[0]);
+    CHECK(kyoei_name_begin(&m,mixed,5,8));m.result=KYOEI_NAME_CANCELLED;
+    kyoei_name_boundary(&m,0);kyoei_name_delete(&m);CHECK(m.length==5 && m.cursor==5);
     CHECK(kyoei_name_begin(&m,initial,4,4));
     const uint16_t too_long[]={'a','b','c','d','e'};
     CHECK(!kyoei_name_insert(&m,too_long,5)); CHECK(m.select_all && m.length==4);

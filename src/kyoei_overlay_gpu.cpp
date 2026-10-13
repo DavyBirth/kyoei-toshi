@@ -96,6 +96,9 @@ bool HandleEvent(const SDL_Event &event) {
         case SDLK_UP: key=KYOEI_OVERLAY_KEY_UP; break;
         case SDLK_DOWN: key=KYOEI_OVERLAY_KEY_DOWN; break;
         case SDLK_BACKSPACE: key=KYOEI_OVERLAY_KEY_BACKSPACE; break;
+        case SDLK_DELETE: key=KYOEI_OVERLAY_KEY_DELETE; break;
+        case SDLK_HOME: key=KYOEI_OVERLAY_KEY_HOME; break;
+        case SDLK_END: key=KYOEI_OVERLAY_KEY_END; break;
         case SDLK_RETURN: case SDLK_KP_ENTER: if (!event.key.repeat) key=KYOEI_OVERLAY_KEY_ACCEPT; break;
         case SDLK_ESCAPE: key=KYOEI_OVERLAY_KEY_CANCEL; break;
         case SDLK_A: if (event.key.mod&SDL_KMOD_CTRL) key=KYOEI_OVERLAY_KEY_SELECT_ALL; break;

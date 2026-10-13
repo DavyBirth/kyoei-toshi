@@ -12,7 +12,8 @@ extern "C" {
 enum { KYOEI_OVERLAY_NONE, KYOEI_OVERLAY_NAME, KYOEI_OVERLAY_LIST, KYOEI_OVERLAY_MESSAGE };
 enum { KYOEI_OVERLAY_KEY_LEFT, KYOEI_OVERLAY_KEY_RIGHT, KYOEI_OVERLAY_KEY_UP,
        KYOEI_OVERLAY_KEY_DOWN, KYOEI_OVERLAY_KEY_BACKSPACE, KYOEI_OVERLAY_KEY_SELECT_ALL,
-       KYOEI_OVERLAY_KEY_ACCEPT, KYOEI_OVERLAY_KEY_CANCEL };
+       KYOEI_OVERLAY_KEY_ACCEPT, KYOEI_OVERLAY_KEY_CANCEL,
+       KYOEI_OVERLAY_KEY_DELETE, KYOEI_OVERLAY_KEY_HOME, KYOEI_OVERLAY_KEY_END };
 int kyoei_overlay_begin_name(const wchar_t *title,const uint16_t *text,size_t length,size_t limit);
 int kyoei_overlay_name_result(uint16_t *text,size_t capacity,unsigned *result);
 void kyoei_overlay_release_name(void);

@@ -58,6 +58,20 @@ static inline void kyoei_name_backspace(KyoeiNameModel *m) {
     memmove(m->text+m->cursor,m->text+end,(m->length-end+1)*sizeof(uint16_t));
     m->length-=end-m->cursor;
 }
+static inline void kyoei_name_boundary(KyoeiNameModel *m,int end) {
+    if (!m || m->result) return;
+    m->select_all=0;m->cursor=end?m->length:0;
+}
+static inline void kyoei_name_delete(KyoeiNameModel *m) {
+    if (!m || m->result) return;
+    if (m->select_all) { kyoei_name_backspace(m);return; }
+    if (m->cursor==m->length) return;
+    size_t start=m->cursor;
+    kyoei_name_cursor(m,1);
+    size_t end=m->cursor;
+    memmove(m->text+start,m->text+end,(m->length-end+1)*sizeof(uint16_t));
+    m->length-=end-start;m->cursor=start;
+}
 /* Four rows of ten keys: letters, digits, space, shift, erase, done. */
 static inline void kyoei_name_move(KyoeiNameModel *m, int dx, int dy) {
     if (!m || m->result) return;

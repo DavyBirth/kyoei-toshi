@@ -96,6 +96,9 @@ void keyboard_locked(unsigned key) {
         if (key==KYOEI_OVERLAY_KEY_LEFT) kyoei_name_cursor(&name,0);
         if (key==KYOEI_OVERLAY_KEY_RIGHT) kyoei_name_cursor(&name,1);
         if (key==KYOEI_OVERLAY_KEY_BACKSPACE) kyoei_name_backspace(&name);
+        if (key==KYOEI_OVERLAY_KEY_DELETE) kyoei_name_delete(&name);
+        if (key==KYOEI_OVERLAY_KEY_HOME) kyoei_name_boundary(&name,0);
+        if (key==KYOEI_OVERLAY_KEY_END) kyoei_name_boundary(&name,1);
         if (key==KYOEI_OVERLAY_KEY_SELECT_ALL) name.select_all=name.length!=0;
     } else {
         uint32_t pressed=key==KYOEI_OVERLAY_KEY_UP || key==KYOEI_OVERLAY_KEY_LEFT?0x10:
@@ -144,7 +147,7 @@ void name_box(float width,bool controller) {
         }
         ImGui::TextWrapped("D-pad: choose a key   Circle: select   X: cancel");
         ImGui::TextWrapped("Square: erase   Triangle: shift   L1/R1: cursor   Options: done");
-    } else ImGui::TextWrapped("Type your name. Arrow keys: cursor   Backspace: erase   Ctrl+A: select all");
+    } else ImGui::TextWrapped("Type your name. Arrows/Home/End: cursor   Backspace/Delete: erase   Ctrl+A: select all");
     ImGui::Spacing();
     if (ImGui::Button("Confirm",ImVec2(135*scale,36*scale))) finish_locked(0);
     ImGui::SameLine();
