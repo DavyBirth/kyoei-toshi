@@ -1,5 +1,23 @@
 # Diário do projeto
 
+### 13/10/2026 — corte do orbe mudou de lado; constantes no instante do desenho
+
+- Davy registrou F9 e informou faixa agora na direita. Log 20261013_162330:
+  1.957/1.707 perfis completos, sem descartes. Captura passiva da janela PID
+  32984 confirma faixa direita e foto íntegra. Partida mantida aberta/intacta.
+- Recortes seguem cobrindo tela; geometria selecionada distingue caixas/foto.
+  Painel local 200×1.080 usa textura 16×16, presente antes e durante: não é
+  prova de que seja camada defeituosa. Limites locais não são pós-shader.
+- Leitura posterior limitada de constantes por ReadProcessMemory foi possível,
+  mas buffers podem ter sido reciclados; não correlacionar esses valores ao F9.
+  Preparada coleta no próprio BindBuffers: até oito buffers, 64 bytes cada,
+  só uniforms VS/PS de draws com blend; sem waits nem storage/GPU dirty.
+- Build kyoei-orb-trace-next.exe PASS sem substituir executável do PID ativo.
+  Testes tamanho/overflow/falha/dirty/disabled PASS e parser nove PASS. CheckOnly
+  do novo atalho PASS. Normal SHA preservado; CMake restaurado para kyoei.
+- Testar orbe constantes EN.cmd disponível para próxima abertura pelo usuário;
+  nenhuma partida iniciada ou fechada pelo agente. Causa ainda não provada.
+
 ### 13/10/2026 — segunda captura do orbe e seleção real de vértices
 
 - Log de Davy 20261013_160452: duas capturas completas, 1.764/4.114 desenhos,

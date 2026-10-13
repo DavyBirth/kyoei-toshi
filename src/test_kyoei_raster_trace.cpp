@@ -63,5 +63,15 @@ int main(int argc,char **) {
     SampleSelectedXY(vertex,selection,readable,clean,selected_copy);CHECK(vertex.status==1 && vertex.selected_indices[3]==20);
     selection.base_vertex=1000;SampleSelectedXY(vertex,selection,readable,clean,selected_copy);CHECK(vertex.status==4 && vertex.sample_count==0);
     selection.valid=0;SampleSelectedXY(vertex,selection,readable,clean,selected_copy);CHECK(vertex.status==8);
+    UniformProbe uniform;uniform.address=100;uniform.bytes=80;
+    unsigned uniform_reads=0;
+    auto uniform_copy=[&](auto,void *out,uint64_t bytes) { ++uniform_reads;std::memset(out,0x12,bytes);return true; };
+    SampleWords(uniform,readable,clean,uniform_copy);
+    CHECK(uniform.status==1 && uniform.word_count==16 && uniform.words[15]==0x12121212 && uniform_reads==1);
+    SampleWords(uniform,readable,[](auto,auto){return true;},uniform_copy);
+    CHECK(uniform.status==2 && uniform.word_count==0 && uniform_reads==1);
+    uniform.address=UINT64_MAX-3;SampleWords(uniform,readable,clean,uniform_copy);CHECK(uniform.status==4 && uniform_reads==1);
+    uniform.address=100;SampleWords(uniform,readable,clean,[](auto,void *out,uint64_t bytes){std::memset(out,0xff,bytes);return false;});
+    CHECK(uniform.status==7 && uniform.words[0]==0 && uniform.word_count==0);
     std::puts("RASTER TRACE PASS: real registers, independent flags, exact coordinates, deduplication, two frames, bounded profiles and retrigger; no GPU/window");
 }

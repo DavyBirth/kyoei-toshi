@@ -172,7 +172,7 @@ kyoei_replace_checked(KYOEI_LOADER
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 set(KYOEI_PORT_EXE_NAME "kyoei" CACHE STRING "Prepared port binary: kyoei or kyoei-orb-trace")
-if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace)$")
+if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace|kyoei-orb-trace-next)$")
   message(FATAL_ERROR "Unsupported port executable name")
 endif()
 set_target_properties(kyoei PROPERTIES OUTPUT_NAME "${KYOEI_PORT_EXE_NAME}")
@@ -435,10 +435,27 @@ set(KYOEI_DRAW_SELECTION [=[
 ]=])
 kyoei_replace_checked(KYOEI_RASTERIZER
   "void Rasterizer::Draw(bool is_indexed, u32 index_offset) {"
-  "void Rasterizer::Draw(bool is_indexed, u32 index_offset) {\n    KyoeiRasterTrace::current_selection={};")
+  "void Rasterizer::Draw(bool is_indexed, u32 index_offset) {\n    KyoeiRasterTrace::current_selection={};KyoeiRasterTrace::current_uniforms={};KyoeiRasterTrace::current_uniform_count=0;")
 kyoei_replace_checked(KYOEI_RASTERIZER
   "                              u32 max_count, VAddr count_address) {"
-  "                              u32 max_count, VAddr count_address) {\n    KyoeiRasterTrace::current_selection={};")
+  "                              u32 max_count, VAddr count_address) {\n    KyoeiRasterTrace::current_selection={};KyoeiRasterTrace::current_uniforms={};KyoeiRasterTrace::current_uniform_count=0;")
+set(KYOEI_UNIFORM_PROBE [=[
+        if (KyoeiRasterTrace::Capturing() && !desc.IsSpecial() && !is_storage && size>0 &&
+            (stage.l_stage==Shader::LogicalStage::Vertex || stage.l_stage==Shader::LogicalStage::Fragment)) {
+            u32 probe_blend{};std::memcpy(&probe_blend,&liverpool->regs.blend_control[0],4);
+            if(probe_blend && KyoeiRasterTrace::current_uniform_count<KyoeiRasterTrace::current_uniforms.size()) {
+                auto &probe=KyoeiRasterTrace::current_uniforms[KyoeiRasterTrace::current_uniform_count++];
+                probe.address=vsharp.base_address;probe.bytes=size;probe.stage=static_cast<unsigned>(stage.l_stage);probe.binding=i;
+                KyoeiRasterTrace::SampleWords(probe,
+                    [this](uint64_t addr,uint64_t bytes) { return memory->ClampRangeSize(addr,bytes)==bytes; },
+                    [this](uint64_t addr,uint64_t bytes) { return buffer_cache.IsRegionGpuModified(addr,bytes); },
+                    [](uint64_t addr,void *dest,uint64_t bytes) { return gz_memory_copy(static_cast<uintptr_t>(addr),dest,bytes,0)!=0; });
+            }
+        }
+]=])
+kyoei_replace_checked(KYOEI_RASTERIZER
+  "        const bool is_storage = desc.IsStorage(vsharp);"
+  "        const bool is_storage = desc.IsStorage(vsharp);\n${KYOEI_UNIFORM_PROBE}")
 set(KYOEI_DIRECT_BIND [=[    const auto state = BeginRendering(pipeline);
 
     buffer_cache.BindVertexBuffers(*pipeline, buffer_barriers);

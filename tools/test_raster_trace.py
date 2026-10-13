@@ -48,5 +48,11 @@ Kyoei raster parameters: p=0 stage=vs start=0 words=00000000,00000000
         self.assertEqual(row['vertex_samples'][0]['status'],'1')
         self.assertEqual(row['shader_parameters'][0]['stage'],'vs')
 
+    def test_uniform_snapshot_retained_separately(self):
+        extra='Kyoei raster uniform: p=0 slot=0 stage=3 binding=0 address=abc bytes=64 status=1 count=16 start=0 words=3f800000,00000000\n'
+        row=analyze(CAPTURE.replace('Kyoei raster capture end:',extra+'Kyoei raster capture end:'))['captures'][0]['profiles'][0]
+        self.assertEqual(row['uniform_samples'][0]['count'],'16')
+        self.assertEqual(row['uniform_samples'][0]['words'],'3f800000,00000000')
+
 
 if __name__=='__main__':unittest.main()

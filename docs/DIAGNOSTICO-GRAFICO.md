@@ -139,3 +139,20 @@ Só até quatro entradas são lidas, sem resolver primitivas completas, restart
 ou transformação pós-VS. Coordenadas de amostras inválidas não são válidas
 para análise; exigir status 1 e samples positivos. Dados GPU modificados são
 ignorados sem espera/download. Este complemento não corrige a faixa.
+
+## Captura 162330: corte à direita e constantes
+
+Capturas completas de 1.957/1.707 perfis, sem perdas. Foto do tutorial íntegra;
+faixa limpa direita confirmada na captura privada orb-user-20261013-03.png.
+Recortes continuam inteiros. Painel local 200×1.080 com textura 16×16 aparece
+antes e durante, sem prova de ligação ao defeito. Não deduzir posição na tela
+sem transformação do shader. Não usar constantes lidas depois via memória
+como se fossem as capturadas: o jogo reutiliza buffers.
+
+Novo atalho `Testar orbe constantes EN.cmd` usa `kyoei-orb-trace-next.exe`,
+mantendo a partida existente intacta. Captura F9 inclui `uniform_samples`:
+até oito uniform buffers VS/PS, primeiros 64 bytes, no binding de draws com
+blend. Stage 3=VS, 0=PS. Exigir status 1/count positivo. Buffers storage ou
+GPU dirty não são copiados. Palavra hexadecimal é dado bruto; tipo/matriz
+precisam ser confirmados pelo shader. Não garante capturar todos os parâmetros
+ou os bytes realmente consumidos pela GPU. Nenhuma correção ativada.

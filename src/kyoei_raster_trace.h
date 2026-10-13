@@ -42,6 +42,23 @@ struct DrawSelection {
     int64_t base_vertex{};
 };
 inline thread_local DrawSelection current_selection{};
+struct UniformProbe {
+    uint64_t address{},bytes{};
+    unsigned stage{},binding{},status{},word_count{};
+    std::array<uint32_t,16> words{};
+    bool operator==(const UniformProbe &) const=default;
+};
+inline thread_local std::array<UniformProbe,8> current_uniforms{};
+inline thread_local unsigned current_uniform_count{};
+template<class Readable,class Dirty,class Copy>
+void SampleWords(UniformProbe &probe,Readable readable,Dirty dirty,Copy copy) {
+    probe.words.fill(0);probe.word_count=0;
+    const uint64_t bytes=std::min(probe.bytes,uint64_t(64))&~uint64_t(3);
+    if(!bytes || probe.address>UINT64_MAX-bytes || !readable(probe.address,bytes)) { probe.status=4;return; }
+    if(dirty(probe.address,bytes)) { probe.status=2;return; }
+    if(!copy(probe.address,probe.words.data(),bytes)) { probe.words.fill(0);probe.status=7;return; }
+    probe.word_count=static_cast<unsigned>(bytes/4);probe.status=1;
+}
 template<class Readable,class Dirty,class Copy>
 void SampleSelectedXY(VertexProbe &probe,const DrawSelection &draw,Readable readable,Dirty dirty,Copy copy) {
     probe.xy.fill(0);probe.sample_count=0;probe.selected_indices.fill(0);probe.selection_status=draw.valid;
@@ -89,6 +106,8 @@ struct Profile {
     std::array<VertexProbe,4> vertices{};
     unsigned parameter_count{};
     std::array<uint32_t,16> vs_parameters{},ps_parameters{};
+    unsigned uniform_count{};
+    std::array<UniformProbe,8> uniforms{};
     bool operator==(const Profile &) const=default;
 };
 inline bool Enabled() {
@@ -149,6 +168,13 @@ inline void Presented() {
             gz_log("Kyoei raster parameters: p=%u stage=ps start=%u words=%08x,%08x,%08x,%08x,%08x,%08x,%08x,%08x",
                 i,j,p.ps_parameters[j],p.ps_parameters[j+1],p.ps_parameters[j+2],p.ps_parameters[j+3],p.ps_parameters[j+4],p.ps_parameters[j+5],p.ps_parameters[j+6],p.ps_parameters[j+7]);
         }
+        for(unsigned slot=0;slot<p.uniform_count;++slot) {
+            const auto &u=p.uniforms[slot];
+            for(unsigned j=0;j<16;j+=8)
+                gz_log("Kyoei raster uniform: p=%u slot=%u stage=%u binding=%u address=%llx bytes=%llu status=%u count=%u start=%u words=%08x,%08x,%08x,%08x,%08x,%08x,%08x,%08x",
+                    i,slot,u.stage,u.binding,(unsigned long long)u.address,(unsigned long long)u.bytes,u.status,u.word_count,j,
+                    u.words[j],u.words[j+1],u.words[j+2],u.words[j+3],u.words[j+4],u.words[j+5],u.words[j+6],u.words[j+7]);
+        }
     }
     gz_log("Kyoei raster capture end: id=%llu",(unsigned long long)recording);
     completed.store(recording);
@@ -167,6 +193,7 @@ Profile MakeProfile(const Regs &r,const Viewport &v,const Rect &rect,unsigned i)
     p.viewport_enable=r.mode_control.vport_scissor_enable;p.viewport_index=i;p.primitive=(unsigned)r.primitive_type;
     std::memcpy(&p.blend,&r.blend_control[0],4);std::memcpy(&p.depth,&r.depth_control,4);
     p.vertex_count=current_vertex_count;p.vertices=current_vertices;
+    p.uniform_count=current_uniform_count;p.uniforms=current_uniforms;
     if ((p.blend || p.primitive==17 || (p.primitive==6 && p.depth==0)) && std::fabs(v.width)>=128) {
         p.parameter_count=16;std::copy_n(r.vs_program.user_data.begin(),16,p.vs_parameters.begin());
         std::copy_n(r.ps_program.user_data.begin(),16,p.ps_parameters.begin());

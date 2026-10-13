@@ -27,6 +27,9 @@ def analyze(text):
         elif current and 'Kyoei raster parameters:' in line:
             values=dict(re.findall(r'(\w+)=([^\s]+)',line));index=int(values['p'])
             if index in current['profiles']:current['profiles'][index].setdefault('shader_parameters',[]).append(values)
+        elif current and 'Kyoei raster uniform:' in line:
+            values=dict(re.findall(r'(\w+)=([^\s]+)',line));index=int(values['p'])
+            if index in current['profiles']:current['profiles'][index].setdefault('uniform_samples',[]).append(values)
         elif current and 'Kyoei raster capture end:' in line:
             end=int(re.search(r'id=(\d+)',line).group(1))
             required={'xywh','scissor_xywh','screen','window','generic','viewport'}

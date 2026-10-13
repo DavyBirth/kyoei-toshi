@@ -1,5 +1,18 @@
 # Retomada — 13/10/2026
 
+Log 20261013_162330 analisado: 1.957/1.707 perfis completos, zero descartes;
+relatório build/orb-raster-report-04.json. Davy relata corte agora à direita,
+confirmado em captura privada build/orb-user-20261013-03.png. PID 32984 aberto,
+não fechar/reiniciar. Vértices selecionados separam caixas; recortes continuam
+inteiros. Constantes lidas depois por memória podem ter sido reutilizadas:
+não representam o instante F9. Novo kyoei-orb-trace-next.exe compilado separado,
+captura até 64 bytes de oito uniform buffers no binding, ignora GPU dirty/storage.
+Testes limites/falha/dirty/disabled PASS; parser nove PASS; CheckOnly PASS.
+Atalho Testar orbe constantes EN.cmd, F9 antes e no tutorial após Davy encerrar
+a partida atual por conta própria. Executável atual e normal preservados.
+Não afirmar correção. Próximo analisar uniform_samples para transformação VS
+e composição PS. Script recusa partida existente via nomes Win32_Process.
+
 Nova captura 20261013_160452: IDs 1/2 completos, 839/1.133 perfis, zero perdas;
 nenhum candidato de recorte na esquerda. Relatório build/orb-raster-report-03.json.
 Os vértices anteriores eram começo de buffers UI compartilhados, não subdraws:
