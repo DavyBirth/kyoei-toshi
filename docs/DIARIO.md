@@ -964,6 +964,17 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   não declarar menus totalmente traduzidos, imagens traduzidas ou abertura
   real do novo launcher certificada. instruções em docs/ABRIR-JOGO.md.
 
+### 13/10/2026 — plano offline e ordem dos idiomas
+
+- Recriado docs/PLANO-MANHA.md após confirmar que a gravação anterior não
+  havia ocorrido. Referência adicionada à retomada.
+- Davy pediu uma língua por vez: primeiro inglês, depois português. Revisar,
+  ampliar e validar EN antes da nova rodada PT-BR; pacotes em sequência.
+- Plano prioriza fontes/minimapa, entrada de nome e save/load, tradução e
+  análise gráfica com testes offline. Não abrir jogo nem depender de Davy.
+- Percentual da quota não acessível: checkpoints frequentes e reserva para
+  encerramento, sem promessa de parada automática exata em 3%.
+
 ### 12/10/2026 — limite de quota e primeiro retorno da prévia PT-BR
 
 - Davy respondeu que restam 4% de uso. Encerrar após salvar este checkpoint,

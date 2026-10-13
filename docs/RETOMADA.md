@@ -1,5 +1,10 @@
 # Retomada — 12/10/2026
 
+Atualização em 13/10/2026: plano offline salvo em `docs/PLANO-MANHA.md`.
+Na próxima sessão da escola, não abrir o jogo. Por pedido explícito de Davy,
+fazer primeiro a tradução inglesa, salvar/validar essa etapa e somente depois
+passar ao português. O plano não agenda execução. Os 4% abaixo são históricos.
+
 Davy pediu parar perto de 3% da quota; informou 4%. Progresso salvo e trabalho
 encerrado após o checkpoint. Ler também `docs/DIARIO.md` e AGENTS.md.
 
