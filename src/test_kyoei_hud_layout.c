@@ -18,6 +18,12 @@ int main(void) {
     metrics.equivalent['W'-32]=4;
     char oversized[116]; memset(oversized,'W',115);oversized[115]=0;
     if (kyoei_hud_fit(&metrics,oversized,115,0,&wide)) return 8;
+    float measured=0;
+    const char *punctuation="\xe2\x80\x98i\xe2\x80\x99\xe2\x80\x9c\xe2\x80\x9d\xe2\x80\xa6\xe2\x99\xaa";
+    if (!kyoei_hud_measure(&metrics,punctuation,strlen(punctuation),&measured) || fabsf(measured-6.2f)>.001f) return 9;
+    const char *bad[]={"\xe2\x80","\xe2\x80\x80","\xc0\xaf","\xc3\xa9","a\xe2\x80\x99%"};
+    for (unsigned i=0;i<sizeof(bad)/sizeof(bad[0]);++i)
+        if (kyoei_hud_measure(&metrics,bad[i],strlen(bad[i]),&measured)) return 10;
     puts("HUD LAYOUT PASS: glyph widths, full long label, mirrored anchor, formatting fallback, finite metrics and bounded span");
     return 0;
 }

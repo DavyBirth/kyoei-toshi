@@ -200,3 +200,17 @@ instalar; função global de contagem permanece intacta. ASCII simples medido;
 JA/códigos/fora do limite usam contagem original. Testes de medidas/fallback,
 ABI e instalação sobre os blocos reais PASS, sem executar o jogo. Não declarar
 ancoragem/objetivo resolvidos até comparar em movimento e perto das bordas.
+
+## Pontuação UTF-8 na prévia inglesa
+
+FitHud também aceita U+2018/U+2019/U+201C/U+201D/U+2026/U+266A, presentes
+nos dois atlas/tabelas auditados com advance igual ao glifo full-width.
+Gerador de métricas confere esse invariante antes de gerar o cache privado.
+Não usa medidas latinas substitutas para acentos faltantes nem edita atlas.
+Textos com tokens, bytes inválidos e demais caracteres continuam no original.
+
+Medidor local do minimapa procura terminador dentro de até 116 bytes acessíveis
+e passa o tamanho UTF-8 real ao medidor. Não confunde bytes com contagem de
+caracteres. Teste do callback real cobre apóstrofo curvo no meio de texto,
+restauração do rótulo e fallback para glifo fora da cobertura. Layout ainda
+precisa ser visto pelo usuário; nenhum ganho de FPS ou correção do orbe implica.

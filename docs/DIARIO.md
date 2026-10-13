@@ -1,5 +1,19 @@
 # Diário do projeto
 
+### 13/10/2026 — trabalho offline: pontuação UTF-8 nas caixas e minimapa
+
+- Ajuste FitHud agora mede seis glifos já existentes em ambas as fontes:
+  aspas simples/duplas curvas, reticências e nota musical. Tabelas auditadas
+  demonstram advance exatamente full-width; gerador de métricas verifica isso.
+  Não remove reticências narrativas e não habilita acentos ausentes nas variantes.
+- Medida do minimapa separa comprimento UTF-8 em bytes da contagem nativa de
+  caracteres; antes um apóstrofo curvo impedia a medição e caía no original.
+  Leitura limitada ao trecho de memória acessível e a 115 bytes. Códigos,
+  caracteres não cobertos e UTF-8 truncado/inválido mantêm fallback original.
+- Build PASS, testes de largura, callback real e instalação com assinaturas do
+  eboot próprio PASS, sem chamar jogo. Cache privado 02 idêntico em formato ao
+  01; ambos têm as mesmas medidas ASCII. CheckOnly FitHud PASS. Visual pendente.
+
 ### 13/10/2026 — trabalho offline: edição completa pelo teclado
 
 - Davy pediu continuar durante a aula sem abrir o jogo. Sem novas capturas

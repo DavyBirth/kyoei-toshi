@@ -15,12 +15,22 @@ static inline int kyoei_hud_measure(const KyoeiHudMetrics *metrics,const char *t
                                    size_t bytes,float *width) {
     if (!metrics || !text || !width || !bytes || bytes>115 || text[bytes]) return 0;
     float equivalent=0;
-    for (size_t i=0;i<bytes;++i) {
+    for (size_t i=0;i<bytes;) {
         unsigned char ch=(unsigned char)text[i];
+        if (ch>=128) {
+            /* Both audited native fonts give these existing glyphs exactly
+             * one full-width advance. No fallback to a missing accent. */
+            if (bytes-i<3 || (memcmp(text+i,"\xe2\x80\x98",3) &&
+                memcmp(text+i,"\xe2\x80\x99",3) && memcmp(text+i,"\xe2\x80\x9c",3) &&
+                memcmp(text+i,"\xe2\x80\x9d",3) && memcmp(text+i,"\xe2\x80\xa6",3) &&
+                memcmp(text+i,"\xe2\x99\xaa",3))) return 0;
+            equivalent+=1;i+=3;continue;
+        }
         if (ch<32 || ch>126 || strchr("[]<>{}%\\",ch)) return 0;
         float advance=metrics->equivalent[ch-32];
         if (!isfinite(advance) || advance<=0 || advance>4) return 0;
         equivalent+=advance;
+        ++i;
     }
     *width=equivalent;
     return 1;

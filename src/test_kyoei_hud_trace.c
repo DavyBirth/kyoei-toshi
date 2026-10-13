@@ -19,6 +19,9 @@ ABI uintptr_t kyoei_hud_test_marker(void *,const void *);
 typedef unsigned (ABI *Count)(const char *);
 unsigned kyoei_hud_test_map(Count,const char *);
 static ABI unsigned fake_count(const char *text) { return (unsigned)strlen(text); }
+static ABI unsigned fake_unicode_count(const char *text) {
+    unsigned count=0;for(;*text;++text) if (((unsigned char)*text&0xc0)!=0x80) ++count;return count;
+}
 static unsigned original_calls,assign_calls;
 static unsigned char node[0x300],plate[0x100],object[0x300];
 static ABI void fake_assign(void *target,const char *source) {
@@ -59,6 +62,11 @@ static int check_fit_callback(void) {
     kyoei_hud_test_callbacks(fake_original,fake_assign,&metrics);
     if (kyoei_hud_test_map(fake_count,"iiii")!=1 || kyoei_hud_test_map(fake_count,"WWWW")!=4) return 16;
     if (kyoei_hud_test_map(fake_count,"[i4]")!=4) return 17;
+    const char *curved="i\xe2\x80\x99i";
+    if (kyoei_hud_test_map(fake_unicode_count,curved)!=2) return 20;
+    if (kyoei_hud_test_map(fake_unicode_count,"\xc3\xa9")!=1) return 21;
+    fake_assign(&source,curved);kyoei_hud_test_marker(object,&source);
+    if (strcmp(actual->pointer,curved)) return 22;
     return 0;
 }
 int main(int argc,char **argv) {

@@ -82,8 +82,14 @@ static float float_field(const void *object,size_t offset) {
 static ABI unsigned measure_map_text(const char *text) {
     unsigned characters=count_text(text);
     float equivalent;
-    if (!fit_enabled || characters>115 || !readable(text,(size_t)characters+1) ||
-        !kyoei_hud_measure(&fit_metrics,text,characters,&equivalent)) return characters;
+    if (!fit_enabled || characters>115) return characters;
+    MEMORY_BASIC_INFORMATION info;
+    if (!text || !VirtualQuery(text,&info,sizeof(info)) || info.State!=MEM_COMMIT ||
+        (info.Protect&(PAGE_NOACCESS|PAGE_GUARD))) return characters;
+    size_t available=info.RegionSize-((uintptr_t)text-(uintptr_t)info.BaseAddress);
+    if (available>116) available=116;
+    const char *end=memchr(text,0,available);
+    if (!end || !kyoei_hud_measure(&fit_metrics,text,(size_t)(end-text),&equivalent)) return characters;
     // Call sites convert this integer to float; round upward to retain margin.
     return (unsigned)ceilf(equivalent);
 }
@@ -226,7 +232,7 @@ void kyoei_hud_trace_configure(void *image,uint64_t size) {
     FlushInstructionCache(GetCurrentProcess(),relay,78);
     FlushInstructionCache(GetCurrentProcess(),code,6);
     gz_log("Kyoei HUD trace: command marker verified; fit_preview=%d; first 24 text changes only",fit_enabled);
-    if (fit_enabled) gz_log("Kyoei HUD fit: English ASCII preview; full label, conservative native advances; bounded span; visual review pending");
+    if (fit_enabled) gz_log("Kyoei HUD fit: English ASCII and verified UTF8 punctuation preview; full label, conservative native advances; bounded span; visual review pending");
     if (fit_enabled) gz_log("Kyoei map fit: extent/plate calls %s; original rotation and clamps retained",
         install_map_measure(image,size,relay)?"verified and adapted":"unavailable; original path retained");
 }
