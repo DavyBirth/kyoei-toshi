@@ -810,3 +810,26 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   33432, fast=1, métricas=1, stress=0. Get-Process confirmou título novo
   na criação real da janela. Continuar após morrer ainda exige validação
   de gameplay; ganho relatado por Davy registrado sem prometer FPS fixo.
+
+### 12/10/2026 — Continue confirmado e observação do começo
+
+- Davy confirmou Continue após morrer funcionando, título corrigido e
+  círculo/X corretos no save/load. Relatou velocidade bem melhor e pediu
+  acompanhamento de FPS/visual/falhas enquanto jogava sem Abiotic Factor.
+  Pediu encerrar a análise ao morrer; não interrompemos/reiniciamos o jogo.
+- Análise salva em docs/ANALISE-COMECO.md: duas amostras de ~30 s, 600/720
+  intervalos, FPS agregados 22,74/25,41. Incluem passagem por cena/eventos;
+  não comparar com abertura/menu de 60 FPS. TLS zero. Leitura linear
+  média 11,65 ms em relatório da segunda amostra. CPU ~1,8 núcleos ativos,
+  RAM residente ~8,4 GiB. Três amostras pontuais GPU 3D 11,5–36,2%; não
+  diagnóstico definitivo de gargalo ou vazamento.
+- Quatro capturas de cidade, diálogo, fogo e gigante inspecionadas sem
+  defeito gráfico evidente nesses frames. Nenhum STOP/assert/map failure
+  nos intervalos; processo aberto após morte. Flicker/movimento e comparação
+  exata com PS4 não certificados. Não prometer primeira fase completa.
+- tools/analyze_native_performance.py resume intervalos delimitados por
+  offset em bytes, aceita logs UTF-8 e UTF-16 do PowerShell. Mantém métricas
+  privadas em build; não inclui textos originais nos relatórios versionados.
+- Piloto do começo localizado: Text_Stage_201.luc tem 749 candidatos;
+  map_goal_text.luc contém objetivos/marcadores observados. IDs e escopo
+  documentados sem versionar originais. Nenhuma tradução aplicada ainda.
