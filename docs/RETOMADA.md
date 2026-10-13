@@ -1,5 +1,41 @@
 # Retomada — 13/10/2026
 
+## Sessão offline durante a aula — seis avanços salvos
+
+Davy pediu trabalhar sem abrir nada enquanto não pode testar. Nenhuma partida
+foi iniciada nesta sessão; última conferência não encontrou processo Kyoei.
+Não pedir gameplay enquanto ele estiver na aula. Horário do término perguntado
+por mensagem assíncrona, ainda sem resposta. Handoff de tradução intacto;
+retorno-gpt sem arquivos novos. Inglês continua primeiro.
+
+- c99ceb7: nomes com Delete/Home/End, mantendo pares UTF-16 e controle.
+  Modelo, overlay real em 640×360 e adapter IME/ABI PASS.
+- 7a0c263: HUD/minimapa medem as seis pontuações UTF-8 já nas duas fontes.
+  Bytes separados de caracteres; tokens/glifos ausentes mantêm fallback.
+  Layout/callback/assinaturas nativas e verificação real das métricas PASS.
+- 8e1282e: F9 deduplica por chave, confirma igualdade completa em colisões;
+  preserva ordem/repetições/limites. Parser onze PASS, inclui corte direito.
+- 23c843b: frame/work stats marcam diagnostic=1 durante janelas afetadas pelo
+  F9, sem remover tempos lentos. Baseline TLS começa no primeiro present.
+  Testes de métricas/disabled e raster PASS. Não é ganho de FPS medido.
+- 4c2ca81: guarda contra partidas duplicadas centralizada em run_native,
+  cobre launcher/atalhos/três executáveis; bloco real testado isolado via AST.
+- ca6ab4e: auditoria do PSARC próprio encontrou 21 páginas R8 e oito tabelas.
+  Principal/IM 0/1/2 com retângulos dentro dos atlas; variantes sem vínculo
+  demonstrado. Metadados em docs/m3/font-pages-audit.json, nenhum pixel no Git.
+
+Build normal e diagnóstico pending PASS. Ambos CheckOnly PASS. Binários atuais:
+build/kyoei.exe e build/orb-pending/kyoei-orb-trace-next.exe; hashes privados
+build/offline-checkpoint-20261013.json. Normal foi reconstruído legitimamente
+com os avanços desta sessão; o hash antigo orb-trace-original é histórico.
+CMake restaurado para nome kyoei e saída build/. FitHud/diálogos mantêm opt-in.
+
+Próximo ponto gráfico ainda é coletar constantes com o binário corrigido quando
+Davy puder: Testar orbe constantes EN.cmd. Não declarar orbe, movimento do
+minimapa, à ausente ou FPS resolvidos. Não adicionar glifos a atlas por palpite.
+
+## Histórico do diagnóstico antes desta sessão
+
 Mais recente 172251: 1.885/1.781 perfis completos/sem perdas, mas ZERO constantes.
 Erro do diagnóstico: BufferResource::IsStorage sempre retorna true nesta base;
 filtrar !is_storage excluía constantes somente leitura. Corrigido para Guest

@@ -1,5 +1,16 @@
 # Diário do projeto
 
+### 13/10/2026 — consolidação dos seis avanços offline
+
+- Retomada atualizada com commits, testes e pendências; build normal e
+  diagnóstico pending compilados. CheckOnly HUD FitHud e orbe PASS. Hashes
+  privados em build/offline-checkpoint-20261013.json. CMake voltou à saída
+  normal build/kyoei.exe. Última consulta sem processo Kyoei em execução.
+- Nenhuma partida aberta, dump/saves/core fixo/Godzilla preservados. Retorno
+  de tradução externo ainda ausente; pacotes entregues ao GPT não alterados.
+- Orbe, ancoragem visual, fonte do objetivo/à e FPS permanecem sem confirmação
+  de correção. Não usar metadados de atlas ou teste sintético como gameplay.
+
 ### 13/10/2026 — trabalho offline: inventário completo de páginas de fonte
 
 - Inspeção anterior via pasta parcial mostrava só TEXs 0. Auditoria direta do
