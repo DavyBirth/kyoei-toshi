@@ -35,6 +35,12 @@ o runtime local e fontes públicas verificáveis; não baixar dumps de terceiros
 - Save/load ainda usam apresentação nativa com backend de pastas existente.
   Não mudar armazenamento como parte da troca de apresentação.
 
+Seleção e viewport da lista agora usam `kyoei_list_model`, independente de
+Win32 e conectado à apresentação atual. Navegação conserva wrap e prioridade
+existentes; altura insuficiente produz viewport vazio, evitando underflow.
+Slots/confirmar/cancelar/resultados foram exercitados por teste sintético da
+ABI verdadeira com worker de UI controlado. Não escreveu saves de Davy.
+
 ## Entrada: provas offline novas
 
 `kyoei_input_mode` registra atividade real de teclado e botões do controle.

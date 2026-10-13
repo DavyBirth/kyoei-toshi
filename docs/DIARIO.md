@@ -964,6 +964,15 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   não declarar menus totalmente traduzidos, imagens traduzidas ou abertura
   real do novo launcher certificada. instruções em docs/ABRIR-JOGO.md.
 
+### 13/10/2026 — backend da lista de saves
+
+- Navegação e cálculo de viewport separados em src/kyoei_list_model.h e
+  usados pela apresentação atual. Preserva wrap, seleção e armazenamento.
+- Corrigido underflow do número de linhas em janelas com altura insuficiente.
+  Nenhum save real escrito; não declarar nova interface na imagem concluída.
+- Build kyoei PASS sem execução. Teste headless list_model PASS e teste
+  da ABI real com UI controlada test_save_list.py PASS.
+
 ### 13/10/2026 — entrada ativa, editor de nomes e estudo do motor
 
 - Davy autorizou estudar o funcionamento completo e procurar fontes públicas.

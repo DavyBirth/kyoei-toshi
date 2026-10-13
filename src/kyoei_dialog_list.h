@@ -2,20 +2,17 @@
 #pragma once
 #include <windows.h>
 #include "dialog_ui.h"
+#include "kyoei_list_model.h"
 static _Thread_local const wchar_t *const *kyoei_list_labels;
 static _Thread_local unsigned kyoei_list_count, kyoei_list_selected;
 static void kyoei_list_move(HWND window, uint32_t pressed) {
-    if (pressed & (0x10 | 0x80))
-        kyoei_list_selected = (kyoei_list_selected + kyoei_list_count - 1) % kyoei_list_count;
-    else if (pressed & (0x20 | 0x40))
-        kyoei_list_selected = (kyoei_list_selected + 1) % kyoei_list_count;
+    kyoei_list_selected=kyoei_list_next(kyoei_list_count,kyoei_list_selected,pressed);
     InvalidateRect(window, NULL, FALSE);
 }
 static void kyoei_list_draw(HDC dc, const RECT *r) {
-    unsigned visible = (unsigned)(r->bottom - 160) / 30;
-    if (!visible) return;
-    unsigned start = kyoei_list_selected >= visible ? kyoei_list_selected - visible + 1 : 0;
-    for (unsigned i = start; i < kyoei_list_count && i < start + visible; ++i) {
+    KyoeiListView view=kyoei_list_view(kyoei_list_count,kyoei_list_selected,r->bottom);
+    unsigned start=view.first;
+    for (unsigned i = start; i < start+view.rows; ++i) {
         RECT row = {24, 55 + (int)(i - start) * 30, r->right - 24, 84 + (int)(i - start) * 30};
         if (i == kyoei_list_selected) {
             HBRUSH brush = CreateSolidBrush(RGB(30, 110, 165));
