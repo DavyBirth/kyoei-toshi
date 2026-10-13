@@ -95,6 +95,10 @@ int main() {
     wait_kind(KYOEI_OVERLAY_MESSAGE); kyoei_overlay_progress(150);
     check_draw(1280,720); kyoei_overlay_key(KYOEI_OVERLAY_KEY_ACCEPT);
     CHECK(progress.wait_for(std::chrono::milliseconds(1))==std::future_status::timeout);
+    kyoei_overlay_key(KYOEI_OVERLAY_KEY_CANCEL);
+    kyoei_overlay_input(0); kyoei_overlay_input(0x4000);
+    CHECK(progress.wait_for(std::chrono::milliseconds(1))==std::future_status::timeout);
+    CHECK(kyoei_overlay_kind()==KYOEI_OVERLAY_MESSAGE);
     KyoeiOverlayModel::SetReady(false);
     CHECK(progress.wait_for(std::chrono::seconds(1))==std::future_status::ready && progress.get()==0);
     CHECK(!kyoei_overlay_begin_name(L"Unavailable",initial,3,4));

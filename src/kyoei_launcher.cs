@@ -14,13 +14,14 @@ class KyoeiLauncher {
     [STAThread]
     static int Main(string[] args) {
         bool checkOnly = args.Length == 1 && args[0] == "--check";
-        bool renderOnly = args.Length == 1 && args[0] == "--render-preview";
+        bool renderOnly = args.Length == 1 && (args[0] == "--render-preview" || args[0] == "--render-preview-en");
         if (args.Length != 0 && !checkOnly && !renderOnly) return 2;
         string baseRoot = AppDomain.CurrentDomain.BaseDirectory;
         if (checkOnly) return Execute(baseRoot, true, "");
         Application.EnableVisualStyles(); Application.SetCompatibleTextRenderingDefault(false);
         using (LauncherForm form = new LauncherForm(baseRoot)) {
             if (renderOnly) {
+                if(args[0]=="--render-preview-en")form.PreviewEnglish();
                 form.ShowInTaskbar=false; form.Opacity=0; form.Show(); Application.DoEvents();
                 using (Bitmap screenshot = new Bitmap(form.Width,form.Height)) {
                     form.DrawToBitmap(screenshot,new Rectangle(Point.Empty,form.Size));
@@ -138,11 +139,13 @@ class LauncherForm : Form {
     void UpdateNotice() {
         resolution.Enabled=mode.SelectedIndex==0 && !running;
         inGameDialogs.Enabled=language.SelectedIndex==1 && !running;
+        inGameDialogs.Visible=language.SelectedIndex==1;
         notice.Text=language.SelectedIndex==0 ? "Texto e áudio originais em japonês." :
             "Prévia: objetivos, ações do começo e descrições das opções. Outros textos e imagens ainda em japonês.";
         status.Text=mode.SelectedIndex==1 ? "Tela cheia usa a resolução da sua tela. A tradução ainda precisa de revisão visual." :
             "A resolução de saída não altera a renderização interna. Seus saves atuais serão usados.";
     }
+    internal void PreviewEnglish() { language.SelectedIndex=1;UpdateNotice(); }
     void LoadSettings() {
         try {
             string path=Path.Combine(root,"build","launcher-settings.json");if(!File.Exists(path))return;

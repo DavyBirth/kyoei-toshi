@@ -69,3 +69,32 @@ Exemplos: p0/k18 cresce 1,266× na principal e 1,439× na IM; p0/k57 cresce
 1,382× e 1,625×. Outras frases inglesas encolhem. Portanto contagem de letras
 ou aumento fixo uniforme não basta para ajustar as caixas. Próxima correção
 deve medir texto/fonte efetivos e crescer placa/quebrar dentro da área útil.
+
+## Evidência da partida de Davy — 13/10, 12:28–12:35 Bahia
+
+Davy abriu o jogo pelo launcher, em inglês, 1280×720, diálogos internos
+habilitados; PID observado 28332. O agente não iniciou nem reiniciou a partida.
+Capturas privadas em build/minimap-user-20261013-01.png e -02.png, obtidas
+com capture_native.ps1 sem -Focus e sem enviar controles.
+
+A primeira captura confirma a interação truncada como `Listen to t…`, apesar
+da placa branca continuar à direita do texto. O objetivo acima do minimapa
+também está cortado à direita. A diferença entre largura da placa e limite
+do texto reforça investigar clipping/limite do nó, além do fundo da caixa.
+O rótulo `Park: meet your friend` aparece separado da seta na borda direita;
+esta imagem parada não prova a causa nem o comportamento com câmera em movimento.
+
+A segunda captura mostra a fala de `Man sheltering from the rain` sem corte
+visível no nome. Davy confirmou que a ação `Peek inside` pertence a esse alvo.
+O verbo original de p0/k30 não especifica um interior: rascunho EN corrigido
+para `Take a closer look`, com nota sobre outros usos compartilhados. Validação
+de IDs, tokens e reinserção EN PASS. Pacote da partida permanece intacto;
+correção textual ainda não publicada nem observada no runtime.
+
+Davy relatou desempenho pior. Não há compiladores concorrentes na observação,
+e o log atual não contém medições de FPS comparáveis. A composição do overlay
+é condicionada a modal ativo no presenter; não executa passagem de desenho
+durante caminhada sem diálogo. Isso não mede custo total nem exclui regressão.
+Próximo diagnóstico: comparação com frame stats na mesma cena/configuração,
+quando houver uma próxima abertura autorizada, incluindo diálogos ligados e
+desligados. Não atribuir a perda à tradução sem evidência.

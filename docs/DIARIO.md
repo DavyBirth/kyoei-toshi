@@ -1,5 +1,22 @@
 # Diário do projeto
 
+### 13/10/2026 — retorno ao vivo de Davy, 12:38 Bahia
+
+- Davy abriu uma partida EN pelo launcher (PID 28332, log
+  native-05/logs/20261013_122032.log), 1280×720 com InGameDialogs. Não iniciada
+  pelo agente; preservar processo, executable e pacote em uso.
+- Capturas sem foco/controles confirmam corte da interação e do objetivo.
+  Evidência e limites em docs/m3/HUD-INVESTIGACAO.md; ancoragem em movimento
+  ainda não comprovada. Davy também relatou lentidão, sem FPS comparável.
+- Corrigido rascunho EN de Peek inside para Take a closer look: ação usada
+  no homem abrigado da chuva, verbo sem interior explícito. Validação EN PASS;
+  nenhuma reconstrução/publicação do pacote durante a partida.
+- Overlay: progresso sem escolhas agora ignora X/Esc, como a apresentação
+  nativa; fechamento via backend permanece. Regressão no modelo real PASS.
+- Teste dos descritores Vulkan reais PASS: transição direta/modal, Load/Store
+  e retorno a Present. Ponteiro persistente do formato Vulkan e checkbox do
+  launcher visível somente em EN preparados; sem substituir o binário ativo.
+
 Memória do projeto entre sessões. Ler antes de começar cada sessão.
 
 ---

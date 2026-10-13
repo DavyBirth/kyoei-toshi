@@ -4,6 +4,7 @@
 // gpu/shim/gow3_overlay.cpp (GPL-2.0-or-later). Modal/state/UI implementation
 // is separate and Kyoei-specific. Dear ImGui itself retains its MIT license.
 #include "kyoei_overlay_gpu.h"
+#include "kyoei_overlay_barriers.h"
 #include "kyoei_overlay.h"
 #include "kyoei_input_mode.h"
 #include "imgui.h"
@@ -23,6 +24,7 @@ namespace KyoeiOverlay {
 namespace {
 bool initialized{};
 vk::Format surface_format{};
+VkFormat color_format{};
 unsigned images{};
 std::chrono::steady_clock::time_point last_draw;
 void checked(VkResult result) {
@@ -48,7 +50,7 @@ void Initialize(const Vulkan::Instance &instance,vk::Format format,unsigned imag
     },const_cast<vk::Instance *>(&handle))) {
         KyoeiOverlayModel::SetReady(false); KyoeiOverlayModel::ShutdownGui(); return;
     }
-    VkFormat color=static_cast<VkFormat>(format);
+    color_format=static_cast<VkFormat>(format);
     ImGui_ImplVulkan_InitInfo info{};
     info.ApiVersion=instance.ApiVersion(); info.Instance=handle;
     info.PhysicalDevice=instance.GetPhysicalDevice(); info.Device=instance.GetDevice();
@@ -58,7 +60,7 @@ void Initialize(const Vulkan::Instance &instance,vk::Format format,unsigned imag
     info.UseDynamicRendering=true; info.CheckVkResultFn=checked;
     info.PipelineInfoMain.PipelineRenderingCreateInfo={
         .sType=VK_STRUCTURE_TYPE_PIPELINE_RENDERING_CREATE_INFO_KHR,
-        .colorAttachmentCount=1,.pColorAttachmentFormats=&color};
+        .colorAttachmentCount=1,.pColorAttachmentFormats=&color_format};
     if (!ImGui_ImplVulkan_Init(&info)) {
         KyoeiOverlayModel::SetReady(false); KyoeiOverlayModel::ShutdownGui(); return;
     }
@@ -126,9 +128,7 @@ void Render(vk::CommandBuffer command,vk::ImageView view,vk::Extent2D extent) {
     float elapsed=std::chrono::duration<float>(now-last_draw).count(); last_draw=now;
     ImGui_ImplVulkan_NewFrame();
     auto *draw=KyoeiOverlayModel::Draw(extent.width,extent.height,elapsed);
-    const vk::RenderingAttachmentInfo attachment{
-        .imageView=view,.imageLayout=vk::ImageLayout::eColorAttachmentOptimal,
-        .loadOp=vk::AttachmentLoadOp::eLoad,.storeOp=vk::AttachmentStoreOp::eStore};
+    const auto attachment=Attachment(view);
     command.beginRendering(vk::RenderingInfo{
         .renderArea={{0,0},extent},.layerCount=1,.colorAttachmentCount=1,.pColorAttachments=&attachment});
     {

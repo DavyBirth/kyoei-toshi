@@ -403,7 +403,7 @@ kyoei_replace_checked(KYOEI_WINDOW
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
 file(READ "${KYOEI_CORE}/gpu/vendor/vk_presenter.cpp" KYOEI_PRESENTER)
-set(KYOEI_PRESENTER "#include \"kyoei_overlay_gpu.h\"\n#include \"kyoei_overlay.h\"\n${KYOEI_PRESENTER}")
+set(KYOEI_PRESENTER "#include \"kyoei_overlay_gpu.h\"\n#include \"kyoei_overlay_barriers.h\"\n#include \"kyoei_overlay.h\"\n${KYOEI_PRESENTER}")
 kyoei_replace_checked(KYOEI_PRESENTER
   "    pp_pass.Create(device, swapchain.GetSurfaceFormat().format);"
   "    pp_pass.Create(device, swapchain.GetSurfaceFormat().format);\n    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());")
@@ -413,21 +413,19 @@ kyoei_replace_checked(KYOEI_PRESENTER
 kyoei_replace_checked(KYOEI_PRESENTER
   "    Check(instance.GetDevice().resetFences(frame->present_done));"
   "    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());\n    const bool kyoei_modal=kyoei_overlay_kind()!=0;\n    const auto kyoei_modal_revision=kyoei_overlay_revision();\n    Check(instance.GetDevice().resetFences(frame->present_done));")
-kyoei_replace_checked(KYOEI_PRESENTER
-  "            .newLayout = vk::ImageLayout::ePresentSrcKHR,"
-  "            .newLayout = kyoei_modal ? vk::ImageLayout::eColorAttachmentOptimal : vk::ImageLayout::ePresentSrcKHR,")
-kyoei_replace_checked(KYOEI_PRESENTER
-  "            .dstAccessMask = vk::AccessFlagBits::eNone,\n            .oldLayout = vk::ImageLayout::eTransferDstOptimal,"
-  "            .dstAccessMask = kyoei_modal ? vk::AccessFlagBits::eColorAttachmentRead | vk::AccessFlagBits::eColorAttachmentWrite : vk::AccessFlagBits::eNone,\n            .oldLayout = vk::ImageLayout::eTransferDstOptimal,")
+set(KYOEI_OVERLAY_ORIGINAL_BARRIER [=[        vk::ImageMemoryBarrier{
+            .srcAccessMask = vk::AccessFlagBits::eTransferWrite,
+            .dstAccessMask = vk::AccessFlagBits::eNone,
+            .oldLayout = vk::ImageLayout::eTransferDstOptimal,
+            .newLayout = vk::ImageLayout::ePresentSrcKHR,
+            .srcQueueFamilyIndex = VK_QUEUE_FAMILY_IGNORED,
+            .dstQueueFamilyIndex = VK_QUEUE_FAMILY_IGNORED,
+            .image = swapchain.Image(), .subresourceRange = range}]=])
+kyoei_replace_checked(KYOEI_PRESENTER "${KYOEI_OVERLAY_ORIGINAL_BARRIER}"
+  "        KyoeiOverlay::BeforeDraw(swapchain.Image(),range,kyoei_modal)")
 set(KYOEI_OVERLAY_PRESENT [=[    if (kyoei_modal) {
         KyoeiOverlay::Render(cmd,swapchain.ImageView(),{swapchain.GetWidth(),swapchain.GetHeight()});
-        const vk::ImageMemoryBarrier to_present{
-            .srcAccessMask=vk::AccessFlagBits::eColorAttachmentWrite,
-            .dstAccessMask=vk::AccessFlagBits::eNone,
-            .oldLayout=vk::ImageLayout::eColorAttachmentOptimal,
-            .newLayout=vk::ImageLayout::ePresentSrcKHR,
-            .srcQueueFamilyIndex=VK_QUEUE_FAMILY_IGNORED,.dstQueueFamilyIndex=VK_QUEUE_FAMILY_IGNORED,
-            .image=swapchain.Image(),.subresourceRange=range};
+        const auto to_present=KyoeiOverlay::AfterDraw(swapchain.Image(),range);
         cmd.pipelineBarrier(vk::PipelineStageFlagBits::eColorAttachmentOutput,vk::PipelineStageFlagBits::eBottomOfPipe,{}, {}, {},to_present);
     }
     kyoei_overlay_presented(kyoei_modal_revision);
@@ -478,6 +476,11 @@ target_compile_features(test_kyoei_ime_overlay PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_ime_overlay PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
 target_include_directories(test_kyoei_ime_overlay PRIVATE src "${KYOEI_CORE}/src")
 target_link_libraries(test_kyoei_ime_overlay PRIVATE kyoei_imgui user32 gdi32)
+add_executable(test_kyoei_overlay_barriers src/test_kyoei_overlay_barriers.cpp)
+get_target_property(KYOEI_OVERLAY_GPU_INCLUDES kyoei_videoout INCLUDE_DIRECTORIES)
+target_include_directories(test_kyoei_overlay_barriers PRIVATE ${KYOEI_OVERLAY_GPU_INCLUDES})
+target_compile_features(test_kyoei_overlay_barriers PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_overlay_barriers PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX VULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1)
 add_executable(test_kyoei_readback_batch src/test_kyoei_readback_batch.cpp)
 target_compile_features(test_kyoei_readback_batch PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_readback_batch PRIVATE _CRT_SECURE_NO_WARNINGS)

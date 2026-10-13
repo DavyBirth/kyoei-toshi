@@ -1,5 +1,12 @@
 # Retomada — 13/10/2026
 
+Atualização 12:38 Bahia: Davy abriu o jogo, PID 28332, EN 1280×720 com diálogos
+internos; preservar a partida. Não recompilar/substituir build/kyoei.exe em uso.
+Capturas sem controles confirmam cortes de interação/objetivo; ver
+docs/m3/HUD-INVESTIGACAO.md. Relato de lentidão ainda sem comparação de FPS.
+Take a closer look corrige rascunho p0/k30, validado EN, pacote ativo inalterado.
+Regressão de progresso não cancelável por controles e barreiras Vulkan PASS.
+
 ## Estado mais recente: sessão offline executada
 
 Atualização posterior ao encerramento precoce: Davy pediu continuidade

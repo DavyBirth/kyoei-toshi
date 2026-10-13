@@ -73,7 +73,7 @@ void release_locked() {
     ++revision;
 }
 void apply_pressed_locked(uint32_t pressed) {
-    if (!kind || done || !pressed) return;
+    if (!kind || done || !pressed || (kind==KYOEI_OVERLAY_MESSAGE && !message_choices)) return;
     if (kind==KYOEI_OVERLAY_NAME) {
         kyoei_name_buttons(&name,pressed);
         if (name.result) finish_locked(name.result==KYOEI_NAME_ACCEPTED?0:1);
@@ -86,7 +86,7 @@ void apply_pressed_locked(uint32_t pressed) {
     ++revision;
 }
 void keyboard_locked(unsigned key) {
-    if (done) return;
+    if (done || (kind==KYOEI_OVERLAY_MESSAGE && !message_choices)) return;
     if (key==KYOEI_OVERLAY_KEY_CANCEL) { finish_locked(1); return; }
     if (key==KYOEI_OVERLAY_KEY_ACCEPT) {
         if (kind!=KYOEI_OVERLAY_MESSAGE || message_choices) finish_locked(0);
