@@ -893,3 +893,23 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   Launcher --check retornou 0 e gravou confirmação em build/launcher-last.log.
   Nenhum processo kyoei aberto. Abertura real não testada por orientação atual.
   Instruções em docs/ABRIR-JOGO.md. Executável não inclui dados do jogo.
+
+### 12/10/2026 — readback e evidência para defeitos gráficos
+
+- Cópia local de TextureCache invalida memória não coerente depois da GPU
+  concluir e antes da leitura/publicação, tanto síncrona quanto assíncrona.
+  Antes, Commit invalidava antes de a cópia GPU ser gravada. Referências
+  técnicas e limites em docs/DIAGNOSTICO-GRAFICO.md; não associar ao orbe sem
+  reprodução na GPU real. Memória coerente mantém o caminho sem invalidação.
+- tools/test_readback_integration.py compila os métodos reais de referência
+  e adaptados contra GPU/ring simulados. Reproduz bytes antigos da referência
+  não coerente, corrigidos nos dois caminhos. Lote com três imagens e buffer
+  para duas usa duas esperas, versus três, preservando bytes e publicação.
+  Teste auxiliar do lote PASS. Padrão continua sem lote; ganho real pendente.
+- Ativação do lote usa escopo RAII e restaura o estado anterior. CMake agora
+  inclui alvo permanente do teste. Build kyoei + teste PASS, sem executar jogo.
+- KYOEI_DISPLAY_TRACE=1 registra flips pretos solicitados pelo jogo, saída
+  fechada e atributos de superfícies. Não suprime frames ou altera ordem.
+  Analisador de desempenho coleta o diagnóstico e amostras dos lotes.
+- Regressões de ordem de VideoOut, gate de labels e patch privado de comandos
+  PASS, reproduzindo as falhas da referência nos testes sintéticos.

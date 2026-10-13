@@ -21,6 +21,9 @@ work={}
 for name,mean,p95,maximum in re.findall(r'Kyoei work stats: stage=([^ ]+) calls=120 mean_ms=([\d.]+) p95_ms=([\d.]+) max_ms=([\d.]+)',text):
     work.setdefault(name,[]).append(dict(mean_ms=float(mean),p95_ms=float(p95),max_ms=float(maximum)))
 tls=[int(value) for value in re.findall(r'Kyoei TLS stats: handled_total=(\d+)',text)]
+display=[line for line in text.splitlines() if 'Kyoei display trace:' in line]
+readbacks=[dict(images=int(images),waits=int(waits),bytes=int(size)) for images,waits,size in re.findall(
+    r'Kyoei readback batch: images=(\d+) waits=(\d+) bytes=(\d+)',text)]
 signals=[line for line in text.splitlines() if re.search(r'STOP:|Kyoei map failure:|Kyoei flip failure:|Assertion Failed|\bVK_ERROR_\w+|GPU .*\[(?:Critical|Error)',line,re.I)]
 report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args.start_byte+len(data),
             presentation_windows=len(frames),summarized_intervals=120*len(frames),
@@ -31,7 +34,7 @@ report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args
             fastest_window_fps=max((row['fps'] for row in frames),default=None),
             largest_interval_ms=max((row['max_ms'] for row in frames),default=None),
             frames=frames,work=work,tls_handled_range=[min(tls),max(tls)] if tls else None,
-            detected_failure_lines=signals)
+            detected_failure_lines=signals,display_trace=display,readback_batch_samples=readbacks)
 if args.out:
     args.out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({key:value for key,value in report.items() if key not in ('frames','work')},indent=2))

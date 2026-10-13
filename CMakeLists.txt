@@ -216,6 +216,18 @@ kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
 kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
   "    Vulkan::Frame* frame;"
   "    KyoeiFrameStats::Work preparation_measurement(0);\n    Vulkan::Frame* frame;")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "#include \"kyoei_frame_stats.h\""
+  "#include \"kyoei_frame_stats.h\"\n#include \"kyoei_display_diagnostics.h\"")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "void VideoOutDriver::DrawBlankFrame() {"
+  "void VideoOutDriver::DrawBlankFrame() {\n    KyoeiDisplayDiagnostics::ClosedPort();")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "    if (index == -1) {\n        frame = presenter->PrepareBlankFrame(false);"
+  "    if (index == -1) {\n        KyoeiDisplayDiagnostics::Submitted(index,is_eop,flip_arg);\n        frame = presenter->PrepareBlankFrame(false);")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "        frame = presenter->PrepareFrame(group, buffer.address_left);"
+  "        KyoeiDisplayDiagnostics::Submitted(index,is_eop,flip_arg,group.attrib.width,group.attrib.height,group.attrib.pitch_in_pixel,static_cast<u32>(group.attrib.pixel_format),static_cast<u32>(group.attrib.tiling_mode));\n        frame = presenter->PrepareFrame(group, buffer.address_left);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp" CONTENT "${KYOEI_VIDEOOUT_DRIVER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp")
 # The emulated command processor can reach the next flip's WRITE_DATA while
@@ -285,10 +297,48 @@ kyoei_replace_checked(KYOEI_GNM
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp" CONTENT "${KYOEI_GNM}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/texture_cache/texture_cache.cpp" KYOEI_TEXTURE_CACHE)
-set(KYOEI_TEXTURE_CACHE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n${KYOEI_TEXTURE_CACHE}")
+set(KYOEI_TEXTURE_CACHE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n#include \"kyoei_readback_batch.h\"\n${KYOEI_TEXTURE_CACHE}")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "namespace VideoCore {" "#include <vk_mem_alloc.h>\nnamespace VideoCore {")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "void TextureCache::ProcessDownloadImages() {"
-  "void TextureCache::ProcessDownloadImages() {\n    if (download_images.empty()) return;\n    KyoeiFrameStats::Work download_measurement(2);")
+  "void TextureCache::ProcessDownloadImages() {\n    if (download_images.empty()) return;\n    KyoeiFrameStats::Work download_measurement(2);\n    KyoeiReadback::Batch batch([this] { scheduler.Finish(); });\n    KyoeiReadback::Activation activation(batch);")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "    download_images.clear();"
+  "    batch.Flush();\n    if (batch.images && KyoeiFrameStats::Enabled()) {\n        static unsigned reports=0;\n        if (++reports % 120 == 0) gz_log(\"Kyoei readback batch: images=%u waits=%u bytes=%llu\",batch.images,batch.waits,(unsigned long long)batch.bytes);\n    }\n    download_images.clear();")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "    const auto [download, offset] = download_buffer.Map(download_size);"
+  "    auto mapping = download_buffer.Map(download_size, 0, !KyoeiReadback::active);\n    if (!mapping.first && KyoeiReadback::active) {\n        KyoeiReadback::active->Flush();\n        mapping=download_buffer.Map(download_size);\n    }\n    ASSERT_MSG(mapping.first, \"Download image exceeds available stream buffer\");\n    const auto [download, offset] = mapping;\n    if (KyoeiReadback::active) KyoeiReadback::active->BeforeReuse(offset,download_size);")
+set(KYOEI_DOWNLOAD_ORIGINAL [=[    if (sync) {
+        scheduler.Finish();
+        Core::Memory::Instance()->TryWriteBacking(std::bit_cast<u8*>(image.info.guest_address),
+                                                  download, download_size);
+    } else {
+        scheduler.DeferPriorityOperation(
+            [this, device_addr = image.info.guest_address, download, download_size] {
+                Core::Memory::Instance()->TryWriteBacking(std::bit_cast<u8*>(device_addr), download,
+                                                          download_size);
+            });
+    }]=])
+set(KYOEI_DOWNLOAD_ADAPTED [=[    // Host cache invalidation belongs after GPU completion, before CPU reads.
+    // StreamBuffer::Commit alone happens before this copy is recorded.
+    auto publish = [allocator=instance.GetAllocator(), allocation=download_buffer.buffer.allocation,
+                    coherent=download_buffer.is_coherent, offset,
+                    device_addr=image.info.guest_address, download, download_size] {
+        if (!coherent) {
+            const auto result=vmaInvalidateAllocation(allocator,allocation,offset,download_size);
+            ASSERT_MSG(result == VK_SUCCESS, "Download cache invalidation failed");
+        }
+        Core::Memory::Instance()->TryWriteBacking(std::bit_cast<u8*>(device_addr),download,download_size);
+    };
+    if (sync && KyoeiReadback::active) {
+        KyoeiReadback::active->Add(offset,download_size,std::move(publish));
+    } else if (sync) {
+        scheduler.Finish();
+        publish();
+    } else {
+        scheduler.DeferPriorityOperation(std::move(publish));
+    }]=])
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "${KYOEI_DOWNLOAD_ORIGINAL}" "${KYOEI_DOWNLOAD_ADAPTED}")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
@@ -319,6 +369,9 @@ target_include_directories(kyoei_videoout PRIVATE
 file(GLOB KYOEI_BOOST_INCLUDES "${KYOEI_GPU_HEADERS}/gz_boost-src/libs/*/include")
 target_include_directories(kyoei_videoout SYSTEM PRIVATE ${KYOEI_BOOST_INCLUDES})
 add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
+add_executable(test_kyoei_readback_batch src/test_kyoei_readback_batch.cpp)
+target_compile_features(test_kyoei_readback_batch PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_readback_batch PRIVATE _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_gpu_wait src/test_kyoei_gpu_wait.c src/kyoei_gpu_wait.c)
 target_include_directories(test_kyoei_gpu_wait PRIVATE "${KYOEI_CORE}/src" src)
 add_executable(test_kyoei_png src/test_kyoei_png.c src/kyoei_png.c)
