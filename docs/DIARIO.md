@@ -1,5 +1,16 @@
 # Diário do projeto
 
+### 13/10/2026 — trabalho offline: guarda única contra partidas duplicadas
+
+- Proteção movida para run_native.ps1, caminho comum do launcher e dos atalhos.
+  Inclui executável normal e ambos os diagnósticos; antes atalho HUD desconhecia
+  o diagnóstico next e launcher direto não tinha a mesma guarda.
+- Usa nomes Win32_Process, como a guarda já corrigida do orbe. Não fecha nada,
+  apenas recusa nova abertura. CheckOnly continua independente de partida ativa.
+- CheckOnly HUD/orbe PASS. Bloco real da guarda avaliado isoladamente via AST
+  com três processos sintéticos: todos bloqueados; estranho/CheckOnly permitidos.
+  Nenhum trecho de abertura foi executado nesse teste.
+
 ### 13/10/2026 — trabalho offline: medições identificam custo do F9
 
 - Janelas frame/work stats agora incluem diagnostic=1 quando cruzam trabalho

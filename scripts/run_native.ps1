@@ -13,6 +13,14 @@ $kyoeiFonts = "$kyoeiRoot\third_party\godzilla-core\third_party\shadPS4\src\imgu
 foreach ($kyoeiRequired in @($kyoeiExecutable, "$Work\out\boot-linked.bin", "$Work\out\entry.bin", "$Work\out\imports.tsv", "$Work\out\link.json", "$kyoeiFonts\NotoSans-Regular.ttf", "$kyoeiFonts\NotoSansCJK-Regular.ttc", "$($kyoeiProof.source)\eboot.bin", "$($kyoeiProof.source)\sce_sys\param.sfo")) {
     if (-not (Test-Path -LiteralPath $kyoeiRequired -PathType Leaf)) { throw "Arquivo necessario ausente: $kyoeiRequired" }
 }
+if (-not $CheckOnly) {
+    $kyoeiExisting = @(Get-CimInstance Win32_Process | Where-Object {
+        $_.Name -in @('kyoei.exe','kyoei-orb-trace.exe','kyoei-orb-trace-next.exe')
+    })
+    if ($kyoeiExisting.Count) {
+        throw 'J? existe uma partida do Kyoei aberta. Feche pelo pr?prio jogo antes de iniciar outra.'
+    }
+}
 $env:KYOEI_LANGUAGE=$Language
 $env:KYOEI_RASTER_TRACE=if ($OrbTrace -or $OrbTraceNext) { '1' } else { '0' }
 if ($InGameDialogs -and $Language -ne 'en') { throw 'A prévia dos diálogos dentro do jogo está disponível em inglês.' }
