@@ -1,0 +1,680 @@
+{
+  "scope": "Read-only font page inventory. Same-prefix mapping only; variant sharing/runtime selection unverified.",
+  "runtime_verified": false,
+  "source": "Owned CUSA03562 01.03 common.psarc, read via M0 path",
+  "tables": [
+    {
+      "resource": "font/hgg/utf8all_table.csh",
+      "sha256": "96bf0ff07200b00ddf1c6879c3754d820c9862fbb0486e122f1ddd80cc9c8e4e",
+      "rows": 6974,
+      "invalid_keys": 0,
+      "duplicate_keys": 0,
+      "pages": [
+        {
+          "page": 0,
+          "glyphs": 2047,
+          "expected_resource": "font/hgg/utf8all_0.tex",
+          "max_right": 2045,
+          "max_bottom": 2018,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 1,
+          "glyphs": 1852,
+          "expected_resource": "font/hgg/utf8all_1.tex",
+          "max_right": 2046,
+          "max_bottom": 2009,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 2,
+          "glyphs": 1878,
+          "expected_resource": "font/hgg/utf8all_2.tex",
+          "max_right": 2047,
+          "max_bottom": 2048,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 3,
+          "glyphs": 1197,
+          "expected_resource": "font/hgg/utf8all_3.tex",
+          "max_right": 2047,
+          "max_bottom": 1339,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        }
+      ]
+    },
+    {
+      "resource": "font/hgg128/utf8all_table.csh",
+      "sha256": "bfeb6ebb83d02fff1c082a3d7d6c5e98254fd8b4af885d1774c54eb53d38aeff",
+      "rows": 6974,
+      "invalid_keys": 0,
+      "duplicate_keys": 0,
+      "pages": [
+        {
+          "page": 0,
+          "glyphs": 451,
+          "expected_resource": "font/hgg128/utf8all_0.tex",
+          "max_right": 2046,
+          "max_bottom": 1973,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 1,
+          "glyphs": 350,
+          "expected_resource": "font/hgg128/utf8all_1.tex",
+          "max_right": 2044,
+          "max_bottom": 2021,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 2,
+          "glyphs": 291,
+          "expected_resource": "font/hgg128/utf8all_2.tex",
+          "max_right": 2044,
+          "max_bottom": 2012,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 3,
+          "glyphs": 295,
+          "expected_resource": "font/hgg128/utf8all_3.tex",
+          "max_right": 2046,
+          "max_bottom": 2002,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 4,
+          "glyphs": 293,
+          "expected_resource": "font/hgg128/utf8all_4.tex",
+          "max_right": 2046,
+          "max_bottom": 2004,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 5,
+          "glyphs": 296,
+          "expected_resource": "font/hgg128/utf8all_5.tex",
+          "max_right": 2044,
+          "max_bottom": 2010,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 6,
+          "glyphs": 291,
+          "expected_resource": "font/hgg128/utf8all_6.tex",
+          "max_right": 2046,
+          "max_bottom": 2009,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 7,
+          "glyphs": 292,
+          "expected_resource": "font/hgg128/utf8all_7.tex",
+          "max_right": 2045,
+          "max_bottom": 2008,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 8,
+          "glyphs": 291,
+          "expected_resource": "font/hgg128/utf8all_8.tex",
+          "max_right": 2027,
+          "max_bottom": 2008,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 9,
+          "glyphs": 290,
+          "expected_resource": "font/hgg128/utf8all_9.tex",
+          "max_right": 2013,
+          "max_bottom": 2012,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 10,
+          "glyphs": 295,
+          "expected_resource": "font/hgg128/utf8all_10.tex",
+          "max_right": 2038,
+          "max_bottom": 2010,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 11,
+          "glyphs": 294,
+          "expected_resource": "font/hgg128/utf8all_11.tex",
+          "max_right": 2036,
+          "max_bottom": 2018,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 12,
+          "glyphs": 301,
+          "expected_resource": "font/hgg128/utf8all_12.tex",
+          "max_right": 2041,
+          "max_bottom": 1997,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 13,
+          "glyphs": 300,
+          "expected_resource": "font/hgg128/utf8all_13.tex",
+          "max_right": 2047,
+          "max_bottom": 2005,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 14,
+          "glyphs": 290,
+          "expected_resource": "font/hgg128/utf8all_14.tex",
+          "max_right": 2042,
+          "max_bottom": 2001,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 15,
+          "glyphs": 292,
+          "expected_resource": "font/hgg128/utf8all_15.tex",
+          "max_right": 2047,
+          "max_bottom": 1997,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 16,
+          "glyphs": 291,
+          "expected_resource": "font/hgg128/utf8all_16.tex",
+          "max_right": 2037,
+          "max_bottom": 2010,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 17,
+          "glyphs": 294,
+          "expected_resource": "font/hgg128/utf8all_17.tex",
+          "max_right": 2046,
+          "max_bottom": 2008,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 18,
+          "glyphs": 291,
+          "expected_resource": "font/hgg128/utf8all_18.tex",
+          "max_right": 2042,
+          "max_bottom": 2006,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 19,
+          "glyphs": 292,
+          "expected_resource": "font/hgg128/utf8all_19.tex",
+          "max_right": 2045,
+          "max_bottom": 2012,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 20,
+          "glyphs": 289,
+          "expected_resource": "font/hgg128/utf8all_20.tex",
+          "max_right": 1999,
+          "max_bottom": 2016,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 21,
+          "glyphs": 293,
+          "expected_resource": "font/hgg128/utf8all_21.tex",
+          "max_right": 2041,
+          "max_bottom": 2009,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 22,
+          "glyphs": 290,
+          "expected_resource": "font/hgg128/utf8all_22.tex",
+          "max_right": 2047,
+          "max_bottom": 2017,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 23,
+          "glyphs": 22,
+          "expected_resource": "font/hgg128/utf8all_23.tex",
+          "max_right": 1980,
+          "max_bottom": 235,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        }
+      ]
+    },
+    {
+      "resource": "font/hgg16/utf8all_table.csh",
+      "sha256": "4e58abd66a32133617a7b6e8bb0e77c696667ef6b71b098d59a6a46df1d31947",
+      "rows": 6974,
+      "invalid_keys": 0,
+      "duplicate_keys": 0,
+      "pages": [
+        {
+          "page": 0,
+          "glyphs": 6974,
+          "expected_resource": "font/hgg16/utf8all_0.tex",
+          "max_right": 2047,
+          "max_bottom": 932,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        }
+      ]
+    },
+    {
+      "resource": "font/hgg32/utf8all_table.csh",
+      "sha256": "382a949dc6779af6e76eae49979e5962db8b48bbb97fed04292a89645bfa87d7",
+      "rows": 6974,
+      "invalid_keys": 0,
+      "duplicate_keys": 0,
+      "pages": [
+        {
+          "page": 0,
+          "glyphs": 4568,
+          "expected_resource": "font/hgg32/utf8all_0.tex",
+          "max_right": 2047,
+          "max_bottom": 2045,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 1,
+          "glyphs": 2406,
+          "expected_resource": "font/hgg32/utf8all_1.tex",
+          "max_right": 2045,
+          "max_bottom": 1168,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        }
+      ]
+    },
+    {
+      "resource": "font/msg16/utf8all_table.csh",
+      "sha256": "c3bd0aaed213100004372da007a814b8e18dff22cabb28ba3333c094f9308909",
+      "rows": 6974,
+      "invalid_keys": 0,
+      "duplicate_keys": 0,
+      "pages": [
+        {
+          "page": 0,
+          "glyphs": 6974,
+          "expected_resource": "font/msg16/utf8all_0.tex",
+          "max_right": 2047,
+          "max_bottom": 935,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        }
+      ]
+    },
+    {
+      "resource": "font/org/utf8all_table.csh",
+      "sha256": "d1cbd28cdd52e8bfb7671343ba0c02f6bbc770842c1f7d0c1dd0ebffbfb746df",
+      "rows": 6974,
+      "invalid_keys": 0,
+      "duplicate_keys": 0,
+      "pages": [
+        {
+          "page": 0,
+          "glyphs": 3381,
+          "expected_resource": "font/org/utf8all_0.tex",
+          "max_right": 2046,
+          "max_bottom": 2015,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 1,
+          "glyphs": 3234,
+          "expected_resource": "font/org/utf8all_1.tex",
+          "max_right": 2047,
+          "max_bottom": 2025,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        },
+        {
+          "page": 2,
+          "glyphs": 359,
+          "expected_resource": "font/org/utf8all_2.tex",
+          "max_right": 2042,
+          "max_bottom": 253,
+          "invalid_rectangles": 0,
+          "same_prefix_present": false,
+          "bounds_verified": false
+        }
+      ]
+    },
+    {
+      "resource": "font/utf8all_IM_table.csh",
+      "sha256": "d5f70fe25a09fba55e2e77bcbdca1102ad0872f8be1c6f75e7e2c1a561fbb362",
+      "rows": 6976,
+      "invalid_keys": 0,
+      "duplicate_keys": 0,
+      "pages": [
+        {
+          "page": 0,
+          "glyphs": 3431,
+          "expected_resource": "font/utf8all_IM_0.tex",
+          "max_right": 2047,
+          "max_bottom": 2026,
+          "invalid_rectangles": 0,
+          "same_prefix_present": true,
+          "bounds_verified": true
+        },
+        {
+          "page": 1,
+          "glyphs": 3252,
+          "expected_resource": "font/utf8all_IM_1.tex",
+          "max_right": 2047,
+          "max_bottom": 2016,
+          "invalid_rectangles": 0,
+          "same_prefix_present": true,
+          "bounds_verified": true
+        },
+        {
+          "page": 2,
+          "glyphs": 293,
+          "expected_resource": "font/utf8all_IM_2.tex",
+          "max_right": 2039,
+          "max_bottom": 215,
+          "invalid_rectangles": 0,
+          "same_prefix_present": true,
+          "bounds_verified": true
+        }
+      ]
+    },
+    {
+      "resource": "font/utf8all_table.csh",
+      "sha256": "c545587399ab11c2c0ea90ba158816e2ce33f627359aa0e671c30f7b2c2355dc",
+      "rows": 11303,
+      "invalid_keys": 0,
+      "duplicate_keys": 0,
+      "pages": [
+        {
+          "page": 0,
+          "glyphs": 3651,
+          "expected_resource": "font/utf8all_0.tex",
+          "max_right": 2047,
+          "max_bottom": 2034,
+          "invalid_rectangles": 0,
+          "same_prefix_present": true,
+          "bounds_verified": true
+        },
+        {
+          "page": 1,
+          "glyphs": 3259,
+          "expected_resource": "font/utf8all_1.tex",
+          "max_right": 2047,
+          "max_bottom": 2033,
+          "invalid_rectangles": 0,
+          "same_prefix_present": true,
+          "bounds_verified": true
+        },
+        {
+          "page": 2,
+          "glyphs": 4393,
+          "expected_resource": "font/utf8all_2.tex",
+          "max_right": 2047,
+          "max_bottom": 1793,
+          "invalid_rectangles": 0,
+          "same_prefix_present": true,
+          "bounds_verified": true
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "resource": "font/utf8all_0.tex",
+      "sha256": "9b5ac26c9d7cbdd9e4fcb9f0a1a8e95ba9cf61c7957bf3bc304f9c2bec474724",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_1.tex",
+      "sha256": "e8de82ff439290a8239d868a00abc19988fec6e84cfd252a3bb9cd77068ea6b7",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_10.tex",
+      "sha256": "a03a243e8c6e0ed634539d2918c069a8c902144c0a2c85b3ebdec2abedd5dbc5",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_11.tex",
+      "sha256": "cd0ef55c4031392f547418b0060db9192d3d2e09d931e413982f416b426803c4",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_12.tex",
+      "sha256": "56f048602a79af34242cdb81c2115e56d9d014cbb36102380bdfd4231eded32f",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_13.tex",
+      "sha256": "3332b5f513f20da95ef7ad4fd1bb49a25a815889df88319e5dc9750c4c06b2b6",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_14.tex",
+      "sha256": "af4b1fd54f631aba858fe2cbcdac536cf3ba2ecc2e27179edfffeb26a7de7bff",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_2.tex",
+      "sha256": "bd9b43e87fb1823033d798d2183b8314af88bc5fe038a08bf1a216ba416895fc",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_3.tex",
+      "sha256": "d706897b40007bfa945eab9049f48da6762b317751f6ff24a40af2f350cac5cb",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_4.tex",
+      "sha256": "d4acd6df3b4057c0775920c37c54152e517b5a366d53215489f406ef49cbcbe9",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_5.tex",
+      "sha256": "5ef4f8590450099301ffdf8579932b770e312a1df40bcdb9b48ba2948cf2e8dc",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_6.tex",
+      "sha256": "9a14a8a9a7bbaf405eed1e6a767885760c3e790987bf72fb751936b4a2e97c4e",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_7.tex",
+      "sha256": "9f75f64ad5d105acd6df46efbf4ecdf334e3b9a0f7a306ac2f5eafc26fb98fe5",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_8.tex",
+      "sha256": "774da963a17d64e0daa7de33d77a178a20f126fc38c589dec1c44e8d653f4fee",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_9.tex",
+      "sha256": "474b2e39360f035e544efa6557bda8fdbdb91a769af1cbb5e381fa1a07eafb54",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_IM_0.tex",
+      "sha256": "bdb28e83418d595f1e03f140427c80ce1835a79cedd256c326300ec08f764c44",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_IM_1.tex",
+      "sha256": "46753a474c21d715be311ebf9e0fa96197b0ce466eda289a696d1dc2ba6c67c3",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_IM_2.tex",
+      "sha256": "76b0998333694f1590f1a2c4eaab8ad5c0ad7ac4a01d92b84cb382146c2720b3",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_IM_3.tex",
+      "sha256": "ce57744cdd6ed5a3f3501c8b86e768c96847490e58971d06a7a8c3c007f2e110",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_IM_4.tex",
+      "sha256": "26ca29ff07e489c25a06d14764c9383e825adbb14fb5a330828ba681a47feec5",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    },
+    {
+      "resource": "font/utf8all_IM_5.tex",
+      "sha256": "50d2f33132d914490de969ec606cfc7b33fcab8bd59e0445a00f5d308de051a6",
+      "width": 2048,
+      "height": 2048,
+      "storage_family": 1,
+      "channel_layout": 48,
+      "levels": 1
+    }
+  ]
+}

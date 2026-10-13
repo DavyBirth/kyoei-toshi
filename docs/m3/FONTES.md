@@ -27,3 +27,23 @@ isso não preenche automaticamente os atlas nativos.
 
 Relatórios: `fallback-coverage.json`, `game-font-coverage.json` e
 `native-glyph-sheet.json`. Atlas e folhas completas ficam fora do repositório.
+
+## Auditoria de páginas diretamente no PSARC
+
+`tools/audit_font_pages.py` lê somente o PSARC indicado pelo M0 e gera relatório
+privado novo em build/. Não extrai pixels, altera fontes ou reconstrói pacotes.
+Metadados revisados em `font-pages-audit.json`: oito tabelas, 21 páginas TEX,
+todas R8 linear de 2048×2048 e um nível de mip. Hashes das oito tabelas coincidem
+com a auditoria anterior. A pasta parcial de inspeção tinha só as páginas 0;
+isso não representa todos os atlas presentes no disco.
+
+Principal e IM referenciam páginas 0/1/2 e possuem os arquivos correspondentes;
+todos os retângulos lidos dessas seis páginas estão dentro dos limites. As
+outras variantes usam entre uma e 24 páginas nas tabelas, sem TEXs de mesmo
+prefixo em suas subpastas. Não presumir compartilhamento com os atlas raiz
+nem selecionar variantes por nome. Há 15 páginas de nome utf8all e seis IM
+no arquivo: não apagar as adicionais por não aparecerem nessas duas tabelas.
+
+ASCII e os seis glifos de pontuação habilitados em FitHud ficam na página 0
+das duas fontes. Esta auditoria não prova qual fonte a tela de objetivo usa,
+não adiciona acentos e não certifica pixels de páginas ainda não inspecionadas.

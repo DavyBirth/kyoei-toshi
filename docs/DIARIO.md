@@ -1,5 +1,19 @@
 # Diário do projeto
 
+### 13/10/2026 — trabalho offline: inventário completo de páginas de fonte
+
+- Inspeção anterior via pasta parcial mostrava só TEXs 0. Auditoria direta do
+  PSARC próprio encontrou 21 páginas: 15 utf8all e seis IM, todas R8 linear,
+  2048×2048, um mip. Nenhum pixel extraído/alterado e nenhum pacote reconstruído.
+- Principal/IM usam índices 0/1/2; seis páginas correspondentes presentes e
+  todos os retângulos das tabelas dentro dos limites. Variantes usam até 24
+  páginas, sem arquivos do mesmo prefixo: compartilhamento/uso ainda não provado.
+- Oito hashes de tabela no PSARC coincidem com auditoria anterior. Metadados
+  somente em docs/m3/font-pages-audit.json; utilitário audit_font_pages.py
+  reproduz a leitura. Não versionar atlas/desmontagem/texto original completo.
+- ASCII/pontuação liberada em FitHud confirmados na página 0. Ainda não corrige
+  o à ausente, não identifica fonte do objetivo e não substitui atlas por palpite.
+
 ### 13/10/2026 — trabalho offline: guarda única contra partidas duplicadas
 
 - Proteção movida para run_native.ps1, caminho comum do launcher e dos atalhos.
