@@ -1,5 +1,12 @@
 # Retomada — 13/10/2026
 
+Prévia de caixa EN implementada/compilada, testes offline PASS. Atalho
+Testar HUD ajustada EN.cmd ativa FitHud; padrão continua original. Esperado:
+Listen to their conversation inteiro, placa ajustada e espelhamento preservado.
+Fonte/escala/bordas precisam de teste de Davy. Cache privado em build.
+Minimapa/performance continuam pendentes. Retorno GPT via pasta
+translation/retorno-gpt, não anexos no terminal. Ver HUD-INVESTIGACAO.md.
+
 Outro GPT já trabalha na entrega inglesa. Davy pediu PT depois: pacote
 separado external-pt-full-01/Kyoei-Portugues-handoff.zip pronto, 16.136 IDs
 candidatos/173 arquivos. Original EN intacto. Importador suporta idioma en

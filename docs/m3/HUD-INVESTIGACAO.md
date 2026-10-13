@@ -169,3 +169,25 @@ Setter de string 0x31e4a0 confirma comprimento em bytes em +8 e dados em +0,
 com buffer inline +0x10 para strings curtas. Diagnóstico usa esse comprimento
 com guardas em vez de VirtualQuery por caractere. Parte de fonte +0x19c
 preparada para uma próxima execução; não trocar binário durante a partida.
+
+## Prévia de correção local — opt-in, inglês
+
+Testar HUD ajustada EN.cmd ativa KYOEI_HUD_FIT=1. Callback preserva a rotina
+original e restaura o rótulo completo pelo setter nativo 0x31e090, assinatura
+0xe8b3ee3e9ee96dfc (0xc2 bytes). Não copia texto diretamente no objeto String.
+Ajusta scale_x da base e offsets usando as fórmulas do ramo espelhado.
+
+Cache privado build/hud-native-metrics-01.bin gerado das duas tabelas auditadas:
+95 advances ASCII normalizados pelo glifo full-width; usa a medida maior
+enquanto fonte selecionada não está certificada no runtime. Não versionar
+esse arquivo derivado. Unidades inferidas da geometria original ainda exigem
+comparação visual; não equivalem a certificação de pixels/layout.
+
+Aplicação limitada a ASCII sem códigos, <=115 bytes e placa <=768 unidades
+lógicas. Outros casos mantêm o comportamento original. Não declarar todas
+as caixas/acentos resolvidos. Não altera minimapa, saves, JA/PT ou o padrão.
+
+Testes PASS: largura distinta para i/W, label longo, espelhamento, limites,
+NaN e códigos; callback real com String/nós sintéticos preserva retorno,
+restaura frase via setter, atualiza geometria e mantém fallback em códigos.
+Build e CheckOnly PASS, sem jogo iniciado. Teste visual permanece pendente.

@@ -1,5 +1,19 @@
 # Diário do projeto
 
+### 13/10/2026 — prévia concreta de ajuste da caixa de interação
+
+- Prévia opt-in EN restaura texto completo pelo setter nativo assinado e
+  ajusta largura/espelhamento com métricas conservadoras das duas fontes do
+  dump. Cache privado em build; original/pacotes/saves intactos.
+- Largura/limites e callback com String/nós sintéticos PASS; relay/instalação
+  PASS, build kyoei e CheckOnly PASS. Nenhum gameplay iniciado. Atalho
+  Testar HUD ajustada EN.cmd preparado para comparação de Davy.
+- Fonte/escala/bordas requerem teste visual. Prévia limitada a ASCII sem
+  códigos/largura máxima; minimapa/performance continuam pendentes.
+- Davy usa terminal: baixar retornos GPT em
+  G:\kyoei-toshi-work\translation\retorno-gpt e informar o caminho aqui;
+  não depender de anexos no PowerShell.
+
 ### 13/10/2026 — português para o outro GPT após o inglês
 
 - Davy informou que o lote inglês já está rodando no outro GPT. Preservado

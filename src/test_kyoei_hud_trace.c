@@ -1,5 +1,6 @@
 #include "gz.h"
 #include "kyoei_hud_trace.h"
+#include "kyoei_hud_layout.h"
 #include <windows.h>
 #include <stdio.h>
 #include <stdarg.h>
@@ -9,6 +10,49 @@ void gz_log(const char *format,...) { va_list args; va_start(args,format); vprin
 void gz_stop(int code,const char *format,...) { (void)format; ExitProcess(code); }
 static ABI uintptr_t callback(void *first,const void *second) {
     return (uintptr_t)first+2*(uintptr_t)second;
+}
+typedef struct { char *pointer; unsigned length,capacity; char buffer[116]; } EngineString;
+typedef uintptr_t (ABI *Marker)(void *,const void *);
+typedef void (ABI *Assign)(void *,const char *);
+void kyoei_hud_test_callbacks(Marker,Assign,const KyoeiHudMetrics *);
+ABI uintptr_t kyoei_hud_test_marker(void *,const void *);
+static unsigned original_calls,assign_calls;
+static unsigned char node[0x300],plate[0x100],object[0x300];
+static ABI void fake_assign(void *target,const char *source) {
+    EngineString *string=target;
+    size_t bytes=strlen(source);
+    if (bytes>115) ExitProcess(22);
+    memcpy(string->buffer,source,bytes+1);string->pointer=string->buffer;
+    string->length=(unsigned)bytes;string->capacity=116;++assign_calls;
+}
+static ABI uintptr_t fake_original(void *unused,const void *source) {
+    (void)unused;(void)source;
+    fake_assign(node+0x110,"Listen to t...");++original_calls;
+    return 0xc0de;
+}
+static int check_fit_callback(void) {
+    void *node_pointer=node,*plate_pointer=plate;
+    memcpy(object+0x278,&node_pointer,8);memcpy(object+0x238,&plate_pointer,8);
+    KyoeiHudMetrics metrics;
+    for (unsigned i=0;i<95;++i) metrics.equivalent[i]=.6f;
+    kyoei_hud_test_callbacks(fake_original,fake_assign,&metrics);
+    EngineString source={0};fake_assign(&source,"Listen to their conversation");
+    assign_calls=0;
+    if (kyoei_hud_test_marker(object,&source)!=0xc0de || original_calls!=1 || assign_calls!=2) return 10;
+    EngineString *actual=(void *)(node+0x110);
+    if (strcmp(actual->pointer,source.pointer) || actual->length!=source.length) return 11;
+    KyoeiHudFit fit;
+    kyoei_hud_fit(&metrics,source.pointer,source.length,0,&fit);
+    float scale;memcpy(&scale,plate+0x80,4);
+    if (fabsf(scale-fit.scale_x)>.001f) return 12;
+    unsigned direction=1;memcpy(object+0x2c8,&direction,4);
+    if (kyoei_hud_test_marker(object,&source)!=0xc0de) return 13;
+    float x;memcpy(&x,node+0x60,4);
+    if (fabsf(x-(32-36*scale))>.001f) return 14;
+    fake_assign(&source,"[i4]");assign_calls=0;
+    kyoei_hud_test_marker(object,&source);
+    if (assign_calls!=1 || strcmp(actual->pointer,"Listen to t...")) return 15;
+    return 0;
 }
 int main(int argc,char **argv) {
     _putenv_s("KYOEI_HUD_TRACE","0"); kyoei_hud_trace_configure(NULL,0);
@@ -25,6 +69,7 @@ int main(int argc,char **argv) {
     if (((Call)(page+128))((void *)11,(void *)22)!=33) return 4;
     if (((Call)(page+160))((void *)11,(void *)22)!=55) return 5;
     VirtualFree(page,0,MEM_RELEASE);
+    int fit_result=check_fit_callback();if (fit_result) return fit_result;
     _putenv_s("KYOEI_HUD_TRACE","1"); kyoei_hud_trace_configure(NULL,0);
     if (argc==2) {
         FILE *source=fopen(argv[1],"rb");
