@@ -9,6 +9,11 @@ Não abrir o jogo automaticamente. Davy abriu uma partida PT-BR por conta
 própria no fim da sessão, PID observado 4772. Não fechar ou reiniciar essa
 partida sem pedido. A proibição de abertura pelo agente permanece.
 
+Log atual: native-05/logs/20261012_225841.log. A partida de Davy está usando
+runtime-preview-01 (45 entradas), iniciada antes do pacote 02 ficar pronto.
+O manifesto agora aponta para 02 (94 entradas), usado na próxima abertura.
+O log confirma PT-BR e tela cheia 1920×1080; não trocar a partida automaticamente.
+
 Não alterar `G:\godzilla-port-codex` nem o core fixo. CMake adapta cópias em
 build. Dump próprio: `G:\GodzillaShadPS4PC\launcher\game_data\CUSA03562`, 01.03.
 Original intacto; textos e arte completos ficam fora do Git.

@@ -979,3 +979,7 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Processo do jogo observado PID 4772, iniciado por Davy; não fechar, reiniciar
   ou abrir outra partida. Código estava limpo no commit 062adc8 antes deste
   registro. Retomada detalhada em docs/RETOMADA.md.
+- Log da partida de Davy: native-05/logs/20261012_225841.log. Confirma
+  PT-BR montado de runtime-preview-01 (45 entradas), fullscreen=1 e saída
+  1920x1080. A partida começou antes da publicação do pacote 02 (94 entradas);
+  a próxima abertura usará 02. Não reiniciar a partida atual para trocar.
