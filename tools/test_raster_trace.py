@@ -23,6 +23,17 @@ class CaptureReports(unittest.TestCase):
     def test_full_coverage_not_flagged(self):
         row=analyze(CAPTURE.replace('153,0,1767,1080','0,0,1920,1080'))['captures'][0]
         self.assertEqual(row['left_cut_candidates'],[])
+        self.assertEqual(row['right_cut_candidates'],[])
+
+    def test_right_cut_retained(self):
+        row=analyze(CAPTURE.replace('153,0,1767,1080','0,0,1767,1080'))['captures'][0]
+        self.assertEqual(row['left_cut_candidates'],[])
+        self.assertAlmostEqual(row['right_cut_candidates'][0]['right_cut_fraction'],153/1920)
+
+    def test_half_pixel_origin_not_flagged(self):
+        text=CAPTURE.replace('xywh=0,0,1920,1080','xywh=0.5,1080.5,1920,-1080').replace('153,0,1767,1080','0,0,1920,1080')
+        row=analyze(text)['captures'][0]
+        self.assertEqual(row['left_cut_candidates'],[]);self.assertEqual(row['right_cut_candidates'],[])
 
     def test_unrelated_log_not_copied(self):
         self.assertEqual(analyze('Guest dialogue: irrelevant\n')['captures'],[])

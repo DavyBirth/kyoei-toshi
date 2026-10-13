@@ -1,5 +1,20 @@
 # Diário do projeto
 
+### 13/10/2026 — trabalho offline: custo e evidência da captura gráfica
+
+- Deduplicação do F9 indexa candidatos por chave e confirma igualdade completa:
+  conserva ordem, repetições e limite de perfis. Colisões não fundem desenhos.
+  Antes toda chamada varria todos os perfis; teste de mil shaders distintos
+  faz zero comparações completas nas inserções e uma por repetição. Não é FPS.
+- Regressão força colisão com geometria diferente, testa contagens/ordem e
+  repetições; teste nativo/disabled PASS. Build normal e diagnóstico pending PASS.
+- Parser examina também corte direito, ignora diferença de até um pixel e
+  exibe contagem de amostras de constantes. Onze regressões PASS; relatório
+  privado 06 reanalisa 172251. Candidatos direitos: somente viewport 16.384,
+  modo de clipping desabilitado; não provar defeito com essa diferença esperada.
+- CheckOnly diagnóstico PASS; configuração voltou a kyoei em build/. Nenhuma
+  abertura de jogo. Coleta de constantes real continua pendente para o orbe.
+
 ### 13/10/2026 — trabalho offline: pontuação UTF-8 nas caixas e minimapa
 
 - Ajuste FitHud agora mede seis glifos já existentes em ambas as fontes:

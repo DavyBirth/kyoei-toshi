@@ -9,6 +9,8 @@
 #include <mutex>
 #include <cmath>
 #include <algorithm>
+#include <unordered_map>
+#include <vector>
 extern "C" void gz_log(const char *,...);
 extern "C" int gz_memory_copy(uintptr_t,void *,uint64_t,int);
 namespace KyoeiRasterTrace {
@@ -124,6 +126,37 @@ inline uint64_t recording{};
 inline unsigned frames{},draws{},size{},dropped{};
 inline std::array<Profile,2048> profiles;
 inline std::array<unsigned,2048> repetitions;
+inline std::unordered_map<uint64_t,std::vector<unsigned>> profile_buckets;
+inline unsigned last_comparisons{};
+inline uint64_t ProfileBucket(const Profile &p) {
+    uint64_t hash=UINT64_C(14695981039346656037);
+    auto add=[&](uint64_t value) { hash=(hash^value)*UINT64_C(1099511628211); };
+    add(p.target);add(p.vs);add(p.ps);add(p.primitive);add(p.blend);add(p.depth);
+    add(p.vertex_count);add(p.parameter_count);add(p.uniform_count);
+    for(unsigned i=0;i<p.vertex_count;++i) {
+        const auto &v=p.vertices[i];add(v.address);add(v.location);add(v.status);
+        for(auto index:v.selected_indices) add(index);
+    }
+    for(unsigned i=0;i<p.parameter_count;++i) { add(p.vs_parameters[i]);add(p.ps_parameters[i]); }
+    for(unsigned i=0;i<p.uniform_count;++i) {
+        const auto &u=p.uniforms[i];add(u.address);add(u.stage);add(u.binding);add(u.status);
+        for(auto word:u.words) add(word);
+    }
+    // Omitted fields still participate in exact equality below. A collision
+    // cannot merge unequal profiles; +0/-0 floats share this integer key.
+    return hash;
+}
+inline void RecordProfile(const Profile &value,uint64_t bucket) {
+    ++draws;last_comparisons=0;
+    auto found=profile_buckets.find(bucket);
+    if(found!=profile_buckets.end()) for(unsigned i:found->second) {
+        ++last_comparisons;
+        if(profiles[i]==value) { ++repetitions[i];return; }
+    }
+    if(size<profiles.size()) {
+        profiles[size]=value;repetitions[size]=1;profile_buckets[bucket].push_back(size++);
+    } else ++dropped;
+}
 inline bool Request() {
     if (!Enabled()) return false;
     uint64_t id=requested.fetch_add(1)+1;
@@ -135,11 +168,11 @@ inline void Record(const Profile &value) {
     if (!Capturing()) return;
     std::scoped_lock lock{mutex};
     uint64_t id=requested.load();
-    if (id!=recording) { recording=id;frames=draws=size=dropped=0;repetitions.fill(0); }
-    ++draws;
-    for (unsigned i=0;i<size;++i) if (profiles[i]==value) { ++repetitions[i];return; }
-    if (size<profiles.size()) { profiles[size]=value;repetitions[size++]=1; }
-    else ++dropped;
+    if (id!=recording) {
+        recording=id;frames=draws=size=dropped=0;repetitions.fill(0);
+        profile_buckets.clear();profile_buckets.reserve(profiles.size());
+    }
+    RecordProfile(value,ProfileBucket(value));
 }
 inline void Presented() {
     if (!Capturing()) return;

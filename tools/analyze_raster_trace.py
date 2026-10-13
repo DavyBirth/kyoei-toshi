@@ -40,17 +40,25 @@ def analyze(text):
         capture['sampling_complete']=capture['complete'] and capture['dropped']==0
         rows=list(capture['profiles'].values());capture['profiles']=rows
         capture['constant_capture_present']=any(row.get('uniform_samples') for row in rows)
-        candidates=[]
+        candidates=[];right_candidates=[]
         for row in rows:
             if 'xywh' not in row or 'scissor_xywh' not in row:continue
             viewport=[float(v) for v in row['xywh'].split(',')]
             scissor=[int(v) for v in row['scissor_xywh'].split(',')]
-            if viewport[2]>0 and viewport[0]<scissor[0]<viewport[0]+viewport[2]:
+            # Half-pixel viewport origins are normal in these captures. Ignore
+            # differences <= one target pixel; this is a candidate heuristic.
+            if viewport[2]>0 and viewport[0]+1<scissor[0]<viewport[0]+viewport[2]:
                 candidates.append(dict(profile=int(row['p']),target=row['target'],ps=row['ps'],
                     viewport=viewport,scissor=scissor,
                     left_cut_fraction=(scissor[0]-viewport[0])/viewport[2],
                     note='Partial left coverage; may be intentional. Compare before/after and draw target.'))
+            right=scissor[0]+scissor[2];end=viewport[0]+viewport[2]
+            if viewport[2]>0 and viewport[0]<right<end-1:
+                right_candidates.append(dict(profile=int(row['p']),target=row['target'],ps=row['ps'],
+                    viewport=viewport,scissor=scissor,right_cut_fraction=(end-right)/viewport[2],
+                    note='Partial right coverage; may be intentional, especially with clipping disabled.'))
         capture['left_cut_candidates']=candidates
+        capture['right_cut_candidates']=right_candidates
     return dict(scope='Raster states only, no texture/shader contents. Candidates are not proof of a defect.',captures=captures)
 
 
@@ -62,6 +70,12 @@ def main():
     if args.output.exists():raise ValueError('Choose a new report file')
     args.output.write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
     print(f'{len(report["captures"])} captures; completeness/drop counts retained; {args.output}')
+    for capture in report['captures']:
+        constants=sum(1 for row in capture['profiles'] for sample in row.get('uniform_samples',[])
+                      if sample['status']=='1' and sample.get('start')=='0')
+        print(f'id={capture["id"]} profiles={len(capture["profiles"])} dropped={capture["dropped"]} '
+              f'complete={capture["sampling_complete"]} constant_samples={constants} '
+              f'left_candidates={len(capture["left_cut_candidates"])} right_candidates={len(capture["right_cut_candidates"])}')
 
 
 if __name__=='__main__':main()

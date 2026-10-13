@@ -78,5 +78,18 @@ int main(int argc,char **) {
     uniform.address=UINT64_MAX-3;SampleWords(uniform,readable,clean,uniform_copy);CHECK(uniform.status==4 && uniform_reads==1);
     uniform.address=100;SampleWords(uniform,readable,clean,[](auto,void *out,uint64_t bytes){std::memset(out,0xff,bytes);return false;});
     CHECK(uniform.status==7 && uniform.words[0]==0 && uniform.word_count==0);
+    // Force collisions: exact comparison must retain both geometries.
+    profiles.fill({});profile_buckets.clear();size=draws=dropped=0;repetitions.fill(0);
+    Profile first;first.ps=17;first.viewport[0]=10;
+    Profile second=first;second.viewport[0]=20;
+    CHECK(ProfileBucket(first)==ProfileBucket(second));
+    RecordProfile(first,7);RecordProfile(second,7);RecordProfile(first,7);
+    CHECK(size==2 && draws==3 && repetitions[0]==2 && repetitions[1]==1);
+    // Distinct shader addresses take separate buckets, preserving original order.
+    profile_buckets.clear();size=draws=dropped=0;repetitions.fill(0);
+    for(unsigned i=0;i<1000;++i) { first.ps=i;RecordProfile(first,ProfileBucket(first));CHECK(last_comparisons==0); }
+    CHECK(size==1000 && profiles[999].ps==999);
+    for(unsigned i=0;i<1000;++i) { first.ps=i;RecordProfile(first,ProfileBucket(first));CHECK(last_comparisons==1); }
+    CHECK(size==1000 && draws==2000 && repetitions[999]==2);
     std::puts("RASTER TRACE PASS: real registers, independent flags, exact coordinates, deduplication, two frames, bounded profiles and retrigger; no GPU/window");
 }

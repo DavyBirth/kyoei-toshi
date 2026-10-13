@@ -169,3 +169,16 @@ dados de constantes presentes de simples completude dos registros raster.
 Binário corrigido separado em `build/orb-pending/kyoei-orb-trace-next.exe`;
 mesmo atalho constantes usa essa versão. Não substitui o processo aberto.
 Ainda exige captura real para confirmar conteúdos e investigar transformação.
+
+## Custo da captura e comparação dos dois lados
+
+Deduplicação usa uma chave de candidatos com comparação completa para colisões,
+preservando ordem e repetições. O limite continua 2.048 perfis; chave não cresce
+quando o limite é atingido. Testes forçam colisões e repetição de mil shaders.
+Redução de trabalho só comprovada no caminho de diagnóstico; não é ganho de FPS.
+
+Parser inclui `right_cut_candidates`, além dos da esquerda, e ignora diferenças
+de até um pixel (origem fracionária de viewport não prova faixa). Reanálise 06
+de 172251 tem 13/14 candidatos direitos, todos com viewport 16.384 e scissor de
+1.920/4.096: padrão de clipping desabilitado, não prova da faixa. Console informa
+`constant_samples=0` quando faltam constantes, mesmo com registro completo.
