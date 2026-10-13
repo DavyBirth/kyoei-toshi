@@ -1,5 +1,10 @@
 # Retomada — 12/10/2026
 
+Checkpoint adicional de 13/10: modelo headless de nomes e modalidade ativa
+implementados; SDL/IME reais alimentam modalidade; build kyoei e dois testes
+headless PASS, jogo não executado. IME protege UTF-16. Overlay e save/load
+na imagem ainda pendentes. Mapa técnico e fontes em docs/FUNCIONAMENTO.md.
+
 Atualização em 13/10/2026: plano offline salvo em `docs/PLANO-MANHA.md`.
 Primeiro checkpoint de execução: construtor/validador aceitam --language en;
 construtor --validate-only validou 94 entradas EN sem criar pacote nem alterar

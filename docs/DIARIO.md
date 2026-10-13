@@ -964,6 +964,22 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   não declarar menus totalmente traduzidos, imagens traduzidas ou abertura
   real do novo launcher certificada. instruções em docs/ABRIR-JOGO.md.
 
+### 13/10/2026 — entrada ativa, editor de nomes e estudo do motor
+
+- Davy autorizou estudar o funcionamento completo e procurar fontes públicas.
+  Fonte oficial identifica OROCHI 3/YEBIS 3; busca inicial não encontrou código
+  público oficial do jogo/GxCore. Referências em docs/FUNCIONAMENTO.md.
+- Modalidade ativa ligada aos eventos reais SDL e à digitação do IME nativo.
+  Eixos com limiar/histerese; conexão, drift e eixo mantido não roubam modalidade.
+  Acesso entre threads protegido, sem alterações no core fixo.
+- Editor headless de nomes: grade/navegação, seleção inicial, caixa, espaço,
+  apagar, cursor, confirmar/cancelar, limites e pares UTF-16. Modelo ainda não
+  tem apresentação gráfica ligada ao jogo; não declarar overlay concluído.
+- IME real verifica UTF-16 antes de escrever no buffer convidado, inclusive
+  retorno de filtros. Preserva backend e nomes/saves existentes.
+- Configuração/build kyoei PASS (não executado); testes headless name_model
+  e input_mode PASS. Próximo: composição de overlay e roteamento da edição.
+
 ### 13/10/2026 — execução offline: inglês isolado e diagnóstico HUD
 
 - Nenhum processo kyoei/shadPS4 encontrado na preparação; não abrir jogo.

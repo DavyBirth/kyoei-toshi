@@ -6,6 +6,8 @@
 #include <stddef.h>
 #include <string.h>
 #include <wchar.h>
+#include "kyoei_input_mode.h"
+#include "kyoei_name_model.h"
 
 typedef int32_t (ABI *TextFilter)(uint16_t *, uint32_t *, const uint16_t *, uint32_t);
 typedef struct {
@@ -82,6 +84,7 @@ static DWORD WINAPI show_ime(void *unused) {
     SetForegroundWindow(window); SetFocus(edit); SendMessageW(edit, EM_SETSEL, 0, -1);
     MSG message;
     while (!done && GetMessageW(&message, NULL, 0, 0) > 0) {
+        if (message.message == WM_KEYDOWN || message.message == WM_CHAR) kyoei_input_keyboard();
         if (message.message == WM_KEYDOWN && message.wParam == VK_RETURN) { finish(window, 0); continue; }
         if (message.message == WM_KEYDOWN && message.wParam == VK_ESCAPE) { finish(window, 1); continue; }
         if (!IsDialogMessageW(window, &message)) { TranslateMessage(&message); DispatchMessageW(&message); }
@@ -114,6 +117,7 @@ static ABI int32_t ime_init(const ImeParam *p, const void *extended) {
     while (n < p->max_length && p->buffer[n]) { initial[n] = p->buffer[n]; ++n; }
     if (p->buffer[n]) return (int32_t)0x80bc0006;
     initial[n] = 0; title[0] = 0;
+    if (!kyoei_name_valid((const uint16_t *)initial,n)) return (int32_t)0x80bc0006;
     if (p->title) { n = 0; while (n < 256 && p->title[n]) { title[n] = p->title[n]; ++n; } title[n] = 0; }
     done = 0; end_status = 2; InterlockedExchange(&abort_requested, 0);
     InterlockedExchange(&status, 1);
@@ -128,11 +132,13 @@ static ABI int32_t ime_result(uint32_t *result) {
     if (ime_status() != 2) return (int32_t)0x80bc0106;
     if (end_status == 0) {
         uint32_t n = (uint32_t)wcslen(accepted);
+        if (n > param.max_length || !kyoei_name_valid((const uint16_t *)accepted,n)) return (int32_t)0x80bc0006;
         if (param.filter) {
             uint16_t filtered[2049] = {0}; uint32_t length = param.max_length;
             int32_t error = param.filter(filtered, &length, (uint16_t *)accepted, n);
             if (error) return error;
             if (length > param.max_length) return (int32_t)0x80bc0006;
+            if (!kyoei_name_valid(filtered,length)) return (int32_t)0x80bc0006;
             memcpy(param.buffer, filtered, length * 2); param.buffer[length] = 0;
         } else memcpy(param.buffer, accepted, (n + 1) * 2);
     }
