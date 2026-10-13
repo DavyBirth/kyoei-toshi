@@ -89,6 +89,7 @@ class LauncherForm : Form {
     readonly string root;
     readonly ComboBox language=new ComboBox(),resolution=new ComboBox(),mode=new ComboBox();
     readonly Button play=new Button();
+    readonly CheckBox inGameDialogs=new CheckBox();
     readonly Label notice=new Label(),status=new Label();
     readonly string[] languages={"ja","en","pt-BR"};
     readonly string[] sizes={"1280 × 720","1600 × 900","1920 × 1080","2560 × 1440","3840 × 2160"};
@@ -114,11 +115,13 @@ class LauncherForm : Form {
         AddLabel("RESOLUÇÃO DE SAÍDA",520,283,205,24,9,muted,FontStyle.Bold);
         AddLabel("MODO DE TELA",745,283,205,24,9,muted,FontStyle.Bold);
         SetupCombo(resolution,520,313,205,sizes);SetupCombo(mode,745,313,200,new string[]{"Janela","Tela cheia sem bordas"});
-        notice.SetBounds(520,352,425,55);notice.Font=new Font("Segoe UI",9);notice.ForeColor=muted;Controls.Add(notice);
-        play.SetBounds(520,425,425,52);play.Text="INICIAR JOGO";play.Font=new Font("Segoe UI",13,FontStyle.Bold);
+        notice.SetBounds(520,352,425,46);notice.Font=new Font("Segoe UI",9);notice.ForeColor=muted;Controls.Add(notice);
+        inGameDialogs.SetBounds(520,404,425,22);inGameDialogs.Text="Diálogos dentro do jogo · prévia em inglês";
+        inGameDialogs.Font=new Font("Segoe UI",9);inGameDialogs.ForeColor=ink;Controls.Add(inGameDialogs);
+        play.SetBounds(520,440,425,52);play.Text="INICIAR JOGO";play.Font=new Font("Segoe UI",13,FontStyle.Bold);
         play.BackColor=cyan;play.ForeColor=Color.FromArgb(7,22,32);play.FlatStyle=FlatStyle.Flat;play.FlatAppearance.BorderSize=0;
         play.Cursor=Cursors.Hand;Controls.Add(play);
-        status.SetBounds(520,494,425,65);status.Font=new Font("Segoe UI",9);status.ForeColor=muted;Controls.Add(status);
+        status.SetBounds(520,512,425,65);status.Font=new Font("Segoe UI",9);status.ForeColor=muted;Controls.Add(status);
         LoadSettings();UpdateNotice();
         language.SelectedIndexChanged+=delegate{UpdateNotice();};mode.SelectedIndexChanged+=delegate{UpdateNotice();};
         play.Click+=delegate{Launch();};
@@ -134,6 +137,7 @@ class LauncherForm : Form {
     }
     void UpdateNotice() {
         resolution.Enabled=mode.SelectedIndex==0 && !running;
+        inGameDialogs.Enabled=language.SelectedIndex==1 && !running;
         notice.Text=language.SelectedIndex==0 ? "Texto e áudio originais em japonês." :
             "Prévia: objetivos, ações do começo e descrições das opções. Outros textos e imagens ainda em japonês.";
         status.Text=mode.SelectedIndex==1 ? "Tela cheia usa a resolução da sua tela. A tradução ainda precisa de revisão visual." :
@@ -146,18 +150,20 @@ class LauncherForm : Form {
             int lang=Array.IndexOf(languages,Convert.ToString(values["language"]));language.SelectedIndex=lang<0?0:lang;
             int size=Array.IndexOf(sizes,Convert.ToString(values["resolution"]));resolution.SelectedIndex=size<0?0:size;
             mode.SelectedIndex=Convert.ToBoolean(values["fullscreen"])?1:0;
+            if(values.ContainsKey("inGameDialogs"))inGameDialogs.Checked=Convert.ToBoolean(values["inGameDialogs"]);
         } catch { status.Text="Preferências antigas inválidas; usando as opções padrão."; }
     }
     void SaveSettings() {
         Directory.CreateDirectory(Path.Combine(root,"build"));
-        var values=new Dictionary<string,object>{{"language",languages[language.SelectedIndex]},{"resolution",sizes[resolution.SelectedIndex]},{"fullscreen",mode.SelectedIndex==1}};
+        var values=new Dictionary<string,object>{{"language",languages[language.SelectedIndex]},{"resolution",sizes[resolution.SelectedIndex]},{"fullscreen",mode.SelectedIndex==1},{"inGameDialogs",inGameDialogs.Checked}};
         File.WriteAllText(Path.Combine(root,"build","launcher-settings.json"),new JavaScriptSerializer().Serialize(values),Encoding.UTF8);
     }
     void Launch() {
         if(running)return;SaveSettings();
         string lang=languages[language.SelectedIndex];string[] dimensions=sizes[resolution.SelectedIndex].Split('×');
-        string options=" -Language "+lang+" -Width "+dimensions[0].Trim()+" -Height "+dimensions[1].Trim()+(mode.SelectedIndex==1?" -Fullscreen":"");
-        running=true;play.Enabled=false;language.Enabled=false;mode.Enabled=false;resolution.Enabled=false;
+        string options=" -Language "+lang+" -Width "+dimensions[0].Trim()+" -Height "+dimensions[1].Trim()+(mode.SelectedIndex==1?" -Fullscreen":"")+
+            (lang=="en" && inGameDialogs.Checked?" -InGameDialogs":"");
+        running=true;play.Enabled=false;language.Enabled=false;mode.Enabled=false;resolution.Enabled=false;inGameDialogs.Enabled=false;
         status.Text="Iniciando o jogo…";
         Task.Factory.StartNew(delegate{
             int result=KyoeiLauncher.Execute(root,false,options);

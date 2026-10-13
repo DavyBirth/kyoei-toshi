@@ -1,0 +1,110 @@
+// Exercise real modal implementation/ImGui without SDL, Vulkan, game or saves.
+#include "kyoei_overlay.h"
+#include "kyoei_input_mode.h"
+#include "imgui.h"
+#include "imgui_internal.h"
+#include <windows.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <future>
+#include <thread>
+#include <vector>
+#include <string>
+#define CHECK(x) do { if (!(x)) { std::fprintf(stderr,"line %d: %s\n",__LINE__,#x); std::exit(1); } } while(0)
+static void wait_kind(int expected) {
+    for (unsigned attempt=0;attempt<1000;++attempt) {
+        if (kyoei_overlay_kind()==expected) return;
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+    }
+    CHECK(false);
+}
+static void check_draw(unsigned width,unsigned height,bool scroll_free=false) {
+    for (int frame=0;frame<2;++frame) {
+        auto *draw=KyoeiOverlayModel::Draw(width,height,1.f/60);
+        CHECK(draw && draw->Valid && draw->TotalVtxCount>0);
+        CHECK(draw->DisplaySize.x==float(width) && draw->DisplaySize.y==float(height));
+        for (const auto *list:draw->CmdLists) for (const auto &command:list->CmdBuffer) {
+            CHECK(std::isfinite(command.ClipRect.x) && command.ClipRect.x>=0);
+            CHECK(command.ClipRect.y>=0 && command.ClipRect.z<=width && command.ClipRect.w<=height);
+        }
+    }
+    auto *window=ImGui::FindWindowByName("##kyoei-modal");
+    CHECK(window && window->Pos.x>=0 && window->Pos.y>=0);
+    CHECK(window->Pos.x+window->Size.x<=width && window->Pos.y+window->Size.y<=height);
+    if (scroll_free) CHECK(window->ScrollMax.y<1);
+}
+int main() {
+    _set_error_mode(_OUT_TO_STDERR);
+    _set_abort_behavior(0,_WRITE_ABORT_MSG|_CALL_REPORTFAULT);
+    _putenv_s("KYOEI_IN_GAME_DIALOGS","1"); _putenv_s("KYOEI_LANGUAGE","en");
+    KyoeiOverlayModel::InitializeGui(nullptr,true); KyoeiOverlayModel::SetReady(true);
+    const uint16_t initial[]={'K','e','n'};
+    kyoei_overlay_input(0);
+    CHECK(kyoei_overlay_begin_name(L"Synthetic name",initial,3,4));
+    kyoei_input_controller_button(); check_draw(1280,720,true); check_draw(640,360,true);
+    CHECK(kyoei_overlay_input(0x2000)); CHECK(kyoei_overlay_input(0x2000));
+    kyoei_overlay_input(0); kyoei_overlay_input(0x2000);
+    kyoei_overlay_input(0x1000); // triangle shifts
+    kyoei_overlay_input(0x20); kyoei_overlay_input(0x2000); // B
+    kyoei_input_keyboard(); CHECK(kyoei_overlay_text("\xc3\xa9"));
+    kyoei_overlay_text("too long"); kyoei_overlay_text("\xed\xa0\x80");
+    check_draw(1280,720,true);
+    uint16_t result[7]={0,0,0,0,0,0xaaaa,0xbbbb}; unsigned status=99;
+    CHECK(!kyoei_overlay_name_result(result,7,&status));
+    kyoei_overlay_key(KYOEI_OVERLAY_KEY_ACCEPT);
+    CHECK(kyoei_overlay_name_result(result,7,&status) && status==0);
+    if (result[0]!='a' || result[1]!='a' || result[2]!='B' || result[3]!=0xe9 || result[4])
+        std::fprintf(stderr,"synthetic name units: %04x %04x %04x %04x %04x\n",result[0],result[1],result[2],result[3],result[4]);
+    CHECK(result[0]=='a' && result[1]=='a' && result[2]=='B' && result[3]==0xe9 && result[4]==0);
+    CHECK(result[5]==0xaaaa && result[6]==0xbbbb);
+    CHECK(kyoei_overlay_input(0x2000));
+    kyoei_overlay_release_name(); CHECK(!kyoei_overlay_kind());
+    CHECK(kyoei_overlay_needs_redraw()); kyoei_overlay_presented(kyoei_overlay_revision());
+    CHECK(!kyoei_overlay_needs_redraw());
+    CHECK(kyoei_overlay_begin_name(L"Abort",initial,3,4)); kyoei_overlay_abort_name();
+    CHECK(kyoei_overlay_name_result(result,7,&status) && status==2);
+    kyoei_overlay_release_name();
+    CHECK(kyoei_overlay_begin_name(L"Cancel",initial,3,4));
+    kyoei_overlay_input(0); kyoei_overlay_input(0x4000|0x2000);
+    CHECK(kyoei_overlay_name_result(result,7,&status) && status==1);
+    kyoei_overlay_release_name();
+    std::vector<std::wstring> storage(1025);
+    std::vector<const wchar_t *> labels;
+    for (unsigned index=0;index<storage.size();++index) { storage[index]=L"Synthetic slot "+std::to_wstring(index); labels.push_back(storage[index].c_str()); }
+    auto list=std::async(std::launch::async,[&]{return kyoei_overlay_select(L"Choose a synthetic slot",labels.data(),1025,1024);});
+    wait_kind(KYOEI_OVERLAY_LIST); labels.clear(); storage.clear();
+    check_draw(1280,720); kyoei_overlay_key(KYOEI_OVERLAY_KEY_UP);
+    kyoei_overlay_key(KYOEI_OVERLAY_KEY_ACCEPT);
+    CHECK(list.wait_for(std::chrono::seconds(1))==std::future_status::ready && list.get()==1023);
+    const wchar_t *one[]={L"Only slot"};
+    auto cancel=std::async(std::launch::async,[&]{return kyoei_overlay_select(L"Cancel list",one,1,0);});
+    wait_kind(KYOEI_OVERLAY_LIST); kyoei_overlay_cancel_dialog();
+    CHECK(cancel.wait_for(std::chrono::seconds(1))==std::future_status::ready && cancel.get()==-1);
+    CHECK(kyoei_overlay_select(L"Invalid",nullptr,0,0)==INT_MIN);
+    CHECK(kyoei_overlay_select(L"Invalid",one,1,2)==INT_MIN);
+    for (unsigned type:{0u,1u,2u,7u,8u}) {
+        kyoei_overlay_prepare_dialog();
+        auto message=std::async(std::launch::async,[type]{return kyoei_overlay_message(L"Synthetic confirmation",type);});
+        wait_kind(KYOEI_OVERLAY_MESSAGE); check_draw(640,360,true);
+        kyoei_overlay_input(0); kyoei_overlay_input(0x2000);
+        int expected=type==7?IDNO:type==8?IDCANCEL:IDOK;
+        CHECK(message.wait_for(std::chrono::seconds(1))==std::future_status::ready && message.get()==expected);
+    }
+    auto progress=std::async(std::launch::async,[]{return kyoei_overlay_message(L"Synthetic progress",256);});
+    wait_kind(KYOEI_OVERLAY_MESSAGE); kyoei_overlay_progress(150);
+    check_draw(1280,720); kyoei_overlay_key(KYOEI_OVERLAY_KEY_ACCEPT);
+    CHECK(progress.wait_for(std::chrono::milliseconds(1))==std::future_status::timeout);
+    KyoeiOverlayModel::SetReady(false);
+    CHECK(progress.wait_for(std::chrono::seconds(1))==std::future_status::ready && progress.get()==0);
+    CHECK(!kyoei_overlay_begin_name(L"Unavailable",initial,3,4));
+    KyoeiOverlayModel::SetReady(true);
+    kyoei_overlay_cancel_dialog();
+    CHECK(kyoei_overlay_select(L"Cancelled before open",one,1,0)==-1);
+    CHECK(kyoei_overlay_message(L"Cancelled before open",0)==0);
+    kyoei_overlay_prepare_dialog();
+    _putenv_s("KYOEI_IN_GAME_DIALOGS","0");
+    CHECK(kyoei_overlay_select(L"Disabled",one,1,0)==INT_MIN);
+    KyoeiOverlayModel::ShutdownGui();
+    std::puts("OVERLAY PASS: real ImGui layout, UTF16/results, input edges, 1025 slots, ownership, cancellation and fallback");
+}

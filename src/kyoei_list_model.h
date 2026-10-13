@@ -10,7 +10,7 @@ static inline unsigned kyoei_list_next(unsigned count,unsigned selected,uint32_t
     return selected;
 }
 static inline KyoeiListView kyoei_list_view(unsigned count,unsigned selected,int height) {
-    KyoeiListView view={0};
+    KyoeiListView view={0,0};
     if (!count || selected>=count || height<=160) return view;
     unsigned visible=(unsigned)(height-160)/30;
     if (!visible) return view;

@@ -8,10 +8,10 @@ int main(void) {
     const uint16_t initial[]={'D','a','v','y'}, empty[]={0};
     CHECK(kyoei_name_begin(&m,initial,4,8));
     kyoei_name_buttons(&m,0x2000); /* circle enters a, replacing selected default */
-    CHECK(m.length==1 && m.text[0]=='a' && !m.result);
-    kyoei_name_buttons(&m,0x8000); kyoei_name_buttons(&m,0x20); kyoei_name_buttons(&m,0x2000);
+    CHECK(m.length==1 && m.text[0]=='a' && m.text[1]==0 && !m.result);
+    kyoei_name_buttons(&m,0x1000); kyoei_name_buttons(&m,0x20); kyoei_name_buttons(&m,0x2000);
     CHECK(m.length==2 && m.text[1]=='B');
-    kyoei_name_buttons(&m,0x1000); CHECK(m.length==1);
+    kyoei_name_buttons(&m,0x8000); CHECK(m.length==1);
     kyoei_name_buttons(&m,0x4000|0x2000); CHECK(m.result==KYOEI_NAME_CANCELLED);
     kyoei_name_buttons(&m,8); CHECK(m.result==KYOEI_NAME_CANCELLED && m.length==1);
     CHECK(kyoei_name_begin(&m,empty,0,3));

@@ -34,7 +34,7 @@ static inline int kyoei_name_insert(KyoeiNameModel *m, const uint16_t *text, siz
     if (!m || m->result || !text || !length || !kyoei_name_valid(text,length)) return 0;
     size_t used=m->select_all?0:m->length;
     if (length>m->limit-used) return 0;
-    if (m->select_all) { m->length=m->cursor=0; m->select_all=0; }
+    if (m->select_all) { m->length=m->cursor=0; m->text[0]=0; m->select_all=0; }
     memmove(m->text+m->cursor+length,m->text+m->cursor,(m->length-m->cursor+1)*sizeof(*text));
     memcpy(m->text+m->cursor,text,length*sizeof(*text));
     m->length+=length; m->cursor+=length; return 1;
@@ -86,8 +86,10 @@ static inline void kyoei_name_buttons(KyoeiNameModel *m, uint32_t pressed) {
     else if (pressed&0x40) kyoei_name_move(m,0,1);
     if (pressed&0x80) kyoei_name_move(m,-1,0);
     else if (pressed&0x20) kyoei_name_move(m,1,0);
-    if (pressed&0x8000) m->upper=!m->upper;
-    if (pressed&0x1000) kyoei_name_backspace(m);
+    if (pressed&0x1000) m->upper=!m->upper;
+    if (pressed&0x8000) kyoei_name_backspace(m);
+    if (pressed&0x400) kyoei_name_cursor(m,0);
+    if (pressed&0x800) kyoei_name_cursor(m,1);
     if (pressed&0x2000) kyoei_name_activate(m);
 }
 #endif

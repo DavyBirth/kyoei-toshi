@@ -8,15 +8,10 @@
 #include <wchar.h>
 #include "kyoei_input_mode.h"
 #include "kyoei_name_model.h"
+#include "kyoei_overlay.h"
+#include "kyoei_ime.h"
 
-typedef int32_t (ABI *TextFilter)(uint16_t *, uint32_t *, const uint16_t *, uint32_t);
-typedef struct {
-    int32_t user; uint32_t type; uint64_t languages;
-    uint32_t enter_label, input_method; TextFilter filter;
-    uint32_t option, max_length; uint16_t *buffer;
-    float x, y; uint32_t horizontal, vertical;
-    const uint16_t *placeholder, *title; unsigned char reserved[16];
-} ImeParam;
+typedef KyoeiImeParam ImeParam;
 _Static_assert(sizeof(ImeParam) == 96, "IME parameter ABI");
 _Static_assert(offsetof(ImeParam, buffer) == 40, "IME buffer ABI");
 _Static_assert(sizeof(wchar_t) == 2, "Windows UTF16");
@@ -29,6 +24,8 @@ static uint32_t end_status;
 static uint32_t previous_buttons;
 #define IME_CONFIRM (WM_APP + 41)
 static int done;
+static int using_overlay;
+static SRWLOCK result_lock=SRWLOCK_INIT;
 
 static void finish(HWND window, uint32_t result) {
     if (result == 0) {
@@ -120,13 +117,26 @@ static ABI int32_t ime_init(const ImeParam *p, const void *extended) {
     if (!kyoei_name_valid((const uint16_t *)initial,n)) return (int32_t)0x80bc0006;
     if (p->title) { n = 0; while (n < 256 && p->title[n]) { title[n] = p->title[n]; ++n; } title[n] = 0; }
     done = 0; end_status = 2; InterlockedExchange(&abort_requested, 0);
+    using_overlay=kyoei_overlay_begin_name(title,(const uint16_t *)initial,wcslen(initial),p->max_length);
     InterlockedExchange(&status, 1);
+    if (using_overlay) {
+        worker=NULL;
+        gz_log("Kyoei IME: in-game entry opened, max_length=%u",p->max_length);
+        return 0;
+    }
     worker = CreateThread(NULL, 0, show_ime, NULL, 0, NULL);
     if (!worker) { InterlockedExchange(&status, 0); return (int32_t)0x80bc0003; }
     gz_log("Kyoei IME: native text entry opened, max_length=%u", p->max_length);
     return 0;
 }
-static ABI int32_t ime_status(void) { return InterlockedCompareExchange(&status, 0, 0); }
+static ABI int32_t ime_status(void) {
+    AcquireSRWLockExclusive(&result_lock);
+    if (using_overlay && InterlockedCompareExchange(&status,0,0)==1 &&
+        kyoei_overlay_name_result((uint16_t *)accepted,2049,&end_status)) InterlockedExchange(&status,2);
+    int32_t value=InterlockedCompareExchange(&status,0,0);
+    ReleaseSRWLockExclusive(&result_lock);
+    return value;
+}
 static ABI int32_t ime_result(uint32_t *result) {
     if (!result) return (int32_t)0x80bc0031;
     if (ime_status() != 2) return (int32_t)0x80bc0106;
@@ -146,11 +156,13 @@ static ABI int32_t ime_result(uint32_t *result) {
 }
 static ABI int32_t ime_abort(void) {
     if (ime_status() != 1) return (int32_t)0x80bc0105;
+    if (using_overlay) { kyoei_overlay_abort_name(); return 0; }
     InterlockedExchange(&abort_requested, 1); return 0;
 }
 static ABI int32_t ime_term(void) {
     if (ime_status() != 2) return (int32_t)0x80bc0106;
-    WaitForSingleObject(worker, INFINITE); CloseHandle(worker); worker = NULL;
+    if (worker) { WaitForSingleObject(worker, INFINITE); CloseHandle(worker); worker = NULL; }
+    if (using_overlay) { kyoei_overlay_release_name(); using_overlay=0; }
     memset(&param, 0, sizeof(param)); InterlockedExchange(&status, 0); return 0;
 }
 uintptr_t kyoei_ime_resolve(const char *symbol) {

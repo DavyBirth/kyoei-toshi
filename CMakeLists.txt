@@ -15,6 +15,7 @@ list(TRANSFORM CORE_FILES APPEND ".c")
 # Adapt build copies only; keep the fixed Godzilla snapshot unchanged.
 file(READ "${KYOEI_CORE}/src/rt_services.c" KYOEI_SERVICES)
 file(READ "${KYOEI_CORE}/src/dialog_ui.c" KYOEI_DIALOG_UI)
+set(KYOEI_DIALOG_UI "#include \"kyoei_overlay.h\"\n${KYOEI_DIALOG_UI}")
 function(kyoei_replace_checked variable before after)
   string(FIND "${${variable}}" "${before}" position)
   if(position EQUAL -1)
@@ -91,7 +92,19 @@ kyoei_replace_checked(KYOEI_SERVICES
   "    if (p->mode == 3) {\n        const uint32_t *system = p->system;\n        if (!system || p->display < 1 || p->display > 3 || (system[0] != 2 && system[0] != 3)) { free(work); return (int32_t)0x80B8000F; }\n        work->type = 1;\n        wcscpy(work->text, system[0] == 3 ? L\"Substituir este save?\" : p->display == 1 ? L\"Salvar neste slot?\" : p->display == 2 ? L\"Carregar este save?\" : L\"Excluir este save?\");\n    } else if (p->mode == 2) {")
 kyoei_replace_checked(KYOEI_DIALOG_UI
   "int gz_dialog_input(uint32_t buttons) {"
-  "int kyoei_ime_input(uint32_t buttons);\nint gz_dialog_input(uint32_t buttons) {\n    if (kyoei_ime_input(buttons)) { release_gate = 1; return 1; }")
+  "int kyoei_ime_input(uint32_t buttons);\nint gz_dialog_input(uint32_t buttons) {\n    if (kyoei_overlay_input(buttons) || kyoei_ime_input(buttons)) { release_gate = 1; return 1; }")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "void gz_dialog_cancel(void) {"
+  "void gz_dialog_cancel(void) {\n    kyoei_overlay_cancel_dialog();")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "void gz_dialog_progress(unsigned percent) {"
+  "void gz_dialog_progress(unsigned percent) { kyoei_overlay_progress(percent);")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "void gz_dialog_prepare(void) {"
+  "void gz_dialog_prepare(void) { kyoei_overlay_prepare_dialog();")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "int gz_dialog_show(const wchar_t *text, unsigned type) {"
+  "int gz_dialog_show(const wchar_t *text, unsigned type) {\n    if (!InterlockedCompareExchange(&canceled,0,0)) {\n        int overlay=kyoei_overlay_message(text,type);\n        if (overlay!=INT_MIN) return overlay;\n    }")
 kyoei_replace_checked(KYOEI_SERVICES
   "case 0: case 1: case 3: case 7: case 8: break;"
   "case 0: case 1: case 2: case 3: case 7: case 8: break;")
@@ -157,6 +170,16 @@ target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
 target_sources(kyoei PRIVATE src/kyoei_png.c)
 target_sources(kyoei PRIVATE src/kyoei_savedata.c)
 target_sources(kyoei PRIVATE src/kyoei_input_mode.c)
+set(KYOEI_IMGUI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party/imgui")
+set(KYOEI_IMGUI_SOURCES "${KYOEI_IMGUI_DIR}/imgui.cpp" "${KYOEI_IMGUI_DIR}/imgui_draw.cpp"
+  "${KYOEI_IMGUI_DIR}/imgui_tables.cpp" "${KYOEI_IMGUI_DIR}/imgui_widgets.cpp")
+add_library(kyoei_imgui STATIC ${KYOEI_IMGUI_SOURCES})
+target_include_directories(kyoei_imgui PUBLIC "${KYOEI_IMGUI_DIR}")
+target_compile_definitions(kyoei_imgui PRIVATE _CRT_SECURE_NO_WARNINGS)
+target_sources(kyoei PRIVATE src/kyoei_overlay_model.cpp)
+target_compile_features(kyoei PRIVATE cxx_std_23)
+target_compile_definitions(kyoei PRIVATE NOMINMAX)
+target_link_libraries(kyoei PRIVATE kyoei_imgui)
 target_compile_definitions(kyoei PRIVATE KYOEI_SAVE_ADAPTER=1)
 target_compile_definitions(kyoei PRIVATE KYOEI_PNG_ENCODER=1 MINIZ_STATIC_DEFINE=1)
 target_compile_definitions(kyoei PRIVATE KYOEI_CRASH_CAPTURE=1)
@@ -199,6 +222,10 @@ add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cp
 # Release the old surface before publishing completion. Otherwise a guest
 # woken by the event can lock it for a new flip before the late reset to zero.
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/driver.cpp" KYOEI_VIDEOOUT_DRIVER)
+set(KYOEI_VIDEOOUT_DRIVER "#include \"kyoei_overlay.h\"\n${KYOEI_VIDEOOUT_DRIVER}")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "ImGui::Core::MustKeepDrawing()"
+  "(ImGui::Core::MustKeepDrawing() || kyoei_overlay_needs_redraw())")
 kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
   "#include \"common/assert.h\""
   "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_flip_trace.h\"\n#include \"common/assert.h\"")
@@ -352,10 +379,14 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE "${KYOEI_DOWNLOAD_ORIGINAL}" "${KYOEI_
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
+set(KYOEI_WINDOW "#include \"kyoei_overlay_gpu.h\"\n${KYOEI_WINDOW}")
+kyoei_replace_checked(KYOEI_WINDOW
+  "    SDL_Event event;"
+  "    KyoeiOverlay::UpdateTextInput(window);\n    SDL_Event event;")
 set(KYOEI_WINDOW "#include \"kyoei_input_mode.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "        gz_pad_event(event);"
-  "        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT) kyoei_input_keyboard();\n        else if (event.type == SDL_EVENT_GAMEPAD_BUTTON_DOWN) kyoei_input_controller_button();\n        else if (event.type == SDL_EVENT_GAMEPAD_AXIS_MOTION) kyoei_input_controller_axis(event.gaxis.axis,event.gaxis.value);\n        else if (event.type == SDL_EVENT_WINDOW_FOCUS_LOST || event.type == SDL_EVENT_GAMEPAD_REMOVED) kyoei_input_release();\n        gz_pad_event(event);")
+  "        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT) kyoei_input_keyboard();\n        else if (event.type == SDL_EVENT_GAMEPAD_BUTTON_DOWN) kyoei_input_controller_button();\n        else if (event.type == SDL_EVENT_GAMEPAD_AXIS_MOTION) kyoei_input_controller_axis(event.gaxis.axis,event.gaxis.value);\n        else if (event.type == SDL_EVENT_WINDOW_FOCUS_LOST || event.type == SDL_EVENT_GAMEPAD_REMOVED) kyoei_input_release();\n        if (KyoeiOverlay::HandleEvent(event)) continue;\n        gz_pad_event(event);")
 set(KYOEI_WINDOW "#include \"kyoei_window_options.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "base_title{title}"
@@ -371,6 +402,48 @@ kyoei_replace_checked(KYOEI_WINDOW
   "    int pixels_w=w,pixels_h=h; SDL_GetWindowSizeInPixels(window,&pixels_w,&pixels_h);\n    width.store(pixels_w); height.store(pixels_h);\n    const char* icon_path=std::getenv(\"KYOEI_WINDOW_ICON\");\n    if (icon_path && *icon_path) {\n        wchar_t icon_wide[1024];\n        if (!gz_widen(icon_path,icon_wide,1024)) {\n            static HICON game_icon=(HICON)LoadImageW(nullptr,icon_wide,IMAGE_ICON,0,0,LR_LOADFROMFILE|LR_DEFAULTSIZE);\n            if (game_icon) {\n                SendMessageW((HWND)window_info.render_surface,WM_SETICON,ICON_BIG,(LPARAM)game_icon);\n                SendMessageW((HWND)window_info.render_surface,WM_SETICON,ICON_SMALL,(LPARAM)game_icon);\n            }\n        }\n    }\n    gz_log(\"GPU: SDL window created (%dx%d), output=%dx%d fullscreen=%u\", w,h,pixels_w,pixels_h,options.fullscreen);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
+file(READ "${KYOEI_CORE}/gpu/vendor/vk_presenter.cpp" KYOEI_PRESENTER)
+set(KYOEI_PRESENTER "#include \"kyoei_overlay_gpu.h\"\n#include \"kyoei_overlay.h\"\n${KYOEI_PRESENTER}")
+kyoei_replace_checked(KYOEI_PRESENTER
+  "    pp_pass.Create(device, swapchain.GetSurfaceFormat().format);"
+  "    pp_pass.Create(device, swapchain.GetSurfaceFormat().format);\n    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());")
+kyoei_replace_checked(KYOEI_PRESENTER
+  "    flip_scheduler.Finish();"
+  "    flip_scheduler.Finish();\n    KyoeiOverlay::Shutdown();")
+kyoei_replace_checked(KYOEI_PRESENTER
+  "    Check(instance.GetDevice().resetFences(frame->present_done));"
+  "    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());\n    const bool kyoei_modal=kyoei_overlay_kind()!=0;\n    const auto kyoei_modal_revision=kyoei_overlay_revision();\n    Check(instance.GetDevice().resetFences(frame->present_done));")
+kyoei_replace_checked(KYOEI_PRESENTER
+  "            .newLayout = vk::ImageLayout::ePresentSrcKHR,"
+  "            .newLayout = kyoei_modal ? vk::ImageLayout::eColorAttachmentOptimal : vk::ImageLayout::ePresentSrcKHR,")
+kyoei_replace_checked(KYOEI_PRESENTER
+  "            .dstAccessMask = vk::AccessFlagBits::eNone,\n            .oldLayout = vk::ImageLayout::eTransferDstOptimal,"
+  "            .dstAccessMask = kyoei_modal ? vk::AccessFlagBits::eColorAttachmentRead | vk::AccessFlagBits::eColorAttachmentWrite : vk::AccessFlagBits::eNone,\n            .oldLayout = vk::ImageLayout::eTransferDstOptimal,")
+set(KYOEI_OVERLAY_PRESENT [=[    if (kyoei_modal) {
+        KyoeiOverlay::Render(cmd,swapchain.ImageView(),{swapchain.GetWidth(),swapchain.GetHeight()});
+        const vk::ImageMemoryBarrier to_present{
+            .srcAccessMask=vk::AccessFlagBits::eColorAttachmentWrite,
+            .dstAccessMask=vk::AccessFlagBits::eNone,
+            .oldLayout=vk::ImageLayout::eColorAttachmentOptimal,
+            .newLayout=vk::ImageLayout::ePresentSrcKHR,
+            .srcQueueFamilyIndex=VK_QUEUE_FAMILY_IGNORED,.dstQueueFamilyIndex=VK_QUEUE_FAMILY_IGNORED,
+            .image=swapchain.Image(),.subresourceRange=range};
+        cmd.pipelineBarrier(vk::PipelineStageFlagBits::eColorAttachmentOutput,vk::PipelineStageFlagBits::eBottomOfPipe,{}, {}, {},to_present);
+    }
+    kyoei_overlay_presented(kyoei_modal_revision);
+    SubmitInfo info{};
+    info.AddWait(swapchain.GetImageAcquiredSemaphore());]=])
+kyoei_replace_checked(KYOEI_PRESENTER
+  "    SubmitInfo info{};\n    info.AddWait(swapchain.GetImageAcquiredSemaphore());"
+  "${KYOEI_OVERLAY_PRESENT}")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp" CONTENT "${KYOEI_PRESENTER}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp"
+  src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp")
+target_include_directories(kyoei_videoout PRIVATE "${KYOEI_IMGUI_DIR}" "${KYOEI_IMGUI_DIR}/backends")
+set_source_files_properties(src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
+  PROPERTIES COMPILE_DEFINITIONS IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1)
+set_source_files_properties(src/kyoei_overlay_gpu.cpp PROPERTIES
+  COMPILE_DEFINITIONS "IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1;KYOEI_GUI_FONT_DIR=\"${KYOEI_SHAD}/src/imgui/renderer/fonts\"")
 target_include_directories(kyoei_videoout PRIVATE "${KYOEI_CORE}/gpu")
 target_sources(kyoei PRIVATE $<TARGET_OBJECTS:kyoei_videoout>)
 target_compile_features(kyoei_videoout PRIVATE cxx_std_23)
@@ -393,6 +466,18 @@ add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 add_executable(test_kyoei_name_model src/test_kyoei_name_model.c)
 add_executable(test_kyoei_input_mode src/test_kyoei_input_mode.c)
 add_executable(test_kyoei_list_model src/test_kyoei_list_model.c)
+add_executable(test_kyoei_overlay src/test_kyoei_overlay.cpp src/kyoei_overlay_model.cpp
+  src/kyoei_input_mode.c ${KYOEI_IMGUI_SOURCES})
+target_compile_features(test_kyoei_overlay PRIVATE cxx_std_23)
+target_compile_options(test_kyoei_overlay PRIVATE -UNDEBUG)
+target_compile_definitions(test_kyoei_overlay PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
+target_include_directories(test_kyoei_overlay PRIVATE src "${KYOEI_IMGUI_DIR}")
+add_executable(test_kyoei_ime_overlay src/test_kyoei_ime_overlay.cpp src/kyoei_ime.c
+  src/kyoei_overlay_model.cpp src/kyoei_input_mode.c)
+target_compile_features(test_kyoei_ime_overlay PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_ime_overlay PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
+target_include_directories(test_kyoei_ime_overlay PRIVATE src "${KYOEI_CORE}/src")
+target_link_libraries(test_kyoei_ime_overlay PRIVATE kyoei_imgui user32 gdi32)
 add_executable(test_kyoei_readback_batch src/test_kyoei_readback_batch.cpp)
 target_compile_features(test_kyoei_readback_batch PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_readback_batch PRIVATE _CRT_SECURE_NO_WARNINGS)

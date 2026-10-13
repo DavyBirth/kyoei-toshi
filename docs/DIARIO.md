@@ -964,6 +964,31 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   não declarar menus totalmente traduzidos, imagens traduzidas ou abertura
   real do novo launcher certificada. instruções em docs/ABRIR-JOGO.md.
 
+### 13/10/2026 — retomada persistente e integração de diálogos
+
+- Davy corrigiu o encerramento precoce: continuar o plano autonomamente,
+  sem pedir testes ou abrir jogo. Também indicou GoW3 PC e Bloodborne PC.
+- Referências públicas copiadas só para leitura em build, sem submódulos de
+  jogos nem execução. Commits/licenças/padrões em docs/FONTES-CODIGO.md.
+- Integração ImGui/Vulkan adaptada do GoW3; versão fixa ImGui 1.92.9b/MIT
+  adicionada separadamente do core Godzilla. Core/Godzilla permanecem intactos.
+- Nome, lista de saves, confirmações e progresso agora ligados às APIs reais
+  de overlay. Eventos SDL/pad encaminhados, entrada convidada neutra e redraw
+  do último frame em espera. Desligado por padrão; fallback nativo preservado.
+- Build kyoei PASS sem execução. test_kyoei_overlay PASS: desenho ImGui real,
+  bounds, edição, ownership de 1.025 slots, cancelamento/progresso/fallback.
+- test_kyoei_ime_overlay PASS: ABI real, filtros na thread de GetResult,
+  publicação, guards, Unicode, cancel/abort e lifecycle. Não escreve saves.
+- Corrigidos terminador residual na troca do nome inicial, Square apagar/
+  Triangle shift e escala cumulativa ao redimensionar. Regressão name_model
+  PASS. Testes reais anteriores de SaveList e DialogButtons PASS.
+- Launcher recompilado e prévia oculta inspecionada sem jogo. Nova opção
+  inglesa de diálogos e CheckOnly en -InGameDialogs PASS. Gameplay e composição
+  Vulkan não certificados offline; instruções em docs/OVERLAY-DIALOGOS.md.
+- Observação de hora durante fechamento deste checkpoint: 15:10 UTC / 12:10
+  Bahia. Primeiro checkpoint da manhã foi 06:53 Bahia; a correção de encerramento
+  ocorreu depois de 07:26. Quota percentual continua desconhecida; não alegar 3%.
+
 ### 13/10/2026 — nova prévia inglesa e análise estática do executável
 
 - Acrescentadas 36 entradas EN de conversas iniciais na rua e descritores de

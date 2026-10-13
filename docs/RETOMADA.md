@@ -2,6 +2,13 @@
 
 ## Estado mais recente: sessão offline executada
 
+Atualização posterior ao encerramento precoce: Davy pediu continuidade
+autônoma. Overlay de nomes/lista/confirmar/progresso agora ligado ao runtime
+real e compilado, opt-in no launcher inglês; fallback nativo preservado.
+test_kyoei_overlay e test_kyoei_ime_overlay PASS sem jogo. Ver
+docs/OVERLAY-DIALOGOS.md e docs/FONTES-CODIGO.md. A afirmação abaixo de modelo
+ainda desconectado é histórica: integração implementada, gameplay pendente.
+
 - Não abriu jogo. Não usar os 4% históricos como quota atual; percentual não
   acessível. Nenhum processo de jogo foi encontrado na preparação.
 - Inglês primeiro: 130 entradas, prévia privada runtime-preview-en-03 ativa

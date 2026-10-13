@@ -3,6 +3,7 @@
 #include <windows.h>
 #include "dialog_ui.h"
 #include "kyoei_list_model.h"
+#include "kyoei_overlay.h"
 static _Thread_local const wchar_t *const *kyoei_list_labels;
 static _Thread_local unsigned kyoei_list_count, kyoei_list_selected;
 static void kyoei_list_move(HWND window, uint32_t pressed) {
@@ -24,6 +25,8 @@ static void kyoei_list_draw(HDC dc, const RECT *r) {
 int kyoei_dialog_select(const wchar_t *title, const wchar_t *const *labels,
                         unsigned count, unsigned initial) {
     if (!count || !labels || initial >= count) return -1;
+    int overlay=kyoei_overlay_select(title,labels,count,initial);
+    if (overlay!=INT_MIN) return overlay;
     kyoei_list_labels = labels; kyoei_list_count = count; kyoei_list_selected = initial;
     int answer = gz_dialog_show(title, 512);
     kyoei_list_labels = NULL;
