@@ -156,3 +156,16 @@ blend. Stage 3=VS, 0=PS. Exigir status 1/count positivo. Buffers storage ou
 GPU dirty não são copiados. Palavra hexadecimal é dado bruto; tipo/matriz
 precisam ser confirmados pelo shader. Não garante capturar todos os parâmetros
 ou os bytes realmente consumidos pela GPU. Nenhuma correção ativada.
+
+## Correção do coletor após captura 172251
+
+1.885/1.781 perfis completos, zero perdas, mas nenhum uniform_sample. O filtro
+`!is_storage` estava errado: `Shader::BufferResource::IsStorage` nesta base
+retorna true até para constantes. Agora coleta somente recurso Guest sem
+`is_written`, mantendo as mesmas guardas de leitura/GPU dirty. Regressão com
+tipo real do renderer cobre esse caso. `constant_capture_present` distingue
+dados de constantes presentes de simples completude dos registros raster.
+
+Binário corrigido separado em `build/orb-pending/kyoei-orb-trace-next.exe`;
+mesmo atalho constantes usa essa versão. Não substitui o processo aberto.
+Ainda exige captura real para confirmar conteúdos e investigar transformação.

@@ -1,5 +1,6 @@
 #include "kyoei_raster_trace.h"
 #include "video_core/amdgpu/regs.h"
+#include "shader_recompiler/resource.h"
 #include <cstdarg>
 #include <cstdio>
 #include <string>
@@ -64,6 +65,10 @@ int main(int argc,char **) {
     selection.base_vertex=1000;SampleSelectedXY(vertex,selection,readable,clean,selected_copy);CHECK(vertex.status==4 && vertex.sample_count==0);
     selection.valid=0;SampleSelectedXY(vertex,selection,readable,clean,selected_copy);CHECK(vertex.status==8);
     UniformProbe uniform;uniform.address=100;uniform.bytes=80;
+    Shader::BufferResource resource{};resource.buffer_type=Shader::BufferType::Guest;
+    CHECK(resource.IsStorage(AmdGpu::Buffer{}) && CanSampleResource(resource));
+    resource.is_written=true;CHECK(!CanSampleResource(resource));
+    resource.is_written=false;resource.buffer_type=Shader::BufferType::Flatbuf;CHECK(!CanSampleResource(resource));
     unsigned uniform_reads=0;
     auto uniform_copy=[&](auto,void *out,uint64_t bytes) { ++uniform_reads;std::memset(out,0x12,bytes);return true; };
     SampleWords(uniform,readable,clean,uniform_copy);

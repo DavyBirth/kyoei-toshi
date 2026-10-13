@@ -39,6 +39,7 @@ def analyze(text):
         capture['log_complete']=capture['complete']
         capture['sampling_complete']=capture['complete'] and capture['dropped']==0
         rows=list(capture['profiles'].values());capture['profiles']=rows
+        capture['constant_capture_present']=any(row.get('uniform_samples') for row in rows)
         candidates=[]
         for row in rows:
             if 'xywh' not in row or 'scissor_xywh' not in row:continue

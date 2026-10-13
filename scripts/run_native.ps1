@@ -4,6 +4,7 @@ param([string]$Work = '', [switch]$CheckOnly, [ValidateSet('ja','en','pt-BR')][s
 $ErrorActionPreference = 'Stop'
 $kyoeiRoot = Split-Path $PSScriptRoot
 $kyoeiExecutable=Join-Path "$kyoeiRoot\build" $(if ($OrbTraceNext) { 'kyoei-orb-trace-next.exe' } elseif ($OrbTrace) { 'kyoei-orb-trace.exe' } else { 'kyoei.exe' })
+if ($OrbTraceNext) { $kyoeiExecutable=Join-Path "$kyoeiRoot\build\orb-pending" 'kyoei-orb-trace-next.exe' }
 $kyoeiProof = Get-Content -LiteralPath "$kyoeiRoot\docs\native-prepare.json" -Raw | ConvertFrom-Json
 if (-not $Work) { $Work = Split-Path $kyoeiProof.prepared_out }
 if ($kyoeiProof.title -ne 'CUSA03562' -or $kyoeiProof.version -ne '01.03') { throw 'Identidade inválida' }

@@ -1,5 +1,17 @@
 # Retomada — 13/10/2026
 
+Mais recente 172251: 1.885/1.781 perfis completos/sem perdas, mas ZERO constantes.
+Erro do diagnóstico: BufferResource::IsStorage sempre retorna true nesta base;
+filtrar !is_storage excluía constantes somente leitura. Corrigido para Guest
+e !is_written, mantendo guardas GPU dirty/leitura/limites. Teste com estrutura
+real comprova armazenamento storage e elegibilidade read-only; escrito/especial
+rejeitados. Build e testes PASS, parser nove PASS, CheckOnly PASS. Novo binário
+build/orb-pending/kyoei-orb-trace-next.exe; mesmo atalho constantes usa esse.
+PID 21636 continua com build/kyoei-orb-trace-next.exe antigo; não fechar ou
+substituir. Usuário precisa reiniciar por conta própria para nova coleta F9.
+Relatório 05 e captura orb-user-20261013-04.png privados; causa ainda desconhecida.
+Parser agora declara constant_capture_present, sem confundir com log completo.
+
 Log 20261013_162330 analisado: 1.957/1.707 perfis completos, zero descartes;
 relatório build/orb-raster-report-04.json. Davy relata corte agora à direita,
 confirmado em captura privada build/orb-user-20261013-03.png. PID 32984 aberto,

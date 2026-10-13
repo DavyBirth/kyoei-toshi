@@ -50,6 +50,10 @@ struct UniformProbe {
 };
 inline thread_local std::array<UniformProbe,8> current_uniforms{};
 inline thread_local unsigned current_uniform_count{};
+template<class Resource> bool CanSampleResource(const Resource &resource) {
+    // Vulkan storage classification also includes read-only constant buffers.
+    return !resource.IsSpecial() && !resource.is_written;
+}
 template<class Readable,class Dirty,class Copy>
 void SampleWords(UniformProbe &probe,Readable readable,Dirty dirty,Copy copy) {
     probe.words.fill(0);probe.word_count=0;

@@ -1,5 +1,21 @@
 # Diário do projeto
 
+### 13/10/2026 — filtro de constantes corrigido com recurso real do renderer
+
+- Captura 20261013_172251: 1.885/1.781 perfis, sem perdas, mas zero uniform_samples.
+  F9 de Davy funcionou; diagnóstico excluiu todos os buffers pelo filtro errado.
+- Causa demonstrada no código fixo shader_recompiler/resource.h: IsStorage
+  retorna true inclusive para constantes somente leitura. Corrigido filtro para
+  recurso Guest e !is_written; GPU dirty/limites/falha continuam protegidos.
+- Regressão usa Shader::BufferResource real: storage/read-only elegível;
+  escrito e especial rejeitados. Teste nativo/disabled PASS, parser nove PASS,
+  CheckOnly PASS. Parser registra ausência de constantes explicitamente.
+- Build corrigido em build/orb-pending, sem substituir executável aberto do PID
+  21636. Mesmo Testar orbe constantes EN.cmd aponta para nova versão. Nenhuma
+  partida iniciada/encerrada. Próxima coleta requer abertura pelo usuário.
+- Captura passiva orb-user-20261013-04.png: foto íntegra, contexto preservado.
+  Relatório 05 não permite avaliar transformação: não declarar faixa corrigida.
+
 ### 13/10/2026 — corte do orbe mudou de lado; constantes no instante do desenho
 
 - Davy registrou F9 e informou faixa agora na direita. Log 20261013_162330:

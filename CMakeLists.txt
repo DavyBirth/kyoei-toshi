@@ -440,7 +440,7 @@ kyoei_replace_checked(KYOEI_RASTERIZER
   "                              u32 max_count, VAddr count_address) {"
   "                              u32 max_count, VAddr count_address) {\n    KyoeiRasterTrace::current_selection={};KyoeiRasterTrace::current_uniforms={};KyoeiRasterTrace::current_uniform_count=0;")
 set(KYOEI_UNIFORM_PROBE [=[
-        if (KyoeiRasterTrace::Capturing() && !desc.IsSpecial() && !is_storage && size>0 &&
+        if (KyoeiRasterTrace::Capturing() && KyoeiRasterTrace::CanSampleResource(desc) && size>0 &&
             (stage.l_stage==Shader::LogicalStage::Vertex || stage.l_stage==Shader::LogicalStage::Fragment)) {
             u32 probe_blend{};std::memcpy(&probe_blend,&liverpool->regs.blend_control[0],4);
             if(probe_blend && KyoeiRasterTrace::current_uniform_count<KyoeiRasterTrace::current_uniforms.size()) {

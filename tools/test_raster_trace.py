@@ -53,6 +53,8 @@ Kyoei raster parameters: p=0 stage=vs start=0 words=00000000,00000000
         row=analyze(CAPTURE.replace('Kyoei raster capture end:',extra+'Kyoei raster capture end:'))['captures'][0]['profiles'][0]
         self.assertEqual(row['uniform_samples'][0]['count'],'16')
         self.assertEqual(row['uniform_samples'][0]['words'],'3f800000,00000000')
+        self.assertTrue(analyze(CAPTURE.replace('Kyoei raster capture end:',extra+'Kyoei raster capture end:'))['captures'][0]['constant_capture_present'])
+        self.assertFalse(analyze(CAPTURE)['captures'][0]['constant_capture_present'])
 
 
 if __name__=='__main__':unittest.main()
