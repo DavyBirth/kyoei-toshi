@@ -1,5 +1,16 @@
 # Retomada — 13/10/2026
 
+Nova captura 20261013_160452: IDs 1/2 completos, 839/1.133 perfis, zero perdas;
+nenhum candidato de recorte na esquerda. Relatório build/orb-raster-report-03.json.
+Os vértices anteriores eram começo de buffers UI compartilhados, não subdraws:
+não inferir limites das caixas desses XY. Diagnóstico separado recompilado agora
+resolve índices 16/32 bits, base vertex efetivo (inclusive fetch shader) e offsets
+diretos; indiretos marcados indisponíveis. samples/selection/indices/selected_xy
+no log. Testes negativos/limites/GPU dirty PASS, parser oito PASS, CheckOnly PASS.
+Normal SHA preservado, configuração CMake restaurada para kyoei. Próximo: repetir
+F9 antes e durante tutorial pelo mesmo Testar orbe EN.cmd. Sem correção visual
+comprovada; não mudar recorte por palpite. Nenhum jogo iniciado nesta análise.
+
 Capturas 20261013_143716 analisadas: tutorial sem perdas (255 perfis), recorte
 não mostra faixa/offset; baseline perdeu 1.045 ocorrências acima de 256 perfis.
 Não mudar scissor com esses dados. Complemento kyoei-orb-trace.exe compilado:

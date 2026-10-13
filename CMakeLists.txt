@@ -362,7 +362,7 @@ set(KYOEI_VERTEX_PROBE [=[
                 probe.address=buffer.base_address;probe.bytes=buffer.GetSize();probe.stride=buffer.GetStride();
                 probe.location=attributes[slot].location;probe.format=static_cast<u32>(attributes[slot].format);
                 if (bindings[slot].inputRate!=vk::VertexInputRate::eVertex) probe.status=6;
-                else KyoeiRasterTrace::SampleXY(probe,
+                else KyoeiRasterTrace::SampleSelectedXY(probe,KyoeiRasterTrace::current_selection,
                     [this](uint64_t addr,uint64_t bytes) { return memory->ClampRangeSize(addr,bytes)==bytes; },
                     [this](uint64_t addr,uint64_t bytes) { return IsRegionGpuModified(addr,bytes); },
                     [](uint64_t addr,void *dest,uint64_t bytes) { return gz_memory_copy(static_cast<uintptr_t>(addr),dest,bytes,0)!=0; });
@@ -422,6 +422,30 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONT
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_rasterizer.cpp" KYOEI_RASTERIZER)
 set(KYOEI_RASTERIZER "#include \"kyoei_raster_trace.h\"\n${KYOEI_RASTERIZER}")
+set(KYOEI_DRAW_SELECTION [=[
+    if (KyoeiRasterTrace::Capturing()) {
+        const auto &probe_vs=pipeline->GetStage(Shader::LogicalStage::Vertex);
+        const auto [probe_vertex,probe_instance]=GetDrawOffsets(regs,probe_vs,pipeline->GetFetchShader());
+        auto &selection=KyoeiRasterTrace::current_selection;
+        selection={};selection.valid=1;selection.indexed=is_indexed;selection.count=regs.num_indices;
+        selection.base_vertex=is_indexed?int64_t(static_cast<s32>(probe_vertex)):int64_t(probe_vertex);
+        selection.index_bytes=regs.index_buffer_type.index_type==AmdGpu::IndexType::Index16?2:4;
+        selection.address=regs.index_base_address.Address<VAddr>()+uint64_t(index_offset)*selection.index_bytes;
+    }
+]=])
+kyoei_replace_checked(KYOEI_RASTERIZER
+  "void Rasterizer::Draw(bool is_indexed, u32 index_offset) {"
+  "void Rasterizer::Draw(bool is_indexed, u32 index_offset) {\n    KyoeiRasterTrace::current_selection={};")
+kyoei_replace_checked(KYOEI_RASTERIZER
+  "                              u32 max_count, VAddr count_address) {"
+  "                              u32 max_count, VAddr count_address) {\n    KyoeiRasterTrace::current_selection={};")
+set(KYOEI_DIRECT_BIND [=[    const auto state = BeginRendering(pipeline);
+
+    buffer_cache.BindVertexBuffers(*pipeline, buffer_barriers);
+    if (is_indexed) {
+        buffer_cache.BindIndexBuffer(index_offset, buffer_barriers);]=])
+kyoei_replace_checked(KYOEI_RASTERIZER "${KYOEI_DIRECT_BIND}"
+  "    const auto state = BeginRendering(pipeline);\n${KYOEI_DRAW_SELECTION}\n    buffer_cache.BindVertexBuffers(*pipeline, buffer_barriers);\n    if (is_indexed) {\n        buffer_cache.BindIndexBuffer(index_offset, buffer_barriers);")
 set(KYOEI_SCISSOR_PUSH [=[        scissors.push_back({
             .offset = {vp_scsr.top_left_x, vp_scsr.top_left_y},
             .extent = {vp_scsr.GetWidth(), vp_scsr.GetHeight()},

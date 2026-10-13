@@ -16,6 +16,8 @@ struct VertexProbe {
     uint64_t address{},bytes{};
     unsigned location{},stride{},format{},status{};
     std::array<float,8> xy{};
+    unsigned sample_count{},selection_status{};
+    std::array<uint32_t,4> selected_indices{};
     bool operator==(const VertexProbe &) const=default;
 };
 template<class Readable,class Dirty,class Copy>
@@ -34,6 +36,49 @@ void SampleXY(VertexProbe &probe,Readable readable,Dirty dirty,Copy copy) {
 }
 inline thread_local std::array<VertexProbe,4> current_vertices{};
 inline thread_local unsigned current_vertex_count{};
+struct DrawSelection {
+    uint64_t address{};
+    unsigned count{},index_bytes{},indexed{},valid{};
+    int64_t base_vertex{};
+};
+inline thread_local DrawSelection current_selection{};
+template<class Readable,class Dirty,class Copy>
+void SampleSelectedXY(VertexProbe &probe,const DrawSelection &draw,Readable readable,Dirty dirty,Copy copy) {
+    probe.xy.fill(0);probe.sample_count=0;probe.selected_indices.fill(0);probe.selection_status=draw.valid;
+    if (!draw.valid) { probe.status=8;return; }
+    if (probe.format!=103 && probe.format!=106 && probe.format!=109) { probe.status=3;return; }
+    if (probe.stride<8 || probe.stride>256 || !draw.count) { probe.status=4;return; }
+    unsigned count=std::min(draw.count,4u);
+    if (draw.indexed) {
+        const uint64_t size=uint64_t(count)*draw.index_bytes;
+        if ((draw.index_bytes!=2 && draw.index_bytes!=4) || draw.address>UINT64_MAX-size || !readable(draw.address,size)) { probe.status=4;return; }
+        if (dirty(draw.address,size)) { probe.status=2;return; }
+        std::array<uint32_t,4> raw{};
+        if (!copy(draw.address,raw.data(),size)) { probe.status=7;return; }
+        for(unsigned i=0;i<count;++i) {
+            uint32_t index{};
+            if(draw.index_bytes==2) { uint16_t small{};std::memcpy(&small,reinterpret_cast<const char *>(raw.data())+i*2,2);index=small; }
+            else index=raw[i];
+            const int64_t selected=int64_t(index)+draw.base_vertex;
+            if(selected<0 || selected>UINT32_MAX) { probe.status=4;return; }
+            probe.selected_indices[i]=static_cast<uint32_t>(selected);
+        }
+    } else {
+        if(draw.base_vertex<0 || uint64_t(draw.base_vertex)+count-1>UINT32_MAX) { probe.status=4;return; }
+        for(unsigned i=0;i<count;++i) probe.selected_indices[i]=static_cast<uint32_t>(draw.base_vertex+i);
+    }
+    // Validate every range before copying any coordinates; never synchronize GPU data.
+    for(unsigned i=0;i<count;++i) {
+        const uint64_t offset=uint64_t(probe.selected_indices[i])*probe.stride;
+        if(offset>probe.bytes || probe.bytes-offset<8 || probe.address>UINT64_MAX-offset-8 || !readable(probe.address+offset,8)) { probe.status=4;return; }
+        if(dirty(probe.address+offset,8)) { probe.status=2;return; }
+    }
+    for(unsigned i=0;i<count;++i) {
+        if(!copy(probe.address+uint64_t(probe.selected_indices[i])*probe.stride,&probe.xy[i*2],8)) { probe.xy.fill(0);probe.status=7;return; }
+        if(!std::isfinite(probe.xy[i*2]) || !std::isfinite(probe.xy[i*2+1])) { probe.xy.fill(0);probe.status=5;return; }
+    }
+    probe.sample_count=count;probe.status=1;
+}
 struct Profile {
     uint64_t target{},vs{},ps{};
     std::array<int,4> screen{},window{},generic{},viewport_scissor{},scissor{};
@@ -93,8 +138,9 @@ inline void Presented() {
             p.generic[0],p.generic[1],p.generic[2],p.generic[3],p.viewport_scissor[0],p.viewport_scissor[1],p.viewport_scissor[2],p.viewport_scissor[3]);
         for(unsigned slot=0;slot<p.vertex_count;++slot) {
             const auto &v=p.vertices[slot];
-            gz_log("Kyoei raster vertex: p=%u slot=%u location=%u address=%llx bytes=%llu stride=%u format=%u status=%u first4_xy=%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f",
+            gz_log("Kyoei raster vertex: p=%u slot=%u location=%u address=%llx bytes=%llu stride=%u format=%u status=%u samples=%u selection=%u indices=%u,%u,%u,%u selected_xy=%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f",
                 i,slot,v.location,(unsigned long long)v.address,(unsigned long long)v.bytes,v.stride,v.format,v.status,
+                v.sample_count,v.selection_status,v.selected_indices[0],v.selected_indices[1],v.selected_indices[2],v.selected_indices[3],
                 v.xy[0],v.xy[1],v.xy[2],v.xy[3],v.xy[4],v.xy[5],v.xy[6],v.xy[7]);
         }
         for(unsigned j=0;j<p.parameter_count;j+=8) {

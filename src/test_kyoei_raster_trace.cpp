@@ -41,5 +41,27 @@ int main(int argc,char **) {
     CHECK(vertex.status==4 && copies==4);
     vertex.bytes=32;SampleXY(vertex,[](auto,auto){return true;},[](auto,auto){return false;},[](auto,void *,auto){return false;});
     CHECK(vertex.status==7 && vertex.xy[0]==0);
+    // Indexed UI subdraw: the selected vertices are nowhere near buffer start.
+    DrawSelection selection;selection.valid=1;selection.indexed=1;selection.index_bytes=2;
+    selection.address=1000;selection.count=3;selection.base_vertex=-2;
+    vertex.address=100;vertex.bytes=800;vertex.stride=8;
+    auto selected_copy=[](uint64_t address,void *out,uint64_t bytes) {
+        if(address==1000) { uint16_t indices[]={20,22,21};std::memcpy(out,indices,bytes); }
+        else { float values[]={float(address-100),1080};std::memcpy(out,values,bytes); }
+        return true;
+    };
+    auto readable=[](auto,auto){return true;};auto clean=[](auto,auto){return false;};
+    SampleSelectedXY(vertex,selection,readable,clean,selected_copy);
+    CHECK(vertex.status==1 && vertex.sample_count==3 && vertex.selected_indices[0]==18 && vertex.xy[0]==144 && vertex.xy[4]==152);
+    selection.index_bytes=4;
+    SampleSelectedXY(vertex,selection,readable,clean,[](uint64_t address,void *out,uint64_t bytes){
+        if(address==1000) { uint32_t indices[]={20,22,21};std::memcpy(out,indices,bytes); }
+        else { float values[]={1,2};std::memcpy(out,values,bytes); }return true;});
+    CHECK(vertex.status==1 && vertex.selected_indices[1]==20);
+    SampleSelectedXY(vertex,selection,readable,[](auto,auto){return true;},selected_copy);CHECK(vertex.status==2 && vertex.sample_count==0);
+    selection.indexed=0;selection.base_vertex=17;selection.count=4;
+    SampleSelectedXY(vertex,selection,readable,clean,selected_copy);CHECK(vertex.status==1 && vertex.selected_indices[3]==20);
+    selection.base_vertex=1000;SampleSelectedXY(vertex,selection,readable,clean,selected_copy);CHECK(vertex.status==4 && vertex.sample_count==0);
+    selection.valid=0;SampleSelectedXY(vertex,selection,readable,clean,selected_copy);CHECK(vertex.status==8);
     std::puts("RASTER TRACE PASS: real registers, independent flags, exact coordinates, deduplication, two frames, bounded profiles and retrigger; no GPU/window");
 }

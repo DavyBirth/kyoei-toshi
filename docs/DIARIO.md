@@ -1,5 +1,23 @@
 # Diário do projeto
 
+### 13/10/2026 — segunda captura do orbe e seleção real de vértices
+
+- Log de Davy 20261013_160452: duas capturas completas, 1.764/4.114 desenhos,
+  839/1.133 perfis, nenhum descarte e nenhum recorte à esquerda. Relatório
+  privado build/orb-raster-report-03.json. Causa da camada ainda não demonstrada.
+- Comparação por target/shaders/primitive/blend/depth/viewport/scissor: 188
+  estados comuns, 55 só antes, 74 só durante. Não equivalem a objetos visíveis;
+  há dois frames e targets alternados. Não atribuir defeito só pela diferença.
+- UI compartilha buffers grandes; quatro primeiras entradas repetidas em
+  centenas de desenhos não descrevem suas caixas. Complemento agora seleciona
+  índices 16/32 bits com deslocamento/base vertex efetivos, preservando renderer.
+  Amostra até quatro entradas do desenho; não é geometria pós-shader nem total.
+  Draw indireto fica explicitamente indisponível, sem reaproveitar seleção velha.
+- Build separado PASS; testes de índice 16/32, base negativa válida, deslocamento
+  direto, fora do buffer, GPU dirty e indisponível PASS. Parser oito PASS;
+  CheckOnly PASS e SHA normal preservado. Nenhuma partida iniciada. Próximo
+  registro F9 pelo mesmo atalho precisa de dados selected_xy antes/no tutorial.
+
 ### 13/10/2026 — leitura das capturas do orbe e complemento de geometria
 
 - Davy informou capturei. Log 20261013_143716 analisado: registro 1 atingiu

@@ -121,3 +121,21 @@ a referência usa três esperas, o lote usa duas, com bytes idênticos.
 Isso prova a redução de esperas nesse caso sintético, não ganho de FPS no jogo.
 Grupos com uma única imagem não têm esse benefício. Futuro teste deve usar a
 mesma cena, sem capturas durante a medição, distinguindo cidade, menu e carga.
+# Segunda captura e índices reais — 13/10/2026
+
+Log privado `20261013_160452.log`: 839 perfis antes e 1.133 durante, ambos
+completos e sem descartes. Nenhum recorte à esquerda. Relatório privado:
+`build/orb-raster-report-03.json`. Recorte não explica por si só a faixa.
+
+Limitação demonstrada: buffers UI são compartilhados por centenas de subdraws;
+`first4_xy` era o começo do buffer, e não a seleção de cada desenho. Não usar
+esses valores para inferir bordas da caixa. O diagnóstico seguinte registra
+`samples`, `selection`, `indices` e `selected_xy`, usando índices 16/32 bits,
+offset do buffer de índices e base vertex efetivo do mesmo GetDrawOffsets usado
+pelo renderer. Desenhos diretos usam o primeiro vértice efetivo. Indiretos
+ficam com status 8 (indisponível). Instanciados continuam ignorados.
+
+Só até quatro entradas são lidas, sem resolver primitivas completas, restart
+ou transformação pós-VS. Coordenadas de amostras inválidas não são válidas
+para análise; exigir status 1 e samples positivos. Dados GPU modificados são
+ignorados sem espera/download. Este complemento não corrige a faixa.
