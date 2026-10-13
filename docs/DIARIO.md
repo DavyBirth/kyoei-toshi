@@ -2,6 +2,11 @@
 
 ### 13/10/2026 — retorno ao vivo de Davy, 12:38 Bahia
 
+- Investigação posterior encontrou truncamento anterior ao desenho na rotina
+  0xa6d9a0: >=13 caracteres vira primeiros 11 + U+2026, produz exatamente
+  Listen to t…; largura calculada por contagem. Sem patch especulativo no
+  executável. Próximos chamadores/pontos de prova em HUD-INVESTIGACAO.md.
+
 - Davy abriu uma partida EN pelo launcher (PID 28332, log
   native-05/logs/20261013_122032.log), 1280×720 com InGameDialogs. Não iniciada
   pelo agente; preservar processo, executable e pacote em uso.

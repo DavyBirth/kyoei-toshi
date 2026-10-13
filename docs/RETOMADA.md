@@ -6,6 +6,9 @@ Capturas sem controles confirmam cortes de interação/objetivo; ver
 docs/m3/HUD-INVESTIGACAO.md. Relato de lentidão ainda sem comparação de FPS.
 Take a closer look corrige rascunho p0/k30, validado EN, pacote ativo inalterado.
 Regressão de progresso não cancelável por controles e barreiras Vulkan PASS.
+Descoberta seguinte: rotina 0xa6d9a0 corta >=13 para 11 caracteres + U+2026
+e calcula placa por contagem. Prefixo bate com captura. Próximo passo verificar
+chamadores 0xa1de11/0xa6d2cf e ligação ao recurso; não alterar utilitário global.
 
 ## Estado mais recente: sessão offline executada
 

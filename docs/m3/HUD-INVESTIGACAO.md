@@ -98,3 +98,27 @@ durante caminhada sem diálogo. Isso não mede custo total nem exclui regressão
 Próximo diagnóstico: comparação com frame stats na mesma cena/configuração,
 quando houver uma próxima abertura autorizada, incluindo diálogos ligados e
 desligados. Não atribuir a perda à tradução sem evidência.
+
+## Caminho de truncamento encontrado após as capturas
+
+Desmontagem em fronteiras de função confirma `0xa6d9a0`: conta caracteres
+com `0x31cd90`; se comprimento >= 13, copia os primeiros 11 e acrescenta
+U+2026, literal em `0x10c7911`. O resultado para a tradução da captura é
+exatamente `Listen to t…`. Depois atribui o texto ao nó armazenado em
+objeto+0x278, string em nó+0x110. A rotina usa contagem para dimensionar
+outro nó em objeto+0x238: valor em nó+0x80 = n*0,80555558+0,88888890;
+quando truncado, n=12. Isso demonstra corte anterior ao renderer e cálculo
+por quantidade, não por advances da fonte. A associação à captura é forte,
+mas ainda não foi confirmada por trace da chamada na partida.
+
+Chamadores candidatos `0xa1de11` e `0xa6d2cf`: próxima etapa é verificar
+instruções e ligar o nó à carga do recurso, antes de alterar comportamento.
+Não mudar globalmente `0x31cd90`: é utilitário compartilhado de strings.
+Uma correção local precisa preservar limites de tela e medir placa/texto
+pela fonte real, além de retirar o corte antecipado. Dump e partida intactos.
+
+Outros consumidores de text_marker: LEAs confirmadas em `0xaea76c` e
+`0xb025b1`; o primeiro tem outro limite, >=9 corta para sete + U+2026.
+Logo não há um único limite global para todas as caixas. Relatório técnico
+privado: build/interaction-hud-references.json. Não reutilizar números de
+uma rotina como correção universal.
