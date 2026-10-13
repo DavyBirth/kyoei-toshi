@@ -16,7 +16,8 @@ def digest(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('archive', help='Nome no catalogo, por exemplo system.psarc')
-    parser.add_argument('--entry', help='Caminho exato dentro do pacote; sem isso, restaura o pacote inteiro')
+    parser.add_argument('--entry', action='append', help='Caminho exato; pode repetir para recuperar varios recursos')
+    parser.add_argument('--entries-file', type=Path, help='JSON com lista de caminhos exatos, para uma recuperacao seletiva')
     args = parser.parse_args()
     proof = json.loads((REPO/'docs/m1/formats.json').read_text(encoding='utf8'))
     ledger = REPO/'work/m1/catalog.json'
@@ -36,12 +37,19 @@ def main():
     if digest(archive_path) != record['archive_sha256']:
         raise ValueError('PSARC mudou desde M0')
     expected = {row['path']:row for row in record['files']}
-    if args.entry is not None and args.entry not in expected:
+    selected=set(args.entry or [])
+    if args.entries_file:
+        entries=json.loads(args.entries_file.read_text(encoding='utf8'))
+        if not isinstance(entries,list) or not all(isinstance(name,str) for name in entries):
+            raise ValueError('Lista de recursos invalida')
+        selected.update(entries)
+    selective=args.entry is not None or args.entries_file is not None
+    if any(name not in expected for name in selected):
         raise ValueError('Recurso fora do catalogo')
     restored = 0
     with Psarc(archive_path) as archive:
         for entry in archive.entries[1:]:
-            if args.entry is not None and entry.name != args.entry:
+            if selective and entry.name not in selected:
                 continue
             row = expected[entry.name]
             output = root/Path(args.archive).stem/safe_name(entry.name)

@@ -1,0 +1,1210 @@
+{
+  "scanned_resources": 1025,
+  "missing_resources": [],
+  "heuristic_japanese_runs": 120,
+  "private_output": "G:\\kyoei-toshi-work\\translation\\catalog-01\\supplementary",
+  "hits": [
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_save_dialog_2.hud",
+      "offset": 1136,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "ff0bfa981e1e588ce4c06974d9a41258b50bc95870322ee708b48af4f50ab902",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_save_dialog_2.hud",
+      "offset": 1203,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "ff0bfa981e1e588ce4c06974d9a41258b50bc95870322ee708b48af4f50ab902",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item_dialog.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "8c7257db3bcf67c0e6899deaab6170d995d6bd6e2eeded41f21d71a6ec25a9b1",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item_dialog.hud",
+      "offset": 4084,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "8c7257db3bcf67c0e6899deaab6170d995d6bd6e2eeded41f21d71a6ec25a9b1",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item_dialog.hud",
+      "offset": 4130,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "8c7257db3bcf67c0e6899deaab6170d995d6bd6e2eeded41f21d71a6ec25a9b1",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/warning_icon.hud",
+      "offset": 139,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "f6133bf58b540c3d58c6998a900a84fdaf02b3700331e5c71bcc39cf18be0a80",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/loading/loading_progress_bar.hud",
+      "offset": 146,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "1405890b0f25008effba56f6c09c454cbcffbe58501dea0bbd8487037b923f6b",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "offset": 100,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "offset": 148,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "offset": 213,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "offset": 264,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "offset": 322,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "offset": 381,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "offset": 442,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kinshi_run.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "713ddde133c1b3e11f09bc44589c8fb69cf58ace4a02229eb37776f48b2121eb",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kinshi_run.hud",
+      "offset": 104,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "713ddde133c1b3e11f09bc44589c8fb69cf58ace4a02229eb37776f48b2121eb",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kinshi_run.hud",
+      "offset": 155,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "713ddde133c1b3e11f09bc44589c8fb69cf58ace4a02229eb37776f48b2121eb",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kinshi_run.hud",
+      "offset": 211,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "713ddde133c1b3e11f09bc44589c8fb69cf58ace4a02229eb37776f48b2121eb",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kinshi_run.hud",
+      "offset": 273,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "713ddde133c1b3e11f09bc44589c8fb69cf58ace4a02229eb37776f48b2121eb",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kinshi_run.hud",
+      "offset": 335,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "713ddde133c1b3e11f09bc44589c8fb69cf58ace4a02229eb37776f48b2121eb",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/store_dialog.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "0ba2e2e2efe3cd9914dd366a9c5e563adf26cfbedb05aed880a9ad8f2e3bcada",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/store_dialog.hud",
+      "offset": 98,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "0ba2e2e2efe3cd9914dd366a9c5e563adf26cfbedb05aed880a9ad8f2e3bcada",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/store_dialog.hud",
+      "offset": 2965,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "0ba2e2e2efe3cd9914dd366a9c5e563adf26cfbedb05aed880a9ad8f2e3bcada",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/store_dialog.hud",
+      "offset": 3011,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "0ba2e2e2efe3cd9914dd366a9c5e563adf26cfbedb05aed880a9ad8f2e3bcada",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_dialog_title.hud",
+      "offset": 4025,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "cb3c676b3ad131864f7f603f9bc199678e3287d7d08aef2b68d465864646e0bc",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_dialog_title.hud",
+      "offset": 4092,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "cb3c676b3ad131864f7f603f9bc199678e3287d7d08aef2b68d465864646e0bc",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_save_dialog.hud",
+      "offset": 4107,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "2433633683d5b0ce53f1eb522ee1af3048bc3c978cd2d9a4a31ab9d7634fab3f",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_save_dialog.hud",
+      "offset": 4174,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "2433633683d5b0ce53f1eb522ee1af3048bc3c978cd2d9a4a31ab9d7634fab3f",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/loading/loading_tips.hud",
+      "offset": 1692,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "88b46979cde2ed5ed93367b46fc5d95f1c807f01e3f6a3df4666714c337f8c8f",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/loading/loading_tips.hud",
+      "offset": 1744,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "88b46979cde2ed5ed93367b46fc5d95f1c807f01e3f6a3df4666714c337f8c8f",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/loading/loading_tips.hud",
+      "offset": 1799,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "88b46979cde2ed5ed93367b46fc5d95f1c807f01e3f6a3df4666714c337f8c8f",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/loading/loading_tips.hud",
+      "offset": 1851,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "88b46979cde2ed5ed93367b46fc5d95f1c807f01e3f6a3df4666714c337f8c8f",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kaihi_action/kaihi_action_bucket.hud",
+      "offset": 472,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "5d129febf56e28240fa8292a7a22539ed1d0f4be0901b2a865f6deddb853bb74",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kaihi_action/kaihi_action_bucket.hud",
+      "offset": 530,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "5d129febf56e28240fa8292a7a22539ed1d0f4be0901b2a865f6deddb853bb74",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kaihi_action/kaihi_action_bucket.hud",
+      "offset": 579,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "5d129febf56e28240fa8292a7a22539ed1d0f4be0901b2a865f6deddb853bb74",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/option/menu_option_brightness.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "a36e84fcd1f4969c1993b3ca3a31658fd72266333563e76ec5650753259878ee",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/option/menu_option.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "5c41b79c02e55446addf0d10b6031f7f9938008c2391f4f29c3ac8dbf2028ce3",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/option/menu_option.hud",
+      "offset": 128,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "5c41b79c02e55446addf0d10b6031f7f9938008c2391f4f29c3ac8dbf2028ce3",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/option/menu_option.hud",
+      "offset": 54919,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "5c41b79c02e55446addf0d10b6031f7f9938008c2391f4f29c3ac8dbf2028ce3",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/option/menu_option.hud",
+      "offset": 54984,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "5c41b79c02e55446addf0d10b6031f7f9938008c2391f4f29c3ac8dbf2028ce3",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_dialog.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "a0807d047dc7b0c413abe59550309a3c85c5799fa6285fe315751d55cbca61d1",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_dialog.hud",
+      "offset": 98,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "a0807d047dc7b0c413abe59550309a3c85c5799fa6285fe315751d55cbca61d1",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_dialog.hud",
+      "offset": 4374,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "a0807d047dc7b0c413abe59550309a3c85c5799fa6285fe315751d55cbca61d1",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_dialog.hud",
+      "offset": 4441,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "a0807d047dc7b0c413abe59550309a3c85c5799fa6285fe315751d55cbca61d1",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_next_page.hud",
+      "offset": 4025,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "21f8e6007597263fefebb7eaecc14b1e1af5a79369880de052aafb68b42a3d74",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_next_page.hud",
+      "offset": 4092,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "21f8e6007597263fefebb7eaecc14b1e1af5a79369880de052aafb68b42a3d74",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item_item.hud",
+      "offset": 20256,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "2fbbfe3e5591d402b76d52026ed9f724a7d6d003728a8d9f606a1520819ec42f",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "73c44725d068c1f94a254e1f4b80ffaa87650bf82ba27a1240acb65debe79346",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item.hud",
+      "offset": 107,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "73c44725d068c1f94a254e1f4b80ffaa87650bf82ba27a1240acb65debe79346",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/mail/menu_mail_detail_reply.hud",
+      "offset": 107,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "eb911f363aaabbc203c92d4e0cb25f5fbca15d1ea48cd446e8bccf837b818444",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/numeric_keypad/numeric_keypad.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "9e7c61855cd2913ed459be3ae1cf213529e235c9057ffc2d60895a10d1e7f700",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/numeric_keypad/numeric_keypad.hud",
+      "offset": 155,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "9e7c61855cd2913ed459be3ae1cf213529e235c9057ffc2d60895a10d1e7f700",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/numeric_keypad/numeric_keypad.hud",
+      "offset": 246,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "9e7c61855cd2913ed459be3ae1cf213529e235c9057ffc2d60895a10d1e7f700",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/numeric_keypad/numeric_keypad.hud",
+      "offset": 309,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "9e7c61855cd2913ed459be3ae1cf213529e235c9057ffc2d60895a10d1e7f700",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/store_select_num_cstm.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "04e204a9b976e98d3129729e6889df88c0a4da31e24606357cbcd10e6bde2ce5",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/mail/menu_mail_detail_select.hud",
+      "offset": 52,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "901a09ee3c55d6f483fc9ec132e7dc341fc6f389e90f40decf58a779105717a0",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/mail/menu_mail_detail_select.hud",
+      "offset": 111,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "901a09ee3c55d6f483fc9ec132e7dc341fc6f389e90f40decf58a779105717a0",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/mail/menu_mail_detail_select.hud",
+      "offset": 170,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "901a09ee3c55d6f483fc9ec132e7dc341fc6f389e90f40decf58a779105717a0",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 3540,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 6265,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 8074,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 10831,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 11812,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 12764,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 13746,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 14727,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 15707,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 16575,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 17557,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 37227,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 38105,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 38974,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 39928,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 40881,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 41834,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 42787,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 43740,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 44693,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 45647,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 46516,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 47570,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 48419,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 49372,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 50325,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 51278,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 52231,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "offset": 53276,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 587,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 672,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 1239,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 1374,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 1972,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 2082,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 2655,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 2765,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 3338,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 3448,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 4019,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 4154,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 4750,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 4885,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 5483,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 5618,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 6214,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 6349,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 6947,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 7082,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 7680,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 7790,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 8363,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 8498,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 9096,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 9206,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 9779,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 9914,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 10510,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 10645,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 13230,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "offset": 13451,
+      "offset_space": "decompressed_payload",
+      "source_sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "encoding": "utf8",
+      "kind": "heuristic_run",
+      "status": "structure_unverified"
+    }
+  ],
+  "visible_text_coverage_verified": false,
+  "reinsertion_supported": false
+}

@@ -1,0 +1,22 @@
+{
+  "format": "kyoei-protected-names-v1",
+  "status": "initial_incomplete",
+  "policy": "Preserve personal identity. Use verified official Latin spellings, never translate a name's literal meaning. Player-entered names and substitution tokens remain unchanged. Unverified readings require human review.",
+  "entries": [
+    {
+      "id": "ultraman",
+      "source_forms": ["ウルトラマン"],
+      "en": "Ultraman",
+      "pt-BR": "Ultraman",
+      "source": "https://tsuburaya-prod.com/heroes/ultraman"
+    },
+    {
+      "id": "alien-zarab",
+      "source_forms": ["ザラブ星人"],
+      "en": "Alien Zarab",
+      "pt-BR": "Alien Zarab",
+      "source": "https://tsuburaya-prod.com/encyclopedia/alien-zarab"
+    }
+  ],
+  "pending": ["Human characters: confirm readings and official spellings before adding approved entries."]
+}

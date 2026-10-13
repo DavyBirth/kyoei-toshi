@@ -1,0 +1,611 @@
+{
+  "catalog_sha256": "7060a3cffe96b1be7b13a4255f35a7ddb5eb3cc80055b8dfbbf65db89155b880",
+  "inventoried_files": 72961,
+  "scope_counts": {
+    "texture_inventory": 51266,
+    "unverified_asset_family": 19135,
+    "structured_text_extraction": 2331,
+    "supplementary_text_hits": 23,
+    "movie_review_pending": 4,
+    "audio_preserved": 202
+  },
+  "all_visible_text_identified": false,
+  "families": [
+    {
+      "extension": ".acb",
+      "scope": "audio_preserved",
+      "files": 142,
+      "bytes": 411406176,
+      "next_step": "check_story_subtitle_coverage_without_dubbing"
+    },
+    {
+      "extension": ".acb_tmp",
+      "scope": "audio_preserved",
+      "files": 5,
+      "bytes": 14388384,
+      "next_step": "check_story_subtitle_coverage_without_dubbing"
+    },
+    {
+      "extension": ".acf",
+      "scope": "audio_preserved",
+      "files": 1,
+      "bytes": 7488,
+      "next_step": "check_story_subtitle_coverage_without_dubbing"
+    },
+    {
+      "extension": ".awb",
+      "scope": "audio_preserved",
+      "files": 54,
+      "bytes": 548954774,
+      "next_step": "check_story_subtitle_coverage_without_dubbing"
+    },
+    {
+      "extension": ".mp4",
+      "scope": "movie_review_pending",
+      "files": 1,
+      "bytes": 1959100,
+      "next_step": "check_burned_in_text_and_subtitle_tracks"
+    },
+    {
+      "extension": ".usm",
+      "scope": "movie_review_pending",
+      "files": 3,
+      "bytes": 327157024,
+      "next_step": "check_burned_in_text_and_subtitle_tracks"
+    },
+    {
+      "extension": ".csh",
+      "scope": "structured_text_extraction",
+      "files": 2032,
+      "bytes": 3020568,
+      "next_step": "context_and_human_review"
+    },
+    {
+      "extension": ".luc",
+      "scope": "structured_text_extraction",
+      "files": 299,
+      "bytes": 3926165,
+      "next_step": "context_and_human_review"
+    },
+    {
+      "extension": ".csd",
+      "scope": "supplementary_text_hits",
+      "files": 2,
+      "bytes": 19692,
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "extension": ".hud",
+      "scope": "supplementary_text_hits",
+      "files": 21,
+      "bytes": 45584,
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "extension": ".tex",
+      "scope": "texture_inventory",
+      "files": 51266,
+      "bytes": 15281285124,
+      "next_step": "interface_image_review"
+    },
+    {
+      "extension": ".bch",
+      "scope": "unverified_asset_family",
+      "files": 116,
+      "bytes": 31272,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".cht",
+      "scope": "unverified_asset_family",
+      "files": 115,
+      "bytes": 30475,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".cms",
+      "scope": "unverified_asset_family",
+      "files": 118,
+      "bytes": 7105392,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".co",
+      "scope": "unverified_asset_family",
+      "files": 2,
+      "bytes": 4508,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".coj",
+      "scope": "unverified_asset_family",
+      "files": 770,
+      "bytes": 394835,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".crv",
+      "scope": "unverified_asset_family",
+      "files": 357,
+      "bytes": 154505,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".csd",
+      "scope": "unverified_asset_family",
+      "files": 192,
+      "bytes": 1644917,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".eff",
+      "scope": "unverified_asset_family",
+      "files": 903,
+      "bytes": 1336131,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".eo",
+      "scope": "unverified_asset_family",
+      "files": 1,
+      "bytes": 1172,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".go",
+      "scope": "unverified_asset_family",
+      "files": 6,
+      "bytes": 20732,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".h",
+      "scope": "unverified_asset_family",
+      "files": 143,
+      "bytes": 507013,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".hfp",
+      "scope": "unverified_asset_family",
+      "files": 2,
+      "bytes": 492,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".hud",
+      "scope": "unverified_asset_family",
+      "files": 128,
+      "bytes": 189446,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".lst",
+      "scope": "unverified_asset_family",
+      "files": 45,
+      "bytes": 193216,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".m3r",
+      "scope": "unverified_asset_family",
+      "files": 390,
+      "bytes": 3145059,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".mbl",
+      "scope": "unverified_asset_family",
+      "files": 7,
+      "bytes": 1412,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".mcv",
+      "scope": "unverified_asset_family",
+      "files": 28,
+      "bytes": 8782,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".mdc",
+      "scope": "unverified_asset_family",
+      "files": 3685,
+      "bytes": 6810479,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".mdl",
+      "scope": "unverified_asset_family",
+      "files": 3682,
+      "bytes": 1808654925,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".mik",
+      "scope": "unverified_asset_family",
+      "files": 3,
+      "bytes": 750,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".mip",
+      "scope": "unverified_asset_family",
+      "files": 4,
+      "bytes": 777,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".mpk",
+      "scope": "unverified_asset_family",
+      "files": 1862,
+      "bytes": 591245050,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".msi",
+      "scope": "unverified_asset_family",
+      "files": 397,
+      "bytes": 101632,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".msq",
+      "scope": "unverified_asset_family",
+      "files": 2955,
+      "bytes": 587243,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".msqp",
+      "scope": "unverified_asset_family",
+      "files": 404,
+      "bytes": 126755,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".mvw",
+      "scope": "unverified_asset_family",
+      "files": 402,
+      "bytes": 102893,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".nam",
+      "scope": "unverified_asset_family",
+      "files": 45,
+      "bytes": 256222,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".pak",
+      "scope": "unverified_asset_family",
+      "files": 45,
+      "bytes": 303633536,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".pln",
+      "scope": "unverified_asset_family",
+      "files": 1,
+      "bytes": 194,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".po",
+      "scope": "unverified_asset_family",
+      "files": 1564,
+      "bytes": 2927016,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".psb",
+      "scope": "unverified_asset_family",
+      "files": 14,
+      "bytes": 9687,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".psd",
+      "scope": "unverified_asset_family",
+      "files": 20,
+      "bytes": 154268,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".rrd",
+      "scope": "unverified_asset_family",
+      "files": 2,
+      "bytes": 1893,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".rsc",
+      "scope": "unverified_asset_family",
+      "files": 29,
+      "bytes": 10356,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".rss",
+      "scope": "unverified_asset_family",
+      "files": 34,
+      "bytes": 23797,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".rtd",
+      "scope": "unverified_asset_family",
+      "files": 256,
+      "bytes": 305932,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".scb",
+      "scope": "unverified_asset_family",
+      "files": 2,
+      "bytes": 24598,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".spk",
+      "scope": "unverified_asset_family",
+      "files": 30,
+      "bytes": 4919505,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".tbl",
+      "scope": "unverified_asset_family",
+      "files": 7,
+      "bytes": 1792,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".tik",
+      "scope": "unverified_asset_family",
+      "files": 3,
+      "bytes": 759,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".tip",
+      "scope": "unverified_asset_family",
+      "files": 4,
+      "bytes": 1048,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".vo",
+      "scope": "unverified_asset_family",
+      "files": 356,
+      "bytes": 1105132,
+      "next_step": "determine_whether_visible_text_exists"
+    },
+    {
+      "extension": ".vsb",
+      "scope": "unverified_asset_family",
+      "files": 6,
+      "bytes": 5062,
+      "next_step": "determine_whether_visible_text_exists"
+    }
+  ],
+  "focused_review_queue": [
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_save_dialog_2.hud",
+      "bytes": 865,
+      "sha256": "ff0bfa981e1e588ce4c06974d9a41258b50bc95870322ee708b48af4f50ab902",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item_dialog.hud",
+      "bytes": 1494,
+      "sha256": "8c7257db3bcf67c0e6899deaab6170d995d6bd6e2eeded41f21d71a6ec25a9b1",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/warning_icon.hud",
+      "bytes": 1069,
+      "sha256": "f6133bf58b540c3d58c6998a900a84fdaf02b3700331e5c71bcc39cf18be0a80",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/loading/loading_progress_bar.hud",
+      "bytes": 1806,
+      "sha256": "1405890b0f25008effba56f6c09c454cbcffbe58501dea0bbd8487037b923f6b",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/cockpit/hpst/cockpit_hpst.hud",
+      "bytes": 4928,
+      "sha256": "e45005dde2f63c36d91a983c6592c765c01865cb7f84d7fd2dcd3b04818f1e62",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kinshi_run.hud",
+      "bytes": 883,
+      "sha256": "713ddde133c1b3e11f09bc44589c8fb69cf58ace4a02229eb37776f48b2121eb",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/store_dialog.hud",
+      "bytes": 1288,
+      "sha256": "0ba2e2e2efe3cd9914dd366a9c5e563adf26cfbedb05aed880a9ad8f2e3bcada",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_dialog_title.hud",
+      "bytes": 1451,
+      "sha256": "cb3c676b3ad131864f7f603f9bc199678e3287d7d08aef2b68d465864646e0bc",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_save_dialog.hud",
+      "bytes": 1525,
+      "sha256": "2433633683d5b0ce53f1eb522ee1af3048bc3c978cd2d9a4a31ab9d7634fab3f",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/loading/loading_tips.hud",
+      "bytes": 893,
+      "sha256": "88b46979cde2ed5ed93367b46fc5d95f1c807f01e3f6a3df4666714c337f8c8f",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/kaihi_action/kaihi_action_bucket.hud",
+      "bytes": 616,
+      "sha256": "5d129febf56e28240fa8292a7a22539ed1d0f4be0901b2a865f6deddb853bb74",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/option/menu_option_brightness.hud",
+      "bytes": 1889,
+      "sha256": "a36e84fcd1f4969c1993b3ca3a31658fd72266333563e76ec5650753259878ee",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/option/menu_option.hud",
+      "bytes": 8441,
+      "sha256": "5c41b79c02e55446addf0d10b6031f7f9938008c2391f4f29c3ac8dbf2028ce3",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_dialog.hud",
+      "bytes": 1554,
+      "sha256": "a0807d047dc7b0c413abe59550309a3c85c5799fa6285fe315751d55cbca61d1",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/Intermission/IM_next_page.hud",
+      "bytes": 1449,
+      "sha256": "21f8e6007597263fefebb7eaecc14b1e1af5a79369880de052aafb68b42a3d74",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item_item.hud",
+      "bytes": 3796,
+      "sha256": "2fbbfe3e5591d402b76d52026ed9f724a7d6d003728a8d9f606a1520819ec42f",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/item/menu_item.hud",
+      "bytes": 1776,
+      "sha256": "73c44725d068c1f94a254e1f4b80ffaa87650bf82ba27a1240acb65debe79346",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/mail/menu_mail_detail_reply.hud",
+      "bytes": 2701,
+      "sha256": "eb911f363aaabbc203c92d4e0cb25f5fbca15d1ea48cd446e8bccf837b818444",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/numeric_keypad/numeric_keypad.hud",
+      "bytes": 3238,
+      "sha256": "9e7c61855cd2913ed459be3ae1cf213529e235c9057ffc2d60895a10d1e7f700",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/store_select_num_cstm.hud",
+      "bytes": 2119,
+      "sha256": "04e204a9b976e98d3129729e6889df88c0a4da31e24606357cbcd10e6bde2ce5",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "common.psarc",
+      "resource": "hud/menu/mail/menu_mail_detail_select.hud",
+      "bytes": 1803,
+      "sha256": "901a09ee3c55d6f483fc9ec132e7dc341fc6f389e90f40decf58a779105717a0",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "movie.psarc",
+      "resource": "Title01.usm",
+      "bytes": 304469920,
+      "sha256": "1ec4be48586ecb369fb7a1bce76515ece377c5bfe4b639c2331120ed2b40fcde",
+      "scope": "movie_review_pending",
+      "next_step": "check_burned_in_text_and_subtitle_tracks"
+    },
+    {
+      "archive": "movie.psarc",
+      "resource": "Gzcm.usm",
+      "bytes": 9235776,
+      "sha256": "7a1d5256020fcd314c8067a84789956dafe415d7fea252b9ac9f4002f4396007",
+      "scope": "movie_review_pending",
+      "next_step": "check_burned_in_text_and_subtitle_tracks"
+    },
+    {
+      "archive": "movie.psarc",
+      "resource": "test.mp4",
+      "bytes": 1959100,
+      "sha256": "f6562dfa0dbddbcde3000755e3b0bc59abb7402b9347da075ef173c408176fa5",
+      "scope": "movie_review_pending",
+      "next_step": "check_burned_in_text_and_subtitle_tracks"
+    },
+    {
+      "archive": "movie.psarc",
+      "resource": "201news.usm",
+      "bytes": 13451328,
+      "sha256": "cfd62b6cc81fa918b98d6feccea7b4a8698baac0bf9588d76b50393fd1fafa51",
+      "scope": "movie_review_pending",
+      "next_step": "check_burned_in_text_and_subtitle_tracks"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_8.csd",
+      "bytes": 9483,
+      "sha256": "54e9192bc23418fe6f2155f1392340b834c1bfaebddf47970e93876be42a2a06",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    },
+    {
+      "archive": "stage202.psarc",
+      "resource": "charset/charset_5.csd",
+      "bytes": 10209,
+      "sha256": "565a4cd9ade324f6e1e1dc2d65e28eaa9fb85b7aaf699c483e09167dd7bb8729",
+      "scope": "supplementary_text_hits",
+      "next_step": "decode_structure_before_reinsertion"
+    }
+  ]
+}

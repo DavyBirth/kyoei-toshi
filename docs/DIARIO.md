@@ -833,3 +833,52 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Piloto do começo localizado: Text_Stage_201.luc tem 749 candidatos;
   map_goal_text.luc contém objetivos/marcadores observados. IDs e escopo
   documentados sem versionar originais. Nenhuma tradução aplicada ainda.
+
+### 12/10/2026 — preparação integral e proteção de nomes
+
+- Davy autorizou preparação de todos os textos e imagens de interface,
+  preservando anúncios/placas ambientais. Relatou flash preto nos menus e
+  textura estranha no tutorial do orbe; ambos seguem sem correção comprovada.
+- Uma execução foi aberta para verificar readback apesar de Davy dizer que
+  não testaria. Erro reconhecido. Orientação atual: não abrir o jogo; continuar
+  apenas ferramentas e testes offline. Nenhuma tradução aplicada ao dump.
+- Catálogo privado translation/catalog-01 em G:/kyoei-toshi-work:
+  2.331 recursos auditados, 230.622 ocorrências UTF-8 e 4.447 de outra codificação;
+  classificação preliminar encontra 15.687 candidatos. Não certifica toda a
+  cobertura do jogo. Varredura complementar encontrou 120 trechos em HUD/CSD,
+  cuja estrutura de reinserção ainda precisa ser estudada.
+- Inventário de 51.266 texturas: 1.412 candidatas de interface para revisão,
+  1.411 prévias BC3 decodificadas; uma textura legada pendente. Ambiente fica
+  excluído por padrão. Galeria privada em catalog-01/images/review.html.
+  Imagem original do tutorial do orbe inspecionada limpa; isso não prova que
+  a renderização em execução esteja correta.
+- Piloto: 30 entradas de objetivos/ações, inglês e pt-BR, 60 traduções com
+  reinserção e releitura verificadas, outros textos preservados. Rascunho
+  exige revisão humana e teste de layout; sem aplicação ou aprovação final.
+- Davy pediu excelência e cuidado com nomes. Glossário inicial protege grafias
+  oficiais; nomes humanos ainda pendentes. Validador verifica ocorrências,
+  nomes personalizados explicitamente indicados e referências do motor.
+  Cinco testes de proteção PASS; piloto estrutural PASS. Ferramenta não
+  reconhece automaticamente todos os nomes japoneses; revisão obrigatória.
+- Readback em lote preparado na integração local e teste auxiliar passou;
+  ganho de FPS não comprovado. Investigação gráfica/performance permanece
+  em andamento. Core fixo e projeto Godzilla preservados.
+
+### 12/10/2026 — continuidade offline e checkpoint de tradução
+
+- Davy autorizou avançar sem abrir o jogo até perto do limite de uso e salvar
+  o progresso. Percentual de quota do Codex não está exposto ao agente;
+  manter checkpoints persistentes, sem prometer leitura desse percentual.
+- Fontes fallback NotoSans e NotoSansCJK face 0 têm todos os 152 caracteres
+  necessários ao piloto/ASCII/acentos e pontuação. Relatório com hashes em
+  docs/m3/fallback-coverage.json. Fonte própria do jogo/layout ainda pendentes.
+- docs/m4/coverage-queue.json contabiliza os 72.961 arquivos sem perdas:
+  2.331 recursos estruturados; 51.266 texturas; 23 recursos com hits extras;
+  quatro vídeos pendentes; 202 recursos de áudio preservados; 19.135 arquivos
+  de famílias ainda não certificados quanto a texto visível. Estes últimos
+  incluem dados de modelos/animações; não são 19.135 textos para traduzir.
+- Varredura complementar agora limita a descompressão e rejeita streams
+  incompletos/sobras, como o extrator principal. Testes sintéticos de texto:
+  seis PASS; proteção de nomes: cinco PASS; compilação Python PASS.
+- Readback em lote permanece opt-in KYOEI_BATCH_READBACK=1 até validação
+  comparativa de execução. Nenhuma nova execução do jogo nesta continuidade.

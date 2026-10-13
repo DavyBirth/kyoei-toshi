@@ -1,0 +1,36 @@
+{
+  "draft": "translations\\pilot-opening.json",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "private_output": "None",
+  "records": [
+    {
+      "resource": "common/lua/map_goal_text.luc",
+      "language": "en",
+      "translated_entries": 9,
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "rebuilt_sha256": "94aea9670e75f458abe328615795758711262f89fe9d954611761f6ffa6c4fb7"
+    },
+    {
+      "resource": "common/lua/map_goal_text.luc",
+      "language": "pt-BR",
+      "translated_entries": 9,
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "rebuilt_sha256": "284ad35df76cd659fe69d34ce2d3643fa2e6ad1fef3b6af9435f10623d903df1"
+    },
+    {
+      "resource": "common/lua/Text_Stage_201.luc",
+      "language": "en",
+      "translated_entries": 21,
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "rebuilt_sha256": "3dab617e0832bf5eb9953c050809edd6b68c3d72f645575ae698aaa03bf1cad7"
+    },
+    {
+      "resource": "common/lua/Text_Stage_201.luc",
+      "language": "pt-BR",
+      "translated_entries": 21,
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "rebuilt_sha256": "bba2310c61be1b6af0332a8ca7d259c3f6c8a75b8685cd888466c45f9ee69344"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "notes": "Opening objectives and shared first-stage actions. IDs are resource-local. Short UI labels require in-game layout review.",
+  "resources": [
+    {
+      "path": "common/lua/map_goal_text.luc",
+      "entries": [
+        {"id":"p0/k15","en":"Park: meet the woman","pt-BR":"Parque: encontrar a mulher"},
+        {"id":"p0/k17","en":"Park: meet your friend","pt-BR":"Parque: encontrar sua amiga"},
+        {"id":"p0/k19","en":"Park: meet your loved one","pt-BR":"Parque: encontrar alguém especial"},
+        {"id":"p0/k21","en":"Park: meet your partner","pt-BR":"Parque: encontrar seu amor"},
+        {"id":"p0/k34","en":"Meet the woman. First, reach the main street.","pt-BR":"Encontre a mulher. Primeiro, chegue à avenida."},
+        {"id":"p0/k36","en":"Meet your friend. First, reach the main street.","pt-BR":"Encontre sua amiga. Primeiro, chegue à avenida."},
+        {"id":"p0/k38","en":"Meet your loved one. First, reach the main street.","pt-BR":"Encontre alguém especial. Primeiro, chegue à avenida."},
+        {"id":"p0/k40","en":"Meet your partner. First, reach the main street.","pt-BR":"Encontre seu amor. Primeiro, chegue à avenida."},
+        {"id":"p0/k42","en":"Get away from the suspicious cash handoff!","pt-BR":"Fuja da entrega suspeita de dinheiro!"}
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_201.luc",
+      "entries": [
+        {"id":"p0/k4","en":"This isn't the way to our meeting spot...","pt-BR":"Não é por aqui que vou encontrá-la..."},
+        {"id":"p0/k9","en":"This isn't the way to our meeting spot...","pt-BR":"Não é por aqui que vou encontrá-la..."},
+        {"id":"p0/k11","en":"It's dangerous to go down...","pt-BR":"É perigoso descer..."},
+        {"id":"p0/k13","en":"It's dangerous to go down...","pt-BR":"É perigoso descer..."},
+        {"id":"p0/k16","en":"Listen in","pt-BR":"Escutar às escondidas"},
+        {"id":"p0/k18","en":"Listen to their conversation","pt-BR":"Ouvir a conversa dos dois"},
+        {"id":"p0/k20","en":"Call out","pt-BR":"Chamar"},
+        {"id":"p0/k22","en":"Listen discreetly","pt-BR":"Escutar discretamente"},
+        {"id":"p0/k24","en":"Talk","pt-BR":"Conversar"},
+        {"id":"p0/k26","en":"Go inside","pt-BR":"Entrar"},
+        {"id":"p0/k28","en":"Leave","pt-BR":"Sair"},
+        {"id":"p0/k30","en":"Peek inside","pt-BR":"Espiar"},
+        {"id":"p0/k32","en":"Stare","pt-BR":"Olhar fixamente"},
+        {"id":"p0/k34","en":"Check the fruit","pt-BR":"Examinar os frutos","notes":"Confirm object/context; action is shared beyond the observed opening."},
+        {"id":"p0/k36","en":"Open the dresser","pt-BR":"Abrir a cômoda"},
+        {"id":"p0/k38","en":"Look in the mirror","pt-BR":"Olhar no espelho"},
+        {"id":"p0/k40","en":"Look","pt-BR":"Olhar"},
+        {"id":"p0/k44","en":"Listen closely","pt-BR":"Prestar atenção"},
+        {"id":"p0/k50","en":"Listen to the muttering","pt-BR":"Ouvir a pessoa falando sozinha"},
+        {"id":"p0/k57","en":"Listen","pt-BR":"Ouvir"},
+        {"id":"p0/k59","en":"See what's happening","pt-BR":"Observar"}
+      ]
+    }
+  ]
+}

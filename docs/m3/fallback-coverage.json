@@ -1,0 +1,24 @@
+{
+  "scope": "Configured fallback font files only; game font/layout unverified",
+  "required_characters": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜàáâãäåçèéêëìíîïñòóôõöùúûü–—‘’“”…",
+  "fonts": [
+    {
+      "path": "third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts/NotoSans-Regular.ttf",
+      "collection_face": 0,
+      "sha256": "b1bdcde3fb9f2f84ec8d8c57a82e8add1af2a87793709c7234dc0547926036bc",
+      "missing": [],
+      "covered": 152,
+      "required": 152
+    },
+    {
+      "path": "third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts/NotoSansCJK-Regular.ttc",
+      "collection_face": 0,
+      "sha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a",
+      "missing": [],
+      "covered": 152,
+      "required": 152
+    }
+  ],
+  "combined_missing": [],
+  "runtime_verified": false
+}
