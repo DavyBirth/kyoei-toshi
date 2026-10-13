@@ -963,3 +963,19 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   Prévia ainda exige revisão humana, teste visual de layout/acentos e gameplay;
   não declarar menus totalmente traduzidos, imagens traduzidas ou abertura
   real do novo launcher certificada. instruções em docs/ABRIR-JOGO.md.
+
+### 12/10/2026 — limite de quota e primeiro retorno da prévia PT-BR
+
+- Davy respondeu que restam 4% de uso. Encerrar após salvar este checkpoint,
+  conforme pedido de parar perto de 3%; não iniciar melhorias novas agora.
+- Davy abriu a prévia PT-BR por conta própria. Relatou que "Parque: encontrar
+  sua amiga" no minimapa se move estranhamente ao mover a câmera. A frase
+  "Encontre sua amiga. Primeiro, chegue à avenida." aparece sem o "à".
+  Acento ausente é compatível com a falta de glifos nas variantes, mas a fonte
+  concreta dessa tela e a causa do movimento ainda não foram confirmadas.
+- Prioridade da próxima sessão: rastrear a fonte do objetivo e corrigir os
+  glifos necessários; investigar âncora/medidas/transformação do marcador
+  do minimapa. Não remover acentos nem encurtar traduções sem diagnóstico.
+- Processo do jogo observado PID 4772, iniciado por Davy; não fechar, reiniciar
+  ou abrir outra partida. Código estava limpo no commit 062adc8 antes deste
+  registro. Retomada detalhada em docs/RETOMADA.md.

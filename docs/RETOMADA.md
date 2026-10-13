@@ -1,0 +1,79 @@
+# Retomada — 12/10/2026
+
+Davy pediu parar perto de 3% da quota; informou 4%. Progresso salvo e trabalho
+encerrado após o checkpoint. Ler também `docs/DIARIO.md` e AGENTS.md.
+
+## Restrição e estado atual
+
+Não abrir o jogo automaticamente. Davy abriu uma partida PT-BR por conta
+própria no fim da sessão, PID observado 4772. Não fechar ou reiniciar essa
+partida sem pedido. A proibição de abertura pelo agente permanece.
+
+Não alterar `G:\godzilla-port-codex` nem o core fixo. CMake adapta cópias em
+build. Dump próprio: `G:\GodzillaShadPS4PC\launcher\game_data\CUSA03562`, 01.03.
+Original intacto; textos e arte completos ficam fora do Git.
+
+## Próxima prioridade: defeitos relatados por Davy
+
+1. Marcador "Parque: encontrar sua amiga" se move estranhamente com a câmera.
+   Fonte do texto: `common/lua/map_goal_text.luc`, variante p0/k17. Investigar
+   medidas/âncora/transformação do rótulo com texto latino; causa não provada.
+2. Objetivo "Encontre sua amiga. Primeiro, chegue à avenida." perde o "à".
+   Variante p0/k36 no mesmo recurso. O texto reconstruído preserva o caractere
+   UTF-8. Descobrir qual tabela/atlas a tela usa; principal tem o glifo,
+   variantes não têm. Não converter para português sem acentos.
+3. Ainda pendentes: piscada preta ao entrar em Load/New Game e textura estranha
+   no tutorial do orbe. Fonte original da imagem do orbe está limpa.
+4. Desempenho: última medição limpa anterior deu ~22,74/25,41 FPS em janelas
+   mistas de cidade/eventos. Nenhum ganho novo de FPS comprovado nesta etapa.
+
+## O que já existe
+
+- Launcher local `G:\kyoei-toshi\City Shrouded in Shadow.exe`: janela com arte
+  PS4 e ícone, JA/EN/PT-BR, resolução de saída e janela/tela cheia sem bordas.
+  Preferências em build/launcher-settings.json. Fontes do launcher versionadas;
+  arte/ICO em build/launcher-assets, ignorados. Doc: ABRIR-JOGO.md.
+- Tradução parcial: 94 entradas por idioma, três recursos. Arquivos
+  translations/pilot-opening.json (30), pilot-options.json (15) e
+  pilot-intro.json (49). Nomes de jogador, ícones e cores preservados.
+  Rascunhos ainda exigem revisão humana; layout não certificado.
+- Pacotes privados atuais runtime-preview-02 em
+  `G:\kyoei-toshi-work\translation`, EN/PT-BR common.psarc. Manifesto:
+  docs/m4/runtime-preview.json. Runtime monta só o pacote selecionado em
+  /app0/DAT/common.psarc e /hostapp/DAT/common.psarc. Outros dados vêm do dump;
+  saves em G:\kyoei-toshi-work\native-05\user. Nunca distribuir esses pacotes.
+- Catálogo completo auditado: translation/catalog-01, 2.331 recursos,
+  230.622 ocorrências UTF-8. Candidatos preliminares 15.687; cobertura de todos
+  os textos visíveis ainda não certificada. Quatro vídeos permanecem na fila.
+- Páginas privadas scene-review-02/index.html: 23 recursos/7.946 trechos,
+  revisão lado a lado e exportação sem o japonês original.
+- Galeria correta: catalog-01/images-v2/review-portable.html. 1.412 candidatas,
+  1.411 prévias e uma legada pendente. Decoder antigo assumia BC3 em tudo;
+  corrigido para BC3/RGBA8/R8. NÃO usar a galeria antiga para certificar pixels.
+  Primeira folha revisada: 25 preservar, dez traduzir, uma pendente.
+- Fontes: docs/m3/FONTES.md. Principal tem os 153 caracteres verificados,
+  inclusive acentos; sete variantes common/font e uma de sistema faltam 52.
+  Atlas principal é R8 linear. Folha privada inspecionada confirma glifos.
+- Readback não coerente corrigido após fence, testes passam. Lote permanece
+  opt-in KYOEI_BATCH_READBACK=1; padrão desligado, benefício real pendente.
+  KYOEI_DISPLAY_TRACE=1 registra caminhos explícitos de frames pretos.
+
+## Ferramentas e verificações
+
+- Build: `cmake -S . -B build`, `cmake --build build --target kyoei -j 4`.
+- Python de imagens: build/image-tools/Scripts/python.exe, Pillow/fonttools.
+- Launcher: preparar arte com tools/prepare_launcher_assets.py nesse Python,
+  depois powershell -NoProfile -File tools/build_launcher.ps1.
+- Launcher --check e scripts/run_native.ps1 -CheckOnly verificam configuração
+  sem jogo. --render-preview renderiza somente o launcher de forma oculta.
+- tools/test_translation_mount.py: backend real, dados sintéticos, JA/EN/PT
+  e somente leitura PASS. test_psarc_patch.py: quatro PASS; test_text.py:
+  seis PASS; proteção de nomes: cinco PASS; controles: dois PASS; TEX:
+  cinco PASS. Build passou. Readback e regressões de GPU passaram.
+- Recriar pacotes em NOVO diretório com tools/build_runtime_translation.py
+  OUTPUT translations/pilot-opening.json translations/pilot-options.json
+  translations/pilot-intro.json --preview. Verifica source hashes e reinserção.
+  Versões privadas 01/02 ocupam ~25,4 GB ao todo; não apagar o dump para limpar.
+- Commits relevantes: 5de88ac catálogo; 0dd5210 launcher simples;
+  a205a7a readback/diagnóstico; 062adc8 launcher visual e prévias de tradução.
+  O checkpoint seguinte contém estes relatos e este arquivo de retomada.
