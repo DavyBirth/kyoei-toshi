@@ -25,6 +25,9 @@ function(kyoei_replace_checked variable before after)
 endfunction()
 file(READ "${KYOEI_CORE}/src/rt_thread.c" KYOEI_THREADS)
 kyoei_replace_checked(KYOEI_THREADS
+  "static const GzExport exports[] = {"
+  "#include \"kyoei_thread_finalize.h\"\nstatic const GzExport exports[] = {\n    {\"libkernel\", \"__pthread_cxa_finalize\", (void *)kyoei_pthread_finalize},")
+kyoei_replace_checked(KYOEI_THREADS
   "    t->result = t->entry(t->argument);"
   "    extern void kyoei_tls_enter(void);\n    kyoei_tls_enter();\n    t->result = t->entry(t->argument);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_threads.c" CONTENT "${KYOEI_THREADS}" @ONLY)

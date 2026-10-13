@@ -744,3 +744,32 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   fast=1, métricas=1, stress=0. Abertura com handled_total=0. Relatórios
   iniciais de 60 FPS ainda são abertura, não prova de desempenho na cidade.
   Partida deixada aberta para confirmar Continue e fluidez após load.
+
+### 12/10/2026 — limpeza de destructors de threads ao continuar
+
+- Davy relatou rodar melhor, mas Continue após morte ainda fechou.
+  20261012_205113.log confirma que o finalizador avançou além de
+  __elf_phdr_match_addr e fechou na próxima API ausente:
+  libkernel::__pthread_cxa_finalize, libc+0x71309, chamada no stop da fase.
+  TLS handled_total permaneceu zero ao longo da partida. Relatórios finais
+  incluíram 33–41 FPS e quedas a 19–25; melhoria percebida não significa
+  performance concluída nem comparação de rota controlada.
+- Referência de semântica: limpeza de handlers atfork e destructors TSD ao
+  descarregar biblioteca. Runtime nativo não aceita registros atfork/sinais
+  e não tem filas desses handlers; tem tabela real de chaves TSD.
+  Fonte primária para essa tabela:
+  https://raw.githubusercontent.com/freebsd/freebsd-src/main/lib/libthr/thread/thr_spec.c
+- src/kyoei_thread_finalize.h, incluído na cópia local rt_thread gerada,
+  implementa __pthread_cxa_finalize retirando só destructors de chaves
+  usados cujo endereço pertence aos segmentos executáveis da fase.
+  Mantém chave alocada e valor, como _thr_tsd_unload de referência;
+  mantém destructors de outros módulos. Não executa destructors nesse
+  ponto, não termina threads, não retorna sucesso fixo para ignorar limpeza.
+- tools/test_thread_finalize.py usa as operações reais de chaves do core
+  e o adaptador real: callback da fase removido, callback estrangeiro e de
+  região não executável preservados, chave/valor mantidos, repetição idempotente,
+  cleanup posterior chama callback restante. PASS. Build, test_kyoei_modules
+  e --list-stubs PASS. 462 runtime, 418 módulos, 286 stubs.
+- Nova execução build/native-pthread-finalize.console.log, fast=1,
+  métricas=1, stress=0. Saves preservados. Continue precisa de nova validação
+  no jogo; não declarar estabilidade completa. Godzilla/core fixo intactos.

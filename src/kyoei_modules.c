@@ -164,6 +164,9 @@ static ABI int32_t elf_match_address(const ModuleInfo *info, uint64_t address) {
     }
     return 0;
 }
+int kyoei_module_code_contains(const void *info, uintptr_t address) {
+    return elf_match_address(info, address);
+}
 static ABI int32_t module_symbol(int32_t handle, const char *name, void **address) {
     if (!name || !address) return (int32_t)0x8002000e;
     unsigned index = (unsigned)handle - 0x4000u;
