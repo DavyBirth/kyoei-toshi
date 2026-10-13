@@ -182,3 +182,8 @@ de até um pixel (origem fracionária de viewport não prova faixa). Reanálise 
 de 172251 tem 13/14 candidatos direitos, todos com viewport 16.384 e scissor de
 1.920/4.096: padrão de clipping desabilitado, não prova da faixa. Console informa
 `constant_samples=0` quando faltam constantes, mesmo com registro completo.
+
+Novas linhas frame/work stats acrescentam `diagnostic=1` se a janela inclui
+captura F9; tempos brutos são mantidos. Não usar essas janelas para comparação
+de desempenho normal. `diagnostic=0` só informa ausência de F9, não igualdade
+de cena/câmera/estado entre partidas. Baseline TLS começa no primeiro present.

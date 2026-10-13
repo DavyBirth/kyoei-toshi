@@ -1,5 +1,17 @@
 # Diário do projeto
 
+### 13/10/2026 — trabalho offline: medições identificam custo do F9
+
+- Janelas frame/work stats agora incluem diagnostic=1 quando cruzam trabalho
+  da captura F9. Tempos brutos e frames lentos permanecem registrados; não
+  excluir outliers nem apresentar pausa do diagnóstico como FPS normal.
+- Estado/geração atômicos detectam captura inteira entre duas medições e
+  captura dentro de uma chamada. Janela seguinte limpa volta a diagnostic=0.
+- Primeira janela de TLS agora usa baseline do primeiro present, sem contar
+  faults da inicialização como se pertencessem aos 120 intervalos medidos.
+- Build normal PASS; teste real das métricas, modo desligado e regressões do
+  raster PASS sem jogo. Não há novo ganho de FPS demonstrado.
+
 ### 13/10/2026 — trabalho offline: custo e evidência da captura gráfica
 
 - Deduplicação do F9 indexa candidatos por chave e confirma igualdade completa:

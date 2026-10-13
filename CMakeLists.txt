@@ -563,6 +563,10 @@ target_include_directories(kyoei_videoout SYSTEM PRIVATE ${KYOEI_BOOST_INCLUDES}
 add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 add_executable(test_kyoei_name_model src/test_kyoei_name_model.c)
 add_executable(test_kyoei_input_mode src/test_kyoei_input_mode.c)
+add_executable(test_kyoei_frame_stats src/test_kyoei_frame_stats.cpp)
+target_include_directories(test_kyoei_frame_stats PRIVATE src)
+target_compile_features(test_kyoei_frame_stats PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_frame_stats PRIVATE _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_list_model src/test_kyoei_list_model.c)
 add_executable(test_kyoei_overlay src/test_kyoei_overlay.cpp src/kyoei_overlay_model.cpp
   src/kyoei_input_mode.c ${KYOEI_IMGUI_SOURCES})

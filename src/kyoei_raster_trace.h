@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <unordered_map>
 #include <vector>
+#include "kyoei_diagnostic_activity.h"
 extern "C" void gz_log(const char *,...);
 extern "C" int gz_memory_copy(uintptr_t,void *,uint64_t,int);
 namespace KyoeiRasterTrace {
@@ -160,6 +161,7 @@ inline void RecordProfile(const Profile &value,uint64_t bucket) {
 inline bool Request() {
     if (!Enabled()) return false;
     uint64_t id=requested.fetch_add(1)+1;
+    KyoeiDiagnosticActivity::Begin();
     gz_log("Kyoei raster capture requested: id=%llu; next two presented frames",(unsigned long long)id);
     return true;
 }
@@ -215,6 +217,7 @@ inline void Presented() {
     }
     gz_log("Kyoei raster capture end: id=%llu",(unsigned long long)recording);
     completed.store(recording);
+    KyoeiDiagnosticActivity::End();
 }
 template<class Regs,class Viewport,class Rect>
 Profile MakeProfile(const Regs &r,const Viewport &v,const Rect &rect,unsigned i) {
