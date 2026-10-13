@@ -1,5 +1,15 @@
 # Retomada — 13/10/2026
 
+Mais recente: Davy testou e pediu olhar orbe. Defeito é camada alaranjada
+sobre cenário deixando faixa limpa na esquerda; foto do tutorial íntegra.
+Capturas privadas build/orb-user-20261013-01/-02.png e comparação original.
+Partida PID observado 26124, log 20261013_135113, não iniciada pelo agente.
+Preservar processo/executable; próximo diagnóstico é scissor/viewport/offset/
+blend/render target da camada. Ver DIAGNOSTICO-GRAFICO.md; causa não provada.
+Testes reais confirmam 28 chars recebidos/exibidos e font size 38; ancoragem
+visual ainda pendente. Readbacks periódicos 1 imagem/1 espera; sem ganho FPS
+comprovado, ~29 FPS no tutorial parado não equivale à rua em movimento.
+
 Prévia FitHud agora inclui medidas locais do minimapa (dois sites assinados),
 sem mudar rotação/seta/clamps. ABI/instalação/fallback PASS, visual pendente.
 Testar desempenho EN.cmd habilita agrupamento de readback para comparação

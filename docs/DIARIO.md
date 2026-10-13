@@ -1,5 +1,21 @@
 # Diário do projeto
 
+### 13/10/2026 — bug do orbe esclarecido e retorno dos testes
+
+- Davy pediu observar o defeito e esclareceu camada alaranjada que não cobre
+  toda a tela/deixa faixa limpa na esquerda. Duas capturas do PID 26124 sem
+  foco/controles; foto dos três orbes comparada com original e íntegra.
+  Registro preciso e próximo diagnóstico em DIAGNOSTICO-GRAFICO.md.
+- Partida do usuário às 13:51:13, log 20261013_135113, FitHud/BatchReadback;
+  outra às 13:46:25. Preservar executável/processo em uso. Nenhuma partida
+  iniciada pelo agente e nenhum shader/recorte alterado por palpite.
+- HUD registra casos 28 recebidos/28 exibidos: restauração de texto completo
+  comprovada no motor. Font size +0x19c confirmado 38 no runtime. Resultado
+  de ancoragem/clipping nas bordas ainda não certificado visualmente.
+- Lotes de readback registrados: uma imagem/uma espera/256 bytes, sem
+  redução de waits nesses exemplos. ~29 FPS no tutorial parado não prova
+  ganho comparado à rua em movimento. Não promover agrupamento como ganho.
+
 ### 13/10/2026 — minimapa na prévia e comparação de readback
 
 - Mesma prévia FitHud adapta dois consumidores locais de largura do minimapa

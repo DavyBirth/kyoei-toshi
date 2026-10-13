@@ -18,6 +18,28 @@ pretos, porque isso poderia esconder transições necessárias.
 
 ## Tutorial do orbe
 
+Atualização 13/10, teste de Davy: defeito esclarecido como camada alaranjada
+sobre o cenário, que não cobre toda a tela e deixa uma faixa limpa à esquerda.
+Não é corrupção da imagem dos três orbes. Capturas privadas sem foco/controles:
+build/orb-user-20261013-01.png e -02.png. A borda está aproximadamente a 102
+pixels do início da área do jogo, em saída 1280×720; medida visual aproximada,
+sem afirmar qual viewport/draw produz a camada.
+
+Comparação com a prévia original limpa ccca0f02f40c2c30.png confirmou o
+desenho dos orbes e fundo da foto. Brilho abaixo da foto não foi identificado
+por Davy como o bug principal. Partida aberta por ele, PID histórico 26124,
+log native-05/logs/20261013_135113.log; FitHud e BatchReadback ativos.
+Não reiniciar nem substituir o executável dessa partida automaticamente.
+
+Próxima evidência necessária: retângulos de viewport/scissor, offsets,
+render target e blending do draw da camada, comparados com o antes do tutorial.
+Logs atuais não capturam esses estados. Não remover o efeito ou aumentar
+recortes globalmente para esconder a faixa. Renderer combina recortes screen,
+window e generic e aplica offset; flags e limites são ponto de investigação,
+sem causa demonstrada. O mesmo caminho está no
+[renderer oficial atual do shadPS4](https://github.com/shadps4-emu/shadPS4/blob/main/src/video_core/renderer_vulkan/vk_rasterizer.cpp).
+Não alegar que uma atualização do emulador resolveu esse defeito.
+
 A textura `texture/hud/operation_pic_treasure.tex` decodificada está limpa.
 Isso descarta corrupção dessa imagem no dump verificado; não descarta erros
 de composição, sincronização ou de outra textura usada nessa tela.
@@ -33,6 +55,12 @@ Referências: [cache e mapeamento no VMA](https://gpuopen-librariesandsdks.githu
 e [sincronização Vulkan](https://github.khronos.org/Vulkan-Site/spec/latest/chapters/synchronization.html).
 
 ## Desempenho
+
+Testes de Davy 20261013_134625 e 135113 disponíveis. O segundo inclui parada
+no tutorial (~28,8–29,6 FPS nas últimas janelas), não comparável diretamente
+à caminhada do primeiro (~19,6–26,4 nas últimas janelas). Registros periódicos
+de readback mostram uma imagem/uma espera/256 bytes, sem redução de esperas
+nesses lotes. Nenhum ganho de FPS por agrupamento comprovado.
 
 `KYOEI_BATCH_READBACK=1` agrupa downloads, publicando todos os bytes antes de
 retornar ao jogo. Se o buffer circular for reutilizado, publica a região antiga
