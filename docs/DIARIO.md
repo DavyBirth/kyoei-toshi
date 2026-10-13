@@ -1,5 +1,18 @@
 # Diário do projeto
 
+### 13/10/2026 — minimapa na prévia e comparação de readback
+
+- Mesma prévia FitHud adapta dois consumidores locais de largura do minimapa
+  (extensão do rótulo e placa), por advances normalizados em vez de quantidade
+  de letras. Rotação/seta/clamps originais preservados, assinaturas verificadas.
+  Medição/fallback/ABI e instalação nos blocos reais PASS; gameplay pendente.
+- Comparação opcional pronta em Testar desempenho EN.cmd: FitHud e
+  BatchReadback, mantendo o padrão desligado. Agrupamento já existia; testes
+  confirmam fence/publicação/reuso do ring. Sem ganho de FPS declarado.
+- Contadores agora observam também caminho de waits individuais, sem inserir
+  esperas; teste de observação/escopos aninhados PASS. CheckOnly da configuração
+  PASS. Comparar mesma cena com Testar HUD ajustada EN.cmd (agrupamento off).
+
 ### 13/10/2026 — prévia concreta de ajuste da caixa de interação
 
 - Prévia opt-in EN restaura texto completo pelo setter nativo assinado e

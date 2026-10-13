@@ -29,9 +29,12 @@ public:
     void Add(uint64_t offset,uint64_t size,std::function<void()> publish) {
         pending.push_back({offset,size,std::move(publish)}); ++images; bytes+=size;
     }
+    void RecordSingle(uint64_t size) { ++images; ++waits; bytes+=size; }
     ~Batch() { Flush(); }
 };
 inline thread_local Batch* active=nullptr;
+inline thread_local Batch* observing=nullptr;
+inline void RecordSingle(uint64_t size) { if (observing) observing->RecordSingle(size); }
 inline bool Enabled() {
     // Runtime A/B validation is pending: retain the established path by default.
     static const bool enabled=[] { const char *v=std::getenv("KYOEI_BATCH_READBACK"); return v && v[0]=='1'; }();
@@ -39,11 +42,13 @@ inline bool Enabled() {
 }
 class Activation {
     Batch* previous;
+    Batch* previous_observer;
 public:
-    explicit Activation(Batch& batch) : previous(active) {
+    explicit Activation(Batch& batch) : previous(active),previous_observer(observing) {
+        observing=&batch;
         if (Enabled()) active=&batch;
     }
-    ~Activation() { active=previous; }
+    ~Activation() { active=previous; observing=previous_observer; }
     Activation(const Activation&)=delete;
     Activation& operator=(const Activation&)=delete;
 };

@@ -23,5 +23,19 @@ int main() {
         batch.Add(12,4,[&] { guest[2]=ring[12]; });
     }
     CHECK(waits==3 && guest[2]==42);
+    {
+        KyoeiReadback::Batch batch([&] { ++waits; });
+        {
+            KyoeiReadback::Activation observe(batch);
+            KyoeiReadback::RecordSingle(32);KyoeiReadback::RecordSingle(64);
+            CHECK(batch.images==2 && batch.waits==2 && batch.bytes==96);
+            KyoeiReadback::Batch nested([&] { ++waits; });
+            { KyoeiReadback::Activation inner(nested);KyoeiReadback::RecordSingle(8); }
+            CHECK(nested.images==1 && nested.waits==1 && nested.bytes==8);
+            CHECK(KyoeiReadback::observing==&batch);
+        }
+        CHECK(!KyoeiReadback::observing);
+        CHECK(waits==3); // Observation adds no real wait/publication.
+    }
     puts("READBACK BATCH PASS: one fence for grouped copies, no early publication, ring overlap flushed, scope completion");
 }

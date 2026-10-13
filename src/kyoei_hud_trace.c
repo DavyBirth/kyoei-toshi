@@ -20,6 +20,8 @@ static int fit_enabled,trace_enabled;
 static KyoeiHudMetrics fit_metrics;
 typedef void (ABI *GuestAssign)(void *,const char *);
 static GuestAssign assign_text;
+typedef unsigned (ABI *GuestCount)(const char *);
+static GuestCount count_text;
 
 static uint64_t code_hash(const unsigned char *bytes,size_t count) {
     uint64_t hash=UINT64_C(14695981039346656037);
@@ -76,6 +78,38 @@ static float float_field(const void *object,size_t offset) {
     if (object && readable((const char *)object+offset,sizeof(value)))
         memcpy(&value,(const char *)object+offset,sizeof(value));
     return value;
+}
+static ABI unsigned measure_map_text(const char *text) {
+    unsigned characters=count_text(text);
+    float equivalent;
+    if (!fit_enabled || characters>115 || !readable(text,(size_t)characters+1) ||
+        !kyoei_hud_measure(&fit_metrics,text,characters,&equivalent)) return characters;
+    // Call sites convert this integer to float; round upward to retain margin.
+    return (unsigned)ceilf(equivalent);
+}
+static int install_map_measure(unsigned char *image,uint64_t size,unsigned char *relay) {
+    if (size<0xa5f4c2 || code_hash(image+0x31cd90,0x4d)!=UINT64_C(0xb21fac6ec7e95b52) ||
+        code_hash(image+0xa5bfe8,0x45)!=UINT64_C(0x100e3132baf6ec4a) ||
+        code_hash(image+0xa5f499,0x29)!=UINT64_C(0xcf8178d72f0daebd)) return 0;
+    const size_t sites[]={0xa5bff0,0xa5f4a5};
+    int32_t branches[2];DWORD previous[2];
+    for (unsigned i=0;i<2;++i) {
+        int64_t distance=(int64_t)(uintptr_t)(relay+64)-(int64_t)(uintptr_t)(image+sites[i]+5);
+        if (distance<INT32_MIN || distance>INT32_MAX) return 0;
+        branches[i]=(int32_t)distance;
+    }
+    if (!VirtualProtect(image+sites[0],5,PAGE_EXECUTE_READWRITE,&previous[0])) return 0;
+    if (!VirtualProtect(image+sites[1],5,PAGE_EXECUTE_READWRITE,&previous[1])) {
+        DWORD ignored;VirtualProtect(image+sites[0],5,previous[0],&ignored);return 0;
+    }
+    count_text=(GuestCount)(image+0x31cd90);
+    for (unsigned i=0;i<2;++i) {
+        image[sites[i]]=0xe8;memcpy(image+sites[i]+1,&branches[i],4);
+        DWORD ignored;
+        if (!VirtualProtect(image+sites[i],5,previous[i],&ignored)) gz_stop(21,"STOP: cannot restore map text code protection");
+        FlushInstructionCache(GetCurrentProcess(),image+sites[i],5);
+    }
+    return 1;
 }
 static ABI uintptr_t trace_marker(void *object,const void *text) {
     uintptr_t result=original_marker(object,text);
@@ -134,6 +168,7 @@ void kyoei_hud_test_callbacks(GuestMarker original,GuestAssign assign,const Kyoe
     fit_enabled=1; trace_enabled=0;
 }
 ABI uintptr_t kyoei_hud_test_marker(void *object,const void *text) { return trace_marker(object,text); }
+unsigned kyoei_hud_test_map(GuestCount original,const char *text) { count_text=original;return measure_map_text(text); }
 #endif
 
 size_t kyoei_hud_trace_relay(unsigned char *relay,const void *resume,const void *callback) {
@@ -172,6 +207,9 @@ void kyoei_hud_trace_configure(void *image,uint64_t size) {
         relay=VirtualAlloc((unsigned char *)image+0x5000000+i*0x10000,4096,MEM_COMMIT|MEM_RESERVE,PAGE_READWRITE);
     if (!relay) { gz_log("Kyoei HUD trace: no relay allocation; skipped"); return; }
     kyoei_hud_trace_relay(relay,code+6,trace_marker);
+    const unsigned char absolute_jump[]={0xff,0x25,0,0,0,0};
+    memcpy(relay+64,absolute_jump,6);
+    uintptr_t map_callback=(uintptr_t)measure_map_text;memcpy(relay+70,&map_callback,8);
     int64_t distance=(int64_t)(uintptr_t)(relay+32)-(int64_t)(uintptr_t)(code+5);
     DWORD prior;
     if (distance<INT32_MIN || distance>INT32_MAX || !VirtualProtect(relay,4096,PAGE_EXECUTE_READ,&prior)) {
@@ -185,8 +223,10 @@ void kyoei_hud_trace_configure(void *image,uint64_t size) {
     code[0]=0xe9; memcpy(code+1,&relative,4); code[5]=0x90;
     DWORD ignored;
     if (!VirtualProtect(code,6,prior,&ignored)) gz_stop(21,"STOP: cannot restore HUD trace code protection");
-    FlushInstructionCache(GetCurrentProcess(),relay,46);
+    FlushInstructionCache(GetCurrentProcess(),relay,78);
     FlushInstructionCache(GetCurrentProcess(),code,6);
     gz_log("Kyoei HUD trace: command marker verified; fit_preview=%d; first 24 text changes only",fit_enabled);
     if (fit_enabled) gz_log("Kyoei HUD fit: English ASCII preview; full label, conservative native advances; bounded span; visual review pending");
+    if (fit_enabled) gz_log("Kyoei map fit: extent/plate calls %s; original rotation and clamps retained",
+        install_map_measure(image,size,relay)?"verified and adapted":"unavailable; original path retained");
 }

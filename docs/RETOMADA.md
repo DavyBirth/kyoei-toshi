@@ -1,5 +1,11 @@
 # Retomada — 13/10/2026
 
+Prévia FitHud agora inclui medidas locais do minimapa (dois sites assinados),
+sem mudar rotação/seta/clamps. ABI/instalação/fallback PASS, visual pendente.
+Testar desempenho EN.cmd habilita agrupamento de readback para comparação
+com Testar HUD ajustada EN.cmd. Contadores do caminho individual e fences/
+reuso/publicação PASS. Sem ganho de FPS medido; manter padrão desligado.
+
 Prévia de caixa EN implementada/compilada, testes offline PASS. Atalho
 Testar HUD ajustada EN.cmd ativa FitHud; padrão continua original. Esperado:
 Listen to their conversation inteiro, placa ajustada e espelhamento preservado.

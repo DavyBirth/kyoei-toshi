@@ -377,6 +377,7 @@ set(KYOEI_DOWNLOAD_ADAPTED [=[    // Host cache invalidation belongs after GPU c
     if (sync && KyoeiReadback::active) {
         KyoeiReadback::active->Add(offset,download_size,std::move(publish));
     } else if (sync) {
+        KyoeiReadback::RecordSingle(download_size);
         scheduler.Finish();
         publish();
     } else {

@@ -191,3 +191,12 @@ Testes PASS: largura distinta para i/W, label longo, espelhamento, limites,
 NaN e códigos; callback real com String/nós sintéticos preserva retorno,
 restaura frase via setter, atualiza geometria e mantém fallback em códigos.
 Build e CheckOnly PASS, sem jogo iniciado. Teste visual permanece pendente.
+
+Minimapa incluído na mesma prévia FitHud: apenas as chamadas de medição em
+0xa5bff0/0xa5f4a5 foram adaptadas para largura normalizada por glifos, arredondada
+para cima porque o consumidor espera inteiro. Preserva transformações, rotação,
+seta e clamps do motor. Assinaturas dos blocos originais verificadas antes de
+instalar; função global de contagem permanece intacta. ASCII simples medido;
+JA/códigos/fora do limite usam contagem original. Testes de medidas/fallback,
+ABI e instalação sobre os blocos reais PASS, sem executar o jogo. Não declarar
+ancoragem/objetivo resolvidos até comparar em movimento e perto das bordas.

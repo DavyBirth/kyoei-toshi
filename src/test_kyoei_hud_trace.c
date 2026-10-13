@@ -16,6 +16,9 @@ typedef uintptr_t (ABI *Marker)(void *,const void *);
 typedef void (ABI *Assign)(void *,const char *);
 void kyoei_hud_test_callbacks(Marker,Assign,const KyoeiHudMetrics *);
 ABI uintptr_t kyoei_hud_test_marker(void *,const void *);
+typedef unsigned (ABI *Count)(const char *);
+unsigned kyoei_hud_test_map(Count,const char *);
+static ABI unsigned fake_count(const char *text) { return (unsigned)strlen(text); }
 static unsigned original_calls,assign_calls;
 static unsigned char node[0x300],plate[0x100],object[0x300];
 static ABI void fake_assign(void *target,const char *source) {
@@ -52,6 +55,10 @@ static int check_fit_callback(void) {
     fake_assign(&source,"[i4]");assign_calls=0;
     kyoei_hud_test_marker(object,&source);
     if (assign_calls!=1 || strcmp(actual->pointer,"Listen to t...")) return 15;
+    metrics.equivalent['i'-32]=.2f;metrics.equivalent['W'-32]=1.f;
+    kyoei_hud_test_callbacks(fake_original,fake_assign,&metrics);
+    if (kyoei_hud_test_map(fake_count,"iiii")!=1 || kyoei_hud_test_map(fake_count,"WWWW")!=4) return 16;
+    if (kyoei_hud_test_map(fake_count,"[i4]")!=4) return 17;
     return 0;
 }
 int main(int argc,char **argv) {
@@ -71,13 +78,23 @@ int main(int argc,char **argv) {
     VirtualFree(page,0,MEM_RELEASE);
     int fit_result=check_fit_callback();if (fit_result) return fit_result;
     _putenv_s("KYOEI_HUD_TRACE","1"); kyoei_hud_trace_configure(NULL,0);
-    if (argc==2) {
+    if (argc>=2) {
         FILE *source=fopen(argv[1],"rb");
         const size_t entry=0xa6d9a0,length=0x1da,size=entry+length;
         unsigned char *image=VirtualAlloc(NULL,size,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);
         if (!source || !image || fseek(source,(long)(entry+0x4000),SEEK_SET)) return 6;
         if (fread(image+entry,1,length,source)!=length) return 7;
+        const size_t blocks[][2]={{0x31e090,0xc2},{0x31cd90,0x4d},{0xa5bfe8,0x45},{0xa5f499,0x29}};
+        for (unsigned i=0;i<4;++i) {
+            if (fseek(source,(long)(blocks[i][0]+0x4000),SEEK_SET) ||
+                fread(image+blocks[i][0],1,blocks[i][1],source)!=blocks[i][1]) return 18;
+        }
         fclose(source);
+        if (argc==3) {
+            _putenv_s("KYOEI_HUD_FIT","1");_putenv_s("KYOEI_LANGUAGE","en");
+            _putenv_s("KYOEI_HUD_METRICS",argv[2]);
+        }
+        unsigned char map_before[5];memcpy(map_before,image+0xa5bff0,5);
         unsigned char saved[6]; memcpy(saved,image+entry,6);
         image[entry+10]^=1;
         kyoei_hud_trace_configure(image,size);
@@ -85,6 +102,7 @@ int main(int argc,char **argv) {
         image[entry+10]^=1;
         kyoei_hud_trace_configure(image,size);
         if (image[entry]!=0xe9 || image[entry+5]!=0x90) return 9;
+        if (argc==3 && (image[0xa5bff0]!=0xe8 || !memcmp(map_before,image+0xa5bff0,5))) return 19;
         // Only installation is tested. Never call any original game code.
         VirtualFree(image,0,MEM_RELEASE);
     }

@@ -11,9 +11,9 @@ typedef struct { float scale_x, plate_x, text_x; } KyoeiHudFit;
 /* The verified marker geometry uses a 36-unit base, 26-unit text inset,
  * and mirrored positioning when its existing direction flag is set.
  * Leave unsupported formatting/long labels to the original implementation. */
-static inline int kyoei_hud_fit(const KyoeiHudMetrics *metrics,const char *text,
-                                size_t bytes,int mirrored,KyoeiHudFit *fit) {
-    if (!metrics || !text || !fit || !bytes || bytes>115 || text[bytes]) return 0;
+static inline int kyoei_hud_measure(const KyoeiHudMetrics *metrics,const char *text,
+                                   size_t bytes,float *width) {
+    if (!metrics || !text || !width || !bytes || bytes>115 || text[bytes]) return 0;
     float equivalent=0;
     for (size_t i=0;i<bytes;++i) {
         unsigned char ch=(unsigned char)text[i];
@@ -22,6 +22,13 @@ static inline int kyoei_hud_fit(const KyoeiHudMetrics *metrics,const char *text,
         if (!isfinite(advance) || advance<=0 || advance>4) return 0;
         equivalent+=advance;
     }
+    *width=equivalent;
+    return 1;
+}
+static inline int kyoei_hud_fit(const KyoeiHudMetrics *metrics,const char *text,
+                                size_t bytes,int mirrored,KyoeiHudFit *fit) {
+    float equivalent;
+    if (!fit || !kyoei_hud_measure(metrics,text,bytes,&equivalent)) return 0;
     float scale=equivalent*(29.f/36.f)+(32.f/36.f);
     if (!isfinite(scale) || scale*36>768) return 0;
     fit->scale_x=scale;
