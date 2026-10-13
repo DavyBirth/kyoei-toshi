@@ -137,3 +137,17 @@ e o limite de tela. Advances das duas tabelas para o texto inteiro são
 481/518 unidades; para os 11 caracteres, 179/196. Esses valores diferem
 da contagem multiplicada por largura fixa. Não usar a escala deduzida de uma
 captura como medida geral para todas as resoluções.
+
+Diagnóstico opt-in preparado: src/kyoei_hud_trace.c, somente com
+KYOEI_HUD_TRACE=1. Assinatura FNV da rotina completa 0x1da bytes é
+0x28c6cdeef5969e0d. Relay SysV preserva prólogo, argumentos e retorno;
+original executa sem alterações de texto/layout. Registra somente contagens,
+geometria e campos técnicos da fonte nas primeiras 24 atualizações; nenhuma
+fala original vai no log. Desabilitado por padrão; assinatura diferente
+faz o diagnóstico ser ignorado. Teste sintético de relay e instalação
+verificada no bloco real PASS, sem executar código do jogo.
+
+Teste oferecido a Davy: Testar HUD EN.cmd (EN 1280×720, diálogos internos,
+frame stats e HUD trace). O agente compilou e executou apenas -CheckOnly.
+O teste visual ainda deve confirmar escala/fonte e medir fluidez. O atalho
+recusa iniciar com outra partida aberta; não fecha nenhuma partida.

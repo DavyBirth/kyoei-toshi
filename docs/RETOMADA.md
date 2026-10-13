@@ -1,5 +1,12 @@
 # Retomada — 13/10/2026
 
+Checkpoint posterior: diagnóstico cmnd_marker compilado, padrão desligado.
+Testar HUD EN.cmd permite a Davy testar com frame stats/HUD trace; o agente
+não o executou. Relay/assinatura/instalação PASS, build/CheckOnly PASS.
+Próximo: analisar log dessa execução para fonte/escala/contagens e FPS;
+então corrigir localmente medição/truncamento. Fonte principal/IM não
+confirmada na caixa; não aplicar fator arbitrário.
+
 Entrega externa pronta e enviada em links: docs/m4/TRADUCAO-EXTERNA.md.
 ZIP privado external-en-full-01: 16.100 candidatos/173 JSONs, inglês primeiro,
 138 recursos incluindo 20 Text_Stage; não modificar a entrega já enviada.

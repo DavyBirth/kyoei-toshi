@@ -163,9 +163,16 @@ kyoei_replace_checked(KYOEI_LOADER
 kyoei_replace_checked(KYOEI_LOADER
   "    gz_thread_attach_main();"
   "    gz_thread_attach_main();\n    kyoei_tls_enter();")
+kyoei_replace_checked(KYOEI_LOADER
+  "#include \"kyoei_gpu_wait.h\""
+  "#include \"kyoei_gpu_wait.h\"\n#include \"kyoei_hud_trace.h\"")
+kyoei_replace_checked(KYOEI_LOADER
+  "    kyoei_gpu_wait_configure(image, image_size);"
+  "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 target_sources(kyoei PRIVATE src/kyoei_crash.c)
+target_sources(kyoei PRIVATE src/kyoei_hud_trace.c)
 target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
 target_sources(kyoei PRIVATE src/kyoei_png.c)
 target_sources(kyoei PRIVATE src/kyoei_savedata.c)
@@ -485,6 +492,9 @@ add_executable(test_kyoei_readback_batch src/test_kyoei_readback_batch.cpp)
 target_compile_features(test_kyoei_readback_batch PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_readback_batch PRIVATE _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_gpu_wait src/test_kyoei_gpu_wait.c src/kyoei_gpu_wait.c)
+add_executable(test_kyoei_hud_trace src/test_kyoei_hud_trace.c src/kyoei_hud_trace.c)
+target_include_directories(test_kyoei_hud_trace PRIVATE "${KYOEI_CORE}/src" src)
+target_compile_definitions(test_kyoei_hud_trace PRIVATE _CRT_SECURE_NO_WARNINGS)
 target_include_directories(test_kyoei_gpu_wait PRIVATE "${KYOEI_CORE}/src" src)
 add_executable(test_kyoei_png src/test_kyoei_png.c src/kyoei_png.c)
 add_executable(test_kyoei_modules src/test_kyoei_modules.c)

@@ -1,5 +1,17 @@
 # Diário do projeto
 
+### 13/10/2026 — diagnóstico concreto para teste da HUD
+
+- Diagnóstico opt-in da rotina cmnd_marker 0xa6d9a0 preparado com assinatura
+  completa, relay SysV e limite de 24 registros. Preserva comportamento
+  original; observa contagens, geometria e campos de fonte, sem falas no log.
+- Teste do relay/retorno e instalação sobre bloco real PASS, sem executar
+  código do jogo. Build kyoei PASS, depois de confirmar ausência de partida;
+  CheckOnly EN/1280×720/diálogos/diagnóstico PASS. Nenhum jogo iniciado.
+- Testar HUD EN.cmd pronto para Davy, que ofereceu testes em casa. Não
+  considerar corte/minimapa corrigidos; próximas evidências são fonte/escala
+  efetivas e FPS comparável. Entrega externa permanece intacta.
+
 ### 13/10/2026 — entrega externa de tradução do catálogo completo
 
 - Davy pediu arquivos para outro ChatGPT rascunhar inglês enquanto continua

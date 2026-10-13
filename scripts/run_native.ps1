@@ -1,6 +1,6 @@
 # Run only the prepared Kyoei, with separate writable data. No shadPS4 executable.
 param([string]$Work = '', [switch]$CheckOnly, [ValidateSet('ja','en','pt-BR')][string]$Language='ja',
-      [ValidateRange(640,8192)][int]$Width=1280,[ValidateRange(360,4320)][int]$Height=720,[switch]$Fullscreen,[switch]$InGameDialogs)
+      [ValidateRange(640,8192)][int]$Width=1280,[ValidateRange(360,4320)][int]$Height=720,[switch]$Fullscreen,[switch]$InGameDialogs,[switch]$Diagnostics)
 $ErrorActionPreference = 'Stop'
 $kyoeiRoot = Split-Path $PSScriptRoot
 $kyoeiProof = Get-Content -LiteralPath "$kyoeiRoot\docs\native-prepare.json" -Raw | ConvertFrom-Json
@@ -14,6 +14,7 @@ foreach ($kyoeiRequired in @("$kyoeiRoot\build\kyoei.exe", "$Work\out\boot-linke
 $env:KYOEI_LANGUAGE=$Language
 if ($InGameDialogs -and $Language -ne 'en') { throw 'A prévia dos diálogos dentro do jogo está disponível em inglês.' }
 $env:KYOEI_IN_GAME_DIALOGS=if ($InGameDialogs) { '1' } else { '0' }
+if ($Diagnostics) { $env:KYOEI_HUD_TRACE='1'; $env:KYOEI_FRAME_STATS='1' }
 Remove-Item Env:KYOEI_TRANSLATION_ARCHIVE -ErrorAction SilentlyContinue
 if ($Language -ne 'ja') {
     $kyoeiTranslation=Get-Content -LiteralPath "$kyoeiRoot\docs\m4\runtime-preview.json" -Raw | ConvertFrom-Json
@@ -28,7 +29,7 @@ $env:KYOEI_WINDOW_HEIGHT=[string]$Height
 $env:KYOEI_FULLSCREEN=if ($Fullscreen) { '1' } else { '0' }
 $env:KYOEI_WINDOW_ICON="$kyoeiRoot\build\launcher-assets\game.ico"
 if ($CheckOnly) {
-    Write-Output "Launcher OK; CUSA03562 01.03; idioma: $Language; saida: ${Width}x${Height}; fullscreen: $Fullscreen; dialogos no jogo: $InGameDialogs; saves: $Work\user; nenhum jogo iniciado."
+    Write-Output "Launcher OK; CUSA03562 01.03; idioma: $Language; saida: ${Width}x${Height}; fullscreen: $Fullscreen; dialogos no jogo: $InGameDialogs; diagnostico: $Diagnostics; saves: $Work\user; nenhum jogo iniciado."
     exit 0
 }
 if (-not $env:GZ_PRESENT_MODE) { $env:GZ_PRESENT_MODE = 'Fifo' }
