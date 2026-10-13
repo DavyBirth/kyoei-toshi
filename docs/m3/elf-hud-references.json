@@ -1,0 +1,79 @@
+{
+  "source_sha256": "1968814b70f69ec85ff3e556c4b66b53ec298c0dea71120e4f0ba594906e418e",
+  "segments": [
+    {
+      "offset": 16384,
+      "address": 0,
+      "size": 19177324,
+      "flags": 5
+    },
+    {
+      "offset": 19922944,
+      "address": 19906560,
+      "size": 45872,
+      "flags": 6
+    }
+  ],
+  "labels": [
+    {
+      "label": "common/font/utf8all",
+      "file_offset": "0x10a051e",
+      "address": "0x109c51e"
+    },
+    {
+      "label": "common/font/utf8all_IM",
+      "file_offset": "0x10a0532",
+      "address": "0x109c532"
+    },
+    {
+      "label": "common/hud/cockpit/map/cockpit_map",
+      "file_offset": "0x10c5dca",
+      "address": "0x10c1dca"
+    }
+  ],
+  "references": [
+    {
+      "kind": "candidate_rip_lea",
+      "address": "0x6dc062",
+      "target": "0x109c51e",
+      "labels": [
+        "common/font/utf8all"
+      ]
+    },
+    {
+      "kind": "candidate_rip_lea",
+      "address": "0x6dc081",
+      "target": "0x109c51e",
+      "labels": [
+        "common/font/utf8all"
+      ]
+    },
+    {
+      "kind": "candidate_rip_lea",
+      "address": "0x6dc0bf",
+      "target": "0x109c532",
+      "labels": [
+        "common/font/utf8all_IM"
+      ]
+    },
+    {
+      "kind": "candidate_rip_lea",
+      "address": "0x6dc0de",
+      "target": "0x109c532",
+      "labels": [
+        "common/font/utf8all_IM"
+      ]
+    },
+    {
+      "kind": "candidate_rip_lea",
+      "address": "0xa59aa9",
+      "target": "0x10c1dca",
+      "labels": [
+        "common/hud/cockpit/map/cockpit_map"
+      ]
+    }
+  ],
+  "instruction_boundaries_verified": false,
+  "runtime_verified": false,
+  "source": "G:\\kyoei-toshi-work\\native-05\\out\\eboot.elf"
+}

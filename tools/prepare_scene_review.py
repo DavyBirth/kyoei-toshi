@@ -11,7 +11,8 @@ from text_formats import JAPANESE
 
 SCRIPT=r'''
 const data=JSON.parse(document.getElementById('scene-data').textContent);
-const savedKey='kyoei-scene-'+data.source_sha256;
+const languages=data.languages||['en','pt-BR'];
+const savedKey='kyoei-scene-'+data.source_sha256+'-'+languages.join('-');
 let saved={};try{saved=JSON.parse(localStorage.getItem(savedKey)||'{}')}catch(e){}
 const container=document.querySelector('main');
 function save(){try{localStorage.setItem(savedKey,JSON.stringify(saved))}catch(e){document.querySelector('#status').textContent='Não foi possível salvar no navegador. Exporte o JSON.'}}
@@ -21,7 +22,7 @@ for(const row of data.entries){
  const original=document.createElement('p');original.className='original';original.textContent=row.original;card.append(original);
  const values=saved[row.id]||{en:row.en||'', 'pt-BR':row['pt-BR']||'',notes:row.notes||'',review:'pending'};
  saved[row.id]=values;
- for(const [key,label] of [['en','English'],['pt-BR','Português do Brasil'],['notes','Contexto / dúvidas / nomes']]){
+ for(const [key,label] of [['en','English'],['pt-BR','Português do Brasil'],['notes','Contexto / dúvidas / nomes']].filter(([key])=>key==='notes'||languages.includes(key))){
   const heading=document.createElement('label');heading.textContent=label;
   const input=document.createElement('textarea');input.value=values[key]||'';
   input.oninput=()=>{values[key]=input.value;values.review='pending';select.value='pending';save()};
@@ -38,9 +39,11 @@ document.querySelector('#filter').oninput=function(){
 };
 document.querySelector('#export').onclick=()=>{
  const entries=[];
- for(const row of data.entries){const value=saved[row.id];if(!value.en && !value['pt-BR'])continue;
-  if(!value.en || !value['pt-BR']){alert('Preencha os dois idiomas antes de exportar: '+row.id);return;}
-  entries.push({id:row.id,source_text_sha256:row.source_text_sha256,en:value.en,'pt-BR':value['pt-BR'],notes:value.notes,editorial_status:value.review});
+ for(const row of data.entries){const value=saved[row.id];if(!languages.some(language=>value[language]))continue;
+  if(languages.some(language=>!value[language])){alert('Preencha os idiomas selecionados antes de exportar: '+row.id);return;}
+  const entry={id:row.id,source_text_sha256:row.source_text_sha256,notes:value.notes,editorial_status:value.review};
+  for(const language of languages)entry[language]=value[language];
+  entries.push(entry);
  }
  const draft={format:'kyoei-translation-draft-v1',title:'CUSA03562',version:'01.03',status:'draft_requires_human_review',runtime_verified:false,
   resources:[{path:data.resource,source_sha256:data.source_sha256,entries}]};
@@ -52,8 +55,8 @@ document.querySelector('#import').onchange=async function(){try{
  if(draft.format!=='kyoei-translation-draft-v1'||draft.title!=='CUSA03562'||draft.version!=='01.03'||draft.resources.length!==1)throw Error('Formato ou jogo diferente');
  const resource=draft.resources[0];if(resource.path!==data.resource||resource.source_sha256!==data.source_sha256)throw Error('Recurso ou versão diferente');
  const known=new Map(data.entries.map(row=>[row.id,row])),seen=new Set();
- for(const row of resource.entries){const source=known.get(row.id);if(!source||seen.has(row.id)||row.source_text_sha256!==source.source_text_sha256||typeof row.en!=='string'||typeof row['pt-BR']!=='string')throw Error('IDs, textos ou campos inválidos');seen.add(row.id);}
- for(const row of resource.entries)saved[row.id]={en:row.en,'pt-BR':row['pt-BR'],notes:row.notes||'',review:row.editorial_status||'pending'};
+ for(const row of resource.entries){const source=known.get(row.id);if(!source||seen.has(row.id)||row.source_text_sha256!==source.source_text_sha256||languages.some(language=>typeof row[language]!=='string'))throw Error('IDs, textos ou campos inválidos');seen.add(row.id);}
+ for(const row of resource.entries){const value=saved[row.id]||{};for(const language of languages)value[language]=row[language];value.notes=row.notes||'';value.review=row.editorial_status||'pending';saved[row.id]=value;}
  save();location.reload();
 }catch(e){alert('Importação recusada: '+e.message)}this.value='';};
 '''
@@ -61,7 +64,9 @@ document.querySelector('#import').onchange=async function(){try{
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output',type=Path); parser.add_argument('--all-stages',action='store_true')
+    parser.add_argument('--language',action='append',choices=('en','pt-BR'))
     args=parser.parse_args(); output=output_path(args.output)
+    languages=list(dict.fromkeys(args.language or ('en','pt-BR')))
     if output.exists(): raise ValueError('Choose a new private directory')
     audit=json.loads((REPO/'docs/m2/audit.json').read_text(encoding='utf8'))
     pilot={}
@@ -89,20 +94,21 @@ def main():
             entry.update({k:v for k,v in pilot.get(row['path'],{}).get(string['id'],{}).items() if k!='id'})
             entries.append(entry)
         filename=hashlib.sha256(row['path'].encode('utf8')).hexdigest()[:16]
-        info=dict(resource=row['path'],source_sha256=row['sha256'],filename=filename,entries=entries)
+        info=dict(resource=row['path'],source_sha256=row['sha256'],filename=filename,entries=entries,languages=languages)
         serialized=json.dumps(info,ensure_ascii=False).replace('<','\\u003c').replace('&','\\u0026')
         page='''<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Kyoei — revisão de tradução</title>
 <style>body{font:16px system-ui;background:#151b25;color:#eee;margin:24px}header{position:sticky;top:0;background:#151b25;padding:12px}article{background:#242e3f;padding:18px;margin:18px 0;border-radius:8px}.original{white-space:pre-wrap;font-size:20px}label{display:block;margin:12px 0}textarea{display:block;box-sizing:border-box;width:100%;min-height:80px;font:16px system-ui}button,input,select{padding:8px;margin:5px}h3{font-size:14px;color:#b6c9e0}</style>
 <header><h1>Revisão de tradução</h1><p>'''+html.escape(row['path'])+'''</p>
 <p>Não altera o jogo. Revisão textual não certifica layout. Guarde o JSON exportado; o navegador sozinho não é backup.</p>
-<input id="filter" placeholder="Filtrar texto ou ID"><button id="export">Exportar rascunho EN + PT-BR</button><label>Importar rascunho <input id="import" type="file" accept=".json"></label><p id="status"></p></header><main></main>
+<input id="filter" placeholder="Filtrar texto ou ID"><button id="export">Exportar rascunho</button><label>Importar rascunho <input id="import" type="file" accept=".json"></label><p id="status"></p></header><main></main>
 <script type="application/json" id="scene-data">'''+serialized+'''</script><script>'''+SCRIPT+'''</script></html>'''
         (output/(filename+'.html')).write_text(page,encoding='utf8')
         reports.append(dict(resource=row['path'],source_sha256=row['sha256'],entries=len(entries),private_page=filename+'.html',excluded_internal_ids=internal))
         links.append(f'<li><a href="{filename}.html">{html.escape(row["path"])}</a> — {len(entries)} trechos</li>')
     (output/'index.html').write_text('<!doctype html><meta charset="utf-8"><h1>Kyoei: cenas para revisão</h1><p>Originais privados; rascunhos ainda precisam de contexto e validação.</p><ul>'+''.join(links)+'</ul>',encoding='utf8')
-    (REPO/'docs/m4/scene-review.json').write_text(json.dumps(dict(private_output=str(output),resources=reports,
-        layout_verified=False,chronological_order_verified=False),indent=2)+'\n',encoding='utf8')
+    report_name='scene-review'+('-'+'-'.join(languages) if args.language else '')+'.json'
+    (REPO/'docs/m4'/report_name).write_text(json.dumps(dict(private_output=str(output),resources=reports,
+        languages=languages,layout_verified=False,chronological_order_verified=False),indent=2)+'\n',encoding='utf8')
     print(f'Private review pages: {len(reports)}; entries: {sum(r["entries"] for r in reports)}; output: {output}')
 
 if __name__=='__main__': main()

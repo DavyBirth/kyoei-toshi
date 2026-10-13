@@ -1,0 +1,19 @@
+{
+  "log": "G:\\kyoei-toshi-work\\native-05\\logs\\20261012_225841.log",
+  "start_byte": 0,
+  "end_byte": 288096,
+  "presentation_windows": 0,
+  "summarized_intervals": 0,
+  "estimated_presentation_seconds": 0,
+  "note": "Aggregate summaries of 120 intervals; no raw frame trace. Menus/loading may be mixed unless scene is observed.",
+  "fps_over_summarized_intervals": null,
+  "slowest_window_fps": null,
+  "fastest_window_fps": null,
+  "largest_interval_ms": null,
+  "frames": [],
+  "work": {},
+  "tls_handled_range": null,
+  "detected_failure_lines": [],
+  "display_trace": [],
+  "readback_batch_samples": []
+}

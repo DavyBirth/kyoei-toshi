@@ -5,18 +5,54 @@
   "source_archive_sha256": "3a54e70d40b57562cbf350028ab8b75ee09c8143f8f1e766cc04bd81ce133966",
   "languages": {
     "en": {
-      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-02\\en\\common.psarc",
-      "sha256": "3b211c5255eaec48acb068a2a90af60a5cbeea66de5b88e8d0233ad2d5f9f242",
-      "bytes": 6346561047,
+      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-03\\en\\common.psarc",
+      "sha256": "ef792065cde7fbf2f3452c04b8ea616e2a9da8b1810f442fbf76960c75b2dbe6",
+      "bytes": 6346561190,
       "status": "experimental_partial_translation",
-      "runtime_verified": false
+      "runtime_verified": false,
+      "resources": [
+        {
+          "resource": "common/lua/map_goal_text.luc",
+          "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+          "entries": 9
+        },
+        {
+          "resource": "common/lua/Text_Stage_201.luc",
+          "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+          "entries": 106
+        },
+        {
+          "resource": "common/lua/option_menu_text.luc",
+          "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+          "entries": 15
+        }
+      ],
+      "translated_entries": 130
     },
     "pt-BR": {
       "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-02\\pt-BR\\common.psarc",
       "sha256": "a3f5b20ed9fcb78f27b65f6bfbcb982a2d3db13204f6342310c334c076c0c5ac",
       "bytes": 6346560961,
       "status": "experimental_partial_translation",
-      "runtime_verified": false
+      "runtime_verified": false,
+      "resources": [
+        {
+          "resource": "common/lua/map_goal_text.luc",
+          "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+          "entries": 9
+        },
+        {
+          "resource": "common/lua/Text_Stage_201.luc",
+          "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+          "entries": 70
+        },
+        {
+          "resource": "common/lua/option_menu_text.luc",
+          "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+          "entries": 15
+        }
+      ],
+      "translated_entries": 94
     }
   },
   "resources": [
@@ -28,7 +64,7 @@
     {
       "resource": "common/lua/Text_Stage_201.luc",
       "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
-      "entries": 70
+      "entries": 106
     },
     {
       "resource": "common/lua/option_menu_text.luc",
@@ -36,8 +72,12 @@
       "entries": 15
     }
   ],
-  "entries_per_language": 94,
+  "entries_per_language": null,
   "human_review_complete": false,
   "runtime_verified": false,
-  "original_dump_modified": false
+  "original_dump_modified": false,
+  "entries_by_language": {
+    "en": 130,
+    "pt-BR": 94
+  }
 }

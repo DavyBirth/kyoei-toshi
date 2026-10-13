@@ -1,0 +1,15 @@
+{
+  "draft": "translations\\pilot-street-en.json",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "private_output": null,
+  "records": [
+    {
+      "resource": "common/lua/Text_Stage_201.luc",
+      "language": "en",
+      "translated_entries": 36,
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "rebuilt_sha256": "7c490ca30918f15bc016c034f9e17e333b0a9ce168965fc9ea7f5fda73238170"
+    }
+  ]
+}

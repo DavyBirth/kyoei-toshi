@@ -1,4 +1,48 @@
-# Retomada — 12/10/2026
+# Retomada — 13/10/2026
+
+## Estado mais recente: sessão offline executada
+
+- Não abriu jogo. Não usar os 4% históricos como quota atual; percentual não
+  acessível. Nenhum processo de jogo foi encontrado na preparação.
+- Inglês primeiro: 130 entradas, prévia privada runtime-preview-en-03 ativa
+  no manifesto para próxima abertura. PT continua 94 entradas no pacote 02.
+  A ampliação EN está em translations/pilot-street-en.json; revisão pendente.
+- Pacote EN relido/hash/reinserção PASS. CheckOnly EN/PT PASS, sem gameplay.
+  Páginas inglesas scene-review-en-03 (962 candidatos) e relatório próprio;
+  revisão anterior de 23 recursos preservada.
+- Commits: b3b1b17 idioma isolado; 01a8cb7 modelos de nome/modalidade;
+  ccb7551 lista de saves. Checkpoint seguinte reúne prévia EN e estudo estático.
+- Build kyoei PASS. Três modelos headless PASS (nomes/modalidade/lista),
+  test_save_list ABI PASS. Modelo de teclado ainda sem apresentação ligada ao
+  renderer; save/load continuam na apresentação nativa. Não prometer novas
+  telas no jogo como prontas.
+- Novas ferramentas: inspect_elf_references.py e measure_translation_layout.py,
+  três testes cada PASS. Manifesto independente tem cinco regressões PASS.
+- HUD/minimapa/acentos ainda sem correção visual. Relatório e endereços
+  consumidores em docs/m3/HUD-INVESTIGACAO.md. Não alterar floats por palpite.
+- Defaults de nome localizados, mas campos limitados a quatro caracteres +
+  terminador; romaji completo não cabe. Ver docs/m4/NOMES-PADRAO.md. Não
+  truncar nem substituir nomes personalizados ou saves para contornar.
+- Log existente não tem instrumentação suficiente para diagnosticar orbe,
+  piscada ou FPS. KYOEI_BATCH_READBACK permanece opt-in; nenhum ganho declarado.
+
+## Próximos passos exatos
+
+1. Continuar EN; não fazer nova rodada PT até checkpoint inglês coerente.
+   Validar/build com --language en; não incluir pilot-street-en em uma execução
+   PT, pois ele deliberadamente não contém esse idioma.
+2. Rastrear consumidores/propriedades dos nós de texto a partir das referências
+   do minimapa (0xa59aa9) e registro das fontes (0x6dc030). LEAs confirmadas
+   por llvm-objdump; scanner de bytes produz candidatos, não descompilação completa.
+3. Integrar modelos de nome/lista ao overlay gráfico, com snapshots/fila de
+   eventos e redraw quando o convidado espera resposta sem novo flip. A base
+   ImGui atual é shim sem desenho. Preservar fallback até teste visual futuro.
+4. Investigar representação dos nomes e filtros a partir dos campos 0x13bda8c
+   e 0x13bda96, sem aumentar wcsncpy para além da capacidade dos destinos.
+5. Não executar scripts de gameplay. CheckOnly pode exigir -ExecutionPolicy
+   Bypass somente no processo; não mudar política global do Windows.
+
+## Histórico dos checkpoints anteriores
 
 Checkpoint adicional de 13/10: modelo headless de nomes e modalidade ativa
 implementados; SDL/IME reais alimentam modalidade; build kyoei e dois testes

@@ -13,7 +13,11 @@ def main():
         draft=json.loads(path.read_text(encoding='utf8'))
         for resource in draft['resources']:
             for entry in resource['entries']:
-                for language in ('en','pt-BR'): required.update(entry[language])
+                for language in ('en','pt-BR'):
+                    value=entry.get(language)
+                    if value is not None:
+                        if not isinstance(value,str): raise ValueError('Invalid translation field')
+                        required.update(value)
     required.difference_update('\n\r\t')
     fonts=ROOT/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts'
     rows=[]; combined=set()

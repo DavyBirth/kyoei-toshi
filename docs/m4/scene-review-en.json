@@ -1,0 +1,35 @@
+{
+  "private_output": "G:\\kyoei-toshi-work\\translation\\scene-review-en-03",
+  "resources": [
+    {
+      "resource": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "entries": 200,
+      "private_page": "a9efb8be4aa7da7c.html",
+      "excluded_internal_ids": []
+    },
+    {
+      "resource": "common/lua/Text_Stage_201.luc",
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "entries": 746,
+      "private_page": "bb8be8ff8a90276e.html",
+      "excluded_internal_ids": [
+        "p0/k91",
+        "p0/k100",
+        "p0/k103"
+      ]
+    },
+    {
+      "resource": "common/lua/option_menu_text.luc",
+      "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+      "entries": 16,
+      "private_page": "e2b7ba1d90a4621e.html",
+      "excluded_internal_ids": []
+    }
+  ],
+  "languages": [
+    "en"
+  ],
+  "layout_verified": false,
+  "chronological_order_verified": false
+}

@@ -13,6 +13,25 @@ from text_formats import Lua52
 
 
 class RuntimeTranslation(unittest.TestCase):
+    def test_publish_one_language_preserves_other_archive_and_coverage(self):
+        previous=dict(format='kyoei-runtime-preview-v1',title='CUSA03562',version='01.03',
+            source_archive_sha256='synthetic',languages={'en':{'archive':'old-en'},'pt-BR':{'archive':'old-pt'}},
+            entries_per_language=94,resources=[{'resource':'old'}])
+        report=dict(previous,languages={'en':{'archive':'new-en'}},entries_per_language=130,
+            resources=[{'resource':'new'}])
+        combined=builder.published_manifest(report,previous)
+        self.assertEqual(combined['languages']['pt-BR']['archive'],'old-pt')
+        self.assertEqual(combined['languages']['pt-BR']['resources'],[{'resource':'old'}])
+        self.assertEqual(combined['entries_by_language'],{'en':130,'pt-BR':94})
+        self.assertIsNone(combined['entries_per_language'])
+        self.assertNotIn('resources',previous['languages']['pt-BR'])
+
+    def test_do_not_mix_different_archive_revisions(self):
+        report=dict(format='kyoei-runtime-preview-v1',title='CUSA03562',version='01.03',
+            source_archive_sha256='one',languages={},resources=[],entries_per_language=0)
+        with self.assertRaisesRegex(ValueError,'different source'):
+            builder.published_manifest(report,dict(report,source_archive_sha256='two'))
+
     def run_validation(self, language, corrupt=False):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)

@@ -5,9 +5,10 @@ Ele abre o launcher com a arte original do jogo e opções de idioma, resoluçã
 de saída e janela/tela cheia sem bordas. Clique em **Iniciar jogo**.
 Usa a mesma preparação e os mesmos saves do port atual, sem terminal extra.
 
-Inglês e português são prévias parciais de 94 entradas por idioma: narração e
-escolhas de criação do personagem, objetivos e ações do começo e descrições
-das opções. Demais diálogos e textos em imagens continuam em japonês.
+Inglês tem uma prévia parcial de 130 entradas; português permanece em 94.
+Incluem narração e escolhas de criação do personagem, objetivos e ações do
+começo e descrições das opções. Inglês inclui também primeiras conversas na
+rua. Outros diálogos e textos em imagens continuam em japonês.
 Revisão humana e verificação visual das prévias ainda estão pendentes.
 
 A resolução selecionada altera o tamanho da saída em janela; a renderização
@@ -30,7 +31,8 @@ O launcher local inclui o ícone derivado da sua cópia e lê a arte em `build`.
 Ainda depende desta instalação e do dump próprio. Não é um pacote portátil
 para distribuição; a arte original e os pacotes locais não vão no Git.
 
-Os pacotes de idioma ficam em `G:\kyoei-toshi-work\translation\runtime-preview-02`.
+O pacote inglês fica em `G:\kyoei-toshi-work\translation\runtime-preview-en-03`;
+o português continua em `runtime-preview-02` na mesma pasta de tradução.
 O runtime monta somente o pacote traduzido; todos os outros arquivos vêm do
 dump original, que continua intacto. Esses pacotes locais incluem dados do
 jogo e não são arquivos distribuíveis. No Git ficam as traduções e ferramentas.

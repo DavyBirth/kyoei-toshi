@@ -964,6 +964,37 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   não declarar menus totalmente traduzidos, imagens traduzidas ou abertura
   real do novo launcher certificada. instruções em docs/ABRIR-JOGO.md.
 
+### 13/10/2026 — nova prévia inglesa e análise estática do executável
+
+- Acrescentadas 36 entradas EN de conversas iniciais na rua e descritores de
+  personagens; total 130 entradas. PT não ampliado. Revisão humana pendente.
+- Validada reinserção dos três recursos; pacote privado inglês en-03 gerado,
+  relido e hash conferido contra escrita. SHA256:
+  ef792065cde7fbf2f3452c04b8ea616e2a9da8b1810f442fbf76960c75b2dbe6.
+  Original M0 intacto. Manifesto atualizado só para EN; PT anterior 02 preservado
+  com 94 entradas. Contagem agora também por idioma, evitando alegar igualdade.
+- Publicação de manifesto usa troca atômica e recusa mistura de fontes/versões.
+  Cinco regressões de idioma/publicação PASS. CheckOnly EN e PT PASS sem jogo.
+- Páginas privadas inglesas: scene-review-en-03, três recursos/962 candidatos;
+  exportam somente o idioma escolhido. Relatório separado scene-review-en.json;
+  páginas e catálogo de revisão anterior preservados. 962 não significa cobertura
+  narrativa certificada; inclui objetivos de outras etapas no recurso compartilhado.
+- Medições de advances dos 130 textos nas duas fontes e três regressões PASS.
+  Alguns avisos ingleses crescem até 1,625x nos exemplos examinados; outros
+  encolhem. Medições não comprovam escala/fonte/layout na tela.
+- Por autorização de Davy, desmontagem estática aprofundada no ELF próprio.
+  Confirmadas LEAs de carga das duas fontes e da versão cockpit/map do HUD.
+  Ferramenta reutilizável de xrefs com três testes sintéticos PASS; relatório só
+  contém hashes/endereços/identificadores, nunca executável ou código completo.
+- Defaults localizados em UTF-16. Cópias wcsncpy com cinco unidades e destinos
+  separados por dez bytes; log real mostra IME max_length=4. Romaji completo
+  exige tratar representação/limites e persistência; nenhuma truncagem aplicada.
+  Prova e próximos consumidores em docs/m4/NOMES-PADRAO.md.
+- Log 225841 analisado offline: sem séries de FPS, display trace ou readback;
+  sem falhas detectadas pelos padrões do analisador. Não demonstra ausência
+  dos defeitos visuais. Logs 230727/231419 encerram por fechamento do usuário.
+  Nenhum ganho novo de FPS, correção do orbe ou piscada comprovados.
+
 ### 13/10/2026 — backend da lista de saves
 
 - Navegação e cálculo de viewport separados em src/kyoei_list_model.h e

@@ -12,6 +12,28 @@ from psarc_patch import patch
 from text_tool import REPO,decode,export,insert,output_path
 from translation_names import validate_names
 
+def published_manifest(report, previous=None):
+    """Retain independently built languages without claiming equal coverage."""
+    combined=json.loads(json.dumps(report))
+    if previous is not None:
+        for key in ('format','title','version','source_archive_sha256'):
+            if previous.get(key)!=report.get(key):
+                raise ValueError('Existing preview manifest targets a different source')
+        retained={}
+        for language,record in previous['languages'].items():
+            retained[language]=dict(record)
+            retained[language].setdefault('resources',previous.get('resources',[]))
+            retained[language].setdefault('translated_entries',previous.get('entries_per_language'))
+        retained.update(combined['languages']); combined['languages']=retained
+    for language in report['languages']:
+        combined['languages'][language]['resources']=report['resources']
+        combined['languages'][language]['translated_entries']=report['entries_per_language']
+    counts={language:record.get('translated_entries') for language,record in combined['languages'].items()}
+    combined['entries_by_language']=counts
+    if len(set(counts.values()))>1:
+        combined['entries_per_language']=None
+    return combined
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output',type=Path);parser.add_argument('drafts',nargs='+',type=Path)
@@ -83,7 +105,12 @@ def main():
         entries_per_language=sum(r['entries'] for r in reports),human_review_complete=False,
         runtime_verified=False,original_dump_modified=False)
     (output/'manifest.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
-    (REPO/'docs/m4/runtime-preview.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')
+    manifest_path=REPO/'docs/m4/runtime-preview.json'
+    previous=json.loads(manifest_path.read_text(encoding='utf8')) if manifest_path.exists() else None
+    publication=published_manifest(report,previous)
+    temporary=manifest_path.with_suffix('.json.tmp')
+    temporary.write_text(json.dumps(publication,indent=2)+'\n',encoding='utf8')
+    temporary.replace(manifest_path)
     print(f'Local previews ready: {report["entries_per_language"]} entries per language',flush=True)
 
 if __name__=='__main__':main()
