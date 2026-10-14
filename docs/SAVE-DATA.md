@@ -1,5 +1,10 @@
 # Backend de saves — verificações offline
 
+Lista de slots rejeita nomes com UTF-8 inválido e valida o índice retornado
+pela apresentação antes de acessar a lista. Índice fora dos limites é tratado
+como cancelamento, sem copiar memória fora do array para o diretório de saída.
+Regressões em tools/test_save_list.py exercitam o serviço adaptado real.
+
 O port mantém os arquivos do jogo na pasta de cada slot e os metadados ao lado,
 em `.sce_sys/param.bin`. Não mudar o formato dos arquivos gravados pelo jogo.
 As adaptações ficam em src/ e em cópia gerada de rt_savedata.c; core fixo intacto.

@@ -1,5 +1,14 @@
 # Diário do projeto
 
+### 13/10/2026 — seleção de save rejeita retorno fora da lista e UTF-8 inválido
+
+- Worker da lista valida selected contra count antes de indexar o array de
+  nomes; retorno inválido vira cancelamento, mantendo saída vazia. Conversão
+  dos nomes usa MB_ERR_INVALID_CHARS em vez de substituir bytes inválidos.
+- Teste do serviço adaptado PASS: slots novos/existentes, cancelar, retorno
+  além da lista, UTF-8 inválido, confirmação e ponteiros/palavras de guarda.
+  Build normal PASS, CheckOnly EN PASS, sem janela/jogo/saves reais.
+
 ### 13/10/2026 — metadados de save e identificação de montagem
 
 - Revisão offline encontrou write_param sem retorno: falhas de gravação eram

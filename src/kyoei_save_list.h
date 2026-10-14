@@ -34,7 +34,7 @@ static KyoeiSaveList *kyoei_save_list_copy(const SaveParam *p) {
         if (i < items->count) {
             if (!memchr(items->names[i], 0, 32)) goto failed;
             memcpy(list->names[i], items->names[i], 32);
-            if (!MultiByteToWideChar(CP_UTF8, 0, list->names[i], -1, list->labels[i], 256)) goto failed;
+            if (!MultiByteToWideChar(CP_UTF8, MB_ERR_INVALID_CHARS, list->names[i], -1, list->labels[i], 256)) goto failed;
         } else wcscpy(list->labels[i], L"Criar novo save");
     }
     if (items->focus == 1 || items->focus == 3) list->initial = count - 1;
@@ -50,6 +50,7 @@ static DWORD WINAPI kyoei_save_list_show(void *arg) {
     const wchar_t *title = list->display == 1 ? L"Escolha onde salvar" :
         list->display == 2 ? L"Escolha o save para carregar" : L"Escolha o save para excluir";
     int selected = kyoei_dialog_select(title, (const wchar_t *const *)list->labels, list->count, list->initial);
+    if (selected<0 || (unsigned)selected>=list->count) selected=-1;
     /* LIST returns an invalid button id even when a directory was chosen. */
     save_button = 0; save_result_code = selected >= 0 ? 0 : 1;
     memset(kyoei_save_selected, 0, sizeof(kyoei_save_selected));

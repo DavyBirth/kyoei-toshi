@@ -57,6 +57,12 @@ int main(void) {
  CHECK(!save_init()); choice=-1; CHECK(!save_open(&p));
  CHECK(WaitForSingleObject(save_worker,2000)==WAIT_OBJECT_0); CHECK(!save_result(&result));
  CHECK(result.result==1 && result.button==0 && destination[0]==0); CHECK(!save_term());
+ CHECK(!save_init()); choice=3; CHECK(!save_open(&p));
+ CHECK(WaitForSingleObject(save_worker,2000)==WAIT_OBJECT_0); CHECK(!save_result(&result));
+ CHECK(result.result==1 && destination[0]==0 && destination[32]==0x5a); CHECK(!save_term());
+ CHECK(!save_init()); names[0][0]=(char)0xc0;names[0][1]=(char)0xaf;names[0][2]=0;
+ CHECK(save_open(&p)==(int32_t)0x80B8000A); CHECK(!save_term());
+ strcpy(names[0],"SAVEDATA-000");
  CHECK(!save_init()); items.count=1025; CHECK(save_open(&p)==(int32_t)0x80B8000A); CHECK(!save_term());
  uint32_t system[12]={2}; p.mode=3; p.system=system;
  CHECK(!save_init()); dialog_answer=IDNO; CHECK(!save_open(&p));
