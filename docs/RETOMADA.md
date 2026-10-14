@@ -1,40 +1,32 @@
-# Checkpoint — 14/10/2026
+# Retomada - 14/10/2026: fechamento noturno
 
-ATUALIZAÇÃO 02:09: Davy retomou explicitamente a tradução até 03:00 de hoje,
-com desligamento Windows autorizado nesse horário. Isso substitui a parada
-anterior. Tarefas KyoeiLocalizationCheckpoint-20261014 (5 min) e
-KyoeiLocalizationShutdown-20261014 (03:00) registradas e conferidas.
-Resumo atual em codex-localization/reports/AUTO-CHECKPOINT.json e OVERNIGHT.md.
-Pedido de e-mail final autorizado; sem sender conectado, usar chat e relatório
-local (fallback autorizado). Não declarar e-mail enviado. Não abrir jogo.
+Estado atual da localiza??o: 6922/16100 preenchidas; 9178 vazias.
+2798 novas EN desde o retorno do GPT; 2127 na retomada noturna (4795 -> 6922).
+Esta atualiza??o substitui o checkpoint antigo de interrup??o: Davy retomou
+explicitamente e autorizou trabalho at? 03:00 e desligamento Windows.
 
-## Localização — interrupção explícita solicitada por Davy
+Ler docs/LOCALIZACAO-MADRUGADA-2026-10-14.md e, na pasta privada
+G:/kyoei-toshi-work/translation/retorno-gpt/codex-localization,
+CONTINUE-HERE.md e reports/CHECKPOINT.json. working/ cont?m os 173 JSONs
+atuais. Nunca extrair ZIP antigo por cima. Consolidado cumulativo em
+published/Kyoei_English_Consolidated_Current.zip.
 
-Davy pediu INTERROMPER AGORA e salvar. Trabalho interrompido; varredura do
-Stage 7 encerrada. Não continuar nesta sessão após salvar este checkpoint.
+Auditoria estrutural PASS; todos os 6922 textos reinseridos e relidos em
+mem?ria em 117 recursos do dump auditado, sem tocar no jogo. Nenhum ingl?s
+recebido apagado; 38 diferen?as apenas de delimitadores documentados.
+Revis?o editorial e layout continuam pendentes. Ingl?s primeiro, PT-BR depois.
+Pr?ximo lote: translate-en-0144.json ap?s p0/k234, depois 0145 e lacunas
+restantes; nomes sem grafia confirmada permanecem pendentes.
 
-Pasta privada de trabalho:
-G:/kyoei-toshi-work/translation/retorno-gpt/codex-localization
-Ler CONTINUE-HERE.md e reports/CHECKPOINT.json. JSONs atuais em working/;
-originais e baseline separados, ZIPs recebidos intactos. Não extrair por cima.
-Consolidado único: published/Kyoei_English_Consolidated_Current.zip.
+V?deos: 19 conferidos 720p; ?ndices 2fps de Stages1-8 completos (28495
+amostras). Apenas quadros selecionados foram lidos semanticamente; n?o
+confundir r?tulo da grava??o com n?mero do recurso nem declarar stage completo.
 
-- 173 JSONs, 16100 entradas; 4795 preenchidas, 11305 vazias. Nesta sessão:
-  671 novas traduções EN e 38 reparações de delimitadores, sem apagar inglês.
-- Última auditoria: reports/stage10b-tower-01-audit.json, zero divergências.
-  Apenas en/notes alterados. Revisão editorial e gameplay continuam pendentes.
-- Stages 8, 9, 10a, 10b e 11 avançados; seis entradas Stage3 e uma Stage6
-  adicionadas na revisão 720p. Nenhum desses números certifica stage completo.
-- 19 vídeos atuais conferidos como 720p. Índices 2fps concluídos em 8/1/2/3/4/5/6:
-  26162 amostras, sem alegar leitura semântica de todas. Stage7 interrompido.
-- Próximo lote: Stage10c em translate-en-0074.json, depois restante Stage11,
-  nomes/títulos pendentes em 8/9 e expansão 12–17. Notas privadas têm detalhes.
-- Ferramentas: audit_localization_return.py, apply_localization_batch.py,
-  scan_localization_video.py. Testes do auditor PASS; 28 recursos alterados
-  tiveram prova de reinserção antes do último lote 10b, ainda não incluído nela.
-- Não foi publicado pacote runtime nem jogo iniciado. Relato de prazo revisto:
-  lotes amplos aceleram rascunho, sem garantia de terminar revisão completa hoje.
-
+Tarefas KyoeiLocalizationCheckpoint-20261014 (5 min) e
+KyoeiLocalizationShutdown-20261014 (03:00 Bahia) registradas. A tarefa final
+audita/publica e chama shutdown sem /f. N?o alegar desligamento j? observado.
+Sem ferramenta de envio de e-mail: relat?rio local e chat, alternativa autorizada.
+N?o abrir jogo, modificar dump/saves, core fixo ou projeto Godzilla.
 
 Davy testou e relata desempenho bem melhor, ainda com quedas. Log 010525
 encerrou com código 0, sem métricas frame/work; não atribuir causa das quedas.

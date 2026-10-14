@@ -1549,3 +1549,25 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   ferramenta de envio de e-mail conectada; não prometer envio inexistente.
 - Parada anterior revogada explicitamente. Continuar lotes até a reserva de
   fechamento; checkpoint atualizado em OVERNIGHT.md/AUTO-CHECKPOINT.json.
+
+
+### 14/10/2026 - consolidado noturno salvo antes das 03:00
+
+- Retomada autorizada conclu?da em reserva de fechamento: 6922/16100 entradas
+  preenchidas, 9178 vazias. +2127 nesta retomada, +2798 desde o recebido (4124).
+- Lotes ampliaram 10c/11/12/13/14/15/16/final e retomaram 1/2/4/7 e acompanhante.
+  Ingl?s recebido preservado: zero apagamentos; 38 reparos de delimitadores.
+  Corre??es editoriais pr?prias com before/after; nomes incertos n?o inventados.
+- Auditoria dos 173 JSONs PASS; teste do auditor PASS. Todas as 6922 EN em
+  117 recursos reais reconstru?das/relidas em mem?ria, strings restantes intactas.
+  Nenhum jogo lan?ado, pacote runtime alterado, dump/saves tocados nesta etapa.
+- 19 v?deos 720p conferidos; Stage7 retomado e ?ndice completo. Stages1-8
+  somam 28495 amostras; quadros pontuais posteriores lidos. N?o declarar an?lise
+  sem?ntica integral. Evid?ncias e gloss?rio provis?rio na pasta privada.
+- Relat?rio docs/LOCALIZACAO-MADRUGADA-2026-10-14.md; retomada privada em
+  CONTINUE-HERE.md/CHECKPOINT.json. Pr?ximo lote 0144 ap?s p0/k234, depois0145.
+- Consolidado cumulativo publicado ap?s auditoria em published/; proveni?ncia
+  no relat?rio privado published-checkpoint.json. As c?pias recebidas intactas.
+- Checkpoints Windows a cada cinco minutos; desligamento autorizado agendado
+  ?s03:00 Bahia, sem /f. N?o alegar execu??o j? observada. Sem sender de email;
+  resumo local/chat como alternativa autorizada. Revis?o humana/layout pendentes.

@@ -40,8 +40,21 @@ def main():
         target=root/'published/Kyoei_English_Consolidated_Current.zip'
         temporary=target.with_suffix('.zip.tmp')
         with temporary.open('wb') as output:output.write(destination.read_bytes())
+        with ZipFile(temporary) as verification:
+            if verification.testzip() is not None:raise ValueError('Published ZIP integrity check failed')
+            names=[name for name in verification.namelist() if name.startswith('translate-en-') and name.endswith('.json') and '/' not in name]
+            if len(names)!=173:raise ValueError('Published ZIP does not contain all translation files')
+            for name in names:
+                if json.loads(verification.read(name).decode('utf-8'))!=working[name]:
+                    raise ValueError('Published JSON differs from audited working document')
         temporary.replace(target)
         summary['published_sha256']=hashlib.sha256(target.read_bytes()).hexdigest()
+        publication=dict(summary,archive=target.name,zip_integrity_pass=True,
+            all_173_documents_match_working=True)
+        metadata=target.parent/'publication.json'
+        metadata_temporary=metadata.with_suffix('.json.tmp')
+        metadata_temporary.write_text(json.dumps(publication,indent=2)+'\n',encoding='utf-8')
+        metadata_temporary.replace(metadata)
     (reports/'AUTO-CHECKPOINT.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(summary))
 
