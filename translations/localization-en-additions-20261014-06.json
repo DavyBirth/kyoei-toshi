@@ -1,0 +1,2879 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r3/c26",
+          "source_text_sha256": "ce91ddf1fa88be338782478de0d7d6fe1cebefc220f1f336826a1bad347e5d88",
+          "en": "A spare hat given to you by the captain of the research vessel Shibazakura.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r3/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r3/c28",
+          "source_text_sha256": "ce91ddf1fa88be338782478de0d7d6fe1cebefc220f1f336826a1bad347e5d88",
+          "en": "A spare hat given to you by the captain of the research vessel Shibazakura.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r3/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r4/c26",
+          "source_text_sha256": "ce91ddf1fa88be338782478de0d7d6fe1cebefc220f1f336826a1bad347e5d88",
+          "en": "A spare hat given to you by the captain of the research vessel Shibazakura.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r4/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r4/c28",
+          "source_text_sha256": "ce91ddf1fa88be338782478de0d7d6fe1cebefc220f1f336826a1bad347e5d88",
+          "en": "A spare hat given to you by the captain of the research vessel Shibazakura.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r4/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r26/c26",
+          "source_text_sha256": "b57a5dd8d2fb78baada33aa38ecfd03d7823e5e2cd8ba38c3d4f9ff6faf5432a",
+          "en": "A uniform cap worn by train drivers for Metro Rail, Miyato City's subway system.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r26/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r26/c28",
+          "source_text_sha256": "b57a5dd8d2fb78baada33aa38ecfd03d7823e5e2cd8ba38c3d4f9ff6faf5432a",
+          "en": "A uniform cap worn by train drivers for Metro Rail, Miyato City's subway system.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r26/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r27/c26",
+          "source_text_sha256": "b57a5dd8d2fb78baada33aa38ecfd03d7823e5e2cd8ba38c3d4f9ff6faf5432a",
+          "en": "A uniform cap worn by train drivers for Metro Rail, Miyato City's subway system.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r27/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r27/c28",
+          "source_text_sha256": "b57a5dd8d2fb78baada33aa38ecfd03d7823e5e2cd8ba38c3d4f9ff6faf5432a",
+          "en": "A uniform cap worn by train drivers for Metro Rail, Miyato City's subway system.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r27/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r32/c25",
+          "source_text_sha256": "5f4a64a95cb90c86a173e2b373d367e254f66ad24f55dc5583b74ffa8e2638b3",
+          "en": "Toro Hat",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r32/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r32/c26",
+          "source_text_sha256": "10d6d7e4ebdb87d05ef669d073099545384451dd54c628eff3b52aa031f8c720",
+          "en": "A hat shaped like the head of Toro, the familiar face from Doko Demo Issyo.<br>You might even find yourself talking like him!",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r32/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r32/c28",
+          "source_text_sha256": "10d6d7e4ebdb87d05ef669d073099545384451dd54c628eff3b52aa031f8c720",
+          "en": "A hat shaped like the head of Toro, the familiar face from Doko Demo Issyo.<br>You might even find yourself talking like him!",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r32/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r33/c25",
+          "source_text_sha256": "5f4a64a95cb90c86a173e2b373d367e254f66ad24f55dc5583b74ffa8e2638b3",
+          "en": "Toro Hat",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r33/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r33/c26",
+          "source_text_sha256": "10d6d7e4ebdb87d05ef669d073099545384451dd54c628eff3b52aa031f8c720",
+          "en": "A hat shaped like the head of Toro, the familiar face from Doko Demo Issyo.<br>You might even find yourself talking like him!",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r33/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r33/c28",
+          "source_text_sha256": "10d6d7e4ebdb87d05ef669d073099545384451dd54c628eff3b52aa031f8c720",
+          "en": "A hat shaped like the head of Toro, the familiar face from Doko Demo Issyo.<br>You might even find yourself talking like him!",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r33/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r34/c25",
+          "source_text_sha256": "55c459e080e1299285cfa7b8ac2d022dc6ab8232f396d08a4c35b14d1f5e13c1",
+          "en": "Kuro Hat",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r34/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r34/c26",
+          "source_text_sha256": "83f7d5b718addedc4e692cd10aa9ef5aa34b9e7d25c4ce8353d8d9055227bf90",
+          "en": "A hat shaped like the head of Kuro, the familiar face from Doko Demo Issyo.<br>You might even find yourself talking like him!",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r34/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r34/c28",
+          "source_text_sha256": "83f7d5b718addedc4e692cd10aa9ef5aa34b9e7d25c4ce8353d8d9055227bf90",
+          "en": "A hat shaped like the head of Kuro, the familiar face from Doko Demo Issyo.<br>You might even find yourself talking like him!",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r34/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r35/c25",
+          "source_text_sha256": "55c459e080e1299285cfa7b8ac2d022dc6ab8232f396d08a4c35b14d1f5e13c1",
+          "en": "Kuro Hat",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r35/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r35/c26",
+          "source_text_sha256": "83f7d5b718addedc4e692cd10aa9ef5aa34b9e7d25c4ce8353d8d9055227bf90",
+          "en": "A hat shaped like the head of Kuro, the familiar face from Doko Demo Issyo.<br>You might even find yourself talking like him!",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r35/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r35/c28",
+          "source_text_sha256": "83f7d5b718addedc4e692cd10aa9ef5aa34b9e7d25c4ce8353d8d9055227bf90",
+          "en": "A hat shaped like the head of Kuro, the familiar face from Doko Demo Issyo.<br>You might even find yourself talking like him!",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r35/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r36/c25",
+          "source_text_sha256": "af7ff639bd93b02f155780e9b292463bebf7399f56130977e3359f41e3781ed9",
+          "en": "Go Go Curry Cap",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r36/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r36/c26",
+          "source_text_sha256": "f916be4d6b961ec0de354ea68fde3e778dc6d32ceee1abc8b5a277093182f848",
+          "en": "A Go Go Curry cap.<br>Wearing it with the uniform might make you feel even more energetic.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r36/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r36/c28",
+          "source_text_sha256": "f916be4d6b961ec0de354ea68fde3e778dc6d32ceee1abc8b5a277093182f848",
+          "en": "A Go Go Curry cap.<br>Wearing it with the uniform might make you feel even more energetic.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r36/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r37/c25",
+          "source_text_sha256": "af7ff639bd93b02f155780e9b292463bebf7399f56130977e3359f41e3781ed9",
+          "en": "Go Go Curry Cap",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r37/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r37/c26",
+          "source_text_sha256": "f916be4d6b961ec0de354ea68fde3e778dc6d32ceee1abc8b5a277093182f848",
+          "en": "A Go Go Curry cap.<br>Wearing it with the uniform might make you feel even more energetic.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r37/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r37/c28",
+          "source_text_sha256": "f916be4d6b961ec0de354ea68fde3e778dc6d32ceee1abc8b5a277093182f848",
+          "en": "A Go Go Curry cap.<br>Wearing it with the uniform might make you feel even more energetic.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r37/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r360/c25",
+          "source_text_sha256": "ec3aa0a4a543ca2d1708e032aafc1640f0518c9e7494c29588db7800fe820695",
+          "en": "Toro Costume",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r360/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r360/c26",
+          "source_text_sha256": "021afc2e59feebf308b9b1e90c32b0b22ec033e84f72966f200c2f0f98aaeaf5",
+          "en": "A costume of Toro, the familiar face from Doko Demo Issyo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r360/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r360/c28",
+          "source_text_sha256": "021afc2e59feebf308b9b1e90c32b0b22ec033e84f72966f200c2f0f98aaeaf5",
+          "en": "A costume of Toro, the familiar face from Doko Demo Issyo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r360/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r361/c25",
+          "source_text_sha256": "ec3aa0a4a543ca2d1708e032aafc1640f0518c9e7494c29588db7800fe820695",
+          "en": "Toro Costume",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r361/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r361/c26",
+          "source_text_sha256": "021afc2e59feebf308b9b1e90c32b0b22ec033e84f72966f200c2f0f98aaeaf5",
+          "en": "A costume of Toro, the familiar face from Doko Demo Issyo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r361/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r361/c28",
+          "source_text_sha256": "021afc2e59feebf308b9b1e90c32b0b22ec033e84f72966f200c2f0f98aaeaf5",
+          "en": "A costume of Toro, the familiar face from Doko Demo Issyo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r361/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r362/c25",
+          "source_text_sha256": "c5b2ce138b8fc0061e58f092a2d8752ea637b4ed14b2d5a8734aa4a9323fecee",
+          "en": "Kuro Costume",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r362/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r362/c26",
+          "source_text_sha256": "581cf0335e5874bd24e593f65236fc8ff6abc0c16e4ae0aaaaafa0994d138593",
+          "en": "A costume of Kuro, the familiar face from Doko Demo Issyo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r362/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r362/c28",
+          "source_text_sha256": "581cf0335e5874bd24e593f65236fc8ff6abc0c16e4ae0aaaaafa0994d138593",
+          "en": "A costume of Kuro, the familiar face from Doko Demo Issyo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r362/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r363/c25",
+          "source_text_sha256": "c5b2ce138b8fc0061e58f092a2d8752ea637b4ed14b2d5a8734aa4a9323fecee",
+          "en": "Kuro Costume",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r363/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r363/c26",
+          "source_text_sha256": "581cf0335e5874bd24e593f65236fc8ff6abc0c16e4ae0aaaaafa0994d138593",
+          "en": "A costume of Kuro, the familiar face from Doko Demo Issyo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r363/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r363/c28",
+          "source_text_sha256": "581cf0335e5874bd24e593f65236fc8ff6abc0c16e4ae0aaaaafa0994d138593",
+          "en": "A costume of Kuro, the familiar face from Doko Demo Issyo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r363/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r364/c25",
+          "source_text_sha256": "c517a9c2e03924fd11b8dc0b01ee82eff40fc1642e6b0a6a7a9c8ec3d9720fc3",
+          "en": "Go Go Curry Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r364/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r364/c26",
+          "source_text_sha256": "dc2c637e8ec3aa98f91f5fe63b3768aa5370b1be4d96e932108dd94b7edee198",
+          "en": "A uniform from Go Go Curry, whose motto puts customers' energy first. Just wearing it seems enough to perk you up.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r364/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r364/c28",
+          "source_text_sha256": "dc2c637e8ec3aa98f91f5fe63b3768aa5370b1be4d96e932108dd94b7edee198",
+          "en": "A uniform from Go Go Curry, whose motto puts customers' energy first. Just wearing it seems enough to perk you up.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r364/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r365/c25",
+          "source_text_sha256": "c517a9c2e03924fd11b8dc0b01ee82eff40fc1642e6b0a6a7a9c8ec3d9720fc3",
+          "en": "Go Go Curry Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r365/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r365/c26",
+          "source_text_sha256": "dc2c637e8ec3aa98f91f5fe63b3768aa5370b1be4d96e932108dd94b7edee198",
+          "en": "A uniform from Go Go Curry, whose motto puts customers' energy first. Just wearing it seems enough to perk you up.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r365/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r365/c28",
+          "source_text_sha256": "dc2c637e8ec3aa98f91f5fe63b3768aa5370b1be4d96e932108dd94b7edee198",
+          "en": "A uniform from Go Go Curry, whose motto puts customers' energy first. Just wearing it seems enough to perk you up.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r365/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r368/c25",
+          "source_text_sha256": "47f48003b9d9a5bd1b41d77f26f0135dc4e4b84e0199574ecf056de844e42e2c",
+          "en": "Hikari Miyamoto Costume",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r368/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r368/c26",
+          "source_text_sha256": "4cab9368af9e73c37400d7c73667b04de6540e013b887c0c45607691eb8e0197",
+          "en": "A costume of Hikari Miyamoto from Summer Lesson.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r368/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r368/c28",
+          "source_text_sha256": "4cab9368af9e73c37400d7c73667b04de6540e013b887c0c45607691eb8e0197",
+          "en": "A costume of Hikari Miyamoto from Summer Lesson.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r368/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r369/c25",
+          "source_text_sha256": "47f48003b9d9a5bd1b41d77f26f0135dc4e4b84e0199574ecf056de844e42e2c",
+          "en": "Hikari Miyamoto Costume",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r369/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r369/c26",
+          "source_text_sha256": "4cab9368af9e73c37400d7c73667b04de6540e013b887c0c45607691eb8e0197",
+          "en": "A costume of Hikari Miyamoto from Summer Lesson.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r369/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r369/c28",
+          "source_text_sha256": "4cab9368af9e73c37400d7c73667b04de6540e013b887c0c45607691eb8e0197",
+          "en": "A costume of Hikari Miyamoto from Summer Lesson.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r369/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r390/c25",
+          "source_text_sha256": "1cf866f4b734e395ad559a32687c615eaebf7c74514ef7325a5f3d6753a4374c",
+          "en": "Men's Gz Logo T-Shirt (White)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r390/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r390/c26",
+          "source_text_sha256": "b61424035b03c7e42fac0ba54c025f405b85668d6a340472836b0957c9a02a1c",
+          "en": "A white T-shirt with the logo of Granzella, the game company that puts fun first, printed on the chest.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r390/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r390/c28",
+          "source_text_sha256": "b61424035b03c7e42fac0ba54c025f405b85668d6a340472836b0957c9a02a1c",
+          "en": "A white T-shirt with the logo of Granzella, the game company that puts fun first, printed on the chest.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r390/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r391/c25",
+          "source_text_sha256": "bba524d98b20cfe1e94ce1fc0f9ccbda1909b1eaf4582eded4a4ca98f8f5f182",
+          "en": "Women's Gz Logo T-Shirt (White)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r391/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r391/c26",
+          "source_text_sha256": "b61424035b03c7e42fac0ba54c025f405b85668d6a340472836b0957c9a02a1c",
+          "en": "A white T-shirt with the logo of Granzella, the game company that puts fun first, printed on the chest.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r391/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r391/c28",
+          "source_text_sha256": "b61424035b03c7e42fac0ba54c025f405b85668d6a340472836b0957c9a02a1c",
+          "en": "A white T-shirt with the logo of Granzella, the game company that puts fun first, printed on the chest.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r391/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r394/c25",
+          "source_text_sha256": "1b79ff1effff6376f4c9c05f3c0354f62f847ce23272286d203fbfd323cabe7a",
+          "en": "Otsuka's Leather Jacket",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r394/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r394/c26",
+          "source_text_sha256": "19484ab0c414ba4e171f6ee3642643b79567cab8dd01d7d5734ea25e0a1d0594",
+          "en": "A leather jacket like the one worn by web writer Otsuka.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r394/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r394/c28",
+          "source_text_sha256": "19484ab0c414ba4e171f6ee3642643b79567cab8dd01d7d5734ea25e0a1d0594",
+          "en": "A leather jacket like the one worn by web writer Otsuka.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r394/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r409/c25",
+          "source_text_sha256": "5649fd37a2b94f53d86678659323dc73937be5fda567c50a706f8b9cf46ff931",
+          "en": "Risa's Date Outfit",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r409/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r409/c26",
+          "source_text_sha256": "a0440cd1f260308c387eec51c889a56d071750778b36eba910b05222799519fc",
+          "en": "An outfit Risa put together with newfound determination for a date she was particularly excited about, according to Risa herself.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r409/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r409/c28",
+          "source_text_sha256": "a0440cd1f260308c387eec51c889a56d071750778b36eba910b05222799519fc",
+          "en": "An outfit Risa put together with newfound determination for a date she was particularly excited about, according to Risa herself.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r409/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r471/c25",
+          "source_text_sha256": "32e73470e2f94138e50fe0cb949fc46c637a2bf07c41aa6a6681335290a21746",
+          "en": "SSSP Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r471/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r471/c26",
+          "source_text_sha256": "65ae76f1d1af0b878b699468cecfdb0c71822867fa8b3e5451f50bb7148f9914",
+          "en": "Uniform gloves worn by the SSSP, whose mission is to investigate all kinds of mysterious incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r471/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r471/c28",
+          "source_text_sha256": "65ae76f1d1af0b878b699468cecfdb0c71822867fa8b3e5451f50bb7148f9914",
+          "en": "Uniform gloves worn by the SSSP, whose mission is to investigate all kinds of mysterious incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r471/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r472/c25",
+          "source_text_sha256": "32e73470e2f94138e50fe0cb949fc46c637a2bf07c41aa6a6681335290a21746",
+          "en": "SSSP Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r472/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r472/c26",
+          "source_text_sha256": "65ae76f1d1af0b878b699468cecfdb0c71822867fa8b3e5451f50bb7148f9914",
+          "en": "Uniform gloves worn by the SSSP, whose mission is to investigate all kinds of mysterious incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r472/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r472/c28",
+          "source_text_sha256": "65ae76f1d1af0b878b699468cecfdb0c71822867fa8b3e5451f50bb7148f9914",
+          "en": "Uniform gloves worn by the SSSP, whose mission is to investigate all kinds of mysterious incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r472/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r473/c25",
+          "source_text_sha256": "be2f720f5ac1a45b3c711407ea3de4b1273d94e9592cf66d31754f96cc287a5a",
+          "en": "Ultra Guard Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r473/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r473/c26",
+          "source_text_sha256": "f5b5ddec69969d43cba4f35b5c0f0f88a3e17ea1e8ae343db14773215fa115d0",
+          "en": "Uniform gloves worn by the Ultra Guard, an elite unit of the Earth Defense Force.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r473/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r473/c28",
+          "source_text_sha256": "f5b5ddec69969d43cba4f35b5c0f0f88a3e17ea1e8ae343db14773215fa115d0",
+          "en": "Uniform gloves worn by the Ultra Guard, an elite unit of the Earth Defense Force.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r473/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r474/c25",
+          "source_text_sha256": "be2f720f5ac1a45b3c711407ea3de4b1273d94e9592cf66d31754f96cc287a5a",
+          "en": "Ultra Guard Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r474/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r474/c26",
+          "source_text_sha256": "f5b5ddec69969d43cba4f35b5c0f0f88a3e17ea1e8ae343db14773215fa115d0",
+          "en": "Uniform gloves worn by the Ultra Guard, an elite unit of the Earth Defense Force.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r474/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r474/c28",
+          "source_text_sha256": "f5b5ddec69969d43cba4f35b5c0f0f88a3e17ea1e8ae343db14773215fa115d0",
+          "en": "Uniform gloves worn by the Ultra Guard, an elite unit of the Earth Defense Force.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r474/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r476/c25",
+          "source_text_sha256": "5c2eadc7bab4ab23a8b5412d0c74d042af88ea5c14c645f2e761431615751cf8",
+          "en": "Firefighter's Protective Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r476/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r476/c26",
+          "source_text_sha256": "da31a1dc527e50839da5a5267dc4ce99d9c30bb4f0cb117810ab6b06c09b3d1d",
+          "en": "Gloves worn with protective clothing by firefighters at fire scenes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r476/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r476/c28",
+          "source_text_sha256": "da31a1dc527e50839da5a5267dc4ce99d9c30bb4f0cb117810ab6b06c09b3d1d",
+          "en": "Gloves worn with protective clothing by firefighters at fire scenes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r476/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r477/c25",
+          "source_text_sha256": "5c2eadc7bab4ab23a8b5412d0c74d042af88ea5c14c645f2e761431615751cf8",
+          "en": "Firefighter's Protective Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r477/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r477/c26",
+          "source_text_sha256": "da31a1dc527e50839da5a5267dc4ce99d9c30bb4f0cb117810ab6b06c09b3d1d",
+          "en": "Gloves worn with protective clothing by firefighters at fire scenes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r477/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r477/c28",
+          "source_text_sha256": "da31a1dc527e50839da5a5267dc4ce99d9c30bb4f0cb117810ab6b06c09b3d1d",
+          "en": "Gloves worn with protective clothing by firefighters at fire scenes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r477/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r486/c25",
+          "source_text_sha256": "b0e49e94233c135a0d8afe5ccdc43e4716572ad5acd45aad268e097d0cb5c08a",
+          "en": "Firefighter's Protective Gloves (Red & Blue)",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r486/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r486/c26",
+          "source_text_sha256": "9b5928382efd8341288dc357ea986e5876d7092463656912680051555706e8b1",
+          "en": "Firefighter's protective gloves in fresh, bright colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r486/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r486/c28",
+          "source_text_sha256": "9b5928382efd8341288dc357ea986e5876d7092463656912680051555706e8b1",
+          "en": "Firefighter's protective gloves in fresh, bright colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r486/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r487/c25",
+          "source_text_sha256": "b0e49e94233c135a0d8afe5ccdc43e4716572ad5acd45aad268e097d0cb5c08a",
+          "en": "Firefighter's Protective Gloves (Red & Blue)",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r487/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r487/c26",
+          "source_text_sha256": "9b5928382efd8341288dc357ea986e5876d7092463656912680051555706e8b1",
+          "en": "Firefighter's protective gloves in fresh, bright colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r487/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r487/c28",
+          "source_text_sha256": "9b5928382efd8341288dc357ea986e5876d7092463656912680051555706e8b1",
+          "en": "Firefighter's protective gloves in fresh, bright colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r487/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r491/c25",
+          "source_text_sha256": "46bee0640401e71611abb023677501b3ba6549891946f3ee75441da871859124",
+          "en": "Motorcycle Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r491/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r491/c26",
+          "source_text_sha256": "9ccef33b3b158a4035e600315204eface23c390a987867aea18754e574e60cd1",
+          "en": "Black leather motorcycle gloves for women.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r491/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r491/c28",
+          "source_text_sha256": "9ccef33b3b158a4035e600315204eface23c390a987867aea18754e574e60cd1",
+          "en": "Black leather motorcycle gloves for women.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r491/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r885/c26",
+          "source_text_sha256": "1516e7fee32836d3fa15acf5746405f4cc7c6462b666e6d5426e07290debe8fe",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r885/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r885/c28",
+          "source_text_sha256": "1516e7fee32836d3fa15acf5746405f4cc7c6462b666e6d5426e07290debe8fe",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r885/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r889/c25",
+          "source_text_sha256": "25d1b6ecaac57544eae7b64a0001d2bdf35ba8920467e37bed63bbfb21d6824a",
+          "en": "Karaage Minister (Whirlpool Flavor)",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r889/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r890/c26",
+          "source_text_sha256": "ac551594ccf03754081f39a69041d948e67d8f04f6ef142e35999f2f5bcd1e67",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>The chili flavor has a pleasantly spicy kick.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r890/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r890/c28",
+          "source_text_sha256": "ac551594ccf03754081f39a69041d948e67d8f04f6ef142e35999f2f5bcd1e67",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>The chili flavor has a pleasantly spicy kick.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r890/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r891/c26",
+          "source_text_sha256": "f828f2af08bb7be0684225d39dd4cf112bd6271dd9e6ac9f17753a25b00da049",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>A nostalgic soy sauce flavor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r891/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r891/c28",
+          "source_text_sha256": "f828f2af08bb7be0684225d39dd4cf112bd6271dd9e6ac9f17753a25b00da049",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>A nostalgic soy sauce flavor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r891/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r892/c26",
+          "source_text_sha256": "d903e84e1bd0c6ab988ae214decc23ee9e87f46ab67d9955b5f78c08fb4d9264",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>A mild milk flavor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r892/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r892/c28",
+          "source_text_sha256": "d903e84e1bd0c6ab988ae214decc23ee9e87f46ab67d9955b5f78c08fb4d9264",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>A mild milk flavor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r892/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r893/c26",
+          "source_text_sha256": "cee53f2eb890111489dabfa946480e1accf4b7a6cae664d88e3e6d4c76de92e6",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>Strawberry-flavored, with fruit pulp mixed in.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r893/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r893/c28",
+          "source_text_sha256": "cee53f2eb890111489dabfa946480e1accf4b7a6cae664d88e3e6d4c76de92e6",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>Strawberry-flavored, with fruit pulp mixed in.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r893/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r894/c26",
+          "source_text_sha256": "11b534517f7d6f2517ced83a9038dfcd4820a98f1102dc4c0e74768930655441",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>A very rare, special Karaage Minister with a deeply memorable flavor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r894/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r894/c28",
+          "source_text_sha256": "11b534517f7d6f2517ced83a9038dfcd4820a98f1102dc4c0e74768930655441",
+          "en": "An original product from the Clover convenience-store chain.<br>Fried chicken praised for its satisfyingly springy texture.<br>A very rare, special Karaage Minister with a deeply memorable flavor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r894/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r902/c26",
+          "source_text_sha256": "47d9c26ce2df57a990abdf0f34e6f8a04c10ca547afa5793a7c32547ee830c7f",
+          "en": "Blended coffee made with beans expertly roasted by the proprietor of Albatross, a long-established coffee shop in the city.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r902/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r902/c28",
+          "source_text_sha256": "47d9c26ce2df57a990abdf0f34e6f8a04c10ca547afa5793a7c32547ee830c7f",
+          "en": "Blended coffee made with beans expertly roasted by the proprietor of Albatross, a long-established coffee shop in the city.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r902/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r915/c26",
+          "source_text_sha256": "6c49e104faac9ca8f59419a3ab65a9981aa97ab5ffaa6d984c546926b7dd7a50",
+          "en": "A popular limited-quantity menu item at Café Iberis.<br>A premium sandwich made with Miyato beef tenderloin from the chateaubriand cut.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r915/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r915/c28",
+          "source_text_sha256": "6c49e104faac9ca8f59419a3ab65a9981aa97ab5ffaa6d984c546926b7dd7a50",
+          "en": "A popular limited-quantity menu item at Café Iberis.<br>A premium sandwich made with Miyato beef tenderloin from the chateaubriand cut.",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r915/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1144/c26",
+          "source_text_sha256": "136d2eea6d80470fb816e870c07e39dcb1bfe5685e3f6ddf249066f30e286442",
+          "en": "A check for 80 million yen given to you by Shibata of W&P Consulting.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1144/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1144/c28",
+          "source_text_sha256": "136d2eea6d80470fb816e870c07e39dcb1bfe5685e3f6ddf249066f30e286442",
+          "en": "A check for 80 million yen given to you by Shibata of W&P Consulting.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1144/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1145/c26",
+          "source_text_sha256": "f656ef19f6f67929202fb7c06304616027fc34fb66b6576fe29a5f0a20432be7",
+          "en": "A contract for 9.9 billion yen given to you by Shibata of W&P Consulting.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1145/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1145/c28",
+          "source_text_sha256": "f656ef19f6f67929202fb7c06304616027fc34fb66b6576fe29a5f0a20432be7",
+          "en": "A contract for 9.9 billion yen given to you by Shibata of W&P Consulting.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1145/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1150/c25",
+          "source_text_sha256": "0d831cfe64f4cdbcdc1e2881d43281ffa2a6a20bee96bd2a4008badc4678faf0",
+          "en": "Game Software: \"Absolutely Safe City\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1150/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1153/c25",
+          "source_text_sha256": "f747cf2bb1538b9758135c522e32a0cbd19516457d2b7c98864e188a8a4988c3",
+          "en": "A Comic Book with a Romantic, Aesthetic Atmosphere",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1153/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1154/c25",
+          "source_text_sha256": "44053735dcc83c440ea0f924048e522552ce47a6f9a48fd3e8c14dae805fec15",
+          "en": "Photo of Risa Kashiwagi: On a Street Corner",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1154/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1154/c26",
+          "source_text_sha256": "ec9b84c9ba08d6e6af921af1e707b459e33bd51eb820ed48e868f02fd3569f9e",
+          "en": "An image saved on Risa Kashiwagi's smartphone.<br>A casual photograph of Risa walking through the city.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1154/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1154/c28",
+          "source_text_sha256": "ec9b84c9ba08d6e6af921af1e707b459e33bd51eb820ed48e868f02fd3569f9e",
+          "en": "An image saved on Risa Kashiwagi's smartphone.<br>A casual photograph of Risa walking through the city.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1154/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1155/c25",
+          "source_text_sha256": "c61b95a99cf72a0d25ef384464b316c481044a225858bce60fd02b3f0be4c027",
+          "en": "Photo of Risa Kashiwagi: On a Tennis Court",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1155/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1155/c26",
+          "source_text_sha256": "1131a2a71301ce911cdb26bb758b22062e6b27a058016867147f3a81447feaf0",
+          "en": "An image saved on Risa Kashiwagi's smartphone.<br>It shows Risa playing tennis, offering a glimpse of her everyday life.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1155/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1155/c28",
+          "source_text_sha256": "1131a2a71301ce911cdb26bb758b22062e6b27a058016867147f3a81447feaf0",
+          "en": "An image saved on Risa Kashiwagi's smartphone.<br>It shows Risa playing tennis, offering a glimpse of her everyday life.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1155/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1156/c25",
+          "source_text_sha256": "7a5c4dfcbfed5a655dbbe9eebe4eea76ba98b14cd8b8bb6be208b3f63a833818",
+          "en": "Photo of Risa Kashiwagi: By the Pool",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1156/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1156/c26",
+          "source_text_sha256": "72dc4ddda91d20faee3e0f3220746144fdc6f209521884b39eca90227e6f15cf",
+          "en": "An image saved on Risa Kashiwagi's smartphone.<br>It shows Risa relaxing beside a pool, offering a glimpse of her time off.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1156/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1156/c28",
+          "source_text_sha256": "72dc4ddda91d20faee3e0f3220746144fdc6f209521884b39eca90227e6f15cf",
+          "en": "An image saved on Risa Kashiwagi's smartphone.<br>It shows Risa relaxing beside a pool, offering a glimpse of her time off.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1156/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1157/c25",
+          "source_text_sha256": "d16a2db5a36623bedbe48bd911adc0955a7866efcc3fae89d433d44cc63dc98b",
+          "en": "Photo of Risa Kashiwagi: In a Classroom",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1157/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1157/c26",
+          "source_text_sha256": "030538d08b90120cdbbad13a9cf45009948d28643e21434d0904d1f2dd1ba125",
+          "en": "An image saved on Risa Kashiwagi's smartphone.<br>It shows Risa in a schoolgirl's uniform.<br>A photograph from Risa's school days.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1157/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1157/c28",
+          "source_text_sha256": "030538d08b90120cdbbad13a9cf45009948d28643e21434d0904d1f2dd1ba125",
+          "en": "An image saved on Risa Kashiwagi's smartphone.<br>It shows Risa in a schoolgirl's uniform.<br>A photograph from Risa's school days.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1157/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1158/c25",
+          "source_text_sha256": "c8278ec10ca2a3aeba9a9afc25a271b127872d942fa4a031bcf8a151bc09abca",
+          "en": "Iberis Tower Guide Map",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1158/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1158/c26",
+          "source_text_sha256": "4226e86a6fcda4a518f8f8f90c7907511ca2ea49853d15e010c65990d4eeef09",
+          "en": "A map showing the layout inside Iberis Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1158/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1158/c28",
+          "source_text_sha256": "4226e86a6fcda4a518f8f8f90c7907511ca2ea49853d15e010c65990d4eeef09",
+          "en": "A map showing the layout inside Iberis Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1158/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1159/c25",
+          "source_text_sha256": "880669cfb0d934c2774b55e95673c26dce2442efd73b33dbb58ee3ec6f4ffabb",
+          "en": "Otsuka's Business Card",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1159/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1159/c26",
+          "source_text_sha256": "39096a11343f5fdbd66365137f38716fee41a654c54f28d6305375d248dc1f50",
+          "en": "A business card belonging to web writer Hideyasu Otsuka.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1159/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1159/c28",
+          "source_text_sha256": "39096a11343f5fdbd66365137f38716fee41a654c54f28d6305375d248dc1f50",
+          "en": "A business card belonging to web writer Hideyasu Otsuka.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1159/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1160/c25",
+          "source_text_sha256": "1d93147989005ef86bfb53364fa378aa6adb618cc29b755ecd43d65c14f45e76",
+          "en": "Risa Kashiwagi's Business Card",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1160/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1160/c26",
+          "source_text_sha256": "5add42bc87c84a1ae8c3461340eaafa74799eccfb525f64bfb7325c835e64d83",
+          "en": "A business card belonging to journalist Risa Kashiwagi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1160/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1160/c28",
+          "source_text_sha256": "5add42bc87c84a1ae8c3461340eaafa74799eccfb525f64bfb7325c835e64d83",
+          "en": "A business card belonging to journalist Risa Kashiwagi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1160/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1161/c25",
+          "source_text_sha256": "a95318cdf8d9496e893df4f612b8c062f6dc83d4f754c8c6ad29d86c25d7093d",
+          "en": "Miyato Sky Tower Brochure",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1161/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1161/c26",
+          "source_text_sha256": "706372dec4c5d3816601e408ee8ecb81dd56445e9b0f49af95574d4c9ccc79e4",
+          "en": "A brochure for Miyato Sky Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1161/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1161/c28",
+          "source_text_sha256": "706372dec4c5d3816601e408ee8ecb81dd56445e9b0f49af95574d4c9ccc79e4",
+          "en": "A brochure for Miyato Sky Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1161/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1162/c25",
+          "source_text_sha256": "24d7dedd4e9c2473a56fdb89910ceeb2af39a9a72d84131bf6fc504e1b5453a6",
+          "en": "Tower Employee ID",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1162/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1162/c26",
+          "source_text_sha256": "a56d345a63bde81b05786c512c6f47283b6ddd38d742f8d671e27357a7859ead",
+          "en": "An ID card belonging to a tower employee.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1162/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1162/c28",
+          "source_text_sha256": "a56d345a63bde81b05786c512c6f47283b6ddd38d742f8d671e27357a7859ead",
+          "en": "An ID card belonging to a tower employee.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1162/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1163/c25",
+          "source_text_sha256": "6946caffe2c77213b974007b83c938a764c68b7399c3499ece28a5469ded9bb2",
+          "en": "May Calendar",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1163/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1163/c26",
+          "source_text_sha256": "6938b33be49cab652cb60ea85c190fc5bd1805135c09b1184e6bdbcc9592f845",
+          "en": "A calendar for May of this year.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1163/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1163/c28",
+          "source_text_sha256": "6938b33be49cab652cb60ea85c190fc5bd1805135c09b1184e6bdbcc9592f845",
+          "en": "A calendar for May of this year.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1163/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1165/c25",
+          "source_text_sha256": "a24da29fa4b884d3f7b860e9fe3a35f9ee101d876700896cd0d5f3448a50376a",
+          "en": "Giant Shadow Weekly",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1165/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1165/c26",
+          "source_text_sha256": "c5ed010a01ea3d045bfab40178ded5869693e8a7d641ea4b9887827bdf624c74",
+          "en": "A weekly magazine published by Ebine Publishing Co., Ltd. It covers a broad range of subjects, from politics and economics to food. Its circulation of 740,000 is the highest in the industry.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1165/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1165/c28",
+          "source_text_sha256": "c5ed010a01ea3d045bfab40178ded5869693e8a7d641ea4b9887827bdf624c74",
+          "en": "A weekly magazine published by Ebine Publishing Co., Ltd. It covers a broad range of subjects, from politics and economics to food. Its circulation of 740,000 is the highest in the industry.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1165/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1166/c25",
+          "source_text_sha256": "e213275d7c74e43bcae9cd5ece35b1407869acf672a262d0f192e8c99ee83ee4",
+          "en": "Women's Magazine: Self‐Conscious",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1166/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1167/c25",
+          "source_text_sha256": "e4c2765e9f4da5f24ba6bb32d88907e5c51dd6f3276624f1f2f59a47c9904028",
+          "en": "Men's Magazine: Narcist",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1167/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1168/c25",
+          "source_text_sha256": "4affd57776973a87e5ed5fe5d2b7db349c8b110e0bde5b606ff20e36d9f82897",
+          "en": "Sports Newspaper: Miyaspo",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1168/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1168/c26",
+          "source_text_sha256": "7345995dd2a3f73f823bcb4ad69a06872fa65feefa4d13690793586f10212270",
+          "en": "A sports newspaper published by Miyato Sports Newspaper Company, featuring entertainment news, gambling information, and a small amount of political and economic news. Its abbreviated name is Miyaspo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1168/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1168/c28",
+          "source_text_sha256": "7345995dd2a3f73f823bcb4ad69a06872fa65feefa4d13690793586f10212270",
+          "en": "A sports newspaper published by Miyato Sports Newspaper Company, featuring entertainment news, gambling information, and a small amount of political and economic news. Its abbreviated name is Miyaspo.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1168/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1169/c25",
+          "source_text_sha256": "46ddf9dd8a586e3ecd0035516244c5a310a80a59d3a6f6705de3528f630b10df",
+          "en": "Science Magazine: Petit Scientist",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1169/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1169/c26",
+          "source_text_sha256": "6b56556747dcc5fce7b761bbbe4d48e2f069294e3c3db635b0bbcb9f94e51a63",
+          "en": "An academic journal featuring introductions to the latest research and papers in fields such as astronomy, biology, and physics.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1169/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1169/c28",
+          "source_text_sha256": "6b56556747dcc5fce7b761bbbe4d48e2f069294e3c3db635b0bbcb9f94e51a63",
+          "en": "An academic journal featuring introductions to the latest research and papers in fields such as astronomy, biology, and physics.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1169/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1170/c25",
+          "source_text_sha256": "4970a338966be640c84adda5361e1a8afb572061f39df355bf946613879d9f0b",
+          "en": "Researcher's Scribbled Note",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1170/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1170/c26",
+          "source_text_sha256": "00c0b9a2dd09c519dae5453b5e5912bf50f590a68dd71afd3b057b5324826827",
+          "en": "A note entrusted to you by a frightened researcher at the Cosmic Ray Research Institute.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1170/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1170/c28",
+          "source_text_sha256": "00c0b9a2dd09c519dae5453b5e5912bf50f590a68dd71afd3b057b5324826827",
+          "en": "A note entrusted to you by a frightened researcher at the Cosmic Ray Research Institute.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1170/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1171/c25",
+          "source_text_sha256": "d2a43591c71d7b5f11709fbca420d20c4d181cc55cdf3e1fc0e73a1904419e30",
+          "en": "Enthusiast Magazine: Cosplay Times, Vol. 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1171/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1171/c26",
+          "source_text_sha256": "86ac268c34428d01c3543f28bd8825ec74623783976a5a2de6196b94304a53bd",
+          "en": "The first issue of a specialist cosplay magazine that fans won't want to miss.<br>Feature: 'The Police Officer You've Always Wanted to Be!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1171/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1171/c28",
+          "source_text_sha256": "86ac268c34428d01c3543f28bd8825ec74623783976a5a2de6196b94304a53bd",
+          "en": "The first issue of a specialist cosplay magazine that fans won't want to miss.<br>Feature: 'The Police Officer You've Always Wanted to Be!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1171/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1172/c25",
+          "source_text_sha256": "3f9cd43adc49873db4cf0301f281cc88153fc564eb829286babd2bd8958ce48c",
+          "en": "Enthusiast Magazine: Cosplay Times, Vol. 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1172/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1172/c26",
+          "source_text_sha256": "ddb1107ac1d03b898ae1fb80b56c6c64ddca072e8c2355de6b324352513a2c4c",
+          "en": "The second issue of a specialist cosplay magazine that fans won't want to miss.<br>Feature: 'Welcome! Fast-Food Staff!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1172/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1172/c28",
+          "source_text_sha256": "ddb1107ac1d03b898ae1fb80b56c6c64ddca072e8c2355de6b324352513a2c4c",
+          "en": "The second issue of a specialist cosplay magazine that fans won't want to miss.<br>Feature: 'Welcome! Fast-Food Staff!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1172/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1173/c25",
+          "source_text_sha256": "14064c32b7f8beb0170fea9a47373ecc042785cd69a9bca4704b7ccc9e50bdbd",
+          "en": "Enthusiast Magazine: Cosplay Times, Vol. 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1173/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1173/c26",
+          "source_text_sha256": "a28e74e858349a12d2562ff4ada4efa2601095a6d0636256a72787f5b7f427eb",
+          "en": "The third issue of a specialist cosplay magazine that fans won't want to miss.<br>Feature: 'Firefighters Are Hot!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1173/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1173/c28",
+          "source_text_sha256": "a28e74e858349a12d2562ff4ada4efa2601095a6d0636256a72787f5b7f427eb",
+          "en": "The third issue of a specialist cosplay magazine that fans won't want to miss.<br>Feature: 'Firefighters Are Hot!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1173/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1174/c25",
+          "source_text_sha256": "c85d0c1be6f22457c5d67dce317f9a8d36fdc8284b84a1cffc8642fa56c84a14",
+          "en": "Letter Carried by the Bus Driver",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1174/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1174/c26",
+          "source_text_sha256": "49d7ebfba474e45b35322b074351537a1abdd90df2b4a6c0af2f1f58aefd549c",
+          "en": "A letter found in the breast pocket of the driver who died inside the bus.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1174/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1174/c28",
+          "source_text_sha256": "49d7ebfba474e45b35322b074351537a1abdd90df2b4a6c0af2f1f58aefd549c",
+          "en": "A letter found in the breast pocket of the driver who died inside the bus.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1174/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1175/c25",
+          "source_text_sha256": "1e9a0342a6388bcf022b3580bae4f17e532e12e76b3520a328b6c69e1539611f",
+          "en": "Convenience Store Clerk's Message Note",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1175/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1176/c25",
+          "source_text_sha256": "86122253d67d52850ffde2046caab0488628b15520c714a3201952723b5d9866",
+          "en": "Report on Waterfront Land Development",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1176/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1177/c25",
+          "source_text_sha256": "52e3d8fc4c65a9cdd8d2362390b988b2bafb5f8b5d488e50f8a941a6890bc75f",
+          "en": "Lottery Ticket No. 123451",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1177/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1177/c26",
+          "source_text_sha256": "752f29eb4b3330c420adcfa04e6c532d26de714e52987eb9e6c31a4aec23b320",
+          "en": "Jumbo Jumbo Lottery<br>Draw number: 123451",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1177/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1177/c28",
+          "source_text_sha256": "752f29eb4b3330c420adcfa04e6c532d26de714e52987eb9e6c31a4aec23b320",
+          "en": "Jumbo Jumbo Lottery<br>Draw number: 123451",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1177/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1178/c25",
+          "source_text_sha256": "b526321c75db399da41dd387919d535695cefc37020ff98c50515f2032786057",
+          "en": "Lottery Ticket No. 123452",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1178/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1178/c26",
+          "source_text_sha256": "60a7d2e5cc02d8023c35474cde5bfbf37ac87466ebcdab33aaec0d48fffdc0f0",
+          "en": "Jumbo Jumbo Lottery<br>Draw number: 123452",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1178/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1178/c28",
+          "source_text_sha256": "60a7d2e5cc02d8023c35474cde5bfbf37ac87466ebcdab33aaec0d48fffdc0f0",
+          "en": "Jumbo Jumbo Lottery<br>Draw number: 123452",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1178/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1181/c25",
+          "source_text_sha256": "310e24e3b21bc6794e396bcd4a0361a9fa613050c3b8dd703716e9f990d3b511",
+          "en": "The Tale of the Last Sword: The Past Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1181/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1182/c25",
+          "source_text_sha256": "874f9e20c04f9bfb31161352e792815289be56af9be5000c2797a836789a8c82",
+          "en": "The Tale of the Last Sword: The Pitch-Black Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1182/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1183/c25",
+          "source_text_sha256": "6b30fcfd376b0e5cab63285eb515099575c3183a000b142016d4d8627276c969",
+          "en": "The Tale of the Last Sword: The Hunger Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1183/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1184/c25",
+          "source_text_sha256": "beb7d3e69109b55c16b0df75129ed4c1c60458078ef98d0f8612e6de7691debf",
+          "en": "The Tale of the Last Sword: The Crimson Flames Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1184/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1185/c25",
+          "source_text_sha256": "5c673eaaf78ee136d8acbfe8ca03778b63e0fe8a5ad2f7dd8e405a4998d8c372",
+          "en": "The Tale of the Last Sword: The Slumber Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1185/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1186/c25",
+          "source_text_sha256": "4dd134d7722ced67d297a26f27a584c742b32dd744e135b1d4ae6b8ebf8baf5d",
+          "en": "The Tale of the Last Sword: The Romance Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1186/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1187/c25",
+          "source_text_sha256": "028582563b6bed863cbf71693e19db4ca7f2c8839684b911ffe816592a062c85",
+          "en": "The Tale of the Last Sword: The Cursed Sword Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1187/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1188/c25",
+          "source_text_sha256": "932c02454cb44f1066ebcaea2f45d93eb464631674970d60b622641ae6db2318",
+          "en": "The Tale of the Last Sword: The Recollections Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1188/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1189/c25",
+          "source_text_sha256": "a0607c00c4879c4579e784dfd7ecec9fd5103a803e3daff2c2245ca70b1de4a4",
+          "en": "The Tale of the Last Sword: The Open Sky Chapter",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1189/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1190/c25",
+          "source_text_sha256": "d438ed20f65e66f9dfb908d49a88759d93899d3b85327bc51d45c56c69506b60",
+          "en": "The Tale of the Last Sword: The Chapter of Silence",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1190/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1192/c25",
+          "source_text_sha256": "f547390c3f7cbe5f81ee72118551dca67019a9626a8de3eb9fc3b206d91aba1e",
+          "en": "Deed to Hyacinth Soft",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1192/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1192/c26",
+          "source_text_sha256": "85a6bea7de2e8ad1cb993c69d7bd6222520ae48cca478ccdbc6a05f642f3e064",
+          "en": "A document proving ownership of the software development company Hyacinth Soft.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1192/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1192/c28",
+          "source_text_sha256": "85a6bea7de2e8ad1cb993c69d7bd6222520ae48cca478ccdbc6a05f642f3e064",
+          "en": "A document proving ownership of the software development company Hyacinth Soft.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1192/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1193/c25",
+          "source_text_sha256": "e8dc3c891028b0b3c9cd4beb40abcf89d995db8f57823665bf6707d20ca1df83",
+          "en": "Deed to Miyato Cinema",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1193/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1193/c26",
+          "source_text_sha256": "60598444907a093837f026cbac3cb8dd7748861b2b239df9f8bab6ae09d3626c",
+          "en": "A document proving ownership of Miyato Cinema, a movie theater in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1193/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1193/c28",
+          "source_text_sha256": "60598444907a093837f026cbac3cb8dd7748861b2b239df9f8bab6ae09d3626c",
+          "en": "A document proving ownership of Miyato Cinema, a movie theater in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1193/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1194/c25",
+          "source_text_sha256": "5dcc404d6124506a0fe3e3edc5d8b85abd9b9fad716d71f310f8e45a0cbf0b5b",
+          "en": "Deed to Ristorante Miyato",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1194/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1194/c26",
+          "source_text_sha256": "d030336246c2c4ac28a0b438c12dbe74ab52e78aa05db93bc7044e0ea69c58cd",
+          "en": "A document proving ownership of Ristorante Miyato, a popular French restaurant in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1194/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1194/c28",
+          "source_text_sha256": "d030336246c2c4ac28a0b438c12dbe74ab52e78aa05db93bc7044e0ea69c58cd",
+          "en": "A document proving ownership of Ristorante Miyato, a popular French restaurant in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1194/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1195/c25",
+          "source_text_sha256": "7bff12f8d84034d9d741e486fb104c1c1908edc191fba5e49bfe7496414aa023",
+          "en": "Deed to Southern Island Hideaway Beach Resort",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1195/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1195/c26",
+          "source_text_sha256": "6ba0c14945f554e1e339eaf0fea2582b84489bf9b5cf2685a6e1eaa5a8d60711",
+          "en": "A document proving ownership of Southern Island Hideaway, a beach resort by the blue sea.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1195/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1195/c28",
+          "source_text_sha256": "6ba0c14945f554e1e339eaf0fea2582b84489bf9b5cf2685a6e1eaa5a8d60711",
+          "en": "A document proving ownership of Southern Island Hideaway, a beach resort by the blue sea.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1195/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1196/c25",
+          "source_text_sha256": "e18aad551ab59ad2551402a0a1a5986dd75a72f92a3bd078d3fd14548c653636",
+          "en": "Deed to the Ebine Publishing Building",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1196/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1196/c26",
+          "source_text_sha256": "dd975d82a6fd65cbdbf319158e2e26a52f6e38d04b1fd5733648fe4faf39e4ee",
+          "en": "A document proving ownership of the Ebine Publishing building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1196/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1196/c28",
+          "source_text_sha256": "dd975d82a6fd65cbdbf319158e2e26a52f6e38d04b1fd5733648fe4faf39e4ee",
+          "en": "A document proving ownership of the Ebine Publishing building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1196/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1198/c25",
+          "source_text_sha256": "f547390c3f7cbe5f81ee72118551dca67019a9626a8de3eb9fc3b206d91aba1e",
+          "en": "Deed to Hyacinth Soft",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1198/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1198/c26",
+          "source_text_sha256": "85a6bea7de2e8ad1cb993c69d7bd6222520ae48cca478ccdbc6a05f642f3e064",
+          "en": "A document proving ownership of the software development company Hyacinth Soft.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1198/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1198/c28",
+          "source_text_sha256": "85a6bea7de2e8ad1cb993c69d7bd6222520ae48cca478ccdbc6a05f642f3e064",
+          "en": "A document proving ownership of the software development company Hyacinth Soft.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1198/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1199/c25",
+          "source_text_sha256": "e8dc3c891028b0b3c9cd4beb40abcf89d995db8f57823665bf6707d20ca1df83",
+          "en": "Deed to Miyato Cinema",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1199/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1199/c26",
+          "source_text_sha256": "60598444907a093837f026cbac3cb8dd7748861b2b239df9f8bab6ae09d3626c",
+          "en": "A document proving ownership of Miyato Cinema, a movie theater in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1199/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1199/c28",
+          "source_text_sha256": "60598444907a093837f026cbac3cb8dd7748861b2b239df9f8bab6ae09d3626c",
+          "en": "A document proving ownership of Miyato Cinema, a movie theater in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1199/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1200/c25",
+          "source_text_sha256": "5dcc404d6124506a0fe3e3edc5d8b85abd9b9fad716d71f310f8e45a0cbf0b5b",
+          "en": "Deed to Ristorante Miyato",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1200/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1200/c26",
+          "source_text_sha256": "d030336246c2c4ac28a0b438c12dbe74ab52e78aa05db93bc7044e0ea69c58cd",
+          "en": "A document proving ownership of Ristorante Miyato, a popular French restaurant in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1200/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1200/c28",
+          "source_text_sha256": "d030336246c2c4ac28a0b438c12dbe74ab52e78aa05db93bc7044e0ea69c58cd",
+          "en": "A document proving ownership of Ristorante Miyato, a popular French restaurant in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1200/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1201/c25",
+          "source_text_sha256": "7bff12f8d84034d9d741e486fb104c1c1908edc191fba5e49bfe7496414aa023",
+          "en": "Deed to Southern Island Hideaway Beach Resort",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1201/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1201/c26",
+          "source_text_sha256": "6ba0c14945f554e1e339eaf0fea2582b84489bf9b5cf2685a6e1eaa5a8d60711",
+          "en": "A document proving ownership of Southern Island Hideaway, a beach resort by the blue sea.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1201/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1201/c28",
+          "source_text_sha256": "6ba0c14945f554e1e339eaf0fea2582b84489bf9b5cf2685a6e1eaa5a8d60711",
+          "en": "A document proving ownership of Southern Island Hideaway, a beach resort by the blue sea.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1201/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1202/c25",
+          "source_text_sha256": "e18aad551ab59ad2551402a0a1a5986dd75a72f92a3bd078d3fd14548c653636",
+          "en": "Deed to the Ebine Publishing Building",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1202/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1202/c26",
+          "source_text_sha256": "dd975d82a6fd65cbdbf319158e2e26a52f6e38d04b1fd5733648fe4faf39e4ee",
+          "en": "A document proving ownership of the Ebine Publishing building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1202/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1202/c28",
+          "source_text_sha256": "dd975d82a6fd65cbdbf319158e2e26a52f6e38d04b1fd5733648fe4faf39e4ee",
+          "en": "A document proving ownership of the Ebine Publishing building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1202/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1204/c25",
+          "source_text_sha256": "2d004319ba2d6a0cc81f2f9a7ab2a061bd2dd98d5c033682a26b20196eb689d3",
+          "en": "Check for 5 Million Yen",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1204/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1204/c26",
+          "source_text_sha256": "4793d438308714632398948bbefaab9f9333ce8b11758ccf7a7829273dbd728c",
+          "en": "A check for 5 million yen found tucked inside an issue of Giant Shadow Weekly at Iberis Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1204/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1204/c28",
+          "source_text_sha256": "4793d438308714632398948bbefaab9f9333ce8b11758ccf7a7829273dbd728c",
+          "en": "A check for 5 million yen found tucked inside an issue of Giant Shadow Weekly at Iberis Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1204/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1227/c25",
+          "source_text_sha256": "5d26e792a6594c66747446b46e4bec4f8803109e658777499db844a6d7b7f8b0",
+          "en": "Chief Researcher Sawada's Locker Key",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1227/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1227/c26",
+          "source_text_sha256": "ec6631e652f2be28f69c72e78898669f6c9003fa2fa5dd43afd7b3a4328bf7cc",
+          "en": "A locker key entrusted to you by Chief Researcher Sawada of the Cosmic Ray Research Institute.<br>The locker room is apparently behind the first-floor reception desk.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1227/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1227/c28",
+          "source_text_sha256": "ec6631e652f2be28f69c72e78898669f6c9003fa2fa5dd43afd7b3a4328bf7cc",
+          "en": "A locker key entrusted to you by Chief Researcher Sawada of the Cosmic Ray Research Institute.<br>The locker room is apparently behind the first-floor reception desk.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1227/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1228/c25",
+          "source_text_sha256": "cd57af7ec32a1f9da2e831d961e9c1a3d3b287744d6a565182fb42c47a2bd420",
+          "en": "Laboratory Keycard",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1228/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1229/c25",
+          "source_text_sha256": "ddc82476e4f57d0140c59a3eea8b1577f384b89deae2cad08e10a123dda8c9fd",
+          "en": "Forklift Key",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1229/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1230/c25",
+          "source_text_sha256": "2ab2c911fae96ab3f7231fa0ee844951035df4d4c75d02e0f8d6dda91429a7f6",
+          "en": "Key to the Outdoor Stairs",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1230/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1230/c26",
+          "source_text_sha256": "2fc9c23ebf51f6622bd2350c7e5023677d39fdb2f57bad16e9406f69d1896ae9",
+          "en": "A key that opens the door to the outdoor stairs at Miyato Sky Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1230/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1230/c28",
+          "source_text_sha256": "2fc9c23ebf51f6622bd2350c7e5023677d39fdb2f57bad16e9406f69d1896ae9",
+          "en": "A key that opens the door to the outdoor stairs at Miyato Sky Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1230/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1231/c25",
+          "source_text_sha256": "8f8a26d0edaf38f796adda64f2571ab588f6a55f1fe38ae665b183675f4777ee",
+          "en": "Observation Deck Storage Room Locker Key",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1231/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1232/c25",
+          "source_text_sha256": "a7262e33f79368c1fc39247179968293671907e09b8c22e2004a92cbdbaffef6",
+          "en": "Dirty Key",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1232/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1233/c25",
+          "source_text_sha256": "c463737abe136cfc5d1469bb59d0c9d9a78f29b4101b68ff775b8b53815eb40b",
+          "en": "Office Manager's Locker Key",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1233/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1233/c26",
+          "source_text_sha256": "6ae23cef6388ea9c195a072118e506dab5287022b9e3d7be6f98f2812fe5da5c",
+          "en": "A key to the office manager's locker at a travel agency in Sumire Ward.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1233/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1233/c28",
+          "source_text_sha256": "6ae23cef6388ea9c195a072118e506dab5287022b9e3d7be6f98f2812fe5da5c",
+          "en": "A key to the office manager's locker at a travel agency in Sumire Ward.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1233/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1234/c25",
+          "source_text_sha256": "cc613a6783ee4a62b97bbbe9b5e118a0d50fbf3c0f022d68e2f0394c2a7a1c75",
+          "en": "Refrigerated Truck Container Key",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1234/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1234/c26",
+          "source_text_sha256": "849a1142f917842d4f16050fd94a4241cde965128187d56de157dc4ac69588c6",
+          "en": "A key to the door of a refrigerated truck's container. It also opens the container's side door.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1234/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1234/c28",
+          "source_text_sha256": "849a1142f917842d4f16050fd94a4241cde965128187d56de157dc4ac69588c6",
+          "en": "A key to the door of a refrigerated truck's container. It also opens the container's side door.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1234/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1235/c25",
+          "source_text_sha256": "91ff2c9abdfdba6c9bd37fb4a77ecddc24d51f6ecb4a152e5fd89d66cd095b4e",
+          "en": "Small Key",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1235/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1235/c26",
+          "source_text_sha256": "d1b5d6bfc63ccfad953a89cea6244bd3cdd199abdd5289ff83b14fb053eb96b9",
+          "en": "A small key found in the W&P office.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1235/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1235/c28",
+          "source_text_sha256": "d1b5d6bfc63ccfad953a89cea6244bd3cdd199abdd5289ff83b14fb053eb96b9",
+          "en": "A small key found in the W&P office.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1235/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1267/c25",
+          "source_text_sha256": "c65cf80a94bb653bb2e0647c12d3802fb6161a04ef3fa684a9926d8824f2e957",
+          "en": "Box Containing an Engagement Ring",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1267/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1267/c26",
+          "source_text_sha256": "0a0ab0eb1279e3884526682b12475a1c094d23fe01791f61bd741d8b690b75e2",
+          "en": "A box containing an engagement ring, found on a road where flocks of monstrous birds were flying.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1267/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1267/c28",
+          "source_text_sha256": "0a0ab0eb1279e3884526682b12475a1c094d23fe01791f61bd741d8b690b75e2",
+          "en": "A box containing an engagement ring, found on a road where flocks of monstrous birds were flying.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1267/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1268/c25",
+          "source_text_sha256": "2fdae653859075d0f51c55b4f7b95e9576b469a32bb5c64b0f2fd1991c53fe71",
+          "en": "Bloodstained Box Containing an Engagement Ring",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1268/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1269/c26",
+          "source_text_sha256": "773835264b926fe0a659dbf042969a2779db1cff22d832dc71a5d45dac6d76a1",
+          "en": "A medicated patch that soothes lower back pain.<br>Its positioning sheet lets you apply it to your back with one hand, even on your own.<br>Now with one extra patch!",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1269/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1269/c28",
+          "source_text_sha256": "773835264b926fe0a659dbf042969a2779db1cff22d832dc71a5d45dac6d76a1",
+          "en": "A medicated patch that soothes lower back pain.<br>Its positioning sheet lets you apply it to your back with one hand, even on your own.<br>Now with one extra patch!",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1269/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1270/c25",
+          "source_text_sha256": "9e2f53704368c72f0e122374e02eb5c1ee6f8a5fda43805a254924af69981a32",
+          "en": "Handmade Adhesive Bandage",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1270/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1270/c26",
+          "source_text_sha256": "a9c636ba82b65f985494bdf57f12c2648993777f63eeb0f87937ec2f06a0990b",
+          "en": "An adhesive bandage with a colorful pattern.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1270/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1270/c28",
+          "source_text_sha256": "a9c636ba82b65f985494bdf57f12c2648993777f63eeb0f87937ec2f06a0990b",
+          "en": "An adhesive bandage with a colorful pattern.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1270/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1271/c25",
+          "source_text_sha256": "bd0177eec0c4af1e82be67744937a1546459db3f83fcb4e416607b872596f84b",
+          "en": "One Earring",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1271/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1271/c26",
+          "source_text_sha256": "9f0f61a16adfa0fdbe5d794a4d1f082ec1b9382a0be99513d2fdd5099d04ecbc",
+          "en": "Found on the floor of the office where Asano was.<br>One of a beautiful pair of earrings.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1271/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1271/c28",
+          "source_text_sha256": "9f0f61a16adfa0fdbe5d794a4d1f082ec1b9382a0be99513d2fdd5099d04ecbc",
+          "en": "Found on the floor of the office where Asano was.<br>One of a beautiful pair of earrings.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1271/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1272/c25",
+          "source_text_sha256": "1d93fa114ab57bfbada0d810816c072e04eca89fef8dc41e5f1cce2fbd872ee6",
+          "en": "Women's Wristwatch",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1272/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1272/c26",
+          "source_text_sha256": "dac295fb0dd637a3cc358ae22a1e2d04ffe9019dd5d786b5ecf39661aab5170a",
+          "en": "A slender wristwatch with a red strap that adds a feminine touch.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1272/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1272/c28",
+          "source_text_sha256": "dac295fb0dd637a3cc358ae22a1e2d04ffe9019dd5d786b5ecf39661aab5170a",
+          "en": "A slender wristwatch with a red strap that adds a feminine touch.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1272/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1273/c25",
+          "source_text_sha256": "51461561f05b9916151c176d4010148a66eddee9a5e4d437f3b6216562cf28bd",
+          "en": "Prickly Pear Cactus \"Golden Honey\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1273/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1273/c26",
+          "source_text_sha256": "3861123b0c6778b4f5f35615ad771070f6239eac14bb0ac042ae39c1047d989f",
+          "en": "Perfect for your office or home desk when you need to unwind!<br>The trick is not to overwater it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1273/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1273/c28",
+          "source_text_sha256": "3861123b0c6778b4f5f35615ad771070f6239eac14bb0ac042ae39c1047d989f",
+          "en": "Perfect for your office or home desk when you need to unwind!<br>The trick is not to overwater it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1273/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1274/c25",
+          "source_text_sha256": "2e9f4f0f8da04daf4e12cbf9222ffe48319b271360d719917b5f7f91e57c9636",
+          "en": "Toilet Paper",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1274/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1274/c26",
+          "source_text_sha256": "009e6f0778865dfa0e04b7592b2b481be48415a87a90b0e79dc286ba79e85141",
+          "en": "Ordinary two-ply toilet paper.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1274/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1274/c28",
+          "source_text_sha256": "009e6f0778865dfa0e04b7592b2b481be48415a87a90b0e79dc286ba79e85141",
+          "en": "Ordinary two-ply toilet paper.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1274/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1275/c25",
+          "source_text_sha256": "ebfd203fbccb2a2852e4615f97a7b93b1106472c2b2ff4f439f10decc97027a8",
+          "en": "Huge Emerald",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1275/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1275/c26",
+          "source_text_sha256": "63b2579428b978d50bf554f6298810d6dddd7a8db141abb7a7e54c81a7243816",
+          "en": "An enormous teardrop-shaped emerald weighing 430 carats.<br>Its purity leaves something to be desired, but it's still worth tens of millions of yen.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1275/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1275/c28",
+          "source_text_sha256": "63b2579428b978d50bf554f6298810d6dddd7a8db141abb7a7e54c81a7243816",
+          "en": "An enormous teardrop-shaped emerald weighing 430 carats.<br>Its purity leaves something to be desired, but it's still worth tens of millions of yen.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1275/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1276/c25",
+          "source_text_sha256": "d5a9ff940ba32111cdfc1776723b4a5cb023ff9b6e28a3f319e0219428711c18",
+          "en": "Smartphone",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1276/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1276/c26",
+          "source_text_sha256": "3d716e3141d8e5ee4ec52f97518e47915ed6a321bd6de16aa3f7cfca3b41e4ec",
+          "en": "Your own smartphone.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1276/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1276/c28",
+          "source_text_sha256": "3d716e3141d8e5ee4ec52f97518e47915ed6a321bd6de16aa3f7cfca3b41e4ec",
+          "en": "Your own smartphone.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1276/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1277/c25",
+          "source_text_sha256": "b6ea9f5c584966be219e56326455d97c72e20da6a4e0f9bc835ddca3bbfe80c7",
+          "en": "Smartphone Borrowed from Risa",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1277/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1277/c26",
+          "source_text_sha256": "17020abd807f51e42894b49b094dfa78b67bbd9bf925897cdf04a88ad182b92a",
+          "en": "A smartphone borrowed from a woman named Risa Kashiwagi.<br>She lent it to you because her work as a journalist means she always carries two.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1277/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1277/c28",
+          "source_text_sha256": "17020abd807f51e42894b49b094dfa78b67bbd9bf925897cdf04a88ad182b92a",
+          "en": "A smartphone borrowed from a woman named Risa Kashiwagi.<br>She lent it to you because her work as a journalist means she always carries two.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1277/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/loading_image_and_text.csh",
+      "source_sha256": "5f7a4c7731e997457391f2e0f987338db6a16a998f68f40f8825dadd4679621e",
+      "entries": [
+        {
+          "id": "r13/c3",
+          "source_text_sha256": "76338f6bde848b5abb58de84e4bc2b364759ee4a33343b4c4d6c1038251ee559",
+          "en": "I rushed into a building to escape the giant alien.\\nThere, I met a man called Otsuka.\\nHe said it looked as though the giant alien was targeting me.\\nAs we talked, flames spread into the building.\\nEveryone headed upstairs.\\nI raced up the stairs after them.",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r13/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r13/c4",
+          "source_text_sha256": "592738cb5ac64d839c818554fe5b6f39c4852fd314d5887b44d7bed20ef8c989",
+          "en": "I rushed into a building to escape the giant alien.\\nThere, I met a man called Otsuka.\\nHe said it looked as though the giant alien was targeting me.\\nAs we talked, flames spread into the building.\\nEveryone headed upstairs.\\nI raced up the stairs after them.",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r13/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r84/c3",
+          "source_text_sha256": "f2238db1085a60d21e8f49993d7b64b8f5eb29dec605ad14dd4a297e8569f315",
+          "en": "Not only the deputy director,\\nbut Risa too was in the laboratory.\\nThen Yuki and Otsuka arrived as well.\\nAs we talked, one of the researchers transformed into a mysterious creature.\\nThe deputy director was erased by its beam.\\nThen we all fled at once.",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r84/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r84/c4",
+          "source_text_sha256": "ed787bd9eeb9175f3e76ce3b6facb0972dfbe79e61f165b1d0efe1cc7f4d9355",
+          "en": "Not only the deputy director,\\nbut Risa too was in the laboratory.\\nThen Yuki and Otsuka arrived as well.\\nAs we talked, one of the researchers transformed into a mysterious creature.\\nThe deputy director was erased by its beam.\\nThen we all fled at once.",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r84/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r105/c3",
+          "source_text_sha256": "f9627f8dbbaa54a29c4a56c1f73ba36948f8081c553b3757aec96c8a81c24840",
+          "en": "Otsuka asked us to rescue an old friend of his,\\nan editor-in-chief who was injured.\\nWhile we searched for the publishing building where they were,\\na black giant alien appeared...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r105/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r105/c4",
+          "source_text_sha256": "f9627f8dbbaa54a29c4a56c1f73ba36948f8081c553b3757aec96c8a81c24840",
+          "en": "Otsuka asked us to rescue an old friend of his,\\nan editor-in-chief who was injured.\\nWhile we searched for the publishing building where they were,\\na black giant alien appeared...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r105/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r116/c3",
+          "source_text_sha256": "b8a240adc2fc37c6137e0b00f86ffd8297cd1965b62e1061503d3fad3efe864a",
+          "en": "We decided to dry our clothes in a convenience store.\\nRisa told us about all kinds of things.\\nOtsuka, her brother...\\nBy the time our clothes were dry, the rain had stopped.\\nWe set off to rescue Yuki.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r116/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r116/c4",
+          "source_text_sha256": "ba35f49005fe52691718382241cc2d12f29058ffa9a9f7cd96587750bf12cba2",
+          "en": "We decided to dry our clothes in a convenience store.\\nRisa told us about all kinds of things.\\nOtsuka, her brother...\\nBy the time our clothes were dry, the rain had stopped.\\nWe set off to rescue Yuki.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r116/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r124/c3",
+          "source_text_sha256": "6a3ae0e03214cea52b9968796a229736709d63044f04dcd47c94680cbc8cb8be",
+          "en": "We came to this city\\nto meet the man Otsuka told us about.\\nApparently, with his help, we can drive away\\nthose dangerous people from W&P Consulting.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r124/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r124/c4",
+          "source_text_sha256": "6a3ae0e03214cea52b9968796a229736709d63044f04dcd47c94680cbc8cb8be",
+          "en": "We came to this city\\nto meet the man Otsuka told us about.\\nApparently, with his help, we can drive away\\nthose dangerous people from W&P Consulting.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r124/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r127/c3",
+          "source_text_sha256": "be35cbf5d1b13c2ca33cea3364469024d501e81eae8441532c87eba51fe4f362",
+          "en": "We somehow rescued Yuki!\\nAccording to Otsuka, a helicopter\\nhas arrived on this building's roof.\\nWe need to hurry up there.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r127/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r127/c4",
+          "source_text_sha256": "d2eff4b8c35445d28cd43b23e31a9fe99f6e10e7fd5deec3e7133ddf37805f88",
+          "en": "We somehow rescued Yuki!\\nAccording to Otsuka, a helicopter\\nhas arrived on this building's roof.\\nWe need to hurry up there.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r127/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/staffroll.csh",
+      "source_sha256": "751be64333402793813ee9f03ec8da9ef3dcd73b68dedc62ac484ded478bb338",
+      "entries": [
+        {
+          "id": "r9/c3",
+          "source_text_sha256": "4336f0d0e50a89f6d7d3c31301233ffe30aa4b1a103cb1c2df2e2832ce1a551a",
+          "en": "Hideyasu Otsuka",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r9/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_EpilogueText.luc",
+      "source_sha256": "c4b10551ce7c0a546089a37b2c2beb06ab8caaadc940fe28ae5275bdeaac3938",
+      "entries": [
+        {
+          "id": "p0/k21",
+          "source_text_sha256": "a1926ee84a9b6b37a3b4afac9bc292b4768170d5a648deffa9af533cf30baabb",
+          "en": "Web writer Hideyasu Otsuka published an account of his experiences\nduring the series of strange incidents, and it became a bestseller.",
+          "notes": "English draft imported from audited private workspace, translate-en-0094.json:p0/k21; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Heroine.luc",
+      "source_sha256": "ad9f923db70f61116204eba07b48f2e4b368a7ae0f994fbaebef93d002c9ff54",
+      "entries": [
+        {
+          "id": "p0/k191",
+          "source_text_sha256": "28dbbd7de3c257f3737dc369b370162ecaeb74cf728480d4a560b44924a37345",
+          "en": "About Otsuka",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k191; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k197",
+          "source_text_sha256": "0291be031e14dce9d0eed54287d5db4ef70c9b8348ec515652ef5372dcc846c1",
+          "en": "So that man's name is Otsuka.\nWe were saved thanks to him.",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k197; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k583",
+          "source_text_sha256": "ae4e39c7fa757003f3480ab95f7f6e612acc4ae7fadf7aa2b9a12c31b56c18df",
+          "en": "Otsuka really turns up everywhere, doesn't he?\nWhat a surprise!",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k583; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k760",
+          "source_text_sha256": "86d0ecdf42edd3a03953f44e737b297ec2102e68ff768f2aa61f40ec8d1764a0",
+          "en": "Someone was erased...?\nAnd Otsuka's gone to investigate too... I'm worried...",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k760; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k790",
+          "source_text_sha256": "85bb2c564114c4ded3b6d2964bf288360b34c6441d4ac15a8783ca8b488b255f",
+          "en": "Otsuka and Risa seem to have known each other a long time.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k790; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1014",
+          "source_text_sha256": "9348f0de01392fd8fca7db2d63fe8fc9635fe07bf1c412d51809f7df2fa4c297",
+          "en": "That person standing over there is the one Otsuka told us to meet, right?",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1014; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Mail.luc",
+      "source_sha256": "4e888a17a3ae57fedc8c7cae1ef339c772487b3b7be91957dcc91737c1c877a6",
+      "entries": [
+        {
+          "id": "p0/k193",
+          "source_text_sha256": "4e8329f64c8c5e2ea25f912c5631a78b48d940dc630bf3c144dd86a90a31579c",
+          "en": "Otsuka",
+          "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k193; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_201.luc",
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "entries": [
+        {
+          "id": "p0/k788",
+          "source_text_sha256": "a00a82fb229fabfacf2376048b4f66a53b5e86d412f6907b9128ca302eae895a",
+          "en": "Web Writer Otsuka",
+          "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k788; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k978",
+          "source_text_sha256": "21c7db7e52d601d0449a45211039ac312746282ee202b09bc62514ed39e8bed1",
+          "en": "I'm Otsuka. I write articles for online news sites.\nNice to meet you!",
+          "notes": "English draft imported from audited private workspace, translate-en-0057.json:p0/k978; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_204.luc",
+      "source_sha256": "24e892d1979af5bca0df524f6cb06002166ee4099db4f1038492d5df53712ad2",
+      "entries": [
+        {
+          "id": "p0/k377",
+          "source_text_sha256": "4e8329f64c8c5e2ea25f912c5631a78b48d940dc630bf3c144dd86a90a31579c",
+          "en": "Otsuka",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k377; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k380",
+          "source_text_sha256": "c97ca545a3eb915716a9104b8fd2b6a4f809c3f2688019c515cacfc111a92bd2",
+          "en": "Otsuka's holding them back.\nLet's hurry to the elevator.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k380; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1032",
+          "source_text_sha256": "7b389bd4689f2b61e68887b2e09b4d9dd1640d0e05115d38ece4c7d865f90e0b",
+          "en": "Otsuka's holding them back.\nWe need to escape, quickly...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0145.json:p0/k1032; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1521",
+          "source_text_sha256": "0f64222dbca29a9c12e8d80a832fbe3587161485dfe2416067a876eef8298e96",
+          "en": "(I told Otsuka what had happened so far:\nmeeting Risa Kashiwagi, encountering all those strange incidents...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0146.json:p0/k1521; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_206.luc",
+      "source_sha256": "ec99884b400f9c1fa52fc68f5636ff7f524e798527101cdfebd6d8c07fefbe56",
+      "entries": [
+        {
+          "id": "p0/k708",
+          "source_text_sha256": "bc42fd659532a3f7b2054161c374e18eccb451c365b32b95af14ed088ba7e144",
+          "en": "That web writer, Otsuka, who's so interested in the giant shadows...",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k708; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k752",
+          "source_text_sha256": "a92aa06e76c356f2ac320b757bb5b45b57af656a9ef289a52b75bdc387c1995d",
+          "en": "That web writer, Otsuka... I suppose.",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k752; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1055",
+          "source_text_sha256": "f3979d702651ad056d5f8f768155fb9be6341f0ea600c783a1d1b66da4c2fddb",
+          "en": "Otsuka!",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1055; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1063",
+          "source_text_sha256": "ef0f2e3e03fa9dea04266d2d3227f611f4874dc51baec15b3525af282016b5c6",
+          "en": "Simply express surprise at Otsuka's appearance.",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1063; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_211.luc",
+      "source_sha256": "f39f5287339dbe3d42edcb4da942e995822f43e19151d7afe35b874fc142c929",
+      "entries": [
+        {
+          "id": "p0/k24",
+          "source_text_sha256": "4e8329f64c8c5e2ea25f912c5631a78b48d940dc630bf3c144dd86a90a31579c",
+          "en": "Otsuka",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k24; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k243",
+          "source_text_sha256": "86d0ecdf42edd3a03953f44e737b297ec2102e68ff768f2aa61f40ec8d1764a0",
+          "en": "Someone was erased...?\nAnd Otsuka's gone to investigate too... I'm worried...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k243; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k257",
+          "source_text_sha256": "1fd72f0eb541c89b2086c1a75180c4351923db547191b58f6e70617239f7a5a1",
+          "en": "Huh? Otsuka?",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k257; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k264",
+          "source_text_sha256": "560f3b850d796688b70c3b0fcb7c3ed16da17b77a5cbd703d7480f90a935d3d2",
+          "en": "We're here to make a delivery.\nWhat brings you here, Otsuka?",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k264; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k335",
+          "source_text_sha256": "3c32cf2acc2645d021e857f81834c5c6fc525771c86b82e58dd83393e3592f49",
+          "en": "Point at Otsuka.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k335; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k363",
+          "source_text_sha256": "6bbe8fc21250774975cf14efff14b14f3cfd3f5008df283d48d7219963ed9edf",
+          "en": "I can't let Otsuka do something so dangerous! I'll go scout the place!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k363; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k369",
+          "source_text_sha256": "3044281d49ca801047640c50678e2f8150a8dca604743ab5865df96e01fdb30e",
+          "en": "I can't let Otsuka do something so dangerous!\nI'll go scout the place!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k369; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_212.luc",
+      "source_sha256": "3af3b860839559bd0e120981237f27c0c97f3c8a265b43dc4801e05214d2c46c",
+      "entries": [
+        {
+          "id": "p0/k849",
+          "source_text_sha256": "62de497daa1a688a59211b69f54edcb0f5e722cc7271b9795acd30e71849268d",
+          "en": "Hey, I'll go on ahead.\nI don't want Otsuka stealing the scoop...",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k849; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k917",
+          "source_text_sha256": "9f968da2ed1d54fcc3d6810d0a20251bfe023a4542da52cef16af99f1f387f69",
+          "en": "It looks like what Otsuka said was true.\nAnd to think you made it through all that danger...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k917; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_214.luc",
+      "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+      "entries": [
+        {
+          "id": "p0/k53",
+          "source_text_sha256": "0a90abb1dbd673073e89005dca0fb4dcc021c35785a4f4d68ab40cd5e4fa6b38",
+          "en": "Let's look for the [#ff88ff88]Ebine Publishing[/#] building,\nwhere Otsuka's acquaintance is.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k53; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k444",
+          "source_text_sha256": "3c81871acfae1ae16395c5064c66fe6247e3e02bd85b3ae890731b3309c5e821",
+          "en": "It seems this article was written by a reporter called Otsuka.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k444; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k620",
+          "source_text_sha256": "38737c4447f9c0ff24640e51b9eed703ac06e8a57e1fb02fc30c7fc160043814",
+          "en": "From Otsuka?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k620; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k643",
+          "source_text_sha256": "f46b428f865b7630bbe4f71acb3e5cb7701aca7502be6661bad35e155d266b1b",
+          "en": "Go help the editor-in-chief and ask about Otsuka's past!",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k643; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k649",
+          "source_text_sha256": "7b1c1439c933215ea2e4f8ef49a09982108ae25462d5599168de438a36afc3c5",
+          "en": "Go help the editor-in-chief and ask about Otsuka's past!",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k649; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k668",
+          "source_text_sha256": "b77b76ca70992305534e2ff569c5981fb59717278b0e4fbae98cef03269d3712",
+          "en": "《To Otsuka:\nThe W&P building collapsed, and their organization seems to have been wiped out.》",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k668; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k681",
+          "source_text_sha256": "d2978d17c78d15ac4d9013a648c849179f0a8ba78eca10d13e882a43225e38f0",
+          "en": "Um... Are you two\nthe people Otsuka called to help?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k681; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k683",
+          "source_text_sha256": "006fa5349a663cb9c3bef338e593dbcfb06346ca1b4adb5df7ddee9a4cb8d504",
+          "en": "Yes, that's right. Are you the editor-in-chief who's an old friend of Otsuka's?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k683; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k687",
+          "source_text_sha256": "03f4fa8502b7345d60d40086769cf64d86b11beef920ba94eefd43382a0918f2",
+          "en": "That's right! Are you the editor-in-chief who's an old friend of Otsuka's?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k687; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k720",
+          "source_text_sha256": "0467e68ca8bc82ced992ec26f2bcc7490c79b0ef8074fc213ea1ae3ac8d9256f",
+          "en": "An issue of Giant Shadow Weekly from 16 years ago, the first one I worked on.\nIt even includes a battlefield report by Otsuka, who joined the company at the same time as me.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k720; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k722",
+          "source_text_sha256": "3a0f44eff0d6f89e91f7fcfa07644c056221fd70350defb108adcb590bde7743",
+          "en": "What? Otsuka was a war correspondent?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k722; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k724",
+          "source_text_sha256": "388b4ba2502d6f1a9ca3acbabd90e2c72c07a0896ebcbe8db7f84195d720a2f5",
+          "en": "What was Otsuka like when he joined the company?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k724; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k730",
+          "source_text_sha256": "97956b416352b972315bce1154229afb28321ddb7b0a35f901232cc7a9e18884",
+          "en": "What? Otsuka was a war correspondent?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k730; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k733",
+          "source_text_sha256": "4d859a70e0d59cbff5a9d26e4534e226982a30a84b39723c01356930d25ebdfc",
+          "en": "Oh, sorry. Otsuka told me\nnot to talk about the past. You'll have to ask him directly for anything more.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k733; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k740",
+          "source_text_sha256": "7ba0b000743b4770cef57d24b14d1069b13b932c8d6f2d7895bfb5f2174e4465",
+          "en": "We're coworkers. Oh, right, Otsuka told me not to talk about\nthe past. You'll have to ask him directly for anything more.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k740; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k745",
+          "source_text_sha256": "7a16180702507f2f4bbe816a39b92954561213eea897b762c11145922c3bbd6b",
+          "en": "Yes. Still, this brings back memories. Otsuka, back then...",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k745; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k749",
+          "source_text_sha256": "5ebd8738820cbce9f867ca56aa87e01195cd84b3685596480bb3351849b50d23",
+          "en": "Well, Otsuka seems to have been working quite seriously lately.\nPerhaps the rising younger generation has spurred him on.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k749; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k779",
+          "source_text_sha256": "41825b05b8d0095674af1eb4dba3823f09493f1f0a0114705dbfbbf60ff95731",
+          "en": "She'd been successful as a freelancer since her student days. She said she wanted\nto work with Otsuka, and for a while, they were on the same team.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k779; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k781",
+          "source_text_sha256": "30a1146e1f4588d2fe5f3d8689e0d0e9cc7f306d7c9b1c6f9194e750d4a7d17d",
+          "en": "But Otsuka kept doing whatever he pleased,\nso Risa got fed up with him, and the team broke up.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k781; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k783",
+          "source_text_sha256": "40c71805546049df10828a4b9eb0081ad2c2610ad2cf486b22d90a3c7c4f88b0",
+          "en": "Otsuka was awful back then... Well, I'm a hyena of the same pack,\nso I'm hardly one to talk.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k783; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k785",
+          "source_text_sha256": "927f5a664be76d39a3d6708664e29d7794781d4bbca26f492ae192f5a26c843a",
+          "en": "After that, Risa Kashiwagi kept making a name for herself,\nwhile Otsuka fell farther and farther behind.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k785; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k799",
+          "source_text_sha256": "898e9dcb4afb59a95a7421aa6f91a233682df7fbda134bce1e1c46ca1a657bd3",
+          "en": "I told Risa that W&P had been wiped out\nand that we'd come to rescue the editor-in-chief at Otsuka's request.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k799; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k804",
+          "source_text_sha256": "5df2068bc6bc1d18dce801ea75de5d4316aecf8bdf1cecc6ecc6be7c23620b3e",
+          "en": "I heard about how you and Otsuka used to work together\nand parted on bad terms.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k804; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_215.luc",
+      "source_sha256": "063da08a76a3abae15ddb198b0594957c8aa6811419b4eab0d4a8142cee59ff7",
+      "entries": [
+        {
+          "id": "p0/k348",
+          "source_text_sha256": "1b18b5d99d793b9eed0a68393a010f9fadde8bbc7c078561707d426edd3c0ea8",
+          "en": "By the way, Otsuka really gave you a hard time.\nThat was rotten luck...",
+          "notes": "English draft imported from audited private workspace, translate-en-0089.json:p0/k348; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k360",
+          "source_text_sha256": "6fb5d8ad29f67e42a8964c3a245f5819696db8438e96dc0422b49a94c5528b3c",
+          "en": "Ask, 'Otsuka, what happened in the war zone?'",
+          "notes": "English draft imported from audited private workspace, translate-en-0089.json:p0/k360; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k362",
+          "source_text_sha256": "4558ee266b5fdc0daa4c364bc183532ca81c6bdb6ef450f2860885cbc8df36ab",
+          "en": "Imagine what Otsuka experienced in the war zone and weep at the horror of it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0089.json:p0/k362; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k366",
+          "source_text_sha256": "bd32f5f6302e8926d4b742f9f1f0263b93177e471da474f9a5a0f5e9ff96912c",
+          "en": "Otsuka, what happened in the war zone?",
+          "notes": "English draft imported from audited private workspace, translate-en-0089.json:p0/k366; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k371",
+          "source_text_sha256": "5b963b7911a6b75e9e3e97e03b7f6abb73d12fb2a8aa84ee10e5530487cde152",
+          "en": "I don't know what Otsuka saw in the war zone either.\nHe doesn't want to talk about it...",
+          "notes": "English draft imported from audited private workspace, translate-en-0089.json:p0/k371; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_218.luc",
+      "source_sha256": "e2cd50ee0dcafbeb37650762d0635d15bcd477c352023d7a13bb0e81677282c6",
+      "entries": [
+        {
+          "id": "p0/k265",
+          "source_text_sha256": "c7acd5eb01a5fcf1cfc55aa5a0063e61ca36bf194dfb7136281b5081c1d18bd3",
+          "en": "This is also where I met that web writer, Otsuka...",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k265; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k273",
+          "source_text_sha256": "2ee3b049034911bb0b65ad56c32eb843645b0e3865e057cfac1ef0e4b20b0a12",
+          "en": "This is also where I met that web writer, Otsuka...",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k273; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k285",
+          "source_text_sha256": "75177477da583be777665fd3103e44638639b2351332378ebd94394ea071c600",
+          "en": "This is also where I met\nthat web writer, Otsuka...",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k285; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k450",
+          "source_text_sha256": "f3979d702651ad056d5f8f768155fb9be6341f0ea600c783a1d1b66da4c2fddb",
+          "en": "Otsuka!",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k450; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k452",
+          "source_text_sha256": "cf86d3629ed8345aac7fcbbbd33fb765f2a30e0e7adf02a0ef614faf9bbf5c80",
+          "en": "Otsuka...\nWould you kindly stop interfering with our business?",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k452; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "entries": [
+        {
+          "id": "p0/k307",
+          "source_text_sha256": "57d759bf10bde5e0b330c2f01a03c077945926a08d97b642857418ce814aa6fe",
+          "en": "Hurry to the elevator! Otsuka is holding them back.",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k307; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k400",
+          "source_text_sha256": "de83395d1bfc5ed3d304224d6845ce4139839660154901233e1026f91c633b7c",
+          "en": "Head for the Ebine Publishing building, where Otsuka's acquaintance is.",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k400; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k402",
+          "source_text_sha256": "e0a8d672380e4c6010be232b9a76d67c5c89b144dab6fb0e3167178d7be2e1bf",
+          "en": "Look for Otsuka's acquaintance somewhere in the publishing building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k402; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/mission_text.luc",
+      "source_sha256": "2aee79fe9a3c37c9672cc108ecc31d2e65d74f3d138592269420b8c674a88800",
+      "entries": [
+        {
+          "id": "p0/k86",
+          "source_text_sha256": "924fe66fcd992d86cbf0cb5d8a04a1ceb1617dbd12936fb6fc58d2870d3a731c",
+          "en": "The sender was Otsuka. Apparently, he and Kashiwagi knew each other, but he wouldn't tell me what their relationship was.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k86; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k190",
+          "source_text_sha256": "25a0136e2e972bb6f5f49fb94b132456705ccba8fdb88dd5d530db1f640f03f7",
+          "en": "While we were talking with Otsuka, the two pursuers spotted us.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k190; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k270",
+          "source_text_sha256": "d200b988409f8c81f4a3064b9485408e1f67549bcc026d92003644cffd9bcd6a",
+          "en": "On the way, we dried our clothes in an empty convenience store.\nI heard all kinds of stories: about Risa's late brother, about Otsuka's past as a war correspondent...",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k270; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k292",
+          "source_text_sha256": "3445294839c7a132da5726ae0f0415bcd0ea3f40d819110952e6703b46600d1b",
+          "en": "Apparently, an editor-in-chief who is an old friend of Otsuka's has injured their leg and cannot escape. Otsuka asked us to rescue them. We'll head for Ebine Publishing's second editorial department.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k292; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_201_news_text.luc",
+      "source_sha256": "7ba28c7ceac5fbf240069f6acf531d70069f882628b2674a9e3cdfbe5af59ea8",
+      "entries": [
+        {
+          "id": "p0/k100",
+          "source_text_sha256": "ff0345edf5b1467358bfceb8cff3c30c3bce48f76bdd526fcfff06510c2a3d1a",
+          "en": "Chief Cabinet Secretary S announced that the 'giant of light,' which stopped the giant alien destroying the city, will be called Ultraman.\nUltraman is believed to stand approximately 40 meters tall and weigh an estimated 35,000 tons. His flight speed reportedly reaches Mach 5. Some witnesses claim he grew to giant size before appearing, but the details remain unclear.\n\nPeople watching videos uploaded by witnesses have posted numerous comments praising his efforts.",
+          "notes": "English draft imported from audited private workspace, translate-en-0016.json:p0/k100; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k133",
+          "source_text_sha256": "0ade1332d427f931ec6ddac1849e7b416f0cc2bf844c176a9561d99348af08e0",
+          "en": "'The quickest way to change your mood is to change your hairstyle.'\nSo says Associate Professor F, who teaches neuroscience at M University.\nA recent trend among young people is changing their hairstyle while looking in a restroom mirror.\n\nIf you find a convenience store, why not look into its restroom mirror and try a new hairstyle?\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0016.json:p0/k133; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k139",
+          "source_text_sha256": "bdebe2df8bd64814a839d1860bd56be74aea21822f410c06d0bc1018c70984ac",
+          "en": "Alien Zarab is said to have come from the Eighth Galaxy. According to Alien Zarab, Ultraman, the giant of light, is also an alien from space.\nAlien Zarab acted friendly toward humanity, but it has been revealed that he was actually impersonating Ultraman and destroying the city.",
+          "notes": "English draft imported from audited private workspace, translate-en-0016.json:p0/k139; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k147",
+          "source_text_sha256": "b08d501a68ad233d6b7ac94fbd3b38bc461a161a7dfee621b69d25c9c012c533",
+          "en": "Witnesses reported seeing a young person attacked by two men during the series of strange incidents near Tsubaki Avenue in Sakura Ward, deftly evading their blows again and again.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0016.json:p0/k147; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k151",
+          "source_text_sha256": "227d6f68bfaaa9b2bb932324f214b526f06f1731905cfe686c1d08038b6a7daf",
+          "en": "The giant aliens were seen attacking each other with beams and other projectiles fired from their hands.\nAt one point, one of them also released a ring-shaped weapon.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0016.json:p0/k151; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k158",
+          "source_text_sha256": "abd260c4fb1c13655875ab5e772d056841fc06a7b25404f5cf3fbf774d251f17",
+          "en": "'The Tale of the Last Sword' Reaches 1.1 Billion Copies Sold",
+          "notes": "English draft imported from audited private workspace, translate-en-0016.json:p0/k158; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_202_news_text.luc",
+      "source_sha256": "39048e20552ee003153ac5793b34c1cdb04f4eb0706b57d16e5589dffd5dc629",
+      "entries": [
+        {
+          "id": "p0/k139",
+          "source_text_sha256": "dcb29f746500e26c387c4ee26a58200db7e13c06e9965a93209dfdeafee005ba",
+          "en": "【 Risa Kashiwagi's Column: Grateful for Everyday Peace 】",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k139; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k144",
+          "source_text_sha256": "1242a2e6fd0847296eb7363c36afed0144fc17d45d9e7c57e557a12757c0b806",
+          "en": "The second volume of the hugely popular epic novel 'The Tale of the Last Sword,' 'The Pitch-Black Chapter,' has been released. This time, the setting changes completely from the first volume, and the story quite literally ventures into pitch-black darkness.\nWith just its first two volumes published, the series already conveys an epic scale.\nIts author, O. R. James, said: 'I have planned out all ten volumes. Now the characters should weave the story themselves.'\nWe eagerly await volume three and beyond.",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k144; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_205_news_text.luc",
+      "source_sha256": "aa35c8c0ac1d84a13a8b276593df5863034d6fca24b84c3881681ff6c2746bb2",
+      "entries": [
+        {
+          "id": "p0/k84",
+          "source_text_sha256": "6ca5aed5a83a5f8e0d6c584527b3284ce54cc436283889789bbbc23c562e71d6",
+          "en": "Late tonight, a mysterious black life-form that appeared on Nanohana Street in Miyato City was repelled by a gigantic humanoid weapon that emerged from the road. A government announcement also established that this mysterious life-form will be called an 'Angel.'\n\nThe Angel had been destroying nearby buildings, but the gigantic humanoid weapon prevented further damage.\nNo detailed information about this humanoid weapon is currently available.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k84; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k86",
+          "source_text_sha256": "3823d915355fcf7a744f6952cc1ef0ad790722e4667c4792baf99b811e305d23",
+          "en": "Late tonight, an attack by the Angel that appeared on Nanohana Street in Miyato City caused a tanker truck parked on the road to explode, setting the area ablaze.\nThe Angel was fighting a gigantic humanoid weapon that had emerged from the road, and a stray shot is believed to have struck the tanker. The truck carried gasoline and diesel fuel and was on its way to nearby gas stations. Its driver and local residents had evacuated, and there appear to be no casualties from the explosion.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k86; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k90",
+          "source_text_sha256": "da22a86b982969f0d031541d9d9b494f886447be6c9fbc88cbe6ecb3291b45ba",
+          "en": "The government has not yet made an announcement about the gigantic humanoid weapon that repelled the Angel appearing late tonight.\nThe weapon emerged from launch equipment installed in the road, suggesting that the organization responsible for the road may have some information.\nLocal residents say they knew the equipment had been installed, but did not know what it was for.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k90; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k92",
+          "source_text_sha256": "8f2038c2bede51ea1f526456e9516425cbafdf5307458402cdd25f72c2375a61",
+          "en": "General hospitals across Miyato City are struggling to treat people injured in collapsing buildings and explosions caused by giant creatures late tonight.\nMore than 400 people are believed to have been injured by the creatures. With too few doctors and nurses, hospitals cannot keep up. They are reportedly prioritizing the severely injured, children, and elderly patients.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k92; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k94",
+          "source_text_sha256": "b5bfabd60b9d31e3300c94527f1bd25da2b796f994e2a0f4ff65dc46c1fdf198",
+          "en": "Sewer construction was underway near Nanohana Street in Miyato City, where the Angel appeared, but the surrounding roads and buildings have been severely damaged, and there is currently no prospect of work resuming. The site supervisor said: 'We want to resume as soon as we can confirm the workers' safety, and we hope to restart as quickly as possible for the residents' sake.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k94; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k96",
+          "source_text_sha256": "e32a4ddde4545d6785877acdb88bf3679ea2bdc3b173698ec0fcdb5b019bf223",
+          "en": "A clerk at a convenience store near the scene reported that some residents had been stockpiling food for emergencies after the Angel's attack crippled infrastructure around Nanohana Street in Miyato City.\nConvenience stores in the area have run out of food, and the disturbances continue to prevent them from restocking.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k96; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k98",
+          "source_text_sha256": "097d2e35fa5d00e7b1045d413089106aef0c01ee7d65e685a8757edacd7db8aa",
+          "en": "Witnesses revealed that, during today's battle on Nanohana Street in Miyato City, the Angel deployed what looked like a wall of light to block the gigantic humanoid weapon's attacks.\nThe wall reportedly stopped an attack from the humanoid weapon's knife-like blade. Witnesses also saw the weapon subsequently force the wall open with both hands and destroy it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k98; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k100",
+          "source_text_sha256": "553124a7c0c312a0550c1574a4ae944537e90f2539b9785d12b52e6225b2bec8",
+          "en": "Giant creatures appearing in the city are the talk of the town, but 'giant' curry is also becoming popular.\nThe owner of a curry stand near the Nanohana Street intersection said: 'Extra-large servings have been selling well lately. Even today, a couple came in and both ordered enormous curries.'\nThe craze for all things giant may spread even farther.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k100; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k104",
+          "source_text_sha256": "4ef426731f2ec217dfbbbb8cd0877fafa87725c52b843b91af1ee4fda7f79b3e",
+          "en": "This scene was captured during the battle between the Angel and the gigantic humanoid weapon on Nanohana Street in Miyato City late tonight.\nA young person was trying to run between the two as they faced off.\nThe incident has caused extensive harm, including deaths, injuries, and damage to buildings and roads. There is no prospect yet of residents returning to their former lives.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k104; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k108",
+          "source_text_sha256": "f0a8d756292ea4f594da19fcd327465ed77a284cd3bafb59749d2bd2cc100101",
+          "en": "Traffic backed up at the Nanohana-Mokuren Intersection in Miyato City today after the road suddenly caved in.\nMany people had stepped out of their cars to look at the hole. Then an Angel suddenly appeared and landed.\nPeople fled in panic, and the abandoned cars were crushed one after another.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k108; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k112",
+          "source_text_sha256": "4c605891f80c96f8c87ffef8e4802c8dd6c6ee6069003a12968f543a20cf7fd0",
+          "en": "This is Nanohana Street in Miyato City after the Angel's appearance.\nDeep scars remain across the city.\nHow much time will reconstruction take, including clearing destroyed buildings and the piles of rubble on the roads?",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k112; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k114",
+          "source_text_sha256": "17e0e4c698714b88be0d5af938bfaca42e5c5f4bed83453c8de444974c6e36c6",
+          "en": "A young person was seen being asked by Toro to help with game development at the convenience store at the Nanohana-Mokuren Intersection in Sakura Ward.\nToro reportedly asked them to obtain Health Drinks to bring to the developers.\nUnfortunately, the store had sold out, so the young person found a drink elsewhere and gave it to Toro.\nIf this has brought 'Absolutely Safe City 2: Good Night' one step closer to completion, that is wonderful news.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k114; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k116",
+          "source_text_sha256": "3096090cc369220996667478bdceda24809d1cf3b61ddb238034482bd4051022",
+          "en": "New information has emerged about the Angel that attacked the Nanohana-Mokuren Intersection in Sakura Ward today.\nAccording to reports, what appeared to be its face was seen splitting in two.\nThe pink light emitted from its palms was also extremely powerful, reportedly destroying attack aircraft, buildings, and cars one after another.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k116; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k124",
+          "source_text_sha256": "bda06a39e511fb729fdc94a0baf0d9ba52ae336d047ce835031ebd5b4d142ceb",
+          "en": "This photograph captures the battle between the Angel and the gigantic humanoid weapon.\nAccording to witnesses, the humanoid weapon let out a beast-like scream and charged at the black being. After forcing open its wall of light, it straddled the Angel and repeatedly punched it.\nAt first, the humanoid weapon had tried to defeat the Angel by firing a huge gun, but then it switched to primitive, beast-like combat and silenced the Angel. Witnesses reportedly found the sight terrifying.",
+          "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k124; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_206_news_text.luc",
+      "source_sha256": "31811de3ac020a498a2119fd5defd7bbc6ede2441c7ec3283b01099b2957ac21",
+      "entries": [
+        {
+          "id": "p0/k71",
+          "source_text_sha256": "f0f800c060c8858a993b4b6512d5c6e51878e4a05471d813c7428e2ce379f79d",
+          "en": "Web Writer Otsuka Questioned by Police",
+          "notes": "English draft imported from audited private workspace, translate-en-0037.json:p0/k71; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k72",
+          "source_text_sha256": "e0d782c61ac6b7f7929c592365925a90184d543d87fe5d5958a663f6c32b19eb",
+          "en": "Web writer Hideyasu Otsuka, 38, is being questioned by police after being aboard the research vessel until shortly before it sank. He reportedly escaped by helicopter just before the sinking, which prompted the questioning. Otsuka continues to insist, 'I don't know anything. I'm innocent.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0037.json:p0/k72; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_208_news_text.luc",
+      "source_sha256": "8e4e33b0da797a9cb165e930ed36e6b44db1f729115c232dc5926f348f4597b5",
+      "entries": [
+        {
+          "id": "p0/k160",
+          "source_text_sha256": "911de41563bb8ec63be7e29669b99abbe81030dd1cf97fda98c85296c5f9bd99",
+          "en": "Some information that is hard to believe has reached us, and I would like to share it.\nIf you looked at the houseplant in this photograph and wondered why no one had picked it up, you had the same thought I did.\nIn fact, it was not knocked over by an earthquake or an accident. It was deliberately laid on its side.\nResearch claims that a houseplant laid on its side produces ten times the usual amount of the relaxing substance 'shinotony,' and the practice is reportedly spreading gradually through offices.\nInterviews at offices trying it revealed substantial effects: 'It felt strange at first, and I doubted it would work, but our business performance improved by 10 percent,' and 'People's expressions softened, and communication in the office became smoother.'\nThe research institution behind the findings explained: 'Just as people relax when they lie down, we discovered that plants also relax more on their sides, which stimulates their production of shinotony.' I have already begun trying it in my own office and hope to report the results next time.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k160; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k168",
+          "source_text_sha256": "340c3ee8ae7a6b7e9cf6c54672488e4d7ab8b5cf0c4eec8826198e2e6c197cfb",
+          "en": "I spoke to a woman who had not fled, but was keeping her station kiosk open as usual while giant creatures rampaged right nearby.\n'This seems to be the only shop still open...' Something sounded caught in her throat, so I pressed her for more.\nHer answer was dispiriting: 'The higher-ups told us not to close. They said it would make an inspiring story and raise the share price.' She continued: 'They say they'll fire me if I close. They'll blacklist me so I can't get another job... Of course, my life matters, so I do plan to run if things get really bad.'\nHaving said this, the woman smiled as if a weight had lifted. Then she added: 'Now that I've said it, I'll be fired. But I feel better. Put it in your article. It's the truth.'\nThis article may cost her her job. But as the person publishing it, I want to help her too. Together with the contents of the USB drive she gave me at the end, I plan to expose the company's dark side in our next report.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k176",
+          "source_text_sha256": "6fcb82547bb1455c6bcf8c54f061426c4dd1e5657ebc2c8d55fab414f6928cb9",
+          "en": "Inside a building right beside where the giant creatures appeared, people were still buried in work.\nAs a giant creature struck the building, windows shattered, walls cracked, and office papers scattered everywhere. Yet they calmly continued working as though nothing had happened. The sight was both sublime and horrifying.\nWhen I tried to visit the office later, the building had been declared off-limits because it was at risk of collapse.\nI could not reach its management either, and still do not know whether those people escaped safely.\nWhen I visited the building, I thought I faintly heard the tapping of keyboards drifting down from an upper floor on the wind. I can only pray that I imagined it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k176; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k186",
+          "source_text_sha256": "bfebfd23ced6c5c165d9026b0f846c836eb265a4a362e0e15db2e4f92b439ea0",
+          "en": "An office reportedly received a mysterious fax late one night.\nIt read 'B E H I N D' in letters that looked as though they had been written with a finger dipped in liquid.\nAnother fax arrived at the same time the following day. The message was identical, but apparently it had been written anew, as the letters differed slightly.\nThese mysterious faxes continued for two weeks.\nUnable to ignore them any longer, the office consulted the police, who would not take the matter seriously. With no other choice, they hired a detective to investigate the sender.\nThe sender's number was soon identified, but it had not been used in decades, and its former owner was already dead. The detective also found the site of the former owner's home, but it was apparently an abandoned house.\n\nThere proved to be no connection whatsoever between the office staff and the former owner or their relatives.\nThe faxes kept arriving every day while the detective investigated, even after the office switched to a new fax number.\nWhen that fax alone continued to arrive despite the machine being unplugged, they could no longer believe an ordinary living person was responsible.\n\nWhy was it being sent, by whom, how, and for what purpose?\n'I've solved the mystery. It's...' The detective's telephone report broke off there, and the detective has been missing ever since.\nSeveral more detectives were hired afterward, but each disappeared just as they seemed to reach the answer. Word of this spread, and apparently no detective will take the case now.\n\nAt the office, the fax still arrives at the same time every day.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k186; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k188",
+          "source_text_sha256": "0ca7dc96d9c2d0aef2d30d407d9e9c8192a19b93b63fb76a2ae9339451b59a07",
+          "en": "Stacks of meticulously filed documents pack the office shelves. It is a familiar sight to working adults, especially those known as white-collar workers.\nDespite the spread of computers and the many years since 'paperless' became a buzzword, things still look like this.\n\nEven documents requiring signatures can now be handled with pen tablets and similar devices. Why can we still not move beyond paper?\nOne theory likens it to the desire to possess things.\nThere is reassurance in having something physical, paper, rather than something electronic.\nPeople from generations that did not grow up with computers are particularly uneasy about the unfamiliar idea of digitization. Paper, which they can see and touch, makes them feel secure.\n\nI believe there is a place for paper documents that should be preserved, including for sentimental reasons.\nStill, I cannot help feeling that far too much unnecessary paper remains.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k188; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k190",
+          "source_text_sha256": "ef7226092de51be2d80400f6eb334451af56427db32cfa2000fd543e03022f88",
+          "en": "Office shelves are a common sight, but today I would like to introduce one fitted with the latest newly developed equipment.\nFirst, the space for hanging coats becomes an emergency shelter capsule.\nStep inside and press the switch at the back, and a shutter lowers to seal you off from the outside.\nIt is waterproof, so water cannot enter. Various devices are built into the shelving frame, one of which purifies outside air and sends it inside. Remarkably, it can even generate air when surrounded by seawater.\nNaturally, it also includes a simple toilet and air conditioning to prevent odors from lingering.\nA monitor shows your surroundings through the shelf's cameras and sensors, as well as high-resolution images from a dedicated satellite.\nBecause the satellite monitors your situation, a specialized rescue team will rush to you if, for example, you are buried under rubble or submerged in water.\n\nI can only marvel at how far technology has come.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k190; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k192",
+          "source_text_sha256": "68165ba8c307b671800b687e53e8c9a7b640fe1f1793d5db9749923daf482f36",
+          "en": "Water dispensers provide clean drinking water whenever you want it. They are now widely used in offices and homes.\nBut is that water really safe?\nA company was investigated last week. The story received little attention, overshadowed by a political scandal around the same time, but this supplier was filling tanks with tap water and selling it as 'pure water.'\nWorse, it added the disinfectant calcium hypochlorite as a precaution, then mixed in a compound called Monefurio to mask the smell.\n\nThat was not all. The water tanks were discarded, deteriorated containers from other suppliers that it collected without permission and reused.\n\nAnd the tap water came from public facilities such as parks in the dead of night. It leaves me speechless.\n\nIs the company supplying your water dispenser trustworthy?\nI recommend checking the list of companies whose safety has been confirmed on the Consumer Affairs Agency website.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k192; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k194",
+          "source_text_sha256": "9386c2a9b338b6fdf2ab1dab81541878400c73c797906a40769c883eead9d3fc",
+          "en": "The red button above a fire hydrant. Everyone knows it sounds an emergency alarm when pressed.\nAnd yet, how many of us feel tempted to press it when we see it? Of course, pressing it when there is no emergency is nothing but a nuisance. Even adults who know this may suddenly feel the urge when it catches their eye.\nResearch has reportedly linked this to stress. The more stressed someone is, the more readily they feel the urge to press it. They want the release of doing something forbidden, or of watching other people panic.\nOn the other hand, there is an urban legend that it emits radio waves designed to attract attention and arouse curiosity.\nThe idea is so implausible that no one takes it seriously, and dismantling the device revealed nothing of the sort. The manufacturer and retailer naturally deny it too.\nStill, something bothers me. While visiting a company that makes fire hydrants, I happened to glimpse inside a warehouse storing finished units and thought I saw something like an altar. The warehouse door was quickly closed, but the employee accompanying me seemed to tense up for an instant.\nI will continue investigating. Please await further reports.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k194; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k196",
+          "source_text_sha256": "a72cfead1ee5bf2c803a8e4f746962016c8d2cbe87b8c0855976453ddf83e3c8",
+          "en": "These cardboard boxes are piled across an office corridor.\nThey are reportedly full of office documents and have been left like this because there is nowhere to put them.\nSeeing such a scene deeply saddens me, because it sharply reduces these workers' chances of surviving a disaster.\n\nIn my reporting, I have confirmed several cases where piles of documents prevented people from reaching emergency stairs, or where falling boxes crushed people to death.\n\nYou need not tidy up just to make things look nice. Please do it to help yourself survive.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k196; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k198",
+          "source_text_sha256": "fe117d8ac335b2f6b706480134574e4b0ac1725688664721bf4155b753081bf1",
+          "en": "A malicious crime involving an AED has occurred.\nA young passerby used an AED on an elderly man who collapsed with respiratory failure, but sadly the man could not be saved.\nA member of the public is not held criminally responsible merely because their use of an AED in an emergency fails to save someone.\nSo what was the problem?\nIn fact, it was a crime the young person had planned.\nNoticing the elderly stranger's considerable assets, the culprit began by exchanging greetings in parks as though by chance, eventually winning his trust as if they were his own grandchild.\nWith no family, the elderly man believed the lies, adopted the young person, and arranged for them to receive a substantial insurance payout if anything happened to him.\nThe culprit then gradually weakened him by mixing drugs into his tea and other drinks.\nThat was what caused the man to collapse in the street.\nTerrifyingly, the culprit also seems to have tampered with the AED when using it.\n\nGiven the circumstances of the man's death, no particular investigation was conducted, and the plot seemed to have succeeded.\nHow was it exposed?\nThe truth is revealed in 'A Collection of Miraculous Mysteries: Modern Sentiments,' now on sale to great acclaim.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k198; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "fc36328a4cc999bcd8cbb9bf60c4784e91837daa9c5caa35a913a0280612042a",
+          "en": "Did you know that an ordinary station ticket machine conceals a unique trick?\nChoose certain buttons in a particular order and rhythm, and it will issue a special ticket.\n\nThe special ticket cannot be used for travel, but hand it to a station employee and you will receive something in return.\n\nUnfortunately, I cannot reveal exactly how to perform the trick, or what you receive, here.\nHowever, I really did obtain the special ticket, and what I received in exchange made my life considerably richer.\nIf you manage to get that special ticket, there is no doubt that it will bring happiness to anyone.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k210",
+          "source_text_sha256": "9ca920e4efc8f9d064da2cd7f1bd3cfd274c56ea5f5526506f6a7c93c6ae8e67",
+          "en": "A man was seen photographing a giant creature from close by.\nHe reportedly climbed onto an abandoned car and filmed intently while the creature's huge tail passed right overhead.\n\nWe learned that he was a freelance photographer, but even given his profession, one must question such a dangerous act.\nWhen I managed to contact him later, I put that question to him.\n'There are things only I can do. That's all.' With those words, he headed for his next assignment.\nPhotographers and journalists seem to have a stronger resolve than I imagined.\nStill, I believe it is also necessary to avoid danger when the situation demands it.\nOnce you lose your life, all is lost.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k210; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k214",
+          "source_text_sha256": "bcfec89bf2b42cb56eb753ddbdee157eb8b7d62f8297ebba75bb85611b98f936",
+          "en": "A man fidgets endlessly outside a public restroom with a 'Cleaning in Progress' sign.\nMany of us have encountered this situation: though you rarely use it, you suddenly need a restroom, only to find it being cleaned.\nYou wonder why it had to happen now. Going to another public restroom would be dangerous, so you tell yourself the cleaning will be over soon and simply keep waiting.\nStatistics suggest that people who do this are highly likely to end up having to search for another restroom anyway.\nThis is because cleaning a restroom takes far more effort and time than you might imagine.\nWith that in mind, it is wiser to look elsewhere as soon as you learn the restroom is being cleaned.\nThese days, apps can show usable public restrooms near your location. I recommend trying one.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k214; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k216",
+          "source_text_sha256": "e38221376a86ac41b6823a0491e7a8e284d9e8f3e64e89b5b873a6cef67323a7",
+          "en": "Almost all of them are expressionless.\nThey neither fawn over customers nor condescendingly suggest they will buy something only because you are in trouble.\nThey always remain composed.\nThey would not tell me the details, but apparently the company drills this mindset into them during training.\nThere is even an urban legend that they are clones, since every employee seems identical in everything, not just clothing. That too apparently results from their training.\nAnd you can see their hidden passion in their eyes. They shine with the conviction that making customers happy by buying their goods is their own greatest joy.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k216; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k220",
+          "source_text_sha256": "5fdceaab86aa2caa1b5ece2d19fffa37bd01ea4cb5099156f2a63561047e50f1",
+          "en": "Our popular 'Tipsy Sightseeing' series, written under the inspiration of a pleasant buzz, has reached its 10,482nd installment.\n\nThis time, we are looking at emergency stairs.\nWhen you are tipsy, resting your cheek against a step feels wonderfully cool.\nThey are also ideal for quietly crouching down when you feel low.\nIf the emergency stairs are outdoors rather than enclosed by walls, they can even serve as a kitchen for grilling dried fish during late-night overtime.\n\nBe aware that, especially overseas, doors on emergency stairs sometimes cannot be opened from the stairwell except on the first floor for security reasons.\nTake care not to step into a high-rise stairwell by mistake and find yourself forced to descend an absurd number of floors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k220; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k222",
+          "source_text_sha256": "eb1bccb49e38591024b951f6984314064ab5504074788a7db367aa811b9c3c6c",
+          "en": "Late at night, the tapping of a keyboard echoes through a dim office.\nA man is working alone.\nHe founded the company and now runs it by himself. As usual, he is typing relentlessly, this time to meet a deadline the following morning.\nApparently, this situation is almost constant. He rarely returns to his apartment, and bathes and does his laundry at nearby facilities.\nHe says he enjoys his work, but should such working conditions really be left unchallenged?\nI know that being able to do as much of the work you love as you want may sound enviable to many people. Still, I cannot help wondering whether it is healthy for a living creature, for a human being.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k222; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "dfc7af202f950e63119cda1ace1f6589a97dce45521f0affb5d8c37dd5b058ec",
+          "en": "A woman crouches in a dim office.\nSpeak to her, and she mutters something before moving away, still crouching.\nIt seems impossible demands at work have caused her stress to erupt in this form.\nThere were other employees around, but no one tried to calm or comfort her. None of them had the spare energy.\n\nIt should have been a deeply sad sight.\nBut I happened to learn later that this woman was a difficult employee who crouched down in protest over the slightest thing.\nShe routinely forgot to report things or neglected assigned tasks because she did not know how to proceed. When someone pointed this out, she behaved in the same way.\nI could not hide my astonishment at behavior as childish as a small child throwing a tantrum in a toy shop.\n\nMore frightening still, apparently the number of adults who behave like this is rising rapidly.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "3f3ab9783891cb5c013d48be5b3e37cf9b753121a5e67de91f289dca86637000",
+          "en": "Few people realize that getting out of a stopped car to inspect the situation during a sudden incident can itself be dangerous.\nOn highways and ordinary roads alike, as long as cars and motorcycles are moving, standing carelessly in the roadway puts you at risk of being struck by approaching traffic.\n\nIt is understandable to panic when placed in circumstances most people would never encounter in a lifetime.\nBut it is precisely at such times that everyday precautions can help you avoid an unexpected accident.\n\nIn reality, we often only notice this when it happens to us. I hope this article can serve as a lesson and help as many people as possible.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "09bb7cbca9f6d49b16307e171dbe6b20bcee3046b8d16691fcd52e6fa8913b37",
+          "en": "People flee, trying to avoid falling rubble from collapsing buildings.\nAs with disasters such as earthquakes, it is important to stay somewhere as safe as possible from a collapse.\nOn a broad street like this one, the central divider is one example. There is no danger there of being struck by approaching traffic either.\n\nIt is important to understand that all kinds of objects can become deadly hazards, and to think through such situations in advance.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k234",
+          "source_text_sha256": "2ec82e4b2e36aa2e604fd3832432f4caf85a74b10d782c8091624551911705a0",
+          "en": "Amid all this chaos, one woman stayed inside the station rather than fleeing.\nShe was waiting for the man she had been dating for about three years.\nUnable to contact him because of the disturbances, she had also lost one of the earrings he gave her on their first date,\nand dropped the matching watch they had bought together.\nDespite one ominous event after another, she simply waited.\nPerhaps she did not want to show her devotion. She deliberately acted irritated and complained about her boyfriend's shortcomings.\nTrembling with fear, she nevertheless bravely kept waiting.\nThe fleeting expression on her face when her boyfriend finally reached the station said more than anything else could.\nQuickly hiding it, she cursed at him as the two left the danger zone together.\n\nWith so much grim news during these incidents, I would like to thank this couple for giving us such a heartwarming sight.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k234; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

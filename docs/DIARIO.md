@@ -1,5 +1,33 @@
 # Diário do projeto
 
+### 14/10/2026 — continuação persistente: objetivos, recaps, itens e notícias
+
+- Davy pediu continuar. Quinze lotes de novas traduções (+1.092 EN) e um lote
+  de correção própria: 10.591/16.100 preenchidas, 5.509 vazias. Não concluído.
+- Objetivos de missão 0108 (+166), resumos de carregamento 0045/0046, mapas,
+  diálogos de resgate/ônibus, documentos/chaves/fotos/alimentos/figurinos e
+  notícias completas 0065/0016/0039/0041. Artigos longos traduzidos integralmente,
+  mantendo tom, especulações ficcionais e quebras reais/escapadas por variante.
+- Reutilização de 16 textos idênticos conferidos e com inglês prévio unívoco,
+  indicando ID da fonte; identificadores internos excluídos. Fichas 0023 têm
+  leituras explícitas de Shibata/Muto/Kubo/Osanai/Natsuno/Aoi/Namioka/Yanagibashi/Uchida.
+- Otsuka Hideyasu confirmado por kana no anúncio de personagens reproduzido
+  em https://game.watch.impress.co.jp/docs/news/1064842.html ; Hideharu em resumo
+  de fã diverge. Isso resolveu 88 lacunas. Outros nomes sem evidência pendentes.
+- Toro/Kuro/Doko Demo Issyo conferidos em fontes oficiais PlayStation;
+  Go Go Curry no próprio site; Hikari Miyamoto/Summer Lesson na página oficial
+  da PlayStation Store. URLs nas notas. Títulos ficcionais ainda provisórios.
+- Inventário: 2.121 entradas vazias de itens são registros provisórios literais.
+  Não equivalem a 2.121 itens reais sem tradução; não foram preenchidas só para
+  aumentar a cobertura. Ainda há conteúdo visível pendente e revisão humana.
+- Importador recusou nova notícia 0016:k139 por duas ocorrências de Alien Zarab
+  contra três no JP; corrigido nome/reporte com expected_en e motivo no histórico.
+  Auditorias dos 173 JSONs PASS; reconstrução/releitura das 10.591 EN em 117
+  recursos PASS. Adições05 (+700/18 recursos) e adições06 (+392/21 recursos),
+  sem original japonês. União com 130 pilotos validada em memória: 10.721.
+- en-04 continua 8.389, PT-BR 94; sem pacote novo, jogo iniciado ou save alterado.
+  Consolidado/índice/retomada privados atualizados. HUD e imagens/vídeos pendentes.
+
 ### 14/10/2026 — nova continuação autorizada para fechar o inglês
 
 - Davy pediu seguir até terminar, sem novas confirmações por arquivo. Inglês
