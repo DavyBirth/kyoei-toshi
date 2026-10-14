@@ -1,5 +1,29 @@
 # Diário do projeto
 
+### 14/10/2026 — tradução ampliada e prévia inglesa en-04
+
+- Retomada autorizada: nove lotes, +1.337 EN; consolidado privado agora
+  8.259/16.100 preenchidas, 7.841 vazias. Auditoria dos 173 JSONs PASS;
+  todas as EN reconstruídas/relidas em 117 recursos do dump próprio PASS.
+  Inglês recebido preservado; 38 reparos anteriores mantidos. Revisão pendente.
+- Contexto Stage4: SRT degrada após ~90s; quadros 720p inspecionados em
+  1200/1800/2200s. Em 1800s, fala corresponde a 0146:k1790, menina chama Yuki
+  de irmã. Não é análise integral. Kashiwagi tem leitura explícita em 0018:k290.
+- Davy autorizou aplicar incrementalmente se simples. Novo importador grava
+  só campos permitidos, sem original japonês; valida fontes/tokens/nomes.
+  Auto-review inicial rejeitou por receio de cópia do original; lista explícita
+  de saída adicionada, execução corrigida aprovada. Nenhum original versionado.
+- Prévia EN en-04: 8.389 entradas incluindo 130 anteriores, 117 recursos;
+  PSARC gravado/relido/hash PASS. SHA e limitações no relatório da tarde.
+  CheckOnly EN/PT PASS. Nenhum jogo aberto; gameplay/layout ainda pendentes.
+- Pacote inglês 6.348.273.788 bytes: só +1.748.729 bytes sobre o original.
+  Sem partida ativa, removido apenas pacote EN en-03 substituído/recriável,
+  liberando 6.346.561.190 bytes. Provas/traduções antigas, dump/saves/PT intactos.
+- Consolidado cumulativo atualizado; CONTINUE-HERE/CHECKPOINT/índice privados
+  registram lacunas e próximos lotes. Inglês ainda incompleto; PT não ampliado.
+  Não chamar 51,3% de entradas de metade do jogo visível. Continuação: 0061/0111.
+  Detalhes em docs/LOCALIZACAO-TARDE-2026-10-14.md e docs/ABRIR-JOGO.md.
+
 ### 13/10/2026 — índice de fonte do nó bitmap rastreado offline
 
 - Registro GxUnitFontBmp → fábrica 0x2e4cd0 → construtor 0x2e5230/base
