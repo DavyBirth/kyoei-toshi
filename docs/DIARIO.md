@@ -1,5 +1,18 @@
 # Diário do projeto
 
+### 13/10/2026 — limpeza de pacotes antigos e regra permanente
+
+- Davy autorizou apagar o que não precisa ser mantido, como regra permanente;
+  registrada em AGENTS.md. Conferir dependências/substitutos antes da remoção.
+- SHA256 e tamanho dos atuais EN en-03/PT-BR 02 conferidos contra manifesto;
+  runtime lê esse manifesto e não havia partida aberta. Removidos somente
+  common.psarc EN/PT da prévia 01 e EN da 02: 19.039.683.103 bytes liberados
+  (19,04 GB/17,73 GiB). Metadados/provas antigos mantidos; lista privada em
+  build/cleanup-old-previews-20261013.json. Dump/saves/pacotes atuais intactos.
+- CheckOnly EN e PT-BR PASS após limpeza, sem abrir jogo. Versões antigas
+  agora exigem reconstrução se forem necessárias; não referenciá-las como
+  pacotes existentes. Traduções, ferramentas e pacote de retorno GPT mantidos.
+
 ### 13/10/2026 — consolidação dos seis avanços offline
 
 - Retomada atualizada com commits, testes e pendências; build normal e

@@ -32,6 +32,7 @@
 - O port do Kyoei (M6) só começa depois que o Godzilla tiver a parte gráfica funcionando (M5 de lá).
 
 ## Regras
+- Regra permanente de Davy em 13/10/2026: apagar arquivos que não precisam ser mantidos. Para derivados obsoletos e recriáveis, conferir substitutos/dependências/processos e remover sem pedir nova autorização. Preservar dump, saves, trabalho único, arquivos atuais e evidências necessárias; não tratar dúvida sobre uso como prova de que um arquivo é dispensável.
 - Nada do jogo no repositório: nem executável, nem .psarc, nem texto japonês original completo. O patch só contém a tradução e as ferramentas.
 - Passos pequenos e um commit por avanço que funciona. Um marco só está feito quando dá para provar.
 - Manter `docs/DIARIO.md`: ler antes de cada sessão e atualizar antes de encerrar.

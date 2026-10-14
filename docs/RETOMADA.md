@@ -1,5 +1,11 @@
 # Retomada — 13/10/2026
 
+Limpeza autorizada: pacotes runtime-preview-01 EN/PT e runtime-preview-02 EN
+removidos (19,04 GB). Atuais en-03 EN e 02 PT íntegros, hashes conferidos;
+CheckOnly ambos PASS. Provas/metadados antigos permanecem, arquivos antigos
+não. Regra permanente em AGENTS.md: limpar derivados obsoletos/recriáveis após
+conferir dependências, sem pedir autorização repetida. Dump/saves preservados.
+
 ## Sessão offline durante a aula — seis avanços salvos
 
 Davy pediu trabalhar sem abrir nada enquanto não pode testar. Nenhuma partida
