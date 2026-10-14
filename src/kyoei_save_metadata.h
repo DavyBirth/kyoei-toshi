@@ -7,10 +7,10 @@ static void kyoei_discard_empty_save(const char *host,const char *meta) {
     if(!gz_widen(meta,wide,1024)) RemoveDirectoryW(wide);
     if(!gz_widen(host,wide,1024)) RemoveDirectoryW(wide);
 }
-static int write_param(const char *meta,const Param *p) {
+static int kyoei_write_save_metadata(const char *meta,const char *name,const void *data,size_t bytes) {
     static volatile LONG sequence;
     char path[760];wchar_t target[1024],temporary[1100];
-    int length=snprintf(path,sizeof(path),"%s\\param.bin",meta);
+    int length=snprintf(path,sizeof(path),"%s\\%s",meta,name);
     if(length<0 || (size_t)length>=sizeof(path) || gz_widen(path,target,1024)) return -1;
     HANDLE file=INVALID_HANDLE_VALUE;
     for(unsigned attempt=0;attempt<16;++attempt) {
@@ -21,12 +21,19 @@ static int write_param(const char *meta,const Param *p) {
         if(GetLastError()!=ERROR_FILE_EXISTS && GetLastError()!=ERROR_ALREADY_EXISTS) return -1;
     }
     if(file==INVALID_HANDLE_VALUE) return -1;
-    Param copy=*p;copy.mtime=(int64_t)time(NULL);
-    DWORD written=0;
-    int okay=WriteFile(file,&copy,sizeof(copy),&written,NULL) && written==sizeof(copy);
+    int okay=1;size_t offset=0;
+    while(offset<bytes) {
+        DWORD count=(DWORD)((bytes-offset)>1048576?1048576:(bytes-offset)),written=0;
+        if(!WriteFile(file,(const unsigned char *)data+offset,count,&written,NULL) || written!=count) { okay=0;break; }
+        offset+=count;
+    }
     if(okay) okay=FlushFileBuffers(file)!=0;
     if(!CloseHandle(file)) okay=0;
     if(okay) okay=MoveFileExW(temporary,target,MOVEFILE_REPLACE_EXISTING|MOVEFILE_WRITE_THROUGH)!=0;
     if(!okay) DeleteFileW(temporary);
     return okay?0:-1;
+}
+static int write_param(const char *meta,const Param *p) {
+    Param copy=*p;copy.mtime=(int64_t)time(NULL);
+    return kyoei_write_save_metadata(meta,"param.bin",&copy,sizeof(copy));
 }

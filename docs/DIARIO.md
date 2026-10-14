@@ -1447,3 +1447,17 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   personalizados do jogador. Localizar defaults fora dos diálogos e verificar
   entrada, exibição e persistência nos saves. Nenhuma implementação nova neste
   checkpoint; registrar para a próxima etapa, sem abrir/reiniciar jogo.
+
+
+### 14/10/2026 ? ?cones de save e ciclo de montagem, offline
+
+- SaveIcon limita leitura ao menor entre buffer_size/data_size, escreve em
+  tempor?rio exclusivo e substitui somente ap?s escrita e flush completos.
+  Falha preserva ?cone anterior. Montagem somente leitura rejeita SaveIcon.
+- Terminate retorna BUSY quando existem slots montados, preservando contexto;
+  montagem revalida inicializa??o dentro do lock para evitar corrida.
+- Backend real com fixtures tempor?rias PASS: buffer menor que data_size,
+  escrita parcial/erro, preserva??o do ?cone, readonly, remontagem e BUSY.
+  CMake configure/build kyoei/test_kyoei_savedata e teste ABI PASS.
+- N?o ? transa??o do payload inteiro nem prote??o readonly de todos os arquivos.
+  Nenhum jogo, janela ou save real utilizado. Tradu??o inglesa externa intacta.

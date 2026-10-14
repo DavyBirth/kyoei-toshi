@@ -61,6 +61,32 @@ kyoei_replace_checked(KYOEI_THREADS
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_threads.c" CONTENT "${KYOEI_THREADS}" @ONLY)
 list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_threads.c")
 file(READ "${KYOEI_CORE}/src/rt_savedata.c" KYOEI_SAVEDATA)
+kyoei_replace_checked(KYOEI_SAVEDATA
+  "#define ERR_NOT_MOUNTED ((int32_t)0x809F0004)"
+  "#define ERR_BUSY ((int32_t)0x809F0003)\n#define ERR_NOT_MOUNTED ((int32_t)0x809F0004)")
+set(KYOEI_OLD_SAVE_TERMINATE [=[static ABI int32_t save_terminate(void) {
+    if (!initialized) return ERR_NOT_INITIALIZED;
+    initialized = 0;
+    return 0;
+}]=])
+kyoei_replace_checked(KYOEI_SAVEDATA "${KYOEI_OLD_SAVE_TERMINATE}"
+  "static ABI int32_t save_terminate(void) {\n    AcquireSRWLockExclusive(&lock);\n    if (!initialized) { ReleaseSRWLockExclusive(&lock); return ERR_NOT_INITIALIZED; }\n    for (unsigned i=0;i<SLOTS;++i) if (slots[i].used) { ReleaseSRWLockExclusive(&lock); return ERR_BUSY; }\n    initialized = 0;\n    ReleaseSRWLockExclusive(&lock);\n    return 0;\n}")
+kyoei_replace_checked(KYOEI_SAVEDATA
+  "    AcquireSRWLockExclusive(&lock);\n    int slot = -1;"
+  "    AcquireSRWLockExclusive(&lock);\n    if (!initialized) { ReleaseSRWLockExclusive(&lock); return ERR_NOT_INITIALIZED; }\n    int slot = -1;")
+kyoei_replace_checked(KYOEI_SAVEDATA
+  "static struct { int used; char host[700], meta[700]; } slots[SLOTS];"
+  "static struct { int used, read_only; char host[700], meta[700]; } slots[SLOTS];")
+kyoei_replace_checked(KYOEI_SAVEDATA
+  "    slots[slot].used = 1;"
+  "    slots[slot].used = 1; slots[slot].read_only = (mode & MODE_RDONLY) != 0;")
+set(KYOEI_OLD_ICON_WRITE [=[        char path[760];
+        snprintf(path, sizeof(path), "%s\\icon0.png", slots[slot].meta);
+        FILE *f = open_utf8(path, L"wb");
+        r = f && fwrite(icon->buffer, 1, icon->data_size, f) == icon->data_size ? 0 : ERR_INTERNAL;
+        if (f) fclose(f);]=])
+kyoei_replace_checked(KYOEI_SAVEDATA "${KYOEI_OLD_ICON_WRITE}"
+  "        if (slots[slot].read_only) r = ERR_BAD_MOUNTED;\n        else {\n            uint64_t bytes = icon->data_size < icon->buffer_size ? icon->data_size : icon->buffer_size;\n            r = bytes > SIZE_MAX || kyoei_write_save_metadata(slots[slot].meta, \"icon0.png\", icon->buffer, (size_t)bytes) ? ERR_INTERNAL : 0;\n        }")
 set(KYOEI_OLD_WRITE_PARAM [=[static void write_param(const char *meta, const Param *p) {
     char path[760];
     snprintf(path, sizeof(path), "%s\\param.bin", meta);

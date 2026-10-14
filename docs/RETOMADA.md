@@ -1,3 +1,11 @@
+# Checkpoint ? 14/10/2026
+
+SaveIcon agora respeita buffer_size/data_size, usa substitui??o at?mica e
+rejeita montagem readonly. Terminate com slot montado retorna BUSY; mount
+reconfere initialized sob lock. Backend real sint?tico, ABI e build PASS.
+Limite: readonly de payloads gen?ricos e transa??o do save inteiro n?o feitos.
+Nenhuma partida iniciada; tradu??o inglesa segue no GPT externo.
+
 # Retomada — 13/10/2026
 
 Novos avanços offline de save/load e fontes:

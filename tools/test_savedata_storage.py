@@ -54,6 +54,7 @@ int main(int argc,char **argv) {
  float progress=1; CHECK(!save_get_progress(&progress) && progress==0);
  CHECK(save_get_progress(NULL)==ERR_PARAMETER); CHECK(!save_clear_progress());
  input.mode=34; CHECK(!mount2(&input,&result));
+ CHECK(save_terminate()==ERR_BUSY && initialized && mounted[0]);
  char path[1200]; snprintf(path,sizeof(path),"%s\\payload.bin",mounted);
  FILE *file=fopen(path,"wb"); CHECK(file && fwrite("roundtrip",1,9,file)==9); fclose(file);
  Param param={0}; strcpy(param.title,"Synthetic test"); param.user_param=123;
@@ -86,6 +87,17 @@ int main(int argc,char **argv) {
  WIN32_FIND_DATAW found;HANDLE find=FindFirstFileW(wide,&found);CHECK(find==INVALID_HANDLE_VALUE);
  CHECK(!save_set_param(&result.point,0,&changed,sizeof(changed)));
  CHECK(!read_param(slots[slot].meta,&after) && !strcmp(after.title,changed.title));
+ unsigned char icon_bytes[16];memset(icon_bytes,0x4a,sizeof(icon_bytes));
+ Icon icon={0};icon.buffer=icon_bytes;icon.buffer_size=sizeof(icon_bytes);icon.data_size=64;
+ CHECK(!save_icon(&result.point,&icon));
+ snprintf(path,sizeof(path),"%s\\icon0.png",slots[slot].meta);file=fopen(path,"rb");
+ unsigned char icon_copy[17]={0};CHECK(file && fread(icon_copy,1,sizeof(icon_copy),file)==16);fclose(file);
+ CHECK(!memcmp(icon_copy,icon_bytes,16));
+ memset(icon_bytes,0x7b,16);fail_metadata_write=1;CHECK(save_icon(&result.point,&icon)==ERR_INTERNAL);fail_metadata_write=0;
+ file=fopen(path,"rb");CHECK(file && fread(icon_copy,1,sizeof(icon_copy),file)==16);fclose(file);CHECK(icon_copy[0]==0x4a && icon_copy[15]==0x4a);
+ CHECK(!save_umount(&result.point));input.mode=1;CHECK(!mount2(&input,&result));
+ CHECK(save_icon(&result.point,&icon)==ERR_BAD_MOUNTED);
+ CHECK(!save_umount(&result.point));input.mode=2;CHECK(!mount2(&input,&result));CHECK(!save_icon(&result.point,&icon));
  CHECK(!save_umount(&result.point));
  directory=(DirName){"FAILED-SAVE"};input.mode=34;fail_metadata_write=1;
  CHECK(mount2(&input,&result)==ERR_INTERNAL && !mounted[0]);fail_metadata_write=0;
