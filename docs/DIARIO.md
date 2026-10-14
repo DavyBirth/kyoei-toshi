@@ -1536,3 +1536,16 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   published/Kyoei_English_Consolidated_Current.zip, SHA-256
   e66fa047159e70fa37f253b0ad83113bcf59148c4186e574b7739dda3678d09e.
   CONTINUE-HERE.md e CHECKPOINT.json registram plano, limitações e próximo lote.
+
+### 14/10/2026 — retomada noturna até 03:00 autorizada
+
+- Davy retomou a tradução e autorizou desligamento total às 03:00, Bahia,
+  e checkpoints de cinco minutos. Horário inicial conferido 02:07 -03:00.
+- Testado checkpoint auditado; registrado no Agendador Windows o checkpoint
+  periódico (primeiro 02:14:18) e final/publicação/desligamento às 03:00.
+  Sem /f. Scripts e log local em scripts/localization_shutdown.ps1 e
+  build/localization-shutdown.log. Só os JSONs e metadados privados entram no ZIP.
+- Relatório final por e-mail foi autorizado, com fallback no chat. Nenhuma
+  ferramenta de envio de e-mail conectada; não prometer envio inexistente.
+- Parada anterior revogada explicitamente. Continuar lotes até a reserva de
+  fechamento; checkpoint atualizado em OVERNIGHT.md/AUTO-CHECKPOINT.json.

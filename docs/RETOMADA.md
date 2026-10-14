@@ -1,5 +1,13 @@
 # Checkpoint — 14/10/2026
 
+ATUALIZAÇÃO 02:09: Davy retomou explicitamente a tradução até 03:00 de hoje,
+com desligamento Windows autorizado nesse horário. Isso substitui a parada
+anterior. Tarefas KyoeiLocalizationCheckpoint-20261014 (5 min) e
+KyoeiLocalizationShutdown-20261014 (03:00) registradas e conferidas.
+Resumo atual em codex-localization/reports/AUTO-CHECKPOINT.json e OVERNIGHT.md.
+Pedido de e-mail final autorizado; sem sender conectado, usar chat e relatório
+local (fallback autorizado). Não declarar e-mail enviado. Não abrir jogo.
+
 ## Localização — interrupção explícita solicitada por Davy
 
 Davy pediu INTERROMPER AGORA e salvar. Trabalho interrompido; varredura do
