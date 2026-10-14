@@ -1476,3 +1476,18 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   como hipótese a investigar. Não atribuir custo à largura de banda sem medir.
 - Nenhum ganho de FPS declarado; nenhuma partida iniciada. Próximo trabalho:
   dependências/consumidor de readback, tempos de threads/fila GPU e pacing.
+
+### 14/10/2026 — primeira correção de cache na investigação de 60 FPS
+
+- Confirmado caminho de Finish síncrono antes de eventos EOS/EOP/ReleaseMem.
+  Não removida sincronização obrigatória nem habilitado lote por palpite.
+- Comparação com referência Bloodborne revelou mesmo erro na base: hash de
+  imagem inteira comparado a prefixo 8x8. RefreshImage agora mede guest_size.
+  Teste de métodos reais + XXH3 reproduz falha no original, passa no corrigido
+  (intacta, escrita no último byte, CpuDirty). Core fixo preservado.
+- Novos scopes de tempo de parede: readback-finish/map/publish, opt-in,
+  agregados por thread. Testes de categorias, isolamento de threads e modo
+  desligado PASS. Não são timestamps GPU nem ganho demonstrado.
+- Port recompilado, CheckOnly EN com diagnóstico PASS, nenhuma partida aberta.
+  Normal atualizado; orb-pending continua checkpoint anterior separado.
+  Detalhes e próximo ponto sobre pacing/simulação em DESEMPENHO.md.

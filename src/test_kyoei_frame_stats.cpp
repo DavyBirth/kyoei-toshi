@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include <thread>
 static std::vector<std::string> logs;
 extern "C" void gz_log(const char *format,...) {
     char line[2048];va_list args;va_start(args,format);std::vsnprintf(line,sizeof(line),format,args);va_end(args);logs.emplace_back(line);
@@ -37,5 +38,22 @@ int main(int argc,char **) {
     for(unsigned i=0;i<1000 && logs.size()<5;++i) KyoeiFrameStats::Presented();
     CHECK(logs.size()==5 && logs[3].find("diagnostic=0")!=std::string::npos);
     CHECK(logs[4].find("delta=0 ")!=std::string::npos);
+    const char* stages[]={"readback-finish","readback-publish","readback-map"};
+    for(unsigned category=3;category<6;++category) {
+        const auto previous=logs.size();
+        for(unsigned i=0;i<120;++i) { KyoeiFrameStats::Work work(category); }
+        CHECK(logs.size()==previous+1);
+        CHECK(logs.back().find(stages[category-3])!=std::string::npos);
+    }
+    // Worker samples cannot complete a partial renderer-thread window.
+    const auto previous=logs.size();
+    for(unsigned i=0;i<60;++i) { KyoeiFrameStats::Work work(4); }
+    std::thread worker([] {
+        for(unsigned i=0;i<60;++i) { KyoeiFrameStats::Work work(4); }
+    });
+    worker.join();
+    CHECK(logs.size()==previous);
+    for(unsigned i=0;i<60;++i) { KyoeiFrameStats::Work work(4); }
+    CHECK(logs.size()==previous+1);
     std::puts("FRAME STATS PASS: capture within/between calls annotated; clean window resets; raw samples retained");
 }

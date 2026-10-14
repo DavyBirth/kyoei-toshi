@@ -27,11 +27,12 @@ public:
     }
     ~Work() {
         if (!Enabled()) return;
-        // Each category runs on a single owning renderer thread.
-        static std::array<std::array<double, 120>, 3> samples{};
-        static std::array<size_t, 3> counts{};
-        static std::array<bool,3> diagnostics{};
-        static std::array<uint64_t,3> previous_generation{};
+        // Deferred publication may run on the scheduler worker. Keep samples
+        // per thread rather than racing or mixing overlapping CPU scopes.
+        static thread_local std::array<std::array<double, 120>, 6> samples{};
+        static thread_local std::array<size_t, 6> counts{};
+        static thread_local std::array<bool,6> diagnostics{};
+        static thread_local std::array<uint64_t,6> previous_generation{};
         auto& values = samples[category]; auto& count = counts[category];
         auto diagnostic_end=KyoeiDiagnosticActivity::Now();
         diagnostics[category]|=KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end) ||
@@ -41,7 +42,8 @@ public:
         if (count != values.size()) return;
         double total = 0; for (double value : values) total += value;
         auto sorted = values; std::sort(sorted.begin(), sorted.end());
-        const char* names[] = {"prepare", "present", "linear-downloads"};
+        const char* names[] = {"prepare", "present", "linear-downloads",
+                               "readback-finish", "readback-publish", "readback-map"};
         gz_log("Kyoei work stats: stage=%s calls=120 mean_ms=%.2f p95_ms=%.2f max_ms=%.2f diagnostic=%u",
                names[category], total/count, sorted[113], sorted.back(),unsigned(diagnostics[category]));
         count = 0;diagnostics[category]=false;

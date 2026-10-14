@@ -417,6 +417,22 @@ kyoei_replace_checked(KYOEI_BUFFER_CACHE "${KYOEI_VERTEX_INPUTS}" "${KYOEI_VERTE
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp" CONTENT "${KYOEI_BUFFER_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/texture_cache/texture_cache.cpp" KYOEI_TEXTURE_CACHE)
+# Same-range dirty comparison, also identified in bloodborne_pc e5d04e2.
+# MarkAsMaybeDirty hashes guest_size; comparing only the first 8x8 pixels
+# invalidates unchanged images and can miss later CPU writes.
+set(KYOEI_PARTIAL_DIRTY_HASH [=[        // The image size should be less than page size to be considered MaybeCpuDirty
+        // So this calculation should be very uncommon and reasonably fast
+        // For now we'll just check up to 64 first pixels
+        const auto addr = std::bit_cast<u8*>(image.info.guest_address);
+        const u32 w = std::min(image.info.size.width, u32(8));
+        const u32 h = std::min(image.info.size.height, u32(8));
+
+        const u32 s_w = image.info.props.is_block ? Common::DivCeil(w, 4u) : w;
+        const u32 s_h = image.info.props.is_block ? Common::DivCeil(h, 4u) : h;
+        const u32 size = s_w * s_h * (image.info.num_bits / 8);
+        const u64 hash = XXH3_64bits(addr, size);]=])
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "${KYOEI_PARTIAL_DIRTY_HASH}"
+  "        // Match the complete range hashed by MarkAsMaybeDirty.\n        const u64 hash = XXH3_64bits(std::bit_cast<const u8*>(image.info.guest_address), image.info.guest_size);")
 set(KYOEI_TEXTURE_CACHE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n#include \"kyoei_readback_batch.h\"\n${KYOEI_TEXTURE_CACHE}")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE "namespace VideoCore {" "#include <vk_mem_alloc.h>\nnamespace VideoCore {")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE
@@ -460,6 +476,20 @@ set(KYOEI_DOWNLOAD_ADAPTED [=[    // Host cache invalidation belongs after GPU c
         scheduler.DeferPriorityOperation(std::move(publish));
     }]=])
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE "${KYOEI_DOWNLOAD_ORIGINAL}" "${KYOEI_DOWNLOAD_ADAPTED}")
+# Break down the existing wall-clock download scope without changing fences,
+# publication order or the default batching policy.
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "scheduler.Finish();"
+  "{ KyoeiFrameStats::Work finish_measurement(3); scheduler.Finish(); }")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "    auto mapping = download_buffer.Map(download_size, 0, !KyoeiReadback::active);"
+  "    auto map_download = [&](bool wait) { KyoeiFrameStats::Work map_measurement(5); return download_buffer.Map(download_size, 0, wait); };\n    auto mapping = map_download(!KyoeiReadback::active);")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "mapping=download_buffer.Map(download_size);"
+  "mapping=map_download(true);")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "device_addr=image.info.guest_address, download, download_size] {"
+  "device_addr=image.info.guest_address, download, download_size] {\n        KyoeiFrameStats::Work publish_measurement(4);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_rasterizer.cpp" KYOEI_RASTERIZER)

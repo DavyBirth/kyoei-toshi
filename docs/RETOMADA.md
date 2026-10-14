@@ -1,5 +1,13 @@
 # Checkpoint — 14/10/2026
 
+Investigação 60 FPS avançou: comparação de hash MaybeCpuDirty corrigida
+(guest_size inteiro nos dois caminhos). Teste do método real falha no original
+e passa na cópia adaptada; build normal atualizado/CheckOnly EN PASS. Scopes
+readback-finish/map/publish adicionados com amostras por thread, testes PASS.
+Nenhum ganho de FPS medido; orb-pending não reconstruído neste checkpoint.
+Seguir DESEMPENHO.md: dependências EOS/EOP impedem retirar Finish cegamente;
+investigar uso de flip_rate pelo jogo e relação com simulação antes de 60 Hz.
+
 Meta nova de Davy: pelo menos 60 FPS. Seguir docs/DESEMPENHO.md; prioridade
 readback/sincronização, threads/GPU e pacing. Analisador separa marca F9 e
 legado desconhecido; teste CLI PASS. Relatório antigo misto não é baseline

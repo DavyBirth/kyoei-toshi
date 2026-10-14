@@ -40,3 +40,10 @@ APIs de fontes/texturas de versões diferentes.
 Esses candidatos não foram implementados por aparecerem na referência. Não
 transferir patches/endereço de GoW3 ou Bloodborne ao eboot do Kyoei. Resultados
 de FPS e gameplay publicados pelos autores não medem nosso port.
+
+14/10: comparadas implementações de ProcessDownloadImages. GoW3 usa protocolo
+de readback diferido com watch de páginas e staging próprio, ainda não portado.
+Bloodborne identifica hashes de regiões diferentes em MarkAsMaybeDirty e
+RefreshImage. Mesmo defeito confirmado na base Kyoei e corrigido via CMake para
+usar guest_size nos dois lados, com teste que falha no original e passa na cópia
+adaptada. Referência: texture_cache.cpp das versões fixadas na tabela acima.

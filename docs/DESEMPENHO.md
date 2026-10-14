@@ -47,3 +47,35 @@ para frame/work stats; mantém também totais e pausas de todas as janelas.
 Relata orçamento de 60 FPS, mas resumos de 120 intervalos não permitem calcular
 FPS mínimo, contar todos os quadros atrasados nem obter p95 global exato.
 Valores impressos são arredondados; médias junto ao limite requerem dados brutos.
+
+## Investigação de código e build — 14/10/2026
+
+- Confirmado `RelWithDebInfo`: não era um build Debug sem otimização.
+- DownloadImageMemory chama Scheduler::Finish, que submete comandos e espera
+  o tick da submissão. ProcessDownloadImages é chamado antes de EventWriteEos,
+  EventWriteEop e ReleaseMem sinalizarem eventos ao convidado. Não remover
+  espera nem adiar publicação sem tratar essas dependências.
+- GoW3 consultado na versão de FONTES-CODIGO.md implementa readback diferido
+  com proteção de páginas, fila de staging, cancelamento e espera sob demanda.
+  Não equivale a simplesmente trocar Finish por Flush. Kyoei mantém batch opt-in;
+  amostras com uma imagem por lote não demonstram benefício desse agrupamento.
+- Adicionados scopes opt-in readback-finish, readback-map e readback-publish.
+  Finish inclui submissão e espera, não é tempo GPU isolado. Publish inclui
+  invalidação de cache e TryWriteBacking. Map inclui possíveis esperas do ring.
+  Janelas de 120 chamadas são por thread; não somar suas médias como frame.
+  Teste verifica independência das amostras da thread de publicação diferida.
+- Confirmado erro de hash visto também no Bloodborne: MarkAsMaybeDirty usa
+  guest_size inteiro; RefreshImage comparava apenas os primeiros 8x8 pixels.
+  Comparação agora usa a mesma região completa. Evita primeira invalidação
+  espúria e detecta alterações posteriores fora do prefixo. Não limpa flags
+  GPU nem ignora escrita CPU confirmada. Adaptação na cópia gerada por CMake,
+  core fixo preservado. Não se sabe ainda a frequência desse caso no gameplay.
+- Teste compila trechos dos métodos reais com XXH3 e imagem sintética: original
+  reproduz falha sem alteração; corrigido preserva imagem intacta, detecta
+  último byte e mantém caminho CpuDirty. Build do port e CheckOnly EN PASS.
+- Apresentador usa vblank configurado e flip_rate+1; jogo pode solicitar pular
+  ciclos com sceVideoOutSetFlipRate. Não provado qual valor usa na cidade.
+  Próxima investigação de taxa: identificar chamadas e vínculo com simulação.
+
+Executável normal build/kyoei.exe atualizado; diagnóstico orb-pending anterior
+continua separado. Nenhuma partida iniciada, nenhum ganho de FPS medido.
