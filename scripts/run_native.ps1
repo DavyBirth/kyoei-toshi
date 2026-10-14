@@ -1,6 +1,6 @@
 ﻿# Run only the prepared Kyoei, with separate writable data. No shadPS4 executable.
 param([string]$Work = '', [switch]$CheckOnly, [ValidateSet('ja','en','pt-BR')][string]$Language='ja',
-      [ValidateRange(640,8192)][int]$Width=1280,[ValidateRange(360,4320)][int]$Height=720,[switch]$Fullscreen,[switch]$InGameDialogs,[switch]$Diagnostics,[switch]$FitHud,[switch]$BatchReadback,[switch]$OrbTrace,[switch]$OrbTraceNext)
+      [ValidateRange(640,8192)][int]$Width=1280,[ValidateRange(360,4320)][int]$Height=720,[switch]$Fullscreen,[switch]$InGameDialogs,[switch]$Diagnostics,[switch]$PerformanceStats,[switch]$FitHud,[switch]$BatchReadback,[switch]$OrbTrace,[switch]$OrbTraceNext)
 $ErrorActionPreference = 'Stop'
 $kyoeiRoot = Split-Path $PSScriptRoot
 $kyoeiExecutable=Join-Path "$kyoeiRoot\build" $(if ($OrbTraceNext) { 'kyoei-orb-trace-next.exe' } elseif ($OrbTrace) { 'kyoei-orb-trace.exe' } else { 'kyoei.exe' })
@@ -26,6 +26,7 @@ $env:KYOEI_RASTER_TRACE=if ($OrbTrace -or $OrbTraceNext) { '1' } else { '0' }
 if ($InGameDialogs -and $Language -ne 'en') { throw 'A prévia dos diálogos dentro do jogo está disponível em inglês.' }
 $env:KYOEI_IN_GAME_DIALOGS=if ($InGameDialogs) { '1' } else { '0' }
 if ($Diagnostics) { $env:KYOEI_HUD_TRACE='1'; $env:KYOEI_FRAME_STATS='1' }
+if ($PerformanceStats) { $env:KYOEI_FRAME_STATS='1'; $env:KYOEI_HUD_TRACE='0' }
 $env:KYOEI_HUD_FIT=if ($FitHud) { '1' } else { '0' }
 $env:KYOEI_BATCH_READBACK=if ($BatchReadback) { '1' } else { '0' }
 if ($FitHud) {

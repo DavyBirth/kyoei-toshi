@@ -1,5 +1,11 @@
 # Checkpoint — 14/10/2026
 
+Davy testou e relata desempenho bem melhor, ainda com quedas. Log 010525
+encerrou com código 0, sem métricas frame/work; não atribuir causa das quedas.
+Próxima medição voluntária: Medir desempenho atual EN.cmd, sem F9, jogando
+na rua. Coleta frame stats sem HUD trace ou batch experimental. Não iniciar
+automaticamente. Nenhum processo encontrado após esse teste rápido.
+
 Direção de longo prazo: Davy esclareceu que pretende, como etapa final
 opcional, renderizador próprio de PC substituindo a tradução gráfica PS4.
 Port híbrido continua prioridade; roteiro em docs/PLANO.md, etapa 6. Trocar

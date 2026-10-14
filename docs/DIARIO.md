@@ -1502,3 +1502,15 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   Nenhuma promessa de 60 FPS decorrente apenas dessa mudança de arquitetura.
 - Davy relata Godzilla praticamente perfeito. Não tratado como benchmark do
   Kyoei, nem como autorização para alterar Godzilla/core fixo.
+
+### 14/10/2026 — retorno de melhora percebida, quedas ainda presentes
+
+- Davy abriu rapidamente e relatou desempenho bem melhor, ainda com quedas.
+  Isso é percepção dele, sem comparação controlada ou FPS quantificado.
+- Log 20261014_010525: janela 1280x720, RTX 2060, encerramento pelo usuário,
+  Exit code 0. Sem frame/work stats; não permite atribuir as quedas. Nenhum
+  processo Kyoei encontrado na conferência após relato. Agente não abriu jogo.
+- Atalho Medir desempenho atual EN.cmd usa novo -PerformanceStats: métricas
+  agregadas, HUD trace desligado, batch/readback experimental não habilitado.
+  Não usar Testar desempenho EN como baseline normal: ele habilita BatchReadback
+  e FitHud. CheckOnly valida a preparação sem executar partida.
