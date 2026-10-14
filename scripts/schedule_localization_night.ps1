@@ -17,6 +17,7 @@ foreach ($kind in @('Checkpoint','Shutdown')) {
     $definition.Settings.DisallowStartIfOnBatteries = $false
     $definition.Settings.StopIfGoingOnBatteries = $false
     $definition.Settings.StartWhenAvailable = $false
+    $definition.Settings.WakeToRun = ($kind -eq 'Shutdown')
     $definition.Settings.MultipleInstances = 2
     $definition.Settings.ExecutionTimeLimit = 'PT3M'
     $trigger = $definition.Triggers.Create(1)

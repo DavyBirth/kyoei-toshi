@@ -1571,3 +1571,7 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Checkpoints Windows a cada cinco minutos; desligamento autorizado agendado
   ?s03:00 Bahia, sem /f. N?o alegar execu??o j? observada. Sem sender de email;
   resumo local/chat como alternativa autorizada. Revis?o humana/layout pendentes.
+
+- Conferencia final: tarefa periodica retornou0; desligamento03:00 habilitado,
+  WakeToRun ativado so nessa tarefa. Triagem adicional deixou duas entradas
+  recebidas com japones remanescente para revisao, sem alterar o ingles.
