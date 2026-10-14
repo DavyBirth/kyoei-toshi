@@ -1,5 +1,10 @@
 # Checkpoint — 14/10/2026
 
+Meta nova de Davy: pelo menos 60 FPS. Seguir docs/DESEMPENHO.md; prioridade
+readback/sincronização, threads/GPU e pacing. Analisador separa marca F9 e
+legado desconhecido; teste CLI PASS. Relatório antigo misto não é baseline
+de gameplay. Nenhuma otimização de FPS comprovada neste checkpoint.
+
 SaveIcon agora respeita buffer_size/data_size, usa substituição atômica e
 rejeita montagem readonly. Terminate com slot montado retorna BUSY; mount
 reconfere initialized sob lock. Backend real sintético, ABI e build PASS.

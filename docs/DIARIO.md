@@ -1464,3 +1464,15 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - HUD: sonda de leitura identifica tipos UnitFontEx/GxUnitFontBmp nos nós de
   objetivo/navegação. Hash, offsets e construtor registrados em FONTES.md.
   Fonte final ainda desconhecida; nenhum atlas alterado ou diálogo exportado.
+
+### 14/10/2026 — meta de desempenho e auditoria dos relatórios
+
+- Davy definiu objetivo de pelo menos 60 FPS; plano técnico em DESEMPENHO.md.
+- Analisador ignorava diagnostic=0/1: agora separa captura, não marcada e
+  legado desconhecido, sem descartar pausas ou alterar total agregado.
+  Teste sintético do CLI PASS, incluindo readback e janela lenta preservada.
+- Log antigo 135113: 100 janelas, cenas misturadas, leituras lineares médias
+  10,46 ms; amostras de uma imagem/espera/256 bytes apontam sincronização
+  como hipótese a investigar. Não atribuir custo à largura de banda sem medir.
+- Nenhum ganho de FPS declarado; nenhuma partida iniciada. Próximo trabalho:
+  dependências/consumidor de readback, tempos de threads/fila GPU e pacing.

@@ -15,11 +15,24 @@ with args.log.open('rb') as file:
     file.seek(args.start_byte)
     data=file.read() if args.end_byte is None else file.read(max(0,args.end_byte-args.start_byte))
 text=data.decode(encoding,errors='replace')
-frames=[dict(zip(('fps','mean_ms','p50_ms','p95_ms','max_ms'),map(float,row))) for row in re.findall(
-    r'Kyoei frame stats: intervals=120 fps=([\d.]+) mean_ms=([\d.]+) p50_ms=([\d.]+) p95_ms=([\d.]+) max_ms=([\d.]+)',text)]
+frames=[]
+for row in re.findall(
+    r'Kyoei frame stats: intervals=120 fps=([\d.]+) mean_ms=([\d.]+) p50_ms=([\d.]+) p95_ms=([\d.]+) max_ms=([\d.]+)(?: diagnostic=([01]))?',text):
+    frame=dict(zip(('fps','mean_ms','p50_ms','p95_ms','max_ms'),map(float,row[:5])))
+    frame['diagnostic']=bool(int(row[5])) if row[5] else None
+    frames.append(frame)
 work={}
-for name,mean,p95,maximum in re.findall(r'Kyoei work stats: stage=([^ ]+) calls=120 mean_ms=([\d.]+) p95_ms=([\d.]+) max_ms=([\d.]+)',text):
-    work.setdefault(name,[]).append(dict(mean_ms=float(mean),p95_ms=float(p95),max_ms=float(maximum)))
+for name,mean,p95,maximum,diagnostic in re.findall(r'Kyoei work stats: stage=([^ ]+) calls=120 mean_ms=([\d.]+) p95_ms=([\d.]+) max_ms=([\d.]+)(?: diagnostic=([01]))?',text):
+    work.setdefault(name,[]).append(dict(mean_ms=float(mean),p95_ms=float(p95),max_ms=float(maximum),diagnostic=bool(int(diagnostic)) if diagnostic else None))
+
+def partition_summary(rows):
+    result={}
+    for label,state in [('unflagged',False),('diagnostic',True),('legacy_unknown',None)]:
+        selected=[row for row in rows if row['diagnostic'] is state]
+        result[label]=dict(windows=len(selected),
+            mean_ms=sum(row['mean_ms'] for row in selected)/len(selected) if selected else None,
+            largest_interval_ms=max((row['max_ms'] for row in selected),default=None))
+    return result
 tls=[int(value) for value in re.findall(r'Kyoei TLS stats: handled_total=(\d+)',text)]
 display=[line for line in text.splitlines() if 'Kyoei display trace:' in line]
 readbacks=[dict(images=int(images),waits=int(waits),bytes=int(size)) for images,waits,size in re.findall(
@@ -33,7 +46,14 @@ report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args
             slowest_window_fps=min((row['fps'] for row in frames),default=None),
             fastest_window_fps=max((row['fps'] for row in frames),default=None),
             largest_interval_ms=max((row['max_ms'] for row in frames),default=None),
-            frames=frames,work=work,tls_handled_range=[min(tls),max(tls)] if tls else None,
+            frames=frames,work=work,
+            diagnostic_partitions=partition_summary(frames),
+            work_diagnostic_partitions={name:partition_summary(rows) for name,rows in work.items()},
+            target_60fps=dict(budget_ms=1000/60,
+                windows_mean_over_budget=sum(row['mean_ms']>1000/60 for row in frames),
+                windows_p95_over_budget=sum(row['p95_ms']>1000/60 for row in frames),
+                note='Window summaries cannot establish minimum FPS or raw frame deadline counts. Unflagged does not imply gameplay or absence of other profiling.'),
+            tls_handled_range=[min(tls),max(tls)] if tls else None,
             detected_failure_lines=signals,display_trace=display,readback_batch_samples=readbacks)
 if args.out:
     args.out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
