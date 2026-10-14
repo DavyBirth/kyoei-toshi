@@ -1491,3 +1491,14 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Port recompilado, CheckOnly EN com diagnóstico PASS, nenhuma partida aberta.
   Normal atualizado; orb-pending continua checkpoint anterior separado.
   Detalhes e próximo ponto sobre pacing/simulação em DESEMPENHO.md.
+
+### 14/10/2026 — ambição de port nativo como etapa final opcional
+
+- Davy esclareceu que recompilar significava avançar futuramente para renderer
+  próprio, sem tradução gráfica de PS4; etapa final opcional, preservando o
+  híbrido atual. Direção registrada na etapa 6 de PLANO.md.
+- Separados renderer próprio e substituição integral da lógica do executável;
+  descompilação não recupera automaticamente fonte compilável original.
+  Nenhuma promessa de 60 FPS decorrente apenas dessa mudança de arquitetura.
+- Davy relata Godzilla praticamente perfeito. Não tratado como benchmark do
+  Kyoei, nem como autorização para alterar Godzilla/core fixo.

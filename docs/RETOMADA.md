@@ -1,5 +1,11 @@
 # Checkpoint — 14/10/2026
 
+Direção de longo prazo: Davy esclareceu que pretende, como etapa final
+opcional, renderizador próprio de PC substituindo a tradução gráfica PS4.
+Port híbrido continua prioridade; roteiro em docs/PLANO.md, etapa 6. Trocar
+renderer não substitui automaticamente lógica PS4 nem garante 60 FPS.
+Godzilla praticamente perfeito segundo relato dele; não alterar projeto irmão.
+
 Investigação 60 FPS avançou: comparação de hash MaybeCpuDirty corrigida
 (guest_size inteiro nos dois caminhos). Teste do método real falha no original
 e passa na cópia adaptada; build normal atualizado/CheckOnly EN PASS. Scopes
