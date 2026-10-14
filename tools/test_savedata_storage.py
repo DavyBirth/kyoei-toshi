@@ -1,6 +1,7 @@
 """Write, unmount and reopen a synthetic save using the actual folder backend."""
 from pathlib import Path
 import subprocess
+import tempfile
 
 root = Path(__file__).resolve().parents[1]
 build = root/'build/test-save-storage'
@@ -28,9 +29,19 @@ uintptr_t gz_lookup(const GzExport *table,size_t count,const char *library,const
  for (size_t i=0;i<count;++i) if (!strcmp(table[i].symbol,symbol) && (!table[i].library || !strcmp(table[i].library,library))) return (uintptr_t)table[i].function;
  return 0;
 }
+static int fail_metadata_write;
+static BOOL WINAPI test_write_file(HANDLE file,LPCVOID data,DWORD size,LPDWORD written,LPOVERLAPPED overlap) {
+ if (fail_metadata_write) {
+  DWORD partial=0; WriteFile(file,data,size>8?8:size,&partial,overlap);
+  *written=partial; SetLastError(ERROR_DISK_FULL); return FALSE;
+ }
+ return WriteFile(file,data,size,written,overlap);
+}
+#define WriteFile test_write_file
 #define Mount1 BackendMount1
 #include "kyoei_savedata_backend.c"
 #undef Mount1
+#undef WriteFile
 #include "kyoei_savedata.c"
 uintptr_t kyoei_shared_resolve(const char *library,const char *symbol,int data) { return data ? 0 : gz_savedata_resolve(library,symbol); }
 #define CHECK(x) do { if (!(x)) { fprintf(stderr,"line %d failed\n",__LINE__); return 1; } } while(0)
@@ -54,10 +65,37 @@ int main(int argc,char **argv) {
  file=fopen(path,"rb"); CHECK(file && fread(readback,1,9,file)==9); fclose(file); CHECK(!strcmp(readback,"roundtrip"));
  int slot=slot_of(&result.point); Param persisted={0}; read_param(slots[slot].meta,&persisted);
  CHECK(!strcmp(persisted.title,"Synthetic test") && persisted.user_param==123);
- CHECK(!save_umount(&result.point)); directory=(DirName){"../escape"};
+ MountPoint malformed={"/savedata0junk"}; CHECK(save_umount(&malformed)==ERR_NOT_FOUND);
+ malformed=(MountPoint){"/savedata"}; CHECK(slot_of(&malformed)==-1);
+ malformed=(MountPoint){"/savedata00"}; CHECK(slot_of(&malformed)==-1);
+ memset(&malformed,'0',sizeof(malformed));memcpy(malformed.data,"/savedata",9);CHECK(slot_of(&malformed)==-1);
+ CHECK(slot_of(&result.point)==slot && mounted[0]);
+ Param changed=persisted;strcpy(changed.title,"Must not replace original");
+ fail_metadata_write=1;
+ CHECK(save_set_param(&result.point,0,&changed,sizeof(changed))==ERR_INTERNAL);
+ fail_metadata_write=0;
+ Param after={0};CHECK(!read_param(slots[slot].meta,&after) && !memcmp(&after,&persisted,sizeof(after)));
+ snprintf(path,sizeof(path),"%s\\param.bin",slots[slot].meta); wchar_t wide[1200];
+ CHECK(!gz_widen(path,wide,1200));
+ HANDLE held=CreateFileW(wide,GENERIC_READ,FILE_SHARE_READ,NULL,OPEN_EXISTING,0,NULL);
+ CHECK(held!=INVALID_HANDLE_VALUE);
+ CHECK(save_set_param(&result.point,0,&changed,sizeof(changed))==ERR_INTERNAL);
+ CHECK(CloseHandle(held));
+ CHECK(!read_param(slots[slot].meta,&after) && !memcmp(&after,&persisted,sizeof(after)));
+ snprintf(path,sizeof(path),"%s\\param.bin.tmp-*",slots[slot].meta);CHECK(!gz_widen(path,wide,1200));
+ WIN32_FIND_DATAW found;HANDLE find=FindFirstFileW(wide,&found);CHECK(find==INVALID_HANDLE_VALUE);
+ CHECK(!save_set_param(&result.point,0,&changed,sizeof(changed)));
+ CHECK(!read_param(slots[slot].meta,&after) && !strcmp(after.title,changed.title));
+ CHECK(!save_umount(&result.point));
+ directory=(DirName){"FAILED-SAVE"};input.mode=34;fail_metadata_write=1;
+ CHECK(mount2(&input,&result)==ERR_INTERNAL && !mounted[0]);fail_metadata_write=0;
+ char base[600];root(1,NULL,base,sizeof(base));snprintf(path,sizeof(path),"%s\\FAILED-SAVE",base);
+ CHECK(!folder_exists(path));snprintf(path,sizeof(path),"%s\\FAILED-SAVE.sce_sys",base);CHECK(!folder_exists(path));
+ CHECK(!mount2(&input,&result) && result.status==1);CHECK(!save_umount(&result.point));
+ directory=(DirName){"../escape"};
  CHECK(mount2(&input,&result)==ERR_PARAMETER); CHECK(!save_terminate());
  CHECK(save_clear_progress()==ERR_NOT_INITIALIZED);
- puts("SAVE STORAGE PASS: Mount2, real payload/metadata persisted across terminate/remount, invalid paths, backup progress");
+ puts("SAVE STORAGE PASS: payload/metadata remount, invalid mount points, failed/short writes and replacement preserve old metadata, no stale temps");
  return 0;
 }
 '''
@@ -65,4 +103,7 @@ int main(int argc,char **argv) {
 subprocess.run(['clang','-O2','-D_CRT_SECURE_NO_WARNINGS','-I'+str(root/'src'),
                 '-I'+str(root/'third_party/godzilla-core/src'),'-I'+str(root/'build'),
                 str(build/'test.c'),'-o',str(build/'test.exe')],check=True)
-subprocess.run([str(build/'test.exe'),str(build/'user')],check=True)
+with tempfile.TemporaryDirectory(prefix='fixture-',dir=build.resolve()) as fixture:
+    if not Path(fixture).resolve().is_relative_to(build.resolve()):
+        raise ValueError('Synthetic save fixture outside test build directory')
+    subprocess.run([str(build/'test.exe'),fixture],check=True)

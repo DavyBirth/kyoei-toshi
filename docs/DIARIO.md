@@ -1,5 +1,20 @@
 # Diário do projeto
 
+### 13/10/2026 — metadados de save e identificação de montagem
+
+- Revisão offline encontrou write_param sem retorno: falhas de gravação eram
+  reportadas como sucesso e abriam param.bin diretamente com truncamento.
+  Agora usa temporário exclusivo, escrita completa/flush/substituição; falha
+  retorna ERR_INTERNAL e preserva metadados anteriores. Não altera payload.
+- slot_of usava atoi e aceitava /savedata0junk como 0. Parser agora exige nome
+  canônico completo e terminador nos 16 bytes da ABI, slots 0–15.
+- Teste do backend real com saves sintéticos PASS: persistência/reabertura,
+  escrita parcial injetada, substituição bloqueada por handle Windows,
+  preservação byte a byte, ausência de temporários e recuperação de criação.
+  ABI Mount2/build normal PASS. Nenhum jogo ou save real acessado.
+- Documentação em SAVE-DATA.md. Novos headers próprios/adaptação CMake;
+  third_party/godzilla-core e projeto Godzilla intactos.
+
 ### 13/10/2026 — limpeza de pacotes antigos e regra permanente
 
 - Davy autorizou apagar o que não precisa ser mantido, como regra permanente;

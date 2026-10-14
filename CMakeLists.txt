@@ -61,6 +61,22 @@ kyoei_replace_checked(KYOEI_THREADS
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_threads.c" CONTENT "${KYOEI_THREADS}" @ONLY)
 list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_threads.c")
 file(READ "${KYOEI_CORE}/src/rt_savedata.c" KYOEI_SAVEDATA)
+set(KYOEI_OLD_WRITE_PARAM [=[static void write_param(const char *meta, const Param *p) {
+    char path[760];
+    snprintf(path, sizeof(path), "%s\\param.bin", meta);
+    FILE *f = open_utf8(path, L"wb");
+    if (f) { Param copy = *p; copy.mtime = (int64_t)time(NULL); fwrite(&copy, sizeof(copy), 1, f); fclose(f); }
+}]=])
+kyoei_replace_checked(KYOEI_SAVEDATA "${KYOEI_OLD_WRITE_PARAM}" "#include \"kyoei_save_metadata.h\"\n#include \"kyoei_save_slot.h\"")
+kyoei_replace_checked(KYOEI_SAVEDATA
+  "    if (!exists) { Param empty = {0}; write_param(meta, &empty); }"
+  "    if (!exists) { Param empty = {0}; if (write_param(meta, &empty)) { kyoei_discard_empty_save(host,meta); ReleaseSRWLockExclusive(&lock); return ERR_INTERNAL; } }")
+kyoei_replace_checked(KYOEI_SAVEDATA
+  "        if (!r) write_param(slots[slot].meta, &p);"
+  "        if (!r && write_param(slots[slot].meta, &p)) r = ERR_INTERNAL;")
+kyoei_replace_checked(KYOEI_SAVEDATA
+  "    int slot = atoi(point->data + 9);"
+  "    int slot = kyoei_save_slot_number(point->data,sizeof(point->data));")
 kyoei_replace_checked(KYOEI_SAVEDATA
   "static const GzExport exports[] = {"
   "/* No asynchronous backups are scheduled by this folder backend. */\nstatic ABI int32_t save_clear_progress(void) { return initialized ? 0 : ERR_NOT_INITIALIZED; }\nstatic ABI int32_t save_get_progress(float *progress) {\n    if (!initialized) return ERR_NOT_INITIALIZED;\n    if (!progress) return ERR_PARAMETER;\n    *progress = 0.0f; return 0;\n}\nstatic const GzExport exports[] = {\n    {NULL, \"sceSaveDataGetProgress\", (void *)save_get_progress},\n    {NULL, \"sceSaveDataClearProgress\", (void *)save_clear_progress},")
