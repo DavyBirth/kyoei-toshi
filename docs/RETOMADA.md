@@ -1,10 +1,14 @@
-# Checkpoint ? 14/10/2026
+# Checkpoint — 14/10/2026
 
-SaveIcon agora respeita buffer_size/data_size, usa substitui??o at?mica e
+SaveIcon agora respeita buffer_size/data_size, usa substituição atômica e
 rejeita montagem readonly. Terminate com slot montado retorna BUSY; mount
-reconfere initialized sob lock. Backend real sint?tico, ABI e build PASS.
-Limite: readonly de payloads gen?ricos e transa??o do save inteiro n?o feitos.
-Nenhuma partida iniciada; tradu??o inglesa segue no GPT externo.
+reconfere initialized sob lock. Backend real sintético, ABI e build PASS.
+Limite: readonly de payloads genéricos e transação do save inteiro não feitos.
+Nenhuma partida iniciada; tradução inglesa segue no GPT externo.
+
+HUD: tools/inspect_hud_node_types.py identifica way_goal_text como UnitFontEx
+e navi_text como GxUnitFontBmp. Font slot final ainda desconhecido. Evidências
+e próximo passo em docs/m3/FONTES.md. Inglês externo continua primeiro.
 
 # Retomada — 13/10/2026
 

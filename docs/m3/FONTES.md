@@ -72,3 +72,32 @@ A seleção concreta do nó do objetivo ainda precisa ser ligada ao recurso HUD
 ou observada em runtime. Não concluir pelo tamanho 38 que a fonte é a principal,
 nem substituir atlas ou remover acentos. Referências de campos em outras
 classes não são evidência do font slot deste nó.
+
+## Tipos serializados do objetivo — 14/10/2026
+
+HUD privado `common/hud/cockpit/map/cockpit_map.hud`, SHA-256
+`c94095095aa27488279e43450f8af00ca5c9263ce98e951b59e888d8e200227d`.
+Payload BILZ: 11971 bytes. Sondagem reproduzível:
+
+```powershell
+python tools/inspect_hud_node_types.py G:/kyoei-toshi-work/m1/common/hud/cockpit/map/cockpit_map.hud --label way_goal_text --label navi_text --type GxUnitFontBmp --type UnitFontEx
+```
+
+- way_goal_text: offset 3716, comprimento 13, tipo 0x86aac3f5 (UnitFontEx).
+- navi_text: offset 5557, comprimento 9, tipo 0x0518af9e (GxUnitFontBmp).
+- G aparente após os nomes nas buscas ASCII pertence ao campo seguinte.
+
+Hash de tipo ASCII em 0x302ff0: acumulador 37, para cada byte
+`h = (h * 37 + byte) & 0xffffffff`. Não há multiplicação final. Propriedades
+usam outro caminho (0x302f60), com multiplicação adicional e XOR do descritor.
+
+Registro UnitFontEx em 0xae8709/0xae875b: tamanho 0x3c0, descritor 0x153e670,
+pai 0x136f620 (GxUnitFontBmp). Fábrica 0xae95d0 chama construtor 0xae9a60,
+que chama bitmap 0x2e5230 e instala vtable 0x12e1b28. O construtor derivado
+inspecionado não muda +0x1a8 diretamente, inicialmente zero na classe base.
+Propriedades e atualizações posteriores ainda podem selecionar outro slot.
+
+Propriedade bitmap +0x1a8 registrada em 0x2e4dce chama-se `_index`:
+referência 0x2e4df8, string técnica 0x1017501. Próximo passo: rastrear
+propriedades herdadas e overrides UnitFontEx ou observar índice em runtime
+autorizado. Sonda relata candidatos estruturais; nenhum atlas alterado.

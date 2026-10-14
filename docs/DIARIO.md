@@ -1449,15 +1449,18 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   checkpoint; registrar para a próxima etapa, sem abrir/reiniciar jogo.
 
 
-### 14/10/2026 ? ?cones de save e ciclo de montagem, offline
+### 14/10/2026 — ícones de save e ciclo de montagem, offline
 
 - SaveIcon limita leitura ao menor entre buffer_size/data_size, escreve em
-  tempor?rio exclusivo e substitui somente ap?s escrita e flush completos.
-  Falha preserva ?cone anterior. Montagem somente leitura rejeita SaveIcon.
+  temporário exclusivo e substitui somente após escrita e flush completos.
+  Falha preserva ícone anterior. Montagem somente leitura rejeita SaveIcon.
 - Terminate retorna BUSY quando existem slots montados, preservando contexto;
-  montagem revalida inicializa??o dentro do lock para evitar corrida.
-- Backend real com fixtures tempor?rias PASS: buffer menor que data_size,
-  escrita parcial/erro, preserva??o do ?cone, readonly, remontagem e BUSY.
+  montagem revalida inicialização dentro do lock para evitar corrida.
+- Backend real com fixtures temporárias PASS: buffer menor que data_size,
+  escrita parcial/erro, preservação do ícone, readonly, remontagem e BUSY.
   CMake configure/build kyoei/test_kyoei_savedata e teste ABI PASS.
-- N?o ? transa??o do payload inteiro nem prote??o readonly de todos os arquivos.
-  Nenhum jogo, janela ou save real utilizado. Tradu??o inglesa externa intacta.
+- Não é transação do payload inteiro nem proteção readonly de todos os arquivos.
+  Nenhum jogo, janela ou save real utilizado. Tradução inglesa externa intacta.
+- HUD: sonda de leitura identifica tipos UnitFontEx/GxUnitFontBmp nos nós de
+  objetivo/navegação. Hash, offsets e construtor registrados em FONTES.md.
+  Fonte final ainda desconhecida; nenhum atlas alterado ou diálogo exportado.
