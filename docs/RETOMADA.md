@@ -1,5 +1,20 @@
 # Retomada — 13/10/2026
 
+Novos avanços offline de save/load e fontes:
+- bea6b64: metadados de save escritos em temporário, erro de escrita/substituição
+  propagado, original preservado; parser exige /savedata0–15 completos. Backend
+  real com fixtures isoladas PASS (escrita parcial, bloqueio real Windows,
+  reabertura, recuperação de criação); ABI/build PASS. Payload não é transação.
+- 2df4560: lista valida índice antes de acessar nomes, rejeita UTF-8 inválido;
+  teste do serviço real PASS, sem janela ou saves reais.
+- Fonte bitmap: +0x1a8 rastreado do nó aos parâmetros+0x10 e seleção de slot
+  no consumidor 0x2de990; tamanho +0x19c é campo separado. HUD trace passa a
+  registrar font_index_1a8. Fonte do objetivo ainda não observada/confirmada;
+  nenhum atlas trocado. Evidências/endereços em docs/m3/FONTES.md.
+Normal reconstruído com essas correções; hashes do checkpoint offline anterior
+são históricos. Nenhuma partida iniciada. Testes em build/test-save-storage
+usam pasta temporária descartável, sem tocar nos saves do usuário.
+
 Limpeza autorizada: pacotes runtime-preview-01 EN/PT e runtime-preview-02 EN
 removidos (19,04 GB). Atuais en-03 EN e 02 PT íntegros, hashes conferidos;
 CheckOnly ambos PASS. Provas/metadados antigos permanecem, arquivos antigos

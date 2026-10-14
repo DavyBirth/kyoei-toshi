@@ -148,9 +148,12 @@ static ABI uintptr_t trace_marker(void *object,const void *text) {
     last_input_hash=input_hash; last_label=label; InterlockedIncrement(&reports);
     {
         void *plate=field_pointer(object,0x238);
-        gz_log("Kyoei HUD trace: input_chars=%u shown_chars=%u plate_scale_x=%.4f plate_x=%.3f text_x=%.3f text_size_19c=%.3f",
+        unsigned font_index=UINT_MAX;
+        if (label && readable((const char *)label+0x1a8,sizeof(font_index)))
+            memcpy(&font_index,(const char *)label+0x1a8,sizeof(font_index));
+        gz_log("Kyoei HUD trace: input_chars=%u shown_chars=%u plate_scale_x=%.4f plate_x=%.3f text_x=%.3f text_size_19c=%.3f font_index_1a8=%u",
             input_count,label?string_characters((char *)label+0x110,NULL):UINT_MAX,
-            float_field(plate,0x80),float_field(plate,0x60),float_field(label,0x60),float_field(label,0x19c));
+            float_field(plate,0x80),float_field(plate,0x60),float_field(label,0x60),float_field(label,0x19c),font_index);
         // Raw technical fields for identifying font/size. Never log source prose.
         if (label && readable((char *)label+0x98,0x78)) {
             unsigned fields[30]; memcpy(fields,(char *)label+0x98,sizeof(fields));

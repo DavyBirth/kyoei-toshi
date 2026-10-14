@@ -1,5 +1,17 @@
 # Diário do projeto
 
+### 13/10/2026 — índice de fonte do nó bitmap rastreado offline
+
+- Registro GxUnitFontBmp → fábrica 0x2e4cd0 → construtor 0x2e5230/base
+  0x2e4570: string +0x110, tamanho +0x19c. Caminho de desenho 0x2e5aeb
+  copia +0x1a8 a parâmetros+0x10; consumidor 0x2de9f6 seleciona slot <=3
+  com stride 0x100. Desmontagem limitada verificada; não executada.
+- Diagnóstico HUD adiciona font_index_1a8 com guarda de leitura, sem alterar
+  campo ou atlas. Fonte concreta do objetivo ainda pendente; tamanho de fonte
+  não basta para identificar variante. Investigação em docs/m3/FONTES.md.
+- Build normal e teste do callback/instalação HUD PASS. Nenhum jogo iniciado;
+  nenhuma fonte/glifo foi substituído por hipótese.
+
 ### 13/10/2026 — seleção de save rejeita retorno fora da lista e UTF-8 inválido
 
 - Worker da lista valida selected contra count antes de indexar o array de

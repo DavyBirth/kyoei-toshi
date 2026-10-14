@@ -47,3 +47,28 @@ no arquivo: não apagar as adicionais por não aparecerem nessas duas tabelas.
 ASCII e os seis glifos de pontuação habilitados em FitHud ficam na página 0
 das duas fontes. Esta auditoria não prova qual fonte a tela de objetivo usa,
 não adiciona acentos e não certifica pixels de páginas ainda não inspecionadas.
+
+## Caminho estático do índice de fonte no nó bitmap
+
+ELF próprio com hash 1968814b70f69ec85ff3e556c4b66b53ec298c0dea71120e4f0ba594906e418e.
+Conferido com llvm-objdump, sem executar instruções do jogo:
+
+- registro do tipo GxUnitFontBmp em 0x2e4c69; fábrica 0x2e4cd0 aloca 0x1f0
+  bytes e chama 0x2e5230, que usa construtor base 0x2e4570;
+- base inicializa string em +0x110 e tamanho float 24 em +0x19c;
+- desenho copia nó+0x1a8 em 0x2e5aeb para parâmetros+0x10. Chamada 0x2e5b9e
+  passa esse bloco a 0x2de990;
+- consumidor lê parâmetros+0x10 em 0x2de9f6, exige índice <=3 e usa stride
+  0x100 na estrutura do gerenciador. Este é o caminho de seleção do font slot,
+  separado do tamanho +0x19c e dos outros campos +0x1a0/+0x1a4.
+
+HUD trace agora registra font_index_1a8 com leitura protegida, somente quando
+o diagnóstico está ativo. O registro anterior de oito palavras em +0x188
+terminava em +0x1a4, portanto não incluía esse campo. Referências técnicas
+privadas em build/font-selector-references-01.json e trecho limitado em
+build/font-bitmap-node-disassembly.txt; não versionar desmontagem completa.
+
+A seleção concreta do nó do objetivo ainda precisa ser ligada ao recurso HUD
+ou observada em runtime. Não concluir pelo tamanho 38 que a fonte é a principal,
+nem substituir atlas ou remover acentos. Referências de campos em outras
+classes não são evidência do font slot deste nó.
