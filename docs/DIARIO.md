@@ -1514,3 +1514,25 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   agregadas, HUD trace desligado, batch/readback experimental não habilitado.
   Não usar Testar desempenho EN como baseline normal: ele habilita BatchReadback
   e FitHud. CheckOnly valida a preparação sem executar partida.
+
+### 14/10/2026 — retorno do GPT auditado e localização continuada
+
+- Lidas regras retorno-gpt/AGENTS.md e fontes/relatórios. Extraídos original,
+  baseline e working separados em retorno-gpt/codex-localization, fora do Git.
+- Confirmados 173 JSONs/16100 entradas, inicialmente 4124 preenchidas, campos
+  protegidos íntegros. Reparados 38 delimitadores 【…】 convertidos/perdidos no
+  inglês recebido; wording preservado, justificativas e before/after privados.
+- Inseridas 671 novas traduções: Stage8 219; Stage9 34; Stage3 6; Stage6 1;
+  Stage10a 251; Stage11 63; Stage10b 97. Total 4795 preenchidas, 11305 vazias.
+  Somente en/notes alterados; não confundir rascunho com aprovação editorial.
+- Auditor automático e regressões PASS. Última auditoria full-set zero erros;
+  28 recursos conferidos contra dump próprio e reinseridos em memória com
+  strings restantes preservadas, antes do último lote 10b. Nada aplicado ao jogo.
+- Vídeos atuais: 19 em 720p; índices 2fps concluídos 8/1/2/3/4/5/6, 26162
+  amostras. Quadros pontuais lidos em resolução nativa e ligados a IDs quando
+  demonstrado. Não é análise semântica integral nem cobertura de todos os ramos.
+- Davy esclareceu explicitamente INTERROMPER AGORA e salvar. Varredura Stage7
+  terminada; nenhum lote iniciado após isso. Consolidado cumulativo privado:
+  published/Kyoei_English_Consolidated_Current.zip, SHA-256
+  e66fa047159e70fa37f253b0ad83113bcf59148c4186e574b7739dda3678d09e.
+  CONTINUE-HERE.md e CHECKPOINT.json registram plano, limitações e próximo lote.

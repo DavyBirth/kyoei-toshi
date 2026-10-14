@@ -1,5 +1,33 @@
 # Checkpoint — 14/10/2026
 
+## Localização — interrupção explícita solicitada por Davy
+
+Davy pediu INTERROMPER AGORA e salvar. Trabalho interrompido; varredura do
+Stage 7 encerrada. Não continuar nesta sessão após salvar este checkpoint.
+
+Pasta privada de trabalho:
+G:/kyoei-toshi-work/translation/retorno-gpt/codex-localization
+Ler CONTINUE-HERE.md e reports/CHECKPOINT.json. JSONs atuais em working/;
+originais e baseline separados, ZIPs recebidos intactos. Não extrair por cima.
+Consolidado único: published/Kyoei_English_Consolidated_Current.zip.
+
+- 173 JSONs, 16100 entradas; 4795 preenchidas, 11305 vazias. Nesta sessão:
+  671 novas traduções EN e 38 reparações de delimitadores, sem apagar inglês.
+- Última auditoria: reports/stage10b-tower-01-audit.json, zero divergências.
+  Apenas en/notes alterados. Revisão editorial e gameplay continuam pendentes.
+- Stages 8, 9, 10a, 10b e 11 avançados; seis entradas Stage3 e uma Stage6
+  adicionadas na revisão 720p. Nenhum desses números certifica stage completo.
+- 19 vídeos atuais conferidos como 720p. Índices 2fps concluídos em 8/1/2/3/4/5/6:
+  26162 amostras, sem alegar leitura semântica de todas. Stage7 interrompido.
+- Próximo lote: Stage10c em translate-en-0074.json, depois restante Stage11,
+  nomes/títulos pendentes em 8/9 e expansão 12–17. Notas privadas têm detalhes.
+- Ferramentas: audit_localization_return.py, apply_localization_batch.py,
+  scan_localization_video.py. Testes do auditor PASS; 28 recursos alterados
+  tiveram prova de reinserção antes do último lote 10b, ainda não incluído nela.
+- Não foi publicado pacote runtime nem jogo iniciado. Relato de prazo revisto:
+  lotes amplos aceleram rascunho, sem garantia de terminar revisão completa hoje.
+
+
 Davy testou e relata desempenho bem melhor, ainda com quedas. Log 010525
 encerrou com código 0, sem métricas frame/work; não atribuir causa das quedas.
 Próxima medição voluntária: Medir desempenho atual EN.cmd, sem F9, jogando
