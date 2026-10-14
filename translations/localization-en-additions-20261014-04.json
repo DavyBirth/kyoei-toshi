@@ -1,0 +1,797 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/lua/Text_Stage_207.luc",
+      "source_sha256": "603aa30eb7daf17377811f372335f25a2e3b36002105db33c2a40f5148780969",
+      "entries": [
+        {
+          "id": "p0/k213",
+          "source_text_sha256": "08193d40f41575ebae37de61f9e16f8fe4a72c370b204fce6952f090c6a7a146",
+          "en": "(It looks like that black Labor from earlier is fighting...\nLet's leave the harbor before we get caught up in it.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k213; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k215",
+          "source_text_sha256": "aafcbdb096bb0d302133eec41713ad9f5def6586431b077a0dba7a0ca79c78a7",
+          "en": "(It looks like that black Labor from earlier is fighting...\nWe need to leave the harbor before we get caught up in it.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k215; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k241",
+          "source_text_sha256": "3f20816ab610e703edf91ec99e4d776e56395a179a64931d36e338ebc60be4ef",
+          "en": "It's dangerous to pass under the Labor's feet!\nLet's find another way!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k241; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k246",
+          "source_text_sha256": "5fe7bc7123c746ce11fea604b8605a7ad41186b1ab6acc83ba42115cbf354e02",
+          "en": "This Labor...\nIt looks like it can still move...",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k246; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k250",
+          "source_text_sha256": "843ed8cbccdde2e5da9c6372b04d25eb69b511efbc19a78e46afb603c51ce030",
+          "en": "Leave the piloting to Yuki, since she seems to have experience.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k250; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k262",
+          "source_text_sha256": "19ee5ad19a6638b4e42c2ef27803e12fa02d2029cbf3b32eab5c42f0d0f65c3a",
+          "en": "Come to think of it, you piloted a construction Labor\nat a part-time job before, didn't you?",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k262; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k268",
+          "source_text_sha256": "016e6049a624e651260628aad4779f1efc1657454345dd3a607f461e3ce26d51",
+          "en": "Put your faith in Yuki's natural talent and let her pilot it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k268; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k270",
+          "source_text_sha256": "55f907c3e0f7ee4b1c3f7ef70a0b55a68d3e94ba323965ec798dfeac37477bfa",
+          "en": "Yuki! You're the only one who can do it!\nIt'll be fine! You can do this! Right?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k270; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k272",
+          "source_text_sha256": "592a4ed405f2e83f83ec60949ff366e5442b4033ae9baf02be7dfa4a3d7a5096",
+          "en": "This Labor...\nIt looks like it can still move...",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k272; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k275",
+          "source_text_sha256": "677a7c74c462f357f53e2fb0a93807c42cc3a4b16b98dda93e24c0c36f322c8d",
+          "en": "Leave the piloting to Yuki, since she seems to have experience.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k275; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k285",
+          "source_text_sha256": "4fe76798e5f128fdf30d2090475958c5b8a8eb54e084176a036cff50278a434b",
+          "en": "Come to think of it, you piloted a construction Labor\nat a part-time job before, didn't you?",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k285; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k291",
+          "source_text_sha256": "ea29fbed8513a278a2a90be905949769a29d0fa82dfd02be00cf771efdb66a61",
+          "en": "Put your faith in Yuki's natural talent and let her pilot it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k291; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k293",
+          "source_text_sha256": "3e288c230e6cef3556d492033247563592a84ae73847a288b636767727390ddf",
+          "en": "Yuki! You're the only one who can do it!\nIt'll be fine! You can do this! Right?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k293; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k361",
+          "source_text_sha256": "548de2d90c725f3c37e9dd38b03731de38a58d1bfae3b5471d278b8255b4b02d",
+          "en": "Hey! Kiyoshi! Can you hear me?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k361; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k364",
+          "source_text_sha256": "0bafb534ab9ced1a0bdf998baa1443996c15b6d8ad8521360fd3404434f8a042",
+          "en": "Shibata! Leave this to me!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k364; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k366",
+          "source_text_sha256": "1c2512189a41629509fcddaec2020cc7a583285071407d7f9a002b3cc8936b1f",
+          "en": "Muto! Kiyoshi!\nDispose of them as soon as you find them. Don't screw this up!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k366; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k373",
+          "source_text_sha256": "46df7c46c9916c9ec7a341c8ed885bf87d2b0e7941dc9ab976c69531485e7249",
+          "en": "...Hey, Muto. Keep your mouth shut.\nYou never know who might be listening, or where.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k373; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k375",
+          "source_text_sha256": "d8f110afb56435ac12db97be6e5baaa20853b26b71263a9e82e09a45b3717e72",
+          "en": "S-sorry, Shibata...",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k375; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k413",
+          "source_text_sha256": "81b9aaf3e7acf08fe196b188a5227552630d9194adfb36c13cc22e475a55afb5",
+          "en": "Kiyoshi",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k413; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k418",
+          "source_text_sha256": "00bffa72f121f3aba86ac24309d3cf75a12fd9e582217788df0342f0a9b6be83",
+          "en": "Do it, Muto!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k418; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k420",
+          "source_text_sha256": "3a30835a43d40f891d51d8bcb123d0a8357cf9f7e21dc4e76e2e6eaca10f45e0",
+          "en": "Oh, it's from Risa...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k420; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k426",
+          "source_text_sha256": "90f10c17f6cc590108ec3e252a4360e08c593f68d98018c9e724bad4257c76c8",
+          "en": "Oh, you're safe. Can you see\nthe Labors fighting from where you are?",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k426; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k433",
+          "source_text_sha256": "63a97dd668358982f5de5aa48e41a7077531ccd309457d48a91cbfdfa0748129",
+          "en": "We're ready to get out. You'll have to make your way\nthrough the battle between the Labors, but hang in there and get here!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k433; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k474",
+          "source_text_sha256": "d6a8307ad7f2a7a747df19a78c72246ae3d314c87aa583c7593e80d1ee64b59b",
+          "en": "It's Risa!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k474; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k480",
+          "source_text_sha256": "0139aac986cd140fda08445fa2e718d524fc0066ba53a0dd79278afc5b8be3ba",
+          "en": "How did Kashiwagi know where we were?",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k480; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k482",
+          "source_text_sha256": "42f15052aa7cf5bc81ed267f635b80d39ac197c7316d9abda3433af8196a1803",
+          "en": "Gaze at Kashiwagi for a moment, thinking how wonderful she is.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k482; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k487",
+          "source_text_sha256": "09aedb213ef47fd8676ab0a66698a92d2e359b1e0b2eebc56da96d46d1ca1a54",
+          "en": "How did Kashiwagi know where we were?",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k487; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k489",
+          "source_text_sha256": "3a2990526637d38b8509f212dce183c0e6e9b79fec8c97750b27bebc851c3155",
+          "en": "Gaze at Kashiwagi for a moment, thinking how wonderful she is.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k489; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k496",
+          "source_text_sha256": "13e02dcca23b651ed49e1b98ce5c6b59ba25669f848242e43848de98622ee11c",
+          "en": "How did this woman, Kashiwagi,\nknow where we were?",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k496; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k498",
+          "source_text_sha256": "260a21ff2e46b6dc5464cd4c966888a093d874754af82427427f230578cb6fb2",
+          "en": "How did this woman, Kashiwagi,\nknow where we were...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k498; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k500",
+          "source_text_sha256": "3c86ba0caa1aea58ff4233870c63ae99301e6391c8ffdc22c9a8cb6faef961c3",
+          "en": "Kashiwagi is wonderful.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k500; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k502",
+          "source_text_sha256": "8668457270db9f6ec5718176e7cd422cbe380d3735aacc0e27424b7563e461c4",
+          "en": "Kashiwagi is wonderful.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k502; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_211.luc",
+      "source_sha256": "f39f5287339dbe3d42edcb4da942e995822f43e19151d7afe35b874fc142c929",
+      "entries": [
+        {
+          "id": "p0/k78",
+          "source_text_sha256": "e7bbc32f169962dda68d72615b67b6629560f17153c8a78f187730833292df25",
+          "en": "Chief Researcher Sawada",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k78; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k172",
+          "source_text_sha256": "037ee9d2cf78c63c5f6435488b126ba6c6fc5b3435f33fe218dc18845f93244a",
+          "en": "You obtained the hugely popular novel '[#ff44ff44]The Tale of the Last Sword: The Cursed Sword Chapter[/#]'!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k172; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k187",
+          "source_text_sha256": "bb1ee8fb94c7988567551f3f28dc3c181d7b83990c158ce8ee6d8708ca3c15bf",
+          "en": "It's a locker labeled 'Sawada.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k187; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k194",
+          "source_text_sha256": "5064fd725d542fb36d03f506fba118adc59d197c5fed8846736361c95eadaf3b",
+          "en": "It contains comics Sawada enjoys reading.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k194; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k196",
+          "source_text_sha256": "378e41b9d56432181a67aec987fb894dc18902acb3e608e7eab386979fe2acc6",
+          "en": "It contains Sawada's lab coat.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k196; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "e87452269c6295c99fee7cb86dec9db83c18987fe2f68e91344542e4e61bee00",
+          "en": "Take the comics Sawada enjoys reading.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k202",
+          "source_text_sha256": "96dcced14e4ed4823613d6fb3b859cc25b8ecc5caef26a4ed7a3f2c5864b03b7",
+          "en": "Take Sawada's lab coat.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k202; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k208",
+          "source_text_sha256": "d013ca1997d726d7b6255068c6346240504fb68a7ee1270101c5d46cec445d05",
+          "en": "You obtained the comics Sawada enjoys reading!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k208; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k210",
+          "source_text_sha256": "22d182df57d28fa968f480369f3aae951b81a224a5d112592f510b051f9fab93",
+          "en": "You obtained Sawada's lab coat!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k210; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k217",
+          "source_text_sha256": "fc4a44ae259d6b9f6058aefdaaad83307b532cc789bf3888f88cf3244d735d49",
+          "en": "Sawada said, 'Please don't look too closely\nat anything other than the keycard,' didn't she...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k217; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k219",
+          "source_text_sha256": "01995ab35be61f80bdb6ddac86bbcad6eb287bebf4c10a816b4cdf7d1239d3d3",
+          "en": "Sawada said, 'Please don't look too closely\nat anything other than the keycard,' didn't she...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k219; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k234",
+          "source_text_sha256": "693f1510b86575b239687efeac213046eb7c9218cc1af55ec0acd83ac56c86a5",
+          "en": "(Yuki saw me and came over.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k234; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k236",
+          "source_text_sha256": "97d7a512369b878437e731b2b29cd87ef263b571c0180cffeb579a67642b9fb3",
+          "en": "(Yuki saw me and came over.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k236; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k247",
+          "source_text_sha256": "2e7ba0459b442d6fe994bc44f2b5bc624c5f29c57387e7ed867a3dfb18daa275",
+          "en": "So you've found out where the deputy director is.\nNow we can deliver the program\nKashiwagi entrusted to us.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k247; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k277",
+          "source_text_sha256": "d1648abe1593287b89c9631f2e8f5c5c323f90f63de52ae1bd512e00d76fe494",
+          "en": "Kashiwagi asked us to.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k277; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k285",
+          "source_text_sha256": "31c00f97927ba7e47bc86d654162dbdbe2a83df178e9b2998141a44b8d983a29",
+          "en": "Kashiwagi asked us to.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k285; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k297",
+          "source_text_sha256": "e6ce553b8212afa4a22b439a69cc4ba5d5b291241e4c1fe85658874513f5d9da",
+          "en": "Kashiwagi?\nRisa Kashiwagi sent you here...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k297; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k337",
+          "source_text_sha256": "a157934138cf2ccd435ede47d0375a904c6eaca50525306561315a56882d736d",
+          "en": "Point at Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k337; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k507",
+          "source_text_sha256": "0223c33e7aa01aa06ba8e0ce031b31cae258c17fcd064b01e5c8475f083677ad",
+          "en": "Huh? Why is Kashiwagi here?",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k507; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k584",
+          "source_text_sha256": "95c26b2e62c1210fe30e44e2ef01b2e7a6d2fddc651c418a7e742cd9cb138773",
+          "en": "You obtained 【Karaage Minister (Secret Flavor)】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k584; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k607",
+          "source_text_sha256": "553b58c2eca24c58d97019bb1ff565af08c3ff88c99fc34734b58e70e03ad81d",
+          "en": "I'd like Sawada to kiss me...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k607; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k609",
+          "source_text_sha256": "c4c1810f99834d3360dfb5e216a9925860b1d990f1447f3a28fa3e2e7ecbafa0",
+          "en": "I'd like to hug Sawada tight...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k609; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k611",
+          "source_text_sha256": "8d67c1a7c79f1480dca612893498e7618c1d37962ca0bf88a193f81717617f1b",
+          "en": "I'd like Sawada to see my special ability...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k611; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k613",
+          "source_text_sha256": "1ece9e1be27b390c8b4268f7f3dce51108c3d7f9b9ae56c3dd115a5b59845402",
+          "en": "I'd like Sawada to see my special appearance...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k613; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k615",
+          "source_text_sha256": "9b9977be330bbba81a46c14ecc77b93beab0a28acab1aad71d57c4a8a01b82d0",
+          "en": "I want to play grown-up games with Sawada.",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k615; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k617",
+          "source_text_sha256": "70c6dfc36ab84f3960752f79b06de610b1e5a69dafdd96f5e8410bbba1c2b10c",
+          "en": "I'd like Sawada to hit me as hard as she can!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k617; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k619",
+          "source_text_sha256": "b33d937654fcda70540bd576cbff52f8ce1da9b27d2ce702123c3127cd214955",
+          "en": "I'd like Sawada to tie me up tightly!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k619; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k621",
+          "source_text_sha256": "0f5b22937bfd5a4d05f445400616fad1af49f0dfe6eb1b13969f966326052341",
+          "en": "I'd like Sawada to tie me up tightly, then hit me as hard as she can!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k621; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k623",
+          "source_text_sha256": "a3e1f6c7e1d6758688e9883a3a3426cde8a7b484b3303f332b0f1d7c6b275ad5",
+          "en": "I want Sawada to do all kinds of things to me, all at once!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k623; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k629",
+          "source_text_sha256": "ef7674cdf03a187f73651b1be7c5519e688b1f3a88b0b77ca7a92440ea2cd634",
+          "en": "I'd like Sawada to see my special ability...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k629; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k631",
+          "source_text_sha256": "943016ba034add3ec83fc943d496414991d5e0c643470098efdf262907493632",
+          "en": "I'd like Sawada to see my special appearance...",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k631; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k635",
+          "source_text_sha256": "0d751badcd198f73541cb9522e19647d91370d76d957bffd5d429c60365265f5",
+          "en": "I'd like Sawada to tie me up tightly!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k635; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k637",
+          "source_text_sha256": "316759dfc349ccd9116f0b35bd1469a7063c0fb7cec40c255f233c2d3c7e93ad",
+          "en": "I'd like Sawada to tie me up tightly, then hit me as hard as she can!",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k637; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_214.luc",
+      "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+      "entries": [
+        {
+          "id": "p0/k51",
+          "source_text_sha256": "ba4ef888e2440a09f6eb0833084ec194e3fe1f5de2840f1d2f7a973613428cb2",
+          "en": "It looks like Hananira Town isn't this way...",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k51; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k90",
+          "source_text_sha256": "972317124ca30d07453006b7be291884aeb0126469b3f106af78ef81222bf39c",
+          "en": "I handle the 'Street Style Snapshots'\ncolumn in Giant Shadow Weekly.\nSince you're here, let me feature you in an article.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k90; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k149",
+          "source_text_sha256": "6197d1bb0acbdf0fcea888bcb31f5de90004c5f1212e24931d00f93e518c54b2",
+          "en": "Hey, you! Would you like to buy my restaurant?\nIt's called 'Ristorante Miyato.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k149; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k156",
+          "source_text_sha256": "4df486d8c0a5eccfb84f606ce3ecd7b82015624280b579c9ec6953eb1d4640d0",
+          "en": "Buy the upscale French restaurant 'Ristorante Miyato' for 1 billion yen.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k156; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "7146479bd720a4f34cdad2d805b8d37c5c129dfefbdb1fa618736fd7629a381a",
+          "en": "You obtained the 【Deed to Ristorante Miyato】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k168",
+          "source_text_sha256": "d2ec467c9c6d3288031b0aefe7cb9e7f9d569e11e54cd9d7068805046593dfb5",
+          "en": "Congratulations! You're now the owner of Ristorante Miyato.\nThe restaurant has plenty of skilled chefs,\nso I think there are all kinds of possibilities.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k170",
+          "source_text_sha256": "d985fb4bb9caf55775f5deb0b9e84ef52b49d74c2e19e06b2bdb7eed7d06c2fb",
+          "en": "What kind of restaurant do you want Ristorante Miyato to become?",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k170; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "f76cb0687539b1c319ba876b6ae6f9c6c0c3b2fb4a2bf413a355a061cc991677",
+          "en": "Thank you. Take good care of Ristorante Miyato!",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k209",
+          "source_text_sha256": "9327bde66ee75219d5284b4471614a4ca24961ad8835a3191bdd60b2d794240d",
+          "en": "This is Hananira Town.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k209; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k211",
+          "source_text_sha256": "0a1e8755cb0a5835b16c8636482325e79cbdbba18987ac62d353648805ca1455",
+          "en": "Do you know where the Ebine Publishing building is?",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k211; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k213",
+          "source_text_sha256": "35959056be20346d1dd2cab028f5969a2659278183bda6f51279208eb54c60a5",
+          "en": "Ebine Publishing? Oh, that sounds familiar...",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k213; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k224",
+          "source_text_sha256": "df18a650ae82340a8916527a35df2515eedd5954106c441a6a56ca09ba564db1",
+          "en": "Hey, you! Would you like to buy Ebine Publishing and its building from me?\nHow about it? I'll let you have them for a bargain price of 1.5 billion yen!",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k224; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "e1a5629acd31990460a39bbc429552b5d98581f23484eceea6aa4eaf0cca90b6",
+          "en": "Buy Ebine Publishing for 1.5 billion yen!",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k237",
+          "source_text_sha256": "95e05113dcc5c5df6431e3fb57def6d6b91254eb94d4d60f0510b0b5121719d4",
+          "en": "You received the 【Deed to the Ebine Publishing Building】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k237; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k243",
+          "source_text_sha256": "a5541958531f34b5930450c23cc114a24178bfdac40996cea572a9c04d5b3269",
+          "en": "...The building is damaged, but Ebine Publishing is a publisher with a long history.\nIt has published 'Giant Shadow Weekly' for over 30 years.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k243; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k245",
+          "source_text_sha256": "a9d69fd67692c1fb251b69e7c88303363932988ff809dd0013fe90b969e02f0e",
+          "en": "How do you plan to run\nEbine Publishing from now on?",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k245; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k247",
+          "source_text_sha256": "4f5e5306168f5d341a6bd63251a39e8b3e2f05b582e667a8e8cba8a004292a1d",
+          "en": "I'll repair the building and try to revive Ebine Publishing.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k247; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k251",
+          "source_text_sha256": "75d2db950d38292621c87a1febfbd0dfd2519d913132dd75e8cf782ad1aa0793",
+          "en": "Thank you. As its former owner, I'd be very happy\nif you kept the history of 'Giant Shadow Weekly' going.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k251; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k255",
+          "source_text_sha256": "d087c5e96f24eb3598f531523868525d2b5415a1674de3ba0a5eef78df01266c",
+          "en": "...Well, you're the owner. You have the right to decide.\nThat would be one way to put Ebine Publishing to use too.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k255; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k261",
+          "source_text_sha256": "d47c13c123105a391b329bad30b7e5859c7cfc2cf60fdf29955ed93505830811",
+          "en": "Buy the Ebine Publishing building for 1,499,990,000 yen!",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k261; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k422",
+          "source_text_sha256": "f32ab15b86efec5d5be4d637d7ef6fc7c041c46b3e500bf06380124cb996adb6",
+          "en": "There's a book you can take on the shelf: 'The Tale of the Last Sword: The Open Sky Chapter.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k422; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k428",
+          "source_text_sha256": "caee37be917ad077d30758a8bdde757ea6275d7adbc7cbe64fb1588a2021d7b6",
+          "en": "You obtained 【The Tale of the Last Sword: The Open Sky Chapter】!",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k428; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k432",
+          "source_text_sha256": "d36ea891e79124d70c5679e64e56046c9bd1e436e6f045fd4007272f0fb9dd9f",
+          "en": "Old issues of 'Giant Shadow Weekly' line the bookshelves.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k432; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k451",
+          "source_text_sha256": "7073259dc96419967a2e2913d67193da3131de4de919f903b1051430c0a0d266",
+          "en": "'Risa Kashiwagi's article in this week's issue was excellent.\nHer incisive approach to her subject and clear organization of the information made it easy to follow.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k451; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k453",
+          "source_text_sha256": "c36dd8f4bf1f87d37ed871d4b5b1cdb552f94c734c3fd9fe3e00e5d64f1232c6",
+          "en": "'I'm a fan of Risa Kashiwagi's articles. I've been following her\nsince she began making a name for herself as a student journalist.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k453; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k455",
+          "source_text_sha256": "df4479299d2741a997f8aae9d787b7f017112bed847b94abe16ec5baff5f5f9f",
+          "en": "'I'm sad that Ms. Kashiwagi's articles no longer appear in Giant Shadow Weekly. She's contributing to other magazines, so she's clearly still active, but I'd like her to return to Giant Shadow Weekly.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k455; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k459",
+          "source_text_sha256": "56ec63617e5ef02c3c584808e39431da598d86e51b1952b58cf8b143bab80c46",
+          "en": "Look at the information on Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k459; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k463",
+          "source_text_sha256": "a8c26e90ddcfbd4010b9b4fcb1361f4e8276d070f1c3b39231ae34c47ddea08c",
+          "en": "Look at the information on Sky Garden Bridge.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k463; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k465",
+          "source_text_sha256": "bcf245ea69d8d1b8b5b0715d43a042bc3c55f80245c2298b1e429967506112a3",
+          "en": "Look at the information on Iberis Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k465; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k467",
+          "source_text_sha256": "9ab05e6907fbf3a1c8a4a18b5500967ea79caa66efbbc9a174f99e27216dfa87",
+          "en": "Look at the information on Miyato Sky Tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k467; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k469",
+          "source_text_sha256": "681c1547b39920d1b9c4ae86eb4200f606237ea688b72895d40dc9219c556465",
+          "en": "Look at the information on W&P Consulting.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k469; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k471",
+          "source_text_sha256": "644e779b043fe2aaeafae41c792bee73e0a841eac5b9c50405233494ddc9e4d0",
+          "en": "Look at the information on Radio Sky Garden.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k471; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k474",
+          "source_text_sha256": "f22a931d2733b391e313a7bbc78a11d6c346683256769db0e0d9bd48f7071fd4",
+          "en": "＜Miyato City＞\nMiyato City is the capital of Miyato Prefecture and a government-designated city.\nIt consists of 13 wards and has a total population of 2.13 million.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k474; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k476",
+          "source_text_sha256": "1bbf766073a57e03aed87ba6a7b6911a9cbe2d4e0fc2120ce26b42c6404cc5c2",
+          "en": "Heavy industry thrives in the Miyato Bay area facing the Pacific Ocean, while commerce\nthrives on the plains around Sakura Ward, the city's bustling downtown district.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k476; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k478",
+          "source_text_sha256": "8889eeba5db95ab320f3d122494ece0ebfcd8e2adbf76b6f797d9823ee67a7a9",
+          "en": "Two railway systems operate in the city: Miyato Electric Railway and Metro Rail, the subway.\nThe city also has an extensive network of wide roads, making travel by car easy.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k478; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k480",
+          "source_text_sha256": "3a67adbc12d3a6e4677f9c5e04dfe22c4619ac7ae0606b5d98f6176349dd67df",
+          "en": "'Miyato okonomiyaki' is a famous local specialty.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k480; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k482",
+          "source_text_sha256": "96f9d63cc18268799de1fb27f4dd5ea97f1e7a7bc85f717d041ad321cfd24930",
+          "en": "＜Purple Flashes＞\nOver the past few days, purple flashes have frequently been observed in skies around the world.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k482; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k490",
+          "source_text_sha256": "7bbe816fb53d4e13729228c6e84484f06f8601dd08d836d74f6ac1f260e8d12c",
+          "en": "So far, there have been no reports of any damage caused\nby these purple flashes. Research is reportedly underway at the Cosmic Ray Research Institute.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k490; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k492",
+          "source_text_sha256": "023f5bcc987c57ca1a0fcf90dc7ef72a2d761f0ac83aaca456265cfa73163d2f",
+          "en": "＜Sky Garden Bridge＞\nAn enormous bridge spanning Miyato Bay, with a total length of 11 km. In addition to cars\nand the Garden Liner railway, it also accommodates bicycles and pedestrians.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k492; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k498",
+          "source_text_sha256": "cff557a0716ed726b967d12631864d73e7de3fc752ef1191d13cc45d0c9359fc",
+          "en": "＜Iberis Tower＞\nA 50-story high-rise, 231 meters tall, built in Miyato City's waterfront area.\nIn recent years, it has become one of the city's landmarks.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k498; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k504",
+          "source_text_sha256": "aa1496b508fbb6be56cd90e479704842e3fecd31bc838d0137b6c1f428a4a6b2",
+          "en": "＜Miyato Sky Tower＞\nA 190-meter broadcasting tower in Miyato City's downtown area. It celebrated its 50th anniversary last year.\nIt is one of the city's iconic structures.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k504; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k506",
+          "source_text_sha256": "1aaf5f36e1f29cd47f9f5de2495a746db7597e15f95e0bf2eeef64b16a5188b8",
+          "en": "The opening of Iberis Tower was expected to reduce its visitor numbers,\nbut it remains a popular, well-established tourist attraction in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k506; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k508",
+          "source_text_sha256": "071fd070eb495272a56321d1f26b37e0df47291c4ebeb1b9823a1bd4dab0abb6",
+          "en": "＜W&P Consulting＞\nW&P Consulting Co., Ltd., commonly known as WP,\nis a company dealing in weapons intelligence, headquartered in Miyato City's Fortune Center Building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k508; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k516",
+          "source_text_sha256": "db5e6d0196e2705c967f493446119996b1d131de2dd502659bc172c405a7296e",
+          "en": "＜Radio Sky Garden＞\nAn AM radio station in Miyato City. Its flagship program, 'Aya Suzumura's Midnight Sky\nGarden,' is a popular show broadcast live nationwide from Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k516; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k518",
+          "source_text_sha256": "9a0b1084352c61453d3946482384dd18105454baca1994088227fadacaf0ba19",
+          "en": "The company was formerly called 'Miyato Radio Broadcasting,' but on its 40th anniversary\nit changed its name to 'Radio Sky Garden (RSG).'",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k518; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,28 @@
 # Diário do projeto
 
+### 14/10/2026 — nova continuação autorizada para fechar o inglês
+
+- Davy pediu seguir até terminar, sem novas confirmações por arquivo. Inglês
+  continua incompleto: 9.499/16.100 preenchidas, 6.601 vazias; cobertura bruta
+  inclui créditos, variantes e registros internos, não mede jogo visível revisado.
+- Onze lotes: +802 EN em cenas 0057/0126/0128/0053/0085/0030/0044/0029/0131/0084
+  e lacunas de nomes em cenas anteriores; itens reais 0117 incluídos no primeiro.
+  Todos com backup prévio, histórico antes/depois e auditoria de 173 JSONs PASS.
+- Leitura de Miho/Shibata/Muto no material de anúncio reproduzido pela Famitsu
+  (201707/14137494); Sawada/Mizuki, Sasaki/Haruomi e Asano/Kosuke na introdução
+  de personagens publicada em 4gamer (20170926052). Não confundir Mitsuki de wiki
+  de fã com Mizuki publicado. Ichijo/Miyato/Hananira têm kana explícita no dump.
+  Ebine/Ristorante Miyato vêm de kana; Giant Shadow Weekly é título provisório.
+- Correção editorial própria 0128:k522 removeu pergunta extra ausente no JP,
+  mantendo a quebra original. Inglês recebido não apagado. Nomes sem evidência,
+  ações ambíguas e placeholders permanecem pendentes, sem preencher por hipótese.
+- Todas as 9.499 EN reconstruídas/relidas em 117 recursos do dump próprio PASS.
+  Adições03 (+692, 11 recursos) e adições04 (+110, 3 recursos) exportadas sem
+  campo original. União com os pilotos validada em memória: 9.629 entradas.
+- Sem pacote/manifesto novo: en-04 continua 8.389 e PT-BR 94. Nenhum jogo
+  iniciado ou save modificado. Revisão humana, HUD e textos em imagens/vídeos
+  permanecem pendentes. Índice/checkpoint privados atualizados para continuação.
+
 ### 14/10/2026 — retorno da en-04 e continuação do inglês
 
 - Davy testou e relatou inglês entendível, compreensão das escolhas/humor,
