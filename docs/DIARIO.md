@@ -1,5 +1,27 @@
 # Diário do projeto
 
+### 14/10/2026 — retorno da en-04 e continuação do inglês
+
+- Davy testou e relatou inglês entendível, compreensão das escolhas/humor,
+  citando roubo de uniforme de policial. Não é aprovação editorial integral.
+  Problemas: escolhas longas não cabem; palavras partidas nas legendas;
+  ponto às vezes isolado na linha seguinte. Sem causa ou correção comprovada.
+- Pedido explícito de escopo: logo, aviso antes dos logos e títulos de capítulos,
+  além de texto em imagens/vídeos. Classificação de cada tela ainda pendente;
+  catálogo M1 não prova qual recurso contém esses exemplos. Registro completo
+  em docs/m4/REVISAO-VISUAL.md, sem encurtar texto para mascarar layout.
+- Quatro lotes continuaram 0061/0111/0112/0114: +438 EN, agora 8.697/16.100
+  preenchidas, 7.403 vazias. Todos os 173 JSONs auditados; todas as EN em
+  117 recursos do dump reconstruídas/relidas em memória PASS. Revisão pendente.
+- SSSP/Ultra Guard confirmados na enciclopédia oficial Tsuburaya; URLs nas
+  notas. Registros provisórios e nomes incertos não preenchidos por hipótese.
+- Importador --only-new exporta adições sem original; recusa divergências
+  no inglês/hash já existente. Rascunho novo só +438, dois recursos; união
+  com prévia anterior validada em memória: 8.827, sem pacote/manifesto novo.
+- en-04 do launcher continua 8.389; PT-BR continua 94. Nenhuma partida
+  iniciada/reiniciada pelo agente. Retomada/índice/consolidado privados atualizados.
+  Inglês segue incompleto. Próximo: 0117 itens reais e lacunas narrativas.
+
 ### 14/10/2026 — tradução ampliada e prévia inglesa en-04
 
 - Retomada autorizada: nove lotes, +1.337 EN; consolidado privado agora

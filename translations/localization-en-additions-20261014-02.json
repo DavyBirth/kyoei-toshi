@@ -1,0 +1,3087 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r17/c25",
+          "source_text_sha256": "f93770edce8f59a3fcc61a3f633213cc8c1c2e491104b55cb46a442c056a49be",
+          "en": "SSSP Helmet",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r17/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r17/c26",
+          "source_text_sha256": "a808c99c97f23480c1752c835557d59a800ceca0cc4f7c698d009729527006da",
+          "en": "The uniform helmet of the SSSP, tasked with investigating unusual incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r17/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r17/c28",
+          "source_text_sha256": "a808c99c97f23480c1752c835557d59a800ceca0cc4f7c698d009729527006da",
+          "en": "The uniform helmet of the SSSP, tasked with investigating unusual incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r17/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r18/c25",
+          "source_text_sha256": "f93770edce8f59a3fcc61a3f633213cc8c1c2e491104b55cb46a442c056a49be",
+          "en": "SSSP Helmet",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r18/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r18/c26",
+          "source_text_sha256": "a808c99c97f23480c1752c835557d59a800ceca0cc4f7c698d009729527006da",
+          "en": "The uniform helmet of the SSSP, tasked with investigating unusual incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r18/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r18/c28",
+          "source_text_sha256": "a808c99c97f23480c1752c835557d59a800ceca0cc4f7c698d009729527006da",
+          "en": "The uniform helmet of the SSSP, tasked with investigating unusual incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r18/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r19/c25",
+          "source_text_sha256": "ac3a279558136ec4e5376b348c8a9196a33b54d978a4208a53db3a65b2f42a7c",
+          "en": "Ultra Guard Helmet",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r19/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r19/c26",
+          "source_text_sha256": "cc3633b2d0307857f9735cd0c1b47571b7e50aa0ae5b681402a9514d152f8906",
+          "en": "The uniform helmet of the Ultra Guard, the Earth Defense Force's elite unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r19/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r19/c28",
+          "source_text_sha256": "cc3633b2d0307857f9735cd0c1b47571b7e50aa0ae5b681402a9514d152f8906",
+          "en": "The uniform helmet of the Ultra Guard, the Earth Defense Force's elite unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r19/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r20/c25",
+          "source_text_sha256": "ac3a279558136ec4e5376b348c8a9196a33b54d978a4208a53db3a65b2f42a7c",
+          "en": "Ultra Guard Helmet",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r20/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r20/c26",
+          "source_text_sha256": "cc3633b2d0307857f9735cd0c1b47571b7e50aa0ae5b681402a9514d152f8906",
+          "en": "The uniform helmet of the Ultra Guard, the Earth Defense Force's elite unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r20/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r20/c28",
+          "source_text_sha256": "cc3633b2d0307857f9735cd0c1b47571b7e50aa0ae5b681402a9514d152f8906",
+          "en": "The uniform helmet of the Ultra Guard, the Earth Defense Force's elite unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r20/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r21/c25",
+          "source_text_sha256": "5d3677ae5dba34321c1979cc67f5bc35f858ddcec3e60b24792c66bb7c0b87aa",
+          "en": "Full-Face Helmet (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r21/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r21/c26",
+          "source_text_sha256": "e3783cfc56c50c523a0e174b90cf5e70af5f4565b4c69538e31127681912522b",
+          "en": "A full-face helmet worn when riding a motorcycle.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r21/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r21/c28",
+          "source_text_sha256": "e3783cfc56c50c523a0e174b90cf5e70af5f4565b4c69538e31127681912522b",
+          "en": "A full-face helmet worn when riding a motorcycle.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r21/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r22/c25",
+          "source_text_sha256": "5d3677ae5dba34321c1979cc67f5bc35f858ddcec3e60b24792c66bb7c0b87aa",
+          "en": "Full-Face Helmet (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r22/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r22/c26",
+          "source_text_sha256": "e3783cfc56c50c523a0e174b90cf5e70af5f4565b4c69538e31127681912522b",
+          "en": "A full-face helmet worn when riding a motorcycle.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r22/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r22/c28",
+          "source_text_sha256": "e3783cfc56c50c523a0e174b90cf5e70af5f4565b4c69538e31127681912522b",
+          "en": "A full-face helmet worn when riding a motorcycle.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r22/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r23/c25",
+          "source_text_sha256": "ab801503267c13122b1283821f9251ff185e5b82aef515eabf128a03622a7b6f",
+          "en": "Full-Face Helmet (Black) (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r23/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r23/c26",
+          "source_text_sha256": "04a16eeb059e177729880fe442ae67afc6c1122ca5facc43dd765acc99c8c3b7",
+          "en": "A full-face helmet worn when riding a motorcycle.<br>Belongs to Risa Kashiwagi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r23/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r23/c28",
+          "source_text_sha256": "04a16eeb059e177729880fe442ae67afc6c1122ca5facc43dd765acc99c8c3b7",
+          "en": "A full-face helmet worn when riding a motorcycle.<br>Belongs to Risa Kashiwagi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r23/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r24/c26",
+          "source_text_sha256": "0f87a86113f6654df88dfbfb7c4677756e8b355ae5ecd1a4f3019068c49968a1",
+          "en": "The helmet from the protective gear firefighters wear at fire scenes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r24/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r24/c28",
+          "source_text_sha256": "0f87a86113f6654df88dfbfb7c4677756e8b355ae5ecd1a4f3019068c49968a1",
+          "en": "The helmet from the protective gear firefighters wear at fire scenes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r24/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r25/c26",
+          "source_text_sha256": "0f87a86113f6654df88dfbfb7c4677756e8b355ae5ecd1a4f3019068c49968a1",
+          "en": "The helmet from the protective gear firefighters wear at fire scenes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r25/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r25/c28",
+          "source_text_sha256": "0f87a86113f6654df88dfbfb7c4677756e8b355ae5ecd1a4f3019068c49968a1",
+          "en": "The helmet from the protective gear firefighters wear at fire scenes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r25/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r28/c25",
+          "source_text_sha256": "1f9aba233115bab929cc48af646b0616adb68816784e1b8a8f49f2c23816107d",
+          "en": "Special Vehicles Section 2 Helmet",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r28/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r28/c26",
+          "source_text_sha256": "e5866bc80e79da163cbc9d47c62e3d30a018dde3ceba3d57e9c468ab91584f0c",
+          "en": "A helmet worn by Special Vehicles Section 2 personnel when dispatched.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r28/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r28/c28",
+          "source_text_sha256": "e5866bc80e79da163cbc9d47c62e3d30a018dde3ceba3d57e9c468ab91584f0c",
+          "en": "A helmet worn by Special Vehicles Section 2 personnel when dispatched.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r28/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r29/c25",
+          "source_text_sha256": "1f9aba233115bab929cc48af646b0616adb68816784e1b8a8f49f2c23816107d",
+          "en": "Special Vehicles Section 2 Helmet",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r29/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r29/c26",
+          "source_text_sha256": "e5866bc80e79da163cbc9d47c62e3d30a018dde3ceba3d57e9c468ab91584f0c",
+          "en": "A helmet worn by Special Vehicles Section 2 personnel when dispatched.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r29/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r29/c28",
+          "source_text_sha256": "e5866bc80e79da163cbc9d47c62e3d30a018dde3ceba3d57e9c468ab91584f0c",
+          "en": "A helmet worn by Special Vehicles Section 2 personnel when dispatched.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r29/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r38/c26",
+          "source_text_sha256": "57537bf194f78ed090395732606331fc385eaa5f65a8e1d05c1b23c39ed2de49",
+          "en": "A helmet for pilots in a unit specializing in combat against unusual creatures.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r38/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r38/c28",
+          "source_text_sha256": "57537bf194f78ed090395732606331fc385eaa5f65a8e1d05c1b23c39ed2de49",
+          "en": "A helmet for pilots in a unit specializing in combat against unusual creatures.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r38/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r39/c26",
+          "source_text_sha256": "57537bf194f78ed090395732606331fc385eaa5f65a8e1d05c1b23c39ed2de49",
+          "en": "A helmet for pilots in a unit specializing in combat against unusual creatures.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r39/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r39/c28",
+          "source_text_sha256": "57537bf194f78ed090395732606331fc385eaa5f65a8e1d05c1b23c39ed2de49",
+          "en": "A helmet for pilots in a unit specializing in combat against unusual creatures.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r39/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r40/c26",
+          "source_text_sha256": "ccb6480e412e654ffc1dc15901ac5d0551958e2a53834689f1c9270a44e68df3",
+          "en": "A hat shaped like a yellow bear who loves video games.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r40/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r40/c28",
+          "source_text_sha256": "ccb6480e412e654ffc1dc15901ac5d0551958e2a53834689f1c9270a44e68df3",
+          "en": "A hat shaped like a yellow bear who loves video games.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r40/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r41/c26",
+          "source_text_sha256": "ccb6480e412e654ffc1dc15901ac5d0551958e2a53834689f1c9270a44e68df3",
+          "en": "A hat shaped like a yellow bear who loves video games.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r41/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r41/c28",
+          "source_text_sha256": "ccb6480e412e654ffc1dc15901ac5d0551958e2a53834689f1c9270a44e68df3",
+          "en": "A hat shaped like a yellow bear who loves video games.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r41/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r42/c25",
+          "source_text_sha256": "18c9de7a3c9c80df2f6e3b42c8c39cb72d98f2e6a38fcd517fb04bb698c70826",
+          "en": "Male Police Officer's Cap (Black & Orange)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r42/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r42/c26",
+          "source_text_sha256": "684b17f177850c76cc4cf63f9c9a96c2c82666c7f43e493aa320128aec74e7f2",
+          "en": "A male police officer's uniform cap in bold colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r42/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r42/c28",
+          "source_text_sha256": "684b17f177850c76cc4cf63f9c9a96c2c82666c7f43e493aa320128aec74e7f2",
+          "en": "A male police officer's uniform cap in bold colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r42/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r43/c25",
+          "source_text_sha256": "35b229b83ee0eba732a1ac255628c2f3aba964735a1bd46ac1b9fe0bf5db89ca",
+          "en": "Female Police Officer's Cap (Black & Orange)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r43/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r43/c26",
+          "source_text_sha256": "f514ac6b81fb578b7b1bf209b4b6cb71a5447ad6906f2d060d6a3b4558343ff9",
+          "en": "A female police officer's uniform cap in bold colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r43/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r43/c28",
+          "source_text_sha256": "f514ac6b81fb578b7b1bf209b4b6cb71a5447ad6906f2d060d6a3b4558343ff9",
+          "en": "A female police officer's uniform cap in bold colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r43/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r44/c25",
+          "source_text_sha256": "c1226381b4e15a02ec1c664ea7986d6431b6588f4e66f8c55bcc101da6eac57b",
+          "en": "Firefighter's Helmet (Red & Blue)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r44/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r44/c26",
+          "source_text_sha256": "08b8c5e98d5e3c1880f57e125b81a2ef126133c955fd73b7085fb5e1079b24b7",
+          "en": "A helmet from firefighters' protective gear, in fresh colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r44/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r44/c28",
+          "source_text_sha256": "08b8c5e98d5e3c1880f57e125b81a2ef126133c955fd73b7085fb5e1079b24b7",
+          "en": "A helmet from firefighters' protective gear, in fresh colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r44/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r45/c25",
+          "source_text_sha256": "c1226381b4e15a02ec1c664ea7986d6431b6588f4e66f8c55bcc101da6eac57b",
+          "en": "Firefighter's Helmet (Red & Blue)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r45/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r45/c26",
+          "source_text_sha256": "08b8c5e98d5e3c1880f57e125b81a2ef126133c955fd73b7085fb5e1079b24b7",
+          "en": "A helmet from firefighters' protective gear, in fresh colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r45/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r45/c28",
+          "source_text_sha256": "08b8c5e98d5e3c1880f57e125b81a2ef126133c955fd73b7085fb5e1079b24b7",
+          "en": "A helmet from firefighters' protective gear, in fresh colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r45/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r46/c25",
+          "source_text_sha256": "151df65d4c7dac38774caa1f7c5f04c2f012543ec9f4b23e188691ac358ed879",
+          "en": "Fast-Food Worker Cap (Navy & Orange)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r46/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r46/c26",
+          "source_text_sha256": "975dcf8f260686c48b208197ede7c32e6c7b23bc75ace58445c53418c7bef2dd",
+          "en": "A fast-food worker's uniform cap in stylish colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r46/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r46/c28",
+          "source_text_sha256": "975dcf8f260686c48b208197ede7c32e6c7b23bc75ace58445c53418c7bef2dd",
+          "en": "A fast-food worker's uniform cap in stylish colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r46/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r47/c25",
+          "source_text_sha256": "151df65d4c7dac38774caa1f7c5f04c2f012543ec9f4b23e188691ac358ed879",
+          "en": "Fast-Food Worker Cap (Navy & Orange)",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r47/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r47/c26",
+          "source_text_sha256": "975dcf8f260686c48b208197ede7c32e6c7b23bc75ace58445c53418c7bef2dd",
+          "en": "A fast-food worker's uniform cap in stylish colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r47/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r47/c28",
+          "source_text_sha256": "975dcf8f260686c48b208197ede7c32e6c7b23bc75ace58445c53418c7bef2dd",
+          "en": "A fast-food worker's uniform cap in stylish colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0111.json:r47/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r191/c25",
+          "source_text_sha256": "984d13c3fcd0e087db29dfd2e4d80e47a27b8b79b3592f51888b1179583eda4c",
+          "en": "Mask (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r191/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r191/c27",
+          "source_text_sha256": "939627cad6d52d5a6ca212b4b3f8c7b34cc81c631c6319258f55f9dd9d76aa70",
+          "en": "Mask",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r191/c27; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r192/c25",
+          "source_text_sha256": "984d13c3fcd0e087db29dfd2e4d80e47a27b8b79b3592f51888b1179583eda4c",
+          "en": "Mask (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r192/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r193/c26",
+          "source_text_sha256": "096e063677b71a0c11d9af4a7117a9b24faaa8f7af67127440c1faa0e9f4276d",
+          "en": "A fake beard that brings to mind a wise gentleman.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r193/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r193/c28",
+          "source_text_sha256": "096e063677b71a0c11d9af4a7117a9b24faaa8f7af67127440c1faa0e9f4276d",
+          "en": "A fake beard that brings to mind a wise gentleman.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r193/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r194/c26",
+          "source_text_sha256": "096e063677b71a0c11d9af4a7117a9b24faaa8f7af67127440c1faa0e9f4276d",
+          "en": "A fake beard that brings to mind a wise gentleman.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r194/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r194/c28",
+          "source_text_sha256": "096e063677b71a0c11d9af4a7117a9b24faaa8f7af67127440c1faa0e9f4276d",
+          "en": "A fake beard that brings to mind a wise gentleman.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r194/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r195/c26",
+          "source_text_sha256": "20ae572fac3a6f890bef654ff31555c8cb5e1d46be166d16c6efb3dcaffcb67d",
+          "en": "An aged tengu mask that looks as if it has a story behind it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r195/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r195/c28",
+          "source_text_sha256": "20ae572fac3a6f890bef654ff31555c8cb5e1d46be166d16c6efb3dcaffcb67d",
+          "en": "An aged tengu mask that looks as if it has a story behind it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r195/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r196/c26",
+          "source_text_sha256": "20ae572fac3a6f890bef654ff31555c8cb5e1d46be166d16c6efb3dcaffcb67d",
+          "en": "An aged tengu mask that looks as if it has a story behind it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r196/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r196/c28",
+          "source_text_sha256": "20ae572fac3a6f890bef654ff31555c8cb5e1d46be166d16c6efb3dcaffcb67d",
+          "en": "An aged tengu mask that looks as if it has a story behind it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r196/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r197/c25",
+          "source_text_sha256": "9389a21a45c9ca4cac2914c70d3013e0b23e289779d1e990e1f5b3e3078319da",
+          "en": "Gas Mask (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r197/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r197/c26",
+          "source_text_sha256": "5c275ca48e2575794e392e92148c616281cb4790b74f9eb2492dd94344d30e05",
+          "en": "A gas mask that keeps you from inhaling smoke, dust, and toxic gases.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r197/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r197/c28",
+          "source_text_sha256": "5c275ca48e2575794e392e92148c616281cb4790b74f9eb2492dd94344d30e05",
+          "en": "A gas mask that keeps you from inhaling smoke, dust, and toxic gases.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r197/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r198/c25",
+          "source_text_sha256": "9389a21a45c9ca4cac2914c70d3013e0b23e289779d1e990e1f5b3e3078319da",
+          "en": "Gas Mask (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r198/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r198/c26",
+          "source_text_sha256": "5c275ca48e2575794e392e92148c616281cb4790b74f9eb2492dd94344d30e05",
+          "en": "A gas mask that keeps you from inhaling smoke, dust, and toxic gases.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r198/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r198/c28",
+          "source_text_sha256": "5c275ca48e2575794e392e92148c616281cb4790b74f9eb2492dd94344d30e05",
+          "en": "A gas mask that keeps you from inhaling smoke, dust, and toxic gases.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r198/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r201/c26",
+          "source_text_sha256": "6b467bdb1e686f1fa9e054d040aec5c1aad739fd5308f41d6253702343a2feaf",
+          "en": "A fake mustache that instantly lightens the mood when worn.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r201/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r201/c28",
+          "source_text_sha256": "6b467bdb1e686f1fa9e054d040aec5c1aad739fd5308f41d6253702343a2feaf",
+          "en": "A fake mustache that instantly lightens the mood when worn.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r201/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r202/c26",
+          "source_text_sha256": "6b467bdb1e686f1fa9e054d040aec5c1aad739fd5308f41d6253702343a2feaf",
+          "en": "A fake mustache that instantly lightens the mood when worn.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r202/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r202/c28",
+          "source_text_sha256": "6b467bdb1e686f1fa9e054d040aec5c1aad739fd5308f41d6253702343a2feaf",
+          "en": "A fake mustache that instantly lightens the mood when worn.",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r202/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r306/c25",
+          "source_text_sha256": "43c37486429bcfc3b930ae5e173094139366487ad2ef04c830e5ff1916873340",
+          "en": "Yuki's Clothes",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r306/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r306/c26",
+          "source_text_sha256": "af0bb6cbf1bd36a45e6604b1bd623950ac510752fb1d54273a242bc0d17684a1",
+          "en": "Clothes worn by Yuki, someone precious to you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r306/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r306/c28",
+          "source_text_sha256": "af0bb6cbf1bd36a45e6604b1bd623950ac510752fb1d54273a242bc0d17684a1",
+          "en": "Clothes worn by Yuki, someone precious to you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r306/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r328/c26",
+          "source_text_sha256": "e2035426874f0f9b4633f6dc7d19b476b67e6b5575dfe445a109f36432e372a2",
+          "en": "A sailor-style school uniform with a distinctive burgundy scarf.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r328/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r328/c28",
+          "source_text_sha256": "e2035426874f0f9b4633f6dc7d19b476b67e6b5575dfe445a109f36432e372a2",
+          "en": "A sailor-style school uniform with a distinctive burgundy scarf.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r328/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r329/c26",
+          "source_text_sha256": "e2035426874f0f9b4633f6dc7d19b476b67e6b5575dfe445a109f36432e372a2",
+          "en": "A sailor-style school uniform with a distinctive burgundy scarf.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r329/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r329/c28",
+          "source_text_sha256": "e2035426874f0f9b4633f6dc7d19b476b67e6b5575dfe445a109f36432e372a2",
+          "en": "A sailor-style school uniform with a distinctive burgundy scarf.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r329/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r330/c25",
+          "source_text_sha256": "a45c9a9bb119caf61f2101d3440001de5d7ad30861eb8ed386d1a2b3ee72be21",
+          "en": "Souvenir Jacket & Black Jeans",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r330/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r330/c26",
+          "source_text_sha256": "5c3cdf4ca9327a5d18c029acdba0f0049539a4268dee410a574b673e69a4ee3f",
+          "en": "An outfit pairing a green souvenir jacket with black jeans.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r330/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r330/c28",
+          "source_text_sha256": "5c3cdf4ca9327a5d18c029acdba0f0049539a4268dee410a574b673e69a4ee3f",
+          "en": "An outfit pairing a green souvenir jacket with black jeans.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r330/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r331/c25",
+          "source_text_sha256": "96e89684f617ec43c3e9b84c5e7dc9387257267371513d170ad5c20c42beba6b",
+          "en": "Souvenir Jacket & Fitted Skirt",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r331/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r331/c26",
+          "source_text_sha256": "9ba61412e2ae686b04d8fce43c58c42c4451266951da0b437b535c4454ad1293",
+          "en": "An outfit pairing a red souvenir jacket with a fitted miniskirt.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r331/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r331/c28",
+          "source_text_sha256": "9ba61412e2ae686b04d8fce43c58c42c4451266951da0b437b535c4454ad1293",
+          "en": "An outfit pairing a red souvenir jacket with a fitted miniskirt.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r331/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r332/c25",
+          "source_text_sha256": "3411ece8b63d8d19c40249003c7c4156299dc818a07fc238d4a7e098a313b21e",
+          "en": "School Blazer & Slacks (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r332/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r332/c26",
+          "source_text_sha256": "7be2a96fb107eb0e7a6fcf32a1074b21eed6bcbed08cec06bf360e4c3cbc5a54",
+          "en": "A boys' school uniform with a blazer.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r332/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r332/c28",
+          "source_text_sha256": "7be2a96fb107eb0e7a6fcf32a1074b21eed6bcbed08cec06bf360e4c3cbc5a54",
+          "en": "A boys' school uniform with a blazer.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r332/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r333/c25",
+          "source_text_sha256": "0f7a86f579d82b289297e727351d7f5494b344c7fd82f1657a0458ffc3a7fcd3",
+          "en": "School Blazer & Miniskirt (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r333/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r333/c26",
+          "source_text_sha256": "bd49feb89e36cbd620225df671597eced9bbf8ee60c5c45b02b9785f814a1427",
+          "en": "A girls' school uniform with a blazer.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r333/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r333/c28",
+          "source_text_sha256": "bd49feb89e36cbd620225df671597eced9bbf8ee60c5c45b02b9785f814a1427",
+          "en": "A girls' school uniform with a blazer.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r333/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r334/c25",
+          "source_text_sha256": "835451b2d8218b9c2b41062272f0f5b097fd2f0538d0b397dadd78497bc57047",
+          "en": "Windbreaker & Cargo Pants (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r334/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r334/c26",
+          "source_text_sha256": "25a17fad41f6b2ebb5819f0c6920ca9517f463c31938095801441f8401f3f95c",
+          "en": "An outfit pairing a green windbreaker with cargo pants.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r334/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r334/c28",
+          "source_text_sha256": "25a17fad41f6b2ebb5819f0c6920ca9517f463c31938095801441f8401f3f95c",
+          "en": "An outfit pairing a green windbreaker with cargo pants.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r334/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r335/c25",
+          "source_text_sha256": "f6767cba2f482ba21c38fef95992018c8bd11ab69218df26c270e9b00e158c24",
+          "en": "Dress & Leather Jacket (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r335/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r335/c26",
+          "source_text_sha256": "c1da2c3e0940d976b763e2030d8c0a16736e841705e8900cdbe35a66536b0172",
+          "en": "An outfit pairing a striped dress with a leather jacket.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r335/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r335/c28",
+          "source_text_sha256": "c1da2c3e0940d976b763e2030d8c0a16736e841705e8900cdbe35a66536b0172",
+          "en": "An outfit pairing a striped dress with a leather jacket.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r335/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r336/c25",
+          "source_text_sha256": "5bb72666afb179c1912666519fe7abd8b518f192d9aecd3294625ea39de6e2c7",
+          "en": "Bath Towel (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r336/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r337/c25",
+          "source_text_sha256": "5bb72666afb179c1912666519fe7abd8b518f192d9aecd3294625ea39de6e2c7",
+          "en": "Bath Towel (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r337/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r338/c25",
+          "source_text_sha256": "dd82a1aabffbfc398fec899ddd379786ad6fd3a40e3bf581152e1b0ac43aa52b",
+          "en": "SSSP Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r338/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r338/c26",
+          "source_text_sha256": "ff1ad2c036746e7c6fd085eb0b95170779f0e19d0760331431c6ff1b45607aca",
+          "en": "The uniform of the SSSP, tasked with investigating unusual incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r338/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r338/c28",
+          "source_text_sha256": "ff1ad2c036746e7c6fd085eb0b95170779f0e19d0760331431c6ff1b45607aca",
+          "en": "The uniform of the SSSP, tasked with investigating unusual incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r338/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r339/c25",
+          "source_text_sha256": "dd82a1aabffbfc398fec899ddd379786ad6fd3a40e3bf581152e1b0ac43aa52b",
+          "en": "SSSP Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r339/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r339/c26",
+          "source_text_sha256": "ff1ad2c036746e7c6fd085eb0b95170779f0e19d0760331431c6ff1b45607aca",
+          "en": "The uniform of the SSSP, tasked with investigating unusual incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r339/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r339/c28",
+          "source_text_sha256": "ff1ad2c036746e7c6fd085eb0b95170779f0e19d0760331431c6ff1b45607aca",
+          "en": "The uniform of the SSSP, tasked with investigating unusual incidents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r339/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r340/c25",
+          "source_text_sha256": "6580500cefb69fe6ca2a1a63c12f3b05af90230ee7cdcf5c157bf47751c99086",
+          "en": "Ultra Guard Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r340/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r340/c26",
+          "source_text_sha256": "37b2b74be2dfc63fdd9248419b3e9d5b85e1de8301a40e8ce62c96eed5ca8710",
+          "en": "The uniform of the Ultra Guard, the Earth Defense Force's elite unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r340/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r340/c28",
+          "source_text_sha256": "37b2b74be2dfc63fdd9248419b3e9d5b85e1de8301a40e8ce62c96eed5ca8710",
+          "en": "The uniform of the Ultra Guard, the Earth Defense Force's elite unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r340/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r341/c25",
+          "source_text_sha256": "6580500cefb69fe6ca2a1a63c12f3b05af90230ee7cdcf5c157bf47751c99086",
+          "en": "Ultra Guard Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r341/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r341/c26",
+          "source_text_sha256": "37b2b74be2dfc63fdd9248419b3e9d5b85e1de8301a40e8ce62c96eed5ca8710",
+          "en": "The uniform of the Ultra Guard, the Earth Defense Force's elite unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r341/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r341/c28",
+          "source_text_sha256": "37b2b74be2dfc63fdd9248419b3e9d5b85e1de8301a40e8ce62c96eed5ca8710",
+          "en": "The uniform of the Ultra Guard, the Earth Defense Force's elite unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r341/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r344/c26",
+          "source_text_sha256": "d3f7e567d3b1f81edb134928fcaf864de809cd2848e4cd7409abb7797012968d",
+          "en": "A sexy cheongsam with side slits.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r344/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r344/c28",
+          "source_text_sha256": "d3f7e567d3b1f81edb134928fcaf864de809cd2848e4cd7409abb7797012968d",
+          "en": "A sexy cheongsam with side slits.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r344/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r345/c26",
+          "source_text_sha256": "d3f7e567d3b1f81edb134928fcaf864de809cd2848e4cd7409abb7797012968d",
+          "en": "A sexy cheongsam with side slits.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r345/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r345/c28",
+          "source_text_sha256": "d3f7e567d3b1f81edb134928fcaf864de809cd2848e4cd7409abb7797012968d",
+          "en": "A sexy cheongsam with side slits.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r345/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r348/c25",
+          "source_text_sha256": "4c94fd16a88deafa4f734c1b31934d4c2da7116d25acb4765fe9e80a374a10b7",
+          "en": "Anti-Giant Shadow Suit",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r348/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r348/c26",
+          "source_text_sha256": "5b925e983780baa9ecf1aa80256722d91c9a242d7759cdcf491d3db718d52c9d",
+          "en": "A powerful full suit for confronting giant shadows.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r348/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r348/c28",
+          "source_text_sha256": "5b925e983780baa9ecf1aa80256722d91c9a242d7759cdcf491d3db718d52c9d",
+          "en": "A powerful full suit for confronting giant shadows.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r348/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r349/c25",
+          "source_text_sha256": "4c94fd16a88deafa4f734c1b31934d4c2da7116d25acb4765fe9e80a374a10b7",
+          "en": "Anti-Giant Shadow Suit",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r349/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r349/c26",
+          "source_text_sha256": "5b925e983780baa9ecf1aa80256722d91c9a242d7759cdcf491d3db718d52c9d",
+          "en": "A powerful full suit for confronting giant shadows.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r349/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r349/c28",
+          "source_text_sha256": "5b925e983780baa9ecf1aa80256722d91c9a242d7759cdcf491d3db718d52c9d",
+          "en": "A powerful full suit for confronting giant shadows.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r349/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r350/c26",
+          "source_text_sha256": "df2c4d472a5dbed66d664f179bdd4b5ba1446c0a90a9935d50748925b3986ea0",
+          "en": "A uniform for a part-time waiter.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r350/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r350/c28",
+          "source_text_sha256": "df2c4d472a5dbed66d664f179bdd4b5ba1446c0a90a9935d50748925b3986ea0",
+          "en": "A uniform for a part-time waiter.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r350/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r351/c26",
+          "source_text_sha256": "28614d30832ab3e71a196d39a05cc96902629284ff1e8b287b80fab8bf8020b7",
+          "en": "A uniform for a part-time waitress.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r351/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r351/c28",
+          "source_text_sha256": "28614d30832ab3e71a196d39a05cc96902629284ff1e8b287b80fab8bf8020b7",
+          "en": "A uniform for a part-time waitress.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r351/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r352/c25",
+          "source_text_sha256": "099f27142c5c30246f2949ce7ee10f99a8fb836b404fabc1eb041370b9f435ec",
+          "en": "NERV Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r352/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r352/c26",
+          "source_text_sha256": "7cf25b90c0ba9648816a33fd34d427b36bdebc74a8f257e3fd15a21c84fae898",
+          "en": "The uniform of the special agency NERV.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r352/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r352/c28",
+          "source_text_sha256": "7cf25b90c0ba9648816a33fd34d427b36bdebc74a8f257e3fd15a21c84fae898",
+          "en": "The uniform of the special agency NERV.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r352/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r353/c25",
+          "source_text_sha256": "099f27142c5c30246f2949ce7ee10f99a8fb836b404fabc1eb041370b9f435ec",
+          "en": "NERV Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r353/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r353/c26",
+          "source_text_sha256": "7cf25b90c0ba9648816a33fd34d427b36bdebc74a8f257e3fd15a21c84fae898",
+          "en": "The uniform of the special agency NERV.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r353/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r353/c28",
+          "source_text_sha256": "7cf25b90c0ba9648816a33fd34d427b36bdebc74a8f257e3fd15a21c84fae898",
+          "en": "The uniform of the special agency NERV.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r353/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r354/c26",
+          "source_text_sha256": "a2b543e355cfe10dc690c462676714a38a4de48dc7548a6aa68d31cb49c82c3f",
+          "en": "A special costume with a large shell.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r354/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r354/c28",
+          "source_text_sha256": "a2b543e355cfe10dc690c462676714a38a4de48dc7548a6aa68d31cb49c82c3f",
+          "en": "A special costume with a large shell.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r354/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r355/c26",
+          "source_text_sha256": "a2b543e355cfe10dc690c462676714a38a4de48dc7548a6aa68d31cb49c82c3f",
+          "en": "A special costume with a large shell.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r355/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r355/c28",
+          "source_text_sha256": "a2b543e355cfe10dc690c462676714a38a4de48dc7548a6aa68d31cb49c82c3f",
+          "en": "A special costume with a large shell.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r355/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r356/c25",
+          "source_text_sha256": "368c0aff28b155411d506b43c95249646c8c62f8a921070490bc6464570312e8",
+          "en": "Special Vehicles Section 2 Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r356/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r356/c26",
+          "source_text_sha256": "b579641b1a4782fd9f2e0c9adbfc5f6ff9232b7ddd71a6a4b5e88ed7fcbe86a2",
+          "en": "The uniform of Special Vehicles Section 2 of the Metropolitan Police Security Bureau.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r356/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r356/c28",
+          "source_text_sha256": "b579641b1a4782fd9f2e0c9adbfc5f6ff9232b7ddd71a6a4b5e88ed7fcbe86a2",
+          "en": "The uniform of Special Vehicles Section 2 of the Metropolitan Police Security Bureau.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r356/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r357/c25",
+          "source_text_sha256": "368c0aff28b155411d506b43c95249646c8c62f8a921070490bc6464570312e8",
+          "en": "Special Vehicles Section 2 Uniform",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r357/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r357/c26",
+          "source_text_sha256": "b579641b1a4782fd9f2e0c9adbfc5f6ff9232b7ddd71a6a4b5e88ed7fcbe86a2",
+          "en": "The uniform of Special Vehicles Section 2 of the Metropolitan Police Security Bureau.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r357/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r357/c28",
+          "source_text_sha256": "b579641b1a4782fd9f2e0c9adbfc5f6ff9232b7ddd71a6a4b5e88ed7fcbe86a2",
+          "en": "The uniform of Special Vehicles Section 2 of the Metropolitan Police Security Bureau.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r357/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r366/c26",
+          "source_text_sha256": "00b550b2a0944761342713d8cca34872ed011bafc5f206ac2279d0e34542aca2",
+          "en": "A suit for pilots in a unit specializing in combat against unusual creatures. Perfect for anyone who wants to feel like a pilot!",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r366/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r366/c28",
+          "source_text_sha256": "00b550b2a0944761342713d8cca34872ed011bafc5f206ac2279d0e34542aca2",
+          "en": "A suit for pilots in a unit specializing in combat against unusual creatures. Perfect for anyone who wants to feel like a pilot!",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r366/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r367/c26",
+          "source_text_sha256": "00b550b2a0944761342713d8cca34872ed011bafc5f206ac2279d0e34542aca2",
+          "en": "A suit for pilots in a unit specializing in combat against unusual creatures. Perfect for anyone who wants to feel like a pilot!",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r367/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r367/c28",
+          "source_text_sha256": "00b550b2a0944761342713d8cca34872ed011bafc5f206ac2279d0e34542aca2",
+          "en": "A suit for pilots in a unit specializing in combat against unusual creatures. Perfect for anyone who wants to feel like a pilot!",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r367/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r370/c26",
+          "source_text_sha256": "4ba80ebb56abd04aa8fbf93505c92f17417438ac282d5aa60a970eb4cdc07829",
+          "en": "A T-shirt printed with a yellow bear who loves video games.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r370/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r370/c28",
+          "source_text_sha256": "4ba80ebb56abd04aa8fbf93505c92f17417438ac282d5aa60a970eb4cdc07829",
+          "en": "A T-shirt printed with a yellow bear who loves video games.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r370/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r371/c26",
+          "source_text_sha256": "4ba80ebb56abd04aa8fbf93505c92f17417438ac282d5aa60a970eb4cdc07829",
+          "en": "A T-shirt printed with a yellow bear who loves video games.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r371/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r371/c28",
+          "source_text_sha256": "4ba80ebb56abd04aa8fbf93505c92f17417438ac282d5aa60a970eb4cdc07829",
+          "en": "A T-shirt printed with a yellow bear who loves video games.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r371/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r372/c25",
+          "source_text_sha256": "802908cf725f6114d5cf2c1648b8ae2d59940da93ad459b8951a7a22af02486e",
+          "en": "Swim Trunks (Red & White)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r372/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r372/c26",
+          "source_text_sha256": "cc25c7efee53f4c7150685eb528a09f930d32171b4b8350ff1136becd07e26ed",
+          "en": "Men's swim trunks in dazzling red and white.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r372/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r372/c28",
+          "source_text_sha256": "cc25c7efee53f4c7150685eb528a09f930d32171b4b8350ff1136becd07e26ed",
+          "en": "Men's swim trunks in dazzling red and white.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r372/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r373/c25",
+          "source_text_sha256": "f3facaf087373c4b8cbfc9598116f4b459aa240a71b3c00421c31ff0204a3ffe",
+          "en": "Bikini (Red & White)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r373/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r373/c26",
+          "source_text_sha256": "867f8b04d06d66169a9256a525d57a11feae618bf800f258aa41e67cdd67cffd",
+          "en": "A women's bikini in dazzling red and white.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r373/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r373/c28",
+          "source_text_sha256": "867f8b04d06d66169a9256a525d57a11feae618bf800f258aa41e67cdd67cffd",
+          "en": "A women's bikini in dazzling red and white.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r373/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r374/c25",
+          "source_text_sha256": "508aae425dc8d168126623927fee072d798b9acfa422c45a1f4f665299ecd8f0",
+          "en": "Male Police Officer's Uniform (Black & Orange)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r374/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r374/c26",
+          "source_text_sha256": "602d872c0b0868046e78144c75a143c10f1c7f2086eb8755fe39b9e895aa1f66",
+          "en": "A male police officer's uniform in bold colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r374/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r374/c28",
+          "source_text_sha256": "602d872c0b0868046e78144c75a143c10f1c7f2086eb8755fe39b9e895aa1f66",
+          "en": "A male police officer's uniform in bold colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r374/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r375/c25",
+          "source_text_sha256": "7d6c04aacb2d506bd93448f3a0f3445bf1758b423dae6a3947a62f4a427407de",
+          "en": "Female Police Officer's Uniform (Black & Orange)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r375/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r375/c26",
+          "source_text_sha256": "544ed0809c388f0482d71d30c209708625e2cf900c143e4d4185e182a52e8d31",
+          "en": "A female police officer's uniform in bold colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r375/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r375/c28",
+          "source_text_sha256": "544ed0809c388f0482d71d30c209708625e2cf900c143e4d4185e182a52e8d31",
+          "en": "A female police officer's uniform in bold colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r375/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r376/c25",
+          "source_text_sha256": "d98017d04310013179462f4b833c5926ae30538ba7ace4540235981018d4cd9a",
+          "en": "Firefighter's Protective Gear (Red & Blue)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r376/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r376/c26",
+          "source_text_sha256": "c1c0afa32c368abab85b81eec39a9291d1e156dcd19274c16ddff87d86e5d9fb",
+          "en": "Firefighters' protective gear in fresh colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r376/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r376/c28",
+          "source_text_sha256": "c1c0afa32c368abab85b81eec39a9291d1e156dcd19274c16ddff87d86e5d9fb",
+          "en": "Firefighters' protective gear in fresh colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r376/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r377/c25",
+          "source_text_sha256": "d98017d04310013179462f4b833c5926ae30538ba7ace4540235981018d4cd9a",
+          "en": "Firefighter's Protective Gear (Red & Blue)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r377/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r377/c26",
+          "source_text_sha256": "c1c0afa32c368abab85b81eec39a9291d1e156dcd19274c16ddff87d86e5d9fb",
+          "en": "Firefighters' protective gear in fresh colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r377/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r377/c28",
+          "source_text_sha256": "c1c0afa32c368abab85b81eec39a9291d1e156dcd19274c16ddff87d86e5d9fb",
+          "en": "Firefighters' protective gear in fresh colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r377/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r378/c25",
+          "source_text_sha256": "3f3089b294d0d495e55b31d9bf4a2d4fde81bf34bc1455a7903ebc6c83129550",
+          "en": "Researcher's Lab Coat (Red)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r378/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r378/c26",
+          "source_text_sha256": "4acb56b1149f8c2c1c657553425dc4f221b57c063c99d9fb80a55321a7d72381",
+          "en": "A red lab coat that gives the impression of someone extraordinary.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r378/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r378/c28",
+          "source_text_sha256": "4acb56b1149f8c2c1c657553425dc4f221b57c063c99d9fb80a55321a7d72381",
+          "en": "A red lab coat that gives the impression of someone extraordinary.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r378/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r379/c25",
+          "source_text_sha256": "3f3089b294d0d495e55b31d9bf4a2d4fde81bf34bc1455a7903ebc6c83129550",
+          "en": "Researcher's Lab Coat (Red)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r379/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r379/c26",
+          "source_text_sha256": "4acb56b1149f8c2c1c657553425dc4f221b57c063c99d9fb80a55321a7d72381",
+          "en": "A red lab coat that gives the impression of someone extraordinary.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r379/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r379/c28",
+          "source_text_sha256": "4acb56b1149f8c2c1c657553425dc4f221b57c063c99d9fb80a55321a7d72381",
+          "en": "A red lab coat that gives the impression of someone extraordinary.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r379/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r380/c25",
+          "source_text_sha256": "81a9fc0c9c28e8eab0c0862347bb77adb9b116c7826791ab66d40304c955df5c",
+          "en": "Fast-Food Worker Uniform (Navy & Orange)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r380/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r380/c26",
+          "source_text_sha256": "05c39bc8d6420b1dbee58ca46e4a8c7643191d6c6c272af50ed3b4ccdfc9e1b8",
+          "en": "A fast-food worker's uniform in stylish colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r380/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r380/c28",
+          "source_text_sha256": "05c39bc8d6420b1dbee58ca46e4a8c7643191d6c6c272af50ed3b4ccdfc9e1b8",
+          "en": "A fast-food worker's uniform in stylish colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r380/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r381/c25",
+          "source_text_sha256": "81a9fc0c9c28e8eab0c0862347bb77adb9b116c7826791ab66d40304c955df5c",
+          "en": "Fast-Food Worker Uniform (Navy & Orange)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r381/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r381/c26",
+          "source_text_sha256": "05c39bc8d6420b1dbee58ca46e4a8c7643191d6c6c272af50ed3b4ccdfc9e1b8",
+          "en": "A fast-food worker's uniform in stylish colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r381/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r381/c28",
+          "source_text_sha256": "05c39bc8d6420b1dbee58ca46e4a8c7643191d6c6c272af50ed3b4ccdfc9e1b8",
+          "en": "A fast-food worker's uniform in stylish colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r381/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r382/c25",
+          "source_text_sha256": "eecfd9b33da6a31ab09e7942545c317f27b7e38b7ef86bc6385fb0d6a528cd7c",
+          "en": "Overalls (Shining Red) (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r382/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r382/c26",
+          "source_text_sha256": "a51bfee38ccbadeffc65553e6bd9e7899f247b45be0bba6cb380dc5e8360b828",
+          "en": "An overalls outfit in vibrant, energetic colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r382/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r382/c28",
+          "source_text_sha256": "a51bfee38ccbadeffc65553e6bd9e7899f247b45be0bba6cb380dc5e8360b828",
+          "en": "An overalls outfit in vibrant, energetic colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r382/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r383/c25",
+          "source_text_sha256": "1e2548474232f2293ed0244f14e3486ccd33a893a8a7cced56030b40765350cf",
+          "en": "Short Overalls (Shining Red) (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r383/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r383/c26",
+          "source_text_sha256": "a51bfee38ccbadeffc65553e6bd9e7899f247b45be0bba6cb380dc5e8360b828",
+          "en": "An overalls outfit in vibrant, energetic colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r383/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r383/c28",
+          "source_text_sha256": "a51bfee38ccbadeffc65553e6bd9e7899f247b45be0bba6cb380dc5e8360b828",
+          "en": "An overalls outfit in vibrant, energetic colors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r383/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r384/c25",
+          "source_text_sha256": "00df928ff92ba57a72f2456409a5f75d51388829be999bbff5d17d67ca832b57",
+          "en": "Sailor Uniform (Crimson)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r384/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r384/c26",
+          "source_text_sha256": "c0fa3143cc0376654fabfd174f9af0b3fa5b036aff06b2ae9745b6f05ec28404",
+          "en": "A sailor-style school uniform in energetic red fabric.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r384/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r384/c28",
+          "source_text_sha256": "c0fa3143cc0376654fabfd174f9af0b3fa5b036aff06b2ae9745b6f05ec28404",
+          "en": "A sailor-style school uniform in energetic red fabric.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r384/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r385/c25",
+          "source_text_sha256": "00df928ff92ba57a72f2456409a5f75d51388829be999bbff5d17d67ca832b57",
+          "en": "Sailor Uniform (Crimson)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r385/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r385/c26",
+          "source_text_sha256": "c0fa3143cc0376654fabfd174f9af0b3fa5b036aff06b2ae9745b6f05ec28404",
+          "en": "A sailor-style school uniform in energetic red fabric.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r385/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r385/c28",
+          "source_text_sha256": "c0fa3143cc0376654fabfd174f9af0b3fa5b036aff06b2ae9745b6f05ec28404",
+          "en": "A sailor-style school uniform in energetic red fabric.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r385/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r386/c25",
+          "source_text_sha256": "8b6346faa2e194e5af473c6e3d3e44529b452ca21a43827d31170e636817d9d7",
+          "en": "Souvenir Jacket (Blue & Green)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r386/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r386/c26",
+          "source_text_sha256": "e923a1fbcb126a3a4d447a836bbc0823dc81da6177b0305fc4634acb69d58d81",
+          "en": "A souvenir jacket in dazzling blue and green.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r386/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r386/c28",
+          "source_text_sha256": "e923a1fbcb126a3a4d447a836bbc0823dc81da6177b0305fc4634acb69d58d81",
+          "en": "A souvenir jacket in dazzling blue and green.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r386/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r387/c25",
+          "source_text_sha256": "8b6346faa2e194e5af473c6e3d3e44529b452ca21a43827d31170e636817d9d7",
+          "en": "Souvenir Jacket (Blue & Green)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r387/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r387/c26",
+          "source_text_sha256": "e923a1fbcb126a3a4d447a836bbc0823dc81da6177b0305fc4634acb69d58d81",
+          "en": "A souvenir jacket in dazzling blue and green.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r387/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r387/c28",
+          "source_text_sha256": "e923a1fbcb126a3a4d447a836bbc0823dc81da6177b0305fc4634acb69d58d81",
+          "en": "A souvenir jacket in dazzling blue and green.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r387/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r388/c25",
+          "source_text_sha256": "f7e71b9df7412980d0b9253286279bf0c1c40030398a6baa9fb998c91dbc7aa1",
+          "en": "Cheongsam (Black)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r388/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r388/c26",
+          "source_text_sha256": "ae1d8e1740c6f19bd2b700162d22675fee23ae9b0904ae820be1fd0e661b4fef",
+          "en": "A bold, glossy black cheongsam.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r388/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r388/c28",
+          "source_text_sha256": "ae1d8e1740c6f19bd2b700162d22675fee23ae9b0904ae820be1fd0e661b4fef",
+          "en": "A bold, glossy black cheongsam.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r388/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r389/c25",
+          "source_text_sha256": "f7e71b9df7412980d0b9253286279bf0c1c40030398a6baa9fb998c91dbc7aa1",
+          "en": "Cheongsam (Black)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r389/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r389/c26",
+          "source_text_sha256": "ae1d8e1740c6f19bd2b700162d22675fee23ae9b0904ae820be1fd0e661b4fef",
+          "en": "A bold, glossy black cheongsam.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r389/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r389/c28",
+          "source_text_sha256": "ae1d8e1740c6f19bd2b700162d22675fee23ae9b0904ae820be1fd0e661b4fef",
+          "en": "A bold, glossy black cheongsam.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r389/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r395/c25",
+          "source_text_sha256": "43c37486429bcfc3b930ae5e173094139366487ad2ef04c830e5ff1916873340",
+          "en": "Yuki's Clothes",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r395/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r395/c26",
+          "source_text_sha256": "5eb7008441c88448f5c4e854d72a4d14a5748ade4946d30a00d7ea67aa279255",
+          "en": "Clothes worn by your friend Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r395/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r395/c28",
+          "source_text_sha256": "5eb7008441c88448f5c4e854d72a4d14a5748ade4946d30a00d7ea67aa279255",
+          "en": "Clothes worn by your friend Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r395/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r397/c25",
+          "source_text_sha256": "43c37486429bcfc3b930ae5e173094139366487ad2ef04c830e5ff1916873340",
+          "en": "Yuki's Clothes",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r397/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r397/c26",
+          "source_text_sha256": "a2055807f166858ae7faa5f1fcc4c0989900c5e4867004b1ac0d66778ead22d2",
+          "en": "Clothes worn by your girlfriend Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r397/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r397/c28",
+          "source_text_sha256": "a2055807f166858ae7faa5f1fcc4c0989900c5e4867004b1ac0d66778ead22d2",
+          "en": "Clothes worn by your girlfriend Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r397/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r399/c25",
+          "source_text_sha256": "43c37486429bcfc3b930ae5e173094139366487ad2ef04c830e5ff1916873340",
+          "en": "Yuki's Clothes",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r399/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r399/c26",
+          "source_text_sha256": "c14e7631c6be9bc6016275f4066e079144214ea945086158ed669da49d985de3",
+          "en": "Clothes worn by someone named Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r399/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r399/c28",
+          "source_text_sha256": "c14e7631c6be9bc6016275f4066e079144214ea945086158ed669da49d985de3",
+          "en": "Clothes worn by someone named Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r399/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r401/c25",
+          "source_text_sha256": "b6d5e2c3b63906e5d2e529aa11974efa0a4e6affa073ca1b47dee6282113aa50",
+          "en": "Yuki's Clothes (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r401/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r401/c26",
+          "source_text_sha256": "5eb7008441c88448f5c4e854d72a4d14a5748ade4946d30a00d7ea67aa279255",
+          "en": "Clothes worn by your friend Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r401/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r401/c28",
+          "source_text_sha256": "5eb7008441c88448f5c4e854d72a4d14a5748ade4946d30a00d7ea67aa279255",
+          "en": "Clothes worn by your friend Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r401/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r403/c25",
+          "source_text_sha256": "b6d5e2c3b63906e5d2e529aa11974efa0a4e6affa073ca1b47dee6282113aa50",
+          "en": "Yuki's Clothes (Unavailable)",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r403/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r403/c26",
+          "source_text_sha256": "a2055807f166858ae7faa5f1fcc4c0989900c5e4867004b1ac0d66778ead22d2",
+          "en": "Clothes worn by your girlfriend Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r403/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r403/c28",
+          "source_text_sha256": "a2055807f166858ae7faa5f1fcc4c0989900c5e4867004b1ac0d66778ead22d2",
+          "en": "Clothes worn by your girlfriend Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0114.json:r403/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_206.luc",
+      "source_sha256": "ec99884b400f9c1fa52fc68f5636ff7f524e798527101cdfebd6d8c07fefbe56",
+      "entries": [
+        {
+          "id": "p0/k140",
+          "source_text_sha256": "24439d5934dcf82149c0659caf3ec2f989ebfb06ec859ae3140d761dbce3dcfd",
+          "en": "The shadow on the seafloor disappeared?!\nThe first mate's in his usual spot.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k140; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k151",
+          "source_text_sha256": "876c50b765fdc7b01b136c9aad7c8e0ec8049a03269cd1ff3701b754c783e605",
+          "en": "We're late getting back to port...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k151; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k153",
+          "source_text_sha256": "294e7dc749c2b44dfbc5684ac8333dcc5c43a59c813a4f812a6e87bcb1534282",
+          "en": "It's getting noisy...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k153; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k155",
+          "source_text_sha256": "730170e6c0445d0f60fd453e6db658680d865e27b36dccf10c6300e694cee7e2",
+          "en": "The shadow disappeared?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k155; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k157",
+          "source_text_sha256": "56a64e5c5c97306520c654976c5ec075dcb3da95a6c4917d9f6a02d8fb43cbfa",
+          "en": "Man Performing an Inspection",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k157; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k168",
+          "source_text_sha256": "c7d71d415eec76030d94745f5957572703165d68eb434dc9c3f5ae3fc622e54c",
+          "en": "Man Watching the Sea",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k180",
+          "source_text_sha256": "ae1f5bc4bb77ff1782a4187d5b44b4c2b2ef5ec5cfa56cf3be4e3aa463418d16",
+          "en": "Man on the Crane",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k180; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k191",
+          "source_text_sha256": "c61093f05d6a5fc12be048952f62fc961b318e44d533860ba6a62fc7fa235b9b",
+          "en": "That's true... But something's not right...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k191; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k193",
+          "source_text_sha256": "40d31b0059da5796460e1f4235feffa2d1830471be8e2186c1a156fb09c247fa",
+          "en": "It's too calm.\nThe weather tends to be unstable at this time of year.\nThere should be more waves, but it's so calm...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k193; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k195",
+          "source_text_sha256": "983d228e88c43e7e2b91c7e596fd6b8abac068d48b622163363670f92e69988f",
+          "en": "I just hope nothing happens...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k195; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k205",
+          "source_text_sha256": "9ad8320fbf00a326b3e2f5da04e733318c7c558d9059a54545d6d3d130af9105",
+          "en": "Research Vessel Captain",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k205; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k210",
+          "source_text_sha256": "241892ac9d0453c32e67c0cc80b244db2ac1b6be9f253fbd1f87f7449da688cf",
+          "en": "This is my last voyage. This time, I'm really retiring.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k210; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k212",
+          "source_text_sha256": "eddf4afba8ccd691b39bb33ce79478b2f6fecd57b32ad1c288797a916bac8d88",
+          "en": "It looks like your clothes have dried.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k212; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k214",
+          "source_text_sha256": "8cef6b8ecb5ba38244a3cc79b5c5f794e9bd619fb093649699692518cee10e54",
+          "en": "You should dry your clothes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k214; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k216",
+          "source_text_sha256": "2b4d05a62675e7c987fa728fc059bf55554ae43020552db7ade54daedefe9b3c",
+          "en": "We're well behind schedule getting back to port.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k216; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k220",
+          "source_text_sha256": "d5fd75e13273c87361812e2f8738606d4e134bd70e6d7b01125786825e192c57",
+          "en": "You two, get to the lifeboat quickly!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k220; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k222",
+          "source_text_sha256": "bb3ea1146414de3a0218a6d1db6f239aecf5e7dd05b6160028e3312a99e9d739",
+          "en": "The captain's calling for me?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k222; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k224",
+          "source_text_sha256": "02023c975de67c48b3ce0f24d315621eeeececb2d909eb055cb98467b8212ec4",
+          "en": "'There's something I want to tell you too. I'll be waiting\nat the bow tomorrow morning.' Y-yes!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k224; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k234",
+          "source_text_sha256": "db25ec66954d7f06275bc789bc6df960a3b75cb594c7dc3206c8f1aa94b91c98",
+          "en": "It looks like your clothes have dried. Good.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k234; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k236",
+          "source_text_sha256": "d433a9bbfc89dc4477db1b1049f74d260930e3d5f094d5ba756c7ab0cf7008a8",
+          "en": "There's a heater in the facilities to the left as you leave this observation room.\nYou should dry your clothes there.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k236; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k238",
+          "source_text_sha256": "f0ea3db16621331c6589b37dd7ba70431c71ce1fb7f56e9001f6a26f3ff1d667",
+          "en": "This is the observation room.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k238; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k240",
+          "source_text_sha256": "2d966631fcc94d5930841a9d42238af88ef503cbad8a551dc55d0ff164be8e7c",
+          "en": "The captain is in the observation room.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k240; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k245",
+          "source_text_sha256": "39ce56026371d9d2710b6bd386479cd009e2502a6890900a34288298a5dbdcf4",
+          "en": "Having to leave this area of the sea is so frustrating...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k245; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k247",
+          "source_text_sha256": "bb185713451af417cc72d02bc080ffa01921265210a98869d20fe7008945d716",
+          "en": "If only we could get a little closer to the shadow...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k247; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k251",
+          "source_text_sha256": "273e17cf205eace9f49e82516d727369315e976556461ce26c1a14777ee47346",
+          "en": "For some reason, I end up telling you all sorts of things.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k251; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k256",
+          "source_text_sha256": "b19bcc95d63585fdf2abe26b932ee982c440ae081cbbc53239621f343dd6fa19",
+          "en": "That captain...\nI wish he'd be just a little more flexible...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k256; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k261",
+          "source_text_sha256": "a541db1cd3b43fde831e4111479082508c4122b2e6e319fcd1b9fc018703eda3",
+          "en": "Doctor's Assistant",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k261; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k262",
+          "source_text_sha256": "c7e495095be6acc44a3dd07b550cae57e6e53ff0129d2a9bbbe8e0e09c9dff6f",
+          "en": "What?! Why's the ship shaking so much?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k262; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k264",
+          "source_text_sha256": "a5434dcf77813766781b338165f75d9c89d34033bb5b2a40b9042d43549ae389",
+          "en": "Where did that shadow go...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k264; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k266",
+          "source_text_sha256": "79a6e9a2657bc1d708a372643a931acff2b99b8b4d23260c856ae9ab91dc8f58",
+          "en": "Isn't there some way to get closer to that shadow...?\nMaybe it'd be easier if the shadow came toward the ship...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k266; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k268",
+          "source_text_sha256": "22d3c765fc04eee670d5c0980ffd9d8a57c7b49fe55f9ed6b1d17d225920f4b6",
+          "en": "No good... We can't collect any more data from this far away...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k268; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k280",
+          "source_text_sha256": "b22002b91a979fb4e37f483d59348b36f6010330ee68a49ed710012df7d9841b",
+          "en": "The sea... I can see the sea...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k280; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k282",
+          "source_text_sha256": "bee74966c1b6ad312a9c2d9b6b922ad5432dc3f7148feafd172aa03461c2a2ac",
+          "en": "The sea... I can see the sea...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k282; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k284",
+          "source_text_sha256": "e6ae5871d1834fc67f2a04f88462345c62f0fc1cb2d6411dde6ab181b7e1565a",
+          "en": "(Maybe I should sort through everything that's happened...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k284; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k286",
+          "source_text_sha256": "9f2987d76aac10a85112dd31fefd76089e771c55d18c2eae906b09d4c463a1f6",
+          "en": "The giant shadows",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k286; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k288",
+          "source_text_sha256": "353a062dd62b5a441ac2d4998daebf6c532961d58e5bf70cae78b3d9cc6d96f1",
+          "en": "Yuki",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k288; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k293",
+          "source_text_sha256": "b154fa961a21f2623e4a237cacedfc456296a78e89283b538b8a7354d78567e1",
+          "en": "Yuki",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k293; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k296",
+          "source_text_sha256": "864797f2a36cd2c2eec4677478712c922b7754babf9d54f32e41e2745b78e5eb",
+          "en": "I thought about the giant shadows...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k296; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k299",
+          "source_text_sha256": "322693fde316ffdd69af3b60da06170f596f3708febe8fc31305c645e905d0e1",
+          "en": "Talking to Myself",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k299; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k300",
+          "source_text_sha256": "1f911bd0c46a32492713ca29ac5afc1977f08e50847cc9acddd51c74d4f9a92f",
+          "en": "I first encountered a giant shadow\njust after finishing work and leaving the office.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k300; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k302",
+          "source_text_sha256": "ac1ce487734f985732a9dc7a511bc94acfd9151e17b0719cb7bdbd57978e4af5",
+          "en": "I first encountered a giant shadow\njust after attending a lecture and leaving school.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k302; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k304",
+          "source_text_sha256": "e82147c63cc04d94754e7d696ed8ea6e6dbc46c06d7dd1096048cc0cce5f2de4",
+          "en": "I first encountered a giant shadow\njust after arriving in the city in high spirits.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k304; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k306",
+          "source_text_sha256": "3210ba1c92f9d447adc2298e046c1ffc7848f88b48e776dcd63c84f48814a385",
+          "en": "I first encountered a giant shadow\njust after wandering into the city for no particular reason.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k306; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k308",
+          "source_text_sha256": "25626dec0b7365800c10b86d68c2512834a01e5bc6c9071161c6fa267eb51eb8",
+          "en": "I first encountered a giant shadow\njust after arriving in the city in incredibly high spirits.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k308; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k310",
+          "source_text_sha256": "687a3719f737f3b554339be2ae2be7fe8fb1091f735db8c942d2e43895f61b74",
+          "en": "I first encountered a giant shadow\njust after finishing work and leaving the office.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k310; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k312",
+          "source_text_sha256": "35bd5decc35e08655f99ba2124f459cc647ca81083c11691636477319fd70c67",
+          "en": "I first encountered a giant shadow\njust after attending a lecture and leaving school.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k312; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k314",
+          "source_text_sha256": "2a837704373ac1a621098c688933b62d8ce424cf87d0f551b41af928b5bdc630",
+          "en": "I first encountered a giant shadow\njust after arriving in the city in high spirits.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k314; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k316",
+          "source_text_sha256": "ce0cd956384ab913992c9b21a53a09afdfbc7061a9e4d00ec8a904d5f2efe5cf",
+          "en": "I first encountered a giant shadow\njust after wandering into the city for no particular reason.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k316; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k318",
+          "source_text_sha256": "62b1cdee8960605148f9c924e5af4c15d0a15ada2f139c9f35938890e4041d83",
+          "en": "I first encountered a giant shadow\njust after arriving in the city in incredibly high spirits.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k318; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k320",
+          "source_text_sha256": "4c0a3a5b15ecf26110ef6f0ea67492778efb14162cb21ecfc88929ddd2adc15d",
+          "en": "After that, I met up with Yuki in the park, and we jumped onto the subway.\nBut that subway was attacked by monsters too...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k320; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k322",
+          "source_text_sha256": "7343fd77680bdc48f94b9c48afb4c4e5b0b17d1e4524375ee198cee4115707bc",
+          "en": "After that, I met up with Yuki in the park, and we jumped onto the subway.\nBut that subway was attacked by monsters too...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k322; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k324",
+          "source_text_sha256": "6ffe2fbc94ceeea9e2a46a6054e117de5998faa40f1bc23596b5094fe593c82f",
+          "en": "We walked along the subway tracks, trying to reach the surface.\nBut a giant shadow appeared above ground too.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k324; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k326",
+          "source_text_sha256": "c23db6040853d607929d34bfa59c7e57c9346dfcfe4583f2c5e9a80aac9c3cbb",
+          "en": "We walked along the subway tracks, trying to reach the surface.\nBut a giant shadow appeared above ground too.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k326; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k328",
+          "source_text_sha256": "680095a7723c1164d4dfaff4d0fa2e6fc0483d914c57703e17b14888099b55e7",
+          "en": "We drove away in a panic, only to find giant flying shadows ahead too...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k328; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k330",
+          "source_text_sha256": "c4cd40b44581f85878f371b9bad34ccd6a9a25e3f5282914b165e7128546a9e5",
+          "en": "We drove away in a panic, only to find giant flying shadows ahead too...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k330; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k336",
+          "source_text_sha256": "1542222232fefd60362b75327635b5caa6e584183bbe27f2a7f6928dc4278ec5",
+          "en": "And now, for some reason, Yuki and I are out at sea...\nAboard a research vessel.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k336; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k338",
+          "source_text_sha256": "141804ecfb6ae7cc700c909bf5092a070339fa3a85bdcc15ab45a051928bd997",
+          "en": "And now, for some reason, Yuki and I are out at sea...\nAboard a research vessel.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k338; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k340",
+          "source_text_sha256": "527c0ff4922339b56ad802d5f17ce905eb2d62803268defe67cbc595d9f3e9c0",
+          "en": "What on earth...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k340; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k343",
+          "source_text_sha256": "58874568a72b8d799e0d5d5c438e590fd623a3755f6a0d62a34bbe2a2cf6de46",
+          "en": "I have absolutely no idea what's happening.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k343; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k345",
+          "source_text_sha256": "2e41842124e0a1bbc399fc2870f852c9e56835e4b7ab3ae022dd557268ffe6e0",
+          "en": "I've just been unlucky so far... This is the last we'll see of those shadows.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k345; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k347",
+          "source_text_sha256": "948679e5180a54dcd1a9f03a87f8819b2eecb04ec92900a68a160a9c2a3256b2",
+          "en": "More shadows are bound to appear, and I'll be in danger again.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k347; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k349",
+          "source_text_sha256": "49c772cc53fa7fa02e3a493799b830050d1a09e559d6d52446d06c1b819f9e49",
+          "en": "I don't really understand it, but I'll try to enjoy whatever happens.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k349; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k351",
+          "source_text_sha256": "e574eb62573a1d8fb13a643c21447bb3de898b13d6f4e16b0aa7f9655ea87c44",
+          "en": "If something's going to happen, make it big and spectacular!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k351; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k353",
+          "source_text_sha256": "6632d8612b18855f99a102469a3ebaa46042935fccdf0091d50d84921307e546",
+          "en": "I have absolutely no idea what's happening.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k353; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k355",
+          "source_text_sha256": "94c9fa117011229de8d3654f5e1ca48a2b9fe5b0fd803ff1ae342e32be5d7d3e",
+          "en": "I've just been unlucky so far... This is the last we'll see of those shadows.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k355; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k357",
+          "source_text_sha256": "45b16b52441b99fb8cb98abb68df91e83ef24fc5c4b4417e34409a73e79255d6",
+          "en": "More shadows are bound to appear, and I'll be in danger again.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k357; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k360",
+          "source_text_sha256": "67fe6e2a2815ddbc9e27ac2e3e3c1a162482ac8a16354f6a9a5fd22edc66da4e",
+          "en": "If something's going to happen, make it big and spectacular!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k360; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k372",
+          "source_text_sha256": "98ed67b667ef70fd7d775d2cfe88e567895708856176ea36bbeb278c566d0bdf",
+          "en": "I thought about Yuki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k372; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k374",
+          "source_text_sha256": "6fe6ef40affcec86d40e3fa4f24ddcd72d0a18f5bbdacc497c40b907e1b55f7c",
+          "en": "I thought about Yuki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k374; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k376",
+          "source_text_sha256": "45c9b6c00ef84334d98db57c3583af06fa679336dc43517011bffbb1ccb769cf",
+          "en": "Yuki is my friend, and we were supposed to meet in the park today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k376; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k378",
+          "source_text_sha256": "158d8ab18009c1311fa8433d1de2e9e727e0bbe1e2d1e872aeb24700b3339796",
+          "en": "Yuki is someone very precious to me,\nand we were supposed to meet in the park today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k378; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k380",
+          "source_text_sha256": "580243feb247ac272712d0e99df758fb2b4aa984774ad714ff02bea3fb334803",
+          "en": "Yuki is my girlfriend, and we were supposed to meet in the park today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k380; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k382",
+          "source_text_sha256": "87810cda69717cb7b0e68e86c00b4578f1a1f56074a82bb0e74fffddd4b27bb2",
+          "en": "I don't know Yuki very well,\nbut we were supposed to meet in the park today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k382; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k384",
+          "source_text_sha256": "8bf58b400e269e6b4655a7c60baaef2584c0a9200fb6c847b107f4372c6b6022",
+          "en": "Yuki is my friend, and we were supposed to meet in the park today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k384; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k386",
+          "source_text_sha256": "6d2f16a1cd4f3ef0a530876fc68f9596368b4840460c51ccce8ecbd37e8ea184",
+          "en": "Yuki is someone very precious to me,\nand we were supposed to meet in the park today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k386; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k388",
+          "source_text_sha256": "85cdba492ef02e721d03b766365c5f03f557ad7ce0fa7c822f880107db242f0b",
+          "en": "Yuki is my girlfriend, and we were supposed to meet in the park today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k388; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k390",
+          "source_text_sha256": "09423f3f08744352c688cc0cb6d210b860e273da057316fa198387024a162dc8",
+          "en": "I don't know Yuki very well,\nbut we were supposed to meet in the park today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k390; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k392",
+          "source_text_sha256": "a5e18f83f009b79a472ba3277a0c3b06f5f02035738136a7d9fdbeeddd03c146",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand felt a warm affection.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k392; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k394",
+          "source_text_sha256": "1f3cf891a8d16b210d5282961f8be3833a9d24fd299e3c145f518e5792e6d377",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand felt encouraged.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k394; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k396",
+          "source_text_sha256": "8995e1f8c32a9db51c726351094b8605610b8d0e98f634bac59e7416d98a643d",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand felt she was precious to me.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k396; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k398",
+          "source_text_sha256": "098e04fc8e667a4cf731c99fada52c9e8d511dd55abba92808353d07c3b687c2",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand wished I could touch her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k398; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k400",
+          "source_text_sha256": "8530a24090ef818f4067cf663962474b36fdb2a402a2c6b0fadb828210880864",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand felt very irritated.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k400; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k402",
+          "source_text_sha256": "00a4b8299285c6db1b5d3c2f1886c5f68e6d1d965d8538733cba32eec722d708",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand became very wary of her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k402; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k404",
+          "source_text_sha256": "30190a57ad84a70d6cf8cf59b13f5f3c09a21a9418ee2fdcb06fba4a069bb2f6",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand felt a warm affection.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k404; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k406",
+          "source_text_sha256": "21e3a0aede3b3db2f422e7b501c399ea4368c91d2aacd5a640558b357a3cc930",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand felt encouraged.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k406; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k408",
+          "source_text_sha256": "918803968eae11342b3d6d16262d06931166d57b888ec9eb1942887f4decbed9",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand felt she was precious to me.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k408; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k410",
+          "source_text_sha256": "ad39570bd4021c7c93926fd896f27497c5923fd20ad72765b9a04cf08226c6ff",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand wished I could touch her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k410; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k412",
+          "source_text_sha256": "09353b651382f01ebff329557917be5c2c0a69166b556639da4fa3ef8c39958a",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand felt very irritated.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k412; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k414",
+          "source_text_sha256": "4364d3c49f10c1ac000b7920e297c1e92b41fd621ef2bf9e1f880f0e341ee62e",
+          "en": "When we were side by side on the subway, I looked at Yuki\nand became very wary of her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k414; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k416",
+          "source_text_sha256": "6a071959f7ff8f6a3ac045125780f86a05f97607de3877aed799fd4460ead360",
+          "en": "We met a girl who mistook Yuki for her sister,\nand I ate Yuki's enormous curry for her...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k416; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k418",
+          "source_text_sha256": "cb0c2219aeebe93e26040b00cd3840b7d432fa27950af77880098cb572cdaa6f",
+          "en": "And when Yuki was surrounded by flames,\nall I could think about was saving her.\nI trusted my abilities and jumped into the fire.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k418; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k420",
+          "source_text_sha256": "fd0ac956f9f9e4e5e59f3fb2e7f0b993ef4d5d93d2df1c15d7ce3cec01d2a26f",
+          "en": "And when Yuki was surrounded by flames,\nall I could think about was saving her.\nI trusted my abilities, put out the flames, and saved her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k420; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k422",
+          "source_text_sha256": "ec95a3e7239a50f7ff288d664503ca76cfe09088938fe0ae38701bf5d3614d1c",
+          "en": "And when Yuki was surrounded by flames,\nall I did was panic.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k422; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k424",
+          "source_text_sha256": "4309d79b9d0aa13e4eec05659f7ab64db8ce9fbca22cd60e1235172b67c15c1a",
+          "en": "And when Yuki was surrounded by flames,\nI laughed at her and thought it served her right, because I hated her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k424; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k426",
+          "source_text_sha256": "9924c61cb751e393a183fcad512a92e37a506d9becc40c8de1f0c5da01e9574b",
+          "en": "We met a girl who mistook Yuki for her sister,\nand I ate Yuki's enormous curry for her...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k426; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k428",
+          "source_text_sha256": "bf229713296a4128a2182034244d57058e436ddb43d456994ae4175bbb665d32",
+          "en": "And when Yuki was surrounded by flames, all I could think about was saving her.\nI trusted my abilities and jumped into the fire.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k428; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k430",
+          "source_text_sha256": "fc85115aa68cfaced623ffb691c28c6707a6b9d0c803759de387a64a9691ab45",
+          "en": "And when Yuki was surrounded by flames, all I could think about was saving her.\nI trusted my abilities, put out the flames, and saved her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k430; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k432",
+          "source_text_sha256": "28375cd30f99d602ce1fc448f94b238e4e72d17243ba028046aea29e07829d07",
+          "en": "And when Yuki was surrounded by flames,\nall I did was panic.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k432; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k434",
+          "source_text_sha256": "ecd5fcd0fce64500581e7981621edfe30fd439556214dc1cd4f8af70adc82a77",
+          "en": "And when Yuki was surrounded by flames,\nI laughed at her and thought it served her right, because I hated her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k434; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k436",
+          "source_text_sha256": "eaf0c3a50b44be12fcf70c571ae33520aeaae84c6089732a3012b35cdef6877d",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I felt a warm affection.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k436; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k438",
+          "source_text_sha256": "8706a8e1f73bff2e05ba5c4292f9b07633b19b0b100bb3aa86ca493c90834144",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I felt encouraged.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k438; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k440",
+          "source_text_sha256": "10bccc73e93a1eb328df6092b233a1503afc4a7527da955ae8f7e2dcad89014d",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I felt she was precious to me.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k440; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k442",
+          "source_text_sha256": "ce5f29ff24030b6912d5a280191d8b037bb027c48232303f51ec197711b5264e",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I wished I could touch her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k442; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k444",
+          "source_text_sha256": "aae3043bd33d2f36b56c970dd06734a0e5f776604cfec5ed3b4c3fad2a2dd7c2",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I felt very irritated.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k444; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k446",
+          "source_text_sha256": "cfccffda36fbcb5b0ed194b56eb09e7e4cabf47d33b1487abcf7ac04122523bc",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I became very wary of her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k446; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k448",
+          "source_text_sha256": "a839516b244f4c331382f626424d9072544a5e8efebd8bde71705da52c2af433",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nI asked to rest my head in her lap.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k448; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k450",
+          "source_text_sha256": "96bb363c6d01d971d3ee153e860f7e4052de10273966c80a7dcaee56ed8b3e37",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I felt a warm affection.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k450; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k452",
+          "source_text_sha256": "dc2c21d78fef52e2165898d9e15b348f12a88edb913a04e0d695de92ff8bfa8c",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I felt encouraged.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k452; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k455",
+          "source_text_sha256": "584d551bcea46bb13915d91dc53b75173e5856a88db164d0f74daab873cd62a1",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I wished I could touch her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k455; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k457",
+          "source_text_sha256": "96e6a100ca9439741dcbd93b226bc5eca18fc0426ae6679c033fff0a94faacab",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I felt very irritated.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k457; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k459",
+          "source_text_sha256": "1a4a55661a319a94a1434ea6c6c663757997264efd17e63186f6dae2eca2d73a",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nLooking at her, I became very wary of her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k459; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k461",
+          "source_text_sha256": "677538a5680a32effe42c74fe2ba54fbaa9c35ab0b49400ea23ec1d07b051df4",
+          "en": "Earlier, we wore nothing but bath towels while our wet clothes dried.\nWe spent some time alone together.\nShe let me swap clothes with her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k461; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k463",
+          "source_text_sha256": "68e39afd482dc358e2fc8c91bb5ceeb92a35eefa268ef01335af4ce10585e914",
+          "en": "Right now, at this very moment, my feelings for Yuki are...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k463; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k465",
+          "source_text_sha256": "c2660bfd58144f7034e3401d4d941375d5ee0077c1cc94e92703fdbd43e83cad",
+          "en": "Right now, at this very moment, my feelings for Yuki are...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k465; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k467",
+          "source_text_sha256": "c63029c3ca91dae55b451a5c1e47560516cded23128b024fd22373f61e658705",
+          "en": "I'm very fond of her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k467; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k469",
+          "source_text_sha256": "0261b9e97c88f0d225be881059746f08c1ebaf6593897eb06fd40b47d73dc592",
+          "en": "Honestly, I love her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k469; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k471",
+          "source_text_sha256": "49801dc6c14a002db57f711229e520d8a987c2da7fe44fec267430bb691d11b7",
+          "en": "Honestly, I hate her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k471; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k473",
+          "source_text_sha256": "d3d8ffd2b3fe2abad7f0c92f50329f70149dcd66336f6ec92025ede78b2814ea",
+          "en": "I'm not very interested in her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k473; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k475",
+          "source_text_sha256": "c47d969d6f03e4cdac8d172deb0ed92f9108bcf63116925c73271f2cb87102da",
+          "en": "I want to protect her with my abilities.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k475; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k477",
+          "source_text_sha256": "da0e691221f62dd40664a145ce25c7e69afc18642e5a1a7d2cf537cbe56ccb2b",
+          "en": "I don't want her to hold me back.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k477; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k479",
+          "source_text_sha256": "78a53504a3cf402b03738daca0376734482f959fab130eccc729cf77b217e7e9",
+          "en": "I want to be with her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k479; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k481",
+          "source_text_sha256": "82af863df18db84967cfe8993ebf0c327e37365f32b70988cb06c2b2a97cd048",
+          "en": "I'd like her to change her hairstyle, if possible.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k481; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k483",
+          "source_text_sha256": "d6eb30290e6bc1f1f109dbe873dbeb7c8dd69ec9f604693d4bb888df00855173",
+          "en": "I'd like her to change her outfit, if possible.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k483; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k486",
+          "source_text_sha256": "96fc967c0cb703364d0418a9eb7932c579ab08294b110b382cf79242e20ac840",
+          "en": "Honestly, I love her!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k486; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k488",
+          "source_text_sha256": "ac214bd0b19198886228c0bfed2f52729a83afcc8a73cdfa4111b1d0925eea9f",
+          "en": "Honestly, I hate her!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k488; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k490",
+          "source_text_sha256": "ef9f6009366097ed99f796679b50b6d297dbf9a2686ffda3bc3fa2b68dede684",
+          "en": "I'm not very interested in her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k490; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k492",
+          "source_text_sha256": "f51f7060bdfdb9dc8f69c217a37c87851449374b6935a84c1c5ab8e163e59390",
+          "en": "I want to protect her with my abilities.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k492; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k494",
+          "source_text_sha256": "2ac6e9025e783a084068f209482d93ab79e401062d50384e4ab2f23f31c06b65",
+          "en": "I don't want her to hold me back.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k494; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k499",
+          "source_text_sha256": "1b946c96722147da30a1c41e011b3d058a2f4f7a5cad4ae0a538ff0209293422",
+          "en": "Right now, at this very moment, I'm very fond of Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k499; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k501",
+          "source_text_sha256": "27791678c9fd45c6e140b6883520cdb5e61c294162f2aa57657da5b7275291d5",
+          "en": "Right now, at this very moment, I love Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k501; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k503",
+          "source_text_sha256": "bd9fdf61427e4c65fe3eb8c9da8011e56ccd18100076b7efc856cb1abd80c916",
+          "en": "Right now, at this very moment, I hate Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k503; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k505",
+          "source_text_sha256": "4847982ee9ed29ad4a71c770258abeafda38f834b604f8772a927d24fd3761ca",
+          "en": "I'm not very interested in Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k505; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k507",
+          "source_text_sha256": "749ab6fc7c4a7e294bb367c5b382d7219266b9a4b7a7d6ad8ad8cad0d2aa597e",
+          "en": "I want to protect Yuki with my abilities.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k507; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k509",
+          "source_text_sha256": "ee4430ea215a39e725d85a7a6f0cea6690b69e38b9a3502f092dc5df68387cab",
+          "en": "I don't want Yuki to hold me back.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k509; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k511",
+          "source_text_sha256": "37d6a00df0a2bae3d9f583047b98ae79c0af33550af5ead6dcd61cf7f4052e18",
+          "en": "I want to be with Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k511; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k513",
+          "source_text_sha256": "f4db09d3c5937d433d1bf1e8de3d6a04f457df2bef8feba87657d16edcfd29a7",
+          "en": "I'd like her to change her hairstyle, if possible.\n(Try talking to Yuki. She might change her hairstyle.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k513; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k515",
+          "source_text_sha256": "0f0fc536dffa33b9a8b5f12d77a3a14cf2a029f0e3cd5d5a28e0577e2441526a",
+          "en": "I'd like her to change her outfit, if possible.\n(Try talking to Yuki. She might change her outfit.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k515; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k517",
+          "source_text_sha256": "26fe9cb5b2bab967d9f14a9eda73a845c9b5b143a3bc2dcf8bed29861ec9701e",
+          "en": "Right now, at this very moment, I'm very fond of Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k517; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k519",
+          "source_text_sha256": "dd2779774f4881115360b62b2faa65d659ba0e802d90eaf66e73b16006ee43af",
+          "en": "Right now, at this very moment, I love Yuki!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k519; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k521",
+          "source_text_sha256": "a72ae4928abd654cc84d1f4177137555c363bbb151c1925db1e326b0ae46a4d6",
+          "en": "Right now, at this very moment, I hate Yuki!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k521; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k523",
+          "source_text_sha256": "69d956afc26c8841fef7946984edb36336751b8e3fdbb142a8668829985a4a75",
+          "en": "I'm not very interested in Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k523; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k525",
+          "source_text_sha256": "660b1ae70008aca04b9fd21c5ec3f156608f845009ad4c0ef5f946064b7a9568",
+          "en": "I want to protect Yuki with my abilities.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k525; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k527",
+          "source_text_sha256": "9c46db390285f1b23d99d92eea2e0472696f18a101161d57cdfd7728384ebadd",
+          "en": "I don't want Yuki to hold me back.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k527; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k529",
+          "source_text_sha256": "7d2cd5012aa676ad788d7fa961502b8fe152fadee36a1191f1af46b244054796",
+          "en": "I want to be with Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k529; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k533",
+          "source_text_sha256": "63c5d9627830f28e82907f055bcbd242c34dbe125c3f332d20920c5abce372cb",
+          "en": "The sign reads 'Crew Only.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k533; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k535",
+          "source_text_sha256": "345502af8cd0c87ce84e3f5431290f40ddca24ac05f578e33ed2528c72b449b0",
+          "en": "It's a lifeboat.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k535; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k537",
+          "source_text_sha256": "653e806a9507f462a9faca7aafaf90cc3b48627ad0c0fea562cf2e169de244bc",
+          "en": "It's a lifeboat.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k537; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k539",
+          "source_text_sha256": "e2a4e19b9c2a169f2ee94fd6204442ac9f82415421c45381f7af96c632b28314",
+          "en": "It's the heater where Yuki and I dried our clothes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k539; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k541",
+          "source_text_sha256": "bf4067686cc634014622247b322d8c863968cbd53fec07c4d6d26c50d8124241",
+          "en": "It's the heater where Yuki and I dried our clothes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k541; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k543",
+          "source_text_sha256": "91ba5e5e95b8a1debdf532c956f44a23012f7b8a93408f31e5289fd80df73b10",
+          "en": "It's an impressive computer.\nIt's giving off heat.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k543; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k545",
+          "source_text_sha256": "44f5a85ffef2c308cfa1cb228e71bcd81e8cf62b9ce01ebb826b5c97ff26f254",
+          "en": "It's an impressive computer.\nIt's giving off heat.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k545; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k547",
+          "source_text_sha256": "044706d2a5c9724f0120647747339d9d8a71781a5bd3c2ea351c8786b7113a44",
+          "en": "There's a bucket here.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k547; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k549",
+          "source_text_sha256": "3692477a70a6d26501c400b7f14666fa6319360b218ce5037ffcf15c5d553ac1",
+          "en": "We have to hurry to the lifeboat...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k549; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k554",
+          "source_text_sha256": "fa27e1cfe890d2b2659489284521c864fd770d14e791bc441e38aa96e5a93109",
+          "en": "...Hey... Wake up...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k554; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k557",
+          "source_text_sha256": "61c04838c415653385289e861b1194e33b6d61425c8fcb6de03084262d72db85",
+          "en": "Ugh...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k557; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k560",
+          "source_text_sha256": "1c4dcd98e4c5248d9209715cd6198fa69e80077e3d1b90d85f7b5bdc759058da",
+          "en": "Mm...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k560; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k562",
+          "source_text_sha256": "6f30fc9f956ff2a5867a2749065b51b636dd476ba7f8012d221248c571fd0b95",
+          "en": "What?! Where are we...?\nWe were just outside the hospital in the city...?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k562; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k564",
+          "source_text_sha256": "51391945c154463c011c4ac71d1cd986f61435b8a8e4c1856e7a172136668405",
+          "en": "What?! Where are we?\nWe were just outside the hospital in the city...?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k564; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k566",
+          "source_text_sha256": "c841ac8a19633037dc76f783aa3a340aeeafc31120e0a4de8bd7cff42a7a25ca",
+          "en": "I don't know. When I came to,\nI was on this boat too.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k566; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k568",
+          "source_text_sha256": "3171518b7cee6f0f0a3f8595db1f9c92400322391d99183801ceeebbd955b36b",
+          "en": "But why...? Could this be another effect of the disturbances...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k568; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k570",
+          "source_text_sha256": "516846fc88fa6dbf90582bf899dd17231b13ae68bf07c79670c16d2005dd6e57",
+          "en": "How much time has passed since then...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k570; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k572",
+          "source_text_sha256": "f16025b8ad6bc869116179da7ee54ef9ad57e6bdf35817ce45c024a2436bde55",
+          "en": "Where on earth did this boat come from...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k572; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k574",
+          "source_text_sha256": "64a68c6c8ebee0d46b25a59e91f26fb53eff3b1ec07eba13425cd7b13c4f09d3",
+          "en": "This looks like the sea... But is it really the sea...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k574; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k576",
+          "source_text_sha256": "3d7bd8df52bfe812e30fa0511a288c22853049a01f6ab504df33cf0420d2be3d",
+          "en": "(Does she really not know anything...?)",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k576; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k578",
+          "source_text_sha256": "4108afff02206ba476f15d0fe19b9146116c6b1ae41f80943429b98d0b7d2f4c",
+          "en": "Could I still be dreaming...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k578; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k580",
+          "source_text_sha256": "da8006d6d90395efd649cf012ddf8c53761ced7ba4590b661d0066e411abb664",
+          "en": "But why...? Could this be another effect of the disturbances...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k580; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k582",
+          "source_text_sha256": "73fb4e74611b270c5899bfcfcb0cc5d6341a6a9546d63563319bd654da5aaf07",
+          "en": "How much time has passed since then...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k582; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k585",
+          "source_text_sha256": "ed297d8d35c447ea57b2599da87fdf94207607df8491e53c18a507e79eccbbd7",
+          "en": "This looks like the sea... But is it really the sea...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k585; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k587",
+          "source_text_sha256": "29f6f7637540f4d71cfe6bfc69e510ac044345477a1e90171620e5b79455225e",
+          "en": "(Does she really not know anything...?)",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k587; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k589",
+          "source_text_sha256": "2676f1fa0a840d32583d6be30f14192523ddde882077accbf5faa0478d8f217f",
+          "en": "Could I still be dreaming...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k589; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k591",
+          "source_text_sha256": "b619ee8e39553ceb1002221eb176e4541e55b1719f040da9afed7c123f00e3e8",
+          "en": "But why...? Could this be another effect of the disturbances...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k591; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k593",
+          "source_text_sha256": "f99a58a2d61bc023e9b4a1272c608daae886c88008a24a9625f2ce2d25993b9a",
+          "en": "But why...? Could this be another effect of the disturbances...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k593; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k595",
+          "source_text_sha256": "32ef5be4292ca15d177914a92d4affc1f52b90bce962059d49aa5e89ef5a1dd8",
+          "en": "...Maybe.\nSo many things have been happening...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k595; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k599",
+          "source_text_sha256": "da9b716a78e62a80332472aaba9af961bca69e26a8d546845dd0fc2c8b001024",
+          "en": "...It looks like hardly any time has passed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k599; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k601",
+          "source_text_sha256": "b8a3826e6d1b5a2affc1eb403216a12249a79d898e9665cea9638591b22e71b6",
+          "en": "...It looks like hardly any time has passed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k601; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k603",
+          "source_text_sha256": "18ff59fe6f524b7f883c4247092949f725dee7e680caf3cf905072f185221c31",
+          "en": "You mean we were brought here\nwhile we were unconscious for just a little while...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k603; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k605",
+          "source_text_sha256": "01fce6cea13bc12890bbf2d5fd8521d873240b8fe6edd219776594761f0edf6d",
+          "en": "Where on earth did this boat come from...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k605; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k608",
+          "source_text_sha256": "25d85d5490cb7a491fb255be8db9ac5c61624fd561ce0df3e5b0fff49f8c0947",
+          "en": "It's a perfectly ordinary boat, the kind you could find anywhere.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k608; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k610",
+          "source_text_sha256": "1a63594fafccda0d3cfaaf4d7e0eea40033177b74a808776fa7f026a299a9dbc",
+          "en": "It's a perfectly ordinary boat, the kind you could find anywhere.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k610; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k612",
+          "source_text_sha256": "7fc48163fa5c6b0af67c2bcd5c12773e47dc96833dea168317afff4fc29674d4",
+          "en": "Could we really have drifted all this way in this boat...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k612; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k614",
+          "source_text_sha256": "52482518c2bde4b05099e792ba092c9baf08598757181bbca17081c878038d38",
+          "en": "This looks like the sea... But is it really the sea...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k614; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k616",
+          "source_text_sha256": "9b6f106151b8daa76e4ef41908d6cd51e74d6f2b5474bce2acdee50e926b0a83",
+          "en": "This looks like the sea... But is it really the sea...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k616; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k618",
+          "source_text_sha256": "fa5d34f17a1dcdb40700f7e737325b29a48abd4430be9c8bbdb85c42c1fcc900",
+          "en": "Ugh...! Salt water.\nIt really is the sea...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k618; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k620",
+          "source_text_sha256": "f0c3b99ad3406c34324475a2bf13c2178b86a2a4804c7d17f202e15f878053ff",
+          "en": "Ugh...! Salt water.\nIt really does seem to be the sea...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k620; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k622",
+          "source_text_sha256": "034a5fd4972be09e1cb419bf5028bf75182c550f4e43acceeb40a65836956fe2",
+          "en": "I can't see any lights around us,\nso we might be pretty far offshore...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k622; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k626",
+          "source_text_sha256": "1d8c844fd374ad1aaa8bd58b5a90148ea61670cc4bab85be82bc367ec93e473f",
+          "en": "...Hm? What is it?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k626; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k628",
+          "source_text_sha256": "fcebae8651c2913efc5e5c2fb2be93cdd03f2cda67927f5181a6d2a7d3845134",
+          "en": "Reconsider: '(How could I suspect her?!)' Then cover it up.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k628; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k630",
+          "source_text_sha256": "357c7f8f902837f10d1554fbeea86c56eee5ce402da6d115590c9ba2e09975a9",
+          "en": "Stay wary of her, but cover it up by saying it's nothing.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k630; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k632",
+          "source_text_sha256": "6b994af276e4ec10e942fbdc96fe3d67a2e7d4354634169e8154751363d1c6da",
+          "en": "Press her to tell you whether she knows anything.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k632; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k634",
+          "source_text_sha256": "26154ddab2a508ab6b02b2f42cd35675c2b05eadd3d1ed167d982ef9e7544ed8",
+          "en": "N-no, it's nothing.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k634; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k636",
+          "source_text_sha256": "fd8614364a76fd492dec488fb4887881021895b6b52294e7ee6283a4873a779e",
+          "en": "N-no, it's nothing.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k636; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k638",
+          "source_text_sha256": "c557549e06c497b1522fee9307c5d28f5a926d0f95b840c4272bd633496a905e",
+          "en": "...? Okay. Still,\nwhy are we in a place like this...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k638; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k640",
+          "source_text_sha256": "09c9c873cc6bf7794c13dec31f6d9f9f888a00d88fad118ec38679e0f6a544a5",
+          "en": "No, it's nothing.\nDon't worry about it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k640; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k642",
+          "source_text_sha256": "ff620c12a2ba7ffd4cf21f435c94376d312a23953e2222b05876a4cd0f845264",
+          "en": "No, it's nothing.\nDon't worry about it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k642; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k645",
+          "source_text_sha256": "84c0a4e1530eeca32096aa6b91d25dd8a662479c568c0f3f3b91268bb0716073",
+          "en": "Hey, do you really not know anything?\nDidn't you see something while I was asleep?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k645; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k647",
+          "source_text_sha256": "d1daacec527a9acb610fb9c64aadf8dbf8beef00bcae899fa6b31d8df52ba345",
+          "en": "Hey, do you really not know anything?\nDidn't you see something while I was asleep?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k647; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k651",
+          "source_text_sha256": "1bf3b24dd714dded2fc52973f5eca323fa79f5c36f3c91dca2dafb98e4ba4486",
+          "en": "No. I really don't know anything.\nWhen I came to, I was here.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k651; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k655",
+          "source_text_sha256": "f5b9b6d252f691b9ea3cf5ea5f1813701f41e9d0319208a00211d469c8f06f2d",
+          "en": "Ask Yuki to pinch your cheek.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k655; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k657",
+          "source_text_sha256": "d6afe26d132ed7e40c1e5ba6d1fc89472c923bfbf27e6fe6c6b349c43cf8c814",
+          "en": "Pinch Yuki's cheek.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k657; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k659",
+          "source_text_sha256": "7714323da143ec1742ed5feb6db65a24d5a9849dbcc4fa96a4d45fbf2e1e4289",
+          "en": "Hey, try pinching my cheek.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k659; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k661",
+          "source_text_sha256": "225062658974e0dce0d64c11cda1bae380f07eafe1347f0da1b81d6017aeb245",
+          "en": "Hey, try pinching my cheek.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k661; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k663",
+          "source_text_sha256": "d703542772823a085e1534a39393e2ea9a48ca5a27b3dc2d17a7eef3cd9f7b57",
+          "en": "Ow, ow... That hurts...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k663; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k665",
+          "source_text_sha256": "fb988e49c0e09814879ad74eab509240b3aa9442bbb95d21b9d2998748e2efcf",
+          "en": "It looks like this really isn't a dream...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k665; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k667",
+          "source_text_sha256": "e2a06b51bcb4d1579270d9602bfbd58745271ffa526c956f9f33604838802adc",
+          "en": "It looks like this really isn't a dream...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k667; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k669",
+          "source_text_sha256": "d0f43bff79722c8f719c2f09d3d453b92b3898ccd59fd5ea285eb5a62207c08a",
+          "en": "But what do we do now?\nWe don't even know which way to go...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k669; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k671",
+          "source_text_sha256": "b944e8e1633e30754e420c053a9ff51b925e1e5ab0a07a9c5b3ff7caa6295296",
+          "en": "It's dangerous to move without a plan. Let's wait for someone to rescue us.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k671; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k673",
+          "source_text_sha256": "1bc03f8b3e461195d0b06dfc9e8fecd40e4a907de454dcd7165f137153e631f8",
+          "en": "Let's shout for help, anyway!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k673; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k675",
+          "source_text_sha256": "70cd12d3e9515df472c30ee8f75d78aa3056a2cf84dd78ee6c6dabba37c83f2d",
+          "en": "Let's take a chance and start rowing!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k675; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k677",
+          "source_text_sha256": "5cf758d777c77fafa10d2120818350e9a8914dd45cd54bc62327f6a544b782d5",
+          "en": "It's hopeless. Let's give up...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k677; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k679",
+          "source_text_sha256": "600629fdf3d34b39f96cc568002d9937b3806e69b517e439786d67c68113a2e2",
+          "en": "It's dangerous to move without a plan. Let's wait for someone to rescue us.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k679; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k683",
+          "source_text_sha256": "bfed52ef45571e08ce6f619c01f83f8d59930b28b268c71d67326d7281678ac2",
+          "en": "It's hopeless. Let's give up...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k683; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k687",
+          "source_text_sha256": "368267c9d2ab7b0ee8f2a3e642a44f258f01a27d4d9b8af64f310ceb5f8f9cfd",
+          "en": "Heeey! Somebody!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k687; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k689",
+          "source_text_sha256": "2084e1397b5c599f5d05934badbdbbf5f8b2e2ff83de6b412905ac543af00eb5",
+          "en": "Somebody! Please help us!",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k689; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k694",
+          "source_text_sha256": "8ca9632de54378c129fd0c73af7cf8f6ec2134718685b32ea592c5100cc16ab9",
+          "en": "It's hopeless. Let's give up...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k694; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}
