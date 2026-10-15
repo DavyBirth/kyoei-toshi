@@ -40,6 +40,8 @@ def main():
     parser.add_argument('--preview',action='store_true',required=True)
     parser.add_argument('--language',action='append',choices=('en','pt-BR'),
                         help='Build only the selected language; repeat to select both')
+    parser.add_argument('--textures-en',type=Path,
+                        help='Directory of localized TEX files (from tools/localize_textures.py) mirroring archive paths')
     parser.add_argument('--validate-only',action='store_true',
                         help='Verify resource roundtrips without creating archives or publishing a manifest')
     args=parser.parse_args();output=output_path(args.output)
@@ -94,6 +96,9 @@ def main():
     source=Path(inventory['source'])/'DAT/common.psarc'
     expected=next(r['sha256'] for r in inventory['files'] if r['path']=='DAT/common.psarc')
     output.mkdir(parents=True);languages={}
+    if args.textures_en and 'en' in compiled:
+        for path in sorted(args.textures_en.rglob('*.tex')):
+            compiled['en'][path.relative_to(args.textures_en).as_posix()]=path.read_bytes()
     for language,replacements in compiled.items():
         target=output/language/'common.psarc';print(f'Building private preview: {language}',flush=True)
         proof=patch(source,target,replacements,expected)

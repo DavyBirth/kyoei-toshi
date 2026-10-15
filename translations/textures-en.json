@@ -1,0 +1,256 @@
+{
+ "format": "kyoei-texture-labels-v1",
+ "language": "en",
+ "textures": [
+  {
+   "resource": "texture/menu_option/M_option_01.tex",
+   "en": "On",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_01.tex",
+   "en": "On",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_02.tex",
+   "en": "Off",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_02.tex",
+   "en": "Off",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_03.tex",
+   "en": "Inverted",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_03.tex",
+   "en": "Inverted",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_04.tex",
+   "en": "Normal",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_04.tex",
+   "en": "Normal",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_05.tex",
+   "en": "Detailed",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_05.tex",
+   "en": "Detailed",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_06.tex",
+   "en": "Simple",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_06.tex",
+   "en": "Simple",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_07.tex",
+   "en": "Third-person",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_07.tex",
+   "en": "Third-person",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_08.tex",
+   "en": "Middle",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_08.tex",
+   "en": "Middle",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_09.tex",
+   "en": "First-person",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_09.tex",
+   "en": "First-person",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_10.tex",
+   "en": "Large",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_10.tex",
+   "en": "Large",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_11.tex",
+   "en": "Small",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_select_11.tex",
+   "en": "Small",
+   "align": "center",
+   "margin": 12,
+   "size": 21
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_01.tex",
+   "en": "Controller Vibration",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_02.tex",
+   "en": "Look Up/Down",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_03.tex",
+   "en": "Look Left/Right",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_04.tex",
+   "en": "Player Voice",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_05.tex",
+   "en": "Character Voices",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_06.tex",
+   "en": "Display 1: HP & Stamina",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_07.tex",
+   "en": "Display 2: Camera",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_08.tex",
+   "en": "Display 3: Map",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_09.tex",
+   "en": "Display 4: Map Rotation",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_10.tex",
+   "en": "Display 5: Guide",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_11.tex",
+   "en": "Screen Brightness",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_12.tex",
+   "en": "Volume 1: Voices",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_13.tex",
+   "en": "Volume 2: Music",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_14.tex",
+   "en": "Volume 3: Sound Effects",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_selection_15.tex",
+   "en": "Cutscene Subtitles",
+   "mode": "label",
+   "size": 19
+  },
+  {
+   "resource": "texture/menu_option/M_option_sselect_08.tex",
+   "en": "Display 1: HP & Stamina",
+   "mode": "label",
+   "size": 19
+  }
+ ]
+}
