@@ -1833,3 +1833,16 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   Pulados: notas de desenvolvimento, textos de teste, créditos e notícias longas.
 - Consolidado não republicado em published/, pacote do jogo não alterado,
   jogo não iniciado. Revisão humana pendente.
+
+### 15/10/2026 — segundo lote (pedido de 1000; 697 feitas)
+
+- Davy autorizou liberar o Git (safe.directory global; autor local Davy) e pediu
+  mais 1000. Aplicados sete sublotes claude-20261015-lote1000-a..g: 697 novas EN.
+  Total 13084/16100 preenchidas, 3016 vazias. Auditoria estrutural PASS em cada.
+- Conteúdo: notícias restantes, textos de leitura (revista Giant Shadow Weekly,
+  cartas, contratos, cheques, bilhetes), os volumes de The Tale of the Last Sword,
+  itens e cargos/empresas dos créditos. Leituras inferidas marcadas nas notas.
+- 浅瀬尾 traduzido como "Asaseo" sem confirmação oficial; revisar.
+- Não chegou a 1000 de propósito: o resto são nomes reais nos créditos (sem
+  leitura confirmada), notas de desenvolvedor e placeholders 仮登録.
+- Sublote "a" vazio criado por engano foi removido antes do reaplique.
