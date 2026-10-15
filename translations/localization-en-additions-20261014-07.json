@@ -1,0 +1,1252 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r478/c25",
+          "source_text_sha256": "e3817ee37550378fbed11c7adc29a33476d207d4fcd39924a9613d7d60f7e08b",
+          "en": "Special Vehicles Section 2 Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r478/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r478/c26",
+          "source_text_sha256": "2c99851672410067a14ddae67396c63cad6084d36dbd729fd55eace002de4669",
+          "en": "Gloves worn by members of Special Vehicles Section 2 when deployed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r478/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r478/c28",
+          "source_text_sha256": "2c99851672410067a14ddae67396c63cad6084d36dbd729fd55eace002de4669",
+          "en": "Gloves worn by members of Special Vehicles Section 2 when deployed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r478/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r479/c25",
+          "source_text_sha256": "e3817ee37550378fbed11c7adc29a33476d207d4fcd39924a9613d7d60f7e08b",
+          "en": "Special Vehicles Section 2 Gloves",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r479/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r479/c26",
+          "source_text_sha256": "2c99851672410067a14ddae67396c63cad6084d36dbd729fd55eace002de4669",
+          "en": "Gloves worn by members of Special Vehicles Section 2 when deployed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r479/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r479/c28",
+          "source_text_sha256": "2c99851672410067a14ddae67396c63cad6084d36dbd729fd55eace002de4669",
+          "en": "Gloves worn by members of Special Vehicles Section 2 when deployed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0115.json:r479/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r554/c26",
+          "source_text_sha256": "35458fdd310fed1a7409ee1b3a4823fbb128d1e31a8a5a2668a59fce2aa45bd6",
+          "en": "A box containing a hard drive entrusted to you by Asano, who runs a software company.<br>He asked you to deliver it to the deputy director of the National Cosmic Ray Research Institute.<br>Apparently, it contains an important program.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r554/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r554/c28",
+          "source_text_sha256": "35458fdd310fed1a7409ee1b3a4823fbb128d1e31a8a5a2668a59fce2aa45bd6",
+          "en": "A box containing a hard drive entrusted to you by Asano, who runs a software company.<br>He asked you to deliver it to the deputy director of the National Cosmic Ray Research Institute.<br>Apparently, it contains an important program.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r554/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1176/c26",
+          "source_text_sha256": "1317e31a984a70a8ab88dc092b76209d1d21983b2d8309d0679396f6b127e0f7",
+          "en": "Documents kept in the safe of Kunshiran Construction, a land development company with offices in Iberis Tower.<br>They seem very important.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1176/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1176/c28",
+          "source_text_sha256": "1317e31a984a70a8ab88dc092b76209d1d21983b2d8309d0679396f6b127e0f7",
+          "en": "Documents kept in the safe of Kunshiran Construction, a land development company with offices in Iberis Tower.<br>They seem very important.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1176/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1180/c25",
+          "source_text_sha256": "3069f02e803c74cfe77efa470ee90cd8bab28809ae64ffd073594d66d22e774f",
+          "en": "Kunshiran Construction's Bankbook",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1180/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1180/c26",
+          "source_text_sha256": "3a0d76a1f6ed0050b7956d82051f6f09ab8f26e0d7fd26baf7435616e2333fc3",
+          "en": "The bankbook for construction company Kunshiran Construction's general account.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1180/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1180/c28",
+          "source_text_sha256": "3a0d76a1f6ed0050b7956d82051f6f09ab8f26e0d7fd26baf7435616e2333fc3",
+          "en": "The bankbook for construction company Kunshiran Construction's general account.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1180/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1203/c25",
+          "source_text_sha256": "3069f02e803c74cfe77efa470ee90cd8bab28809ae64ffd073594d66d22e774f",
+          "en": "Kunshiran Construction's Bankbook",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1203/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1203/c26",
+          "source_text_sha256": "3a0d76a1f6ed0050b7956d82051f6f09ab8f26e0d7fd26baf7435616e2333fc3",
+          "en": "The bankbook for construction company Kunshiran Construction's general account.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1203/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1203/c28",
+          "source_text_sha256": "3a0d76a1f6ed0050b7956d82051f6f09ab8f26e0d7fd26baf7435616e2333fc3",
+          "en": "The bankbook for construction company Kunshiran Construction's general account.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1203/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1278/c25",
+          "source_text_sha256": "2538daf5b39612b60eab3c9642886d244e102be1d0a28d38ece9d79fe786defa",
+          "en": "Kunshiran Construction's Bank Seal",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1278/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1278/c26",
+          "source_text_sha256": "297c5b9604e7c06cf31201f8d99e5e30f356a35c9f0c6b725948213a59929be6",
+          "en": "A bank seal used by Kunshiran Construction for its general account and other banking transactions.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1278/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1278/c28",
+          "source_text_sha256": "297c5b9604e7c06cf31201f8d99e5e30f356a35c9f0c6b725948213a59929be6",
+          "en": "A bank seal used by Kunshiran Construction for its general account and other banking transactions.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1278/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/staffroll.csh",
+      "source_sha256": "751be64333402793813ee9f03ec8da9ef3dcd73b68dedc62ac484ded478bb338",
+      "entries": [
+        {
+          "id": "r31/c3",
+          "source_text_sha256": "7a00b24db2fb404180967e15a49e03eb0ef2498857b4e5cd7f2e12359fd478f8",
+          "en": "Kosuke Asano",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r31/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r33/c3",
+          "source_text_sha256": "f7688ca5e805ffab70e49fdecc36815fe0235c45002eac620405c7c8c4abfa27",
+          "en": "Mizuki Sawada",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r33/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r35/c3",
+          "source_text_sha256": "8e0139be99bda92837d3a93105bb4dfa2c5bff497704586b595a6cdde590aac3",
+          "en": "Haruomi Sasaki",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r35/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_204.luc",
+      "source_sha256": "24e892d1979af5bca0df524f6cb06002166ee4099db4f1038492d5df53712ad2",
+      "entries": [
+        {
+          "id": "p0/k36",
+          "source_text_sha256": "ebb40b66f96c1c9855522dec29b526707ceba73dba19613376543c1458ed87b5",
+          "en": "Kunshiran Construction is really something.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k36; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k38",
+          "source_text_sha256": "07eb091bc709393a6a518ceaa4e240f88eb608d78c9d65790f628eec5dd3b5b9",
+          "en": "Ask about Kunshiran Construction.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k38; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k44",
+          "source_text_sha256": "4b9410f59c04ce670746f664e64ab3a3a3e481eb62df54893b33d60dadfd82eb",
+          "en": "Kunshiran Construction built Iberis Tower too.\nIts offices are on the 20th floor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k44; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k119",
+          "source_text_sha256": "145af1975624ca02fa5cb228d4ca07d56b6aa7baafd608117c18f64d01b78b1d",
+          "en": "It's a limited-quantity beef cutlet sandwich.\nSomeone from Kunshiran Construction just bought the last one.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k119; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k398",
+          "source_text_sha256": "ac116071b913629fca57b38359eaa385333caccf9bf5a22cfd646b990e40fa82",
+          "en": "This is Iberis Tower, built by our own Kunshiran Construction.\nIt's Miyato City's newest symbol. Hahahaha!",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k398; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k412",
+          "source_text_sha256": "12b221197c8f8076cf703d6aec184bf342ae3b5823de2234050869f4f753f489",
+          "en": "If that report is made public, Kunshiran Construction is finished...\nI have to get it back, whatever it takes...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k412; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k436",
+          "source_text_sha256": "bfaed27414e9b2eef25eff1f309b1fe2e4a44e8ed5df1c42407cbd4ce94b4d7a",
+          "en": "Ah...! That report you're holding...!\nIf it gets out, both I and Kunshiran Construction are finished...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k436; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k438",
+          "source_text_sha256": "c28244f880aaa92c74700d6add3ce05c7d4c2f755a3389bf57ff80c2af55cd5e",
+          "en": "...I built Kunshiran Construction from the ground up.\nI worked hard, and now we have 515 employees.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k438; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k701",
+          "source_text_sha256": "4d6edbd04f8260207f245102aaf414209f6cb4c65121bb3c11153799c6532f2c",
+          "en": "If that settlement report on the waterfront development reaches a journalist,\nKunshiran Construction is finished...",
+          "notes": "English draft imported from audited private workspace, translate-en-0145.json:p0/k701; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1168",
+          "source_text_sha256": "2c6f1d6315fc820636c8ff9366e5a812ba5eca0cf2ad56ecef369f210e00bbcd",
+          "en": "It seems you have nothing to do with Kunshiran Construction.\nForget about us and get out of here, quickly.",
+          "notes": "English draft imported from audited private workspace, translate-en-0145.json:p0/k1168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1258",
+          "source_text_sha256": "400ce6a23b9fa01f279bf538960152b996a16e216060ffb732a3151e8dd31bb4",
+          "en": "Kunshiran Construction...",
+          "notes": "English draft imported from audited private workspace, translate-en-0146.json:p0/k1258; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_207.luc",
+      "source_sha256": "603aa30eb7daf17377811f372335f25a2e3b36002105db33c2a40f5148780969",
+      "entries": [
+        {
+          "id": "p0/k416",
+          "source_text_sha256": "4815351de6c483b44855d56ff405a84bb59177b187697f4d9ea31da8bc4674cf",
+          "en": "It's a Labor from Special Vehicles Section 2! What's it doing here...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k416; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_208.luc",
+      "source_sha256": "952fa3013f36035ee9f4940bb4d60f4b8ffa2e8c524d38b6121777f5583689e8",
+      "entries": [
+        {
+          "id": "p0/k148",
+          "source_text_sha256": "310e9efe311d4b7ddb12d24109bb76cb79b9e1dbcba1aef77ad2df946df62b01",
+          "en": "This is no time to go back.\nI have to follow Kashiwagi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k148; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k150",
+          "source_text_sha256": "ffedb869bea74ec2282304e2074284974773a96e2bf0b887a6ccd7bc3c7129cf",
+          "en": "This is no time to go back.\nI have to follow Kashiwagi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k150; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "5ac7af709e2b8594189955d4d4c8068eb58fd892b6ffa31d3661a1c8b1bdbaad",
+          "en": "Kashiwagi! Ow...!\n...Thank you for coming!",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k238",
+          "source_text_sha256": "159a19be519818062212b895d8eec9f4e4cc98f214394c6559407df5740e3d19",
+          "en": "Nice to meet you. I'm Asano. I rent a little space\nin this company my friend runs, and work here.",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k238; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k242",
+          "source_text_sha256": "e05b078c3365576b59afe4bb581595e437846eda5b2e9528a09ed5658b6ad807",
+          "en": "Oh, come on, Kashiwagi...\nI was just tricked into taking over as the company's representative.",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k242; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k258",
+          "source_text_sha256": "dcce88918d7499d35fc1cf3f536381a1537deced9d46cf4f8f77f7ca4cd8a25e",
+          "en": "Leave it to me.\nI just need to take it to the Cosmic Ray Research Institute, right?",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k258; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k260",
+          "source_text_sha256": "a6d25d10ab0665a9735111aebb68f9c39d9ba8fddbaa1a98b019662400670a5e",
+          "en": "That's right. Give it to the deputy director, a man named Sasaki.\nHe should know what it is.",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k260; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k317",
+          "source_text_sha256": "a6f8eedcc87938f58721e2ae44eb030f3739363f939df056a7ad04e24501e0e4",
+          "en": "Asano",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k317; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k320",
+          "source_text_sha256": "e77e3000bc8db33d83ba604c75f400e2b459e808f5e5f70d69dd1fc777ecbcc9",
+          "en": "Please take care of Kashiwagi too.",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k320; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k338",
+          "source_text_sha256": "1000df3296d13d38f4cd95058ca0b4d2e56ab1ba8a655eaa85418da014c013b8",
+          "en": "(You received the deed from Asano's desk.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k338; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k346",
+          "source_text_sha256": "e694cd4909d08bf7141757bbaa7882f5c9f4a79485ec30ddf12a81fd6e4df1d7",
+          "en": "This company I represent\nis called Hyacinth Soft.\nWhat direction do you think I should take it in?",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k346; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k356",
+          "source_text_sha256": "95789db6039d70cff68ff266201b8080f18e2fa2bd434d0f75265a7347a30cbe",
+          "en": "Thank you. That was helpful.\nWell then, please take the program\nto the Cosmic Ray Research Institute.",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k356; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k608",
+          "source_text_sha256": "613b74bbcb049327e40206b38807e07c41764a67a27d93c454ab8b57bf5d3ba5",
+          "en": "Thank you, meow!\nThat brings 'Absolutely Safe City 2' another step closer to completion, meow!",
+          "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k608; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_209.luc",
+      "source_sha256": "41ade45c2c29bad9b125a846627dcfb1ff534c7cb90c04a13c6a81f0545adf8d",
+      "entries": [
+        {
+          "id": "p0/k134",
+          "source_text_sha256": "ad4cf48dc3dd35ed5f6d9edd1b2569f67f11a328d8ce5d1a7664d781e6de94b3",
+          "en": "For Asano's sake too, I'll make sure this gets delivered!",
+          "notes": "English draft imported from audited private workspace, translate-en-0171.json:p0/k134; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_211.luc",
+      "source_sha256": "f39f5287339dbe3d42edcb4da942e995822f43e19151d7afe35b874fc142c929",
+      "entries": [
+        {
+          "id": "p0/k79",
+          "source_text_sha256": "16d69a9eee1d25c72fe8388be2c46fb141e4951f65a8a2f4990b606404c5b26f",
+          "en": "The lockers are in the room behind reception on the first floor.\nMine is the one labeled 'Sawada.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k79; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k150",
+          "source_text_sha256": "dac180e1d5d626896acbd56d34235f17da96e00988414e2974757bedf1e422ad",
+          "en": "Then I'll unlock the door from inside.\nBe careful on your way here. —Sawada",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k150; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k471",
+          "source_text_sha256": "a13c6c8e98c10db5c6a4e6e59f629de9121d1b2e2ed7526fd20f15bc500aa339",
+          "en": "The lockers are in the room behind reception on the first floor.\nMine is the one labeled 'Sawada.'\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k471; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k672",
+          "source_text_sha256": "ac7de1b4f940072796ce54a7e5fd65f81815331d3fb5d26f23851f2a947ee79b",
+          "en": "(Sawada is much slimmer than she looks...\nAnd she's so tense that her whole body's stiff...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k672; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k674",
+          "source_text_sha256": "18dea4093ef173dfbd20778540ebaea7e80dc9646973d34292eb67ca38a0b2dd",
+          "en": "(Sawada is much slimmer than she looks...\nAnd she's so tense that her whole body's stiff...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k674; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k787",
+          "source_text_sha256": "51d8506ddb4b4a7f2e37f19b0a1d6968b0a3c0c7a9b364f57185738eefb88232",
+          "en": "I'd like Sawada to tie me up tightly,\nthen hit me as hard as she can!",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k787; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k789",
+          "source_text_sha256": "e02c08b9a968937359ed7a46e7a2be74c4f1fb724f4b6fcdd37090708114985d",
+          "en": "I'd like Sawada to tie me up tightly,\nthen hit me as hard as she can!",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k789; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k804",
+          "source_text_sha256": "8af1fc7d3e009e5d563d49cb119b45b9bf0723c761d2671648c0c86dad82de15",
+          "en": "I want Sawada to do\nall kinds of things to me, all at once!",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k804; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k806",
+          "source_text_sha256": "76b3a8fa102a97da170bd0c22b33393930e71b4bd609e36cc2dd71b9f1a98b13",
+          "en": "I want Sawada to do\nall kinds of things to me, all at once!",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k806; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k828",
+          "source_text_sha256": "a67187d13d02278f5c2a57be8214f05bb80b861fc2597b704f5e9ec2879cdf69",
+          "en": "(This is the storage room where Chief Researcher Sawada is...\nThe deputy director was attacked by that strange creature, but...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k828; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k830",
+          "source_text_sha256": "211e2c1704cee38b77ee6307d17d7ca89e7805baf7e42b2ec41bb922db3c00b2",
+          "en": "(This is the storage room where Chief Researcher Sawada is...\nThe deputy director was attacked by that strange creature, but...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k830; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k832",
+          "source_text_sha256": "e20a8bf34c807089575515a9251a44bdb53dfde952dc737dc2e5b0c040585b2d",
+          "en": "Hehe... I'll show Chief Researcher Sawada the book I found in her locker!",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k832; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k834",
+          "source_text_sha256": "ba4c9f23a7441178059ee6e366fdc094efb36edacf22ad89784674b460c2bffa",
+          "en": "Hehe... I'll show Chief Researcher Sawada the book I found in her locker!",
+          "notes": "English draft imported from audited private workspace, translate-en-0132.json:p0/k834; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_212.luc",
+      "source_sha256": "3af3b860839559bd0e120981237f27c0c97f3c8a265b43dc4801e05214d2c46c",
+      "entries": [
+        {
+          "id": "p0/k179",
+          "source_text_sha256": "e8e8c519820eebf7d04b41ca2071f313c3eea3f9b54ea4d0a9056a08a6a324a8",
+          "en": "Aya Suzumura and Saki Honjo! Oh, I can't wait...",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k179; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k199",
+          "source_text_sha256": "1c5bd65aa07f6776d2d96bc4147d004a6f49e76456d00d0ff6166e7f1694caea",
+          "en": "Oh, hearing Aya Suzumura and Saki Honjo sing\nin the same show... I'm so excited...",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k199; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k225",
+          "source_text_sha256": "1d77f24100d3818d31d827ee53c8824adee48d1a8ca3a5cf2b4412d621dc33b2",
+          "en": "Hearing Aya Suzumura sing will be wonderful,\nbut above all, there's Saki Honjo! If she sings 'By Your Side...'\nthat would be perfect!",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k225; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "16214aac716626cb4992525ac3c707da1e710950d8bcce901a30aef56f21f08f",
+          "en": "It's finally time!\nI get to hear Aya Suzumura and Saki Honjo perform live!\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k276",
+          "source_text_sha256": "8f0e087607f42ebc236bed935e2f81266f4911d33ec43c428cca68b7d44d1a8d",
+          "en": "A Brazen Girl Named Kyoko",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k276; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k316",
+          "source_text_sha256": "d39f0338085a1569e3f9e721dc0808456eaaa674858d847cd6800ff8d7db724e",
+          "en": "Oh! We meet again, meow!\nThanks to your help, 'Absolutely Safe City 2' is finally finished, meow!",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k316; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k319",
+          "source_text_sha256": "d3f962729417f93b4c34189c61363a3fa1dfa0414d5f5c6164040886137456d8",
+          "en": "It really took forever, meow...\nDevelopment lasted as long as 'City Shrouded in Shadow,' meow.",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k319; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k344",
+          "source_text_sha256": "8c00c5496608e1e62920f223bfb4d7d33933313985cdc15a09bc4ef4f6e86a63",
+          "en": "Kyoko!! Where's Kyoko?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k344; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k346",
+          "source_text_sha256": "a8fe30414e64551bea9da18a727ad9a34e47eb9ca5b07ba919d7a3fc2d0e1f0f",
+          "en": "Just because I tried to see my daughter without telling my ex-husband,\nI've put Kyoko through this... Aaah...",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k346; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k349",
+          "source_text_sha256": "f1a66743d8b667485b7f5af84992bcdf450992439008d287d496f9b56224287f",
+          "en": "Kyoko...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k349; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k351",
+          "source_text_sha256": "05c8def3efe36bbd2bf7e888cd800f097d3ac323c761b62a98960ec045474c68",
+          "en": "A Girl Named Kyoko",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k351; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k355",
+          "source_text_sha256": "59c16886f2fd84b4d233ac6c37b9e5657d9fc94a57519f9fa0e13efb57d9d1d4",
+          "en": "Kyoko, thank goodness you're safe!",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k355; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k373",
+          "source_text_sha256": "c18344c1a9164ca32fff1f5cdcaa3e8a42fae4ac3a73a296ad163eb08723772f",
+          "en": "Kyoko's Mother",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k373; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k461",
+          "source_text_sha256": "ff2a3086249fca6184aca1638fbe9379d85bec56615241109fecca583519c836",
+          "en": "I like you too... Ah...",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k461; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k505",
+          "source_text_sha256": "3c757e94d3afa1fbd3527c16480227b73e0be60b0f6c0392cd2b4529a76b0652",
+          "en": "I have to go save Risa...",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k505; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_214.luc",
+      "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+      "entries": [
+        {
+          "id": "p0/k494",
+          "source_text_sha256": "8ad0251bd0e1ba1d0fa3a29502aaeebc5b5d8f8d959b169ae953268de4468a51",
+          "en": "Construction took eight years and two months, with a total project cost of 1.0564 trillion yen. The bridge was built by Kunshiran Construction, headquartered in Miyato City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k494; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "entries": [
+        {
+          "id": "p0/k303",
+          "source_text_sha256": "4cc1ebf405b61edbdad8b402a4729cceb46ca4e62dd9ae6d55443514ad9f8cfc",
+          "en": "Kunshiran Construction Office",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k303; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k315",
+          "source_text_sha256": "3c1f48957ab6297d3cce9c470c3a3819f80f81e73e7015682f96c563251ba9bd",
+          "en": "Head to the west side of the 19th floor. Special Vehicles Section 2 has come to rescue us.",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k315; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/mission_text.luc",
+      "source_sha256": "2aee79fe9a3c37c9672cc108ecc31d2e65d74f3d138592269420b8c674a88800",
+      "entries": [
+        {
+          "id": "p0/k76",
+          "source_text_sha256": "9bdf91468e3c06350d192fac3d0d8fac7fe8ed30a01ab6a42484c1bf7a37a304",
+          "en": "Apparently, Gyaos ate the key to the stairs leading to ground level along with the worker carrying it. Could there be a way to get it back? I'll search the area.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k76; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k77",
+          "source_text_sha256": "1d7293c805a71494f78955e8e05e491757a7371a78ecbb81ca77a3c8165cc96d",
+          "en": "Gyaos apparently regurgitates things it cannot digest. Searching its vomit might turn up the key.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k77; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k199",
+          "source_text_sha256": "96053e27d2a2ca9fab0ac7d205d92ceea516aabb562fcc64fc75a9ce94b95bc6",
+          "en": "With the little girl's help, I obtained a fire extinguisher. I'll put out the flames blocking the way and head for Special Vehicles Section 2, which is carrying out rescues.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k199; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_204_news_text.luc",
+      "source_sha256": "7381fb977b640ed21542e498875b08a1410a10a59a94a6bce31454c9527c4a90",
+      "entries": [
+        {
+          "id": "p0/k164",
+          "source_text_sha256": "8d22185c40762042ade70c93a9713895f74d244efd0391017e6d61f8e77bd69c",
+          "en": "A fire broke out at Iberis Tower in Sakura Ward, Miyato City, Miyato Prefecture, at around 9 p.m. today. Labors belonging to Division 2 of Special Vehicles Section 2, within the Tokyo Metropolitan Police Department's Security Bureau, rescued people trapped inside.\nPublic support for the Labor unit has reportedly grown among those who previously distrusted it. However, footage shows the Labors breaking through the building's outer wall to enter, and opinion is divided over whether this was necessary.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k164; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k179",
+          "source_text_sha256": "b215b12d06e9082c7e116efdb19a2bdddf00331c554600f72be2926556e345b8",
+          "en": "Kunshiran Construction Attacked",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k179; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k184",
+          "source_text_sha256": "98b6efa9a8e1f202fc7b75dc30105f9d68f68693ccce64be0495c98eecdb83ff",
+          "en": "Reports have emerged of a man causing a commotion over the Iberis Tower fire, shouting for his copy of Giant Shadow Weekly to be returned.\nThe man is an executive at Kunshiran Construction. A charred safe was found in the remains of the tower fire, and he has apparently been demanding the issue of Giant Shadow Weekly that was inside it.\nMiyato Prefectural Police are expected to question the executive as a person of interest in the fire. The magazine itself has not been found.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k184; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k187",
+          "source_text_sha256": "3932121aa4dd0ac7a73f377e167d8591d9639df5827138cc3f61a8471545bab3",
+          "en": "Kunshiran Construction President Missing",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k187; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k191",
+          "source_text_sha256": "29a0ffdcb86b046c359e7dbfc96049cd34a216851af96b46ed63c8e651df563e",
+          "en": "Kunshiran Construction's Bankbook Stolen",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k191; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k192",
+          "source_text_sha256": "4a4e0f2871d0216fb403dde4926fe026d796f5cecbe395c1cbefe34f36045c19",
+          "en": "A fire broke out at Iberis Tower at around 9 p.m. today. At the same time, a Labor attacked Kunshiran Construction's offices on the 20th floor and stole a safe.\nAfter the incident, the wreckage of what appeared to be the invading Labor and the stolen safe were found in the first-floor hall. Kunshiran Construction's bankbook was missing from the safe.\nThe account handles the company's operating funds. Miyato Prefectural Police are investigating on the assumption that the Labor's pilot took the bankbook and fled.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k192; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k193",
+          "source_text_sha256": "078349c2a77672a83855ed45995c8faceb57c1594285428e2e22c4a7f703be87",
+          "en": "Kunshiran Construction's Seal Stolen",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k193; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k194",
+          "source_text_sha256": "c7bce0a3f8a75765bcdde24e9b35b23797598acb022b8f61ea13cef18a5b101d",
+          "en": "A fire broke out at Iberis Tower at around 9 p.m. today. At the same time, a Labor attacked Kunshiran Construction's offices on the 20th floor and stole a safe.\nAfter the incident, the wreckage of what appeared to be the invading Labor and the stolen safe were found in the first-floor hall. Kunshiran Construction's seal was missing from the safe.\nHowever, the bankbook reportedly stored alongside it had been left behind. Why the culprit took only the seal remains a mystery.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k194; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k196",
+          "source_text_sha256": "282b488ae6a48372ae5de0ec2427fc8737d1f5010ac0a1dba2e80688422d6ffa",
+          "en": "A fire broke out at Iberis Tower at around 9 p.m. today. At the same time, a Labor attacked Kunshiran Construction's offices on the 20th floor and stole a safe.\nAfter the incident, the wreckage of what appeared to be the invading Labor and the stolen safe were found in the first-floor hall. Both a seal and a bankbook were missing from the safe.\nInvestigators say the bankbook and seal are used for Kunshiran Construction's operating funds. Miyato Prefectural Police are investigating on the assumption that the Labor's pilot took them and fled.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k196; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k231",
+          "source_text_sha256": "9658ae2fe52be7f8c3c2826ba683470d5992f4449a1cfb6273b58cc98478673e",
+          "en": "Environmental group NKX is fiercely protesting Kunshiran Construction's waterfront development.\nThe plan involves reclaiming land along Miyato Prefecture's waterfront to build a market and apartment buildings. Work began earlier this year, but has been suspended since an accident during construction last month.\nNKX has voiced opposition that could almost be interpreted as a threat, saying: 'Filling in this historic beach is outrageous. If this plan is forced through, we'll stop it by any means necessary.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k231; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k233",
+          "source_text_sha256": "17ef2a9126372f43ef24c6270ec7ef418186d3e837ebe94724b1e9dd29ea8714",
+          "en": "The leader of environmental group NKX is missing. Our staff have been contacting the group for several hours about the Iberis Tower fire and the attack on Kunshiran Construction, but have been told no answer is possible while the leader is absent. People connected with Kunshiran Construction are speculating that the group's leader was piloting the blue Labor that entered the tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k233; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k239",
+          "source_text_sha256": "6b5a64d527976eaec09b10aef020ec8f25c2807519157efb71dbbdb13824f058",
+          "en": "Witness statements have revealed that the Labor that entered Iberis Tower and stole a safe from Kunshiran Construction's office met up with a group of three on the 20th floor.\nOne of the three people reportedly wore a checked jacket. A suspicious group of three was also seen on the observation room floor before the fire. Police believe they are the same group and are investigating.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k239; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k249",
+          "source_text_sha256": "fc202b340c2d242f38e1086b0e3125c5b7a318206b6caf966de94c2ba359b8cb",
+          "en": "Early today, a lightweight red Chinese-style dress was stolen from Kunshiran Construction's office on the 19th floor of Iberis Tower.\nThe dress is a new product from Nanyakanya. Miyato Prefectural Police are investigating the theft and trying to locate it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k249; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k255",
+          "source_text_sha256": "07c6db5ca6825b1cd3c78840b7c03b51e2cc566f2e70c7994e438b67d855cbd7",
+          "en": "Perhaps emergencies reveal people's true nature.\nMr. H of Kunshiran Construction has become a hero after the recent building fire. Working in a 22nd-floor office, he opened a window as soon as the fire alarm sounded and urged those around him to evacuate.\nMr. Y, who escaped with him, said: 'H is usually quiet, and his work is a little below average, but he was like a different person. Without him, everyone would have panicked. Who knows what would have happened? He had a loud voice, clear instructions, and a reassuring manner, so everyone followed him. I'd like a boss like him.'\nH had already gone home and could not be interviewed, but from what we heard, he was certainly one of today's heroes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k255; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_208_news_text.luc",
+      "source_sha256": "8e4e33b0da797a9cb165e930ed36e6b44db1f729115c232dc5926f348f4597b5",
+      "entries": [
+        {
+          "id": "p0/k253",
+          "source_text_sha256": "661281abc979519d12caa2c434ca572bb731f17ee79500d55a4787f7ba9711e6",
+          "en": "Miyato Software Company Hyacinth Soft Goes Bankrupt",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k253; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k254",
+          "source_text_sha256": "a374951f7c047038e8aabadd4a77c034fb713a1e8138ba525d09a600a1f9d0f6",
+          "en": "It has emerged that Hyacinth Soft, a software company in Miyato City, will go bankrupt. Its performance had deteriorated sharply in recent years, and its management had disappeared. A new representative recently took over and sought to rebuild the company, but bankruptcy has now been decided.\nIts representative, Asano, said: 'I wanted to make steady progress, little by little, even with small jobs. But I couldn't dramatically improve the company's finances. It's heartbreaking.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k254; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k255",
+          "source_text_sha256": "c4bc98192303ff63767ca71c7d17a219aff93fd1e431684be87a824dcd7837ad",
+          "en": "Miyato's Hyacinth Soft Draws Attention with Its Own App",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k255; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k256",
+          "source_text_sha256": "3e00183a333ab5def7dc176124dc5fb8ebec59a1505ae62dcd37c3a673f677d0",
+          "en": "A smartphone app developed by Hyacinth Soft, a software company in Miyato City, is attracting attention.\nThe app teaches arithmetic, mathematics, and baking through a game-like experience. Asano, the company's representative, said: 'I heard that baking requires precise calculations of quantities and knowledge of chemical reactions. The original idea was that it might be fun to learn those things together.'\nThe recently announced beta, a trial version still in development, has been well received. Users have praised it, saying, 'Now I understand the Pythagorean theorem,' and 'I made successful cream puffs for the first time.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k256; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_2_news_text.luc",
+      "source_sha256": "b3888d5ad7dab3bcfecbbcb58b427cc8aa668cc6aa75ad9458a9bdca71590cbe",
+      "entries": [
+        {
+          "id": "p0/k122",
+          "source_text_sha256": "e3fffbd334a7da3df621e16995c1fc0b7e8f890bf87a1d57c3ae3768474f9c57",
+          "en": "A giant monster suddenly appeared near Miyato Sky Tower and attacked it with fireballs.\nThe tower had become a Gyaos nest.\n\nThe attack set the nest ablaze, apparently engulfing most of the Gyaos.\nMuch of Miyato Sky Tower also collapsed.\nThere seems little hope that those carried off by Gyaos survived.\n\nThe giant monster repeatedly fired indiscriminately at the fleeing Gyaos and appears to have wiped them out.\nThe fireballs also caused devastating damage to the surrounding area.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k122; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k126",
+          "source_text_sha256": "f4cd037066e28fb2d750986f7f60613feb370045b0309329ee06140941126f6a",
+          "en": "Gyaos, the flying monsters responsible for unprecedented damage on Suzuran Avenue.\nIt has emerged that the government had already discovered them, but sought to protect them as rare survivors.\n\nThe Gyaos that partially destroyed Miyato Sky Tower and nested there have been found to exceed human size immediately after emerging and to grow at an abnormal rate.\nExperts say a single Gyaos can lay eggs and reproduce on its own.\n\nAs a result, the government's response to their explosive growth came too late, and many people lost their lives.\n\nNumerous comments condemning the government have been posted online.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k126; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k129",
+          "source_text_sha256": "40d81841e5e5cb413481d07617807f87315ab198ab0520fb16d2c9c757a1df10",
+          "en": "Gyaos Slices Up the Tower?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k129; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k130",
+          "source_text_sha256": "21dd060318fc8ac61dda4e6f8550a0cf20b6bf32f86000c84941254d62392ee5",
+          "en": "An unusual scene was reportedly observed at Miyato Sky Tower, which had become a Gyaos nest.\nOne Gyaos fired a beam at the stairs leading directly to the observation deck, tearing them apart.\n\nWhy would it take an action that might have brought down its entire nest along with the tower?\nAn expert suggested, 'Perhaps it destroyed the escape route to keep its prey from getting away.'\n\nGyaos attacks humans and possesses both advanced intelligence and remarkable reproductive ability.\nUrgent countermeasures are needed, but the government is slow to act.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k130; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k131",
+          "source_text_sha256": "d7ba24d2ee0dc879496e05fbcd8423686a00ed5dcb0130ecfe204b3bb9a9855b",
+          "en": "Gyaos Eggs Discovered",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k131; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k132",
+          "source_text_sha256": "c4e260626d18b875d816edf38ed96c78d355b1901a9d8889309e1c2583bf1332",
+          "en": "Further reports on Gyaos reveal that eggs have been found in its nest.\nAccording to experts, it can lay eggs without a mate, and young will hatch from those eggs.\nIt is hard to believe, but terrifying if true. Even one surviving individual could begin a new population.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k132; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k162",
+          "source_text_sha256": "e98d3b2544cd8c7819a076ada7fc3cceac6a2af719ca2ac0444e69ed0c799aed",
+          "en": "A secondhand buyer was seen here too, quietly wearing his usual outfit.\nHe was on the first floor of Miyato Sky Tower, which had become a Gyaos nest.\n\nWhether he was doing business despite the crisis or because of it, people were reportedly seen speaking to him and making trades.\nCertainly, many ATMs may not work in a situation like this. There may be no power at all. Were they raising money for food and water, or trying to arrange priority passage to safety? We do not know.\n\nIt is unknown whether this secondhand buyer returned alive.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k162; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k174",
+          "source_text_sha256": "d815291ec0238191fdf269d24e83aeec9c3860961a45847e914f9470d34a71a1",
+          "en": "This footage shows fires breaking out all across the city.\nIt was reportedly filmed at Miyato Sky Tower. Why someone would try to record such footage while Gyaos flew around the tower is unknown.\nPerhaps it was captured by chance.\n\nThe spread of smartphones has certainly led to far more ordinary people recording events like journalists. Yet looking through a phone camera also seems to make some people less aware that what they see is real, and they often fail to notice nearby danger.\nI sincerely hope as many people as possible understand that, once they lose their lives, it is too late.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k174; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k176",
+          "source_text_sha256": "3b26f989543281dc297d057c3523f287e65f27baa68ec26fab317cf867f8e0ae",
+          "en": "This footage captures a young person desperately running down Miyato Sky Tower's emergency stairs.\nA Gyaos fired beams after them, destroying the stairs one section after another.\n\nWas it simply a whim that kept it from aiming directly at the young person?\nMany creatures on Earth torment their prey in ways humans perceive as playing with it. Was this the same behavior?\n\nWhatever the reason, the young person seems to have escaped somehow.\nWe have obtained footage of what happened afterward too, but will present that another time.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k176; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k178",
+          "source_text_sha256": "9e6d03c04b0ea2e85131839a6ca16aab6e542cb8e61b4fc8d348bd1bf34129f9",
+          "en": "Our news helicopter filmed a young person moving along a narrow steel beam without a safety line, with Gyaos nearby.\nSeveral Gyaos surrounded them and seemed to be fighting over their human prey.\n\nTheir struggle occasionally sent gusts of wind past the young person, who repeatedly staggered and nearly fell.\nA fall from a beam dozens of meters above the ground would be fatal.\nSadly, our helicopter could not approach for fear of a Gyaos attack. All we could do was watch.\n\nFortunately, the young person seems to have crossed the beam safely, but we lost track of them afterward.\nWe hope they made it back alive.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k178; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k180",
+          "source_text_sha256": "f61ef435ccf2c4ceda0bd05e47e44872fac07b2aa6debb3738790e3bf4d540c9",
+          "en": "Our reporting has revealed that someone shared adhesive bandages with strangers on the observation deck of Miyato Sky Tower after it became a Gyaos nest.\n\nIn an extraordinary situation where you could be injured at any moment, caring about others and doing what you can to help is a noble act, easy to describe but difficult to perform.\nI cannot be the only person warmed by learning that such people have been seen in many places.\nThe more people like this there are, the more often we can rise again.\nI resolved anew to keep this in mind and become someone who can put it into practice.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k180; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k182",
+          "source_text_sha256": "30fce20d0f9e68e31f7ef635734d5ad1a7d5edde0233328e3244b101dad58c92",
+          "en": "I encountered a woman whose partner had gone missing during the disturbances.\nThere are so many people like her. Many have been separated not only from partners, but from children or parents.\n\nSadly, few reportedly manage to reunite safely.\nTheir belongings are often found later in Gyaos vomit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k182; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k188",
+          "source_text_sha256": "71351fa75f5a8797e0f1eb517e151ef4462625b3e00f2bba18336983989e167d",
+          "en": "We obtained footage of the observation deck at Miyato Sky Tower during the incident.\n\nIt shows a man sitting weakly with his knees drawn up, perhaps having given up because he could do nothing.\nA young person was also seen desperately running down the tower's emergency stairs, but not everyone can act with such courage.\n\nWithout powerful weapons, surrounded by Gyaos that no human could match in strength, few people could have believed they would survive.\n\nFortunately, this man did survive. Perhaps the experience taught him the value of life: previously unmotivated at work, he now works with such enthusiasm that his boss and coworkers are astonished.\nYou never know what will change a person.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k188; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k190",
+          "source_text_sha256": "a9ab2f64ef69b4fa7cf22d6a1a8d8ff1554b184c2ae10d4c2d342086a2bad4a6",
+          "en": "People were confirmed stranded in what had once been Miyato Sky Tower's second floor.\nSeveral Gyaos surrounded them. Waiting to become food and gathering the courage to flee, only to be spotted and devoured, may have carried equally grave risks.\n\nSadly, we have been unable to confirm whether the man in this footage survived.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k190; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k192",
+          "source_text_sha256": "6bdc31da6e28caec1c7c85258719af008bb1e1d877c4bfdd025955e41c184a16",
+          "en": "A man and woman gaze at the night scenery from the observation deck. It looks like an ordinary scene, but it is anything but.\nThis was filmed on the observation deck's first floor while Gyaos occupied Miyato Sky Tower.\nWhile most people trembled or hid, these two had steeled themselves and quietly committed the view they shared to memory.\nThey did not seem to have abandoned hope of survival. Rather, they were firmly determined to treasure their time together instead of wasting it in fear.\nEveryone is different. Even in a crisis, people's priorities vary.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k192; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k194",
+          "source_text_sha256": "cd0b98772b6b07807e3970e379d14ddd4ba076c226a14163d7d56c422fe9e79a",
+          "en": "Among those stranded on the observation deck was the couple shown here.\nApparently, they lashed out at each other throughout the ordeal. It is shameful to blame the person you supposedly love for coming to Miyato Sky Tower and having your lives put at risk.\n\nWhen the door to the emergency stairs opened, they both rushed to escape before the other.\nWitnesses say the man used the woman as a shield and saved himself. Sadly, she was carried off by Gyaos again and remains missing.\n\nTaking legal action against the man would be difficult. But when I learned he had begun living with another woman just days after surviving, I felt an indescribable sadness.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k194; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k198",
+          "source_text_sha256": "eabc1e2bd5c526e9faf3fac435adeee409da6cb101ea3221c187846599d2f8a6",
+          "en": "An unopened can of juice was reportedly found in Gyaos vomit.\nWitnesses say the young person who retrieved it carried it away. One wonders whether they drank it afterward.\nPersonally, no matter how well sealed it was or how thoroughly I washed the can, I could never bring myself to drink it.\nI intend to keep looking for the young person who took the juice and ask what really happened. Please await further reports.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k198; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "1b38317047812e7d21db711fe5bc11a8c0d1f6e4ef5c03570a820e74daf002e8",
+          "en": "When Gyaos entered even the first floor of Miyato Sky Tower's observation deck, people reportedly fled, screaming and shouting.\nFortunately, the emergency stairwell door opened soon afterward, apparently keeping casualties on that floor to a minimum.\n\nTo Gyaos, humans are merely food, targeted just as a bird targets fish near the water's surface.\nAlthough we know about food chains, we humans usually see ourselves as predators and rarely experience the fear of becoming prey. Being placed in that situation would naturally cause panic.\n\nI sincerely hope no new predator appears.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k202",
+          "source_text_sha256": "f92b5f56afbeee4f3cd09fb48aeecf84e192859d726d5a0f33e268a027675292",
+          "en": "We obtained footage of a woman being pursued by Gyaos in what had once been the second-floor observation deck of Miyato Sky Tower.\nFortunately, she seems to have escaped on this occasion, though she must have felt more dead than alive.\nWe have been unable to confirm whether she ultimately returned safely.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k202; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k204",
+          "source_text_sha256": "0ee70371801d1ed2f1b2cce8e0dc10d135254a2ed37dbe83cf6685a091d7dc6f",
+          "en": "Gyaos has been found to regurgitate what it cannot digest, but this behavior is also seen in birds.\nFor birds, this mainly includes insect exoskeletons, bones, and feathers.\n\nThe behavior is also said to help clean digestive organs such as the esophagus.\nMost people probably give it little thought, but knowing even sparrows do this might make you look at birds more often from tomorrow onward.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k204; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k210",
+          "source_text_sha256": "6cfe57bf11371b45c3d86aad4402152f66a17bc0cbbabb85ad22ea0fc1715398",
+          "en": "This footage shows the first-floor observation deck of Miyato Sky Tower while it was a Gyaos nest.\nWas the large puddle across the floor caused by a broken water pipe?\nWith the second-floor observation deck almost completely destroyed, it would not have been surprising to see worse flooding or fires from electrical shorts. For the survivors, perhaps this was a small mercy amid the disaster.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k210; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_3_news_text.luc",
+      "source_sha256": "492540a524b928b7863ed9ea0a383b887612b0d538bac0b0389928602cf2cbe5",
+      "entries": [
+        {
+          "id": "p0/k105",
+          "source_text_sha256": "191ef60b8a69d3c21368431ffe9506d8bafd9f84f3e9c1f928f695ab06f7c8a2",
+          "en": "Reunion with Yuki",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k105; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k106",
+          "source_text_sha256": "8e2760c8c9fb1e012812b3a38904c58e90e2abd5f8f5fb09bb4d956443acc491",
+          "en": "What time was it today...?\nAfter abandoning Yuki, how long had I been in the darkness?\nIt felt like hours, like dozens of hours, yet also like mere seconds.\nI thought I would never see her again, but there she was, right before me!\nI didn't understand what had happened, but none of that mattered.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k106; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k155",
+          "source_text_sha256": "495f8248c66a60ad8e23e8af81fd8f20fdb0f9f5d64bbb8929bd261e5cc3e11b",
+          "en": "Aya Suzumura's New Song 'I Want to Greet You as Usual and Say I'm Sorry' Is a Huge Hit",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k155; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k157",
+          "source_text_sha256": "894cc93cfa09f985451b7fbd115e74b17fb3c55925811cf6c2d0770fd988f5cc",
+          "en": "Aya Suzumura's New Song 'I Want to Take Your Hand and Celebrate Our Reunion' Is a Huge Hit",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k157; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k159",
+          "source_text_sha256": "31726cb1503e7304a47b36077c55b8604256ff37b265c846da840bfb057a3dc9",
+          "en": "Aya Suzumura's New Song 'I'll Be So Happy I Won't Be Able to Stop Crying' Is a Huge Hit",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k159; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k160",
+          "source_text_sha256": "35abf78aabbff33f810fcb764c432c87c7cdb9726f0a07adf85b2da63c785839",
+          "en": "CD sales of rising young singer-songwriter Aya Suzumura's new song, 'I'll Be So Happy I Won't Be Able to Stop Crying,' have reportedly reached 500,000.\nThe song describes the inner struggle of a woman trying to confess her unrequited love and has struck a chord with listeners of many generations.\nThe television drama 'Teacup Love,' which uses it as its theme song, also continues to enjoy high ratings.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k160; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k161",
+          "source_text_sha256": "b5995763c0d977aed12fc43550770c6d2ef6705f6a79b76ec8939e2537b9c2b7",
+          "en": "Aya Suzumura's New Song 'I'll Hold You and Never Let Go' Is a Huge Hit",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k161; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k163",
+          "source_text_sha256": "fe37a2dd59e357c3e0f27ab0f87da7da2273fbaf91bfc3f1cc06143c0ced721c",
+          "en": "Aya Suzumura's New Song 'I Want to Get Down on My Knees and Apologize' Is a Huge Hit",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k163; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k165",
+          "source_text_sha256": "16856004d8f24307e65b460b70bf6e94f39d89e3ce3fe5c877d2cc122b412030",
+          "en": "Aya Suzumura's New Song 'I'll Hold You Desperately and Keep On Kissing You' Is a Huge Hit",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k165; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_news_text.luc",
+      "source_sha256": "1c575203f6420af477aae10e01c4dffd0fdba46d2940fd05c4ee1d6f99715c7d",
+      "entries": [
+        {
+          "id": "p0/k107",
+          "source_text_sha256": "194fbf82e3c90dccb818faab5358fbe7858fdfe169ffdae3a85367fc173ab285",
+          "en": "Flocks of Flying Monsters Arrive in Miyato City's Office District",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k107; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k108",
+          "source_text_sha256": "3f53be653daa1511462b3790a11a9d37831ce34d2b7f230996b70ee1bcf2db06",
+          "en": "Large numbers of flying monsters descended on Suzuran Avenue in Miyato City.\nThe monsters are highly aggressive toward humans, attacking and carrying off people in the office district, which was plunged into chaos in an instant.\nThey seem to have left Suzuran Avenue for now, but similar damage is reportedly occurring in many other districts.\nSuzuran Avenue alone has suffered hundreds of injuries, and the number of missing people is believed to be around one hundred.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k108; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k110",
+          "source_text_sha256": "ebfdd993e5f43baed1e7884cad1b082fbabb064d14c398d981ff37a705eb8742",
+          "en": "The government announced that the flying monsters appearing near Suzuran Avenue in Miyato City will be called Gyaos.\nAssociate Professor N of S University, who is gathering witness reports, says Gyaos grows far faster than any known creature. It has been confirmed to attack and eat humans, but little else about its biology is known.\nThe government is urgently trying to locate its nesting grounds. Associate Professor N said, 'If we find the nest, some of those carried off may be there.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k110; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k114",
+          "source_text_sha256": "598d6b080e9cabaa590389f79d11c126af5247d24bef1894cbf36502fc74abc1",
+          "en": "Traffic accidents occurred on Suzuran Avenue in Miyato City after Gyaos appeared at an intersection and startled drivers. At least 21 vehicles have been confirmed involved in collisions.\nAt the time, large numbers of Gyaos were flying along Suzuran Avenue. Drivers on connecting roads reportedly found the creatures' huge bodies suddenly passing directly in front of them.\nNumerous other traffic accidents occurred on Suzuran Avenue as well, and police say they are still assessing the damage.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k114; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k116",
+          "source_text_sha256": "144bb2535ef72aff59114f54b98ca8a8cbed299aacfc6e4a1726c528cd548f1e",
+          "en": "PANSIE Department Store, in the center of Suzuran Avenue in Miyato City, suffered devastating damage from Gyaos. Most of the building's windows were shattered, and connecting passages, atriums, and other areas were severely damaged. A PANSIE spokesperson said, 'We are currently assessing the damage. We have no prospect of reopening yet.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k116; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k118",
+          "source_text_sha256": "d95c5d149a6f85fb43578c80072ab27e5ad09b982cb64d740eddade3b5e3e753",
+          "en": "There was widespread chaos on Suzuran Avenue in Miyato City after Gyaos arrived, but one man reportedly allowed himself to be carried off in a brave attempt to rescue an abducted woman.\n\nWitnesses say the two young people were attacked by Gyaos just after escaping an overturned bus. The woman pushed the man aside and was captured in his place. The man then spread his arms on top of the bus and let himself be caught to follow her.\nWe can only pray that these brave young people are safe.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k118; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k122",
+          "source_text_sha256": "4f779a8e45fb394aff5a753fa033ca03d66c0ddec8a5745eda66e00b1e549f2a",
+          "en": "A woman was seen being attacked and carried off by Gyaos near PANSIE Department Store in Miyato City.\nWitnesses say she was attacked as she hurried out of the entrance. Many other people have also been carried off by Gyaos.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k122; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k124",
+          "source_text_sha256": "9bcb3ecfd43fa605a38ee014be8fa92057f7fb9d19ce67798e17491faae4b5e0",
+          "en": "Footage has captured a Gyaos carrying someone away in Miyato City. A man in red can be seen clutched in its feet. The Gyaos reportedly flew away into the eastern sky.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k124; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k132",
+          "source_text_sha256": "4822b638e7b982f349fceecf6ddf329268cc83cdf8063f485e0a1c155cb02973",
+          "en": "A Gyaos destroyed a connecting passage at PANSIE Department Store in Miyato City.\nTraffic accidents had left more than a dozen people stranded on the road beneath it when the Gyaos attacked, bringing the passage down on them. The full extent of the damage is still under investigation.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k132; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k133",
+          "source_text_sha256": "4ed51b6842def470bc4a3bc9cb28a58df1b1bd93149970d2281bb13bac5eed68",
+          "en": "An Unexpected Reunion amid the Gyaos Crisis",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k133; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k139",
+          "source_text_sha256": "3265246e9514586c38e7e3114ee4ae0bb4f4b6d54ed95fa883132e31ca310d28",
+          "en": "Bridge Views, Part 204: Kunshiran Bridge",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k139; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k140",
+          "source_text_sha256": "dd54ec76db8ff2a7b41ceaa0e940e3ecc2b320e17f56fbb9210a5602a865e178",
+          "en": "Built by Kunshiran Construction, Kunshiran Bridge is one of Suzuran Avenue's essential date spots.\nThe night scenery reflected in the water below is beautiful and reportedly soothes office workers exhausted from their jobs.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k140; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k144",
+          "source_text_sha256": "957b957b0204d3a8f34e11e0c71df669434eab7c6ef4736d4431dc6584a3f5f9",
+          "en": "While reporting on the Gyaos attack in Miyato City, I saw young people photographing Gyaos attacking humans. The photographs will probably be posted on social media. I believe there is value in showing the horror of the incident, but thinking of the victims left me with a feeling I could not bear.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k144; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k146",
+          "source_text_sha256": "0ad52fde2735b846e10ba262b89dcaa9f24b0c8c3806f5c99c6df1d5ef0ccc06",
+          "en": "A Gyaos entered the east building of PANSIE Department Store in Miyato City. It reportedly broke through the atrium roof and attacked people sheltering inside. Associate Professor N of S University said, 'Its determination to pursue prey is extraordinary compared with known creatures. It may also have an exceptionally keen sense of smell.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k146; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k147",
+          "source_text_sha256": "eb4e50f3fe0cb0dc251ed63d053b105ff171a9c94c99d7811d447fa05f119ce4",
+          "en": "The History of Suzuran Avenue, Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k147; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k149",
+          "source_text_sha256": "6407110a9b28e62b4a292d54f719a2a38c1cdb3c3ff981d4e16bcb5048263207",
+          "en": "The History of Suzuran Avenue, Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k149; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k151",
+          "source_text_sha256": "798e2271d24fff257c2d0d6422c36649465ff8eccbf00ab414a45d1ae5e2fef3",
+          "en": "The History of Suzuran Avenue, Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k151; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k153",
+          "source_text_sha256": "51de740874197fbb80545219e8abe05875caa2dfbd2cb0ea22c5d839a2c10dbb",
+          "en": "The History of Suzuran Avenue, Part 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k153; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k155",
+          "source_text_sha256": "75476768b64b2061ff61600cecce55d8050221c9b1db09901bf74f6a79992540",
+          "en": "The History of Suzuran Avenue, Part 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k155; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k157",
+          "source_text_sha256": "21cfc688b18a7c2ca5c9288c5ffcc8b68072cd3a4768366948aa30fb37db13d5",
+          "en": "The History of Suzuran Avenue, Part 6",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k157; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k159",
+          "source_text_sha256": "38d85decc0c45d22c3b1e3998eae01791022faa2a2208a830ff5ef86d8077e50",
+          "en": "The Seven Mysteries of Suzuran Avenue, Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k159; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k161",
+          "source_text_sha256": "37d9b398af9d6a2426e346471a6c3588b8aed8566032d65076fcfcd1124eb132",
+          "en": "The Seven Mysteries of Suzuran Avenue, Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k161; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k163",
+          "source_text_sha256": "097db3474bfabc6c6dee55e5eac6fbe84183565441cf203511e128639a2e0d5e",
+          "en": "The Seven Mysteries of Suzuran Avenue, Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k163; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k165",
+          "source_text_sha256": "0abdf6dc8c37648826afb833f6c0aecbc37193af83fdcd4e0029ad42871975ee",
+          "en": "The Seven Mysteries of Suzuran Avenue, Part 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k165; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k167",
+          "source_text_sha256": "43cd289e18f531f275b3adf62a25eb5f6c26174c9d323e79773d354ce2d2e3c3",
+          "en": "The Seven Mysteries of Suzuran Avenue, Part 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k167; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k169",
+          "source_text_sha256": "adfd92606dd1bb3e1012f6077cbca0268bba379de0140bac04ae83f0934e3734",
+          "en": "The Seven Mysteries of Suzuran Avenue, Part 6",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k169; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k171",
+          "source_text_sha256": "bd2c0780c1d69e7680d8710720a3e0245cd0a8e01668e1e6d62ce75d5696cbb1",
+          "en": "The Seven Mysteries of Suzuran Avenue, Part 7",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k171; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k173",
+          "source_text_sha256": "4744bf8e20eca2c9f05696babb18934e43edcf9e854286a27da11bead2b0a113",
+          "en": "'The Tale of the Last Sword' to Become a Video Game",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k173; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k175",
+          "source_text_sha256": "7f581d93b5c33d6d3400dd809e82fae5bdf22e70895c985095e4f73811238bd8",
+          "en": "There was widespread chaos on Suzuran Avenue in Miyato City after Gyaos arrived, but one woman reportedly allowed herself to be carried off in a brave attempt to rescue another abducted woman.\n\nWitnesses say the two young people were attacked by Gyaos just after escaping an overturned bus. One woman pushed the other aside and was captured in her place. The remaining woman then spread her arms on top of the bus and let herself be caught to follow her.\nWe can only pray that these brave young people are safe.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k175; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k176",
+          "source_text_sha256": "bd0f824d40c1b6b20ef644a2624c18f667073f0cf10bb30b61958c6831fb1a9e",
+          "en": "Miyato Cinema to Close: Residents Mourn Its Loss",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k176; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k178",
+          "source_text_sha256": "db2c8d6f416586ef587bc784c05841c814d729b2146d867abfdae86276520346",
+          "en": "Miyato Cinema Draws Attention as a Center of Reconstruction",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k178; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_211_news_text.luc",
+      "source_sha256": "920eeae783fb0176d73e69e1c532c85afcd108af38f65d3cfc2173fa1670944f",
+      "entries": [
+        {
+          "id": "p0/k68",
+          "source_text_sha256": "2e673315a0b6fec133ebd26790b71be0dda61412fc42b67b5ac830eb4fe2cce2",
+          "en": "The National Cosmic Ray Research Institute has been studying the purple flashes of lightning frequently observed over the country in recent days. It has suggested that matter drifting in space may have partially broken through the Van Allen belts and entered the atmosphere.\nAccording to Deputy Director Dr. Sasaki, who is conducting the research, the basic mechanism behind the flashes is becoming clearer, but their composition is still under investigation. Research is continuing with help from private research institutions and local IT companies.\nSome people have expressed concern about possible effects on the human body. Identifying the cause and composition as soon as possible is eagerly awaited.\n\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0151.json:p0/k68; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k72",
+          "source_text_sha256": "28b77ed1cadb12740e8034259dad5c8f88ce98681518b4d29a1f4bb06add2206",
+          "en": "Mizuki Sawada, a chief researcher at the National Cosmic Ray Research Institute, has an unusual background: she used to write scenarios for video games.\nShe reportedly began working on scenarios with game companies while still at university, helping develop several visual novel adventures depicting platonic romance between men and women.\nSawada showed a particularly charming smile as she talked about her student days.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0151.json:p0/k72; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

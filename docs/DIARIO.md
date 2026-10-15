@@ -1,5 +1,25 @@
 # Diário do projeto
 
+### 14/10/2026 — retomada após aplicação: rádio, laboratório e torre
+
+- Davy pediu continuar a tradução. Seis lotes novos (+163 EN) e uma correção
+  própria: 10.754/16.100 preenchidas, 5.346 vazias. Inglês incompleto.
+- Rádio/escritório/laboratório, fichas e itens de Asano/Sawada/Sasaki, documentos
+  da Kunshiran Construction (kana explícita), notícias da torre e primeiras fases.
+  Artigos longos completos; variantes, parágrafos e quebras preservados.
+- Gyaos confirmado no site oficial https://gamera-rebirth.com/kaiju/gyaos.html ;
+  Special Vehicles Section 2 e Division 2 na página oficial de Patlabor
+  https://www.playstation.com/en-us/games/patlabor-the-case-files/ .
+  Termos documentados nas notas; leituras humanas desconhecidas permanecem vazias.
+- Correção editorial própria: light red substituído por lightweight red em
+  0125:k249, pois o JP indica vermelho e peso leve, não vermelho-claro.
+  Valor anterior/motivo registrados; traduções recebidas preservadas.
+- Auditoria dos 173 JSONs e reconstrução/releitura das 10.754 EN em 117 recursos
+  PASS. Adições07: 163 em 17 recursos, sem original japonês; união com pilotos
+  validada em memória: 10.884. Sem reconstruir o pacote a cada lote.
+- en-05 permanece aplicada em 10.721, PT-BR 94. Sem jogo iniciado ou saves
+  alterados. Consolidado/retomada privados salvos para continuar as lacunas.
+
 ### 14/10/2026 — inglês atualizado aplicado: en-05
 
 - Davy pediu aplicar o inglês atual. Gerado pacote privado runtime-preview-en-05,
