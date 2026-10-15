@@ -1890,3 +1890,27 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   ativa, CheckOnly PASS; en-07 apagada. Ideias de Davy registradas: ícones de
   teclado (mapa em godzilla-core/gpu/pad.cpp; port já detecta modo teclado) e
   logo em inglês (title_logo.tex; avaliar estética antes de ativar).
+
+### 15/10/2026 — encerramento da sessão Claude (retomar no Codex)
+
+Estado: prévia runtime-preview-en-08 ativa (13.214 textos EN + 57 texturas:
+menu Options e títulos de fase). EN 13.084/16.100 no consolidado privado; patch
+em translations/localization-en-additions-20261015-01.json + textures-en.json.
+FitHud ligado por padrão em EN (run_native.ps1, -OriginalHud desliga).
+
+Retorno final de Davy:
+- Options traduzido, mas tamanhos de fonte desiguais entre rótulos (label()
+  reduz a fonte para caber: padronizar um tamanho único para todos e encurtar
+  textos que não cabem) e botões de seleção mal acabados (relabel() apaga o
+  texto com cor sólida e deixa marcas na borda/gradiente: preferir recompor o
+  botão a partir de uma faixa limpa do próprio botão, ex. copiar coluna sem texto).
+- Jogo melhor e jogável, ainda com stutter; deseja 60 FPS. Jogo pede flip rate 0
+  (não há trava de 30). Investigar: compilação de shaders na primeira aparição
+  (stutter na abertura), esperas Finish/readback, coletar com
+  "Medir desempenho atual EN.cmd". Davy deixou uma partida aberta; não fechar.
+
+Próximos passos sugeridos: (1) acabamento das texturas de Options; (2) ver
+títulos de fase no jogo; (3) desempenho/stutter; (4) ícones de teclado: opção
+no launcher primeiro, troca dinâmica depois (mapa em godzilla-core/gpu/pad.cpp);
+(5) teste de logo EN só com aprovação visual de Davy; (6) quebra de linha por
+espaço (rotina de texto do eboot); (7) PT-BR depois.
