@@ -22,6 +22,7 @@ if (-not $CheckOnly) {
     }
 }
 $env:KYOEI_LANGUAGE=$Language
+$env:KYOEI_PIPELINE_CACHE_DIR=Join-Path $Work 'cache\vulkan'
 $env:KYOEI_RASTER_TRACE=if ($OrbTrace -or $OrbTraceNext) { '1' } else { '0' }
 if ($InGameDialogs -and $Language -ne 'en') { throw 'A prévia dos diálogos dentro do jogo está disponível em inglês.' }
 $env:KYOEI_IN_GAME_DIALOGS=if ($InGameDialogs) { '1' } else { '0' }

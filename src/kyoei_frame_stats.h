@@ -29,21 +29,29 @@ public:
         if (!Enabled()) return;
         // Deferred publication may run on the scheduler worker. Keep samples
         // per thread rather than racing or mixing overlapping CPU scopes.
-        static thread_local std::array<std::array<double, 120>, 6> samples{};
-        static thread_local std::array<size_t, 6> counts{};
-        static thread_local std::array<bool,6> diagnostics{};
-        static thread_local std::array<uint64_t,6> previous_generation{};
+        static thread_local std::array<std::array<double, 120>, 9> samples{};
+        static thread_local std::array<size_t, 9> counts{};
+        static thread_local std::array<bool,9> diagnostics{};
+        static thread_local std::array<uint64_t,9> previous_generation{};
         auto& values = samples[category]; auto& count = counts[category];
         auto diagnostic_end=KyoeiDiagnosticActivity::Now();
         diagnostics[category]|=KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end) ||
             (count && previous_generation[category]!=diagnostic_start.generation);
         previous_generation[category]=diagnostic_end.generation;
-        values[count++] = std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - start).count();
+        const double elapsed=std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - start).count();
+        values[count++] = elapsed;
+        const char* names[] = {"prepare", "present", "linear-downloads",
+                               "readback-finish", "readback-publish", "readback-map",
+                               "shader-compile", "graphics-pipeline", "compute-pipeline"};
+        // A cold start may compile fewer than 120 shaders. Preserve evidence of
+        // its slow calls, with a strict log cap instead of per-frame traffic.
+        static thread_local std::array<unsigned,3> slow_reports{};
+        if(category>=6 && elapsed>=1000./60. && slow_reports[category-6]++<8)
+            gz_log("Kyoei compile stall: stage=%s milliseconds=%.2f diagnostic=%u",names[category],elapsed,
+                unsigned(KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end)));
         if (count != values.size()) return;
         double total = 0; for (double value : values) total += value;
         auto sorted = values; std::sort(sorted.begin(), sorted.end());
-        const char* names[] = {"prepare", "present", "linear-downloads",
-                               "readback-finish", "readback-publish", "readback-map"};
         gz_log("Kyoei work stats: stage=%s calls=120 mean_ms=%.2f p95_ms=%.2f max_ms=%.2f diagnostic=%u",
                names[category], total/count, sorted[113], sorted.back(),unsigned(diagnostics[category]));
         count = 0;diagnostics[category]=false;

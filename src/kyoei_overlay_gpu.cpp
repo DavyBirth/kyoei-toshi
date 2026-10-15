@@ -43,7 +43,8 @@ void Initialize(const Vulkan::Instance &instance,vk::Format format,unsigned imag
         ImGui::DestroyContext();
         initialized=false;
     }
-    KyoeiOverlayModel::InitializeGui(KYOEI_GUI_FONT_DIR,false);
+    const char *font_directory=std::getenv("KYOEI_GUI_FONT_DIR");
+    KyoeiOverlayModel::InitializeGui(font_directory && *font_directory ? font_directory : KYOEI_GUI_FONT_DIR,false);
     const vk::Instance handle=instance.GetInstance();
     if (!ImGui_ImplVulkan_LoadFunctions(instance.ApiVersion(),[](const char *name,void *user) {
         return VULKAN_HPP_DEFAULT_DISPATCHER.vkGetInstanceProcAddr(*static_cast<const vk::Instance *>(user),name);

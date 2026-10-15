@@ -1,5 +1,25 @@
 # Desempenho — objetivo de 60 FPS
 
+## Continuação de 15/10
+
+Log 20261015_023230:73 janelas/8.760 intervalos,31,66 FPS agregados,
+17,73–60,08 por janela e máximo516,21ms. Inclui menus/transições: não é percurso
+controlado. Prepare0,15ms, Present0,48ms; cinco janelas readback-finish10,86ms
+em média (máximo28,47ms). Não somar tempos de threads como caminho crítico.
+
+Cache Vulkan complementar ao cache de shaders: vendor/device/pipelineCacheUUID,
+cabeçalho versão1,32..64MiB, fallback vazio se rejeitado. Criar antes do WarmUp.
+O portátil começa sem cache. Runtime usa TerminateProcess; saída normal pede
+Sync pela fila GPU com espera máxima3s e substituição atômica. Erros não gravam.
+Unidade verifica identidade, truncamento, troca atômica/configuração ausente.
+Build PASS; benefício real pendente do teste de partida bloqueado por revisão.
+
+KYOEI_FRAME_STATS acrescenta shader-compile/graphics-pipeline/compute-pipeline.
+Agrega120 chamadas por thread/categoria. Até oito pausas por categoria/thread
+acima de16,67ms ficam registradas individualmente, para aberturas com poucas
+compilações. Analisador não interpreta esses registros como contagem completa.
+Isso não mede tempo GPU isolado nem demonstra60 FPS.
+
 Davy pediu em 14/10/2026 análise minuciosa com objetivo de pelo menos 60 FPS.
 Orçamento de referência: 16,67 ms por quadro. Objetivo ainda não atingido nem
 garantido pelo hardware/código atual. Avaliar estabilidade dos tempos, não só

@@ -24,6 +24,9 @@ function(kyoei_replace_checked variable before after)
   string(REPLACE "${before}" "${after}" adapted "${${variable}}")
   set(${variable} "${adapted}" PARENT_SCOPE)
 endfunction()
+kyoei_replace_checked(KYOEI_SERVICES
+  "getenv(\"GZ_USER_NAME\") : \"Davy\""
+  "getenv(\"GZ_USER_NAME\") : \"Player\"")
 file(READ "${KYOEI_CORE}/src/rt_file.c" KYOEI_FILES)
 kyoei_replace_checked(KYOEI_FILES
   "void gz_file_configure(const char *app0, const char *user) {"
@@ -166,6 +169,9 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" CONTENT "${
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c" CONTENT "${KYOEI_DIALOG_UI}" @ONLY)
 list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c")
 file(READ "${KYOEI_CORE}/src/loader.c" KYOEI_LOADER)
+kyoei_replace_checked(KYOEI_LOADER
+  "    gz_log(\"Exit code %d\", code);"
+  "    extern void kyoei_gpu_cache_shutdown(void);\n    if(code==0) kyoei_gpu_cache_shutdown();\n    gz_log(\"Exit code %d\", code);")
 kyoei_replace_checked(KYOEI_LOADER
   "    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);"
   "    if (!no_gpu && !list_stubs && !getenv(\"GZ_READBACK_LINEAR\") && _putenv_s(\"GZ_READBACK_LINEAR\", \"1\")) fail(\"cannot configure linear image readback\");\n    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);")
@@ -494,6 +500,42 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "device_addr=image.info.guest_address, download, download_size] {"
   "device_addr=image.info.guest_address, download, download_size] {\n        KyoeiFrameStats::Work publish_measurement(4);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
+
+# Kyoei-only driver cache. Keep the frozen dependency intact. Create the
+# Vulkan cache before WarmUp so preloaded pipelines benefit from its contents.
+file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_pipeline_cache.cpp" KYOEI_PIPELINE_CACHE)
+set(KYOEI_PIPELINE_CACHE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_CACHE}")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "        GraphicsPipeline::SerializationSupport sdata{};"
+  "        KyoeiFrameStats::Work kyoei_compile_work(7);\n        GraphicsPipeline::SerializationSupport sdata{};")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "        ComputePipeline::SerializationSupport sdata{};"
+  "        KyoeiFrameStats::Work kyoei_compile_work(8);\n        ComputePipeline::SerializationSupport sdata{};")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "    LOG_INFO(Render_Vulkan, \"Compiling {} shader {:#x} {}\", info.stage, info.pgm_hash,"
+  "    KyoeiFrameStats::Work kyoei_compile_work(6);\n    LOG_INFO(Render_Vulkan, \"Compiling {} shader {:#x} {}\", info.stage, info.pgm_hash,")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "    WarmUp();\n\n    auto [cache_result, cache] = instance.GetDevice().createPipelineCacheUnique({});"
+  "    const auto properties=instance.GetPhysicalDevice().getProperties();\n    KyoeiPipelineCache::Identity identity{properties.vendorID,properties.deviceID,{}};\n    std::memcpy(identity.uuid.data(),properties.pipelineCacheUUID.data(),16);\n    auto initial=KyoeiPipelineCache::Load(identity);\n    auto [cache_result, cache] = instance.GetDevice().createPipelineCacheUnique({.initialDataSize=initial.size(),.pInitialData=initial.data()});\n    if(cache_result!=vk::Result::eSuccess && !initial.empty()) {\n        auto retry=instance.GetDevice().createPipelineCacheUnique({});\n        cache_result=retry.result; cache=std::move(retry.value);\n    }")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "    pipeline_cache = std::move(cache);"
+  "    pipeline_cache = std::move(cache);\n    WarmUp();")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "PipelineCache::~PipelineCache() = default;"
+  "PipelineCache::~PipelineCache() { KyoeiPipelineCache::Persist(instance,pipeline_cache); }")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_cache.cpp" CONTENT "${KYOEI_PIPELINE_CACHE}" @ONLY)
+file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_pipeline_serialization.cpp" KYOEI_PIPELINE_SERIALIZATION)
+set(KYOEI_PIPELINE_SERIALIZATION "#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_SERIALIZATION}")
+kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
+  "void PipelineCache::Sync() {\n    Storage::DataBase::Instance().Close();"
+  "void PipelineCache::Sync() {\n    KyoeiPipelineCache::Persist(instance,pipeline_cache);\n    Storage::DataBase::Instance().Close();")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" CONTENT "${KYOEI_PIPELINE_SERIALIZATION}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_cache.cpp"
+  "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" src/kyoei_gpu_cache_shutdown.cpp)
+add_executable(test_kyoei_pipeline_cache src/test_kyoei_pipeline_cache.cpp)
+target_compile_features(test_kyoei_pipeline_cache PRIVATE cxx_std_23)
+target_compile_options(test_kyoei_pipeline_cache PRIVATE -UNDEBUG)
+target_compile_definitions(test_kyoei_pipeline_cache PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_rasterizer.cpp" KYOEI_RASTERIZER)
 set(KYOEI_RASTERIZER "#include \"kyoei_raster_trace.h\"\n${KYOEI_RASTERIZER}")

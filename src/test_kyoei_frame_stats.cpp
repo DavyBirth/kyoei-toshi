@@ -45,6 +45,13 @@ int main(int argc,char **) {
         CHECK(logs.size()==previous+1);
         CHECK(logs.back().find(stages[category-3])!=std::string::npos);
     }
+    const char* compile_stages[]={"shader-compile","graphics-pipeline","compute-pipeline"};
+    for(unsigned category=6;category<9;++category) {
+        const auto previous=logs.size();
+        for(unsigned i=0;i<120;++i) { KyoeiFrameStats::Work work(category); }
+        CHECK(logs.size()==previous+1);
+        CHECK(logs.back().find(compile_stages[category-6])!=std::string::npos);
+    }
     // Worker samples cannot complete a partial renderer-thread window.
     const auto previous=logs.size();
     for(unsigned i=0;i<60;++i) { KyoeiFrameStats::Work work(4); }
@@ -55,5 +62,8 @@ int main(int argc,char **) {
     CHECK(logs.size()==previous);
     for(unsigned i=0;i<60;++i) { KyoeiFrameStats::Work work(4); }
     CHECK(logs.size()==previous+1);
+    const auto before_stall=logs.size();
+    { KyoeiFrameStats::Work work(6);std::this_thread::sleep_for(std::chrono::milliseconds(20)); }
+    CHECK(logs.size()==before_stall+1 && logs.back().find("Kyoei compile stall: stage=shader-compile")!=std::string::npos);
     std::puts("FRAME STATS PASS: capture within/between calls annotated; clean window resets; raw samples retained");
 }

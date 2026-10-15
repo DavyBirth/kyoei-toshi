@@ -38,6 +38,8 @@ display=[line for line in text.splitlines() if 'Kyoei display trace:' in line]
 readbacks=[dict(images=int(images),waits=int(waits),bytes=int(size)) for images,waits,size in re.findall(
     r'Kyoei readback batch: images=(\d+) waits=(\d+) bytes=(\d+)',text)]
 signals=[line for line in text.splitlines() if re.search(r'STOP:|Kyoei map failure:|Kyoei flip failure:|Assertion Failed|\bVK_ERROR_\w+|GPU .*\[(?:Critical|Error)',line,re.I)]
+compile_stalls=[dict(stage=stage,milliseconds=float(milliseconds),diagnostic=bool(int(diagnostic)))
+    for stage,milliseconds,diagnostic in re.findall(r'Kyoei compile stall: stage=([^ ]+) milliseconds=([\d.]+) diagnostic=([01])',text)]
 report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args.start_byte+len(data),
             presentation_windows=len(frames),summarized_intervals=120*len(frames),
             estimated_presentation_seconds=round(sum(row['mean_ms']*120/1000 for row in frames),3),
@@ -54,7 +56,9 @@ report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args
                 windows_p95_over_budget=sum(row['p95_ms']>1000/60 for row in frames),
                 note='Window summaries cannot establish minimum FPS or raw frame deadline counts. Unflagged does not imply gameplay or absence of other profiling.'),
             tls_handled_range=[min(tls),max(tls)] if tls else None,
-            detected_failure_lines=signals,display_trace=display,readback_batch_samples=readbacks)
+            detected_failure_lines=signals,display_trace=display,readback_batch_samples=readbacks,
+            compile_stalls=compile_stalls,
+            compile_stalls_note='Capped at eight slow calls per compiler category/thread; not a complete stall count.')
 if args.out:
     args.out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({key:value for key,value in report.items() if key not in ('frames','work')},indent=2))
