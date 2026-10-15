@@ -1876,3 +1876,12 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   -OriginalHud desliga. CheckOnly EN PASS (ajuste HUD: True).
 - Textura estranha do orbe: nunca foi corrigida (diagnóstico pendente desde 13/10),
   não é regressão desta sessão.
+
+### 15/10/2026 — menu de opções em inglês (texturas)
+
+- Davy: mais rápido, ainda com stutters/quedas; menu Options em japonês.
+- Rótulos do menu são texturas texture/menu_option/*.tex (BC3 + mips, BILZ/zlib).
+  Nova ferramenta tools/localize_textures.py apaga o texto e desenha o inglês
+  (NotoSans) sobre o fundo original; tabela translations/textures-en.json (38).
+  build_runtime_translation.py aceita --textures-en. Prévia en-07 (13.214 textos
+  + 38 texturas) ativa, CheckOnly PASS; en-06 apagada. Visual no jogo pendente.
