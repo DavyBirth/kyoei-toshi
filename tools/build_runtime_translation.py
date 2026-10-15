@@ -45,6 +45,8 @@ def main():
     parser.add_argument('--validate-only',action='store_true',
                         help='Verify resource roundtrips without creating archives or publishing a manifest')
     args=parser.parse_args();output=output_path(args.output)
+    if args.textures_en and (not args.textures_en.is_dir() or not any(args.textures_en.rglob('*.tex'))):
+        raise ValueError('Localized texture directory is missing or contains no TEX files')
     selected=tuple(dict.fromkeys(args.language or ('en','pt-BR')))
     audit=json.loads((REPO/'docs/m2/audit.json').read_text(encoding='utf8'))
     inventory=json.loads((REPO/'docs/m0/inventory.json').read_text(encoding='utf8'))

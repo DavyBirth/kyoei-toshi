@@ -29,10 +29,10 @@ public:
         if (!Enabled()) return;
         // Deferred publication may run on the scheduler worker. Keep samples
         // per thread rather than racing or mixing overlapping CPU scopes.
-        static thread_local std::array<std::array<double, 120>, 9> samples{};
-        static thread_local std::array<size_t, 9> counts{};
-        static thread_local std::array<bool,9> diagnostics{};
-        static thread_local std::array<uint64_t,9> previous_generation{};
+        static thread_local std::array<std::array<double, 120>, 12> samples{};
+        static thread_local std::array<size_t, 12> counts{};
+        static thread_local std::array<bool,12> diagnostics{};
+        static thread_local std::array<uint64_t,12> previous_generation{};
         auto& values = samples[category]; auto& count = counts[category];
         auto diagnostic_end=KyoeiDiagnosticActivity::Now();
         diagnostics[category]|=KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end) ||
@@ -42,11 +42,12 @@ public:
         values[count++] = elapsed;
         const char* names[] = {"prepare", "present", "linear-downloads",
                                "readback-finish", "readback-publish", "readback-map",
-                               "shader-compile", "graphics-pipeline", "compute-pipeline"};
+                               "shader-compile", "graphics-pipeline", "compute-pipeline",
+                               "scheduler-submit", "scheduler-wait", "queue-lock"};
         // A cold start may compile fewer than 120 shaders. Preserve evidence of
         // its slow calls, with a strict log cap instead of per-frame traffic.
         static thread_local std::array<unsigned,3> slow_reports{};
-        if(category>=6 && elapsed>=1000./60. && slow_reports[category-6]++<8)
+        if(category>=6 && category<9 && elapsed>=1000./60. && slow_reports[category-6]++<8)
             gz_log("Kyoei compile stall: stage=%s milliseconds=%.2f diagnostic=%u",names[category],elapsed,
                 unsigned(KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end)));
         if (count != values.size()) return;

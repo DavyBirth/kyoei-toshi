@@ -1985,3 +1985,49 @@ títulos de fase no jogo; (3) desempenho/stutter; (4) ícones de teclado: opçã
 no launcher primeiro, troca dinâmica depois (mapa em godzilla-core/gpu/pad.cpp);
 (5) teste de logo EN só com aprovação visual de Davy; (6) quebra de linha por
 espaço (rotina de texto do eboot); (7) PT-BR depois.
+
+### 15/10/2026 — retorno do portable, mouse e desempenho no Codex
+
+- Davy aprovou Options e títulos dos capítulos no portable. Relatou muitas
+  quedas/stutter; prioridade desempenho, alvo RX 580 + i5-9400. Deseja Linux
+  junto ao Windows em pasta enxuta. Esclareceu manter somente x64, sem 32 bits.
+- Log privado portable: 174 janelas/20.880 intervalos, 23,64 FPS agregados,
+  máximo 767,32 ms; cenas/menus misturados. Shader até 22,91 ms, pipeline
+  gráfico até 39,59 ms; readback-finish média 14,98 ms. DESEMPENHO.md atualizado.
+- Filtro dos logs de sucesso de mapeamento reduz lock/stdout/fflush no
+  streaming; KYOEI_MEMORY_TRACE=1 restaura detalhe. Erros/relatórios preservados.
+  Novas métricas scheduler-submit/scheduler-wait/queue-lock; Finish mantido.
+  Nenhum ganho de FPS declarado sem nova medição.
+- Câmera por mouse implementada via SDL3/analógico direito, cursor relativo
+  enquanto focado, liberação em perda de foco/modais; F7 alterna captura.
+  Teclado IJKL e controle continuam disponíveis. Testes sem partida PASS;
+  sensação/sensibilidade e captura real em gameplay ainda pendentes.
+- Build PASS; testes mouse/log filter/frame stats on/off/pipeline cache/
+  overlay/input mode PASS; cinco regressões de runtime translation PASS.
+  CheckOnly EN com PerformanceStats PASS, sem partida iniciada pelo agente.
+- Escolhas locais revistas: I'm a man. / I'm a woman. Prévia en-14 preparada,
+  13.226 entradas + 59 texturas. Verificação leu pacote: ambas as escolhas
+  corretas; todas as 59 texturas byte-idênticas às anteriores.
+- Auditoria privada: 13.096/16.100 preenchidos, 3.004 vazios; 2.121 cadastros
+  provisórios, 256 modelos de notícia, 320 créditos e 235 revisão individual,
+  além de outros grupos. Há notícias/textos narrativos ainda sem EN. Detalhes
+  em LOCALIZACAO-PENDENCIAS.md. Nenhum JSON privado alterado nesta continuação.
+- Falha de atualização: ferramenta copiou idioma en-13 antes de descobrir
+  executável bloqueado pela partida portable PID9416. En-13 havia sido gerada
+  sem texturas por caminho incorreto aceito silenciosamente. Não fechar jogo.
+  Erro comunicado a Davy. Corrigido gerador para rejeitar pasta vazia/inexistente;
+  en-14 recomposta com 59 texturas e verificada. Prévia inválida en-13 removida
+  após conferir substituto, publicação e conteúdo; metadados/evidência no diário.
+- Builder agora verifica os executáveis antes de qualquer cópia e mantém
+  session.lock durante atualização. Atualizações de cópia já finalizada
+  atualizam hashes/metadados, sem manter alegação antiga de varredura completa.
+  data/saves não são apagados. Recusa com partida ativa verificada.
+- Atualizador oculto PID3048 aguarda fechamento do jogo E launcher; ferramenta
+  tools/update_portable_when_closed.py. Estado em build/portable-update-status.json;
+  stdout/stderr em build/portable-update.*.log. Ainda não declarar portable
+  atualizado enquanto estado não for complete; pasta em uso pode conter o
+  idioma incorreto da tentativa inicial até a atualização ser aplicada.
+- Linux: referência Bloodborne tem caminhos POSIX reais (probe/runtime_memory/
+  build.sh); base Kyoei depende de Win32 e bibliotecas .lib. WSL não instalado.
+  Nenhum executável Linux entregue. Mapa técnico/critério de entrega em LINUX.md.
+  Snapshot Godzilla e projetos irmãos preservados. Nenhuma partida encerrada.

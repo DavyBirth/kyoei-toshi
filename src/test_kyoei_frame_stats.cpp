@@ -45,8 +45,9 @@ int main(int argc,char **) {
         CHECK(logs.size()==previous+1);
         CHECK(logs.back().find(stages[category-3])!=std::string::npos);
     }
-    const char* compile_stages[]={"shader-compile","graphics-pipeline","compute-pipeline"};
-    for(unsigned category=6;category<9;++category) {
+    const char* compile_stages[]={"shader-compile","graphics-pipeline","compute-pipeline",
+        "scheduler-submit","scheduler-wait","queue-lock"};
+    for(unsigned category=6;category<12;++category) {
         const auto previous=logs.size();
         for(unsigned i=0;i<120;++i) { KyoeiFrameStats::Work work(category); }
         CHECK(logs.size()==previous+1);

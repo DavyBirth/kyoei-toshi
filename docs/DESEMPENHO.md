@@ -1,5 +1,30 @@
 # Desempenho — objetivo de 60 FPS
 
+## Teste portable de Davy e continuação em 15/10
+
+`build/portable-performance-20261015.json`: 174 janelas, 20.880 intervalos,
+23,64 FPS agregados; janelas de 11,90 a 60,06 FPS, pausa máxima 767,32 ms.
+Menus/carga/jogo misturados; não é benchmark comparável de uma mesma rota.
+Compilações observadas: shader até 22,91 ms, pipeline gráfico até 39,59 ms.
+Readback-finish: 11 janelas, média 14,98 ms, máximo 37,83 ms; leituras de
+uma imagem/256 bytes. Não somar médias de threads nem atribuir toda pausa
+à compilação. Prepare 0,21 ms e Present 0,63 ms agregados.
+
+Mudanças compiladas/testadas nesta continuação:
+
+- Mensagens de sucesso de mapeamento/desmapeamento ficam opt-in com
+  `KYOEI_MEMORY_TRACE=1`. Erros/relatórios continuam visíveis. Evita lock,
+  stdout e fflush por mapeamento durante streaming; ganho ainda não medido.
+- Novas métricas `scheduler-submit`, `scheduler-wait` e `queue-lock` separam
+  preparação/submissão, espera por timeline e disputa pelo mutex da fila.
+  Tempos de parede por thread, não timestamps GPU. Sem remover Finish.
+- A referência Bloodborne consultada também usa Finish antes da publicação
+  de readback síncrono. Copiar somente Flush não preserva esse contrato.
+
+Próxima medição: mesma rota com cache quente/frio, usando o portable atualizado;
+observar as três métricas novas junto a readback e compilações. Meta de hardware
+RX 580/i5-9400 ainda sem teste nessa máquina. Linux x64: avaliação em LINUX.md.
+
 ## Continuação de 15/10
 
 Log 20261015_023230:73 janelas/8.760 intervalos,31,66 FPS agregados,

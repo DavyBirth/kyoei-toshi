@@ -74,6 +74,22 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('output',type=Path);ap.add_argument('--finalize',action='store_true');a=ap.parse_args()
     out=a.output.resolve()
     if not out.is_relative_to(ROOT/'build') or out==ROOT/'build':raise ValueError('Private output must be a child of ignored build/')
+    # A loaded PE cannot be opened for writing on Windows. Check both before
+    # copying anything, including archives that a running game may be reading.
+    for name in ['runtime/kyoei.exe','City Shrouded in Shadow.exe']:
+        current=out/name
+        if current.exists():
+            try:
+                with current.open('r+b'):pass
+            except PermissionError as error:
+                raise RuntimeError('Close the game and portable launcher before updating; no files copied: '+name) from error
+    # Keep this handle alive for all of main(). The launcher uses FileShare.None,
+    # so it cannot start another session while an existing private copy updates.
+    profile_guard=None
+    if (out/'data').is_dir():
+        try:profile_guard=(out/'data/session.lock').open('a+b')
+        except PermissionError as error:
+            raise RuntimeError('Portable session is active; no files copied') from error
     proof=json.loads((ROOT/'docs/native-prepare.json').read_text(encoding='utf-8'))
     publication=json.loads((ROOT/'docs/m4/runtime-preview.json').read_text(encoding='utf-8'))
     preview=publication['languages']['en']
@@ -110,7 +126,24 @@ def main():
     subprocess.run([str(csc),'/nologo','/codepage:65001','/target:winexe','/platform:x64','/optimize+',
                     '/r:System.Windows.Forms.dll','/r:System.Drawing.dll','/win32icon:'+str(out/'assets/game.ico'),
                     '/out:'+str(out/'City Shrouded in Shadow.exe'),str(ROOT/'src/kyoei_portable_launcher.cs')],check=True)
-    (out/'README.txt').write_text('CITY SHROUDED IN SHADOW\n\nOpen "City Shrouded in Shadow.exe". Choose English or Japanese.\nKeep all folders together. No installation or administrator account is needed.\n\nWindows 10/11 x64, compatible Vulkan graphics driver and AVX2-capable CPU required.\nThe complete folder must be on NTFS or exFAT (individual files exceed 4 GB).\nSaves and new logs stay in data/. No existing personal saves are included.\n\nKEYBOARD\nWASD: move. IJKL: camera. Arrow keys: directional pad.\nX: Circle (normally confirm). Space: Cross (normally back/cancel).\nZ: Square. C: Triangle. Q/E: L1/R1. 1/3: L2/R2.\nEnter: Options. Tab: touchpad. Controller prompts still show PS4 buttons.\nAn SDL-compatible gamepad can also be used.\n\nEnglish localization and runtime are experimental. Some text/images and layout\nremain under review. Performance depends on the computer; 60 FPS is a target,\nnot a guarantee. Rendering, game timing and original Japanese remain intact.\n\nPrivate test copy made from the owner\'s disc. Do not publish game files.\nRuntime contains GPL software; see licenses/.\n',encoding='utf-8')
+    (out/'README.txt').write_text('CITY SHROUDED IN SHADOW\n\nOpen "City Shrouded in Shadow.exe". Choose English or Japanese.\nKeep all folders together. No installation or administrator account is needed.\n\nWindows 10/11 x64, compatible Vulkan graphics driver and AVX2-capable CPU required.\nThe complete folder must be on NTFS or exFAT (individual files exceed 4 GB).\nSaves and new logs stay in data/. No existing personal saves are included.\n\nKEYBOARD AND MOUSE\nWASD: move. Mouse or IJKL: camera. Arrow keys: directional pad.\nThe mouse is captured while the game has focus. F7 releases/recaptures it.\nAlt+Tab releases it; port dialogs temporarily restore the cursor.\nX: Circle (normally confirm). Space: Cross (normally back/cancel).\nZ: Square. C: Triangle. Q/E: L1/R1. 1/3: L2/R2.\nEnter: Options. Tab: touchpad. Controller prompts still show PS4 buttons.\nAn SDL-compatible gamepad can also be used.\n\nEnglish localization and runtime are experimental. Some text/images and layout\nremain under review. Performance depends on the computer; 60 FPS is a target,\nnot a guarantee. Rendering, game timing and original Japanese remain intact.\n\nPrivate test copy made from the owner\'s disc. Do not publish game files.\nRuntime contains GPL software; see licenses/.\n',encoding='utf-8')
+    if not a.finalize and (out/'manifest.json').exists():
+        # Updating an already-tested private copy must not leave stale hashes or
+        # retain a claim that these new artifacts passed the full privacy scan.
+        manifest=json.loads((out/'manifest.json').read_text(encoding='utf-8'))
+        if manifest.get('title')!='CUSA03562' or manifest.get('version')!='01.03':
+            raise ValueError('Existing portable manifest targets another game')
+        for row in manifest['files']:
+            path=out/row['path']
+            if not path.is_file():raise ValueError('Portable manifest file missing: '+row['path'])
+            if row['path'] in {'runtime/kyoei.exe','City Shrouded in Shadow.exe','languages/en/common.psarc','README.txt'}:
+                row.update(bytes=path.stat().st_size,sha256=digest(path))
+        manifest.update(english_entries=publication.get('entries_by_language',{}).get('en',publication.get('entries_per_language')),
+            english_textures=preview.get('textures'),privacy_scan_passed=False,updated_since_finalization=True,
+            privacy_scope='Private runtime update; full distribution privacy scan must be repeated before redistribution. Existing data/ and saves preserved.')
+        temporary=out/'manifest.json.tmp'
+        temporary.write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+        temporary.replace(out/'manifest.json')
     if a.finalize:
         forbidden=[os.environ.get('USERNAME','').lower().encode(),Path(os.environ['USERPROFILE']).name.lower().encode(),
                    b'codex',b'claude',b'chatgpt',b'openai']

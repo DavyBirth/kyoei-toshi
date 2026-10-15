@@ -217,6 +217,10 @@ kyoei_replace_checked(KYOEI_LOADER
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
   "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);")
+set(KYOEI_LOADER "#include \"kyoei_log_filter.h\"\n${KYOEI_LOADER}")
+kyoei_replace_checked(KYOEI_LOADER
+  "void gz_log(const char *format, ...) { va_list a;"
+  "void gz_log(const char *format, ...) { if (!kyoei_log_visible(format)) return; va_list a;")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 set(KYOEI_PORT_EXE_NAME "kyoei" CACHE STRING "Prepared port binary: kyoei or kyoei-orb-trace")
@@ -598,6 +602,33 @@ kyoei_replace_checked(KYOEI_RASTERIZER "${KYOEI_SCISSOR_PUSH}"
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasterizer.cpp" CONTENT "${KYOEI_RASTERIZER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasterizer.cpp")
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
+file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_scheduler.cpp" KYOEI_SCHEDULER)
+set(KYOEI_SCHEDULER "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n${KYOEI_SCHEDULER}")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "    SubmitExecution(info);\n    Wait(presubmit_tick);"
+  "    { KyoeiFrameStats::Work measurement(9); SubmitExecution(info); }\n    { KyoeiFrameStats::Work measurement(10); Wait(presubmit_tick); }")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "    std::scoped_lock lk{submit_mutex};"
+  "    auto lk = [] { KyoeiFrameStats::Work measurement(11); return std::unique_lock{submit_mutex}; }();")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_scheduler.cpp" CONTENT "${KYOEI_SCHEDULER}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_scheduler.cpp")
+file(READ "${KYOEI_CORE}/gpu/pad.cpp" KYOEI_PAD)
+set(KYOEI_PAD "#include \"kyoei_mouse.h\"\n${KYOEI_PAD}")
+kyoei_replace_checked(KYOEI_PAD
+  "    if (buttons & 0x100) data.analogButtons.l2 = 255;"
+  "    KyoeiMouse::Apply(data.rightStick);\n    if (buttons & 0x100) data.analogButtons.l2 = 255;")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp" CONTENT "${KYOEI_PAD}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp")
+set(KYOEI_WINDOW "#include \"kyoei_mouse.h\"\n${KYOEI_WINDOW}")
+kyoei_replace_checked(KYOEI_WINDOW
+  "    SDL_Event event;"
+  "    KyoeiMouse::Update(window);\n    SDL_Event event;")
+kyoei_replace_checked(KYOEI_WINDOW
+  "        gz_pad_event(event);"
+  "        KyoeiMouse::Event(window,event);\n        gz_pad_event(event);")
+kyoei_replace_checked(KYOEI_WINDOW
+  "    gz_pad_poll();"
+  "    KyoeiMouse::Update(window);\n    gz_pad_poll();")
 set(KYOEI_WINDOW "#include \"kyoei_raster_trace.h\"\n#include \"kyoei_overlay_gpu.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "    SDL_Event event;"
@@ -708,6 +739,13 @@ target_include_directories(test_kyoei_ime_overlay PRIVATE src "${KYOEI_CORE}/src
 target_link_libraries(test_kyoei_ime_overlay PRIVATE kyoei_imgui user32 gdi32)
 add_executable(test_kyoei_overlay_barriers src/test_kyoei_overlay_barriers.cpp)
 get_target_property(KYOEI_OVERLAY_GPU_INCLUDES kyoei_videoout INCLUDE_DIRECTORIES)
+add_executable(test_kyoei_mouse src/test_kyoei_mouse.cpp)
+target_include_directories(test_kyoei_mouse PRIVATE ${KYOEI_OVERLAY_GPU_INCLUDES})
+target_compile_features(test_kyoei_mouse PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_mouse PRIVATE NOMINMAX _CRT_SECURE_NO_WARNINGS)
+target_link_libraries(test_kyoei_mouse PRIVATE "${KYOEI_CORE}/prebuilt/_deps/gz_sdl-build/SDL3-static.lib" ${KYOEI_SYSTEM_LIBRARIES})
+add_executable(test_kyoei_log_filter src/test_kyoei_log_filter.c)
+target_compile_definitions(test_kyoei_log_filter PRIVATE _CRT_SECURE_NO_WARNINGS)
 target_include_directories(test_kyoei_overlay_barriers PRIVATE ${KYOEI_OVERLAY_GPU_INCLUDES})
 target_compile_features(test_kyoei_overlay_barriers PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_overlay_barriers PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX VULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1)
