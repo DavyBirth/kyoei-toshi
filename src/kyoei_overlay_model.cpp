@@ -89,7 +89,8 @@ void keyboard_locked(unsigned key) {
     if (done || (kind==KYOEI_OVERLAY_MESSAGE && !message_choices)) return;
     if (key==KYOEI_OVERLAY_KEY_CANCEL) { finish_locked(1); return; }
     if (key==KYOEI_OVERLAY_KEY_ACCEPT) {
-        if (kind!=KYOEI_OVERLAY_MESSAGE || message_choices) finish_locked(0);
+        if ((kind!=KYOEI_OVERLAY_MESSAGE || message_choices) &&
+            (kind!=KYOEI_OVERLAY_NAME || kyoei_name_can_accept(&name))) finish_locked(0);
         return;
     }
     if (kind==KYOEI_OVERLAY_NAME) {
@@ -126,7 +127,9 @@ void name_box(float width,bool controller) {
     ImGui::SetScrollX(std::max(0.f,cursor-available+18*scale));
     ImGui::EndChild();
     if (name.select_all) ImGui::PopStyleColor();
-    ImGui::TextDisabled("%u / %u",(unsigned)name.length,(unsigned)name.limit);
+    if (kyoei_name_is_roman_default(&name)) ImGui::TextDisabled("Default name");
+    else ImGui::TextDisabled("%u / %u",(unsigned)name.length,(unsigned)name.native_limit);
+    if (!kyoei_name_can_accept(&name)) ImGui::TextWrapped("Use up to %u characters, or keep the default name.",(unsigned)name.native_limit);
     if (controller) {
         const float gap=6*scale,key_width=(width-40*scale-gap*9)/10;
         for (unsigned key=0;key<40;++key) {
@@ -149,7 +152,9 @@ void name_box(float width,bool controller) {
         ImGui::TextWrapped("Square: erase   Triangle: shift   L1/R1: cursor   Options: done");
     } else ImGui::TextWrapped("Type your name. Arrows/Home/End: cursor   Backspace/Delete: erase   Ctrl+A: select all");
     ImGui::Spacing();
+    ImGui::BeginDisabled(!kyoei_name_can_accept(&name));
     if (ImGui::Button("Confirm",ImVec2(135*scale,36*scale))) finish_locked(0);
+    ImGui::EndDisabled();
     ImGui::SameLine();
     if (ImGui::Button("Cancel",ImVec2(135*scale,36*scale))) finish_locked(1);
     if (!controller) ImGui::TextDisabled("Enter: confirm   Esc: cancel");
@@ -197,13 +202,15 @@ void message_box() {
 extern "C" int kyoei_overlay_begin_name(const wchar_t *title,const uint16_t *text,size_t length,size_t limit) {
     std::scoped_lock lock{mutex};
     if (!available_locked() || !kyoei_name_begin(&name,text,length,limit)) return 0;
+    const char *language=std::getenv("KYOEI_LANGUAGE");
+    if (limit==4 && language && !std::strcmp(language,"en")) kyoei_name_show_roman(&name);
     caption=ui_text(title); done=false; end_status=2; kind=KYOEI_OVERLAY_NAME; ++revision; return 1;
 }
 extern "C" int kyoei_overlay_name_result(uint16_t *text,size_t capacity,unsigned *result) {
     std::scoped_lock lock{mutex};
-    if (kind!=KYOEI_OVERLAY_NAME || !done || !result || !text || capacity<=name.length) return 0;
+    if (kind!=KYOEI_OVERLAY_NAME || !done || !result || !text || capacity<=kyoei_name_stored_length(&name)) return 0;
     *result=end_status;
-    if (!end_status) std::memcpy(text,name.text,(name.length+1)*sizeof(uint16_t));
+    if (!end_status && !kyoei_name_export(&name,text,capacity)) return 0;
     return 1;
 }
 extern "C" void kyoei_overlay_release_name() {

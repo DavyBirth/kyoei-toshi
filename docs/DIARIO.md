@@ -1988,7 +1988,9 @@ espaço (rotina de texto do eboot); (7) PT-BR depois.
 
 ### 15/10/2026 — retorno do portable, mouse e desempenho no Codex
 
-- Davy aprovou Options e títulos dos capítulos no portable. Relatou muitas
+- Davy relatou Options e títulos dos capítulos bons no portable; isso não
+  constitui aprovação definitiva das texturas, conforme esclareceu depois.
+  Relatou muitas
   quedas/stutter; prioridade desempenho, alvo RX 580 + i5-9400. Deseja Linux
   junto ao Windows em pasta enxuta. Esclareceu manter somente x64, sem 32 bits.
 - Log privado portable: 174 janelas/20.880 intervalos, 23,64 FPS agregados,
@@ -2031,3 +2033,47 @@ espaço (rotina de texto do eboot); (7) PT-BR depois.
   build.sh); base Kyoei depende de Win32 e bibliotecas .lib. WSL não instalado.
   Nenhum executável Linux entregue. Mapa técnico/critério de entrega em LINUX.md.
   Snapshot Godzilla e projetos irmãos preservados. Nenhuma partida encerrada.
+
+### 15/10/2026 — revisão isolada, nomes romaji e ambiente Linux
+
+- Davy corrigiu: as texturas não estão definitivamente aprovadas. Corrigido
+  o registro anterior. Nova galeria privada build/texture-review/index.html:
+  59 pares original/inglês, 118 PNGs nativos, zoom e decisões/notas exportáveis.
+  Todas pendentes por padrão; aberta no navegador. Conferência Edge/headless
+  e screenshot inspecionada. Fonte/documentação em TEXTURAS-REVISAO.md.
+- Davy reiterou nome/sobrenome em romaji, edição dentro do jogo e teclado
+  virtual apenas quando estiver usando controle. Overlay/modelo já existiam,
+  mas portable não habilitava: launcher agora define IN_GAME_DIALOGS=1 em EN.
+  Launcher de desenvolvimento inicia checkbox marcado; preferência anterior
+  salva ainda pode prevalecer. Fallback nativo preservado se backend falhar.
+- Implementada apresentação reversível dos quatro defaults: Ken/Misaki e
+  Miharu/Matsubara. Editor mostra romaji completo e devolve UTF-16 original
+  ao convidado se mantido. Nome personalizado continua literal e limitado a
+  quatro unidades; valores maiores não são truncados nem confirmados.
+- Adapter da conversão wcstombs_s confere thunk/GOT/export nativo; atua nos
+  dois campos verificados e concatenação no retorno0xac4e64. Armazenamento e
+  saves não mudam. Fonte fora do escopo segue à conversão original. Política
+  e referências das leituras documentadas em m4/NOMES-PADRAO.md. Cobertura
+  visual de todas as telas ainda não comprovada.
+- Build PASS. NAMES/modelo/overlay/ABI IME PASS, incluindo guards, quatro
+  defaults, customização e ida/volta. Desenho ImGui real verifica que teclado
+  virtual some ao usar teclado físico e retorna com controle. Quatro testes
+  de xrefs PASS; suporte novo a alvo por endereço sem exportar prosa original.
+- Bootstrap EN sem GPU/list-stubs PASS no build e no binário do portable;
+  log confirma ligação romaji; nenhum código do jogo executado. Portable
+  recomposto após Davy avisar que fechou a partida: 13.226 textos/59 texturas,
+  launcher --check PASS, dados pessoais/saves preservados. Nenhum jogo aberto.
+- F7 explicado: atalho opcional entre câmera pelo mouse e seta livre; perda
+  de foco já libera automaticamente. Não depende de F7 para usar Alt+Tab.
+- Pergunta dos 6 GB respondida: é common.psarc completo com tradução, não
+  6 GB de inglês. Distribuição futura deve conter alterações/ferramentas;
+  reduzir duplicação do runtime ainda é trabalho pendente, sem prazo prometido.
+- Linux: tentativas comuns WSL falharam; preparado script com -NoRestart e
+  executado com elevação administrativa do Windows (PID5440). Status final
+  restart_required: componentes WSL/VirtualMachinePlatform preparados; nenhum
+  reinício feito. Ubuntu/toolchain e executável Linux ainda pendentes. Após
+  reinício voluntário, retomar scripts/setup_linux_build.ps1 e o backend POSIX.
+- Novo achado no log da partida encerrada por Davy: checkpoint do cache Vulkan
+  deu timeout no encerramento normal. Não afirmar cache de driver persistido.
+  Investigar separadamente; não remover sincronização por suposição. Desempenho
+  continua prioridade e sem ganho novo certificado nesta continuação.

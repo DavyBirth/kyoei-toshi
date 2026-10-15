@@ -1,6 +1,7 @@
 // Invoke the real PS4 ABI adapter and guest filter, without game or native UI.
 #include "kyoei_ime.h"
 #include "kyoei_overlay.h"
+#include "kyoei_name_alias.h"
 #include <windows.h>
 #include <cstdio>
 #include <cstdlib>
@@ -22,6 +23,7 @@ int main() {
     static_assert(sizeof(KyoeiImeParam)==96 && offsetof(KyoeiImeParam,buffer)==40);
     _set_error_mode(_OUT_TO_STDERR); _set_abort_behavior(0,_WRITE_ABORT_MSG|_CALL_REPORTFAULT);
     _putenv_s("KYOEI_IN_GAME_DIALOGS","1");
+    _putenv_s("KYOEI_LANGUAGE","en");
     KyoeiOverlayModel::InitializeGui(nullptr,true); KyoeiOverlayModel::SetReady(true);
     typedef int32_t (ABI *Init)(const KyoeiImeParam *,const void *);
     typedef int32_t (ABI *NoArgs)();
@@ -34,6 +36,16 @@ int main() {
     CHECK(init && status && result && abort_entry && term && !status());
     CHECK(init(nullptr,nullptr)==(int32_t)0x80bc0031);
     CHECK(!kyoei_ime_resolve("synthetic-unknown"));
+    for (const auto &alias:kyoei_name_aliases) {
+        uint16_t buffer[7]={0,0,0,0,0,0xaaaa,0xbbbb};
+        std::memcpy(buffer,alias.original,(alias.original_length+1)*2);
+        KyoeiImeParam param{};param.user=1;param.max_length=4;param.buffer=buffer;
+        CHECK(!init(&param,nullptr));CHECK(status()==1);
+        kyoei_overlay_key(KYOEI_OVERLAY_KEY_ACCEPT);
+        uint32_t info[4]={99,99,99,99};CHECK(status()==2 && !result(info) && info[0]==0);
+        CHECK(!std::memcmp(buffer,alias.original,(alias.original_length+1)*2));
+        CHECK(buffer[5]==0xaaaa && buffer[6]==0xbbbb);CHECK(!term());
+    }
     for (filter_mode=0;filter_mode<3;++filter_mode) {
         uint16_t buffer[7]={'K','e','n',0,0,0xaaaa,0xbbbb};
         KyoeiImeParam param{}; param.user=1; param.max_length=4; param.buffer=buffer; param.filter=guest_filter;

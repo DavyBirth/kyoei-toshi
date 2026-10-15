@@ -16,6 +16,11 @@ def fixture():
 
 
 class ElfReferences(unittest.TestCase):
+    def test_address_target_without_exporting_literal(self):
+        report=references(fixture(),address_targets=[0x9000])
+        self.assertEqual(report['labels'],[])
+        self.assertEqual([(r['address'],r['target']) for r in report['references']],[('0x5000','0x9000')])
+
     def test_address_mapping_and_requested_calls(self):
         report=references(fixture(),['font/test'],[0x6000])
         self.assertEqual(report['labels'][0]['address'],'0x9000')

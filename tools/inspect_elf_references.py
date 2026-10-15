@@ -28,8 +28,8 @@ def load_segments(data):
     return segments
 
 
-def references(data,literals=(),call_targets=()):
-    segments=load_segments(data); targets={}; rows=[]
+def references(data,literals=(),call_targets=(),address_targets=()):
+    segments=load_segments(data); targets={address:[] for address in address_targets}; rows=[]
     for literal in literals:
         if not literal or not literal.isascii() or '\0' in literal:
             raise ValueError('Use nonempty ASCII technical labels')
@@ -67,10 +67,11 @@ def main():
     parser.add_argument('elf',type=Path)
     parser.add_argument('--literal',action='append',default=[])
     parser.add_argument('--call-target',action='append',type=lambda value:int(value,0),default=[])
+    parser.add_argument('--address',action='append',type=lambda value:int(value,0),default=[])
     parser.add_argument('--report',type=Path)
     args=parser.parse_args()
-    if not args.literal and not args.call_target: parser.error('Select a technical label or call target')
-    report=references(args.elf.read_bytes(),args.literal,args.call_target)
+    if not args.literal and not args.call_target and not args.address: parser.error('Select a technical label, address or call target')
+    report=references(args.elf.read_bytes(),args.literal,args.call_target,args.address)
     report['source']=str(args.elf.resolve())
     serialized=json.dumps(report,indent=2)+'\n'
     if args.report: args.report.write_text(serialized,encoding='utf8')

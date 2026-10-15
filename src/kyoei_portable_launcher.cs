@@ -104,6 +104,7 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_HUD_FIT"]=lang=="en"?"1":"0";
             start.EnvironmentVariables["KYOEI_HUD_METRICS"]="assets/hud-metrics.bin";
             start.EnvironmentVariables["KYOEI_GUI_FONT_DIR"]="assets/fonts";
+            start.EnvironmentVariables["KYOEI_IN_GAME_DIALOGS"]=lang=="en"?"1":"0";
             start.EnvironmentVariables["GZ_SYSTEM_FONT"]="assets/fonts/NotoSans-Regular.ttf";
             start.EnvironmentVariables["GZ_SYSTEM_FONT_JP"]="assets/fonts/NotoSansCJK-Regular.ttc";
             start.EnvironmentVariables["KYOEI_WINDOW_ICON"]="assets/game.ico";

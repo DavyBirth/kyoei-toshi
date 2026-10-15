@@ -4,10 +4,12 @@ Implementados e compilados em 13/10/2026. Testes offline de modelo, ImGui e
 ABI passaram. Desenho/composição Vulkan em uma partida ainda não verificados;
 não abrir o jogo automaticamente para certificar esta prévia.
 
-## Como habilitar depois
+## Ativação atual
 
-No launcher, selecionar English e marcar **Diálogos dentro do jogo · prévia
-em inglês**. Padrão desmarcado; apresentação nativa continua como fallback.
+No portable atualizado em 15/10, English ativa a interface dentro do jogo
+automaticamente. O launcher de desenvolvimento inicia com a opção marcada;
+preferências já salvas podem manter a seleção anterior. Apresentação nativa
+continua como fallback se o backend Vulkan do overlay estiver indisponível.
 O script também aceita `-InGameDialogs` junto de `-Language en`.
 `-CheckOnly` confere configuração sem iniciar jogo.
 
@@ -51,6 +53,7 @@ Os testes detectaram e corrigiram terminador residual ao substituir seleção
 inicial, máscaras trocadas de Square/Triangle e escala acumulativa que zerava
 propriedades ImGui ao redimensionar repetidamente.
 
-Limite original de nome continua quatro unidades por campo; isto não resolve
-romaji de defaults longos nem autoriza aumentar buffers/saves. HUD original,
+Limite original de nome personalizado continua quatro unidades por campo.
+Os quatro defaults têm apresentação romaji reversível, documentada em
+m4/NOMES-PADRAO.md, sem aumentar buffers/saves. HUD original,
 minimapa e truncamento de falas são outro caminho e seguem em investigação.

@@ -117,7 +117,7 @@ class LauncherForm : Form {
         AddLabel("MODO DE TELA",745,283,205,24,9,muted,FontStyle.Bold);
         SetupCombo(resolution,520,313,205,sizes);SetupCombo(mode,745,313,200,new string[]{"Janela","Tela cheia sem bordas"});
         notice.SetBounds(520,352,425,46);notice.Font=new Font("Segoe UI",9);notice.ForeColor=muted;Controls.Add(notice);
-        inGameDialogs.SetBounds(520,404,425,22);inGameDialogs.Text="Diálogos dentro do jogo · prévia em inglês";
+        inGameDialogs.SetBounds(520,404,425,22);inGameDialogs.Text="Diálogos dentro do jogo · prévia em inglês";inGameDialogs.Checked=true;
         inGameDialogs.Font=new Font("Segoe UI",9);inGameDialogs.ForeColor=ink;Controls.Add(inGameDialogs);
         play.SetBounds(520,440,425,52);play.Text="INICIAR JOGO";play.Font=new Font("Segoe UI",13,FontStyle.Bold);
         play.BackColor=cyan;play.ForeColor=Color.FromArgb(7,22,32);play.FlatStyle=FlatStyle.Flat;play.FlatAppearance.BorderSize=0;

@@ -4,9 +4,16 @@ Pedido de Davy em 15/10/2026: manter x64; Windows e Linux na mesma pasta,
 sem duplicar os dados do jogo e sem encher a raiz de ferramentas.
 RX 580 + i5-9400 é um alvo para avaliação, não um mínimo já comprovado.
 
-Estado: **ainda não existe executável Linux do Kyoei**. `wsl --list --quiet`
-informou que o subsistema não está instalado neste computador. Nesta sessão
-não foram instalados componentes do sistema nem reiniciado o computador.
+Estado: **ainda não existe executável Linux do Kyoei**. A preparação do ambiente
+avançou em 15/10: `scripts/setup_linux_build.ps1` foi executado com elevação do
+Windows, habilitando WSL/VirtualMachinePlatform com `-NoRestart`. Resultado em
+`build/linux-setup-status.json`: `restart_required`. Nenhum reinício solicitado
+ou realizado. Ubuntu e toolchain ainda não instalados; após reinício voluntário
+de Davy, retomar o mesmo script e conferir a distribuição antes de compilar.
+
+As tentativas iniciais de `wsl --install` sem token administrativo retornaram
+código1. A preparação administrativa posterior resolveu a ativação dos
+componentes, mas não elimina o trabalho de backend descrito abaixo.
 Renomear o PE ou adicionar um script Wine não produz um port Linux nativo.
 
 A referência local `build/reference-bloodborne`, commit registrado em

@@ -218,6 +218,10 @@ kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
   "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);")
 set(KYOEI_LOADER "#include \"kyoei_log_filter.h\"\n${KYOEI_LOADER}")
+set(KYOEI_LOADER "#include \"kyoei_names.h\"\n${KYOEI_LOADER}")
+kyoei_replace_checked(KYOEI_LOADER
+  "    protect(traps, round_page(import_count * 32), 5);"
+  "    if (import_count>28 && !strcmp(imports[28].library,\"libc\") && !strcmp(imports[28].symbol,\"wcstombs_s\") && bindings[28]) kyoei_names_configure(image,image_size,(uintptr_t)image+bindings[28]);\n    protect(traps, round_page(import_count * 32), 5);")
 kyoei_replace_checked(KYOEI_LOADER
   "void gz_log(const char *format, ...) { va_list a;"
   "void gz_log(const char *format, ...) { if (!kyoei_log_visible(format)) return; va_list a;")
@@ -234,6 +238,7 @@ target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
 target_sources(kyoei PRIVATE src/kyoei_png.c)
 target_sources(kyoei PRIVATE src/kyoei_savedata.c)
 target_sources(kyoei PRIVATE src/kyoei_input_mode.c)
+target_sources(kyoei PRIVATE src/kyoei_names.c)
 set(KYOEI_IMGUI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party/imgui")
 set(KYOEI_IMGUI_SOURCES "${KYOEI_IMGUI_DIR}/imgui.cpp" "${KYOEI_IMGUI_DIR}/imgui_draw.cpp"
   "${KYOEI_IMGUI_DIR}/imgui_tables.cpp" "${KYOEI_IMGUI_DIR}/imgui_widgets.cpp")
@@ -719,6 +724,9 @@ file(GLOB KYOEI_BOOST_INCLUDES "${KYOEI_GPU_HEADERS}/gz_boost-src/libs/*/include
 target_include_directories(kyoei_videoout SYSTEM PRIVATE ${KYOEI_BOOST_INCLUDES})
 add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 add_executable(test_kyoei_name_model src/test_kyoei_name_model.c)
+add_executable(test_kyoei_names src/test_kyoei_names.c src/kyoei_names.c)
+target_include_directories(test_kyoei_names PRIVATE src "${KYOEI_CORE}/src")
+target_compile_definitions(test_kyoei_names PRIVATE KYOEI_NAMES_TEST=1 _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_input_mode src/test_kyoei_input_mode.c)
 add_executable(test_kyoei_frame_stats src/test_kyoei_frame_stats.cpp)
 target_include_directories(test_kyoei_frame_stats PRIVATE src)

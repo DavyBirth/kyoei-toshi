@@ -1,5 +1,41 @@
 # Nomes padrão — inicialização e limites
 
+## Adaptação de apresentação em 15/10/2026
+
+Implementado `src/kyoei_names.c` para inglês: ligação de `wcstombs_s` no GOT
+0x12f7ab8, conferida contra a importação libc/índice28, endereço nativo e
+assinaturas do thunk/carga de campo. Antes da proteção final do carregador,
+substitui apenas essa ligação por um adapter que delega à libc original.
+Não escreve nos campos do protagonista nem amplia a estrutura do save.
+
+Fontes para a apresentação Ken Misaki/Miharu Matsubara: nomes japoneses no
+[PlayStation Blog](https://blog.ja.playstation.com/2017/10/16/20171016-kyoeitoshi/)
+e leituras explícitas dos sobrenomes na
+[apresentação publicada pela GAME Watch](https://game.watch.impress.co.jp/docs/news/1064842.html).
+As formas em letras latinas são transliteração editorial dessas leituras,
+sem alegação de grafia latina oficial publicada pelo fabricante.
+
+Escopo: fontes que apontam exatamente para os dois campos verificados e
+concatenação sobrenome/espaço/nome no retorno0xac4e64. Campos são comparados
+com as quatro formas japonesas conhecidas; qualquer outro texto segue intacto.
+Nessa apresentação inglesa, um nome personalizado escrito exatamente igual
+a uma dessas formas japonesas também será romanizado. A identidade e os bytes
+armazenados não mudam; não há substituição global em diálogos ou outros NPCs.
+
+No editor ImGui, os defaults completos aparecem em romaji. Aceitar um default
+devolve os caracteres originais ao convidado; um nome personalizado é devolvido
+literalmente se couber no limite original. Nomes personalizados maiores que
+quatro unidades continuam sem suporte: confirmação bloqueada com explicação,
+sem corte silencioso. Alias e limite original são separados no modelo.
+
+Testes de modelo e ABI real: quatro defaults completos, volta aos bytes originais,
+nome personalizado, rejeição de comprimento inválido, guards, fonte fora do
+campo preservada, chamada de concatenação delimitada e delegação da ABI PASS.
+Ainda falta verificar visualmente todas as telas e caminhos em gameplay;
+não declarar cobertura de consumidores que não passam por essa conversão.
+
+## Evidência original de 13/10
+
 Investigação estática do dump próprio em 13/10/2026; nenhuma alteração dos
 nomes, do executável convidado ou dos saves aplicada nesta etapa.
 

@@ -43,6 +43,12 @@ int main() {
     kyoei_overlay_input(0);
     CHECK(kyoei_overlay_begin_name(L"Synthetic name",initial,3,4));
     kyoei_input_controller_button(); check_draw(1280,720,true); check_draw(640,360,true);
+    const auto controller_vertices=KyoeiOverlayModel::Draw(1280,720,1.f/60)->TotalVtxCount;
+    kyoei_input_keyboard();check_draw(1280,720,true);
+    const auto keyboard_vertices=KyoeiOverlayModel::Draw(1280,720,1.f/60)->TotalVtxCount;
+    CHECK(keyboard_vertices<controller_vertices);
+    kyoei_input_controller_button();check_draw(1280,720,true);
+    CHECK(KyoeiOverlayModel::Draw(1280,720,1.f/60)->TotalVtxCount==controller_vertices);
     CHECK(kyoei_overlay_input(0x2000)); CHECK(kyoei_overlay_input(0x2000));
     kyoei_overlay_input(0); kyoei_overlay_input(0x2000);
     kyoei_overlay_input(0x1000); // triangle shifts

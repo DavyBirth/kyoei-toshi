@@ -1,0 +1,32 @@
+{
+  "source_sha256": "1968814b70f69ec85ff3e556c4b66b53ec298c0dea71120e4f0ba594906e418e",
+  "checks": [
+    {
+      "label": "male_first",
+      "address": "0x10d5ab0",
+      "expected_signature_matches": true
+    },
+    {
+      "label": "male_last",
+      "address": "0x10d5ab6",
+      "expected_signature_matches": true
+    },
+    {
+      "label": "female_first",
+      "address": "0x10d5ac8",
+      "expected_signature_matches": true
+    },
+    {
+      "label": "female_last",
+      "address": "0x10d5ad0",
+      "expected_signature_matches": true
+    },
+    {
+      "label": "combined_separator",
+      "address": "0xcd57d0",
+      "expected_signature_matches": true
+    }
+  ],
+  "original_prose_exported": false,
+  "runtime_visual_verified": false
+}

@@ -4,12 +4,15 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <string.h>
+#include "kyoei_name_alias.h"
 
 enum { KYOEI_NAME_EDITING, KYOEI_NAME_ACCEPTED, KYOEI_NAME_CANCELLED };
 typedef struct {
     uint16_t text[2049];
     size_t length, cursor, limit;
     unsigned key, upper, result, select_all;
+    size_t native_limit;
+    const KyoeiNameAlias *alias;
 } KyoeiNameModel;
 
 /* PS4 limits count UTF-16 units; never split a surrogate pair. */
@@ -27,8 +30,30 @@ static inline int kyoei_name_begin(KyoeiNameModel *m, const uint16_t *text,
                                    size_t length, size_t limit) {
     if (!m || !text || !limit || limit>2048 || length>limit || !kyoei_name_valid(text,length)) return 0;
     memset(m,0,sizeof(*m)); memcpy(m->text,text,length*sizeof(*text));
-    m->length=m->cursor=length; m->limit=limit; m->select_all=length!=0;
+    m->length=m->cursor=length; m->limit=m->native_limit=limit; m->select_all=length!=0;
     return 1;
+}
+/* Called explicitly for localized character-name entry, never for generic IME. */
+static inline void kyoei_name_show_roman(KyoeiNameModel *m) {
+    m->alias=kyoei_name_alias_find(m->text,m->length);
+    if (!m->alias || m->alias->original_length>m->native_limit) { m->alias=NULL;return; }
+    memcpy(m->text,m->alias->roman,(m->alias->roman_length+1)*2);
+    m->length=m->cursor=m->alias->roman_length;
+    if(m->limit<m->length)m->limit=m->length;
+}
+static inline int kyoei_name_is_roman_default(const KyoeiNameModel *m) {
+    return m->alias && m->length==m->alias->roman_length && !memcmp(m->text,m->alias->roman,m->length*2);
+}
+static inline int kyoei_name_can_accept(const KyoeiNameModel *m) {
+    return m->length<=m->native_limit || kyoei_name_is_roman_default(m);
+}
+static inline size_t kyoei_name_stored_length(const KyoeiNameModel *m) {
+    return kyoei_name_is_roman_default(m)?m->alias->original_length:m->length;
+}
+static inline int kyoei_name_export(const KyoeiNameModel *m,uint16_t *text,size_t capacity) {
+    size_t length=kyoei_name_stored_length(m);
+    if(!text || !kyoei_name_can_accept(m) || capacity<=length)return 0;
+    memcpy(text,kyoei_name_is_roman_default(m)?m->alias->original:m->text,(length+1)*2);return 1;
 }
 static inline int kyoei_name_insert(KyoeiNameModel *m, const uint16_t *text, size_t length) {
     if (!m || m->result || !text || !length || !kyoei_name_valid(text,length)) return 0;
@@ -88,14 +113,14 @@ static inline void kyoei_name_activate(KyoeiNameModel *m) {
     else if (m->key==36) c=' ';
     else if (m->key==37) m->upper=!m->upper;
     else if (m->key==38) kyoei_name_backspace(m);
-    else if (m->key==39) m->result=KYOEI_NAME_ACCEPTED;
+    else if (m->key==39 && kyoei_name_can_accept(m)) m->result=KYOEI_NAME_ACCEPTED;
     if (c) kyoei_name_insert(m,&c,1);
 }
 static inline void kyoei_name_buttons(KyoeiNameModel *m, uint32_t pressed) {
     if (!m || m->result) return;
     /* Cancel takes priority over simultaneous confirm. */
     if (pressed&0x4000) { m->result=KYOEI_NAME_CANCELLED; return; }
-    if (pressed&8) { m->result=KYOEI_NAME_ACCEPTED; return; }
+    if (pressed&8) { if(kyoei_name_can_accept(m))m->result=KYOEI_NAME_ACCEPTED; return; }
     if (pressed&0x10) kyoei_name_move(m,0,-1);
     else if (pressed&0x40) kyoei_name_move(m,0,1);
     if (pressed&0x80) kyoei_name_move(m,-1,0);

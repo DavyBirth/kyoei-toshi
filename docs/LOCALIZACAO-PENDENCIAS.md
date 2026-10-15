@@ -39,5 +39,6 @@ grupos inteiros por nome de arquivo, nem declarar 100% ajustando a contagem.
 
 Nesta continuação, as escolhas de sexo do protagonista no rascunho local
 foram revistas para “I'm a man.” e “I'm a woman.”. A prévia en-14 contém
-essas mudanças e preserva byte a byte as 59 texturas anteriores. Nenhum
+essas mudanças e preserva byte a byte as 59 texturas anteriores, ainda sujeitas
+à revisão visual de Davy. Nenhum
 outro texto foi traduzido nesta continuação. Revisão humana continua pendente.
