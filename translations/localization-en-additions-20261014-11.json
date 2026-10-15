@@ -1,0 +1,431 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r1280/c26",
+          "source_text_sha256": "dd975d82a6fd65cbdbf319158e2e26a52f6e38d04b1fd5733648fe4faf39e4ee",
+          "en": "A document proving ownership of the Ebine Publishing building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0123.json:r1280/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1280/c28",
+          "source_text_sha256": "dd975d82a6fd65cbdbf319158e2e26a52f6e38d04b1fd5733648fe4faf39e4ee",
+          "en": "A document proving ownership of the Ebine Publishing building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0123.json:r1280/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_202.luc",
+      "source_sha256": "88cb6fa67d7c5988d44c1af7be81289d01e078dfe2f978734c2d3fe947086766",
+      "entries": [
+        {
+          "id": "p0/k1066",
+          "source_text_sha256": "3b18130007aebc7a7567187e4366b215c3b1161bc3d041753da3e3993f38ee27",
+          "en": "Risa Kashiwagi",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k1066; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/place_text.luc",
+      "source_sha256": "c7785d42ffe727186ca4913907876128114a12a7931943b658d973306e430a86",
+      "entries": [
+        {
+          "id": "p0/k216",
+          "source_text_sha256": "ee7715bb90e13ecff611a53badb2309b2574e640cf55b7b0109790f4682b3799",
+          "en": "Ebine Publishing Building",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k216; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_203_news_text.luc",
+      "source_sha256": "6f501775275c2f4988ca0e54b26314482c4f6f5e3ca5374fe09c679eb75d2564",
+      "entries": [
+        {
+          "id": "p0/k122",
+          "source_text_sha256": "0744aaa5613312d1a154f29e47bd76a1f99953f38694af687e1501400510215c",
+          "en": "Two strangely shaped flying creatures suddenly appeared above Sky Garden Bridge. Yes, two of them.\nTheir appearances differ, suggesting they are not of the same species.\n\nThe two flew around above Sky Garden Bridge, one behind the other, almost as if playing.\nBefore long, beam-like rays were fired, destroying cars crossing the bridge one after another.\nThe beams were powerful enough to pierce the bridge itself. As if hastening its collapse, the wind pressure from the two creatures' wingbeats bent the entire bridge to an unbelievable degree.\n\nSome time after the bridge collapsed, the two creatures suddenly vanished.\nWhy did they attack the bridge? Was it a warning to humanity?\nOr was it like excited children innocently breaking things? Left with nothing but mysteries and immense damage, what can we do?",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k122; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k126",
+          "source_text_sha256": "6a6d3b5005418855cbb04f426bc2cec0cbe20b4b8f6306011eaeb92eb674fb30",
+          "en": "'It's a devil.' 'Whatever way you look at it, that's a devil.' Comments like these keep pouring in on our news video.\nThe subject is one of the two mysterious giant flying creatures that appeared above Sky Garden Bridge.\nUnlike the other giant flying creature, this one gives a distinctly brutal impression.\nStill, just as with us, a frightening appearance cannot tell us whether something is evil.\nIt is true that this giant flying creature persistently attacked the bridge and its vehicles. But we must also accept that we cannot rule out some reason for its actions.\n\nWild animals driven from their habitats often cause trouble when they enter human settlements looking for food. What if we have unknowingly done something similar?\nShouldn't we take our tendency toward human supremacy seriously and investigate the cause?",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k126; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k128",
+          "source_text_sha256": "15bb8fa5f1d1c83429a90fea78f20847f228a071b06b9e5695718fa56534810b",
+          "en": "Younger readers may not know that the present Sky Garden Bridge is the second to bear the name.\nDesigned and built during the period of rapid economic growth as advanced infrastructure for modern civilization, the first had only a roadway and sidewalks.\nEven so, it was an extremely useful link between the cities at the time.\n\nThen, in the winter marking exactly twenty years since its opening, a passenger plane forced to ditch after its engines stopped crashed into the bridge.\nReaders in their forties and older may remember the special broadcasts that continued for days.\n\nWith public finances strained, building a new bridge was expected to take many years, and the surrounding cities felt doomed to decline.\nIt was as winter ended and the scent of spring began to emerge that a man appeared, offering an enormous sum from his personal fortune. (To be continued.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k128; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k130",
+          "source_text_sha256": "1df41850c98270dc4895abbd0b3051e9861c826503575b66564c90b2aa3027b3",
+          "en": "I could not believe my eyes. No, I did not want to believe them.\n\nThat was how I felt as I witnessed Sky Garden Bridge, a vital transportation hub reborn after that horrific incident, sinking into the sea.\nStill rated among the world's finest, a bridge that might be called the 'strongest in the world' collapsed with astonishing ease, leaving only remnants of its piers.\nThe sound of enormous masses of iron scraping, creaking, and twisting, unlike anything I had ever heard, seemed like Sky Garden Bridge screaming.\n\nBut I believe. One day, a new Sky Garden Bridge will surely be built, once again carrying people's smiles.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k130; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k132",
+          "source_text_sha256": "6a62b67a6740350581185868b4abfbf3a2e4c337a036e84bcf4a119ba5881046",
+          "en": "Around the time the mysterious giant flying creatures appeared, a vehicle was seen rushing along Sky Garden Bridge while crashing into other cars.\nPerhaps its occupants were frightened of the giant creatures and wanted to escape, but the behavior can only be called utterly selfish.\nFurthermore, the license plate in the footage revealed that the vehicle had been stolen.\nIf someone stole another person's car, forced other vehicles aside, and endangered others simply to save themselves, I can only consider them an outrageously disgraceful person.\n\nThe vehicle was found on the seabed after Sky Garden Bridge collapsed, but its occupants have not been found. Police are investigating.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k132; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k134",
+          "source_text_sha256": "59d44e2bd8a2135f624e219de6910bed64de51dbf6460c5c4439401f0464a7a1",
+          "en": "While covering the destruction of Sky Garden Bridge, our news helicopter happened to capture something extraordinary.\n\nThree men can be seen standing on the road as vehicles burn fiercely and sections of the roadway collapse around them.\nOur independent reporting indicates that the two standing together on the right are an executive and his subordinate from an organization dogged by all kinds of sinister rumors.\n\nAstonishingly, the man facing them is Mr. F, who belongs to an organization that should be at odds with theirs.\nWas it merely a chance encounter? Perhaps, but I cannot help feeling that would be far too convenient.\n\nI suspect some kind of secret discussion.\nAfter all, Mr. F is another person surrounded by all kinds of sinister rumors.\nI am investigating the matter. Please watch for further reports.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k134; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k137",
+          "source_text_sha256": "0aaa8f5a924ded086cdc290413897414e3f65fa29b1b36ac81f03ee775414459",
+          "en": "'Ah! That's the Face!' Fugitive Spotted",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k137; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k139",
+          "source_text_sha256": "bfa0c79e47b8b1ef099ac4230a18fec6b79902a56bce0f185201c2ca9e5c6860",
+          "en": "'Borrowing' in an Emergency: Acceptable or Not?",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k139; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k141",
+          "source_text_sha256": "f7a3271582b67b75af34a91dcd85dbb42681897c9ec3622c573773761c7dcc5f",
+          "en": "Why Battle with Cars During an Emergency?",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k141; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k142",
+          "source_text_sha256": "717945945b962409650ee555b951a362b19cb1b533ad5fb45ba9fdce62f56d3f",
+          "en": "Our helicopter captured footage of two cars racing along Sky Garden Bridge, where the mysterious giant flying creatures had appeared, while ramming into one another.\nWe could not observe them for long, but the black car seemed to be persistently chasing the blue one. The blue car kept racing despite severe damage, and we later saw it abandoned.\nWhat on earth happened between the occupants of these two vehicles? Was it a personal grudge, or something that arose spontaneously under these extraordinary circumstances? With the occupants unidentified, we have no way of knowing. But seeing this ugly human conflict while everyone on the bridge faced mortal danger made me wonder whether the mysterious flying creatures' actions were not mere malice, but a 'culling and purge of humanity.' Was I alone in feeling profoundly sad?",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k142; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k143",
+          "source_text_sha256": "980d4c2be87aaa3d21465fd59dbe93d1b2b2e9ba5efd4e81b46740ab0de5a5b7",
+          "en": "The Future They Hoped to Share",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k143; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k144",
+          "source_text_sha256": "ab45113c0786a703d04af981a8dd5e2fdd578b2502461ecb9629a34fefe0a5b2",
+          "en": "A photograph taken on the collapsing Sky Garden Bridge made my heart ache. According to the photographer, the two people pictured were engaged, and that day they were on their way to meet the woman's parents.\nUnfortunately, their survival has not been confirmed since Sky Garden Bridge collapsed, and the photographer did not ask their names.\nSome people, like the photographer, miraculously survived. I sincerely hope these two are alive and can begin their married life together as they had planned.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k144; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k145",
+          "source_text_sha256": "41eed1eecb3e47b82a56df3479d6fc8703a2905906501a05e5ac90dcdb31a7b4",
+          "en": "Tragedy on the Bridge",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k145; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k146",
+          "source_text_sha256": "c18f38c57c165fc143ce5c88ff8c50fe5b3d0d4d82b268b53d45114b6309517f",
+          "en": "'Horrific.' That was the only word that came to mind when I saw this footage.\nIt does not show a war zone in a distant country. It shows our familiar Sky Garden Bridge.\nEvery single car on the bridge is ablaze, stretching on and on.\nIn a few months, this footage may be buried beneath the internet's vast mass of data. Even so, I must struggle to keep this tragedy from being forgotten. That is what I must do as a journalist.\nAt present, we have no way to prevent such a tragedy. But even a single piece of footage like this might provide a clue toward a solution. So that we may one day have the means to respond if something similar happens again, each of us must do what we can. Isn't that the key to humanity's survival?",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k146; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k147",
+          "source_text_sha256": "708adb0b596ad1f0909415665c32cc7da641d109fbf32877874c2e0a2da8ea46",
+          "en": "Destructive Power Beyond Measure",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k147; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k148",
+          "source_text_sha256": "8bf5748f9caee396c26f612ecbd4d4cba62ffa811a6d2eca48e86d65103835b8",
+          "en": "We managed to capture the mysterious rays fired by the giant flying creatures.\nThey can clearly be seen striking the bridge like lightning of a different color. We do not yet know whether these strange rays consist of the same things as what we understand as 'beams.' However, experts say that, assuming they are produced in a similar way, our present science could not achieve such destructive power. No material on Earth could form a gun barrel capable of withstanding that output.\nWouldn't that also mean that no material or equipment currently on Earth can block those strange rays?\nAnalysis and investigation of footage, including material our company provided, are now underway. I fervently hope this analysis project succeeds, so that humanity can stand against the giant shadows that may appear again.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k148; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k149",
+          "source_text_sha256": "c482b3f476ea302e34768eefac0f6944600c1e6392e87b25eda4569bb68f5628",
+          "en": "An Appalling Argument",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k149; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k150",
+          "source_text_sha256": "89044f46af73ade624d7f454d89b14312a2b4d2d123c13a3e100f69cb0b21408",
+          "en": "While covering the collapse of Sky Garden Bridge, we used a directional microphone to pick up a conversation between two women stranded on the bridge. I was appalled.\nRather than addressing the danger they were in, they did nothing but blame each other for getting into it. Many years have passed since people began saying the public's awareness of danger had declined, but I honestly never imagined anyone could be this bad. In my previous reporting, those who seemed unaware were a small minority. Even then, listening carefully revealed that their words did not reflect their true feelings: they were hiding embarrassment or putting on a brave front, and were actually aware and thinking things through.\nPerhaps my reporting was inadequate. Or perhaps I found the only pair like this in the entire country.\nEither way, such people do exist: people who cannot recognize danger and blame everything on others.\nIn a sense, perhaps the two are happy. They presumably never feel guilty about anything.\nBut we must never follow their example. For that would mean ceasing to be 'human.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k150; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k157",
+          "source_text_sha256": "350066d11e57b9de75a0822fadef683cd947b5fbeb1f3abc6b02a133d3940e9d",
+          "en": "Garden Liner, Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k157; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k158",
+          "source_text_sha256": "9d72b5d33d6d8ab9c6cd516b956c3b840a43cccda31ec68b96b596c41edf37ea",
+          "en": "New Initiatives\n\nIn this third installment, I would like to report on the Garden Liner of today and the near future.\nThe Garden Liner, which boasts world-leading mass passenger and freight transportation, has begun working on new train services. Its scheduling can fairly be described as precise to the minute, or even the second, and it has an outstanding record for accuracy and safety. Building on that foundation, new rolling stock is already in service. To offer a more elegant journey, each car accommodates just ten passengers, all in private compartments. At around twice the standard fare, it is inexpensive for the comfort provided and has become hugely popular with office workers tired of rush-hour crowds. Tickets have already sold out five years ahead, and some reportedly change hands online for high prices.\nGR, the Garden Liner's operator, is reportedly already moving toward increasing the frequency of these services by running trains at shorter intervals. Even so, demand is expected to remain greater than the available supply.\n\nThe Garden Liner also plans to introduce further new rolling stock soon. Next time, I hope to take a closer look.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k158; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k159",
+          "source_text_sha256": "8caf2a6906910af9e353c1e2f388e147291a690e3227746f2c669cf35d0a8f2f",
+          "en": "Emergency Phones That Never Connected",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k159; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k160",
+          "source_text_sha256": "0dec1027c9bc0d3c23c010a028650bd3b4bf5c65fd64388143f8dad8179b7b81",
+          "en": "As the mysterious giant flying creatures destroyed Sky Garden Bridge, the emergency phones installed throughout it failed to connect and were unusable.\n\nThe prevailing view is that the bridge's destruction severed the cables. However, our independent reporting increasingly suggests the phones had never worked properly.\nPast usage records show that, although people had tried to use the bridge's emergency phones since their installation, no calls had ever connected. Each incident was followed by an inspection and a recorded restoration of service, but doubts remain.\nEvery inspection was performed by Company T, which had also installed the phones. Documents obtained independently show that it did not purchase the necessary equipment at installation, in order to cut costs. In other words, it installed phones that were never connected, then collected payment by falsely reporting that service had been restored.\nAccording to K, a former employee of Company T, the president once boasted over drinks: 'Everyone has a mobile phone anyway. Nobody uses emergency phones.' 'Even if they find a problem, it's over the sea. Blame salt damage or something and they'll never know. Better yet, the repair fee is pure profit.'\nIf this is true, how many lives were lost needlessly? We intend to keep investigating Company T.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k160; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k161",
+          "source_text_sha256": "68d669bf9417e00407983e2f1d137934b68b8abaa7f47950aa226984e0ddf6ad",
+          "en": "A Cameraman's Final Act of Determination",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k161; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k162",
+          "source_text_sha256": "062d9e449f87e097a07c015275c52c4958311bb6209cbcc3dd9c4fb5382ff490",
+          "en": "This is the final footage from a camera recovered inside our news helicopter, which collided with a mysterious giant flying creature and sank into the sea.\nIts position relative to the bridge suggests it sank immediately afterward.\nThe fact that the flying creature is just barely in the frame conveys the cameraman's determination more than anything.\nThe cameraman's whereabouts remain unknown. I have known him for many years. He is someone who charges headlong toward his subject, quite literally risking his life to get the shot. Even then, I believe he was absorbed in capturing just one more image from more angles and distances, rather than thinking about what was happening to the helicopter or what would happen to him.\n\nSome may dismiss such behavior as foolishly single-minded. But surely there can be no doubt that people like him are among the most trustworthy.\nI am proud to bring you this article together with his footage.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k162; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k163",
+          "source_text_sha256": "2538943d459d8236cccae2f8fe28b68d80acdac65b4d0beba7b658eec7c0f443",
+          "en": "The Threat of Sudden Gusts",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k163; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k164",
+          "source_text_sha256": "d597aaca5417e02e82ec2a1ae9f204bae24d9706f1dc4587a024f35a4c1fb7f5",
+          "en": "We captured a giant flying creature passing directly in front of people fleeing across the bridge.\nIts enormous wings generated gusts strong enough to almost knock adults over.\nThe fact that merely passing by could endanger people filled me with tremendous fear, as well as an indescribable sense of awe.\nSince ancient times, people have feared yet worshipped things they could neither understand nor control, and lived humbly.\nPerhaps this attack by giant creatures was meant to remind humanity of those feelings.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k164; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "72739f1a11090af38a8c4304c8eb1beee95079b450b0253a1b125a2f2628d37e",
+          "en": "The flying creature resembling an enormous moth initially seemed to be pursued by the other giant flying creature. However, we then witnessed it scattering something like glowing wing scales onto the other creature from above.\nThe creature being showered with them seemed to flee in distress, crying out in pain.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k168",
+          "source_text_sha256": "20761dc1cca40135c005e5b0c75208bdc2b366dd0210d208923a9dcc603ca1bc",
+          "en": "We captured the moment the restaurant on the north side of the bridge, already half-destroyed by a giant flying creature's rays, subsequently collapsed into the sea.\nThis restaurant was extremely popular with couples and famous for its peaceful views of the beautiful night skyline. Christmas Eve reservations were booked ten years ahead.\nThe food was first-rate, too. I still cannot forget how impressed I was when I ate there while reporting three years ago.\nFortunately, the customers and staff had reportedly already escaped that day. I sincerely hope the restaurant is rebuilt and reopens.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k170",
+          "source_text_sha256": "5fb46eca4aea2bd4e9c6138931ccdcb0bfcb9d5f268e43c0af5f56ac0cde0592",
+          "en": "We have learned that the restaurant on the south side of Sky Garden Bridge has collapsed.\nUnlike its northern counterpart, which catered to adults, it was a hugely popular, casual venue for a somewhat younger crowd.\nEven so, it was hardly cheap. I still vividly remember saving desperately from my part-time job in high school to go there with the older woman I was dating.\n\nOne major reason for its popularity was the rumor that couples who had their first date there would stay together.\nIndeed, statistics reportedly showed that fully 99 percent of those couples lasted more than five years.\n\nUnfortunately, I fall into the remaining one percent. Still, it saddens me to lose the place tied to those bittersweet memories.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k170; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k172",
+          "source_text_sha256": "db5b8a2832a0e9fca4c3c31207a6e12ad316c89ecd96258fee171ffcfff22c45",
+          "en": "We have learned that OH, an actor at the height of his popularity, was stranded on Sky Garden Bridge while the giant flying creatures were destroying it.\nHe was reportedly with SY, an actress just as popular.\nThey encountered the disaster while returning to OH's home after a secret date.\nTheir relationship, revealed in such an unexpected way, has divided fans.\nNaturally, some defend them and others disapprove. OH had also been rumored to be dating another actress, KF, prompting rumors that he was seeing both women.\nAs for SY, her innocent image had never given any hint of a man in her life, making the revelation particularly shocking.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k172; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k174",
+          "source_text_sha256": "f8cfa5238a24d563d8c071569664688e1c02f947caa817725745c599f07460f5",
+          "en": "Reporting on actress SY's circle after her secret date with actor OH came to light revealed that changes had begun several months earlier.\nSY is the eldest of four sisters raised by their mother alone. Despite her poor health, their mother brought up all four daughters, with SY only in fourth grade when it began.\nTheir father brought another woman into the home and divorced their mother, effectively driving her and the girls out.\nExperiences like these left SY deeply distrustful of men, and she entered show business without ever pursuing romance.\nHer wholehearted dedication to acting, both to repay her mother in some small way and to give her younger sisters a proper education, had a purity that won her many fans.\n\nRecently, however, a rift seems to have developed between the sisters. It reportedly began when the younger sisters withdrew SY's earnings, managed by their mother, without permission. They not only went out partying night after night, but took endless overseas trips with dozens of friends.\nThey also reportedly used SY's fame to purchase expensive apartments and vacation homes with SY as guarantor.\n\nWith them spending even more than the hundreds of millions of yen she earned, a rift was only natural.\nShe now reportedly lives with her mother and has cut off contact with her sisters.\n\nApparently, it was actor OH who soothed her troubled heart.\nPerhaps she is now growing from 'a devoted woman working tirelessly for her family' into 'a free woman pursuing her own happiness.'\nWhatever may be said of sisters who fail to understand their elder sister's love, I hope she and her mother find happiness.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k174; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k176",
+          "source_text_sha256": "82089c5e1410ea807dd4fe64516c512ae82624ed63aea99c503e8691d16369d8",
+          "en": "This is an emergency warning triangle.\nI suspect many drivers do not carry one.\n\nWhen forced to stop on the road, drivers must warn following vehicles of danger by placing it several meters to several dozen meters behind them.\n\nOnce a major accident happens, it is too late. Put another way, a small precaution can avert danger.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k176; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k178",
+          "source_text_sha256": "00172a8c12d3622c3486d24f70d95f1102edeaf28fcda75b70f58b847091407e",
+          "en": "Witness testimony revealed that a woman had been staring intently at the northern restaurant.\nShe reportedly knew that entering it would allow her to reach the lower roadway.\nBut she never went inside. With her whereabouts still unknown, we do not know why.\nOthers testified that the way into the restaurant had been cleared. Why did she fail to act?\n\nApparently, people can look calm while actually being in a panic.\nPerhaps she, too, seemed to be calmly considering an escape route while her thoughts had really come to a complete halt.\n\nI can only pray that she is safe.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k178; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k180",
+          "source_text_sha256": "2cef3faf8905b9318fc6d7f159092a4b1adbfcb8c69778a37d5b79bf6845f14e",
+          "en": "We have learned that a woman miraculously rescued from Sky Garden Bridge was actually returning from a trip with her lover.\nThe man she was having an affair with was among the other survivors, and it emerged that the female friend she was supposed to have traveled with had not gone.\nApparently tired of her seemingly unreliable husband, she made advances toward a rugged male subordinate, beginning the affair a year ago.\n\nHer husband has already divorced her and begun a new life with their daughter.\nAs for the woman, the discovery of her inappropriate relationship with a subordinate also forced her to leave the company.\nIt is a textbook example of how an affair ends.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k180; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k182",
+          "source_text_sha256": "77577b6b9efaae810c0ba8eab5ae1ddcbb2b87f73aa5b1564a6457332d47d374",
+          "en": "The male subordinate who accompanied the woman on the affair-related trip described in another article was reportedly huddled up and trembling on the bridge.\nThe supposedly rugged man proved to be distinctly unreliable.\n\nAccording to our reporting, he had seemed quiet and unremarkable through high school. Acquaintances from university onward, however, strongly described him as outgoing, supremely confident, and dependable.\nIt was a classic case of reinventing oneself at university.\nSomewhere nobody knew his past, he had put on the bravest face he could and constructed a new self.\nBut perhaps his true nature had not changed so easily.\n\nAn affair is wrong, but no one can deny him his true nature.\nHe now reportedly earns his living as a convenience store clerk in a major city.\nI hope he finds happiness in that life.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k182; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k184",
+          "source_text_sha256": "5d016d15dc14ef39d94592e914b56b710cbce726c8b3b957cd96516fbf132ae7",
+          "en": "The giant flying creatures forced the refrigerated truck he was driving to stop suddenly. Collisions from vehicles behind it scattered frozen fish from its container onto the road.\nAs time passed, the fish thawed naturally and the surrounding smell reportedly grew increasingly fishy.\n\nEven so, he apparently did everything he could to clean up.\nBut the bridge then collapsed, and he fell into the sea along with the frozen fish.\n\nHaving happened to enter the truck's container, he was protected from falling bridge girders and debris and could wait it out.\nHowever, while he stayed inside, the smell of half-thawed fish and schools of fish in the sea filled the space so intensely that he thought he would lose his mind.\n\nLater, he changed jobs to a company delivering ordinary cargo.\nHe says the smell of fish still clings to him, and he cannot even approach the fresh fish section in a supermarket.\nIt is a shame he cannot eat fish, but there are plenty of other delicious foods.\nHaving been given a second chance at life, I hope he enjoys it in good health.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k184; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "9f15bf59093e546ffcc792b403942c4a42e2f49450a016610382d50c777003ff",
+          "en": "An oddly composed person carrying an emergency bag with something like a crowbar sticking out was seen on Sky Garden Bridge just before it collapsed.\nSubsequent reporting suggests he is a journalist who has survived disasters like this many times.\n\nBecause the crowbar-like object could also serve as a weapon, the other stranded people reportedly initially considered him dangerous and kept their distance.\n\nThis time, too, he reportedly swam ashore on his own after the bridge collapsed, then walked off to parts unknown.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k202",
+          "source_text_sha256": "d1246f41abe2db3481851a9c2a2a52860f361ccdcd163ba41e732a78751fa4d1",
+          "en": "The secondhand buyers who have recently attracted attention were spotted on Sky Garden Bridge as its collapse approached.\n\nTheir conspicuous outfits and unusual business model, in which staff standing here and there serve as the shops themselves, have attracted particular attention on social media.\n\nMany people have said they would like an 'anything for sale' service, too. Unfortunately, no comment has been issued.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k202; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k206",
+          "source_text_sha256": "ad980a27742983ac71e4302cb6a5ec6e0ac02c336e5086bc2920b1eda3e06fd4",
+          "en": "Cars on the bridge are sent flying by a giant flying creature's rays.\nA motorcycle was spotted passing at just that moment, but apparently made it through safely.\nWhether by chance or because its rider was a professional stunt performer or the like remains unclear,\nbut it seems to have slipped deftly through a gap beneath a flying car.\n\nWhen something extraordinary happens, unexpected skills may help you survive.\nWe plan to begin a feature introducing such skills soon. Please watch for further reports.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k206; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k210",
+          "source_text_sha256": "bcc7b2ace9cfe093624d79395058225f3f445724f2c53695a5c013f586c6fd4b",
+          "en": "This captures the moment the giant flying creature at the rear passed close to the half-destroyed bridge restaurant, firing rays at the other giant flying creature.\n\nThe principles behind these rays remain unexplained.\nUnofficial reports suggest various countries have begun researching how to reproduce them for military use.\n\nPersonally, I cannot help feeling that humanity would be better off if they remained unexplained.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k210; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k212",
+          "source_text_sha256": "b52fa21d1167bb4eb619ab67f9341f8bb965d520ad8efc7c8f9730856c1e7a3f",
+          "en": "A suspicious person was discovered in footage of the bridge restaurant's men's restroom just before its collapse.\nThis came to light because footage from the crime-prevention camera was sent over a dedicated line to the restaurant operator's headquarters, leaving a record even after the restaurant fell.\n\nUsing the restroom at a time when nearly half the building had probably already collapsed is itself unnatural. Moreover, the person was wandering about as if searching for something, so involvement in some kind of crime cannot be ruled out.\nStill, given the location, financial motives seem unlikely. What on earth were they trying to do?",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k212; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k218",
+          "source_text_sha256": "2059f0f89a9594eeef4043e78c1d853c49de19048d449f97b8d22fac910242bc",
+          "en": "Hand dryers are now a common sight in public facilities, offices, and many other places.\nBut did you know they have begun a new stage of evolution?\n\nModels are now being sold that not only dry washed hands but also remove facial shine.\nThese are hugely popular with office workers whose faces become oily toward evening or when they are tired.\n\nFurthermore, rather than simply drying the skin, they also moisturize it. Instead of leaving skin parched once the shine is gone, they reportedly leave it feeling refreshed and have been warmly received.\nThey are particularly popular with sales staff who often meet people outside their companies, and corporate orders are reportedly pouring in.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k218; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k220",
+          "source_text_sha256": "8bcb5d0200e3502aa4680a61b118b4e34fa56ce8feaebcbcbc51bc5fb4486b1d",
+          "en": "We have learned that a young person entered the bridge restaurant's women's restroom despite the imminent collapse.\nTheir movements as they wandered around inside make it seem clear that they were not there for its usual purpose.\n\nWhy were they in such a place just before it collapsed? Perhaps they were a customer desperately searching for something important they had dropped.\n\nWith a possible crime also a concern, police are investigating their identity and intend to question them. Please watch for further reports.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k220; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k224",
+          "source_text_sha256": "23f7e4de25f77a2ff79429e176250e6ebda94a463883174d00140f9e6b23b356",
+          "en": "Did you know there are hand dryers designed for women?\n\nFirst, their hand-drying function goes beyond conventional drying: a special moisturizing mist leaves hands smooth.\nIts immediate effects reportedly far surpass commercially available hand creams. Tests even found that women troubled by rough hands saw their cracks disappear after only about three uses.\n\nThey also include a function that removes facial shine without taking off makeup.\nAmazingly, a special function improves the complexion at the same time, reportedly providing a facial beauty treatment as well.\n\nThese are purchased not only by companies but also by many individual women for use as beauty devices at home. Demand has been so high that production lines are being expanded.\nHome models with an additional foot-care function are also on sale and have earned rave reviews for their effects on swollen feet and sensitivity to cold.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k224; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "173ec085b8caa1f4aba3c5a0bd15ea957c898458e86403a88d49d9abef36394a",
+          "en": "We have learned that someone who was not a staff member was near the cash register shortly before the collapse.\nThe lack of lighting makes it hard to see, but they appear to be stealing money from it.\n\nHowever, the register was recovered later, and its money was found safely inside. Nothing had been stolen.\n\nThen what was that person doing?\nDid they try and fail to open the register? Or were they an obsessive cash-register enthusiast?\nThe person has not been identified. Since no theft occurred, the bridge restaurant's operator also says it will not report the incident to police,\nso unfortunately it seems we will never learn the truth.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "6433db91c8e376390f61aeca636017226b9b9b5628ae02ab0f36e74e070a3c50",
+          "en": "There are many rumors about Sky Garden Bridge, but this time we examine the claim that its piers actually float.\n\nNormally, bridge piers are secured to strong foundations constructed on the seabed.\nEven an amateur like me can imagine that otherwise they would shift, making the bridge itself unsustainable.\n\nThat was why I initially wondered how such a rumor could arise.\nAs my reporting progressed, however, it began to seem less than entirely false. That said, I have found no clear evidence.\nWhenever I try to inspect the piers, a Japan Coast Guard boat appears from nowhere as I approach and drives me away.\n\nIf it is true, it might represent a patent that overturns everything we thought we knew about bridge construction.\nI intend to keep investigating. Please watch for further reports.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "ceb21e9db9355c7bf9093235632c0d1dee8384f035b697127b281fde0a85510e",
+          "en": "Walk Across and Back Ten Times...\n\nHave you heard the rumor that walking ten round trips across Sky Garden Bridge will make a wish come true?\nPerhaps it is the bridge equivalent of making a hundred shrine visits.\n\nApparently, the wishes granted differ between the northern and southern sidewalks on the lower level.\nTen round trips on the northern sidewalk supposedly grant wishes about love, while the southern one grants wishes about studies and business.\n\nYou must not be seen by anyone along the way, nor may you speak. With cars passing constantly, that seems rather impossible...",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k234",
+          "source_text_sha256": "7a0021d9ddbe78113b2e4eb73a563567749738eb210def7ea008d3260421596a",
+          "en": "Jump with a Wish in Your Heart...\n\nSky Garden Bridge has a long history, and at one time it was a wooden bridge.\nOf course, it had a different name then.\nThere is a tale about the bridge dating back to those days.\n\nNot long after it was built, when society was still divided by hereditary status, the commoner loved by a samurai family's daughter was killed by a masterless samurai hired by her parents.\nDespairing of life, the daughter threw herself over the railing. A bright light then supposedly descended from the sky and rose back into the heavens together with a light that appeared on the water.\nFrom rumors spread by those who saw it, the story changed into a belief that jumping from the bridge would unite you with your beloved.\n\nSo many people began jumping, and deaths rose so sharply, that the shogunate reportedly stationed officials permanently on the bridge to stop them.\n\nFew people notice them, but even today there are small shrines beside the piers at both ends of Sky Garden Bridge, dedicated to those who died.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k234; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k236",
+          "source_text_sha256": "c7b0694b60e91a7fdbe403db0b9cf3fef79a7a8ca1bf9f10024c878b995a4c5d",
+          "en": "Does It Really Work? A Bond of Love\n\nDid you know there is a spot on the southern sidewalk of Sky Garden Bridge's lower level, about 120 meters from the western end, where the railing is shaped like an angel?\nIn fact, it was accidentally deformed during construction. Since there was no problem with its strength or structure, it was left as it was.\n\nHowever, its angel-like appearance gave rise to a rumor: 'Tie a cloth bearing your name and your lover's to the nearby railing, and you will remain together forever.'\nNo matter how often the cloths were removed, they quickly accumulated again. Eventually, the city authorities responsible gave in and began managing the spot as a tourist attraction instead.\nThe tied cloths are removed regularly, and the area where they may be tied is designated.\n\nRecently, it has become famous as a stop for couples visiting from other prefectures, so many of you may already know it.\nIt is strange what can give rise to a rumor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k236; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k238",
+          "source_text_sha256": "66042ae3802a20c4b80712225ddab80604343ac417481182250cdcf2e8a6acde",
+          "en": "A Third Level Beneath the Sea?\n\nSky Garden Bridge is generally understood to have two levels: an upper level exclusively for cars and a lower level with sidewalks, roadways, and railway tracks.\n\nBut have you heard the rumor that there is actually a third level?\nSupposedly, an elevator in a pier takes you beneath the seabed, where passages lead to other piers and the opposite shore.\nIt is said to be exclusively for important people in emergencies.\nWhen I asked the management company and others about this, they laughed it off.\nThere are indeed ladders inside the piers, they said, but these are solely for bridge management and maintenance.\n\nNevertheless, immediately after this interview, my superior ordered me to stop investigating. Finding that suspicious, and after considering various factors, I intend to leave my job and keep pursuing the matter as a freelance journalist. Please watch for further reports.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k238; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k240",
+          "source_text_sha256": "ee60d34ddfcbee342059e2939d531fd84f99dd8b1dfea296cab9591e224e6ec9",
+          "en": "Actually a Protective Barrier?\n\nRecently, rumors have been circulating that Sky Garden Bridge is a protective barrier. They began when someone pointed out that, viewed from the sea, its shape resembles the depiction of a barrier used in a certain faith to keep evil spirits out.\n\nI researched that faith myself, and there is indeed something similar.\nHowever, it was a minor faith to begin with, and apparently has no followers left today.\nPeople tend to connect even small details and give them unusual interpretations. Perhaps that is how this rumor arose.\nOr is there 'something' proceeding in secret, somewhere far deeper? I intend to keep investigating.",
+          "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k240; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_217_news_text.luc",
+      "source_sha256": "8c7c9602b3267d23b276f6939dcc49b0405603d698bada10ee5c362e4fabcb5d",
+      "entries": [
+        {
+          "id": "p0/k58",
+          "source_text_sha256": "ff0345edf5b1467358bfceb8cff3c30c3bce48f76bdd526fcfff06510c2a3d1a",
+          "en": "Chief Cabinet Secretary S announced that the 'giant of light,' which stopped the giant alien destroying the city, will be called Ultraman.\nUltraman is believed to stand approximately 40 meters tall and weigh an estimated 35,000 tons. His flight speed reportedly reaches Mach 5. Some witnesses claim he grew to giant size before appearing, but the details remain unclear.\n\nPeople watching videos uploaded by witnesses have posted numerous comments praising his efforts.",
+          "notes": "English draft imported from audited private workspace, translate-en-0167.json:p0/k58; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

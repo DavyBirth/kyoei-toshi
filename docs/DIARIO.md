@@ -1,5 +1,19 @@
 # Diário do projeto
 
+### 14/10/2026 — continuação das notícias da Sky Garden Bridge
+
+- Após o checkpoint anterior, três lotes de artigos completos (+51 EN), mais
+  cinco reutilizações revisadas de original exatamente idêntico/inglês unívoco.
+  Nesta retomada +185; consolidado 10.939/16.100, 5.161 vazias. Incompleto.
+- Telefonia de emergência, sobreviventes, restaurantes, transporte e lendas
+  da ponte; especulação/humor/alegações ficcionais preservados como narrador.
+  Artigos com leituras de nomes/bylines não comprovadas permanecem pendentes.
+- Adições11: 56 em cinco recursos, sem original JP. Auditoria dos 173 JSONs
+  e reconstrução/releitura das 10.939 EN em 117 recursos PASS. União com pilotos
+  validada em memória: 11.069; nenhum arquivo de jogo gerado nesta etapa.
+- en-05 permanece aplicada em 10.721 EN; revisão visual/humana pendente.
+  Diário, índice de lacunas e consolidado privado atualizados para retomada.
+
 ### 14/10/2026 — continuação: porto, resgate e acessórios
 
 - Davy autorizou continuar no modelo atual. Quatro lotes novos, +129 EN:
