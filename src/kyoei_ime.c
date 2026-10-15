@@ -117,6 +117,13 @@ static ABI int32_t ime_init(const ImeParam *p, const void *extended) {
     initial[n] = 0; title[0] = 0;
     if (!kyoei_name_valid((const uint16_t *)initial,n)) return (int32_t)0x80bc0006;
     if (p->title) { n = 0; while (n < 256 && p->title[n]) { title[n] = p->title[n]; ++n; } title[n] = 0; }
+    {   /* The game's two name prompts, shown in English when the port runs in English. */
+        const char *language=getenv("KYOEI_LANGUAGE");
+        if (language && !strcmp(language,"en")) {
+            if (!wcscmp(title,L"「姓」を入力してください")) wcscpy(title,L"Enter your last name");
+            else if (!wcscmp(title,L"「名」を入力してください")) wcscpy(title,L"Enter your first name");
+        }
+    }
     done = 0; end_status = 2; InterlockedExchange(&abort_requested, 0);
     using_overlay=kyoei_overlay_begin_name(title,(const uint16_t *)initial,wcslen(initial),p->max_length);
     InterlockedExchange(&status, 1);
@@ -150,11 +157,13 @@ static ABI int32_t ime_result(uint32_t *result) {
         }
         if (n > param.max_length || !kyoei_name_valid((const uint16_t *)accepted,n)) return (int32_t)0x80bc0006;
         if (param.filter) {
+            // CUSA03562's filter returns 0 only when it rewrote the text
+            // (half-width kana to full-width); nonzero means keep the source.
             uint16_t filtered[2049] = {0}; uint32_t length = param.max_length;
-            int32_t error = param.filter(filtered, &length, (uint16_t *)accepted, n);
-            if (error) return error;
-            if (length > param.max_length) return (int32_t)0x80bc0006;
-            if (!kyoei_name_valid(filtered,length)) return (int32_t)0x80bc0006;
+            int32_t changed = param.filter(filtered, &length, (uint16_t *)accepted, n);
+            if (changed || length > param.max_length || !kyoei_name_valid(filtered,length)) {
+                memcpy(filtered, accepted, (n + 1) * 2); length = n;
+            }
             memcpy(param.buffer, filtered, length * 2); param.buffer[length] = 0;
         } else memcpy(param.buffer, accepted, (n + 1) * 2);
     }

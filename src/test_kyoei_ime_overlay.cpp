@@ -17,6 +17,7 @@ static ABI int32_t guest_filter(uint16_t *output,uint32_t *length,const uint16_t
     CHECK(*length==4 && count==2 && input[0]=='h' && input[1]=='i');
     if (filter_mode==1) { *length=5; return 0; }
     if (filter_mode==2) { output[0]=0xd800; *length=1; return 0; }
+    if (filter_mode==3) { output[0]='X'; *length=1; return -1; } // game: unchanged
     output[0]='H'; output[1]='I'; *length=2; return 0;
 }
 int main() {
@@ -46,7 +47,7 @@ int main() {
         CHECK(!std::memcmp(buffer,alias.original,(alias.original_length+1)*2));
         CHECK(buffer[5]==0xaaaa && buffer[6]==0xbbbb);CHECK(!term());
     }
-    for (filter_mode=0;filter_mode<3;++filter_mode) {
+    for (filter_mode=0;filter_mode<4;++filter_mode) {
         uint16_t buffer[7]={'K','e','n',0,0,0xaaaa,0xbbbb};
         KyoeiImeParam param{}; param.user=1; param.max_length=4; param.buffer=buffer; param.filter=guest_filter;
         filter_calls=0;
@@ -61,7 +62,7 @@ int main() {
         if (!filter_mode) {
             CHECK(!returned && buffer[0]=='H' && buffer[1]=='I' && buffer[2]==0);
             CHECK(info[0]==0 && info[1]==0 && info[2]==0 && info[3]==0);
-        } else CHECK(returned==(int32_t)0x80bc0006 && buffer[0]=='K' && info[0]==9);
+        } else CHECK(!returned && buffer[0]=='h' && buffer[1]=='i' && buffer[2]==0 && info[0]==0);
         CHECK(buffer[5]==0xaaaa && buffer[6]==0xbbbb && info[4]==0xabcdef01);
         CHECK(!term() && !status() && !kyoei_overlay_kind());
     }

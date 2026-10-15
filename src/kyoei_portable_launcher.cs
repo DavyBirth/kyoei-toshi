@@ -148,6 +148,7 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_LANGUAGE"]=lang;
             start.EnvironmentVariables["KYOEI_MOUSE_SENSITIVITY"]=mouseSensitivity.ToString(CultureInfo.InvariantCulture);
             start.EnvironmentVariables["KYOEI_NAME_STORE"]="data/user/character-names.bin";
+            start.EnvironmentVariables["KYOEI_TITLE_EXIT"]="1";
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
             start.EnvironmentVariables["GZ_LANGUAGE"]=lang=="ja"?"0":"1";
             if(lang=="en")start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";
