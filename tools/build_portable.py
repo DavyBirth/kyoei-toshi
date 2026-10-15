@@ -100,6 +100,9 @@ def main():
     for name in ['boot-linked.bin','imports.tsv','deferred.tsv','tls-sites.tsv']:
         copy_file(prepared/name,out/'runtime/out'/name)
     copy_file(Path(preview['archive']),out/'languages/en/common.psarc')
+    # Return to Desktop title item, drawn in the native menu style from the dump.
+    subprocess.run([str(ROOT/'build/image-tools/Scripts/python.exe'),str(ROOT/'tools/make_title_exit_art.py'),
+                    str(out/'game/DAT/common.psarc'),str(out/'assets')],check=True)
     # Keyboard button prompts: small read-time deltas over each language's archive.
     imaging=ROOT/'build/image-tools/Scripts/python.exe'
     for language,base in (('en',out/'languages/en/common.psarc'),('ja',out/'game/DAT/common.psarc')):

@@ -11,22 +11,25 @@
 #include <windows.h>
 #include <limits.h>
 #include <stdlib.h>
+#include <stdio.h>
 typedef void (ABI *GuestUpdate)(void *);
 static GuestUpdate original_update;
 #endif
 
-enum { VISIBLE_MS=200, CONFIRM=0x2000, CANCEL=0x4000, UP=0x10, DOWN=0x40 };
-static _Atomic int cursor=-1, state=KYOEI_TITLE_EXIT_HIDDEN, hover;
+enum { VISIBLE_MS=200, CONFIRM=0x2000, UP=0x10, DOWN=0x40 };
+static _Atomic int cursor=-1, accepting, state=KYOEI_TITLE_EXIT_HIDDEN, hover;
 static _Atomic uint64_t last_frame;
 static uint32_t previous_buttons;
 static int previous_down,previous_up;
 static _Atomic int quit_requested, quit_taken;
+/* Geometry published by the guest thread; read by the overlay each frame. */
+static volatile float item_alpha, item_x, item_y, item_focus;
 
 #ifdef KYOEI_TITLE_EXIT_TEST
 static uint64_t test_now;
 static uint64_t now_ms(void) { return test_now; }
 static void request_quit(void) { quit_requested=1; }
-void kyoei_title_exit_test_frame(int value,uint64_t now) { cursor=value; last_frame=now; test_now=now; }
+void kyoei_title_exit_test_frame(int value,uint64_t now) { cursor=value; accepting=1; item_alpha=1; last_frame=now; test_now=now; }
 void kyoei_title_exit_test_clock(uint64_t now) { test_now=now; }
 int kyoei_title_exit_test_quit_requested(void) { return quit_requested; }
 #else
@@ -38,21 +41,26 @@ static void request_quit(void) {
 #endif
 
 int kyoei_title_exit_take_quit(void) { return quit_requested && !atomic_exchange(&quit_taken,1); }
-static int visible(void) {
+static int shown(void) {
     uint64_t frame=last_frame;
-    return frame && now_ms()-frame<VISIBLE_MS && cursor>=0;
+    return frame && now_ms()-frame<VISIBLE_MS && item_alpha>0;
 }
+static int usable(void) { return shown() && accepting && cursor>=0; }
 int kyoei_title_exit_state(void) {
-    if (!visible()) return KYOEI_TITLE_EXIT_HIDDEN;
+    if (!shown()) return KYOEI_TITLE_EXIT_HIDDEN;
     int value=state;
-    if (value<=KYOEI_TITLE_EXIT_IDLE) return hover?KYOEI_TITLE_EXIT_SELECTED:KYOEI_TITLE_EXIT_IDLE;
+    if (value<=KYOEI_TITLE_EXIT_IDLE) return hover&&usable()?KYOEI_TITLE_EXIT_SELECTED:KYOEI_TITLE_EXIT_IDLE;
     return value;
+}
+int kyoei_title_exit_item(KyoeiTitleItem *item) {
+    if (!item || !shown()) return 0;
+    item->alpha=item_alpha; item->x=item_x; item->y=item_y; item->focus=item_focus;
+    return 1;
 }
 void kyoei_title_exit_hover(int inside) { hover=inside!=0; }
 int kyoei_title_exit_click(void) {
-    if (!visible()) return 0;
-    if (state==KYOEI_TITLE_EXIT_CONFIRM) request_quit();
-    else { state=KYOEI_TITLE_EXIT_CONFIRM; }
+    if (!usable()) return 0;
+    request_quit();
     return 1;
 }
 
@@ -63,36 +71,62 @@ static void set_state(int value) {
     gz_log("Kyoei title: exit entry state=%d",value);
 #endif
 }
+/* The menu's own confirm (E / Enter / Circle) quits at once: nothing on the
+ * title screen can be lost, matching a PC title menu's Quit entry. */
 int kyoei_title_exit_input(uint32_t buttons,unsigned stick_y) {
     int down=(buttons&DOWN) || stick_y>=200, up=(buttons&UP) || stick_y<=56;
     uint32_t pressed=buttons&~previous_buttons;
     int down_edge=down&&!previous_down, up_edge=up&&!previous_up;
     previous_buttons=buttons; previous_down=down; previous_up=up;
-    if (!visible()) { set_state(KYOEI_TITLE_EXIT_HIDDEN); return 0; }
-    int current=state;
-    if (current<=KYOEI_TITLE_EXIT_IDLE) {
+    if (!usable()) { if (!shown()) set_state(KYOEI_TITLE_EXIT_HIDDEN); return 0; }
+    if (state<=KYOEI_TITLE_EXIT_IDLE) {
         set_state(KYOEI_TITLE_EXIT_IDLE);
         if (cursor==3 && down_edge) { set_state(KYOEI_TITLE_EXIT_SELECTED); return 1; }
         return 0;
     }
     // Our entry owns the cursor: the game must not see these inputs.
-    if (current==KYOEI_TITLE_EXIT_SELECTED) {
-        if (up_edge) set_state(KYOEI_TITLE_EXIT_IDLE);
-        else if (pressed&CONFIRM) set_state(KYOEI_TITLE_EXIT_CONFIRM);
-    } else if (pressed&CONFIRM) request_quit();
-    else if ((pressed&CANCEL) || up_edge || down_edge) set_state(KYOEI_TITLE_EXIT_SELECTED);
+    if (up_edge) set_state(KYOEI_TITLE_EXIT_IDLE);
+    else if (pressed&CONFIRM) request_quit();
     return 1;
 }
 
 #ifndef KYOEI_TITLE_EXIT_TEST
+/* UnitHudGameTitle node table at +0x50: items 5/7/9/11 (focus layers 6/8/10/12),
+ * reserved fifth slot 13/14, underline 15/16. Node +0x60/+0x64 = x/y in the
+ * 1920x1080 HUD, +0x94 = RGBA color (alpha in the high byte). */
+typedef struct { unsigned char pad[0x60]; float x, y; unsigned char pad2[0x94-0x68]; uint32_t color; } HudNode;
+static HudNode *node(void *self,int index) {
+    HudNode **nodes=NULL; memcpy(&nodes,(const char *)self+0x50,8);
+    return nodes?nodes[index]:NULL;
+}
 static ABI void title_update(void *self) {
     original_update(self);
-    int value=-1,accepting=0;
+    int value=-1,ready=0;
     memcpy(&value,(const char *)self+0x1b8,sizeof(value));
     // +0x1b0 gates the game's own cursor input: zero during intro/fades.
-    memcpy(&accepting,(const char *)self+0x1b0,sizeof(accepting));
-    if (!accepting) return;
-    cursor=value>=0&&value<=3?value:-1;
+    memcpy(&ready,(const char *)self+0x1b0,sizeof(ready));
+    HudNode *items[4]={node(self,5),node(self,7),node(self,9),node(self,11)};
+    HudNode *slot=node(self,13),*line_a=node(self,15),*line_b=node(self,16);
+    if (!items[0]||!items[3]||!slot||!line_a||!line_b) return;
+    float alpha=(float)(items[3]->color>>24)/255.f;
+    float base=items[0]->x, selected_x=items[0]->x;
+    for (int i=0;i<4;++i) { if (items[i]->x<base) base=items[i]->x; if (items[i]->x>selected_x) selected_x=items[i]->x; }
+    float shift=selected_x>base?selected_x-base:50.f;
+    int ours=state>=KYOEI_TITLE_EXIT_SELECTED || (hover && ready);
+    if (ours && value==3) {
+        // Hand the native highlight to our row: item 4 returns to its resting
+        // column and its glow layer hides; the game's underline follows us.
+        HudNode *glow=node(self,12);
+        float offset=line_a->y-items[3]->y;
+        items[3]->x=base; if (glow) { glow->x=base; glow->color&=0x00ffffffu; }
+        line_a->y=line_b->y=slot->y+offset;
+    }
+    float target=ours?base+shift:base;
+    item_x=item_x+(target-item_x)*0.35f;
+    if (item_x<base-1||item_x>base+shift+1) item_x=target;
+    item_focus=item_focus+((ours?1.f:0.f)-item_focus)*0.35f;
+    item_y=slot->y; item_alpha=alpha;
+    cursor=value>=0&&value<=3?value:-1; accepting=ready;
     last_frame=now_ms();
 }
 static uint64_t code_hash(const unsigned char *bytes,size_t count) {

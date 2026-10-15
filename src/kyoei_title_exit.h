@@ -10,6 +10,9 @@ void kyoei_title_exit_configure(void *image,uint64_t size);
 /* Called by the pad bridge each poll; nonzero means the input was consumed. */
 int kyoei_title_exit_input(uint32_t buttons,unsigned left_stick_y);
 int kyoei_title_exit_state(void);
+/* HUD-space (1920x1080) placement and fade of the PC item, mirroring the native items. */
+typedef struct { float alpha, x, y, focus; } KyoeiTitleItem;
+int kyoei_title_exit_item(KyoeiTitleItem *item);
 /* Returns 1 once after the player confirmed; the window thread then quits. */
 int kyoei_title_exit_take_quit(void);
 /* Mouse activation from the overlay; returns nonzero when consumed. */

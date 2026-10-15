@@ -8,6 +8,8 @@
 #include "kyoei_input_mode.h"
 #include "kyoei_title_exit.h"
 #include "imgui.h"
+#include "imgui_internal.h"
+#include <cstdio>
 #include <windows.h>
 #include <algorithm>
 #include <atomic>
@@ -322,42 +324,68 @@ void SetReady(bool value) {
     std::scoped_lock lock{mutex}; ready=value;
     if (!value) finish_locked(2);
 }
+void release_title_art();
 void ShutdownGui() {
     std::scoped_lock lock{mutex}; ready=false; finish_locked(2);
+    release_title_art();
     ImGui::DestroyContext();
 }
-// Placement measured against the native title menu (1280x720 capture, 16:9
-// area): items at x=88, rows 45 px apart, fifth row centered near y=285.
+// The PC title item is drawn from art made in the native item style
+// (tools/make_title_exit_art.py): a sharp layer plus a blurred focus layer,
+// placed and faded from the game's own menu nodes (HUD space 1920x1080).
+constexpr float TITLE_ART_DX=0, TITLE_ART_DY=0; // calibrated against the native items
 float title_rect[4];
-void title_exit(unsigned width,unsigned height,int state) {
-    const char *language=std::getenv("KYOEI_LANGUAGE");
-    bool japanese=language && !std::strcmp(language,"ja");
-    const char *label=japanese?"ãã¹ã¯ãããã«æ»ã":"Return to Desktop";
-    float unit=std::min(float(height)/720.f,float(width)/1280.f);
-    float left=(float(width)-1280*unit)/2, top=(float(height)-720*unit)/2;
-    float size=27*unit, x=left+88*unit, y=top+285*unit;
-    auto *font=ImGui::GetFont();
-    ImVec2 extent=font->CalcTextSizeA(size,FLT_MAX,0,label);
-    ImVec2 at(x,y-extent.y/2);
-    title_rect[0]=at.x-12*unit; title_rect[1]=at.y-6*unit; title_rect[2]=extent.x+24*unit; title_rect[3]=extent.y+12*unit;
-    auto *draw=ImGui::GetForegroundDrawList();
-    bool active=state>=KYOEI_TITLE_EXIT_SELECTED;
-    if (active) draw->AddRectFilledMultiColor(ImVec2(at.x+10*unit,at.y+extent.y+2*unit),ImVec2(at.x+extent.x+50*unit,at.y+extent.y+4*unit),
-        IM_COL32(60,200,140,255),IM_COL32(60,200,140,0),IM_COL32(60,200,140,0),IM_COL32(60,200,140,255));
-    for (int dx=-1;dx<=1;++dx) for (int dy=-1;dy<=1;++dy)
-        draw->AddText(font,size,ImVec2(at.x+dx*1.5f*unit,at.y+dy*1.5f*unit),IM_COL32(0,0,0,active?140:90),label);
-    draw->AddText(font,size,at,active?IM_COL32(255,255,255,255):IM_COL32(225,225,225,235),label);
-    draw->AddText(font,size,ImVec2(at.x+.6f*unit,at.y),active?IM_COL32(255,255,255,255):IM_COL32(225,225,225,235),label);
-    if (state==KYOEI_TITLE_EXIT_CONFIRM) {
-        bool controller=kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER;
-        const char *hint=japanese?(controller?"â çµäº  Ã æ»ã":"E / Enter: çµäº   Space: æ»ã"):
-            (controller?"Quit to desktop?   Circle: Yes   Cross: No":"Quit to desktop?   E / Enter / Click: Yes   Space: No");
-        float small=17*unit;
-        ImVec2 hint_at(at.x,at.y+extent.y+10*unit);
-        ImVec2 hint_size=font->CalcTextSizeA(small,FLT_MAX,0,hint);
-        draw->AddRectFilled(ImVec2(hint_at.x-8*unit,hint_at.y-4*unit),ImVec2(hint_at.x+hint_size.x+8*unit,hint_at.y+hint_size.y+4*unit),IM_COL32(0,0,0,150),4*unit);
-        draw->AddText(font,small,hint_at,IM_COL32(240,240,240,255),hint);
+// Both layers live in the font atlas (custom rects) so they upload through the
+// same path as the glyphs; a separate user texture upload faulted in the driver.
+ImFontAtlasRectId title_art[2]={ImFontAtlasRectId_Invalid,ImFontAtlasRectId_Invalid};
+bool title_art_loaded;
+int title_art_width, title_art_height;
+void load_title_art() {
+    title_art_loaded=true;
+    const char *path=std::getenv("KYOEI_TITLE_EXIT_ART");
+    if (!path || !*path) return;
+    FILE *file=std::fopen(path,"rb");
+    if (!file) return;
+    unsigned char head[16]; uint32_t w=0,h=0;
+    bool ok=std::fread(head,1,16,file)==16 && !std::memcmp(head,"KYART1\0\0",8);
+    if (ok) { std::memcpy(&w,head+8,4); std::memcpy(&h,head+12,4); ok=w && h && w<=1024 && h<=256; }
+    std::vector<unsigned char> pixels(ok?(size_t)w*h*8:0);
+    ok=ok && std::fread(pixels.data(),1,pixels.size(),file)==pixels.size();
+    std::fclose(file);
+    if (!ok) return;
+    ImFontAtlas *atlas=ImGui::GetIO().Fonts;
+    atlas->TexPixelsUseColors=true;
+    for (int layer=0; layer<2; ++layer) {
+        ImFontAtlasRect r;
+        title_art[layer]=atlas->AddCustomRect((int)w,(int)h,&r);
+        if (title_art[layer]==ImFontAtlasRectId_Invalid || atlas->TexData->Format!=ImTextureFormat_RGBA32) return;
+        for (uint32_t y=0; y<h; ++y)
+            std::memcpy(atlas->TexData->GetPixelsAt(r.x,r.y+(int)y),pixels.data()+((size_t)layer*h+y)*w*4,(size_t)w*4);
+        ImFontAtlasTextureBlockQueueUpload(atlas,atlas->TexData,r.x,r.y,r.w,r.h);
     }
+    title_art_width=(int)w; title_art_height=(int)h;
+}
+void release_title_art() {
+    title_art[0]=title_art[1]=ImFontAtlasRectId_Invalid;
+    title_art_loaded=false; title_art_width=0;
+}
+void title_exit(unsigned width,unsigned height) {
+    KyoeiTitleItem item;
+    if (!title_art_width || !kyoei_title_exit_item(&item)) { title_rect[2]=0; return; }
+    // 16:9 HUD letterboxed into the swapchain, as the game composes it.
+    float unit=std::min(float(width)/1920.f,float(height)/1080.f);
+    float left=(float(width)-1920*unit)/2, top=(float(height)-1080*unit)/2;
+    ImVec2 at(left+(item.x+TITLE_ART_DX)*unit, top+(item.y+TITLE_ART_DY)*unit);
+    ImVec2 end(at.x+title_art_width*unit, at.y+title_art_height*unit);
+    title_rect[0]=at.x; title_rect[1]=at.y; title_rect[2]=end.x-at.x; title_rect[3]=end.y-at.y;
+    auto *draw=ImGui::GetBackgroundDrawList();
+    int alpha=(int)(std::clamp(item.alpha,0.f,1.f)*255);
+    int glow=(int)(std::clamp(item.focus,0.f,1.f)*alpha);
+    ImFontAtlas *atlas=ImGui::GetIO().Fonts;
+    ImFontAtlasRect normal,focus;
+    if (!atlas->GetCustomRect(title_art[0],&normal) || !atlas->GetCustomRect(title_art[1],&focus)) return;
+    if (glow>0) draw->AddImage(atlas->TexRef,at,end,focus.uv0,focus.uv1,IM_COL32(255,255,255,glow));
+    draw->AddImage(atlas->TexRef,at,end,normal.uv0,normal.uv1,IM_COL32(255,255,255,alpha));
 }
 }
 extern "C" int kyoei_title_exit_hit(float x,float y) {
@@ -378,6 +406,7 @@ ImDrawData *Draw(unsigned width,unsigned height,float seconds) {
     float next=std::clamp(float(height)/1080.f,.6f,2.f);
     auto &style=ImGui::GetStyle(); style=base_style; style.ScaleAllSizes(next);
     style.FontScaleMain=next; scale=next;
+    if (!title_art_loaded) load_title_art();
     ImGui::NewFrame();
     if (kind && !done) {
         bool controller=kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER;
@@ -390,8 +419,7 @@ ImDrawData *Draw(unsigned width,unsigned height,float seconds) {
         else if (kind==KYOEI_OVERLAY_LIST) list_box(panel_height);
         else message_box();
         ImGui::End();
-    } else if (int title_state=kyoei_title_exit_state()) title_exit(width,height,title_state);
-    else title_rect[2]=0;
+    } else title_exit(width,height);
     ImGui::Render(); return ImGui::GetDrawData();
 }
 }

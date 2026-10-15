@@ -153,6 +153,7 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_MOUSE_SENSITIVITY"]=mouseSensitivity.ToString(CultureInfo.InvariantCulture);
             start.EnvironmentVariables["KYOEI_NAME_STORE"]="data/user/character-names.bin";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT"]="1";
+            start.EnvironmentVariables["KYOEI_TITLE_EXIT_ART"]="assets/title-exit.kyart";
             string promptsDelta=Path.Combine("languages",lang,"keyboard-icons.kydelta");
             if(keyboardPrompts&&File.Exists(Path.Combine(root,promptsDelta)))start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=promptsDelta;
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
