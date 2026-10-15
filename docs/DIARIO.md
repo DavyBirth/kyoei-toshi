@@ -2100,3 +2100,25 @@ espaço (rotina de texto do eboot); (7) PT-BR depois.
   13.226 textos e 59 texturas, adapter romaji ligado. Saves preservados.
   Nenhuma partida iniciada/encerrada. Linux ainda aguarda reinício voluntário
   e implementação; nenhum binário Linux prometido como entregue.
+
+### 15/10/2026 — progresso salvo e prioridades de Davy
+
+- Pedido explícito: salvar progresso. Código anterior salvo no commit 29a352a;
+  portable atualizado, árvore limpa antes deste registro. Restam, segundo Davy,
+  cerca de 40% do limite disponível; isso não certifica conclusão de etapas.
+- Ordem para a continuação:
+  1. Corrigir as 58 texturas conforme revisão importada, preservando a cópia
+     atual e oferecendo comparação visual. Não presumir aprovação das novas.
+  2. Melhorar desempenho ao máximo com medições de FPS/tempos/stutter e provas
+     de correção. Alvo inclui RX580/i5-9400; não prometer taxa sem teste.
+  3. Compilar e validar Linux x64, mantendo portable enxuto. Componentes WSL
+     aguardam reinício voluntário; ainda não existe executável Linux entregue.
+  4. VERIFICAR jogo 100% jogável: progressão do início ao fim, capítulos,
+     controles, nomes, saves, diálogos/legendas/texturas e textos necessários
+     ao jogador. Inventário ou bootstrap não substituem prova em jogo.
+  5. Corrigir toda lacuna/bloqueio encontrado até atingir esse objetivo;
+     registrar separadamente o comprovado, o pendente e o que exige teste humano.
+- Autorização anterior para trabalho permanece. Manter x64, saves e dump;
+  preservar snapshot Godzilla e não alterar projetos irmãos. Não iniciar nem
+  fechar partida automaticamente. Próxima sessão começa lendo este diário,
+  a revisão preservada e os documentos de desempenho/localização/Linux.
