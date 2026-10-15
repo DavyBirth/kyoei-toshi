@@ -19,6 +19,7 @@ class PortableLauncher : Form {
     FileStream profileLock;
     bool running;
     decimal mouseSensitivity=1.8m;
+    bool keyboardPrompts=true;
     [STAThread] static int Main(string[] args) {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
@@ -93,11 +94,12 @@ class PortableLauncher : Form {
             int i;if(int.TryParse(lines[1],out i)&&i>=0&&i<resolution.Items.Count)resolution.SelectedIndex=i;
             fullscreen.Checked=lines[2]=="1";
             decimal sensitivity;if(lines.Length>3&&decimal.TryParse(lines[3],NumberStyles.Number,CultureInfo.InvariantCulture,out sensitivity))mouseSensitivity=Math.Max(.2m,Math.Min(5m,sensitivity));
+            if(lines.Length>4)keyboardPrompts=lines[4]!="controller";
         }catch{}
     }
     void SaveSettings() {
         Directory.CreateDirectory(Path.Combine(root,"data"));
-        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture)});
+        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),keyboardPrompts?"keyboard":"controller"});
     }
     Form ControlsDialog() {
         var dialog=new Form();dialog.Text="Controls";dialog.ClientSize=new Size(850,665);dialog.StartPosition=FormStartPosition.CenterParent;
@@ -127,7 +129,9 @@ class PortableLauncher : Form {
         var note=new Label();note.SetBounds(18,505,815,40);note.Text="Actions depend on the scene. Vehicles use the same controller-to-key bindings.\nThe camera follows the game's maximum turning speed.";dialog.Controls.Add(note);
         var label=new Label();label.SetBounds(18,557,350,25);label.Text="Mouse sensitivity (default 1.80)";dialog.Controls.Add(label);
         var sensitivity=new NumericUpDown();sensitivity.SetBounds(390,552,120,28);sensitivity.Minimum=.2m;sensitivity.Maximum=5m;sensitivity.DecimalPlaces=2;sensitivity.Increment=.1m;sensitivity.Value=mouseSensitivity;dialog.Controls.Add(sensitivity);
-        var save=new Button();save.SetBounds(620,609,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
+        var promptsLabel=new Label();promptsLabel.SetBounds(18,602,350,25);promptsLabel.Text="On-screen button prompts";dialog.Controls.Add(promptsLabel);
+        var prompts=new ComboBox();prompts.SetBounds(390,597,210,28);prompts.DropDownStyle=ComboBoxStyle.DropDownList;prompts.Items.AddRange(new object[]{"Keyboard & mouse","PlayStation controller"});prompts.SelectedIndex=keyboardPrompts?0:1;dialog.Controls.Add(prompts);
+        var save=new Button();save.SetBounds(620,609,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;keyboardPrompts=prompts.SelectedIndex==0;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
         return dialog;
     }
     void Launch() {
@@ -149,6 +153,8 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_MOUSE_SENSITIVITY"]=mouseSensitivity.ToString(CultureInfo.InvariantCulture);
             start.EnvironmentVariables["KYOEI_NAME_STORE"]="data/user/character-names.bin";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT"]="1";
+            string promptsDelta=Path.Combine("languages",lang,"keyboard-icons.kydelta");
+            if(keyboardPrompts&&File.Exists(Path.Combine(root,promptsDelta)))start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=promptsDelta;
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
             start.EnvironmentVariables["GZ_LANGUAGE"]=lang=="ja"?"0":"1";
             if(lang=="en")start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";

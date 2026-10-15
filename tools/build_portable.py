@@ -1,5 +1,5 @@
 """Assemble the owner's private offline test copy. Never add its output to Git."""
-import argparse, hashlib, json, os, re, shutil, struct, subprocess
+import argparse, hashlib, json, os, re, shutil, struct, subprocess, sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -100,6 +100,13 @@ def main():
     for name in ['boot-linked.bin','imports.tsv','deferred.tsv','tls-sites.tsv']:
         copy_file(prepared/name,out/'runtime/out'/name)
     copy_file(Path(preview['archive']),out/'languages/en/common.psarc')
+    # Keyboard button prompts: small read-time deltas over each language's archive.
+    imaging=ROOT/'build/image-tools/Scripts/python.exe'
+    for language,base in (('en',out/'languages/en/common.psarc'),('ja',out/'game/DAT/common.psarc')):
+        delta=out/'languages'/language/'keyboard-icons.kydelta'
+        if delta.exists():delta.unlink()
+        subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/psarc_delta.py'),str(base),str(delta),
+                        '--keyboard-icons','--language',language],check=True)
     fonts=ROOT/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts'
     for name in ['NotoSans-Regular.ttf','NotoSansCJK-Regular.ttc']:copy_file(fonts/name,out/'assets/fonts'/name)
     for name in ['artwork.png','game.ico']:copy_file(ROOT/'build/launcher-assets'/name,out/'assets'/name)
@@ -126,7 +133,7 @@ def main():
     subprocess.run([str(csc),'/nologo','/codepage:65001','/target:winexe','/platform:x64','/optimize+',
                     '/r:System.Windows.Forms.dll','/r:System.Drawing.dll','/win32icon:'+str(out/'assets/game.ico'),
                     '/out:'+str(out/'City Shrouded in Shadow.exe'),str(ROOT/'src/kyoei_portable_launcher.cs')],check=True)
-    (out/'README.txt').write_text('CITY SHROUDED IN SHADOW\n\nOpen "City Shrouded in Shadow.exe". Choose English or Japanese.\nKeep all folders together. No installation or administrator account is needed.\n\nWindows 10/11 x64, compatible Vulkan graphics driver and AVX2-capable CPU required.\nThe complete folder must be on NTFS or exFAT (individual files exceed 4 GB).\nSaves and new logs stay in data/. No existing personal saves are included.\n\nKEYBOARD AND MOUSE\nWASD: move. Mouse or IJKL: camera. Arrow keys: directional pad.\nThe mouse is captured while the game has focus. F7 releases/recaptures it.\nAlt+Tab releases it; port dialogs temporarily restore the cursor.\nX: Circle (normally confirm). Space: Cross (normally back/cancel).\nZ: Square. C: Triangle. Q/E: L1/R1. 1/3: L2/R2.\nEnter: Options. Tab: touchpad. Controller prompts still show PS4 buttons.\nAn SDL-compatible gamepad can also be used.\n\nEnglish localization and runtime are experimental. Some text/images and layout\nremain under review. Performance depends on the computer; 60 FPS is a target,\nnot a guarantee. Rendering, game timing and original Japanese remain intact.\n\nPrivate test copy made from the owner\'s disc. Do not publish game files.\nRuntime contains GPL software; see licenses/.\n',encoding='utf-8')
+    (out/'README.txt').write_text('CITY SHROUDED IN SHADOW\n\nOpen "City Shrouded in Shadow.exe". Choose English or Japanese.\nKeep all folders together. No installation or administrator account is needed.\n\nWindows 10/11 x64, compatible Vulkan graphics driver and AVX2-capable CPU required.\nThe complete folder must be on NTFS or exFAT (individual files exceed 4 GB).\nSaves and new logs stay in data/. No existing personal saves are included.\n\nKEYBOARD AND MOUSE\nWASD: move. Mouse: camera. Shift: sprint. Ctrl: dodge.\nE / Enter / left click: interact, confirm. Space: back, cancel.\nF: read mail. Q / V: camera view. G / right click: Giant Shadow Camera.\nR / middle click: reset camera. H: HUD. M: map. Esc / Tab: pause menu.\nArrow keys: menus and target selection. F7 releases/recaptures the mouse.\nThe launcher\'s Controls window lists every action, sets mouse sensitivity\nand chooses keyboard or PlayStation button prompts.\nAn SDL-compatible gamepad can also be used.\n\nEnglish localization and runtime are experimental. Some text/images and layout\nremain under review. Performance depends on the computer; 60 FPS is a target,\nnot a guarantee. Rendering, game timing and original Japanese remain intact.\n\nPrivate test copy made from the owner\'s disc. Do not publish game files.\nRuntime contains GPL software; see licenses/.\n',encoding='utf-8')
     if not a.finalize and (out/'manifest.json').exists():
         # Updating an already-tested private copy must not leave stale hashes or
         # retain a claim that these new artifacts passed the full privacy scan.
