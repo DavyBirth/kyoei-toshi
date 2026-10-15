@@ -2302,3 +2302,35 @@ Falta:
 - Linux segue incompleto: memória/threads/arquivos/serviços/saves/GPU.
   L1/R1 da pausa e conferência visual das quebras/ícones/seta continuam
   pendentes. Portable e saves não alterados; Godzilla e snapshot preservados.
+
+### 15/10/2026 — revisão das capturas 1–4 e prioridade a testes Windows
+
+- Pedido: analisar falhas nas quatro imagens da Área de Trabalho; priorizar
+  tradução jogável/portable Windows, depois tentar Linux. Pedido adicional:
+  nenhuma identificação pessoal/de ferramentas na cópia para os amigos.
+- Diagnóstico e limites em docs/REVISAO-HUD-20261015.md. Delta de correções:
+  455 strings com pontuação latina, 25 rótulos HUD e dois textos de abertura
+  ajustados; 62 recursos no delta, leitura/ida e volta verificadas. Cinco
+  literais curtos do executável traduzidos com âncoras. Snapshot intocado.
+- Ícones passam de delta fixo a 43 pares de texturas selecionados por entrada
+  recente no upload GPU (microtiles, mipmaps e padding verificados). Em jogo,
+  setas trocaram para L1/R1 com evento SDL simulado; novo E visto no Save.
+  Não confundir simulação com teste de controle físico; fonte e Xbox pendentes.
+- Pausa identificada por texturas desenhadas: setas na tela principal, A/D nas
+  páginas internas preservando a grade. Janela de contexto evita oscilações
+  causadas por apresentações repetidas. Título da janela sem sufixo PC Port.
+- Regressão detectada no loading durante tentativa de alterar o campo de
+  overflow do medidor. Escrita retirada; save isolado voltou a carregar.
+  Evidências build/ui-final-pause.png e ui-auto-{keyboard,controller}.png.
+  Saves pessoais não usados para gravar durante a validação.
+- Portable pessoal atualizado. Exportação limpa separada preparada por
+  tools/export_private_test.py; exclui data/, confere hashes e procura nomes
+  pessoais/de ferramentas. Relatório privado build/friends-export-privacy.json:
+  PASS, 129 arquivos, zero achados; nenhum dado pessoal copiado. Exportação
+  final inclui o iniciador Wine para Linux e passou no launcher --check.
+- Quebra universal, objetivo inferior/bússola, alguns prompts e traduções
+  restantes ainda exigem trabalho. Nenhuma alegação de campanha 100% concluída.
+- Linux: cabeçalhos Vulkan oficiais isolados em build/linux-full/Vulkan-Headers,
+  commit c46850864f4661461b0f6cb9922c058ffea4915e. Nova tentativa de bbgpu da
+  referência local em andamento; reprodução em scripts/build_linux_gpu_probe.sh.
+  Biblioteca de referência não equivale à integração/jogo Kyoei Linux.

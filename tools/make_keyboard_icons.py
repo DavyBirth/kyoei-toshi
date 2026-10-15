@@ -75,7 +75,7 @@ def keycap(w, h, label):
     pad = max(2, min(W, H) // 14)
     radius = min(W, H) // 5
     # Drop shadow, glossy grey body and a lighter rim, like the original icons.
-    d.rounded_rectangle((pad, pad + SCALE, W - pad, H - pad + SCALE // 2), radius, fill=(0, 0, 0, 110))
+    d.rounded_rectangle((pad, pad + SCALE // 2, W - pad, H - pad), radius, fill=(0, 0, 0, 80))
     # Body: smooth top-to-bottom gradient (no separate highlight shape, which
     # read as a white box at the game's icon size), then the light rim.
     body = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -88,7 +88,7 @@ def keycap(w, h, label):
     mask = Image.new('L', (W, H), 0)
     ImageDraw.Draw(mask).rounded_rectangle((pad, pad, W - pad, H - pad - SCALE), radius, fill=255)
     im.paste(body, (0, 0), mask)
-    d.rounded_rectangle((pad, pad, W - pad, H - pad - SCALE), radius, outline=(205, 208, 214, 255), width=SCALE + 2)
+    d.rounded_rectangle((pad, pad, W - pad, H - pad - SCALE), radius, outline=(160, 164, 170, 255), width=SCALE)
     box = (pad + 4 * SCALE, pad + 3 * SCALE, W - pad - 4 * SCALE, H - pad - 4 * SCALE)
     bw, bh = box[2] - box[0], box[3] - box[1]
     if label == '@mouse':
@@ -177,19 +177,19 @@ def skip(original_image, english):
     return im
 
 
-def cursor_lr(original_image):
+def cursor_lr(original_image, page_keys=False):
     """Pause-menu page arrows: L1/R1 tags above the arrows become Q/Shift."""
     im = original_image.copy()
     # The tags are the only dark, opaque pixels (arrows are green glow).
     dark = Image.eval(im.convert('L'), lambda v: 255 if v < 70 else 0)
     mask = Image.composite(dark, Image.new('L', im.size, 0), im.getchannel('A').point(lambda a: 255 if a > 90 else 0))
-    for left_half, label in ((True, 'Q'), (False, 'Shift')):
+    for left_half, label in ((True, 'A' if page_keys else '@left'), (False, 'D' if page_keys else '@right')):
         x0, x1 = (0, im.width // 2) if left_half else (im.width // 2, im.width)
         box = mask.crop((x0, 0, x1, im.height)).getbbox()
         bx0, by0 = x0 + box[0], box[1]
         bw, bh = box[2] - box[0], box[3] - box[1]
         im.paste(Image.new('RGBA', (bw + 12, bh + 12), (0, 0, 0, 0)), (bx0 - 6, by0 - 6))
-        cw = max(bw, int(bh * (2.2 if len(label) > 1 else 1.2)))
+        cw = max(bw, int(bh * 1.2))
         im.alpha_composite(keycap(cw, bh, label), (bx0 + (bw - cw) // 2, by0))
     return im
 

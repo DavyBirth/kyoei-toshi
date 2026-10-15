@@ -12,6 +12,17 @@ int main() {
     CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LSHIFT)==0x800);
     CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LCTRL)==0x8000);
     CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_ESCAPE)==8);
+    kyoei_prompt_pause_seen(); kyoei_prompt_status_seen(); kyoei_prompt_presented();
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LEFT)==0x400);
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_D)==0x800);
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_Q)==0);
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LSHIFT)==0);
+    kyoei_prompt_reset();kyoei_prompt_pause_seen();kyoei_prompt_presented();
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LEFT)==0x80); // inventory grid
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_A)==0x400);
+    kyoei_prompt_reset();kyoei_prompt_presented();
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LSHIFT)==0x800);
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LEFT)==0x80);
     _putenv_s("KYOEI_MOUSE_SENSITIVITY","1.0");float low=Axis(1,.008,128);
     _putenv_s("KYOEI_MOUSE_SENSITIVITY","2.0");CHECK(Axis(1,.008,128)>low);
     _putenv_s("KYOEI_MOUSE_SENSITIVITY","nan");CHECK(Sensitivity()==1.8f);

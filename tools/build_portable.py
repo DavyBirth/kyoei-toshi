@@ -1,5 +1,5 @@
 """Assemble the owner's private offline test copy. Never add its output to Git."""
-import argparse, hashlib, json, os, re, shutil, struct, subprocess, sys
+import argparse, hashlib, json, os, re, shutil, struct, subprocess, sys, tempfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -51,7 +51,15 @@ def clean_pe(source, target):
 def copy_file(source,target):
     target.parent.mkdir(parents=True,exist_ok=True)
     if not target.exists() or source.stat().st_size!=target.stat().st_size or source.stat().st_mtime_ns>target.stat().st_mtime_ns:
-        shutil.copyfile(source,target)
+        # Atomic replacement also preserves clean exports sharing immutable
+        # archive links with this local test copy.
+        with tempfile.NamedTemporaryFile(dir=target.parent,prefix=target.name+'.',suffix='.copying',delete=False) as f:
+            temporary=Path(f.name)
+        try:
+            shutil.copyfile(source,temporary)
+            temporary.replace(target)
+        finally:
+            if temporary.exists():temporary.unlink()
 
 def personal_text_hits(data,tokens,text_file=False):
     """Find identifiers in text, not coincidental case-folded compressed bytes."""
@@ -103,13 +111,16 @@ def main():
     # Return to Desktop title item, drawn in the native menu style from the dump.
     subprocess.run([str(ROOT/'build/image-tools/Scripts/python.exe'),str(ROOT/'tools/make_title_exit_art.py'),
                     str(out/'game/DAT/common.psarc'),str(out/'assets')],check=True)
-    # Keyboard button prompts: small read-time deltas over each language's archive.
+    # Paired button payloads switch live; UI corrections stay a read-time delta.
     imaging=ROOT/'build/image-tools/Scripts/python.exe'
+    subprocess.run([str(sys.executable),str(ROOT/'tools/build_ui_corrections.py'),
+                    str(out/'languages/en/common.psarc'),str(out/'languages/en/ui-corrections.kydelta')],check=True)
     for language,base in (('en',out/'languages/en/common.psarc'),('ja',out/'game/DAT/common.psarc')):
-        delta=out/'languages'/language/'keyboard-icons.kydelta'
-        if delta.exists():delta.unlink()
-        subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/psarc_delta.py'),str(base),str(delta),
-                        '--keyboard-icons','--language',language],check=True)
+        subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/build_prompt_pack.py'),
+                        str(base),str(out/'languages'/language/'prompts.kypack')],check=True)
+        # Replaced by the verified paired pack above; no runtime reads this.
+        obsolete=out/'languages'/language/'keyboard-icons.kydelta'
+        if obsolete.exists():obsolete.unlink()
     fonts=ROOT/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts'
     for name in ['NotoSans-Regular.ttf','NotoSansCJK-Regular.ttc']:copy_file(fonts/name,out/'assets/fonts'/name)
     for name in ['artwork.png','game.ico']:copy_file(ROOT/'build/launcher-assets'/name,out/'assets'/name)
@@ -138,17 +149,28 @@ def main():
                     '/out:'+str(out/'City Shrouded in Shadow.exe'),str(ROOT/'src/kyoei_portable_launcher.cs')],check=True)
     shutil.copyfile(ROOT/'tools/start-on-linux.sh',out/'Start on Linux.sh')
     (out/'README.txt').write_text('CITY SHROUDED IN SHADOW\n\nOpen "City Shrouded in Shadow.exe". Choose English or Japanese.\nKeep all folders together. No installation or administrator account is needed.\n\nWindows 10/11 x64, compatible Vulkan graphics driver and AVX2-capable CPU required.\nThe complete folder must be on NTFS or exFAT (individual files exceed 4 GB).\nSaves and new logs stay in data/. No existing personal saves are included.\n\nKEYBOARD AND MOUSE\nWASD: move. Mouse: camera. Shift: sprint. Ctrl: dodge.\nE / Enter / left click: interact, confirm. Space: back, cancel.\nF: read mail. Q / V: camera view. G / right click: Giant Shadow Camera.\nR / middle click: reset camera. H: HUD. M: map. Esc / Tab: pause menu.\nArrow keys: menus and target selection. F7 releases/recaptures the mouse.\nThe launcher\'s Controls window lists every action, sets mouse sensitivity\nand chooses keyboard or PlayStation button prompts.\nAn SDL-compatible gamepad can also be used.\n\nEnglish localization and runtime are experimental. Some text/images and layout\nremain under review. Performance depends on the computer; 60 FPS is a target,\nnot a guarantee. Rendering, game timing and original Japanese remain intact.\n\nPrivate test copy made from the owner\'s disc. Do not publish game files.\nRuntime contains GPL software; see licenses/.\n',encoding='utf-8')
+    readme=out/'README.txt'
+    readme.write_text(readme.read_text(encoding='utf-8').replace(
+        'and chooses keyboard or PlayStation button prompts.',
+        'and chooses Automatic, keyboard or PlayStation button prompts.\nAutomatic follows the last device used without restarting the game.\nPause: Left/Right change pages on the main pause screen; A/D change pages\ninside the menus, leaving arrow keys available for item grids.'),encoding='utf-8')
     if not a.finalize and (out/'manifest.json').exists():
         # Updating an already-tested private copy must not leave stale hashes or
         # retain a claim that these new artifacts passed the full privacy scan.
         manifest=json.loads((out/'manifest.json').read_text(encoding='utf-8'))
         if manifest.get('title')!='CUSA03562' or manifest.get('version')!='01.03':
             raise ValueError('Existing portable manifest targets another game')
+        manifest['files']=[row for row in manifest['files'] if not row['path'].endswith('/keyboard-icons.kydelta')]
+        prompt_paths={p.relative_to(out).as_posix() for p in (out/'languages').rglob('*') if p.suffix in {'.kypack','.kydelta'}}
+        prompt_paths.add('Start on Linux.sh')
         for row in manifest['files']:
             path=out/row['path']
             if not path.is_file():raise ValueError('Portable manifest file missing: '+row['path'])
-            if row['path'] in {'runtime/kyoei.exe','City Shrouded in Shadow.exe','languages/en/common.psarc','README.txt'}:
+            if row['path'] in {'runtime/kyoei.exe','City Shrouded in Shadow.exe','languages/en/common.psarc','README.txt'} | prompt_paths:
                 row.update(bytes=path.stat().st_size,sha256=digest(path))
+        recorded={row['path'] for row in manifest['files']}
+        for name in sorted(prompt_paths-recorded):
+            path=out/name
+            manifest['files'].append(dict(path=name,bytes=path.stat().st_size,sha256=digest(path)))
         manifest.update(english_entries=publication.get('entries_by_language',{}).get('en',publication.get('entries_per_language')),
             english_textures=preview.get('textures'),privacy_scan_passed=False,updated_since_finalization=True,
             privacy_scope='Private runtime update; full distribution privacy scan must be repeated before redistribution. Existing data/ and saves preserved.')

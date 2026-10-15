@@ -20,7 +20,12 @@
 #define ABI
 #endif
 typedef struct { uint32_t start; } MeasureParams;          /* +0: first byte of the line */
-typedef struct { uint32_t end; uint8_t newline; } MeasureOut; /* +0: next start, +4: explicit break */
+typedef struct {
+    uint32_t end; uint8_t newline, reserved[3];
+    uint32_t glyphs, overflow;
+    int32_t height, line_height, align;
+    uint32_t style;
+} MeasureOut; /* Verified stores at 0x2e31d3..0x2e3256; overflow is cached by the caller. */
 typedef float (ABI *Measure)(void *, const char *, uint32_t, uint32_t, void *, const MeasureParams *, MeasureOut *);
 static Measure original;
 
@@ -39,9 +44,16 @@ static uint32_t last_break(const char *text, uint32_t start, uint32_t end) {
 float kyoei_text_wrap_measure(void *font, const char *text, uint32_t index, uint32_t length, void *state,
                               const MeasureParams *params, MeasureOut *out) {
     float width = original(font, text, index, length, state, params, out);
+#ifndef KYOEI_TEXT_WRAP_TEST
+    static volatile LONG reports;
+    if (getenv("KYOEI_WRAP_TRACE") && text && params && out && length>40 && out->end<length &&
+        InterlockedIncrement(&reports)<=16) {
+        gz_log("Kyoei wrap probe: length=%u start=%u end=%u explicit=%u index=%u",length,params->start,out->end,out->newline,index);
+    }
+#endif
     if (!text || !params || !out || out->newline || out->end >= length || out->end <= params->start) return width;
     uint32_t end = out->end;
-    if (text[end] == ' ') { out->end = end + 1; return width; }      /* break falls on a space */
+    if (text[end] == ' ') { out->end = end + 1; return width; }
     if (text[end - 1] == ' ') return width;                          /* next word starts here */
     uint32_t space = last_break(text, params->start, end);
     if (space == UINT32_MAX) return width;                           /* no space: keep native wrap */
@@ -65,6 +77,8 @@ static uint64_t code_hash(const unsigned char *bytes, size_t count) {
     return hash;
 }
 void kyoei_text_wrap_configure(void *image, uint64_t size) {
+    extern void kyoei_ui_text_configure(void *,uint64_t);
+    kyoei_ui_text_configure(image,size);
     const char *language = getenv("KYOEI_LANGUAGE");
     if (!language || (strcmp(language, "en") && strcmp(language, "pt-BR"))) return;
     const char *setting = getenv("KYOEI_WORD_WRAP");

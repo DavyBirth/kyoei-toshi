@@ -3,12 +3,21 @@
 Davy pausou o Claude Code. Ler docs/DIARIO.md (últimas entradas) e docs/LINUX.md.
 
 ## Estado
+- Revisão Windows mais recente: ler docs/REVISAO-HUD-20261015.md e últimas
+  entradas do diário. Portable atualizado; exportação limpa para amigos em
+  build/City-Shrouded-in-Shadow-Friends-Test (só compartilhar se manifest
+  privacy_scan_passed=true). Linux GPU em build/linux-full/gpu em tentativa
+  de compilação; logs configure-current.log/build-current.log no diretório pai.
+- Não reintroduzir escrita no campo overflow +0xc do medidor: travou loading.
+  O rollback voltou a carregar. Quebra universal e legenda inferior/bússola
+  seguem pendentes. Alguns ícones de fonte não reconhecidos; Xbox não pronto.
 - Retomada Codex: RTC e semáforos/eventos POSIX implementados em cópias de
   build; quatro testes Linux PASS. Auditoria real: 10 imports no runtime,
   418 nos módulos, 738 stubs. Ainda sem execução do jogo/GPU Linux.
 - Portable Windows atualizado em build/City-Shrouded-in-Shadow-Portable (en-16,
   deltas de ícones EN/JA, arte do Return to Desktop, "Start on Linux.sh" via Wine).
-- Tudo commitado (último: d3862aa). Saves de Davy preservados.
+- Base anterior: 5f3ada9. Saves de Davy preservados. O estado mais recente
+  desta lista prevalece sobre as notas históricas abaixo.
 
 ## Pendências
 1. Port NATIVO Linux (pedido explícito de Davy). Carregador ELF + TLS prontos
@@ -21,7 +30,9 @@ Davy pausou o Claude Code. Ler docs/DIARIO.md (últimas entradas) e docs/LINUX.m
    (usar Vulkan-Headers do submódulo).
    Wine no WSL (llvmpipe) roda código do jogo e para antes de VideoOut; sem GPU
    real no WSL (dzn ausente), não comprovado.
-2. L1/R1 do menu de pausa → setas/A-D no PC. Hook de UnitMenuManager 0xb2c600
+2. Histórico anterior à revisão: L1/R1 do menu de pausa → setas/A-D no PC.
+   Implementado agora por contexto das texturas; ver revisão HUD. O antigo
+   hook de UnitMenuManager 0xb2c600
    (vtable 0x12e56c0, slot 15) testado; campo +0x178 não muda ao abrir o menu.
    Revertido. Falta achar o sinal de "menu aberto".
 3. Verificar em jogo: quebra por palavras (hook 0x2e2b10), ícones novos,

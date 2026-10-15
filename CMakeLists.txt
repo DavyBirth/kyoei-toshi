@@ -269,6 +269,8 @@ target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
 target_sources(kyoei PRIVATE src/kyoei_png.c)
 target_sources(kyoei PRIVATE src/kyoei_savedata.c)
 target_sources(kyoei PRIVATE src/kyoei_input_mode.c)
+target_sources(kyoei PRIVATE src/kyoei_prompt_state.c)
+target_sources(kyoei PRIVATE src/kyoei_ui_text.c)
 target_sources(kyoei PRIVATE src/kyoei_names.c)
 target_sources(kyoei PRIVATE src/kyoei_pc_names.c)
 set(KYOEI_IMGUI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party/imgui")
@@ -546,6 +548,25 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "device_addr=image.info.guest_address, download, download_size] {"
   "device_addr=image.info.guest_address, download, download_size] {\n        KyoeiFrameStats::Work publish_measurement(4);")
+set(KYOEI_TEXTURE_CACHE "#include \"kyoei_live_prompts.h\"\n${KYOEI_TEXTURE_CACHE}")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "void TextureCache::RefreshImage(Image& image) {"
+  "void TextureCache::RefreshImage(Image& image) {\n    bool prompt_changed=false; unsigned prompt_mode=0;\n    const auto* prompt=False(image.flags & ImageFlagBits::GpuModified) ? KyoeiPrompts::Select(image,True(image.flags & ImageFlagBits::CpuDirty),prompt_changed,prompt_mode) : nullptr;\n    if (prompt_changed) image.flags |= ImageFlagBits::CpuDirty;")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "    const auto [in_buffer, in_offset] =\n        buffer_cache.ObtainBufferForImage(image.info.guest_address, image.info.guest_size);"
+  "    auto source=buffer_cache.ObtainBufferForImage(image.info.guest_address,image.info.guest_size);\n    if (prompt) {\n        auto& staging=buffer_cache.GetUtilityBuffer(MemoryUsage::Upload);\n        const auto [pixels,at]=staging.Map(image.info.guest_size,16);\n        ASSERT(pixels); std::memset(pixels,0,image.info.guest_size);\n        const auto& data=prompt_mode==KYOEI_INPUT_CONTROLLER?prompt->controller:prompt->keyboard;\n        const bool copied=KyoeiPrompts::Rows(*prompt,image.info,[&](size_t to,size_t from,size_t bytes){std::memcpy(pixels+to,data.data()+from,bytes);return true;});\n        ASSERT(copied); staging.Commit(); source={&staging,at};\n    }\n    const auto [in_buffer,in_offset]=source;")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "tile_manager.DetileImage(in_buffer->Handle(), in_offset, image.info);"
+  "(prompt ? TileManager::Result{in_buffer->Handle(),in_offset} : tile_manager.DetileImage(in_buffer->Handle(), in_offset, image.info));")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "False(image.flags & ImageFlagBits::GpuModified) ? KyoeiPrompts::Select"
+  "!image.usage.render_target ? KyoeiPrompts::Select")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "if (is_gpu_modified && !is_gpu_dirty) {"
+  "if (is_gpu_modified && !is_gpu_dirty && !prompt) {")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "void TextureCache::UnregisterImage(ImageId image_id) {\n    Image& image = slot_images[image_id];"
+  "void TextureCache::UnregisterImage(ImageId image_id) {\n    Image& image = slot_images[image_id];\n    KyoeiPrompts::states.erase(image.image_uid);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 
 # Kyoei-only driver cache. Keep the frozen dependency intact. Create the
@@ -683,6 +704,9 @@ kyoei_replace_checked(KYOEI_PAD "    if (gz_dialog_input(buttons)) {"
   "    const int kyoei_title_consumed=kyoei_title_exit_input(buttons,data.leftStick.y);
     if (kyoei_title_exit_take_quit()) { SDL_Event quit{}; quit.type=SDL_EVENT_QUIT; SDL_PushEvent(&quit); }
     if (kyoei_title_consumed || gz_dialog_input(buttons)) {")
+kyoei_replace_checked(KYOEI_PAD
+  "keyboard_axis(SDL_SCANCODE_A,SDL_SCANCODE_D,data.leftStick.x)"
+  "(kyoei_prompt_pause_active()?data.leftStick.x:keyboard_axis(SDL_SCANCODE_A,SDL_SCANCODE_D,data.leftStick.x))")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp" CONTENT "${KYOEI_PAD}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp")
 set(KYOEI_WINDOW "#include \"kyoei_mouse.h\"\n${KYOEI_WINDOW}")
@@ -706,7 +730,7 @@ kyoei_replace_checked(KYOEI_WINDOW
 set(KYOEI_WINDOW "#include \"kyoei_window_options.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "base_title{title}"
-  "base_title{\"City Shrouded in Shadow - Kyoei Toshi | PC Port\"}")
+  "base_title{\"City Shrouded in Shadow - Kyoei Toshi\"}")
 kyoei_replace_checked(KYOEI_WINDOW
   "    window = SDL_CreateWindow(title,"
   "    (void)title;\n    window = SDL_CreateWindow(base_title.c_str(),")
@@ -719,6 +743,13 @@ kyoei_replace_checked(KYOEI_WINDOW
 kyoei_replace_checked(KYOEI_WINDOW
   "        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT)"
   "        if (event.type == SDL_EVENT_KEY_DOWN && event.key.key == SDLK_F9 && KyoeiRasterTrace::Enabled()) { if (!event.key.repeat) KyoeiRasterTrace::Request(); continue; }\n        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT)")
+kyoei_replace_checked(KYOEI_WINDOW
+  "        if (event.type == SDL_EVENT_KEY_DOWN && event.key.key == SDLK_F9"
+  "        if (event.type == SDL_EVENT_KEY_DOWN && event.key.key == SDLK_F8 && std::getenv(\"KYOEI_INPUT_TEST\")) { if (!event.key.repeat) { SDL_Event controller{}; controller.type=SDL_EVENT_GAMEPAD_BUTTON_DOWN; controller.gbutton.button=SDL_GAMEPAD_BUTTON_SOUTH; SDL_PushEvent(&controller); } continue; }\n        if (event.type == SDL_EVENT_KEY_DOWN && event.key.key == SDLK_F9")
+set(KYOEI_WINDOW "#include \"kyoei_prompt_state.h\"\n${KYOEI_WINDOW}")
+kyoei_replace_checked(KYOEI_WINDOW
+  "        KyoeiMouse::Event(window,event);"
+  "        if (event.type==SDL_EVENT_KEY_DOWN && (event.key.key==SDLK_ESCAPE || event.key.key==SDLK_TAB || event.key.key==SDLK_SPACE || event.key.key==SDLK_BACKSPACE)) kyoei_prompt_reset();\n        KyoeiMouse::Event(window,event);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
 file(READ "${KYOEI_CORE}/gpu/vendor/vk_presenter.cpp" KYOEI_PRESENTER)
@@ -757,7 +788,8 @@ kyoei_replace_checked(KYOEI_PRESENTER
 set(KYOEI_PRESENTER "#include \"kyoei_raster_trace.h\"\n${KYOEI_PRESENTER}")
 kyoei_replace_checked(KYOEI_PRESENTER
   "    kyoei_overlay_presented(kyoei_modal_revision);"
-  "    kyoei_overlay_presented(kyoei_modal_revision);\n    KyoeiRasterTrace::Presented();")
+  "    kyoei_overlay_presented(kyoei_modal_revision);\n    KyoeiRasterTrace::Presented();\n    kyoei_prompt_presented();")
+set(KYOEI_PRESENTER "#include \"kyoei_prompt_state.h\"\n${KYOEI_PRESENTER}")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp" CONTENT "${KYOEI_PRESENTER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp"
   src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp")
@@ -820,6 +852,12 @@ target_link_libraries(test_kyoei_ime_overlay PRIVATE kyoei_imgui user32 gdi32)
 add_executable(test_kyoei_overlay_barriers src/test_kyoei_overlay_barriers.cpp)
 get_target_property(KYOEI_OVERLAY_GPU_INCLUDES kyoei_videoout INCLUDE_DIRECTORIES)
 add_executable(test_kyoei_mouse src/test_kyoei_mouse.cpp)
+add_executable(test_kyoei_live_prompts src/test_kyoei_live_prompts.cpp src/kyoei_prompt_state.c)
+target_include_directories(test_kyoei_live_prompts PRIVATE src)
+target_compile_features(test_kyoei_live_prompts PRIVATE cxx_std_23)
+target_compile_options(test_kyoei_live_prompts PRIVATE -UNDEBUG)
+target_compile_definitions(test_kyoei_live_prompts PRIVATE _CRT_SECURE_NO_WARNINGS)
+target_sources(test_kyoei_mouse PRIVATE src/kyoei_prompt_state.c)
 target_include_directories(test_kyoei_mouse PRIVATE ${KYOEI_OVERLAY_GPU_INCLUDES})
 target_compile_features(test_kyoei_mouse PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_mouse PRIVATE NOMINMAX _CRT_SECURE_NO_WARNINGS)

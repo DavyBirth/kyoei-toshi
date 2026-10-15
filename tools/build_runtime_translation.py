@@ -11,6 +11,7 @@ from prepare_translation_catalog import TOKENS
 from psarc_patch import patch
 from text_tool import REPO,decode,export,insert,output_path
 from translation_names import validate_names
+from english_typography import native_english
 
 def published_manifest(report, previous=None):
     """Retain independently built languages without claiming equal coverage."""
@@ -75,6 +76,7 @@ def main():
             for string in document['strings']:
                 if string['id'] not in resource['entries']:continue
                 entry=resource['entries'][string['id']];value=entry[language]
+                if language=='en' and isinstance(value,str):value=native_english(value)
                 if not isinstance(value,str) or '\0' in value or (not value and string['original'] and not entry.get('allow_empty')):
                     raise ValueError('Invalid/empty translation')
                 if sorted(TOKENS.findall(value))!=sorted(TOKENS.findall(string['original'])):raise ValueError('Control tokens differ')
@@ -86,6 +88,7 @@ def main():
             decoded={s.id:s.text() for s in parsed.strings}
             for id,original in originals.items():
                 expected=resource['entries'][id][language] if id in resource['entries'] else original
+                if language=='en' and id in resource['entries']:expected=native_english(expected)
                 if decoded[id]!=expected:raise ValueError('Roundtrip differs')
             compiled[language][name.split('/',1)[1]]=rebuilt
         reports.append(dict(resource=name,source_sha256=resource['source_sha256'],entries=len(resource['entries'])))

@@ -2,14 +2,15 @@
 #include <stdio.h>
 #include <string.h>
 #define CHECK(x) do{if(!(x)){fprintf(stderr,"Wrap failed: %d\n",__LINE__);return 1;}}while(0)
-typedef struct { uint32_t start; } P; typedef struct { uint32_t end; uint8_t newline; } O;
+typedef struct { uint32_t start; } P;
+typedef struct { uint32_t end; uint8_t newline,reserved[3]; uint32_t glyphs,overflow; int32_t height,line_height,align; uint32_t style; } O;
 float kyoei_text_wrap_measure(void*,const char*,uint32_t,uint32_t,void*,const P*,O*);
 void kyoei_text_wrap_test_original(void*);
 /* Native model: 1 unit per byte, width 10, breaks at '\n' or before the overflowing glyph. */
 static float native(void *f,const char *t,uint32_t i,uint32_t len,void *s,const P *p,O *o){
-    (void)f;(void)i;(void)s; uint32_t x=0,k=p->start;
+    (void)f;(void)i;(void)s; uint32_t x=0,k=p->start;o->overflow=0;
     for(;k<len;++k){ if(t[k]=='\n'){o->end=k+1;o->newline=1;return (float)x;} if(x+1>10&&k>p->start)break; ++x; }
-    o->end=k;o->newline=0;return (float)x;
+    o->end=k;o->newline=0;if(k<len)o->overflow=k;return (float)x;
 }
 static int lines(const char *t,char out[][16]){
     P p={0};O o;int n=0;uint32_t len=(uint32_t)strlen(t);
@@ -20,6 +21,9 @@ static int lines(const char *t,char out[][16]){
 }
 int main(void){
     kyoei_text_wrap_test_original((void*)native); char l[8][16];
+    P p={0};O o={0};
+    kyoei_text_wrap_measure(0,"Hello world",0,11,0,&p,&o);
+    CHECK(o.end==6); /* Keep the native overflow protocol unchanged. */
     CHECK(lines("I'm going to meet a woman.",l)==3 && !strcmp(l[0],"I'm going") && !strcmp(l[1],"to meet a") && !strcmp(l[2],"woman."));
     CHECK(lines("Hello world",l)==2 && !strcmp(l[0],"Hello") && !strcmp(l[1],"world"));
     CHECK(lines("abcdefghijklmno",l)==2 && !strcmp(l[0],"abcdefghij"));          /* no space: native */

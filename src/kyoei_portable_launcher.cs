@@ -19,7 +19,7 @@ class PortableLauncher : Form {
     FileStream profileLock;
     bool running;
     decimal mouseSensitivity=1.8m;
-    bool keyboardPrompts=true;
+    string promptMode="auto";
     [STAThread] static int Main(string[] args) {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
@@ -94,12 +94,14 @@ class PortableLauncher : Form {
             int i;if(int.TryParse(lines[1],out i)&&i>=0&&i<resolution.Items.Count)resolution.SelectedIndex=i;
             fullscreen.Checked=lines[2]=="1";
             decimal sensitivity;if(lines.Length>3&&decimal.TryParse(lines[3],NumberStyles.Number,CultureInfo.InvariantCulture,out sensitivity))mouseSensitivity=Math.Max(.2m,Math.Min(5m,sensitivity));
-            if(lines.Length>4)keyboardPrompts=lines[4]!="controller";
+            if(lines.Length>4 && lines[4]=="controller")promptMode="controller";
+            else if(lines.Length>4 && lines[4]=="keyboard-fixed")promptMode="keyboard";
+            else promptMode="auto";
         }catch{}
     }
     void SaveSettings() {
         Directory.CreateDirectory(Path.Combine(root,"data"));
-        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),keyboardPrompts?"keyboard":"controller"});
+        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),promptMode=="keyboard"?"keyboard-fixed":promptMode});
     }
     Form ControlsDialog() {
         var dialog=new Form();dialog.Text="Controls";dialog.ClientSize=new Size(850,665);dialog.StartPosition=FormStartPosition.CenterParent;
@@ -130,8 +132,8 @@ class PortableLauncher : Form {
         var label=new Label();label.SetBounds(18,557,350,25);label.Text="Mouse sensitivity (default 1.80)";dialog.Controls.Add(label);
         var sensitivity=new NumericUpDown();sensitivity.SetBounds(390,552,120,28);sensitivity.Minimum=.2m;sensitivity.Maximum=5m;sensitivity.DecimalPlaces=2;sensitivity.Increment=.1m;sensitivity.Value=mouseSensitivity;dialog.Controls.Add(sensitivity);
         var promptsLabel=new Label();promptsLabel.SetBounds(18,602,350,25);promptsLabel.Text="On-screen button prompts";dialog.Controls.Add(promptsLabel);
-        var prompts=new ComboBox();prompts.SetBounds(390,597,210,28);prompts.DropDownStyle=ComboBoxStyle.DropDownList;prompts.Items.AddRange(new object[]{"Keyboard & mouse","PlayStation controller"});prompts.SelectedIndex=keyboardPrompts?0:1;dialog.Controls.Add(prompts);
-        var save=new Button();save.SetBounds(620,609,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;keyboardPrompts=prompts.SelectedIndex==0;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
+        var prompts=new ComboBox();prompts.SetBounds(390,597,210,28);prompts.DropDownStyle=ComboBoxStyle.DropDownList;prompts.Items.AddRange(new object[]{"Automatic","Keyboard & mouse","PlayStation controller"});prompts.SelectedIndex=promptMode=="controller"?2:promptMode=="keyboard"?1:0;dialog.Controls.Add(prompts);
+        var save=new Button();save.SetBounds(620,609,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;promptMode=prompts.SelectedIndex==2?"controller":prompts.SelectedIndex==1?"keyboard":"auto";try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
         return dialog;
     }
     void Launch() {
@@ -154,8 +156,9 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_NAME_STORE"]="data/user/character-names.bin";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT"]="1";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT_ART"]="assets/title-exit.kyart";
-            string promptsDelta=Path.Combine("languages",lang,"keyboard-icons.kydelta");
-            if(keyboardPrompts&&File.Exists(Path.Combine(root,promptsDelta)))start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=promptsDelta;
+            start.EnvironmentVariables["KYOEI_PROMPT_MODE"]=promptMode;
+            start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",lang,"prompts.kypack");
+            if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,"ui-corrections.kydelta");
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
             start.EnvironmentVariables["GZ_LANGUAGE"]=lang=="ja"?"0":"1";
             if(lang=="en")start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";
