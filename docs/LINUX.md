@@ -112,3 +112,21 @@ Critério para publicar o segundo iniciador: build real em Linux, bootstrap
 sem gráficos, testes de TLS/memória/importações, Vulkan, input/foco, tradução,
 save/load e um percurso controlado. Até isso acontecer, o portable continua
 Windows x64. A câmera adicionada nesta sessão usa SDL3 e poderá ser reutilizada.
+
+Tentativa gráfica de 15/10/2026: scripts/build_linux_gpu_probe.sh compila
+apenas a biblioteca da referência local, mantendo o snapshot fixo intacto.
+Vulkan-Headers oficiais isolados em build/linux-full/Vulkan-Headers, commit
+c46850864f4661461b0f6cb9922c058ffea4915e. Supera a ausência de extensões
+recentes nos headers do sistema. Build em build/linux-full/gpu; logs privados
+configure-current.log e build-current.log no diretório pai. A biblioteca
+não é um executável Kyoei nem deve ser anunciada como port Linux pronto.
+
+O segundo bloqueio foi Xbyak ausente no Linux. Cabeçalhos oficiais isolados
+em build/linux-full/Xbyak, commit cd6bad3cad2e07a3e277c23d2b1f065320024717,
+expostos somente por link em build/linux-full/gpu/include/xbyak. Nenhum
+arquivo do snapshot fixo ou do projeto Godzilla foi modificado.
+
+Resultado: biblioteca build/linux-full/gpu/libbbgpu.so compilada com saída 0,
+ELF x86-64 confirmado por file. Quatro CTests Linux passaram novamente.
+Não foi ligada ao runtime Kyoei, não foi executado o jogo nativo e esse
+artefato de desenvolvimento não foi colocado na entrega para amigos.

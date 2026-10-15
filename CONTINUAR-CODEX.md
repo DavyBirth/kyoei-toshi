@@ -6,8 +6,10 @@ Davy pausou o Claude Code. Ler docs/DIARIO.md (últimas entradas) e docs/LINUX.m
 - Revisão Windows mais recente: ler docs/REVISAO-HUD-20261015.md e últimas
   entradas do diário. Portable atualizado; exportação limpa para amigos em
   build/City-Shrouded-in-Shadow-Friends-Test (só compartilhar se manifest
-  privacy_scan_passed=true). Linux GPU em build/linux-full/gpu em tentativa
-  de compilação; logs configure-current.log/build-current.log no diretório pai.
+  privacy_scan_passed=true; final PASS, 129 arquivos). Windows: e52aa75.
+  Linux: build/linux-full/gpu/libbbgpu.so compilada, ELF x86-64.
+  Procedimento: scripts/build_linux_gpu_probe.sh. Ainda sem jogo nativo;
+  biblioteca de referencia nao integrada ao runtime Kyoei.
 - Não reintroduzir escrita no campo overflow +0xc do medidor: travou loading.
   O rollback voltou a carregar. Quebra universal e legenda inferior/bússola
   seguem pendentes. Alguns ícones de fonte não reconhecidos; Xbox não pronto.

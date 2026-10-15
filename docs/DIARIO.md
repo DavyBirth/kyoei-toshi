@@ -2334,3 +2334,11 @@ Falta:
   commit c46850864f4661461b0f6cb9922c058ffea4915e. Nova tentativa de bbgpu da
   referência local em andamento; reprodução em scripts/build_linux_gpu_probe.sh.
   Biblioteca de referência não equivale à integração/jogo Kyoei Linux.
+- Resultado final Linux: bbgpu compilada com sucesso (ELF x86-64), após
+  resolver Vulkan-Headers e Xbyak oficiais em caches isolados. Xbyak:
+  cd6bad3cad2e07a3e277c23d2b1f065320024717. Quatro CTests Linux PASS.
+  Continua sem integração do jogo: 738 stubs na última auditoria; nenhum
+  executável Linux jogável entregue. O script do portable usa Wine.
+- Windows registrado no commit e52aa75; testes de UI, tradução, privacidade,
+  mouse/pausa, texturas e quebra passaram. Exportação limpa com 129 arquivos
+  e nenhum achado de identificação; saves pessoais preservados à parte.
