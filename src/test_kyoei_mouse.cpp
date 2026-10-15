@@ -1,11 +1,20 @@
 #include <cstdio>
 #include "kyoei_mouse.h"
+#include "kyoei_pc_controls.h"
 static int modal=0;
 extern "C" int kyoei_overlay_kind(void) { return modal; }
 extern "C" void kyoei_input_keyboard(void) {}
 #define CHECK(x) do { if(!(x)) { std::fprintf(stderr,"Mouse check failed: %d\n",__LINE__);return 1; } } while(0)
 int main() {
     using namespace KyoeiMouse;
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_E)==0x2000);
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LSHIFT)==0x800);
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_LCTRL)==0x8000);
+    CHECK(KyoeiPcControls::KeyMask(SDL_SCANCODE_ESCAPE)==8);
+    _putenv_s("KYOEI_MOUSE_SENSITIVITY","1.0");float low=Axis(1,.008,128);
+    _putenv_s("KYOEI_MOUSE_SENSITIVITY","2.0");CHECK(Axis(1,.008,128)>low);
+    _putenv_s("KYOEI_MOUSE_SENSITIVITY","nan");CHECK(Sensitivity()==1.8f);
+    _putenv_s("KYOEI_MOUSE_SENSITIVITY","");
     CHECK(Axis(0,.008,203)==203);
     CHECK(Axis(2,.008,128)==Axis(4,.016,128));
     CHECK(Axis(-100,.001,128)==1 && Axis(100,.001,128)==255);

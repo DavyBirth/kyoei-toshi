@@ -10,6 +10,7 @@
 #include "kyoei_name_model.h"
 #include "kyoei_overlay.h"
 #include "kyoei_ime.h"
+#include "kyoei_pc_names.h"
 
 typedef KyoeiImeParam ImeParam;
 _Static_assert(sizeof(ImeParam) == 96, "IME parameter ABI");
@@ -142,6 +143,11 @@ static ABI int32_t ime_result(uint32_t *result) {
     if (ime_status() != 2) return (int32_t)0x80bc0106;
     if (end_status == 0) {
         uint32_t n = (uint32_t)wcslen(accepted);
+        if(using_overlay && param.max_length==4 && n>4 && n<=24 && kyoei_pc_names_enabled()) {
+            uint16_t token[5];
+            if(!kyoei_pc_name_store((const uint16_t*)accepted,n,token))return (int32_t)0x80bc0006;
+            memcpy(accepted,token,10);n=4;
+        }
         if (n > param.max_length || !kyoei_name_valid((const uint16_t *)accepted,n)) return (int32_t)0x80bc0006;
         if (param.filter) {
             uint16_t filtered[2049] = {0}; uint32_t length = param.max_length;

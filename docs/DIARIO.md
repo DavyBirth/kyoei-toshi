@@ -2202,3 +2202,39 @@ espaço (rotina de texto do eboot); (7) PT-BR depois.
   hash/leitura do portable e ausência de jogo/atualizador ativo. Metadados de
   prova antigos, referência visual, traduções e backups preservados. Evidência
   privada em build/cleanup-preview-14.json. PT-BR e demais fontes não removidos.
+
+### 15/10/2026 — interrupção do Codex por limite; retomada pelo Claude Code
+
+Pedido de Davy: Linux jogável para o amigo (CachyOS recente, KDE), portable com
+exe Windows e Linux, aba de controles no launcher (controle e teclado) com
+sensibilidade do mouse, teclas estilo PC, mouse mais sensível, nome do
+personagem com mais de 4 letras e usado nas legendas, ícones de teclado no
+jogo, opção "voltar à área de trabalho" no menu inicial.
+
+Feito (código compila no Windows; testes PASS; NÃO validado em partida):
+- `src/kyoei_pc_controls.h`: teclas PC (WASD já no stick; E/Enter confirmar
+  0x2000, Espaço/Backspace 0x4000, Ctrl 0x8000, F 0x1000, Shift 0x800, Q 0x400,
+  V 0x100, G 0x200, Esc/Tab 8, M touchpad, H 2, R 4, setas = direcional),
+  conferidas no diagrama operation_normal.tex. Mouse: botão esq. 0x2000,
+  dir. 0x200, meio 4. Patch aplicado no pad.cpp via CMake.
+- `kyoei_mouse.h`: `KYOEI_MOUSE_SENSITIVITY` (padrão 1.8, antes 1.0).
+- Launcher: campo de sensibilidade e `KYOEI_NAME_STORE`.
+- `kyoei_pc_names.c`: nome longo (até 24) guardado em
+  `data/user/character-names.bin`; o jogo recebe token de 4 unidades
+  (ZAAA…) e a exibição troca o token pelo nome. Teste cross-process PASS
+  (`test_kyoei_pc_names.exe <arquivo> write` e depois `read`).
+
+Falta:
+1. Validar no jogo: nome longo na criação e nas legendas (o nome genérico
+   japonês nas legendas ainda não foi investigado: provável texto com nome
+   padrão fixo, não o campo do jogador).
+2. Aba "Controles" do launcher listando todos os comandos (controle e
+   teclado) — só a sensibilidade foi adicionada.
+3. Ícones de teclado no jogo (troca de texturas de botões quando o modo de
+   entrada for teclado) — não iniciado.
+4. "Voltar à área de trabalho" no menu inicial — não iniciado.
+5. Linux: build gráfico (bbgpu/shadPS4) em WSL Ubuntu parou em
+   vk_*.cpp: cabeçalhos Vulkan do sistema incompatíveis com extensão VALVE
+   da referência (usar Vulkan-Headers do submódulo). Runtime POSIX: 748
+   imports sem implementação Linux. Sem launcher Linux. Longe de jogável.
+6. Republicar portable só após validação; o portable atual é o anterior.

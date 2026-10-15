@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Globalization;
 
 class PortableLauncher : Form {
     readonly string root=AppDomain.CurrentDomain.BaseDirectory;
@@ -17,6 +18,7 @@ class PortableLauncher : Form {
     Image artwork;
     FileStream profileLock;
     bool running;
+    decimal mouseSensitivity=1.8m;
     [STAThread] static int Main(string[] args) {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
@@ -27,6 +29,13 @@ class PortableLauncher : Form {
             if(args.Length==1 && args[0]=="--render-preview") {
                 app.ShowInTaskbar=false;app.Opacity=0;app.Show();Application.DoEvents();
                 using(var b=new Bitmap(app.Width,app.Height)) {app.DrawToBitmap(b,new Rectangle(0,0,b.Width,b.Height));b.Save(Path.Combine(app.root,"launcher-preview.png"));}
+                return 0;
+            }
+            if(args.Length==1 && args[0]=="--render-controls-preview") {
+                using(var controls=app.ControlsDialog()) {
+                    controls.ShowInTaskbar=false;controls.Opacity=0;controls.Show();Application.DoEvents();
+                    using(var b=new Bitmap(controls.Width,controls.Height)){controls.DrawToBitmap(b,new Rectangle(0,0,b.Width,b.Height));b.Save(Path.Combine(app.root,"controls-preview.png"));}
+                }
                 return 0;
             }
             if(args.Length!=0)return 2;
@@ -49,11 +58,14 @@ class PortableLauncher : Form {
         AddText("DISPLAY",496,330,180,22,9,Color.Silver);
         Setup(resolution,496,356,220,new string[]{"1280 × 720","1600 × 900","1920 × 1080","2560 × 1440"});
         fullscreen.SetBounds(735,356,200,28);fullscreen.Text="Fullscreen";fullscreen.ForeColor=Color.Silver;Controls.Add(fullscreen);
+        var controlsButton=new Button();controlsButton.SetBounds(496,389,430,27);controlsButton.Text="CONTROLS & MOUSE SENSITIVITY";
+        controlsButton.FlatStyle=FlatStyle.Flat;controlsButton.ForeColor=Color.WhiteSmoke;
+        controlsButton.Click+=delegate{using(var dialog=ControlsDialog())dialog.ShowDialog(this);};Controls.Add(controlsButton);
         play.SetBounds(496,421,430,56);play.Text="START GAME";play.Font=new Font("Segoe UI",14,FontStyle.Bold);
         play.FlatStyle=FlatStyle.Flat;play.FlatAppearance.BorderSize=0;play.BackColor=Color.FromArgb(162,31,49);play.ForeColor=Color.White;
         play.Cursor=Cursors.Hand;play.Click+=delegate{Launch();};Controls.Add(play);
         status.SetBounds(496,493,430,58);status.ForeColor=Color.FromArgb(155,155,167);status.Font=new Font("Segoe UI",9);
-        status.Text="English localization · work in progress\nA new save profile is stored in this folder.\nKeyboard controls: README.txt";Controls.Add(status);
+        status.Text="English localization · work in progress\nYour saves and settings stay in this folder.";Controls.Add(status);
         LoadSettings();
         FormClosing+=delegate(object sender,FormClosingEventArgs e){if(running){e.Cancel=true;WindowState=FormWindowState.Minimized;}};
     }
@@ -80,7 +92,43 @@ class PortableLauncher : Form {
             language.SelectedIndex=lines[0]=="ja"?1:0;
             int i;if(int.TryParse(lines[1],out i)&&i>=0&&i<resolution.Items.Count)resolution.SelectedIndex=i;
             fullscreen.Checked=lines[2]=="1";
+            decimal sensitivity;if(lines.Length>3&&decimal.TryParse(lines[3],NumberStyles.Number,CultureInfo.InvariantCulture,out sensitivity))mouseSensitivity=Math.Max(.2m,Math.Min(5m,sensitivity));
         }catch{}
+    }
+    void SaveSettings() {
+        Directory.CreateDirectory(Path.Combine(root,"data"));
+        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture)});
+    }
+    Form ControlsDialog() {
+        var dialog=new Form();dialog.Text="Controls";dialog.ClientSize=new Size(850,665);dialog.StartPosition=FormStartPosition.CenterParent;
+        dialog.BackColor=BackColor;dialog.ForeColor=ForeColor;dialog.Font=Font;dialog.FormBorderStyle=FormBorderStyle.FixedDialog;dialog.MaximizeBox=false;dialog.MinimizeBox=false;
+        var table=new DataGridView();table.SetBounds(16,16,818,482);table.ReadOnly=true;table.AllowUserToAddRows=false;table.AllowUserToDeleteRows=false;table.AllowUserToResizeRows=false;
+        table.BackgroundColor=Color.FromArgb(24,24,30);table.BorderStyle=BorderStyle.None;table.RowHeadersVisible=false;table.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
+        table.DefaultCellStyle.BackColor=Color.FromArgb(30,30,38);table.DefaultCellStyle.ForeColor=Color.WhiteSmoke;table.DefaultCellStyle.SelectionBackColor=Color.FromArgb(70,42,53);table.DefaultCellStyle.SelectionForeColor=Color.White;
+        table.Columns.Add("action","Action");table.Columns.Add("pc","Keyboard / mouse");table.Columns.Add("pad","PlayStation / Xbox");
+        string[][] rows={
+            new[]{"Move / walk / run","W A S D","Left stick"},
+            new[]{"Look around","Mouse / I J K L","Right stick"},
+            new[]{"Interact / talk / pick up / confirm","E / Enter / left mouse","Circle / B"},
+            new[]{"Back / cancel / stand up","Space / Backspace","Cross / A"},
+            new[]{"Dodge / go prone","Ctrl","Square / X"},
+            new[]{"Read incoming mail","F","Triangle / Y"},
+            new[]{"Sprint (while moving)","Shift","R1 / RB"},
+            new[]{"Camera view toward first person","Q","L1 / LB"},
+            new[]{"Camera view toward third person","V","L2 / LT"},
+            new[]{"Giant Shadow Camera","Right mouse / G","R2 / RT"},
+            new[]{"Reset camera","Middle mouse / R","R3 / right stick click"},
+            new[]{"Change HUD size / visibility","H","L3 / left stick click"},
+            new[]{"Map","M","Touchpad / View"},
+            new[]{"Menus / target selection","Arrow keys","D-pad"},
+            new[]{"Pause / inventory menu","Esc / Tab","Options / Menu"},
+            new[]{"Release / capture mouse","F7; Alt+Tab releases automatically","—"}};
+        foreach(var row in rows)table.Rows.Add(row);table.ClearSelection();dialog.Controls.Add(table);
+        var note=new Label();note.SetBounds(18,505,815,40);note.Text="Actions depend on the scene. Vehicles use the same controller-to-key bindings.\nThe camera follows the game's maximum turning speed.";dialog.Controls.Add(note);
+        var label=new Label();label.SetBounds(18,557,350,25);label.Text="Mouse sensitivity (default 1.80)";dialog.Controls.Add(label);
+        var sensitivity=new NumericUpDown();sensitivity.SetBounds(390,552,120,28);sensitivity.Minimum=.2m;sensitivity.Maximum=5m;sensitivity.DecimalPlaces=2;sensitivity.Increment=.1m;sensitivity.Value=mouseSensitivity;dialog.Controls.Add(sensitivity);
+        var save=new Button();save.SetBounds(620,609,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
+        return dialog;
     }
     void Launch() {
         if(running)return;
@@ -90,7 +138,7 @@ class PortableLauncher : Form {
             try {profileLock=new FileStream(Path.Combine(root,"data","session.lock"),FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.None);}
             catch(IOException){throw new IOException("The game is already running from this folder.");}
             string lang=language.SelectedIndex==0?"en":"ja";
-            File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{lang,resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0"});
+            SaveSettings();
             var start=new ProcessStartInfo(Path.Combine(root,"runtime","kyoei.exe"),"\"runtime/out\" --app0 \"game\" --user \"data/user\" --log \"data/logs/session.log\"");
             start.WorkingDirectory=root;start.UseShellExecute=false;start.CreateNoWindow=true;start.RedirectStandardOutput=true;start.RedirectStandardError=true;
             foreach(DictionaryEntry v in Environment.GetEnvironmentVariables()) {
@@ -98,6 +146,8 @@ class PortableLauncher : Form {
             }
             string[] dims=resolution.Text.Split('×');
             start.EnvironmentVariables["KYOEI_LANGUAGE"]=lang;
+            start.EnvironmentVariables["KYOEI_MOUSE_SENSITIVITY"]=mouseSensitivity.ToString(CultureInfo.InvariantCulture);
+            start.EnvironmentVariables["KYOEI_NAME_STORE"]="data/user/character-names.bin";
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
             start.EnvironmentVariables["GZ_LANGUAGE"]=lang=="ja"?"0":"1";
             if(lang=="en")start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";

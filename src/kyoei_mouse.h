@@ -13,6 +13,12 @@ namespace KyoeiMouse {
 inline bool released=false, captured=false;
 inline float dx=0,dy=0;
 inline Uint64 previous=0;
+inline float Sensitivity() {
+    const char *setting=std::getenv("KYOEI_MOUSE_SENSITIVITY");
+    if(!setting||!*setting)return 1.8f;
+    char *end=nullptr;float value=std::strtof(setting,&end);
+    return end && !*end && std::isfinite(value)?std::clamp(value,.2f,5.f):1.8f;
+}
 inline void Clear() { dx=dy=0;previous=SDL_GetTicksNS(); }
 inline void Update(SDL_Window* window) {
     const char* option=std::getenv("KYOEI_MOUSE_CAMERA");
@@ -24,6 +30,7 @@ inline void Update(SDL_Window* window) {
     Clear();
 }
 inline void Event(SDL_Window* window,const SDL_Event& event) {
+    if(event.type==SDL_EVENT_MOUSE_BUTTON_DOWN)kyoei_input_keyboard();
     if (event.type==SDL_EVENT_KEY_DOWN && event.key.key==SDLK_F7 && !event.key.repeat)
         released=!released;
     if (event.type==SDL_EVENT_WINDOW_FOCUS_LOST) Clear();
@@ -39,7 +46,7 @@ inline unsigned char Axis(float distance,double seconds,unsigned char fallback) 
     if (distance==0) return fallback;
     // Mouse speed, rather than distance per poll, keeps sensitivity independent
     // of the SDL poll rate. This emulates the stick; the game's turn cap remains.
-    float value=float(distance/std::max(seconds,0.001)*0.09);
+    float value=float(distance/std::max(seconds,0.001)*0.09)*Sensitivity();
     float magnitude=std::min(127.f,24.f+std::abs(value));
     return static_cast<unsigned char>(std::clamp(128+int(std::copysign(magnitude,value)),0,255));
 }

@@ -4,17 +4,22 @@
 #include "gz.h"
 #include "kyoei_names.h"
 #include "kyoei_name_alias.h"
+#include "kyoei_pc_names.h"
 #include <stdlib.h>
 #include <string.h>
 typedef int32_t (ABI *Convert)(uint64_t *,char *,uint64_t,const uint16_t *,uint64_t);
 static Convert original;
 static const uint16_t *first,*last;
 static uintptr_t combined_return;
+static _Thread_local uint16_t roman_buffers[2][25];
+static _Thread_local unsigned roman_buffer;
 
 static size_t field_length(const uint16_t *text) {
     size_t n=0;while(n<5 && text[n])++n;return n;
 }
 static const uint16_t *roman_field(const uint16_t *text) {
+    uint16_t *expanded=roman_buffers[(roman_buffer++)%2];
+    if(kyoei_pc_name_lookup(text,field_length(text),expanded))return expanded;
     const KyoeiNameAlias *alias=kyoei_name_alias_find(text,field_length(text));
     return alias?alias->roman:text;
 }
@@ -26,14 +31,21 @@ static const uint16_t *display_source(const uint16_t *source,uintptr_t caller,ui
         memcmp(source+ln+1,first,(fn+1)*2))return source;
     const uint16_t *a=roman_field(last),*b=roman_field(first);
     size_t n=0;
-    while(*a && n<15)combined[n++]=*a++;
+    while(*a && n<24)combined[n++]=*a++;
     combined[n++]=' ';
-    while(*b && n<30)combined[n++]=*b++;
+    while(*b && n<49)combined[n++]=*b++;
     combined[n]=0;return combined;
 }
 static ABI int32_t convert_name(uint64_t *written,char *output,uint64_t capacity,const uint16_t *source,uint64_t count) {
-    uint16_t combined[32];
+    uint16_t combined[64];
     const uint16_t *display=display_source(source,(uintptr_t)__builtin_return_address(0),combined);
+    uint16_t expanded[25];
+    if(source && kyoei_pc_name_lookup(source,field_length(source),expanded))display=expanded;
+    else if(source && first && last && display==source) {
+        size_t n=field_length(source),fn=field_length(first),ln=field_length(last);
+        if(n==fn && n<=4 && !memcmp(source,first,(n+1)*2))display=roman_field(first);
+        else if(n==ln && n<=4 && !memcmp(source,last,(n+1)*2))display=roman_field(last);
+    }
     return original(written,output,capacity,display,count);
 }
 void kyoei_names_configure(void *image,uint64_t bytes,uintptr_t expected_converter) {

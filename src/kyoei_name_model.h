@@ -13,6 +13,7 @@ typedef struct {
     unsigned key, upper, result, select_all;
     size_t native_limit;
     const KyoeiNameAlias *alias;
+    unsigned extended;
 } KyoeiNameModel;
 
 /* PS4 limits count UTF-16 units; never split a surrogate pair. */
@@ -45,7 +46,7 @@ static inline int kyoei_name_is_roman_default(const KyoeiNameModel *m) {
     return m->alias && m->length==m->alias->roman_length && !memcmp(m->text,m->alias->roman,m->length*2);
 }
 static inline int kyoei_name_can_accept(const KyoeiNameModel *m) {
-    return m->length<=m->native_limit || kyoei_name_is_roman_default(m);
+    return m->length<=m->native_limit || kyoei_name_is_roman_default(m) || (m->extended && m->length<=m->limit);
 }
 static inline size_t kyoei_name_stored_length(const KyoeiNameModel *m) {
     return kyoei_name_is_roman_default(m)?m->alias->original_length:m->length;

@@ -246,6 +246,7 @@ target_sources(kyoei PRIVATE src/kyoei_png.c)
 target_sources(kyoei PRIVATE src/kyoei_savedata.c)
 target_sources(kyoei PRIVATE src/kyoei_input_mode.c)
 target_sources(kyoei PRIVATE src/kyoei_names.c)
+target_sources(kyoei PRIVATE src/kyoei_pc_names.c)
 set(KYOEI_IMGUI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party/imgui")
 set(KYOEI_IMGUI_SOURCES "${KYOEI_IMGUI_DIR}/imgui.cpp" "${KYOEI_IMGUI_DIR}/imgui_draw.cpp"
   "${KYOEI_IMGUI_DIR}/imgui_tables.cpp" "${KYOEI_IMGUI_DIR}/imgui_widgets.cpp")
@@ -632,6 +633,23 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_scheduler.cpp" CONTENT 
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_scheduler.cpp")
 file(READ "${KYOEI_CORE}/gpu/pad.cpp" KYOEI_PAD)
 set(KYOEI_PAD "#include \"kyoei_mouse.h\"\n${KYOEI_PAD}")
+set(KYOEI_PAD "#include \"kyoei_pc_controls.h\"\n${KYOEI_PAD}")
+set(KYOEI_OLD_KEYS [=[u32 key_mask(SDL_Scancode key) {
+    switch (key) {
+    case SDL_SCANCODE_UP: return 0x10; case SDL_SCANCODE_RIGHT: return 0x20;
+    case SDL_SCANCODE_DOWN: return 0x40; case SDL_SCANCODE_LEFT: return 0x80;
+    case SDL_SCANCODE_RETURN: return 8; case SDL_SCANCODE_SPACE: return 0x4000;
+    case SDL_SCANCODE_X: return 0x2000; case SDL_SCANCODE_Z: return 0x8000;
+    case SDL_SCANCODE_C: return 0x1000; case SDL_SCANCODE_Q: return 0x400;
+    case SDL_SCANCODE_E: return 0x800; case SDL_SCANCODE_1: return 0x100;
+    case SDL_SCANCODE_3: return 0x200; case SDL_SCANCODE_TAB: return 0x100000;
+    default: return 0;
+    }
+}]=])
+kyoei_replace_checked(KYOEI_PAD "${KYOEI_OLD_KEYS}"
+  "u32 key_mask(SDL_Scancode key) { return KyoeiPcControls::KeyMask(key); }")
+kyoei_replace_checked(KYOEI_PAD "    u32 buttons = keys;"
+  "    keys=0; for (unsigned i=1;i<held.size();++i) if(held[i]) keys|=key_mask(static_cast<SDL_Scancode>(i));\n    u32 buttons = keys;\n    if(KyoeiMouse::captured && !kyoei_overlay_kind()) {\n        auto mouse=SDL_GetMouseState(nullptr,nullptr);\n        if(mouse&SDL_BUTTON_LMASK)buttons|=0x2000;\n        if(mouse&SDL_BUTTON_RMASK)buttons|=0x200;\n        if(mouse&SDL_BUTTON_MMASK)buttons|=4;\n    }")
 kyoei_replace_checked(KYOEI_PAD
   "    if (buttons & 0x100) data.analogButtons.l2 = 255;"
   "    KyoeiMouse::Apply(data.rightStick);\n    if (buttons & 0x100) data.analogButtons.l2 = 255;")
@@ -738,6 +756,8 @@ target_include_directories(kyoei_videoout SYSTEM PRIVATE ${KYOEI_BOOST_INCLUDES}
 add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 add_executable(test_kyoei_name_model src/test_kyoei_name_model.c)
 add_executable(test_kyoei_names src/test_kyoei_names.c src/kyoei_names.c)
+add_executable(test_kyoei_pc_names src/test_kyoei_pc_names.c src/kyoei_pc_names.c)
+target_sources(test_kyoei_names PRIVATE src/kyoei_pc_names.c)
 target_include_directories(test_kyoei_names PRIVATE src "${KYOEI_CORE}/src")
 target_compile_definitions(test_kyoei_names PRIVATE KYOEI_NAMES_TEST=1 _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_input_mode src/test_kyoei_input_mode.c)
@@ -749,12 +769,14 @@ add_executable(test_kyoei_list_model src/test_kyoei_list_model.c)
 add_executable(test_kyoei_overlay src/test_kyoei_overlay.cpp src/kyoei_overlay_model.cpp
   src/kyoei_input_mode.c ${KYOEI_IMGUI_SOURCES})
 target_compile_features(test_kyoei_overlay PRIVATE cxx_std_23)
+target_sources(test_kyoei_overlay PRIVATE src/kyoei_pc_names.c)
 target_compile_options(test_kyoei_overlay PRIVATE -UNDEBUG)
 target_compile_definitions(test_kyoei_overlay PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
 target_include_directories(test_kyoei_overlay PRIVATE src "${KYOEI_IMGUI_DIR}")
 add_executable(test_kyoei_ime_overlay src/test_kyoei_ime_overlay.cpp src/kyoei_ime.c
   src/kyoei_overlay_model.cpp src/kyoei_input_mode.c)
 target_compile_features(test_kyoei_ime_overlay PRIVATE cxx_std_23)
+target_sources(test_kyoei_ime_overlay PRIVATE src/kyoei_pc_names.c)
 target_compile_definitions(test_kyoei_ime_overlay PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
 target_include_directories(test_kyoei_ime_overlay PRIVATE src "${KYOEI_CORE}/src")
 target_link_libraries(test_kyoei_ime_overlay PRIVATE kyoei_imgui user32 gdi32)

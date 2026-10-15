@@ -3,6 +3,7 @@
 // GoW3 overlay reference; no game addresses, cheats or settings code copied.
 #include "kyoei_overlay.h"
 #include "kyoei_name_model.h"
+#include "kyoei_pc_names.h"
 #include "kyoei_list_model.h"
 #include "kyoei_input_mode.h"
 #include "imgui.h"
@@ -128,7 +129,7 @@ void name_box(float width,bool controller) {
     ImGui::EndChild();
     if (name.select_all) ImGui::PopStyleColor();
     if (kyoei_name_is_roman_default(&name)) ImGui::TextDisabled("Default name");
-    else ImGui::TextDisabled("%u / %u",(unsigned)name.length,(unsigned)name.native_limit);
+    else ImGui::TextDisabled("%u / %u",(unsigned)name.length,(unsigned)(name.extended?name.limit:name.native_limit));
     if (!kyoei_name_can_accept(&name)) ImGui::TextWrapped("Use up to %u characters, or keep the default name.",(unsigned)name.native_limit);
     if (controller) {
         const float gap=6*scale,key_width=(width-40*scale-gap*9)/10;
@@ -204,6 +205,14 @@ extern "C" int kyoei_overlay_begin_name(const wchar_t *title,const uint16_t *tex
     if (!available_locked() || !kyoei_name_begin(&name,text,length,limit)) return 0;
     const char *language=std::getenv("KYOEI_LANGUAGE");
     if (limit==4 && language && !std::strcmp(language,"en")) kyoei_name_show_roman(&name);
+    if(limit==4 && language && !std::strcmp(language,"en") && kyoei_pc_names_enabled()) {
+        uint16_t expanded[25];
+        if(kyoei_pc_name_lookup(text,length,expanded)) {
+            size_t n=0;while(expanded[n])++n;
+            memcpy(name.text,expanded,(n+1)*2);name.length=name.cursor=n;name.select_all=1;
+        }
+        name.extended=1;name.limit=24;
+    }
     caption=ui_text(title); done=false; end_status=2; kind=KYOEI_OVERLAY_NAME; ++revision; return 1;
 }
 extern "C" int kyoei_overlay_name_result(uint16_t *text,size_t capacity,unsigned *result) {
