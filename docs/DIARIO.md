@@ -2122,3 +2122,32 @@ espaço (rotina de texto do eboot); (7) PT-BR depois.
   preservar snapshot Godzilla e não alterar projetos irmãos. Não iniciar nem
   fechar partida automaticamente. Próxima sessão começa lendo este diário,
   a revisão preservada e os documentos de desempenho/localização/Linux.
+
+### 15/10/2026 — retomada após reinício, proposta visual e Ubuntu x64
+
+- Davy reiniciou o PC e pediu continuação. Lidos diário, AGENTS, revisão e
+  documentos de Linux/desempenho. Executor restrito falha antes de criar
+  processos (setup refresh); comandos executados com escalonamento autorizado.
+- Nova proposta privada de texturas em build/textures-revised. Galeria
+  build/texture-review-v2/index.html aberta no Edge: 59 grupos/177 PNGs,
+  original/anterior/revisada. Mantidos versão atual, backup e portable.
+- Corrigido centro vertical dos botões; seleções ganham altura baseada nos
+  glifos brancos originais, sem alargamento; sombra difusa mais visível.
+  Títulos recebem sombra mais larga e Stage maior; aviso inicial maior.
+  Amostras visuais inspecionadas; teste de bordas/gradientes PASS.
+- Verificação de hashes/decodificação: 47 TEX mudaram; 11 botões selecionados
+  já estavam centralizados e ficaram idênticos; ficção aprovada preservada
+  byte a byte. Todas as 59 mantêm dimensões, mipmaps, descritores e tamanho
+  descomprimido. Nova aprovação visual pendente; não afirmar 58 concluídas.
+- Script Linux retomado com token administrativo do Windows: instalados
+  WSL 3.0.3/Ubuntu 26.04.1 LTS (WSL2). Nenhum novo reinício executado.
+  Ubuntu inicia por root e confirma x86_64. Instalados compilador Clang21,
+  CMake4/Ninja, Vulkan/SDL3/FFmpeg de desenvolvimento.
+- Novo scripts/setup_linux_toolchain.sh permite repetir instalação ou
+  --verify-only. Verificação PASS: compilou e executou programa C ELF x86-64.
+  Esse programa é só teste do compilador; ainda não há port Linux compilado.
+  Instalação apt terminou exit0; aviso de bus systemd durante triggers não
+  impediu o teste. Backend POSIX/TLS/runtime e gráficos continuam pendentes.
+- Nenhuma partida iniciada/encerrada; saves, dump e Godzilla preservados.
+  Nenhum ganho novo de FPS medido. Pendências: revisão visual da proposta,
+  desempenho com medição, backend Linux e validação do jogo até o fim.

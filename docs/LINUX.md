@@ -4,12 +4,24 @@ Pedido de Davy em 15/10/2026: manter x64; Windows e Linux na mesma pasta,
 sem duplicar os dados do jogo e sem encher a raiz de ferramentas.
 RX 580 + i5-9400 é um alvo para avaliação, não um mínimo já comprovado.
 
-Estado: **ainda não existe executável Linux do Kyoei**. A preparação do ambiente
+Estado após reinício de Davy em 15/10: **ainda não existe executável Linux do
+Kyoei**, mas o ambiente já funciona. Instalados WSL 3.0.3 e Ubuntu 26.04.1 LTS
+em WSL2; `uname -m` confirma x86_64. Clang 21.1.8, CMake 4.2.3, Ninja 1.13.2,
+Vulkan 1.4.341, SDL3 3.4.2 e bibliotecas de desenvolvimento FFmpeg disponíveis.
+`scripts/setup_linux_toolchain.sh --verify-only` compilou e executou um pequeno
+programa C, identificado como ELF x86-64. É prova do ambiente, não do port.
+Saída privada em `build/linux-environment/compiler-smoke`.
+O script sem `--verify-only` instala as dependências, executado como root
+no Ubuntu. Nenhuma conta pessoal ou senha configurada; uso de desenvolvimento
+por `wsl -d Ubuntu -u root`. Nenhuma partida iniciada. Próximo passo continua
+sendo o backend POSIX e integração das dependências ELF descritos abaixo.
+
+Histórico antes do reinício: a preparação do ambiente
 avançou em 15/10: `scripts/setup_linux_build.ps1` foi executado com elevação do
 Windows, habilitando WSL/VirtualMachinePlatform com `-NoRestart`. Resultado em
-`build/linux-setup-status.json`: `restart_required`. Nenhum reinício solicitado
-ou realizado. Ubuntu e toolchain ainda não instalados; após reinício voluntário
-de Davy, retomar o mesmo script e conferir a distribuição antes de compilar.
+`build/linux-setup-status.json` era `restart_required`. O agente não solicitou
+nem realizou reinício. Ubuntu e toolchain ainda não estavam instalados; após reinício voluntário
+de Davy, o mesmo script foi retomado e a distribuição conferida.
 
 As tentativas iniciais de `wsl --install` sem token administrativo retornaram
 código1. A preparação administrativa posterior resolveu a ativação dos
