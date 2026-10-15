@@ -244,10 +244,10 @@ kyoei_replace_checked(KYOEI_LOADER
   "    gz_thread_attach_main();\n    kyoei_tls_enter();")
 kyoei_replace_checked(KYOEI_LOADER
   "#include \"kyoei_gpu_wait.h\""
-  "#include \"kyoei_gpu_wait.h\"\n#include \"kyoei_hud_trace.h\"\n#include \"kyoei_title_exit.h\"")
+  "#include \"kyoei_gpu_wait.h\"\n#include \"kyoei_hud_trace.h\"\n#include \"kyoei_title_exit.h\"\n#include \"kyoei_text_wrap.h\"")
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
-  "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);\n    kyoei_title_exit_configure(image, image_size);")
+  "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);\n    kyoei_title_exit_configure(image, image_size);\n    kyoei_text_wrap_configure(image, image_size);")
 set(KYOEI_LOADER "#include \"kyoei_log_filter.h\"\n${KYOEI_LOADER}")
 set(KYOEI_LOADER "#include \"kyoei_names.h\"\n${KYOEI_LOADER}")
 kyoei_replace_checked(KYOEI_LOADER
@@ -264,7 +264,7 @@ if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace|kyoei-orb-trace-next
 endif()
 set_target_properties(kyoei PROPERTIES OUTPUT_NAME "${KYOEI_PORT_EXE_NAME}")
 target_sources(kyoei PRIVATE src/kyoei_crash.c)
-target_sources(kyoei PRIVATE src/kyoei_hud_trace.c src/kyoei_title_exit.c)
+target_sources(kyoei PRIVATE src/kyoei_hud_trace.c src/kyoei_title_exit.c src/kyoei_text_wrap.c)
 target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
 target_sources(kyoei PRIVATE src/kyoei_png.c)
 target_sources(kyoei PRIVATE src/kyoei_savedata.c)
@@ -788,6 +788,8 @@ add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 add_executable(test_kyoei_name_model src/test_kyoei_name_model.c)
 add_executable(test_kyoei_names src/test_kyoei_names.c src/kyoei_names.c)
 add_executable(test_kyoei_pc_names src/test_kyoei_pc_names.c src/kyoei_pc_names.c)
+add_executable(test_kyoei_text_wrap src/test_kyoei_text_wrap.c src/kyoei_text_wrap.c)
+target_compile_definitions(test_kyoei_text_wrap PRIVATE KYOEI_TEXT_WRAP_TEST=1)
 add_executable(test_kyoei_title_exit src/test_kyoei_title_exit.c src/kyoei_title_exit.c)
 target_compile_definitions(test_kyoei_title_exit PRIVATE KYOEI_TITLE_EXIT_TEST=1)
 target_sources(test_kyoei_names PRIVATE src/kyoei_pc_names.c)

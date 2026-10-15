@@ -4453,28 +4453,28 @@
         {
           "id": "p0/k28",
           "source_text_sha256": "bab1a6a5a9d0b44be2db8ea9b64c29f2f6e465c479b0141aaefe4fff1cb15c97",
-          "en": "It is said that this story's protagonist, <P_LNAME><P_FNAME>, was in some way\ninvolved in the series of strange events as a member of the Cosplay Club.",
+          "en": "It is said that this story's protagonist, <P_FNAME> <P_LNAME>, was in some way\ninvolved in the series of strange events as a member of the Cosplay Club.",
           "notes": "English draft imported from audited private workspace, translate-en-0094.json:p0/k28; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k30",
           "source_text_sha256": "14699fa9b794eb2a84fbbaa710c11d8151e3d6f5d7837f4f926f174251667505",
-          "en": "It is said that this story's protagonist, <P_LNAME><P_FNAME>,\namassed a vast fortune during the series of strange events.",
+          "en": "It is said that this story's protagonist, <P_FNAME> <P_LNAME>,\namassed a vast fortune during the series of strange events.",
           "notes": "English draft imported from audited private workspace, translate-en-0094.json:p0/k30; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k32",
           "source_text_sha256": "1770af322490bc3b8acb053d9d2486d8ee580d983f806f6b055416c81bb354e7",
-          "en": "It is said that this story's protagonist, <P_LNAME><P_FNAME>, harbored\nsomewhat perverse feelings for Reiko Kamio during the series of strange events.",
+          "en": "It is said that this story's protagonist, <P_FNAME> <P_LNAME>, harbored\nsomewhat perverse feelings for Reiko Kamio during the series of strange events.",
           "notes": "English draft imported from audited private workspace, translate-en-0094.json:p0/k32; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k34",
           "source_text_sha256": "a8ca01f8f685eca38ad7a814dd14065262e47382886cd82a6eea4cc5ba2cd6b9",
-          "en": "It is said that this story's protagonist, <P_LNAME><P_FNAME>, was in some way\ninvolved in the series of strange events.",
+          "en": "It is said that this story's protagonist, <P_FNAME> <P_LNAME>, was in some way\ninvolved in the series of strange events.",
           "notes": "English draft imported from audited private workspace, translate-en-0094.json:p0/k34; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -7695,7 +7695,7 @@
         {
           "id": "r6/c3",
           "source_text_sha256": "6e40ea199ad8fcc7a1886e6b0542ba03d980947ed010e4c82c77fc87814817ff",
-          "en": "Business Partnership Agreement Regarding the Generation of Strange Events\\n\\nW&P Consulting Co., Ltd. (hereinafter \"Party A\") and <P_LNAME><P_FNAME> (hereinafter \"Party B\") have agreed to generate strange events and jointly develop business.\\nThey hereby enter into the following agreement.\\n\\nArticle 1 (Purpose)\\n1. The purpose of this agreement is to establish a business relationship based on mutual trust between Party A and Party B, and to pursue mutual benefit and development.",
+          "en": "Business Partnership Agreement Regarding the Generation of Strange Events\\n\\nW&P Consulting Co., Ltd. (hereinafter \"Party A\") and <P_FNAME> <P_LNAME> (hereinafter \"Party B\") have agreed to generate strange events and jointly develop business.\\nThey hereby enter into the following agreement.\\n\\nArticle 1 (Purpose)\\n1. The purpose of this agreement is to establish a business relationship based on mutual trust between Party A and Party B, and to pursue mutual benefit and development.",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r6/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -8080,7 +8080,7 @@
         {
           "id": "r38/c4",
           "source_text_sha256": "ddca1fde189a1b8c46f65a60dddfa2da1dee109de04a5218d41d06cc2b692aff",
-          "en": "578th Jumbo Jumbo National Local Self-Government Lottery\\n\\nThe following prizes are awarded by drawing.\\n1st Prize　　　　　　　¥600000000……………… 3 tickets\\nAdjacent to 1st　　　¥200000000……………… 6 tickets\\n2nd Prize　　　　　　　 ¥60000000……………… 6 tickets\\n3rd Prize　　　　　　　 ¥30000000………………30 tickets\\n ：                              ：\\n7th Prize　　　　　　　        ¥300…… 1000000 tickets\\n\\n",
+          "en": "578th Jumbo Jumbo National Local Self-Government Lottery\\n\\nThe following prizes are awarded by drawing.\\n1st Prize　　　　　　　¥600000000.................. 3 tickets\\nAdjacent to 1st　　　¥200000000.................. 6 tickets\\n2nd Prize　　　　　　　 ¥60000000.................. 6 tickets\\n3rd Prize　　　　　　　 ¥30000000..................30 tickets\\n ：                              ：\\n7th Prize　　　　　　　        ¥300...... 1000000 tickets\\n\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r38/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -8094,7 +8094,7 @@
         {
           "id": "r39/c4",
           "source_text_sha256": "ddca1fde189a1b8c46f65a60dddfa2da1dee109de04a5218d41d06cc2b692aff",
-          "en": "578th Jumbo Jumbo National Local Self-Government Lottery\\n\\nThe following prizes are awarded by drawing.\\n1st Prize　　　　　　　¥600000000……………… 3 tickets\\nAdjacent to 1st　　　¥200000000……………… 6 tickets\\n2nd Prize　　　　　　　 ¥60000000……………… 6 tickets\\n3rd Prize　　　　　　　 ¥30000000………………30 tickets\\n ：                              ：\\n7th Prize　　　　　　　        ¥300…… 1000000 tickets\\n\\n",
+          "en": "578th Jumbo Jumbo National Local Self-Government Lottery\\n\\nThe following prizes are awarded by drawing.\\n1st Prize　　　　　　　¥600000000.................. 3 tickets\\nAdjacent to 1st　　　¥200000000.................. 6 tickets\\n2nd Prize　　　　　　　 ¥60000000.................. 6 tickets\\n3rd Prize　　　　　　　 ¥30000000..................30 tickets\\n ：                              ：\\n7th Prize　　　　　　　        ¥300...... 1000000 tickets\\n\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r39/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -8108,7 +8108,7 @@
         {
           "id": "r40/c4",
           "source_text_sha256": "ddca1fde189a1b8c46f65a60dddfa2da1dee109de04a5218d41d06cc2b692aff",
-          "en": "578th Jumbo Jumbo National Local Self-Government Lottery\\n\\nThe following prizes are awarded by drawing.\\n1st Prize　　　　　　　¥600000000……………… 3 tickets\\nAdjacent to 1st　　　¥200000000……………… 6 tickets\\n2nd Prize　　　　　　　 ¥60000000……………… 6 tickets\\n3rd Prize　　　　　　　 ¥30000000………………30 tickets\\n ：                              ：\\n7th Prize　　　　　　　        ¥300…… 1000000 tickets\\n\\n",
+          "en": "578th Jumbo Jumbo National Local Self-Government Lottery\\n\\nThe following prizes are awarded by drawing.\\n1st Prize　　　　　　　¥600000000.................. 3 tickets\\nAdjacent to 1st　　　¥200000000.................. 6 tickets\\n2nd Prize　　　　　　　 ¥60000000.................. 6 tickets\\n3rd Prize　　　　　　　 ¥30000000..................30 tickets\\n ：                              ：\\n7th Prize　　　　　　　        ¥300...... 1000000 tickets\\n\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r40/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },

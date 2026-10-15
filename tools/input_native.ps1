@@ -1,5 +1,5 @@
 param([Parameter(Mandatory=$true)][int]$TargetId,
- [Parameter(Mandatory=$true)][ValidateSet('Enter','Space','Z','X','Q','Up','Down','Left','Right','W','A','S','D','I','J','K','L')][string]$Key,
+ [Parameter(Mandatory=$true)][ValidateSet('Enter','Space','E','F','Escape','Tab','Z','X','Q','Up','Down','Left','Right','W','A','S','D','I','J','K','L')][string]$Key,
  [ValidateRange(50,3000)][int]$HoldMs=180)
 $ErrorActionPreference = 'Stop'
 Add-Type @'
@@ -13,7 +13,7 @@ public class KyoeiInput {
 $kyoeiProcess = Get-Process -Id $TargetId -ErrorAction Stop
 $kyoeiExe = [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) 'build/kyoei.exe'))
 if ($kyoeiProcess.ProcessName -ne 'kyoei' -or $kyoeiProcess.Path -ne $kyoeiExe -or -not $kyoeiProcess.MainWindowHandle) { throw 'Janela diferente do port Kyoei' }
-$kyoeiKeys = @{Enter=13; Space=32; Z=90; X=88; Q=81; Up=38; Down=40; Left=37; Right=39; W=87; A=65; S=83; D=68; I=73; J=74; K=75; L=76}
+$kyoeiKeys = @{Enter=13; Space=32; E=69; F=70; Escape=27; Tab=9; Z=90; X=88; Q=81; Up=38; Down=40; Left=37; Right=39; W=87; A=65; S=83; D=68; I=73; J=74; K=75; L=76}
 $kyoeiVirtual = [uint32]$kyoeiKeys[$Key]
 $kyoeiScan = [KyoeiInput]::MapVirtualKey($kyoeiVirtual,0)
 $kyoeiParam = [int64](1 -bor ($kyoeiScan -shl 16))

@@ -75,9 +75,19 @@ def keycap(w, h, label):
     radius = min(W, H) // 5
     # Drop shadow, glossy grey body and a lighter rim, like the original icons.
     d.rounded_rectangle((pad, pad + SCALE, W - pad, H - pad + SCALE // 2), radius, fill=(0, 0, 0, 110))
-    d.rounded_rectangle((pad, pad, W - pad, H - pad - SCALE), radius, fill=(58, 60, 66, 255), outline=(205, 208, 214, 255), width=SCALE + 2)
-    inner = (pad + 3 * SCALE, pad + 3 * SCALE, W - pad - 3 * SCALE, (H - SCALE) // 2)
-    d.rounded_rectangle(inner, radius // 2, fill=(255, 255, 255, 14))
+    # Body: smooth top-to-bottom gradient (no separate highlight shape, which
+    # read as a white box at the game's icon size), then the light rim.
+    body = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    shade = ImageDraw.Draw(body)
+    top, bottom = pad, H - pad - SCALE
+    for y in range(top, bottom):
+        t = (y - top) / max(1, bottom - top)
+        v = int(78 - 30 * t)
+        shade.line((0, y, W, y), fill=(v, v + 2, v + 6, 255))
+    mask = Image.new('L', (W, H), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((pad, pad, W - pad, H - pad - SCALE), radius, fill=255)
+    im.paste(body, (0, 0), mask)
+    d.rounded_rectangle((pad, pad, W - pad, H - pad - SCALE), radius, outline=(205, 208, 214, 255), width=SCALE + 2)
     box = (pad + 4 * SCALE, pad + 3 * SCALE, W - pad - 4 * SCALE, H - pad - 4 * SCALE)
     bw, bh = box[2] - box[0], box[3] - box[1]
     if label == '@mouse':
