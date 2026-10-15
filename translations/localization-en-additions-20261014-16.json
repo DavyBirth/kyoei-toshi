@@ -1,0 +1,1281 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/staffroll.csh",
+      "source_sha256": "751be64333402793813ee9f03ec8da9ef3dcd73b68dedc62ac484ded478bb338",
+      "entries": [
+        {
+          "id": "r3/c3",
+          "source_text_sha256": "007aa71e4524d4ff058dc424c9a32c774cbcc4335891c7b83216eb587c5712b7",
+          "en": "Ken Misaki",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r3/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r5/c3",
+          "source_text_sha256": "90b007057b9575681b2d50fc174adfbfab162d54fe847ee71c87b0c5238778c3",
+          "en": "Miharu Matsubara",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r5/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r13/c3",
+          "source_text_sha256": "91227300d1851e124faacfe9ca077fe6e3aa8ec773fac95c808933ba2ecffa8c",
+          "en": "Ryoji Shibata",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r13/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r15/c3",
+          "source_text_sha256": "1366c0dbffa3a33d4d11df74f538216c15f6d9a4cd1892e0f9cd315722c9e134",
+          "en": "Katsuhiro Muto",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r15/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r21/c3",
+          "source_text_sha256": "1deba372e41acd85890d5073d6fc658f4b7fff9f5ef99fa1de902513ec41ab6c",
+          "en": "Miho Yamamura",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r21/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r23/c3",
+          "source_text_sha256": "9b8f97f998aee160f801d748aa4ebf912987b667583ff81c48f44e04d6f6e263",
+          "en": "Shinji Yamamura",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r23/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r43/c3",
+          "source_text_sha256": "59c182ad40f2523b849cde79edefe0e07756357254349ef9c5d669734658196d",
+          "en": "Kazuya Ichijo",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r43/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r53/c3",
+          "source_text_sha256": "4b285e47d0e664fcbac0ba0f54ed32ad278063d7e42c5ad03214412e2d646f85",
+          "en": "Aya Suzumura",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r53/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r294/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r294/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r309/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r309/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r311/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r311/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r313/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r313/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r317/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r317/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r321/c3",
+          "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+          "en": "Daikoku Azuma",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r321/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r326/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r326/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r328/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0093.json:r328/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r330/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0093.json:r330/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r332/c3",
+          "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+          "en": "Daikoku Azuma",
+          "notes": "English draft imported from audited private workspace, translate-en-0093.json:r332/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r334/c3",
+          "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+          "en": "Mai Iida",
+          "notes": "English draft imported from audited private workspace, translate-en-0093.json:r334/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r336/c3",
+          "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+          "en": "Daikoku Azuma",
+          "notes": "English draft imported from audited private workspace, translate-en-0093.json:r336/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r345/c3",
+          "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+          "en": "Daikoku Azuma",
+          "notes": "English draft imported from audited private workspace, translate-en-0093.json:r345/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r350/c3",
+          "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+          "en": "Daikoku Azuma",
+          "notes": "English draft imported from audited private workspace, translate-en-0093.json:r350/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r359/c3",
+          "source_text_sha256": "d0bb9da5b7aca490fefcc4c7432b5d2499c5d9e5db15a969e472cd5b97895646",
+          "en": "Hiroshi Ebihara",
+          "notes": "English draft imported from audited private workspace, translate-en-0093.json:r359/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/SpeakerTable.luc",
+      "source_sha256": "ecce9eef350997de9e3d338df230cb08361924b845259731f64853a36dcfed30",
+      "entries": [
+        {
+          "id": "p0/k49",
+          "source_text_sha256": "40b2ed4c26255cddc5c45816d571e1a9561d04eb79222d53f758f1c51021442b",
+          "en": "Office Worker Kinoshita",
+          "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k49; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k51",
+          "source_text_sha256": "03433ff305f49eb0ad07a2da098dcb31ff4cb081f44f701d941bb6fe85b0a723",
+          "en": "Sakurako",
+          "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k51; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Heroine.luc",
+      "source_sha256": "ad9f923db70f61116204eba07b48f2e4b368a7ae0f994fbaebef93d002c9ff54",
+      "entries": [
+        {
+          "id": "p0/k125",
+          "source_text_sha256": "93d35387c7c283c9be1d5a9d951236c73cfbbd6e1c4393c4d10f22d503e2e682",
+          "en": "I wonder if Nakagawa is all right...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k125; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k193",
+          "source_text_sha256": "1cbfef015b1ed5626457a424a3cbb9c7db8e77e98ffd0699d98cbbbca7385dbe",
+          "en": "About Nakagawa",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k193; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k201",
+          "source_text_sha256": "4feb08f21dbd777381448935c4707268775ca7985deee44ef611465cfc1fec68",
+          "en": "Nakagawa looked like he was hurting...",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k201; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k203",
+          "source_text_sha256": "a4fb9e4a9b0cd7c364e18ea68f4fff82c6b6b707b5d3682431b92453f2faa085",
+          "en": "I wonder if Nakagawa is all right...\nLet's take good care of that game.",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k203; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k205",
+          "source_text_sha256": "387b2ce75e26413d38bc05462855450113e7f31df912adbfff6a78abd424729d",
+          "en": "Nakagawa was a little angry...",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k205; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_201.luc",
+      "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+      "entries": [
+        {
+          "id": "p0/k284",
+          "source_text_sha256": "699aaff3e36419eeed5c7cda84f96a332d5bc959b1ae7c1cc1cecb8d2d593a29",
+          "en": "Store Clerk Iwabuchi",
+          "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k284; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k446",
+          "source_text_sha256": "0dccad68e6822a091cb0c29741b15cb96cc3521876f532327e1a0f673fc5c428",
+          "en": "I've received information that Saeki, who escaped from detention,\nis hiding somewhere around here.\nHave you heard anything new?",
+          "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k446; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k454",
+          "source_text_sha256": "509395345b8b6cdefe4c8ad2e02e3f64bb1e874cc67c0aeef0b1ff1bd46df68d",
+          "en": "A man? Then that isn't the Saeki I'm looking for.\nSorry to bother you. I'll try another district.",
+          "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k454; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k462",
+          "source_text_sha256": "f4287ee124771a28be3c6c7e9374e5b7af9460b42ff25bd17b3aa10e6fda2521",
+          "en": "Then that isn't the Saeki I'm looking for.\nSorry to bother you. I'll try another district.",
+          "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k462; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k823",
+          "source_text_sha256": "566b63acbfdc46900288c2e9627032a8d74bbc8d8776a52b64660f420904368f",
+          "en": "A Woman with a Vacant Expression: Kinoshita",
+          "notes": "English draft imported from audited private workspace, translate-en-0057.json:p0/k823; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1448",
+          "source_text_sha256": "4e63d7e987edc639bef51a0f6b3768f25824861d719b7ac21b1883c2b9334f7a",
+          "en": "N-no! I-I don't want to die!\nKinoshita! H-help me!",
+          "notes": "English draft imported from audited private workspace, translate-en-0057.json:p0/k1448; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1508",
+          "source_text_sha256": "f9a2374fc9afef1fad46cd72d971644006c5abcfb6a869cd15c3760296232417",
+          "en": "Kuribayashi, is something wrong?",
+          "notes": "English draft imported from audited private workspace, translate-en-0058.json:p0/k1508; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1510",
+          "source_text_sha256": "92f43e2d6b96464f53f1909c9bf646697e459acb8b0db1cbbbf43c094b5e7653",
+          "en": "Senior Officer Yanai, the uniform this person is wearing\nis mine! It went missing a little while ago!",
+          "notes": "English draft imported from audited private workspace, translate-en-0058.json:p0/k1510; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1524",
+          "source_text_sha256": "6260cab6d9d1e3ae1ea211b88f94e297c4248573e52b97486f62d05e861a2219",
+          "en": "Senior Officer Yanai, that dresser belongs to you, doesn't it?\nWhat is the meaning of this...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0058.json:p0/k1524; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1539",
+          "source_text_sha256": "1cca49b085252cb7007080a682405554f879b2ad44c8824165e9f8b182d677fd",
+          "en": "Senior Officer Yanai, this woman is wearing a policeman's uniform!",
+          "notes": "English draft imported from audited private workspace, translate-en-0058.json:p0/k1539; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1551",
+          "source_text_sha256": "9201d3356f508fa904d5ff163fa9fdbe6c103f6ca2cf407990392260f629e76e",
+          "en": "Senior Officer Yanai, what are you so impressed about!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0058.json:p0/k1551; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_202.luc",
+      "source_sha256": "88cb6fa67d7c5988d44c1af7be81289d01e078dfe2f978734c2d3fe947086766",
+      "entries": [
+        {
+          "id": "p0/k467",
+          "source_text_sha256": "2cbf9c5c11641d0ce1f6df6056de5cd03bf924a2bbeec7bf48c025987e78d6f4",
+          "en": "Oh, Iwabuchi is probably angry...",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k467; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k475",
+          "source_text_sha256": "950aa57cd813f66ff3747a5374e185db814426730621527788b299ca6015f728",
+          "en": "Iwabuchi must be waiting for the tickets...",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k475; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k481",
+          "source_text_sha256": "554c16ebfd8571df47c2e7f0f4c06ee95152c8822772b17700a3bfec6f6a04d2",
+          "en": "Iwabuchi was in a bind.",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k481; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k483",
+          "source_text_sha256": "70bb2b1e8a55305f34e74e10ac255a86dd01b8772faf7bf6eb524a2057fd3083",
+          "en": "I should deliver the tickets to Iwabuchi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k483; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k487",
+          "source_text_sha256": "b1570a4f45f16c11b469acea9a17a682d34d58206cb6cb288151d5a1e3ad2620",
+          "en": "You know Iwabuchi!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k487; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k502",
+          "source_text_sha256": "e5a0317fd4a001a10fed21de5ebe278fada6e0696d737d04dfbafdce6c546eaf",
+          "en": "I don't want Iwabuchi giving me a hard time later, either.\nI'll leave them with you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k502; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_203.luc",
+      "source_sha256": "4ee99ba7841105d66fc189a01204cdabadf530192d675b9544a097159bf3d809",
+      "entries": [
+        {
+          "id": "p0/k191",
+          "source_text_sha256": "03433ff305f49eb0ad07a2da098dcb31ff4cb081f44f701d941bb6fe85b0a723",
+          "en": "Sakurako",
+          "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k191; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k540",
+          "source_text_sha256": "140db717d171f2350c94a8419fd79adffd530f86dfc83c9a1081c1e7973ba364",
+          "en": "Sakurako, I wonder if your father is safe...\nIt can't be helped that we can't go see him...",
+          "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k540; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k557",
+          "source_text_sha256": "32fa9365dd1202eaa5a4dd49f999ac44fa5f0c8e475b1838d795c10131568a13",
+          "en": "That's right. Sakurako's father won't approve our marriage\nbecause my work is unstable.",
+          "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k557; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k563",
+          "source_text_sha256": "d5c4d4d1884823af440fafb66b0f683a5adfa299b47a9de28788f87bfab33000",
+          "en": "N-no, that's not it! Sakurako's father won't approve our marriage\nbecause my work is unstable.",
+          "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k563; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k572",
+          "source_text_sha256": "0fe89207a71b6b1eb6319bafb250c5da4280fe1a020e7165024bc774d6f2f0b6",
+          "en": "My girlfriend... Sakurako's father won't approve our marriage\nbecause my work is unstable.",
+          "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k572; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_204.luc",
+      "source_sha256": "24e892d1979af5bca0df524f6cb06002166ee4099db4f1038492d5df53712ad2",
+      "entries": [
+        {
+          "id": "p0/k137",
+          "source_text_sha256": "fad450fe2a932217a7d9e6aee355af85d6fb181c21a895a5cf0c716226ff805e",
+          "en": "Oh, isn't that man Nakagawa?",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k137; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k139",
+          "source_text_sha256": "3ca8f39f5836aace37513e4135c81b37239f39e5de6bbff85741e3d5ace2e524",
+          "en": "Think back: 'Nakagawa? Come to think of it, somewhere...'",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k139; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k157",
+          "source_text_sha256": "ab4e8778b35f02859b4df5c8b924eb2842e9b116b3a1d2e1c6889d96960b9448",
+          "en": "Nakagawa",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k157; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k158",
+          "source_text_sha256": "3dd40d94f3c6fb78d7a67c21fe2753da6f9621ddb17bf09eb3e8957a3b68b1e4",
+          "en": "I'm sorry, Sakurako...",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k158; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k474",
+          "source_text_sha256": "cc02fca55cef4919f41a26be11209ad994d910963ff1b1df31a318a3b16c95bd",
+          "en": "(Nakagawa looks deeply dejected...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k474; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k484",
+          "source_text_sha256": "504b6c5ffa242ceef5f39fad14282767aedd0e9a6f3ec828823c47cc3823877c",
+          "en": "A Deeply Dejected Gentleman: Nakagawa",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k484; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k495",
+          "source_text_sha256": "8c720779658fea1c76a8117e0902a854a8c810e0225d225eebec3f0461c3c212",
+          "en": "I thought keeping that with you would only make the pain worse, Nakagawa...",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k495; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k497",
+          "source_text_sha256": "150ceaff0c9625a7f124ffcca4f5b1a5747dda8a97e18931ede7ba92aa4e0c02",
+          "en": "You've already played that game, haven't you, Nakagawa? So I thought you didn't need it...",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k497; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k508",
+          "source_text_sha256": "6d65ad2261b5ca621f711e9e522039558f078d2709d45797f1c1a908f2f827ae",
+          "en": "This is something Ichijo and Sakurako wanted to entrust to me.\nI cannot give it to you!",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k508; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1301",
+          "source_text_sha256": "fc801e89c7f530b8955890d9eba38276a0f3e4073a648c1fc812f298fc830836",
+          "en": "Sakurako...",
+          "notes": "English draft imported from audited private workspace, translate-en-0146.json:p0/k1301; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k2003",
+          "source_text_sha256": "aba86cf23ccdd96e57788af4e2366385f1edb4c6c6a75cd17e763636b6eb4d2a",
+          "en": "Oh, isn't that man Nakagawa?\nYou know, the father of the woman who gave us the game.",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2003; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k2010",
+          "source_text_sha256": "44ee069c2224d01bed34ead4d9851905e75067468f1f43e2d168b6cc9bc5dd2b",
+          "en": "Two people named Ichijo and Sakurako\nasked me to tell you they can't come today.",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2010; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k2018",
+          "source_text_sha256": "b3eb4fe50ba7f777c769cdd3039dd3fa51ca7166f2f9899c102c7a597b5e4fda",
+          "en": "They said they were coming on the train across that bridge...\nCould it be... Sakurako...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2018; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k2047",
+          "source_text_sha256": "c9e65dcd3e189aded9d7ac0137b133dcd1cc8cc78f923a7dc6a9c175163dbd32",
+          "en": "Because of that, I made Sakurako go without things, too.",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2047; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k2049",
+          "source_text_sha256": "4a377fe2f1d2de78b0d1b53420cbf95b12721beb0e220245fec3a48eb5b31d86",
+          "en": "So I wanted Sakurako to be happy, no matter what.",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2049; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k2057",
+          "source_text_sha256": "5747205dc796ee3910a959608550b373fb03e3a88b3f046740bebde3b480aa42",
+          "en": "I realized Ichijo was a suitable husband for Sakurako.",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2057; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k2059",
+          "source_text_sha256": "2845038df1e9128eed5423b5529af463558f9678d89394e7bfa0302b3745e8f4",
+          "en": "I realized Sakurako's judgment was right.",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2059; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k2063",
+          "source_text_sha256": "82a13ef40aa6580d4da594d2b9743c68ec6ed38a05bded84370773ab2c44b612",
+          "en": "I just wanted Sakurako to be happy...\nThat was all...",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2063; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_207.luc",
+      "source_sha256": "603aa30eb7daf17377811f372335f25a2e3b36002105db33c2a40f5148780969",
+      "entries": [
+        {
+          "id": "p0/k77",
+          "source_text_sha256": "82baaa981e93cdd0a24996bd9e5ccb37adb1b5713402fa637940c7107edb2663",
+          "en": "The Griffon is here!\nDeploy the remaining Abrahams!",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k77; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k209",
+          "source_text_sha256": "6329976319b378cc1ea690f9c82bec66435e1a62a7d00284ec010f6091ebfaea",
+          "en": "This Abraham doesn't look like it can move anymore.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k209; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k211",
+          "source_text_sha256": "296b9f7a989793d0e91e9e273ac8f5a3563d8d2cf440f252ca99ac7884a85842",
+          "en": "This Abraham doesn't look like it can move anymore.",
+          "notes": "English draft imported from audited private workspace, translate-en-0029.json:p0/k211; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_212.luc",
+      "source_sha256": "3af3b860839559bd0e120981237f27c0c97f3c8a265b43dc4801e05214d2c46c",
+      "entries": [
+        {
+          "id": "p0/k246",
+          "source_text_sha256": "ba9f8ac2a5c3b7c70912831e9cc8c76297411c93e227f78a08090eb369d1f26e",
+          "en": "Iwabuchi",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k246; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k854",
+          "source_text_sha256": "26e4ccfbb80373a5dce0e603e46665df17c208cfdfb6d4c399fca95b469786ea",
+          "en": "Oh! Y-you! It's me!\nIwabuchi, from the convenience store!",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k854; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_218.luc",
+      "source_sha256": "e2cd50ee0dcafbeb37650762d0635d15bcd477c352023d7a13bb0e81677282c6",
+      "entries": [
+        {
+          "id": "p0/k3",
+          "source_text_sha256": "8833c216d41a3e8af74efc446230331c8c35c12fb6533f88f3382cbd452036b9",
+          "en": "Police Officer Yanai",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k12",
+          "source_text_sha256": "550042c69dd4bb215c9569497329ae28e06878652ba50191d94570c105f3cb8d",
+          "en": "Officer Yanai, Wearing a Friendly Expression",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k12; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k19",
+          "source_text_sha256": "9c20b93b3ae254180a444682b64bd921218f218307fb5981e1a72de1ac1574d9",
+          "en": "Policewoman Kuribayashi",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k19; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1024",
+          "source_text_sha256": "d98180c8b4d2bda7638abbbab462e4cdfa0db17f5d6175063596323858e15cf7",
+          "en": "Something seems to have happened. Kuribayashi, can you go?",
+          "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k1024; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/mission_text.luc",
+      "source_sha256": "2aee79fe9a3c37c9672cc108ecc31d2e65d74f3d138592269420b8c674a88800",
+      "entries": [
+        {
+          "id": "p0/k39",
+          "source_text_sha256": "237d75fdcce213e4450239c2e1c40477d1a8d34abcfc0e148d7c359ea91838e1",
+          "en": "I gave the live show tickets to Iwabuchi.\nI got to hear the performance, too, but it was stopped partway through.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k39; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k153",
+          "source_text_sha256": "b96ac3f877af51c2c22796d171486dbe598b0fb596df15d2af60286cfb1287e0",
+          "en": "I met two people planning to marry among those who failed to escape: game developer Kazuya Ichijo and Sakurako Nakagawa.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k153; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k155",
+          "source_text_sha256": "25f9395190f9a2b12963a0000cb6a2e7031b5139dad8268417dae7a4221501eb",
+          "en": "I met Nakagawa, who had been waiting for Ichijo and Sakurako at the Iberis Tower Building. When I told him the two seemed to have been caught in the bridge collapse, he was speechless.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k155; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_207_news_text.luc",
+      "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
+      "entries": [
+        {
+          "id": "p0/k139",
+          "source_text_sha256": "4c7852703c2a82ed78b3dd37b0c5004de9828ffc62d4139d292443523ae5eaa6",
+          "en": "A Civilian at the Controls? Woman on an Abraham's Shoulder",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k139; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k141",
+          "source_text_sha256": "9bf202ca800f2a1ae1e14891a20a7c602954f792cfcf491a8decf9faa292c581",
+          "en": "A Civilian at the Controls? Young Person on an Abraham's Shoulder",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k141; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k154",
+          "source_text_sha256": "3316470a44cb7c291632c333fe88875cdc706f6244ba264d06e6243041a698da",
+          "en": "This footage captures an Abraham standing by inside a warehouse.\nMany security companies own multiple Labors like this.\nThere are problems, however.\nA major security company has ample funds to own many of the latest Labors.\nMedium-sized and smaller companies are not so fortunate.\nAt one regional security company I visited, there was only a single, very old Labor.\nFrankly, it had not been maintained well and seemed little more than a display.\n(With hardly any civilian Labors in that region, perhaps there is less need.)\n\nWouldn't life become safer and more secure if the hundreds of billions of yen the government wastes every year were used to lend Labors regularly to security companies throughout the country?",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k154; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k169",
+          "source_text_sha256": "46f2af475b633fd40cf4b3d513434947afe96efc39cf45c2186d641b7e806262",
+          "en": "Black Labor Makes Short Work of Abrahams",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k169; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k170",
+          "source_text_sha256": "e5a81921983963327becf55889ddb40a506b0872cf54b1ae1aa07dbcc22541d9",
+          "en": "An Abraham is lodged in a warehouse, unable to move. Apparently, it tried to restrain the black Labor, only to be sent flying instead.\nOther Abrahams were reportedly knocked into the sea.\n\nThat the operator escaped with only minor injuries was truly a small mercy amid the misfortune.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k170; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_3_news_text.luc",
+      "source_sha256": "492540a524b928b7863ed9ea0a383b887612b0d538bac0b0389928602cf2cbe5",
+      "entries": [
+        {
+          "id": "p0/k104",
+          "source_text_sha256": "53a409f17fd1b01c9eac4d78bf584dc3654fa1b1717b85a8bb47161ce9fb2f26",
+          "en": "What time was it today...?\nHaving abandoned Yuki, I was in darkness.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k104; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k107",
+          "source_text_sha256": "e6b5b5b14b01f27a577abe0404857f5db2d8e6baf90a0e731d2d94a63a211708",
+          "en": "What time was it today...?\nHaving abandoned Yuki, I was in darkness.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k107; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k108",
+          "source_text_sha256": "937215205a3a0eed6d6ce161a5bf13f34ee564f33f1c96a4513f94d13f97aff4",
+          "en": "What time was it today...?\nAfter abandoning Yuki, how long had I been in darkness?\nIt felt like hours, perhaps dozens of hours, and yet also like mere seconds.\nI thought I would never see her again, but she appeared before my eyes!\nI did not know what had happened, but none of that mattered.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k108; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k134",
+          "source_text_sha256": "c25409dbd092745236c287ebe845752f4c340564dcc6e9c8b9f5299e46d9fc21",
+          "en": "After the giant-shadow incident that struck Miyato City today, many residents are spending an anxious night in shelters.\nAmong them, street performer Watanabe is reportedly easing the atmosphere with simple magic tricks and pantomime.\n'At first, I stayed quiet, thinking people might get angry at me for performing during an emergency. But when I showed a little child a magic trick to comfort them, a crowd formed before I knew it...'\nEvacuees reportedly thanked the performer, saying it had warmed their hearts.\nWatanabe said, 'I'm happy my skills can be useful.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k134; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k148",
+          "source_text_sha256": "47f5188bb3b13b9189b59d9c67999cda5b2fef580d39f01dccca3291387985c8",
+          "en": "In next week's Weekly GZ, the hugely popular manga Tabletop Role-Playing Girlfriend features a reunion with Ryuji, who had been traveling separately from the others. 'I'm nervous alone and have nowhere else to turn,' he claims. But the real reason he returned is...!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k148; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k150",
+          "source_text_sha256": "0f3edc91cc3a5705f5e56b135ed9c4903acabad64e0d34620c2005b9ee690015",
+          "en": "The science-fiction epic Strange Bedfellows on Neptune finally opens this weekend.\n＜Story＞\nJin and Aneru, childhood friends now on opposing sides, are pursued by a common enemy and end up aboard the same battleship on Neptune's seas. Each thinks, 'I don't trust them, but I should watch a little longer,' as they begin questioning a world in which childhood friends must fight...",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k150; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k156",
+          "source_text_sha256": "0264ca89290327a2f4099b469b0d40a4bfed026c3734dabee4555553ad94ae0b",
+          "en": "CD sales of promising young singer-songwriter Aya Suzumura's new song, I Want to Greet You as Usual and Say I'm Sorry, have reached 500,000.\nThe song describes the conflict and reconciliation following a trivial argument with a close friend, resonating with a wide range of generations.\nThe drama Belly Roll of Youth, which uses it as its theme, also continues to earn high ratings.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k156; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k158",
+          "source_text_sha256": "4e585893de4f46c0268dfbd44df1b109330437e1552883b7321d9393265bab62",
+          "en": "CD sales of promising young singer-songwriter Aya Suzumura's new song, I Want to Take Your Hand and Celebrate Our Reunion, have reached 500,000.\nThe song describes friends who drifted apart meeting again by chance and renewing their friendship, resonating with a wide range of generations.\nThe special-effects superhero show Unidentified Squadron Yuman, which uses it as its theme, also continues to earn high ratings.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k158; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k162",
+          "source_text_sha256": "54b34934145014f1d0c95a19a18e455109e2c6eaf2d3794484faa16a13757e2d",
+          "en": "CD sales of promising young singer-songwriter Aya Suzumura's new song, I'll Hold You and Never Let Go, have reached 500,000.\nThe song expresses straightforward feelings for a loved one, resonating with a wide range of generations.\nThe film Land of Love, which uses it as its theme, is also a major box-office hit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k162; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "326779ce8a610db210142e60d90df888e6a08a9d9432c5c68fd8771e76cf60f8",
+          "en": "CD sales of promising young singer-songwriter Aya Suzumura's new song, I'll Hold You Desperately and Keep On Kissing You, have reached 500,000.\nThe song follows an adolescent boy growing up on a journey through a devastated world as he searches for the girl he admires, who has been abducted. It resonates with a wide range of generations.\nWritten as the theme for the anime Marus the Track Collector, the song accompanies a show that also continues to earn high ratings.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k167",
+          "source_text_sha256": "d1eaed153978109207e678a59de01bedf8eddc007f5c40c6b08758011cf021df",
+          "en": "Rap Version of Mai Iida's Sky for Two of Us Released",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k167; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k168",
+          "source_text_sha256": "5cd42800e6217e981874b50da71a0fbff55ec2e419ff67791ddc8812800c6bf1",
+          "en": "A rap version of singer-songwriter Mai Iida's Sky for Two of Us has been released.\nThe arrangement evokes an expanded world for the song.\n\nSky for Two of Us is available from Granzella Music at http://granzellamusic.jp/.",
+          "notes": "English draft imported from audited private workspace, translate-en-0005.json:p0/k168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_news_text.luc",
+      "source_sha256": "1c575203f6420af477aae10e01c4dffd0fdba46d2940fd05c4ee1d6f99715c7d",
+      "entries": [
+        {
+          "id": "p0/k112",
+          "source_text_sha256": "0c6ffb6e115e40378b3ef98b5e7f7f275131f8ab04a91aef7a6663eadd17f02c",
+          "en": "Gunshots were reported near Suzuran Avenue in Miyato City.\nAccording to witnesses, an intimidating man was threatening two young people with a gun.\nThe young people later escaped amid the confusion when flying monsters appeared, while the armed man was carried off by a monster.\n\nPolice increasingly suspect gang involvement. However, with officers occupied responding to successive anomalies across the area, they may be unable to assign enough personnel to the investigation.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k112; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k120",
+          "source_text_sha256": "a5e2be41e2a8f43a24844fe9800728cc6f69c177fa26d42055ec933c714d285c",
+          "en": "A new bank-transfer scam has recently attracted attention. The perpetrator reportedly calls victims saying things like, 'Grandma, it's me! Let me do something nice for you,' then doubles the money they transfer and gives it back.\nThe damage does not end there. Other repeated misdeeds reportedly include sending expensive bedding and installing handrails in every room of the house.\nPolice are said to be searching for the culprit with all their resources.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k120; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k126",
+          "source_text_sha256": "4ffcd4032804f2b7b3b1a13142a7777873be1ee97efb9c06515cd2cbe5f93e36",
+          "en": "One of the Gyaos that appeared in Miyato City was seen colliding with a building.\nIt reportedly lost its balance and fell to the ground.\nAssociate Professor N of University S suggested, 'Perhaps it was distracted by its human prey and crashed.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k126; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k128",
+          "source_text_sha256": "ef3da82c265c348fef2a6b9c2ce56810c39655c3113f769eabb57c99ab71c803",
+          "en": "A beloved sign that had long served as a symbol of Suzuran Avenue was destroyed by Gyaos.\nSince it was such a well-known meeting spot, expressions of sadness have continued to pour in.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k128; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k130",
+          "source_text_sha256": "4da713aaa5d641b7f8932b1847ae8fc29b8a5df70bbaedb4a6fb3f41a79e946e",
+          "en": "The famous sign destroyed by Gyaos landed in a spot too cruel to call miraculous.\nIt fell so as to block the entrance to PANSIE's West Wing.\nYes, the very entrance where people had been seeking refuge moments earlier.\nStrong winds were blowing that day. Experts believe they caught the damaged sign and positioned it precisely across the entrance.\nThe impact cracked the ground and badly deformed the sign itself.\nWhether anyone was nearby at the time is unknown. But anyone crushed beneath it would almost certainly have died...",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k130; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k136",
+          "source_text_sha256": "318f6a35bccbb4ddd4da7ef23ec8add5bb8201ae913276350ac64043adf97ea5",
+          "en": "Amid the Gyaos incident in Miyato City, numerous traffic accidents made the roads impassable to pedestrians. Some people reportedly climbed onto tanker trucks to get around. E, who lives in an apartment along Suzuran Avenue and witnessed this, said, 'Because they were moving high up, some were spotted and carried off by flying monsters. I couldn't even call out to them. There was nothing I could do...'",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k136; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k148",
+          "source_text_sha256": "c02cd663aed7d942d9d654f68eedbfc27f649bd797982d472d14b3f8a202c1ac",
+          "en": "Suzuran Avenue is said to have been a vital transportation route since long ago, when settlements large enough to call towns were still few.\n\nApparently, the surrounding area was then enclosed by rugged mountains and supposedly bottomless marshes, making this street the only flat, safe passage.\n\nAt some point, development began along the route, and houses went up one after another.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k148; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k150",
+          "source_text_sha256": "96a373bc496ac9248d93ddc64e81b303de6ed18fafbe9e6e58ca72cff1b3c56c",
+          "en": "Documents record that Suzuran Avenue flourished as a post town around six hundred years ago.\n\nThe area apparently was unsuitable for farmland, but proved extremely valuable as a stopping point on the way to the next post town.\nEntertainment establishments also opened one after another for travelers to enjoy, making it something like a modern entertainment district.\n\nLooking back now, perhaps this was the prototype of Suzuran Avenue.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k150; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k152",
+          "source_text_sha256": "9a48b60cf88376eece4c8b9c1e0c5f3b57b3ca90e04d14f8edf23b89ffa54742",
+          "en": "As Western culture began arriving, modernization advanced around Suzuran Avenue.\n\nWooden houses were rebuilt one after another as Western-style buildings with mortar finishes.\nAlong with this, the buildings lining the avenue grew ever larger.\n\nModernization spread quickly through the area, reportedly making it one of the country's foremost cutting-edge towns and attracting still more visitors.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k152; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k154",
+          "source_text_sha256": "bbae7d781d2262bfa76267c31748418678280a5e5f87dcdbfe11e34e8807643a",
+          "en": "Even as an ominous sense of approaching war spread nationwide, Suzuran Avenue's entertainment district continued to flourish.\nLarge bribes apparently allowed it to operate freely without attracting the authorities' disapproval.\n\nVisitors therefore reportedly described it as heaven itself.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k154; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k156",
+          "source_text_sha256": "de7b3950cfa4545a2b2142be7a06ea09e4fdc9a6b6f093730f4f2ba1773e7a26",
+          "en": "During the war, even bribes could no longer provide an escape. With luxury branded the enemy, Suzuran Avenue appeared to have fallen into decline.\nIn fact, although its entertainment establishments were officially closed, business apparently continued behind the scenes.\n\nNaturally, the ordinary customers of earlier days could not visit during wartime. Instead, the establishments reportedly made decent profits serving high-ranking military officials.\nThe people of Suzuran Avenue seem to have always been resilient.\nUnfortunately, however, air raids destroyed most of its buildings.\nFor the first time, Suzuran Avenue lost its glamour.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k156; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k158",
+          "source_text_sha256": "d91d28d3534b6c5c6c3461cc599490cca981108744bcecc31a8099d412443e31",
+          "en": "After the war, the area around Suzuran Avenue recovered at an astonishing speed.\nAlthough the buildings had been lost to air raids, people apparently had moved their accumulated money elsewhere, leaving ample funds for rebuilding.\nThe streetscape forming the basis of today's district reportedly emerged almost overnight.\nFurthermore, this reconstruction apparently marked the adoption of the name Suzuran Avenue.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k158; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k160",
+          "source_text_sha256": "9d128db6adff2d8c2978396098e59ddb076e3f68919de421db5d609352d016a7",
+          "en": "Mysterious Characters on Manhole Covers\n\nNobody knows when it began, but the manhole covers on Suzuran Avenue reportedly bear different characters.\nOne has 'ろ' (ro), another 'か' (ka), and so on.\nOfficially, the explanation is that the patterns merely resemble characters. Yet it is strange that supposedly mass-produced covers should all have slightly different patterns.\n\nOne theory says that reading them in a particular order forms a code. Decipher it, and you can supposedly find treasure buried by a shop that once stood on Suzuran Avenue.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k160; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k162",
+          "source_text_sha256": "246d4254c127e5f9014fa09203c3b6ac1f8e5e4fee352f15a513d9b330cc9410",
+          "en": "The Night the Gas Lamps Flared Together\n\nBack when the streetlights were gas lamps, a strange phenomenon occurred: for some reason, only the lamps on Suzuran Avenue suddenly burned much more fiercely, all at once.\nAn investigation found no abnormalities, and why it happened only in this area remains a mystery.\n\nHowever, it happened twice, and both times a major earthquake struck somewhere the following day. Some therefore rumor that a precursor to the earthquake manifested locally.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k162; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k164",
+          "source_text_sha256": "84308b06a0eae37f2e74a64a2daf7d3b8c627349777b0ec3c517288a4cda5107",
+          "en": "A Mysterious Shadow Wandering Late at Night\n\nShortly before dawn, when even the entertainment district grows deserted, a shadow is reportedly seen wandering aimlessly.\nAnyone who sees it, or someone close to them, is said to die within three days.\n\nTwo or three people reportedly see it each year, and deaths among them or their close relatives have indeed been reported.\nHowever, if you see the shadow and deliberately bump into it, the misfortune can supposedly be avoided.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k164; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "4f4d1a714289dbbbb2de22d7274ead40270a16e9f9c03a9257670591c512e2be",
+          "en": "A Car with No Driver\n\nYou may not pay much attention while walking around town, but witnesses sometimes report driverless cars passing along Suzuran Avenue.\nOf course, these are not the self-driving vehicles currently under development.\nThey are clearly old passenger cars, with slightly tinted windows.\n\nSeeing one the day before an exam or business negotiation is said to bring success.\nPerhaps, being a car, it helps things move along nicely.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k168",
+          "source_text_sha256": "1d9792a5ad82b568d5d0713dd2a475488ae39ef6c045fc6cfa309d5a9de83e99",
+          "en": "Streetlights Going Out Together\n\nAbout five years ago, the streetlights on Suzuran Avenue alone all went out at once.\nIt was not a localized power outage, and the cause remains unknown.\n\nBut when a major earthquake struck elsewhere the following day, locals reportedly recalled the past.\nSomething similar had happened back in the days of gas lamps.\n\nLocals say, 'The next time all the streetlights go out together, there will definitely be a major earthquake somewhere the following day.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k170",
+          "source_text_sha256": "72edc5054f71589481513084a4e94ec98f9e1168cbefefaf51bc12dfbcd1ac4b",
+          "en": "A Voice Calling from Behind\n\nMany people walking along Suzuran Avenue report suddenly being called by a child's voice from behind, only to turn around and find no child there.\n\nMoreover, if the voice is a boy's, misfortune supposedly follows; if it is a girl's, happiness follows.\nIt is a fifty-fifty gamble, but apparently quite a few young people hoping for success in love deliberately walk the avenue repeatedly, ready to take their chances.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k170; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k172",
+          "source_text_sha256": "5e30d9e7222e996eef2d0ddb3e8db58a583e6718859bfa10b4d2d2869678d926",
+          "en": "Solve It and Die: The Seventh Mystery\n\nThe seventh of Suzuran Avenue's Seven Mysteries is, in fact, unknown.\nPerhaps there is a clue somewhere that could reveal it. Perhaps there is not.\n\nHowever, anyone who learns the seventh mystery is said to die at that very moment.\nSeveral people who investigated it in the past have indeed died. Neither preexisting illness nor an accident was responsible: they died suddenly.\nPeople want to investigate everything, but perhaps this teaches us that some things are better left unknown.",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k172; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_212_news_text.luc",
+      "source_sha256": "4df22ab296656669e2d6b7ee4107f608b0fb57c5c82d719608f00f16a5e8309d",
+      "entries": [
+        {
+          "id": "p0/k76",
+          "source_text_sha256": "166fe31dac21b17985cad0fe4e21d437a34a291a2f7a20982cb537b3cbfb798c",
+          "en": "At around 3 a.m. today, a gigantic, mysterious red life-form appeared in Sumire Ward, Miyato City. It cut through nearby buildings one after another, causing extensive damage.\nIts identity and purpose remain completely unknown.\nThe government also announced that, like the mysterious black life-form that appeared on Nanohana Street today, this red creature will be called an 'Angel.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k76; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k79",
+          "source_text_sha256": "1ba6ff997559f93f6db125f1a2e80e5f45de0f83d7fa3657dd5b675ef0b0470f",
+          "en": "＜Photo＞ Giants in Battle",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k79; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k80",
+          "source_text_sha256": "093040105ce697b5b7885ef41c5845e0b6d952f197a21b376a58d8401e5614eb",
+          "en": "A giant humanoid weapon faces the red Angel that appeared near radio station RSG in Sumire Ward around 3 a.m. today.\nIt emerged from launch equipment built into the road.",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k80; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k82",
+          "source_text_sha256": "7d9d0ba70f50643d93e8f7a92455f292cad896ec399ac3ea01e20658107173e3",
+          "en": "Dangerous incidents in parks late at night have become frequent in Sumire Ward, Miyato City, since the start of the year. Police have increased nighttime patrol staffing and taken other measures, but so far there appears to be little noticeable effect. The Sumire police chief said, 'We intend to implement various measures to protect residents' safety.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k82; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k84",
+          "source_text_sha256": "63f0aab5d4396b2af128bd56c90ecacbd380e6542ab0ce5bf85d29739139e93a",
+          "en": "'Isn't road construction supposed to happen at the end of the fiscal year?'\nA, a Sumire Ward resident in Miyato City, is increasingly frustrated by roadworks continuing into the new fiscal year. As of this week, thirty-six roadwork sites are operating in the ward, drawing numerous complaints from residents unable to go about their normal lives.\nA said, 'I'm appalled by the lack of planning in Sumire Ward, which commissions the work.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k84; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k87",
+          "source_text_sha256": "73f7b1dc6aeea446801dc986e44f7d14eb374ffcb7a41411b9a12cfbecafb2a8",
+          "en": "Sumire Ward Mystery Building Identified as Humanoid Weapon Armory",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k87; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k88",
+          "source_text_sha256": "6355859e2202f400a2b646d41c02fb1ba7b4898163e4442c3f50a197d0d70570",
+          "en": "Amid today's red Angel incident in Sumire Ward, Miyato City, a building long regarded as a mystery by residents was revealed to be an armory for the giant humanoid weapon.\nIt stands on the street in front of the radio station in the affected ward. The humanoid weapon reportedly retrieved firearms from inside it to fight the red Angel.\nBecause nobody ever seemed to be there, residents had called it the 'mystery building.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k88; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k89",
+          "source_text_sha256": "a96aec03f6dbeaf9a2fbd60453d85d7543bbe27b887671796c79f3d663dbec54",
+          "en": "Live Show Audience Member May Have Entered Staff Room",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k89; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k90",
+          "source_text_sha256": "c650ec75519b43cc22b804718ae42cdbed8b8ca5e8145e98389403e0ac01f04e",
+          "en": "We have learned that an intruder entered the staff room of Miyato City's Radio Sky Garden late tonight and took a soft drink.\nA live performance of the popular late-night show Midnight Sky Garden was being held there, and an audience member is believed to have entered the room.\nThe intruder took orange juice from a staff member's desk, with no other losses reported. The staff member sympathized, saying, 'There are no vending machines in the station. Maybe they were thirsty and couldn't help taking my juice,' while expressing dissatisfaction with the station's facilities.",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k90; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k91",
+          "source_text_sha256": "e8b253cf94cb0a1b12d6d1cd9db9e79821630f47223fec17db84e9edd93cd3fd",
+          "en": "＜Photo＞ Humanoid Weapon Name? Writing on Launch Equipment",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k91; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k92",
+          "source_text_sha256": "050e259acc012d3cd6d777b8bec1696270e1359ba00c6bb695f0556e0c884dcb",
+          "en": "Writing was confirmed on the launch equipment used by the giant humanoid weapon that repelled the red Angel in Sumire Ward, Miyato City, today.\nCould it identify the company that built the equipment, or the equipment itself?\nThe equipment is built into the road, but neither the national nor local government has announced anything about it or the humanoid weapon.",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k92; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k93",
+          "source_text_sha256": "553e302b8d15de872b13c2a04f6d4361699c8fd0438ae933d11ed4c9b6d1f0bc",
+          "en": "Sumire Ward Incident: Travel Agency Manager in Distress",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k93; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k95",
+          "source_text_sha256": "983217303b69e64db571cbc6ce6dc2d17894e1be582030ef85a14f7c7d4ff7eb",
+          "en": "＜Photo＞ The Red Angel Incident: People Who Could Not Escape",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k95; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k96",
+          "source_text_sha256": "3d461e0acd3341f5afc6a5403879b1320f11f8ec263d86770887b75dfb9fe4e8",
+          "en": "People who failed to escape the red Angel incident in Sumire Ward, Miyato City.\nThey watch the battle between the red Angel and the giant humanoid weapon unfold before them.\nEventually, the humanoid weapon repelled the red Angel, and they were able to return home safely.",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k96; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k97",
+          "source_text_sha256": "e9b279ff488c7bc901ea670c2e1df3262837fce583957b4da353db36361640af",
+          "en": "＜Photo＞ Giant Humanoid Weapon Repels Red Angel",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k97; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k98",
+          "source_text_sha256": "67b6723471e110f8f5ce1690753f53104844662b12ec09019263108618476130",
+          "en": "The red Angel that appeared in Sumire Ward, Miyato City, sliced through buildings with glowing, whip-like arms, even piercing the giant humanoid weapon's body.\nIn the end, however, the humanoid weapon repelled it. Intense light enveloped the area at that moment.\nWhen the residents watching realized the humanoid weapon had won, they celebrated with one another.",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k98; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k99",
+          "source_text_sha256": "e79f1d57c067fe97513ad7381deb7d531aa376449f925e3e671d444cae22ed3b",
+          "en": "Firefighter Rallies After Encouragement from a Colleague",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k99; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k101",
+          "source_text_sha256": "2fc7b99085f416a485f98174526bbf1f4d7454bc3f5ea5e848ba393bc4547ea9",
+          "en": "Musician Saki Honjo at Red Angel Incident: 'Especially at a Time Like This'",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k101; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k102",
+          "source_text_sha256": "29eef619810edcb631babc4c3795aa223704da83486ece75a54e64b473ee3e26",
+          "en": "Musician Saki Honjo was scheduled to perform at today's live broadcast of the late-night radio program Midnight Sky Garden. She was caught in the incident while waiting in the dressing room for her turn.\n\n'I was concentrating while listening to Aya Suzumura, who was performing before me, when the music suddenly stopped. As I wondered what had happened, a dazzling light shot overhead. There was an enormous noise, and I ducked instinctively. When I looked up, the ceiling was gone and I could see the sky.'\n\nTogether with fellow performer Aya Suzumura, Honjo encouraged the panicking people, descended the stairs, and escaped the building with her life.\n\nHonjo has a hit song called Kimi No Tonari De and has long encouraged people by performing in disaster-stricken areas. With Miyato City badly damaged by the giant-shadow anomalies, she told us firmly, 'Especially at a time like this, my singing has meaning.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k102; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k103",
+          "source_text_sha256": "f8f8704ef0d7dea5f1e94a21da9700fe0e171cc6e59f541964f1a8efe0061f90",
+          "en": "Musician Aya Suzumura at Red Angel Incident: 'We Will Finish This Concert'",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k103; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k104",
+          "source_text_sha256": "2b49ec575d1b3fd2746e3b48931eb389da4a17aff359431a97bc0508a30478ce",
+          "en": "Musician Aya Suzumura was caught in the incident during a public live broadcast of her radio program Midnight Sky Garden. The red Angel cut away the part of the building immediately above the live studio.\n\nSuzumura had planned to perform Sky for Two of Us and See You. that day, but the incident forced the show to stop. Some fans were reportedly more disappointed at not hearing her songs to the end than at being caught in the incident.\nShe reportedly promised the evacuated fans that she would perform in Miyato City again.\n\nSuzumura said, 'After talking with the staff, we considered canceling today's show. But I wanted to convey my feelings to the fans who came and the people listening, so we decided to perform. As a result, everyone was put in danger, and I am truly sorry. But I think the desire to hold a concert on a day like this matters deeply. We will finish this concert.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k104; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k105",
+          "source_text_sha256": "8138d03a8634595cc973eb6567f73642b1e543e7035accb31bb9ebb13afc877d",
+          "en": "A Milestone in the Cats' Game Development Request",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k105; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k106",
+          "source_text_sha256": "7a18c0205f5e9c087ab3993182ae2709ae7f487c90b08e3a2c37d74f665f970c",
+          "en": "Late tonight, Toro and Kuro, who are developing Absolutely Safe City 2: Good Night, announced that completion was now in sight.\n＜主人公＞ played a major role in development. Apparently, the project would have been canceled without this person's efforts to clear various tasks. Toro said, 'Now we have everything we need, meow. It's as good as finished, meow. Leave the rest to us, meow!'\n\nThe precise release date remains undecided, but fans of the previous game are already voicing both anticipation and concern.",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k106; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_213_news_text.luc",
+      "source_sha256": "a3c952d422cdc7c0451ad2f33a6a0b77a27eeb85b87a7c2d082d963470e99ca5",
+      "entries": [
+        {
+          "id": "p0/k160",
+          "source_text_sha256": "53a60f4b5ecfe6a403a4eead36f2a740760de4c15b96662197018ed6dd7996eb",
+          "en": "Just now, an enormous silver machine was carried by transport aircraft to the front of the Fortune Center Building in Yotsuba Ward.\nNo announcement has yet been made, but it is thought to be the new Self-Defense Force weapon mentioned in witness reports.\n\nImmediately after landing, it began attacking the giant creature. A ray fired from what appeared to be its mouth caused the creature to recoil noticeably.\n\nThe giant weapon appears to be an effective countermeasure. However, its appearance and attacks share many features with the giant creature, suggesting some connection between them.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k160; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k162",
+          "source_text_sha256": "3e5bb76738c5e4f09cb90fd715ae8d6d7cc9bb962916df927ea5b79190497702",
+          "en": "Just now, the enormous silver weapon suddenly stopped moving.\nThe reason is uncertain, but it appears to have lost power.\nPerhaps this was unexpected: the transport aircraft seem to be watching from a distance.\n\nMeanwhile, the giant creature left the Yotsuba Ward area and disappeared.\nWitnesses say it submerged in the nearby sea.\n\nThe events were startlingly sudden, but the area around Yotsuba Ward has gone from devastation back to an eerie quiet.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k162; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k164",
+          "source_text_sha256": "e2bb5455873b78d8f8ce59224b8f6e4c6a0eeae5fd376be73a47276243c91ef8",
+          "en": "Numerous witness reports have arrived concerning the giant weapon's shutdown.\nTheir common element is that 'the giant weapon seemed to stop suddenly after the enormous black creature let out a mighty roar.'\nWith insufficient information about the weapon, we cannot be certain, but some connection between it and the giant creature remains possible.\nIf the reports of a roar stopping it are true, however, wouldn't that be a fatal weakness in a countermeasure against the creature?",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k164; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "cdd28b1fc3e383e52ddcfb54155bac91e828ba098079ea7ea1f8ba309c05591d",
+          "en": "Just now, the enormous silver weapon that had stopped moving suddenly started up and began destroying the city.\n\nOne transport aircraft watching nearby approached, perhaps to guide it, but was shot down by a missile it fired.\nThe remaining two aircraft apparently immediately headed toward the crash site.\n\nJudging by the situation, the giant weapon appears to be out of control.\nWalking while destroying the city, it looks just like that enormous black creature.\n\nIt is now heading straight for the Fortune Center Building. If it maintains this course, a head-on collision with the building will be unavoidable.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k168",
+          "source_text_sha256": "000a68761230145416f910e36724edf74ef992c23eb5e633091e09f3a97fc8b3",
+          "en": "The enormous silver weapon finally stopped after rampaging for as long as thirty minutes.\nIt was subsequently recovered by transport aircraft.\n\nThe situation appears to be over, but the weapon's rampage has left deep scars throughout the area.\nThe Fortune Center Building has been completely destroyed, and homes along its route have suffered devastating damage.\nRecovery in Yotsuba Ward looks likely to take considerable time.\n\nThe government has yet to make an announcement. An explanation to the public and swift assistance for victims are now needed.\nThis is the worst human-caused disaster on record. Public condemnation and demands for accountability will be unavoidable.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k172",
+          "source_text_sha256": "3db7b4415f3393c9428effdfa52fbf0e1adac132a6e55b53011fc756d5268ec0",
+          "en": "The giant weapon, apparently out of control, began moving while firing missiles indiscriminately.\n\nLarge numbers of missiles struck nearby facilities, causing immense damage.\nThe Fortune Center Building in particular came under concentrated fire.\n\nAn expert commented, 'I can only think those missiles were aimed at the building. There is no way to check now, but perhaps there was something inside that the giant shadows were after.'\n\nIn response, police have apparently decided to question people connected with the Fortune Center Building soon.\nFurther developments in the investigation are eagerly awaited.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k172; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k176",
+          "source_text_sha256": "05909d9c5720f19b2ecd6bcd950927df5dfa6e2b6f5f217e4d7289c24dd94814",
+          "en": "The biology of the giant creature that appeared this time seems to be attracting scholars' attention worldwide.\n\nThe first question concerns its enormous body.\nIts appearance suggests a reptile, but how it sustains a body far larger than any creature on Earth remains a mystery.\nIt presumably needs tremendous energy, yet so far it has not been observed feeding on anything.\n\nThe next question concerns the ray it fires from its mouth.\nThis creature can make its dorsal fins glow and emit an extremely high-energy beam from its mouth.\nRather than a survival mechanism, this is practically a weapon and seems difficult to explain as a product of biological evolution.\nFurthermore, it releases energy while already requiring an enormous supply to sustain its size.\n\nOne biologist concluded, 'The only explanation is nuclear fusion inside its body.' Most scholars disagree, saying nuclear fusion inside a living creature is impossible.\nHowever, some have expressed a degree of understanding: 'It would make sense if the beam from its mouth were a way of releasing waste heat.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k176; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k180",
+          "source_text_sha256": "17f82d99debdcb3416c5867c5f828f5b2f3235cac4b2a9ab4f0c4845013b6278",
+          "en": "We received a sighting from K, a birdwatching enthusiast, which we would like to share.\nK was apparently watching the giant creature through a telescope when a glance at the Fortune Center Building revealed someone still inside.\n\nCurious, K zoomed in and saw the person desperately doing something. The next moment, a woman stood up. Presumably, the person had been rescuing her.\nK said, 'Well, that surprised me. I wondered what someone was doing in a place like that, and apparently they were helping a woman. I don't think I could ever have done it. Quite admirable, really.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k180; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k182",
+          "source_text_sha256": "3f55513b9b57c9f2692fe54d7a3c42b55486e15723520749a2a26998c8c4ceb7",
+          "en": "We received a strange sighting from K, a birdwatching enthusiast, which we would like to share.\nK was apparently watching the giant creature through a telescope when a glance at the Fortune Center Building revealed someone inside.\n\nCurious, K zoomed in and saw, astonishingly, someone smirking in the midst of this dangerous situation.\nK said in bewilderment, 'Well, that shocked me. The instant I saw that face, I cried out and fell over. I've never seen such a smirk in my life. It looked terribly lecherous.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k182; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k184",
+          "source_text_sha256": "2c209b79182ee94354479d95bcfbc1ba510e68760146955cb4ee6e489d4b2c15",
+          "en": "We received a passionate sighting from K, a birdwatching enthusiast, which we would like to share.\nK was apparently watching the giant creature through a telescope when a glance at the Fortune Center Building revealed two figures.\n\nCurious, K zoomed in further and, astonishingly, witnessed the two people kissing.\nK commented,\n'Well, how disgraceful! I wondered what they were doing, and there were two young people kissing. They ought to consider the time and place. Disgraceful, really.'\nTheir face was bright red.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k184; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k186",
+          "source_text_sha256": "5b0f94118e36537178bb977e574781206caddec911e1e2725b875389c167ab34",
+          "en": "We received a suspicious sighting from K, a birdwatching enthusiast, which we would like to share.\nK was apparently watching the giant creature through a telescope when a glance at the Fortune Center Building revealed two figures.\n\nCurious, K zoomed in and saw the people handing over 'something white.'\nK said suspiciously, 'I couldn't see exactly what it was, but they were handing over something white. I think it had a slight sheen. What on earth were they exchanging in a situation like that? It must have been some shady deal.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k186; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k188",
+          "source_text_sha256": "8e2e6807bd6af660a3fbcae4ca1e3df0c6986ace58239cdd2f03541b1406d237",
+          "en": "We received a mysterious sighting from K, a birdwatching enthusiast, which we would like to share.\nK was apparently watching the giant creature through a telescope when a glance at the Fortune Center Building revealed two figures.\n\nCurious, K zoomed in and saw a woman giving the other person a large number of eggs.\nK gazed into the distance and said, 'That might have been an Egg Person. My grandfather told me about them back in the countryside. Apparently, they love eggs to a frightening degree, eat nothing else, and can live two hundred years on eggs alone. Their obsession is extraordinary. If they spot you carrying eggs, they'll follow you relentlessly, even into your home, until you hand over every one. Come to think of it, we even had an Egg Person-proof fence at home. Ha-ha.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k188; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k190",
+          "source_text_sha256": "e383cfb6aaa511da05e53ff2f0c409ebbaf81aef4606c6db8f9772d0fbcffddb",
+          "en": "K, the birdwatching enthusiast who contacted us earlier, has provided another sighting concerning the 'Egg Person.'\nK apparently continued watching the Egg Person's movements afterward.\n\nAfter receiving the large quantity of eggs, the Egg Person reportedly kept demanding more from the woman.\nShe apparently still had some and reluctantly handed over the remainder.\n\nK said solemnly, 'There's no doubt. That was an Egg Person. That persistence is unique to them. They're harmless if you give them eggs, but there's no telling what might happen if you carelessly eat one in front of them. If you meet an Egg Person, I strongly recommend handing over your eggs quietly. I don't want what happened to my grandfather to happen again.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k190; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k198",
+          "source_text_sha256": "998202819e94ba220e5b3ff37aa2510caa77f57b8e23eb95acc04ce2d603fd3e",
+          "en": "Almost every year, people say of the young, 'Young people these days lose their tempers easily.'\n'These days' makes it sound as though they did not in the past. But is that really true?\nRegardless of the era, isn't youth itself an age when tempers flare easily?\n\nWhy is that age so prone to anger in the first place?\nPerhaps young people have nowhere to direct their abundant energy, and it emerges in the form of 'losing their temper.'\nIn other words, aren't people who 'snap easily' people with no outlet for their energy?\nViewed this way, perhaps there are not more angry people, but fewer opportunities to find an outlet.\n\nIf so, this seems less a problem with young people than with society as a whole.\nPerhaps modern life is gradually offering fewer things into which young people can pour their feelings.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k198; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "4bdce0452c0a1f2242d924728e2e8cbce92afbce0d475be12c9ca7c0758c3723",
+          "en": "Several figures were reportedly seen among the remains of the Fortune Center Building after it collapsed in the giant weapon's rampage.\nAfter a while, they apparently entered a door left standing in the wreckage.\nSomeone familiar with the building's structure commented, 'The remaining section contains stairs leading to the first floor. Judging by its condition, they could have escaped through that door.' Their safety, however, has not yet been confirmed.\n\nPolice have also just reached the scene, and rescue work appears to have begun.\nI hope everyone is rescued as soon as possible.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k202",
+          "source_text_sha256": "407042248d1e90b3e4978453ffe9e064008721669a1f2ef91449075b492ca2be",
+          "en": "The threats associated with the enormous black creature include its massive body walking around and the heat ray from its mouth. But I would like to emphasize that its occasional roars and cries are also a considerable threat.\n\nThe office in the building where I work suffered an extraordinary disaster after one such cry.\nEvery window shattered at once, and the sheer shock briefly knocked me unconscious.\nI somehow regained consciousness, only to be stunned by how the office had changed.\nDesks and lockers had been slammed to the ground, documents and everything else were in chaos, and large cracks ran through the ceiling and walls.\nThe ceiling looked ready to collapse. Realizing it was dangerous to stay, I barely escaped the office with my life.\n\nI suspect every building in the area suffered similar damage.\nIts body and heat ray may seem like the most frightening things, but even its cries endanger us.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k202; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k204",
+          "source_text_sha256": "55fda16a6e97f4a5ffb97946a3f926874654ed6f3598f030dc34d4369f8c157a",
+          "en": "Before dawn today, W&P Consulting's offices suffered devastating damage from a giant shadow.\nW&P Consulting holds a major global share in weapons intelligence and brokerage. Its destruction is likely to send ripples around the world.\nSome investors are already making moves, and today's stock market is expected to be turbulent.\n\nW&P Consulting is expected to issue some kind of announcement today. Its contents are likely to draw considerable attention.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k204; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k210",
+          "source_text_sha256": "053659915f57f0bfa6494510ec9cc087049cbdf637acacacc47ae8e008b9c5f5",
+          "en": "Before dawn today, Miyato Prefectural Police received a report that ten million yen kept in W&P Consulting's offices, devastated by a giant shadow, had been stolen.\nAccording to the person connected with W&P who discovered it, every bundle of banknotes that should have been inside a safe left at the collapsed site was gone.\nThe safe showed no sign of being forced open by the impact, and no bundles of banknotes lay scattered nearby, making it highly likely that someone unlocked it and took the contents.\nMiyato Prefectural Police are investigating while carefully establishing the facts.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k210; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k212",
+          "source_text_sha256": "2a36c2ef0f9d0df1c2aede8dec87361c778f7e15685b1be00ef8e8b10487d3b7",
+          "en": "The story of 'slipping on a banana peel' has been passed down as a joke since long ago.\nOne day, however, our editorial department noticed a crucial fact about it.\nYes: not one of us had ever slipped on a banana peel.\n\nStrange. Something was strange. We shuddered.\nPerhaps they were not slippery at all, and we had merely been made to believe they were.\nCould a government conspiracy, for instance, be manipulating the information?\n\nWith so little information, we immediately formed a team and decided to investigate the following thoroughly:\n'Can a person really slip on a banana peel?'\n\nWe calmly placed a banana on the floor and stepped on it.\nWe repeated roughly one hundred thousand variations of the experiment, changing the angle of the step, the shoes, the banana variety, our mood that day, and more. After three weeks of exhaustive testing, the team finally reached its conclusion: 'Banana peels really are slippery.'\n\nRest assured.\nBanana peels were slippery after all.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k212; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k214",
+          "source_text_sha256": "08321b54a0a5984735da332d1394730d83f3bf4f2724bbcd1f51e380d20537f8",
+          "en": "The latest giant-shadow anomaly before dawn today also caused immense damage in Yotsuba Ward.\nThe damage extends throughout the ward, and with the disaster striking late at night, many people are missing.\n\nThe wide area affected has left police and firefighters short of personnel. Assistance is reportedly being requested from outside their usual districts.\nAcross Yotsuba Ward, people believed to be family members have collapsed in tears atop the rubble or tried to remove debris without waiting for rescuers. Heartbroken cries from victims echo everywhere.\n\nMany who failed to escape remain beneath collapsed homes and buildings. Swift rescue operations are needed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k214; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k216",
+          "source_text_sha256": "e41c7b18425ff329d2acdc259f1784b3bea6f05bfd8b2bdf54a86131615531b7",
+          "en": "S, a resident of Yotsuba Ward, had collapsed in terror directly beneath the building at the moment the giant weapon struck it.\nThen both a miracle and a misfortune befell S.\n\nAfter the weapon collided with the Fortune Center Building, rubble, desks, lockers, and other objects rained down toward S.\nAstonishingly, every single one missed, leaving S without a scratch.\nIt can only be called a miracle.\n\nS later somehow reached the station, but everyone who looked at their face reacted with shock.\nWondering why, S hurried to check a mirror and found their face completely black.\nApparently, ink or something similar had been spilled all over S.\nAlongside the miracle had come this small misfortune.\n\nS remained positive: 'Since then, little bits of bad luck keep happening. I even slipped on a banana just now. It's like my misfortune is being paid in installments. But none of it matters unless you're alive, right?'",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k216; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k220",
+          "source_text_sha256": "3220be58cfb255a8d36815702c7d8ed74312e9da50a17d699d4e4ffa6aabc06b",
+          "en": "Have you heard the rumor about the Fortune Center Building's 'nonexistent floor'?\nThe Fortune Center Building was a thirty-six-story high-rise, but a rumor, particularly among high school students, claimed a floor 10.5 existed between the tenth and eleventh floors.\nOur investigative team questioned building staff and others to discover the truth but ultimately could not confirm it.\n\nHowever, after the building's complete destruction, the team carefully counted its floors and confirmed that there were thirty-seven. Astonishingly, the rumored floor apparently really existed.\nEveryone connected with the building is puzzled by this result. Who built that floor, and for what purpose, remains a mystery.\n\nIt is deeply regrettable that this mystery has been buried beneath the rubble.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k220; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k224",
+          "source_text_sha256": "e283ba89cb80fae91b13301615401c18e66827a4e9e51f91a185f531d7178e2b",
+          "en": "Taicho Inc.'s 'Water from the Foot of Mt. Hakusan Dispenser' service.\nIt has become a familiar sight, but did you know how much hardship preceded its success?\n\nAt first, apparently every employee carried barrels up the foot of Mt. Hakusan, collected water, and brought them down again, repeating this daily.\nThe work was so punishing that many collapsed from overwork. Six months after launch, the service's survival was reportedly in doubt.\n\nNevertheless, the president was determined to provide water from the foot of Mt. Hakusan. Somehow persuading management and investors, the company adopted its present system of channeling the water to a factory.\nSome customers, however, apparently insist, 'You can't call that water from the foot of Mt. Hakusan.' As a premium service, the old method of collecting it in barrels therefore remains.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k224; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "6f1ece21895766941f4bc37bd4d87cd5cc871e7813d4bb03680453b02ebfcb38",
+          "en": "Large numbers of banknotes were seen flying through the air around the Fortune Center Building, which was completely destroyed before dawn today.\nNearby residents who had come to look rushed joyfully to grab them, while men apparently connected with the building shouted angrily to stop them, creating utter pandemonium.\nSomething resembling a safe lay open atop the rubble, apparently scattering the banknotes.\n\nPolice subsequently arrived and ended the disturbance after several dozen minutes.\nAll banknotes collected by residents were apparently confiscated. Some residents and people connected with the building were also temporarily detained.\nThe recovered notes are now being counted to check for shortages, though some losses seem unavoidable.\n\nApparently, the safe showed no sign of being forced open by the impact, leading to suspicions that someone responsible had forgotten to lock it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k228",
+          "source_text_sha256": "b57e23374bb1b649f78eb627215fc7b14253c4e240cb24a149b40bfd2f972295",
+          "en": "Images of the Fortune Center Building's remains uploaded to social media have attracted comments from Japan and abroad:\n'Amazing that it could be left standing like that!'\n'Good heavens, what kind of construction technology does this country have?'\n'It looks dangerous, but I kind of want to climb it.'\n\nIt is no exaggeration to call the building completely destroyed, yet its former ends have miraculously remained standing.\nSomeone apparently connected with the building posted, 'It is dangerous and will be removed soon.' Responses included, 'What a waste to remove it,' and, 'It should be preserved as a symbol of what happened.'\nNevertheless, leaving it would naturally risk collapse, so those responsible likely have no choice but to remove it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k228; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "46ad33a1043ca8f95c1973a5103d79d35181b37de6df3f018d763f1269bf92cb",
+          "en": "The giant-shadow incident in Yotsuba Ward sparked fires throughout the ward.\nSome are still burning fiercely, with the use of flammable construction materials identified as a cause.\nIn the worst-hit area, building debris itself is burning. Apparently, the material used there became more flammable as it aged.\nIt reportedly did not violate the law, but legislation concerning the material may now change.\n\nIronically, while giant shadows are causing immense damage everywhere, they have also exposed problems that had previously gone unremarked.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k235",
+          "source_text_sha256": "b0df39475b1a5790d3a728024e9a9294b2d4019a5cfeb88d8b4d6961263ae223",
+          "en": "What appears to be a new computer virus has suddenly begun spreading widely.\nWhen a computer is infected, apparently all its files are replaced by pictures of nuts.\nIts source remains unknown, but it is exploiting computer vulnerabilities skillfully and spreading explosively.\nAt present, the only concrete countermeasure is essentially 'do not connect to the internet.' A swift response from those responsible is needed.\nWorldwide damage is expected to reach hundreds of billions of yen, and cybercrime police in various countries have apparently begun taking action.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k235; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

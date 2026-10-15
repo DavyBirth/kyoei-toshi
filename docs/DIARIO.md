@@ -1,5 +1,30 @@
 # Diário do projeto
 
+### 14/10/2026 — novas evidências de voz, notícias e trilha oficial
+
+- Mais 168 EN em seis lotes, mais uma correção própria de grafia de título
+  antes de exportar. Total 11.677/16.100, 4.423 vazias; +738 desde pedido
+  de concluir. Continuação em curso, não declarar conclusão do inglês.
+- Notícias integrais 0134/0013, rádio/música 0010/0005, créditos de nomes
+  já comprovados, Abraham e 56 falas/rótulos/objetivos de NPCs.
+- Evidências de nomes nos scripts próprios: Vo203_sakurako_010;
+  Vo218_yanai_010, Vo218_kinosita_010, Vo218_kuribayasi; Vo212_iwabuti_010
+  e Iwabuchi no demo212; Nakagawa em scripts204; Saeki em flags/animações.
+  Conversão Kunrei si/ti para Hepburn shi/chi documentada. Prenomes incertos
+  permanecem pendentes; evidência de sobrenome não resolve outros homônimos.
+- Granzella Music oficial EN confirma Mai Iida, Daikoku Azuma, Hiroshi Ebihara,
+  Kimi No Tonari De, Sky for Two of Us e See You. Fontes nas notas privadas:
+  https://granzellamusic.jp/en/music/gzmm_10012/ e
+  https://granzellamusic.jp/en/album/gzma_10007/ . Revisão transversal dos
+  títulos em traduções anteriores ainda necessária; sem importar letras da web.
+- Abraham: grafia corroborada por cobertura contemporânea do anúncio do jogo
+  no Tokusatsu Network; entidade JP no site oficial Patlabor episódios33/34.
+  Não confundir essa evidência secundária de grafia com localização oficial.
+- k160 de 0013 retém glifos de pistas de bueiro com leitura EN. k164 interpreta
+  aparente typo 地震 por 自身 conforme contexto explícito, marcado para revisão.
+- Adições16:168 em16 recursos, sem original JP. Auditoria173 e reinserção das
+  11.677 EN em117 recursos PASS. en-05 segue10.721; sem jogo iniciado.
+
 ### 14/10/2026 — continuação persistente: figurinos, loja e incêndio
 
 - Mais 126 EN em quatro lotes: colunas completas de figurinos 0154, nomes
