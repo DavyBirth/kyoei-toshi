@@ -1,0 +1,435 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/lua/stage_207_news_text.luc",
+      "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
+      "entries": [
+        {
+          "id": "p0/k125",
+          "source_text_sha256": "e95cd56bbfaf664de8a5043529aeabe7eb830bc824924669e743a06c61c6c56d",
+          "en": "Bullet Marks Found in Omoto Trading Warehouse",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k125; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k126",
+          "source_text_sha256": "9e32841266447e1973ba94f2dcb6126470e7d2cd6498596353fdee8de5408de8",
+          "en": "We have learned that multiple bullet marks were found inside an Omoto Trading warehouse in the city.\nThe Tokyo Metropolitan Police Department announced that it will investigate how the guns were obtained, reports of suspicious individuals, and any connection with the unidentified Labor that appeared the same day.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k126; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k127",
+          "source_text_sha256": "d21ba0f19e38b3f4f97bb2b307b33d94a484d37928ececaeb10129e7c39160e4",
+          "en": "Warehouse Explosion: Was a Labor Involved?",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k127; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k128",
+          "source_text_sha256": "26bf0b8e1a031dfad1a00e52bccaba1b911f024480ec0ef161db6a9943967901",
+          "en": "A section of a warehouse in the city exploded late tonight, causing devastating damage nearby.\nThe explosion completely destroyed one of Omoto Trading's warehouses by fire.\nThe cause remains unknown, but reports of an unidentified, suspicious Labor at the same place and time have prompted speculation about its involvement.\nAuthorities say they are investigating, including whether the events were connected.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k128; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k129",
+          "source_text_sha256": "4d16b070fccea476eec14b019d44eaa817bff8b4a73f6226ec5631157fd5cdb3",
+          "en": "Unidentified Labor Appears",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k129; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k131",
+          "source_text_sha256": "eabb9abe7905621f00cb3501708b6071fee017d5249ee7b045feec811c95b9bc",
+          "en": "Ingram Blunders Again",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k131; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k133",
+          "source_text_sha256": "b0f1ff2b289545ec7c137d29973cdc314541d32dfc02684343c859cdfa409497",
+          "en": "Exhausted Young Workers, Unchanged Working Conditions",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k133; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k134",
+          "source_text_sha256": "0bcc886192864ab133ee5063b7f807c25b34d3a59fdf7c66598389e5d706fc5f",
+          "en": "We photographed a young person sitting in utter exhaustion at the harbor late at night.\nAccording to our reporting, this had been a compensatory day off after three days spent almost continuously at work.\nBut a sudden call from the company canceled the break, leaving them in the state seen here.\n\nTime off is a worker's right, and barring extraordinary circumstances, they should be able to refuse. Reality is not so simple.\nRefusal could lead to a poor performance assessment or even a lower base salary.\n\nThe company employing this young person is now under inspection, and its actual conditions should become clear soon.\nI can understand management saying that staff shortages sometimes leave little choice.\nBut they must remember that such unreasonable conditions ultimately make the shortage worse.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k134; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k135",
+          "source_text_sha256": "391f06a306455ae3a090ff06fe5782dee8ef83750cd97af8b460c01e1261620e",
+          "en": "A Suspicious Person in the Warehouse?",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k135; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k136",
+          "source_text_sha256": "d75666f59d9a80a68ee3c45e0a761e044707355572387fa01d6ce4fda4a4d425",
+          "en": "Security footage from an Omoto Trading warehouse shows a young person who appears to have no connection with the company. Police are reportedly trying to identify them.\n\nThe footage also shows movements suggesting they were searching lockers and the pockets of sleeping employees. Authorities decided to release it because they believe the person may be responsible for a recent increase in burglaries.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k136; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k137",
+          "source_text_sha256": "1994233b2f8deaf9d0fcba2553553d6b5d98524532a68e3856ded29b05c70018",
+          "en": "Has Awareness of Danger Sunk This Low?",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k137; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k138",
+          "source_text_sha256": "dc82c473b3b28a8f275a4a4e6d866d1e40b835de63f524acf7439265d0fb99e8",
+          "en": "We obtained footage of a young person watching Labors fight from a warehouse.\nThey are far from alone. We often see young people watching danger with the ease of moviegoers, or recording it on their phones, despite being in harm's way.\n\nResearch reportedly suggests this happens when people grow up without painful experiences of their own.\nFor example, how close can you get to a bonfire for comfortable warmth? Should you watch out for flames suddenly shifting in the wind? You learn such things by actually sitting near a fire and experiencing them. They are more than abstract knowledge.\nAnd understanding a bonfire's flames naturally becomes practical knowledge when dealing with a household gas stove or matches.\n\nPerhaps these young people cannot picture how dangerous even brief contact with a moving Labor is, or how far debris can fly during a battle between them.\nFor some, by the time they understand, they will face a grave and irreversible threat to their lives.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k138; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k143",
+          "source_text_sha256": "60d5774206aa051131ce0d2ee86fabffbcb6839841227172dd0b0bc97c0460a3",
+          "en": "The Urge to Broadcast Yourself",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k143; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k145",
+          "source_text_sha256": "4437d702982c6f324253f61a750089c6237afd1994def96a1cab33f77f39ee9e",
+          "en": "A Seafarer's Dreams Fill the Wheelhouse",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k145; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k147",
+          "source_text_sha256": "291033c3d1b94b587657c70889675e675b5929a8d20313abd4d41ac3110d2c63",
+          "en": "An Enthusiast? The Forklift Mystery",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k147; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k149",
+          "source_text_sha256": "c453ca88092116a4ef455159bf64a06e71f562cbd74b2191d91c15807ae026d7",
+          "en": "Whether a Company Is Exploitative Depends on the Worker?",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k149; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k151",
+          "source_text_sha256": "a61ded7b4e3aae72876b81636e8cd28affb9e77ba3f63c674512df55a192933e",
+          "en": "A Worker Blows the Whistle?!",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k151; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k153",
+          "source_text_sha256": "1fbfce6dbb040af3ed25a1208ea7c4f49ca2f45822d4eec4a4947422314f232d",
+          "en": "Security Companies and Labors",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k153; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k155",
+          "source_text_sha256": "df094811d501ab19cb68c489f8ab53b1296bfffa434fc35a035999713e80aa92",
+          "en": "A New Business Model: Secondhand Buyers",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k155; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k156",
+          "source_text_sha256": "f6106e0539a44059896bf44b820152b65f029f4909ebf8c3caabe5d2b093be51",
+          "en": "A new business model has appeared in the secondhand-buying industry.\nInstead of shops, identically dressed staff stand in all kinds of places, ready to buy almost anything on the spot.\nUnfortunately, managing the cash paid to customers and storing and handling purchased goods are trade secrets, so I could learn no more about them. Still, the concept certainly felt fresh.\n\nThe instantly recognizable staff attract interest just by being there. Social media sites now even compile their locations, rapidly increasing public awareness.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k156; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k157",
+          "source_text_sha256": "94f4116c00702d6574cfba15112924bbe93f48e20ecd3a9ff9e349c6bba815a7",
+          "en": "Containers: Possibilities for Every Purpose",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k157; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k158",
+          "source_text_sha256": "f01cda814b837958a8b31c58f9d27fb2298394d4c73ba91835b7f18beaebbab6",
+          "en": "Containers can be seen everywhere: at ports, aboard freight trains running beside roads, and at airfields.\nMany readers have probably also seen rusty ones abandoned forlornly in scrap yards.\n\nNaturally, containers consolidate cargo and protect it from damage. But did you know they are increasingly being put to other uses?\nFor example, a large container can be placed in a garden and partly remodeled into a separate study, or a refrigerated container can become a food storehouse.\nAnd their possibilities continue to expand.\nSome people have fitted containers with wheels and engines so they can evacuate in the entire container. Others have installed oxygen generators and independent power supplies, allowing a family of four to spend a month inside during a flood.\nTheir simple shapes and structures permit all kinds of modifications.\nIn one particularly unusual case, someone stacked containers, installed stairs inside, and created a seven-story rental building.\nI do not know how it came about, but the building has been officially approved, and prospective tenants reportedly keep coming.\n\nWhy not explore the possibilities of containers yourself?",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k158; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k159",
+          "source_text_sha256": "67a10bbfc0c5633f3016283d53ed8b1e3040a265638771337329dae4e69c773a",
+          "en": "The Sea's Mysteries Still Have Unfathomed Depths",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k159; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k160",
+          "source_text_sha256": "6958f2b7c01ba763c84dcbf281eb23aa90540af2e70052358291d20b5db8f4f9",
+          "en": "How many people have looked out over a sea with neither city lights nor moonlight?\nWith no light at all, naturally, everything ahead is pitch-black. You hear only the waves. I experienced this on a certain beach, and the darkness seemed ready to swallow me. Even knowing the ground was gently sloping sand, I was afraid to step forward and touch the waves.\n\nAs the continuing discovery of new fish species shows, much of the sea remains beyond humanity's understanding. Technology may now reveal the shape of the seabed through radar, but the truth is that we still do not know what is out there.\n\nAbout two years ago, a certain country's state-of-the-art submarine disappeared during deep-sea operations. An accident or another country's involvement was initially suspected, but eight months later it was found beneath the sea on the opposite side of the planet, covered in spiral scratches and without its crew.\nAt first, the scratches were thought to have come from strong friction as it tried to free itself from something like a cable tangled around it and snagged on rocks. But something resembling scales was found embedded in the scratches.\nWhether an unknown deep-sea creature attacked it remains unresolved.\n\nFor humanity, the sea still has depths we cannot fathom.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k160; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k161",
+          "source_text_sha256": "2bf1b41b966896b60a6576d0a5ef4dc7e9981fa39e21b6f71880baa73bfefc0e",
+          "en": "An Essential at Sea: The Lifebuoy",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k161; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k162",
+          "source_text_sha256": "223a505ad17c8cacb2fa460e91cae8daab9df625ea00fa784970c6448655a007",
+          "en": "The lifebuoys found aboard ships are, naturally, mandatory equipment.\nThey save lives at the very moment they are needed most.\n\nThey are also increasingly provided at school pools and bathing beaches.\nSome might suggest that, in a pool, someone could simply swim out to help. But drowning people may desperately grab or thrash, putting rescuers at great risk, especially those without a lifeguard's extensive training and experience.\nA lifebuoy allows a rescue while reducing the risk of creating more victims.\n\nOf course, taking lifesaving training and learning to throw a lifebuoy yourself can help you save someone when the unexpected happens.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k162; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k163",
+          "source_text_sha256": "675a810d1990d1cbe6431ec3c5501615474750056b1e0e9f9289f46f149e20bf",
+          "en": "Exploring Warehouses, Part 20114",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k163; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k165",
+          "source_text_sha256": "f0e37d3e9260775c696697d1dc41ba755f5dd6295ed7d251f48bdad35ee580f2",
+          "en": "It Wasn't the Toll of Overwork After All...",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k165; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k171",
+          "source_text_sha256": "f6243013b3816112daf6182cac0a4f9236e8f5bb68acdda63cffb25f0c4ac239",
+          "en": "Useful in a Disaster? The Versatile Bucket",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k171; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k172",
+          "source_text_sha256": "51736e909160da0b5cc5a93f1942292651e0ab6e4d23ff20670a2f17f6dd9128",
+          "en": "Buckets are wonderfully versatile.\nBesides their original purpose of carrying water, you have probably seen them used for cigarette ends in outdoor smoking areas, or smaller ones used as pots for little houseplants.\n\nPut clothes or similar padding inside and wear one, and it becomes a makeshift helmet. It is weaker than a real helmet, but even this can protect your head from falling glass and small fragments of concrete during a disaster.\nOf course, this is only an emergency substitute. Still, I hope readers realize that ingenuity can make familiar objects useful when the need arises.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k172; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k173",
+          "source_text_sha256": "44334314376a369c3136ad3fdadd0da5122a5a2fe013d7c51d5f7aa56f75df25",
+          "en": "Stolen Boat Found",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k173; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k175",
+          "source_text_sha256": "0226f6516ccbbfc152a07299ea5a6d34f74b938d4b0470984b9435c996022f1d",
+          "en": "The Vast Power of Nature",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k175; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k176",
+          "source_text_sha256": "ad1bb7535679ae2c7d390b449d1e7c3f7a7eb2e7253c5dacb339ce0a3cce7e9b",
+          "en": "The tides rise and fall because of the moon's position and gravitational pull, as most readers probably know.\nIt is hard not to marvel at gravity when the pull of a moon 384,400 kilometers away can affect us.\n\nBut did you know another theory has recently emerged?\nIt claims that the area near Earth's center is hollow, with two openings somewhere that open and close. Air passing through them supposedly makes Earth itself swell and contract.\nThe supposed openings have reportedly already been identified and are being investigated.\n\nIt sounds highly dubious, but would you believe it?",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k176; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k177",
+          "source_text_sha256": "b584766851f930281a8a529f41d52ca6c08eced5c9300ef0ef79668d3f5ee7e8",
+          "en": "Omoto Trading: Top Ten News Stories, Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k177; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k179",
+          "source_text_sha256": "944eeb08cd2c9bf3f90124d0208c8ad279d1f32fb47ce3644138cd9432f38a53",
+          "en": "Omoto Trading: Top Ten News Stories, Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k179; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k181",
+          "source_text_sha256": "85300039ce4d3c3a98f55bb94aa36c34061c758541f10c8998c86cbf65e0ba30",
+          "en": "Omoto Trading: Top Ten News Stories, Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k181; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k183",
+          "source_text_sha256": "4261cecb7775e6cf083233d2e5babff722714b1430d2ee0a63056706452b131f",
+          "en": "Omoto Trading: Top Ten News Stories, Part 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k183; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k185",
+          "source_text_sha256": "5d4acc094efa437eb0004b3bea933f67bfdbcc7880cc48c7204745924f7c4aaf",
+          "en": "Omoto Trading: Top Ten News Stories, Part 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k185; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k187",
+          "source_text_sha256": "dfd1a7f99aa8cda86b9e97f6debce9c37e4dd090f2cac6c3857acf6cf1b17542",
+          "en": "Omoto Trading: Top Ten News Stories, Part 6",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k187; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k189",
+          "source_text_sha256": "25a87965aa5f29640468ef26e70135663aa3a9e6d12f1cc6e014c47950b1e498",
+          "en": "Omoto Trading: Top Ten News Stories, Part 7",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k189; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k191",
+          "source_text_sha256": "d421971dfe7bc28414a49df69373385e2bff7955b118d1546e5499eb8434e2cb",
+          "en": "Omoto Trading: Top Ten News Stories, Part 8",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k191; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k193",
+          "source_text_sha256": "17c63db31187037fa98c8e7bc2fba8adf0ab7464388aa441bec6f9ebe6c88129",
+          "en": "Omoto Trading: Top Ten News Stories, Part 9",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k193; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k195",
+          "source_text_sha256": "8ae68e82b4b3a0b901bd8d79892ab86e562a6baed6bd14c0c0cb12b94f253e51",
+          "en": "Omoto Trading: Top Ten News Stories, Part 10",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k195; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k207",
+          "source_text_sha256": "bd5efc0981cca68a04fd76e3a4335b636aa7d49364f42215375a7e72427fefc7",
+          "en": "Types of Warehouses, Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k207; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k209",
+          "source_text_sha256": "ef0f9d662e8a192e2193e4852e1e56574478224d1b9f76dd32da86bc0faeb193",
+          "en": "Types of Warehouses, Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k209; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k211",
+          "source_text_sha256": "649b6e2f0c9dac4b5a02e0e724fd877472c36de1ac4e07e8952889e83e1679af",
+          "en": "Types of Warehouses, Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k211; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k213",
+          "source_text_sha256": "9763c0ad306e5fb97a9d775ef11eeaddae3f4ece3fe265f1d6a5dae06409191f",
+          "en": "Types of Warehouses, Part 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k213; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k215",
+          "source_text_sha256": "095aa860a7e0997a135bf4a5315fa317c94fc04d1cc5378befe3609921983a02",
+          "en": "Types of Warehouses, Part 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k215; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k217",
+          "source_text_sha256": "b2e6615a0729eb2a173d59af01e20db86b926c86aab5a84b695f985c7ea41bf7",
+          "en": "The Harbor's Seven Mysteries, Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k217; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k219",
+          "source_text_sha256": "d03d199e3703edaaed3adbd2d95042916cc82e2f866d73f9a43fc300ffe9913c",
+          "en": "The Harbor's Seven Mysteries, Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k219; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k221",
+          "source_text_sha256": "ffeac1c4967205e1f52f51e6d60f44e4785552d3d1870e8e0aa8d5af8ae62b18",
+          "en": "The Harbor's Seven Mysteries, Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k221; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k223",
+          "source_text_sha256": "f2d4e5654871a29e0ea1f3257d1976349057d9d6accf0e90d4f74106fd66d913",
+          "en": "The Harbor's Seven Mysteries, Part 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k223; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k225",
+          "source_text_sha256": "a20b82faa00de2116e79803fe74c12cd5df22d8428f8ab402447a4ab40dd4d42",
+          "en": "The Harbor's Seven Mysteries, Part 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k225; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k227",
+          "source_text_sha256": "b0c0c0307e9c3242a91421a757743c9eee5b45b7f778d1b6d3905a46ac543634",
+          "en": "The Harbor's Seven Mysteries, Part 6",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k227; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k229",
+          "source_text_sha256": "c0ffb6feab69e1d8aa0cae20f71182f0890b18d2519fc1ad5713c88cec0b47a0",
+          "en": "The Harbor's Seven Mysteries, Part 7",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k229; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k231",
+          "source_text_sha256": "d958d070d265c007ea5598214cad3e4dd66e28d031c03bdce391107bbaeaa978",
+          "en": "What Can You Find at the Harbor? Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k231; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k233",
+          "source_text_sha256": "06a3a680378a6898d7ee037532563e5e43f35b0f8a73906f7418f233c1b55143",
+          "en": "What Can You Find at the Harbor? Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k233; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k235",
+          "source_text_sha256": "515613a84f99a90e9afeb1e6dcbb71865e87714e7037c83903efc80e4209d57a",
+          "en": "What Can You Find at the Harbor? Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k235; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k237",
+          "source_text_sha256": "314ac6765766bb00f4cebac105188383a7026be1e782df33e91a985b52a811be",
+          "en": "What Can You Find at the Harbor? Part 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k237; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k239",
+          "source_text_sha256": "0d47a25ea49b19e30528bb0752a6447636002d4444134eac827fe1704b278a4b",
+          "en": "What Can You Find at the Harbor? Part 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k239; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

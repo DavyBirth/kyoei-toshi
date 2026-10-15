@@ -1,5 +1,20 @@
 # Diário do projeto
 
+### 14/10/2026 — continuação: porto, resgate e acessórios
+
+- Davy autorizou continuar no modelo atual. Quatro lotes novos, +129 EN:
+  10.883/16.100 preenchidas, 5.217 vazias. Inglês ainda incompleto.
+- Notícias completas do porto e armazéns, diálogos de resgate da Yuki,
+  nomes/descrições de acessórios. Humor e exageros ficcionais preservados;
+  leituras desconhecidas, registros provisórios e conteúdo interno não inflados.
+- Auditor barrou uma quebra de linha em 0079:k158 antes de qualquer gravação;
+  corrigida e lote reaprovado. Auditoria dos 173 JSONs e reconstrução/releitura
+  das 10.883 EN em 117 recursos PASS. Adições08/09/10 contêm 60/31/38 textos,
+  somente tradução/metadados permitidos; união com pilotos validada em memória.
+- en-05 aplicada permanece em 10.721 EN; novos lotes preparados no patch.
+  Revisão humana/HUD e textos em imagens/vídeos permanecem pendentes.
+  Nenhum jogo iniciado, dump ou saves alterados. Checkpoint privado atualizado.
+
 ### 14/10/2026 — retomada após aplicação: rádio, laboratório e torre
 
 - Davy pediu continuar a tradução. Seis lotes novos (+163 EN) e uma correção

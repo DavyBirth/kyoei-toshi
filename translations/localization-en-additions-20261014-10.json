@@ -1,0 +1,281 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r551/c25",
+          "source_text_sha256": "7f105f6663561d8039a59c2ddd975a275a6a136f23151cec3e038abc83cee6a1",
+          "en": "Flashlight",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r551/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r551/c26",
+          "source_text_sha256": "47a2bb41b8037a6427caea60efa2182b35f3cf849d8a0dc5625152aa00db053d",
+          "en": "A flashlight that illuminates the darkness.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r551/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r551/c28",
+          "source_text_sha256": "47a2bb41b8037a6427caea60efa2182b35f3cf849d8a0dc5625152aa00db053d",
+          "en": "A flashlight that illuminates the darkness.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r551/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r552/c25",
+          "source_text_sha256": "12defb9818d3d7d629a9e04fc3d4df146fc89eea03a38d09e12cb52bde30fa8c",
+          "en": "A Trampled Flower",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r552/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r554/c25",
+          "source_text_sha256": "d0fcf90e6ab4703a9f73c7c02c08bbcf7052cb52935659a7a39a980d04f98c62",
+          "en": "Box Containing a Hard Drive",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r554/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r555/c25",
+          "source_text_sha256": "762692e1a9fd1b84fe59f4b7d15c03cb12282f5c2b85c5cf335b79b45b86c903",
+          "en": "Fire Extinguisher",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r555/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r555/c26",
+          "source_text_sha256": "7d9cc3d258e830f9498c1b86dbd3c0799a36bb8ebf2c2db29e25de7fec4b3a6c",
+          "en": "A red fire extinguisher for ordinary fires.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r555/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r555/c28",
+          "source_text_sha256": "7d9cc3d258e830f9498c1b86dbd3c0799a36bb8ebf2c2db29e25de7fec4b3a6c",
+          "en": "A red fire extinguisher for ordinary fires.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r555/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r557/c25",
+          "source_text_sha256": "967397066504a34a010238d48011bb5ee455e0789586e38c9df08a219817f0b6",
+          "en": "Piggy Bank",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r557/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r557/c26",
+          "source_text_sha256": "2ad08d95a7b87ca91238f127aa76884af6a6a61e5e78e6ba97db60a743594144",
+          "en": "A pink ceramic piggy bank. Its plump shape looks delicious to small children.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r557/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r557/c28",
+          "source_text_sha256": "2ad08d95a7b87ca91238f127aa76884af6a6a61e5e78e6ba97db60a743594144",
+          "en": "A pink ceramic piggy bank. Its plump shape looks delicious to small children.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r557/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r593/c25",
+          "source_text_sha256": "10eddb3fcc0c9a98dda22c67e4ed8054a78bd4015db0689451d98e430af40a09",
+          "en": "Moon Earrings",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r593/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r593/c26",
+          "source_text_sha256": "8660d8730d36231289558c3e7c3aa626b7ddce8c5c7a8eb05e47c0258ff76f5e",
+          "en": "Cute earrings with dangling crescent moons.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r593/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r593/c28",
+          "source_text_sha256": "8660d8730d36231289558c3e7c3aa626b7ddce8c5c7a8eb05e47c0258ff76f5e",
+          "en": "Cute earrings with dangling crescent moons.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r593/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r594/c25",
+          "source_text_sha256": "10eddb3fcc0c9a98dda22c67e4ed8054a78bd4015db0689451d98e430af40a09",
+          "en": "Moon Earrings",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r594/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r594/c26",
+          "source_text_sha256": "8660d8730d36231289558c3e7c3aa626b7ddce8c5c7a8eb05e47c0258ff76f5e",
+          "en": "Cute earrings with dangling crescent moons.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r594/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r594/c28",
+          "source_text_sha256": "8660d8730d36231289558c3e7c3aa626b7ddce8c5c7a8eb05e47c0258ff76f5e",
+          "en": "Cute earrings with dangling crescent moons.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r594/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r595/c25",
+          "source_text_sha256": "eabb31bffabde39c7811b45a31603d19b696b466248983d24d5a8b1379896a66",
+          "en": "Clothespins",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r595/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r595/c26",
+          "source_text_sha256": "a4a0b6b07b8b606a4c11103b932672424cb6dd73acb756ca3e80e258d66d94a7",
+          "en": "Ordinary clothespins found anywhere.<br>Clip them onto your earlobes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r595/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r595/c28",
+          "source_text_sha256": "a4a0b6b07b8b606a4c11103b932672424cb6dd73acb756ca3e80e258d66d94a7",
+          "en": "Ordinary clothespins found anywhere.<br>Clip them onto your earlobes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r595/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r596/c25",
+          "source_text_sha256": "eabb31bffabde39c7811b45a31603d19b696b466248983d24d5a8b1379896a66",
+          "en": "Clothespins",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r596/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r596/c26",
+          "source_text_sha256": "a4a0b6b07b8b606a4c11103b932672424cb6dd73acb756ca3e80e258d66d94a7",
+          "en": "Ordinary clothespins found anywhere.<br>Clip them onto your earlobes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r596/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r596/c28",
+          "source_text_sha256": "a4a0b6b07b8b606a4c11103b932672424cb6dd73acb756ca3e80e258d66d94a7",
+          "en": "Ordinary clothespins found anywhere.<br>Clip them onto your earlobes.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r596/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r597/c25",
+          "source_text_sha256": "383e659f79f56572dc9d358da8a65a7c2f2bd9b1fee4a847d1ec355d6ee050b4",
+          "en": "Memento Earrings",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r597/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r597/c26",
+          "source_text_sha256": "adb506747f9ff36b014f86bdf5d2c7afe4bd2e3fdeca8c98ca921ab719741fcf",
+          "en": "Earrings set with large diamonds.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r597/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r597/c28",
+          "source_text_sha256": "adb506747f9ff36b014f86bdf5d2c7afe4bd2e3fdeca8c98ca921ab719741fcf",
+          "en": "Earrings set with large diamonds.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r597/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r598/c25",
+          "source_text_sha256": "383e659f79f56572dc9d358da8a65a7c2f2bd9b1fee4a847d1ec355d6ee050b4",
+          "en": "Memento Earrings",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r598/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r598/c26",
+          "source_text_sha256": "adb506747f9ff36b014f86bdf5d2c7afe4bd2e3fdeca8c98ca921ab719741fcf",
+          "en": "Earrings set with large diamonds.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r598/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r598/c28",
+          "source_text_sha256": "adb506747f9ff36b014f86bdf5d2c7afe4bd2e3fdeca8c98ca921ab719741fcf",
+          "en": "Earrings set with large diamonds.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r598/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r600/c25",
+          "source_text_sha256": "91611b214cb89cb2e24aa8ddf8e48931041b25df65e965ae980e19eb8c4a85ea",
+          "en": "Risa's Earrings",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r600/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r600/c26",
+          "source_text_sha256": "35a9c98bc5c6f65734c6804faede8fa0937b2bad57c6538f4ac0b276f0efaaca",
+          "en": "The same earrings worn by the journalist Risa Kashiwagi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r600/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r600/c28",
+          "source_text_sha256": "35a9c98bc5c6f65734c6804faede8fa0937b2bad57c6538f4ac0b276f0efaaca",
+          "en": "The same earrings worn by the journalist Risa Kashiwagi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r600/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r601/c25",
+          "source_text_sha256": "5f9b68767b68e834f4e82890f37479b37edffe5387128f922f250d1351b6e6b1",
+          "en": "Solid Gold Clothespins",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r601/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r601/c26",
+          "source_text_sha256": "5234c82c2c7a64346bfe609219106a98748dc92795a3579777eab9576df6c10b",
+          "en": "Clothespins cast in 24-karat gold.<br>※A special item available only to you, who have carried over your memories as a savior.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r601/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r601/c28",
+          "source_text_sha256": "5234c82c2c7a64346bfe609219106a98748dc92795a3579777eab9576df6c10b",
+          "en": "Clothespins cast in 24-karat gold.<br>※A special item available only to you, who have carried over your memories as a savior.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r601/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r602/c25",
+          "source_text_sha256": "5f9b68767b68e834f4e82890f37479b37edffe5387128f922f250d1351b6e6b1",
+          "en": "Solid Gold Clothespins",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r602/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r602/c26",
+          "source_text_sha256": "5234c82c2c7a64346bfe609219106a98748dc92795a3579777eab9576df6c10b",
+          "en": "Clothespins cast in 24-karat gold.<br>※A special item available only to you, who have carried over your memories as a savior.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r602/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r602/c28",
+          "source_text_sha256": "5234c82c2c7a64346bfe609219106a98748dc92795a3579777eab9576df6c10b",
+          "en": "Clothespins cast in 24-karat gold.<br>※A special item available only to you, who have carried over your memories as a savior.",
+          "notes": "English draft imported from audited private workspace, translate-en-0116.json:r602/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}
