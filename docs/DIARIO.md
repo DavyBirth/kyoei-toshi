@@ -1846,3 +1846,20 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Não chegou a 1000 de propósito: o resto são nomes reais nos créditos (sem
   leitura confirmada), notas de desenvolvedor e placeholders 仮登録.
 - Sublote "a" vazio criado por engano foi removido antes do reaplique.
+
+### 15/10/2026 — prévia en-06, log de flip rate e opinião sobre 60 FPS
+
+- Exportadas 1197 EN novas para translations/localization-en-additions-20261015-01.json
+  (só inglês e hashes). Prévia privada runtime-preview-en-06: 13.214 entradas,
+  roundtrip PASS, manifesto aponta en-06; PT-BR segue em runtime-preview-02.
+  CheckOnly PASS. en-05 apagada (substituída e recriável). Gameplay não testado.
+- Runtime agora registra no log cada sceVideoOutSetFlipRate (handle/rate).
+  Objetivo: saber se o jogo limita a 30 Hz pelo flip rate. Davy precisa rodar
+  "Medir desempenho atual EN" e enviar o log.
+- Bloodborne-Windows: 60 FPS vem de patches no eboot 1.09 (comunidade,
+  patches/Bloodborne.xml), não só do runtime. Para o Kyoei, engenharia reversa
+  do eboot (limitador de quadros, passo de tempo da simulação) é o caminho
+  equivalente; sem patch o jogo tende a rodar na taxa que ele mesmo pede.
+- Revisão visual: quebras de palavra e ponto isolado indicam quebra de linha
+  por caractere (estilo japonês). Correção robusta: localizar a rotina de
+  quebra no eboot e quebrar em espaços (também engenharia reversa).
