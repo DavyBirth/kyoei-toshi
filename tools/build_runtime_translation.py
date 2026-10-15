@@ -77,7 +77,7 @@ def main():
                 entry=resource['entries'][string['id']];value=entry[language]
                 if not isinstance(value,str) or '\0' in value or (not value and string['original'] and not entry.get('allow_empty')):
                     raise ValueError('Invalid/empty translation')
-                if TOKENS.findall(value)!=TOKENS.findall(string['original']):raise ValueError('Control tokens differ')
+                if sorted(TOKENS.findall(value))!=sorted(TOKENS.findall(string['original'])):raise ValueError('Control tokens differ')
                 validate_names(string['original'],value,language,glossary,entry.get('protected_literals',[]))
                 if entry.get('source_text_sha256') and entry['source_text_sha256']!=hashlib.sha256(string['original'].encode('utf8')).hexdigest():
                     raise ValueError('Original text hash differs')

@@ -50,6 +50,7 @@ BINDINGS = {
     'texture/intermission/L1_btn.tex': 'Q',
     'texture/intermission/R1_btn.tex': 'Shift',
     'texture/pause/demo_skip_icon.tex': '@skip',
+    'texture/hud/demo_skip_icon.tex': '@skip',
     'texture/hud/cursor_lr.tex': '@cursor_lr',
     **{f'texture/text marker/talk_icon_0{i}.tex': '@talk' for i in range(1, 7)},
 }
