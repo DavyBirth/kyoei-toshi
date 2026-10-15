@@ -2238,3 +2238,30 @@ Falta:
    da referência (usar Vulkan-Headers do submódulo). Runtime POSIX: 748
    imports sem implementação Linux. Sem launcher Linux. Longe de jogável.
 6. Republicar portable só após validação; o portable atual é o anterior.
+
+### 15/10/2026 (tarde) — Claude Code: itens de PC concluídos e verificados no port
+
+- Voltar à área de trabalho (efd87cd): rotina UnitHudGameTitle 0xaaf9b0
+  (cursor +0x1b8, limite 4 itens; +0x1b0 libera entrada) interceptada por
+  relay com hash. Baixo no 4º item seleciona a 5ª opção desenhada pelo
+  overlay; confirmar duas vezes (E/Enter/○ ou clique) fecha via
+  SDL_EVENT_QUIT. Verificado: posição sob o menu e saída com código 0.
+  Limite: o sublinhado nativo de "????" continua visível com a 5ª ativa.
+- Nome do personagem (a02d1ac): causa real do "nome padrão" encontrada.
+  O filtro do jogo (0xb05870) só converte kana meia-largura e devolve -1
+  quando não muda nada; o adaptador tratava -1 como recusa e o jogo voltava
+  ao padrão (御崎 健 → "Misaki Ken"). Agora mantém o texto. Verificado:
+  "My name is Montgomery Alexander." Prompts 姓/名 em inglês.
+- Ícones de teclado (10a4244): 21 ícones da fonte + HUD (alternar alvo,
+  esquiva QTE, marcadores de conversa, Scene Skip, L1/R1 do menu de pausa,
+  botões do intervalo) redesenhados como teclas. Entregues como delta de
+  leitura (~2 MB por idioma) aplicado pelo runtime sobre common.psarc,
+  sem copiar 6 GB; delta que não confere com a base é ignorado. Verificado
+  em jogo: "Switch target" com setas; talk marker com E.
+- Launcher (5dcf124): Controles com todas as ações, sensibilidade e
+  escolha de ícones (teclado/controle). Portable reconstruído com os
+  deltas EN/JA e README de teclas novo.
+- Linux: Wine 10 em WSL carrega o executável Windows e mapeia a imagem em
+  0x800000000 (bootstrap --list-stubs PASS). Caminho rápido proposto para o
+  amigo (CachyOS): Proton/Wine. Port nativo Linux continua pendente
+  (runtime POSIX e GPU).
