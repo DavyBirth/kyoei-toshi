@@ -1,5 +1,7 @@
 #include "kyoei_pipeline_cache.h"
 #include <cassert>
+#include <future>
+extern "C" void gz_log(const char *,...) {}
 int main() {
     using namespace KyoeiPipelineCache;
     struct Profile { uint32_t a,b; } profile{7,11};
@@ -17,7 +19,30 @@ int main() {
     _putenv_s("KYOEI_PIPELINE_CACHE_DIR","pipeline-cache-test");
     assert(Save(id,bytes));assert(Load(id)==bytes);
     bytes.back()=42;assert(Save(id,bytes));assert(Load(id)==bytes);
+    assert(Writer().Submit([id,bytes] {return Save(id,bytes);}));
+    assert(Writer().Flush(std::chrono::seconds(2)));assert(Load(id)==bytes);
+    auto invalid=bytes;invalid[4]=2;
+    assert(Writer().Submit([id,invalid] {return Save(id,invalid);}));
+    assert(Writer().Flush(std::chrono::seconds(2)));assert(Load(id)==bytes);
+    assert(Writer().GetStatus().failed==1 && !Writer().GetStatus().last_success);
+    {
+        Jobs jobs;std::promise<void> entered,release;auto entered_future=entered.get_future();
+        auto release_future=release.get_future().share();int latest=0;
+        assert(jobs.Submit([&] {entered.set_value();release_future.wait();latest=1;return true;}));
+        assert(entered_future.wait_for(std::chrono::seconds(2))==std::future_status::ready);
+        assert(jobs.Submit([&] {latest=2;return true;}));
+        assert(jobs.Submit([&] {latest=3;return true;}));
+        assert(!jobs.Flush(std::chrono::milliseconds(5)));
+        release.set_value();assert(jobs.Flush(std::chrono::seconds(2)));
+        assert(latest==3 && jobs.GetStatus().completed==2);
+    }
+    CheckpointGate gate;gate.Record(1,1000,true);
+    assert(!gate.Poll(1));assert(!gate.Due(30999));assert(gate.Due(31000));
+    bool polled=false;for(unsigned i=0;i<256;++i)polled|=gate.Poll(2);assert(polled);
+    gate.Record(2,31000,false);assert(gate.saved_generation==1 && !gate.Due(60999));
+    gate.Record(2,61000,true);assert(gate.saved_generation==2);
     auto file=Path(id);{std::ofstream f(file,std::ios::binary|std::ios::trunc);f<<"truncated";}
     assert(Load(id).empty());std::filesystem::remove(file);std::filesystem::remove(file.parent_path());
     _putenv_s("KYOEI_PIPELINE_CACHE_DIR","");assert(Load(id).empty());assert(!Save(id,bytes));
+    std::puts("PIPELINE CACHE PASS: async write/readback, invalid snapshot preserves file, latest pending wins, bounded flush and throttling");
 }

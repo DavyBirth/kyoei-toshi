@@ -10,9 +10,12 @@
 #include <span>
 #include <vector>
 #include <windows.h>
+#include "kyoei_cache_jobs.h"
+extern "C" void gz_log(const char *format,...);
 namespace KyoeiPipelineCache {
 constexpr size_t MaxBytes=64u<<20;
 struct Identity { uint32_t vendor,device;std::array<uint8_t,16> uuid; };
+inline std::mutex file_mutex;
 template<class Profile> inline bool ProfileMatches(std::span<const uint8_t> bytes,const Profile &profile) {
     return bytes.size()==sizeof(Profile) && std::memcmp(bytes.data(),&profile,sizeof(Profile))==0;
 }
@@ -37,6 +40,7 @@ inline std::vector<uint8_t> Load(const Identity &id) {
     return bytes;
 }
 inline bool Save(const Identity &id,std::span<const uint8_t> bytes) {
+    std::lock_guard lock{file_mutex};
     auto path=Path(id);if(path.empty()||!Matches(bytes,id))return false;
     std::error_code error;std::filesystem::create_directories(path.parent_path(),error);if(error)return false;
     auto temp=path;temp+=".tmp";
@@ -52,5 +56,31 @@ template<class Instance,class Cache> inline bool Persist(const Instance &instanc
     std::memcpy(id.uuid.data(),properties.pipelineCacheUUID.data(),16);
     auto result=instance.GetDevice().getPipelineCacheData(*cache);
     return static_cast<int>(result.result)==0 && Save(id,result.value);
+}
+template<class Instance,class Cache> inline bool Checkpoint(const Instance &instance,const Cache &cache,
+                                                           uint64_t generation,bool force=false) {
+    static const bool enabled=[] {const char *p=std::getenv("KYOEI_PIPELINE_CACHE_DIR");return p && *p;}();
+    if(!enabled)return false;
+    static thread_local CheckpointGate gate;
+    if(!force && !gate.Poll(generation))return false;
+    const auto start=std::chrono::steady_clock::now();
+    const uint64_t now_ms=std::chrono::duration_cast<std::chrono::milliseconds>(start.time_since_epoch()).count();
+    if(!force && !gate.Due(now_ms))return false;
+    bool queued=false;
+    try {
+        const auto properties=instance.GetPhysicalDevice().getProperties();
+        Identity id{properties.vendorID,properties.deviceID,{}};
+        std::memcpy(id.uuid.data(),properties.pipelineCacheUUID.data(),16);
+        // Called after warmup, or between synchronous pipeline lookups on the
+        // GPU command thread. Only an owned byte vector is passed to the writer.
+        auto result=instance.GetDevice().getPipelineCacheData(*cache);
+        if(static_cast<int>(result.result)==0 && Matches(result.value,id)) {
+            const auto bytes=result.value.size();
+            queued=Writer().Submit([id,data=std::move(result.value)] {return Save(id,data);});
+            const double ms=std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-start).count();
+            gz_log("Kyoei driver cache: snapshot queued=%u bytes=%llu capture_ms=%.2f",unsigned(queued),(unsigned long long)bytes,ms);
+        } else gz_log("Kyoei driver cache: invalid driver snapshot; previous cache retained");
+    } catch(...) {gz_log("Kyoei driver cache: snapshot failed; previous cache retained");}
+    gate.Record(generation,now_ms,queued);return queued;
 }
 }

@@ -1,5 +1,27 @@
 # Desempenho — objetivo de 60 FPS
 
+## Correção do timeout de encerramento — 15/10
+
+Antes, o encerramento enfileirava Sync no thread gráfico e esperava três
+segundos. Fixture ocupando esse thread real por 4,2 segundos reproduziu timeout
+antes da captura (phase=0, exit=24): build/cache-timeout-repro/busy-before.log.
+
+Agora o blob Vulkan é capturado após warmup e quando há pipelines novos,
+com checagem amortizada e intervalo de 30 segundos por thread. Captura fica no
+thread proprietário; apenas bytes seguem para gravador CPU, fila limitada e
+substituição atômica. Saída aguarda até três segundos só pelas gravações já
+enviadas, sem tarefa nova na fila gráfica. Últimos pipelines desde a captura
+podem ser recompilados depois. Não fecha concorrentemente o banco de shaders.
+
+Mesmo teste ocupado passou: flush em 0,03 ms, exit=0 e arquivo válido salvo
+(busy-after.log). Testes unitários cobrem persistência, dados inválidos,
+preservação do cache anterior, fila limitada, espera com prazo e agendamento.
+Nenhum código do jogo executado; não é ganho de FPS medido. Blob da fixture
+tem só 36 bytes; cópia do cache pessoal encontrou perfil incompatível e não
+comprova recuperação de pipelines de uma partida. Disco lento ainda pode
+exceder o prazo; conserva-se a versão atômica anterior. Tempo de captura Vulkan
+é registrado para avaliar custo durante gameplay.
+
 ## Teste portable de Davy e continuação em 15/10
 
 `build/portable-performance-20261015.json`: 174 janelas, 20.880 intervalos,

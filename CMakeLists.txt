@@ -173,6 +173,9 @@ kyoei_replace_checked(KYOEI_LOADER
   "    gz_log(\"Exit code %d\", code);"
   "    extern void kyoei_gpu_cache_shutdown(void);\n    if(code==0) kyoei_gpu_cache_shutdown();\n    gz_log(\"Exit code %d\", code);")
 kyoei_replace_checked(KYOEI_LOADER
+  "        gz_gpu_self_test(); gz_stop(0, \"GPU TEST: PASS\");"
+  "        const char *cache_test=getenv(\"KYOEI_CACHE_SELF_TEST\");\n        if(cache_test && !strcmp(cache_test,\"1\")) { extern void kyoei_gpu_cache_self_test(void); kyoei_gpu_cache_self_test(); }\n        gz_gpu_self_test(); gz_stop(0, \"GPU TEST: PASS\");")
+kyoei_replace_checked(KYOEI_LOADER
   "    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);"
   "    if (!no_gpu && !list_stubs && !getenv(\"GZ_READBACK_LINEAR\") && _putenv_s(\"GZ_READBACK_LINEAR\", \"1\")) fail(\"cannot configure linear image readback\");\n    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);")
 set(TLS_REJECTION "    if (main_tls[2]) fail(\"this eboot has static TLS; the Windows loader does not support it yet\");")
@@ -534,19 +537,25 @@ kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "    const auto properties=instance.GetPhysicalDevice().getProperties();\n    KyoeiPipelineCache::Identity identity{properties.vendorID,properties.deviceID,{}};\n    std::memcpy(identity.uuid.data(),properties.pipelineCacheUUID.data(),16);\n    auto initial=KyoeiPipelineCache::Load(identity);\n    auto [cache_result, cache] = instance.GetDevice().createPipelineCacheUnique({.initialDataSize=initial.size(),.pInitialData=initial.data()});\n    if(cache_result!=vk::Result::eSuccess && !initial.empty()) {\n        auto retry=instance.GetDevice().createPipelineCacheUnique({});\n        cache_result=retry.result; cache=std::move(retry.value);\n    }")
 kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "    pipeline_cache = std::move(cache);"
-  "    pipeline_cache = std::move(cache);\n    WarmUp();")
+  "    pipeline_cache = std::move(cache);\n    WarmUp();\n    KyoeiPipelineCache::Checkpoint(instance,pipeline_cache,uint64_t(num_new_pipelines)+1,true);")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "const GraphicsPipeline* PipelineCache::GetGraphicsPipeline() {"
+  "const GraphicsPipeline* PipelineCache::GetGraphicsPipeline() {\n    KyoeiPipelineCache::Checkpoint(instance,pipeline_cache,uint64_t(num_new_pipelines)+1);")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "const ComputePipeline* PipelineCache::GetComputePipeline() {"
+  "const ComputePipeline* PipelineCache::GetComputePipeline() {\n    KyoeiPipelineCache::Checkpoint(instance,pipeline_cache,uint64_t(num_new_pipelines)+1);")
 kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "PipelineCache::~PipelineCache() = default;"
   "PipelineCache::~PipelineCache() { KyoeiPipelineCache::Persist(instance,pipeline_cache); }")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_cache.cpp" CONTENT "${KYOEI_PIPELINE_CACHE}" @ONLY)
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_pipeline_serialization.cpp" KYOEI_PIPELINE_SERIALIZATION)
-set(KYOEI_PIPELINE_SERIALIZATION "#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_SERIALIZATION}")
+set(KYOEI_PIPELINE_SERIALIZATION "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_SERIALIZATION}")
 kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
   "if (std::memcmp(profile_data.data(), &profile, sizeof(profile)) != 0)"
   "if (!KyoeiPipelineCache::ProfileMatches(std::span<const uint8_t>(profile_data),profile))")
 kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
   "void PipelineCache::Sync() {\n    Storage::DataBase::Instance().Close();"
-  "void PipelineCache::Sync() {\n    KyoeiPipelineCache::Persist(instance,pipeline_cache);\n    Storage::DataBase::Instance().Close();")
+  "void PipelineCache::Sync() {\n    gz_log(\"Kyoei driver cache: collecting driver data\");\n    const bool saved=KyoeiPipelineCache::Persist(instance,pipeline_cache);\n    gz_log(\"Kyoei driver cache: driver data saved=%u; closing shader database\",unsigned(saved));\n    Storage::DataBase::Instance().Close();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" CONTENT "${KYOEI_PIPELINE_SERIALIZATION}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_cache.cpp"
   "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" src/kyoei_gpu_cache_shutdown.cpp)

@@ -2077,3 +2077,26 @@ espaço (rotina de texto do eboot); (7) PT-BR depois.
   deu timeout no encerramento normal. Não afirmar cache de driver persistido.
   Investigar separadamente; não remover sincronização por suposição. Desempenho
   continua prioridade e sem ganho novo certificado nesta continuação.
+
+### 15/10/2026 — timeout reproduzido e revisão preservada
+
+- JSON de Davy encontrado diretamente em Downloads; importador valida inventário,
+  hashes e notas. Resultado: 1 aceita, 58 revisar. Backup privado verificado em
+  build/texture-review-backups/e967c3f206d7a4b4: TEX atuais, galeria, revisão e
+  manifesto SHA-256. Nenhum ajuste visual aplicado nesta etapa.
+- Não há garantia de localização integral: 59 imagens entre 1.412 candidatas
+  UI/história; nem todas precisam tradução, inventário visual incompleto.
+  Textos ainda têm lacunas narrativas; não afirmar diálogos/legendas 100%.
+- Timeout reproduzido sem código do jogo: thread gráfico real ocupado por
+  fixture 4,2 s; implementação antiga falhou após três segundos, phase=0.
+  Captura Vulkan agora ocorre no proprietário durante sessão; bytes seguem
+  para gravador CPU limitado. Saída espera gravações pendentes sem fila GPU.
+  Mesmo teste passou em 0,03 ms, exit=0. Teste unitário PASS e build PASS.
+- Limites: fixture salva só cabeçalho de 36 bytes. Cópia privada dos shaders
+  pessoais encontrou perfil incompatível e não validou cache populado.
+  Últimos pipelines desde checkpoint podem ser recompilados depois; prazo de
+  disco continua limitado. Nenhuma melhora de FPS medida. Ver DESEMPENHO.md.
+- Portable atualizado com correção; verificação launcher/bootstrap EN PASS,
+  13.226 textos e 59 texturas, adapter romaji ligado. Saves preservados.
+  Nenhuma partida iniciada/encerrada. Linux ainda aguarda reinício voluntário
+  e implementação; nenhum binário Linux prometido como entregue.
