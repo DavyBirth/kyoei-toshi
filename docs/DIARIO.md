@@ -1821,3 +1821,15 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Conferencia final: tarefa periodica retornou0; desligamento03:00 habilitado,
   WakeToRun ativado so nessa tarefa. Triagem adicional deixou duas entradas
   recebidas com japones remanescente para revisao, sem alterar o ingles.
+
+### 15/10/2026 — lote de 500 traduções (Claude)
+
+- Davy pediu continuar a partir do diário com limite de 500 novas traduções.
+- Lote claude-20261015-lote500 aplicado via apply_localization_batch.py:
+  500 novas EN em 64 JSONs; total 12387/16100 preenchidas, 3713 vazias.
+  Auditoria estrutural PASS; backup em checkpoints/before-claude-20261015-lote500.zip.
+- Conteúdo: 284 rótulos de falante (nomes já confirmados; seis com leitura
+  padrão inferida marcada nas notas), ~150 falas e ~70 itens/descrições.
+  Pulados: notas de desenvolvimento, textos de teste, créditos e notícias longas.
+- Consolidado não republicado em published/, pacote do jogo não alterado,
+  jogo não iniciado. Revisão humana pendente.
