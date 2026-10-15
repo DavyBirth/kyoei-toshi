@@ -20,7 +20,7 @@ enum { VISIBLE_MS=200, CONFIRM=0x2000, UP=0x10, DOWN=0x40 };
 static _Atomic int cursor=-1, accepting, state=KYOEI_TITLE_EXIT_HIDDEN, hover;
 static _Atomic uint64_t last_frame;
 static uint32_t previous_buttons;
-static int previous_down,previous_up;
+static int previous_down,previous_up,swallow;
 static _Atomic int quit_requested, quit_taken;
 /* Geometry published by the guest thread; read by the overlay each frame. */
 static volatile float item_alpha, item_x, item_y, item_focus;
@@ -79,13 +79,16 @@ int kyoei_title_exit_input(uint32_t buttons,unsigned stick_y) {
     int down_edge=down&&!previous_down, up_edge=up&&!previous_up;
     previous_buttons=buttons; previous_down=down; previous_up=up;
     if (!usable()) { if (!shown()) set_state(KYOEI_TITLE_EXIT_HIDDEN); return 0; }
+    // After leaving our row, hide the still-held direction from the game until
+    // it is released; otherwise the game reads it as a fresh press and skips ????.
+    if (swallow) { if (buttons || down || up) return 1; swallow=0; }
     if (state<=KYOEI_TITLE_EXIT_IDLE) {
         set_state(KYOEI_TITLE_EXIT_IDLE);
         if (cursor==3 && down_edge) { set_state(KYOEI_TITLE_EXIT_SELECTED); return 1; }
         return 0;
     }
     // Our entry owns the cursor: the game must not see these inputs.
-    if (up_edge) set_state(KYOEI_TITLE_EXIT_IDLE);
+    if (up_edge) { set_state(KYOEI_TITLE_EXIT_IDLE); swallow=1; }
     else if (pressed&CONFIRM) request_quit();
     return 1;
 }

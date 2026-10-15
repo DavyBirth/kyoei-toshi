@@ -11,7 +11,8 @@ int main(void){
     CHECK(kyoei_title_exit_input(0,255)&&kyoei_title_exit_state()==KYOEI_TITLE_EXIT_SELECTED); /* stick down */
     CHECK(kyoei_title_exit_input(0,128));                                               /* consumed while ours */
     CHECK(kyoei_title_exit_input(0x10,128)&&kyoei_title_exit_state()==KYOEI_TITLE_EXIT_IDLE);  /* up returns */
-    CHECK(!kyoei_title_exit_input(0,128));
+    CHECK(kyoei_title_exit_input(0x10,128));                                            /* held: hidden from game */
+    CHECK(!kyoei_title_exit_input(0,128));                                              /* released */
     CHECK(kyoei_title_exit_input(0x40,128)&&kyoei_title_exit_input(0,128));
     CHECK(!kyoei_title_exit_test_quit_requested());
     CHECK(kyoei_title_exit_input(0x2000,128)&&kyoei_title_exit_test_quit_requested());  /* native confirm quits */
