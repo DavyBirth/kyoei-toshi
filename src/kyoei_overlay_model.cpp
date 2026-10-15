@@ -6,6 +6,7 @@
 #include "kyoei_pc_names.h"
 #include "kyoei_list_model.h"
 #include "kyoei_input_mode.h"
+#include "kyoei_title_exit.h"
 #include "imgui.h"
 #include <windows.h>
 #include <algorithm>
@@ -325,6 +326,45 @@ void ShutdownGui() {
     std::scoped_lock lock{mutex}; ready=false; finish_locked(2);
     ImGui::DestroyContext();
 }
+// Placement measured against the native title menu (1280x720 capture, 16:9
+// area): items at x=88, rows 45 px apart, fifth row centered near y=285.
+float title_rect[4];
+void title_exit(unsigned width,unsigned height,int state) {
+    const char *language=std::getenv("KYOEI_LANGUAGE");
+    bool japanese=language && !std::strcmp(language,"ja");
+    const char *label=japanese?"ãã¹ã¯ãããã«æ»ã":"Return to Desktop";
+    float unit=std::min(float(height)/720.f,float(width)/1280.f);
+    float left=(float(width)-1280*unit)/2, top=(float(height)-720*unit)/2;
+    float size=27*unit, x=left+88*unit, y=top+285*unit;
+    auto *font=ImGui::GetFont();
+    ImVec2 extent=font->CalcTextSizeA(size,FLT_MAX,0,label);
+    ImVec2 at(x,y-extent.y/2);
+    title_rect[0]=at.x-12*unit; title_rect[1]=at.y-6*unit; title_rect[2]=extent.x+24*unit; title_rect[3]=extent.y+12*unit;
+    auto *draw=ImGui::GetForegroundDrawList();
+    bool active=state>=KYOEI_TITLE_EXIT_SELECTED;
+    if (active) draw->AddRectFilledMultiColor(ImVec2(at.x+10*unit,at.y+extent.y+2*unit),ImVec2(at.x+extent.x+50*unit,at.y+extent.y+4*unit),
+        IM_COL32(60,200,140,255),IM_COL32(60,200,140,0),IM_COL32(60,200,140,0),IM_COL32(60,200,140,255));
+    for (int dx=-1;dx<=1;++dx) for (int dy=-1;dy<=1;++dy)
+        draw->AddText(font,size,ImVec2(at.x+dx*1.5f*unit,at.y+dy*1.5f*unit),IM_COL32(0,0,0,active?140:90),label);
+    draw->AddText(font,size,at,active?IM_COL32(255,255,255,255):IM_COL32(225,225,225,235),label);
+    draw->AddText(font,size,ImVec2(at.x+.6f*unit,at.y),active?IM_COL32(255,255,255,255):IM_COL32(225,225,225,235),label);
+    if (state==KYOEI_TITLE_EXIT_CONFIRM) {
+        bool controller=kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER;
+        const char *hint=japanese?(controller?"â çµäº  Ã æ»ã":"E / Enter: çµäº   Space: æ»ã"):
+            (controller?"Quit to desktop?   Circle: Yes   Cross: No":"Quit to desktop?   E / Enter / Click: Yes   Space: No");
+        float small=17*unit;
+        ImVec2 hint_at(at.x,at.y+extent.y+10*unit);
+        ImVec2 hint_size=font->CalcTextSizeA(small,FLT_MAX,0,hint);
+        draw->AddRectFilled(ImVec2(hint_at.x-8*unit,hint_at.y-4*unit),ImVec2(hint_at.x+hint_size.x+8*unit,hint_at.y+hint_size.y+4*unit),IM_COL32(0,0,0,150),4*unit);
+        draw->AddText(font,small,hint_at,IM_COL32(240,240,240,255),hint);
+    }
+}
+}
+extern "C" int kyoei_title_exit_hit(float x,float y) {
+    const float *r=KyoeiOverlayModel::title_rect;
+    return r[2]>0 && x>=r[0] && y>=r[1] && x<r[0]+r[2] && y<r[1]+r[3];
+}
+namespace KyoeiOverlayModel {
 ImDrawData *Draw(unsigned width,unsigned height,float seconds) {
     std::scoped_lock lock{mutex};
     auto &io=ImGui::GetIO(); io.DisplaySize=ImVec2((float)width,(float)height);
@@ -350,7 +390,8 @@ ImDrawData *Draw(unsigned width,unsigned height,float seconds) {
         else if (kind==KYOEI_OVERLAY_LIST) list_box(panel_height);
         else message_box();
         ImGui::End();
-    }
+    } else if (int title_state=kyoei_title_exit_state()) title_exit(width,height,title_state);
+    else title_rect[2]=0;
     ImGui::Render(); return ImGui::GetDrawData();
 }
 }

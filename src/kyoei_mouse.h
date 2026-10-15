@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include "kyoei_overlay.h"
 #include "kyoei_input_mode.h"
+#include "kyoei_title_exit.h"
 
 // All access is on the SDL window/pad polling thread. Guest pad reads use
 // the existing bridge mutex and only see the completed pad sample.
@@ -22,7 +23,7 @@ inline float Sensitivity() {
 inline void Clear() { dx=dy=0;previous=SDL_GetTicksNS(); }
 inline void Update(SDL_Window* window) {
     const char* option=std::getenv("KYOEI_MOUSE_CAMERA");
-    bool want=(!option || option[0]!='0') && !released && !kyoei_overlay_kind() &&
+    bool want=(!option || option[0]!='0') && !released && !kyoei_overlay_kind() && !kyoei_title_exit_state() &&
         (SDL_GetWindowFlags(window)&SDL_WINDOW_INPUT_FOCUS) &&
         !(SDL_GetWindowFlags(window)&SDL_WINDOW_MINIMIZED);
     if (want==captured) return;

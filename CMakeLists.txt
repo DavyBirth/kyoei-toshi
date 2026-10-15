@@ -220,10 +220,10 @@ kyoei_replace_checked(KYOEI_LOADER
   "    gz_thread_attach_main();\n    kyoei_tls_enter();")
 kyoei_replace_checked(KYOEI_LOADER
   "#include \"kyoei_gpu_wait.h\""
-  "#include \"kyoei_gpu_wait.h\"\n#include \"kyoei_hud_trace.h\"")
+  "#include \"kyoei_gpu_wait.h\"\n#include \"kyoei_hud_trace.h\"\n#include \"kyoei_title_exit.h\"")
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
-  "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);")
+  "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);\n    kyoei_title_exit_configure(image, image_size);")
 set(KYOEI_LOADER "#include \"kyoei_log_filter.h\"\n${KYOEI_LOADER}")
 set(KYOEI_LOADER "#include \"kyoei_names.h\"\n${KYOEI_LOADER}")
 kyoei_replace_checked(KYOEI_LOADER
@@ -240,7 +240,7 @@ if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace|kyoei-orb-trace-next
 endif()
 set_target_properties(kyoei PROPERTIES OUTPUT_NAME "${KYOEI_PORT_EXE_NAME}")
 target_sources(kyoei PRIVATE src/kyoei_crash.c)
-target_sources(kyoei PRIVATE src/kyoei_hud_trace.c)
+target_sources(kyoei PRIVATE src/kyoei_hud_trace.c src/kyoei_title_exit.c)
 target_sources(kyoei PRIVATE src/kyoei_gpu_wait.c)
 target_sources(kyoei PRIVATE src/kyoei_png.c)
 target_sources(kyoei PRIVATE src/kyoei_savedata.c)
@@ -653,6 +653,12 @@ kyoei_replace_checked(KYOEI_PAD "    u32 buttons = keys;"
 kyoei_replace_checked(KYOEI_PAD
   "    if (buttons & 0x100) data.analogButtons.l2 = 255;"
   "    KyoeiMouse::Apply(data.rightStick);\n    if (buttons & 0x100) data.analogButtons.l2 = 255;")
+set(KYOEI_PAD "#include \"kyoei_title_exit.h\"
+${KYOEI_PAD}")
+kyoei_replace_checked(KYOEI_PAD "    if (gz_dialog_input(buttons)) {"
+  "    const int kyoei_title_consumed=kyoei_title_exit_input(buttons,data.leftStick.y);
+    if (kyoei_title_exit_take_quit()) { SDL_Event quit{}; quit.type=SDL_EVENT_QUIT; SDL_PushEvent(&quit); }
+    if (kyoei_title_consumed || gz_dialog_input(buttons)) {")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp" CONTENT "${KYOEI_PAD}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp")
 set(KYOEI_WINDOW "#include \"kyoei_mouse.h\"\n${KYOEI_WINDOW}")
@@ -692,7 +698,8 @@ kyoei_replace_checked(KYOEI_WINDOW
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
 file(READ "${KYOEI_CORE}/gpu/vendor/vk_presenter.cpp" KYOEI_PRESENTER)
-set(KYOEI_PRESENTER "#include \"kyoei_overlay_gpu.h\"\n#include \"kyoei_overlay_barriers.h\"\n#include \"kyoei_overlay.h\"\n${KYOEI_PRESENTER}")
+set(KYOEI_PRESENTER "#include \"kyoei_title_exit.h\"
+#include \"kyoei_overlay_gpu.h\"\n#include \"kyoei_overlay_barriers.h\"\n#include \"kyoei_overlay.h\"\n${KYOEI_PRESENTER}")
 kyoei_replace_checked(KYOEI_PRESENTER
   "    pp_pass.Create(device, swapchain.GetSurfaceFormat().format);"
   "    pp_pass.Create(device, swapchain.GetSurfaceFormat().format);\n    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());")
@@ -701,7 +708,7 @@ kyoei_replace_checked(KYOEI_PRESENTER
   "    flip_scheduler.Finish();\n    KyoeiOverlay::Shutdown();")
 kyoei_replace_checked(KYOEI_PRESENTER
   "    Check(instance.GetDevice().resetFences(frame->present_done));"
-  "    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());\n    const bool kyoei_modal=kyoei_overlay_kind()!=0;\n    const auto kyoei_modal_revision=kyoei_overlay_revision();\n    Check(instance.GetDevice().resetFences(frame->present_done));")
+  "    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());\n    const bool kyoei_modal=kyoei_overlay_kind()!=0 || kyoei_title_exit_state()!=0;\n    const auto kyoei_modal_revision=kyoei_overlay_revision();\n    Check(instance.GetDevice().resetFences(frame->present_done));")
 set(KYOEI_OVERLAY_ORIGINAL_BARRIER [=[        vk::ImageMemoryBarrier{
             .srcAccessMask = vk::AccessFlagBits::eTransferWrite,
             .dstAccessMask = vk::AccessFlagBits::eNone,
@@ -757,6 +764,8 @@ add_executable(test_kyoei_tls src/test_kyoei_tls.c src/kyoei_tls.c)
 add_executable(test_kyoei_name_model src/test_kyoei_name_model.c)
 add_executable(test_kyoei_names src/test_kyoei_names.c src/kyoei_names.c)
 add_executable(test_kyoei_pc_names src/test_kyoei_pc_names.c src/kyoei_pc_names.c)
+add_executable(test_kyoei_title_exit src/test_kyoei_title_exit.c src/kyoei_title_exit.c)
+target_compile_definitions(test_kyoei_title_exit PRIVATE KYOEI_TITLE_EXIT_TEST=1)
 target_sources(test_kyoei_names PRIVATE src/kyoei_pc_names.c)
 target_include_directories(test_kyoei_names PRIVATE src "${KYOEI_CORE}/src")
 target_compile_definitions(test_kyoei_names PRIVATE KYOEI_NAMES_TEST=1 _CRT_SECURE_NO_WARNINGS)
@@ -769,14 +778,16 @@ add_executable(test_kyoei_list_model src/test_kyoei_list_model.c)
 add_executable(test_kyoei_overlay src/test_kyoei_overlay.cpp src/kyoei_overlay_model.cpp
   src/kyoei_input_mode.c ${KYOEI_IMGUI_SOURCES})
 target_compile_features(test_kyoei_overlay PRIVATE cxx_std_23)
-target_sources(test_kyoei_overlay PRIVATE src/kyoei_pc_names.c)
+target_sources(test_kyoei_overlay PRIVATE src/kyoei_pc_names.c src/kyoei_title_exit.c)
+target_compile_definitions(test_kyoei_overlay PRIVATE KYOEI_TITLE_EXIT_TEST=1)
 target_compile_options(test_kyoei_overlay PRIVATE -UNDEBUG)
 target_compile_definitions(test_kyoei_overlay PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
 target_include_directories(test_kyoei_overlay PRIVATE src "${KYOEI_IMGUI_DIR}")
 add_executable(test_kyoei_ime_overlay src/test_kyoei_ime_overlay.cpp src/kyoei_ime.c
   src/kyoei_overlay_model.cpp src/kyoei_input_mode.c)
 target_compile_features(test_kyoei_ime_overlay PRIVATE cxx_std_23)
-target_sources(test_kyoei_ime_overlay PRIVATE src/kyoei_pc_names.c)
+target_sources(test_kyoei_ime_overlay PRIVATE src/kyoei_pc_names.c src/kyoei_title_exit.c)
+target_compile_definitions(test_kyoei_ime_overlay PRIVATE KYOEI_TITLE_EXIT_TEST=1)
 target_compile_definitions(test_kyoei_ime_overlay PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
 target_include_directories(test_kyoei_ime_overlay PRIVATE src "${KYOEI_CORE}/src")
 target_link_libraries(test_kyoei_ime_overlay PRIVATE kyoei_imgui user32 gdi32)

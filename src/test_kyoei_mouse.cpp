@@ -3,6 +3,7 @@
 #include "kyoei_pc_controls.h"
 static int modal=0;
 extern "C" int kyoei_overlay_kind(void) { return modal; }
+extern "C" int kyoei_title_exit_state(void) { return 0; }
 extern "C" void kyoei_input_keyboard(void) {}
 #define CHECK(x) do { if(!(x)) { std::fprintf(stderr,"Mouse check failed: %d\n",__LINE__);return 1; } } while(0)
 int main() {

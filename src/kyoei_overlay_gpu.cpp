@@ -7,6 +7,7 @@
 #include "kyoei_overlay_barriers.h"
 #include "kyoei_overlay.h"
 #include "kyoei_input_mode.h"
+#include "kyoei_title_exit.h"
 #include "imgui.h"
 #include "imgui_impl_vulkan.h"
 #include "video_core/renderer_vulkan/vk_instance.h"
@@ -32,8 +33,8 @@ void checked(VkResult result) {
 }
 }
 void Initialize(const Vulkan::Instance &instance,vk::Format format,unsigned image_count) {
-    const char *setting=std::getenv("KYOEI_IN_GAME_DIALOGS");
-    if (!setting || std::strcmp(setting,"1")) return;
+    const char *setting=std::getenv("KYOEI_IN_GAME_DIALOGS"),*title=std::getenv("KYOEI_TITLE_EXIT");
+    if ((!setting || std::strcmp(setting,"1")) && (!title || std::strcmp(title,"1"))) return;
     if (initialized && surface_format==format && images==image_count) return;
     if (initialized) {
         // Rebuilding backend allocations requires all previous draws to finish.
@@ -86,7 +87,26 @@ bool HandleEvent(const SDL_Event &event) {
     if (event.type==SDL_EVENT_QUIT || event.type==SDL_EVENT_WINDOW_CLOSE_REQUESTED) {
         kyoei_overlay_abort_all(); return false;
     }
-    if (!kyoei_overlay_kind()) return false;
+    if (!kyoei_overlay_kind()) {
+        if (!kyoei_title_exit_state()) return false;
+        // The title releases the mouse pointer so the PC entry can be clicked.
+        if (event.type==SDL_EVENT_MOUSE_MOTION || event.type==SDL_EVENT_MOUSE_BUTTON_DOWN) {
+            auto id=event.type==SDL_EVENT_MOUSE_MOTION?event.motion.windowID:event.button.windowID;
+            auto *window=SDL_GetWindowFromID(id);
+            float density=window?SDL_GetWindowPixelDensity(window):1.f;
+            float x=(event.type==SDL_EVENT_MOUSE_MOTION?event.motion.x:event.button.x)*density;
+            float y=(event.type==SDL_EVENT_MOUSE_MOTION?event.motion.y:event.button.y)*density;
+            int inside=kyoei_title_exit_hit(x,y);
+            kyoei_title_exit_hover(inside);
+            if (inside && event.type==SDL_EVENT_MOUSE_BUTTON_DOWN && event.button.button==SDL_BUTTON_LEFT)
+            {
+                int consumed=kyoei_title_exit_click();
+                if (kyoei_title_exit_take_quit()) { SDL_Event quit{}; quit.type=SDL_EVENT_QUIT; SDL_PushEvent(&quit); }
+                return consumed!=0;
+            }
+        }
+        return false;
+    }
     if (event.type==SDL_EVENT_TEXT_INPUT) { kyoei_overlay_text(event.text.text); return true; }
     if (event.type==SDL_EVENT_KEY_DOWN) {
         if (event.key.key==SDLK_ESCAPE && event.key.repeat) return true;
