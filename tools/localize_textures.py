@@ -91,7 +91,10 @@ def label(im, text, size):
     alpha = im.getchannel('A').load()
     xs = [x for y in range(h) for x in range(w) if alpha[x, y] > 128]
     left = min(xs) if xs else 2
-    font, bb = fit_font(text, size, w - left - 3)
+    font = ImageFont.truetype(str(FONT), size)
+    bb = font.getbbox(text)
+    if bb[2] - bb[0] > w - left - 3:
+        raise ValueError(f'Label does not fit at the shared font size: {text}')
     y = h / 2 - (bb[1] + bb[3]) / 2
     shadow = Image.new('RGBA', (w, h), (0, 0, 0, 0))
     ImageDraw.Draw(shadow).text((left - bb[0] + 1, y + 1), text, font=font, fill=(0, 0, 0, 220))
@@ -163,11 +166,19 @@ def relabel(im, text, align, margin, size=20):
     tx0, ty0, tx1, ty1 = min(xs), min(ys), max(xs), max(ys)
     lum = lambda p: p[0] * 3 + p[1] * 6 + p[2]
     textc = max((px[x, y] for x, y in zip(xs, ys)), key=lambda p: abs(lum(p) - lum(bg)))
-    mask = mask.filter(ImageFilter.MaxFilter(5))
-    rgba.paste(Image.new('RGBA', (w, h), bg), (0, 0), mask)
+    # The clean inner left column preserves the original row-by-row gradient.
+    # Keep the frame/corners untouched, instead of filling glyph masks with
+    # a single colour that leaves rectangular marks on selected buttons.
+    for y in range(y0, y1):
+        row = px[x0, y]
+        for x in range(x0, x1):
+            px[x, y] = row
     # fit font: cap height of original text ~ glyph box height
     avail = (x1 - x0 - 6) if align == 'center' else (x1 - tx0 - 2)
-    font, bb = fit_font(text, size, avail)
+    font = ImageFont.truetype(str(FONT), size)
+    bb = font.getbbox(text)
+    if bb[2] - bb[0] > avail:
+        raise ValueError(f'Button does not fit at the shared font size: {text}')
     d = ImageDraw.Draw(rgba)
     cy = (ty0 + ty1) / 2
     tw = bb[2] - bb[0]

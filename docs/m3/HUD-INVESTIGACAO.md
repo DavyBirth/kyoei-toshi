@@ -1,5 +1,24 @@
 # HUD: fontes, largura e ancoragem
 
+## Quebra de linha: investigação offline de15/10
+
+Mesmo ELF próprio/hash1968814b70f69ec85ff3e556c4b66b53ec298c0dea71120e4f0ba594906e418e.
+Literais técnicos `_lineBreakflag` em0x101c2f2 e `_lineBreakFlag` em0x101ca87.
+LEAs conferidas na desmontagem:0x2db6ee,0x2dbece,0x2e442e.
+São registros de reflexão: GxResHudSet::GxParamHud::GxFontBmpExtension e
+GxUnitFontBase. O segundo registra campo0x1a0; construtor0x2e45ac inicializa1.
+Isso identifica o campo, não demonstra um modo de quebra por palavras.
+
+GxUnitFontBmp: caminhos0x2e5ad0/0x2e5dc4/0x2e5f39/0x2e60d7 propagam o campo.
+0x19c participa da escala do texto,0x1b4/0x1b8 participam da área escalada.
+0x2e5b9e chama0x2de990;0x2e5e31 chama0x2e0cf0;0x2e5f73 chama0x2e3690.
+0x2e0cf0 tem chamadas de parser/medidas e0x2e2b10 percorre caracteres/tags.
+Parâmetros de ponteiro/stack ainda exigem reconstrução ABI completa antes de
+qualquer hook. Não trocar o utilitário global de contagem nem desabilitar
+wrap: pode criar overflow/clipping e afetar japonês/tags/velocidade de texto.
+Evidência privada build/overnight/linebreak-*.asm,font-engine.asm e relatórios
+JSON; nenhuma desmontagem completa versionada ou patch de wrap ativado.
+
 Investigação offline de 13/10/2026. Nenhum jogo executado.
 
 Davy relatou que caixas de interação próximas aos personagens mantêm o

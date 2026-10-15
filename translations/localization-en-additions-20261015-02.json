@@ -1,0 +1,135 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/loading_image_and_text.csh",
+      "source_sha256": "5f7a4c7731e997457391f2e0f987338db6a16a998f68f40f8825dadd4679621e",
+      "entries": [
+        {
+          "id": "r104/c3",
+          "source_text_sha256": "1637861f00b6fe984e3c208b04c0ef5557eb60636edae20c2b83f33f1f3b4ae6",
+          "en": "The two men who kept trying to kill me\\nworked for W&P Consulting,\\na company dealing in weapons intelligence.\\nBut the building housing its headquarters\\nwas destroyed when Type-3 Kiryu went berserk.\\n\\nWe escaped the building in a desperate scramble.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r104/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r104/c4",
+          "source_text_sha256": "f4610ec3718dac1a7bab7bde365ac8d60d1d75d6c61e8dd55d48de0d86cb1baa",
+          "en": "The two men who kept trying to kill me\\nworked for W&P Consulting,\\na company dealing in weapons intelligence.\\nBut the building housing its headquarters\\nwas destroyed when Type-3 Kiryu went berserk.\\n\\nWe escaped the building in a desperate scramble.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r104/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/reading_material.csh",
+      "source_sha256": "1b9ed830b5435611e69d1f78474859544992df35340fc3029b6c5c70cade3661",
+      "entries": [
+        {
+          "id": "r4/c4",
+          "source_text_sha256": "a62353b59701377370eac855c90328c5a556fe21b4fb0985e5925be1ffc5df26",
+          "en": "W&P Consulting helps clients\\nin countries and factions around the world achieve peace and security\\nby introducing them to various weapons sales channels and matching them\\nwith companies possessing weapons-development technology.",
+          "notes": "English draft imported from audited private workspace, translate-en-0170.json:r4/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r37/c3",
+          "source_text_sha256": "2fc0446a3ee256b90157c91c3a94d5d11e66f2641aed6cf607dca71d5fc3ac57",
+          "en": "TOP SECRET\\n[ CONFIDENTIAL MATERIAL ]\\n\\nReport on Waterfront Land Development",
+          "notes": "English draft imported from audited private workspace, translate-en-0170.json:r37/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r50/c8",
+          "source_text_sha256": "d5fc56225ce8085fd14b8b3ad59af58281043df260c1af7e54fb678516d6189c",
+          "en": "\"Gwaaaaaah!\"\\nSuddenly, I heard a man's voice. It was more a cry of agony than a scream.\\nTurning toward the sound, I saw an older man collapsing with a hand pressed to his chest.\\n\"Ugh... Aaaah...\"\\nAnother voice sounded close by.\\nThe young woman I had been speaking to just moments earlier collapsed.\\nLooking around, I saw people falling one after another. What was happening?",
+          "notes": "English draft imported from audited private workspace, translate-en-0170.json:r50/c8; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_201_news_text.luc",
+      "source_sha256": "7ba28c7ceac5fbf240069f6acf531d70069f882628b2674a9e3cdfbe5af59ea8",
+      "entries": [
+        {
+          "id": "p0/k157",
+          "source_text_sha256": "77f586043b9c63652805af19543e6205d467b7096a40f859bdfbc1014bf4577a",
+          "en": "A post shows a young person being asked by cats to help make a game in the Kaido Building on Tsubaki Avenue in Sakura Ward.\nThe cats, named Toro and Kuro, asked for help because development of Absolutely Safe City 2: Good Night, the game they appear in, has run into difficulties.\nApparently, Toro and Kuro will now appear wherever this young person goes, making requests related to development.\nWhen will the game be completed? That responsibility rests squarely on this young person's shoulders.",
+          "notes": "English draft imported from audited private workspace, translate-en-0016.json:p0/k157; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_204_news_text.luc",
+      "source_sha256": "7381fb977b640ed21542e498875b08a1410a10a59a94a6bce31454c9527c4a90",
+      "entries": [
+        {
+          "id": "p0/k282",
+          "source_text_sha256": "36d529bc0b92484159de75c629b71e70744abefa3815602e335a3859b4fc6389",
+          "en": "The Ibe-View Photo Contest",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k282; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k285",
+          "source_text_sha256": "64e6d8227f9e13862f4bc3c1608c847eee5e4bd31d5f3c9d6b333e61913bf3bd",
+          "en": "The Tale of the Last Sword, the hugely acclaimed novel that has taken the world by storm, is reportedly inspiring a rapidly growing number of fans to visit its real-world settings on so-called Last Sword pilgrimages.\nVolume 3 was set in a remote forest that ordinarily attracted few visitors. After the novel's release, fan visits gradually increased, and the forest now reportedly receives as many as ten thousand fans a day. The local area is actively welcoming them as part of its revitalization efforts, even developing the \"house meat\" featured in the story.\nThe seemingly unstoppable popularity of The Tale of the Last Sword appears to extend well beyond novels, making a major contribution to local economies.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k285; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k289",
+          "source_text_sha256": "51cc5cba420fa32b57f9837ed14657c648c607a6c5372909173230c475e73029",
+          "en": "Property prices appear to be rising in Sakura Ward, Miyato City, where giant creatures appeared tonight.\nThe ward has suffered extensive damage, with no clear prospect of recovery yet. However, businesses are reportedly buying properties in anticipation of price rises during future reconstruction and redevelopment.\nAccording to a Sakura Ward real-estate agent, some properties have increased in price by around 160 percent.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k289; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_208_news_text.luc",
+      "source_sha256": "8e4e33b0da797a9cb165e930ed36e6b44db1f729115c232dc5926f348f4597b5",
+      "entries": [
+        {
+          "id": "p0/k184",
+          "source_text_sha256": "b5db0aa587158d293719a2cb29101e3d5307bc4f0d99f11cdb4717f6e3b90ee3",
+          "en": "The Sui functional desk was developed in response to requests for a desk that could glide effortlessly around the office.\nAt the flick of a switch, spherical rollers emerge from its legs. Connect it to your chair using the supplied fittings and you can move around with remarkable ease.\nBy deliberately avoiding a motorized design, it has earned praise for helping people get more exercise and boasts an impressive record for weight loss.\n\nThe desk also comes with power outlets as standard. Plug the supplied charger into an office outlet and it wirelessly powers the desk's contactless battery, allowing you to move around with a computer still running on the desk.\n\nThe problem is that this wireless power system is so powerful that it also draws electricity without permission from chargers installed in neighboring offices.\nSome people have deliberately avoided installing a charger in their own office and have been caught stealing electricity.\nAn identification feature would presumably solve the problem, but for some reason the specifications remain unchanged.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k184; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_211_news_text.luc",
+      "source_sha256": "920eeae783fb0176d73e69e1c532c85afcd108af38f65d3cfc2173fa1670944f",
+      "entries": [
+        {
+          "id": "p0/k86",
+          "source_text_sha256": "5dddcb0a535be06fbad49b490561973ba2539ddd546127f0428cef10986d20b6",
+          "en": "A young person was seen being asked by Toro to help develop a game inside the Cosmic Ray Research Institute.\nToro reportedly requested help acquiring motion data needed for the game currently in development.\nIt would be wonderful if this brings Absolutely Safe City 2: Good Night one step closer to completion.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0151.json:p0/k86; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_218_news_text.luc",
+      "source_sha256": "f7a2bf10947a7a937a4749259375b6bc7d3b8952f015d13163abf12b138b0a35",
+      "entries": [
+        {
+          "id": "p0/k108",
+          "source_text_sha256": "80f08a847239a91fd6b44019a39ccefa798d336596efe3128a8c5bd07a7f864f",
+          "en": "The International Space Development Federation announced that all ten volumes of The Tale of the Last Sword will travel aboard Saiken, an unmanned deep-space probe scheduled to launch around next autumn. Saiken will head out of the solar system, making observations as it passes Mars, Jupiter, Saturn, and Uranus. The federation said, \"We want extraterrestrial life to discover the most popular story on Earth. If they can understand it, the circle of Last Sword fans could spread throughout the universe.\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0001.json:p0/k108; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

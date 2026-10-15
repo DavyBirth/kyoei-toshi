@@ -1,5 +1,45 @@
 # Diário do projeto
 
+### 15/10/2026 — continuação noturna e preparação portátil
+
+- Davy autorizou tradução, HUD, engenharia reversa e desempenho durante a noite;
+  checar cota a cada dez minutos, reservar10–15%, preparar cópia portátil
+  pessoal sem identidade/logs/saves e desligar somente após entrega salva.
+- Lido/preservado o avanço Claude:13.084 EN privadas, en-08 com13.214 incluindo
+  pilotos/57 texturas. Mais12 EN em finish-20261015-news-lore:13.096/16.100
+  privadas; en-10 com13.226/57 texturas. Inglês ainda requer revisão.
+- Auditoria173 JSONs e reconstrução/releitura em117 recursos PASS.
+  Adições20261015-02 contém12 EN. Consolidado privado republicado, SHA256
+  8fdf31f92d92c4b2f81b63e53841f45a976b6f5cdbfba3d4ed1443773bf391b8.
+- Options: rótulos fixos19/botões21, falha quando não cabem, textos curtos
+  semanticamente completos. Botões recompostos com coluna limpa de cada linha,
+  preservando bordas/gradientes. BC3 inspecionado e regressão sintética PASS.
+  ST_15/ST_16 originais confirmados visualmente como Stage16/15: não inverter.
+- scripts/check_usage.ps1 registra limite a cada600s, sem conversa/credenciais.
+  Sessão ancorada por marcador atual. Indicador mudou de19% semanal para99%,
+  novas datas de renovação, por volta03:20; causa desconhecida. Reserva considera
+  ambas janelas. Não usar estimativa baseada só nos tokens do contexto.
+- Pacote privado build/City-Shrouded-in-Shadow-Portable, launcher C# próprio,
+  japonês/inglês, caminhos relativos, perfil vazio/fontes/dependências.
+  Loader --list-stubs --no-gpu PASS sem partida; fonte/depuração removidas
+  das seções de diagnóstico do PE. Varredura final de privacidade em curso.
+- Varredura achou fallback Davy no serviço de usuário herdado. Adaptado para
+  Player no CMake gerado; snapshot/Godzilla intactos. Launcher portátil fixa
+  Player/idioma0 ou1. Coincidências em PSARC comprimido exigem contexto e
+  conferência dos hashes do disco, sem alterar dados originais por palpite.
+- Cache Vulkan por vendor/device/UUID, limite64MiB, rejeição de truncados,
+  escrita atômica/fallback vazio. Inicialização antes de WarmUp. Saída normal
+  pede Sync pela fila GPU, espera no máximo3s; erros não gravam. Build/cache/
+  estatísticas PASS em testes de unidade; desempenho real ainda pendente.
+- Abrir/fechar partida de teste foi bloqueado pela revisão automática por
+  restrição anterior de não controlar jogo. Não contornado; autorização
+  específica solicitada. Continuar trabalho sem partida enquanto pendente.
+- Quebra por palavras ainda pendente; tipos/campos/rotinas encontrados,
+  detalhes HUD-INVESTIGACAO.md. Não desabilitar wrap por palpite.
+- 60 FPS não demonstrados. Log recente31,66 FPS agregados, leituras GPU10,86ms
+  nas janelas amostradas. Métricas novas isolam compilação de shaders/pipelines,
+  com registros limitados para pausas acima de16,67ms. Ver DESEMPENHO.md.
+
 ### 14/10/2026 — salvamento solicitado por Davy
 
 - Davy pediu SALVA. Consolidado atual salvo e publicado: 11.887/16.100 EN,

@@ -5,9 +5,9 @@
   "source_archive_sha256": "3a54e70d40b57562cbf350028ab8b75ee09c8143f8f1e766cc04bd81ce133966",
   "languages": {
     "en": {
-      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-08\\en\\common.psarc",
-      "sha256": "9f7726d4661ff966624b0f33b2577abac931c31f2eb9eae003befadbe9b077ee",
-      "bytes": 6349043708,
+      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-10\\en\\common.psarc",
+      "sha256": "67dc8bddcc6c14976ff714280985a9443b9576affe99ed6e1af9c07fe62177ce",
+      "bytes": 6349027505,
       "status": "experimental_partial_translation",
       "runtime_verified": false,
       "resources": [
@@ -24,7 +24,7 @@
         {
           "resource": "common/csv/loading_image_and_text.csh",
           "source_sha256": "5f7a4c7731e997457391f2e0f987338db6a16a998f68f40f8825dadd4679621e",
-          "entries": 404
+          "entries": 406
         },
         {
           "resource": "common/csv/operation_text.csh",
@@ -34,7 +34,7 @@
         {
           "resource": "common/csv/reading_material.csh",
           "source_sha256": "1b9ed830b5435611e69d1f78474859544992df35340fc3029b6c5c70cade3661",
-          "entries": 168
+          "entries": 171
         },
         {
           "resource": "common/csv/staffroll.csh",
@@ -244,7 +244,7 @@
         {
           "resource": "common/lua/stage_201_news_text.luc",
           "source_sha256": "7ba28c7ceac5fbf240069f6acf531d70069f882628b2674a9e3cdfbe5af59ea8",
-          "entries": 62
+          "entries": 63
         },
         {
           "resource": "common/lua/stage_201_npc.luc",
@@ -319,7 +319,7 @@
         {
           "resource": "common/lua/stage_204_news_text.luc",
           "source_sha256": "7381fb977b640ed21542e498875b08a1410a10a59a94a6bce31454c9527c4a90",
-          "entries": 122
+          "entries": 125
         },
         {
           "resource": "common/lua/stage_204_npc.luc",
@@ -389,7 +389,7 @@
         {
           "resource": "common/lua/stage_208_news_text.luc",
           "source_sha256": "8e4e33b0da797a9cb165e930ed36e6b44db1f729115c232dc5926f348f4597b5",
-          "entries": 127
+          "entries": 128
         },
         {
           "resource": "common/lua/stage_208_npc.luc",
@@ -469,7 +469,7 @@
         {
           "resource": "common/lua/stage_211_news_text.luc",
           "source_sha256": "920eeae783fb0176d73e69e1c532c85afcd108af38f65d3cfc2173fa1670944f",
-          "entries": 31
+          "entries": 32
         },
         {
           "resource": "common/lua/stage_211_npc.luc",
@@ -564,7 +564,7 @@
         {
           "resource": "common/lua/stage_218_news_text.luc",
           "source_sha256": "f7a2bf10947a7a937a4749259375b6bc7d3b8952f015d13163abf12b138b0a35",
-          "entries": 39
+          "entries": 40
         },
         {
           "resource": "common/lua/stage_218_npc.luc",
@@ -597,7 +597,7 @@
           "entries": 2
         }
       ],
-      "translated_entries": 13214
+      "translated_entries": 13226
     },
     "pt-BR": {
       "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-02\\pt-BR\\common.psarc",
@@ -639,7 +639,7 @@
     {
       "resource": "common/csv/loading_image_and_text.csh",
       "source_sha256": "5f7a4c7731e997457391f2e0f987338db6a16a998f68f40f8825dadd4679621e",
-      "entries": 404
+      "entries": 406
     },
     {
       "resource": "common/csv/operation_text.csh",
@@ -649,7 +649,7 @@
     {
       "resource": "common/csv/reading_material.csh",
       "source_sha256": "1b9ed830b5435611e69d1f78474859544992df35340fc3029b6c5c70cade3661",
-      "entries": 168
+      "entries": 171
     },
     {
       "resource": "common/csv/staffroll.csh",
@@ -859,7 +859,7 @@
     {
       "resource": "common/lua/stage_201_news_text.luc",
       "source_sha256": "7ba28c7ceac5fbf240069f6acf531d70069f882628b2674a9e3cdfbe5af59ea8",
-      "entries": 62
+      "entries": 63
     },
     {
       "resource": "common/lua/stage_201_npc.luc",
@@ -934,7 +934,7 @@
     {
       "resource": "common/lua/stage_204_news_text.luc",
       "source_sha256": "7381fb977b640ed21542e498875b08a1410a10a59a94a6bce31454c9527c4a90",
-      "entries": 122
+      "entries": 125
     },
     {
       "resource": "common/lua/stage_204_npc.luc",
@@ -1004,7 +1004,7 @@
     {
       "resource": "common/lua/stage_208_news_text.luc",
       "source_sha256": "8e4e33b0da797a9cb165e930ed36e6b44db1f729115c232dc5926f348f4597b5",
-      "entries": 127
+      "entries": 128
     },
     {
       "resource": "common/lua/stage_208_npc.luc",
@@ -1084,7 +1084,7 @@
     {
       "resource": "common/lua/stage_211_news_text.luc",
       "source_sha256": "920eeae783fb0176d73e69e1c532c85afcd108af38f65d3cfc2173fa1670944f",
-      "entries": 31
+      "entries": 32
     },
     {
       "resource": "common/lua/stage_211_npc.luc",
@@ -1179,7 +1179,7 @@
     {
       "resource": "common/lua/stage_218_news_text.luc",
       "source_sha256": "f7a2bf10947a7a937a4749259375b6bc7d3b8952f015d13163abf12b138b0a35",
-      "entries": 39
+      "entries": 40
     },
     {
       "resource": "common/lua/stage_218_npc.luc",
@@ -1217,7 +1217,7 @@
   "runtime_verified": false,
   "original_dump_modified": false,
   "entries_by_language": {
-    "en": 13214,
+    "en": 13226,
     "pt-BR": 94
   }
 }
