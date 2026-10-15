@@ -1,5 +1,31 @@
 # Conferência das pendências em 15/10/2026
 
+Atualização posterior: inseridos **34 rascunhos novos** com backup/ledger
+privados no lote `player-facing-20261015-02`: sete artigos completos (cinema,
+Labor, três notícias da Omoto e duas variantes da cadeira), seis registros
+de máscaras Yuman, dois de roteiro do jogo fictício, um nome de chave e
+18 avisos de item quase alcançável. Leituras e termos existentes reutilizados;
+grafias provisórias continuam sujeitas à revisão. O aviso de item mantém
+`???`, que é a própria identidade desconhecida do original, sem inventar item.
+
+Estado privado: **13.130/16.100 preenchidos; 2.970 vazios**. Reinserção e
+releitura de todas as 13.130 entradas em 135 recursos PASS. União runtime
+com pilotos: **13.260 EN**, 59 texturas. As 34 novas EN e todas as TEX foram
+relidas do PSARC do portable; hash e launcher/bootstrap sem GPU PASS.
+Fonte original/IDs/tokens/linhas/metadados preservados. Consolidação humana e
+funcionamento visual das novas entradas em jogo ainda não comprovados.
+
+Triagem atual: cadastro provisório 2.121; modelo de notícia 256; créditos 320;
+testes numerados 18; notas de desenvolvimento 7; rótulos técnicos 3;
+provisórios/indisponíveis candidatos 44; revisão individual **201**.
+Não há dedução de cobertura jogável a partir desses grupos. Restam artigos
+`stage_204_news_text.luc` p0/k190 e p0/k283 e leitura r37/c4, entre outros;
+nomes sem leitura comprovada exigem evidência, não transliteração inventada.
+Inventário visual de imagens e prova de progressão até o final continuam
+pendentes. Não declarar 100% traduzido ou jogável só porque a reinserção passou.
+
+Dados abaixo preservam a auditoria anterior, antes do lote novo:
+
 Leitura dos 173 JSONs privados, sem modificá-los: 13.096/16.100 preenchidos,
 3.004 vazios. O estado salvo já tinha 12 entradas a mais que o encerramento
 Claude descrito no diário. Os rascunhos de runtime somam 13.226, pois incluem

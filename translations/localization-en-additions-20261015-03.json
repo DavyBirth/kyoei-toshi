@@ -1,0 +1,379 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r199/c26",
+          "source_text_sha256": "db3e677a2a5257446ac02b96695d9183de6721d08d494ac40d5373362422fec5",
+          "en": "A mask of a hero from Unidentified Squadron Yuman, the special-effects superhero show hugely popular with children.<br>Red is the color of courage!",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r199/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r199/c27",
+          "source_text_sha256": "5ee021c9071b3629af96fabe16d39302de7b1870f1386335d6e2def37465dc3f",
+          "en": "Unidentified Squadron Yuman Mask - Red",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r199/c27; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r199/c28",
+          "source_text_sha256": "db3e677a2a5257446ac02b96695d9183de6721d08d494ac40d5373362422fec5",
+          "en": "A mask of a hero from Unidentified Squadron Yuman, the special-effects superhero show hugely popular with children.<br>Red is the color of courage!",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r199/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r200/c26",
+          "source_text_sha256": "db3e677a2a5257446ac02b96695d9183de6721d08d494ac40d5373362422fec5",
+          "en": "A mask of a hero from Unidentified Squadron Yuman, the special-effects superhero show hugely popular with children.<br>Red is the color of courage!",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r200/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r200/c27",
+          "source_text_sha256": "5ee021c9071b3629af96fabe16d39302de7b1870f1386335d6e2def37465dc3f",
+          "en": "Unidentified Squadron Yuman Mask - Red",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r200/c27; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r200/c28",
+          "source_text_sha256": "db3e677a2a5257446ac02b96695d9183de6721d08d494ac40d5373362422fec5",
+          "en": "A mask of a hero from Unidentified Squadron Yuman, the special-effects superhero show hugely popular with children.<br>Red is the color of courage!",
+          "notes": "English draft imported from audited private workspace, translate-en-0112.json:r200/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1226/c25",
+          "source_text_sha256": "1c59564ec66ed2d3fa1e611f43f781483c2ed4b44374d5673b933389c5779853",
+          "en": "Key",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1226/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1281/c26",
+          "source_text_sha256": "f20abe6b676bcff366a58a8cccc7379e4664268852363112d41aa132720de118",
+          "en": "A thrilling script containing the story and dialogue essential to the development of \"Absolutely Safe City 2.\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0123.json:r1281/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1281/c28",
+          "source_text_sha256": "f20abe6b676bcff366a58a8cccc7379e4664268852363112d41aa132720de118",
+          "en": "A thrilling script containing the story and dialogue essential to the development of \"Absolutely Safe City 2.\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0123.json:r1281/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_203_item.luc",
+      "source_sha256": "ed2efe1511458a5bc4dc2960881af7873d07ea8520b7121c2d6ea24c0f83078f",
+      "entries": [
+        {
+          "id": "p0/k11",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0136.json:p0/k11; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_204_item.luc",
+      "source_sha256": "5ab397e57bcb12bc03666e6a70bcd1e8c7d584b5f06702fcd0980392874a5c12",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0025.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_205_item.luc",
+      "source_sha256": "5a34c2fc8073630e766386bd3d010d3c59a73341f441b7a63d868e76ae8e0a71",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0028.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_206_item.luc",
+      "source_sha256": "c8a9572095ceed26fb94ff1a847fc9133da9f266da427e37e8b2a3f437150820",
+      "entries": [
+        {
+          "id": "p0/k11",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0034.json:p0/k11; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_207_item.luc",
+      "source_sha256": "80ffeb63f382bb2bf8266e4afcb46b5a10de3dbf8ed41acca00b771f3295994c",
+      "entries": [
+        {
+          "id": "p0/k11",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0086.json:p0/k11; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_207_news_text.luc",
+      "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
+      "entries": [
+        {
+          "id": "p0/k130",
+          "source_text_sha256": "b584040fc56d702d6cc38396fa13fb945935104414751088928e4d3af6963363",
+          "en": "Reports have come in that an unidentified Labor appeared at Asaseo Wharf in the capital in the early hours of this morning.\nAccording to the Metropolitan Police Department officer who witnessed it while piloting an Ingram, neither the model nor its affiliation is known.\nPolice are investigating, including how it was acquired and who developed it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k130; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k190",
+          "source_text_sha256": "0389f8a7fa22729267b74389a2213f64ea5568309220ecf422d7c91b2e54c29b",
+          "en": "In this series, we look back at last year's ten biggest stories from Omoto Trading, the company known for owning numerous warehouses at Asaseo Wharf and distributing all kinds of goods. Our seventh installment is \"Super Solar Trucks Enter Service.\"\n\nOmoto Trading has begun operating large trucks powered entirely by its independently developed solar technology. The solar panels mounted on top of their containers use proprietary technology and are astonishingly capable: even in dim conditions such as cloudy or rainy weather, one minute of charging generates enough power to travel 10,000 kilometers.\n\nOmoto Trading also plans to use this technology to enter the electric power business. Some say this could put every existing power company out of business.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k190; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k192",
+          "source_text_sha256": "7ddf0f2a1830fe53c4540ef2e881529ca6a0eb2292801ce46cd6d1f7c787a4f0",
+          "en": "In this series, we look back at last year's ten biggest stories from Omoto Trading, the company known for owning numerous warehouses at Asaseo Wharf and distributing all kinds of goods. Our eighth installment is \"One Hundred Additional Large Tankers Enter Service.\"\n\nOmoto Trading has added 100 large tankers exclusively for its own distribution operations and put them into service.\nDeveloped independently by Omoto Trading, the tankers offer ample cargo space along with comfortable living quarters for their crews. Skilled seafarers from other companies are reportedly switching employers one after another.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k192; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k194",
+          "source_text_sha256": "7666219217d802e16a5dd5ffa11fe55d37d82a981dcba81968a71059c9654131",
+          "en": "In this series, we look back at last year's ten biggest stories from Omoto Trading, the company known for owning numerous warehouses at Asaseo Wharf and distributing all kinds of goods. Our ninth installment is \"Teleportation Delivery Service Launched.\"\n\nAfter years of research and development, Omoto Trading has finally made a device that teleports parcels practical for everyday use.\nIf it becomes widespread, this groundbreaking technology will allow packages to reach the other side of the world in mere minutes, without being transported by vehicles as they are today.\nFor now, however, it works only over dedicated lines, making the service expensive.\nThe company says it will be possible to connect through an ordinary electrical outlet in two years.",
+          "notes": "English draft imported from audited private workspace, translate-en-0079.json:p0/k194; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_208_item.luc",
+      "source_sha256": "a50bf11c601e28eed4363665e529d6212dc7d30ae460425e234f60b8285f7278",
+      "entries": [
+        {
+          "id": "p0/k11",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0103.json:p0/k11; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_209_item.luc",
+      "source_sha256": "263b03fb2ae49366444e2a729318a159402087eb30f0a8302df3a2c09a2719df",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0067.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_2_item.luc",
+      "source_sha256": "046bfdc7f52c39dcf5c4389607584f0ae9fef15e0422dacd6580871aeca9e334",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0047.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_3_item.luc",
+      "source_sha256": "3e91ca1317874d8b22b846d08b46d05851da1c9dfd1deab67f25c5199d277efc",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0148.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_item.luc",
+      "source_sha256": "a1e4aa7ea98db863d1a72b1a05fdfc66083e09b5e68e1f790e5ea1170b3a10e6",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0138.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_news_text.luc",
+      "source_sha256": "1c575203f6420af477aae10e01c4dffd0fdba46d2940fd05c4ee1d6f99715c7d",
+      "entries": [
+        {
+          "id": "p0/k177",
+          "source_text_sha256": "32959198a458ce4bcbd15e25a4b995e6b0d101fb5d0c35bbde0b1dd9588b0d2d",
+          "en": "Miyato Cinema, a movie theater in Miyato City, is expected to close as early as next month. The oldest movie theater in the city, Miyato Cinema has been operating for 70 years.\nThe extraordinary giant-creature incidents unfolding in Miyato City today have also caused extensive damage around the theater. It is believed that the business can no longer stay afloat, or that the land may be sold in anticipation of redevelopment during reconstruction. Its former owner, Mr. Shirai, was known for his passionate management and had repeatedly saved the theater from closure. However, ownership changed recently, apparently bringing a change in policy.\nOne resident said, \"Miyato Cinema was where I watched movies during summer vacation as a kid, and where I went on my first date with my girlfriend. I'll be sad to see it go.\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0013.json:p0/k177; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_211_item.luc",
+      "source_sha256": "15ae1fa0415a797885adbf42e0f11826e6ff464a13df9312e69bac8921174b81",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0159.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_212_item.luc",
+      "source_sha256": "6c2919bd0a13a6be1426dbd39d414d9c3764b6af22f488de559430cd28a0bc86",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0104.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_213_item.luc",
+      "source_sha256": "0db082f6f146ee6b94e60a82675919544e1404853ad23bc3285935f26daa19a9",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0040.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_213_news_text.luc",
+      "source_sha256": "a3c952d422cdc7c0451ad2f33a6a0b77a27eeb85b87a7c2d082d963470e99ca5",
+      "entries": [
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "ddacdc06ca81345822c05af6bbe662fe19dde2cd17f09c8bc70443d53ba9a301",
+          "en": "Yotsubashi Co., Ltd., one of Japan's leading office-supply brands, has released \"the world's safest swivel chair.\"\n\nCompany president Yotsubashi reportedly oversaw every stage himself, from development through product testing.\nA spokesperson told us that, to ensure users could swivel comfortably and safely during their breaks, male and female employees in their twenties through sixties were required to spend every break spinning in the chair for a month.\n\"It outperforms the competition in every respect, from ease of swiveling to resistance to motion sickness and a comfortable rotation speed,\" the spokesperson said confidently.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k233",
+          "source_text_sha256": "ec1f4c7989549479b5325e341fffdd3eb09d1fb789c4970f0bb626b05f9344b2",
+          "en": "Yotsubashi Co., Ltd., one of Japan's leading office-supply brands, has released\n\"the world's safest swivel chair.\"\n\nCompany president Yotsubashi reportedly oversaw every stage himself, from development through product testing.\nA spokesperson told us that, to ensure users could swivel comfortably and safely during their breaks, male and female employees in their twenties through sixties were required to spend every break spinning in the chair for a month.\n\"It outperforms the competition in every respect, from ease of swiveling to resistance to motion sickness and a comfortable rotation speed,\" the spokesperson said confidently.",
+          "notes": "English draft imported from audited private workspace, translate-en-0134.json:p0/k233; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_214_item.luc",
+      "source_sha256": "3ff526a14abefd3e70ad4fbbd3ccdd9a1d86b3b23d169a7399a07b2ad0a06f94",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0091.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_215_item.luc",
+      "source_sha256": "6d284b0aba2d141e920dc89133e086d3cbb25145a509647cbd7d31cb8f5a0846",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0150.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_216_item.luc",
+      "source_sha256": "e587322f125a03548bfd5c3128fb7e29e8893bd8ee2753bcd09f7255850872ee",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0049.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_217_item.luc",
+      "source_sha256": "14aaa293c30a5b93847866c1af205d88b6b73c07b5d9abb69439082d544ef0be",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0026.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_chr_test_item.luc",
+      "source_sha256": "b03451b263ee30a6f24f6581f98b9dd5d794899db278892dc0862d42f8f114b5",
+      "entries": [
+        {
+          "id": "p0/k11",
+          "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+          "en": "I can almost get ???, but I can't quite reach it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0101.json:p0/k11; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

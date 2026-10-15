@@ -5,9 +5,9 @@
   "source_archive_sha256": "3a54e70d40b57562cbf350028ab8b75ee09c8143f8f1e766cc04bd81ce133966",
   "languages": {
     "en": {
-      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-14\\en\\common.psarc",
-      "sha256": "d341935f6663b37a662d0630b9b32d844f59c6a2d5595c53054edc59696fbb43",
-      "bytes": 6349079299,
+      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-15\\en\\common.psarc",
+      "sha256": "369553c3c10c7816b3b0d035bc2d9a09b6c6f1566028e41db2054ae39fe31f21",
+      "bytes": 6349250029,
       "textures": 59,
       "status": "experimental_partial_translation",
       "runtime_verified": false,
@@ -20,7 +20,7 @@
         {
           "resource": "common/csv/item_data.csh",
           "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
-          "entries": 1394
+          "entries": 1403
         },
         {
           "resource": "common/csv/loading_image_and_text.csh",
@@ -375,7 +375,7 @@
         {
           "resource": "common/lua/stage_207_news_text.luc",
           "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
-          "entries": 114
+          "entries": 118
         },
         {
           "resource": "common/lua/stage_207_npc.luc",
@@ -455,7 +455,7 @@
         {
           "resource": "common/lua/stage_210_news_text.luc",
           "source_sha256": "1c575203f6420af477aae10e01c4dffd0fdba46d2940fd05c4ee1d6f99715c7d",
-          "entries": 72
+          "entries": 73
         },
         {
           "resource": "common/lua/stage_210_npc.luc",
@@ -500,7 +500,7 @@
         {
           "resource": "common/lua/stage_213_news_text.luc",
           "source_sha256": "a3c952d422cdc7c0451ad2f33a6a0b77a27eeb85b87a7c2d082d963470e99ca5",
-          "entries": 81
+          "entries": 83
         },
         {
           "resource": "common/lua/stage_213_npc.luc",
@@ -596,9 +596,99 @@
           "resource": "common/lua/stage_tv_npc.luc",
           "source_sha256": "c9a98da1d1590b2c1a7048026a77ddcc02dd3ba78948b6e30c94ca19a69498b9",
           "entries": 2
+        },
+        {
+          "resource": "common/lua/stage_203_item.luc",
+          "source_sha256": "ed2efe1511458a5bc4dc2960881af7873d07ea8520b7121c2d6ea24c0f83078f",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_204_item.luc",
+          "source_sha256": "5ab397e57bcb12bc03666e6a70bcd1e8c7d584b5f06702fcd0980392874a5c12",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_205_item.luc",
+          "source_sha256": "5a34c2fc8073630e766386bd3d010d3c59a73341f441b7a63d868e76ae8e0a71",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_206_item.luc",
+          "source_sha256": "c8a9572095ceed26fb94ff1a847fc9133da9f266da427e37e8b2a3f437150820",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_207_item.luc",
+          "source_sha256": "80ffeb63f382bb2bf8266e4afcb46b5a10de3dbf8ed41acca00b771f3295994c",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_208_item.luc",
+          "source_sha256": "a50bf11c601e28eed4363665e529d6212dc7d30ae460425e234f60b8285f7278",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_209_item.luc",
+          "source_sha256": "263b03fb2ae49366444e2a729318a159402087eb30f0a8302df3a2c09a2719df",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_210_2_item.luc",
+          "source_sha256": "046bfdc7f52c39dcf5c4389607584f0ae9fef15e0422dacd6580871aeca9e334",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_210_3_item.luc",
+          "source_sha256": "3e91ca1317874d8b22b846d08b46d05851da1c9dfd1deab67f25c5199d277efc",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_210_item.luc",
+          "source_sha256": "a1e4aa7ea98db863d1a72b1a05fdfc66083e09b5e68e1f790e5ea1170b3a10e6",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_211_item.luc",
+          "source_sha256": "15ae1fa0415a797885adbf42e0f11826e6ff464a13df9312e69bac8921174b81",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_212_item.luc",
+          "source_sha256": "6c2919bd0a13a6be1426dbd39d414d9c3764b6af22f488de559430cd28a0bc86",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_213_item.luc",
+          "source_sha256": "0db082f6f146ee6b94e60a82675919544e1404853ad23bc3285935f26daa19a9",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_214_item.luc",
+          "source_sha256": "3ff526a14abefd3e70ad4fbbd3ccdd9a1d86b3b23d169a7399a07b2ad0a06f94",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_215_item.luc",
+          "source_sha256": "6d284b0aba2d141e920dc89133e086d3cbb25145a509647cbd7d31cb8f5a0846",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_216_item.luc",
+          "source_sha256": "e587322f125a03548bfd5c3128fb7e29e8893bd8ee2753bcd09f7255850872ee",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_217_item.luc",
+          "source_sha256": "14aaa293c30a5b93847866c1af205d88b6b73c07b5d9abb69439082d544ef0be",
+          "entries": 1
+        },
+        {
+          "resource": "common/lua/stage_chr_test_item.luc",
+          "source_sha256": "b03451b263ee30a6f24f6581f98b9dd5d794899db278892dc0862d42f8f114b5",
+          "entries": 1
         }
       ],
-      "translated_entries": 13226
+      "translated_entries": 13260
     },
     "pt-BR": {
       "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-02\\pt-BR\\common.psarc",
@@ -635,7 +725,7 @@
     {
       "resource": "common/csv/item_data.csh",
       "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
-      "entries": 1394
+      "entries": 1403
     },
     {
       "resource": "common/csv/loading_image_and_text.csh",
@@ -990,7 +1080,7 @@
     {
       "resource": "common/lua/stage_207_news_text.luc",
       "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
-      "entries": 114
+      "entries": 118
     },
     {
       "resource": "common/lua/stage_207_npc.luc",
@@ -1070,7 +1160,7 @@
     {
       "resource": "common/lua/stage_210_news_text.luc",
       "source_sha256": "1c575203f6420af477aae10e01c4dffd0fdba46d2940fd05c4ee1d6f99715c7d",
-      "entries": 72
+      "entries": 73
     },
     {
       "resource": "common/lua/stage_210_npc.luc",
@@ -1115,7 +1205,7 @@
     {
       "resource": "common/lua/stage_213_news_text.luc",
       "source_sha256": "a3c952d422cdc7c0451ad2f33a6a0b77a27eeb85b87a7c2d082d963470e99ca5",
-      "entries": 81
+      "entries": 83
     },
     {
       "resource": "common/lua/stage_213_npc.luc",
@@ -1211,6 +1301,96 @@
       "resource": "common/lua/stage_tv_npc.luc",
       "source_sha256": "c9a98da1d1590b2c1a7048026a77ddcc02dd3ba78948b6e30c94ca19a69498b9",
       "entries": 2
+    },
+    {
+      "resource": "common/lua/stage_203_item.luc",
+      "source_sha256": "ed2efe1511458a5bc4dc2960881af7873d07ea8520b7121c2d6ea24c0f83078f",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_204_item.luc",
+      "source_sha256": "5ab397e57bcb12bc03666e6a70bcd1e8c7d584b5f06702fcd0980392874a5c12",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_205_item.luc",
+      "source_sha256": "5a34c2fc8073630e766386bd3d010d3c59a73341f441b7a63d868e76ae8e0a71",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_206_item.luc",
+      "source_sha256": "c8a9572095ceed26fb94ff1a847fc9133da9f266da427e37e8b2a3f437150820",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_207_item.luc",
+      "source_sha256": "80ffeb63f382bb2bf8266e4afcb46b5a10de3dbf8ed41acca00b771f3295994c",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_208_item.luc",
+      "source_sha256": "a50bf11c601e28eed4363665e529d6212dc7d30ae460425e234f60b8285f7278",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_209_item.luc",
+      "source_sha256": "263b03fb2ae49366444e2a729318a159402087eb30f0a8302df3a2c09a2719df",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_210_2_item.luc",
+      "source_sha256": "046bfdc7f52c39dcf5c4389607584f0ae9fef15e0422dacd6580871aeca9e334",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_210_3_item.luc",
+      "source_sha256": "3e91ca1317874d8b22b846d08b46d05851da1c9dfd1deab67f25c5199d277efc",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_210_item.luc",
+      "source_sha256": "a1e4aa7ea98db863d1a72b1a05fdfc66083e09b5e68e1f790e5ea1170b3a10e6",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_211_item.luc",
+      "source_sha256": "15ae1fa0415a797885adbf42e0f11826e6ff464a13df9312e69bac8921174b81",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_212_item.luc",
+      "source_sha256": "6c2919bd0a13a6be1426dbd39d414d9c3764b6af22f488de559430cd28a0bc86",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_213_item.luc",
+      "source_sha256": "0db082f6f146ee6b94e60a82675919544e1404853ad23bc3285935f26daa19a9",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_214_item.luc",
+      "source_sha256": "3ff526a14abefd3e70ad4fbbd3ccdd9a1d86b3b23d169a7399a07b2ad0a06f94",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_215_item.luc",
+      "source_sha256": "6d284b0aba2d141e920dc89133e086d3cbb25145a509647cbd7d31cb8f5a0846",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_216_item.luc",
+      "source_sha256": "e587322f125a03548bfd5c3128fb7e29e8893bd8ee2753bcd09f7255850872ee",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_217_item.luc",
+      "source_sha256": "14aaa293c30a5b93847866c1af205d88b6b73c07b5d9abb69439082d544ef0be",
+      "entries": 1
+    },
+    {
+      "resource": "common/lua/stage_chr_test_item.luc",
+      "source_sha256": "b03451b263ee30a6f24f6581f98b9dd5d794899db278892dc0862d42f8f114b5",
+      "entries": 1
     }
   ],
   "entries_per_language": null,
@@ -1218,7 +1398,7 @@
   "runtime_verified": false,
   "original_dump_modified": false,
   "entries_by_language": {
-    "en": 13226,
+    "en": 13260,
     "pt-BR": 94
   }
 }
