@@ -251,6 +251,120 @@
    "en": "Display 1: HP & Stamina",
    "mode": "label",
    "size": 19
+  },
+  {
+   "resource": "texture/stage_title/ST_01.tex",
+   "mode": "title",
+   "stage": "Stage 01",
+   "en": "A Giant Shadow Appears in the City at Night"
+  },
+  {
+   "resource": "texture/stage_title/ST_02.tex",
+   "mode": "title",
+   "stage": "Stage 02",
+   "en": "A Shadow Stirring Underground"
+  },
+  {
+   "resource": "texture/stage_title/ST_03.tex",
+   "mode": "title",
+   "stage": "Stage 03",
+   "en": "A Giant Shadow Looming Over the Bridge"
+  },
+  {
+   "resource": "texture/stage_title/ST_04.tex",
+   "mode": "title",
+   "stage": "Stage 04",
+   "en": "A Shadow That Sneaks In and Steals"
+  },
+  {
+   "resource": "texture/stage_title/ST_05.tex",
+   "mode": "title",
+   "stage": "Stage 05",
+   "en": "A Shadow Born of Uncontrollable Impulses"
+  },
+  {
+   "resource": "texture/stage_title/ST_06.tex",
+   "mode": "title",
+   "stage": "Stage 06",
+   "en": "The Night Sea, the Sound of Waves, and a Shadow"
+  },
+  {
+   "resource": "texture/stage_title/ST_07.tex",
+   "mode": "title",
+   "stage": "Stage 07",
+   "en": "Shadows Locked in a Fierce Struggle"
+  },
+  {
+   "resource": "texture/stage_title/ST_08.tex",
+   "mode": "title",
+   "stage": "Stage 08",
+   "en": "An Ominous Golden Shadow"
+  },
+  {
+   "resource": "texture/stage_title/ST_09.tex",
+   "mode": "title",
+   "stage": "Stage 09",
+   "en": "Clashing Convictions, Colliding Shadows"
+  },
+  {
+   "resource": "texture/stage_title/ST_10.tex",
+   "mode": "title",
+   "stage": "Stage 10 Part 1",
+   "en": "A Shadow Arrives with a Voracious Appetite"
+  },
+  {
+   "resource": "texture/stage_title/ST_10_1A.tex",
+   "mode": "title",
+   "stage": "Stage 10 Part 2A",
+   "en": "A Shadow Soaring High into the Sky"
+  },
+  {
+   "resource": "texture/stage_title/ST_10_1B.tex",
+   "mode": "title",
+   "stage": "Stage 10 Part 2B",
+   "en": "A Shadow Slipping into the Mind"
+  },
+  {
+   "resource": "texture/stage_title/ST_11.tex",
+   "mode": "title",
+   "stage": "Stage 11",
+   "en": "A Shadow Suddenly Right Beside You"
+  },
+  {
+   "resource": "texture/stage_title/ST_12.tex",
+   "mode": "title",
+   "stage": "Stage 12",
+   "en": "A Shadow That Cuts Through Anything"
+  },
+  {
+   "resource": "texture/stage_title/ST_13.tex",
+   "mode": "title",
+   "stage": "Stage 13",
+   "en": "A Shadow That Relentlessly Closes In"
+  },
+  {
+   "resource": "texture/stage_title/ST_14.tex",
+   "mode": "title",
+   "stage": "Stage 14",
+   "en": "An Overwhelming Shadow That Tramples Everything"
+  },
+  {
+   "resource": "texture/stage_title/ST_15.tex",
+   "mode": "title",
+   "stage": "Stage 16",
+   "en": "A Great Shadow Coming Straight at You"
+  },
+  {
+   "resource": "texture/stage_title/ST_16.tex",
+   "mode": "title",
+   "stage": "Stage 15",
+   "en": "A Giant Shadow Descending from the Sky"
+  },
+  {
+   "resource": "texture/stage_title/ST_17.tex",
+   "mode": "title",
+   "stage": "Stage 17",
+   "en": "A City Sinking Beneath Giant Shadows"
   }
  ]
 }

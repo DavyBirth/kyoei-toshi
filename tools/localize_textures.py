@@ -101,6 +101,47 @@ def label(im, text, size):
     return out
 
 
+SERIF = Path('C:/Windows/Fonts/cambriab.ttf')
+
+
+def glow_text(out, pos, text, font):
+    shadow = Image.new('RGBA', out.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(shadow)
+    for dx, dy in ((0, 0), (2, 2), (-2, 2), (2, -2), (-2, -2)):
+        d.text((pos[0] + dx, pos[1] + dy), text, font=font, fill=(0, 0, 0, 255))
+    out.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(4)))
+    ImageDraw.Draw(out).text(pos, text, font=font, fill=(255, 255, 255, 255))
+
+
+def title(im, stage, text, size=50):
+    """Stage title card: small 'Stage NN' line above a large centred title, white with dark glow."""
+    w, h = im.size
+    fontfile = str(SERIF if SERIF.exists() else FONT)
+    out = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    lines = [text]
+    while True:
+        font = ImageFont.truetype(fontfile, size)
+        widths = [font.getbbox(l)[2] - font.getbbox(l)[0] for l in lines]
+        if max(widths) <= w - 70: break
+        if len(lines) == 1 and size <= 40:
+            words = text.split(); best = None
+            for i in range(1, len(words)):
+                a, b = ' '.join(words[:i]), ' '.join(words[i:])
+                m = max(font.getlength(a), font.getlength(b))
+                if best is None or m < best[0]: best = (m, [a, b])
+            lines = best[1]; size = 44; continue
+        size -= 1
+    small = ImageFont.truetype(fontfile, 32)
+    lh = size * 1.15
+    top = 100 if len(lines) == 1 else 72
+    block_w = max(widths); left = (w - block_w) / 2
+    glow_text(out, (left, 44 if len(lines) == 1 else 22), stage, small)
+    for i, l in enumerate(lines):
+        lw = font.getlength(l)
+        glow_text(out, ((w - lw) / 2, top + (i * lh) + (0 if len(lines) == 1 else 4)), l, font)
+    return out
+
+
 def relabel(im, text, align, margin, size=20):
     w, h = im.size
     rgba = im.copy(); px = rgba.load()
@@ -147,7 +188,8 @@ def main():
     for item in table['textures']:
         data = (a.source / item['resource']).read_bytes()
         info, im = decode(data)
-        if item.get('mode') == 'label': new = label(im, item['en'], item.get('size', 22))
+        if item.get('mode') == 'title': new = title(im, item['stage'], item['en'])
+        elif item.get('mode') == 'label': new = label(im, item['en'], item.get('size', 22))
         else: new = relabel(im, item['en'], item.get('align', 'left'), item.get('margin', 2), item.get('size', 20))
         tex = encode_tex(data, new, info)
         target = a.output / item['resource']; target.parent.mkdir(parents=True, exist_ok=True)

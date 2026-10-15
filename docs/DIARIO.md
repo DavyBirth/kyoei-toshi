@@ -1885,3 +1885,8 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
   (NotoSans) sobre o fundo original; tabela translations/textures-en.json (38).
   build_runtime_translation.py aceita --textures-en. Prévia en-07 (13.214 textos
   + 38 texturas) ativa, CheckOnly PASS; en-06 apagada. Visual no jogo pendente.
+- Títulos de fase (texture/stage_title/ST_*.tex, 19) em inglês com Cambria Bold
+  e brilho escuro, nomes de intermission_result_data. Prévia en-08 (57 texturas)
+  ativa, CheckOnly PASS; en-07 apagada. Ideias de Davy registradas: ícones de
+  teclado (mapa em godzilla-core/gpu/pad.cpp; port já detecta modo teclado) e
+  logo em inglês (title_logo.tex; avaliar estética antes de ativar).
