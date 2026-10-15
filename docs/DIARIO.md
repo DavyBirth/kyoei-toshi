@@ -1,5 +1,19 @@
 # Diário do projeto
 
+### 15/10/2026 — salvamento final às 04:18
+
+- Commits 2bf4850 (perfil de cache/identidade), c78a731 (avisos/en-12),
+  35ee43d (portátil/monitor/triagem/relatório). Repositório sem alterações.
+- Consolidado privado publicado, auditoria173 PASS, SHA256
+  7b8d8477c55937cce7e7d6b44f5501552fbf15a052447c58c746c6ccb9e1155a.
+- Última leitura da cota: 38% curta, 90% semanal. Não atingiu a reserva.
+  Encerramento desta rodada após pacote verificável; validação em partida
+  permanece bloqueada pela revisão automática até autorização específica.
+- Monitor de uso será encerrado e desligamento autorizado solicitado somente
+  após salvar. A solicitação efetiva fica em build/overnight/shutdown-request.json;
+  não afirmar desligamento físico observado.
+
+
 ### 15/10/2026 — pacote portátil conferido
 
 - Prévia final en-12: 13.226 EN incluindo pilotos, 59 texturas. Avisos iniciais
