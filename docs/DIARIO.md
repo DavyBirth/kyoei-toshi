@@ -1,5 +1,21 @@
 # Diário do projeto
 
+### 14/10/2026 — inglês atualizado aplicado: en-05
+
+- Davy pediu aplicar o inglês atual. Gerado pacote privado runtime-preview-en-05,
+  10.721 entradas (10.591 do consolidado + 130 pilotos), 117 recursos.
+  Fonte do dump próprio conferida; reconstrução/releitura e prova do arquivo PASS.
+  SHA-256: 1f30e32d5bc9ef518c989358a2cf3e5a809fa5f774a433b0f57f8e51edf7042f.
+  Tamanho: 6.348.282.243 bytes, só 1.757.184 bytes a mais que o common original.
+- Manifesto do launcher aponta en-05; PT-BR preservado em 94. CheckOnly de ambos
+  passou, sem iniciar jogo ou alterar saves. Teste visual desta versão pendente.
+- Davy esclareceu que os 4% eram do Codex, não do jogo ou do launcher. Não
+  alterar a interface por esse motivo. Nenhuma mudança de launcher feita.
+- Após interrupção, pediu identificar modelo anterior antes de continuar.
+  Metadados da sessão atual confirmam gpt-6.1-sol nos turnos anteriores;
+  esforço anterior ausente, turno atual registra low. Não presumir esforço antigo.
+  Tradução completa, revisão de HUD e imagens/vídeos permanecem pendentes.
+
 ### 14/10/2026 — continuação persistente: objetivos, recaps, itens e notícias
 
 - Davy pediu continuar. Quinze lotes de novas traduções (+1.092 EN) e um lote
