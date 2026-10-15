@@ -1,0 +1,1190 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r1147/c25",
+          "source_text_sha256": "eb38e992c64ce61952aa1a2d0a55de1fc66e8ef16cfaa7a15bbecc7c72c04bf0",
+          "en": "Letter from First Mate Oda",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1147/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1147/c26",
+          "source_text_sha256": "f8a1b307137d0ef09a5151ef8b75e6a9fa98a1df4807bdc7447b9b4927147e4b",
+          "en": "A letter from First Mate Oda to Dr. Fukazawa.<br>It is unsealed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1147/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1147/c28",
+          "source_text_sha256": "f8a1b307137d0ef09a5151ef8b75e6a9fa98a1df4807bdc7447b9b4927147e4b",
+          "en": "A letter from First Mate Oda to Dr. Fukazawa.<br>It is unsealed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1147/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1148/c25",
+          "source_text_sha256": "27f789f6873f86dd62f761721e3688e697b33f002330c60eaa00b9b3afabf316",
+          "en": "Letter from Dr. Fukazawa",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1148/c25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1148/c26",
+          "source_text_sha256": "ecaef2a138165a9ad24fb28cbd1d74207aa10d597003de0316ebdfc972500f33",
+          "en": "A letter from Dr. Fukazawa to First Mate Oda.<br>It is unsealed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1148/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1148/c28",
+          "source_text_sha256": "ecaef2a138165a9ad24fb28cbd1d74207aa10d597003de0316ebdfc972500f33",
+          "en": "A letter from Dr. Fukazawa to First Mate Oda.<br>It is unsealed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1148/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1149/c26",
+          "source_text_sha256": "ed893923f3d26e2da7ad2a7d5bb9d21e7785c54d56afa3c3174fabceb9858314",
+          "en": "A photograph of First Mate Oda and Dr. Fukazawa together on the ship's deck.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1149/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1149/c28",
+          "source_text_sha256": "ed893923f3d26e2da7ad2a7d5bb9d21e7785c54d56afa3c3174fabceb9858314",
+          "en": "A photograph of First Mate Oda and Dr. Fukazawa together on the ship's deck.",
+          "notes": "English draft imported from audited private workspace, translate-en-0121.json:r1149/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_203.luc",
+      "source_sha256": "4ee99ba7841105d66fc189a01204cdabadf530192d675b9544a097159bf3d809",
+      "entries": [
+        {
+          "id": "p0/k481",
+          "source_text_sha256": "3d24d6303762426a7da26e0a5650c67d4c7696fd10f8c3b55b7453b093fbdc97",
+          "en": "Fujiwara? Are you... Fujiwara?",
+          "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k481; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k494",
+          "source_text_sha256": "f0c0b446522e7d8d2e4832f940f695c1ec8e20688e697d5f66ded45f802a8fa3",
+          "en": "Fujiwara, I'm sorry, but could you let us through?",
+          "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k494; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k502",
+          "source_text_sha256": "f4ba5499d0af74557c7962acb23fb1b3e422a93fb219fe9f0433709eb25bfe5a",
+          "en": "Fujiwara, Shibata, and Muto... Too intimidating... Run away.",
+          "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k502; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_206.luc",
+      "source_sha256": "ec99884b400f9c1fa52fc68f5636ff7f524e798527101cdfebd6d8c07fefbe56",
+      "entries": [
+        {
+          "id": "p0/k49",
+          "source_text_sha256": "5969d0ee1b5ea28cdd4d317a0999a7b9956516b6f3c2427cba7a4fbd72fc3148",
+          "en": "I often see Dr. Fukazawa by the lifeboat.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k49; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k107",
+          "source_text_sha256": "495f4f794dd85d24dc1a7e917724505791887b4955b16a9f357350fb48c59645",
+          "en": "First Mate Oda is at the stern.\nHe's been sighing back there a lot lately.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k107; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k109",
+          "source_text_sha256": "bf69f0700c64edefa6bd3bc3e6fc0cff1a7828926f21948ad7ca56053f936b24",
+          "en": "Dr. Fukazawa is by the lifeboat,\nup the stairs around the back here.\nPerhaps she goes there for a change of pace.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k109; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k147",
+          "source_text_sha256": "3c76215ae1effc634b80d796174a69139e282c1d89df7ab1bebe93426412b7fc",
+          "en": "First Mate Oda...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k147; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k149",
+          "source_text_sha256": "073ca46e5b738fd026c6af4115983bdafb5e3099be284270953493135170fbac",
+          "en": "Dr. Fukazawa...",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k149; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k219",
+          "source_text_sha256": "6864ce790986479f3dbe6acaae0974f19d9d80a374d6f902b2873d7ed3218956",
+          "en": "Research Vessel First Mate Oda",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k219; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "9d9160102592a713389656bba8363cbe8365a7d8a271fdbae8feb9cfc01e10aa",
+          "en": "What did Dr. Fukazawa say?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k228",
+          "source_text_sha256": "db591140c222d05e4032b7f161704e41a5d2f847ab6511ee0e9e7039b7e0371c",
+          "en": "Please take that letter to Dr. Fukazawa.\nDon't read it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k228; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "0106fe5ff7224e1a65a09462051bd9f29f485b5767975575cc732b667ff86fce",
+          "en": "Did you go and ask Dr. Fukazawa?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "0f5ee708c0536d8cae8c65f494764e765b860c40e376ebaf4e498d32fd048ffb",
+          "en": "Dr. Fukazawa may be by the lifeboat.\nShe seems to like that spot.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k242",
+          "source_text_sha256": "ed651024c41317ef578e95723c37ce76051f1020a246643d7c2b72d460dc6b09",
+          "en": "Dr. Fukazawa",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k242; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k243",
+          "source_text_sha256": "17c4a3d97d63fde9d951597f6897c62a44aa6c51334abee15e5de1de69654dd1",
+          "en": "Oda!? Where is Oda!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k243; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k249",
+          "source_text_sha256": "ec676bd668f5524c09890ae558646f9888d38d7bfbfadfe294fc1eafae0b356c",
+          "en": "Give that letter to Oda.\nDon't read what's inside.",
+          "notes": "English draft imported from audited private workspace, translate-en-0061.json:p0/k249; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k714",
+          "source_text_sha256": "f119f52b2e26b714dd77646c4b39bc188637fb76104eb2d944322556ec7cca9f",
+          "en": "That tough-looking man we met on the bridge... The one they called Fujiwara...",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k714; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k730",
+          "source_text_sha256": "0985adf1f62e74cdc662db7cf1cb497eced3ff3b9ff98d466f40ffc1b9b4931e",
+          "en": "That tough-looking man we met on the bridge... The one they called Fujiwara...",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k730; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k855",
+          "source_text_sha256": "83794f7de01a4406cfd92b9a43a0eec6e6f70ef070abb5308aa46af734f88aa0",
+          "en": "Maybe that tough-looking man we met on the bridge...\nThe one they called Fujiwara...",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k855; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k857",
+          "source_text_sha256": "23e75a0a8caf77331f3055b5fc5ee7b1080287824001121c63c36fdefd8838f0",
+          "en": "Maybe that tough-looking man we met on the bridge...\nThe one they called Fujiwara...",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k857; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1040",
+          "source_text_sha256": "4646452ff999e284334d076ee21ebbf93ea79e95746ee387efe512098d60f2e5",
+          "en": "I'm Oda, the first mate.\nThis ship is returning from a marine biology survey.",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1040; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1051",
+          "source_text_sha256": "f0ca38d6cdafea2726de853435b5c919f4a77d1a29c68675ab6f32a0a1acff66",
+          "en": "That stubborn doctor, Fukazawa!\nAll she can tell us is there's a big shadow on the seabed!",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1051; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1105",
+          "source_text_sha256": "8a160a3669028df7bcb9a1cf588dd14a5cadeac29c03fb95a28fddde03bf0c83",
+          "en": "Dr. Fukazawa, this investigation of the shadow was not scheduled.\nWe should already have returned to port.",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1105; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1115",
+          "source_text_sha256": "22fb78d1f09677dd4a168c9649a04ed2699f25729ea7062c629e8e36cbb78e3c",
+          "en": "This is Dr. Fukazawa, the leader of this survey.\nShe researches marine life.",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1115; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1117",
+          "source_text_sha256": "89a2cab2b8d85fb954e9aadbd58e43d0ec11d04dd77e4dd669cf47abb65967fe",
+          "en": "Hello. I'm Fukazawa.",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1117; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1125",
+          "source_text_sha256": "c425caa55584f8a60852cba905d358e8f0fcb997e9343d06602de57b9a339346",
+          "en": "Dr. Fukazawa, my first concern is the safety of the ship...",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1125; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1142",
+          "source_text_sha256": "d57d49aeb5ae53d5b2c7d3e7667edce6c193db590f132b68fc9ed348d757a7f2",
+          "en": "(Dr. Fukazawa explained the strange events so far\nin chronological order...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1142; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1334",
+          "source_text_sha256": "624fa62cc392ad52fdc58b9a414fc12a5ce529cf3be74d482c7586be003bec14",
+          "en": "(First Mate Oda\nseems deeply troubled about something...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1334; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1336",
+          "source_text_sha256": "cc0160f5f705828825f79a4c33163a186ca77e6a50fd18b95a90a989259f3468",
+          "en": "(First Mate Oda\nseems deeply troubled about something...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1336; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1386",
+          "source_text_sha256": "6cc946bad3bf511d872e765395dfae8b6b27d8f1de93383a74b1c2ae0f321a83",
+          "en": "Dr. Fukazawa?",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1386; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1388",
+          "source_text_sha256": "b81b759c630570860c2eac058ca9402e5c7ac62629e126b72b05be5a553e6388",
+          "en": "Dr. Fukazawa's assistant?",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1388; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1406",
+          "source_text_sha256": "ef8c22915ebfc6fe9d21952d1355d5f828cb4a442e7ff3d5e0d00b44547226a3",
+          "en": "It's Dr. Fukazawa. When I think of her,\nmy chest aches.",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1406; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1408",
+          "source_text_sha256": "f05fd8b4b14e72c9bce06dcad6bc11fa9a0d7fc421558eab292654d2d9bd642a",
+          "en": "The person you love... Is it Dr. Fukazawa?",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1408; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1413",
+          "source_text_sha256": "39977b2e48a61b88e44abd5c5459fe05b2fde9f4309ee8b33c468c990c562875",
+          "en": "The person you love... Is it Dr. Fukazawa's assistant?",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k1413; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1433",
+          "source_text_sha256": "b87089536373bcde961c02f5944d30445e851a56610d8b2c5606d63c4758b181",
+          "en": "This is a photo I persuaded Dr. Fukazawa to pose for.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1433; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1441",
+          "source_text_sha256": "876e271332a56dbecf5e3c74cfe007ee382ac59047b6864f5c498cb20b98e019",
+          "en": "Oh, if you wouldn't mind,\ncould you casually ask Dr. Fukazawa what she thinks of me?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1441; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1443",
+          "source_text_sha256": "45841f03b46af72e71ff360b2e07a0ac5e826d89e1b19b8f79ad9c49c7cf5f24",
+          "en": "If Dr. Fukazawa doesn't think badly of me, I'd like to tell her how I feel.\nI'm sorry to ask something so strange, but please!",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1443; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1490",
+          "source_text_sha256": "ff382a0c755bcfac1b39998601183a18bec15873fe74107eec3f7d790f978dcb",
+          "en": "Casually ask what she thinks of First Mate Oda.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1490; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1492",
+          "source_text_sha256": "a6676f473ac717492eb10a94293120efa208f57ee03b5b1a6994151460349dda",
+          "en": "Ask what she thinks of First Mate Oda with a grave expression.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1492; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1494",
+          "source_text_sha256": "aca98ce5c5f34d0cf2a3ff1f4fa4ef5bda337c866d37b923467b1ebf59e76cf2",
+          "en": "Ask what she thinks of First Mate Oda while chuckling at a memory.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1494; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1496",
+          "source_text_sha256": "eed0481e133dee1f0e941fefb26bc5e9f605994dcce548c5dd5964ec888b9631",
+          "en": "Ask what she thinks of First Mate Oda with a disgusted expression.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1496; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1498",
+          "source_text_sha256": "1b3356a27bc01404a505d446ff3cc4776742c95789176c13e49fe4349e84e482",
+          "en": "By the way, what kind of person is First Mate Oda?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1498; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1501",
+          "source_text_sha256": "bda33445b57bb87751fe4ed1e224ce384916aaeedd7c17a28a75d0de1baf4dac",
+          "en": "Oda? Well, he's serious, polite, and very attentive.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1501; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1505",
+          "source_text_sha256": "f845c46b88fba76633ef81f9af3d6993deda3de04a8816ca2960c041e412dd1f",
+          "en": "...Has something happened to Oda?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1505; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1510",
+          "source_text_sha256": "cd13dd766f1482372eecf4be0034b0c09b2074e82686359b9c4c015ad6715c4d",
+          "en": "May I ask you something rather personal? You know First Mate Oda?\nWhat kind of person is he?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1510; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1513",
+          "source_text_sha256": "3cd3284f7f4ece35644441702791331dc64f0e6c65f1043e27fea47fed087b65",
+          "en": "Oda...? Well, he's serious and always greets me properly.\nHe doesn't seem like the sort to do anything particularly bad...",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1513; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1521",
+          "source_text_sha256": "21b554dcba75ec6d442de020b3187b1c27e8f4190d0d902bad8cb1f178260fb9",
+          "en": "Hee-hee... Sorry. Ha-ha.\nAbout First Mate Oda... What do you think of him?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1521; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1528",
+          "source_text_sha256": "2a3c6b4a61d2755a53da32e0064adf55ee4a357e7f3d5c1787b05eef7ab6278b",
+          "en": "Did Oda do something funny...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1528; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1534",
+          "source_text_sha256": "7139c5687e341eb06b375ca57b36cb23ad4879fadc8b7b860a9d411b2f2bda65",
+          "en": "That guy... First Mate Oda. What do you think of him?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1534; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1537",
+          "source_text_sha256": "ccf71d36d5e73b56b87de227ae72ddf90685e0caa10ec3a994f3fc28aa2b884b",
+          "en": "Oda? Hmm... I don't think he's such a bad person.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1537; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1539",
+          "source_text_sha256": "24adad46d9f5865b9dac97c9449ec6491c032f4736b8c357eba9e9f618de69db",
+          "en": "Did Oda do something wrong...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1539; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1543",
+          "source_text_sha256": "266cf4df92a4db31fd9bec4b7eac28f08c3796167cf0cec9f341875152727a93",
+          "en": "Oda is serious and kind, cheerful and strong.\nHe's dependable. I think he's a good person.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1543; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1550",
+          "source_text_sha256": "c802010d31b74bf3cae556b4b4c7872505f691e43345d93c05726e453e912e51",
+          "en": "What did Dr. Fukazawa say about me?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1550; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1554",
+          "source_text_sha256": "bdb71c012e22e9a692fa12659f3114c6e05cf6610a12e116cc50c1cfd1f7b4b0",
+          "en": "I think Dr. Fukazawa probably likes you, too, Oda.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1554; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1588",
+          "source_text_sha256": "a25b03ec34c456d1543767859086dd652362851ea08785f7372f6b51df3804ce",
+          "en": "Excuse me, could you deliver this letter to Dr. Fukazawa?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1588; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1592",
+          "source_text_sha256": "58ed2d7e4760018678ce017ed8f0aec19cacd2679abf206717b1db5fee6b5556",
+          "en": "Obtained the 【Letter from First Mate Oda】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1592; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1596",
+          "source_text_sha256": "8eb00acdd473c6ee135df0f49e8b7847bdc400cd6280af38836c0b262a11f707",
+          "en": "First Mate Oda wanted me to give this to you, Dr. Fukazawa...",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1596; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1603",
+          "source_text_sha256": "1566bc3eeeff1a89adc4646f2346d3f0399007c561eaae9cd1adf55fd5970dae",
+          "en": "I took this photo with Oda.\nHe was quite insistent...",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1603; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1611",
+          "source_text_sha256": "6d9e571e39bf83a12ef5fdbdd039d1b4ad996c35e8ee81b70476958398ae974f",
+          "en": "Obtained the 【Letter from Dr. Fukazawa】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1611; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1613",
+          "source_text_sha256": "60c731481e50f49a43782332c1a363401e367644773707de86a25d520b6b6da8",
+          "en": "I've been waiting!\nWhat did Dr. Fukazawa say?",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1613; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1684",
+          "source_text_sha256": "2622904229ceec9bfd47e6ec54ecefd9a38f1ad5ced94b56303f86d0895091c5",
+          "en": "Obtained the 【Photo of the First Mate and Dr. Fukazawa】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0063.json:p0/k1684; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_210.luc",
+      "source_sha256": "4d25399f57494444eff5bd384c56c801405fabba95d98a196a56803094b93aa9",
+      "entries": [
+        {
+          "id": "p0/k562",
+          "source_text_sha256": "57ded0847636887ba08a8cd494514eeb68c75f937bf8888ee3c80970ea990d9d",
+          "en": "Oh, if only I hadn't upset Kumi back then...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k562; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k564",
+          "source_text_sha256": "2954343e2bcb2af495c55324adfcdc27910461fa9fb1867d9d1b424683767fbe",
+          "en": "Please calm down.\nI'm sure Kumi is safe!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k564; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k567",
+          "source_text_sha256": "bf4ecfa742f80a2e046860a80c3a8f6f56a4826cccc97790943269447c69bbdb",
+          "en": "How can you know that!? Kumi is outside!\nIf the monster attacked her...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k567; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k569",
+          "source_text_sha256": "7dd39077297e87fa016fab985e3aacbfee0a2756cb590f77b776a8f8eadf9bcd",
+          "en": "And yet...\nOh, if only I hadn't upset Kumi back then...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k569; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k571",
+          "source_text_sha256": "5dece67f735a4f174b386537e2b3b5d3d1231d8229b44ca71eee3be8766226ab",
+          "en": "Wait for me, Kumi...!\nI'm coming to save you...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k571; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k581",
+          "source_text_sha256": "9d2f84653f255ad27721f98cd5fb7d094fa8b7d5b392fcd4d547c40390a3a988",
+          "en": "I was going to propose today, on her birthday...\nOh, if only I hadn't upset Kumi back then...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k581; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k586",
+          "source_text_sha256": "9e6dff7966aae1897fc615ad89e3294cd09c94ec507df1f1958adfcaed50ce53",
+          "en": "No! We haven't lent each other any money!\nWhat I lost was a ring... An engagement ring!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k586; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k601",
+          "source_text_sha256": "5b7a37f2dd57453aae73f97f77ffae1eb92edb7b332b2272d89af1d2f20cb4f4",
+          "en": "Naoki is outside!\nI have to go find him...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k601; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k603",
+          "source_text_sha256": "bb9510992923aec9815bb3528d061342ebc12dc923c9aed716b123614e21062f",
+          "en": "I'm sorry, Naoki... If we hadn't fought,\nwe wouldn't have gotten separated!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k603; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k609",
+          "source_text_sha256": "bab2bf58071d3805e568c6e70bf4961228d94770ba4171eefaa1641e27bc66fa",
+          "en": "You know, a little while ago, a man in red\nwas looking for someone named Kumi...",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k609; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k611",
+          "source_text_sha256": "02c884309894d17c107ea6a22e79a72bfb197b1567b2c2661d755ed7ae002ae8",
+          "en": "Y-you saw Naoki!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k611; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k613",
+          "source_text_sha256": "712d2ba547b6404538c7977b61d246886ef8fe2c2704b34295b3e897705c74dd",
+          "en": "Naoki was badly injured.",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k613; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k615",
+          "source_text_sha256": "4a027b4fc058fd24d4a0bfc412331f7a83ecd48084a4a312b0804ac3d25b7fb2",
+          "en": "Naoki was looking for you despite being badly injured.",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k615; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k617",
+          "source_text_sha256": "7868f74a47aa77cd39fac7f45c338f394e41c41e75f9af5735b059a31ece2534",
+          "en": "Naoki was looking for you despite his serious injuries, and the monster attacked him...",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k617; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k619",
+          "source_text_sha256": "1a10c16bbebb53e5fca6ff4c517eb2afdf7fb1dcc69af5a2bab3943e4954e316",
+          "en": "Naoki was taken away by rescuers.",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k619; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k623",
+          "source_text_sha256": "d68eea7eab6633ee49dca457c7c087c97b7f817e7895c0aa9b4f45a2257d1623",
+          "en": "Naoki...! I have to go save him...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k623; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k628",
+          "source_text_sha256": "1ce9823d7a4b0732a5329247ececfb150b78593a36ee7f08f167ea3cba41d53b",
+          "en": "Naoki was looking for you,\neven though he was badly injured.",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k628; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k635",
+          "source_text_sha256": "9ccfe37644079e4cd6fc894b79068fcee32729754cadf89ba3acbbf2b376f2b0",
+          "en": "Naoki!",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k635; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k638",
+          "source_text_sha256": "82c04e2a0f33b5788a7ef87bbca81173a043f5983ea2724b718607b30292c5de",
+          "en": "Naoki was looking for you despite his serious injuries,\nand the monster attacked him...",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k638; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k647",
+          "source_text_sha256": "ad26b89012fdc5ef4fcf8011ab57229dbdaef4ea2149cf9592edd815bc962916",
+          "en": "Oh, Naoki was taken away by rescuers.\nPlease don't worry.",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k647; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k675",
+          "source_text_sha256": "ea163e2e89684d460cc46c004f1ab6b25b2524b420540b7ac50d50ef6c99e3ad",
+          "en": "Have faith in Naoki.\nI'm sure he's safe.",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k675; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k684",
+          "source_text_sha256": "77541ff08058a69f9f31173277ba56c1044a8976bfb680d53b389bb5f7b75c64",
+          "en": "Naoki...? Huh!?\nUm... Where was he...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k684; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k690",
+          "source_text_sha256": "e5009883437d6917058882dfba58784d4f5841e77394c560b3ee924fdbadfe05",
+          "en": "Kumi!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0157.json:p0/k690; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_210_2.luc",
+      "source_sha256": "aea85d2f9baa389566b12f9064f3f40b673308d0d98af2bc70c024301d1047f3",
+      "entries": [
+        {
+          "id": "p0/k331",
+          "source_text_sha256": "c77ff1a381eb7b3e783b4f8b6a745a786548c19d56e295fbdfae62a4cb4e0179",
+          "en": "A Familiar Woman: Kumi",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k331; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k334",
+          "source_text_sha256": "efd60f9cc814c68c87b88a95aa57da1f5736b4dbe647c8c77b99ad30c0df1c91",
+          "en": "Kumi, the Woman Looking for Naoki",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k334; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k335",
+          "source_text_sha256": "309d4e0b5d4b0a3f7a74836aee99dd4edea66a95d12dfc8e1e4665dac6887b92",
+          "en": "P-please! Find Naoki!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k335; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k337",
+          "source_text_sha256": "17914a02d200cfd29b336c683266614111b32931db653ae2ac64f000dae913ed",
+          "en": "I saw a flying monster catch Naoki\nand bring him here!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k337; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k339",
+          "source_text_sha256": "8a7543bc08392a63ab95b2a6d8dc7c08986ef9a93ef4cde97d975ed831ad95f2",
+          "en": "But a monster attacked me, too, and I hurt my leg...\nPlease! Find Naoki for me!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k339; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k341",
+          "source_text_sha256": "df9da4ae8748531191182a33aff1491fedc023f502ddd59acd08b022b12a2b01",
+          "en": "Tell her you found Naoki?",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k341; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k344",
+          "source_text_sha256": "ba0e4935cadf32427f5a73196c5722f05f36a6f6438700fe78e758016349c1c3",
+          "en": "Tell her you found Naoki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k344; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k348",
+          "source_text_sha256": "4cac5f8dd122ae66dfef994fdbeb21f93e83c29d37a5b4903d1b81e18c9d9ddd",
+          "en": "R-really...!? Please!\nTake me to Naoki...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k348; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k350",
+          "source_text_sha256": "46c4d73abdd2f3223891fbca95bc6437d7805da1d1a6729b79543b82e42fd552",
+          "en": "Oh... Naoki... Where are you...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k350; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k352",
+          "source_text_sha256": "8cc27fa6feec4abf5ae244188ef62fd4700c5dc649c755bae006067bc095eac3",
+          "en": "Carry Kumi on your back?",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k352; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k354",
+          "source_text_sha256": "949a634ee869047c7591508b77db24fbac84d82a59e68d6d206f826097765edf",
+          "en": "I'll carry Kumi to Naoki on my back!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k354; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k359",
+          "source_text_sha256": "63ec242d1e1ccf8a941b8f13e230bd668c91534266d50817cda10dc02c02725f",
+          "en": "Naoki... I can't... move anymore...\nPlease... Please be safe...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k359; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k361",
+          "source_text_sha256": "1f257b8f640c6cd7a6b0f6fdad46e99e8333f4824c0a9e621b881c244b204edd",
+          "en": "Kumi's injury seems to be getting worse.\nI'd better not force her to move.",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k361; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k363",
+          "source_text_sha256": "e3a11a6638683a35aaee7df8072312c63117f4c3b0a3b16dcb627cc6adf6edfb",
+          "en": "Kumi's injury seems to be getting worse.\nI'd better not force her to move...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k363; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k365",
+          "source_text_sha256": "6964da2501aeba33042f21afc5ded44b8aa38dff904ad5bf9459b6c0daad017b",
+          "en": "A Badly Wounded Young Man: Naoki",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k365; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k368",
+          "source_text_sha256": "e4252ee46b23c188d856659d54d73f74e7016dcda1ec06dfa911d1ff8c6827d4",
+          "en": "K-Kumi... Please be safe...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k368; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k372",
+          "source_text_sha256": "7ae04fb7fd9c3a4bd5f1fe8f5cb4ac053233184b088581a3424a417e8d99b421",
+          "en": "Kumi, the Woman Huddled Beside Naoki",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k372; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k373",
+          "source_text_sha256": "85f90287b2955acb961674aa3984600ac6a13d8213c9102b1ce91bfd82dc359f",
+          "en": "Oh... Naoki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k373; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k375",
+          "source_text_sha256": "7fcc83e29d0d580b8b4af706d931011027cf5f9a0412cab275e3f2745520b89f",
+          "en": "I-I'm sorry. Naoki is still...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k375; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k377",
+          "source_text_sha256": "9d28f879fc92b7be5a5d59e9dc1d40a36e9dbe9e4dec02db063e029e31befaf9",
+          "en": "Please! Take me to Naoki!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k377; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k380",
+          "source_text_sha256": "aac8a30b780a4bd614e944e67010c35206ad4cd8f6e10da9f4ca37aaddd16a7f",
+          "en": "Naoki... Rest now.",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k380; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k385",
+          "source_text_sha256": "72ab1b022731a715fd362a23d0b5035fdd6795175d47e35c6c4828e8cd8a8d79",
+          "en": "K-Kumi...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k385; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k387",
+          "source_text_sha256": "ed67b2643c755564774275164a5cd250f865747e238a95de7f27275312fbf94a",
+          "en": "Oh, Naoki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k387; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k541",
+          "source_text_sha256": "5b326766443c4b53e019cd48994922b449171a2755e14fc7c716a41d885b19b8",
+          "en": "Naoki!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k541; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k544",
+          "source_text_sha256": "87a2280478305de58409ec25a16e6638592de65ef37f0b458c7485ea3b8204da",
+          "en": "Kumi...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k544; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k546",
+          "source_text_sha256": "b671b64aca26753946e9681df77b7f466ce1f21c4fcab0a26057378d520e7462",
+          "en": "I'm sorry, Kumi... For leaving you alone...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k546; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k555",
+          "source_text_sha256": "91a2b990b2968100e35573a4ba97aad77e965f376947f0a4844b9ecf9f58ed36",
+          "en": "I love you... Kumi...\nLet's get married.",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k555; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k585",
+          "source_text_sha256": "0c840d380dda5b3c532cb8067a46b62dd83e467bbf6384506980ceb5bafc2bf0",
+          "en": "Kumi",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k585; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k588",
+          "source_text_sha256": "474b1c22e70887c2f8bf7166e0fff5c45911b55bff8c7641836883229b597635",
+          "en": "Kumi! Did a monster bring you here, too?",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k588; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k590",
+          "source_text_sha256": "00657917dc5c3127ba9f8c4855987268008876918887022a02d858e09283bc39",
+          "en": "Yes. I was looking for Naoki, when suddenly...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k590; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k592",
+          "source_text_sha256": "cafb69a7bb95ff4c0dd058354815e804310ccd8727b2837f8c09bd54aa1f5b4a",
+          "en": "Naoki",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k592; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k593",
+          "source_text_sha256": "e6d0b0e2e95e38cd9f58b83f5cef10d4bb5d19ff93e14e6ab4249a302d043b7a",
+          "en": "Kumi...? Is that you, Kumi...!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k593; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k596",
+          "source_text_sha256": "d4e5d7ad41a2bb39b5cdfb0e796cfc236179894b43cc0701dbde4bc780db759a",
+          "en": "Thank goodness. You're safe, Kumi...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k596; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k598",
+          "source_text_sha256": "a7f4d00cf0646518d0d8799c0c346470ccd00d82497958d08cee2ad0f60a85da",
+          "en": "You too, Naoki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k598; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k600",
+          "source_text_sha256": "b2933ad5515f7f29d243bd9c4cff08c343d294474f61e2719df5b4f3747a5b8d",
+          "en": "Oh, Kumi, I'm sorry.\nThere was something I wanted to give you today, but...",
+          "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k600; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_212.luc",
+      "source_sha256": "3af3b860839559bd0e120981237f27c0c97f3c8a265b43dc4801e05214d2c46c",
+      "entries": [
+        {
+          "id": "p0/k116",
+          "source_text_sha256": "9894c854358d2b1d1f53b0a3d08910b6d4c59c346b615d1352a54a08e4eff07d",
+          "en": "I'm a student in Miyato University's marine science department.\nThat book contains a paper by Dr. Fukazawa,\nwhom I really admire.",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k116; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k118",
+          "source_text_sha256": "7686f1dba724793f91a2a2950abebd496d6780670049445864f234cee32239a1",
+          "en": "I admired Dr. Fukazawa and decided to become\na marine biologist myself.\nI'm studying while working part-time, but...",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k118; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k120",
+          "source_text_sha256": "aee753a73ba0c1422278e362c1e393efb1d3132ba472aef02fffe4fae310e4e6",
+          "en": "Lectures and research by day... Part-time work by night...\nMy goal was to become like Dr. Fukazawa, but now\nI'm thinking of quitting both school and work and going back home...",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k120; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k122",
+          "source_text_sha256": "1c81cac17d26fecd88c06beafbbb2a6488a4d56053a2f0568fb1dc92464440a3",
+          "en": "Show her the photo of Dr. Fukazawa obtained on the research vessel.",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k122; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k128",
+          "source_text_sha256": "8e65171145605e596070a015e7660e60dbee024796dec40232ad06e354c00404",
+          "en": "The Clerk Who Admires Dr. Fukazawa",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k128; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k129",
+          "source_text_sha256": "b91a913860098a796439e507d03a5813f10ef6fdf4784cb33432598d0621889e",
+          "en": "Oh! Dr. Fukazawa!\nYou know her!",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k129; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k131",
+          "source_text_sha256": "7d164c33f1b90d0b7db2b1a6b3045368b2e96f5af4cc951f28229f160807695d",
+          "en": "What kind of person is Dr. Fukazawa?",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k131; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k141",
+          "source_text_sha256": "0cc13625e5de3bbfd5b0c59178c3efaeea6719f86f7a84c3290f00900124069a",
+          "en": "I see...\nDr. Fukazawa is just the person I imagined...",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k141; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k144",
+          "source_text_sha256": "9da1497c569fca0b4b576112d36df458b311c6cc421088d8e2b250c908de35ee",
+          "en": "I see...\nI thought Dr. Fukazawa was someone who could handle anything perfectly.",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k144; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k146",
+          "source_text_sha256": "3ff9212a61967d616095a682373812e4cefb9964a8d89f1ee53db0a8b18f8b65",
+          "en": "Hee-hee. I see.\nDr. Fukazawa does seem stubborn.",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k146; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k148",
+          "source_text_sha256": "942f7f2b2278f3f29dd9900c58de140c2dba382c59dfb803b15bd0c93cacb425",
+          "en": "Hearing about Dr. Fukazawa, whom I admire so much,\nhas cheered me up a little!",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k148; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k152",
+          "source_text_sha256": "f1ad327f5ccdf07e27e1c8a1314ed8b2f7fffb71d180138b8f3d7af3c97ac930",
+          "en": "Thank you for telling me about Dr. Fukazawa!\nI think I can keep trying a little longer.",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k152; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_214.luc",
+      "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+      "entries": [
+        {
+          "id": "p0/k55",
+          "source_text_sha256": "e8cfc770e34f4ad5d4acfd18b0cbed054748a7492f6be771a39be64dda696ef4",
+          "en": "Editor-in-Chief Hirai",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k55; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k690",
+          "source_text_sha256": "817079d556ad382ff387022f35fd82622873ae32cbfcb942a6d624f4ed0b2116",
+          "en": "Yes, I'm Hirai, editor-in-chief of Giant Shadow Weekly.\nI'm glad you came.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k690; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k698",
+          "source_text_sha256": "0ac6265ada9e3df10265e799f06a14cb56d28bf2bb820801268dd6c97fc0e16b",
+          "en": "I'm Hirai, editor-in-chief of Giant Shadow Weekly.\nI'm glad you came.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k698; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k726",
+          "source_text_sha256": "7e62980d99834cbbe0a6de67a4a4254931223b27e9dfbe620f642b85b4f78cfc",
+          "en": "How do you and Otsuka know each other, Hirai?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k726; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_216.luc",
+      "source_sha256": "5a841ee447ca8cc328a0432aeccc8f3b3a973f8e5a5ef8617633313ec9b3ad73",
+      "entries": [
+        {
+          "id": "p0/k99",
+          "source_text_sha256": "c0bc96701f3315602ac5f06c23103592d52660dc9552d0767e42ff30839b0918",
+          "en": "Well, if it isn't Fujiwara.\nWhat are you doing here?",
+          "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k99; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k178",
+          "source_text_sha256": "25d83b422be1c1911e07630d0b988d0c5e1d0c331795e4df5f8a12dcbab6dce3",
+          "en": "Come and negotiate alone.\nIt would be difficult to talk with that man Fujiwara around.",
+          "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k178; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/mission_text.luc",
+      "source_sha256": "2aee79fe9a3c37c9672cc108ecc31d2e65d74f3d138592269420b8c674a88800",
+      "entries": [
+        {
+          "id": "p0/k114",
+          "source_text_sha256": "3be5d0b78b2b9bd183ef4ee467de22caacc2f7ff5afa2385311c5560496bef38",
+          "en": "While escaping from the flying monsters, I met a badly wounded young man in the back of a truck. He said a monster appeared after he fought with his girlfriend and they parted, and he lost sight of her. Apparently, her name is Kumi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k114; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k116",
+          "source_text_sha256": "3d4074d26218d6257d7d8bfd763130f210ce299d8193a36a2e26f31671202d69",
+          "en": "I met Kumi, the girlfriend the young man said he had become separated from. She deeply regretted fighting with him; apparently, his name is Naoki. I parted ways with her afterward. Has she managed to find him again...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k116; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k119",
+          "source_text_sha256": "d541e8d40df16de5fa818c24eafd028f5777ac72dd0e0e243ec1897fbb44fb70",
+          "en": "I met Kumi again.\nShe seems to have hurt herself and cannot walk. She asked me to find Naoki for her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k119; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k120",
+          "source_text_sha256": "eace46ae5f25cd1c6bc16ae2394c9ed84c7851fa10489f1679de748b742e5917",
+          "en": "Naoki was badly injured when I last saw him.\nIs he safe now...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k120; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k121",
+          "source_text_sha256": "e596400c72618c693b6a389842e1dbcbc68976cec25ee36e2c8f2f4b406785e7",
+          "en": "I found Naoki. He is indeed badly injured.\nI should tell Kumi.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k121; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k122",
+          "source_text_sha256": "bd2fcc70fe0293e1d7270b8cc236bbad3ce1006b1320319c8b7b09ceb1f71108",
+          "en": "I told Kumi about Naoki.\nI'll carry her to him on my back.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k122; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k123",
+          "source_text_sha256": "0af851e2c942aafb01b6e5560c638f660ff1fb0149b73101719a906c4fddadb1",
+          "en": "I witnessed Naoki and Kumi make their vows.\nWith a trembling hand, Naoki slipped a ring onto Kumi's finger.\nThey seem to be resting now.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k123; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k245",
+          "source_text_sha256": "e4277b55c45e42aa418ea4746bb21e27fa10c3eed83cfec178a002cc6c316749",
+          "en": "The research vessel sank. A photograph of First Mate Oda and Dr. Fukazawa was floating on the sea.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k245; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k249",
+          "source_text_sha256": "0ad9c642a161b44f28bfaeaf651ee12d6e77500f8dd02ee3855f28dbc3cb57be",
+          "en": "First Mate Oda seems interested in Dr. Fukazawa. I agreed to help him with a request concerning her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k249; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k250",
+          "source_text_sha256": "2b54791ed52f56bc0fc670b2eb2abbe51270d8797cb1ea5d57608408c6c34409",
+          "en": "First Mate Oda asked me to find out how Dr. Fukazawa feels about him. Apparently, she is near the lifeboat.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k250; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k251",
+          "source_text_sha256": "97eabc91c914190f32236c48b9ec3c78642737c696a7ae7a10ee9da2d388408e",
+          "en": "Dr. Fukazawa seemed fond of First Mate Oda. I must tell him.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k251; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k252",
+          "source_text_sha256": "a2e1c6c44299c8dbc2515735cb90d049f7f9019da1f5fe3b980f9a6b1d175802",
+          "en": "The first mate has apparently decided to take the plunge and give Dr. Fukazawa a letter. I'll deliver it to her. Incidentally, the letter does not seem to be sealed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k252; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k253",
+          "source_text_sha256": "ba277857bdb0bebc9e4db213c514e0c215d28db8b6352b689bae075ec20e196b",
+          "en": "Dr. Fukazawa entrusted me with her reply.\nI must deliver it to First Mate Oda. Incidentally, this letter is also unsealed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k253; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k254",
+          "source_text_sha256": "8f5fe3c6d5b9df154428146b79f9866505e7c30c78fda707a729399e7f853127",
+          "en": "I gave First Mate Oda Dr. Fukazawa's reply. Apparently, they will meet at the bow tomorrow morning, where she will tell him how she feels.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k254; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k299",
+          "source_text_sha256": "28ff01e12e28cda18c43c9bb08edf93a0df721d4033d0841229a8e2f64e82edb",
+          "en": "I am to meet up with Mukojima, a member of Editor-in-Chief Hirai's staff. He is reportedly at a convenience store west of the Ebine Publishing building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k299; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k303",
+          "source_text_sha256": "450bc989e2a5e0f62b20ec5f1df7e7565488cef8f6e4cb9a0130ace5316ca6d6",
+          "en": "I met up with Mukojima, who was frightened inside the convenience store.\nAn email from Otsuka says W&P still exists.\nParting ways with Editor-in-Chief Hirai and the others, we head for Mizuna City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k303; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

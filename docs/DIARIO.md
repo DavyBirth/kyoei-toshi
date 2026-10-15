@@ -1,5 +1,25 @@
 # Diário do projeto
 
+### 14/10/2026 — conclusão solicitada: nomes destravados pelo próprio dump
+
+- Davy pediu concluir, sem encerrar a cada checkpoint. Continuação em curso:
+  +444 EN desde 10.939, total 11.383/16.100, 4.717 vazias. Não concluído.
+- Falas/variantes de Yuki, epílogo, resgates, torre, navio, objetivos, cartas,
+  notícias integrais da torre e de Mizuna. Adições12/13/14: 217/161/66 EN.
+- Evidência interna importante: map_goal_text.luc k174 contém a chave
+  MAP_GOAL_212_TO_MIZUNA_CITY e k175 seu destino JP. Usar Mizuna City, sem
+  supor Mitsuna. place_text/place_data e scripts 212/214 corroboram MIZUNA.
+- Leituras em recursos próprios: CHR_042_F_Fukazawa, CHR_041_M_Oda,
+  CHR_034_M_Fujiwara, CHR_279_F_Hirai, CHR_273_F_Kumi (motion/NPC/head).
+  Naoki em stage_210_npc.luc k614/k1238 e loading_image_and_text.csh r72
+  no mesmo encontro com jovem ferido. Sobrenome não autoriza adivinhar prenome.
+- Mukojima: libnpc.luc k408-410 e stage_214_npc.luc k88-90 usam Mukoujima;
+  forma editorial omite vogal longa, como os demais nomes. Arquivos de voz
+  usam também mukousima; preservar evidência para revisão humana.
+- Auditoria dos 173 JSONs e reconstrução/releitura das 11.383 EN PASS em
+  117 recursos. en-05 segue aplicada em 10.721; nenhum jogo iniciado.
+  Próximo: artigos de figurinos 0154, nomes restantes, revisão transversal/HUD.
+
 ### 14/10/2026 — continuação das notícias da Sky Garden Bridge
 
 - Após o checkpoint anterior, três lotes de artigos completos (+51 EN), mais

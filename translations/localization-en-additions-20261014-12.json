@@ -1,0 +1,1564 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/staffroll_image.csh",
+      "source_sha256": "a604b3cc1a4fb1abc9d69a2d0f64e77d7a14f9c804a0486dc41afdce317457db",
+      "entries": [
+        {
+          "id": "r40/c7",
+          "source_text_sha256": "cd5b2277deabefd0e2b7bea0c892a2ff762ebfecc6a0c8241fcb6ff6a95ce79a",
+          "en": "Fearing the shadow hunting me would catch her family in its attack,\\nI teleported far away, to a small boat out at sea.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r40/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r48/c7",
+          "source_text_sha256": "0f393ad542155918e436c1acac5d43eddb38e64ae2525edf51b474202431a933",
+          "en": "But she came to think of you as someone she wanted to protect,\\neven at the cost of her own life.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r48/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r50/c7",
+          "source_text_sha256": "1c582222bacbf6369c93f1f92129252fa3a34f7b072429fe2ad97a8c655516fd",
+          "en": "You abandoned her despite those feelings,\\nbut I was relieved to learn afterward that you wanted to apologize.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r50/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r51/c7",
+          "source_text_sha256": "5cc327e231e9fbda6b64adf3947885b73e01ebe81c35e5c099cbf69df0f24308",
+          "en": "You abandoned her despite those feelings,\\nbut I was relieved to discover how strongly you wanted to see her again.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r51/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r52/c7",
+          "source_text_sha256": "1f8f79b7b907e2340116c4752fafa92ac20f3957afad301ef1d313efe1dcef3b",
+          "en": "You abandoned her despite those feelings,\\nbut I was relieved to learn you missed her enough to cry.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r52/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r53/c7",
+          "source_text_sha256": "36241ebb1136618b9c31550e66ff2503e5166a212b685a1e1a0aa5aaff1655db",
+          "en": "You abandoned her despite those feelings,\\nbut I was relieved to learn you wanted to hold her and never let go.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r53/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r54/c7",
+          "source_text_sha256": "bf857cf00811fcd59902f452e37c801a2d1d6715b00883d69abca4c658658fe1",
+          "en": "You abandoned her despite those feelings,\\nbut seeing you prostrate yourself before her made me pity you instead.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r54/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r55/c7",
+          "source_text_sha256": "3dc4ddd97653157d6000f8c0236455cff6645abfe6cbee5af5b3df181c3dd9e9",
+          "en": "You abandoned her despite those feelings, but for some reason,\\nyour intense desire to kiss her convinced me at the time.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r55/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r56/c7",
+          "source_text_sha256": "7a20a5d3de11a8622480a3ff2c3f0e4deb227d40b5904febb89619e1cf5eeca8",
+          "en": "When you pointed to the web writer in that eerie research institute,\\nI felt I had seen your honest, unvarnished self.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r56/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r58/c7",
+          "source_text_sha256": "d19378ff5636ac6b682e471e15785d60b07dc3dc65f06f78eb1dcdb2706e9567",
+          "en": "When you pointed to yourself in that eerie research institute,\\nI found you dependable, but was also a little worried.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r58/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r61/c7",
+          "source_text_sha256": "e70d017f446761cfefd8d7f33f7458c27f3dc2579c0d443a9c8365075263a663",
+          "en": "The ingenuity and obsession with which W&P sought to use that 'power'\\nwere a threat unlike the shadows I had known, something entirely new...",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r61/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r64/c7",
+          "source_text_sha256": "aa367317075e6344f5980a142e305f240a44629d081d144eca2266be60bb8115",
+          "en": "When you handed Yuki over to W&P to save yourself,\\nyour conflicted thoughts were also very intriguing.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r64/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r74/c7",
+          "source_text_sha256": "48423040f3d213cf1a3b23a09f0576104170037e830f30f214b89bf1c10a839a",
+          "en": "Produced by Bandai Namco Entertainment Inc.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r74/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Heroine.luc",
+      "source_sha256": "ad9f923db70f61116204eba07b48f2e4b368a7ae0f994fbaebef93d002c9ff54",
+      "entries": [
+        {
+          "id": "p0/k638",
+          "source_text_sha256": "069f3ee4a17f439f7d24a5b104a5230d6ea1201ae739bea0bfa59b6a39060807",
+          "en": "We need to take Kashiwagi's delivery to the research institute.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k638; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k652",
+          "source_text_sha256": "37563b16e2eec7548e0eb6ec27e6345d748ac612456b48f87a5139ff6c594818",
+          "en": "I wonder if Kashiwagi hurt her leg... I'm worried about her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k652; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k686",
+          "source_text_sha256": "2c2d96bbd4d63ca6cb8bb2eab426e74075a12be5e57906b9cb91aaedc182e9b8",
+          "en": "Act cool and say, 'I can endure anything if it means protecting you, Yuki.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k686; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k694",
+          "source_text_sha256": "41de4d70580d065542b3e9a2d5635100cac2f8372d61f304a967c02842140eff",
+          "en": "Say with misty eyes, 'I can endure anything if it means protecting you, Yuki.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k694; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k735",
+          "source_text_sha256": "2e2506350909aa023d0aa31dc3c96f23096f7db4958d508f7f494b9e0fff3b77",
+          "en": "Blame Yuki: 'You got hit because you didn't dodge properly.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k735; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k742",
+          "source_text_sha256": "7f2d0a77a5e51f0ff7735a4f061eaf88d01235ae82bdf438ddc2ba9084cd5579",
+          "en": "Blame Yuki: 'You got hit because you didn't dodge properly.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k742; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k758",
+          "source_text_sha256": "0867397d0f00b9739d3aee8baf4a4c66d964bd26d07ea45fc6ee80322f606be2",
+          "en": "The deputy director who needs the delivery Kashiwagi entrusted to us\nis somewhere in here, right?",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k758; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k800",
+          "source_text_sha256": "717895fe9b53eca8836c50f24999dc7b331a9a74ff17abaef9073cdb145ad985",
+          "en": "I'm worried about Risa...",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k800; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k822",
+          "source_text_sha256": "3fbdfd1367c2fcbe6dcb278db4f70e3083f1c368891bc6ba6adc8615bc2ab82f",
+          "en": "Where could Risa be...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k822; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k824",
+          "source_text_sha256": "75d48cb60837b0f29a8077a5593a924238cec958e7d386ee90f8627f6a29d7b0",
+          "en": "Risa, I'm so glad you're safe.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k824; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k838",
+          "source_text_sha256": "bb11c3c6ee82ab4f0d116069656093d953c627782726c2eb1f5d05e0696b3677",
+          "en": "Encourage Yuki: 'I'll get you out soon.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k838; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k840",
+          "source_text_sha256": "defe312705992d223725afe62f6a1b6d889b63856db3b7f05206da279be1520a",
+          "en": "Encourage Yuki: 'I'll get you out soon.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k840; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k842",
+          "source_text_sha256": "2d523ce6915bfa80768ea50a2c7b38c2bcdea490cfbebb139de9ae41076d194a",
+          "en": "Tell Yuki hopelessly, 'We're done for.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k842; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k844",
+          "source_text_sha256": "cd1b5949ce0ac8c4dd8b887dfe7effcc20b7c893f9a2a82795b500ca0e9ed172",
+          "en": "Tell Yuki hopelessly, 'We're done for.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k844; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k846",
+          "source_text_sha256": "5472a056e06e62add0c1a0d25d32fbf8103c65c0b61c21b2a87d074aae51dfb5",
+          "en": "Ask sarcastically, 'Why aren't you looking, Yuki?'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k846; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k848",
+          "source_text_sha256": "a4f6629d035ca5a4e51fc1c5249b36fa9b2adb5a9e619c10db783cccf3f48a6d",
+          "en": "Ask sarcastically, 'Why aren't you looking, Yuki?'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k848; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k850",
+          "source_text_sha256": "1b344be5ab491b5e9022bfe2603a5e639ca685b8cb864a6cb2e2cd03424f3e4d",
+          "en": "Ask Yuki what she thinks.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k850; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k852",
+          "source_text_sha256": "47c25e155a7ebc26d4a8093593f18d55d8bdc78343be7d594caf3f4db0e40adf",
+          "en": "Ask Yuki what she thinks.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k852; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k986",
+          "source_text_sha256": "815915d4e69f6492876e5e5d16d71aeb3421b6d334c3fe695592b34b23cf776a",
+          "en": "Pour your heart out: 'I want to stay with you forever, too, Yuki!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k986; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k994",
+          "source_text_sha256": "5d4a37e791bf940107b04a315917c052aa34a747288ac039bc7ca8667f463742",
+          "en": "Pour your heart out: 'I want to stay with you forever, too, Yuki!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k994; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1020",
+          "source_text_sha256": "d338215cbd73b8f5d8d1703fcf286feac5fc49473bdb8673be91f8eaf03a7860",
+          "en": "(Yuki's clothes are pretty badly damaged...\nWe've been through so much getting here...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1020; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1022",
+          "source_text_sha256": "3a2560214e0c3bf578d0bd7527d6b73c8d59a42528f2b7efe7cc92d8261f3e37",
+          "en": "(Yuki's clothes are pretty badly damaged...\nWe've been through so much getting here...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1022; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1091",
+          "source_text_sha256": "f707456507f5469f359501aa5ec13c0b6b00b0aa33b12331a63a9c32f32b7342",
+          "en": "Suggest changing into the Toro Costume.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1091; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1093",
+          "source_text_sha256": "b026541d17eeb6db70f5bcf463ff0be42b70bba46f0bd04ab8dc203d2afbdcc8",
+          "en": "Suggest changing into the Kuro Costume.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1093; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1095",
+          "source_text_sha256": "da8add222a96e858a0ae7ae6812115999ce260b3d43f6505202967bc841f52d4",
+          "en": "Suggest changing into Hikari Miyamoto's Costume.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1095; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1103",
+          "source_text_sha256": "4f315b2ec48862576935d1a547cc654c510ba853801d60db799f3d00f78ba6b0",
+          "en": "Suggest changing into Risa's Date Outfit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1103; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1154",
+          "source_text_sha256": "412b3f2c226f1980e4b5d867484cc2cec751941763ebb2e59cb4ed3f7a6559ae",
+          "en": "I tried on the Toro Costume.\nToro looks so cute hanging onto my arm.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1154; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1156",
+          "source_text_sha256": "2a86a73682264ccd13e8afbc90144a848527bd83faeabc39b7936e29dd7d0430",
+          "en": "I tried on the Kuro Costume.\nKuro looks so cute hanging onto my arm.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1156; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1158",
+          "source_text_sha256": "e065ce22553651be9a8bc8ae78e29d185c8253b4697237f219f0d8575c397470",
+          "en": "I tried on Hikari Miyamoto's Costume.\nYou'll have to be my tutor. Hee-hee.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1158; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1164",
+          "source_text_sha256": "1243b72b16c0bce218d714bebe72e71d36a09e8aa6f30d29298b22198ed2ef86",
+          "en": "I tried on the Gz Logo T-Shirt.\nI feel like I'm on the Granzella staff.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1164; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1166",
+          "source_text_sha256": "0e1a73ce59bb6282eada0bbbf495c4a5ec99cf380465a6d5317b9e172bcc211b",
+          "en": "I tried on Risa's Date Outfit.\nTreat me like I'm Risa. Hee-hee.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1204",
+          "source_text_sha256": "ff857ef9d843109ed1b6a1d5c9102ecb6f652cfdd62bae0eac82fe16d482cefd",
+          "en": "Where's the Ebine Publishing building?",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1204; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1226",
+          "source_text_sha256": "84cf5fc94c6482a08f434e2b0391846fe2c531e68179aac097882f6ddf33700c",
+          "en": "Risa is so kind, always looking out for us.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k1226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_202.luc",
+      "source_sha256": "88cb6fa67d7c5988d44c1af7be81289d01e078dfe2f978734c2d3fe947086766",
+      "entries": [
+        {
+          "id": "p0/k631",
+          "source_text_sha256": "b26daa22519aa1ef01444f41168ddd374a57abae3b026e3fa3c88741d58be3c4",
+          "en": "I wanted a hamburger...",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k631; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k655",
+          "source_text_sha256": "2b29aa5bad6c8e99c0be182d43ad82e0e42e366e3062627c7af5323dcb2fec01",
+          "en": "That's not true! Daddy will come back for a hamburger! He'll come back to see me!",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k655; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k657",
+          "source_text_sha256": "6e2f98e099ef910dba12360d9c7cd97c721e4226c78be319233b0e66ae01f435",
+          "en": "No! I love hamburgers and Daddy!",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k657; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k663",
+          "source_text_sha256": "2ee73e49eb23a7cefc121f07eb503f5950c3c6a43c9d934e260c5479d34d5931",
+          "en": "I can't wait to have GZ Burgers\nwith Mommy and Daddy...\nI have to find a hamburger...",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k663; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k801",
+          "source_text_sha256": "0a552133b93bb5b478e6d9591a415e1c40787f18f6c0c5d85434b58d17c8db53",
+          "en": "If you see her, could you tell her\nMisaki is waiting here?",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k801; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k809",
+          "source_text_sha256": "bdca9456966289aafe654b653e7e382522fa77bb9771f7e847508a53bdf98e3f",
+          "en": "Misaki",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k809; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k810",
+          "source_text_sha256": "3b7a4f5f5d8db860d07decf2b60aa7a16d6305fed78ee7fb7091f50d49d157c7",
+          "en": "Thank you!\nOh, her name is Nanami.",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k810; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k814",
+          "source_text_sha256": "ff3f8fb3873c62f9af477d80eccdfeec0a358555519ecbd7354d2d173f7d98dd",
+          "en": "If you see Nanami,\nplease tell her I'm waiting here!",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k814; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k818",
+          "source_text_sha256": "b3405aca4e501c0df9be51752a41fee5ad4a505a1604638dd38b84dcb819d4c8",
+          "en": "If you see Nanami,\nplease tell her I'm waiting here!",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k818; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k820",
+          "source_text_sha256": "bac4106a5648a45dacaa9306c69e215a44856a5154acbb66fd6f2fae4b022cce",
+          "en": "Tell her you saw Nanami at the café.",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k820; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k822",
+          "source_text_sha256": "bfd17aa560686cffca8b4a55186f8505c46813d822a9872153dad080b7113964",
+          "en": "Don't mention seeing Nanami.",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k822; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k825",
+          "source_text_sha256": "589bc3edd209929921e1226b6e66482f1fbd6fdabde6dce072ace3f82836edcf",
+          "en": "Nanamin!\nWhat happened to your leg!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k825; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k827",
+          "source_text_sha256": "f069e5595ad6570b3f2bbc7a6cff49bde6aa1d5fa7ade9b73338fd224e7291f2",
+          "en": "Nanami",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k827; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k841",
+          "source_text_sha256": "f452643bbf67a32ad0fb4c71e26ce6709e023141419c2309619e285202cdcac9",
+          "en": "Call out, 'You're Nanami, right?'",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k841; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k845",
+          "source_text_sha256": "d717bbefa8cfe1cbbb022e90bed58bdafe036ba1f99dd48c4f4accae77e7361b",
+          "en": "Huh? Yes, that's me...\n...Misaki? ...I see. She's waiting...",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k845; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k851",
+          "source_text_sha256": "c9d204a025f0ac4f0139771eb150c436084802499bed271ea6cc9c93a154e89c",
+          "en": "Carry her on your back to Misaki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k851; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1156",
+          "source_text_sha256": "c3739a6d909992bc894b4cd9e58210cc220100e31e3ce388ba8ec3799d553d6d",
+          "en": "Nanamin!",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k1156; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_204.luc",
+      "source_sha256": "24e892d1979af5bca0df524f6cb06002166ee4099db4f1038492d5df53712ad2",
+      "entries": [
+        {
+          "id": "p0/k12",
+          "source_text_sha256": "1fedb1dcce276ba0172feaa4e5478f97c8e399ffd69ebeb0856db69e026bd1ef",
+          "en": "Café Iberis Staff",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k12; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k20",
+          "source_text_sha256": "62302c0c49781d24ba11b8d25447e77f85924748558e178a7602af2a1b5884d1",
+          "en": "NKX is fiercely protesting the waterfront development, huh?\nMaybe this place is in danger, too...",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k20; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k23",
+          "source_text_sha256": "c366e50abd9d9e761feb6762ebfaef789cd13e89de49cb011d8d47787f2ec688",
+          "en": "Ask about NKX.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k23; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k27",
+          "source_text_sha256": "c3e0e2ddcd22be9717760bbe1e7ebaaae55fd5ed065c9d74e993c34a34665b9a",
+          "en": "NKX is the name of an environmental group that appeared recently.\nThey use Labors to carry out radical protests.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k27; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k42",
+          "source_text_sha256": "24b0c9a1c4b15f0d6f8ff21d6876d1b3876d3ca97a63e74e66a35b18ec2025df",
+          "en": "It's a general contractor headquartered here in Miyato Prefecture.\nYou know, the company awarded that waterfront development contract everyone's talking about.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k42; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k47",
+          "source_text_sha256": "51a632075ec84396a0d9fa7026b1a61c613cfd3453c2de0ae23d9d74f69628ad",
+          "en": "A Labor was taken up to the roof a little while ago!\nWhat on earth are they planning...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k47; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k87",
+          "source_text_sha256": "5af2e0ab35bca9e9b75ff5ca32476c69711e861d36616c11065d6da6ec76d932",
+          "en": "Welcome to the Iberis Tower Building observation deck!",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k87; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k110",
+          "source_text_sha256": "24a6796a49b24f36123cd16224d88072b23a1632445fba729ded678c83b88554",
+          "en": "Apparently, they're angry that the Iberis Tower Sandwich is sold out.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k110; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k112",
+          "source_text_sha256": "b1648b6e7d5a826faa347a0a8b82eccb61b4d72c2c9040304ada43ca7bf702c1",
+          "en": "Ask about the Iberis Tower Sandwich.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k112; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k126",
+          "source_text_sha256": "ef6a88685201024adf7ef18ebb2d60c125e0e8aff04bca71af1f15c86ffbff7c",
+          "en": "Hey! What do you mean\nthe Iberis Tower Sandwich is sold out?",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k126; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k141",
+          "source_text_sha256": "93760d59293a2a2e3c5f4de3276cb92042c43eaf7bc9e23c5eb58f42913b0134",
+          "en": "Remember: 'That's right! Back on Sky Garden Bridge, I was asked to...!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k141; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k190",
+          "source_text_sha256": "c65381234233b41705955392f630356fedcb5394bd94b602a7d50f208391f5ff",
+          "en": "Ignore them, assuming they're talking to Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k190; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k192",
+          "source_text_sha256": "da2b46ddcd30db2ea48b1bc22842a1233ddcce89ac1746b530ac56249eee4b79",
+          "en": "Ignore them, assuming they're talking to Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k192; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k196",
+          "source_text_sha256": "5a20584a89b1ead2c486af4ae7dad3e7a68de42e99af5cde67c2522705bbc092",
+          "en": "I heard a giant creature destroyed part of the city in Sakura Ward.\nThat got me worried.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k196; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k212",
+          "source_text_sha256": "09b80ad998e2df7323c9d00922c0016e2ba401a9c0bdbe273960380bd1bd9993",
+          "en": "Yuki finished her 【Blended Coffee】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k212; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k214",
+          "source_text_sha256": "4b76bca253c496ea4228367df139eecd903f07bb45c9004697a8db2a894f0cd5",
+          "en": "Yuki finished her 【Blended Coffee】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k214; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k216",
+          "source_text_sha256": "47bff993becd91742cda4d3b267383792db12433e7458f2b49351cd01ddfab64",
+          "en": "Whew... Have you heard? Just now, over in Sakura Ward,\npast the waterfront area, a giant creature was destroying the city...",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k216; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k218",
+          "source_text_sha256": "54f22c217f6a584e11ba91202aa8e3234038338acd23c318a790cc9da12c2f16",
+          "en": "Apparently, it's true. Actually, I run a small apartment building\nnear there called Sukima Apartments No. 2.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k218; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k224",
+          "source_text_sha256": "b64192e9a1a340f83c1967ed77632638a144df380587cbb62296b9d17c404bd0",
+          "en": "Buy Sukima Apartments No. 2 for 60 million yen.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k224; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k240",
+          "source_text_sha256": "37e6051728f7617d4073a03adc0b0f620734f8aa844d66faceb54f6dbfa354c7",
+          "en": "Obtained the 【Deed to Sukima Apartments No. 2】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k240; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k242",
+          "source_text_sha256": "4dfbc8f123346d4dc8201acb97431779d6dcee81b565dbc8380302872ff1c58f",
+          "en": "Sukima Apartments No. 2 is yours now.\n...Um, may I ask you something?",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k242; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k244",
+          "source_text_sha256": "75e9ab406d1486656bad233b28c61df43d579cd8580048f639e780c0fb460856",
+          "en": "What are you planning to do with Sukima Apartments No. 2?\nYou see, I am rather attached to it, so I was wondering...",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k244; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k256",
+          "source_text_sha256": "be83250703dadd2e853ec3fa1ce0d98640a3a7135d626acf9c05052fd01b146d",
+          "en": "Please take good care of Sukima Apartments No. 2.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k256; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k288",
+          "source_text_sha256": "6b57a64498b06b7cc14d2de2ef2b994c280477031824e7f26f78b8c8ac6f7b46",
+          "en": "A poster for a construction company.\nApparently, it's very well known in Miyato Prefecture.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k288; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k434",
+          "source_text_sha256": "467d0320a184ee08203e5f071e8dedd0e5c51e9893e1cbc097a881458e3714f1",
+          "en": "Ugh... My Iberis Tower Building...",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k434; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_210_3.luc",
+      "source_sha256": "1c3e9ed7336488e9eed7d6af8656355b1d2659f08b5f5292034e95880efa9579",
+      "entries": [
+        {
+          "id": "p0/k19",
+          "source_text_sha256": "5b48d149a84f4bf9a2e8f363931f226f8f48f60e0ab652615408e1d786131f32",
+          "en": "Back then, Yuki shoved me out of the way\nto save me. And yet...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k19; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k21",
+          "source_text_sha256": "16177b0cd9f453ecd664ffaa8a222947454313685e7eebc6962706c42787c563",
+          "en": "I abandoned Yuki...\nEven though she was trying to save me...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k21; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k23",
+          "source_text_sha256": "e0514beda0c441a661294d784107a3cf575f1063374c406cfa7ae9c298eda33f",
+          "en": "Back then, Yuki shoved me\nout of the way to save me... And yet...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k23; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k25",
+          "source_text_sha256": "b838986b6ff611721a300703f4c8d87c42bef21bbd9e3f032dffe4f354587d09",
+          "en": "I abandoned Yuki...\nEven though she was trying to save me...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k25; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k28",
+          "source_text_sha256": "66ef65d8dd170999583304e3ce031a21f5b6b3f591b8d8be5304c893cfa053ae",
+          "en": "I should have gone to save Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k32",
+          "source_text_sha256": "9af4cdfeb8d08c6ddfde88badd757218e28b14e500a08e7c73fc36b24a2933cc",
+          "en": "If I'd been caught there, Yuki's effort to save me would have been for nothing.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k32; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k34",
+          "source_text_sha256": "ea8033b272fc6141d6f50637e446001118d25d3a40ccf0e1147b7f44cc9686be",
+          "en": "If I'd noticed the monster approaching sooner, Yuki would have been safe.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k34; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k38",
+          "source_text_sha256": "bfd1c0fd7d6ea5e068d00f6a68bb4b63cbe300171129549d5d93778e30cfeef2",
+          "en": "Yuki chose to do that herself. It's not my fault.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k38; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k40",
+          "source_text_sha256": "1c76de58292ccb197c4cc74cb8ed75b5e48d7d85890124cf857d4f8473e7835c",
+          "en": "I should have gone to save Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k40; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k44",
+          "source_text_sha256": "e770a65a89b5f6e779f641616231fa6dc6d62c3184e9120ec9603107fcbc7897",
+          "en": "If I'd been caught there, Yuki's effort to save me would have been for nothing.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k44; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k46",
+          "source_text_sha256": "a3243032bfb959c865afa1e106b0bd3258c644e845c4074d39e460ab562ff69c",
+          "en": "If I'd noticed the monster approaching sooner, Yuki would have been safe.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k46; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k50",
+          "source_text_sha256": "88ffd779e59fa51b5454d158e914cb73befb6b66a51b726be538212a89bb7b71",
+          "en": "Yuki chose to do that herself. It's not my fault.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k50; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k58",
+          "source_text_sha256": "87d9e1cd92bd4ec47e7ca2ea4bf13268cfa435247a636c2a507114171c17ae3b",
+          "en": "If I'd been caught there, it would have been for nothing...\nYuki risked her life to save me.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k58; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k60",
+          "source_text_sha256": "181a5d585badc8f39a29dede4523f38802bf5aa7625bbbd0e21c476341e212b0",
+          "en": "If I'd been caught there, it would have been for nothing...\nYuki risked her life to save me.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k60; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k67",
+          "source_text_sha256": "5a23d750939b201b7b04f992e0c8f09eace7eb4e862f3c278490ff65f2546849",
+          "en": "Yuki chose to do that herself. It's not my fault.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k67; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k72",
+          "source_text_sha256": "3c68d87f68378db96af094fe29df652d09734edf5e6042adeb7c02d02b3cee0f",
+          "en": "Yuki saved me...\nI wonder how she felt about me...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k72; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k74",
+          "source_text_sha256": "99886636dfe52572a0cac826f949136561871da8d5897a827bff31627545faef",
+          "en": "Yuki saved me...\nI wonder how she felt about me...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k74; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k146",
+          "source_text_sha256": "72f17d0574ab67b28bfee5dc1d52fecdff0114a62fc53f997cbb158477f1d899",
+          "en": "...How do I feel now?\nWhat does Yuki mean to me...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k146; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k148",
+          "source_text_sha256": "dc3f3a483b89e7f5e5b30c6390fa25a924283ba01ff174b54174a9b51a91b984",
+          "en": "...How do I feel now?\nWhat does Yuki mean to me...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k148; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k214",
+          "source_text_sha256": "69dba898c4d6880e0a70e7aca5b69e6850926d6b36e1cfd4495a76f8f62b5d93",
+          "en": "I want to go with Yuki after all.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k214; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k216",
+          "source_text_sha256": "19613360fcac45a26aa1fff26557fdc80ca35b92fc2d121c7d6087a384fbd40d",
+          "en": "I want to go with Yuki because I'm scared to be alone and have nowhere else to turn.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k216; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k218",
+          "source_text_sha256": "178284149e5649c8097ac188215a4fb5b92bafeb475bc7a7ef0aada3a206a5d1",
+          "en": "I don't trust Yuki, but I want to go with her and see how things develop.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k218; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k220",
+          "source_text_sha256": "9da19f45e3b2a05a616110c5602e91ebdef75844a4dbd6d1d0a71e7623d389e7",
+          "en": "I don't mind either way, but if she insists, I want to go with Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k220; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k222",
+          "source_text_sha256": "725bf3130acf0dda420dfb48c6a032ea011978477f49fed91aeb591eeb068ad6",
+          "en": "I want to apologize to Yuki, then go with her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k222; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k224",
+          "source_text_sha256": "f177671e1561c38352fc0483bccfa5c590884434ba6b28eef0aace82b690b329",
+          "en": "I want to go with Yuki after all.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k224; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "8fd6e717210bf67d8e43bbce28279c4ac8bfe8477f6a77a3bf8d68ab4cd6b6dd",
+          "en": "I'm scared to be alone and have nowhere else to turn, so I want to go with Yuki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k228",
+          "source_text_sha256": "e03c293364ce0c6d64f5c0cf8dacae3551f6ee0d25980b6f396d6e0ad853a759",
+          "en": "I don't trust Yuki, but I want to go with her and see how things develop.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k228; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "97431fbe7a3cdd1648724a206580eaefb76be9f1da24658031b5164e74c5eee1",
+          "en": "I don't mind either way, but if she insists, I want to go with Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "73c8936ddba30f440f15437e38093429b221acb22e2092e3e5d5482d58a2ef8d",
+          "en": "I want to apologize to Yuki, then go with her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k234",
+          "source_text_sha256": "f5f14189bef066405de299d9064f8b1df5a12dfa393e076d95591d9b0ff49da1",
+          "en": "I want to go with Yuki after all.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k234; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k237",
+          "source_text_sha256": "76b954484dd4df6acb169b845d3c3a3910c795928d0b720566a0ab07856cc5a4",
+          "en": "I'm scared to be alone and have nowhere else to turn,\nso I want to go with Yuki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k237; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k239",
+          "source_text_sha256": "1ccb78bff18e01e79ae08a0788a16f3c11764983cc493276e66039f4b3c251fd",
+          "en": "I'm scared to be alone and have nowhere else to turn,\nso I want to go with Yuki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k239; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k241",
+          "source_text_sha256": "ce2f5703eebe8f980400b3c2307e6ceda9467fc3ef8205e07f9e47deffc0583f",
+          "en": "I don't trust Yuki,\nbut I should go with her and see how things develop...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k241; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k243",
+          "source_text_sha256": "0e40e7b954b3083f7e94944056bf1861e93066b3ea708a6af0df0c762570acea",
+          "en": "I don't trust Yuki,\nbut I need to go with her and see how things develop...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k243; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k245",
+          "source_text_sha256": "29ecc52b6491c3327a841164dfbd70d3c36b529afccea2ab1e84c3cf3b2dd9e2",
+          "en": "I don't mind either way, but if she insists,\nmaybe I'll go with Yuki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k245; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k247",
+          "source_text_sha256": "67c18c9094933fbcf1f9d117dfc947630943fcf8a5abbaa1bd2d060b9172d504",
+          "en": "I don't mind either way, but if she insists,\nmaybe I'll go with Yuki...",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k247; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k249",
+          "source_text_sha256": "108c23a50f05181b23d674ee21ba618f4a52508a43217898e34cd2da0dc541d5",
+          "en": "I want to apologize to Yuki...\nAnd I want to go with her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k249; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k251",
+          "source_text_sha256": "94673a45cae2be1f5cdbb71d377e9c84f9a76c18d627b8515c07e390d2ca3d84",
+          "en": "I want to apologize to Yuki...\nAnd I want to go with her.",
+          "notes": "English draft imported from audited private workspace, translate-en-0074.json:p0/k251; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_210_2_news_text.luc",
+      "source_sha256": "b3888d5ad7dab3bcfecbbcb58b427cc8aa668cc6aa75ad9458a9bdca71590cbe",
+      "entries": [
+        {
+          "id": "p0/k121",
+          "source_text_sha256": "19926c809bb1cd460701e7e4e0415fc764e83cb4d71ebbac37fd476cace60555",
+          "en": "Flying Monsters' Nest Ablaze: Miyato Sky Tower...",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k121; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k125",
+          "source_text_sha256": "4328e537d01ed112ce6bde5c2801374ab8640b8858b719269958f102eefb6ac2",
+          "en": "Government Had Decided to Protect Flying Monsters!",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k125; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k127",
+          "source_text_sha256": "2e69b8d8bc422060485f558c58fc5be45ddcb610795a313c8372e7055c6f9f36",
+          "en": "Tower Collapse Affects Some Radio Stations",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k127; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k128",
+          "source_text_sha256": "9a7d8e9adbcdee612891f4ab48899cc81a71e24b1ff02940f9e6596f8384930b",
+          "en": "The collapse of Miyato Sky Tower is expected to affect some radio broadcasts.\n\nMost television and radio stations had moved their transmission equipment to a newly completed broadcast tower, retaining Miyato Sky Tower as a backup, so their broadcasts are unaffected.\nHowever, some radio stations had not relocated and are currently off the air.\nThere is reportedly no estimate for when broadcasting will resume.\n\n＜Radio stations currently off the air＞\n・FM Urashimaso\n・Sakura FM",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k128; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k133",
+          "source_text_sha256": "ad407542f578a30b6fb0de06d70669a77a18d5520cdb16b5fa7b69671e68f784",
+          "en": "Gyaos Fires Mysterious Rays!",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k133; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k134",
+          "source_text_sha256": "20bc4e48f2d9d8526ab92c1cc8e5a0d88aad4442407b8546ef9b4ce093ec030c",
+          "en": "We have further news about Gyaos. An individual has reportedly been observed emitting rays from its mouth. These rays are said to cut through whatever they strike.\n\nThe government announced that, as the attack uses ultrasound, it will call the rays the 'Ultrasonic Scalpel.'\nIn response, the Japan Medical Society has protested that the name duplicates that of a surgical instrument.\n\nWhether only certain individuals can emit them or all individuals possess the ability remains unknown. Either way, there can be no doubt that the threat posed by Gyaos has increased.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k134; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k135",
+          "source_text_sha256": "c2a2ed4524f87edf91cb1ebfc1375eb50af9f3735a5d3b45cc081f9304341206",
+          "en": "Horrifying Discoveries About Flying Monsters",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k135; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k136",
+          "source_text_sha256": "18789336692f79bfc015f65234e9e47968489c46cc9f5eaac07d1c64eb342fb0",
+          "en": "As we gradually learn more about Gyaos, a truly horrifying fact has emerged.\nGyaos were actually eating one another atop their nest.\nExperts suspect they may be able to reproduce and increase their numbers even without food.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k136; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k137",
+          "source_text_sha256": "6112df94170e20ca8dd5343cb8694bab59258f3b548dfa3372091db7a8eca67a",
+          "en": "Children's Day Special",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k137; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k138",
+          "source_text_sha256": "6c1c71ad39510fe469c96116dce67e97f8bc2b3c5086d9ec1d98fc3292b4cf0d",
+          "en": "How much do you know about Children's Day?\nThe Constitution defines Children's Day as follows:\n\n'To respect children's individuality, promote their happiness, and express gratitude to mothers.'\n\nYes, Children's Day is also a day to thank mothers.\nWhy not express your gratitude to your parents on Children's Day as well as Mother's Day?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k138; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k139",
+          "source_text_sha256": "b4731a9ad6b5892e20e800385f54400e3407f23d89d7adeec688f8528518108f",
+          "en": "Government Secrets: Disguised News Helicopters?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k139; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k140",
+          "source_text_sha256": "0ea24468dbe7f4661724201031c0f216204fddd17c577b52b0fa460b5a594188",
+          "en": "News helicopters flew around Miyato Sky Tower after Gyaos began nesting there.\nMy independent investigation revealed that these were actually government helicopters disguised as news aircraft, intended to keep Gyaos confined to the nest.\nWhy the disguise? I suspect it was because the government wanted to protect Gyaos despite knowing that they preyed on humans.\nI intend to continue investigating to pursue this suspicion.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k140; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k141",
+          "source_text_sha256": "4c28d2d024181d4a14dc65d787c5d9c009a96f126be3b48429da961ed88681d9",
+          "en": "Helicopter Crashes",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k141; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k142",
+          "source_text_sha256": "56c39e93df8367646c53c2f69c3831a8f6b5d77a18a5ad48d236b3507dd5fcae",
+          "en": "A news helicopter covering Miyato Sky Tower crashed after being attacked by Gyaos.\nWitnesses say it was approaching the tower when it went down.\nIf this is true, perhaps Gyaos attacked while the helicopter was trying to rescue people abducted to the nest?\nThe pilot reportedly had not been authorized to approach the tower.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k142; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k143",
+          "source_text_sha256": "dc11a7635236d3c3b603e8bd9d6ae80fa22bcfc7c53f36a8f13c5fc9300a998b",
+          "en": "Everything Is 'For the Customers'",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k143; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k144",
+          "source_text_sha256": "bb0e3462c448355acd9a07dc4543a432bfa144195ca5058d81f5f58063941b20",
+          "en": "We have learned that among those stranded on the first floor after the second floor of Miyato Sky Tower's observation deck was destroyed, a female shop assistant continued selling goods.\n\nDespite vicious Gyaos nearby, she reportedly prioritized sales over her own evacuation.\nShe said, 'As long as even one person wishes to make a purchase, I cannot leave this place.'\nOur reporting indicates she was hired at Miyato Sky Tower a year ago. Several months before that, as graduation approached, she had failed in job applications to hundreds of companies. Then her parents died unexpectedly, and her home burned to the ground in a suspicious fire.\nAlthough neither she nor her parents were at fault, she felt sorry for neighbors affected by the spreading fire. She sold the land where her home had stood, the last thing she owned, and paid them everything.\n\nHaving lost everything but the clothes on her back, she sat alone and stunned in a park at dusk.\nNo tears came. So many misfortunes had struck that she could feel nothing.\n\nThen an elderly man, passing by on a walk, happened to speak to her. Light entered her life again.\nHe was the founder and chairman of the company operating Miyato Sky Tower.\n\nAfter hearing her story, the chairman reportedly arranged somewhere for her to live that very day and decided to hire her as a shop assistant at Miyato Sky Tower.\nHe said he sympathized because he, too, had lost his parents when young and endured great hardship.\n\nEver since, she had worked with single-minded devotion.\nShe treasured being alive and having the happiness of a future to think about.\nPerhaps precisely because she was such a person, her concern for others was strong enough to keep her serving customers in defiance of this adversity.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k144; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k145",
+          "source_text_sha256": "e4fa6645f8dcc78af1abc66cfba8e4e9b5be574f7e5496505beb82125636ee51",
+          "en": "A Couple",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k145; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k146",
+          "source_text_sha256": "efc16c2970ea55187ac542ea50155a1ee7f442d4b6c85551ab140404b19842a5",
+          "en": "While Gyaos flew overhead, a drama like the one in this footage unfolded on the first floor of Miyato Sky Tower.\nA dying man and an injured woman huddle together. Their subsequent whereabouts are unknown.\nBut a ring worn by the woman has been found on that first-floor observation deck. Am I the only one who finds that troubling?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k146; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k147",
+          "source_text_sha256": "1253daafacbb3b03438c8a71f06166ae0e857d562cfcef0405ec90ab20bbe079",
+          "en": "Regurgitated Matter",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k147; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k148",
+          "source_text_sha256": "78c557a4208366f8579682e7390cdcaac146174ad32f753a4a7f78e181e5603e",
+          "en": "This is matter regurgitated by Gyaos.\nAccording to someone who escaped from the first floor of Miyato Sky Tower's observation deck, a person was seen sticking a hand into it.\nWhy that person did so is unknown.\nWere they searching for something? Did they enjoy the texture? Or had the overwhelming situation left them completely bewildered?\n\nMeanwhile, a company that noticed its viscosity has reportedly succeeded in developing a shock-absorbing material with similar components. We will report again when more details become available.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k148; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k149",
+          "source_text_sha256": "86ee4902feb6ccd287a8a5f8768938c07ceae8953d25b82fc0ce021d23a35a89",
+          "en": "Why AED Installation Needs Subsidies",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k149; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k150",
+          "source_text_sha256": "9c80b9cb5866493c90aa9ee72978886f57069ebcc55a29bfd1351ba22ac592cd",
+          "en": "You have probably often seen AEDs, now installed at all kinds of facilities.\nSince these are provided by the facilities or their management companies, those organizations naturally bear the purchase and maintenance costs.\nThis is becoming a growing burden. A set like the one pictured costs around 300,000 yen, its battery lasts about four years, and the AED itself has a five-year warranty, requiring replacement or repurchase each time. Furthermore, the battery is not designed for recharging and is basically discarded after one use.\n\nAEDs save lives in emergencies and are extremely important. They should be available in more places. Yet I cannot help questioning why this is left entirely to private goodwill.\nThis is precisely when the government should take the lead. There is no need to raise taxes. Simply reducing bureaucrats' abnormally high salaries to private-sector levels would provide 500,000 AED sets. Population density would matter, but even a simple calculation suggests more than 100,000 units for each of the 47 prefectures. Wouldn't that be a substantial help, even to an amateur's mind?\n\nDoes the government want to protect the people, or its own bureaucrats? That is the question.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k150; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k151",
+          "source_text_sha256": "990fe32be4e015325600b36fd7283d1b5b73531a9a7fcee18dee1cea0a351a47",
+          "en": "The Unused Fire Hose",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k151; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k152",
+          "source_text_sha256": "a681be2ed8d3adbd23db3aee5b1a10ff540cf5752a1a45ca8c89dd64c0c57233",
+          "en": "The fire-hose equipment installed on Miyato Sky Tower's observation deck was found with no sign of having been used.\nSince there had been no fire, that is only natural.\n\nHowever, some argue that using its high-pressure water against Gyaos might have improved the chances of survival.\nI am skeptical. True, I have heard an urban-legend-like story about such a jet bringing down a helicopter, though not Gyaos. But Gyaos is an unknown quantity.\nIt is entirely possible that this would merely have angered them and caused even greater damage.\n\nSo-called pundits excel at finding faults and making negative comments, but they have never truly felt the circumstances on the ground. As someone placed in the same broad category of mass media, I can only regret the prevalence of such people.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k152; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k153",
+          "source_text_sha256": "77755b57e8d51d308337cbc47297d4915da64158958f18286e2e9e8abf7e681f",
+          "en": "Examining Regurgitated Matter",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k153; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k155",
+          "source_text_sha256": "45ea1d23a424e83f033b94d5264a0873da276122eb1b629836a906704e929be9",
+          "en": "Psychological Trauma That Still Lingers",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k155; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k157",
+          "source_text_sha256": "95cbac71b5bd2d08f2b82d1e08db6878d42b074a05578ef3d4cd5c96f91cb032",
+          "en": "An Elevator That Brings Happiness?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k157; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k158",
+          "source_text_sha256": "62ce00bab402e40909b6182be0f7a34d92f62bcea1c388cd114bb45af8baa77f",
+          "en": "Have you heard the widely whispered rumor that the elevator on the right as you face Miyato Sky Tower brings happiness?\nOne person says they confessed their love in it and later married. Another lost everything when their company failed, but found a lottery ticket in this elevator. Its owner never came forward, and it won an astonishing one billion yen.\n\nBut tracing these rumors revealed something suspicious.\nApparently, a tower employee started the story to attract customers.\nIt seems to have spread when some of those who rode the elevator because of it claimed, out of vanity, that something good had happened to them.\nOf course, I do not mean to deny mysterious powers entirely. But it appears this is not about making its riders happy: it is about making Miyato Sky Tower happy. (Visitor numbers have more than tripled since the rumor began.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k158; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k159",
+          "source_text_sha256": "07460f8661ad34bd4ffd2e06930abe838b8d350fe9976b8a5f38895937b1fa96",
+          "en": "An Elevator That Is a Huge Gamble?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k159; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k160",
+          "source_text_sha256": "f633adddc9159497a8c5f8a9bd256c54e08084798a5adf4fe21a9b8453c01e87",
+          "en": "The elevator on the left as you face Miyato Sky Tower is called the 'Huge Gamble Elevator.'\nWhen two or fewer people descend in it, a spirit always appears, leaving them psychologically impaired by the time they reach the bottom.\nThe damage is severe, and very few can return to ordinary life.\nHowever, roughly one in fifty encounters a spirit with a peaceful expression and subsequently enjoys a prosperous life.\nAmong those I interviewed, some simply received great wealth and now live comfortably. Another suddenly developed a refined sense of taste, pursued the cooking career they had given up on, and now works at the forefront of a famous restaurant overseas.\n\nNevertheless, because all but a tiny minority suffer what might be called devastating impairment, the elevator was once closed, and at another time a dedicated employee ensured that at least three people descended together.\nBut many were captivated by the appeal of a secure future if things went well. Now two or fewer may ride if they first sign a document accepting personal responsibility.\n\nWhy only when descending? Why two or fewer? Why have the authorities not intervened? Many mysteries remain. There are even reports that the current prime minister rode it before becoming well known. We will bring you further developments.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k160; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k161",
+          "source_text_sha256": "4ada0ce86cf6a58c06d15deeebd2ee05208d791defc79be31dc13611cd34c4d6",
+          "en": "Business as Usual, Even Here?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k161; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k163",
+          "source_text_sha256": "b041519d0aeb2119778ceb4b8ce634938af0bd42f026c1fe35c8f1bbaab28fff",
+          "en": "Restroom Reflections: Miyato Sky Tower Men's Restroom",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k163; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k165",
+          "source_text_sha256": "389c6f311e8897c09433817df10bf348cd6c257cf99272f93793204d1440ee57",
+          "en": "Restroom Reflections: Miyato Sky Tower Women's Restroom",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k165; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k167",
+          "source_text_sha256": "18d748551e34c54aceb2fefd3af923061bb0ed33d0f2c75435f1e03c93028d5b",
+          "en": "Disaster Looters Here, Too",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k167; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k168",
+          "source_text_sha256": "2768fe27ac573496d16099c562addd010e5af96160a618b13e8c312e329f1f6d",
+          "en": "Someone was seen rummaging through lockers in the workers' storeroom.\n'Disaster looting' describes stealing other people's belongings amid the confusion of a fire.\nThere was no fire here, but taking advantage of the chaos of a catastrophe to rummage around amounts to the same thing.\n\nPerhaps the person was searching for something necessary to survive the emergency. Witnesses, however, say their behavior suggested otherwise. Ever since being seen on the observation deck, they had wandered around excessively, seemingly doing nothing but looking for things to take.\n\nThe person has not been identified, and whether they subsequently survived is also unknown.\nIf they did make it out safely, I would like to hear what they were doing.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k168; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k169",
+          "source_text_sha256": "c01c55b56fa5b423e583bc8d204ae9bc7baffb610813cea5c4a081c35d9e4042",
+          "en": "Miyato Sky Tower in Ruins",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k169; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k170",
+          "source_text_sha256": "1deba7e37de0bd401bd75e47ac1078b5bceca3cec6b90b6ed85c62531f398207",
+          "en": "We obtained footage of what used to be Miyato Sky Tower's second-floor observation deck.\nOnce bustling with families with children, and couples at night, it now bears no resemblance to its former self. All that remains is a horrifying scene of scattered rubble.\n\nThe second floor also had a lounge, a spot so famous that magazines once recommended it as an ideal place to propose.\nIts popularity had declined somewhat as taller buildings and the restaurants on Sky Garden Bridge opened. But visitors had begun returning after a renovation about five years ago, making this all the more regrettable.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k170; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k171",
+          "source_text_sha256": "a367718f05f71668cd70c4a2f734ef72a6ebaa8f05aefc3a68bc1d7a77a4e13b",
+          "en": "Behind the Scenes at Work, Part 126",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k171; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k172",
+          "source_text_sha256": "62c13562f07b7aaed76c74b7903f004800dbd60e5a766e8c46aca2c13539e600",
+          "en": "Thanks to your support, this popular feature introducing workplaces we seldom see has reached its 126th installment.\nThis time, we report on the work of maintaining Miyato Sky Tower.\n\nMiyato Sky Tower is repainted once every four years. This is not merely to keep it looking attractive. Preventing rust and repairing any rusty areas also keeps the tower safe and secure as well as beautiful.\nEach repainting takes a year. Scaffolding is installed, but workers sometimes still have to move along narrow steel beams and paint by hand, making it extremely dangerous work.\nResearch into mechanization is progressing, but workers are also calling for it to stop, saying they cannot afford to lose their jobs.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k172; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k173",
+          "source_text_sha256": "9e6bbb1197f08cd632af2ccb58aa1675ae57d2f8e9bc077a0b4e5d77d83868ae",
+          "en": "The End of the World? A City Ablaze",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k173; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k175",
+          "source_text_sha256": "f3a60861a7a2be68cdabab5a719e058c7cd5e0b07b4c67ad26fbb4a20c69eeb3",
+          "en": "A Desperate Sprint for Survival!",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k175; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k177",
+          "source_text_sha256": "abf14713378e2f7289fdbc1446d5dbb219ae077a14c99e3b6177383823c0e2be",
+          "en": "A Death-Defying Tightrope Walk!?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k177; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k179",
+          "source_text_sha256": "1adaad8a02315f62ec3df8454f461138614e47fb9e0b84f34bd41ece1cf35253",
+          "en": "'There Is Still Good in the World': Another Act of Kindness",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k179; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k181",
+          "source_text_sha256": "43806d358e703636887f417f35f1b6539c5ce0d0517f1ca5f084ed114259768a",
+          "en": "Torn Apart from a Lover...",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k181; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k183",
+          "source_text_sha256": "643ec1ecc5b99a66d2422014fb0763452d10168b327cef42f36ce8112fdec8af",
+          "en": "Can Love Sustain a Life?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k183; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k184",
+          "source_text_sha256": "c62acf29dd49e83a4198a5e233ffbf83e218d5cdf893aac6d74135ea59a0bc19",
+          "en": "Witness testimony revealed the presence of a man with extremely serious injuries.\nEven to an amateur, his wounds reportedly looked unsurvivable.\nNevertheless, hoping to see his lover again, he fought desperately to stay conscious.\nHe was bleeding so heavily that he seemed likely to die at any moment.\nPerhaps his powerful feelings for her were keeping him alive.\n\nWhat happened to him afterward is unknown.\nHoping he was reunited safely with his lover, I intend to keep investigating.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k184; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k185",
+          "source_text_sha256": "cf7993cbc107ca1f413b8a609360a9afa6c2fa1cfd06a51924401f47e85273f8",
+          "en": "Heartless? Cruel? The Helicopter That Would Not Rescue Them",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k185; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k186",
+          "source_text_sha256": "1aeb488ee828bc69e61e01cfee55eae23d5dd4d4e09472b73f4dfb5571c7bd76",
+          "en": "Interviews with survivors revealed that many people stranded in Miyato Sky Tower had called for help from the rescue helicopter circling nearby.\nEven with their voices hoarse and their arms so exhausted they could barely lift them, they reportedly waved and shouted for rescue.\n\nYet the rescue helicopter never began a rescue.\nOf course, it repeatedly tried to do so. But wary of Gyaos, whose flying abilities far surpassed its own, it could not get close and was eventually shot down.\n\nHearing this afterward, one can understand that there was no choice. But for those on the observation deck, it also seems understandable that hope flickering before their eyes would leave them feeling abandoned.\nAccording to a government announcement, discussions will be held on conducting future rescues with care for such emotional effects as well.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k186; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k187",
+          "source_text_sha256": "3f54ac5b2ef8010ec5190fd848f4e9611e3514a7a21aeb6b987bf6d0c7a58f1b",
+          "en": "What Caused It? A Man Transformed",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k187; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k189",
+          "source_text_sha256": "546f89fe8b2b71d8e7017434aee5f61c83cec69f475b08fbf530e93457b8ad8b",
+          "en": "Utterly Desperate: Stranded on the Second-Floor Observation Deck",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k189; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k191",
+          "source_text_sha256": "87791b6689d092da28e06fdd31a3eb3fa1e649fa4a1a3aeffd5cd3573cdb1529",
+          "en": "A Night View Shared by Two",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k191; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k193",
+          "source_text_sha256": "671f82848095ceb9f80d0501dc46e4fbf45904fe6071a97ec25bba090db7a16d",
+          "en": "Lovers Sadly Blaming Each Other",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k193; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k195",
+          "source_text_sha256": "7c80fd47927373cf40ab7807fa994b56da0add27ff9f267697c611ccb10c9ad7",
+          "en": "A Door to Survival, or a Locked Gate to Hell",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k195; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k196",
+          "source_text_sha256": "a9646b1a9e64a69971438ddf519233a8a1b8dfb7f0c8d0ab4c3c2c008a8a473d",
+          "en": "We now know that escape from Miyato Sky Tower's observation deck was delayed because the key to the emergency stairway door was temporarily lost and took time to find.\n\nThe worker carrying the key had fallen prey to Gyaos. There is no need to blame that itself. Rather, shouldn't preparations have been made for just such a possibility?\nThe simplest measure would be to keep a spare key elsewhere. Miyato Sky Tower had none, possessing only a single key. That will surely raise questions of responsibility.\n\nFurthermore, sensors can now assess damage to buildings. I believe such equipment should be installed to unlock doors automatically when structural damage indicates that those stranded inside are in danger. Of course, power failures must also be considered, with independent generation such as solar cells on an emergency circuit.\n\nIn reality, discussions like this tend to stall at 'it costs money.' But once lives are lost, it is too late. With no telling what may happen or when, I believe doing everything possible to save lives is essential.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k196; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k197",
+          "source_text_sha256": "4d0233e927128b25b859845ec3e3ea8ec1ed963d65a25bce1e7bc765cd7ff4cf",
+          "en": "Would You Drink It?",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k197; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k199",
+          "source_text_sha256": "d48e0202856ea5b513b6083f788d61474eb80567a28f60e486e62699023367a8",
+          "en": "A Scream Echoes Across the First-Floor Observation Deck",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k199; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k201",
+          "source_text_sha256": "0d76bc05a06f10f91bdb6cea61eeab33ea8e7a39af324f59e4a012f87ef8b3e7",
+          "en": "Caught on Camera: The Reality on the Observation Deck",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k201; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k203",
+          "source_text_sha256": "97f926a596d147d9c8867c4992b40e98c925f6348e60146d5f884e4f5293199e",
+          "en": "Regurgitated Matter: A Look at Pellets, Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k203; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k205",
+          "source_text_sha256": "56c072f668a8e4c43a1ad03fe3de0dbdc2baebdcbce4b22dbb0a8c7a857854e6",
+          "en": "Regurgitated Matter: A Look at Pellets, Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k205; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k206",
+          "source_text_sha256": "f08ee0ddaa30496a8060bf0a1c29d2aaaebdb12d9031d1fb41567be83bc05b60",
+          "en": "Birds' regurgitated matter is called pellets. Pellets from birds that prey on mice and similar animals contain fur and bones, so caution is needed: they may also contain pathogens from those animals.\nTaking an interest is a good thing, but it is important to approach them with a full understanding of such dangers.\n\nWhen collecting them, avoid touching them with your hands. After collection, sterilization in a microwave or similar appliance is necessary.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k206; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k207",
+          "source_text_sha256": "2c1126bfbad15fd05f1d36c21a7cb298e22009a285fdf62b82ac612cb1055c7d",
+          "en": "A Melancholy Scene: 'Meanwhile, on the Observation Deck'",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k207; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k208",
+          "source_text_sha256": "7621900c01e5b822cc6ea75bd598f4c109db4b8a6986b123eb313a1bb2f97a90",
+          "en": "This footage captures a young person looking out from the damaged observation deck.\nWere they contemplating the tragedy that might soon befall them, or resolving to return safely to the ground? We do not know what thoughts accompanied their view of the night skyline.\nThey were reportedly later seen running down the emergency stairs, but their survival has not been confirmed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k208; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k209",
+          "source_text_sha256": "d04bbdd77029138d5aa43415397616de5eb032ee55ebd12580c53517994c25fc",
+          "en": "'Leaks, Too...' A Record from the Scene",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k209; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k211",
+          "source_text_sha256": "ea60b838bc653e722aa911d170ef3bdd168581efb2e094322fae300885b1b76a",
+          "en": "Miyato Sky Tower Rumors, Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k211; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k212",
+          "source_text_sha256": "38e7c00cc2128ffa82ba49a3af748e11a55257f975f03e5d8acaa5ae2701ca3e",
+          "en": "Have you heard the rumor about the men's restroom on Miyato Sky Tower's first-floor observation deck?\nEvery Christmas Eve at a particular time, a stall is occupied. Knock, and what sounds like the same man's voice answers, 'J-just a little longer...'\nAt first nobody paid attention. But after this continued for years, suspicious staff from the operating company used a stepladder that day to look over the stall and confirmed that nobody was inside.\nThey considered a prank involving a hidden microphone, but apparently found nothing of the sort, no matter how thoroughly they searched.\nUnfortunately, I cannot reveal the time. There is also a rumor that those who give the exact time mysteriously disappear.\nHow much you believe is up to you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k212; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k213",
+          "source_text_sha256": "106423ab83b97ae391d8ea6b77b7295496351afb2ca17a0dabde00fb45c130cd",
+          "en": "Miyato Sky Tower Rumors, Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k213; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k214",
+          "source_text_sha256": "64726c8b6a8e307e3aaf88c14149fe19068d667e9225d21c5b77e78425794c8c",
+          "en": "There is reportedly the following rumor about the women's restroom on Miyato Sky Tower's first-floor observation deck.\nNo particular season or time seems to be involved, but while looking in its mirror, you may suddenly see 'someone' standing behind you.\nA woman who sees this then supposedly always feels 'someone' watching from somewhere, eventually suffering psychological damage.\n\nOne theory says it appears to women visiting on a date with a man of a certain appearance, though there is no proof.\nIf true, perhaps 'someone' has a powerful fixation on a man of that appearance and stalks the woman, unable to forgive her for being his girlfriend.\n\nWhether it is a spirit is unknown.\nHow much you believe is up to you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k214; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k215",
+          "source_text_sha256": "f248c80562ad91fee214bfd71853a1eee118bf548075a22c626fe9d8f2436068",
+          "en": "Miyato Sky Tower Rumors, Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k215; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k216",
+          "source_text_sha256": "88d85531a509b2fdc5a9ce2c88d826df5acfe5b417fb46e991761395abd47834",
+          "en": "Little known to the public, Miyato Sky Tower's first-floor observation deck has a workers' storeroom.\nWith employee lockers and small supplies kept there, it has little to do with ordinary visitors.\nBut did you know a strange rumor surrounds it?\n\nVery rarely, a high school girl is reportedly seen emerging from a locker in that storeroom.\nSeeing her does not particularly bring misfortune, but the incident is so bizarre that many witnesses wonder if they hallucinated.\n\nIs it a hallucination born of fantasy, or a real girl inside a locker for some reason?\nHow much you believe is up to you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k216; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k217",
+          "source_text_sha256": "d99b7a0b70f409a8f4d85f0e31ada79b0f0dadf229296593bdfed1e733c908b9",
+          "en": "Miyato Sky Tower Rumors, Part 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k217; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k218",
+          "source_text_sha256": "590174b2ef1e7e4322371efe59e5e5bba93ea0b39c0044d537e979eb0cf2bb3b",
+          "en": "Many readers probably know this rumor about Miyato Sky Tower.\nIt is a sort of superstition: 'Visit on your third date, and you are certain to end up together.'\n\nDespite speculation that the operating company invented it to attract visitors, many couples apparently did follow the advice and end up together.\nThen again, those who broke up would rarely volunteer to talk about it, so perhaps that simply creates the impression.\nHow much you believe is up to you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k218; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k219",
+          "source_text_sha256": "e4d71b04207a3e00d57f2ab7ac0b8c178fb8668e9d41f486af7b1d239831b478",
+          "en": "Miyato Sky Tower Rumors, Part 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k219; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k220",
+          "source_text_sha256": "4f3075349df89a5dc1699bd1e7adcfc154217f556b0fe877adc14a2e86420489",
+          "en": "Did you know Miyato Sky Tower has rumors about studies as well as romance?\nOne says that praying for exam success on the observation deck while facing north-northwest on January 8 guarantees you will pass.\nNo actual statistics have been collected, but since the rumor spread, students and parents praying for success have formed lines there every year on that day.\n\nIn my own circle, about three people have made this 'pilgrimage to Miyato Sky Tower' over the past two or three years. Indeed, all passed the exams for their first choice.\nOn the other hand, another rumor says that praying toward the south-southeast that day brings misfortune, such as failed exams or unsuccessful job applications, to the person you picture while praying.\nHow much you believe is up to you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k220; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k221",
+          "source_text_sha256": "9b0fa3eea4e4382234d749aa413722571121a8ded235bddebfbfc5bb14e7ed2b",
+          "en": "This Land, Then and Now, Part 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k221; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k223",
+          "source_text_sha256": "f14a3691f56f655ed29795593021bc648d14d945a58a8a15889c28d555b29ee5",
+          "en": "This Land, Then and Now, Part 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k223; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k225",
+          "source_text_sha256": "ed4153f3f31342d7b987dac9bb197abedaeb55138a5ceec942c0dc0107256d4d",
+          "en": "This Land, Then and Now, Part 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k225; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "27e7e933b0c6b2cf558bbf7164a82c99c68298f5e3bf63a000bfb8cb9e177caa",
+          "en": "Few people know that about five hundred years ago, row houses stood where Miyato Sky Tower is now.\n\nDocuments suggest their landlord was an ancestor of the man who would later own the inn.\nUnlike his descendant, however, this landlord and his family were apparently respected for treating their tenants kindly.\n\nOn one occasion, he reportedly protected a tenant falsely accused of a crime and fought furiously against officials.\nThe landlord, his tenants, and townspeople who respected him barricaded themselves inside to confront the officials, while other townspeople investigated independently and found the true culprit. The landlord escaped punishment.\n\nAmazingly, the magistrate at the time was so impressed by his character that he later sometimes sought the landlord's advice and assistance with difficult cases.\nIt is a harsh world when such an admirable person's descendant becomes a villain.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k227",
+          "source_text_sha256": "8cb7a758cc59c6af6ffd5de2dc6aa868e997d53cf86ae229854fe7e160286453",
+          "en": "This Land, Then and Now, Part 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k227; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k228",
+          "source_text_sha256": "da34e41c1b8d95fc3a79f21762b4da14920e0aea2be975404e2dd0abd12fefab",
+          "en": "About fifteen hundred years ago, the site of today's Miyato Sky Tower was a market.\n\nMost stalls consisted of cloth spread on the ground beneath simple roofs, lined up like stalls at a modern festival.\nAlthough coins were being produced, they did not circulate widely among ordinary people, who generally bartered rice, cloth, and similar goods.\n\nPerhaps because it was easily accessible, the market flourished, reportedly reaching as many as 954 stalls.\nAmazingly, torches were lit here and there at night, allowing something like late-night business.\n\nAt some point, proper houses began replacing the simple stalls, and the market gradually changed into a town.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k228; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k229",
+          "source_text_sha256": "0294f2e5812632185ae6e6cb6a048ddf2d2302233e3846d19a10ee065ad06c7b",
+          "en": "This Land, Then and Now, Part 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k229; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "cf39fb7af1aa0f461fcc2e27c1a26d65ab2195e4d682cb56aff79204beb56b9f",
+          "en": "Did you know that about three thousand years ago, a settlement stood where Miyato Sky Tower is today?\nIts ruins were discovered underground during the tower's construction, even prompting a temporary campaign to change the construction site.\n\nInvestigations suggest a settlement of thirty or forty people, surrounded by almost obsessively extensive fencing. At its center stood a watchtower unusually tall for the period.\n\nWith no traces of contact with nearby settlements, it appears to have been isolated for some reason.\nPerhaps its watchtower and sturdy fences reflected a life spent fearing attacks from outside.\nOr perhaps it served something like a prison.\nUnfortunately, the truth remains unknown.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k231",
+          "source_text_sha256": "e5e9b702928e6d10dfcde1c470531806030d5cdaf1e8b92fef7a95da9e4db865",
+          "en": "Broadcast Tower Trends: Projection Mapping",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k231; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "fc43c169a96c122d48ea5116a36007d3c94a22f3fed9d71f4617a5f07b4aee14",
+          "en": "Broadcast towers around the country are adopting various methods because their original appeal, simply seeing the view from high up, no longer attracts enough visitors.\n\nRecently, projection mapping onto observation-deck floors and windows at night has begun to catch on.\nChanging the designs with the seasons reportedly also helps bring visitors back.\n\nSome towers have even begun projecting onto their exteriors.\nSince projection mapping requires no alterations to the tower itself, its ease compared with older methods such as changing decorative lights may be another reason for its popularity.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k233",
+          "source_text_sha256": "32a4980ff37edcf4eeef944ed4c3209faca00bdd982a9fdf32bae6d9671aea38",
+          "en": "Broadcast Tower Trends: Moving Decorations",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k233; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k234",
+          "source_text_sha256": "b6a28d019538a2d41c2172a5d91a1c9b8cbfdbf156886a01981881cc4baada05",
+          "en": "Some broadcast towers deliberately use physical decorations to attract visitors.\n\nOne tower has decorations shaped like windmills, deer, and other things attached to it.\nThese not only light up but also move through various mechanisms.\nRemarkably, changing the decorations by time of day as well as season allows it to cater to families, couples, and other visitors.\nI doubt it pays for itself, but apparently a generous sponsor is involved.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k234; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k235",
+          "source_text_sha256": "d128b58e97bc0ae12953fd4e5c36e48e936d97ba70a28446b3938682da9f81d2",
+          "en": "Broadcast Tower Trends: Transformation",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k235; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k236",
+          "source_text_sha256": "5da62135c892a855b3710cbcf47914a2be59e52479589bfb059e635a34a9846c",
+          "en": "Did you know there are broadcast towers that transform?\n\nAmazingly, one changes between five configurations according to the time of day and also changes its orientation with the seasons.\nWhen I visited, I saw the third and fourth transformations. Frankly, I was impressed that such enormous movements were possible.\nIts strength and structure reportedly exceed the required standards, so there is no problem. But it went so far that I wondered whether the transforming robots I watched as a child could be built, too.\n\nThe transformations were so smooth that even from the observation deck, one would hardly expect motion sickness or discomfort. It was extremely enjoyable.\nI recommend visiting at least once.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k236; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k237",
+          "source_text_sha256": "ebc7625933cb8182eeb39fc7b37fab9b2680977b6d0e781a4f26135eabe4a8dc",
+          "en": "Broadcast Tower Trends: Raa-ko",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k237; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k238",
+          "source_text_sha256": "545b2f680db0428a2fa1813cc4ab66ca013a9e0190698fa222c2961c9d40a6f3",
+          "en": "There is a broadcast tower with an enormous mascot clinging to it.\nRaa-ko, the tower's cuddly local mascot, is hanging onto the structure.\nIt is so large that even from far away, you can tell 'something' is attached to the tower.\n\nAmazingly, Raa-ko moves up and down the tower.\nIt makes the journey every hour, and when it reaches the top, a sound announces the time.\n\nCute mascot or not, its enormous face seen from the observation deck reportedly frightens some children into tears.\nPersonally, though, I was quietly impressed by the technology: its precisely timed journeys and the near absence of motor noise while it moves.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k238; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k239",
+          "source_text_sha256": "df314a53afc741a01b90a6b480bb08f80b593a6b6040db31e2ce29414adff6bf",
+          "en": "Broadcast Tower Trends: Growth",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k239; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k240",
+          "source_text_sha256": "76eeb031b948dae1aef30f8c3ef6072434f96bfff2ea10a7a53acc4644d72fcf",
+          "en": "Did you know there is a broadcast tower that grows?\n\nIt gets a little taller every year.\nOf course, it does not grow naturally like bamboo.\nPut simply, each year it is rebuilt at an unbelievable speed to make it taller.\n\nAnd as the tower grows taller, it needs more land. That is why the surrounding properties are being purchased one by one.\nNow more than 530 meters tall, this broadcast tower reportedly intends to keep growing.\nPerhaps one day we will gaze upon Earth from an observation deck beyond the stratosphere.",
+          "notes": "English draft imported from audited private workspace, translate-en-0064.json:p0/k240; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

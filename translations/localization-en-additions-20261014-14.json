@@ -1,0 +1,537 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r900/c26",
+          "source_text_sha256": "0c63990a58fa65d8d4ac80c82735c30f40a6cf84a52a61b8f4c68081d5cffd1d",
+          "en": "A sorbet-style Karaage Minister made with plenty of Mizumizu grapes, a specialty of Mizuna City, Miyato City's neighbor. Savor all their juicy freshness and rich sweetness!",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r900/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r900/c28",
+          "source_text_sha256": "0c63990a58fa65d8d4ac80c82735c30f40a6cf84a52a61b8f4c68081d5cffd1d",
+          "en": "A sorbet-style Karaage Minister made with plenty of Mizumizu grapes, a specialty of Mizuna City, Miyato City's neighbor. Savor all their juicy freshness and rich sweetness!",
+          "notes": "English draft imported from audited private workspace, translate-en-0119.json:r900/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/loading_image_and_text.csh",
+      "source_sha256": "5f7a4c7731e997457391f2e0f987338db6a16a998f68f40f8825dadd4679621e",
+      "entries": [
+        {
+          "id": "r91/c3",
+          "source_text_sha256": "f7b39c9a062041bb603630a114b4c893a33598a9c4771a8db8bb4ef9c8066815",
+          "en": "We safely met up with Risa.\\nApparently, she escaped on her own.\\nThe giant shadows had vanished, too.\\nNow, let's head for Mizuna City.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r91/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r91/c4",
+          "source_text_sha256": "f7b39c9a062041bb603630a114b4c893a33598a9c4771a8db8bb4ef9c8066815",
+          "en": "We safely met up with Risa.\\nApparently, she escaped on her own.\\nThe giant shadows had vanished, too.\\nNow, let's head for Mizuna City.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r91/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r98/c2",
+          "source_text_sha256": "260d04606c9f02af622c90e14e5eb02ef4c7bb069fea5bc9133e912a59509aa3",
+          "en": "Toward Mizuna City",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r98/c2; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r98/c3",
+          "source_text_sha256": "43d6d641ee3b265e8f83e770094ef8d8ea8ddd4c3fea9b60e15f8c9988890e9d",
+          "en": "Otsuka told me to go to Mizuna City if I wanted to protect Yuki,\\nand meet a tough-looking man there.\\nThe three of us set off for Mizuna City.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r98/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r98/c4",
+          "source_text_sha256": "9b52d50051e06efcda265f2c2e7a5af785cde06c8b856765b97a20b26466fd71",
+          "en": "Otsuka told me to go to Mizuna City if I wanted to protect Yuki,\\nand meet a tough-looking man there.\\nThe three of us set off for Mizuna City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r98/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r110/c2",
+          "source_text_sha256": "f8e0490a81aa9221063df573c0b15418d992fed2fe9a097d0639b9997f7e413d",
+          "en": "To Mizuna City!",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r110/c2; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r110/c3",
+          "source_text_sha256": "0cca67754408ed20d01b7dde8d6ef178732a701fe0783510e23176822b72c2c8",
+          "en": "Parting ways with the editor-in-chief, we set out for Mizuna City.\\nWhat is happening in the battle between the giant aliens...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r110/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r110/c4",
+          "source_text_sha256": "0cca67754408ed20d01b7dde8d6ef178732a701fe0783510e23176822b72c2c8",
+          "en": "Parting ways with the editor-in-chief, we set out for Mizuna City.\\nWhat is happening in the battle between the giant aliens...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r110/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Heroine.luc",
+      "source_sha256": "ad9f923db70f61116204eba07b48f2e4b368a7ae0f994fbaebef93d002c9ff54",
+      "entries": [
+        {
+          "id": "p0/k786",
+          "source_text_sha256": "6514108d64493d151367a2595e7cc43e1674f81c4bc762dea0f4219665f6388d",
+          "en": "So we need to go to Mizuna City?\nCome on, let's go.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k786; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k792",
+          "source_text_sha256": "bc43b3cff98bc142976cffa08b7ec52c73bb1d24d01b6960bc05b1ade72c4a95",
+          "en": "Apparently, there's a late-night live show at that radio station just there.\nLet's stop by before heading to Mizuna City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k792; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k828",
+          "source_text_sha256": "c03c2440cd3b2ac8d560f9fa9df20166f3057abe86f698304a3e95b55d6a0634",
+          "en": "Let's head for Mizuna City for now.",
+          "notes": "English draft imported from audited private workspace, translate-en-0165.json:p0/k828; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1244",
+          "source_text_sha256": "a1884ab6d6de25a3fa182afc5d0048754c40d324820a6cb46f8c7414a2cd9339",
+          "en": "Mizuna City is south!",
+          "notes": "English draft imported from audited private workspace, translate-en-0166.json:p0/k1244; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Kasiwagi.luc",
+      "source_sha256": "d6818ce197564b82634a30eeb564884fc4f7055a79fe80cca2408652951c3d74",
+      "entries": [
+        {
+          "id": "p0/k29",
+          "source_text_sha256": "ab5e27013bcaf29bcda2bd049dec7f6ec4b1e4949fdc149b23606edafbd33f28",
+          "en": "Mizuna City is southwest of here.",
+          "notes": "English draft imported from audited private workspace, translate-en-0082.json:p0/k29; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k33",
+          "source_text_sha256": "bca4edf9292f6644117e9ad1e489db9dac63828ea27031709424bdf452136432",
+          "en": "Head west along this street to reach Mizuna City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0082.json:p0/k33; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Mail.luc",
+      "source_sha256": "4e888a17a3ae57fedc8c7cae1ef339c772487b3b7be91957dcc91737c1c877a6",
+      "entries": [
+        {
+          "id": "p0/k164",
+          "source_text_sha256": "b5e7dfa3b74c6522c0e2ce95360633cb0a8a8ea82ee617760c6082314f9c4875",
+          "en": "Have You Reached Mizuna City?",
+          "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k164; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k167",
+          "source_text_sha256": "5af13fb2e59f57b1b025cceeb9e977113e748bcc4b0b85b96d17c72ce4ef19d0",
+          "en": "Have you reached Mizuna City?\nBe careful. There's no telling what might happen.\nGive Yuki my regards, too!",
+          "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k167; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k195",
+          "source_text_sha256": "7b2d194c1fa970650aa8c2974301dcf307c2a65df2b5369c2b34d3123f2884f1",
+          "en": "Another huge one seems to have appeared since then. Are you safe?\nI imagine you're heading for Mizuna City by now, but I have a favor to ask.\nThere's a place called Hananira Town near Mizuna City.\nAn editor-in-chief I've known for years is there.\nApparently, she hurt her leg and is in trouble because she can't escape.\nI'd like you to stop by on your way and help her.\nShe should be in Editorial Department 2 of the Ebine Publishing building.\nI'm counting on you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k195; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_212.luc",
+      "source_sha256": "3af3b860839559bd0e120981237f27c0c97f3c8a265b43dc4801e05214d2c46c",
+      "entries": [
+        {
+          "id": "p0/k812",
+          "source_text_sha256": "01608fc2faca0ad6afa9c8f1d69a02e2089ca72030bea13407bfa15f48fe509f",
+          "en": "Oh, Mizuna City is a long way from here.\nBe ready for that!",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k812; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k819",
+          "source_text_sha256": "d8200c06e3c5eb41d066c56695f94743c36dfb8cbe6a38a36fbdd994b04c27c1",
+          "en": "Mizuna City is the next city over. You won't get there\nin twenty or thirty minutes. I think it's that way...",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k819; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k827",
+          "source_text_sha256": "c4d008b463095b52f7dde541599be0fecf65ddee6fef6c4c8310f5c7602eb3b0",
+          "en": "The way to Mizuna City that Otsuka mentioned is around that corner to the left.\nIt is still far away, though. Be careful.",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k827; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k920",
+          "source_text_sha256": "e6fd309266e40ef9cfe76d0e57dd8801202e298eaa02998c4dc9d43a9a16c6be",
+          "en": "...Let's leave this place for now.\nWe're heading for Mizuna City, right?",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k920; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_214.luc",
+      "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+      "entries": [
+        {
+          "id": "p0/k64",
+          "source_text_sha256": "804adb3230600e46c5208406db68b3b8dc84bf6f2daafd43549e1fab4f835707",
+          "en": "[#ff88ff88]Mizuna City[/#] isn't so far from here.\nLeave this convenience store and [#ff88ff88]turn south at the intersection[/#].",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k64; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k76",
+          "source_text_sha256": "a56275c7c6cb45878d534061ab89dc56b14120633637b5d1cb50f377789bc1dd",
+          "en": "Frightened Editorial Staff Member Mukojima",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k76; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k85",
+          "source_text_sha256": "2333733056dc491fe3b258f6fe83f7aebceb91925103a86ad4a573d37dcadb7c",
+          "en": "Editorial Staff Member Mukojima",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k85; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k520",
+          "source_text_sha256": "e9d8028d424d2b997632032456647e25110df3b803ced404c313e4f995c09c4b",
+          "en": "Incidentally, Aya Suzumura is from Mizuna City, next to Miyato City,\nand graduated from Miyato Singers School.",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k520; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k618",
+          "source_text_sha256": "077d2960da5411f7deb05929a6ac95e9744f9cbfa07dda760bf26c0ad31af898",
+          "en": "What should we do now?\nWe don't need to go to Mizuna City like Otsuka said anymore...",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k618; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k627",
+          "source_text_sha256": "93bf96a12000883acef3c5f1030035392105333d1e8af7b4f8bad4e9c2c670d2",
+          "en": "I imagine you're heading for Mizuna City by now, but I have a favor to ask.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k627; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k630",
+          "source_text_sha256": "02a52d22028dd81733e66cccacfbda25270848df7352401abb742fe64229357e",
+          "en": "There's a place called Hananira Town near Mizuna City.\nAn editor-in-chief I've known for years is there.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k630; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k636",
+          "source_text_sha256": "cc865fa6b99ae434fd43ab2a5e4c5903208faa960a36bf23e8bb831baf57976d",
+          "en": "The editor-in-chief should be in Editorial Department 2 of the Ebine Publishing building.\nI am counting on you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k636; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k671",
+          "source_text_sha256": "711c1e427f75187c85e8614826cdbd88defafa5f5c464364c48eafca81895b40",
+          "en": "《So we no longer have any reason to go to Mizuna City, but\nwe're in Hananira Town now, so I think we'll go help the editor-in-chief.》",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k671; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k674",
+          "source_text_sha256": "0652ec15f1117a6bb4d86c82fb57f671db0a8e2c3662268d0d4aee1df28c7567",
+          "en": "She's in the Ebine Publishing building, right?\nWhere could it be...?",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k674; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k810",
+          "source_text_sha256": "2840ebd0607f678db518916afb2049c1f6cdb13ca49c44dca931b2ffba432cf7",
+          "en": "Apparently, our editorial staff member Mukojima took refuge at a nearby convenience store.\nLet us go and meet up with him.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k810; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k816",
+          "source_text_sha256": "6ffe6838beb98d2573a8e01415607ca673054b8070faca1f16e52a0b6bd22295",
+          "en": "Mukojima!",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k816; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k841",
+          "source_text_sha256": "beaa4e6310306b8680d7d72034b53917cf6363a3e6c839aa28ec0c7e9e6dfc19",
+          "en": "Th-that's terrible! I'll head for Mizuna City right away!",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k841; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k846",
+          "source_text_sha256": "f970e7371242c7452914127f8f8baf0eb41ccbfbfc279881839c28d87159474b",
+          "en": "Th-that's terrible! I'll head for Mizuna City right away!",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k846; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k856",
+          "source_text_sha256": "7abb6f2fc47dcca164fbe1ac66ad4fe906d71e9a4ed66bab8b780e22ca765076",
+          "en": "Th-that's terrible! I'll head for Mizuna City right away!",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k856; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k858",
+          "source_text_sha256": "0813cfbb2276f013b3b742cebe35e3d4527eef77f079d4b7fbd502e192590218",
+          "en": "Th-that's terrible! I'll head for Mizuna City right away!",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k858; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k867",
+          "source_text_sha256": "ec6521c27209154f6864dbc4357f48e128bb347466336d04fe9570fe7485c2df",
+          "en": "Mizuna City isn't so far from here.\nLeave this convenience store and turn south at the intersection.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k867; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "entries": [
+        {
+          "id": "p0/k175",
+          "source_text_sha256": "0bdfeb379ac0cc63ce9c6ec417bdf4eb4305011b19c4593cc26909380b3052c9",
+          "en": "Toward Mizuna City",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k175; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k191",
+          "source_text_sha256": "41a51a92e24c21ccb50f60d402471497ba14a5bda6f6f751024791e212142782",
+          "en": "Head for Mizuna City, as Otsuka suggested.",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k191; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k398",
+          "source_text_sha256": "0e0b77dcbd33cb740eb1870d49bbfc755550515fb2251f1a3065ff4176910a04",
+          "en": "To Mizuna City",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k398; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k410",
+          "source_text_sha256": "680a49cbe01b4575bf175c0616b7c82580e44f6405bb7fe2c5d3c7772d5353f8",
+          "en": "Head to the convenience store to meet editorial staff member Mukojima.",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k410; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k412",
+          "source_text_sha256": "d5c009e64b663f5bd2024d34433d0a7a2b97deef56909a7ba24df0b55150b405",
+          "en": "Leave the convenience store and head south toward Mizuna City!",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k412; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k420",
+          "source_text_sha256": "fe19040b412c3e552dfb1e1e491065c4b029e7c4cbfded6713dac06e0c4db074",
+          "en": "Editorial Staff Member Mukojima",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k420; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/mission_text.luc",
+      "source_sha256": "2aee79fe9a3c37c9672cc108ecc31d2e65d74f3d138592269420b8c674a88800",
+      "entries": [
+        {
+          "id": "p0/k259",
+          "source_text_sha256": "5816ed3c79649fe4f381a2ed13fc4a6bf4aadfd12530b9be0139b786d655ba57",
+          "en": "Head for Mizuna City for now. According to Kashiwagi, it is too far to reach in twenty or thirty minutes. Apparently, it lies to the southwest.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k259; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k298",
+          "source_text_sha256": "ee7e629593f1f24a18b3870c9721bada0a7adea4d9889403c6ffcf78213deb9c",
+          "en": "Meet Editorial Staff Member Mukojima",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k298; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/place_text.luc",
+      "source_sha256": "c7785d42ffe727186ca4913907876128114a12a7931943b658d973306e430a86",
+      "entries": [
+        {
+          "id": "p0/k220",
+          "source_text_sha256": "de4f4b3d804ea7eaf99febd54db822f2e988306c68e6783d71ae9425d7c46ae2",
+          "en": "Hananira Town, Mizuna Road",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k220; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k221",
+          "source_text_sha256": "cb336d063595a5c1552b0c2c20f4875d30deadca71f93e7a2f19c069e5a51f15",
+          "en": "Mizuna City, Mizuna Shopping Street",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k221; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_216_news_text.luc",
+      "source_sha256": "230e8a23dcdc5a3e0d07e574d33fe838e13db272e41c6b16ed32e8f278597db6",
+      "entries": [
+        {
+          "id": "p0/k68",
+          "source_text_sha256": "16b91435bb2069c14888d8d2c02565f66ef47ee18db8e85e608223ee361a4642",
+          "en": "Before dawn today, an extraordinarily gigantic, mysterious life-form appeared above Mizuna City in Miyato Prefecture, descending slowly. Nearby residents have seen a giant humanoid weapon arrive at its projected landing point and apparently try to stop its fall.\nThe government also announced that, like the mysterious life-form that appeared in Miyato City, this one will be called an 'Angel.'\n\nMizuna City neighbors Miyato City, where giant creatures have been appearing since yesterday.",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k68; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k69",
+          "source_text_sha256": "cb77b4f575d29de47f7ede4f38db41eafcb32d099003a9a7acb45726ff5dd089",
+          "en": "Giant Feet Cause Road Collapse in Mizuna City",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k69; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k70",
+          "source_text_sha256": "3e315302007f03a08154dbd4397e67a50348f17976639c315ad898e1a33c0797",
+          "en": "Before dawn today, a giant humanoid weapon was seen running at high speed through central Mizuna City in Miyato Prefecture.\nDamage includes the collapse of part of the road in Mizuna Shopping Street.",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k70; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k72",
+          "source_text_sha256": "df0a152965fb50101995f5b00add42267d4b10aa15c3b9f2de32d000bbf1fa3a",
+          "en": "In Mizuna City, Miyato Prefecture, garbage must be placed at designated collection points by 8 a.m. on collection day. However, some residents put theirs out the night before, creating a dispute.\nOpponents of nighttime disposal worry that it leaves collection points dirty and allows crows and other animals to scatter the garbage. Supporters include people whose daily schedules make putting it out by 8 a.m. difficult.\nIn response, Mizuna City commented, 'We have installed crow-proof nets and other measures, but they are not perfect. We would like to find some way to address this.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k72; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k74",
+          "source_text_sha256": "928e71d281c1c54cfaea8b0854261f0cc5494f177a19dd3c573d3139dbd2b679",
+          "en": "Before dawn today, three giant humanoid weapons were seen deploying against the enormous Angel that appeared above Mizuna City in Miyato Prefecture.",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k74; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k76",
+          "source_text_sha256": "e23517be3f6ec86137a7308638da128943de9e62bf8431866c993ab2bf6ab307",
+          "en": "Before dawn today, police received a report of a black car trying to run someone over in Mizuna City, Miyato Prefecture.\nThe car had reportedly already driven away by the time officers reached the scene.\n\nThe vehicle was a black luxury sedan, reportedly pursuing a young person relentlessly.\nThe person being chased was apparently unfamiliar to the neighborhood.\nPolice are searching for both the vehicle and the young person it pursued.",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k76; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k77",
+          "source_text_sha256": "2a32709a01ed4e5bbc5cc22f1b8bfa4f2ccba2dc3a0fdbdd3a5d00b4a65d8c22",
+          "en": "Localized Violent Winds in Mizuna City",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k77; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k78",
+          "source_text_sha256": "652c59916bcab8b3baaa306136cf53969f27806f28d3e3ce5dd6fbef8ce69a18",
+          "en": "Before dawn today, localized violent winds were observed in Mizuna City, Miyato Prefecture. Residents say powerful winds suddenly blew from the southwest, strong enough to send empty cans, flowerpots, and even car tires flying. One resident was struck by a rolling tire, injured, and taken to hospital.\nThe Japan Meteorological Agency says that while sudden strong winds can occur in spring, the winds in Mizuna City were a phenomenon with few precedents.",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k78; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k79",
+          "source_text_sha256": "2546db387dc6af2c704ada6935285f23b56e8a1d607a3a61e0333cb21b35a686",
+          "en": "Vending Machines Destroyed Across Mizuna City",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k79; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k80",
+          "source_text_sha256": "f95321ea4e251dfefd1bb9282c3c5a190d3a32e0d47dffd87e7621d522de19c4",
+          "en": "Before dawn today, a report was received that five vending machines had been destroyed in Mizuna Shopping Street, Mizuna City, Miyato Prefecture.\nA resident out for an early-morning walk discovered them and called 110.\nPolice are investigating the incident as an attempted theft targeting the cash inside.",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k80; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k82",
+          "source_text_sha256": "9f7a48f0fde611594fed74e89d1a3fb7b8ff2d2783438cc668940977526ed0c1",
+          "en": "Yesterday, representatives of Mizuna Shopping Street and local residents met at its community center in Mizuna City to discuss shop opening hours.\nResidents want longer hours and expressed outrage that most shops currently close at 6 p.m.: 'Six is far too early. They should stay open until at least six-thirty.' The shopping street explained why it could not agree: 'If we don't close at six, we won't make it in time to watch the evening baseball games.' The discussion ended in stalemate, but shop representatives also showed flexibility, saying, 'We would like to reconsider from November onward.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k82; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k83",
+          "source_text_sha256": "f741df4a19b4af4a0dca09e85a9b538d149301a5a13257d63526c134523c8d71",
+          "en": "Mizuna City Anomaly: Walls Rise from the Ground",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k83; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k90",
+          "source_text_sha256": "48351f18322f9a92002e58db12402d68d0e30a6cd6bd0cfa791901077a60a169",
+          "en": "The enormous Angel that appeared above Mizuna City before dawn today was defeated by three giant humanoid weapons that rushed to the scene.\nThe Angel is believed to have descended slowly from space. Initially spherical, it eventually spread out to a size covering the entire Mizuna City area.\nOne humanoid weapon raced to its projected landing point and supported it to prevent its fall, while two others appeared and apparently attacked the enormous Angel.\nThe purple humanoid weapon supporting the Angel is thought to be the same type seen in Miyato City. The red and yellow weapons that appeared next reportedly had differently shaped heads.",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k90; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k94",
+          "source_text_sha256": "175eb7f1215bb76d8606535b459d1eea18dcad5d92b232e9f76011ddd8eabcda",
+          "en": "Sewer construction in Mizuna Shopping Street, Mizuna City, will be extended because of the giant humanoid weapon that appeared before dawn today.\nAccording to the city's Waterworks and Sewerage Bureau's sewer development section, new damage has been found in part of the sewer. The damaged section showed no durability problems at the previous inspection, but is believed to have been broken by the impact of the giant humanoid weapon running along the shopping street before dawn today.\nConstruction was originally scheduled for completion on the thirteenth of this month. It is now expected to continue until the end of next month, including inspections for further damage.\n\nAt a press conference, the head of Mizuna City's sewerage bureau bowed and said, 'We apologize for the continued inconvenience to local residents. We will proceed carefully to ensure nothing is overlooked as we work toward a better living environment for everyone, and ask for your understanding.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k94; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k96",
+          "source_text_sha256": "4b2dc71d04e747b7e13523fe51126b262194f754a33031ace5c1ff71de87ce68",
+          "en": "In recent years, Mizuna City has struggled to deal with increasing amounts of garbage.\nSome areas have produced enormous quantities over the past few years, increasing the burden on collection companies. Bulky waste such as dressers and wardrobes protrudes far into the road, severely obstructing traffic.\nIn a related incident, when the enormous Angel appeared above Mizuna City before dawn today, a black sedan was seen driving dangerously through dressers and wooden crates left on the road, smashing them.\nOne resident said, 'As a resident, I'm ashamed. People's behavior is a problem, but so are the garbage-disposal rules.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k96; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k98",
+          "source_text_sha256": "369f298b5961f670027f361a02d7ac5ba5af0e1455dfbce1c47101312c220acf",
+          "en": "A power outage occurred in part of Mizuna Shopping Street, Mizuna City, apparently caused by damage to a utility pole. Restoration work is still underway in some areas.\nFragments of black car paint were found on the damaged pole. Police are searching for the black sedan that was driving recklessly around the time the outage occurred.\n\nA giant humanoid weapon passed through the shopping street that day, and its impact was initially thought to have damaged the pole. However, the outage began before it passed, prompting a new investigation.",
+          "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k98; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}
