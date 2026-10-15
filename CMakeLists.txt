@@ -273,7 +273,7 @@ kyoei_replace_checked(KYOEI_VIDEOOUT
   "            if (port->buffer_labels[buf_id] != 1) {\n                KyoeiFlipTrace::Dump();\n                gz_log(\"Kyoei flip failure: buffer=%u label=0x%llx previous=%d count=%llu pending=%d gc=%d arg=%lld\", buf_id, (unsigned long long)port->buffer_labels[buf_id], port->prev_index, (unsigned long long)port->flip_status.count, port->flip_status.flip_pending_num, port->flip_status.gc_queue_num, (long long)flip_arg);\n            }\n            ASSERT_MSG(port->buffer_labels[buf_id] == 1, \"Out of order flip IRQ\");")
 kyoei_replace_checked(KYOEI_VIDEOOUT
   "    driver->GetPort(handle)->flip_rate = rate;"
-  "    gz_log(\"Kyoei videoout: SetFlipRate handle=%d rate=%d\", handle, rate);\n    driver->GetPort(handle)->flip_rate = rate;")
+  "    if (driver->GetPort(handle)->flip_rate != rate) gz_log(\"Kyoei videoout: SetFlipRate handle=%d rate=%d\", handle, rate);\n    driver->GetPort(handle)->flip_rate = rate;")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp" CONTENT "${KYOEI_VIDEOOUT}" @ONLY)
 add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp")
 # Release the old surface before publishing completion. Otherwise a guest

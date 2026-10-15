@@ -1863,3 +1863,16 @@ Memória do projeto entre sessões. Ler antes de começar cada sessão.
 - Revisão visual: quebras de palavra e ponto isolado indicam quebra de linha
   por caractere (estilo japonês). Correção robusta: localizar a rotina de
   quebra no eboot e quebrar em espaços (também engenharia reversa).
+
+### 15/10/2026 — retorno de Davy sobre en-06 e correções
+
+- Prints (Área de Trabalho 1-5.png, 01:57-02:01) e logs 20261015_015552/020354.
+- Desempenho pior: causado pelo log novo de SetFlipRate, chamado a cada quadro
+  (10.585 linhas numa sessão). Agora registra só quando a taxa muda. Rebuild PASS.
+- Achado: jogo pede rate=0 (sem pular vblank, alvo 60 Hz). Limite atual de ~30
+  FPS não vem do flip rate; vem do custo da emulação (CPU/GPU/sincronização).
+- Minimapa desalinhado, "..." e escolhas cortadas: normal não ligava FitHud
+  (só o atalho de teste). run_native.ps1 agora liga FitHud por padrão em EN;
+  -OriginalHud desliga. CheckOnly EN PASS (ajuste HUD: True).
+- Textura estranha do orbe: nunca foi corrigida (diagnóstico pendente desde 13/10),
+  não é regressão desta sessão.
