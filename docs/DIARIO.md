@@ -1,5 +1,18 @@
 # Diário do projeto
 
+### 14/10/2026 — continuação persistente: figurinos, loja e incêndio
+
+- Mais 126 EN em quatro lotes: colunas completas de figurinos 0154, nomes
+  confirmados, publicidade integral 0139 e notícias 0125 com variantes.
+  Total 11.509/16.100, 4.591 vazias; +570 desde pedido de concluir. Em curso.
+- Adições15: 126 em 15 recursos, sem original JP. Ficção/sátira dos anúncios,
+  versos, avisos e quebras preservados; não apresentados como conselho real.
+- Auditoria 173 JSONs, reconstrução/releitura de todas as 11.509 EN PASS em
+  117 recursos. União com pilotos 11.639 validada em memória. en-05 permanece
+  aplicada em 10.721. Sem iniciar jogo ou alterar dump/saves.
+- Próximo: notícias longas restantes 0134 e demais lacunas; nomes próprios
+  ainda exigem evidência, revisão editorial/HUD/imagens segue pendente.
+
 ### 14/10/2026 — conclusão solicitada: nomes destravados pelo próprio dump
 
 - Davy pediu concluir, sem encerrar a cada checkpoint. Continuação em curso:

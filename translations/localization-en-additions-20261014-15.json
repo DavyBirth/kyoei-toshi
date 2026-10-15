@@ -1,0 +1,981 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/item_data.csh",
+      "source_sha256": "1622cdb83f82b79da445ed25a59d1a1843c76a373e9ef2d9eda58b4ee2863276",
+      "entries": [
+        {
+          "id": "r1268/c26",
+          "source_text_sha256": "4b93ef22d2a0c56d3ebf6c0c9be47e83d81c769172d9e5b974f7d402e5e4c3db",
+          "en": "A box containing an engagement ring, smeared with blood.<br>It lay where Kumi, the girlfriend of Naoki, the man encountered downtown, apparently came under attack by a monstrous bird.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1268/c26; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r1268/c28",
+          "source_text_sha256": "4b93ef22d2a0c56d3ebf6c0c9be47e83d81c769172d9e5b974f7d402e5e4c3db",
+          "en": "A box containing an engagement ring, smeared with blood.<br>It lay where Kumi, the girlfriend of Naoki, the man encountered downtown, apparently came under attack by a monstrous bird.",
+          "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1268/c28; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/loading_image_and_text.csh",
+      "source_sha256": "5f7a4c7731e997457391f2e0f987338db6a16a998f68f40f8825dadd4679621e",
+      "entries": [
+        {
+          "id": "r43/c3",
+          "source_text_sha256": "6b140be42b009bf2c18de40f1ce824290b14f8a09a8d6f29f22138308ebb96d9",
+          "en": "The shadow resting on the seabed seems to have vanished.\\nI'll go call First Mate Oda at the stern.",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r43/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r43/c4",
+          "source_text_sha256": "6b140be42b009bf2c18de40f1ce824290b14f8a09a8d6f29f22138308ebb96d9",
+          "en": "The shadow resting on the seabed seems to have vanished.\\nI'll go call First Mate Oda at the stern.",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r43/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/staffroll.csh",
+      "source_sha256": "751be64333402793813ee9f03ec8da9ef3dcd73b68dedc62ac484ded478bb338",
+      "entries": [
+        {
+          "id": "r29/c3",
+          "source_text_sha256": "98f63b7ee77f6f8afecc68ce487bee77d487f149ce7de4cebaa23f4b80f2f7b6",
+          "en": "Hitomi Fukazawa",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r29/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r61/c3",
+          "source_text_sha256": "fc8ddad4da34f20a5212e4f7b481cb5373e20914476afe1d761a8c00c49f6b9e",
+          "en": "Hirai",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r61/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/SpeakerTable.luc",
+      "source_sha256": "ecce9eef350997de9e3d338df230cb08361924b845259731f64853a36dcfed30",
+      "entries": [
+        {
+          "id": "p0/k94",
+          "source_text_sha256": "cafb69a7bb95ff4c0dd058354815e804310ccd8727b2837f8c09bd54aa1f5b4a",
+          "en": "Naoki",
+          "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k94; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k95",
+          "source_text_sha256": "0c840d380dda5b3c532cb8067a46b62dd83e467bbf6384506980ceb5bafc2bf0",
+          "en": "Kumi",
+          "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k95; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Heroine.luc",
+      "source_sha256": "ad9f923db70f61116204eba07b48f2e4b368a7ae0f994fbaebef93d002c9ff54",
+      "entries": [
+        {
+          "id": "p0/k500",
+          "source_text_sha256": "1232f417a2a9964c5a731cce8b42b2a97c5730314640b94bc0ddd7d9ac073f7f",
+          "en": "Dr. Fukazawa looked so happy.",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k500; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k502",
+          "source_text_sha256": "27bffa41bb348e2ad90c5114285e06cce47a7f2112d96ded48371effec430105",
+          "en": "It looked like the first mate gave you something.\nCould it be for Dr. Fukazawa?",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k502; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k506",
+          "source_text_sha256": "9e9ee458c36eb2f6fd3135063f794bd2a4bf4e2b439d49d25968a140ec7f608d",
+          "en": "Dr. Fukazawa is wonderful, isn't she?\nA message from the first mate?",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k506; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k508",
+          "source_text_sha256": "8ac4f28c68c8ad96570c8457a2fc20d4b1686d6f9f853184fd7c49bee01dd478",
+          "en": "It looked like Dr. Fukazawa gave you something.\nAre you taking it to the first mate?",
+          "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k508; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_204.luc",
+      "source_sha256": "24e892d1979af5bca0df524f6cb06002166ee4099db4f1038492d5df53712ad2",
+      "entries": [
+        {
+          "id": "p0/k397",
+          "source_text_sha256": "c4382739a3538bbee2808e99d9daca589a6f9d47cad350595fb72c42e79bbefc",
+          "en": "Kunshiran Construction President Busujima",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k397; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k400",
+          "source_text_sha256": "e51fb3e66c8293ae3dcd164d36c989a8a2720b8667a86a8ab60c4c7bb263f1f0",
+          "en": "Me? I'm Busujima, the head of Kunshiran Construction.\nThe view from the observation deck is exceptional.\nPlease take your time and enjoy it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k400; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_210.luc",
+      "source_sha256": "4d25399f57494444eff5bd384c56c801405fabba95d98a196a56803094b93aa9",
+      "entries": [
+        {
+          "id": "p0/k355",
+          "source_text_sha256": "ac8951b8c15d71f8881fede03aca2d90107a2fc57de2bc21de59e4ff0fe6d991",
+          "en": "Kumi, please be safe...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k355; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k529",
+          "source_text_sha256": "b3aa030fc8ea5352cd283520d8d8cf07bd860c8dd77bc424f3b98d3c58a62c3c",
+          "en": "If only I hadn't criticized Kumi over something so trivial...\nWe'd still be together now...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k529; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k531",
+          "source_text_sha256": "ff920920bffc84327c1f0fea3b879c273c6970dc445c517dee7f1a7450d7cc26",
+          "en": "Kumi! Where are you...!?\nI have to go save her...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k531; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k533",
+          "source_text_sha256": "cafb69a7bb95ff4c0dd058354815e804310ccd8727b2837f8c09bd54aa1f5b4a",
+          "en": "Naoki",
+          "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k533; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k544",
+          "source_text_sha256": "818008097992d8fa03b6bd2389c4ea2eadff07ebeb5865f65eeafa31a177454c",
+          "en": "Offer baseless reassurance: 'I'm sure Kumi is safe!'",
+          "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k544; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k558",
+          "source_text_sha256": "da5a9ecad34772bc1e3f429db444c50152d8cddf6c224f8c615c2512b4cdaecc",
+          "en": "What are you talking about!? Kumi is outside!\nIf the monster attacked her...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k558; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_210_2.luc",
+      "source_sha256": "aea85d2f9baa389566b12f9064f3f40b673308d0d98af2bc70c024301d1047f3",
+      "entries": [
+        {
+          "id": "p0/k643",
+          "source_text_sha256": "cd14dde5f55ef0afd55d5b2de2a5dbf71cb128f75b356668120988a5b2450d0d",
+          "en": "A-all right! Kumi, let's get out of here!",
+          "notes": "English draft imported from audited private workspace, translate-en-0054.json:p0/k643; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k645",
+          "source_text_sha256": "7be9d0c5dcec773f5ff11b8247abf91c85161b716330fd9e0ee2b9bb01e03e63",
+          "en": "Wait. Naoki, that present...\nWhat were you going to say when you gave it to me?",
+          "notes": "English draft imported from audited private workspace, translate-en-0054.json:p0/k645; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k649",
+          "source_text_sha256": "a620ac97576013899147bb752c98c451d251f80758c2c45e7cd9011450e32be4",
+          "en": "Happy birthday, Kumi.\nAnd...",
+          "notes": "English draft imported from audited private workspace, translate-en-0054.json:p0/k649; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_218.luc",
+      "source_sha256": "e2cd50ee0dcafbeb37650762d0635d15bcd477c352023d7a13bb0e81677282c6",
+      "entries": [
+        {
+          "id": "p0/k883",
+          "source_text_sha256": "dd722e08deb976644901107a598a3a07ee10f1e7418b5a5faae0defefcecc620",
+          "en": "Give them Captain Oda's Photo for 400,000 yen as proof of their discipleship.",
+          "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k883; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k912",
+          "source_text_sha256": "4ac8252672a178c8a2e501fb6f94f540dbfc5d637cc46fcbc31147ac8fad5fdf",
+          "en": "This time, give them Captain Oda's Photo for 400,000 yen as proof of their discipleship.",
+          "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k912; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1096",
+          "source_text_sha256": "6bc82b708e07c18b404bcc59174975ba6f6a2ee94fc078e2fb26555ad919253e",
+          "en": "Offer them Captain Oda's Photo for 400,000 yen as a protective charm.",
+          "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k1096; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/item_ad_text.luc",
+      "source_sha256": "52218d6ce96f98bc4d08b94b7ab652ecab1fe97c69526c857fc32f7eec3a27d0",
+      "entries": [
+        {
+          "id": "p0/k7",
+          "source_text_sha256": "ba83c29c5cecf8f0ee4201651a1397884da712df9bf45bac5d59aeaec2c3539b",
+          "en": "A hugely popular Karaage Minister offering that perfectly matches rich chicken thigh with the sharp, stimulating heat of chili powder.\nMixed into both the marinade and the coating, our carefully crafted chili powder combines red chilies imported from their place of origin with several spices using our own special blending method.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k11",
+          "source_text_sha256": "9653b564d6a1b1dcbb796b3a8b234b44c70582da8365bd6a4b623eb6dbf6663e",
+          "en": "The undisputed classic, consistently our top seller ever since Karaage Minister first launched. Its seasoning is improved a little each year, continually evolving to become safer and more delicious.\nSeasoned with naturally brewed soy sauce made from organically grown Japanese soybeans, it offers an enduring flavor loved by a wide range of customers.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k11; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k15",
+          "source_text_sha256": "6d9d79d85c36c520179a9e3c3899e2c2ed8615124b90cc344a3983495d92b5fd",
+          "en": "This Karaage Minister is made with a marinade using milk of outstanding flavor and quality, sourced from contracted farms across Japan.\nThe milk adds mellow richness and depth, allowing us to use less salt than in our other Karaage Minister varieties.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k15; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k19",
+          "source_text_sha256": "9390e60327f97bb2ec00297a3a42704f31d477ade3268cce21abd0878cde2c63",
+          "en": "Strawberries come into season in spring. Now we've successfully developed a Karaage Minister made with them!\nCoarsely crushed strawberry flesh is mixed in, combining the chicken's savory richness with strawberry sweetness and tartness for a refreshing taste of spring. Add the Strawberry Sesame Salt provided at the counter for even more strawberry flavor!\nThe perfect companion for a spring outing!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k19; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k23",
+          "source_text_sha256": "c4d063912aaf7dff83bf0cb698fd8f41ab97e2589ffe6b33b94ef2c765b98325",
+          "en": "Beautiful memories with you.\nSuch wonderful times, both painful and joyful.\nBut even the most vivid, deeply cherished memories\nwill one day fade, and eventually be forgotten.\nThe future that must come will transform those memories.\nYet I want to hold this moment in my heart for as long as I can.\n\nMaking your memories just a little stronger:\nKaraage Minister Special Memory Flavor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k23; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k35",
+          "source_text_sha256": "04cdcdb43bc1f0d3801dfc05cefa4ae622e9a96e64ea6aed1229927412d8f0a1",
+          "en": "You want to enjoy Pacific saury, that taste of autumn, all year round...\nTo answer that wish, Karaage Minister Pacific Saury Flavor makes its long-awaited debut!\nPlain-grilled saury is flaked and mixed in, while stock simmered from its backbone goes into the marinade.\nAn extravagant treat using one whole saury in every piece.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k35; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k39",
+          "source_text_sha256": "03f407acca155c5f96e41b5c515b2ff4246505047ecf2af3c40024fa0ee8ce15",
+          "en": "Karaage Minister made with that legendary native chicken, the 'Nameless Chicken,' returns for a limited time this year!\nRaised strong and roaming freely across the land, its thigh meat is truly exquisite!\nFirm flesh gives it a satisfyingly springy bite. With every chew, its deep, rustic flavor grows and fills your mouth.\n\n※Quantities are limited. Some stores may sell out.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k39; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k43",
+          "source_text_sha256": "c2c38039b916cace625d0984abb15241d5d0374b648183e3b0ca9bff805ca50b",
+          "en": "Andromeda: the blazing-hot chili said to be the hottest in the universe.\nThis spring finally sees the arrival of Karaage Minister Super-Spicy Red Flavor, made with this pepper.\nIt boasts roughly 120 times the heat of Karaage Minister Chili Flavor, according to our own comparison.\nOne bite sends sweat cascading like a waterfall, a sight said to resemble the Milky Way glittering in the night sky...\nCan you withstand this heat?\n\n※Small children, pregnant customers, elderly customers, and those sensitive to spicy food should take care.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k43; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k44",
+          "source_text_sha256": "6fc1d2b7861f6e7b64cf5d33fc8c00feaf40ad57f9544570bf8303738eecc961",
+          "en": "～Karaage Minister (Super-Spicy Red Flavor)～",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k44; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k46",
+          "source_text_sha256": "069178612fd3a7e69d81c798dc2ce63e341beadc4752bf1ee6aa7c8b9ae5cdbd",
+          "en": "The Bizarre Game Absolutely Safe City",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k46; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k48",
+          "source_text_sha256": "6f219a4f205bb905cc382a5fb220118566385a76e4eb6313c418176b597de5c8",
+          "en": "～Absolutely Safe City Game～",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k48; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k50",
+          "source_text_sha256": "69914961d90a9fdc63e924f40ae9efbc3d5358b2e2fe742790a2532b99f6f37b",
+          "en": "Replacing Your Extinguisher? Choose a Reliable Stored-Pressure Model!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k50; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k51",
+          "source_text_sha256": "25d7d8b5198c6c1cfcaf9f945ded76370fe2aefe892dc7fd694e054fa2a95464",
+          "en": "Is the fire extinguisher in your home still within its service life?\nUsing an expired extinguisher is extremely dangerous and may cause an unexpected accident.\nIn particular, a ruptured cartridge-operated extinguisher can cause a serious accident.\nA stored-pressure extinguisher avoids rupture accidents and has an easy-to-squeeze handle, allowing even people with limited strength to use it confidently.\nWhen replacing yours, we recommend a stored-pressure extinguisher!\n※Even stored-pressure extinguishers should be replaced promptly once their service life has expired.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k51; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k52",
+          "source_text_sha256": "8530e726cd174a2b17bbecd473ef3ab60c7e1b30fe967a0e980afb3af56b1a5c",
+          "en": "～Fire Extinguisher～",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k52; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k54",
+          "source_text_sha256": "5ced0a978679725dde7f35f1e9669cecd093539d85a31db129fa8f480d2da908",
+          "en": "Extremely Rare! Tickets to Watch Aya Suzumura on the Radio",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k54; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k56",
+          "source_text_sha256": "8983b7d5bfb4192fa566570e77cbbda81425cfc30e3f87f31800e70b2b8a8d08",
+          "en": "～Midnight Sky Garden Radio Audience Ticket～",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k56; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k58",
+          "source_text_sha256": "687de156c8c1a9250f313e9abcd6234bdc77ea85dedfb0b5324a1232f2f1435e",
+          "en": "A Popular Series! A Tale of Two People Bound by Fate!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k58; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k60",
+          "source_text_sha256": "925d6b4fb4df5d53d23072f0925d35d5488e0ca54dfb96a65b97f8c01a12c7c2",
+          "en": "～Hard Boys Z～",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k60; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k67",
+          "source_text_sha256": "87f9e7cf6cbb98c8d6c75c4d685aea3e68ba23951e2b79e3a0001775e0ff7844",
+          "en": "Koshinicool is a cooling, pain-relieving, anti-inflammatory patch. It can be used for more than lower-back pain.\nThin, light, and long-lasting! One patch works for eight hours. Our proprietary technology also lets you extend the duration by layering patches: two last 64 hours, and three last 512 hours.\nIt also uses a placement-guide sheet that lets you apply it to your back with one hand, on your own. Use it anytime without troubling someone else for help.\nNow with one extra patch in our special promotion!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k67; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k68",
+          "source_text_sha256": "3e09abee077c0d75ceeb5d5c24738b8610a454b5a2ead1891881340b0de96ba4",
+          "en": "～Koshinicool～",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k68; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k71",
+          "source_text_sha256": "69fbd4d91d4da848ca66f571c56d31b20b538048f7f7b1331005c28ea921f19f",
+          "en": "A ceramic piggy bank that holds around 50,000 yen in 500-yen coins.\nWith particular attention to the sound when coins are dropped inside, we use clay made from carefully selected earth. Equipment developed using our proprietary technology handles everything from kneading to the final firing, successfully producing a finish that looks handcrafted by an artisan.\nThe series also includes the Piggy Bank Large, which holds 600,000 yen!\nFor a limited time, purchase one and receive a ticket for a factory tour!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k71; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k72",
+          "source_text_sha256": "e291de18aeaf079ba08f5c09097fc57081366aeacb8db8d5624e0ec219e2d5d0",
+          "en": "～Piggy Bank～",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k72; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k75",
+          "source_text_sha256": "15d9596128df503748a7b46b03db4f85da630ee511337449046e9aee67daa4e3",
+          "en": "Juice made with high-quality California orange juice.\nOur Orange Juice has reached its fiftieth anniversary!\nIt has enjoyed tremendous support ever since its launch and is now considered a classic orange juice. We will continue making products our customers can drink with confidence.\n\nFor commercial customers, we offer not only 350 ml cans but also 18-liter barrels and 2,000-liter tanks.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k75; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k79",
+          "source_text_sha256": "b7bd66dcd065046cde4476300eed626dd9c35d41f0e96676ad2de2861ab503ee",
+          "en": "A standard-style set featuring a single-breasted, two-button jacket and flat-front trousers.\nIts balanced silhouette gives the right impression for any occasion. Careful tailoring extends to every detail, including the lining and pockets.\nWith two pairs of trousers included, it offers excellent value and helps you stay fresh through the summer.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k79; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k83",
+          "source_text_sha256": "efe0b0035ca7256e90061a64f59c4efffd2ffa92e230dd0d7d5af4d3fee4fcb2",
+          "en": "A pencil skirt and one-button jacket made from fabric with a luxurious feel.\nThe jacket even considers keyboard use, with slits at the cuffs!\nThe skirt's clean, sharp lines enhance your look. Stretch fabric allows easy movement and comfortable wear!\nMachine-washable at home, it is ideal for keeping your everyday wardrobe fresh!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k83; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k87",
+          "source_text_sha256": "7596708ac1a97b5297b920613a5c1805eeb4d2048d7f240147214ce2759aafdf",
+          "en": "A men's cardigan and chinos set with a standard silhouette.\nThe cardigan is made from durable, comfortable material and can be washed in your home washing machine.\nThe slightly slim chinos use stretch fabric, making them comfortable and versatile.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k87; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k91",
+          "source_text_sha256": "f09449593522c0de191c17a56a237bbb311104ab79a52aaf563dc8a2dca51566",
+          "en": "A long cardigan and short culottes set, perfect for spring.\nThe knitted cardigan keeps you comfortable on slightly chilly days, with varied stitching for a design you will never tire of.\nThe culottes' soft silhouette and material make them comfortable and easy to mix and match.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k91; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k102",
+          "source_text_sha256": "462d2002e85ff4bd1fce523579f8a5853919cbdf10047f9d516f9496fd785b68",
+          "en": "A coordinated flannel shirt and jeans set.\nThe washed cotton flannel shirt has a lovely feel and exceptional comfort, and pairs with all kinds of bottoms.\nThe jeans feature a basic design in soft, comfortable material, with a washed finish for added character.\nOur customer-appreciation sale is pushing prices to the limit! Take this opportunity to try it!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k102; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k106",
+          "source_text_sha256": "76f56918691f89aedfbcdc1f4d65e9ce255a977ae887b19b80f1e5b0690a81ff",
+          "en": "A women's long-sleeved blouse coordinated with jeans.\nCreated for customers who say, 'I don't want to stand out,' 'I want a safe choice,' or 'I want to keep it casual.'\nThe blouse is a familiar white long-sleeved design in 100 percent polyester. The jeans are regular straight-cut blue denim, convenient for everyday wear.\nDiscounted heavily to make room for new stock. Take this opportunity to buy!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k106; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k110",
+          "source_text_sha256": "b8ef5caba6c34d22269609d5c7efb6ffc7cc0f5fabd81915cfc219f598dc4ce5",
+          "en": "A white collared dress shirt paired with bold checked flap trousers wrapped with belts. Three striking belts draw the eye! Open the zippers at the hems to create a boot-cut style and a longer-legged silhouette!\nA punk-style set recommended for anyone seeking coolness that breaks the mold.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k110; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k114",
+          "source_text_sha256": "95e6dc3b3b88efbcabe0619a530402c6b7fbd5518e37172d2732d250e0783fd0",
+          "en": "A leather jacket, camisole, and shorts, combined in a slightly provocative outfit overflowing with leather appeal!\nThe jacket's attractive silhouette adds femininity while retaining the tough texture of high-quality leather!\nRemove the camisole straps, and it becomes a tube top!\nWear them together or separately. Enjoy a PUNK look!",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k114; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k117",
+          "source_text_sha256": "a756806e578f76c713a45b5af3943dff67557da96097c927b6f2857c7ef1b749",
+          "en": "A complete, genuine policeman's uniform, obtained through our own special channels.\nThe fabric and stitching are exceptionally durable and functional, made to withstand demanding police work. We believe you will be impressed by the quality of the real thing.\nPopular not only with cosplay enthusiasts but also with those studying clothing design.\nOnly the item in stock is available, with no restock date set. Order soon!\n※For personal hobby use only.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k117; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k121",
+          "source_text_sha256": "2061227eb2f521f464ef41549bfbdcff3bfb8ba250f4ccb7761d03a74e44c56e",
+          "en": "A complete, genuine policewoman's uniform, obtained through our own special channels.\nSome fabric has minor scuffing, but it is barely noticeable and the uniform is almost like new. When ordering, please tell us whether you want it cleaned before delivery.\nPopular not only with cosplay enthusiasts but also with uniform collectors.\nOnly the item in stock is available, with no restock date set. Order soon!\n※For personal hobby use only.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k121; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "entries": [
+        {
+          "id": "p0/k108",
+          "source_text_sha256": "4716aef03f0b51da6e983e4c7840c50d5eb7965d30e080a7ee9f887bddcbd678",
+          "en": "First Mate Oda at the Stern",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k108; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k114",
+          "source_text_sha256": "c0c71a0c3ab5cf72a2536ad1ecbf5a8e41deac7dcf2fb6a31d815aa773032a5d",
+          "en": "First Mate Oda",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k114; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k116",
+          "source_text_sha256": "ed651024c41317ef578e95723c37ce76051f1020a246643d7c2b72d460dc6b09",
+          "en": "Dr. Fukazawa",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k116; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k124",
+          "source_text_sha256": "55a70c0a7f3919c99ce8477af91c3fae4497dd170c9ce20dbed1b64486fae80f",
+          "en": "The shadow on the seabed seems to have vanished. Go call First Mate Oda at the stern.",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k124; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_204_news_text.luc",
+      "source_sha256": "7381fb977b640ed21542e498875b08a1410a10a59a94a6bce31454c9527c4a90",
+      "entries": [
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "0cc9bc014349bddddf20b0cc5337d9968ddbe1c823a4be82ea656bf0c02c3cd4",
+          "en": "Labors from Division 2 of Special Vehicles Section 2, Security Bureau, Tokyo Metropolitan Police Department, were deployed to help rescue people from the fire at the Iberis Tower Building in Sakura Ward, Miyato City, Miyato Prefecture.\nThe unit was transported to the roof by helicopter and carried out rescues using cables. However, possibly because of an operating error, a Labor damaged the building, sending debris falling to the ground.\nFortunately, nobody was injured, but nearby residents have voiced concerns about the Labor unit.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k170",
+          "source_text_sha256": "cb0d5047ea38fb29cab4f5fe783933a9ac116a38cfbc849b439e7097613cffa3",
+          "en": "During the Iberis Tower Building fire, a Labor belonging to the fire department became stuck in a passageway.\nA photograph we obtained independently confirms that it was indeed stuck. Could the operator not have noticed before trying to pass through? Other firefighting Labors rescued it, and it reportedly suffered no mechanical problems.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k170; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k182",
+          "source_text_sha256": "da96f683359f70c64ba5f7ef9b84fb781535eb6534d0e3805e79fbc1b60a3866",
+          "en": "The major mobile phone company Lightning Connect recently made headlines over a massive customer-data leak. Apparently, it began when an attacker inferred a password from words spoken by a sales employee on a mobile phone in another company's elevator, then broke into its computer system.\nDiscussing a project in an elevator shared with other companies' staff and ordinary people, assuming nobody will understand, is inexcusable. In this high-tech society, there is no telling what might cause an information leak.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k182; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k186",
+          "source_text_sha256": "26f70d44901d7daaf759937b860929077af6e6944cef3ded1e88cbc5729d8030",
+          "en": "Approval has been granted to resume coastal reclamation for the waterfront development project in Miyato City, Miyato Prefecture, which had stalled after an accident late last month.\nOnce reclamation begins, the last beaches in Miyato Prefecture will finally disappear.\nWork begins on the twelfth of next month. The area remains open to the public until the end of this month. Anyone wishing for one last look at the prefecture's beaches has until 3 p.m. on the month's final day.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k186; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k188",
+          "source_text_sha256": "9234311b465008febbe592e03608e3991d04b16bbf3e380a978edd2437b0b319",
+          "en": "President Busujima of Kunshiran Construction has been missing since today's fire at the Iberis Tower Building.\nMiyato Prefectural Police say he was seen fleeing through the offices several times. Believing he was caught in the fire, they are working to establish whether he is safe.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k188; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k198",
+          "source_text_sha256": "489f0372bad5e3f1c99cdb36f68ff6690b893c85b27e0504405268f25abf05ba",
+          "en": "Around 9 p.m. today, a man with a mohawk chased a couple while shouting loudly on the observation-deck floor of the Iberis Tower Building, which later caught fire.\nThe fire had begun before Miyato Prefectural Police arrived in response to the report. The matter remains under investigation, and no solid information was available.\nWitnesses described the pursuer as 'a tall, dark-complexioned man in a suit with a mohawk.' Any connection with the fire is unknown.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k198; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "d43100b14efb0c5c3629df3070187812551e150877ee992e3e4f71a05184d4c9",
+          "en": "Around 9:30 p.m. today, a report was received of two people carrying handguns on an office floor of the Iberis Tower Building.\nBefore this, 'a tall, dark-complexioned man in a suit with a mohawk' had chased a couple on the observation-deck floor. Miyato Prefectural Police are investigating on the assumption that the same person was involved.\nT, who made the report, said, 'They suddenly came into the room shouting loudly and seemed to be looking for someone. I couldn't really tell what their hair was like.' Any connection with the fire is unknown.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k202",
+          "source_text_sha256": "d4ffa4faf4430970bf0dc949e678953ada113f8150050debba294a6d59545406",
+          "en": "T, who survived the Iberis Tower Building fire, says they heard a cat inside the twentieth-floor office during the blaze.\nAccording to T, the only animals kept there are hamsters, making a stray cat that wandered inside the most likely explanation.\n'It had a cute voice, but I couldn't find it when I searched. It probably couldn't have survived that smoke. I feel terrible,' T laments.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k202; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k204",
+          "source_text_sha256": "4339f578dd02f624880ff469cb59f08d63af8aab618468bf4ff820112c428c61",
+          "en": "T, who survived the Iberis Tower Building fire, says they heard a dog inside the twentieth-floor office during the blaze.\nAccording to T, the only animals kept there are hamsters, making a stray dog that wandered inside the most likely explanation.\n'It had a energetic voice, but I couldn't find it when I searched. It probably couldn't have survived that smoke. I feel terrible,' T laments.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k204; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k206",
+          "source_text_sha256": "96c06714db95295dddf31fbcb2d5e0f627e3b20fd2ecf9eaf9acaa2675043f4c",
+          "en": "T, who survived the Iberis Tower Building fire, says they heard a chicken inside the twentieth-floor office during the blaze.\nAccording to T, the only animals kept there are hamsters, making a wild chicken that wandered inside the most likely explanation.\n'It had a healthy voice, but I couldn't find it when I searched. It probably couldn't have survived that smoke. I feel terrible,' T laments.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k206; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k208",
+          "source_text_sha256": "9a6aaaed742f5b282f25990c6f0dcb786b1889297b48fde0f87bf0a79559b9af",
+          "en": "T, who survived the Iberis Tower Building fire, says they heard a bush warbler inside the twentieth-floor office during the blaze.\nAccording to T, the only animals kept there are hamsters, making a wild bush warbler that wandered inside the most likely explanation.\n'It had a beautiful voice, but I couldn't find it when I searched. It probably escaped through a window. It was a strange experience,' T says.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k208; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k210",
+          "source_text_sha256": "782847d9f1339f9f7cc4466b2329eec5ef7fcc89e3c9b831192e81dedb2e9a3c",
+          "en": "T, who survived the Iberis Tower Building fire, says they heard a wolf inside the twentieth-floor office during the blaze.\nAccording to T, no wolves are kept in the office. Experts have suggested it could have been a Hitomitai Building Wolf, a supposedly extinct species able to live only in high-rise buildings, attracting considerable interest.\n'It was a very distinctive call, but I couldn't find it when I searched. It probably couldn't have survived that smoke. I feel terrible,' T laments.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k210; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k214",
+          "source_text_sha256": "a8ee69bc8c59c45a4694df2e9e9cee115d089b2a0b4050da87f83b109ddeeef0",
+          "en": "T, who survived the Iberis Tower Building fire, says they heard a tsukutsukuboshi cicada inside the twentieth-floor office during the blaze.\nAccording to T, no insects are kept there. Experts say June is the earliest these cicadas are heard in Miyato Prefecture, making this the first reported April observation and casting doubt on the claim.\n'There's no mistake. That was a tsukutsukuboshi cicada. I searched immediately, but it stopped calling and I couldn't find it. It probably couldn't have survived that smoke. I feel terrible,' T laments.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k214; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k216",
+          "source_text_sha256": "b789a9fe1125bf1ce30ee3811d48ba26f141b57f10c5ae7e49072484fa023fa0",
+          "en": "This time, we introduce the Dragon Pot, a state-of-the-art kettle from long-established commercial kitchenware maker Munemune!\nMade entirely of thin ceramic, this kettle features our proprietary Dragon Coating inside, patent pending. Quick to boil and slow to cool, like a wild animal's temper.\nAnd prepare to be amazed: being ceramic, it is microwave-safe! Naturally, it is dishwasher-safe, too.\nOpen the handle, and what do you find? A power connection! Yes, this kettle can also boil water from an outlet, just like an electric kettle. And the price? An astonishing 19,800 yen including tax! Don't miss this opportunity!",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k216; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k218",
+          "source_text_sha256": "7326aa0b0df83a73d85ec768100ce49b1030ee6ec1f2131f59da59ed60bb6d8c",
+          "en": "It rarely comes up in conversation, but do you know how long an answering machine records? Twenty seconds? Thirty? You would need about that long to leave a message. Yet Mossy, the latest landline phone from industry leader Irodori Electric, offers an astonishing five seconds! Isn't that rather short? We decided to ask why.\nUs: 'Hello. Why does Mossy record for only five seconds?'\nIrodori: 'Well, when we averaged the recorded messages on all the landline phones we've sold, it came to 2.5 seconds. We figured twice that would be enough, so we made it five.'\nUs: 'What!? 2.5 seconds? Could you even say hello in that time?'\nIrodori: 'Our own investigation confirmed an average of 2.5 seconds. For privacy reasons, we measured only the duration, not the content.'\nUs: 'D-doesn't that include calls where people hung up without leaving a message...?'\nTo be continued next issue.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k218; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k220",
+          "source_text_sha256": "8504d213ef303b2f671bdbd6cdb5d723f6d621b0a38273900d8de379b827ad87",
+          "en": "T, who survived the Iberis Tower Building fire, says they heard a Spiral Hercules Chameleon inside the twentieth-floor office during the blaze.\nAccording to T, the only animals kept there are hamsters, making a wild Spiral Hercules Chameleon that wandered inside the most likely explanation.\n'It was very quiet, but it was definitely a Spiral Hercules Chameleon. I searched for a while but couldn't find it, perhaps because it was camouflaged. It probably couldn't have survived that smoke. I feel terrible,' T laments.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k220; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k222",
+          "source_text_sha256": "d83952db188c97f5b5438f7aca4633ae2494204a9502b0e2731d5dcc18651427",
+          "en": "'Do not use elevators during an emergency, even if they are running,' says U from Irodori Electric's public relations department.\n'A disaster can deform equipment or cause malfunctions. Apart from stopping, an elevator could cause an unexpected accident such as electric shock.'\nOn the twenty-second of last month, when an earthquake of seismic intensity 4 occurred off Miyato Prefecture, a Sakura Ward man became trapped when the elevator he used to evacuate stopped.\nTake care not to use elevators during an emergency.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k222; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k224",
+          "source_text_sha256": "fa5650b94d098fc724c8513bb2abe6024766888d34a671f90a1df0aa5d70b1ac",
+          "en": "K, who escaped safely from the Iberis Tower Building fire, says something is weighing heavily on their conscience.\n'While evacuating, I heard a voice inside an elevator. Someone might have been trapped. I was too panicked to think about it then, but that was definitely a person's voice! Someone was trapped in there!'\nNo casualties from the fire have been announced so far. I hope whoever was trapped is safe...",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k224; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "cb334fe7258dc5dd3fe16fc211d79f4f6537755a0f971644a4b7198e7b18189c",
+          "en": "A security camera inside an Iberis Tower Building elevator retained footage from the fire.\nAfter checking with building staff, we found nobody who recognized the two people shown, suggesting they were visitors.\nThis elevator was particularly affected by the fire, and the two people's safety has not been confirmed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k229",
+          "source_text_sha256": "0e139c82c4480108849b3fe0da67dea4f993ca57614e411777647387a885b02b",
+          "en": "A security camera inside an Iberis Tower Building elevator retained footage from the fire.\nAfter checking with building staff, we found nobody who recognized the two people shown, suggesting they were visitors.\nThe raised hand of the person in the foreground appears to be glowing, prompting suggestions that this person caused the fire. This elevator was particularly affected by the fire, and the two people's safety has not been confirmed.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k229; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "915e4acbe6d052315fb7b38b48dbdefd65f62d8f37cd21ec21ee23826f640190",
+          "en": "NKX Fiercely Protests Waterfront Development Plan",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "c462ae26b0c907bb5b1f44469019c94ecd12790309bf50415b14ddc683656170",
+          "en": "NKX Leader Missing",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k235",
+          "source_text_sha256": "947b72d338dbecd8831b06d6d1a146f321cf4d378e457848fce2f1ec317d5cf4",
+          "en": "A suspicious group of three was seen on the Iberis Tower Building observation deck just before the fire.\nAccording to witness B, two people were questioning a man in a leather jacket in detail, while the man seemed to be demanding something in return.\nBelieving some kind of arrangement was being made, prefectural police are searching for the two people and the man in the leather jacket as important witnesses.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k235; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k236",
+          "source_text_sha256": "3dba413ef0f9403dfe482ffcf5a80274585728f76ef4821876e0cb0d569a4393",
+          "en": "A suspicious group of three was seen on the Iberis Tower Building observation deck just before the fire.\nAccording to witness B, two people were asking a man in a leather jacket for something, while the man seemed to be demanding something in return.\nBelieving some kind of arrangement was being made, prefectural police are searching for the two people and the man in the leather jacket as important witnesses.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k236; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k237",
+          "source_text_sha256": "f53d439a643d4e903e2380ef4d857144a3c6e5e892587dcc819e203e8da44442",
+          "en": "A suspicious group of three was seen on the Iberis Tower Building observation deck just before the fire.\nAccording to witness B, two people talking to a man in a leather jacket looked as though they had seen something terrifying, while the man seemed to be demanding something in return.\nBelieving some kind of arrangement was being made, prefectural police are searching for the two people and the man in the leather jacket as important witnesses.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k237; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k238",
+          "source_text_sha256": "d04beb0e892b01c4fb8575c85805cdbb643422840b27596ecbe9b0438e7cbeea",
+          "en": "Three People Seen Talking to a Blue Labor",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k238; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k240",
+          "source_text_sha256": "f5b5f799786378047b57df8e3cb8e27d62a66218425505996eaa4b8bedea8553",
+          "en": "Fire at the Iberis Tower Building",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k240; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k241",
+          "source_text_sha256": "73978a1eb8149dcc6e67e33aca8cae1b9dfb2dcdf3080595957675846f44c9f3",
+          "en": "Before dawn today, a fire broke out at the Iberis Tower Building in Sakura Ward, Miyato City, Miyato Prefecture. Floors fourteen through twenty-five were damaged, and the fire is believed to have originated in the twentieth-floor offices.\nMiyato Prefectural Police found no incendiary material, but traces of extreme force around the origin suggest something like an explosive was responsible.\nAccording to building staff, several people had seen an unaffiliated man walking around the twentieth floor over the past few days. Investigators are continuing their work on the possibility that he planted explosives.",
+          "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k241; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_206_news_text.luc",
+      "source_sha256": "31811de3ac020a498a2119fd5defd7bbc6ede2441c7ec3283b01099b2957ac21",
+      "entries": [
+        {
+          "id": "p0/k64",
+          "source_text_sha256": "0743ffa3e0da1901768385813aaef9c1a2b10a109c0f82bef8339ec523e9df8e",
+          "en": "Dr. Fukazawa, leader of the survey team aboard the research vessel Shibazakura, earned her doctorate overseas at a young age and was regarded internationally as a promising marine life researcher.\nHer paper published three years ago, 'The Relationship Between Pulse Rate and Lifespan in Giant Creatures Inhabiting the Seabed,' was selected as the best paper of its time by Poseidon Neptune, the most authoritative journal in marine biology.\nNews of Dr. Fukazawa's death has brought expressions of grief from marine researchers around the world.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0037.json:p0/k64; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_212_news_text.luc",
+      "source_sha256": "4df22ab296656669e2d6b7ee4107f608b0fb57c5c82d719608f00f16a5e8309d",
+      "entries": [
+        {
+          "id": "p0/k107",
+          "source_text_sha256": "2710a141b6eb4ba46eee85b99bb9d78d3ec07d4729a10234b40e621818b68c69",
+          "en": "An Aspiring Oceanographer: Following in Dr. Fukazawa's Footsteps",
+          "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k107; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_214_news_text.luc",
+      "source_sha256": "84f45e7cdb233e09e12067e8305ed26bb25c146cbcf427d70a39b705c765e36c",
+      "entries": [
+        {
+          "id": "p0/k178",
+          "source_text_sha256": "cf3f31454aaf25d7db133e9ab9abafd504b3af57801749a61e2e2f40c71ee80c",
+          "en": "Today, we're introducing the outfit of a man who happened to visit our editorial office!\nA giant alien appeared that day and caused chaos, but this cool outfit conveys the toughness of someone who made it through!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k178; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k180",
+          "source_text_sha256": "b8a3b0335c98957d9ad74cd0716d1367764cbc2cee4bc740aae8706a1834139d",
+          "en": "Today, we're introducing the outfit of a woman who happened to visit our editorial office!\nA giant alien appeared that day and caused chaos, but this cute outfit conveys the boldness of someone who made it through!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k180; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k208",
+          "source_text_sha256": "fb7f5b7ae2e089d3bb4cb41522a19bf54725cf03186e3b8ad77c8175c4096851",
+          "en": "Ebine Publishing, headquartered in Hananira Town, Miyato City, suffered major damage to its building from the giant alien that appeared there today. Amid this, it has welcomed a new owner and is aiming to recover. Employee Mukojima said, 'Much of the roof has collapsed, and we don't know where our other colleagues are. Honestly, I thought it was all over. But the new owner said they want to revive Ebine Publishing. I intend to do everything I can to live up to that.'\nHowever, Ebine Publishing faces an extremely difficult road. Not only its building but the surrounding roads are badly damaged, making normal work impossible. It seems questionable whether it needs to remain attached to this building. Its next moves will attract attention.",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k208; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k226",
+          "source_text_sha256": "ade78ac4225c03a550be76ae74ff1ce90eed91903002c30661e06963070f8689",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nCosplay is his hobby, and this is his favorite policewoman's uniform!\nHe let me take a closer look, and it was so well made I thought it might be genuine♪\nHe wore that skirt wonderfully. He looked great♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k226; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k228",
+          "source_text_sha256": "87e9464e21cf31a954f6283344c2ddfb3563f30371d3bcdf908e1e43b00381a5",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nCosplay is his hobby, and this is his favorite policeman's uniform!\nHe let me take a closer look, and it was so well made I thought it might be genuine♪\nHe wore it beautifully and looked wonderfully dashing♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k228; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k230",
+          "source_text_sha256": "5520c42fc4f5113d5f2c8b6d68b38868de459df6fd4d800fdd9326cac3ef38ad",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nCosplay is his hobby, and this is the firefighter's protective clothing he acquired recently!\nHe let me take a closer look, and it certainly seemed capable of handling a little fire♪\nIf I saw him at a fire, I think he would look very dependable♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k230; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k232",
+          "source_text_sha256": "66261d2420ee7f76439b4f1f981c2f88f97f9fa227ad6a74a17a2bb4ec9d750f",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nCosplay is his hobby, and this is the train driver's uniform he acquired recently!\nAs a train buff, I was thrilled! The sounds of Miyato Electric Railway trains departing and running instantly played in my head and gave me a boost. Ha-ha!\nThank you♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k232; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k234",
+          "source_text_sha256": "6d7131a7fe7ff120bed20c00f97de7f793c0e3271b653ea9dd556e5b9cb4e1fa",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nCosplay is his hobby, and this is a GZ Burger employee's uniform!\nI've been a big fan of GZ Burger since my student days, too!\nI think I'll go have a Mega Avocado Triple Onion Braised Pork Burger again sometime♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k234; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k236",
+          "source_text_sha256": "54a2b6d018c8803de30ef2355ff0297a7bd51678ed3af1755940e7f2491b526c",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nCosplay is his hobby, and he chose his favorite stand-collar school uniform that day♪\nI think it has a special appeal when worn after your school days♪\nIncidentally, I wore blazers in both middle and high school, so I've secretly always wanted a stand-collar uniform. Maybe I'll try one on sometime. Ha-ha!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k236; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k238",
+          "source_text_sha256": "11142d242bafa1d9265a65b8bec74d84640647c9cc43af89e141f4c79b34d7de",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nCosplay is his hobby, and he went out in his best sailor-style school uniform that day♪\nIt fit him perfectly, and he wore the skirt with such confidence. He looked wonderful!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k238; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k242",
+          "source_text_sha256": "b4d4e6ec1e49f56a6a9b47680e49c70f873d2413c5b304dda3636ae06080f2b9",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nHis top is a green souvenir jacket embroidered with a tiger. Black jeans and boots give the lower half a sharp finish, creating a wonderful silhouette♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k242; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k244",
+          "source_text_sha256": "769133633e59b4dd4031aee649e9717d5559bfef9c0b4bfadaaa2fcd6f0677b0",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nMaybe he'd just finished his shift? He was wearing a Clover convenience store uniform.\nI worked part-time at Clover as a student, too. Their limited-edition Karaage Minister Beef Sukiyaki flavor from back then is my all-time favorite♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k244; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k246",
+          "source_text_sha256": "c0196aa38b90eb0bf3b09262fdfac182416945a50a0e6ecea67220d3e5cc59a0",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nAuthentic cowboy fashion!\nI think the red scarf around his neck makes an effective accent♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k246; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k248",
+          "source_text_sha256": "01a7bde18d702d8f2592c102c0ece8a037d9058c52aaf0d319d83f6d232f2820",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nHe said this women's qipao was a recent acquisition♪\nApparently, wearing it has made him even more passionate about cosplay!\nAn outfit to remember♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k248; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k250",
+          "source_text_sha256": "c3df376ec2680a855412bdf30f5c39413d7a902c3f60bf37814512386e8578d0",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nAmazingly, he's out on the town in a beach outfit full of resort flair!\nFor a moment, I wondered whether a pool had opened right by our office without me noticing!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k250; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k252",
+          "source_text_sha256": "6a3a90c91609b02a15ba0de0d39129631331d6154fe8b7a5739bad0ab58613c0",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nHe showed up cosplaying as a member of the Ground Self-Defense Force♪\nHe let me take a closer look, and the clothes were as sturdily made as the real thing!\nHe looked dashing, and it suited him♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k252; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k253",
+          "source_text_sha256": "406ddcabecaa7773b0de038cc28269930e7e24f267a072b4f5f95b25367d1a9c",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nEven more outrageous than the clothes is that dominatrix mask♪\nA giant alien appeared that day and caused chaos, but this eccentric outfit could match it!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k253; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k255",
+          "source_text_sha256": "c13bcabc7f069800c9f0027037f67f51bf65a6a97f0e1ce34af13afdcda0be90",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nCosplay is her hobby, and this is her favorite policeman's uniform!\nShe let me take a closer look, and it was so well made I thought it might be genuine♪\nShe wore the men's trousers beautifully and looked wonderfully dashing♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k255; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k257",
+          "source_text_sha256": "ad9558d7a1d034579b9272a3799e0461de65bcd12cc36eb18599f0ae6edcaaf4",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nCosplay is her hobby, and this is her favorite policewoman's uniform!\nShe let me take a closer look, and it was so well made I thought it might be genuine♪\nShe looked so dashing and so much like a real police officer that I got nervous. Ha-ha!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k257; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k259",
+          "source_text_sha256": "aaea804a4a59790a2723b448cb531dc5e286c281c2b6475f82536b4eb77b4f2d",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nCosplay is her hobby, and this is the firefighter's protective clothing she acquired recently!\nShe let me take a closer look, and it certainly seemed capable of handling a little fire♪\nShe looked strong and wonderful♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k259; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k261",
+          "source_text_sha256": "0999dc78ab8acfb056f10b4d9f551586febb02db403a961523238450ecc6a057",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nCosplay is her hobby, and this is the train driver's uniform she acquired recently!\nAs a train buff, I was thrilled! The sounds of Miyato Electric Railway trains departing and running instantly played in my head and gave me a boost. Ha-ha!\nIt looked very cute on her♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k261; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k263",
+          "source_text_sha256": "c8a7127fc8a8a0e3af9fc4e768214d1a41d76b64e9142f32740e5696f4fe1799",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nCosplay is her hobby, and this is a GZ Burger employee's uniform!\nActually, someone I liked in high school worked at GZ Burger. It brought back memories of those days. Ha-ha!\nI think I'll go have a Day's Worth of Vegetables Fried Fish Burger sometime♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k263; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k265",
+          "source_text_sha256": "1406a40ac6a19e73a1ed65cbcdd4d9b4d4ad812e958604e5f32eaef382b173c8",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nCosplay is her hobby, and she chose her favorite stand-collar school uniform that day♪\nI think she looks very cute in that slightly oversized uniform♪\nIncidentally, I wore blazers in both middle and high school, so I've secretly always wanted a stand-collar uniform. Maybe I'll try one on sometime. Ha-ha!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k265; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k267",
+          "source_text_sha256": "bd0793ba0aead072186310e3ca09114571a0406352e48a4087816a4e9d167648",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nCosplay is her hobby, and she went out in her best sailor-style school uniform that day♪\nThe girls at both my middle and high schools wore blazers, so sailor uniforms feel very fresh to me. Ha-ha! But seeing an adult woman wearing one made me feel nostalgic, or something equally strange♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k267; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k269",
+          "source_text_sha256": "f0ee30823c9159796399ece09d3cf102b2e349729d1ef7bdc27fbc483c410938",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nCosplay is her hobby, and she went out in a lab coat that day. She looks wonderful, like a confident female doctor♪\nIt brought back memories of the school nurse treating me after I took a hard hit to the face playing portball in gym class. Ha-ha!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k269; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k271",
+          "source_text_sha256": "c7fe8ce590d57fd2903e70d685ff530c32e53a10342724c3cca5f665dad658d5",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nHer top is a red souvenir jacket embroidered with a tiger. Paired with a black denim miniskirt, it looks cool and cute♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k271; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k273",
+          "source_text_sha256": "60273608c33d56ba2a152d5475c3e64a0a8ab32f06a5637b4b256de003dca269",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nMaybe she'd just finished her shift? She was wearing a Clover convenience store uniform.\nI worked part-time at Clover as a student, too. Their limited-edition Karaage Minister Aura flavor from back then is my least favorite ever. Ha-ha!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k273; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k275",
+          "source_text_sha256": "dde8db48a805bfcfae8e618dc9b94512f29fad67dbbf0a80a830ad0b32d2040f",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nAuthentic cowgirl fashion! She looks very cute♪\nThe red scarf around her neck makes a great accent♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k275; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k277",
+          "source_text_sha256": "5dfcb47cb55a567977f7400524c60f6ea1a71da5bf97e4268234c65add391ee6",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nShe said this qipao was a recent acquisition♪\nApparently, she felt a little embarrassed when she first wore it, but now it feels completely natural♪\nIt looks very sexy on her!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k277; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k279",
+          "source_text_sha256": "184b50b5cb07f7ea9325abf9a746559328baad4a1f6de9e9d6c3054e07368760",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nAmazingly, she's out on the town in a beach outfit full of resort flair!\nHer healthy-looking skin is radiant!\nFor a moment, I wondered whether a pool had opened right by our office without me noticing!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k279; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k281",
+          "source_text_sha256": "e7111be37ed3a9619f64bde3f41c9e093f45a70f8e6bfd8683febfc2be91ce68",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nShe showed up cosplaying as a member of the Ground Self-Defense Force♪\nShe let me take a closer look, and the clothes were as sturdily made as the real thing!\nShe looked dashing and wonderful♪\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k281; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k282",
+          "source_text_sha256": "1c205b005867e67e74cbe368af8476be711155873db6641858eb2cc3f32afe3b",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nEven more provocative than the clothes is that dominatrix mask♪\nA giant alien appeared that day and caused chaos, but this eccentric outfit could match it!\n(Teru Mukojima)",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k282; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k290",
+          "source_text_sha256": "088dcd47b3557d6f27c841e8f97bc6875561736c2732c43cffb362a2bff52766",
+          "en": "Ebine Publishing, publisher of Giant Shadow Weekly, announced that it will sell its entire business, land, and building. This week's issue will be the magazine's last. The main cause is believed to be the extensive damage from the giant alien that appeared today in Hananira Town, where its building stands.\nEmployee Mukojima said, 'The roof is badly damaged, and our other colleagues are missing. I didn't think we could keep going. Hearing that the magazine was closing, I thought, just as I feared. I have no idea what to do from tomorrow.'\nEbine Publishing had changed owners shortly before this. The sale is said to have earned that owner at least two billion yen.",
+          "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k290; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}
