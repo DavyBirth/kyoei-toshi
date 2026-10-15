@@ -11,6 +11,7 @@ def main():
     p.add_argument('--textures',type=Path,default=ROOT/'build/overnight/textures-en')
     p.add_argument('--output',type=Path,default=ROOT/'build/texture-review')
     p.add_argument('--previous',type=Path,help='Private TEX directory to compare against the revision')
+    p.add_argument('--approved-prefix',action='append',default=[],help='Path prefix explicitly approved by the owner')
     a=p.parse_args();out=a.output.resolve();textures=a.textures.resolve()
     if not out.is_relative_to(ROOT/'build') or out==ROOT/'build':raise ValueError('Private gallery must remain under build/')
     files=sorted(textures.rglob('*.tex'))
@@ -24,6 +25,7 @@ def main():
             name=file.relative_to(textures).as_posix();original=b''.join(archive.chunks(entries[name]));translated=file.read_bytes()
             row=dict(id=hashlib.sha256(name.encode()).hexdigest()[:16],resource=name,
                 original_sha256=hashlib.sha256(original).hexdigest(),localized_sha256=hashlib.sha256(translated).hexdigest(),decision='pending')
+            if any(name.startswith(prefix) for prefix in a.approved_prefix):row['decision']='accept'
             for version,data in [('original',original),('en',translated)]:
                 picture,info=preview(data)
                 filename=f'images/{number:02d}-{version}.png';picture.save(out/filename)
@@ -51,6 +53,7 @@ const dialog=document.querySelector('dialog'),full=document.querySelector('#full
 document.querySelector('#export').onclick=()=>{const records=[...document.querySelectorAll('article')].map(card=>({...byId.get(card.dataset.id),decision:card.querySelector('select').value,notes:card.querySelector('textarea').value}));const blob=new Blob([JSON.stringify({format:'kyoei-localized-texture-review-v1',images:records},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='kyoei-texture-review.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 </script></html>'''
     if a.previous:page=page.replace('grid-template-columns:1fr 1fr;', 'grid-template-columns:repeat(3,minmax(0,1fr));')
+    page=page.replace("select.value=['pending','accept','revise','defer'].includes(old.decision)?old.decision:'pending'", "select.value=row.decision==='accept'?'accept':['pending','accept','revise','defer'].includes(old.decision)?old.decision:row.decision")
     (out/'index.html').write_text(page,encoding='utf-8')
     (out/'inventory.json').write_text(json.dumps(rows,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(dict(gallery=str(out/'index.html'),textures=len(rows),images=len(rows)*(3 if a.previous else 2),review_status='pending')))

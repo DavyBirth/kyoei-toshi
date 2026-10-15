@@ -86,6 +86,29 @@ def fit_font(text, size, avail):
         size -= 1
 
 
+def button_inner_rows(im, margin):
+    """Find the two-pixel frame, excluding transparent atlas padding."""
+    x = margin
+    rows = [y for y in range(im.height)
+            if im.getpixel((x, y))[3] > 128 and min(im.getpixel((x, y))[:3]) > 210]
+    if not rows or rows[-1]-rows[0] < im.height//2:
+        raise ValueError('Cannot identify the option button frame')
+    return rows[0]+2, rows[-1]-1  # exclusive bottom; two-pixel horizontal strokes
+
+
+def centered_glyph(text, font, top, bottom):
+    """Position the raster's visible pixels, rather than the font's metrics."""
+    bb = font.getbbox(text)
+    mask = Image.new('L', (bb[2]-bb[0]+4, bb[3]-bb[1]+4))
+    ImageDraw.Draw(mask).text((2-bb[0], 2-bb[1]), text, font=font, fill=255)
+    box = mask.point(lambda v: 255 if v > 128 else 0).getbbox()
+    if box is None:raise ValueError('Empty option text')
+    visible_top = box[1]+bb[1]-2
+    visible_height = box[3]-box[1]
+    if visible_height > bottom-top:raise ValueError('Option text exceeds frame height')
+    return top+(bottom-top-visible_height)//2-visible_top
+
+
 def label(im, text, size):
     w, h = im.size
     alpha = im.getchannel('A').load()
@@ -223,10 +246,10 @@ def relabel(im, text, align, margin, size=20):
     if bb[2] - bb[0] > avail:
         raise ValueError(f'Button does not fit at the shared font size: {text}')
     d = ImageDraw.Draw(rgba)
-    cy = (h - 1) / 2
+    inner_top, inner_bottom = button_inner_rows(im, margin)
     tw = bb[2] - bb[0]
     x = (w - tw) / 2 - bb[0] if align == 'center' else tx0 - bb[0]
-    y = cy - (bb[1] + bb[3]) / 2
+    y = centered_glyph(text, font, inner_top, inner_bottom)
     d.text((x, y), text, font=font, fill=(textc[0], textc[1], textc[2], 255))
     return rgba
 

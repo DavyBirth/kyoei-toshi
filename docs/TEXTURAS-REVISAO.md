@@ -1,5 +1,30 @@
 # Galeria privada de texturas
 
+### Revisão de Davy e correção pela borda — 15/10
+
+Davy aprovou os títulos dos stages nesta continuação. Preservados byte a byte
+da proposta v2; essa aprovação não se estende a outras imagens. Notice agora
+centraliza cada linha, seguindo o alinhamento da imagem enviada por Davy.
+Fonte do jogo e conteúdo do aviso preservados, sem copiar texto dessa referência.
+
+Problema concreto dos Options: atlas de 44 px, com borda terminando em y35
+e oito linhas transparentes abaixo. Centralizar pelo tamanho do atlas empurrava
+o texto para baixo. O gerador agora encontra a borda na coluna limpa, desconta
+suas duas linhas e posiciona os pixels visíveis das letras na área interna.
+Teste sintético cobre estados normal/selecionado, descendentes e atlas com
+padding. Medição dos **22 TEX finais já comprimidos**: diferença entre espaço
+superior/inferior de no máximo um pixel, limite da paridade da grade.
+Prova privada: `build/texture-review-v3/pixel-margins.json`.
+
+Resultado atual em `build/textures-v3`; galeria `build/texture-review-v3/index.html`
+aberta com stages e ficção previamente aprovada marcados como aceitos.
+As 59 texturas foram aplicadas à prévia en-15 e ao portable fechado. Relidas
+diretamente do PSARC do portable e comparadas byte a byte com as TEX geradas.
+Saves preservados. Aprovação visual de Notice/Options permanece pendente,
+sem exigir que Davy registre novamente cada imagem para continuar o trabalho.
+
+Registro anterior da proposta v2:
+
 Continuação após reinício em 15/10: nova proposta em
 `build/texture-review-v2/index.html`, aberta no Edge, com original japonês,
 inglês anterior e inglês revisado. 59 grupos/177 PNGs. Não aplicada ao portable.
