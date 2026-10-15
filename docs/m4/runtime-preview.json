@@ -5,9 +5,10 @@
   "source_archive_sha256": "3a54e70d40b57562cbf350028ab8b75ee09c8143f8f1e766cc04bd81ce133966",
   "languages": {
     "en": {
-      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-10\\en\\common.psarc",
-      "sha256": "67dc8bddcc6c14976ff714280985a9443b9576affe99ed6e1af9c07fe62177ce",
-      "bytes": 6349027505,
+      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-12\\en\\common.psarc",
+      "sha256": "6b8018b985f9261b88d84e086222676cd16b39cc6f5f8283816a0b066c9b24dd",
+      "bytes": 6349079329,
+      "textures": 59,
       "status": "experimental_partial_translation",
       "runtime_verified": false,
       "resources": [

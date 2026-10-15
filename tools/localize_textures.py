@@ -104,6 +104,40 @@ def label(im, text, size):
     return out
 
 
+def notice(im, item):
+    """Plain opening notices; rebuild only the source's uniform text backdrop."""
+    w,h=im.size
+    background=im.getpixel((0,0))
+    # These two audited screens contain text on one uniform opaque backdrop.
+    if any(im.getpixel(p)!=background for p in ((w-1,0),(0,h-1),(w-1,h-1))):
+        raise ValueError('Notice backdrop is no longer uniform at its corners')
+    out=Image.new('RGBA',(w,h),background);draw=ImageDraw.Draw(out)
+    font=ImageFont.truetype(str(FONT),item['size'])
+    width=item['width'];line_height=item['line_height'];paragraphs=[]
+    for paragraph in item['paragraphs']:
+        lines=[];current=''
+        for word in paragraph.split():
+            if font.getlength(word)>width:raise ValueError('Notice word exceeds its text area')
+            candidate=(current+' '+word).strip()
+            if current and font.getlength(candidate)>width:lines.append(current);current=word
+            else:current=candidate
+        if current:lines.append(current)
+        paragraphs.append(lines)
+    total=sum(len(p)*line_height for p in paragraphs)+item.get('paragraph_gap',36)*(len(paragraphs)-1)
+    top=item.get('top',(h-total)/2)
+    if top+total>h-60:raise ValueError('Notice exceeds its vertical text area')
+    if item.get('heading'):
+        heading=ImageFont.truetype(str(FONT),76)
+        draw.text(((w-heading.getlength(item['heading']))/2,155),item['heading'],font=heading,fill=(214,59,28,255))
+    for paragraph in paragraphs:
+        for line in paragraph:
+            left=(w-font.getlength(line))/2 if item.get('align')=='center' else (w-width)/2
+            draw.text((left,top),line,font=font,fill=tuple(item.get('color',[102,102,102,255])))
+            top+=line_height
+        top+=item.get('paragraph_gap',36)
+    return out
+
+
 SERIF = Path('C:/Windows/Fonts/cambriab.ttf')
 
 
@@ -200,6 +234,7 @@ def main():
         data = (a.source / item['resource']).read_bytes()
         info, im = decode(data)
         if item.get('mode') == 'title': new = title(im, item['stage'], item['en'])
+        elif item.get('mode') == 'notice': new = notice(im,item)
         elif item.get('mode') == 'label': new = label(im, item['en'], item.get('size', 22))
         else: new = relabel(im, item['en'], item.get('align', 'left'), item.get('margin', 2), item.get('size', 20))
         tex = encode_tex(data, new, info)

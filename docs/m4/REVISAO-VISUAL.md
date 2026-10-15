@@ -55,3 +55,16 @@ Usar somente o dump próprio e distribuir traduções/ferramentas/patch aplicáv
 nunca vídeos, texturas ou arquivos completos do jogo. A versão gráfica do logo
 precisa de definição visual e revisão antes de ser ativada. Não contar esses
 textos como concluídos apenas porque existem 16.100 candidatos nos JSONs.
+
+## Artes inglesas em 15/10/2026
+
+Prévia en-12: 59 texturas localizadas. Inclui opções/botões, títulos de fases e
+os avisos E06_message.tex e E06_fiction.tex antes dos logos. Avisos recompostos
+no fundo uniforme original; o de ficção usa uma linha, sem deixar a última
+palavra isolada. Decodificação/recompressão BC3 e inspeção estática realizadas;
+a exibição desta versão durante uma partida ainda não foi validada.
+
+Opções usam tamanho comum por classe de rótulo/botão, com erro explícito se o
+texto exceder a largura. A recomposição preserva bordas e gradiente por linha.
+Ajustes não corrigem automaticamente legendas ou escolhas longas. Logo original
+e texto embutido em vídeos ainda pendentes. Preservar os formatos e tokens.

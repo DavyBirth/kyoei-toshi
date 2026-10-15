@@ -365,6 +365,37 @@
       "mode": "title",
       "stage": "Stage 17",
       "en": "A City Sinking Beneath Giant Shadows"
+    },
+    {
+      "resource": "texture/game_title/E06_message.tex",
+      "mode": "notice",
+      "heading": "NOTICE",
+      "size": 43,
+      "width": 1120,
+      "line_height": 66,
+      "top": 305,
+      "paragraph_gap": 40,
+      "paragraphs": [
+        "Distributing or transmitting game software over the Internet without permission from its rights holder, or downloading it knowing that it has been distributed illegally over the Internet, is strictly prohibited by law.",
+        "Thank you for your understanding and cooperation."
+      ]
+    },
+    {
+      "resource": "texture/game_title/E06_fiction.tex",
+      "mode": "notice",
+      "size": 32,
+      "width": 1760,
+      "line_height": 50,
+      "align": "center",
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "paragraphs": [
+        "This game is a work of fiction. It has no connection whatsoever to real people, events, or organizations."
+      ]
     }
   ]
 }

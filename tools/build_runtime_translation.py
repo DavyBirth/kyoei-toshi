@@ -104,6 +104,7 @@ def main():
         proof=patch(source,target,replacements,expected)
         (target.parent/'proof.json').write_text(json.dumps(proof,indent=2)+'\n',encoding='utf8')
         languages[language]=dict(archive=str(target),sha256=proof['output_sha256'],bytes=target.stat().st_size,
+                                 textures=sum(name.endswith('.tex') for name in replacements),
                                  status='experimental_partial_translation',runtime_verified=False)
     report=dict(format='kyoei-runtime-preview-v1',title='CUSA03562',version='01.03',
         source_archive_sha256=expected,languages=languages,resources=reports,
