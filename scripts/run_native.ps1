@@ -10,6 +10,7 @@ if (-not $Work) { $Work = Split-Path $kyoeiProof.prepared_out }
 if ($kyoeiProof.title -ne 'CUSA03562' -or $kyoeiProof.version -ne '01.03') { throw 'Identidade inválida' }
 if ([IO.Path]::GetFullPath("$Work\out") -ne [IO.Path]::GetFullPath($kyoeiProof.prepared_out)) { throw 'Pasta preparada diferente da prova' }
 $kyoeiFonts = "$kyoeiRoot\third_party\godzilla-core\third_party\shadPS4\src\imgui\renderer\fonts"
+$env:KYOEI_GUI_FONT_DIR=$kyoeiFonts
 foreach ($kyoeiRequired in @($kyoeiExecutable, "$Work\out\boot-linked.bin", "$Work\out\entry.bin", "$Work\out\imports.tsv", "$Work\out\link.json", "$kyoeiFonts\NotoSans-Regular.ttf", "$kyoeiFonts\NotoSansCJK-Regular.ttc", "$($kyoeiProof.source)\eboot.bin", "$($kyoeiProof.source)\sce_sys\param.sfo")) {
     if (-not (Test-Path -LiteralPath $kyoeiRequired -PathType Leaf)) { throw "Arquivo necessario ausente: $kyoeiRequired" }
 }

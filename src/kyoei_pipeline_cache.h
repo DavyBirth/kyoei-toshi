@@ -13,6 +13,9 @@
 namespace KyoeiPipelineCache {
 constexpr size_t MaxBytes=64u<<20;
 struct Identity { uint32_t vendor,device;std::array<uint8_t,16> uuid; };
+template<class Profile> inline bool ProfileMatches(std::span<const uint8_t> bytes,const Profile &profile) {
+    return bytes.size()==sizeof(Profile) && std::memcmp(bytes.data(),&profile,sizeof(Profile))==0;
+}
 inline bool Matches(std::span<const uint8_t> bytes,const Identity &id) {
     if(bytes.size()<32||bytes.size()>MaxBytes)return false;
     uint32_t words[4];std::memcpy(words,bytes.data(),16);

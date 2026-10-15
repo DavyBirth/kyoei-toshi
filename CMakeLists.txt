@@ -258,6 +258,11 @@ target_link_libraries(kyoei PRIVATE dbghelp)
 set(KYOEI_GPU_HEADERS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
 target_include_directories(kyoei PRIVATE "${KYOEI_GPU_HEADERS}/gz_miniz-src" "${KYOEI_GPU_HEADERS}/gz_miniz-build")
 set(KYOEI_SHAD "${KYOEI_CORE}/third_party/shadPS4")
+file(READ "${KYOEI_CORE}/gpu/bridge.cpp" KYOEI_BRIDGE)
+kyoei_replace_checked(KYOEI_BRIDGE "info.game_serial = \"CUSA02046\";" "info.game_serial = \"CUSA03562\";")
+kyoei_replace_checked(KYOEI_BRIDGE "info.title = \"Godzilla\";" "info.title = \"Kyoei Toshi\";")
+kyoei_replace_checked(KYOEI_BRIDGE "info.app_ver = \"01.01\";" "info.app_ver = \"01.03\";")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_bridge.cpp" CONTENT "${KYOEI_BRIDGE}" @ONLY)
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/video_out.cpp" KYOEI_VIDEOOUT)
 kyoei_replace_checked(KYOEI_VIDEOOUT
   "    *label_addr = reinterpret_cast<uintptr_t>(port->buffer_labels.data());"
@@ -281,7 +286,8 @@ kyoei_replace_checked(KYOEI_VIDEOOUT
   "    driver->GetPort(handle)->flip_rate = rate;"
   "    if (driver->GetPort(handle)->flip_rate != rate) gz_log(\"Kyoei videoout: SetFlipRate handle=%d rate=%d\", handle, rate);\n    driver->GetPort(handle)->flip_rate = rate;")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp" CONTENT "${KYOEI_VIDEOOUT}" @ONLY)
-add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp")
+add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cpp"
+  "${CMAKE_CURRENT_BINARY_DIR}/kyoei_bridge.cpp")
 # Release the old surface before publishing completion. Otherwise a guest
 # woken by the event can lock it for a new flip before the late reset to zero.
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/driver.cpp" KYOEI_VIDEOOUT_DRIVER)
@@ -527,6 +533,9 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_cache.cpp" CON
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_pipeline_serialization.cpp" KYOEI_PIPELINE_SERIALIZATION)
 set(KYOEI_PIPELINE_SERIALIZATION "#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_SERIALIZATION}")
 kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
+  "if (std::memcmp(profile_data.data(), &profile, sizeof(profile)) != 0)"
+  "if (!KyoeiPipelineCache::ProfileMatches(std::span<const uint8_t>(profile_data),profile))")
+kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
   "void PipelineCache::Sync() {\n    Storage::DataBase::Instance().Close();"
   "void PipelineCache::Sync() {\n    KyoeiPipelineCache::Persist(instance,pipeline_cache);\n    Storage::DataBase::Instance().Close();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" CONTENT "${KYOEI_PIPELINE_SERIALIZATION}" @ONLY)
@@ -658,7 +667,7 @@ target_include_directories(kyoei_videoout PRIVATE "${KYOEI_IMGUI_DIR}" "${KYOEI_
 set_source_files_properties(src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
   PROPERTIES COMPILE_DEFINITIONS IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1)
 set_source_files_properties(src/kyoei_overlay_gpu.cpp PROPERTIES
-  COMPILE_DEFINITIONS "IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1;KYOEI_GUI_FONT_DIR=\"${KYOEI_SHAD}/src/imgui/renderer/fonts\"")
+  COMPILE_DEFINITIONS "IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1;KYOEI_GUI_FONT_DIR=\"assets/fonts\"")
 target_include_directories(kyoei_videoout PRIVATE "${KYOEI_CORE}/gpu")
 target_sources(kyoei PRIVATE $<TARGET_OBJECTS:kyoei_videoout>)
 target_compile_features(kyoei_videoout PRIVATE cxx_std_23)
