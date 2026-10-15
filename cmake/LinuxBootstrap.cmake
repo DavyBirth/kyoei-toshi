@@ -63,3 +63,7 @@ add_test(NAME linux_tls COMMAND test_kyoei_linux_tls)
 add_test(NAME linux_bootstrap_validation COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/tools/test_linux_bootstrap.py"
   "$<TARGET_FILE:kyoei-linux-bootstrap>")
+option(KYOEI_BUILD_LINUX_NATIVE "Build executable POSIX runtime integration" OFF)
+if(KYOEI_BUILD_LINUX_NATIVE)
+  include("${CMAKE_SOURCE_DIR}/cmake/LinuxNative.cmake")
+endif()

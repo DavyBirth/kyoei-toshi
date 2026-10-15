@@ -1,0 +1,26 @@
+# Optional executable POSIX integration; all reference adaptations are build copies.
+set(KYOEI_LINUX_REFERENCE "${CMAKE_SOURCE_DIR}/build/reference-bloodborne" CACHE PATH "Pinned POSIX reference")
+set(KYOEI_LINUX_PREPARED "" CACHE PATH "Owner's prepared BBPROBE5 directory")
+set(KYOEI_LINUX_GPU "${CMAKE_SOURCE_DIR}/build/linux-full/gpu/libbbgpu.so" CACHE FILEPATH "Linux GPU library")
+if(NOT EXISTS "${KYOEI_LINUX_PREPARED}/imports.tsv" OR NOT EXISTS "${KYOEI_LINUX_GPU}")
+  message(FATAL_ERROR "Native Linux requires prepared imports and the compiled ELF GPU library")
+endif()
+set(native_sources "${CMAKE_CURRENT_BINARY_DIR}/native-src")
+execute_process(COMMAND "${Python3_EXECUTABLE}" "${CMAKE_SOURCE_DIR}/tools/prepare_linux_native.py"
+  "${KYOEI_LINUX_REFERENCE}" "${KYOEI_LINUX_PREPARED}" "${native_sources}"
+  COMMAND_ERROR_IS_FATAL ANY)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(NATIVE_SDL REQUIRED IMPORTED_TARGET sdl3)
+find_package(Vulkan REQUIRED)
+find_package(OpenSSL REQUIRED)
+find_library(NATIVE_MINIUPNPC miniupnpc REQUIRED)
+file(GLOB atrac_sources "${KYOEI_LINUX_REFERENCE}/third_party/LibAtrac9/C/src/*.c")
+add_library(kyoei-native-atrac9 STATIC ${atrac_sources})
+target_compile_options(kyoei-native-atrac9 PRIVATE -w)
+file(GLOB native_runtime "${native_sources}/runtime*.c")
+add_executable(kyoei-linux "${native_sources}/probe.c" "${native_sources}/vulkan_smoke.c" ${native_runtime}
+  "${native_sources}/kyoei_native_modules.c" "${CMAKE_SOURCE_DIR}/src/linux/kyoei_native_services.c")
+target_include_directories(kyoei-linux PRIVATE "${native_sources}" "${KYOEI_LINUX_REFERENCE}" "${CMAKE_SOURCE_DIR}/src/linux" "${CMAKE_SOURCE_DIR}/src")
+target_compile_options(kyoei-linux PRIVATE -Wall -Wextra -fno-pie -fno-omit-frame-pointer)
+target_link_options(kyoei-linux PRIVATE -no-pie -rdynamic)
+target_link_libraries(kyoei-linux PRIVATE kyoei-native-atrac9 "${KYOEI_LINUX_GPU}" PkgConfig::NATIVE_SDL Vulkan::Vulkan Threads::Threads "${NATIVE_MINIUPNPC}" OpenSSL::Crypto m dl)

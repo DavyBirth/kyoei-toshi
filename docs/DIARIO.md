@@ -2342,3 +2342,31 @@ Falta:
 - Windows registrado no commit e52aa75; testes de UI, tradução, privacidade,
   mouse/pausa, texturas e quebra passaram. Exportação limpa com 129 arquivos
   e nenhum achado de identificação; saves pessoais preservados à parte.
+
+### 15/10/2026 - pausa imediata solicitada (limite de uso)
+
+- Davy pediu seguir com Linux NATIVO; depois pediu interromper e salvar agora.
+- Novo alvo opt-in kyoei-linux em cmake/LinuxNative.cmake. Executavel real ELF
+  em build/linux-native/kyoei-linux, runtime POSIX completo integrado da
+  referencia local e5d04e2ba4864ccf40de6c3cf6aa532855320b0d. Apenas copias de
+  build adaptadas por tools/prepare_linux_native.py; snapshot preservado.
+- Adaptados escopos NID do Kyoei, base fixa 0x800000000, 580 cargas TLS FS->GS
+  verificadas, usuario neutro Player, SDK, heap tracing, AppInfo, condattrs,
+  modulos tardios do proprio Kyoei com pthreads/OpenSSL. FSR/object motion
+  especificos da referencia desativados. Novos contratos precisam de testes.
+- PROVA REAL: libc e nove inicializadores de modulos passaram; entrada original
+  executada, 2498 __cxa_atexit, memoria direta ~5,1 GB, quatro threads. Teste
+  CPU chegou a sceVideoOutOpen (esperado sem GPU). Log native-cpu-run.log.
+- GPU: janela SDL/Vulkan inicializou, 1726 simbolos HLE, SDK 0x04508101;
+  execucao passou por VideoOut, chegou a seis threads e parou inicialmente em
+  sceErrorDialogInitialize. Acrescentado dialogo de erro SDL (nao e no-op).
+- Ultimo build apos ErrorDialog e desativacao FSR PASS. Ultima execucao GPU
+  interrompida a pedido do usuario, PID Linux 513 confirmado pelo comando;
+  sem prova de primeiro frame, menus ou gameplay. Logs privados em
+  build/linux-full/native-{configure,build,cpu-run,gpu-run}.log.
+- Teste usa build/linux-native-test-user; nenhum save pessoal alterado. Nada
+  do Linux experimental foi inserido na entrega Friends-Test. Privacy Windows
+  continua valida; binarios Linux ainda NAO passaram pela limpeza/exportacao.
+- Retomar pelo novo bloco inicial de CONTINUAR-CODEX.md. Nao confundir com o
+  bootstrap antigo que proibe executar convidado. Ainda faltam mais contratos,
+  traducao, controles Kyoei, UI/save/load, primeiro frame, empacotamento/testes.

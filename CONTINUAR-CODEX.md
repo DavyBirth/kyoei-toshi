@@ -1,3 +1,32 @@
+# PAUSA IMEDIATA - Linux nativo em execucao (15/10/2026)
+
+Davy pediu interromper e salvar por limite de uso. Trabalho salvo; nao
+continuar testes automaticamente ate novo pedido. Ver ultima entrada DIARIO.
+
+Novo executavel: build/linux-native/kyoei-linux (ELF, compilacao PASS).
+Referencia POSIX integrada, nao apenas biblioteca GPU. libc + nove modulos
+inicializam; entrada real executa, memoria e threads funcionam. SDL/Vulkan
+inicializam com 1726 simbolos HLE. Ainda sem primeiro frame ou jogo jogavel.
+Teste GPU anterior chegou a sceErrorDialogInitialize; implementado depois.
+Ultimo teste interrompido por pedido do usuario durante inicializacao.
+
+Build (Ubuntu WSL):
+cmake -S /mnt/g/kyoei-toshi -B /mnt/g/kyoei-toshi/build/linux-native -G Ninja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DKYOEI_BUILD_LINUX_NATIVE=ON -DKYOEI_LINUX_PREPARED=/mnt/g/kyoei-toshi-work/native-05/out
+cmake --build /mnt/g/kyoei-toshi/build/linux-native --target kyoei-linux --parallel 6
+
+Execucao a partir de /mnt/g/kyoei-toshi:
+build/linux-native/kyoei-linux /mnt/g/kyoei-toshi-work/native-05/out/boot-linked.bin --app0 /mnt/g/kyoei-toshi/build/City-Shrouded-in-Shadow-Portable/game --user /mnt/g/kyoei-toshi/build/linux-native-test-user --timeout 45
+Acrescentar --cpu-only para isolar runtime (para em VideoOutOpen).
+Logs: build/linux-full/native-{configure,build,cpu-run,gpu-run}.log.
+Generator: tools/prepare_linux_native.py. Fontes adaptadas em native-src.
+Biblioteca: build/linux-full/gpu/libbbgpu.so. Snapshot e Godzilla intocados.
+Novos contratos ainda sem suite propria; implementar testes antes de anunciar.
+Traducao, bindings Kyoei, dialogos completos, saves e empacotamento pendentes.
+Nao publicar binarios experimentais: caminhos de desenvolvimento ainda existem.
+Friends-Test Windows e saves pessoais preservados.
+
+--- Notas anteriores (estado abaixo pode estar superado) ---
+
 # Retomada para o Codex — 15/10/2026 (noite)
 
 Davy pausou o Claude Code. Ler docs/DIARIO.md (últimas entradas) e docs/LINUX.md.
