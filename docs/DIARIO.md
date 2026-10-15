@@ -2370,3 +2370,7 @@ Falta:
 - Retomar pelo novo bloco inicial de CONTINUAR-CODEX.md. Nao confundir com o
   bootstrap antigo que proibe executar convidado. Ainda faltam mais contratos,
   traducao, controles Kyoei, UI/save/load, primeiro frame, empacotamento/testes.
+- Conferencia apos salvar: PID 513 ja havia encerrado antes do SIGTERM; ps
+  confirma nenhum kyoei-linux ativo. O teste terminou por sua propria parada,
+  nao pelo sinal. Native-gpu-run.log contem o bloqueio final para a retomada;
+  chegou tambem a acesso real de arquivo e duas alocacoes flexiveis.
