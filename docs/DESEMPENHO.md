@@ -25,6 +25,19 @@ Orçamento de referência: 16,67 ms por quadro. Objetivo ainda não atingido nem
 garantido pelo hardware/código atual. Avaliar estabilidade dos tempos, não só
 média; não obter FPS artificial repetindo frames ou acelerando lógica do jogo.
 
+## Correções de segurança e identificação em 15/10
+
+O perfil serializado exige exatamente o tamanho da estrutura antes de comparar
+bytes. Um cache truncado não pode provocar leitura além do arquivo. Teste cobre
+perfil correto, diferente, curto e vazio. O bridge gerado identifica
+CUSA03562/Kyoei Toshi/01.03. Usuário padrão Player, fontes relativas no portátil;
+o launcher de desenvolvimento informa seu caminho explicitamente. Snapshot e
+projeto irmão permanecem intactos.
+
+Referências: [dados do cache Vulkan](https://docs.vulkan.org/refpages/latest/refpages/source/vkGetPipelineCacheData.html)
+e [sincronização](https://docs.vulkan.org/refpages/latest/refpages/source/VkPipelineCacheCreateFlagBits.html).
+O cache otimiza preparação; não desbloqueia a taxa da simulação.
+
 ## Evidência disponível
 
 Percursos observados em ANALISE-COMECO.md: 22,74/25,41 FPS, misturando eventos

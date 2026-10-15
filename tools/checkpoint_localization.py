@@ -13,6 +13,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('workspace',type=Path)
     parser.add_argument('--publish',action='store_true')
+    parser.add_argument('--shutdown-local',default=None,help='Optional explicitly scheduled shutdown, for metadata only')
     args=parser.parse_args();root=args.workspace.resolve();repo=Path(__file__).resolve().parents[1]
     originals=load(root/'original');working=load(root/'working')
     report=audit(originals,working)
@@ -22,7 +23,7 @@ def main():
     summary=dict(timestamp=now.isoformat(),status='checkpoint',files=173,**report['totals'],
         new_english_since_received=report['totals']['filled']-4124,
         latest_ledger=ledgers[-1].name if ledgers else None,structural_pass=True,
-        editorial_approved=False,runtime_verified=False,shutdown_local='2026-10-14T03:00:00-03:00')
+        editorial_approved=False,runtime_verified=False,shutdown_local=args.shutdown_local)
     reports=root/'reports';(reports/'AUTO-CHECKPOINT.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
     (reports/'audit-current.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     destination=root/'checkpoints'/f'auto-{stamp}.zip';destination.parent.mkdir(exist_ok=True)

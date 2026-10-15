@@ -1,0 +1,157 @@
+"""Assemble the owner's private offline test copy. Never add its output to Git."""
+import argparse, hashlib, json, os, re, shutil, struct, subprocess
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[1]
+
+def digest(path):
+    h=hashlib.sha256()
+    with path.open('rb') as f:
+        for chunk in iter(lambda:f.read(8<<20),b''):h.update(chunk)
+    return h.hexdigest()
+
+def clean_pe(source, target):
+    """Erase build-only debug records and source-file diagnostics, not code.
+
+    Existing imports, code, relocations and file offsets stay byte-identical.
+    No source names or account identifiers are needed to run the binary.
+    """
+    data=bytearray(source.read_bytes()); pe=struct.unpack_from('<I',data,0x3c)[0]
+    if data[pe:pe+4]!=b'PE\0\0':raise ValueError('Expected PE')
+    sections=struct.unpack_from('<H',data,pe+6)[0]; opt_size=struct.unpack_from('<H',data,pe+20)[0];opt=pe+24
+    if struct.unpack_from('<H',data,opt)[0]!=0x20b:raise ValueError('Expected x64 PE')
+    table=opt+opt_size; regions=[]
+    for n in range(sections):
+        s=table+n*40; vs,va,rs,raw=struct.unpack_from('<IIII',data,s+8);flags=struct.unpack_from('<I',data,s+36)[0]
+        regions.append((va,vs,raw,rs,flags))
+    debug_rva,debug_size=struct.unpack_from('<II',data,opt+112+6*8)
+    for va,vs,raw,rs,flags in regions:
+        if va<=debug_rva<va+max(vs,rs):
+            debug=raw+debug_rva-va
+            for p in range(debug,debug+debug_size,28):
+                size=struct.unpack_from('<I',data,p+16)[0]
+                ptr=struct.unpack_from('<I',data,p+24)[0]
+                if ptr+size>len(data):raise ValueError('Bad PE debug range')
+                data[ptr:ptr+size]=b'\0'*size
+            data[debug:debug+debug_size]=b'\0'*debug_size
+    struct.pack_into('<II',data,opt+112+6*8,0,0)
+    struct.pack_into('<I',data,opt+64,0) # checksum after removing optional debug metadata
+    scrubbed=0
+    for va,vs,raw,rs,flags in regions:
+        if not flags&0x40000000 or flags&0xa0000000:continue # read-only, non-code only
+        for match in re.finditer(rb'[ -~]{8,}\x00',bytes(data[raw:raw+rs])):
+            value=match.group()[:-1]
+            if re.search(rb'[A-Za-z]:[/\\].*\.(?:cpp|hpp|c|h|pdb|ipp|inl|cc|hh|hxx|tpp)$',value,re.I):
+                name=re.split(rb'[/\\]',value)[-1];replacement=b'source/'+name
+                if len(replacement)<=len(value):
+                    begin=raw+match.start();data[begin:begin+len(value)]=replacement.ljust(len(value),b' ');scrubbed+=1
+    target.write_bytes(data)
+    return scrubbed
+
+def copy_file(source,target):
+    target.parent.mkdir(parents=True,exist_ok=True)
+    if not target.exists() or source.stat().st_size!=target.stat().st_size or source.stat().st_mtime_ns>target.stat().st_mtime_ns:
+        shutil.copyfile(source,target)
+
+def personal_text_hits(data,tokens,text_file=False):
+    """Find identifiers in text, not coincidental case-folded compressed bytes."""
+    lower=data.lower();hits=[];binary_coincidences=0
+    for token in tokens:
+        start=0
+        while (position:=lower.find(token,start))>=0:
+            start=position+len(token)
+            left=position
+            while left and 32<=data[left-1]<=126:left-=1
+            right=start
+            while right<len(data) and 32<=data[right]<=126:right+=1
+            nul_bounded=(left==0 or data[left-1]==0) and (right==len(data) or data[right]==0)
+            if text_file or right-left>=12 or nul_bounded:hits.append(token.decode())
+            else:binary_coincidences+=1
+        if token.decode().encode('utf-16-le') in lower:hits.append(token.decode()+':utf16')
+    return hits,binary_coincidences
+
+def main():
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('output',type=Path);ap.add_argument('--finalize',action='store_true');a=ap.parse_args()
+    out=a.output.resolve()
+    if not out.is_relative_to(ROOT/'build') or out==ROOT/'build':raise ValueError('Private output must be a child of ignored build/')
+    proof=json.loads((ROOT/'docs/native-prepare.json').read_text(encoding='utf-8'))
+    publication=json.loads((ROOT/'docs/m4/runtime-preview.json').read_text(encoding='utf-8'))
+    preview=publication['languages']['en']
+    game=Path(proof['source']);prepared=Path(proof['prepared_out'])
+    out.mkdir(parents=True,exist_ok=True)
+    for source in game.rglob('*'):
+        if source.is_file():copy_file(source,out/'game'/source.relative_to(game))
+    for name in ['boot-linked.bin','imports.tsv','deferred.tsv','tls-sites.tsv']:
+        copy_file(prepared/name,out/'runtime/out'/name)
+    copy_file(Path(preview['archive']),out/'languages/en/common.psarc')
+    fonts=ROOT/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts'
+    for name in ['NotoSans-Regular.ttf','NotoSansCJK-Regular.ttc']:copy_file(fonts/name,out/'assets/fonts'/name)
+    for name in ['artwork.png','game.ico']:copy_file(ROOT/'build/launcher-assets'/name,out/'assets'/name)
+    copy_file(ROOT/'build/hud-native-metrics-01.bin',out/'assets/hud-metrics.bin')
+    scrubbed=clean_pe(ROOT/'build/kyoei.exe',out/'runtime/kyoei.exe')
+    for name in ['msvcp140.dll','msvcp140_atomic_wait.dll','vcruntime140.dll','vcruntime140_1.dll']:
+        copy_file(Path(os.environ['WINDIR'])/'System32'/name,out/'runtime'/name)
+    copy_file(ROOT/'LICENSE',out/'licenses/GPL-2.0.txt')
+    # Preserve upstream license notices without shipping developer workspaces.
+    dependencies=Path('G:/godzilla-port-codex/build/_deps')
+    for folder in dependencies.glob('*-src'):
+        for source in folder.iterdir():
+            if source.is_file() and source.name.upper().startswith(('LICENSE','COPYING','COPYRIGHT','OFL')):
+                copy_file(source,out/'licenses'/folder.name/source.name)
+    for name in ['imgui','shadPS4']:
+        folder=ROOT/'third_party/godzilla-core/third_party'/name
+        if folder.exists():
+            for source in folder.iterdir():
+                if source.is_file() and source.name.upper().startswith(('LICENSE','COPYING','COPYRIGHT','OFL')):
+                    copy_file(source,out/'licenses'/name/source.name)
+    for source in (ROOT/'build/overnight/notices').glob('*.txt'):
+        copy_file(source,out/'licenses'/source.name)
+    csc=Path(os.environ['WINDIR'])/'Microsoft.NET/Framework64/v4.0.30319/csc.exe'
+    subprocess.run([str(csc),'/nologo','/codepage:65001','/target:winexe','/platform:x64','/optimize+',
+                    '/r:System.Windows.Forms.dll','/r:System.Drawing.dll','/win32icon:'+str(out/'assets/game.ico'),
+                    '/out:'+str(out/'City Shrouded in Shadow.exe'),str(ROOT/'src/kyoei_portable_launcher.cs')],check=True)
+    (out/'README.txt').write_text('CITY SHROUDED IN SHADOW\n\nOpen "City Shrouded in Shadow.exe". Choose English or Japanese.\nKeep all folders together. No installation or administrator account is needed.\n\nWindows 10/11 x64, compatible Vulkan graphics driver and AVX2-capable CPU required.\nThe complete folder must be on NTFS or exFAT (individual files exceed 4 GB).\nSaves and new logs stay in data/. No existing personal saves are included.\n\nKEYBOARD\nWASD: move. IJKL: camera. Arrow keys: directional pad.\nX: Circle (normally confirm). Space: Cross (normally back/cancel).\nZ: Square. C: Triangle. Q/E: L1/R1. 1/3: L2/R2.\nEnter: Options. Tab: touchpad. Controller prompts still show PS4 buttons.\nAn SDL-compatible gamepad can also be used.\n\nEnglish localization and runtime are experimental. Some text/images and layout\nremain under review. Performance depends on the computer; 60 FPS is a target,\nnot a guarantee. Rendering, game timing and original Japanese remain intact.\n\nPrivate test copy made from the owner\'s disc. Do not publish game files.\nRuntime contains GPL software; see licenses/.\n',encoding='utf-8')
+    if a.finalize:
+        forbidden=[os.environ.get('USERNAME','').lower().encode(),Path(os.environ['USERPROFILE']).name.lower().encode(),
+                   b'codex',b'claude',b'chatgpt',b'openai']
+        forbidden=list({s for s in forbidden if len(s)>2})
+        findings=[];records=[];coincidences=0;originals_verified=0
+        inventory=json.loads((ROOT/'docs/m0/inventory.json').read_text(encoding='utf-8'))
+        original_hashes={item['path'].replace('\\','/'):item['sha256'] for item in inventory['files']}
+        for path in sorted(out.rglob('*')):
+            if not path.is_file():continue
+            relative=path.relative_to(out).as_posix()
+            if relative.startswith('data/'):raise ValueError('Test data must be removed before finalization')
+            file_hash=digest(path)
+            if relative.startswith('game/'):
+                if original_hashes.get(relative[5:])!=file_hash:raise ValueError('Portable original differs from disc inventory: '+relative)
+                originals_verified+=1
+                if path.suffix.lower()=='.psarc':
+                    # These immutable compressed files predate this project and
+                    # match the disc inventory exactly. Random compressed bytes
+                    # are not personal text; never rewrite a disc asset to hide
+                    # a coincidental four-letter sequence.
+                    records.append(dict(path=relative,bytes=path.stat().st_size,sha256=file_hash))
+                    continue
+            if relative=='languages/en/common.psarc' and file_hash!=preview['sha256']:
+                raise ValueError('Portable English archive differs from audited preview')
+            with path.open('rb') as f:
+                tail=b''
+                for chunk in iter(lambda:f.read(8<<20),b''):
+                    data=tail+chunk
+                    hits,random_hits=personal_text_hits(data,forbidden,path.suffix.lower() in {'.json','.txt','.log','.ini','.xml','.tsv','.ps1','.cmd'})
+                    coincidences+=random_hits
+                    if hits:findings.append(relative)
+                    tail=data[-256:]
+            if path.name!='manifest.json':records.append(dict(path=relative,bytes=path.stat().st_size,sha256=file_hash))
+        if findings:raise ValueError('Privacy scan failed: '+str(sorted(set(findings))))
+        (out/'manifest.json').write_text(json.dumps(dict(format='kyoei-private-portable-v1',title='CUSA03562',version='01.03',
+            languages=['ja','en'],english_entries=publication.get('entries_by_language',{}).get('en',publication.get('entries_per_language')),
+            english_textures=preview.get('textures'),personal_saves_included=False,
+            host_configuration_included=False,privacy_scan_passed=True,original_disc_files_verified=originals_verified,
+            compressed_binary_coincidences=coincidences,
+            privacy_scope='Runtime/configuration text, UTF16 identifiers and PE debug/source metadata scanned. Original PSARC files byte-identical to disc inventory; compressed binary is not treated as personal text. No personal saves, logs, account files or host configuration.',
+            files=records),indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(dict(output=str(out),source_diagnostic_paths_removed=scrubbed,finalized=a.finalize)),flush=True)
+
+if __name__=='__main__':main()

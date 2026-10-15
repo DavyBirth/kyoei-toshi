@@ -1,5 +1,22 @@
 # Diário do projeto
 
+### 15/10/2026 — pacote portátil conferido
+
+- Prévia final en-12: 13.226 EN incluindo pilotos, 59 texturas. Avisos iniciais
+  traduzidos; ficção em linha única. SHA256 no relatório da sessão.
+- Portátil privado: 125 arquivos, 24.221.637.327 bytes; 87 originais com hashes
+  do disco, EN idêntico à prévia, varredura pessoal PASS. Sem saves/logs/contas.
+- Launcher JA/EN e loader sem GPU/sem execução de código do jogo passaram em
+  pasta com espaços e acentos. Conteúdo do pacote não foi modificado pelo teste.
+- Cache truncado protegido; identificação Kyoei corrigida. Compilação PASS.
+- en-08/09/10/11 obsoletas removidas com substituto conferido e sem consumidores.
+  en-12/dump/saves/evidências preservados. Espaço livre após limpeza: ~59 GB.
+- Tradução não declarada completa: 3.004 vazias triadas, nomes/créditos pendentes.
+  HUD/60 FPS exigem partida; teste bloqueado por revisão automática, pedido de
+  autorização específico pendente. Nenhuma partida iniciada/controlada.
+- Detalhes, manifesto e testes: SESSAO-NOTURNA-2026-10-15.md.
+
+
 ### 15/10/2026 — continuação noturna e preparação portátil
 
 - Davy autorizou tradução, HUD, engenharia reversa e desempenho durante a noite;
