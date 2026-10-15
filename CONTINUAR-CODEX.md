@@ -3,6 +3,9 @@
 Davy pausou o Claude Code. Ler docs/DIARIO.md (últimas entradas) e docs/LINUX.md.
 
 ## Estado
+- Retomada Codex: RTC e semáforos/eventos POSIX implementados em cópias de
+  build; quatro testes Linux PASS. Auditoria real: 10 imports no runtime,
+  418 nos módulos, 738 stubs. Ainda sem execução do jogo/GPU Linux.
 - Portable Windows atualizado em build/City-Shrouded-in-Shadow-Portable (en-16,
   deltas de ícones EN/JA, arte do Return to Desktop, "Start on Linux.sh" via Wine).
 - Tudo commitado (último: d3862aa). Saves de Davy preservados.

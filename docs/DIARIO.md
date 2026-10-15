@@ -2283,3 +2283,22 @@ Falta:
   abertura de VideoOut (sem GPU real no WSL; dzn ausente). Não comprovado
   com GPU real. Portable inclui "Start on Linux.sh".
 - Portable reconstruído (en-16, deltas EN/JA 41 ícones, arte do título).
+
+### 15/10/2026 — Codex: primeiros módulos do runtime POSIX
+
+- Lidos CONTINUAR-CODEX.md e docs/LINUX.md. Estado inicial do Git limpo.
+- RTC e semáforos/event flags derivados do snapshot fixo com âncoras
+  verificadas; código próprio em src/linux e integração Linux exclusiva.
+  Relógio/localtime POSIX e sincronização pthread com timeout monotônico;
+  destruição de mutexes/condições após saída dos esperadores.
+- Compilação real Ubuntu x86-64/Clang PASS; quatro CTest PASS (RTC, semáforos,
+  TLS e recusas do loader). Testes concorrentes verificam sinalização,
+  cancelamento e exclusão com threads efetivamente bloqueadas.
+- Teste concorrente também PASS com AddressSanitizer/UndefinedBehaviorSanitizer,
+  sem diagnóstico de memória ou comportamento indefinido.
+- Auditoria da imagem preparada do dump: 10 imports no runtime Linux,
+  418 nos módulos nativos, 738 stubs (antes 748). Log privado:
+  build/linux/bootstrap-posix-runtime.log. Nenhum código do jogo executado.
+- Linux segue incompleto: memória/threads/arquivos/serviços/saves/GPU.
+  L1/R1 da pausa e conferência visual das quebras/ícones/seta continuam
+  pendentes. Portable e saves não alterados; Godzilla e snapshot preservados.

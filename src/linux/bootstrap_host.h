@@ -51,7 +51,3 @@ static int VirtualFree(void *address,size_t size,unsigned allocation) {
 static int VirtualProtect(void *address,size_t size,DWORD protection,DWORD *old) {
     *old=0;return !mprotect(address,size,(int)protection);
 }
-/* This target enumerates unresolved imports. Never pretend host APIs exist. */
-uintptr_t gz_resolve(const char *library,const char *symbol,int is_data) {
-    (void)library;(void)symbol;(void)is_data;return 0;
-}

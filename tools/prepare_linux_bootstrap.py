@@ -29,7 +29,7 @@ def adapt(source):
         '    if (main_tls[1] > main_tls[2] || main_tls[2] > (1u<<20) || main_tls[0] > image_size || main_tls[1] > image_size-main_tls[0] || !main_tls[3] || main_tls[3]>4096 || (main_tls[3]&(main_tls[3]-1))) fail("invalid main TLS metadata");\n    gz_log("Linux bootstrap: main TLS metadata validated; TLS execution not implemented");')
     start=source.index('    for (uint64_t m = 0; m < module_count; ++m)\n        if (modules[m].tls_module)\n            gz_set_module_tls')
     source=source[:start]+'    fail("Linux bootstrap cannot enter guest code");\n}\n'
-    replace('    if (list_stubs) { fflush(NULL); return 0; }','    if (list_stubs) { gz_log("LINUX BOOTSTRAP PASS: real image mapped and relocated; runtime, TLS execution and GPU remain unavailable; no guest code executed"); fflush(NULL); return 0; }')
+    replace('    if (list_stubs) { fflush(NULL); return 0; }','    if (list_stubs) { gz_log("LINUX BOOTSTRAP PASS: real image mapped and relocated; partial POSIX runtime linked; guest execution and GPU remain unavailable; no guest code executed"); fflush(NULL); return 0; }')
     replace('int main(int argc, char **argv) {','#include "bootstrap_tls.h"\n\nint main(int argc, char **argv) {')
     replace('    protect(traps, round_page(import_count * 32), 5);','    prepare_main_tls(out,main_tls);\n    protect(traps, round_page(import_count * 32), 5);')
     source=source.replace('\\\\','/')

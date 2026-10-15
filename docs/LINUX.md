@@ -1,5 +1,24 @@
 # Linux x64 e portable compartilhado
 
+### Runtime POSIX inicial — retomada de 15/10
+
+Calendário/horário (`rt_rtc`) e semáforos/event flags (`rt_sema`) agora são
+derivados da referência fixa com âncoras conferidas. Adaptadores em `tools/`
+geram apenas cópias em build; o snapshot permanece intacto. O backend usa
+clock_gettime/localtime_r, mutexes pthread e condition variables com relógio
+monotônico. Exclusão libera os objetos POSIX após a saída dos esperadores.
+Mantém as limitações da referência: prioridade aproximada pela fila, resolução
+de espera em milissegundos e conversão de fuso usando o offset atual.
+
+Build Ubuntu x86-64 com Clang e quatro testes CTest PASS: RTC, semáforos/eventos,
+TLS e recusas do carregador. Testes incluem calendário/bissextos/época Unix,
+hora real, UTC/Bahia/offset fracionário, tokens, timeout e cancelamento/exclusão
+com threads bloqueadas. A imagem real agora liga **10 imports ao runtime POSIX**,
+418 aos módulos nativos e deixa **738 stubs**. Evidência privada em
+`build/linux/bootstrap-posix-runtime.log`. O carregador continua recusando
+executar o jogo; memória, threads PS4, arquivos, serviços, saves e GPU ainda
+precisam de implementação/integração. Nenhum iniciador nativo foi publicado.
+
 ### Primeiro carregador Linux e TLS — 15/10, após instalação
 
 Existe agora **`build/linux/kyoei-linux-bootstrap`, ELF x86-64 compilado em
