@@ -1,5 +1,31 @@
 # Diário do projeto
 
+### 14/10/2026 — salvamento solicitado por Davy
+
+- Davy pediu SALVA. Consolidado atual salvo e publicado: 11.887/16.100 EN,
+  4.213 vazias; +948 desde 10.939 nesta continuação. Inglês ainda incompleto.
+- Adições17/18: 147 e 63 EN, respectivamente, sem prosa japonesa original.
+  Incluem notícias, dossiês, nomes documentados, epílogo, escolhas opcionais,
+  rótulos de mapa, objetivos e as sete histórias do prédio Yukiyanagi.
+- Yuki Kono usa cobertura inglesa de 2017 (Kouno, Gematsu, maio/2017),
+  com vogal longa omitida conforme estilo; divergência Kano em matéria de
+  2016 registrada nas notas. Não alegar pronúncia confirmada por áudio.
+- Hinageshidai translitera hiragana explícito com sufixo topográfico dai.
+  Yamabuki, Yukiyanagi e Kaido adotam leituras botânicas convencionais em
+  topônimos florais; fontes botânicas primárias/dicionário nas notas privadas.
+  West Azami traduz o componente direcional. Revisão humana ainda pendente.
+- MP4 de Stage15 e Stage17 conferidos sem faixa de áudio. Identificadores
+  de voz no dump são evidência de nomes, não reprodução ou escuta de falas.
+  Extração de voz não concluída; sound extraído contém cabeçalhos .h e .acf.
+- Auditoria dos 173 JSONs e reconstrução/releitura das 11.887 EN em memória
+  PASS em 117 recursos. Campos protegidos preservados; nenhum inglês apagado.
+- Consolidado privado published/Kyoei_English_Consolidated_Current.zip,
+  SHA-256 bf78fc6ff5a3731d7bf48e004387d18db19f2cd4370880e4df908d04f9f9290c.
+  CHECKPOINT.json e CONTINUE-HERE.md atualizados. Último lote yukiyanagi.
+- en-05 permanece aplicada em 10.721 EN. Jogo não iniciado; dump/saves intactos.
+  Próximo: lacunas player-facing, nomes ainda incertos, revisão transversal,
+  HUD e textos em imagens/vídeos. Não confundir placeholders com tradução útil.
+
 ### 14/10/2026 — novas evidências de voz, notícias e trilha oficial
 
 - Mais 168 EN em seis lotes, mais uma correção própria de grafia de título

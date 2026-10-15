@@ -1,0 +1,534 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/loading_image_and_text.csh",
+      "source_sha256": "5f7a4c7731e997457391f2e0f987338db6a16a998f68f40f8825dadd4679621e",
+      "entries": [
+        {
+          "id": "r120/c3",
+          "source_text_sha256": "bcc47e74457b171b6a66d4d865984af976d87f00107fd755f02983d7f9fbbd10",
+          "en": "As we fled from the W&P car,\\na decisive weapon suddenly overtook us.\\nA fierce wind blew toward us from ahead.\\nWe headed for the Yamabuki Building against the wind.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r120/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r120/c4",
+          "source_text_sha256": "bcc47e74457b171b6a66d4d865984af976d87f00107fd755f02983d7f9fbbd10",
+          "en": "As we fled from the W&P car,\\na decisive weapon suddenly overtook us.\\nA fierce wind blew toward us from ahead.\\nWe headed for the Yamabuki Building against the wind.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r120/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r121/c3",
+          "source_text_sha256": "129a688d55b467624652501e68fae8cfb92cff116566d8bc1e0cecd135eb0054",
+          "en": "The W&P men suddenly attacked us in a car.\\nWe had to run!\\nWe headed for our meeting point on the Yamabuki Building rooftop.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r121/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r121/c4",
+          "source_text_sha256": "129a688d55b467624652501e68fae8cfb92cff116566d8bc1e0cecd135eb0054",
+          "en": "The W&P men suddenly attacked us in a car.\\nWe had to run!\\nWe headed for our meeting point on the Yamabuki Building rooftop.",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r121/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r135/c3",
+          "source_text_sha256": "b21e07e8b6b0d77e741c45f7739d7e4f167e0b955e767b26371ed2375d168f2b",
+          "en": "We stopped by West Azami Park.\\nThe park had been badly damaged.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r135/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r135/c4",
+          "source_text_sha256": "b21e07e8b6b0d77e741c45f7739d7e4f167e0b955e767b26371ed2375d168f2b",
+          "en": "We stopped by West Azami Park.\\nThe park had been badly damaged.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0046.json:r135/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Mail.luc",
+      "source_sha256": "4e888a17a3ae57fedc8c7cae1ef339c772487b3b7be91957dcc91737c1c877a6",
+      "entries": [
+        {
+          "id": "p0/k169",
+          "source_text_sha256": "15d0f521682d0513b569ff8b1651c12b38a52a95319c0bfe1d79271492c6ded6",
+          "en": "We are in Mizuna City now. We are heading to the Yamabuki Building rooftop.",
+          "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k169; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_202.luc",
+      "source_sha256": "88cb6fa67d7c5988d44c1af7be81289d01e078dfe2f978734c2d3fe947086766",
+      "entries": [
+        {
+          "id": "p0/k917",
+          "source_text_sha256": "05c2c3418526a524814bd1373708404e66c8dc6dc024b351463764032d61b9dd",
+          "en": "Cafe Yamagobo Owner",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k917; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_205.luc",
+      "source_sha256": "c6d3241b28c9e1ce5e4e176fad8110770d372eb812a6d026b6619801baf6d70b",
+      "entries": [
+        {
+          "id": "p0/k340",
+          "source_text_sha256": "24f7b4707a0225091abe812cca43ac7c7142ecff19ff0f25ff13b7f376ccf1c8",
+          "en": "An intersection in the office district.\nIf I remember correctly, it was in front of a park called West Azami Park.",
+          "notes": "English draft imported from audited private workspace, translate-en-0128.json:p0/k340; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k342",
+          "source_text_sha256": "0ed526bdfaa1ef0db3e52f4c2b2065e25943abb93d87a2f344ac2065b7a32228",
+          "en": "(West Azami Park? ...If I remember correctly...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0128.json:p0/k342; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k344",
+          "source_text_sha256": "6554cafbcb227c4467e9882f8f4fd6a3c461995a9d4cd8f042bdfcb6277ee90e",
+          "en": "(West Azami Park? ...If I remember correctly...)",
+          "notes": "English draft imported from audited private workspace, translate-en-0128.json:p0/k344; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_206.luc",
+      "source_sha256": "ec99884b400f9c1fa52fc68f5636ff7f524e798527101cdfebd6d8c07fefbe56",
+      "entries": [
+        {
+          "id": "p0/k908",
+          "source_text_sha256": "36b08fff9b70030ef9189f35d626d24ff458592d6e45f9925f533d8927728f26",
+          "en": "West Azami Park, where Miho's sister died...\nI feel as though I've heard that name somewhere...!",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k908; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k913",
+          "source_text_sha256": "8b06c8bcb287893dcf86e7d3143d6955314a4e243f0cd2d41a241d314794dd38",
+          "en": "West Azami Park, where Miho's sister died...\nThat is the park where I was supposed to meet you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k913; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k915",
+          "source_text_sha256": "dfdf8c3c0f1e94c01c86e02bd73c0ddb8a7b7e41a4f8723c5c66607a12534b9d",
+          "en": "West Azami Park, where Miho's sister died...\nThe park where I was supposed to meet you...",
+          "notes": "English draft imported from audited private workspace, translate-en-0062.json:p0/k915; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_212.luc",
+      "source_sha256": "3af3b860839559bd0e120981237f27c0c97f3c8a265b43dc4801e05214d2c46c",
+      "entries": [
+        {
+          "id": "p0/k582",
+          "source_text_sha256": "63333f26bb1079b943f5bf827d34ae6ae7ccb3c1da82499a07b460228f37c2e4",
+          "en": "- A newsletter from the Cosplay Demon King Club\n- A receipt for the \"Become Someone Else Ticket\" club\n- A receipt from the hostess club Moe Moe Jupiters",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k582; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k810",
+          "source_text_sha256": "607589e1b386b7c2376bfd6ce89682702811c3991aa8fad0404b43c444aeace0",
+          "en": "He'll be on the roof of the Yamabuki Building in Mizuna City.\nRight, I'm heading off to work.",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k810; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k816",
+          "source_text_sha256": "a0c270ed0c89b7fdd7f22744b78354dc015e2ae9280967e496e748b877e289aa",
+          "en": "I was told to go to the roof of the Yamabuki Building in Mizuna City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k816; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_213.luc",
+      "source_sha256": "774ab7f5569ebf728de073c3736748507a4b315603b57ab5ff9118d4a728c96e",
+      "entries": [
+        {
+          "id": "p0/k635",
+          "source_text_sha256": "d557f9bef998a152a7374e6a489e9e08bc5db809f1f037f6de99a7b9e536fe17",
+          "en": "Hand Yuki over to make sure I alone survive!",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k635; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k637",
+          "source_text_sha256": "bb68f4ff1e94009c3f711453d2535fdcea4868f2129814fd2bc868c89fcfd88a",
+          "en": "Tell Yuki, \"I'll hold them off here! Run on ahead!\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k637; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k639",
+          "source_text_sha256": "8ab345afdc122e78828db883fc508fb8ac04400a2952c0263f1fdcdf933b5453",
+          "en": "With only a fifty-fifty chance of survival, tell Yuki, \"We're running! Follow me!\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k639; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k641",
+          "source_text_sha256": "deb8127b6dfbb99df81b29a4fe5a7993af5a6dd16abd5e27892116dd0c1b69af",
+          "en": "Hand Yuki over to make sure I alone survive!",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k641; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k712",
+          "source_text_sha256": "a033980d9fcabecda82cd1d8b2fe67e16288c9ad14a651dfef25d9546cfb5d8b",
+          "en": "We have to escape now! Hurry over and untie Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k712; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k714",
+          "source_text_sha256": "baa6ac6d069f933fbf4f797c96a77ae51f56703ef6838cda9ca305be9bb60761",
+          "en": "Seize the chance to leer at Yuki while she cannot move.",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k714; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k716",
+          "source_text_sha256": "5b9e956f9c69363a449f3f8c982bacca437d912bf3b6edb6f8d3fc6f0466ffd1",
+          "en": "Demand a reward in exchange for untying Yuki.",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k716; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k779",
+          "source_text_sha256": "dc6d3242e2e986366dbbb3e113db7996a8bd53237d6daaf48ced8f2ee0d8922e",
+          "en": "Obtained 【Boiled Egg】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k779; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k789",
+          "source_text_sha256": "c82f01480111fe3d5c910cc2d4822406e361c6e3da788b223768c6aa2ea675b5",
+          "en": "Obtained 【15 Boiled Eggs】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k789; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_214.luc",
+      "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+      "entries": [
+        {
+          "id": "p0/k860",
+          "source_text_sha256": "6b00149acde0b35cae5f605ad38665ad3e1b4e75f68b65b68f6395d4a9b35e5b",
+          "en": "Don't underestimate W&P.\nHurry up and go meet the man at the Yamabuki Building in Mizuna City.",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k860; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k863",
+          "source_text_sha256": "2af34c52f6c67a29f1be0adb18cc63329144092bf9427b11c11d6ecaee9bdaea",
+          "en": "W&P is still chasing us...\nWe have to get to the Yamabuki Building in Mizuna City...",
+          "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k863; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_216.luc",
+      "source_sha256": "5a841ee447ca8cc328a0432aeccc8f3b3a973f8e5a5ef8617633313ec9b3ad73",
+      "entries": [
+        {
+          "id": "p0/k83",
+          "source_text_sha256": "869f75bcb51f29fb9072fb6f799fec8e23654d55e12d87a67166c25b654e2f13",
+          "en": "There is no time to turn back.\nI have to get to the Yamabuki Building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k83; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k85",
+          "source_text_sha256": "1da24c95766fee52f9456408319b76c62c3b33f6dbf7f810d231a8c98aeaef12",
+          "en": "The Yamabuki Building is not this way.\nI have to head toward it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k85; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k89",
+          "source_text_sha256": "1896a9c2c531b416e20dd3fb4048d92b2452fb904b0dd53c35d3873027cbb9a6",
+          "en": "The Yamabuki Building Otsuka mentioned\nis just ahead.",
+          "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k89; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_218.luc",
+      "source_sha256": "e2cd50ee0dcafbeb37650762d0635d15bcd477c352023d7a13bb0e81677282c6",
+      "entries": [
+        {
+          "id": "p0/k173",
+          "source_text_sha256": "f04846b12f537f02c18fd6796d10f6f9a818cca25b3206870fce2782afecf094",
+          "en": "Buy \"Beach Resort: Southern Island Hideaway\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k173; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k184",
+          "source_text_sha256": "2b4052e55033ea8ad1f1559efa1bbdcb3a13f8f8c401a45add3d85314b6473a6",
+          "en": "Obtained 【Deed to Beach Resort: Southern Island Hideaway】.",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k184; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k217",
+          "source_text_sha256": "5b48535e05eee340eec4479d156001b1bf83fd025016ec0639733b4a7212cd71",
+          "en": "West Azami Park...\nThat is where I was supposed to meet Yuki last night.",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k217; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k219",
+          "source_text_sha256": "d45bc2e3e372a1a3ef1ed246eb1fc69c748bb0d46870d7f939481474c04f01a0",
+          "en": "West Azami Park...\nThat is where I was supposed to meet Yuki last night.",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k219; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k290",
+          "source_text_sha256": "ae5b071a2a992248ab5e5dd4dfbba41d77b2898f0f2da3d9efd6195b6e7ba59e",
+          "en": "West Azami Park...",
+          "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k290; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "entries": [
+        {
+          "id": "p0/k241",
+          "source_text_sha256": "679898e99b765537e893a709682dc76a328a1f6d2e57d7e37f7ff95de8b38fc6",
+          "en": "West Azami Park",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k241; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k320",
+          "source_text_sha256": "87dfad30709e1f8ec1043be39546e665359a9a6d3b87d68a25563978b99d103c",
+          "en": "Yamabuki Building",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k320; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k326",
+          "source_text_sha256": "4e04a3c23c62a095989be75800e815764e731b7497e377eceebf3347485d2e8f",
+          "en": "On Otsuka's advice, go meet someone who can protect us from W&P. They are apparently on the roof of the Yamabuki Building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k326; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/mission_text.luc",
+      "source_sha256": "2aee79fe9a3c37c9672cc108ecc31d2e65d74f3d138592269420b8c674a88800",
+      "entries": [
+        {
+          "id": "p0/k171",
+          "source_text_sha256": "81bade782f67372dc8bc15536a876ca4682182ff4a570f7dcf7019efac4fe908",
+          "en": "Yukiyanagi Building",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k171; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k258",
+          "source_text_sha256": "9539b66a2f5ad4382d4cf0dfb42e61d4b812ba1047be4f64e370eda55262cd47",
+          "en": "Otsuka, the web writer, told me someone could do something about W&P pursuing us. Head to the roof of the Yamabuki Building in Mizuna City to meet this intimidating man.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k258; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k261",
+          "source_text_sha256": "25b05fad3140e4daf2320b9c12ea195581004ff1044e096b28b3f8eccad89a84",
+          "en": "I safely reunited with Risa. Head to the Yamabuki Building in Mizuna City once again.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k261; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k262",
+          "source_text_sha256": "ca4999e66b7b9b2ca1ce268fead109d7f4c75223340ac351846914f9b1c7cdf1",
+          "en": "We have reached Mizuna City. Now we just need to get to the Yamabuki Building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k262; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k263",
+          "source_text_sha256": "b0f58a24607f713c139b03bdda4856d9214c665d3a050a664210eb278be26442",
+          "en": "We finally reached Mizuna City, only to end up being chased by a black car. Our only option is to take shelter in the Yamabuki Building. Apparently, that intimidating man will help us once we get there.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k263; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/place_text.luc",
+      "source_sha256": "c7785d42ffe727186ca4913907876128114a12a7931943b658d973306e430a86",
+      "entries": [
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "7b94091245e2ff33d811492358d1bf0787504084aeae1f52949b5d43192d41a3",
+          "en": "Kaido Building, 8th Floor",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k167",
+          "source_text_sha256": "8c05e7329453152efc475eb5266ab3b8cf6c73720f7ee305afc87f3c2a98afc6",
+          "en": "Near West Azami Park",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k167; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k193",
+          "source_text_sha256": "fe68c3401adfdd6971621dd762d999d49d3014125bb685ef490bcc50ad4a2b16",
+          "en": "Yukiyanagi Building, 14th Floor",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k193; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k222",
+          "source_text_sha256": "1921b262398c155110d0057aba12d879685a7a10e792c3258dd519761954105b",
+          "en": "Yamabuki Building Rooftop, Mizuna City",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k222; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_208_news_text.luc",
+      "source_sha256": "8e4e33b0da797a9cb165e930ed36e6b44db1f729115c232dc5926f348f4597b5",
+      "entries": [
+        {
+          "id": "p0/k162",
+          "source_text_sha256": "3ed6cebafd2cde44ada5998909f072fba0aa38401fb00f02e16278ce65a97593",
+          "en": "Here is a further update on the Yukiyanagi Building, a few minutes' walk from Hinageshidai Station, which we have covered several times before.\nAs previously reported, it houses many young IT companies and is popular with young people for its seemingly bright, fresh image.\nHowever, we have once again discovered suspicious activity. When two mysterious giant creatures appeared and confronted one another directly outside, several people were seen entering and leaving the building during the confrontation.\nThey were not escaping the building out of fear. They deliberately passed beneath the creatures' feet to enter, then came back out a while later.\nWe have also learned that one of these suspicious figures was carrying a dubious-looking box.\nSome suggest they came to retrieve important documents or were simply looting during the disaster. I disagree.\nI already know that several companies in the building have business partners whose identities remain stubbornly unclear.\nI will continue investigating this matter.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k162; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k235",
+          "source_text_sha256": "2fa3ef3b19e91a8cbc3809ef5741905f6ad674954fd079bdda10de66551f2618",
+          "en": "The Seven Mysteries of the Yukiyanagi Building: 1",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k235; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k236",
+          "source_text_sha256": "6219c543ac0a4bf0f2e1977e874f564b8b2c965fc25fa6e3ce44bf092e2a5b41",
+          "en": "The Changing Number of Steps in the Yukiyanagi Building\n\nThere is a staircase in the Yukiyanagi Building whose number of steps changes.\nThe emergency stairs connecting the third and fourth floors reportedly have twelve steps at some times and eleven at others.\nThis is neither a rumor nor an urban legend: actual verification data exists.\n\nLike many readers, I was skeptical and investigated in person.\nThe result confirmed that it was true.\n\nIt is neither an optical illusion nor a trick. The number of steps in the very same staircase really changes.\nWhen there are fewer steps, each becomes slightly taller and deeper, maintaining an uninterrupted staircase.\n\nThe mechanism remains unknown, but statistical evidence suggests that the timing of the changes is related to the tides.\nWe will report again as soon as further information arrives.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k236; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k237",
+          "source_text_sha256": "42f09ab4912aed83d5afabb14812b5ae9f24b8b8cf52753ca5b136111cfa2227",
+          "en": "The Seven Mysteries of the Yukiyanagi Building: 2",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k237; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k238",
+          "source_text_sha256": "106e39aa1f5bc9a4508f6b0dc869c2e2cfde956c596b1a7db33402bf31005ac5",
+          "en": "The Mysterious Floor of the Yukiyanagi Building\n\nAs in some other buildings, the Yukiyanagi Building has no \"fourth floor.\"\nIts actual fourth floor is designated the fifth.\nThe elevator has no fourth-floor button either.\n\nYet there are occasional reports of a fourth-floor button appearing among the elevator buttons.\nThose who reported it, however, said they were too frightened to press it.\n\nIn fact, there is also information suggesting that one person working in this building suddenly disappears every five years.\nPerhaps they merely quit one of its companies without telling anyone.\nStill, we cannot rule out the possibility that they disappeared after pressing the fourth-floor button.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k238; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k239",
+          "source_text_sha256": "6901dc4a4281ad70e271bf01547a233524bfe13fd09aed770d1d9a88b14535d6",
+          "en": "The Seven Mysteries of the Yukiyanagi Building: 3",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k239; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k240",
+          "source_text_sha256": "2cb184c8867b009cd5d9642396b7905da915a7a79b70ab23e45806eda086e2ea",
+          "en": "The Shrine on the Yukiyanagi Building Rooftop\n\nA shrine stands on the rooftop of the Yukiyanagi Building.\nLong ago, the building's site was apparently occupied by a merchant's home.\n\nThe merchant was skilled at business and traded with members of the upper classes, including samurai families and feudal lords.\nBut this brought misfortune.\n\nA particularly high-ranking feudal lord took an interest in the merchant's daughter.\nHe forcibly abducted her to his mansion, then murdered the merchant and his wife, disguising their deaths as the work of bandits to conceal his actions.\n\nAs the lord leisurely approached the room where he had confined the daughter, intending to do as he pleased with her, the supposedly murdered merchant suddenly barred his way, covered in blood.\nEven when several retainers slashed him, the merchant remained unfazed and bit into the lord's throat, killing him.\n\nWith numerous swords and spears piercing his body and a hand and one leg torn off, the merchant nevertheless found his daughter and proudly returned home.\nThe moment he reached home, he collapsed.\nThey say that, though murdered, his love for his daughter drove his body onward, and his sheer determination saved her.\n\nHis daughter later entered religious life. Moved by his devotion, people built a shrine on the land where his empty house had stood.\nOver the years, there were several attempts to remove the shrine, but each brought a succession of mysterious deaths. Even after the building went up, the shrine remained enshrined on its roof.\n\nAnd, occasionally, a figure believed to be the merchant is said to appear in the offices inside.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k240; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k241",
+          "source_text_sha256": "da792ce68210810322586acee47576633d52cebc34e2f1f38254e8afab8ca644",
+          "en": "The Seven Mysteries of the Yukiyanagi Building: 4",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k241; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k242",
+          "source_text_sha256": "a31c1b557e29d47fae248da3f89f710d07f88c85f405eaa06a86f1b403a5ce79",
+          "en": "The Mysterious Voices Heard in the Yukiyanagi Building\n\nThe following story is whispered about the Yukiyanagi Building.\nWhen someone works alone late at night, the voices of a crowd can supposedly be heard from nowhere.\n\nIt happens whenever someone is the only person left on their floor, regardless of which floor it is.\nHowever, once they notice the voices and look around, the sound stops, only to resume when they return to work. Nobody suffers injury or misfortune, but it is an unsettling story nonetheless.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k242; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k243",
+          "source_text_sha256": "1966ba75a236ccfda18e69dc1fbad0c3a50bd040fad1bb3a6f7dd755528b09b7",
+          "en": "The Seven Mysteries of the Yukiyanagi Building: 5",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k243; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k244",
+          "source_text_sha256": "8699b3812b469de1c45a6db84734f3f32c6531943221225f4cb2f4c84fb2e889",
+          "en": "The Shadow Wandering the Yukiyanagi Building\n\nFor some time, there have been numerous reports of something resembling a shadow occasionally crossing the corridors of the Yukiyanagi Building.\nThe shadow has actually been captured by security cameras, abruptly lending truth to the rumors. Some researchers have reportedly volunteered to investigate.\n\nEarly theories suggested it was the lingering resentment of an employee who died from excessive work on one of the floors, or the shadow of the merchant who once lived here, described in Mystery 3. Apparently, neither explanation is correct.\n\nThere seem to be no reports of misfortune befalling those who see it, but not knowing what it is makes it deeply unsettling.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k244; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k245",
+          "source_text_sha256": "1fbe4acc17cec9a57cfea56cf824f7539657158591e800cc0b21d5ca40b7ec9e",
+          "en": "The Seven Mysteries of the Yukiyanagi Building: 6",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k245; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k246",
+          "source_text_sha256": "b3f2311033bc0f3a2328503cae39e9ad0f5c22470c3e88b67e09fff587d85533",
+          "en": "The Glowing Floor of the Yukiyanagi Building\n\nDid you know that part of the third-floor corridor in the Yukiyanagi Building lights up once every few years?\nSeveral spots on the tiled floor glow, and stepping on them reportedly changes the color of the light.\n\nOne theory holds that stepping on the glowing tiles in a particular order brings good fortune.\nApparently, the only employee to step on them in the correct order, around fifteen years ago, subsequently won first prize in the lottery repeatedly and is now immensely wealthy.\nHowever, nobody has identified this lucky individual, so how much of the story is true remains uncertain.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k246; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k247",
+          "source_text_sha256": "9660aed77324d4644af74b3f85c6e18f3d0dfac83942cb8ccbd56b86ba60b00a",
+          "en": "The Seven Mysteries of the Yukiyanagi Building: 7",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k247; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k248",
+          "source_text_sha256": "fc49ade4047ed9a1826e1793a10ef65fcbb8ff4cba41c1a218766e14d63fc48a",
+          "en": "The Writing Appearing in the Yukiyanagi Building Windows\n\nSomething resembling writing reportedly appears at irregular intervals in the sixth-floor windows of the Yukiyanagi Building.\nIt cannot be seen from inside the building, only from outside.\n\nThe windows have not been tampered with and are regularly cleaned, so the cause is completely unknown.\nThe writing also appears to be in cursive script, but nobody has deciphered it, leaving its intended message equally mysterious.\n\nIs the building itself trying to communicate something to the outside world? We will report the truth as soon as we discover it.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k248; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

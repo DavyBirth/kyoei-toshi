@@ -1,0 +1,1164 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/csv/loading_image_and_text.csh",
+      "source_sha256": "5f7a4c7731e997457391f2e0f987338db6a16a998f68f40f8825dadd4679621e",
+      "entries": [
+        {
+          "id": "r6/c3",
+          "source_text_sha256": "9908a80f0f1defa36bfa71dfb7c8758122a984614336678daf8abf83f1bc4431",
+          "en": "The young person suddenly stopped.\\nThen casually looked up at the sky.\\nThis story begins with such an ordinary scene.\\nFrom the prologue to A City Sinking Beneath Giant Shadows, by Hideyasu Otsuka.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r6/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r6/c4",
+          "source_text_sha256": "9908a80f0f1defa36bfa71dfb7c8758122a984614336678daf8abf83f1bc4431",
+          "en": "The young person suddenly stopped.\\nThen casually looked up at the sky.\\nThis story begins with such an ordinary scene.\\nFrom the prologue to A City Sinking Beneath Giant Shadows, by Hideyasu Otsuka.\\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0045.json:r6/c4; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/staffroll.csh",
+      "source_sha256": "751be64333402793813ee9f03ec8da9ef3dcd73b68dedc62ac484ded478bb338",
+      "entries": [
+        {
+          "id": "r4/c3",
+          "source_text_sha256": "be8ed4ab0fb460925fd07c604d86685dda1ec1e25089e6b60e0774d8b16d6197",
+          "en": "Takuya Sato",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r4/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r6/c3",
+          "source_text_sha256": "f854e107bb0d19149cdecd284520a50ed74cd823f72b58fdd3769b2b05e88ba0",
+          "en": "Satomi Akesaka",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r6/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r7/c3",
+          "source_text_sha256": "df53329bdb48240ee69686cf0210142b02dec1855f5195c54513bbccae21c876",
+          "en": "Yuki Kono",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r7/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r8/c3",
+          "source_text_sha256": "5f0b3d0eeb08a06321ccf668e114dbfacfc12aead813c9068a49a37c4edd8f9f",
+          "en": "Reina Ueda",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r8/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r10/c3",
+          "source_text_sha256": "af70f80aa5597cbc3671451939a1f072eefd21c052499fddc8fb290a5cb88b89",
+          "en": "Ryota Takeuchi",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r10/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r12/c3",
+          "source_text_sha256": "00359fdd6f734aac0653794775a6700915a3812959d91f31bf022683ee4902f1",
+          "en": "Yuko Kaida",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r12/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r19/c3",
+          "source_text_sha256": "eef0330fdf91441a4c9aff88a5c5eefe319907a83643d25c3cf93906dd6065b8",
+          "en": "Toru Fujiwara",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r19/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r25/c3",
+          "source_text_sha256": "9cc5f090be40567208015209f0577479ac9ca91dbcca6e7829e95d4c4b9fb53b",
+          "en": "Mitsuo Katagiri",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r25/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r27/c3",
+          "source_text_sha256": "ea43eb42214bf1c922c7487ac8a6d42016bebfc36ca3ca49b966d78be9551789",
+          "en": "Tetsuya Oda",
+          "notes": "English draft imported from audited private workspace, translate-en-0092.json:r27/c3; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/staffroll_image.csh",
+      "source_sha256": "a604b3cc1a4fb1abc9d69a2d0f64e77d7a14f9c804a0486dc41afdce317457db",
+      "entries": [
+        {
+          "id": "r1/c7",
+          "source_text_sha256": "78ff905be94beb270ebcfe9b228ae18fcf0962c34414521219071818b9652ff8",
+          "en": "I am not Yuki Kono, an inhabitant of this planet.\\nA consciousness wandering through space... That is what I am.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r1/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r15/c7",
+          "source_text_sha256": "233ce8df517c2f2c509c2a1c83108768f89f7e98778775f32507974b72fbfea1",
+          "en": "Drawing upon the consciousness of someone named Yuki Kono, I borrowed her form\\nand altered your memories to become someone you wanted to protect.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r15/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r16/c7",
+          "source_text_sha256": "c72bb0b77bf86e2190c03bdbbe5d70c9117def4af03d80ab260458e75617ce95",
+          "en": "Drawing upon the consciousness of someone named Yuki Kono, I borrowed her form\\nand altered your memories, believing I had become someone you wanted to protect.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r16/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r17/c7",
+          "source_text_sha256": "93f32e4036902b57173937dd28e8ac79e599a3d11b91a2c8250228f023b4203b",
+          "en": "Then, until I regained my strength, I hid within Yuki Kono's consciousness\\nand tried to escape the shadows.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r17/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r20/c7",
+          "source_text_sha256": "29f8c87815f6e1b034341cc44de352765631775415b7f3f87433419a0cb0a068",
+          "en": "During that time... Being with you was fascinating.\\nYou always protected Yuki Kono with such care.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r20/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r21/c7",
+          "source_text_sha256": "d7e6a67331826a0022a7c27c94b91d7569bfd1123202d6c6e37e2ccd017b6a97",
+          "en": "During that time... Being with you was fascinating.\\nYou gradually found yourself drawn to Yuki Kono.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r21/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r22/c7",
+          "source_text_sha256": "6ac021aa06dffbf9796bbce67f7e40deffe50a11e87ac1466c343dbd6c6e71aa",
+          "en": "During that time... Being with you was fascinating.\\nYuki Kono excited you a great deal, didn't she?",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r22/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r39/c7",
+          "source_text_sha256": "fdffada765f2ac51d28ad0141df8c5f62498b38b2cd64526d85c65196e100570",
+          "en": "When we happened to meet Yuki Kono's family again at the hospital afterward,\\nI sensed her emotions surging.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r39/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r43/c7",
+          "source_text_sha256": "8cb3d1a4804c56eee0770e55790a823c0131298374f4e8995f7e27853b93130f",
+          "en": "While I remained hidden, I left our actions\\nto Yuki Kono's consciousness.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r43/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r44/c7",
+          "source_text_sha256": "f9f00c6b2c618f509c360c63c404c108c92a11f00f450c0f077a74cdfd5ba038",
+          "en": "...When inhabitants of this planet attacked you,\\nYuki Kono tried to protect you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r44/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r45/c7",
+          "source_text_sha256": "8220dd56d738aad2a2fd1a78fb9b713595ca4e565840a9c1bb159230d44e288d",
+          "en": "...When you used your power to intimidate inhabitants of this planet,\\nYuki Kono was trying to protect you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r45/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r46/c7",
+          "source_text_sha256": "4282f043991c5653cbc05af8ff9ffcfb5741d139c60f4d93b32d985b4aec06b8",
+          "en": "...When inhabitants of this planet attacked you,\\nYuki Kono tried desperately to protect you.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r46/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r47/c7",
+          "source_text_sha256": "83f6f51a6ece81c5d173844eb7b6f2c040f08a143655d90114447ee63fe040be",
+          "en": "Yuki began acting in ways that exceeded my expectations.\\nYou were supposed to be the one protecting Yuki Kono.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r47/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r49/c7",
+          "source_text_sha256": "9510fa313229f5417a4b0f76c0e70cf5bf43ed51c3f504da814c4466af498154",
+          "en": "But I remember how reassuring I found the bond of trust\\nbetween you and Yuki Kono, as you cared for one another.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r49/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r57/c7",
+          "source_text_sha256": "529bff1a7d306a00c15911ef40dabe2c8108a15dddf026fb59858f1096b787af",
+          "en": "When you pointed to Yuki Kono in that eerie research institute,\\nshe was terribly saddened.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r57/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r62/c7",
+          "source_text_sha256": "e4d800a489ddf82b45de9f2d56b9b0281bbab092ce0357afd2f5f9393a1488f6",
+          "en": "The way you and Yuki Kono tried to protect one another\\nwas fascinating, too.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r62/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "r67/c7",
+          "source_text_sha256": "91190488e55f0d37991b66831c7d265d86d760d72ac7a52268c67fe7909a445e",
+          "en": "I am sorry to Yuki Kono, whose form I borrowed,\\nfor rousing her from her long slumber.",
+          "notes": "English draft imported from audited private workspace, translate-en-0172.json:r67/c7; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/csv/store_text_data.csh",
+      "source_sha256": "20d642bd0a491d1e3d693ec30cdcf222a323f6143f5a296f761e4edbca7f7d5d",
+      "entries": [
+        {
+          "id": "r7/c0",
+          "source_text_sha256": "aae4d9142347140d26e57300d10dd1198bc3530236bc2c343b8e4a55e36e16b7",
+          "en": "Hinageshidai Station Kiosk",
+          "notes": "English draft imported from audited private workspace, translate-en-0032.json:r7/c0; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Mail.luc",
+      "source_sha256": "4e888a17a3ae57fedc8c7cae1ef339c772487b3b7be91957dcc91737c1c877a6",
+      "entries": [
+        {
+          "id": "p0/k10",
+          "source_text_sha256": "117e111127ddd127b2cadfa713d0e12011165a4f396c346af4e9153aef8f2bae",
+          "en": "Yuki Kono",
+          "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k10; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_202.luc",
+      "source_sha256": "88cb6fa67d7c5988d44c1af7be81289d01e078dfe2f978734c2d3fe947086766",
+      "entries": [
+        {
+          "id": "p0/k122",
+          "source_text_sha256": "cc82f08d6f74d6a80e4f32bc4c40aee99236cb6f1b040b7454a96359213fbc9d",
+          "en": "(She's my friend...\nYuki Kono.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k122; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k124",
+          "source_text_sha256": "49bba4cb6b0a550175a4fc07dedc6c0326d2c0063cc6cdff9e2888e55ce8aa85",
+          "en": "(She's my friend...\nYuki Kono.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k124; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k126",
+          "source_text_sha256": "6d0fccc8cea6181ab53bc85b936875d8471f3fda45f57b5e8fcd7cf5c44b279e",
+          "en": "(She's someone very precious to me...\nYuki Kono.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k126; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k128",
+          "source_text_sha256": "d97efcfc9d7dd4fa2b7dc73b7bb91dc8eff54399814e3fc668c0028fb61289f9",
+          "en": "(She's someone very precious to me...\nYuki Kono.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k128; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k130",
+          "source_text_sha256": "d484840f564a0a3537b8e10e19ae530dfc8de37fee38dba58eaa72161cbf0600",
+          "en": "(She's my girlfriend.\nHer name is... Yuki Kono.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k130; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k132",
+          "source_text_sha256": "6b0b042950196c229185b0dca7e846058e37a07358b84a873cc2f4c01c5f46fc",
+          "en": "(She's my girlfriend♪\nHer name is... Yuki Kono.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k132; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k134",
+          "source_text_sha256": "25b46243b931aec64c95c1a3dbe4aa9350b2d792324be58bede6280fd6e6e184",
+          "en": "(...I don't really know her... Her name was...\nYuki Kono... I think?)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k134; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k136",
+          "source_text_sha256": "4a1288b712c3f8097e49693c25eeb4c94a285a3f15eb4e41d442eefb7dcb7ec6",
+          "en": "(...I don't really know her... Her name was...\nYuki Kono... I think?)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k136; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k138",
+          "source_text_sha256": "bfc1331d39e037b5727855a5edabafb69a3355b499c015571d8add94eabcfa8c",
+          "en": "(Her name is Yuki Kono.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k138; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k140",
+          "source_text_sha256": "b215c1629da5ce176f13e11bd1df5b73a352ff432b7d97ba9f9c4d30b50d53d5",
+          "en": "(Her name is Yuki Kono.)",
+          "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k140; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k1076",
+          "source_text_sha256": "117e111127ddd127b2cadfa713d0e12011165a4f396c346af4e9153aef8f2bae",
+          "en": "Yuki Kono",
+          "notes": "English draft imported from audited private workspace, translate-en-0019.json:p0/k1076; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_204.luc",
+      "source_sha256": "24e892d1979af5bca0df524f6cb06002166ee4099db4f1038492d5df53712ad2",
+      "entries": [
+        {
+          "id": "p0/k2101",
+          "source_text_sha256": "df53329bdb48240ee69686cf0210142b02dec1855f5195c54513bbccae21c876",
+          "en": "Yuki Kono",
+          "notes": "English draft imported from audited private workspace, translate-en-0147.json:p0/k2101; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_212.luc",
+      "source_sha256": "3af3b860839559bd0e120981237f27c0c97f3c8a265b43dc4801e05214d2c46c",
+      "entries": [
+        {
+          "id": "p0/k167",
+          "source_text_sha256": "117e111127ddd127b2cadfa713d0e12011165a4f396c346af4e9153aef8f2bae",
+          "en": "Yuki Kono",
+          "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k167; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_213.luc",
+      "source_sha256": "774ab7f5569ebf728de073c3736748507a4b315603b57ab5ff9118d4a728c96e",
+      "entries": [
+        {
+          "id": "p0/k91",
+          "source_text_sha256": "81a3fe6054fe8d1ccaca781e5ecaeabcc41a15888707b863e270ff170c8472ca",
+          "en": "＜Career and Achievements＞\n・Requested favors from relevant officials in connection with weapons sales by Rijesu in the home country.\n・Assassinated opponents of introducing weapons from North American Boruhesu to the European revolutionary organization Coffin.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k91; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k93",
+          "source_text_sha256": "9a788f4f5e3137ee2bb13673335f430039156b7ca7af7258ffbb7a1110500803",
+          "en": "・Guarded weapons shipments in Kanama, Central America; won eighteen engagements against antigovernment forces.\n・Protected leaders of the North American revolutionary organization Grave from an attack by government forces.\n・Tracked down and assassinated leaders of Mezara, an antigovernment organization in the Middle Eastern country of Yaguma.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k93; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k99",
+          "source_text_sha256": "4782eaf7601418787baaabec98dd32e816845e9996c4e6af11e596beadc09cb0",
+          "en": "＜Career and Achievements＞\nA former detective, once known as the 'Tiger of Interrogation.'\n・Interrogated the leader of the antigovernment organization Buiro and obtained the location of its hideout.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k99; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k101",
+          "source_text_sha256": "373d3ced3b871b89aa9d08e9307fd7905183a0e598ffecad2f6356e7c2795896",
+          "en": "・Obtained the locations of Mezara leaders, an antigovernment organization in the Middle Eastern country of Yaguma.\n・Obtained the location of the prince of Sanon, abducted by an antigovernment organization.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k101; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k107",
+          "source_text_sha256": "c7a52b1f88e894fe5678cf17e1c10297fc5d5e2d16583ab192358824b744bf14",
+          "en": "＜Career and Achievements＞\n・Entered the vault at Miyato Bank's Sakura Branch and seized documents.\n・Infiltrated the hideout of the antigovernment organization Tenebris and rescued an important government official.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k107; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k115",
+          "source_text_sha256": "2dc51b2e2a743f9c3332fee590c7823d6da7183f0797d425515ac273c40a67d9",
+          "en": "・Infiltrated and disabled the security system of the antigovernment organization Tenebris.\n・Broke into computers in the Otsu Army's operations room and disrupted information.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k115; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k123",
+          "source_text_sha256": "9d4e3ff7244ccad54a1d0ccd4805c73964d81b508581c21c6a6e6a6e6903c844",
+          "en": "・Created poison used to assassinate an Otsu Army officer.\n・Created poison used to assassinate an executive at a competitor of European Sarukofa.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k123; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k131",
+          "source_text_sha256": "2347cac8a62ae307520e2a8373c40be828b3a5c27cf952e2d1ab65b7a61223d4",
+          "en": "・Infiltrated a shipboard hideout of the European antigovernment organization Tenebris and rescued an important government official.\n・Guarded leaders of the South American antigovernment organization Sombra.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k131; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k139",
+          "source_text_sha256": "f37cccb94a5be1c9127af1915e1d9e09a9626e17b7fb53402a0230b65448a740",
+          "en": "・Repelled ten agents of a rival company in connection with weapons sales by North American Taburuto.\n・Assassinated four executives of a rival company in connection with European Kisuton's expansion into new markets.\n・Rescued a leader of the revolutionary organization Pechimachi held by the government, and repelled pursuing troops.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k139; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k145",
+          "source_text_sha256": "713ab9a4cc4667bcac4d1eabd3af5e240188aa533ed12cf82154329ce5c1078b",
+          "en": "＜Career and Achievements＞\n・Successfully sniped two Mezara leaders, an antigovernment organization in the Middle Eastern country of Yaguma.\n・Successfully sniped three leaders of the European antigovernment organization Buiro.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k145; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k151",
+          "source_text_sha256": "42b8534834f230fd7c7c27b8d9fe0ad4f457fba9c6ed3e02d52b9d8088b14adb",
+          "en": "＜Career and Achievements＞\n・Investigated the movements of executives at a competitor of European Dekisuto.\n・Protected an executive of South American Sakuwuru targeted by agents from a rival company.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k151; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k153",
+          "source_text_sha256": "241daf528ca5eac22a4b84df8ae908c4a132733c89d4fa92ae8e165be1237888",
+          "en": "・Located and protected ten beloved pet dogs that had run away from the chancellor of the Middle Eastern country of Eho.",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k153; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k267",
+          "source_text_sha256": "f17c40610042671fc5cc677ebb715ab037c1d3ab695a0dde3a9fe5120cf15a4b",
+          "en": "Inside are color-printed documents bearing the cover title\n\"Candidate Weapons List Requested by the Otsu Army.\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k267; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k269",
+          "source_text_sha256": "d85893db0245bcc99ead5683000dc8ae617f7b99fb1c1c4ecd2e70eadfb8d3df",
+          "en": "Read \"Candidate Weapons List Requested by the Otsu Army.\"",
+          "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k269; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_214.luc",
+      "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+      "entries": [
+        {
+          "id": "p0/k50",
+          "source_text_sha256": "8390d1809eb86361fbd84ef2b3f11ae6cc822858ace5bb67accf58bc57387afc",
+          "en": "Yuki Kono",
+          "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k50; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_215.luc",
+      "source_sha256": "063da08a76a3abae15ddb198b0594957c8aa6811419b4eab0d4a8142cee59ff7",
+      "entries": [
+        {
+          "id": "p0/k256",
+          "source_text_sha256": "542da5e3e023ab7e23481bdbbb941afb14765d6f1789655768958df4f060a9d5",
+          "en": "Turn right at that traffic light to reach Azami 1-chome Station.\nThe subway station where we first met.",
+          "notes": "English draft imported from audited private workspace, translate-en-0089.json:p0/k256; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/Text_Stage_216.luc",
+      "source_sha256": "5a841ee447ca8cc328a0432aeccc8f3b3a973f8e5a5ef8617633313ec9b3ad73",
+      "entries": [
+        {
+          "id": "p0/k160",
+          "source_text_sha256": "18e2028df09e53db1c4ab7f9e0af774b6d9347685b2e7ca4c8aa2b51ab369624",
+          "en": "Why take such a risk?\nWhat is Kamio, the president of W&P Consulting, really after?",
+          "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k160; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "9c50d48c81ca1b3adf2eec4fd152cab5730b15b2eb8ed22e9a70bd17e8a329be",
+          "en": "Then you should ask Kamio herself.",
+          "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/item_ad_text.luc",
+      "source_sha256": "52218d6ce96f98bc4d08b94b7ab652ecab1fe97c69526c857fc32f7eec3a27d0",
+      "entries": [
+        {
+          "id": "p0/k55",
+          "source_text_sha256": "4ca45b8acffedfbb383b2f5180366e26067a40dc930a6c5c511b796dc487dd3a",
+          "en": "Aya Suzumura, the talented young singer-songwriter who burst onto the scene like a comet. This ticket admits you to a public live broadcast of her radio show, Aya Suzumura's Midnight Sky Garden.\nAlong with a short piano performance by Aya Suzumura, you can enjoy the show's popular segments, \"Suzumura Ittosai Slices Through Your Problems\" and \"Aya's Innovative Gourmet\"!\n*As this is a late-night show, minors are not permitted to attend.",
+          "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k55; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/map_goal_text.luc",
+      "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+      "entries": [
+        {
+          "id": "p0/k273",
+          "source_text_sha256": "899838ec62bc501e8395d625e43138431bb1b62bb6ca3803a32f31d2d93b91c6",
+          "en": "Hinageshidai Station",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k273; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k279",
+          "source_text_sha256": "0f304b58c22a8b3360e0bb3ebd3563acab2eb7c15e1ab8637b3ea773ab33b253",
+          "en": "Head to Hinageshidai Station",
+          "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k279; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/mission_text.luc",
+      "source_sha256": "2aee79fe9a3c37c9672cc108ecc31d2e65d74f3d138592269420b8c674a88800",
+      "entries": [
+        {
+          "id": "p0/k105",
+          "source_text_sha256": "007d43e3f78a108e800a2225768dfec7fdfefd520be18429079d83856db61862",
+          "en": "Suzuran Avenue",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k105; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k162",
+          "source_text_sha256": "8b12f07b60051967c31fcfa137e50c15595b9d8d76bf1318292498fb68946193",
+          "en": "Shirotsumekusa Street",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k162; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k183",
+          "source_text_sha256": "899838ec62bc501e8395d625e43138431bb1b62bb6ca3803a32f31d2d93b91c6",
+          "en": "Hinageshidai Station",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k183; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "3486f06a3c2fc77d5ba3a10ec1f26af928110df81fd5804d7e8f0185dee25fe3",
+          "en": "One of our pursuers has appeared again. We must reach the Ingram as quickly as possible!",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k201",
+          "source_text_sha256": "0635331a6b5eaf472be3363487a234955cf1b0adad586a0ec237d933928da7fd",
+          "en": "The Ingram rescued us, allowing us to get down from the tower safely.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k201; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k208",
+          "source_text_sha256": "ca1ee3d3e528102aa909986f385d25aff94db6e20b001dd140898374e6527865",
+          "en": "After escaping the warehouse, we encountered an Ingram. Why are they here?",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k208; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k271",
+          "source_text_sha256": "2d9b8a368f1bead4d0d429a338d32dd4500aed8bc352c2c0316ced3a439ead28",
+          "en": "I met the riot police officer from our earlier escape by vehicle again. Apparently, the giant plant is likely to burst, and we must leave this area immediately. Travel by vehicle.",
+          "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k271; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/place_text.luc",
+      "source_sha256": "c7785d42ffe727186ca4913907876128114a12a7931943b658d973306e430a86",
+      "entries": [
+        {
+          "id": "p0/k165",
+          "source_text_sha256": "24be2cd48a4b707fb82d9c17104a6285b783c68116b4de0e51556df9e91d43ae",
+          "en": "Tsubaki Avenue",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k165; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k170",
+          "source_text_sha256": "9d62a1870554295d482af7487e4ec346e0ac6f38d1513de0151c105795fa8b4a",
+          "en": "Azami 1-chome Station",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k170; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k171",
+          "source_text_sha256": "791fb207730de09d2d7d069652678cc77d56312acfc0fb14c4f616a8f3509bbc",
+          "en": "Azami 1-chome Station Underground Shopping Area",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k171; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k172",
+          "source_text_sha256": "33517758062208248b62ffb8c6e4df6d1924db645da951339e9f3c2664b0561a",
+          "en": "Outside Acacia Department Store",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k172; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k173",
+          "source_text_sha256": "30dda1da7b1809272c0ca1b36732cb1e94634d61b095e1a2c5325b1d2950258f",
+          "en": "Bayshore Route 6",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k173; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k177",
+          "source_text_sha256": "df55134e3dd9dec7cf0ce231a9d0a5529ccbeefb6e7aa8572563874828ff1710",
+          "en": "Iberis Tower Building      Observation Deck Floor",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k177; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k178",
+          "source_text_sha256": "08e53ea97656e2bdd87d1fbfe9d7d35d041ce6d07f4c2688211834c2e8596818",
+          "en": "Iberis Tower Building      Truss Floor",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k178; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k179",
+          "source_text_sha256": "28482cc8629a0bbea0e81896822781be1c52f2bd03aa645fdbaff73eb97a07c3",
+          "en": "Iberis Tower Building      20th Floor",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k179; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k180",
+          "source_text_sha256": "35bdeea1a65b6207b8a2dc0525e0ce3b604b761fbb1c4fcc8ecc6a0f47bb32d2",
+          "en": "Iberis Tower Building      19th Floor",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k180; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k181",
+          "source_text_sha256": "69c884d29344a95e90d85958098ed837dcffe404b8a09887f432efb86423ac1f",
+          "en": "Nanohana Street",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k181; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k182",
+          "source_text_sha256": "8edcbc7c2d88274bb062e14695bdf0c0a415cef689cf46e6480ebb9c6b221d53",
+          "en": "Clover Mokuren Street Store",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k182; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k183",
+          "source_text_sha256": "87a0ae7cad9c6102417cd72a65b670622714e1ac2754b06776fc49acff00d8f6",
+          "en": "Mokuren Street",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k183; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k185",
+          "source_text_sha256": "45241306fae83e21ab08c740fbef9d00bbb5427d0bf677b73eb568893c95014a",
+          "en": "Research Vessel Shibazakura",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k185; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k189",
+          "source_text_sha256": "8b12f07b60051967c31fcfa137e50c15595b9d8d76bf1318292498fb68946193",
+          "en": "Shirotsumekusa Street",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k189; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k191",
+          "source_text_sha256": "6ba6697a8d139c23810119a678cf783d04265fe23f74349d4ed33de1d01cc5af",
+          "en": "Botan Avenue",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k191; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k192",
+          "source_text_sha256": "a185c9c6eb49a9f8d85015155571f9ef0293cee905e5cf9867a2d54a0268a1ce",
+          "en": "Hinageshidai Station Approach",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k192; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k194",
+          "source_text_sha256": "33bda39eb13ba225bc549ececd86a9cdfd2cb47f76e7a91ac9ab4620d8e4e704",
+          "en": "Inside Hinageshidai Station",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k194; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k196",
+          "source_text_sha256": "cfd836026fa0fe3b8b75ad059c4029483ec7e36867f983c0215d855f1cbb7c8f",
+          "en": "Inside a Miyato Electric Railway Tozai Line Train",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k196; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k197",
+          "source_text_sha256": "329f670b44e916ef2782dd862c567aecd29a7529a0119c28173beb8b4893893d",
+          "en": "Miyato Electric Railway Tozai Line Elevated Tracks",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k197; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k198",
+          "source_text_sha256": "d2936100b5c80f565032855a8eddd99c19e7b62b37c492b8226cf57eeea361a5",
+          "en": "Miyato Electric Railway Tozai Line Railway Bridge",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k198; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k199",
+          "source_text_sha256": "8ebd9eccb5aa02e6a4f214c730c7d6ed15a4df626e97d938cdeee969a2e0df0f",
+          "en": "Near the Next Station on the Miyato Electric Railway Tozai Line",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k199; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k200",
+          "source_text_sha256": "4ca16709e9ab533da7048a5f70f3a475938c713de7109057357760b62a7eccbf",
+          "en": "Two-Lane Road near Suzuran Avenue",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k200; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k201",
+          "source_text_sha256": "007d43e3f78a108e800a2225768dfec7fdfefd520be18429079d83856db61862",
+          "en": "Suzuran Avenue",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k201; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k204",
+          "source_text_sha256": "2aec8746c70736500a132a7fd18f92c08df2a24acfca7a878859f476fa6f0169",
+          "en": "Near the Suzuran Avenue Bus Stop",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k204; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k205",
+          "source_text_sha256": "b37f20a073171fe5103a9c89cdd47a4cfd509f142fd45172e77a815088932d57",
+          "en": "Miyato Sky Tower Observation Deck",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k205; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k206",
+          "source_text_sha256": "f52a64152bc78cb1839b5607ba9d34628b761d469a0fdd02dfb49540290bf864",
+          "en": "Miyato Sky Tower Stairs and Maintenance Walkway",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k206; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k211",
+          "source_text_sha256": "9f1edd3d2cbcdc7050245f35fc8af5df85e147d560a131dcfb9962df1a9b58f3",
+          "en": "Northeastern Sumire Ward",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k211; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k212",
+          "source_text_sha256": "9c75c7175ffcfeda776bf5f7110d71225c10cb19c3ad0679932a1833b9d3b437",
+          "en": "Radio Sky Garden",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k212; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k213",
+          "source_text_sha256": "fca18643a5d268a567d75df526dc55bd3b061f572e359f6c41e5ffa31ab98022",
+          "en": "Central Sumire Ward",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k213; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k214",
+          "source_text_sha256": "e25721b6c74fad659bf9b988ac7fba76fac1e2ae818f31a36b67596611eceea9",
+          "en": "Fortune Center Building",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k214; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k215",
+          "source_text_sha256": "8943977b07a0d6f47b54461b013d2f34be2190124504cbed94e18e4e1a6e9b5d",
+          "en": "Hananira Town 1-chome",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k215; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k217",
+          "source_text_sha256": "561e93a31ad767d09da43a6f5ffc244763d2eff2d08044315e8fd86d07e03bc2",
+          "en": "Hananira Town Intersection",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k217; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k218",
+          "source_text_sha256": "29236f793496deb981938da90d1c54041e11d54c7b2182553f642e828cf19d87",
+          "en": "Hananira Town Sewers",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k218; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k219",
+          "source_text_sha256": "02712299ee010e048e39416b5944ac9ad9c1cca10de25fcd5237f4624c0295b0",
+          "en": "Clover Hananira West Store",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k219; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k227",
+          "source_text_sha256": "36017ef5990f3269e79608b3e35928f14e5d6d497b7e3302c7ce89836229a4d2",
+          "en": "Tsubaki Avenue, Sakura Ward",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k227; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k228",
+          "source_text_sha256": "0cb3cef24b926675693e76c84e0bfc67181668ee904321cce14a91ddef5eb505",
+          "en": "Mimosa MZ Building Stairs",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k228; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k229",
+          "source_text_sha256": "9db01fea2ef509d6facc6051a60a04a8b91d912045f1e4930b705dda3b5f33e1",
+          "en": "Mimosa MZ Building Rooftop",
+          "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k229; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_202_news_text.luc",
+      "source_sha256": "39048e20552ee003153ac5793b34c1cdb04f4eb0706b57d16e5589dffd5dc629",
+      "entries": [
+        {
+          "id": "p0/k94",
+          "source_text_sha256": "e2485113d540451a71a09f112e454fbbbd2f82f091e2f7f97d72310dcb61ff15",
+          "en": "Around 7 p.m. today, a subway train on the Yotsuba Line made an emergency stop near Azami 1-chome Station. According to the municipal railway, the driver reported needing to stop because a suspicious shape lay across the tunnel. After stopping, the driver reported heading toward Azami 1-chome Station while protecting the passengers, but subsequently disappeared.\nPolice are investigating a possible connection with the mysterious life-forms appearing in the area.",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k94; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k96",
+          "source_text_sha256": "afa4494e29ebe358dfe493ac4ff64db29d8743b7da5c2af5eb5199a966c5fb6b",
+          "en": "Shortly after 6 p.m. today, an unknown giant plant approximately one hundred meters tall appeared at Acacia Department Store in Sakura Ward. Authorities are investigating a possible connection with the crustacean-like creatures that appeared around the same time inside nearby Azami 1-chome Station.\nBecause the area had already been closed off following attacks on people by unknown crustacean-like creatures at the nearby municipal subway station, no injuries are believed to have resulted from this incident.\n\nWitnesses say cracks suddenly appeared in the department store building, followed by something resembling an enormous flower bursting through the roof. Authorities are questioning the company responsible for managing the building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k96; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k98",
+          "source_text_sha256": "f49aa7722eda9eca7a20ba5b24128ac77425ce01532de347d03f7f03a3aca72d",
+          "en": "In connection with the attacks on people by unknown crustacean-like creatures at municipal subway Azami 1-chome Station, an enormous plant-like organism has also been found inside the station.\nAccording to passengers who escaped, it has spread root-like structures several meters thick throughout the station and adjoining underground shopping area. Many people remain trapped after these structures blocked their escape routes.\n\nAuthorities are investigating whether this organism forms the roots of the enormous plant that burst through the nearby department store's roof. They also announced that the various giant creatures appearing in the area will collectively be named 'Legion.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k98; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k104",
+          "source_text_sha256": "f57e9f9cbb3e5ca189dd000c0fd1dd95e09391fd32d0dc7e03a8f29dc1251b32",
+          "en": "Around 7:30 p.m. today, numerous witnesses reported a giant creature descending from the sky near Acacia Department Store. Riot police and firefighters had been deployed because of the enormous plant, and the creature arrived while they were directing traffic.\nThe government called it Gamera and maintained a watch. However, after approaching the enormous plant at the department store, it reportedly rose into the sky again and disappeared.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k104; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k106",
+          "source_text_sha256": "b23bff7ebaefdb99aec03922fe5dbefd434a234ea57f9d2a0346745e58bdbb09",
+          "en": "Footage taken around 7 p.m. today shows a large creature, as much as two meters long, roaming inside Azami 1-chome Station on the Yotsuba subway line.\n\n\n\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k106; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k114",
+          "source_text_sha256": "aaada1cb215d4712d80d815f500ff35f3212a5ccf5c9ff9830455aca13e2df32",
+          "en": "A girl searching for a hamburger has reportedly been seen in the underground shopping area adjoining Azami 1-chome Station on the Yotsuba subway line, devastated by unknown creatures.\nApparently, she came to eat hamburgers with her mother, but was killed in an attack by an unknown creature. Her mother says the girl adored her father, who had already died, and had come that day to eat his favorite GZ hamburgers.\nHearing reports of her daughter near the hamburger shop, the mother said tearfully that regret at never eating her hamburger must be keeping her wandering there.\n\nOthers, however, reportedly question the mother's account. The girl's mother is said to have died a few months after her father. Which sightings are correct has become a subject of debate online.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k114; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k132",
+          "source_text_sha256": "7f11f08b368f64f649e0f40276b26f89484fc779c3be3f3b89ab4532aa0af0cc",
+          "en": "The unknown creatures appearing around Azami 1-chome Station in Sakura Ward, commonly called Legion, have been found to possess silicon-based shells and body tissue resembling semiconductors.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k132; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k140",
+          "source_text_sha256": "83ede944afd0ccb82b1321327ba011696a7c90eb6ff8cfdc3ffcf0ee3d580162",
+          "en": "I was attacked by monsters at Azami 1-chome subway station. Having dressed up unusually nicely to go out, I witnessed the station suddenly lose power and monsters emerge from the darkness to attack people.\nSeeing familiar scenery and ordinary daily life shattered in such an unexpected way shocked me deeply. I still have not sorted out my feelings.\nOnce again, I am grateful to be alive and grateful for the peaceful days we ordinarily enjoy. I also pray for those who died. (By journalist Risa Kashiwagi)",
+          "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k140; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_208_news_text.luc",
+      "source_sha256": "8e4e33b0da797a9cb165e930ed36e6b44db1f729115c232dc5926f348f4597b5",
+      "entries": [
+        {
+          "id": "p0/k130",
+          "source_text_sha256": "e37cbaa633dd5f9cb13764b74589dcd89abcbc16482bc32a5f0312decd5cb859",
+          "en": "Two more giant creatures have appeared near Hinageshidai Station.\n\nApparently hostile to one another, the two creatures faced off, rampaging and occasionally firing beams from their mouths.\nTheir enormous bodies caused roads to cave in with every step, while nearby buildings suffered shattered windows and cracked walls.\nNumerous buildings were also completely or partially destroyed by their tails and beams.\n\nWhy they chose to confront one another in an urban area remains unknown. From our perspective, all we can say is: take it to an uninhabited island or some remote stretch of ocean.\nIf they were hostile to humanity, this would be a battle. But they do not appear to be deliberately targeting people. Two giant creatures simply having a fight amounts to a nuisance. Given the staggering damage, we would like to shout that it is an enormous nuisance.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k130; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k135",
+          "source_text_sha256": "34dc9775ae6ee0ec60fc4008631978003516f6dcb16ae8a82089a7c09f4ae9aa",
+          "en": "Hinageshidai Station: A Courageous Decision",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k135; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k136",
+          "source_text_sha256": "507c69c9cdba7d41f654752a65709f0e62b4630f5395d0a2a95264d21599ee26",
+          "en": "\"The trains were still running, and people were looking for somewhere to escape. Under those circumstances, closing the station never crossed my mind,\" the Hinageshidai stationmaster told a press conference.\n\nA giant creature's long, thick tail lay right in front of the station, while its owner battled another giant creature close by. Even so, Hinageshidai Station kept its shutters open and continued operating.\n\nIn an unusual moment for a press conference, the entire room applauded when the stationmaster finished speaking.\nA true crisis tests our human decency. This seems a perfect example.\n\nStill, am I overthinking things to wonder why the stationmaster was sweating so unnaturally profusely?",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k136; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k140",
+          "source_text_sha256": "67e1593330f0d6dde8b0986dfe92695140e2897b3f55e955d6a752a97af7f465",
+          "en": "The overpass on Shirotsumekusa Street, affectionately known as the Hand-Holding Overpass, has been destroyed.\nThe golden giant creature is believed responsible, and the damage is reportedly beyond repair.\n\nThe overpass has a long history, dating back to when Shirotsumekusa Street was still a river running through the town. At the time, the settlements on the north and south banks were feuding and had cut off all contact.\nOne day, a girl from the northern settlement and a man from the southern settlement fell in love. Predictably, things did not work out, and the two threw themselves into the river.\nThe girl's father, leader of the northern settlement, was filled with remorse. He went alone to negotiate with the southern settlement, going among the people on both sides and persuading them to end their quarrel in exchange for his own life.\nAround that time, plans began to fill in the river. To make travel between north and south easy even afterward, the northern leader spent his personal fortune to build this overpass.\n\nAfter seeing the overpass completed, he took his own life, refusing to listen to those who tried to stop him.\nMoved by his resolve, the people began interacting more actively. Eventually, it became known as the Hand-Holding Overpass, joining the hands of north and south.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k140; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k148",
+          "source_text_sha256": "024613e1a412c0544841f8cdbd4d827f3c915a792ab5fef13fb064ea00d08709",
+          "en": "The headquarters of Johma, a toothpick manufacturer familiar to those in the know, has been half destroyed by a giant creature's tail.\nBy half destroyed, we mean half the building remains standing. It is certainly in no condition to be used for business.\n\nThe building also housed \"Toothpicks: Everything There Is to Know,\" an exhibition of toothpicks from every era and corner of the world, and the Tsumayo Theater, where toothpick idol Tsumayo-J performed daily. It was regarded as sacred ground by fans said to number ten million in Japan and two billion worldwide.\n\nWith business halted, nearly all the precious exhibits lost, and no theater left for performances, messages of encouragement and grief have poured in from around the world.\nA fundraising campaign launched by fans has already raised over four billion yen, so the revival of this sacred site may not be far off.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k148; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k164",
+          "source_text_sha256": "41e6779b84e50e7a67ce5e2c5e5eb68d11019ddcd4cc4503790c7f132b376390",
+          "en": "This time, we take a look at Hinageshidai Station.\nToday, more than 100,000 passengers use the station each day. When it first opened, however, it was a quiet rural stop surrounded by fields.\nIn fact, there were originally no plans to build a station here. Few people know that a word from a major local landowner prompted the sudden decision to establish one.\nThe station occupies the space beneath the elevated tracks rather than a separate building alongside them because of a desperate effort to finish before the railway opened.\nBuying the fields immediately beside it would have been an option, but there proved to be too little time for construction, leading to the current arrangement at short notice.\nThe station may have been built on a rather selfish whim, but nobody could have imagined the surrounding area rapidly developing into a city and turning it into a major stop.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k164; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k166",
+          "source_text_sha256": "d80f1f0eaee9428271da17cc78d43121bc034eaef6effea9d9b330ae1a7a4acc",
+          "en": "For our eleventh installment, we introduce Design Office Kezurokka.\nKezurokka is a collective of designers specializing in advertising and web design. Some members can also program and compose music, allowing the firm to handle entire projects in-house. Orders from major companies never stop coming.\nEvery member of staff, including the president, is a woman. The company also offers extensive childcare and work-from-home arrangements.\nThough founded only two years ago, it has already outgrown its current office and is now constructing its own building.\nRather than immediately recruiting a large workforce, however, its first priority is creating an environment that helps staff work, including a nursery, medical facilities, a supermarket, and other shopping facilities within the building.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k166; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k170",
+          "source_text_sha256": "59be74bacdd8f26cada0638e5f579b805cef6fcf3e2e9962a2690285ada7ca5c",
+          "en": "Heading the list of seven station mysteries must surely be the toilets at Hinageshidai Station.\nWhatever the time of day, they are always \"being cleaned\" and cannot be used.\nBoth the men's and the women's toilets, at that.\nWhenever we ask the operating company, it insists, \"Our inspection reports confirm that the facilities are available for normal use.\"\nStation staff offered only evasive answers, so I more or less insisted that an employee accompany me to see for ourselves.\nA man dressed as a cleaner stood at the entrance and told us cleaning was in progress. Determined, I waited two hours, but it never ended. When I asked the same cleaner again, he now said a broken water pipe meant the toilets could not be used that day. Every visit during my week of investigation went this way, and I never had a chance to use them.\nThen, on a later visit, I saw the supposed cleaner working in the station office, wearing a station employee's uniform.\nWhy does Hinageshidai Station stubbornly refuse access to its toilets? Why maintain the appearance that they are normally usable, rather than simply claim construction work is underway?\nAnd why does the operating company insist there is no problem? The unanswered questions keep piling up.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k170; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k177",
+          "source_text_sha256": "3102f0bb41e97e206bf93f36f91bf2c0e406616415e5fb26dda868a3793add25",
+          "en": "The Jobu Functional Desk",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k177; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k178",
+          "source_text_sha256": "e3330c1d374b1bf5118813d729bbd2a421d5363bb6d9bcc090463387843b1ac4",
+          "en": "Office desks have now evolved even further.\nMeet the Jobu functional desk. Made from the exceptionally hard material Ekipotan, it can withstand impacts of up to one million tons.\nHide beneath this desk and it will reliably protect you even if the ceiling collapses.\nThat is not all. In the event of one of the bomb attacks that have become so frequent lately, simply shelter behind it.\n\nThere is, however, a drawback: it weighs one ton. That poses no problem in a sturdy building, but anyone using it in a dilapidated old building should beware of it falling through the floor.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k178; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k179",
+          "source_text_sha256": "1ba7e2fa7f47821d927e1a5b891b6432fdb8e67e14201d3e1664c7dc01e30a77",
+          "en": "The Mamoru Functional Desk",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k179; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k180",
+          "source_text_sha256": "48b51ef4eec0b99ea5360d24c99c94555771822ae8efae64702aec04c8a31bb4",
+          "en": "This time, we introduce the Mamoru from the popular functional desk series.\nThis model transforms into a protective suit that covers your entire body.\nAlthough less strong than the Jobu functional desk, it reportedly offers durability comparable to existing bulletproof vests.\nEven the built-in drawer becomes a helmet, providing truly full-body protection.\n\nIt is extremely reassuring when a disaster forces you to pass through a dangerous area.\nHowever, the transformation procedure is complicated, so we strongly recommend practicing regularly.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k180; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k202",
+          "source_text_sha256": "79d045564853a827bc8db5b2dbd458fe2ebe40172c1f8395db7c6902099d7150",
+          "en": "An incident occurred at an elementary school near Hinageshidai Station the day after the giant-creature disturbance subsided.\nA rescue worker checking the damage found bundles of banknotes scattered along a school corridor. Apparently, the previous day's shocks had forced open a fire-hose cabinet, spilling out the banknotes inside.\nThe principal arrived just after the rescue worker and admitted hiding the money himself.\nHe had tried to reach the school on the day of the disturbance, but blocked roads delayed him until morning.\nLarge quantities of banknotes were found in other fire-hose cabinets as well.\nThe money consisted of accumulated kickbacks for recommendations securing admission to prestigious junior high schools.\nHe usually kept it in a safe at home, but hurriedly moved it to the school after learning an investigation was imminent. The giant-creature disturbance broke out that very day.\nCrime does not pay. Police say their investigation will also seek to identify the people who paid the kickbacks.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k202; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k203",
+          "source_text_sha256": "d70c047bc477b118c9d7413d688232064cc0ccfe2ff24f48cbfc18377de811cf",
+          "en": "The Urban Legends of Hinageshidai Station",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k203; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k206",
+          "source_text_sha256": "10c2b414578f57f741e3eed51194b5edf076321f2d8c963e908e93c3ab43fdd8",
+          "en": "Hinageshidai Station has state-of-the-art equipment that looks ordinary at first glance.\nThis rubbish bin is one example.\nIt actually pulverizes and digests the rubbish inside automatically. Perhaps \"digests\" is not technically accurate, but either way, leave it alone and the rubbish inside disappears before you know it.\n\nIf you have the opportunity, watch the bin for a while. You should be able to see the rubbish gradually diminishing before your eyes.\n\nThe device is apparently a prototype developed by a research institute and installed at this station to collect sample data.\nNaturally, it also comes with extensive measures to prevent theft.\nThe research is groundbreaking, with apparent government involvement. If successful, it could help eliminate the world's mountains of rubbish.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k206; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k212",
+          "source_text_sha256": "1c92182bf61c96dffd6ea9a32023198f2c400b593a9ef7a88515507194130ddc",
+          "en": "The woman stood stunned near the ticket gates at Hinageshidai Station, surrounded by cans of juice scattered at her feet.\nWhile giant creatures rampaged, she had visited shop after shop and finally managed to buy the juice. Then a young person rushing into the station collided with her, sending the cans across the floor and spilling all their contents.\n\nShe lives alone with her young child, who was bedridden with a fever.\nHer child wanted a popular juice, so she had wandered the nighttime streets, through a city where giant creatures were running wild, searching for it. At last, she found it near Hinageshidai Station and bought all the stock. She was about to head home when the collision described above ruined everything.\n\nWe cannot blame the young person who collided with her. They must have been desperate to escape the clearly dangerous area around Hinageshidai Station.\nShe herself said she did not blame them. But she added, \"I don't know how I can face my child,\" and, \"I can't go home like this.\" With those words, she disappeared into the city where the giant creatures rampaged.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k212; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k224",
+          "source_text_sha256": "561bbd015fca555ee64c9d4dcb48731989f77e385664a1ccd411a2fb6243d422",
+          "en": "This photograph captures people racing toward Hinageshidai Station, each desperate to get there first, as beams from the giant creatures occasionally strike the ground.\n\nLater interviews revealed that they had missed their chance to flee, hidden in their offices for a while, and finally summoned the courage to make a run for it.\n\nPeople often regard humanity as reigning supreme over every ecosystem, but this shows just how mistaken that belief is. Giant creatures are not the only threat: we are equally powerless before every kind of natural disaster.\nWe have only two choices: flee, or hide and protect ourselves.\nIn light of this disturbance, perhaps humanity should reconsider its proper place in the world.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k224; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k228",
+          "source_text_sha256": "80e5dd3ca46f570b502a876f05993d43fef16ee11e49833561ae4a655d6887ee",
+          "en": "A man at Hinageshidai Station was calmly engrossed in a game on his mobile phone.\nWith giant creatures rampaging nearby and everyone around him either terrified or fleeing, his composure, as though everything were perfectly normal, caught my attention.\n\nIntrigued, I spoke to him. He seemed to reason very logically and fully understood that the situation was critical.\nI was thoroughly impressed that he could remain so calm despite that knowledge.\nCurious about his occupation, I asked what he did for a living. He merely smiled and offered no answer.",
+          "notes": "English draft imported from audited private workspace, translate-en-0065.json:p0/k228; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_209_news_text.luc",
+      "source_sha256": "785081ced153477bb96f83176c59fdef7aaf9876b06130e7000eff6315c1ada8",
+      "entries": [
+        {
+          "id": "p0/k60",
+          "source_text_sha256": "2d9d7980c6d7ec76b1c22c0eb49e88b835895155c093fece7caacd7cdd051cfa",
+          "en": "Late tonight, a mysterious giant lifted a train that had departed Hinageshidai Station on the Miyato Electric Railway Tozai Line.",
+          "notes": "English draft imported from audited private workspace, translate-en-0022.json:p0/k60; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k64",
+          "source_text_sha256": "060dedaf101680591c684b96c8ab75680b0c65ae068c5e66a1224c238b7f0ef3",
+          "en": "Following the incident late tonight in which a mysterious giant lifted a train departing Hinageshidai Station on the Miyato Electric Railway Tozai Line, it has emerged that the giant of light took the train back from the mysterious giant and safely set it down.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0022.json:p0/k64; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_215_news_text.luc",
+      "source_sha256": "b3ed3bdd498d456cb04335cc6341ac4b6204ecd10787355cc7b6813242f8afc7",
+      "entries": [
+        {
+          "id": "p0/k72",
+          "source_text_sha256": "c13eb0483293d81dc4ac92d2e7c4e431e4d6fef45ab10c82578c4b1295488b92",
+          "en": "Footage posted online before dawn today shows a giant creature walking along the main road, Ayame Street. It reportedly headed toward the enormous plant at Acacia Department Store.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k72; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k75",
+          "source_text_sha256": "ad8dababd43087d7629a11f129eb380470327d9b53d1e6e1401b8c2db7460e4c",
+          "en": "Evacuation Ordered Around Azami 1-chome Station",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k75; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k76",
+          "source_text_sha256": "83778a61009bfdc7833fd2066b43d3ef38b1ca6db5e3f198fe7c9bfc777260a1",
+          "en": "Before dawn today, an evacuation order was issued for the area around Azami 1-chome Station.\nCreatures appearing near the station since the previous night had devastated the neighborhood. However, reports that the enormous plant attached to Acacia Department Store would burst prompted the Self-Defense Forces to order an evacuation.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k76; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k86",
+          "source_text_sha256": "5fdd1b34627d0778343c33dc4a404df840a87d45a30ee22c6e0d4cf939661477",
+          "en": "We have learned that a horse escaped from a racecourse ten kilometers from Acacia Department Store the day before the evacuation order concerning the enormous plant. Its whereabouts remain unknown, and police are gathering information.\n",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k86; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k92",
+          "source_text_sha256": "3643171c3b2168b3f60837ec3a3c2a200abcee067887dce27cff0bbda4ba5353",
+          "en": "The government estimates that economic losses from the ongoing series of anomalies around Miyato City exceed eleven trillion yen. With the incidents still continuing, losses may grow further.\nRecovery funds are to come from spending cuts and tax increases, but influential ruling-party lawmakers have also suggested considering reconstruction bonds.",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k92; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k94",
+          "source_text_sha256": "3a3f6ece5ceef1e7b4b06ac2cc45ae7c3a1359547fbd62f6f2be97c19a516fd5",
+          "en": "As evacuation from the Azami 1-chome Station area neared completion, footage captured numerous monsters emerging from underground and attacking vehicles attempting to escape.",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k94; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k95",
+          "source_text_sha256": "94fed40c5f63e2da51801fb8097d49a891525b9b0d7812b026942de1f2d1c71f",
+          "en": "Acacia Department Store Gone: Ninety Years of History End",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k95; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k96",
+          "source_text_sha256": "c58ef7a0a0e01cfca920c18d0d5f511b169a0adba7cc7e2fe09d11a2330d1796",
+          "en": "Before dawn today, the plant attached to Acacia Department Store burst, causing immense damage nearby.\nAt the center of the explosion, the department store vanished without a trace, bringing its long history to an end.\nBefore the war, it opened as a privately owned shop called Acacia-do, reportedly earning a reputation among locals for good-quality goods at low prices.\nIt expanded during the postwar economic boom and continued operating with the goal of improving local quality of life.\nHearing of its destruction, nearby residents said, 'It's terribly sad. We hope they won't give up and will rebuild.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k96; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k100",
+          "source_text_sha256": "0796e65084db164b925eddf4ee09ae8eeb88ff5dd321d2da73a5e270b3860e49",
+          "en": "Some people are confronting the anomalies now afflicting Miyato Prefecture head-on. Trickster Transport, in business since before the war, lives by the motto 'Through Fire and Water,' devoting itself to delivering every package regardless of the difficulty.\nOne delivery worker, Tsuro Haita, has been dodging attacks by small creatures emerging from the ground to deliver packages to doorsteps around Azami Station, devastated on the incidents' first day. He declared, 'Monsters? We never stopped delivering even when bombs were falling. Bring them on!'\nFaced with an unprecedented crisis, their determination to fulfill their duties without regard for danger commands admiration.",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k100; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k102",
+          "source_text_sha256": "fbc0d943f14810c765c6943a7fb116c7b7de611ec88be3bb2b368f4829613bf1",
+          "en": "During the evacuation ordered around Azami 1-chome Station before dawn today, riot police remained to guide people to safety until the very end. Peering through the rain, they shouted themselves hoarse directing evacuees. Then one officer found a woman motionless in a car, her head hanging down.\n\nHer vehicle was badly damaged, with scratches apparently inflicted by mysterious creatures and signs of collisions. It seemed finally to have stopped after hitting another car. Knocked unconscious by the impact, she apparently had not heard the evacuation instructions and was left behind.\n\nThe officer tried to open a door, but repeated collisions had warped them all, leaving them immovable. Even banging on the window and calling failed to wake her. Just as he began to despair, he spotted something like a crowbar nearby and successfully pried it open. The woman's unconscious position had left her unable to breathe. A slightly later discovery or rescue would reportedly have put her life in danger.\n\nAfter regaining consciousness in hospital, she said shyly, 'I woke up somewhere unfamiliar, with a man I didn't know looking at me. That was surprising, but even more surprising was that he suddenly started crying when he saw me wake up. He's the one who saved me, right? It put me off a little, but I'm here because of him. I want to do everything I can to repay him. If possible, always by his side.'",
+          "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k102; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_218_news_text.luc",
+      "source_sha256": "f7a2bf10947a7a937a4749259375b6bc7d3b8952f015d13163abf12b138b0a35",
+      "entries": [
+        {
+          "id": "p0/k100",
+          "source_text_sha256": "a7ddbb20ffbbba713ce1a7078108b170ea7740a36b69faa0a52108be51e0fc04",
+          "en": "The Tokyo Metropolitan Police Department announced the disciplinary dismissal of Inspector Toru Fujiwara, 55, chief of Intelligent Crime Investigation Unit 2 in Investigation Division 2.\nThe former inspector had previously drawn criticism for excessively aggressive investigations involving violence, and for deciding to overlook certain serious crimes even when he witnessed them. This time, after he piloted an organizational helicopter for personal use, the oversight committee's request to waive advance dismissal notice was approved, and he was dismissed immediately.\nFujiwara reportedly refused interviews from the surrounding press and walked away with a defiant smile.",
+          "notes": "English draft imported from audited private workspace, translate-en-0001.json:p0/k100; human editorial and runtime review pending.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}
