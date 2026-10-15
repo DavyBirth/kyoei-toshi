@@ -29,6 +29,11 @@ int main(void) {
     if (kyoei_wait_real_label((const volatile uint64_t *)&label, 456, 30)) return 3;
     if (label != 123 || GetTickCount64() - started > 1000) return 4;
     if (!kyoei_wait_real_label((const volatile uint64_t *)&label, 123, 0)) return 5;
+    DWORD handles_before,handles_after;
+    if (!GetProcessHandleCount(GetCurrentProcess(),&handles_before)) return 10;
+    for (unsigned i=0;i<100;++i)
+        if (kyoei_wait_real_label((const volatile uint64_t *)&label,456,2) || label!=123) return 11;
+    if (!GetProcessHandleCount(GetCurrentProcess(),&handles_after) || handles_before!=handles_after) return 12;
 
     unsigned char *page = VirtualAlloc(NULL, 4096, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
     if (!page) return 6;

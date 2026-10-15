@@ -159,3 +159,32 @@ Valores impressos são arredondados; médias junto ao limite requerem dados brut
 
 Executável normal build/kyoei.exe atualizado; diagnóstico orb-pending anterior
 continua separado. Nenhuma partida iniciada, nenhum ganho de FPS medido.
+
+## Espera GPU com menor atraso — 15/10
+
+Adapter próprio `kyoei_wait_real_label` usava Sleep(1) entre leituras da
+conclusão real. Isso pode arredondar uma conclusão curta ao tick do Windows.
+Agora retorna imediatamente quando já concluída; faz espera ativa limitada
+a 200 microssegundos e, se necessário, usa timer de alta resolução de 1 ms.
+Hosts que não criam esse timer seguem no fallback Sleep(1). Timeout, leitura
+acquire e retorno ao poll/trap original preservados. Não escreve labels,
+não adianta eventos e não remove a espera do readback.
+
+Benchmark `benchmark_kyoei_gpu_wait`, produtor separado, 200 amostras por
+implementação/duração, alternando versão antiga e nova. Com pedido explícito
+de timer de 1 ms: conclusões simuladas de 50/200/800 us foram detectadas em
+média em 1,881/1,922/1,974 ms antes e 0,074/1,703/1,711 ms depois.
+Sem esse pedido: 15,494/14,288/14,196 ms antes e 0,078/1,332/1,371 ms depois.
+Resultados locais de fixture, não tempos do jogo nem comparação de FPS.
+Não extrapolar o caso de tick padrão para uma partida cujo timer pode diferir.
+
+Tradeoff medido: mais ciclos de CPU na thread que aguarda (aproximadamente
+192 mil/610 mil/607 mil ciclos contra 42 mil/54 mil/57 mil, no teste 1 ms).
+Espere até 200 us de trabalho ativo por chamada longa. Ciclos não são tempo
+de CPU convertido por frequência presumida. Não foi medido o impacto na
+RX580/i5-9400. Arquivos privados `build/gpu-wait-benchmark*.txt`.
+
+Build Windows PASS; testes de fence atrasado, timeout sem alteração do label,
+retorno imediato, relay SysV e 100 timeouts sem vazamento de handles PASS.
+Portable atualizado e bootstrap EN sem GPU PASS. Ganho de FPS/stutter em
+gameplay continua não medido, respeitando a instrução de não iniciar partida.

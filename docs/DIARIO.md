@@ -2151,3 +2151,54 @@ espaço (rotina de texto do eboot); (7) PT-BR depois.
 - Nenhuma partida iniciada/encerrada; saves, dump e Godzilla preservados.
   Nenhum ganho novo de FPS medido. Pendências: revisão visual da proposta,
   desempenho com medição, backend Linux e validação do jogo até o fim.
+
+### 15/10/2026 — pixels de Options, textos novos, espera GPU e carregador Linux
+
+- Davy aprovou os títulos dos stages, pediu Notice com linhas centralizadas
+  como a referência enviada e centralização por pixels dos Options. Pediu
+  avanço concreto também em desempenho, textos/jogabilidade e Linux.
+- Referência baixada/inspecionada localmente. Notice agora centraliza cada
+  linha. Achado: atlas Options tem 44px, mas borda termina em y35; o padding
+  transparente inferior deslocava o cálculo anterior. Gerador usa a área
+  interna da borda e pixels reais das letras. Teste sintético PASS e medição
+  dos 22 TEX comprimidos PASS: espaços superior/inferior diferem no máximo
+  1px. Galeria v3 aberta; stages aprovados e ficção preservados byte a byte.
+- 34 EN novas realmente inseridas no consolidado privado, com backup e ledger
+  player-facing-20261015-02: 7 artigos completos, 6 registros de máscara,
+  2 de roteiro, 1 nome de chave e 18 interações. Auditoria estrutural PASS.
+  Privado 13.130/16.100, vazias 2.970; 201 exigem revisão individual na triagem.
+  Reinserção/releitura integral das 13.130 EN em 135 recursos PASS. Restam
+  textos narrativos, nomes e inventário visual; sem prova de 100% jogável.
+- Exportado patch só com 34 EN/hashes, sem prosa original. Prévia en-15
+  recomposta: união de 13.260 EN e 59 TEX. PSARC criado com hash e releitura
+  de substituições verificados. Portable fechado atualizado, preservando
+  saves. Leitura direta do portable verificou as 34 novas e 59 TEX; hash,
+  launcher --check e bootstrap sem GPU/list-stubs EN PASS. Romaji ligado.
+- Melhoria real do adapter de espera GPU: espera ativa limitada a 200us;
+  timer de alta resolução de 1ms depois, fallback Sleep(1). Fence acquire,
+  timeout e poll/trap original mantidos. Não altera label nem simulação.
+  Fixture A/B com timer de 1ms: 50/200/800us detectados em 1,881/1,922/1,974ms
+  antes e 0,074/1,703/1,711ms depois. Custo em ciclos de CPU maior, registrado
+  em DESEMPENHO.md. Sem pedido de timer, redução maior; não extrapolar para
+  gameplay. Build PASS; fence/timeout/relay/100 timeouts sem leaks PASS.
+- Linux agora tem alvo ELF real kyoei-linux-bootstrap, derivado do carregador
+  fixo com âncoras verificadas; SHA256 loader original
+  7de8feb69d3897eee10e11ccaa2b3edb3bcbe44c6190428592d4aeed900fe381.
+  Host mmap/mprotect/pthreads próprio; CMake Linux sem libs Windows.
+  Imagem própria real: 29.540.440 bytes, 36 segmentos, 88.561 relocações,
+  418 imports nativos, 748 ainda sem runtime Linux. --list-stubs obrigatório;
+  entrada do convidado ausente/recusada. Nenhum launcher Linux publicado.
+- TLS Linux principal implementado com GS, FS da glibc preservado. Testado
+  template/zeros/DTV, alinhamento convidado independente do host, quatro
+  threads, isolamento/errno, entradas aninhadas e restauração de GS. As 580
+  instruções reais conferidas e prefixos preparados na imagem; probe GS do
+  host PASS. Testes de recusas do loader PASS. Ainda faltam runtime PS4,
+  módulos/TLS dinâmico, memória/faults, GPU/input/saves e validação real Linux.
+- Nenhuma partida iniciada/encerrada, nenhum FPS novo medido. Dump, saves,
+  snapshot Godzilla e projetos irmãos preservados. Prosseguir com runtime
+  POSIX e gargalos medidos; visual/100% da progressão exigem prova em jogo.
+- Limpeza conforme regra permanente: removido só common.psarc derivado en-14
+  (6.349.079.299 bytes), após conferir SHA256 registrado, substituto en-15,
+  hash/leitura do portable e ausência de jogo/atualizador ativo. Metadados de
+  prova antigos, referência visual, traduções e backups preservados. Evidência
+  privada em build/cleanup-preview-14.json. PT-BR e demais fontes não removidos.

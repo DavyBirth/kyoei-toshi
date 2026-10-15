@@ -18,12 +18,42 @@ static int readable(const void *pointer, size_t bytes) {
 }
 
 int kyoei_wait_real_label(const volatile uint64_t *label, uint64_t expected, unsigned timeout_ms) {
+    if (__atomic_load_n(label, __ATOMIC_ACQUIRE) == expected) return 1;
+    if (!timeout_ms) return 0;
     const ULONGLONG started = GetTickCount64();
+    /* Avoid rounding a short, real GPU completion up to a Windows Sleep tick.
+     * Bound CPU spinning to 200 us; long shader compiles still sleep normally. */
+    LARGE_INTEGER frequency, spin_started, now;
+    QueryPerformanceFrequency(&frequency);
+    QueryPerformanceCounter(&spin_started);
+    const LONGLONG spin_ticks = frequency.QuadPart / 5000;
+    unsigned spins = 0;
+    int spinning = 1;
+    HANDLE timer = NULL;
+    int timer_attempted = 0, reached = 0;
     for (;;) {
-        if (__atomic_load_n(label, __ATOMIC_ACQUIRE) == expected) return 1;
-        if (GetTickCount64() - started >= timeout_ms) return 0;
-        Sleep(1);
+        if (__atomic_load_n(label, __ATOMIC_ACQUIRE) == expected) { reached = 1; break; }
+        if (GetTickCount64() - started >= timeout_ms) break;
+        if (spinning) {
+            YieldProcessor();
+            if ((++spins & 31) != 0) continue;
+            QueryPerformanceCounter(&now);
+            if (now.QuadPart-spin_started.QuadPart < spin_ticks) continue;
+            spinning = 0;
+        }
+        if (!timer_attempted) {
+            /* Windows 10 1803+: 0x2 requests a high-resolution waitable timer.
+             * Older hosts retain the original cooperative sleep fallback. */
+            timer = CreateWaitableTimerExW(NULL, NULL, 0x2, TIMER_ALL_ACCESS);
+            timer_attempted = 1;
+        }
+        LARGE_INTEGER due = {.QuadPart = -10000}; // one real millisecond
+        if (timer && SetWaitableTimer(timer, &due, 0, NULL, NULL, FALSE))
+            WaitForSingleObject(timer, INFINITE);
+        else Sleep(1);
     }
+    if (timer) CloseHandle(timer);
+    return reached;
 }
 
 static ABI void wait_before_guest(void *context, uint64_t expected, const volatile uint64_t *label) {

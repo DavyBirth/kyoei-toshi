@@ -1,5 +1,41 @@
 # Linux x64 e portable compartilhado
 
+### Primeiro carregador Linux e TLS — 15/10, após instalação
+
+Existe agora **`build/linux/kyoei-linux-bootstrap`, ELF x86-64 compilado em
+Ubuntu**, reutilizando o parser BBPROBE5, validações de segmentos/importações,
+relocações e ligações nativas do carregador fixo do Godzilla. O snapshot não
+foi modificado: `tools/prepare_linux_bootstrap.py` deriva uma cópia de build
+com âncoras verificadas e host POSIX em `src/linux/`. A configuração Linux
+do CMake não usa as bibliotecas COFF Windows.
+
+Prova com a imagem real preparada do próprio dump: 29.540.440 bytes mapeados
+em 0x800000000, 36 segmentos, 88.561 relocações, 418 importações ligadas aos
+módulos nativos e 748 ainda sem runtime Linux. Logs privados em
+`build/linux/bootstrap-real.log`. O binário exige `--list-stubs` e recusa
+executar o convidado. Não foi instalado como iniciador do portable.
+
+TLS principal implementado com pthreads/posix_memalign e GS, mantendo FS da
+glibc. Layout segue o adapter Windows, com alinhamento do bloco convidado
+independente do alinhamento da alocação do host. Inicialização por thread,
+template/zeros, DTV, entradas aninhadas, restauração de GS e liberação por
+destrutor. Assinaturas das **580 instruções reais** conferidas antes de
+trocar FS por GS na imagem gravável; somente depois aplica mprotect.
+Probe do host confere GS e restaura seu valor. Nenhum código do jogo executado.
+
+CTest: TLS em quatro threads com isolamento, errno/FS intacto, alinhamento e
+restauração de GS PASS; rejeição de execução/magic/truncamento/limites/TLS
+inválido/módulos inválidos PASS. Ainda faltam runtime PS4, TLS de módulos,
+signals/fault handling, memória direta/coerência GPU, Vulkan/janela/input,
+saves e launcher Linux. **O jogo ainda não roda em Linux.**
+
+Reprodução no Ubuntu: `cmake -S /mnt/g/kyoei-toshi -B /mnt/g/kyoei-toshi/build/linux -G Ninja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++`,
+depois `cmake --build /mnt/g/kyoei-toshi/build/linux` e
+`ctest --test-dir /mnt/g/kyoei-toshi/build/linux --output-on-failure`.
+Carregador: `build/linux/kyoei-linux-bootstrap /mnt/g/kyoei-toshi-work/native-05/out --list-stubs`.
+
+Registro anterior da instalação do ambiente:
+
 Pedido de Davy em 15/10/2026: manter x64; Windows e Linux na mesma pasta,
 sem duplicar os dados do jogo e sem encher a raiz de ferramentas.
 RX 580 + i5-9400 é um alvo para avaliação, não um mínimo já comprovado.
