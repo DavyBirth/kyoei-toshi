@@ -2265,3 +2265,21 @@ Falta:
   0x800000000 (bootstrap --list-stubs PASS). Caminho rápido proposto para o
   amigo (CachyOS): Proton/Wine. Port nativo Linux continua pendente
   (runtime POSIX e GPU).
+
+### 15/10/2026 (noite) — anotações de Davy
+
+- Return to Desktop nativo (3ce514e, d34051c): arte gerada no estilo dos
+  itens (Segoe UI Semibold ajustada a title_menu_newgame, halo/foco
+  ajustados), posição/fade lidos dos nós do menu (slot 13, cor +0x94),
+  sublinhado nativo movido, "????" desmarcado; ↑ não pula mais "????".
+  Upload como textura separada travava o driver; arte vai no atlas ImGui.
+- Quebra por palavras (b03e02e): hook em 0x2e2b10 remede até o último espaço.
+  Reticências japonesas → "..." (181); nomes em ordem ocidental com espaço.
+  Recomposição EN en-16 (checagem de tokens agora por conjunto, não ordem).
+- Ícones: caixa branca removida; segundo demo_skip_icon (texture/hud).
+- L1/R1 do menu: hook do UnitMenuManager (0xb2c600) testado; +0x178 não
+  muda ao abrir o menu. Revertido; pendente.
+- Linux via Wine (WSL, llvmpipe): executa código do jogo e para antes da
+  abertura de VideoOut (sem GPU real no WSL; dzn ausente). Não comprovado
+  com GPU real. Portable inclui "Start on Linux.sh".
+- Portable reconstruído (en-16, deltas EN/JA 41 ícones, arte do título).
