@@ -370,9 +370,9 @@
       "resource": "texture/game_title/E06_message.tex",
       "mode": "notice",
       "heading": "NOTICE",
-      "size": 43,
+      "size": 52,
       "width": 1120,
-      "line_height": 66,
+      "line_height": 72,
       "top": 305,
       "paragraph_gap": 40,
       "paragraphs": [

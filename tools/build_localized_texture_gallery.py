@@ -10,6 +10,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--textures',type=Path,default=ROOT/'build/overnight/textures-en')
     p.add_argument('--output',type=Path,default=ROOT/'build/texture-review')
+    p.add_argument('--previous',type=Path,help='Private TEX directory to compare against the revision')
     a=p.parse_args();out=a.output.resolve();textures=a.textures.resolve()
     if not out.is_relative_to(ROOT/'build') or out==ROOT/'build':raise ValueError('Private gallery must remain under build/')
     files=sorted(textures.rglob('*.tex'))
@@ -27,8 +28,16 @@ def main():
                 picture,info=preview(data)
                 filename=f'images/{number:02d}-{version}.png';picture.save(out/filename)
                 row[version]=filename;row['width']=info['width'];row['height']=info['height']
+            versions=[('original','Original japonês'),('en','Versão inglesa')]
+            if a.previous:
+                previous=(a.previous/name).read_bytes()
+                picture,_=preview(previous)
+                if picture.size!=(row['width'],row['height']):raise ValueError('Previous texture dimensions differ: '+name)
+                filename=f'images/{number:02d}-previous.png';picture.save(out/filename)
+                row['previous']=filename;row['previous_sha256']=hashlib.sha256(previous).hexdigest()
+                versions=[('original','Original japonês'),('previous','Inglês anterior'),('en','Inglês revisado')]
             rows.append(row)
-            pictures=''.join(f'<figure><figcaption>{label}</figcaption><button class="picture" data-src="{row[key]}"><img loading="lazy" src="{row[key]}" alt="{label}"></button></figure>' for key,label in [('original','Original japonês'),('en','Versão inglesa')])
+            pictures=''.join(f'<figure><figcaption>{label}</figcaption><button class="picture" data-src="{row[key]}"><img loading="lazy" src="{row[key]}" alt="{label}"></button></figure>' for key,label in versions)
             cards.append(f'<article data-id="{row["id"]}" data-resource="{html.escape(name,quote=True)}"><h2>{html.escape(name)}</h2><p>{row["width"]} × {row["height"]} · clique para ver em tamanho original</p><div class="comparison">{pictures}</div><label>Revisão <select><option value="pending">Pendente</option><option value="accept">Aprovada por mim</option><option value="revise">Precisa de ajustes</option><option value="defer">Decidir depois</option></select></label><textarea placeholder="O que você mudaria?"></textarea></article>')
     data=json.dumps(rows,ensure_ascii=False).replace('<','\\u003c')
     page='''<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Kyoei · revisão de texturas</title>
@@ -41,8 +50,9 @@ function filter(){let n=0;for(const card of document.querySelectorAll('article')
 const dialog=document.querySelector('dialog'),full=document.querySelector('#full');for(const button of document.querySelectorAll('.picture'))button.onclick=()=>{full.src=button.dataset.src;full.style.maxWidth='none';dialog.showModal()};document.querySelector('#close').onclick=()=>dialog.close();document.querySelector('#actual').onclick=()=>full.style.maxWidth='none';document.querySelector('#fit').onclick=()=>full.style.maxWidth='85vw';
 document.querySelector('#export').onclick=()=>{const records=[...document.querySelectorAll('article')].map(card=>({...byId.get(card.dataset.id),decision:card.querySelector('select').value,notes:card.querySelector('textarea').value}));const blob=new Blob([JSON.stringify({format:'kyoei-localized-texture-review-v1',images:records},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='kyoei-texture-review.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 </script></html>'''
+    if a.previous:page=page.replace('grid-template-columns:1fr 1fr;', 'grid-template-columns:repeat(3,minmax(0,1fr));')
     (out/'index.html').write_text(page,encoding='utf-8')
     (out/'inventory.json').write_text(json.dumps(rows,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps(dict(gallery=str(out/'index.html'),textures=len(rows),images=len(rows)*2,review_status='pending')))
+    print(json.dumps(dict(gallery=str(out/'index.html'),textures=len(rows),images=len(rows)*(3 if a.previous else 2),review_status='pending')))
 
 if __name__=='__main__':main()

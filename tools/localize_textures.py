@@ -7,7 +7,7 @@ only this tool and the label table are part of the patch.
 """
 import argparse, io, json, struct, sys, zlib
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageChops
 sys.path.insert(0, str(Path(__file__).parent))
 from tex_preview import unpack_tex, dds_bc
 
@@ -95,12 +95,21 @@ def label(im, text, size):
     bb = font.getbbox(text)
     if bb[2] - bb[0] > w - left - 3:
         raise ValueError(f'Label does not fit at the shared font size: {text}')
-    y = h / 2 - (bb[1] + bb[3]) / 2
+    # Match the source's visible white glyph height without widening English.
+    red, green, blue, alpha = im.split()
+    white = ImageChops.darker(ImageChops.darker(red, green), blue).point(lambda v: 255 if v > 180 else 0)
+    mask = ImageChops.multiply(white, alpha)
+    source_box = mask.point(lambda v: 255 if v > 128 else 0).getbbox()
+    glyph = Image.new('RGBA', (bb[2]-bb[0], bb[3]-bb[1]), (0,0,0,0))
+    ImageDraw.Draw(glyph).text((-bb[0], -bb[1]), text, font=font, fill='white')
+    target_height = min(h-8, source_box[3]-source_box[1] if source_box else glyph.height)
+    glyph = glyph.resize((glyph.width, target_height), Image.Resampling.LANCZOS)
+    pos = (left, (h-target_height)//2)
     shadow = Image.new('RGBA', (w, h), (0, 0, 0, 0))
-    ImageDraw.Draw(shadow).text((left - bb[0] + 1, y + 1), text, font=font, fill=(0, 0, 0, 220))
-    shadow = shadow.filter(ImageFilter.GaussianBlur(1))
+    shadow.paste((0,0,0,235), (pos[0]+1,pos[1]+2,pos[0]+1+glyph.width,pos[1]+2+glyph.height), glyph.getchannel('A'))
+    shadow = shadow.filter(ImageFilter.GaussianBlur(2))
     out = Image.new('RGBA', (w, h), (0, 0, 0, 0)); out.alpha_composite(shadow)
-    ImageDraw.Draw(out).text((left - bb[0], y), text, font=font, fill=(255, 255, 255, 255))
+    out.alpha_composite(glyph, pos)
     return out
 
 
@@ -146,7 +155,7 @@ def glow_text(out, pos, text, font):
     d = ImageDraw.Draw(shadow)
     for dx, dy in ((0, 0), (2, 2), (-2, 2), (2, -2), (-2, -2)):
         d.text((pos[0] + dx, pos[1] + dy), text, font=font, fill=(0, 0, 0, 255))
-    out.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(4)))
+    out.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(7)))
     ImageDraw.Draw(out).text(pos, text, font=font, fill=(255, 255, 255, 255))
 
 
@@ -168,7 +177,7 @@ def title(im, stage, text, size=50):
                 if best is None or m < best[0]: best = (m, [a, b])
             lines = best[1]; size = 44; continue
         size -= 1
-    small = ImageFont.truetype(fontfile, 32)
+    small = ImageFont.truetype(fontfile, 40)
     lh = size * 1.15
     top = 100 if len(lines) == 1 else 72
     block_w = max(widths); left = (w - block_w) / 2
@@ -214,7 +223,7 @@ def relabel(im, text, align, margin, size=20):
     if bb[2] - bb[0] > avail:
         raise ValueError(f'Button does not fit at the shared font size: {text}')
     d = ImageDraw.Draw(rgba)
-    cy = (ty0 + ty1) / 2
+    cy = (h - 1) / 2
     tw = bb[2] - bb[0]
     x = (w - tw) / 2 - bb[0] if align == 'center' else tx0 - bb[0]
     y = cy - (bb[1] + bb[3]) / 2
