@@ -38,6 +38,30 @@ kyoei_replace_checked(KYOEI_FILES
 kyoei_replace_checked(KYOEI_FILES
   "    gz_file_mount(\"/hostapp\", app0);"
   "    gz_file_mount(\"/hostapp\", app0);\n    kyoei_translation_mount();")
+kyoei_replace_checked(KYOEI_FILES
+  "typedef struct { int used, append; HANDLE host; int64_t position; Listing *dir; char path[512]; } File;"
+  "typedef struct { int used, append; HANDLE host; int64_t position; Listing *dir; char path[512]; const struct KyoeiDelta *delta; } File;")
+kyoei_replace_checked(KYOEI_FILES
+  "#include \"kyoei_translation_mount.h\"\n"
+  "#include \"kyoei_translation_mount.h\"\n#include \"kyoei_archive_delta.h\"\n")
+kyoei_replace_checked(KYOEI_FILES
+  "    snprintf(files[fd].path, sizeof(files[fd].path), \"%s\", guest);"
+  "    snprintf(files[fd].path, sizeof(files[fd].path), \"%s\", guest);\n    if (!dir) files[fd].delta = kyoei_delta_for(guest, host);")
+kyoei_replace_checked(KYOEI_FILES
+  "    int64_t n = read_at(f->host, buffer, size, f->position);"
+  "    int64_t n = kyoei_delta_read(f->delta, f->host, buffer, size, f->position);")
+kyoei_replace_checked(KYOEI_FILES
+  "    return read_at(f->host, buffer, size, offset);"
+  "    return kyoei_delta_read(f->delta, f->host, buffer, size, offset);")
+kyoei_replace_checked(KYOEI_FILES
+  "    int64_t base = whence == 0 ? 0 : whence == 1 ? f->position : file_size(f->host);"
+  "    int64_t base = whence == 0 ? 0 : whence == 1 ? f->position : f->delta ? (int64_t)f->delta->virtual_size : file_size(f->host);")
+kyoei_replace_checked(KYOEI_FILES
+  "    out->ino = i.nFileIndexLow;"
+  "    out->ino = i.nFileIndexLow;\n    if (f->delta) { out->size = (int64_t)f->delta->virtual_size; out->blocks = (out->size + 511) / 512; }")
+kyoei_replace_checked(KYOEI_FILES
+  "    convert_stat(a.dwFileAttributes, (uint64_t)a.nFileSizeHigh << 32 | a.nFileSizeLow, a.ftLastAccessTime, a.ftLastWriteTime, a.ftCreationTime, out);\n    return 0;"
+  "    convert_stat(a.dwFileAttributes, (uint64_t)a.nFileSizeHigh << 32 | a.nFileSizeLow, a.ftLastAccessTime, a.ftLastWriteTime, a.ftCreationTime, out);\n    kyoei_delta_stat(guest, wide, out);\n    return 0;")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_files.c" CONTENT "${KYOEI_FILES}" @ONLY)
 list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_files.c")
 file(READ "${KYOEI_CORE}/src/rt_vmem.c" KYOEI_VMEM)

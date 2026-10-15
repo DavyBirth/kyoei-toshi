@@ -33,11 +33,12 @@ def safe_name(name):
 
 
 class Psarc:
-    def __init__(self, path):
+    def __init__(self, path, file=None, size=None):
+        # file/size read a virtual archive (e.g. base + runtime delta).
         self.path = Path(path)
-        self.file = self.path.open('rb')
+        self.file = file or self.path.open('rb')
         try:
-            self.archive_size = self.path.stat().st_size
+            self.archive_size = size if file else self.path.stat().st_size
             header = self.read_exact(32)
             magic, version, codec, toc_size, stride, count, block_size, flags = struct.unpack('>4sI4s5I', header)
             if (magic, version, codec, stride, block_size, flags) != (b'PSAR', 0x10004, b'zlib', 30, 65536, 13):

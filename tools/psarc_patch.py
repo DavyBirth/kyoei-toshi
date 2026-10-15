@@ -23,6 +23,36 @@ def pack_blocks(data):
     return lengths, b''.join(packed)
 
 
+def rebuild_toc(archive, original_toc, changed):
+    """New TOC plus appended block bodies; the old body is reused unchanged."""
+    if not changed:
+        return original_toc, []
+    old_toc = archive.header['toc_bytes']
+    blocks = list(archive.blocks)
+    appended = []
+    append_bytes = 0
+    entries = []
+    for entry in archive.entries:
+        if entry.name in changed:
+            lengths, packed = pack_blocks(changed[entry.name])
+            entries.append((entry.digest, len(blocks), len(changed[entry.name]),
+                            archive.archive_size-old_toc+append_bytes))
+            blocks.extend(lengths)
+            appended.append(packed)
+            append_bytes += len(packed)
+        else:
+            entries.append((entry.digest, entry.block, entry.size, entry.offset-old_toc))
+    new_toc = 32 + len(entries) * 30 + len(blocks) * 2
+    header = bytearray(original_toc[:32])
+    struct.pack_into('>I', header, 12, new_toc)
+    table = bytearray(header)
+    for digest, index, size, offset in entries:
+        table.extend(digest + index.to_bytes(4, 'big') + size.to_bytes(5, 'big')
+                     + (new_toc+offset).to_bytes(5, 'big'))
+    table.extend(b''.join(n.to_bytes(2, 'big') for n in blocks))
+    return bytes(table), appended
+
+
 def patch(source, output, replacements, expected_sha256=None):
     source, output = Path(source), Path(output)
     if source.resolve() == output.resolve() or output.exists():
@@ -49,32 +79,7 @@ def patch(source, output, replacements, expected_sha256=None):
         archive.file.seek(0)
         original_toc = archive.read_exact(old_toc)
         source_hash.update(original_toc)
-        if changed:
-            blocks = list(archive.blocks)
-            appended = []
-            append_bytes = 0
-            entries = []
-            for entry in archive.entries:
-                if entry.name in changed:
-                    lengths, packed = pack_blocks(changed[entry.name])
-                    entries.append((entry.digest, len(blocks), len(changed[entry.name]),
-                                    archive.archive_size-old_toc+append_bytes))
-                    blocks.extend(lengths)
-                    appended.append(packed)
-                    append_bytes += len(packed)
-                else:
-                    entries.append((entry.digest, entry.block, entry.size, entry.offset-old_toc))
-            new_toc = 32 + len(entries) * 30 + len(blocks) * 2
-            header = bytearray(original_toc[:32])
-            struct.pack_into('>I', header, 12, new_toc)
-            table = bytearray(header)
-            for digest, index, size, offset in entries:
-                table.extend(digest + index.to_bytes(4, 'big') + size.to_bytes(5, 'big')
-                             + (new_toc+offset).to_bytes(5, 'big'))
-            table.extend(b''.join(n.to_bytes(2, 'big') for n in blocks))
-        else:
-            table = original_toc
-            appended = []
+        table, appended = rebuild_toc(archive, original_toc, changed)
         output.parent.mkdir(parents=True, exist_ok=True)
         with output.open('xb') as stream:
             stream.write(table)
