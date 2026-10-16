@@ -2503,3 +2503,15 @@ Falta:
   do portable ou ganho de FPS declarado. Próximo: objeto+6a0 e mundo físico.
 - Limite explícito: UnitPlayer/UnitPlayerBase foram omitidos pelo extrator final
   conservador; seus registros da exploração inicial foram conferidos à parte.
+
+
+### 15/10/2026 — teste de desempenho do Davy em andamento
+
+- Davy abriu Medir desempenho atual EN.cmd: relatou muito stutter inicial,
+  depois melhora e estabilidade percebida; ainda sem comparação controlada.
+- Processo confirmado: build/kyoei.exe, PID29924, início22:59:18. Registro
+  native-05/logs/20261015_225918.log ainda com0 bytes na leitura durante a sessão;
+  sem números de FPS/tempos disponíveis. Cache Vulkan presente (~15,5 MB),
+  o que não prova a causa das travadas. Jogo não interrompido pelo agente.
+- Aguardar fechamento normal para analisar o registro; compilação de shaders
+  ou carregamento são hipóteses, não diagnóstico nem ganho comprovado.
