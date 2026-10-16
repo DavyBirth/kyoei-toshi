@@ -16,6 +16,8 @@ Kyoei frame stats: intervals=120 fps=30.00 mean_ms=33.33 p50_ms=30.00 p95_ms=40.
 Kyoei work stats: stage=linear-downloads calls=120 mean_ms=11.00 p95_ms=15.00 max_ms=20.00 diagnostic=0
 Kyoei work stats: stage=linear-downloads calls=120 mean_ms=90.00 p95_ms=120.00 max_ms=190.00 diagnostic=1
 Kyoei compile stall: stage=shader-compile milliseconds=44.00 diagnostic=0
+Kyoei frame deadlines: intervals=120 over_60hz=20 over_30hz=10 over_50ms=5 over_100ms=2 diagnostic=0
+Kyoei frame deadlines: intervals=120 over_60hz=120 over_30hz=100 over_50ms=80 over_100ms=40 diagnostic=1
 ''',encoding='utf-8')
     subprocess.run([sys.executable,str(Path(__file__).with_name('analyze_native_performance.py')),
                     str(log),'--out',str(output)],check=True,capture_output=True)
@@ -30,4 +32,8 @@ Kyoei compile stall: stage=shader-compile milliseconds=44.00 diagnostic=0
     assert report['work_diagnostic_partitions']['linear-downloads']['unflagged']['mean_ms']==11
     assert report['target_60fps']['windows_p95_over_budget']==3
     assert report['compile_stalls']==[dict(stage='shader-compile',milliseconds=44.0,diagnostic=False)]
+    assert report['measured_deadlines']['unflagged']==dict(intervals=120,over_60hz=20,over_30hz=10,over_50ms=5,over_100ms=2)
+    assert report['measured_deadlines']['diagnostic']['over_100ms']==40
+    # The legacy window has no deadline samples; never invent counts for it.
+    assert sum(row['intervals'] for row in report['measured_deadlines'].values())==240
 print('PERFORMANCE ANALYSIS PASS: diagnostics isolated, legacy unknown, slow frames retained')

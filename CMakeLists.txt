@@ -377,6 +377,9 @@ kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
 kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
   "        frame = presenter->PrepareFrame(group, buffer.address_left);"
   "        KyoeiDisplayDiagnostics::Submitted(index,is_eop,flip_arg,group.attrib.width,group.attrib.height,group.attrib.pitch_in_pixel,static_cast<u32>(group.attrib.pixel_format),static_cast<u32>(group.attrib.tiling_mode));\n        frame = presenter->PrepareFrame(group, buffer.address_left);")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "        timer.Start();"
+  "        { KyoeiFrameStats::Work measurement(13); timer.Start(); }")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp" CONTENT "${KYOEI_VIDEOOUT_DRIVER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout_driver.cpp")
 # The emulated command processor can reach the next flip's WRITE_DATA while
@@ -422,6 +425,17 @@ kyoei_replace_checked(KYOEI_LIVERPOOL
 kyoei_replace_checked(KYOEI_LIVERPOOL
   "                    std::memcpy(address, write_data->data, data_size);"
   "                    std::memcpy(address, write_data->data, data_size);\n                    if (const auto kyoei_index = KyoeiFlipTrace::LabelIndex(address); kyoei_index >= 0) {\n                        KyoeiFlipTrace::Action(\"write-after\", kyoei_index, *address, address);\n                        KyoeiFlipTrace::StressAfterWrite();\n                    }")
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "#include \"kyoei_flip_trace.h\""
+  "#include \"kyoei_flip_trace.h\"\n#include \"kyoei_frame_stats.h\"")
+# The scope lives on the worker stack, outside every coroutine. It includes
+# nested GPU waits, so it must not be added to scheduler/readback timings.
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "        while (num_submits || num_commands) {"
+  "        {\n        KyoeiFrameStats::Work measurement(12);\n        while (num_submits || num_commands) {")
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "        if (submit_done) {"
+  "        }\n        if (submit_done) {")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp" CONTENT "${KYOEI_LIVERPOOL}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp")
 # Patch only a private snapshot. The guest can reuse NOP storage by changing
@@ -629,10 +643,10 @@ set(KYOEI_DRAW_SELECTION [=[
 ]=])
 kyoei_replace_checked(KYOEI_RASTERIZER
   "void Rasterizer::Draw(bool is_indexed, u32 index_offset) {"
-  "void Rasterizer::Draw(bool is_indexed, u32 index_offset) {\n    KyoeiRasterTrace::current_selection={};KyoeiRasterTrace::current_uniforms={};KyoeiRasterTrace::current_uniform_count=0;")
+  "void Rasterizer::Draw(bool is_indexed, u32 index_offset) {\n    KyoeiRasterTrace::BeginDraw();")
 kyoei_replace_checked(KYOEI_RASTERIZER
   "                              u32 max_count, VAddr count_address) {"
-  "                              u32 max_count, VAddr count_address) {\n    KyoeiRasterTrace::current_selection={};KyoeiRasterTrace::current_uniforms={};KyoeiRasterTrace::current_uniform_count=0;")
+  "                              u32 max_count, VAddr count_address) {\n    KyoeiRasterTrace::BeginDraw();")
 set(KYOEI_UNIFORM_PROBE [=[
         if (KyoeiRasterTrace::Capturing() && KyoeiRasterTrace::CanSampleResource(desc) && size>0 &&
             (stage.l_stage==Shader::LogicalStage::Vertex || stage.l_stage==Shader::LogicalStage::Fragment)) {

@@ -40,6 +40,13 @@ readbacks=[dict(images=int(images),waits=int(waits),bytes=int(size)) for images,
 signals=[line for line in text.splitlines() if re.search(r'STOP:|Kyoei map failure:|Kyoei flip failure:|Assertion Failed|\bVK_ERROR_\w+|GPU .*\[(?:Critical|Error)',line,re.I)]
 compile_stalls=[dict(stage=stage,milliseconds=float(milliseconds),diagnostic=bool(int(diagnostic)))
     for stage,milliseconds,diagnostic in re.findall(r'Kyoei compile stall: stage=([^ ]+) milliseconds=([\d.]+) diagnostic=([01])',text)]
+deadlines=[dict(zip(('intervals','over_60hz','over_30hz','over_50ms','over_100ms','diagnostic'),map(int,row)))
+    for row in re.findall(r'Kyoei frame deadlines: intervals=(\d+) over_60hz=(\d+) over_30hz=(\d+) over_50ms=(\d+) over_100ms=(\d+) diagnostic=([01])',text)]
+deadline_summary={}
+for label,state in [('unflagged',0),('diagnostic',1)]:
+    selected=[row for row in deadlines if row['diagnostic']==state]
+    deadline_summary[label]={key:sum(row[key] for row in selected)
+        for key in ('intervals','over_60hz','over_30hz','over_50ms','over_100ms')}
 report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args.start_byte+len(data),
             presentation_windows=len(frames),summarized_intervals=120*len(frames),
             estimated_presentation_seconds=round(sum(row['mean_ms']*120/1000 for row in frames),3),
@@ -49,6 +56,8 @@ report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args
             fastest_window_fps=max((row['fps'] for row in frames),default=None),
             largest_interval_ms=max((row['max_ms'] for row in frames),default=None),
             frames=frames,work=work,
+            measured_deadlines=deadline_summary,
+            measured_deadlines_note='Counts from individual presentation intervals before rounding; only windows carrying deadline records. Not simulation speed or raw frame timestamps.',
             diagnostic_partitions=partition_summary(frames),
             work_diagnostic_partitions={name:partition_summary(rows) for name,rows in work.items()},
             target_60fps=dict(budget_ms=1000/60,

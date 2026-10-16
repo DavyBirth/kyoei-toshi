@@ -34,10 +34,24 @@ int main(int argc,char **) {
         KyoeiFrameStats::Work work(1);
     }
     CHECK(logs.size()==3 && logs[2].find("diagnostic=1")!=std::string::npos);
-    KyoeiFrameStats::Presented();
-    for(unsigned i=0;i<1000 && logs.size()<5;++i) KyoeiFrameStats::Presented();
-    CHECK(logs.size()==5 && logs[3].find("diagnostic=0")!=std::string::npos);
-    CHECK(logs[4].find("delta=0 ")!=std::string::npos);
+    auto tick=std::chrono::steady_clock::now();
+    KyoeiFrameStats::PresentedAt(tick);
+    for(unsigned i=0;i<120;++i) {
+        // Twenty long pauses and a hundred 10 ms frames. Test deadlines
+        // against individual samples, rather than inferring them from a mean.
+        tick+=std::chrono::milliseconds(i<20?110:10);
+        KyoeiFrameStats::PresentedAt(tick);
+    }
+    CHECK(logs.size()==6 && logs[3].find("diagnostic=0")!=std::string::npos);
+    CHECK(logs[4].find("over_60hz=20 over_30hz=20 over_50ms=20 over_100ms=20 diagnostic=0")!=std::string::npos);
+    CHECK(logs[5].find("delta=0 ")!=std::string::npos);
+    for(unsigned i=0;i<120;++i) {
+        if(i==60) { Begin();End(); }
+        tick+=std::chrono::milliseconds(20);
+        KyoeiFrameStats::PresentedAt(tick);
+    }
+    CHECK(logs.size()==9);
+    CHECK(logs[7].find("over_60hz=120 over_30hz=0 over_50ms=0 over_100ms=0 diagnostic=1")!=std::string::npos);
     const char* stages[]={"readback-finish","readback-publish","readback-map"};
     for(unsigned category=3;category<6;++category) {
         const auto previous=logs.size();
@@ -46,8 +60,8 @@ int main(int argc,char **) {
         CHECK(logs.back().find(stages[category-3])!=std::string::npos);
     }
     const char* compile_stages[]={"shader-compile","graphics-pipeline","compute-pipeline",
-        "scheduler-submit","scheduler-wait","queue-lock"};
-    for(unsigned category=6;category<12;++category) {
+        "scheduler-submit","scheduler-wait","queue-lock","command-batch","present-pacing"};
+    for(unsigned category=6;category<14;++category) {
         const auto previous=logs.size();
         for(unsigned i=0;i<120;++i) { KyoeiFrameStats::Work work(category); }
         CHECK(logs.size()==previous+1);

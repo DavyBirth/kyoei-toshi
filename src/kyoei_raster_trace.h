@@ -121,6 +121,15 @@ inline bool Enabled() {
     static const bool enabled=[] { const char *v=std::getenv("KYOEI_RASTER_TRACE");return v && !std::strcmp(v,"1"); }();
     return enabled;
 }
+inline void BeginDraw() {
+    // Requests may arrive between draw setup and resource binding. Keep the
+    // reset when tracing is enabled, even before a capture is requested.
+    // With tracing disabled these thread-local buffers are never consumed.
+    if (!Enabled()) return;
+    current_selection={};
+    current_uniforms={};
+    current_uniform_count=0;
+}
 inline std::atomic<uint64_t> requested{},completed{};
 inline std::mutex mutex;
 inline uint64_t recording{};

@@ -2374,3 +2374,32 @@ Falta:
   confirma nenhum kyoei-linux ativo. O teste terminou por sua propria parada,
   nao pelo sinal. Native-gpu-run.log contem o bloqueio final para a retomada;
   chegou tambem a acesso real de arquivo e duas alocacoes flexiveis.
+
+### 15/10/2026 — desempenho Windows, continuação apenas no backend
+
+- Davy trouxe relato de ~20 FPS/slow motion no Linux do amigo e autorizou
+  investigação também no Windows. Depois pediu não testar agora e seguir só
+  no backend. Não abrir novas sessões automaticamente; gameplay fica para depois.
+- Estado inicial limpo. Lidos AGENTS, diário, CONTINUAR-CODEX e DESEMPENHO.
+  Registro Windows atual analisado: 302 janelas, mínima de 16,78 FPS por janela,
+  cinco janelas scheduler-wait com média de 10,94 ms. Inclui menus/jogo; não é
+  benchmark da cidade. Resumo privado performance-current-20261015.json.
+- Custo removido: buffers raster de diagnóstico eram zerados em todo desenho
+  direto/indireto, mesmo com captura desativada. BeginDraw agora evita essas
+  escritas quando o diagnóstico está desligado. Quando ligado, limpa antes
+  do pedido F9 também, preservando pedidos entre início do desenho e bindings.
+- Novas métricas opt-in: command-batch e present-pacing, mais contagens por
+  intervalo acima dos limites de 60/30 Hz, 50/100 ms. São tempos de parede e
+  intervalos de apresentação; não provam taxa da simulação/causa de slow motion.
+  Analisador separa janelas de diagnóstico e não inventa contagens de logs antigos.
+- Roteiro -PerformanceStats usa perfil separado, registro com data e desliga
+  traces extras. Sessão isolada PID 3604, aberta antes do pedido de backend,
+  mostrou abertura e novas métricas; já havia encerrado pela janela com código
+  0 antes da próxima entrada. Nenhum gameplay carregado. Nenhum jogo ficou ativo.
+  Log privado performance-review-20261015-215344.log; saves pessoais preservados.
+- Windows kyoei.exe recompilado PASS. Testes frame stats/raster ligados e
+  desligados PASS; 11 testes do parser raster PASS; analisador de desempenho,
+  readback real, ordem de superfícies e propriedade do flip PASS. Contratos de
+  readback/fences mantidos. Snapshot fixo, projeto Godzilla e portable intocados.
+- Nenhum ganho de FPS ou correção de câmera lenta declarado. Próxima etapa:
+  correlacionar as novas métricas em uma cena fixa quando houver teste de jogo.

@@ -14,7 +14,16 @@ extern "C" void gz_log(const char *format,...) {
 int main(int argc,char **) {
     _putenv_s("KYOEI_RASTER_TRACE",argc>1?"0":"1");
     using namespace KyoeiRasterTrace;
-    if (argc>1) { CHECK(!Request() && !Capturing());Profile p;Record(p);Presented();CHECK(logs.empty());return 0; }
+    current_selection.valid=1;
+    current_uniform_count=3;
+    current_uniforms.back().address=123;
+    BeginDraw();
+    if (argc>1) {
+        CHECK(current_selection.valid==1 && current_uniform_count==3 && current_uniforms.back().address==123);
+        CHECK(!Request() && !Capturing());Profile p;Record(p);Presented();CHECK(logs.empty());return 0;
+    }
+    // Reset before Request too: F9 can arrive after setup of this draw.
+    CHECK(current_selection.valid==0 && current_uniform_count==0 && current_uniforms.back().address==0);
     AmdGpu::Regs regs{};
     regs.window_offset.window_x_offset=153;regs.window_scissor.window_offset_disable=0;
     regs.generic_scissor.window_offset_disable=1;

@@ -1,5 +1,39 @@
 # Desempenho — objetivo de 60 FPS
 
+## Backend Windows — 15/10 à noite
+
+Removida a limpeza incondicional dos buffers de captura raster em cada desenho
+direto/indireto. `BeginDraw()` só limpa quando `KYOEI_RASTER_TRACE=1`. O estado
+é exclusivo do diagnóstico, sem acesso quando ele está desligado. Quando está
+ligado, a limpeza continua antes mesmo do pedido F9, pois o pedido pode chegar
+entre o começo do desenho e a leitura dos recursos. Isso reduz trabalho CPU
+desnecessário; não há ganho de FPS medido nem correção comprovada de slow motion.
+
+`KYOEI_FRAME_STATS=1` agora mede `command-batch` (drenagem de comandos no
+worker, incluindo esperas internas) e `present-pacing` (espera do temporizador
+da apresentação). Não são tempos GPU nem CPU ativo; não somar suas médias a
+readback/scheduler nem tratá-las como etapas independentes de cada quadro.
+
+Cada janela também registra contagens reais de intervalos acima de 16,67 ms,
+33,33 ms, 50 ms e 100 ms, antes de arredondar. O analisador soma essas contagens
+separando captura diagnóstica e janelas sem captura. Logs antigos continuam
+válidos, mas não ganham contagens inventadas. Oscilação perto de 16,67 ms pode
+ultrapassar o limite mesmo em apresentação média de 60 Hz: não é contagem de
+quadros perdidos, taxa da simulação nem prova de câmera lenta.
+
+`tools/review_ui_session.ps1 -PerformanceStats` prepara um perfil separado e
+registro com data, sem sobrescrever a evidência de UI. Desliga captura raster,
+stress de flip, trace de HUD/display/quebra e diagnóstico dos prompts. Não
+abrir automaticamente: Davy pediu seguir só no backend e testar depois.
+
+Evidência anterior: registro pessoal de 15/10 resumido em
+`build/performance-current-20261015.json`: 302 janelas; mínima por janela de
+16,78 FPS e scheduler-wait médio de 10,94 ms nas cinco janelas disponíveis.
+Mistura menus/jogo; a média global não caracteriza a cidade. Sessão isolada
+aberta antes do pedido de backend chegou à abertura, registrou as novas
+métricas e encerrou com código 0, sem carregar gameplay. Não usá-la para
+comparar desempenho. Portable ainda não atualizado com estas mudanças.
+
 ## Correção do timeout de encerramento — 15/10
 
 Antes, o encerramento enfileirava Sync no thread gráfico e esperava três

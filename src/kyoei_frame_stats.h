@@ -29,10 +29,10 @@ public:
         if (!Enabled()) return;
         // Deferred publication may run on the scheduler worker. Keep samples
         // per thread rather than racing or mixing overlapping CPU scopes.
-        static thread_local std::array<std::array<double, 120>, 12> samples{};
-        static thread_local std::array<size_t, 12> counts{};
-        static thread_local std::array<bool,12> diagnostics{};
-        static thread_local std::array<uint64_t,12> previous_generation{};
+        static thread_local std::array<std::array<double, 120>, 14> samples{};
+        static thread_local std::array<size_t, 14> counts{};
+        static thread_local std::array<bool,14> diagnostics{};
+        static thread_local std::array<uint64_t,14> previous_generation{};
         auto& values = samples[category]; auto& count = counts[category];
         auto diagnostic_end=KyoeiDiagnosticActivity::Now();
         diagnostics[category]|=KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end) ||
@@ -43,7 +43,8 @@ public:
         const char* names[] = {"prepare", "present", "linear-downloads",
                                "readback-finish", "readback-publish", "readback-map",
                                "shader-compile", "graphics-pipeline", "compute-pipeline",
-                               "scheduler-submit", "scheduler-wait", "queue-lock"};
+                               "scheduler-submit", "scheduler-wait", "queue-lock",
+                               "command-batch", "present-pacing"};
         // A cold start may compile fewer than 120 shaders. Preserve evidence of
         // its slow calls, with a strict log cap instead of per-frame traffic.
         static thread_local std::array<unsigned,3> slow_reports{};
@@ -58,7 +59,7 @@ public:
         count = 0;diagnostics[category]=false;
     }
 };
-inline void Presented() {
+inline void PresentedAt(std::chrono::steady_clock::time_point now) {
     if (!Enabled()) return;
     using Clock = std::chrono::steady_clock;
     static auto previous = Clock::now();
@@ -68,7 +69,6 @@ inline void Presented() {
     static bool diagnostic_window=false;
     static auto previous_diagnostic=KyoeiDiagnosticActivity::Now();
     static uint64_t previous_faults=0;
-    const auto now = Clock::now();
     const double milliseconds = std::chrono::duration<double, std::milli>(now - previous).count();
     previous = now;
     auto diagnostic_now=KyoeiDiagnosticActivity::Now();
@@ -84,11 +84,25 @@ inline void Presented() {
     std::sort(sorted.begin(), sorted.end());
     gz_log("Kyoei frame stats: intervals=120 fps=%.2f mean_ms=%.2f p50_ms=%.2f p95_ms=%.2f max_ms=%.2f diagnostic=%u",
            count * 1000.0 / total, total / count, sorted[59], sorted[113], sorted.back(),unsigned(diagnostic_window));
+    // Count actual intervals before rounding. These are presentation deadlines,
+    // not simulation ticks; never infer game speed from an FPS counter alone.
+    unsigned over_60=0, over_30=0, over_50ms=0, over_100ms=0;
+    for (double value : intervals) {
+        over_60 += value > 1000.0/60;
+        over_30 += value > 1000.0/30;
+        over_50ms += value > 50;
+        over_100ms += value > 100;
+    }
+    gz_log("Kyoei frame deadlines: intervals=120 over_60hz=%u over_30hz=%u over_50ms=%u over_100ms=%u diagnostic=%u",
+           over_60,over_30,over_50ms,over_100ms,unsigned(diagnostic_window));
     const uint64_t faults = kyoei_tls_fault_count();
     gz_log("Kyoei TLS stats: handled_total=%llu delta=%llu per_present=%.2f",
            (unsigned long long)faults, (unsigned long long)(faults - previous_faults),
            (faults - previous_faults) / 120.0);
     previous_faults = faults;
     count = 0;diagnostic_window=false;
+}
+inline void Presented() {
+    if (Enabled()) PresentedAt(std::chrono::steady_clock::now());
 }
 }
