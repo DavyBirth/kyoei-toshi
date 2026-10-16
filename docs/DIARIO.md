@@ -2539,3 +2539,25 @@ Fechamento normal, exit0; log privado native-05/logs/20261015_225918.log
 Serve como referência inicial reproduzível do começo; sem comparação da mesma
 sequência na versão anterior, não quantifica ganho causado pelas mudanças.
 Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
+
+
+### 15/10/2026 — detalhamento das pausas de comandos
+
+- Integração CMake preserva snapshot: mede callbacks de comandos, espera
+  WaitVoLabel, Draw/DrawIndirect, DispatchDirect/Indirect e CpSync.
+  Conferidos1 callback,1 label wait,16 draws,9 dispatches e1 CpSync na cópia
+  gerada. Escopos encerram antes de qualquer co_yield; não cobrem a vida
+  inteira de uma corrotina. Medem duração de chamada CPU, incluindo esperas
+  e subchamadas; não são tempos GPU e não podem ser somados entre si.
+- Novas categorias14–18 no frame_stats. Pausas>=50ms nas categorias12–18
+  geram até8 registros por categoria/thread, com término no relógio monotônico
+  para conferir sobreposição. Registro esparso cobre janelas incompletas;
+  limite não é contagem total de travadas. Analisador preserva atribuição
+  diagnostic e timestamps, sem inferir causalidade automaticamente.
+- Compilação kyoei/test_kyoei_frame_stats PASS; teste C++ ativo/desligado,
+  limite8 de10 pausas e analisador Python PASS. Launcher EN PerformanceStats
+  CheckOnly PASS. Nenhum jogo iniciado. Warning u8path preexistente.
+- build/kyoei.exe atualizado; mesmo Medir desempenho atual EN.cmd. Portable
+  intacto. Próximo teste: repetir começo para distinguir espera de apresentação
+  e chamadas de renderização. Ainda sem correção de performance nova: medir
+  antes de escolher alteração de sincronização.

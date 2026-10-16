@@ -436,6 +436,28 @@ kyoei_replace_checked(KYOEI_LIVERPOOL
 kyoei_replace_checked(KYOEI_LIVERPOOL
   "        if (submit_done) {"
   "        }\n        if (submit_done) {")
+# Synchronous calls only: no timer may span co_yield or a coroutine lifetime.
+kyoei_replace_checked(KYOEI_LIVERPOOL "        callback();"
+  "        { KyoeiFrameStats::Work callback_measurement(14); callback(); }")
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "                    vo_port->WaitVoLabel([&] { return wait_reg_mem->Test(regs.reg_array); });"
+  "                    { KyoeiFrameStats::Work label_measurement(15); vo_port->WaitVoLabel([&] { return wait_reg_mem->Test(regs.reg_array); }); }")
+foreach(KYOEI_MEASURE_METHOD IN ITEMS Draw DrawIndirect DispatchDirect DispatchIndirect CpSync)
+  if(KYOEI_MEASURE_METHOD MATCHES "^Draw")
+    set(KYOEI_MEASURE_CATEGORY 16)
+  elseif(KYOEI_MEASURE_METHOD MATCHES "^Dispatch")
+    set(KYOEI_MEASURE_CATEGORY 17)
+  else()
+    set(KYOEI_MEASURE_CATEGORY 18)
+  endif()
+  set(KYOEI_MEASURE_PATTERN "rasterizer->${KYOEI_MEASURE_METHOD}\\([^;]*\\);")
+  if(NOT KYOEI_LIVERPOOL MATCHES "${KYOEI_MEASURE_PATTERN}")
+    message(FATAL_ERROR "Missing synchronous measurement anchor ${KYOEI_MEASURE_METHOD}")
+  endif()
+  string(REGEX REPLACE "${KYOEI_MEASURE_PATTERN}"
+    "{ KyoeiFrameStats::Work raster_measurement(${KYOEI_MEASURE_CATEGORY}); \\0 }"
+    KYOEI_LIVERPOOL "${KYOEI_LIVERPOOL}")
+endforeach()
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp" CONTENT "${KYOEI_LIVERPOOL}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp")
 # Patch only a private snapshot. The guest can reuse NOP storage by changing

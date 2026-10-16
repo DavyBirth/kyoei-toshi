@@ -60,8 +60,9 @@ int main(int argc,char **) {
         CHECK(logs.back().find(stages[category-3])!=std::string::npos);
     }
     const char* compile_stages[]={"shader-compile","graphics-pipeline","compute-pipeline",
-        "scheduler-submit","scheduler-wait","queue-lock","command-batch","present-pacing"};
-    for(unsigned category=6;category<14;++category) {
+        "scheduler-submit","scheduler-wait","queue-lock","command-batch","present-pacing",
+        "command-callback","video-label-wait","raster-draw","raster-dispatch","cp-sync"};
+    for(unsigned category=6;category<KyoeiFrameStats::CategoryCount;++category) {
         const auto previous=logs.size();
         for(unsigned i=0;i<120;++i) { KyoeiFrameStats::Work work(category); }
         CHECK(logs.size()==previous+1);
@@ -80,5 +81,13 @@ int main(int argc,char **) {
     const auto before_stall=logs.size();
     { KyoeiFrameStats::Work work(6);std::this_thread::sleep_for(std::chrono::milliseconds(20)); }
     CHECK(logs.size()==before_stall+1 && logs.back().find("Kyoei compile stall: stage=shader-compile")!=std::string::npos);
+    const auto before_work_stalls=logs.size();
+    for(unsigned i=0;i<10;++i) {
+        KyoeiFrameStats::Work work(15);
+        std::this_thread::sleep_for(std::chrono::milliseconds(55));
+    }
+    CHECK(logs.size()==before_work_stalls+8);
+    CHECK(logs.back().find("Kyoei work stall: stage=video-label-wait")!=std::string::npos);
+    CHECK(logs.back().find("end_ms=")!=std::string::npos);
     std::puts("FRAME STATS PASS: capture within/between calls annotated; clean window resets; raw samples retained");
 }

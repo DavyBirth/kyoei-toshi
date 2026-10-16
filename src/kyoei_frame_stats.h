@@ -10,6 +10,7 @@ extern "C" uint64_t kyoei_tls_fault_count(void);
 // Intervals between completed game presents, excluding idle redraws.
 // Opt-in; reports every 120 intervals, with no per-frame log traffic.
 namespace KyoeiFrameStats {
+inline constexpr unsigned CategoryCount = 19;
 inline bool Enabled() {
     static const bool enabled = [] {
         const char* value = std::getenv("KYOEI_FRAME_STATS");
@@ -29,10 +30,10 @@ public:
         if (!Enabled()) return;
         // Deferred publication may run on the scheduler worker. Keep samples
         // per thread rather than racing or mixing overlapping CPU scopes.
-        static thread_local std::array<std::array<double, 120>, 14> samples{};
-        static thread_local std::array<size_t, 14> counts{};
-        static thread_local std::array<bool,14> diagnostics{};
-        static thread_local std::array<uint64_t,14> previous_generation{};
+        static thread_local std::array<std::array<double, 120>, CategoryCount> samples{};
+        static thread_local std::array<size_t, CategoryCount> counts{};
+        static thread_local std::array<bool,CategoryCount> diagnostics{};
+        static thread_local std::array<uint64_t,CategoryCount> previous_generation{};
         auto& values = samples[category]; auto& count = counts[category];
         auto diagnostic_end=KyoeiDiagnosticActivity::Now();
         diagnostics[category]|=KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end) ||
@@ -44,7 +45,19 @@ public:
                                "readback-finish", "readback-publish", "readback-map",
                                "shader-compile", "graphics-pipeline", "compute-pipeline",
                                "scheduler-submit", "scheduler-wait", "queue-lock",
-                               "command-batch", "present-pacing"};
+                               "command-batch", "present-pacing", "command-callback",
+                               "video-label-wait", "raster-draw", "raster-dispatch", "cp-sync"};
+        // Sparse evidence survives partial 120-call windows. This is wall time
+        // on the calling thread, including nested waits, not GPU execution time.
+        static thread_local std::array<unsigned,CategoryCount> work_stalls{};
+        if(category>=12 && elapsed>=50. && work_stalls[category]<8) {
+            ++work_stalls[category];
+            const double end_ms=std::chrono::duration<double,std::milli>(
+                std::chrono::steady_clock::now().time_since_epoch()).count();
+            gz_log("Kyoei work stall: stage=%s milliseconds=%.2f end_ms=%.2f diagnostic=%u",
+                names[category],elapsed,end_ms,
+                unsigned(KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end)));
+        }
         // A cold start may compile fewer than 120 shaders. Preserve evidence of
         // its slow calls, with a strict log cap instead of per-frame traffic.
         static thread_local std::array<unsigned,3> slow_reports{};

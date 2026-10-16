@@ -131,3 +131,11 @@ Próximo: identificar self+0x6a0 em 0x719a90, resolver movimento e passo físico
 UnitPlayer slot78=0x9fc1a0 segue base condicionalmente ao bit0 de self+69a.
 Não confundir UnitPlayerBase (criação nula) com pai registrado UnitCharacter.
 Continuar backend sem abrir jogo; desempenho real ainda precisa medição em cena.
+
+
+Próxima medição (15/10, após teste real): build/kyoei.exe já inclui categorias
+command-callback, video-label-wait, raster-draw, raster-dispatch e cp-sync.
+Mesmo Medir desempenho atual EN.cmd; agente não iniciou partida. Aguardar
+teste do começo pelo Davy; analisar work_stalls com end_ms no relatório.
+Até8 eventos>=50ms por categoria/thread; scopes CPU inclusivos, não somar
+com command-batch nem chamar de tempo puro GPU. Build/testes PASS.
