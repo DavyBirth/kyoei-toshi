@@ -139,3 +139,8 @@ Mesmo Medir desempenho atual EN.cmd; agente não iniciou partida. Aguardar
 teste do começo pelo Davy; analisar work_stalls com end_ms no relatório.
 Até8 eventos>=50ms por categoria/thread; scopes CPU inclusivos, não somar
 com command-batch nem chamar de tempo puro GPU. Build/testes PASS.
+
+Segundo teste231142 analisado: ver fim de docs/DESEMPENHO.md. Coleta por draw
+foi excessiva (54.419 linhas). Corrigida para1/128, build/testes PASS, sem
+partida do agente. Sessão29,25FPS não é comparação A/B limpa. Readback-finish
+atingiu241,97ms, labelwait30,57ms; investigar leitura sincronizada GPU.

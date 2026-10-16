@@ -20,14 +20,23 @@ inline bool Enabled() {
 }
 class Work {
     unsigned category;
+    bool active = false;
     std::chrono::steady_clock::time_point start;
     KyoeiDiagnosticActivity::Stamp diagnostic_start{};
 public:
     explicit Work(unsigned category_) : category(category_) {
-        if (Enabled()) { start = std::chrono::steady_clock::now();diagnostic_start=KyoeiDiagnosticActivity::Now(); }
+        if (!Enabled()) return;
+        // Millions of draw calls per session: sample before reading clocks or
+        // publishing logs. Other categories retain every call.
+        if (category == 16 || category == 17) {
+            static thread_local std::array<uint64_t,2> calls{};
+            if ((calls[category-16]++ % 128) != 0) return;
+        }
+        active = true;
+        start = std::chrono::steady_clock::now();diagnostic_start=KyoeiDiagnosticActivity::Now();
     }
     ~Work() {
-        if (!Enabled()) return;
+        if (!active) return;
         // Deferred publication may run on the scheduler worker. Keep samples
         // per thread rather than racing or mixing overlapping CPU scopes.
         static thread_local std::array<std::array<double, 120>, CategoryCount> samples{};
@@ -67,8 +76,9 @@ public:
         if (count != values.size()) return;
         double total = 0; for (double value : values) total += value;
         auto sorted = values; std::sort(sorted.begin(), sorted.end());
-        gz_log("Kyoei work stats: stage=%s calls=120 mean_ms=%.2f p95_ms=%.2f max_ms=%.2f diagnostic=%u",
-               names[category], total/count, sorted[113], sorted.back(),unsigned(diagnostics[category]));
+        gz_log("Kyoei work stats: stage=%s calls=120 mean_ms=%.2f p95_ms=%.2f max_ms=%.2f diagnostic=%u sample_stride=%u",
+               names[category], total/count, sorted[113], sorted.back(),unsigned(diagnostics[category]),
+               category==16 || category==17 ? 128u : 1u);
         count = 0;diagnostics[category]=false;
     }
 };

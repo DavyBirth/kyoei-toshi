@@ -22,6 +22,9 @@ for row in re.findall(
     frame['diagnostic']=bool(int(row[5])) if row[5] else None
     frames.append(frame)
 work={}
+sampling={}
+for stage,stride in re.findall(r'Kyoei work stats: stage=([^ ]+) [^\r\n]*sample_stride=(\d+)',text):
+    sampling.setdefault(stage,set()).add(int(stride))
 for name,mean,p95,maximum,diagnostic in re.findall(r'Kyoei work stats: stage=([^ ]+) calls=120 mean_ms=([\d.]+) p95_ms=([\d.]+) max_ms=([\d.]+)(?: diagnostic=([01]))?',text):
     work.setdefault(name,[]).append(dict(mean_ms=float(mean),p95_ms=float(p95),max_ms=float(maximum),diagnostic=bool(int(diagnostic)) if diagnostic else None))
 
@@ -59,6 +62,8 @@ report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args
             fastest_window_fps=max((row['fps'] for row in frames),default=None),
             largest_interval_ms=max((row['max_ms'] for row in frames),default=None),
             frames=frames,work=work,
+            work_sampling_strides={stage:sorted(strides) for stage,strides in sampling.items()},
+            work_sampling_note='sample_stride=128 measures one in 128 calls; statistics and slow records cover selected calls only. Missing stride means legacy every-call instrumentation. Do not infer total work from sampled calls.',
             measured_deadlines=deadline_summary,
             measured_deadlines_note='Counts from individual presentation intervals before rounding; only windows carrying deadline records. Not simulation speed or raw frame timestamps.',
             diagnostic_partitions=partition_summary(frames),

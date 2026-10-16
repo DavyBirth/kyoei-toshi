@@ -64,9 +64,11 @@ int main(int argc,char **) {
         "command-callback","video-label-wait","raster-draw","raster-dispatch","cp-sync"};
     for(unsigned category=6;category<KyoeiFrameStats::CategoryCount;++category) {
         const auto previous=logs.size();
-        for(unsigned i=0;i<120;++i) { KyoeiFrameStats::Work work(category); }
+        const unsigned stride=category==16 || category==17 ? 128u : 1u;
+        for(unsigned i=0;i<120*stride;++i) { KyoeiFrameStats::Work work(category); }
         CHECK(logs.size()==previous+1);
         CHECK(logs.back().find(compile_stages[category-6])!=std::string::npos);
+        CHECK(logs.back().find("sample_stride="+std::to_string(stride))!=std::string::npos);
     }
     // Worker samples cannot complete a partial renderer-thread window.
     const auto previous=logs.size();

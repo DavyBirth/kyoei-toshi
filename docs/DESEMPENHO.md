@@ -279,3 +279,28 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   intacto. Próximo teste: repetir começo para distinguir espera de apresentação
   e chamadas de renderização. Ainda sem correção de performance nova: medir
   antes de escolher alteração de sincronização.
+
+
+### 15/10/2026 — segundo teste e correção do custo de diagnóstico
+
+- Davy testou novamente; log privado20261015_231142.log,5.728.756 bytes,
+  exit0.46 janelas/5.520 intervalos/188,749s,29,25 FPS globais mistos,
+  intervalo máximo551,09ms;40 intervalos>100ms. Não comparar diretamente
+  aos39,84 FPS da sessão anterior: sequência/duração diferentes e coleta mudou.
+- video-label-wait: máximo30,57ms; scheduler-wait241,76ms, readback-finish
+  241,97ms, linear-downloads241,98ms; prepare292,74ms. Essas durações são
+  inclusivas, não somar. A espera de liberação da imagem não explica sozinha
+  as maiores pausas; leitura sincronizada de dados GPU é alvo concreto, sem
+  prova de que explique todas as travadas. command-batch máximo491,50ms.
+- Falha na escolha de frequência do diagnóstico:54.419 janelas raster-draw
+  (6.530.280 chamadas medidas) e570 dispatch. Mais de54mil linhas geradas;
+  timers/sort/log podem perturbar desempenho. Sessão não serve como A/B limpo.
+- Corrigido: raster-draw/dispatch coletam1 em128 chamadas, antes de ler relógio.
+  Agregados mantêm120 amostras e indicam sample_stride=128; analisador preserva
+  metadado e explica que máximos/pausas cobrem só as chamadas selecionadas.
+  Demais categorias permanecem integrais. Sem alegar ganho medido no jogo.
+- Build kyoei e teste C++ PASS, modo desligado PASS, teste Python PASS.
+  Teste confirma1 registro por15.360 chamadas amostradas, limite de pausas
+  preservado. Nenhuma partida aberta pelo agente. Portable intacto.
+- Próximo: investigar a sincronização de readback; não ativar batching como
+  solução automática, pois logs conhecidos trazem lotes de1 imagem.
