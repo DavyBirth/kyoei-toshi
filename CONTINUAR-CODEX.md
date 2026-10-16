@@ -1,5 +1,35 @@
 # Retomada atual — mapa do quadro e investigação no backend (15/10 à noite)
 
+## Continuação mais recente: tempo, tarefas e entidades
+
+- Davy pediu aprofundar a engenharia reversa de tudo que precisarmos para
+  otimizar e corrigir o jogo. Continua backend, sem abrir partida agora.
+- Ler docs/re/TEMPO-TAREFAS-ENTIDADES.md. Correção importante da hipótese:
+  0x6dfda0, estágio 44, escreve app+0xe8=0 em 0x6e08a6. O cálculo medido
+  substitui o padrão fixo do construtor no caminho de inicialização identificado.
+- Índice privado: build/research/guest-code.sqlite, 42.194 intervalos,
+  2.929.970 instruções, cobertura contígua e integridade PASS. Não versionar.
+  Ferramenta tools/index_guest_code.py; reutilizar banco atual se hash confere.
+- Rastreamento conservador de ponteiros: tools/trace_guest_fields.py,
+  docs/re/field-trace-facts.json; relatório build/research/field-provenance.json.
+  1.692 funções selecionadas, 1.334 acessos/endereços, 126 leituras app+0xf0
+  em 92 funções. Não é análise semântica completa nem prova de todas as escritas.
+- setDeltaTimeFactor → 0x603ff0 → app+0xec; grupo e entidade escalam o passo
+  antes de gravar entidade+0x14 (segundos) e +0x18 (unidades de quadro).
+- Gestor de unidades 0x1336200/tabela0x125a2f8; tarefas de 48 bytes, método
+  ímpar codifica slot virtual+1. Unidade HUD Cockpit: tabela0x12d7bb8,
+  slots78/80/90 mapeados. Caminhada dos filhos copia os campos de tempo.
+- Consumidor 0x1f6020 é GxUnitRealTimeDemo, não física do jogador. Usa
+  subdivisão de passos. Evitar generalizar uma atualização por apresentação.
+- Receita docs/re/system-map-facts.json: 138 funções, 116 ligações de
+  chamadores, nove slots condicionais/sete leituras conferidos, sem limite/decode
+  perdido. 32 testes estáticos PASS. Nenhum jogo executado ou runtime alterado.
+- Próximos alvos: classes de personagem/física e módulos de fase, preenchimento
+  e drenagem das tarefas, widgets concretos do marcador/minimapa. Não aplicar
+  mudança de relógio/threads por palpite. Medição de gameplay fica para depois.
+
+## Mapa inicial preservado
+
 Davy autorizou engenharia reversa orientada ao ciclo do quadro, desempenho e
 HUD. Pediu seguir no backend, sem testar/abrir o jogo agora. Linux nativo abaixo
 continua pausado; não retomar seus testes automaticamente.

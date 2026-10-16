@@ -5,6 +5,10 @@ O mapa localiza o controlador de quadro, o cálculo de tempo e dois caminhos
 da HUD, ligando-os às esperas e à apresentação do runtime Windows. Não é uma
 engenharia reversa completa de todas as funções nem uma medição de desempenho.
 
+Continuação: [TEMPO-TAREFAS-ENTIDADES.md](TEMPO-TAREFAS-ENTIDADES.md).
+A análise ampliada encontrou o estágio de inicialização que altera o modo
+para tempo medido. O padrão fixo do construtor, sozinho, não explica a cidade.
+
 ## Evidência e reprodução
 
 Fonte: `eboot.elf` reconstruído pelo preparador a partir do dump registrado
@@ -75,7 +79,7 @@ representa todas as tarefas paralelas nem implica que cada ramo execute em
 todas as cenas. O motor despacha muitos subsistemas por tabelas virtuais;
 não atribuir nomes como física, IA ou HUD a slots ainda não resolvidos.
 
-## Tempo: por que há uma hipótese concreta para a câmera lenta
+## Tempo: os dois cálculos e a alteração feita pelo Kyoei
 
 O construtor escreve modo `1` em objeto+`0xe8`. O vetor de valores iniciais
 para `+0xec..+0xf8` é aproximadamente `[1, 1/60, 1, 15]`. Na rotina do motor:
@@ -112,11 +116,17 @@ ao estado; há outros consumidores em `0x6e6177` e `0x6e6aab`. Não identificamo
 esses objetos como movimento do personagem ou física. Eles provam que o valor
 participa de atualizações reais, não apenas de um contador de FPS.
 
-**Inferência:** se o ramo fixo continuar ativo a 60 e uma atualização ocorrer
-por apresentação, executar só 20 atualizações por segundo fará consumidores
-desse passo avançarem 1/3 de segundo por segundo real. Isso é compatível com
-slow motion. A inspeção estática não prova o modo ativo na cidade, possíveis
-mudanças posteriores dos campos, nem como todos os sistemas consomem o tempo.
+**Correção após rastrear a inicialização:** `0x6dfda0`, chamada pelo slot
+virtual `+0x38` da aplicação, contém uma máquina de 45 estágios. Seu estágio
+44 entra em `0x6e089f` e escreve zero em aplicação+`0xe8` em `0x6e08a6`.
+Esse caminho escolhe o cálculo baseado na taxa medida. A fórmula de passo
+fixo continua existindo, mas seu padrão no construtor não é prova de que ela
+explique o gameplay. Ainda não foram observados os campos na cidade nem
+identificadas todas as escritas possíveis por módulos e aliases indiretos.
+
+Se um consumidor usasse passo fixo de 1/60 com só 20 atualizações por segundo,
+avançaria 1/3 do tempo real. Esse exemplo matemático não é um diagnóstico
+do Kyoei, diante da troca de modo encontrada na inicialização.
 
 Não alterar `+0xe8`, `+0xf0` ou a tabela de taxas agora. Trocar o modo pode
 afetar animação, física, scripts, QTEs e cutscenes. Próxima prova necessária:

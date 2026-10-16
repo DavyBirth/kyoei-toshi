@@ -2437,3 +2437,48 @@ Falta:
   de código convidado. Só metadados técnicos/ferramentas versionados.
 - Sem ganho de FPS declarado. Portable, saves, dump, runtime, snapshot fixo e
   Godzilla intocados nesta etapa. CONTINUAR-CODEX atualizado para esta prioridade.
+
+### 15/10/2026 — índice integral e aprofundamento de tempo/tarefas/HUD
+
+- Davy pediu continuar a engenharia reversa de tudo que precisarmos; reforçou
+  interesse em otimizar o jogo ao entender seu funcionamento. Relato sobre PS4
+  tratado como contexto, sem benchmark ou causa de lentidão presumida. Mantido
+  backend: nenhum jogo aberto/executado nesta etapa.
+- Novo indexador tools/index_guest_code.py: banco privado em
+  build/research/guest-code.sqlite com 42.194 intervalos e 2.929.970 instruções.
+  Comprimentos cobrem cada função contiguamente; zero falhas/redecodes individuais.
+  SQLite integrity_check=ok. Cobertura de instruções não é compreensão completa.
+- Novo rastreador tools/trace_guest_fields.py: origem de ponteiros por CFG,
+  interseção de estados, ABI SysV, subregistradores, clobbers implícitos e prefixos.
+  Relatório final: 1.692 funções selecionadas, 1.334 acessos/endereços de campos,
+  2.196 chamadas com argumentos conhecidos, 19 slots; 361 saltos indiretos ainda
+  não resolvidos. Spills/heap aliases e efeitos interprocedurais não completos.
+- CORREÇÃO da hipótese anterior de câmera lenta: app+0xe8 inicia em 1 no
+  construtor, mas a classe Kyoei escreve 0 em 0x6e08a6, estágio44 de45 da
+  inicialização 0x6dfda0. Slot+38 da aplicação, jump table e receptor conferidos.
+  Inicializador base 0x3440c0 usa RSI para self, RDI para retorno por estrutura.
+  Não usar o padrão do construtor como prova de modo fixo no gameplay.
+- Binding setDeltaTimeFactor identificado na tabela técnica: 0x603ff0 escreve
+  app+0xec em 0x604026. Há restaurações para1.0. Pesquisa nos299 chunks Lua M1
+  não encontrou o nome; não implica ausência em todos os recursos/módulos.
+- Tempo se propaga por grupo/entidade em0x354be0: app+0xf0 × fator de grupo,
+  fator da entidade e escala adicional condicionada. Entidade+14 recebe segundos,
+  +18 recebe unidades de quadro.126 leituras estáticas de app+f0 em92 funções.
+- Gestor global0x1336200: construtor0x353220/tabela0x125a2f8; fases30/38/40/48/50
+  ligadas ao quadro. Fila de tarefas usa registros de48 bytes. Executor0x345970
+  resolve métodos ímpares por slot=(identificador-1); casos71/79/81/91 mapeados.
+  Wrappers não sinalizam trabalhadores incondicionalmente em cada inserção.
+- UnitHudCockpit: registro0xa53330, construção0xa535d0, tabela0x12d7bb8.
+  Atualização78→0xa53090; porta80→0x2efed0→slotd8→0x2f0160. Filhos habilitados
+  recebem tempo do pai antes de update. Estado/flags preservados; nenhuma HUD
+  alterada. Consumidor0x1f6020 identificado como GxUnitRealTimeDemo, não física;
+  contém subdivisão de passos, impedindo supor uma etapa por apresentação.
+- Documentação nova TEMPO-TAREFAS-ENTIDADES.md e correção de QUADRO-HUD-TEMPO.md.
+  Receita system-map-facts:138 funções/116 ligações,9 slots condicionais e7
+  leituras, zero falhas/limite. Fatos de campo emfield-trace-facts.json.
+- 32 testes PASS (3 índice,13 proveniência,12 mapa,4 referências ELF).
+  Provas reais de seletor, propagação e slots PASS; derivados privados ignorados
+  pelo Git. Runtime/portable, dump, saves, snapshot e Godzilla intocados.
+- Próximo: personagem/física, módulos de fase e custo real das filas em cena.
+  Nenhum ganho de FPS, sincronização corrigida ou engenharia reversa total
+  concluída declarado. CONTINUAR-CODEX atualizado para a continuação.

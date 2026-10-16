@@ -1,0 +1,21 @@
+{
+  "source_sha256": "1968814b70f69ec85ff3e556c4b66b53ec298c0dea71120e4f0ba594906e418e",
+  "globals": {"app": "0x13361f0", "graphics": "0x1340518", "units": "0x1336200"},
+  "receivers": {
+    "0x343f80": {"rdi": "app"},
+    "0x3440c0": {"rsi": "app"},
+    "0x345140": {"rdi": "app"},
+    "0x345170": {"rdi": "app"},
+    "0x6dfda0": {"rdi": "app"},
+    "0x6e5940": {"rdi": "app"},
+    "0x353220": {"rdi": "units"},
+    "0x36aac0": {"rsi": "graphics"},
+    "0x36c280": {"rdi": "graphics"},
+    "0x370710": {"rdi": "graphics"},
+    "0x3708d0": {"rdi": "graphics"}
+  },
+  "switches": [
+    {"function": "0x6dfda0", "site": "0x6dfded", "table": "0x107ae10", "count": 45}
+  ],
+  "note": "Receivers follow manually inspected application/vtable and graphics constructor paths. Switch table is signed 32-bit relative to its own base. This is static provenance, not dynamic observation."
+}

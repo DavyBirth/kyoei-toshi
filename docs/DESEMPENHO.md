@@ -1,5 +1,11 @@
 # Desempenho — objetivo de 60 FPS
 
+Aprofundamento em [TEMPO-TAREFAS-ENTIDADES.md](re/TEMPO-TAREFAS-ENTIDADES.md):
+o estágio 44 da inicialização do Kyoei troca para o cálculo de tempo medido.
+O padrão fixo do construtor base não explica, sozinho, o gameplay. Mapeadas
+escalas de tempo, fila de tarefas e atualização concreta da HUD; nenhum ganho
+de FPS ou correção de slow motion foi aplicado/comprovado nesta investigação.
+
 Mapa estático do quadro, cálculo do tempo e caminhos de HUD:
 [QUADRO-HUD-TEMPO.md](re/QUADRO-HUD-TEMPO.md). Identifica o laço e os dois
 cálculos de timestep com evidências reproduzíveis; o modo ativo na cidade
