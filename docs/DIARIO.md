@@ -2875,3 +2875,34 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Próximo foco:separar criação Vulkan/registro persistente no caminho de novos
   pipelines e conferir cache/warmup existente antes de mudar sincronização.
   Nenhum runtime alterado,jogo iniciado ou novo teste solicitado nesta análise.
+
+### 16/10/2026 — separar driver, construtor e registro de pipelines
+
+- Davy autorizou a próxima etapa. Caminho de GetGraphicsPipeline agora mede
+  graphics-construct(19) e graphics-register(20),mantendo escopo externo7.
+  Unidade vk_graphics_pipeline gerada localmente mede graphics-driver(21)
+  somente em createGraphicsPipelineUnique;preloading excluído da categoria21.
+  Objeto explícito substitui unidade do arquivo estático;link final PASS.
+  Snapshot/Godzilla intactos.
+- Novas categorias usam resumos120 chamadas e até8 compile stalls>=16,67ms
+  por categoria/thread. Registros compile stall agora incluem end_ms monotônico
+  para correlação;analisador mantém compatibilidade com linhas antigas sem ele.
+  Driver está dentro do construtor,dentro do escopo externo:não somar tempos.
+- Achado relevante no log201734:aviso de perfil incompatível na inicialização.
+  WarmUp fecha a base e retorna sem pré-carregar pipelines;registro posterior
+  retorna cedo enquanto fechada. Cache Vulkan de driver é separado e continuou
+  atualizado. Não atribuir pausas só à gravação de arquivos:WriteVector já
+  enfileira a escrita na thread PipelineCacheIO.
+- ProfileMatches mantém comparação exata por tamanho/bytes. Com PerformanceStats
+  ligado,uma rejeição registra tamanhos e até8 offsets/valores diferentes.
+  Não aceitar cache incompatível nem apagar perfil antes de explicar diferença.
+  Ainda sem prova se causa é capacidade alterada,formato ou representação.
+- docs/re/PIPELINE-STAGES.md documenta escopos,limites e comportamento da base.
+  Build runtime/testes PASS;C++ frame stats novas3 categorias,diagnóstico,
+  timestamps,limite8,modo desligado PASS. Cache:perfil truncado,compatível,
+  diferenças limitadas8 e ausência de logs desligado PASS;testes existentes
+  de persistência/fila PASS. Analisador Python antigo/novo PASS.
+  Launcher CheckOnly PerformanceStats PASS;git diff --check PASS.
+- Nenhum gameplay iniciado,nem cache/saves reais alterados,nem ZIP regenerado.
+  Build local pronto para investigar rejeição e etapas em medição futura.
+  Sem correção de FPS ou validação visual alegada nesta etapa.

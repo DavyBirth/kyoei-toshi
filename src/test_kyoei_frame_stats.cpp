@@ -16,6 +16,7 @@ int main(int argc,char **) {
     if(argc>1) {
         _putenv_s("KYOEI_FRAME_STATS","0");
         { KyoeiFrameStats::Work work(0); }KyoeiFrameStats::Presented();
+        for(unsigned category=19;category<22;++category) { KyoeiFrameStats::Work work(category); }
         unsigned calls=0;
         struct Task { unsigned* calls; void resume() { ++*calls; } bool done() { return true; } };
         { KyoeiFrameStats::CommandBatch batch; batch.Resume(Task{&calls}); batch.Empty(); batch.Finish(90.,1000.); }
@@ -65,7 +66,8 @@ int main(int argc,char **) {
     }
     const char* compile_stages[]={"shader-compile","graphics-pipeline","compute-pipeline",
         "scheduler-submit","scheduler-wait","queue-lock","command-batch","present-pacing",
-        "command-callback","video-label-wait","raster-draw","raster-dispatch","cp-sync"};
+        "command-callback","video-label-wait","raster-draw","raster-dispatch","cp-sync",
+        "graphics-construct","graphics-register","graphics-driver"};
     for(unsigned category=6;category<KyoeiFrameStats::CategoryCount;++category) {
         const auto previous=logs.size();
         const unsigned stride=category==16 || category==17 ? 128u : 1u;
@@ -87,12 +89,28 @@ int main(int argc,char **) {
     const auto before_stall=logs.size();
     { KyoeiFrameStats::Work work(6);std::this_thread::sleep_for(std::chrono::milliseconds(20)); }
     CHECK(logs.size()==before_stall+1 && logs.back().find("Kyoei compile stall: stage=shader-compile")!=std::string::npos);
-    const auto before_work_stalls=logs.size();
+    CHECK(logs.back().find("end_ms=")!=std::string::npos);
+    for(unsigned category=19;category<22;++category) {
+        const auto before_stage=logs.size();
+        for(unsigned i=0;i<10;++i) {
+            KyoeiFrameStats::Work work(category);
+            if(i==0) { Begin(); End(); }
+            std::this_thread::sleep_for(std::chrono::milliseconds(20));
+        }
+        // Each pipeline stage retains its own eight sparse compile records.
+        unsigned reports=0;
+        for(size_t i=before_stage;i<logs.size();++i)
+            reports+=logs[i].find("Kyoei compile stall:")!=std::string::npos;
+        CHECK(reports==8);
+        CHECK(logs[before_stage].find("diagnostic=1 end_ms=")!=std::string::npos);
+        CHECK(logs.back().find("diagnostic=0 end_ms=")!=std::string::npos);
+    }
+    const auto after_pipeline_stages=logs.size();
     for(unsigned i=0;i<10;++i) {
         KyoeiFrameStats::Work work(15);
         std::this_thread::sleep_for(std::chrono::milliseconds(55));
     }
-    CHECK(logs.size()==before_work_stalls+8);
+    CHECK(logs.size()==after_pipeline_stages+8);
     CHECK(logs.back().find("Kyoei work stall: stage=video-label-wait")!=std::string::npos);
     CHECK(logs.back().find("end_ms=")!=std::string::npos);
     const auto before_readback=logs.size();

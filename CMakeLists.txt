@@ -634,6 +634,15 @@ kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "        ComputePipeline::SerializationSupport sdata{};"
   "        KyoeiFrameStats::Work kyoei_compile_work(8);\n        ComputePipeline::SerializationSupport sdata{};")
 kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "        it.value() = std::make_unique<GraphicsPipeline>("
+  "        { KyoeiFrameStats::Work construct_measurement(19);\n        it.value() = std::make_unique<GraphicsPipeline>(")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "            runtime_infos, fetch_shader, modules, sdata, false);"
+  "            runtime_infos, fetch_shader, modules, sdata, false);\n        }")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "        RegisterPipelineData(graphics_key, pipeline_hash, sdata);"
+  "        { KyoeiFrameStats::Work register_measurement(20); RegisterPipelineData(graphics_key, pipeline_hash, sdata); }")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "    LOG_INFO(Render_Vulkan, \"Compiling {} shader {:#x} {}\", info.stage, info.pgm_hash,"
   "    KyoeiFrameStats::Work kyoei_compile_work(6);\n    LOG_INFO(Render_Vulkan, \"Compiling {} shader {:#x} {}\", info.stage, info.pgm_hash,")
 kyoei_replace_checked(KYOEI_PIPELINE_CACHE
@@ -663,6 +672,15 @@ kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" CONTENT "${KYOEI_PIPELINE_SERIALIZATION}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_cache.cpp"
   "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" src/kyoei_gpu_cache_shutdown.cpp)
+# Measure the driver call independently of layout/setup and serialization.
+# An explicit object overrides the same unit from the prebuilt static archive.
+file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_graphics_pipeline.cpp" KYOEI_GRAPHICS_PIPELINE)
+set(KYOEI_GRAPHICS_PIPELINE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n${KYOEI_GRAPHICS_PIPELINE}")
+kyoei_replace_checked(KYOEI_GRAPHICS_PIPELINE
+  "        device.createGraphicsPipelineUnique(pipeline_cache, pipeline_info);"
+  "        [&] { if (preloading) return device.createGraphicsPipelineUnique(pipeline_cache, pipeline_info); KyoeiFrameStats::Work driver_measurement(21); return device.createGraphicsPipelineUnique(pipeline_cache, pipeline_info); }();")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_graphics_pipeline.cpp" CONTENT "${KYOEI_GRAPHICS_PIPELINE}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_graphics_pipeline.cpp")
 add_executable(test_kyoei_pipeline_cache src/test_kyoei_pipeline_cache.cpp)
 target_compile_features(test_kyoei_pipeline_cache PRIVATE cxx_std_23)
 target_compile_options(test_kyoei_pipeline_cache PRIVATE -UNDEBUG)

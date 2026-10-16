@@ -17,7 +17,21 @@ constexpr size_t MaxBytes=64u<<20;
 struct Identity { uint32_t vendor,device;std::array<uint8_t,16> uuid; };
 inline std::mutex file_mutex;
 template<class Profile> inline bool ProfileMatches(std::span<const uint8_t> bytes,const Profile &profile) {
-    return bytes.size()==sizeof(Profile) && std::memcmp(bytes.data(),&profile,sizeof(Profile))==0;
+    const bool matches=bytes.size()==sizeof(Profile) && std::memcmp(bytes.data(),&profile,sizeof(Profile))==0;
+    const char *stats=std::getenv("KYOEI_FRAME_STATS");
+    if(!matches && stats && stats[0]=='1') {
+        gz_log("Kyoei shader profile mismatch: cached_bytes=%llu current_bytes=%llu",
+            (unsigned long long)bytes.size(),(unsigned long long)sizeof(Profile));
+        const auto *current=reinterpret_cast<const uint8_t*>(&profile);
+        unsigned reported=0;
+        for(size_t i=0;i<bytes.size() && i<sizeof(Profile) && reported<8;++i) {
+            if(bytes[i]==current[i])continue;
+            ++reported;
+            gz_log("Kyoei shader profile difference: offset=%llu cached=%u current=%u",
+                (unsigned long long)i,unsigned(bytes[i]),unsigned(current[i]));
+        }
+    }
+    return matches;
 }
 inline bool Matches(std::span<const uint8_t> bytes,const Identity &id) {
     if(bytes.size()<32||bytes.size()>MaxBytes)return false;

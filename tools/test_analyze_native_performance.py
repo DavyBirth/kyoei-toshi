@@ -16,6 +16,7 @@ Kyoei frame stats: intervals=120 fps=30.00 mean_ms=33.33 p50_ms=30.00 p95_ms=40.
 Kyoei work stats: stage=linear-downloads calls=120 mean_ms=11.00 p95_ms=15.00 max_ms=20.00 diagnostic=0
 Kyoei work stats: stage=linear-downloads calls=120 mean_ms=90.00 p95_ms=120.00 max_ms=190.00 diagnostic=1
 Kyoei compile stall: stage=shader-compile milliseconds=44.00 diagnostic=0
+Kyoei compile stall: stage=graphics-driver milliseconds=120.00 diagnostic=1 end_ms=1000.00
 Kyoei work stall: stage=video-label-wait milliseconds=77.00 end_ms=1000.00 diagnostic=0
 Kyoei work stall: stage=command-batch milliseconds=90.00 end_ms=1001.00 diagnostic=1
 Kyoei command batch: milliseconds=90.00 resume_ms=15.00 max_resume_ms=12.00 resumes=2 completed=1 yielded=1 empty=1 end_ms=1001.00 diagnostic=1
@@ -39,7 +40,9 @@ Kyoei frame deadlines: intervals=120 over_60hz=120 over_30hz=100 over_50ms=80 ov
     assert groups['legacy_unknown']['mean_ms']==33.33
     assert report['work_diagnostic_partitions']['linear-downloads']['unflagged']['mean_ms']==11
     assert report['target_60fps']['windows_p95_over_budget']==3
-    assert report['compile_stalls']==[dict(stage='shader-compile',milliseconds=44.0,diagnostic=False)]
+    assert report['compile_stalls']==[
+        dict(stage='shader-compile',milliseconds=44.0,diagnostic=False),
+        dict(stage='graphics-driver',milliseconds=120.0,diagnostic=True,end_ms=1000.0)]
     assert report['work_sampling_strides']=={'raster-draw':[128]}
     assert report['readback_stalls']==[
         dict(bytes=256,width=8,height=8,milliseconds=240.0,end_ms=1002.0),

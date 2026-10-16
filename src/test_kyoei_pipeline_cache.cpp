@@ -1,13 +1,33 @@
 #include "kyoei_pipeline_cache.h"
 #include <cassert>
 #include <future>
-extern "C" void gz_log(const char *,...) {}
+#include <cstdarg>
+#include <string>
+static std::vector<std::string> logs;
+extern "C" void gz_log(const char *format,...) {
+    char line[512];va_list args;va_start(args,format);
+    std::vsnprintf(line,sizeof(line),format,args);va_end(args);logs.emplace_back(line);
+}
 int main() {
     using namespace KyoeiPipelineCache;
+    _putenv_s("KYOEI_FRAME_STATS","0");
     struct Profile { uint32_t a,b; } profile{7,11};
     std::vector<uint8_t> profile_data(sizeof(profile));std::memcpy(profile_data.data(),&profile,sizeof(profile));
     assert(ProfileMatches(profile_data,profile));assert(!ProfileMatches(std::span(profile_data).first(1),profile));
     profile_data.back()^=1;assert(!ProfileMatches(profile_data,profile));
+    assert(logs.empty());
+    _putenv_s("KYOEI_FRAME_STATS","1");
+    assert(!ProfileMatches(std::span(profile_data).first(1),profile));
+    assert(logs.size()==1 && logs.back().find("cached_bytes=1 current_bytes=8")!=std::string::npos);
+    logs.clear();
+    struct LargeProfile { uint8_t bytes[32]; } larger{};
+    std::vector<uint8_t> incompatible(32,255);
+    assert(!ProfileMatches(incompatible,larger));
+    assert(logs.size()==9 && logs.back().find("offset=7 cached=255 current=0")!=std::string::npos);
+    logs.clear();
+    std::fill(incompatible.begin(),incompatible.end(),0);
+    assert(ProfileMatches(incompatible,larger) && logs.empty());
+    _putenv_s("KYOEI_FRAME_STATS","0");
     Identity id{0x10de,0x1234,{1,2,3}};
     std::vector<uint8_t> bytes(48,0);uint32_t header[]={32,1,id.vendor,id.device};
     std::memcpy(bytes.data(),header,16);std::memcpy(bytes.data()+16,id.uuid.data(),16);

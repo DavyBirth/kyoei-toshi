@@ -41,8 +41,12 @@ display=[line for line in text.splitlines() if 'Kyoei display trace:' in line]
 readbacks=[dict(images=int(images),waits=int(waits),bytes=int(size)) for images,waits,size in re.findall(
     r'Kyoei readback batch: images=(\d+) waits=(\d+) bytes=(\d+)',text)]
 signals=[line for line in text.splitlines() if re.search(r'STOP:|Kyoei map failure:|Kyoei flip failure:|Assertion Failed|\bVK_ERROR_\w+|GPU .*\[(?:Critical|Error)',line,re.I)]
-compile_stalls=[dict(stage=stage,milliseconds=float(milliseconds),diagnostic=bool(int(diagnostic)))
-    for stage,milliseconds,diagnostic in re.findall(r'Kyoei compile stall: stage=([^ ]+) milliseconds=([\d.]+) diagnostic=([01])',text)]
+compile_stalls=[]
+for stage,milliseconds,diagnostic,end in re.findall(
+        r'Kyoei compile stall: stage=([^ ]+) milliseconds=([\d.]+) diagnostic=([01])(?: end_ms=([\d.]+))?',text):
+    record=dict(stage=stage,milliseconds=float(milliseconds),diagnostic=bool(int(diagnostic)))
+    if end: record['end_ms']=float(end)
+    compile_stalls.append(record)
 deadlines=[dict(zip(('intervals','over_60hz','over_30hz','over_50ms','over_100ms','diagnostic'),map(int,row)))
     for row in re.findall(r'Kyoei frame deadlines: intervals=(\d+) over_60hz=(\d+) over_30hz=(\d+) over_50ms=(\d+) over_100ms=(\d+) diagnostic=([01])',text)]
 work_stalls=[dict(stage=stage,milliseconds=float(duration),end_ms=float(end),diagnostic=bool(int(diagnostic)))

@@ -10,7 +10,7 @@ extern "C" uint64_t kyoei_tls_fault_count(void);
 // Intervals between completed game presents, excluding idle redraws.
 // Opt-in; reports every 120 intervals, with no per-frame log traffic.
 namespace KyoeiFrameStats {
-inline constexpr unsigned CategoryCount = 19;
+inline constexpr unsigned CategoryCount = 22;
 inline bool Enabled() {
     static const bool enabled = [] {
         const char* value = std::getenv("KYOEI_FRAME_STATS");
@@ -88,7 +88,8 @@ public:
                                "shader-compile", "graphics-pipeline", "compute-pipeline",
                                "scheduler-submit", "scheduler-wait", "queue-lock",
                                "command-batch", "present-pacing", "command-callback",
-                               "video-label-wait", "raster-draw", "raster-dispatch", "cp-sync"};
+                               "video-label-wait", "raster-draw", "raster-dispatch", "cp-sync",
+                               "graphics-construct", "graphics-register", "graphics-driver"};
         // Sparse evidence survives partial 120-call windows. This is wall time
         // on the calling thread, including nested waits, not GPU execution time.
         static thread_local std::array<unsigned,CategoryCount> work_stalls{};
@@ -105,10 +106,17 @@ public:
         }
         // A cold start may compile fewer than 120 shaders. Preserve evidence of
         // its slow calls, with a strict log cap instead of per-frame traffic.
-        static thread_local std::array<unsigned,3> slow_reports{};
-        if(category>=6 && category<9 && elapsed>=1000./60. && slow_reports[category-6]++<8)
-            gz_log("Kyoei compile stall: stage=%s milliseconds=%.2f diagnostic=%u",names[category],elapsed,
-                unsigned(KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end)));
+        static thread_local std::array<unsigned,6> slow_reports{};
+        if(((category>=6 && category<9) || category>=19) && elapsed>=1000./60.) {
+            const unsigned index=category>=19 ? category-16 : category-6;
+            if(slow_reports[index]<8) {
+                ++slow_reports[index];
+                const double end_ms=std::chrono::duration<double,std::milli>(
+                    std::chrono::steady_clock::now().time_since_epoch()).count();
+                gz_log("Kyoei compile stall: stage=%s milliseconds=%.2f diagnostic=%u end_ms=%.2f",names[category],elapsed,
+                    unsigned(KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end)),end_ms);
+            }
+        }
         if (count != values.size()) return;
         double total = 0; for (double value : values) total += value;
         auto sorted = values; std::sort(sorted.begin(), sorted.end());
