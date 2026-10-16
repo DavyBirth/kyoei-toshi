@@ -1,0 +1,23 @@
+{
+  "title": "CUSA03562",
+  "version": "01.03",
+  "source_sha256": "1968814b70f69ec85ff3e556c4b66b53ec298c0dea71120e4f0ba594906e418e",
+  "note": "Static technical-label/call-flow candidates. The observed runtime 1x1 readback has not been linked to these objects. No asynchronous patch is authorized by this evidence alone.",
+  "seeds": {
+    "auto_exposure_initialize": "0x4e4e0",
+    "auto_exposure_update": "0x67430",
+    "texture_luminance_initialize": "0xcd9f0",
+    "texture_luminance_zero_query_slots": "0xcdb80",
+    "texture_luminance_query_status": "0x92070",
+    "texture_luminance_query_backend": "0xcf400",
+    "texture_luminance_calculate_result": "0xcf860",
+    "texture_luminance_check_result": "0xd04d0",
+    "texture_luminance_update_internal": "0xd08e0",
+    "texture_luminance_get_scalar": "0xd0e50",
+    "texture_luminance_get_vector": "0xd0e90",
+    "texture_luminance_manager_update": "0xd1ec0",
+    "texture_luminance_manager_configure": "0xd2ad0"
+  },
+  "conditional_virtual_edges": [],
+  "reads": []
+}

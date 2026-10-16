@@ -577,7 +577,16 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "{ KyoeiFrameStats::Work finish_measurement(3); scheduler.Finish(); }")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "KyoeiReadback::RecordSingle(download_size);\n        { KyoeiFrameStats::Work finish_measurement(3); scheduler.Finish(); }"
-  "KyoeiReadback::RecordSingle(download_size);\n        { KyoeiFrameStats::Work finish_measurement(3,download_size,image.info.size.width,image.info.size.height); scheduler.Finish(); }")
+  "KyoeiReadback::RecordSingle(download_size);\n        { KyoeiFrameStats::Work finish_measurement(3,download_size,image.info.size.width,image.info.size.height,image.info.guest_address); scheduler.Finish(); }")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "    if (desc.type == BindingType::Storage) {\n        image.flags |= ImageFlagBits::GpuModified;"
+  "    if (desc.type == BindingType::Storage) {\n        image.flags |= ImageFlagBits::GpuModified;\n        KyoeiFrameStats::SmallImage(image.info.guest_address,image.info.size.width,image.info.size.height,image.info.pitch,static_cast<unsigned>(image.info.pixel_format),1);")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "ImageView& TextureCache::FindRenderTarget(ImageId image_id, const ImageDesc& desc) {\n    Image& image = slot_images[image_id];"
+  "ImageView& TextureCache::FindRenderTarget(ImageId image_id, const ImageDesc& desc) {\n    Image& image = slot_images[image_id];\n    KyoeiFrameStats::SmallImage(image.info.guest_address,image.info.size.width,image.info.size.height,image.info.pitch,static_cast<unsigned>(image.info.pixel_format),2);")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "    auto& download_buffer = buffer_cache.GetUtilityBuffer(MemoryUsage::Download);"
+  "    KyoeiFrameStats::SmallImage(image.info.guest_address,image.info.size.width,image.info.size.height,image.info.pitch,static_cast<unsigned>(image.info.pixel_format),3);\n    auto& download_buffer = buffer_cache.GetUtilityBuffer(MemoryUsage::Download);")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "    auto mapping = download_buffer.Map(download_size, 0, !KyoeiReadback::active);"
   "    auto map_download = [&](bool wait) { KyoeiFrameStats::Work map_measurement(5); return download_buffer.Map(download_size, 0, wait); };\n    auto mapping = map_download(!KyoeiReadback::active);")

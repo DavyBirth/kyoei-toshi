@@ -1,3 +1,25 @@
+# Retomada prioritária — investigação de luminância (15/10/2026, fim da noite)
+
+- Último pedido de Davy: continuar autonomamente; quando ele pedir interrupção,
+  salvar o progresso e preparar novos updates Windows e Linux/Wine dos amigos.
+- Ler docs/re/LUMINANCIA-READBACK.md. Candidato de imagem1x1: exposição automática
+  0x67430 → gestor0xd1ec0 → checagem0xd04d0/wrappersd0e50,d0e90 → d08e0.
+  Ainda NÃO provada identidade com recurso1x1 observado; não adiar readback
+  nem desativar iluminação. Backendcf400 slot70/obj+90 ainda não resolvido.
+- Mapa reproduzível: docs/re/luminance-flow-facts.json; relatório privado
+  build/research/luminance-flow.json:37 funções/75 chamadas/78 indiretas,
+  zero falhas/limites. SQLite local já existe; não reconstruir sem necessidade.
+- Build local atual inclui identificação limitada de imagens1x1 por endereço,
+  pitch/formato/papel (16 registros/thread), readback lento inclui endereço.
+  FrameStats/amostragem128 preservados. Build/testes PASS, jogo não iniciado.
+- Último teste gameplay234620: leitura1x1/256bytes esperou91 e133ms;
+  polling vazio earlyreturn não tem ganhoFPS comprovado. Sessões não alinhadas.
+- ZIPs amigos anteriores ainda em build/Kyoei-Windows-Update-20261015.zip e
+  build/Kyoei-Linux-Wine-Update-20261015.zip. Não incluem polling vazio/nova
+  coleta. Ao regenerar, usar nome novo e baseline Friends-Test intacta,
+  verificar hashes/privacidade/preflight e deixar claro status experimental.
+  Linux distribuído usa PE via Wine/Proton, não é o ELF nativo experimental.
+
 # Retomada atual — mapa do quadro e investigação no backend (15/10 à noite)
 
 ## Continuação mais recente: tempo, tarefas e entidades

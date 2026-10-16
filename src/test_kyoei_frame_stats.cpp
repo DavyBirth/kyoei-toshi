@@ -101,5 +101,14 @@ int main(int argc,char **) {
     for(unsigned i=0;i<10;++i) KyoeiFrameStats::GpuWait(20,21,18,20,false,240.,Now());
     CHECK(logs.size()==before_gpu+8);
     CHECK(logs.back().find("requested=20 next=21 known_before=18 known_after=20 forced_flush=0")!=std::string::npos);
+    const auto before_images=logs.size();
+    KyoeiFrameStats::SmallImage(0x1234,2,2,64,37,2);
+    CHECK(logs.size()==before_images);
+    for(unsigned i=0;i<1000;++i) KyoeiFrameStats::SmallImage(0x1234,1,1,64,37,2);
+    CHECK(logs.size()==before_images+1);
+    KyoeiFrameStats::SmallImage(0x1234,1,1,64,37,3);
+    CHECK(logs.size()==before_images+2);
+    for(unsigned i=0;i<100;++i) KyoeiFrameStats::SmallImage(0x2000+i,1,1,64,37,2);
+    CHECK(logs.size()==before_images+16);
     std::puts("FRAME STATS PASS: capture within/between calls annotated; clean window resets; raw samples retained");
 }

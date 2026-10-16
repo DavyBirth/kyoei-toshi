@@ -18,6 +18,19 @@ inline bool Enabled() {
     }();
     return enabled;
 }
+inline void SmallImage(uint64_t address, unsigned width, unsigned height,
+                       unsigned pitch, unsigned format, unsigned role) {
+    if (width!=1 || height!=1 || !Enabled()) return;
+    struct Key { uint64_t address; unsigned format,role; };
+    static thread_local std::array<Key,16> seen{};
+    static thread_local unsigned count=0;
+    for (unsigned i=0;i<count;++i)
+        if (seen[i].address==address && seen[i].format==format && seen[i].role==role) return;
+    if (count==seen.size()) return;
+    seen[count++]={address,format,role};
+    gz_log("Kyoei small image: address=0x%llx width=%u height=%u pitch=%u format=%u role=%u",
+        (unsigned long long)address,width,height,pitch,format,role);
+}
 inline void GpuWait(uint64_t requested, uint64_t submitted_next,
                     uint64_t known_before, uint64_t known_after, bool forced_flush,
                     double milliseconds, KyoeiDiagnosticActivity::Stamp before) {
@@ -38,12 +51,13 @@ class Work {
     unsigned category;
     bool active = false;
     uint64_t transfer_bytes = 0;
+    uint64_t transfer_address = 0;
     unsigned transfer_width = 0, transfer_height = 0;
     std::chrono::steady_clock::time_point start;
     KyoeiDiagnosticActivity::Stamp diagnostic_start{};
 public:
-    explicit Work(unsigned category_, uint64_t bytes=0, unsigned width=0, unsigned height=0)
-        : category(category_), transfer_bytes(bytes), transfer_width(width), transfer_height(height) {
+    explicit Work(unsigned category_, uint64_t bytes=0, unsigned width=0, unsigned height=0, uint64_t address=0)
+        : category(category_), transfer_bytes(bytes), transfer_address(address), transfer_width(width), transfer_height(height) {
         if (!Enabled()) return;
         // Millions of draw calls per session: sample before reading clocks or
         // publishing logs. Other categories retain every call.
@@ -86,8 +100,8 @@ public:
                 names[category],elapsed,end_ms,
                 unsigned(KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end)));
             if (transfer_bytes)
-                gz_log("Kyoei readback stall: bytes=%llu width=%u height=%u milliseconds=%.2f end_ms=%.2f",
-                    (unsigned long long)transfer_bytes,transfer_width,transfer_height,elapsed,end_ms);
+                gz_log("Kyoei readback stall: bytes=%llu width=%u height=%u milliseconds=%.2f end_ms=%.2f address=0x%llx",
+                    (unsigned long long)transfer_bytes,transfer_width,transfer_height,elapsed,end_ms,(unsigned long long)transfer_address);
         }
         // A cold start may compile fewer than 120 shaders. Preserve evidence of
         // its slow calls, with a strict log cap instead of per-frame traffic.

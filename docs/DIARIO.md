@@ -2724,3 +2724,34 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Otimização de fila vazia permanece candidata local; sem aumentoFPS validado
   nem update novo para amigos. Próximo backend: identificar produtor/consumidor
   da imagem1x1 antes de considerar leitura adiada. Não remover fences.
+
+
+### 15/10/2026 — investigação dirigida: luminância e exposição automática
+
+- Davy autorizou seguir trabalhando; quando pedir interrupção, salvar progresso
+  e preparar novos updates dos amigos. Nesta etapa não gerar ZIPs novamente
+  nem iniciar jogo; pacotes anteriores continuam identificados.
+- Rótulos técnicos CTextureLuminance/CTextureLuminanceManage e
+  GetResult_UpdateInternalLuminance ligaram funções a um candidato de feedback
+  gráfico. ApplyEffects_UpdateAutoExposure0x67430 chama gestor0xd1ec0 em678a9;
+  InitializeAutoExposure0x4e4e0 chama configuração0xd2ad0 em4e681.
+- Gestor usa verificação0xd04d0 e wrappersd0e50/d0e90 com ESI0 no caminho
+  analisado; wrappers atualizam viad08e0 e retornam float+74 ou vetor+64.
+  Histórico de resultados no gestor. ESI0 ainda sem contrato de bloqueio
+  confirmado: não presumir que possa adiar a publicação com segurança.
+- Backend0xcf400 resolve slot70; getter4f670 retornaobj+40. Restam
+  implementação concreta/flag100000 e ligação do recurso ao runtime observado.
+  A imagem1x1 dos registros NÃO foi identificada como luminância ainda.
+- docs/re/LUMINANCIA-READBACK.md e luminance-flow-facts.json. Receita executada:
+  37 funções,75 ligações de chamadas,78 chamadas indiretas,zero falhas/limites.
+  Relatórios derivados privados em build/research,sem dados originais no Git.
+- Coleta adicionada: até16 combinações únicas endereço/formato/papel de imagem
+  1x1 por thread,roles1storage/2targetlookup/3download. Só PerformanceStats;
+  repetições não logam. Readback lento inclui endereço para correlação.
+  Endereço pode ser reutilizado,lookup não prova shader executado.
+- Build kyoei/teste C++ PASS; teste1000 repetições gera1 linha,roles separados,
+  teto16 PASS; modo desligado PASS; analisador formatos antigo/novo PASS;
+  12 testes do mapa PASS. Snapshot/dump/saves/iluminação/fences intocados.
+- Próximo: recurso/endereço/formato contra backend/query real; só depois
+  considerar async. GanhoFPS ainda sem prova; polling vazio segue candidato
+  local. Não pedir teste idêntico sem usar a nova hipótese.

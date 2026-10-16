@@ -48,9 +48,15 @@ deadlines=[dict(zip(('intervals','over_60hz','over_30hz','over_50ms','over_100ms
 work_stalls=[dict(stage=stage,milliseconds=float(duration),end_ms=float(end),diagnostic=bool(int(diagnostic)))
     for stage,duration,end,diagnostic in re.findall(
         r'Kyoei work stall: stage=([^ ]+) milliseconds=([\d.]+) end_ms=([\d.]+) diagnostic=([01])',text)]
-readback_stalls=[dict(bytes=int(size),width=int(width),height=int(height),milliseconds=float(duration),end_ms=float(end))
-    for size,width,height,duration,end in re.findall(
-        r'Kyoei readback stall: bytes=(\d+) width=(\d+) height=(\d+) milliseconds=([\d.]+) end_ms=([\d.]+)',text)]
+readback_stalls=[]
+for size,width,height,duration,end,address in re.findall(
+        r'Kyoei readback stall: bytes=(\d+) width=(\d+) height=(\d+) milliseconds=([\d.]+) end_ms=([\d.]+)(?: address=(0x[0-9a-f]+))?',text):
+    record=dict(bytes=int(size),width=int(width),height=int(height),milliseconds=float(duration),end_ms=float(end))
+    if address: record['address']=address
+    readback_stalls.append(record)
+small_images=[dict(address=address,width=int(width),height=int(height),pitch=int(pitch),format=int(fmt),role=int(role))
+    for address,width,height,pitch,fmt,role in re.findall(
+        r'Kyoei small image: address=(0x[0-9a-f]+) width=(\d+) height=(\d+) pitch=(\d+) format=(\d+) role=(\d+)',text)]
 gpu_waits=[dict(requested=int(requested),next=int(next_tick),known_before=int(before),known_after=int(after),
                 forced_flush=bool(int(flush)),milliseconds=float(duration),end_ms=float(end),diagnostic=bool(int(diagnostic)))
     for requested,next_tick,before,after,flush,duration,end,diagnostic in re.findall(
@@ -84,6 +90,8 @@ report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args
             compile_stalls=compile_stalls,
             work_stalls=work_stalls,
             readback_stalls=readback_stalls,
+            small_images=small_images,
+            small_images_note='At most 16 unique (address,format,role) records per thread, 1x1 images only; roles 1=storage binding, 2=render target lookup, 3=download. Virtual addresses can be reused. Bindings do not prove a particular shader executed or identify a game subsystem.',
             gpu_waits=gpu_waits,
             gpu_waits_note='Up to eight Scheduler::Wait calls >=50ms per thread. Known ticks are cached completion counters, not live GPU timestamps or workload durations. next is the logical tick before Wait; forced_flush reports the existing unsent-tick path. No added Vulkan queries.',
             work_stalls_note='At most eight calls >=50ms per category/thread. end_ms uses a process-local monotonic clock; nested scopes overlap and must not be summed. Not GPU timestamps or a complete trace.',
