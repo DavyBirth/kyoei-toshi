@@ -2403,3 +2403,37 @@ Falta:
   readback/fences mantidos. Snapshot fixo, projeto Godzilla e portable intocados.
 - Nenhum ganho de FPS ou correção de câmera lenta declarado. Próxima etapa:
   correlacionar as novas métricas em uma cena fixa quando houver teste de jogo.
+
+### 15/10/2026 — engenharia reversa estática do quadro, tempo e HUD
+
+- Pedido de Davy: aprofundar entendimento do jogo, começando pelo ciclo de
+  um quadro. Mantida a orientação de backend: nenhum jogo aberto nesta etapa.
+- Ferramenta nova tools/inspect_frame_flow.py: índice GNU unwind validado
+  contra FDE/CIE e segmentos; 42.194 intervalos de função. Candidatos CALL/JMP
+  só aceitos após desmontagem LLVM iniciada na fronteira da função. PLT ligada
+  às relocações do boot.bin original. Nenhuma dependência Python nova.
+- Receita hash-bound docs/re/frame-flow-facts.json e mapa explicado em
+  docs/re/QUADRO-HUD-TEMPO.md. Execução real no ELF preparado: 75 funções,
+  90 ligações a chamadores, 254 chamadas indiretas, zero falhas de decode,
+  limite não atingido. Seis conjuntos de leituras estáticas e dois encaixes
+  condicionais de slots virtuais conferidos. Relatório build/frame-flow-map.json.
+- Laço 0x345140 chama slot virtual +0x60; tabela instalada pela aplicação
+  aponta a 0x6e5940, que chama 0x345170. 0x344980 é encerramento, não update.
+- Tempo: construtor inicializa app+0xe8=1; motor escolhe cálculo fixo ou
+  baseado em taxa medida. app+0xf0 recebe segundos e tem consumidores reais
+  no quadro Kyoei. Tabelas taxa=[60,-1,60,30,20], flip=[0,0,0,1,2]. Hipótese
+  de câmera lenta compatível com passo fixo; modo ativo na cidade NÃO provado.
+  Nenhum timestep, seletor, física ou relógio alterado.
+- Mapeados envio/flip, SubmitDone, espera por label/evento (0x437920 →
+  0x44e540 → WaitEqueue) e polling adicional. Ligação ao runtime Windows
+  documentada sem remover fences/publicação/liberação de superfícies.
+- HUD: confirmados chamadores 0xa1bc00 e 0xa6cee0 do marcador 0xa6d9a0;
+  caminho separado de layout 0x2e0cf0 → medidor 0x2e2b10. Placas por contagem
+  e medição/quebra de linha exigem análises distintas. Dispatcher até cada
+  objeto de HUD ainda não resolvido; não inferir ligação direta inexistente.
+- Doze testes sintéticos do novo analisador PASS, incluindo corrupção de
+  unwind, relocação, hash/valor de fatos e chamada/tabela virtual incompatível.
+  Quatro testes de referências ELF PASS. Análise real reproduzida sem execução
+  de código convidado. Só metadados técnicos/ferramentas versionados.
+- Sem ganho de FPS declarado. Portable, saves, dump, runtime, snapshot fixo e
+  Godzilla intocados nesta etapa. CONTINUAR-CODEX atualizado para esta prioridade.

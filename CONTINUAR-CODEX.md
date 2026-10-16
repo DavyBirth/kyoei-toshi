@@ -1,3 +1,27 @@
+# Retomada atual — mapa do quadro e investigação no backend (15/10 à noite)
+
+Davy autorizou engenharia reversa orientada ao ciclo do quadro, desempenho e
+HUD. Pediu seguir no backend, sem testar/abrir o jogo agora. Linux nativo abaixo
+continua pausado; não retomar seus testes automaticamente.
+
+- Ler docs/re/QUADRO-HUD-TEMPO.md e docs/re/frame-flow-facts.json.
+- Ferramenta: tools/inspect_frame_flow.py. Usa limites unwind/FDE e valida
+  chamadas com LLVM; 42.194 funções indexadas, 75 analisadas, 90 ligações a
+  chamadores, 254 chamadas indiretas. Relatório privado build/frame-flow-map.json.
+- Laço 0x345140 → slot +0x60 → quadro Kyoei 0x6e5940 → motor 0x345170.
+  Encontrados cálculos de passo fixo/medido, esperas de label/evento e caminhos
+  distintos de marcador HUD e medição de linhas. Sem concluir modo ativo na cidade.
+- Hipótese de slow motion agora tem base estática: app+0xe8 seleciona cálculo;
+  +0xf0 é usado por atualizações. NÃO alterar tempo por palpite. Falta observar
+  modo/campos/cadência em cena fixa antes de qualquer patch de sincronização.
+- Doze testes sintéticos do analisador e quatro de referências ELF PASS.
+  Nenhum arquivo de jogo, desmontagem ou texto original adicionado ao Git.
+- Backend Windows anterior: bb8a84d, buffers de diagnóstico dispensáveis
+  evitados e métricas novas; build/testes PASS, sem ganho de FPS medido.
+  Portable continua anterior. Diário atualizado com ambas as etapas.
+
+--- Histórico Linux preservado abaixo ---
+
 # PAUSA IMEDIATA - Linux nativo em execucao (15/10/2026)
 
 Davy pediu interromper e salvar por limite de uso. Trabalho salvo; nao

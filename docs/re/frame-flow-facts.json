@@ -1,0 +1,92 @@
+{
+  "title": "CUSA03562",
+  "version": "01.03",
+  "source_sha256": "1968814b70f69ec85ff3e556c4b66b53ec298c0dea71120e4f0ba594906e418e",
+  "note": "Technical metadata only. Labels describe static analysis, not original symbols or runtime proof.",
+  "seeds": {
+    "entry": "0x80",
+    "app_main": "0x601eb0",
+    "app_constructor": "0x343f80",
+    "app_loop": "0x345140",
+    "game_frame": "0x6e5940",
+    "engine_frame": "0x345170",
+    "target_rate_lookup": "0x36c280",
+    "graphics_service": "0x3711a0",
+    "graphics_finish": "0x370710",
+    "measured_rate_update": "0x3708d0",
+    "submit_flip": "0x460700",
+    "frame_finish": "0x4495f0",
+    "wait_frame_label": "0x437920",
+    "wait_event": "0x44e540",
+    "gpu_poll": "0x4330b0",
+    "gpu_work_context": "0x436500",
+    "text_layout": "0x2e0cf0",
+    "measure_line": "0x2e2b10",
+    "hud_marker": "0xa6d9a0",
+    "hud_marker_caller_a": "0xa1bc00",
+    "hud_marker_caller_b": "0xa6cee0"
+  },
+  "import_names": [
+    "sceGnmSubmitAndFlipCommandBuffers",
+    "sceGnmSubmitDone",
+    "sceVideoOutSetFlipRate",
+    "sceKernelWaitEqueue",
+    "sceKernelGetProcessTime"
+  ],
+  "conditional_virtual_edges": [
+    {
+      "label": "app_loop_to_game_frame",
+      "caller": "0x345140",
+      "site": "0x345156",
+      "table": "0x127bdc8",
+      "slot": "0x60",
+      "target": "0x6e5940"
+    },
+    {
+      "label": "graphics_finish_to_frame_finish",
+      "caller": "0x370710",
+      "site": "0x3707cf",
+      "table": "0x1262920",
+      "slot": "0x40",
+      "target": "0x4495f0"
+    }
+  ],
+  "reads": [
+    {
+      "label": "game_vtable_slot_0x60",
+      "address": "0x127be28",
+      "type": "u64",
+      "expected": ["0x6e5940"]
+    },
+    {
+      "label": "engine_vtable_slot_0x60",
+      "address": "0x1259c50",
+      "type": "u64",
+      "expected": ["0x345170"]
+    },
+    {
+      "label": "frame_finish_vtable_slot_0x40",
+      "address": "0x1262960",
+      "type": "u64",
+      "expected": ["0x4495f0"]
+    },
+    {
+      "label": "app_timing_constructor_defaults_0xec",
+      "address": "0x10297b0",
+      "type": "f32",
+      "expected": [1.0, 0.01666666753590107, 1.0, 15.0]
+    },
+    {
+      "label": "target_rate_table",
+      "address": "0x102b540",
+      "type": "f32",
+      "expected": [60.0, -1.0, 60.0, 30.0, 20.0]
+    },
+    {
+      "label": "flip_rate_table",
+      "address": "0x102b580",
+      "type": "i32",
+      "expected": [0, 0, 0, 1, 2]
+    }
+  ]
+}

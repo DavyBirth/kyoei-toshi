@@ -1,5 +1,10 @@
 # Desempenho — objetivo de 60 FPS
 
+Mapa estático do quadro, cálculo do tempo e caminhos de HUD:
+[QUADRO-HUD-TEMPO.md](re/QUADRO-HUD-TEMPO.md). Identifica o laço e os dois
+cálculos de timestep com evidências reproduzíveis; o modo ativo na cidade
+e a causa da câmera lenta continuam pendentes de observação.
+
 ## Backend Windows — 15/10 à noite
 
 Removida a limpeza incondicional dos buffers de captura raster em cada desenho
