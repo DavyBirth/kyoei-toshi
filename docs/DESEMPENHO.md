@@ -233,3 +233,27 @@ Build Windows PASS; testes de fence atrasado, timeout sem alteração do label,
 retorno imediato, relay SysV e 100 timeouts sem vazamento de handles PASS.
 Portable atualizado e bootstrap EN sem GPU PASS. Ganho de FPS/stutter em
 gameplay continua não medido, respeitando a instrução de não iniciar partida.
+
+
+### Teste real do começo — 15/10/2026, 22:59
+
+Davy testou o começo com ação e relatou stutter inicial seguido de melhora.
+Fechamento normal, exit0; log privado native-05/logs/20261015_225918.log
+(543.291 bytes). Análise em build/research/performance-20261015-225918.json.
+
+- 124 janelas de120 intervalos:14.880 intervalos,373,502 segundos medidos.
+- Média global39,84 FPS; médias das janelas17,35–60,05 FPS. Não são FPS mínimo
+  e máximo instantâneos. Menus/cenas/carregamentos sem marcação se misturam.
+- Maior intervalo584,04 ms;1.107 intervalos acima de50 ms,35 acima de100 ms.
+- command-batch:168 janelas de120 chamadas, média18,35 ms/chamada, máximo
+  519,30 ms. Mede o escopo CPU que processa lotes; não é tempo puro de GPU
+  nem pode ser somado aos outros escopos sobrepostos. Principal alvo a detalhar.
+- Shaders:600 chamadas resumidas, máximo13,02 ms; pipelines gráficos:600,
+  máximo16,03 ms. Nenhum compile-stall registrado. Isso não prova ausência
+  de custos em amostras incompletas, mas não sustenta culpar shaders pelas
+  maiores travadas. TLS0; nenhuma linha de falha detectada pelo analisador.
+- Pacing médio16,34 ms/chamada. Não equivale a FPS do jogo.
+
+Serve como referência inicial reproduzível do começo; sem comparação da mesma
+sequência na versão anterior, não quantifica ganho causado pelas mudanças.
+Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
