@@ -304,3 +304,19 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   preservado. Nenhuma partida aberta pelo agente. Portable intacto.
 - Próximo: investigar a sincronização de readback; não ativar batching como
   solução automática, pois logs conhecidos trazem lotes de1 imagem.
+
+
+### 15/10/2026 — readback: investigação e evidência esparsa
+
+- Cadeia conferida: FindTexture(Storage)/FindRenderTarget marcam imagens lineares
+  modificadas; ProcessDownloadImages grava image->buffer, Finish submete a fila
+  e aguarda o tick antes de publicar em memória guest. Não remover a espera
+  sem resolver dependências: o jogo pode consumir esses resultados.
+- Lotes registrados no segundo teste:1 imagem/1 espera/256bytes. Não basta
+  habilitar batching; tamanho de transferência sozinho não explica fila longa.
+  Não foi estabelecido que o máximo de242ms pertença ao mesmo lote256bytes.
+- Medição nova preserva essa correlação: até8 esperas>=50ms em readback-finish
+  e scheduler-wait por thread/categoria. Readback síncrono inclui bytes,largura,
+  altura e término monotônico. Assim compara fila/espera/cópia sem per-frame spam.
+- Build/teste C++ ativo/desligado e analisador Python PASS, incluindo registro
+  de256bytes/8x8 sintético. Nenhum jogo iniciado, fence alterado ou ganho prometido.

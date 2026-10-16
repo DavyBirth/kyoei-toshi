@@ -576,6 +576,9 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "scheduler.Finish();"
   "{ KyoeiFrameStats::Work finish_measurement(3); scheduler.Finish(); }")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "KyoeiReadback::RecordSingle(download_size);\n        { KyoeiFrameStats::Work finish_measurement(3); scheduler.Finish(); }"
+  "KyoeiReadback::RecordSingle(download_size);\n        { KyoeiFrameStats::Work finish_measurement(3,download_size,image.info.size.width,image.info.size.height); scheduler.Finish(); }")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "    auto mapping = download_buffer.Map(download_size, 0, !KyoeiReadback::active);"
   "    auto map_download = [&](bool wait) { KyoeiFrameStats::Work map_measurement(5); return download_buffer.Map(download_size, 0, wait); };\n    auto mapping = map_download(!KyoeiReadback::active);")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE

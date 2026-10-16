@@ -21,10 +21,13 @@ inline bool Enabled() {
 class Work {
     unsigned category;
     bool active = false;
+    uint64_t transfer_bytes = 0;
+    unsigned transfer_width = 0, transfer_height = 0;
     std::chrono::steady_clock::time_point start;
     KyoeiDiagnosticActivity::Stamp diagnostic_start{};
 public:
-    explicit Work(unsigned category_) : category(category_) {
+    explicit Work(unsigned category_, uint64_t bytes=0, unsigned width=0, unsigned height=0)
+        : category(category_), transfer_bytes(bytes), transfer_width(width), transfer_height(height) {
         if (!Enabled()) return;
         // Millions of draw calls per session: sample before reading clocks or
         // publishing logs. Other categories retain every call.
@@ -59,13 +62,16 @@ public:
         // Sparse evidence survives partial 120-call windows. This is wall time
         // on the calling thread, including nested waits, not GPU execution time.
         static thread_local std::array<unsigned,CategoryCount> work_stalls{};
-        if(category>=12 && elapsed>=50. && work_stalls[category]<8) {
+        if((category>=12 || category==3 || category==10) && elapsed>=50. && work_stalls[category]<8) {
             ++work_stalls[category];
             const double end_ms=std::chrono::duration<double,std::milli>(
                 std::chrono::steady_clock::now().time_since_epoch()).count();
             gz_log("Kyoei work stall: stage=%s milliseconds=%.2f end_ms=%.2f diagnostic=%u",
                 names[category],elapsed,end_ms,
                 unsigned(KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end)));
+            if (transfer_bytes)
+                gz_log("Kyoei readback stall: bytes=%llu width=%u height=%u milliseconds=%.2f end_ms=%.2f",
+                    (unsigned long long)transfer_bytes,transfer_width,transfer_height,elapsed,end_ms);
         }
         // A cold start may compile fewer than 120 shaders. Preserve evidence of
         // its slow calls, with a strict log cap instead of per-frame traffic.

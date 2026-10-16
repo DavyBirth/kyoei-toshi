@@ -48,6 +48,9 @@ deadlines=[dict(zip(('intervals','over_60hz','over_30hz','over_50ms','over_100ms
 work_stalls=[dict(stage=stage,milliseconds=float(duration),end_ms=float(end),diagnostic=bool(int(diagnostic)))
     for stage,duration,end,diagnostic in re.findall(
         r'Kyoei work stall: stage=([^ ]+) milliseconds=([\d.]+) end_ms=([\d.]+) diagnostic=([01])',text)]
+readback_stalls=[dict(bytes=int(size),width=int(width),height=int(height),milliseconds=float(duration),end_ms=float(end))
+    for size,width,height,duration,end in re.findall(
+        r'Kyoei readback stall: bytes=(\d+) width=(\d+) height=(\d+) milliseconds=([\d.]+) end_ms=([\d.]+)',text)]
 deadline_summary={}
 for label,state in [('unflagged',0),('diagnostic',1)]:
     selected=[row for row in deadlines if row['diagnostic']==state]
@@ -76,6 +79,7 @@ report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args
             detected_failure_lines=signals,display_trace=display,readback_batch_samples=readbacks,
             compile_stalls=compile_stalls,
             work_stalls=work_stalls,
+            readback_stalls=readback_stalls,
             work_stalls_note='At most eight calls >=50ms per category/thread. end_ms uses a process-local monotonic clock; nested scopes overlap and must not be summed. Not GPU timestamps or a complete trace.',
             compile_stalls_note='Capped at eight slow calls per compiler category/thread; not a complete stall count.')
 if args.out:

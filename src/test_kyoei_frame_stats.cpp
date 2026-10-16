@@ -91,5 +91,9 @@ int main(int argc,char **) {
     CHECK(logs.size()==before_work_stalls+8);
     CHECK(logs.back().find("Kyoei work stall: stage=video-label-wait")!=std::string::npos);
     CHECK(logs.back().find("end_ms=")!=std::string::npos);
+    const auto before_readback=logs.size();
+    { KyoeiFrameStats::Work work(3,256,8,8);std::this_thread::sleep_for(std::chrono::milliseconds(55)); }
+    CHECK(logs.size()==before_readback+2);
+    CHECK(logs.back().find("Kyoei readback stall: bytes=256 width=8 height=8")!=std::string::npos);
     std::puts("FRAME STATS PASS: capture within/between calls annotated; clean window resets; raw samples retained");
 }
