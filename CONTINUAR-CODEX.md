@@ -122,3 +122,12 @@ Davy pausou o Claude Code. Ler docs/DIARIO.md (últimas entradas) e docs/LINUX.m
    Revertido. Falta achar o sinal de "menu aberto".
 3. Verificar em jogo: quebra por palavras (hook 0x2e2b10), ícones novos,
    ↑ no Return to Desktop. Pedir a Davy uma cena com palavra cortada.
+
+
+Continuação RE personagem (15/10/2026): ver docs/re/PERSONAGEM-FISICA.md.
+Ferramenta tools/inspect_guest_types.py, relatório privado
+build/research/movement-types.json (59 tipos/1.039 registros conservadores).
+Próximo: identificar self+0x6a0 em 0x719a90, resolver movimento e passo físico.
+UnitPlayer slot78=0x9fc1a0 segue base condicionalmente ao bit0 de self+69a.
+Não confundir UnitPlayerBase (criação nula) com pai registrado UnitCharacter.
+Continuar backend sem abrir jogo; desempenho real ainda precisa medição em cena.

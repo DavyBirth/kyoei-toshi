@@ -2482,3 +2482,24 @@ Falta:
 - Próximo: personagem/física, módulos de fase e custo real das filas em cena.
   Nenhum ganho de FPS, sincronização corrigida ou engenharia reversa total
   concluída declarado. CONTINUAR-CODEX atualizado para a continuação.
+
+
+### 15/10/2026 — continuação: personagem e física, sem executar o jogo
+
+- Nova ferramenta tools/inspect_guest_types.py: recupera candidatos de registros
+  de reflexão via constantes do índice local, invalidando branches, instruções
+  desconhecidas, escritas parciais e sobreposições na pilha. Hash do ELF exigido.
+- Resultado conservador: 624 funções, 1.039 registros, 59 tipos selecionados
+  (exploração inicial permissiva: 62). Não equivale a classes ativas em cena.
+- Conferidos UnitCharacter, UnitPlayer e hierarquia registrada. UnitPlayerBase
+  possui callback nulo e não é o pai registrado de UnitPlayer.
+- Atualização do jogador 0x9fc1a0/slot78 chega a 0x719a90 condicionalmente ao
+  bit0 de self+69a. Base passa segundos/+14 e unidades de quadro/+18 ao objeto
+  self+6a0 por slots b8/78. Identidade desse objeto ainda pendente.
+- UnitPhysicsDynamicsGround instala tabela final 0x12ef290; slot78 chega a
+  0x35b7f0 via thunk. Solver e passo físico ainda não identificados.
+- Mapa e limites em docs/re/PERSONAGEM-FISICA.md. Seis testes sintéticos PASS.
+  Relatório privado ignorado. Nenhum jogo aberto, mudança de runtime, atualização
+  do portable ou ganho de FPS declarado. Próximo: objeto+6a0 e mundo físico.
+- Limite explícito: UnitPlayer/UnitPlayerBase foram omitidos pelo extrator final
+  conservador; seus registros da exploração inicial foram conferidos à parte.
