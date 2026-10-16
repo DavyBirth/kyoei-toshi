@@ -708,6 +708,12 @@ file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_scheduler.cpp" KYOEI_SCHEDULER)
 set(KYOEI_SCHEDULER "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n${KYOEI_SCHEDULER}")
 kyoei_replace_checked(KYOEI_SCHEDULER
+  "void Scheduler::Wait(u64 tick) {"
+  "void Scheduler::Wait(u64 tick) {\n    const bool measuring=KyoeiFrameStats::Enabled();\n    const auto wait_started=measuring ? std::chrono::steady_clock::now() : std::chrono::steady_clock::time_point{};\n    const auto diagnostic_before=measuring ? KyoeiDiagnosticActivity::Now() : KyoeiDiagnosticActivity::Stamp{};\n    const auto next_before=master_semaphore.CurrentTick();\n    const auto known_before=master_semaphore.KnownGpuTick();")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "    master_semaphore.Wait(tick);"
+  "    master_semaphore.Wait(tick);\n    if (measuring) KyoeiFrameStats::GpuWait(tick,next_before,known_before,master_semaphore.KnownGpuTick(),tick>=next_before,std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-wait_started).count(),diagnostic_before);")
+kyoei_replace_checked(KYOEI_SCHEDULER
   "    SubmitExecution(info);\n    Wait(presubmit_tick);"
   "    { KyoeiFrameStats::Work measurement(9); SubmitExecution(info); }\n    { KyoeiFrameStats::Work measurement(10); Wait(presubmit_tick); }")
 kyoei_replace_checked(KYOEI_SCHEDULER

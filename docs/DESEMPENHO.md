@@ -320,3 +320,24 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   altura e término monotônico. Assim compara fila/espera/cópia sem per-frame spam.
 - Build/teste C++ ativo/desligado e analisador Python PASS, incluindo registro
   de256bytes/8x8 sintético. Nenhum jogo iniciado, fence alterado ou ganho prometido.
+
+
+### 15/10/2026 — base da investigação: contadores da fila GPU
+
+- Davy pediu começar pelo começo. Sem nova sessão após231142; não é possível
+  atribuir a pausa242ms a um recurso específico nos registros antigos.
+- Conferidos Scheduler::Finish/Wait e MasterSemaphore::Wait: Finish submete
+  antes de aguardar; Wait só faz flush adicional se tick ainda não enviado;
+  MasterSemaphore retorna cedo quando tick conhecido/com refresh já terminou.
+  Nenhuma espera duplicada removível demonstrada. Snapshot preservado.
+- Integração Kyoei passa a registrar requested/next lógico/known_before/
+  known_after/forced_flush em Scheduler::Wait>=50ms, até8 por thread. Usa
+  contadores já disponíveis, sem consulta Vulkan adicional. Tempos e diagnostic
+  correlacionam com readback. Contadores known são cache, não timestamps GPU,
+  e diferença de ticks não representa quantidade de desenhos nem tempoGPU.
+- Build kyoei/teste C++ PASS; teste limiar49ms e limite8/10 PASS; analisador
+  Python PASS; launcher PerformanceStats CheckOnly PASS. Jogo não iniciado.
+  Sem nova otimização, cache apagado ou promessaFPS. Updates ZIP anteriores
+  permanecem identificados e não foram regenerados para esta coleta local.
+- Próximo: Davy repetir começo em Medir desempenho atual EN.cmd para capturar
+  readback bytes/dimensões junto dos contadores. Só então escolher correção.

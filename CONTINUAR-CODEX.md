@@ -160,3 +160,8 @@ build/Kyoei-Linux-Wine-Update-20261015.zip,7,3MB,aplicador Python>=3.11.
 Extrair na raiz: sh Atualizacao-Kyoei/Aplicar-no-Linux.sh. Quatro testes WSL
 PASS e preflight real PASS; backup/saves/prefixo preservados. Não é atualização
 do port ELF nativo. Ver docs/ATUALIZACOES-AMIGOS.md. Não enviado aos amigos.
+
+Coleta local mais recente: Scheduler::Wait>=50ms agora inclui contadores
+requested/next/known_before/known_after/forced_flush (máximo8/thread), sem nova
+consulta Vulkan. Aguardando novo teste do começo: logs antigos não contêm isso.
+Build/testes PASS. ZIPs amigos permanecem na revisão anterior identificada.

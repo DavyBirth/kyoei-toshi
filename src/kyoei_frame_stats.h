@@ -18,6 +18,22 @@ inline bool Enabled() {
     }();
     return enabled;
 }
+inline void GpuWait(uint64_t requested, uint64_t submitted_next,
+                    uint64_t known_before, uint64_t known_after, bool forced_flush,
+                    double milliseconds, KyoeiDiagnosticActivity::Stamp before) {
+    if (!Enabled() || milliseconds < 50.) return;
+    static thread_local unsigned reports=0;
+    if (reports>=8) return;
+    ++reports;
+    const auto after=KyoeiDiagnosticActivity::Now();
+    const double end_ms=std::chrono::duration<double,std::milli>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+    gz_log("Kyoei GPU wait: requested=%llu next=%llu known_before=%llu known_after=%llu forced_flush=%u milliseconds=%.2f end_ms=%.2f diagnostic=%u",
+        (unsigned long long)requested,(unsigned long long)submitted_next,
+        (unsigned long long)known_before,(unsigned long long)known_after,
+        unsigned(forced_flush),milliseconds,end_ms,
+        unsigned(KyoeiDiagnosticActivity::Overlaps(before,after)));
+}
 class Work {
     unsigned category;
     bool active = false;

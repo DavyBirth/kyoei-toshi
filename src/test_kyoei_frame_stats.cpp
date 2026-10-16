@@ -95,5 +95,11 @@ int main(int argc,char **) {
     { KyoeiFrameStats::Work work(3,256,8,8);std::this_thread::sleep_for(std::chrono::milliseconds(55)); }
     CHECK(logs.size()==before_readback+2);
     CHECK(logs.back().find("Kyoei readback stall: bytes=256 width=8 height=8")!=std::string::npos);
+    const auto before_gpu=logs.size();
+    KyoeiFrameStats::GpuWait(20,21,18,20,false,49.,Now());
+    CHECK(logs.size()==before_gpu);
+    for(unsigned i=0;i<10;++i) KyoeiFrameStats::GpuWait(20,21,18,20,false,240.,Now());
+    CHECK(logs.size()==before_gpu+8);
+    CHECK(logs.back().find("requested=20 next=21 known_before=18 known_after=20 forced_flush=0")!=std::string::npos);
     std::puts("FRAME STATS PASS: capture within/between calls annotated; clean window resets; raw samples retained");
 }
