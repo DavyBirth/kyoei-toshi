@@ -152,3 +152,11 @@ e backup. Baseline Friends-Test original intacta. Não enviado externamente.
 Linux requer pacote próprio ainda não preparado. Readback: adicionada correlação
 bytes/dimensões/tempo para esperas>50ms; build/testes PASS, fence preservado.
 Não afirmar ganho de FPS. Código de atualização tem3 testes sintéticos PASS.
+
+
+CORREÇÃO Linux: a distribuição Friends-Test usa Wine/Proton (Start on Linux.sh),
+portanto compartilha o PE Windows. Update pronto:
+build/Kyoei-Linux-Wine-Update-20261015.zip,7,3MB,aplicador Python>=3.11.
+Extrair na raiz: sh Atualizacao-Kyoei/Aplicar-no-Linux.sh. Quatro testes WSL
+PASS e preflight real PASS; backup/saves/prefixo preservados. Não é atualização
+do port ELF nativo. Ver docs/ATUALIZACOES-AMIGOS.md. Não enviado aos amigos.

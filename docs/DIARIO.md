@@ -2625,3 +2625,28 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Instruções/limites em docs/ATUALIZACOES-AMIGOS.md. Não enviado aos amigos
   pelo agente. Linux precisa build/pacote separado; não alegar atualização
   Linux nem ganhoFPS. Pacote Windows contém o runtime atual acumulado.
+
+
+### 15/10/2026 — atualização Linux da versão distribuída via Wine/Proton
+
+- Correção da orientação anterior: Friends-Test contém Start on Linux.sh que
+  inicia o launcher Windows via Wine/umu-run. Portanto a atualização desse
+  pacote usa o mesmo runtime PE, sem exigir build Linux nativo. O ELF nativo
+  experimental é outra frente e não foi substituído nem distribuído aqui.
+- Criados tools/apply_runtime_update_linux.py, teste próprio e opção
+  --linux-wine em build_runtime_update.py. ZIP privado pronto:
+  build/Kyoei-Linux-Wine-Update-20261015.zip,7.311.112bytes; SHA256
+  3166ed4e66694032ee3ecbf1bf95ba0a163df1e102da337953882320f161715a.
+- Mesmo payload/base do update Windows. Cinco arquivos,sem jogo,saves,cache,
+  prefixo Wine ou dados originais. Aplicação: extrair na raiz e executar
+  sh Atualizacao-Kyoei/Aplicar-no-Linux.sh. Requer Python>=3.11,sem sudo.
+- Confere hash/título/versão,recusa executáveis mapeados em/proc,serializa
+  aplicadores Linux via flock,verifica/copia backup e publica por rename
+  atômico. Usuário mantém jogo/launcher fechados: flock não substitui os
+  bloqueios Windows do Wine. Saves e prefixo preservados.
+- Quatro testes Linux Ubuntu/WSL PASS:preflight/substituição/backup/save/
+  permissões/reaplicação,payload corrompido,base errada,executável mapeado.
+  Testes corretamente ignorados em Windows. ZIP real CheckOnly contra
+  Friends-Test PASS,sem alterar distribuição original. Instruções corrigidas
+  em docs/ATUALIZACOES-AMIGOS.md. Nenhum jogo iniciado ou update enviado
+  externamente. Compatibilidade de gameplay/FPS ainda depende de teste.
