@@ -2796,3 +2796,25 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   nem percentual/dia vencedor em gameplay. Médias13/15 contêm menus/carga.
 - docs/COMPARACAO-DESEMPENHO-20261016.md contém tabela/limites. Sem novo jogo
   aberto,código alterado ou teste solicitado. Updates16/10 preservados.
+
+### 16/10/2026 — análise do teste 200526 de Davy
+
+- Sessão mais recente confirmada: log privado20261016_200526.log,340.160bytes.
+  Relatório build/research/performance-20261016-200526.json;49 janelas,
+  5.880 intervalos,145,724s resumidos,40,35FPS mistos; janela mais lenta17,82FPS.
+  Média inclui menus/carga e não comprova ganho contra sessões anteriores.
+- 485 intervalos>50ms,31>100ms; maior700,21ms. Sem falhas detectadas pelo
+  analisador. TLS handled0. Validação visual continua sendo a observação humana.
+- Nova coleta funcionou: endereço0x105beeed00 aparece em storage(role1) e
+  download(role3),imagem1x1,pitch64,formato37. Isso relaciona os dois papéis
+  no registro,mas não identifica luminância,shader produtor ou consumidor.
+- Nenhum readback/esperaGPU>=50ms registrado. Janelas completas:readback-finish
+  máximo18,09ms,linear18,11ms,scheduler-wait18,83ms. A espera longa antiga
+  não se reproduziu nesta sessão e não explica sozinha as travadas recorrentes.
+- command-batch máximo492,47ms;shader-compile8,51ms;graphics-pipeline4,58ms;
+  video-label18,78ms. Escopos não são timestampsGPU; não somar escopos inclusivos
+  nem atribuir automaticamente a pausa700ms ao batch492ms.
+- Próximo: decompor processamento de command-batch e ligar recurso observado
+  ao produtor/consumidor real. Nenhuma alteração de runtime ou novo jogo aberto.
+  Registro200147 anterior sem frame stats analisado separadamente,sem confundir
+  com a sessão de medição. Relatórios privados preservados;updates intactos.
