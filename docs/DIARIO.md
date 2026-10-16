@@ -2671,3 +2671,31 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   permanecem identificados e não foram regenerados para esta coleta local.
 - Próximo: Davy repetir começo em Medir desempenho atual EN.cmd para capturar
   readback bytes/dimensões junto dos contadores. Só então escolher correção.
+
+
+### 15/10/2026 — teste233924 e primeira redução de consultas por desenho
+
+- Log privado20261015_233924.log,424.152bytes,exit0.41 janelas/4.920 intervalos,
+  149,489s,32,91 FPS globais mistos,máximo567,34ms.753 intervalos>50ms,
+  34>100ms. Médias não são comparação controlada com sessões anteriores.
+- Nenhuma esperaScheduler/readback>=50ms nesta sessão; janelas completas:
+  scheduler-wait máximo27,16ms,readback-finish27,31ms,linear27,33ms.
+  video-label máximo23,26ms. A pausa242ms anterior não se reproduziu;
+  não explica sozinha as travadas recorrentes. Sem erro detectado no analisador.
+- Sampler128 ativo:354 janelas raster-draw,contra54.419 na coleta antiga;
+  ainda indica milhões de chamadas no trecho. Não extrapolar duração exata
+  totalGPU a partir das amostras. command-batch máximo440,02ms.
+- Achado concreto no código: Draw/Dispatch chamam PopPendingOperations; antes
+  havia Refresh/getSemaphoreCounterValue mesmo com fila pending_ops vazia.
+  Cópia integrada Kyoei agora retorna cedo quando a fila está vazia.
+  Fila com callbacks mantém Refresh/FIFO/IsFree/publicação originais.
+- Conferidos ResourcePool::CommitResource (Refresh quando busca falha),
+  Scheduler::IsFree (Refresh quando necessário), SubmitExecution (Refresh
+  após envio antes de alocar commandbuffers), MasterSemaphore::Wait (Refresh
+  antes de bloquear). Não removidas essas atualizações nem fences/readbacks.
+- Chave KYOEI_POLL_EMPTY_OPS=1 restaura polling vazio anterior no mesmoexe
+  para comparação. Padrão ativa retorno cedo. Snapshot/Godzilla intocados.
+- Build PASS; testes existentes readback-batch/GPU-wait/frame-stats e
+  analisador PASS; launcher CheckOnly PASS. Esses testes não substituem
+  gameplay ou provam ganhoFPS. Novo build local pronto para comparar começo.
+  Não iniciado jogo nem regenerados ZIPs dos amigos antes da validação.

@@ -707,6 +707,12 @@ target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasteri
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_scheduler.cpp" KYOEI_SCHEDULER)
 set(KYOEI_SCHEDULER "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n${KYOEI_SCHEDULER}")
+# Draw/dispatch call this even with no deferred publication pending. Avoid a
+# Vulkan counter query in that case. SubmitExecution still refreshes completion
+# before command-pool allocation; MasterSemaphore::Wait refreshes before waiting.
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "void Scheduler::PopPendingOperations() {\n    master_semaphore.Refresh();"
+  "void Scheduler::PopPendingOperations() {\n    static const bool legacy_empty_poll=[] { const char* value=std::getenv(\"KYOEI_POLL_EMPTY_OPS\"); return value && value[0]=='1'; }();\n    if (pending_ops.empty() && !legacy_empty_poll) return;\n    master_semaphore.Refresh();")
 kyoei_replace_checked(KYOEI_SCHEDULER
   "void Scheduler::Wait(u64 tick) {"
   "void Scheduler::Wait(u64 tick) {\n    const bool measuring=KyoeiFrameStats::Enabled();\n    const auto wait_started=measuring ? std::chrono::steady_clock::now() : std::chrono::steady_clock::time_point{};\n    const auto diagnostic_before=measuring ? KyoeiDiagnosticActivity::Now() : KyoeiDiagnosticActivity::Stamp{};\n    const auto next_before=master_semaphore.CurrentTick();\n    const auto known_before=master_semaphore.KnownGpuTick();")

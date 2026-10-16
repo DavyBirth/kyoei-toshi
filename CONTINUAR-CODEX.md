@@ -165,3 +165,10 @@ Coleta local mais recente: Scheduler::Wait>=50ms agora inclui contadores
 requested/next/known_before/known_after/forced_flush (máximo8/thread), sem nova
 consulta Vulkan. Aguardando novo teste do começo: logs antigos não contêm isso.
 Build/testes PASS. ZIPs amigos permanecem na revisão anterior identificada.
+
+Teste233924:32,91FPS globais,sem esperaScheduler/readback>=50ms. Não culpar
+readback sozinho. Candidato real implementado: PopPendingOperations retorna
+cedo com fila vazia,poupando consulta Vulkan por Draw/Dispatch. Fences/filas
+ativas intactas. KYOEI_POLL_EMPTY_OPS=1 restaura caminho antigo para A/B.
+Build/testes PASS; aguardando validação gameplay no começo pelo Davy.
+ZIPs antigos preservados; só atualizar amigos após validar candidato.
