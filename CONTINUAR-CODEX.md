@@ -144,3 +144,11 @@ Segundo teste231142 analisado: ver fim de docs/DESEMPENHO.md. Coleta por draw
 foi excessiva (54.419 linhas). Corrigida para1/128, build/testes PASS, sem
 partida do agente. Sessão29,25FPS não é comparação A/B limpa. Readback-finish
 atingiu241,97ms, labelwait30,57ms; investigar leitura sincronizada GPU.
+
+
+Update amigos preparado: build/Kyoei-Windows-Update-20261015.zip (7,3MB),
+só Windows x64/runtime próprio; docs/ATUALIZACOES-AMIGOS.md explica aplicação
+e backup. Baseline Friends-Test original intacta. Não enviado externamente.
+Linux requer pacote próprio ainda não preparado. Readback: adicionada correlação
+bytes/dimensões/tempo para esperas>50ms; build/testes PASS, fence preservado.
+Não afirmar ganho de FPS. Código de atualização tem3 testes sintéticos PASS.

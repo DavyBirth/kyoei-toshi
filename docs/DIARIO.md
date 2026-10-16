@@ -2602,3 +2602,26 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   altura e término monotônico. Assim compara fila/espera/cópia sem per-frame spam.
 - Build/teste C++ ativo/desligado e analisador Python PASS, incluindo registro
   de256bytes/8x8 sintético. Nenhum jogo iniciado, fence alterado ou ganho prometido.
+
+
+### 15/10/2026 — atualização pequena para a distribuição Windows
+
+- Davy pediu preparar o repasse das atualizações sem novo download20GB.
+  Criados tools/build_runtime_update.py e scripts/apply_runtime_update.ps1.
+  ZIP privado build/Kyoei-Windows-Update-20261015.zip:7.310.399bytes; SHA256
+  5cc4b5d025b4e0846325e1371d6fbee8609c62e08d6ff47b525b8d6bdd3586b7.
+- Contém5 arquivos:runtime próprio limpo,aplicador,CMD,hashes,leia-me. Não
+  contém jogo/dump/PS4 preparado,traduções,saves,cache ou logs. Só Windows x64.
+  Runtime novo53bf81d723e2af7675094e763e89cda3eb5c59f42fce4d6ca3febdb63d93d33b;
+  base aceitae577a569efc574c1c5d23fce5e5feae907196a999663772348f1c6ca0b2b8a2e.
+- Extrair na raiz do jogo,abrir Atualizacao-Kyoei/Aplicar atualizacao.cmd com
+  jogo e launcher fechados. Valida título/versão/hash do payload e da base,
+  trava sessão,copia/verifica e usa File.Replace com backup do runtime em
+  data/update-backups. Reaplicação é idempotente. Manifest base preservado.
+- Três testes sintéticos PASS:aplicação/preflight/backup/saves/reaplicação,
+  runtime incompatível e payload corrompido. ZIP real CheckOnly contra pasta
+  Friends-Test PASS; hash base igual manifest;tokens pessoais conhecidos sem
+  ocorrências no PE. Pastas Friends-Test e Portable não alteradas.
+- Instruções/limites em docs/ATUALIZACOES-AMIGOS.md. Não enviado aos amigos
+  pelo agente. Linux precisa build/pacote separado; não alegar atualização
+  Linux nem ganhoFPS. Pacote Windows contém o runtime atual acumulado.
