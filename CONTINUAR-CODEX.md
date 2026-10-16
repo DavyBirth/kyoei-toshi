@@ -172,3 +172,9 @@ cedo com fila vazia,poupando consulta Vulkan por Draw/Dispatch. Fences/filas
 ativas intactas. KYOEI_POLL_EMPTY_OPS=1 restaura caminho antigo para A/B.
 Build/testes PASS; aguardando validação gameplay no começo pelo Davy.
 ZIPs antigos preservados; só atualizar amigos após validar candidato.
+
+Teste234620 analisado:ganho do earlyreturn ainda não comprovado. Agora
+confirmado readback1x1/256bytes correlacionado a esperas91/133ms,sem flush
+extra e tick já submetido. Próximo: produtor/consumidor dessa imagem,
+sem desativar sincronização. Não pedir repetição idêntica sem hipótese nova.
+ZIPs amigos ainda anteriores ao candidato de polling vazio.

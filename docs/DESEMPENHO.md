@@ -369,3 +369,28 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   analisador PASS; launcher CheckOnly PASS. Esses testes não substituem
   gameplay ou provam ganhoFPS. Novo build local pronto para comparar começo.
   Não iniciado jogo nem regenerados ZIPs dos amigos antes da validação.
+
+
+### 15/10/2026 — teste234620 do retorno cedo com pending_ops vazio
+
+- Log privado20261015_234620.log,392.698bytes,exit0;52 janelas/6.240 intervalos,
+  198,611s,31,42FPS globais,máximo666,10ms;855 intervalos>50ms,36>100ms.
+  Sessão anterior149,489s/32,91FPS:não comparar médias como regressão/ganho.
+- Blocos por ordem de1200 intervalos:56,25/52,02/25,03/24,65/23,92FPS e
+  último parcial32,35. Antes:56,43/52,14/23,91/23,35 e parcial33,04.
+  Pequena diferença nos blocos lentos é indício,sem alinhamento de cena não
+  é ganho comprovado. Nenhum erro detectado; não implica validação visual.
+- Correlação nova concreta: imagem1x1,pitch/download256bytes; leitura91,41ms
+  termina40348010,28ms,esperaScheduler90,69ms termina40348009,72ms,
+  requested9339/next9340/known_before9332/known_after9339,forced_flush0.
+- Segunda imagem1x1/256bytes:readback132,83ms termina40362401,54ms,
+  espera132,29ms termina40362401,17ms,requested10011/next10012/
+  known_before10010/known_after10011,forced_flush0. Escopos inclusivos.
+  O tick exigido já estava submetido; não houve flush extra nesse caminho.
+  Não é largura de banda da cópia por si só; investigar trabalho anterior,
+  agendamento e ponto de consumo. Contador antes é cache, não fila GPU viva.
+- video-label máximo22,68ms; shaders máximo8,56ms nos600 registros resumidos;
+  command-batch máximo665,27ms. Essas leituras não explicam todas as travadas.
+- Otimização de fila vazia permanece candidata local; sem aumentoFPS validado
+  nem update novo para amigos. Próximo backend: identificar produtor/consumidor
+  da imagem1x1 antes de considerar leitura adiada. Não remover fences.
