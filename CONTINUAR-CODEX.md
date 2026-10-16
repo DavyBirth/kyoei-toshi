@@ -1,3 +1,17 @@
+# Entrega atual — updates cumulativos 16/10/2026
+
+- Davy deixou o próximo teste gameplay para amanhã. Nenhum jogo foi aberto.
+- ZIPs prontos para mandar: build/Kyoei-Windows-Update-20261016.zip e
+  build/Kyoei-Linux-Wine-Update-20261016.zip (~7,3MB cada). Ambos aceitam
+  Friends-Test original e primeiro updater15/10, sem baixar dados do jogo.
+- Incluem runtime atual: polling vazio reduzido e diagnóstico1x1/endereço.
+  Não afirmar ganhoFPS. Quatro cenários com ZIPs reais PASS: Windows/Linux
+  sobre original/update anterior, backup/save/prefixo/reaplicação verificados.
+- Gerador novo suporta --accept-update repetível e valida hashes de ZIPs
+  anteriores. Docs/ATUALIZACOES-AMIGOS.md tem instruções/hashes atuais.
+- Investigação permanece a seguir: confirmar endereço/formato do1x1 com
+  sistema de luminância. Não desativar fences/exposição nem adiar dados ainda.
+
 # Retomada prioritária — investigação de luminância (15/10/2026, fim da noite)
 
 - Último pedido de Davy: continuar autonomamente; quando ele pedir interrupção,

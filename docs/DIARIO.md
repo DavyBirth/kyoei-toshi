@@ -2755,3 +2755,29 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Próximo: recurso/endereço/formato contra backend/query real; só depois
   considerar async. GanhoFPS ainda sem prova; polling vazio segue candidato
   local. Não pedir teste idêntico sem usar a nova hipótese.
+
+
+### 16/10/2026 — updates cumulativos prontos para os amigos
+
+- Davy adiou gameplay para amanhã e pediu novos updates se houve progresso.
+  Incluído runtime atual:otimização de callbacks vazios e coleta limitada
+  de1x1/luminância. Não apresentar como aumento de FPS comprovado.
+- build_runtime_update.py aceita --accept-update repetível,conferindo
+  título/versão/plataforma/schema e hash do payload ZIP anterior.
+  Três testes do gerador PASS (válido,versão errada,payload corrompido).
+- Novos pacotes cumulativos,base original+update15/10 aceitos:
+  Windows build/Kyoei-Windows-Update-20261016.zip:7.311.654bytes,SHA256
+  df8cbd08c599332b2b1c87a7d0e3ab9ce91e151b332cc169832123f5acc59f7d.
+  Linux/Wine build/Kyoei-Linux-Wine-Update-20261016.zip:7.312.368bytes,SHA256
+  faee99ef256fc9b35f943b25c31fdd650dcb1280daa23cd96c1744103f7d9355.
+  Payload compartilhado509c01e74e7613ddc17033aa922cd3448b1c05329133f430e85e612d3a9dc7c6.
+- Testes aplicador Windows3/Linux4 e frame_stats ativo/desligado PASS.
+  Verificação adicional dos ZIPs reais em4 instalações temporárias:
+  Windows/Linux × base original/update anterior; aplicação,reaplicação,
+  backup exato,save e prefixo Wine preservados PASS. Sem arquivos do jogo
+  nem identificadores pessoais conhecidos no payload.
+- Relatório privado build/research/update-validation-20261016.json.
+  docs/ATUALIZACOES-AMIGOS.md atualizado. Extrair sobre pasta do jogo e
+  substituir arquivos de Atualizacao-Kyoei. Launchers/saves/cache intactos.
+  Nenhum jogo iniciado,distribuição local original alterada ou mensagem
+  externa enviada. Teste gameplay do recurso1x1 fica para amanhã.

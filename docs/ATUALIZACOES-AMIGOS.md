@@ -1,5 +1,35 @@
 # Atualizações pequenas
 
+## Revisão atual: 16/10/2026
+
+- Windows: `build/Kyoei-Windows-Update-20261016.zip`, 7.311.654 bytes.
+- Linux/Wine: `build/Kyoei-Linux-Wine-Update-20261016.zip`, 7.312.368 bytes.
+- Ambos aceitam a instalação Friends-Test original e quem aplicou o update de
+  15/10. São cumulativos: não precisa aplicar o anterior primeiro.
+- Incluem retorno cedo na fila de callbacks vazia (menos consultas ociosas ao
+  contador GPU) e diagnóstico limitado de recursos 1×1/esperas longas.
+- Ganho de FPS ainda não comprovado; diagnóstico completo é opt-in e o jogo
+  não foi aberto pelo agente para preparar esses pacotes.
+
+Extrair na pasta do jogo, substituindo os arquivos da pasta `Atualizacao-Kyoei`
+se ela já existir. Fechar jogo e launcher antes. Windows: executar
+`Aplicar atualizacao.cmd`; Linux: `sh Atualizacao-Kyoei/Aplicar-no-Linux.sh`.
+Requisitos e backup permanecem como descritos abaixo. Instalações sintéticas
+com os payloads reais das duas bases foram atualizadas e reaplicadas nos dois
+sistemas: hashes, backups, save e prefixo Wine preservados (quatro cenários).
+As pastas Friends-Test e Portable originais ficaram intactas.
+
+Para gerar releases cumulativos, usar `--accept-update <ZIP-anterior>` (pode
+repetir a opção). O gerador verifica identidade e hash do payload desses ZIPs
+antes de aceitar os hashes instalados. Não adicionar hashes arbitrários.
+
+Payload novo SHA256:
+`509c01e74e7613ddc17033aa922cd3448b1c05329133f430e85e612d3a9dc7c6`.
+Windows ZIP: `df8cbd08c599332b2b1c87a7d0e3ab9ce91e151b332cc169832123f5acc59f7d`.
+Linux ZIP: `faee99ef256fc9b35f943b25c31fdd650dcb1280daa23cd96c1744103f7d9355`.
+
+## Revisão anterior: 15/10/2026
+
 Pacote preparado em 15/10/2026: `build/Kyoei-Windows-Update-20261015.zip`,
 7.310.399 bytes (aproximadamente 7,3 MB). É exclusivo para Windows x64,
 destinado ao runtime do pacote Friends-Test enviado anteriormente.
@@ -52,7 +82,8 @@ python -m unittest discover -s tools -p test_runtime_update.py
 
 A saída deve ser um ZIP novo em `build/`. O gerador confere o runtime base com
 seu manifest e limpa metadados de desenvolvimento do PE. Para releases futuras,
-registrar as versões base aceitas; esta ferramenta aceita uma base por pacote.
+registrar as versões base aceitas; a ferramenta aceita a distribuição base e
+os payloads dos ZIPs anteriores indicados por `--accept-update`.
 
 Validação de 15/10: três testes com arquivos sintéticos (aplicação/backup/saves,
 runtime incompatível e payload danificado), reaplicação, preflight do ZIP real
