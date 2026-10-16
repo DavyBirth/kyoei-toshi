@@ -2781,3 +2781,18 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   substituir arquivos de Atualizacao-Kyoei. Launchers/saves/cache intactos.
   Nenhum jogo iniciado,distribuição local original alterada ou mensagem
   externa enviada. Teste gameplay do recurso1x1 fica para amanhã.
+
+
+### 16/10/2026 — comparação histórica de FPS solicitada por Davy
+
+- Reanalisados23 logs com frame stats (12/13/15),mais diário e observação
+  de gameplay. Inventário privado build/research/fps-history-20261016.json.
+  Incluído log235349:41 janelas,136,07s,36,16FPS mistos,máximo567,26ms.
+- Maior avanço técnico demonstrado:12/10,TLS direto;19–33mil exceções por
+  apresentação antes,zero depois;fixture com leituras32ms→0,02–0,10ms.
+  Não é fator de ganhoFPS. Relato humano de melhora registrado no própriodia.
+- Trechos de ação observados12/10:22,74/25,41FPS; sessões atuais ainda têm
+  blocos lentos23–25. Sem rota A/B alinhada,não afirmar saltoFPS significativo
+  nem percentual/dia vencedor em gameplay. Médias13/15 contêm menus/carga.
+- docs/COMPARACAO-DESEMPENHO-20261016.md contém tabela/limites. Sem novo jogo
+  aberto,código alterado ou teste solicitado. Updates16/10 preservados.
