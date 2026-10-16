@@ -2845,3 +2845,33 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Build local pronto para coleta futura;sem ganhoFPS demonstrado nesta etapa.
   Próximo:usar decomposição para distinguir retomada longa de fila com muitos
   envios/retornos. Registro200526 não contém os novos campos retroativamente.
+
+### 16/10/2026 — teste201734: retomadas longas e pipelines
+
+- Davy executou nova medição. Log privado20261016_201734.log,640.983bytes,
+  exit0;77 janelas/9.240 intervalos,306,680s resumidos,30,13FPS mistos.
+  1.195 intervalos>50ms,61>100ms,máximo2.917,03ms. Sessão mais longa e
+  percurso não alinhado:sem conclusão de regressão/ganho contra40,35FPS.
+  Relatório privado build/research/performance-20261016-201734.json.
+- Coleta detalhada funcionou:8 lotes,8–12 retomadas cada;completed=resumes,
+  yielded0,empty0 em todos. Soma das retomadas difere do total no máximo0,03ms
+  nos valores arredondados. Exemplos:230,37ms,total/resumes230,37ms,
+  maior retomada230,33ms;306,68ms,resumes306,67ms,maior267,67ms.
+  Evidência aponta execução dentro de retomadas,não giro entre filas nestes
+  oito lotes. Não generalizar para sessão inteira:coleta esgotou cedo.
+- graphics-pipeline máximo429,21ms em840 chamadas resumidas;registros esparsos
+  97,64/220,51/176,46ms,entre outros. Escopo inclui criação de GraphicsPipeline
+  e RegisterPipelineData/trabalho associado;isolá-los antes de culpar somente
+  driver Vulkan. Não há end_ms nesses registros para correlação temporal exata.
+  Shader-compile máximo11,86ms;video-label19,06ms;queue-lock0,93ms.
+- Retornou espera de imagem1x1/256bytes no endereço0x105beeed00:114,89ms,
+  esperaGPU114,17ms,requested18336,next18337,known_before18331,after18336,
+  forced_flush0. Recurso storage/download confirmado no teste anterior,mas
+  associação à luminância ainda não provada. Escopos inclusivos,não somar.
+- command-batch máximo2.931,23ms em resumo posterior ao teto da coleta;
+  não há decomposição desta pausa. Não atribuí-la aos pipelines ou readback
+  apenas pela proximidade no arquivo. Capturas do cache de driver7,49–15,83ms,
+  writer completed12/failed0/latest_saved1. Sem falhas detectadas no analisador.
+- Próximo foco:separar criação Vulkan/registro persistente no caminho de novos
+  pipelines e conferir cache/warmup existente antes de mudar sincronização.
+  Nenhum runtime alterado,jogo iniciado ou novo teste solicitado nesta análise.
