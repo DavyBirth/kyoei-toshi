@@ -61,6 +61,11 @@ gpu_waits=[dict(requested=int(requested),next=int(next_tick),known_before=int(be
                 forced_flush=bool(int(flush)),milliseconds=float(duration),end_ms=float(end),diagnostic=bool(int(diagnostic)))
     for requested,next_tick,before,after,flush,duration,end,diagnostic in re.findall(
         r'Kyoei GPU wait: requested=(\d+) next=(\d+) known_before=(\d+) known_after=(\d+) forced_flush=([01]) milliseconds=([\d.]+) end_ms=([\d.]+) diagnostic=([01])',text)]
+
+command_batches=[dict(milliseconds=float(duration),resume_ms=float(resume),max_resume_ms=float(maximum),
+    resumes=int(count),completed=int(completed),yielded=int(yielded),empty=int(empty),end_ms=float(end),diagnostic=bool(int(diagnostic)))
+    for duration,resume,maximum,count,completed,yielded,empty,end,diagnostic in re.findall(
+        r'Kyoei command batch: milliseconds=([\d.]+) resume_ms=([\d.]+) max_resume_ms=([\d.]+) resumes=(\d+) completed=(\d+) yielded=(\d+) empty=(\d+) end_ms=([\d.]+) diagnostic=([01])',text)]
 deadline_summary={}
 for label,state in [('unflagged',0),('diagnostic',1)]:
     selected=[row for row in deadlines if row['diagnostic']==state]
@@ -93,6 +98,8 @@ report=dict(log=str(args.log.resolve()),start_byte=args.start_byte,end_byte=args
             small_images=small_images,
             small_images_note='At most 16 unique (address,format,role) records per thread, 1x1 images only; roles 1=storage binding, 2=render target lookup, 3=download. Virtual addresses can be reused. Bindings do not prove a particular shader executed or identify a game subsystem.',
             gpu_waits=gpu_waits,
+            command_batches=command_batches,
+            command_batches_note='First eight batches >=50ms per worker thread. A batch drains a changing queue, not one submission. Resume wall time includes nested waits and callbacks; yielded means returned without completing, not proven idle time. Empty counts queue visits. Measurement stops after cap. Not GPU timestamps; do not sum with other scopes.',
             gpu_waits_note='Up to eight Scheduler::Wait calls >=50ms per thread. Known ticks are cached completion counters, not live GPU timestamps or workload durations. next is the logical tick before Wait; forced_flush reports the existing unsent-tick path. No added Vulkan queries.',
             work_stalls_note='At most eight calls >=50ms per category/thread. end_ms uses a process-local monotonic clock; nested scopes overlap and must not be summed. Not GPU timestamps or a complete trace.',
             compile_stalls_note='Capped at eight slow calls per compiler category/thread; not a complete stall count.')

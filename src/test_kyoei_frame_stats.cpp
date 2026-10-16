@@ -9,13 +9,17 @@ extern "C" void gz_log(const char *format,...) {
     char line[2048];va_list args;va_start(args,format);std::vsnprintf(line,sizeof(line),format,args);va_end(args);logs.emplace_back(line);
 }
 #include "kyoei_frame_stats.h"
+#include "kyoei_command_batch.h"
 extern "C" uint64_t kyoei_tls_fault_count(void) { return 100; }
 #define CHECK(x) do { if(!(x)) { std::fprintf(stderr,"Frame stats failed at %d\n",__LINE__);return 1; } } while(0)
 int main(int argc,char **) {
     if(argc>1) {
         _putenv_s("KYOEI_FRAME_STATS","0");
         { KyoeiFrameStats::Work work(0); }KyoeiFrameStats::Presented();
-        CHECK(logs.empty());return 0;
+        unsigned calls=0;
+        struct Task { unsigned* calls; void resume() { ++*calls; } bool done() { return true; } };
+        { KyoeiFrameStats::CommandBatch batch; batch.Resume(Task{&calls}); batch.Empty(); batch.Finish(90.,1000.); }
+        CHECK(calls==1 && logs.empty());return 0;
     }
     _putenv_s("KYOEI_FRAME_STATS","1");
     using namespace KyoeiDiagnosticActivity;
@@ -110,5 +114,36 @@ int main(int argc,char **) {
     CHECK(logs.size()==before_images+2);
     for(unsigned i=0;i<100;++i) KyoeiFrameStats::SmallImage(0x2000+i,1,1,64,37,2);
     CHECK(logs.size()==before_images+16);
-    std::puts("FRAME STATS PASS: capture within/between calls annotated; clean window resets; raw samples retained");
+    const auto before_batches=logs.size();
+    { KyoeiFrameStats::CommandBatch batch; batch.Finish(49.,1000.); }
+    CHECK(logs.size()==before_batches);
+    unsigned active_calls=0;
+    struct ActiveTask {
+        unsigned* calls;
+        void resume() { ++*calls; }
+        bool done() { return *calls==2; }
+    };
+    {
+        KyoeiFrameStats::CommandBatch batch;
+        batch.Resume(ActiveTask{&active_calls}); batch.Resume(ActiveTask{&active_calls});
+        batch.Finish(90.,1000.);
+    }
+    CHECK(active_calls==2 && logs.size()==before_batches+1);
+    CHECK(logs.back().find("resumes=2 completed=1 yielded=1")!=std::string::npos);
+    for(unsigned i=0;i<10;++i) {
+        KyoeiFrameStats::CommandBatch batch;
+        batch.Record(12.,false); batch.Record(3.,true); batch.Empty();
+        if(i==0) { Begin();End(); }
+        batch.Finish(90.,1000.);
+    }
+    CHECK(logs.size()==before_batches+8);
+    CHECK(logs[before_batches+1].find("diagnostic=1")!=std::string::npos);
+    CHECK(logs.back().find("resume_ms=15.00 max_resume_ms=12.00 resumes=2 completed=1 yielded=1 empty=1")!=std::string::npos);
+    CHECK(logs.back().find("diagnostic=0")!=std::string::npos);
+    // Report exhaustion must never suppress execution of a task.
+    unsigned calls=0;
+    struct Task { unsigned* calls; void resume() { ++*calls; } bool done() { return true; } };
+    { KyoeiFrameStats::CommandBatch batch; batch.Resume(Task{&calls}); }
+    CHECK(calls==1 && logs.size()==before_batches+8);
+    std::puts("FRAME STATS PASS: diagnostics, deadlines, batch accounting/cap and disabled execution");
 }

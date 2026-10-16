@@ -18,6 +18,7 @@ Kyoei work stats: stage=linear-downloads calls=120 mean_ms=90.00 p95_ms=120.00 m
 Kyoei compile stall: stage=shader-compile milliseconds=44.00 diagnostic=0
 Kyoei work stall: stage=video-label-wait milliseconds=77.00 end_ms=1000.00 diagnostic=0
 Kyoei work stall: stage=command-batch milliseconds=90.00 end_ms=1001.00 diagnostic=1
+Kyoei command batch: milliseconds=90.00 resume_ms=15.00 max_resume_ms=12.00 resumes=2 completed=1 yielded=1 empty=1 end_ms=1001.00 diagnostic=1
 Kyoei work stats: stage=raster-draw calls=120 mean_ms=0.02 p95_ms=0.03 max_ms=0.10 diagnostic=0 sample_stride=128
 Kyoei readback stall: bytes=256 width=8 height=8 milliseconds=240.00 end_ms=1002.00
 Kyoei GPU wait: requested=20 next=21 known_before=18 known_after=20 forced_flush=0 milliseconds=240.00 end_ms=1002.00 diagnostic=0
@@ -46,6 +47,7 @@ Kyoei frame deadlines: intervals=120 over_60hz=120 over_30hz=100 over_50ms=80 ov
     assert report['gpu_waits']==[dict(requested=20,next=21,known_before=18,known_after=20,
         forced_flush=False,milliseconds=240.0,end_ms=1002.0,diagnostic=False)]
     assert report['small_images']==[dict(address='0x1234',width=1,height=1,pitch=64,format=37,role=3)]
+    assert report['command_batches']==[dict(milliseconds=90.,resume_ms=15.,max_resume_ms=12.,resumes=2,completed=1,yielded=1,empty=1,end_ms=1001.,diagnostic=True)]
     assert report['work_stalls']==[
         dict(stage='video-label-wait',milliseconds=77.0,end_ms=1000.0,diagnostic=False),
         dict(stage='command-batch',milliseconds=90.0,end_ms=1001.0,diagnostic=True)]

@@ -432,7 +432,7 @@ kyoei_replace_checked(KYOEI_LIVERPOOL
 # nested GPU waits, so it must not be added to scheduler/readback timings.
 kyoei_replace_checked(KYOEI_LIVERPOOL
   "        while (num_submits || num_commands) {"
-  "        {\n        KyoeiFrameStats::Work measurement(12);\n        while (num_submits || num_commands) {")
+  "        {\n        KyoeiFrameStats::Work measurement(12);\n        KyoeiFrameStats::CommandBatch batch_detail;\n        while (num_submits || num_commands) {")
 kyoei_replace_checked(KYOEI_LIVERPOOL
   "        if (submit_done) {"
   "        }\n        if (submit_done) {")
@@ -458,6 +458,12 @@ foreach(KYOEI_MEASURE_METHOD IN ITEMS Draw DrawIndirect DispatchDirect DispatchI
     "{ KyoeiFrameStats::Work raster_measurement(${KYOEI_MEASURE_CATEGORY}); \\0 }"
     KYOEI_LIVERPOOL "${KYOEI_LIVERPOOL}")
 endforeach()
+kyoei_replace_checked(KYOEI_LIVERPOOL "#include \"kyoei_frame_stats.h\""
+  "#include \"kyoei_frame_stats.h\"\n#include \"kyoei_command_batch.h\"")
+kyoei_replace_checked(KYOEI_LIVERPOOL "                if (queue.submits.empty()) {"
+  "                if (queue.submits.empty()) {\n                    batch_detail.Empty();")
+kyoei_replace_checked(KYOEI_LIVERPOOL "            task.resume();"
+  "            batch_detail.Resume(task);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp" CONTENT "${KYOEI_LIVERPOOL}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp")
 # Patch only a private snapshot. The guest can reuse NOP storage by changing

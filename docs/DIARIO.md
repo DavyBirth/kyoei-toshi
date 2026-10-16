@@ -2818,3 +2818,30 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   ao produtor/consumidor real. Nenhuma alteração de runtime ou novo jogo aberto.
   Registro200147 anterior sem frame stats analisado separadamente,sem confundir
   com a sessão de medição. Relatórios privados preservados;updates intactos.
+
+### 16/10/2026 — decomposição dos lotes gráficos após teste200526
+
+- Davy pediu continuar trabalhando. Revisão de Liverpool::Process demonstrou
+  que command-batch mede um laço que drena fila dinâmica, não um único envio.
+  O máximo492,47ms anterior não identifica sozinho uma chamada lenta.
+- Nova coleta Kyoei em src/kyoei_command_batch.h,integrada por CMake somente
+  na cópia gerada: duração total,soma/maior retomada externa,contagens de
+  retomadas,tarefas concluídas,retornos sem conclusão e visitas a filas vazias.
+  end_ms/diagnostic permitem correlação. Nenhum timer atravessa co_yield.
+- PerformanceStats apenas;primeiros8 lotes>=50ms por thread. Após teto,
+  encerra contagem/relógios detalhados. Durante coleta há duas leituras de
+  relógio por retomada;possível custo em fila com muitas retomadas documentado.
+  yielded não prova ociosidade;tempos incluem esperas/callbacks internos;
+  diferença total/resumes não identifica automaticamente locks ou contenção.
+- Analisador aceita novo registro e logs antigos. docs/re/COMMAND-BATCH.md
+  explica contrato,limites e ausência de timestampsGPU. Snapshot/Godzilla
+  preservados;ordem/condições de sincronização inalteradas.
+- Build kyoei e teste final PASS. Teste C++:tarefas executadas com coleta
+  ativa/desligada/teto esgotado,retorno sem conclusão,contagem,limiar49ms,
+  teto8 e atribuição de diagnóstico PASS. Analisador Python PASS.
+  Launcher PerformanceStats CheckOnly via PowerShell -ExecutionPolicy Bypass
+  PASS;invocação direta anterior bloqueada pela política local de scripts.
+  git diff --check PASS. Nenhum jogo iniciado nem ZIP regenerado.
+- Build local pronto para coleta futura;sem ganhoFPS demonstrado nesta etapa.
+  Próximo:usar decomposição para distinguir retomada longa de fila com muitos
+  envios/retornos. Registro200526 não contém os novos campos retroativamente.
