@@ -3110,3 +3110,39 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Pacotes 20261017 prontos e validados; protótipo segue desligado. Próxima
   investigação: pausas de carregamento e qualidade durante sprint relatadas por
   Davy; medir progresso real entre filas antes de promover readback cooperativo.
+
+### 17/10/2026 — reprodução do desfoque; fidelidade exigida
+- Davy esclareceu: personagem borrado e sem detalhe durante sprint. Reproduzido
+  com cópia privada de save/cache e áudio dummy mudo: cena inteira borrada,
+  HUD nítida; vida 100 para 90; imagem volta a ficar nítida depois de parar.
+  Não é prova de textura faltando nem de comportamento correto do PS4.
+- Partidas sprint-20261017, sprint-traced-20261017, sprint-draws-20261017 e
+  faithful-packets-20261017 fecharam normalmente (exit 0). Evidências privadas
+  em build/research/detiler-fix-20261016. Nenhum save original modificado.
+- Adicionado diagnóstico opt-in KYOEI_STREAMING_TRACE: escopos lentos de
+  texturas/buffers/desenhos/callbacks/pacotes e combinações de dimensões.
+  Sem alterar renderização ou sincronização. Limites por categoria/opcode
+  evitam que esperas de menu consumam a evidência toda. Desligado por padrão.
+- Primeiros uploads lentos 27–42 ms não explicam sozinhos lote de ~300 ms;
+  a pausa original ~800 ms permanece sem causa corrigida. Não alegar ganho.
+- Prototipada opção de remover desfoque; teste CPU passou, mas Davy interrompeu
+  para exigir 100% de fidelidade ao PS4. Retirados opção/atalho/fontes/parâmetro
+  da integração imediatamente e recompilado. Teste isolado da opção fechado
+  antes do sprint (exit 0); sem confirmação visual. Pesquisa única arquivada
+  apenas em build/research/discarded-blur-option-20261017.zip. Não reativar.
+- Regra de fidelidade salva em AGENTS.md: preservar efeitos/resolução interna/
+  velocidade/comportamento; comparar com referência antes de chamar efeito
+  original de bug. Sem reduzir qualidade, remover efeitos ou alterar timestep
+  para disfarçar desempenho. ZIPs dos amigos anteriores não contêm a opção.
+- docs/re/DESFOQUE-E-TRAVADAS.md registra observações e limites. Build normal e
+  launcher CheckOnly PASS após retirada. Teste startup-opcodes-20261017 ainda
+  em andamento neste checkpoint; registrar resultado antes de concluir.
+- Resultado final startup-opcodes-20261017: exit 0, cenário conferido por
+  capturas anteriores do mesmo perfil; recorte desta execução é início/entrada
+  da fase, não benchmark de gameplay estabilizado. Upload 64 MiB: ~40 ms;
+  pacote 0x2d correspondente: ~46 ms. Sem comando isolado explicando a pausa
+  original de ~800 ms neste teste. Escopos inclusivos não provam tempo GPU.
+- Nenhuma alteração de efeitos permaneceu no código ou no executável final.
+  Derivados do teste da opção descartada removidos após confirmar ausência
+  de dependências e processos. Pesquisa única preservada em arquivo privado.
+  Build e CheckOnly PASS; diagnóstico novo é opt-in. Travadas ainda pendentes.

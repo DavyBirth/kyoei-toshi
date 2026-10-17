@@ -471,6 +471,11 @@ kyoei_replace_checked(KYOEI_LIVERPOOL "            task.resume();"
 set(KYOEI_LIVERPOOL "#include \"kyoei_cooperative_readback.h\"\n${KYOEI_LIVERPOOL}")
 set(KYOEI_COOPERATIVE_SCHEDULER_HEADER [=[#include "video_core/renderer_vulkan/vk_scheduler.h"]=])
 set(KYOEI_LIVERPOOL "${KYOEI_COOPERATIVE_SCHEDULER_HEADER}\n${KYOEI_LIVERPOOL}")
+set(KYOEI_LIVERPOOL "#include \"kyoei_streaming_trace.h\"\n${KYOEI_LIVERPOOL}")
+kyoei_replace_checked(KYOEI_LIVERPOOL "        ProcessCommands();"
+  "        { KyoeiStreamingTrace::Scope command_scope(\"command-callbacks\"); ProcessCommands(); }")
+kyoei_replace_checked(KYOEI_LIVERPOOL "            const PM4ItOpcode opcode = header->type3.opcode;"
+  "            const PM4ItOpcode opcode = header->type3.opcode;\n            KyoeiStreamingTrace::Scope packet_scope(\"gfx-packet-inclusive\",uint64_t(opcode),count*4);")
 set(KYOEI_COOPERATIVE_GFX [=[                if (rasterizer) {
                     const auto completion_submits=num_submits.load();
                     auto completion=KyoeiCooperativeReadback::Process(rasterizer->GetScheduler(),[this] { rasterizer->ProcessDownloadImages(); });
@@ -565,6 +570,10 @@ set(KYOEI_VERTEX_PROBE [=[
     }
 ]=])
 kyoei_replace_checked(KYOEI_BUFFER_CACHE "${KYOEI_VERTEX_INPUTS}" "${KYOEI_VERTEX_INPUTS}\n${KYOEI_VERTEX_PROBE}")
+set(KYOEI_BUFFER_CACHE "#include \"kyoei_streaming_trace.h\"\n${KYOEI_BUFFER_CACHE}")
+kyoei_replace_checked(KYOEI_BUFFER_CACHE
+  "std::pair<Buffer*, u32> BufferCache::ObtainBufferForImage(VAddr gpu_addr, u32 size) {"
+  "std::pair<Buffer*, u32> BufferCache::ObtainBufferForImage(VAddr gpu_addr, u32 size) {\n    KyoeiStreamingTrace::Scope streaming_scope(\"image-buffer\",gpu_addr,size);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp" CONTENT "${KYOEI_BUFFER_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/texture_cache/texture_cache.cpp" KYOEI_TEXTURE_CACHE)
@@ -689,6 +698,13 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "    auto& download_buffer = buffer_cache.GetUtilityBuffer(MemoryUsage::Download);"
   "    if (sync && KyoeiTinyDownload::Queue(image,instance,scheduler)) return;\n    auto& download_buffer = buffer_cache.GetUtilityBuffer(MemoryUsage::Download);")
+set(KYOEI_TEXTURE_CACHE "#include \"kyoei_streaming_trace.h\"\n${KYOEI_TEXTURE_CACHE}")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "void TextureCache::RefreshImage(Image& image) {"
+  "void TextureCache::RefreshImage(Image& image) {\n    KyoeiStreamingTrace::Scope streaming_scope(\"refresh-image\",image.info.guest_address,image.info.guest_size,image.info.size.width,image.info.size.height);")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "void TextureCache::RunGarbageCollector() {"
+  "void TextureCache::RunGarbageCollector() {\n    KyoeiStreamingTrace::Scope streaming_scope(\"texture-gc\");")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "ImageId TextureCache::FindImage(ImageDesc& desc, bool exact_fmt) {"
+  "ImageId TextureCache::FindImage(ImageDesc& desc, bool exact_fmt) {\n    KyoeiStreamingTrace::Scope streaming_scope(\"find-image\");")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 
 # Kyoei-only driver cache. Keep the frozen dependency intact. Create the
@@ -863,6 +879,11 @@ set(KYOEI_SCISSOR_PUSH [=[        scissors.push_back({
         });]=])
 kyoei_replace_checked(KYOEI_RASTERIZER "${KYOEI_SCISSOR_PUSH}"
   "${KYOEI_SCISSOR_PUSH}\n        if (KyoeiRasterTrace::Capturing()) KyoeiRasterTrace::Record(KyoeiRasterTrace::MakeProfile(regs,viewport,scissors.back(),i));")
+set(KYOEI_RASTERIZER "#include \"kyoei_streaming_trace.h\"\n${KYOEI_RASTERIZER}")
+kyoei_replace_checked(KYOEI_RASTERIZER "    KyoeiRasterTrace::BeginDraw();"
+  "    KyoeiRasterTrace::BeginDraw();\n    KyoeiStreamingTrace::Scope streaming_draw_scope(\"draw\");")
+kyoei_replace_checked(KYOEI_RASTERIZER "    return state;"
+  "    KyoeiStreamingTrace::RenderExtent(state.width,state.height,regs.viewports[0].xscale,regs.viewports[0].yscale,state.depth_stencil_attachment.has_depth);\n    return state;")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasterizer.cpp" CONTENT "${KYOEI_RASTERIZER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasterizer.cpp")
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
