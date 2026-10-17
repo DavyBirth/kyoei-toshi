@@ -2940,3 +2940,25 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   pré-carregamento real e impacto nas travadas ainda não validados no jogo.
   O cache Vulkan do driver é separado e já vinha funcionando;esta correção
   não promete eliminar as demais pausas. Nenhum ZIP regenerado.
+
+### 16/10/2026 — pré-compilação real na GPU:693 pipelines
+
+- Davy perguntou pelo atalho EN e autorizou testar compilação prévia de shaders.
+  Confirmado:Medir desempenho atual EN.cmd chama build/kyoei.exe via launcher
+  com PerformanceStats. WarmUp já acontece na inicialização normal do backend.
+- Executado runtime atual em --gpu-test com KYOEI_CACHE_SELF_TEST=1,cache real
+  do próprio projeto e mesma GPU. Antes do teste,conferido nenhum kyoei aberto.
+  Nenhum código adicional necessário para habilitar o pré-carregamento.
+- Resultado real:Preloaded693 pipelines;sem rejeição do perfil,sem aviso de
+  stale pipelines;backend Vulkan pronto,exit0. Confirma em execução real que
+  a correção dos bytes de padding permite reutilizar a base existente.
+- Driver cache19.670.149bytes,captura16,94ms,writer completed1/failed0,
+  latest_saved1. Self-test encerrou antes de guest_main,sem partida:
+  runtime files opened0/reads0/writes0,maps0. Saves não acessados.
+  Tempo0,03ms no log é somente flush do writer,não duração do pré-carregamento.
+- Evidência privada build/research/precompile-20261016.log. Única alteração
+  externa esperada:atualização normal do blob Vulkan no cache já configurado.
+  Dump/saves/base de shaders preservados;nenhum pacote de amigos regenerado.
+- Atalho normal continua fazendo WarmUp antes da partida. Isso cobre pipelines
+  conhecidos da base,não todos os shaders/cenas do jogo. Redução de travadas/FPS
+  ainda depende de observação numa nova partida após esse pré-carregamento.
