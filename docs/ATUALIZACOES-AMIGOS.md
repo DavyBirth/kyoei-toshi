@@ -1,6 +1,36 @@
 # Atualizações pequenas
 
-## Revisão atual: 17/10/2026
+## Revisão atual: 17/10/2026b
+
+- Pacote Windows: `build/Kyoei-Windows-Update-20261017b.zip` (7.334.300 bytes).
+- Pacote Linux/Wine: `build/Kyoei-Linux-Wine-Update-20261017b.zip` (7.335.464 bytes).
+- Ambos usam o mesmo runtime e aceitam a instalação Friends-Test original e as
+  atualizações de 15, 16, 17 e 17b de outubro. São pacotes cumulativos.
+- Aplicação real em instalações descartáveis: Windows e Linux/Wine passaram nas
+  quatro bases. Preflight, aplicação, reaplicação, backup, save e prefixo Wine
+  conferidos em todos os oito cenários. Relatório privado em
+  `build/research/update-validation-20261017b.json`.
+- Estes ZIPs contêm somente o runtime próprio, o aplicador, instruções e hashes;
+  nenhum arquivo do jogo, tradução completa, save ou configuração pessoal.
+
+Hashes SHA256 dos ZIPs:
+
+- Windows: `5c8d50a2ed3ba199eafb2c62734713c3e9e58bfb6aa234f09317968ce1df907b`
+- Linux/Wine: `0655b01cc6f525b7170ab22ebdb97163f8e251891123b4c4db4b8210a1296c14`
+- Runtime nos dois pacotes: `6196e2a968e248af422d080f21fa8449e67ce55e726501adf64743c6033f0e55`
+
+Para os amigos: fechar o jogo e o launcher, extrair o ZIP na pasta que contém
+`City Shrouded in Shadow.exe` e substituir a pasta `Atualizacao-Kyoei` se ela
+já existir. No Windows, executar `Atualizacao-Kyoei/Aplicar atualizacao.cmd`.
+No Linux x86-64 com Wine/Proton, executar `sh Atualizacao-Kyoei/Aplicar-no-Linux.sh`
+(Python 3.11+; sem `sudo`). Depois, iniciar pelo launcher habitual. O aplicador
+confere versão e SHA256, cria backup do runtime anterior e preserva saves/cache.
+
+Este é um atualizador manual por ZIP. Não há endereço de releases configurado
+para busca/download automático. O pacote Linux atende Wine/Proton; o port Linux
+nativo ainda não inicia o jogo.
+
+## Revisão anterior: 17/10/2026
 
 - Windows: `build/Kyoei-Windows-Update-20261017.zip`, 7.327.905 bytes.
 - Linux/Wine: `build/Kyoei-Linux-Wine-Update-20261017.zip`, 7.329.069 bytes.

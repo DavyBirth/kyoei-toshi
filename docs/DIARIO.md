@@ -3397,3 +3397,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   recebeu novas flags. Testes fechados normalmente, sem processo kyoei ativo.
   A diferenca estrutural de gravacao serial merece investigacao integrada,
   nao mais uma rodada de flags. 60 FPS continuam nao demonstrados.
+
+
+### 17/10/2026 — atualizador cumulativo para amigos
+- Davy escolheu entrega manual por ZIP e teste no Linux via Wine/Proton. O port Linux nativo continua sem executar o jogo. Sem endpoint de releases, manter atualização manual; não adicionar busca automática sem canal publicado.
+- Recompilado `kyoei.exe` com CMake de produção restaurado. Gerados `Kyoei-Windows-Update-20261017b.zip` e `Kyoei-Linux-Wine-Update-20261017b.zip`, cada um com runtime, aplicador, instruções e manifesto/hash. Nenhum dado do jogo foi empacotado.
+- Pacotes cumulativos aceitam Friends-Test original e payloads de 15, 16, 17 e 17b. Validação em oito combinações (quatro bases × Windows/Linux-Wine): check-only sem escrita, aplicação e reaplicação, hash final, backup, save e prefixo preservados. Relatório privado: `build/research/update-validation-20261017b.json`.
+- SHA256 dos ZIPs: Windows `5c8d50a2ed3ba199eafb2c62734713c3e9e58bfb6aa234f09317968ce1df907b`; Linux/Wine `0655b01cc6f525b7170ab22ebdb97163f8e251891123b4c4db4b8210a1296c14`. Runtime comum `6196e2a968e248af422d080f21fa8449e67ce55e726501adf64743c6033f0e55`. Instruções em `docs/ATUALIZACOES-AMIGOS.md`.
