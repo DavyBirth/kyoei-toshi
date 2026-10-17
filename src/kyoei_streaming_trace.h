@@ -20,7 +20,13 @@ class Scope {
     double start=0;
 public:
     Scope(const char* label,uint64_t addr=0,uint64_t size=0,unsigned w=0,unsigned h=0)
-        :name(label),address(addr),bytes(size),width(w),height(h) { if(Enabled())start=Milliseconds(); }
+    {
+        // The disabled path runs for every draw/upload. Leave diagnostic
+        // payload untouched; the destructor only reads it when start is set.
+        if(!Enabled())return;
+        name=label;address=addr;bytes=size;width=w;height=h;
+        start=Milliseconds();
+    }
     ~Scope() {
         if(!start)return;
         const auto end=Milliseconds();

@@ -3216,3 +3216,90 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Nenhum efeito, resolução, velocidade ou sincronização removido. Dump/saves
   originais intactos. Próximo perfil deve separar CPU convidada e esperas,
   controlando dano/animação do gigante antes de comparar FPS.
+
+### 17/10/2026 — perfil ampliado e custo do diagnóstico desligado
+- guest-cpu-profile-20261017: exit 0, foco perdido 0/81. Em intervalo de ~2s,
+  processador de comandos acumulou 1.578 ms de CPU, main convidado 672 ms;
+  três threads convidadas amostradas passaram 71/78/76 de 100 amostras em
+  espera de condição. Não confundir amostras de parede com porcentagem de CPU.
+- gpu-long-profile-20261017: exit 0, foco perdido 0/80. Mil amostras privadas
+  do processador de comandos após a janela de medição: 720 incluíram Draw,
+  207 GetGraphicsPipeline, 169 BindResources, 117 StageSpecialization,
+  100 ParseFetchShader, 98 BindVertexBuffers, 43 Scheduler::Wait.
+  Categorias se sobrepõem; medição por suspensão não vale como benchmark FPS.
+- Antes da suspensão, três consultas nvidia-smi: GPU 35–38%, 3.868 MiB,
+  clock 1.215–1.335 MHz. Uso inclui outros aplicativos; não estabelece sozinho
+  gargalo. Conjunto de evidências aponta para custo do frontend gráfico na CPU
+  e esperas, sem provar causa única. Host Xeon E5-2640 v3, 8 cores/16 threads.
+- Ctor de KyoeiStreamingTrace::Scope apareceu como PC em 21/1.000 amostras,
+  mesmo sem registros de streaming ativos. Cada pacote/desenho inicializava
+  metadados antes de conferir Enabled. Alterado para retornar antes desses
+  preenchimentos quando desligado; start continua zero e destructor retorna
+  sem ler payload. Modo ligado mantém os mesmos campos/tempos e limite.
+  Build PASS. Teste mudo streaming-off-fast-20261017 em andamento; registrar
+  resultado antes de promover o pequeno ajuste. Não há ganho de FPS comprovado.
+- Perfis, deltas e amostrador permanecem privados em build/research; não adicionar
+  ferramentas de suspensão nem dados de jogo ao pacote dos usuários.
+
+### Parada automatica autorizada por cota - 2026-10-17T01:47:08.5305607-03:00
+- Cota restante: principal 13.0%, semanal 86.0%.
+- Testes encerrados; checkpoint final verificado em build/overnight. Desligamento solicitado por orientacao de Davy em 17/10/2026. Retomar do diario e do Git; performance ainda depende das evidencias registradas.
+
+
+### 17/10/2026 - abertura solicitada por Davy
+- Iniciado o launcher normal City Shrouded in Shadow.exe a pedido de Davy, sem alterar qualidade ou configuracoes de desempenho. Processo inicial PID 22004. Nenhuma nova melhora de FPS comprovada nesta abertura.
+  Davy esclareceu em seguida que "rodar no talo" significa trabalhar para
+  atingir 60 FPS, e nao apenas abrir o jogo. Investigacao retomada abaixo.
+
+### 17/10/2026 — retomada com meta explícita de 60 FPS
+- Conferido o teste streaming-off-fast-20261017 anterior: log encerra com
+  Exit code 0. Nao havia resultado pendente de encerramento; o ajuste de
+  inicializacao do diagnostico desligado permanece sem ganho de FPS provado.
+- Sinal antigo performance-stop-requested arquivado apos nova autorizacao
+  de continuidade. Nenhum monitor de desligamento rearmado nesta retomada.
+- Experimento opt-in de eliminar somente chamadas setVertexInputEXT com
+  descricoes identicas no mesmo scheduler/tick. Recursos, buffers e barreiras
+  continuam atualizados em todo desenho. Teste de stride, rate, divisor,
+  formato, offset, mudanca de scheduler/tick e listas vazias PASS; build PASS.
+  Comparacao inicial: 22,57/28,47 FPS, maximos 232,81/91,70 ms, 840/960
+  intervalos. Mesma vista/HP100, ambos exit0 e foco ausente em todos os checks.
+  Variacao grande de pausas limita atribuicao; nao promover ganho como provado.
+- Encontrado temporizador comum do Windows na apresentacao. Fixture privada
+  de 12 esperas por caso: pedido 16,667 ms levou mediana 31,201 ms no timer
+  comum e 17,023 ms no high-resolution; pedido 8 ms levou 15,484/8,326 ms.
+  Nao alterado relogio global nem configuracao de outros aplicativos.
+- Adaptador experimental exclusivo da apresentacao preserva periodo/debito
+  de Common::AccurateTimer e usa handle high-resolution com fallback original.
+  Nao substitui funcoes gerais de thread nem altera clocks/timestep do guest.
+  Teste com APIs simuladas: fallback desativado/nao suportado, falha ao armar,
+  sinal negativo/limite de espera, quadro atrasado sem dormir e fechamento PASS.
+- Par timer-high/timer-legacy: 27,16/26,85 FPS, maximos 83,84/110,74 ms,
+  960 intervalos cada, ambos exit0. Cadencia do timer melhorou (p95 ~17 ms
+  em vez de ~30 ms), mas nao prova ganho de FPS nem resolve a meta de 60.
+- Todos os testes usam SDL audio dummy e save/cache privados. Comparacao
+  em primeiro plano, sem giros de camera, em andamento neste checkpoint.
+  Candidatos continuam opt-in; nada alterado nos pacotes dos amigos.
+- Par de candidatos juntos (tentativa de foco sem sucesso): 27,54/27,62 FPS,
+  maximos 79,32/100,48 ms, 960 intervalos cada, sem beneficio demonstrado.
+  A janela aparece para Davy; o SO recusou foco automatico e a maioria dos
+  checks permaneceu em segundo plano. Nao alterar aplicativos alheios.
+- Candidato seguinte: cache limitado de entradas da especializacao de shader,
+  com recursos atualizados normalmente em cada chamada. Confere runtime,
+  bindings, descritores normalizados, codigo fetch completo dentro de uma
+  pagina, quantidade de modulos e epoca de carregamento/edicao dos shaders.
+  Antes/depois do construtor original precisam concordar para salvar entrada;
+  primeira observacao fetch apenas aquece o snapshot. Default desligado.
+- 6.000 casos diferenciais de enderecos/tamanhos, imagens, fmask, samplers,
+  mudanca entre observacoes, runtime/bindings/owner/modulos/epoca/pagina PASS.
+  Build PASS. stage-verify-20261017 manteve construtor/busca originais e
+  conferiu toda previsao, incluindo marco de 10.000, sem divergencias; exit0.
+- A/B na mesma partida, blocos de 20s, descartando primeiro resumo apos troca
+  e blocos incompletos: original 26,29 FPS/720 intervalos, candidato 28,06/480.
+  Blocos originais 25,19 e 27,49; candidato 28,06. Variacao/carga externa e
+  amostra desbalanceada nao sustentam atribuir ganho. Foco ausente em todos
+  os checks dos tres blocos completos. Nao declarar meta de 60 FPS resolvida.
+- Normalizacao adicional exclui num_records de buffers depois de preservar
+  nullness/IsStorage: esse tamanho nao integra os campos da especializacao
+  fixa. Os 6.000 casos continuam PASS. Verificacao real normalizada em andamento;
+  proxima medicao registra acertos e prolonga janela para quatro blocos completos.
+  Fontes experimentais ainda sem commit; evidencias privadas em build/research.
