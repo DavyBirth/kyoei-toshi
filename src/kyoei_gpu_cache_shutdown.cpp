@@ -9,12 +9,14 @@
 #include "core/memory.h"
 #include "kyoei_pipeline_cache.h"
 #include "kyoei_tiny_download.h"
+#include "kyoei_vulkan_recording.h"
 extern "C" {
 #include "gz.h"
 }
 extern std::unique_ptr<AmdGpu::Liverpool> liverpool;
 static std::atomic<unsigned> observed_phase{};
 extern "C" void kyoei_gpu_cache_shutdown(void) {
+    KyoeiVulkanRecording::Report();
     if(!std::getenv("KYOEI_PIPELINE_CACHE_DIR") || !liverpool)return;
     auto *rasterizer=Core::Memory::Instance()->GetRasterizer();if(!rasterizer)return;
     static std::atomic_flag requested=ATOMIC_FLAG_INIT;if(requested.test_and_set())return;

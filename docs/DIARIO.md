@@ -3405,3 +3405,60 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Pacotes cumulativos aceitam Friends-Test original e payloads de 15, 16, 17 e 17b. Validação em oito combinações (quatro bases × Windows/Linux-Wine): check-only sem escrita, aplicação e reaplicação, hash final, backup, save e prefixo preservados. Relatório privado: `build/research/update-validation-20261017b.json`.
 - SHA256 dos ZIPs: Windows `5c8d50a2ed3ba199eafb2c62734713c3e9e58bfb6aa234f09317968ce1df907b`; Linux/Wine `0655b01cc6f525b7170ab22ebdb97163f8e251891123b4c4db4b8210a1296c14`. Runtime comum `6196e2a968e248af422d080f21fa8449e67ce55e726501adf64743c6033f0e55`. Instruções em `docs/ATUALIZACOES-AMIGOS.md`.
 - Portable pessoal atualizado pelo `tools/update_portable_runtime.py`; runtime SHA256 bate com o dos dois ZIPs. Launcher `--check` PASS. Saves/dados existentes: 37.352.560 bytes. O manifesto pessoal marca `privacy_scan_passed=false`, pois esta atualização local não executou uma nova finalização/varredura; o portable continua privado e não foi distribuído.
+
+
+### 17/10/2026 - gravacao Vulkan delegada: ganho local de 34,8%
+- Davy pediu continuar usando os outros ports como base e resolver desempenho.
+  Diario, estado Git e comparativo dos seis ports lidos; Godzilla nao alterado.
+- Implementada fila externa por scheduler, inspirada na separacao de gravacao
+  do Bloodborne, preservando ABI do backend precompilado. Um worker por
+  scheduler, comandos/arrays em blocos reutilizaveis de 64 KiB, fila limitada.
+  Sem segmentos paralelos por fluxo ou submissao assincrona nesta etapa.
+- Adaptadores cobrem todas as 276 entradas vkCmd do header local. Valores,
+  bindings, descritores, barreiras, attachments e transferencias possuem
+  snapshots. Payload nao suportado/pNext drena antes de executar diretamente.
+  Configure rejeita entradas novas nao revisadas. Drenagem antes de encerrar
+  buffer/submeter/destruir; ImGui privado drena depois de beginRendering.
+- Testes: 100.000 comandos ordenados + 100.000 snapshots com reuso, mutacao
+  imediata, limites, campos irrelevantes de descritores invalidos, imagens,
+  copias, cores, fallback e vida util PASS. Cache fetch anterior reaproveitado:
+  10.000 mutacoes/limites/colisoes PASS. Temporizador de apresentacao anterior
+  reaproveitado com mesmo periodo/debito, sem alterar relogios do guest; PASS.
+- Primeiras variantes nao resolveram: fila inicial 29,19 FPS/360 intervalos;
+  controle separado 28,55/480; blocos reutilizaveis 29,40/2760. Sem foco.
+  Primeiro A/B combinado 28,55/28,34, 1200 intervalos por caminho, exit0.
+- Perfil posterior ao A/B identificou drenagens em CopyBuffer e ColorWriteMask.
+  Corrigida assinatura de ColorWriteMask (inclui firstAttachment) e snapshot
+  das copias. Segundo A/B 28,75/29,78, 1200 intervalos por caminho, exit0.
+  Incluidas depois transferencias de imagens, clear, blit, viewport e scissor.
+- Ultimo A/B, mesma partida/vista, timer preciso em AMBOS os caminhos:
+  originais 29,87 e 29,39 FPS; novos 40,06 e 39,89. Ponderado 29,65/39,97
+  (+34,8%), 1320/1800 intervalos; maximos 104,66/37,31 ms. Primeiro resumo
+  apos cada troca descartado. 197/197 checks sem foco; sem compilar, capturar
+  ou suspender threads durante os blocos. Exit0. Nao atribuir todo ganho ao
+  temporizador nem comparar diretamente com variantes antigas distintas.
+- Camera/caminhada/corrida: exit0, 34/34 checks sem foco, capturas conferidas,
+  efeitos de explosao/dano preservados. 10.000 decodificacoes reais completas
+  comparadas ao parser original, nenhuma divergencia. FPS desse teste nao e
+  benchmark: verificacao e capturas acrescentam trabalho. Stutter global e
+  meta de 60 FPS continuam nao demonstrados.
+- Fixture GPU real RGBA/padding/publicacao PASS, inclusive depois das novas
+  transferencias e com defaults da previa; executavel sanitizado instalado
+  no portable tambem PASS. Todos os testes abertos usam SDL audio dummy;
+  audio dos launchers normais preservado.
+- Compilacao de pesquisa ON e compilacao limpa normal OFF PASS. Pesquisa fica
+  atras de KYOEI_EXPERIMENTAL_RENDERER (OFF por padrao no repositorio), sem
+  custo de compilar a fila/caches experimentais para clones normais. Na previa
+  ON os tres caminhos ficam ativos por padrao; flags =0 permitem caminho antigo
+  ao executar o runtime diretamente. Perfil local build esta ON.
+- Portatil pessoal atualizado com a previa: runtime sanitizado SHA256
+  91f5573df20446a765e85223ffcff1bca528b42e52aa656ec065d57e98da7c02.
+  Tres arquivos de dados/saves identicos por hash antes/depois. Runtime antigo
+  6196e2a968e248af422d080f21fa8449e67ce55e726501adf64743c6033f0e55
+  conferido dentro do ZIP 20261017b como reversao. Nenhum ZIP para amigos mudou.
+  Ambos launchers --check PASS. Portable continua privado, manifesto sem nova
+  finalizacao/varredura. Evidencias em build/research; detalhes publicos em
+  docs/re/GRAVACAO-VULKAN.md. Build temporario de verificacao OFF removido apos
+  conferir resultado/dependencias/processos; log mantido. Testes encerrados.
+- Ganho comprovado apenas nessa vista na RTX 2060 local. Nao declarar 60 FPS,
+  ausencia de stutter, validacao de outras GPUs/Linux ou jogo inteiro concluido.

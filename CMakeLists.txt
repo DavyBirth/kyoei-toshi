@@ -10,6 +10,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
   return()
 endif()
 set(KYOEI_CORE "${CMAKE_CURRENT_SOURCE_DIR}/third_party/godzilla-core")
+option(KYOEI_EXPERIMENTAL_RENDERER "Build opt-in renderer research paths" OFF)
 include("${KYOEI_CORE}/prebuilt/libraries.cmake")
 set(CORE_FILES rt_core rt_sync rt_memory rt_sema
   rt_kernel rt_rtc)
@@ -338,6 +339,16 @@ add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cp
 # Release the old surface before publishing completion. Otherwise a guest
 # woken by the event can lock it for a new flip before the late reset to zero.
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/driver.cpp" KYOEI_VIDEOOUT_DRIVER)
+if(KYOEI_EXPERIMENTAL_RENDERER)
+set(KYOEI_VIDEOOUT_DRIVER "#include \"kyoei_present_timer.h\"\n${KYOEI_VIDEOOUT_DRIVER}")
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "    Common::AccurateTimer timer{vblank_period};"
+  "    KyoeiPresentTimer::Timer timer{vblank_period};")
+add_executable(test_kyoei_present_timer src/test_kyoei_present_timer.cpp)
+target_compile_features(test_kyoei_present_timer PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_present_timer PRIVATE _CRT_SECURE_NO_WARNINGS)
+target_include_directories(test_kyoei_present_timer PRIVATE "${KYOEI_SHAD}/src")
+endif()
 set(KYOEI_VIDEOOUT_DRIVER "#include \"kyoei_overlay.h\"\n${KYOEI_VIDEOOUT_DRIVER}")
 kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
   "ImGui::Core::MustKeepDrawing()"
@@ -744,6 +755,16 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONT
 # Kyoei-only driver cache. Keep the frozen dependency intact. Create the
 # Vulkan cache before WarmUp so preloaded pipelines benefit from its contents.
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_pipeline_cache.cpp" KYOEI_PIPELINE_CACHE)
+if(KYOEI_EXPERIMENTAL_RENDERER)
+file(READ "${KYOEI_SHAD}/src/shader_recompiler/frontend/fetch_shader.cpp" KYOEI_FETCH_SHADER)
+kyoei_replace_checked(KYOEI_FETCH_SHADER
+  "std::optional<FetchShaderData> ParseFetchShader(const Shader::Info& info) {"
+  "std::optional<FetchShaderData> ParseFetchShaderUncached(const Shader::Info& info) {")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_fetch_shader.cpp" CONTENT "${KYOEI_FETCH_SHADER}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_fetch_shader.cpp" src/kyoei_fetch_shader_cache.cpp)
+add_executable(test_kyoei_fetch_cache src/test_kyoei_fetch_cache.cpp)
+target_compile_features(test_kyoei_fetch_cache PRIVATE cxx_std_23)
+endif()
 set(KYOEI_PIPELINE_CACHE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_CACHE}")
 set(KYOEI_PIPELINE_CACHE "#include \"kyoei_stage_cache.h\"\n${KYOEI_PIPELINE_CACHE}")
 kyoei_replace_checked(KYOEI_PIPELINE_CACHE
@@ -941,6 +962,22 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasterizer.cpp" CONTENT
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_rasterizer.cpp")
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_scheduler.cpp" KYOEI_SCHEDULER)
+if(KYOEI_EXPERIMENTAL_RENDERER)
+target_compile_definitions(kyoei_videoout PRIVATE KYOEI_VULKAN_RECORDING_ENABLED=1)
+set(KYOEI_SCHEDULER "#include \"kyoei_vulkan_recording.h\"\n${KYOEI_SCHEDULER}")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "    AllocateWorkerCommandBuffers();\n    priority_pending_ops_thread ="
+  "    KyoeiVulkanRecording::Initialize();\n    AllocateWorkerCommandBuffers();\n    priority_pending_ops_thread =")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "Scheduler::~Scheduler() {"
+  "Scheduler::~Scheduler() {\n    KyoeiVulkanRecording::Detach(this);")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "    Check(current_cmdbuf.begin(begin_info));"
+  "    Check(current_cmdbuf.begin(begin_info));\n    KyoeiVulkanRecording::Attach(this,current_cmdbuf);")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "    Check(current_cmdbuf.end());"
+  "    KyoeiVulkanRecording::Drain(this);\n    Check(current_cmdbuf.end());")
+endif()
 set(KYOEI_SCHEDULER "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n${KYOEI_SCHEDULER}")
 # Draw/dispatch call this even with no deferred publication pending. Avoid a
 # Vulkan counter query in that case. SubmitExecution still refreshes completion
@@ -962,6 +999,29 @@ kyoei_replace_checked(KYOEI_SCHEDULER
   "    auto lk = [] { KyoeiFrameStats::Work measurement(11); return std::unique_lock{submit_mutex}; }();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_scheduler.cpp" CONTENT "${KYOEI_SCHEDULER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_scheduler.cpp")
+
+if(KYOEI_EXPERIMENTAL_RENDERER)
+target_sources(kyoei_videoout PRIVATE src/kyoei_vulkan_recording.cpp)
+# Every Vulkan command entry point must either own its payload or drain the
+# queue before running directly. Reject an unreviewed dependency update that
+# could silently introduce an unhooked command and reorder the stream.
+file(READ "${KYOEI_GPU_HEADERS}/gz_vulkan-src/include/vulkan/vulkan_core.h" KYOEI_VULKAN_API)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/src/vulkan_recording/commands.inc" KYOEI_RECORDING_ENTRIES)
+string(REGEX MATCHALL "PFN_vkCmd[A-Za-z0-9_]+" KYOEI_VULKAN_COMMANDS "${KYOEI_VULKAN_API}")
+list(REMOVE_DUPLICATES KYOEI_VULKAN_COMMANDS)
+foreach(KYOEI_VULKAN_COMMAND IN LISTS KYOEI_VULKAN_COMMANDS)
+  string(REPLACE "PFN_" "" KYOEI_VULKAN_COMMAND "${KYOEI_VULKAN_COMMAND}")
+  string(FIND "${KYOEI_RECORDING_ENTRIES}" "KYOEI_VK_COMMAND(${KYOEI_VULKAN_COMMAND})" KYOEI_RECORDING_ENTRY)
+  if(KYOEI_RECORDING_ENTRY EQUAL -1)
+    message(FATAL_ERROR "Review Vulkan recording adapter: missing ${KYOEI_VULKAN_COMMAND}")
+  endif()
+endforeach()
+add_executable(test_kyoei_vulkan_recording src/test_kyoei_vulkan_recording.cpp src/kyoei_vulkan_recording.cpp)
+target_compile_features(test_kyoei_vulkan_recording PRIVATE cxx_std_23)
+target_compile_options(test_kyoei_vulkan_recording PRIVATE -UNDEBUG)
+target_compile_definitions(test_kyoei_vulkan_recording PRIVATE KYOEI_VULKAN_RECORDING_ENABLED=1 NOMINMAX WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS)
+target_include_directories(test_kyoei_vulkan_recording PRIVATE src "${KYOEI_SHAD}/src" "${KYOEI_GPU_HEADERS}/gz_vulkan-src/include")
+endif()
 file(READ "${KYOEI_CORE}/gpu/pad.cpp" KYOEI_PAD)
 set(KYOEI_PAD "#include \"kyoei_mouse.h\"\n${KYOEI_PAD}")
 set(KYOEI_PAD "#include \"kyoei_pc_controls.h\"\n${KYOEI_PAD}")
