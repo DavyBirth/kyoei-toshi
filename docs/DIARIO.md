@@ -3146,3 +3146,25 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Derivados do teste da opção descartada removidos após confirmar ausência
   de dependências e processos. Pesquisa única preservada em arquivo privado.
   Build e CheckOnly PASS; diagnóstico novo é opt-in. Travadas ainda pendentes.
+
+### 17/10/2026 — busca exata de imagens e continuidade autorizada
+- Otimizada a escolha exata em FindImage: candidata com mesmo início está na
+  primeira página. Mantida a última candidata na ordem original, todos os
+  critérios de compatibilidade/Picked e mutex; sem cache auxiliar persistente.
+  Falta de exata segue integralmente para o caminho anterior de sobreposições.
+  Efeitos, resolução, recursos, sincronização e tempo convidado intactos.
+- 5.000 layouts aleatórios comparados ao algoritmo de referência PASS; 3.061
+  acertos. Verificação em jogo das duas buscas em cada chamada PASS, marco de
+  10.000 consultas, imagem conferida e exit 0. Variáveis de verificação e
+  comparador anterior documentadas em docs/re/DESFOQUE-E-TRAVADAS.md.
+- Par comparativo de mesma vista/25s: original 30,09 FPS e máximo 48,77 ms;
+  novo 30,14 FPS e máximo 62,98 ms; seis janelas/720 intervalos cada. Foco fora
+  48/48 em ambos; imagens conferidas; ambos exit 0. Não comprova ganho de FPS
+  nem resolve a pausa principal. Evidências image-{old,fast}-20261017 privadas.
+- Davy pediu continuar testando autonomamente até resolver performance e,
+  depois, revisar/enxugar o projeto para quem usar no GitHub. Regra registrada.
+  Builds/cache/logs de pesquisa confirmados como ignorados pelo Git.
+- Preparado amostrador privado de stacks do thread GpuCommandProcessor via
+  GetThreadContext/StackWalk64, sem debugger attach. Ainda sem amostra válida:
+  primeira janela de perfil terminou enquanto se preparava a medição de cota.
+  Segundo teste profile-street2-20261017 em andamento neste checkpoint.

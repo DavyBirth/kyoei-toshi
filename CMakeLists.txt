@@ -577,6 +577,40 @@ kyoei_replace_checked(KYOEI_BUFFER_CACHE
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp" CONTENT "${KYOEI_BUFFER_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/texture_cache/texture_cache.cpp" KYOEI_TEXTURE_CACHE)
+set(KYOEI_TEXTURE_CACHE "#include \"kyoei_image_lookup.h\"\n${KYOEI_TEXTURE_CACHE}")
+set(KYOEI_IMAGE_LOOKUP_OLD [=[    ImageIds image_ids;
+    ForEachImageInRegion(info.guest_address, info.guest_size,
+                         [&](ImageId image_id, Image& image) { image_ids.push_back(image_id); });
+
+    ImageId image_id{};
+
+    // Check for a perfect match first
+    for (const auto& cache_id : image_ids) {]=])
+set(KYOEI_IMAGE_LOOKUP_NEW [=[    static const bool legacy_lookup=[] {auto* p=std::getenv("KYOEI_LEGACY_IMAGE_LOOKUP");return p && p[0]=='1';}();
+    static const bool verify_lookup=[] {auto* p=std::getenv("KYOEI_VERIFY_IMAGE_LOOKUP");return p && p[0]=='1';}();
+    ImageId first_page_match{};
+    if (!legacy_lookup) {
+        if (const auto* candidates=page_table.find(info.guest_address >> Traits::PageBits)) {
+            first_page_match=KyoeiImageLookup::LastExact<ImageId>(*candidates,[&](ImageId id) {
+                const auto& image=slot_images[id];
+                return False(image.flags & ImageFlagBits::Picked) &&
+                    image.Overlaps(info.guest_address,info.guest_size) &&
+                    KyoeiImageLookup::Exact(image.info,info,exact_fmt,IsVulkanFormatCompatible);
+            });
+        }
+    }
+    ImageIds image_ids;
+    if (!first_page_match || verify_lookup) {
+        ForEachImageInRegion(info.guest_address, info.guest_size,
+                             [&](ImageId image_id, Image& image) { image_ids.push_back(image_id); });
+    }
+    ImageId image_id=verify_lookup ? ImageId{} : first_page_match;
+
+    // Check for a perfect match first
+    for (const auto& cache_id : image_ids) {]=])
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "${KYOEI_IMAGE_LOOKUP_OLD}" "${KYOEI_IMAGE_LOOKUP_NEW}")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "    // Try to resolve overlaps (if any)"
+  "    if (verify_lookup && !legacy_lookup) {\n        ASSERT_MSG(image_id==first_page_match, \"First-page image lookup disagrees with full walk\");\n        static thread_local unsigned verified=0;\n        if(++verified==10000)gz_log(\"Kyoei image lookup: 10000 real lookups agree with full walk\");\n    }\n    // Try to resolve overlaps (if any)")
 # Same-range dirty comparison, also identified in bloodborne_pc e5d04e2.
 # MarkAsMaybeDirty hashes guest_size; comparing only the first 8x8 pixels
 # invalidates unchanged images and can miss later CPU writes.
@@ -1063,6 +1097,8 @@ target_compile_definitions(test_kyoei_names PRIVATE KYOEI_NAMES_TEST=1 _CRT_SECU
 add_executable(test_kyoei_input_mode src/test_kyoei_input_mode.c)
 add_executable(test_kyoei_frame_stats src/test_kyoei_frame_stats.cpp)
 add_executable(test_kyoei_cooperative_readback src/test_kyoei_cooperative_readback.cpp)
+add_executable(test_kyoei_image_lookup src/test_kyoei_image_lookup.cpp)
+target_compile_features(test_kyoei_image_lookup PRIVATE cxx_std_23)
 target_compile_features(test_kyoei_cooperative_readback PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_cooperative_readback PRIVATE _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_vertex_ranges src/test_kyoei_vertex_ranges.cpp)

@@ -63,3 +63,31 @@ Opção, atalho, parâmetro e fontes foram retirados da integração e o runtime
 recompilado sem eles. Pesquisa própria preservada somente no arquivo privado
 `build/research/discarded-blur-option-20261017.zip`; não distribuir nem reativar.
 Os ZIPs dos amigos de 17/10 foram gerados antes desse protótipo e não o contêm.
+
+## Busca exata de imagens na primeira página
+
+`FindImage` percorre o intervalo inteiro para reunir imagens candidatas, mesmo
+quando já existe uma imagem com endereço, tamanho, dimensões, tipo e formato
+compatíveis. Uma candidata exata começa no mesmo endereço e necessariamente
+está na primeira página. As candidatas exatas aparecem nessa página na mesma
+ordem da varredura completa; preservar a última mantém a escolha original.
+
+O caminho novo consulta essa página sob o mutex existente, respeita `Picked`,
+sobreposição e todos os critérios originais. Sem candidata exata, executa a
+varredura/resolução de sobreposições anterior. Não mantém cache auxiliar,
+handles persistentes ou índice que precise invalidar. Atualizações de recurso,
+LRU, views, amostras, cópias e barreiras permanecem no código original.
+
+5.000 layouts aleatórios (3.061 acertos exatos) comparados com varredura de
+referência passaram: aliases, registro fora da ordem dos slots, exclusões,
+flags, formatos compatíveis/estritos e fallback por sobreposição.
+`KYOEI_VERIFY_IMAGE_LOOKUP=1` executa ambas as buscas e confere cada consulta
+real antes de resolver recursos; partida de verificação passou sem divergência,
+incluindo o marco de 10.000 consultas, imagem conferida e saída 0.
+`KYOEI_LEGACY_IMAGE_LOOKUP=1` permite o comparador anterior no mesmo executável.
+
+Comparativo de aproximadamente 25 segundos, mesma vista e foco ausente em
+48/48 verificações em ambas: original 30,09 FPS/máximo 48,77 ms; novo 30,14
+FPS/62,98 ms, seis janelas de 120 intervalos em cada. Imagens conferidas,
+ambos exit 0. Sem ganho de FPS demonstrado nessa cena; não declarar a travada
+resolvida. Logs/ranges/imagens `image-{old,fast}-20261017` no perfil privado.

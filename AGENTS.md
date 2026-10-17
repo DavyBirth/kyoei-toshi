@@ -32,6 +32,7 @@
 - O port do Kyoei (M6) só começa depois que o Godzilla tiver a parte gráfica funcionando (M5 de lá).
 
 ## Regras
+- Pedido de Davy em 17/10/2026: depois de resolver a performance, revisar e enxugar código/diagnósticos/experimentos para reduzir o custo de manutenção e de uso por quem clonar o projeto no GitHub. Não antecipar uma reestruturação ampla durante a correção.
 - Orientação explícita de Davy em 17/10/2026: preservar fidelidade ao PS4 em gráficos, efeitos, resolução interna, velocidade e comportamento do jogo. Não remover desfoque, reduzir qualidade ou alterar a simulação para disfarçar problemas de desempenho. Comparar efeitos suspeitos com a referência antes de tratá-los como defeitos do port.
 - Pedido de Davy em 17/10/2026: os testes abertos pelo agente devem ficar no mudo, sem silenciar outros aplicativos (ele pode estar vendo filme). Aplicar só às execuções de teste; preservar o áudio do atalho normal.
 - Regra permanente de Davy em 13/10/2026: apagar arquivos que não precisam ser mantidos. Para derivados obsoletos e recriáveis, conferir substitutos/dependências/processos e remover sem pedir nova autorização. Preservar dump, saves, trabalho único, arquivos atuais e evidências necessárias; não tratar dúvida sobre uso como prova de que um arquivo é dispensável.
