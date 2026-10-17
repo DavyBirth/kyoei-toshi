@@ -2988,3 +2988,54 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Próximo:investigar trabalho anterior ao tick e produtor/consumidor da imagem,
   além dos detilers internos sob demanda;identidade de luminância segue hipótese.
   Nenhum runtime alterado,jogo iniciado ou teste repetido solicitado nesta análise.
+
+### 16/10/2026 — trabalho direto no backend após cobrança de desempenho
+
+- Davy pediu resolver as travadas, sem depender de novas rodadas manuais.
+  O agente executou os testes:usuário/cache/savedata copiados para a pasta
+  privada build/research/detiler-fix-20261016. Nenhuma partida original encerrada;
+  um fechamento genérico foi rejeitado pela revisão automática. Conferida a
+  linha de comando --user isolada e fechado apenas o processo de teste por ID.
+- Corrigida compilação tardia de nove detilers internos, que não pertencem ao
+  cache de pipelines do jogo. A integração gera tile_manager e tiling_comp.h
+  localmente a partir da referência fixa, preparando as variantes observadas
+  antes do backend ficar pronto. GPU real:47,10ms;execução de jogo60,41ms.
+  As nove listas de defines coincidiram com o log212733,nenhuma compilação
+  desses detilers após backend ready. Lazy antigo:KYOEI_LAZY_DETILERS=1.
+- Proteção de primeira utilização:marcas por TileManager identificam pipelines
+  antecipados ainda não usados. Se a primeira imagem requer amostras/array
+  diferentes,descarta somente o pipeline não submetido e compila o solicitado.
+  Depois da primeira utilização não descarta pipelines em uso. Teste GPU real
+  com quatro amostras PASS,NUM_SAMPLES=4,exit0. Testes de propriedade/slots PASS.
+- Investigado envio antecipado em mudanças de passe. Implementado e testado
+  isoladamente,mas retirado do código normal por falta de ganho demonstrado.
+  Fontes do experimento preservadas só em pesquisa privada. Primeiras medições
+  foram invalidadas por ângulos diferentes de câmera;mouse sozinho desligado
+  não bastou. Rodadas posteriores isolam controle físico e recentralizam via R3.
+- Mailbox29,76FPS/Fifo29,77FPS nos recortes de vista parada;diferenças de foco
+  limitam a comparação. Sem justificativa para trocar padrão Fifo.
+- Captura de pilhas após a medição encontrou thread gráfica em ordenação dos
+  intervalos de BindVertexBuffers. Uma pilha não prova porcentagem de CPU.
+  LLDB exigiu Python3.dll no PATH;primeira tentativa falhou antes de anexar.
+  A captura posterior registrou detach,mas processo isolado terminou anormal
+  depois,exit -1073740972. Não usar essa execução para validar encerramento.
+- Caminho rápido de união de intervalos conectados:prova sobreposição/adjacência
+  por min/max;se houver vão,não toca na saída e executa sort/merge original.
+  Mesmo mapeamento/barreiras/bindings,sem reutilizar dados entre quadros.
+  KYOEI_LEGACY_VERTEX_SORT=1 restaura o algoritmo anterior no mesmoexe.
+  100.000 casos aleatórios e bordas PASS. Fixture200.000 conjuntos de8 views:
+  51,51ms original/36,94ms rápido;não é porcentagem de ganhoFPS.
+- Duas partidas isoladas com recentralização+giro programado,controle/mouse
+  físicos fora da entrada:recortes35s,10 janelas/1.200 intervalos em cada.
+  Original33,52FPS/máximo50,80ms;novo32,87FPS/máximo166,65ms. Ambas exit0,
+  imagens conferidas;foco ausente nas duas,câmera e animações ainda não idênticas.
+  Não há melhora de FPS comprovada por essas amostras,nem regressão atribuída.
+  Execução final do novo código sem depurador encerrou normalmente,sem falhas.
+- Build,testes novos,GPU self-test,launcher CheckOnly e git diff --check PASS.
+  docs/re/ENVIO-ANTECIPADO.md registra contratos/limites. Referência Godzilla,
+  dump e saves originais preservados;ZIPs dos amigos não regenerados.
+- Restam pausas grandes sem solução comprovada. Investigar transferência de
+  readback para publicação por callback com buffer próprio e espera cooperativa
+  da corrotina, mantendo resultado pronto ANTES do SignalFence original.
+  Esse desenho ainda não foi implementado neste ponto do diário. Não alegar
+  que remover a espera ou retornar resultado antigo seria uma correção válida.

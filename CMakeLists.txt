@@ -488,6 +488,10 @@ kyoei_replace_checked(KYOEI_GNM
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp" CONTENT "${KYOEI_GNM}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/buffer_cache/buffer_cache.cpp" KYOEI_BUFFER_CACHE)
+set(KYOEI_BUFFER_CACHE "#include \"kyoei_vertex_ranges.h\"\n${KYOEI_BUFFER_CACHE}")
+kyoei_replace_checked(KYOEI_BUFFER_CACHE
+  "    if (!ranges.empty()) {\n        std::ranges::sort(ranges,"
+  "    if (!ranges.empty() && (KyoeiVertexRanges::LegacySort() || !KyoeiVertexRanges::TryConnected(ranges,ranges_merged))) {\n        std::ranges::sort(ranges,")
 set(KYOEI_BUFFER_CACHE "#include \"kyoei_raster_trace.h\"\n${KYOEI_BUFFER_CACHE}")
 set(KYOEI_VERTEX_INPUTS [=[    pipeline.GetVertexInputs(attributes, bindings, divisors, guest_buffers,
                              regs.vgt_instance_step_rate_0, regs.vgt_instance_step_rate_1);]=])
@@ -681,6 +685,65 @@ kyoei_replace_checked(KYOEI_GRAPHICS_PIPELINE
   "        [&] { if (preloading) return device.createGraphicsPipelineUnique(pipeline_cache, pipeline_info); KyoeiFrameStats::Work driver_measurement(21); return device.createGraphicsPipelineUnique(pipeline_cache, pipeline_info); }();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_graphics_pipeline.cpp" CONTENT "${KYOEI_GRAPHICS_PIPELINE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_graphics_pipeline.cpp")
+# Internal texture converters are not guest pipelines and are absent from WarmUp.
+# Prepare the nine single-sample variants actually observed in Kyoei before guest
+# execution. Keep the original lazy path for other variants and local A/B runs.
+file(READ "${KYOEI_SHAD}/src/video_core/texture_cache/tile_manager.cpp" KYOEI_TILE_MANAGER)
+file(READ "${KYOEI_SHAD}/src/video_core/host_shaders/tiling.comp" KYOEI_TILING_SHADER)
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei-host/video_core/host_shaders/tiling_comp.h"
+  CONTENT "#pragma once\n#include <string_view>\nnamespace HostShaders { constexpr std::string_view TILING_COMP = R\"shader_src(\n${KYOEI_TILING_SHADER}\n)shader_src\"; }\n" @ONLY)
+target_include_directories(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei-host")
+set(KYOEI_TILE_MANAGER "extern \"C\" {\n#include \"gz.h\"\n}\n#include <chrono>\n#include <cstdlib>\n#include \"kyoei_primed_detilers.h\"\n${KYOEI_TILE_MANAGER}")
+set(KYOEI_DETILER_WARMUP [=[
+    const char* lazy = std::getenv("KYOEI_LAZY_DETILERS");
+    if (!lazy || lazy[0] != '1') {
+        static_assert(AmdGpu::NUM_TILE_MODES * NUM_BPPS == KyoeiPrimedDetilers::SlotCount);
+        const auto begin = std::chrono::steady_clock::now();
+        struct Variant { AmdGpu::TileMode mode; u32 bits; };
+        static constexpr Variant variants[] = {
+            {AmdGpu::TileMode::Display2DThin,32},
+            {AmdGpu::TileMode::Thin1DThin,32},
+            {AmdGpu::TileMode::Depth2DThin64,32},
+            {AmdGpu::TileMode::Thin1DThin,8},
+            {AmdGpu::TileMode::Thin2DThin,64},
+            {AmdGpu::TileMode::Thin1DThin,128},
+            {AmdGpu::TileMode::Thin2DThin,32},
+            {AmdGpu::TileMode::Thin2DThin,128},
+            {AmdGpu::TileMode::Thin1DThin,64},
+        };
+        for (const auto& variant : variants) {
+            ImageInfo info{};
+            info.tile_mode = variant.mode;
+            info.array_mode = AmdGpu::GetArrayMode(variant.mode);
+            info.num_bits = variant.bits;
+            info.num_samples = 1;
+            GetTilingPipeline(info,false);
+            KyoeiPrimedDetilers::Mark(this,u32(info.tile_mode)*NUM_BPPS+std::bit_width(info.num_bits)-4);
+        }
+        gz_log("Kyoei internal shader warmup: detilers=9 milliseconds=%.2f",
+            std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now()-begin).count());
+        if (const char* test=std::getenv("KYOEI_DETILER_SELF_TEST"); test && test[0]=='1') {
+            ImageInfo info{};
+            info.tile_mode=AmdGpu::TileMode::Depth2DThin64;
+            info.array_mode=AmdGpu::GetArrayMode(info.tile_mode);
+            info.num_bits=32;
+            info.num_samples=4;
+            GetTilingPipeline(info,false);
+            gz_log("Kyoei internal shader self-test: first-use samples=4 completed");
+        }
+    }
+]=])
+kyoei_replace_checked(KYOEI_TILE_MANAGER
+  "    pl_layout = std::move(layout);"
+  "    pl_layout = std::move(layout);\n${KYOEI_DETILER_WARMUP}")
+kyoei_replace_checked(KYOEI_TILE_MANAGER
+  "    auto& tiling_pipelines = is_tiler ? tilers : detilers;"
+  "    auto& tiling_pipelines = is_tiler ? tilers : detilers;\n    if (!is_tiler && KyoeiPrimedDetilers::Claim(this,pl_id) &&\n        (info.num_samples != 1 || info.array_mode != AmdGpu::GetArrayMode(info.tile_mode))) {\n        detilers[pl_id].reset();\n        gz_log(\"Kyoei internal shader warmup: unused variant replaced for samples=%u array_mode=%u\",info.num_samples,unsigned(info.array_mode));\n    }")
+kyoei_replace_checked(KYOEI_TILE_MANAGER
+  "TileManager::~TileManager() = default;"
+  "TileManager::~TileManager() { KyoeiPrimedDetilers::Forget(this); }")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_tile_manager.cpp" CONTENT "${KYOEI_TILE_MANAGER}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_tile_manager.cpp")
 add_executable(test_kyoei_pipeline_cache src/test_kyoei_pipeline_cache.cpp)
 target_include_directories(test_kyoei_pipeline_cache PRIVATE "${KYOEI_SHAD}/src")
 target_compile_features(test_kyoei_pipeline_cache PRIVATE cxx_std_23)
@@ -914,6 +977,11 @@ target_include_directories(test_kyoei_names PRIVATE src "${KYOEI_CORE}/src")
 target_compile_definitions(test_kyoei_names PRIVATE KYOEI_NAMES_TEST=1 _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_input_mode src/test_kyoei_input_mode.c)
 add_executable(test_kyoei_frame_stats src/test_kyoei_frame_stats.cpp)
+add_executable(test_kyoei_vertex_ranges src/test_kyoei_vertex_ranges.cpp)
+add_executable(test_kyoei_primed_detilers src/test_kyoei_primed_detilers.cpp)
+target_compile_features(test_kyoei_primed_detilers PRIVATE cxx_std_23)
+target_compile_features(test_kyoei_vertex_ranges PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_vertex_ranges PRIVATE _CRT_SECURE_NO_WARNINGS)
 target_include_directories(test_kyoei_frame_stats PRIVATE src)
 target_compile_features(test_kyoei_frame_stats PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_frame_stats PRIVATE _CRT_SECURE_NO_WARNINGS)
