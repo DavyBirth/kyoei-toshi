@@ -1,6 +1,7 @@
 // Driver pipeline blobs are local, optional and validated before Vulkan sees them.
 #pragma once
 #include <array>
+#include <cstddef>
 #include <cstdint>
 #include <cstring>
 #include <cstdlib>
@@ -16,15 +17,17 @@ namespace KyoeiPipelineCache {
 constexpr size_t MaxBytes=64u<<20;
 struct Identity { uint32_t vendor,device;std::array<uint8_t,16> uuid; };
 inline std::mutex file_mutex;
-template<class Profile> inline bool ProfileMatches(std::span<const uint8_t> bytes,const Profile &profile) {
-    const bool matches=bytes.size()==sizeof(Profile) && std::memcmp(bytes.data(),&profile,sizeof(Profile))==0;
+template<class Profile> inline bool ProfileMatches(std::span<const uint8_t> bytes,const Profile &profile,
+                                                   size_t compared_bytes=sizeof(Profile)) {
+    if(compared_bytes==0 || compared_bytes>sizeof(Profile))return false;
+    const bool matches=bytes.size()==sizeof(Profile) && std::memcmp(bytes.data(),&profile,compared_bytes)==0;
     const char *stats=std::getenv("KYOEI_FRAME_STATS");
     if(!matches && stats && stats[0]=='1') {
         gz_log("Kyoei shader profile mismatch: cached_bytes=%llu current_bytes=%llu",
             (unsigned long long)bytes.size(),(unsigned long long)sizeof(Profile));
         const auto *current=reinterpret_cast<const uint8_t*>(&profile);
         unsigned reported=0;
-        for(size_t i=0;i<bytes.size() && i<sizeof(Profile) && reported<8;++i) {
+        for(size_t i=0;i<bytes.size() && i<compared_bytes && reported<8;++i) {
             if(bytes[i]==current[i])continue;
             ++reported;
             gz_log("Kyoei shader profile difference: offset=%llu cached=%u current=%u",
@@ -32,6 +35,16 @@ template<class Profile> inline bool ProfileMatches(std::span<const uint8_t> byte
         }
     }
     return matches;
+}
+// ABI of the frozen Shader::Profile: 28 scalar bytes, 38 consecutive bools,
+// then six trailing alignment bytes. Keep the stored format and compare every
+// field byte, excluding only padding. Review these guards if the snapshot changes.
+template<class Profile> inline bool ShaderProfileMatches(std::span<const uint8_t> bytes,const Profile &profile) {
+    static_assert(sizeof(Profile)==72);
+    static_assert(offsetof(Profile,support_int8)==28);
+    static_assert(offsetof(Profile,supports_shader_stencil_export)==65);
+    static_assert(sizeof(profile.supports_shader_stencil_export)==1);
+    return ProfileMatches(bytes,profile,66);
 }
 inline bool Matches(std::span<const uint8_t> bytes,const Identity &id) {
     if(bytes.size()<32||bytes.size()>MaxBytes)return false;

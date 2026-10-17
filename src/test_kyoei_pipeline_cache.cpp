@@ -1,4 +1,5 @@
 #include "kyoei_pipeline_cache.h"
+#include "shader_recompiler/profile.h"
 #include <cassert>
 #include <future>
 #include <cstdarg>
@@ -11,6 +12,20 @@ extern "C" void gz_log(const char *format,...) {
 int main() {
     using namespace KyoeiPipelineCache;
     _putenv_s("KYOEI_FRAME_STATS","0");
+    Shader::Profile shader_profile{};
+    std::vector<uint8_t> shader_bytes(sizeof(shader_profile));
+    std::memcpy(shader_bytes.data(),&shader_profile,sizeof(shader_profile));
+    for(size_t i=66;i<72;++i)shader_bytes[i]^=255;
+    assert(ShaderProfileMatches(shader_bytes,shader_profile));
+    // Every scalar/boolean byte remains significant, including the last field.
+    for(size_t i=0;i<66;++i) {
+        shader_bytes[i]^=1;
+        assert(!ShaderProfileMatches(shader_bytes,shader_profile));
+        shader_bytes[i]^=1;
+    }
+    assert(!ShaderProfileMatches(std::span(shader_bytes).first(71),shader_profile));
+    shader_bytes.push_back(0);
+    assert(!ShaderProfileMatches(shader_bytes,shader_profile));
     struct Profile { uint32_t a,b; } profile{7,11};
     std::vector<uint8_t> profile_data(sizeof(profile));std::memcpy(profile_data.data(),&profile,sizeof(profile));
     assert(ProfileMatches(profile_data,profile));assert(!ProfileMatches(std::span(profile_data).first(1),profile));

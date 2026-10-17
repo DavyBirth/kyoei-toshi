@@ -2906,3 +2906,37 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Nenhum gameplay iniciado,nem cache/saves reais alterados,nem ZIP regenerado.
   Build local pronto para investigar rejeição e etapas em medição futura.
   Sem correção de FPS ou validação visual alegada nesta etapa.
+
+### 16/10/2026 — teste211419 e correção da rejeição por padding do perfil
+
+- Davy corrigiu o agente:houve novo teste antes da resposta sobre desempenho,
+  e o agente respondeu sem consultar o log mais recente. Analisada agora a
+  sessão correta20261016_211419.log,407.032bytes,exit0. Relatório privado
+  build/research/performance-20261016-211419.json;95 janelas/11.400 intervalos,
+  248,256s resumidos,45,92FPS mistos;539 intervalos>50ms,34>100ms,máximo549,43ms.
+  Sem comparação controlada de percurso,não comprova melhora de FPS.
+- Separação funcionou:600 chamadas resumidas por categoria,pipeline externo
+  máximo3,69ms,construtor3,69ms,driver3,44ms,registro0,03ms. Nenhum compile
+  stall de pipelines;shader-compile18,30/23,60ms. Readback sem stall>=50ms.
+  command-batch máximo496,33ms. Logo pipelines lentos da sessão anterior não
+  se reproduziram,não atribuir a eles as travadas atuais.
+- Causa concreta da rejeição do cache identificada:perfil72bytes em ambos;
+  diferenças somente offsets66–71 (cached22/0/61/24/141/118 versus
+  current158/85/103/10/6/158). Os primeiros66bytes coincidem. No tipo real
+  Shader::Profile,os campos terminam em supports_shader_stencil_export no
+  offset65;66–71 são padding final de alinhamento. memcmp bruto rejeitava
+  capacidades iguais por bytes sem significado.
+- Correção Kyoei:ShaderProfileMatches exige tamanho72 e compara todos os
+  66bytes significativos;ignora somente padding final. Guardas de compilação
+  verificam ABI da cópia fixa. Mantém formato salvo,checagens dos campos e
+  diagnóstico de rejeições reais. Snapshot e cache existente preservados.
+  A integração WarmUp usa a nova comparação;sem apagar cache ou relaxar campos.
+- Teste com Shader::Profile real:padding diferente aceito;mutação individual
+  de cada um dos66bytes significativos rejeitada;perfil71/73bytes rejeitado.
+  Testes prévios de cache,persistência,fila e diagnóstico PASS. Build kyoei,
+  frame stats ativo/desligado,analisador antigo/novo,launcher CheckOnly e
+  git diff --check PASS. Nenhum gameplay iniciado nesta etapa.
+- docs/re/PIPELINE-STAGES.md atualizado. Correção funcional pronta,mas
+  pré-carregamento real e impacto nas travadas ainda não validados no jogo.
+  O cache Vulkan do driver é separado e já vinha funcionando;esta correção
+  não promete eliminar as demais pausas. Nenhum ZIP regenerado.

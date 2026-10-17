@@ -665,7 +665,7 @@ file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_pipeline_serializatio
 set(KYOEI_PIPELINE_SERIALIZATION "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_SERIALIZATION}")
 kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
   "if (std::memcmp(profile_data.data(), &profile, sizeof(profile)) != 0)"
-  "if (!KyoeiPipelineCache::ProfileMatches(std::span<const uint8_t>(profile_data),profile))")
+  "if (!KyoeiPipelineCache::ShaderProfileMatches(std::span<const uint8_t>(profile_data),profile))")
 kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
   "void PipelineCache::Sync() {\n    Storage::DataBase::Instance().Close();"
   "void PipelineCache::Sync() {\n    gz_log(\"Kyoei driver cache: collecting driver data\");\n    const bool saved=KyoeiPipelineCache::Persist(instance,pipeline_cache);\n    gz_log(\"Kyoei driver cache: driver data saved=%u; closing shader database\",unsigned(saved));\n    Storage::DataBase::Instance().Close();")
@@ -682,6 +682,7 @@ kyoei_replace_checked(KYOEI_GRAPHICS_PIPELINE
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_graphics_pipeline.cpp" CONTENT "${KYOEI_GRAPHICS_PIPELINE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_graphics_pipeline.cpp")
 add_executable(test_kyoei_pipeline_cache src/test_kyoei_pipeline_cache.cpp)
+target_include_directories(test_kyoei_pipeline_cache PRIVATE "${KYOEI_SHAD}/src")
 target_compile_features(test_kyoei_pipeline_cache PRIVATE cxx_std_23)
 target_compile_options(test_kyoei_pipeline_cache PRIVATE -UNDEBUG)
 target_compile_definitions(test_kyoei_pipeline_cache PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS)
