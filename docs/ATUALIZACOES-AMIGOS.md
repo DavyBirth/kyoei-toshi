@@ -1,5 +1,35 @@
 # Atualizações pequenas
 
+## Revisão atual: 17/10/2026
+
+- Windows: `build/Kyoei-Windows-Update-20261017.zip`, 7.327.905 bytes.
+- Linux/Wine: `build/Kyoei-Linux-Wine-Update-20261017.zip`, 7.329.069 bytes.
+- Cumulativos: aceitam Friends-Test original e updates de 15 e 16/10.
+- Pré-compilação dos pipelines conhecidos e nove conversores internos;
+  união de buffers de vértices simplificada. Readback cooperativo experimental
+  permanece desligado por padrão. Ainda há travadas; ganho de FPS não comprovado.
+- Linux: não aborta por maps protegido de processo identificado sem relação
+  com Wine/Proton. Se Wine, executável Windows ou identidade desconhecida não
+  puder ser verificado, recusa e informa PID. Continua recusando runtime ou
+  launcher mapeado; interpreta escapes de caminhos do /proc e compara caminho
+  inteiro. Não precisa mudar permissões do sistema nem usar sudo.
+- Onze testes Linux/WSL, três do gerador e três Windows passaram. ZIPs reais
+  aplicados/reaplicados em seis instalações descartáveis (três bases, dois
+  sistemas): hash, backup, save e prefixo Wine preservados. Arquivos permitidos
+  e ausência dos identificadores pessoais conhecidos conferidos no payload.
+  Relatório privado: `build/research/update-validation-20261017.json`.
+
+Fechar jogo/launcher, extrair dentro da pasta do jogo substituindo a pasta
+`Atualizacao-Kyoei`. Windows: `Aplicar atualizacao.cmd`. Linux:
+`sh Atualizacao-Kyoei/Aplicar-no-Linux.sh`. Depois abrir pelo launcher habitual.
+O erro de `/usr/bin/kitten` reportado acompanhava a saída 1 do aplicador;
+não foi comprovada falha independente do terminal. Teste no Linux do amigo
+continua necessário para confirmar seu ambiente específico.
+
+Payload SHA256: `f4e2385bff0ec2dd7f58b78ed141f8c2d910e6fbe16e641f1f72e66a0e4b0aae`.
+Windows ZIP: `442fd0d3d809272a766ad484465fcf157b4471b85797fa96f29d969f23556333`.
+Linux ZIP: `b68bdc87b5fde2dff2f418dd2130dbf3ac97a98e945ef3508e6badbc4b1d8a65`.
+
 ## Revisão atual: 16/10/2026
 
 - Windows: `build/Kyoei-Windows-Update-20261016.zip`, 7.311.654 bytes.

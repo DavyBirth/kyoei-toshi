@@ -75,9 +75,12 @@ def main():
                       'fechados, copie o backup indicado sobre runtime/kyoei.exe.\n')
         command = ('@echo off\r\npowershell -NoProfile -ExecutionPolicy Bypass -File '
                    '"%~dp0apply_runtime_update.ps1" -GamePath "%~dp0.."\r\npause\r\n')
-        readme += ('\nMudanças desta revisão: menos consultas GPU quando não há callbacks pendentes;\n'
-                   'diagnóstico limitado para investigar imagens de 1x1 e esperas longas.\n'
-                   'Otimização experimental: não há ganho de FPS comprovado.\n'
+        readme += ('\nMudanças desta revisão: pré-compilação de shaders conhecidos e de nove\n'
+                   'conversores internos; simplificação segura da união de buffers de vértices.\n'
+                   'O protótipo de readback cooperativo fica desligado por padrão.\n'
+                   'No Linux, processos protegidos sem relação com Wine não bloqueiam o update;\n'
+                   'Wine/processos Windows ou sem identificação continuam sendo verificados.\n'
+                   'Ainda há travadas conhecidas; não há ganho de FPS comprovado.\n'
                    'Aceita a distribuição original e os updates anteriores listados no manifest.\n'
                    'Se já existe Atualizacao-Kyoei, substitua seus arquivos ao extrair.\n'
                    'O pacote troca apenas o runtime; não inclui mudanças nos arquivos do jogo.\n')

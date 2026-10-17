@@ -4,6 +4,7 @@ import fcntl
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import tempfile
@@ -14,10 +15,22 @@ def digest(path):
         return hashlib.file_digest(source, 'sha256').hexdigest()
 
 
-def require_closed(root):
+def may_host_runtime(entry):
+    """Classify unreadable mappings conservatively, without requiring ptrace access."""
+    command = (entry/'cmdline').read_bytes().split(b'\0')
+    names = [os.fsdecode(arg).replace('\\', '/').rsplit('/', 1)[-1].lower()
+             for arg in command if arg]
+    comm = (entry/'comm').read_text(errors='replace').strip().lower()
+    if not names:
+        return True  # cannot rule out a process changing identity
+    return any(name.endswith('.exe') or 'wine' in name or 'proton' in name
+               for name in [*names, comm])
+
+
+def require_closed(root, proc=Path('/proc')):
     targets = [str((root/name).resolve()) for name in
                ('runtime/kyoei.exe', 'City Shrouded in Shadow.exe')]
-    for entry in Path('/proc').iterdir():
+    for entry in proc.iterdir():
         if not entry.name.isdigit():
             continue
         try:
@@ -27,8 +40,20 @@ def require_closed(root):
         except FileNotFoundError:
             continue  # process exited during enumeration
         except PermissionError:
-            raise RuntimeError('Não foi possível verificar processos. Feche jogo/launcher e tente novamente.')
-        if any(target in mappings for target in targets):
+            try:
+                if not may_host_runtime(entry):
+                    continue
+            except FileNotFoundError:
+                continue
+            except OSError:
+                pass
+            raise RuntimeError('Não foi possível verificar um processo Wine/Proton ou não identificado '
+                               f'(PID {entry.name}). Feche jogo/launcher e tente novamente.')
+        # /proc escapes spaces and other special bytes with octal sequences.
+        paths = [re.sub(r'\\([0-7]{3})', lambda match: chr(int(match[1], 8)),
+                        line.split(None, 5)[5].removesuffix(' (deleted)'))
+                 for line in mappings.splitlines() if len(line.split(None, 5)) == 6]
+        if any(target in paths for target in targets):
             raise RuntimeError('Feche o jogo e o launcher antes de atualizar.')
 
 

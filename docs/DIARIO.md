@@ -3071,3 +3071,23 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Readback síncrono ainda registra esperas de 55,67 e 106,23 ms.
 - Não atribuir melhora ao protótipo cooperativo: ele segue desligado no atalho.
   Nenhuma mudança de resolução/qualidade foi aplicada nesta conferência.
+
+### 17/10/2026 — atualização dos amigos e correção Linux
+- Retomado do checkpoint a pedido de Davy. Corrigido require_closed: maps
+  protegido de processo identificado alheio a Wine/Proton não aborta o update.
+  Identidade indisponível, Wine ou executável Windows protegido continuam
+  bloqueando com PID. Caminhos mapeados comparados integralmente e com escapes
+  octais/deleted interpretados, cobrindo espaços no nome do launcher.
+- Onze testes Linux/WSL PASS; três testes do gerador e três Windows PASS.
+  Build kyoei e testes vertex ranges, primed detilers e cooperative ligado/off
+  PASS. Nenhuma mudança ao núcleo Godzilla fixo, dump ou saves originais.
+- Gerados ZIPs cumulativos 20261017 Windows (7.327.905 bytes) e Linux/Wine
+  (7.329.069). Aceitam original e updates 15/16. Payload limpo SHA256
+  f4e2385bff0ec2dd7f58b78ed141f8c2d910e6fbe16e641f1f72e66a0e4b0aae.
+  Aplicação/reaplicação real em seis instalações descartáveis PASS, conferidos
+  backups, saves, prefixo e payload; arquivos/personal tokens conferidos.
+  Relatório build/research/update-validation-20261017.json; hashes dos ZIPs
+  registrados em docs/ATUALIZACOES-AMIGOS.md. Nenhum pacote enviado externamente.
+- Readback cooperativo segue desligado por padrão. Iniciado teste isolado
+  cooperative-20261017 com cópia privada de saves/cache; resultado pendente
+  neste checkpoint. Não alegar ganho de FPS nem resolução das travadas.
