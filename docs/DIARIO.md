@@ -3058,3 +3058,16 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Próxima tarefa: corrigir a detecção Linux com verificação segura dos processos
   relevantes, testar e gerar/validar os dois pacotes cumulativos. Manter o
   protótipo experimental desligado na distribuição normal.
+
+### Retorno do teste de Davy — log 20261016_224040
+- Relato: travamento no começo; personagem em sprint com baixa qualidade,
+  depois melhora visual e aumento percebido de velocidade.
+- Log conferido: encerramento normal exit 0; cache do driver salvo sem falhas.
+  Pausas de command-batch de 814,84 ms e quadro máximo de 951,05 ms.
+  Trechos medidos caem a 14,06–17,91 FPS e depois chegam a 24,91 FPS;
+  são cenas diferentes, sem comparação controlada de ganho.
+- Há novas compilações de pipelines durante a partida. Isso pode contribuir
+  com pausas, mas o log não prova causa da qualidade visual do personagem.
+  Readback síncrono ainda registra esperas de 55,67 e 106,23 ms.
+- Não atribuir melhora ao protótipo cooperativo: ele segue desligado no atalho.
+  Nenhuma mudança de resolução/qualidade foi aplicada nesta conferência.
