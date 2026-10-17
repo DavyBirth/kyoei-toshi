@@ -10,6 +10,23 @@ namespace Shader::Gcn {
 std::optional<FetchShaderData> ParseFetchShaderUncached(const Shader::Info& info);
 namespace {
 thread_local uint64_t lookups=0,hits=0;
+bool Associative() {
+    static const bool enabled=[] {const auto* p=std::getenv("KYOEI_FETCH_CACHE_WAYS");return !p||p[0]!='1';}();
+    static const auto* control=std::getenv("KYOEI_FETCH_CACHE_WAYS_CONTROL");
+    if(!control)return enabled;
+    static thread_local unsigned calls=0;
+    static thread_local bool active=false;
+    if((calls++&511)==0){
+        bool next=false;
+        if(auto* f=std::fopen(control,"rb")){next=std::fgetc(f)=='1';std::fclose(f);}
+        if(next!=active){
+            gz_log("Kyoei fetch ways: ways=%u previous_lookups=%llu previous_hits=%llu",next?2u:1u,
+                   (unsigned long long)lookups,(unsigned long long)hits);
+            lookups=hits=0;active=next;
+        }
+    }
+    return active;
+}
 bool Enabled() {
     static const bool enabled=[] { const auto* p=std::getenv("KYOEI_FETCH_CACHE");return !p||p[0]=='1'; }();
     static const bool ab=[] { const auto* p=std::getenv("KYOEI_FETCH_CACHE_AB");return p&&p[0]=='1'; }();
@@ -54,10 +71,10 @@ bool Equal(const FetchShaderData& a,const FetchShaderData& b) {
     return true;
 }
 }
-std::optional<FetchShaderData> ParseFetchShader(const Shader::Info& info) {
+template<size_t Ways> std::optional<FetchShaderData> ParseCached(const Shader::Info& info) {
     if(!info.has_fetch_shader)return std::nullopt;
     if(!Enabled()&&!Verify())return ParseFetchShaderUncached(info);
-    static thread_local KyoeiFetchCache::Cache<FetchShaderData> cache;
+    static thread_local KyoeiFetchCache::Cache<FetchShaderData,128,Ways> cache;
     const auto* code=GetFetchShaderCode(info,info.fetch_shader_sgpr_base);
     ++lookups;
     if(const auto* cached=cache.Probe(code)) {
@@ -74,5 +91,8 @@ std::optional<FetchShaderData> ParseFetchShader(const Shader::Info& info) {
     auto original=ParseFetchShaderUncached(info);
     if(original)cache.Record(code,original->size,*original);
     return original;
+}
+std::optional<FetchShaderData> ParseFetchShader(const Shader::Info& info) {
+    return Associative()?ParseCached<2>(info):ParseCached<1>(info);
 }
 }

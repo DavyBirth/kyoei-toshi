@@ -1,5 +1,14 @@
 # Desempenho — objetivo de 60 FPS
 
+## Resultado mais recente: 17/10/2026, segunda rodada
+
+Depois do ganho local de 34,8% com gravacao Vulkan e cache fetch, o cache com
+duas entradas por grupo ganhou mais 4,8% em outro A/B na mesma partida:
+33,70/35,32 FPS. A leitura de offsets tambem deixou de copiar o vetor de
+atributos a cada draw. [Metodo, controles e limites](re/GRAVACAO-VULKAN.md).
+Os percentuais pertencem a sessoes diferentes e nao formam uma medida conjunta.
+A meta de 60 FPS e a eliminacao global de stutter continuam nao demonstradas.
+
 ## Sessão autônoma de 17/10/2026
 
 Davy autorizou continuar os testes locais até resolver performance, mantendo

@@ -32,6 +32,21 @@ int main() {
     CHECK(*cache.Probe(code)==decode());
     auto* other=page.data()+512;
     CHECK(cache.SlotFor(code)==cache.SlotFor(other));
-    CHECK(!cache.Probe(other));cache.Record(other,16,{});CHECK(!cache.Probe(code));
-    std::puts("fetch cache: 10000 mutations, enclosing snapshots, length/page limits and collisions PASS");
+    CHECK(!cache.Probe(other));cache.Record(other,16,{});
+    CHECK(!cache.Probe(other));cache.Record(other,16,{});
+    // Alternating two colliding addresses must keep both decoded results.
+    for(unsigned i=0;i<10000;++i){
+        CHECK(cache.Probe(other));CHECK(*cache.Probe(code)==decode());
+    }
+    auto* third=page.data()+1024;
+    CHECK(cache.SlotFor(code)==cache.SlotFor(third));
+    CHECK(!cache.Probe(third));cache.Record(third,16,{});
+    CHECK(!cache.Probe(code)); // bounded replacement may lose a hit
+    // A pending observation belongs to its exact pointer, even if another
+    // pointer hashes into the same bucket.
+    KyoeiFetchCache::Cache<std::array<unsigned char,16>> ownership;
+    CHECK(!ownership.Probe(code));ownership.Record(other,16,{});
+    CHECK(!ownership.Probe(other));ownership.Record(other,16,{});
+    CHECK(!ownership.Probe(other));ownership.Record(other,16,{});CHECK(ownership.Probe(other));
+    std::puts("fetch cache: 10000 mutations, 10000 alternating collisions, enclosing snapshots, length/page/ownership/eviction PASS");
 }

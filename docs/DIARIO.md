@@ -3462,3 +3462,52 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   conferir resultado/dependencias/processos; log mantido. Testes encerrados.
 - Ganho comprovado apenas nessa vista na RTX 2060 local. Nao declarar 60 FPS,
   ausencia de stutter, validacao de outras GPUs/Linux ou jogo inteiro concluido.
+
+
+## 17/10/2026 - segunda rodada: copias por draw e colisoes de fetch
+
+- Pedido de Davy: estudar e melhorar mais. Leitura do diario e das fontes
+  locais de referencia, sem modificar Godzilla nem a copia fixa. Testes mudos
+  via SDL dummy, com perfis somente depois dos trechos medidos.
+- Perfil inicial: 1.000 pilhas da thread grafica, 402 em espera, 64 com
+  especializacao, 20 com parser fetch original, 14 com alocacao da conversao
+  optional<const FetchShaderData> para optional<FetchShaderData> no draw.
+  O trabalhador de gravacao tem folga; nao atribuir todo limite a ele.
+- Tentativa de comparar descritores completos antes da especializacao,
+  inspirada em TLG/ISS: controles 32,73/33,21 FPS contra 29,20/30,22 FPS.
+  Alternativa rejeitada e removida do codigo. Patch/evidencias privados
+  preservados em build/research/raw-stage-rejected-20261017.patch e logs.
+- Correcao pequena em CMake: GetDrawOffsets da copia gerada recebe o tipo
+  exato optional<const FetchShaderData> por referencia, evitando copiar o
+  vetor a cada draw. Nenhuma mudanca de layout/ABI. Perfil posterior de
+  1.000 pilhas: zero amostras dessa alocacao; nao mede ganho isolado de FPS.
+- Cache fetch agora com 128 grupos de duas entradas, substituicao limitada.
+  Mantidos limite512/mesma pagina, comparacao integral de bytes e duas
+  observacoes em torno do parser. Record exige endereco exato da Probe.
+  Teste PASS: 10.000 mutacoes e 10.000 alternancias colidentes, mais
+  comprimento/pagina/observacao misturada/propriedade/substituicao.
+- Build ON PASS. A/B fetch-ways-ab-20261017, mesmo processo/vista/Fifo,
+  gravacao+timer+correcao da copia iguais nos dois caminhos. Blocos de uma
+  entrada: 33,87/33,51 FPS; duas: 35,49/35,15. Media ponderada
+  33,7032/35,3211 FPS (+4,8%), 1.560/1.440 intervalos; max52,36/49,04ms.
+  Primeiro resumo por bloco descartado; nenhum restante diagnostic=1;
+  196/196 checks sem foco. Sem build/captura/perfil durante a amostra,
+  exit0. Controles de colisoes: falhas172.470/1.146.594 (15,04%) versus
+  88.080/1.204.012 (7,32%): aproximadamente metade do trabalho refeito
+  por consulta. Nao somar ao +34,8% anterior nem comparar FPS absolutos
+  de sessoes diferentes. 60 FPS e stutter global continuam nao comprovados.
+- Duas entradas por padrao na previa ON; KYOEI_FETCH_CACHE_WAYS=1 mantem
+  controle de uma entrada; controle privado por arquivo para A/B. Defaults
+  normais do repositorio continuam com renderer experimental OFF.
+- Giro/caminhada/corrida fetch-ways-camera-20261017 exit0, 34/34 sem foco;
+  capturas conferidas, fogo/dano/desfoque preservados. Parser verificou
+  10.000 decodificacoes completas sem divergencia. FPS desse teste nao
+  mede performance: verificacao e capturas acrescentam trabalho.
+- Portatil pessoal atualizado. Runtime sanitizado SHA256
+  108d266d052a9871195ed83963321f53026dd2e9cc440b033b2bde11ab24966c.
+  Fixture GPU instalada pixel/padding/publicacao PASS; ambos launchers
+  --check exit0; tres arquivos persistentes identicos por hash. Testes
+  encerrados. Audio normal dos atalhos preservado. Nenhum ZIP para amigos
+  modificado; manifesto privado continua sem nova finalizacao/varredura.
+- Metodo completo em docs/re/GRAVACAO-VULKAN.md; resumo atualizado em
+  docs/DESEMPENHO.md. Sem reestruturacao ampla ou alteracao da qualidade.

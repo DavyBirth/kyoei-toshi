@@ -117,3 +117,67 @@ continua disponivel no atualizador 20261017b para reversao.
 
 Nenhum ZIP para amigos foi atualizado. Esta previa foi validada na RTX 2060
 local; nao representa teste em AMD, Linux/Wine ou no restante completo do jogo.
+
+## Segunda rodada: copias e colisoes de fetch (17/10/2026)
+
+O perfil seguinte mostrou decodificacao de fetch ainda recorrente e alocacoes
+na leitura dos offsets de cada draw. `GraphicsPipeline::GetFetchShader()`
+devolve `optional<const FetchShaderData>`, mas `GetDrawOffsets` recebia
+`optional<FetchShaderData>`: a conversao implicita copiava o vetor de atributos.
+A copia gerada do rasterizer agora recebe o tipo exato por referencia. Nenhum
+layout de classe ou biblioteca fixa foi alterado. Em dois perfis posteriores
+ao benchmark, com 1.000 pilhas cada, as amostras dessa alocacao passaram de
+14 para zero; isso nao mede um percentual isolado de ganho dessa correcao.
+
+O cache de instrucoes agora tem 128 grupos de duas entradas, em vez de uma.
+Dois enderecos com o mesmo hash podem coexistir; a substituicao continua
+limitada. Preserva comparacao integral dos bytes, limite de 512 bytes/mesma
+pagina e confirmacao por duas observacoes envolvendo o parser original.
+`Record` exige o endereco exato da observacao pendente. Os descritores dos
+recursos continuam lidos ao vivo. O teste cobre 10.000 mutacoes de bytes,
+10.000 alternancias de enderecos colidentes, substituicao e propriedade da
+observacao, alem dos limites de pagina/comprimento.
+
+Comparacao `fetch-ways-ab-20261017`, mesma partida/vista na RTX 2060, Fifo,
+gravacao e timer ligados nos dois caminhos. A correcao de copia tambem esta
+nos dois caminhos; portanto, esta coleta isola a associatividade do cache.
+
+| Bloco | Entradas por grupo | FPS | Intervalos | Maximo |
+|---|---|---:|---:|---:|
+| 0 | uma | 33,87 | 840 | 51,65 ms |
+| 1 | duas | 35,49 | 720 | 35,34 ms |
+| 2 | uma | 33,51 | 720 | 52,36 ms |
+| 3 | duas | 35,15 | 720 | 49,04 ms |
+
+Media ponderada: **33,70/35,32 FPS (+4,8%)**, 1.560/1.440 intervalos.
+Primeiro resumo por bloco descartado, nenhum resumo restante marcado por
+diagnostico. 196/196 checks sem foco; sem captura, compilacao ou coleta de
+pilhas durante a amostra. Exit 0. Nos blocos completos dos contadores, uma
+entrada falhou em 172.470/1.146.594 consultas (15,04%); duas falharam em
+88.080/1.204.012 (7,32%): aproximadamente metade das decodificacoes refeitas
+por consulta. O primeiro contador inclui aquecimento e nao entra nessa conta.
+
+Essa e uma comparacao dentro da nova sessao. Nao comparar seus FPS absolutos
+com a sessao anterior de 39,97 FPS nem somar os percentuais como uma medida
+conjunta: a carga do PC e as condicoes entre sessoes podem variar. O resultado
+nao comprova 60 FPS nem ausencia de stutter no restante do jogo.
+
+Na previa experimental, duas entradas sao o padrao; `KYOEI_FETCH_CACHE_WAYS=1`
+permite o controle de uma entrada. `KYOEI_FETCH_CACHE_WAYS_CONTROL` e um
+controle privado amortizado para A/B na mesma partida, sem mudar os relogios
+do jogo. Resolucao, efeitos e simulacao permanecem iguais.
+
+Uma tentativa inspirada na reutilizacao de variantes TLG/ISS comparou os
+descritores completos antes da especializacao. Ficou mais lenta: blocos
+de controle 32,73/33,21 FPS contra 29,20/30,22 FPS. Foi removida, sem novo
+caminho/flag no codigo mantido. Patch e evidencias privados em `build/research`.
+
+Validacao final `fetch-ways-camera-20261017`: giro, caminhada e corrida,
+exit 0, 34/34 checks sem foco; capturas conferidas com fogo, dano e desfoque
+preservados. 10.000 comparacoes completas com o parser original sem
+divergencias. Nao usar seus FPS como benchmark: verificacao e capturas
+acrescentam trabalho. O runtime sanitizado instalado no portatil pessoal
+passou a fixture GPU de pixel/padding/publicacao e ambos os launchers passaram
+`--check`. Tres arquivos persistentes identicos por hash antes/depois. Todos
+os testes mudos; audio normal dos atalhos preservado. Nenhum ZIP para amigos
+alterado; portatil continua privado, sem nova finalizacao de distribuicao.

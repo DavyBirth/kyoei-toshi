@@ -905,6 +905,11 @@ target_compile_options(test_kyoei_pipeline_cache PRIVATE -UNDEBUG)
 target_compile_definitions(test_kyoei_pipeline_cache PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN _CRT_SECURE_NO_WARNINGS)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_rasterizer.cpp" KYOEI_RASTERIZER)
+# GraphicsPipeline owns optional<const FetchShaderData>. Accept its exact type:
+# optional<FetchShaderData> would silently copy the attribute vector per draw.
+kyoei_replace_checked(KYOEI_RASTERIZER
+  "    const std::optional<Shader::Gcn::FetchShaderData>& fetch_shader) {"
+  "    const std::optional<const Shader::Gcn::FetchShaderData>& fetch_shader) {")
 set(KYOEI_RASTERIZER "#include \"kyoei_raster_trace.h\"\n${KYOEI_RASTERIZER}")
 set(KYOEI_DRAW_SELECTION [=[
     if (KyoeiRasterTrace::Capturing()) {
