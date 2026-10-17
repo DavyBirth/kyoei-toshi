@@ -2962,3 +2962,29 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Atalho normal continua fazendo WarmUp antes da partida. Isso cobre pipelines
   conhecidos da base,não todos os shaders/cenas do jogo. Redução de travadas/FPS
   ainda depende de observação numa nova partida após esse pré-carregamento.
+
+### 16/10/2026 — teste212733:pré-carregamento validado em partida
+
+- Davy testou após pré-compilação. Analisado o log mais recente confirmado:
+  20261016_212733.log,239.364bytes,exit0. Relatório privado
+  build/research/performance-20261016-212733.json;34 janelas,4.080 intervalos,
+  117,677s resumidos,34,67FPS mistos,máximo533,82ms;478 intervalos>50ms,
+  23>100ms. Sem comparação controlada com sessões de duração/percurso diferentes.
+- Partida confirmou Preloaded693 pipelines,sem rejeição do perfil. Só uma
+  mensagem Compiling graphics pipeline;nenhum compile stall registrado.
+  Categorias de compilação não fecharam120 chamadas;ausência de resumo não
+  significa que o custo é zero. Detilers internos ainda compilam sob demanda.
+- Oito lotes detalhados novamente sem yielded/empty;retomadas concentram tempo.
+  Exemplo359,34ms,11 retomadas,maior299,42ms. command-batch máximo504,98ms
+  no resumo;prepare261,73ms,present35,06ms,video-label39,21ms.
+- Evidência concreta de espera longa recorrente:imagem1x1/256bytes no endereço
+  0x105beeed00,readback386,15ms termina37059253,89ms;GPU wait385,55ms termina
+  37059253,37ms,requested4753,next4754,known_before4752,known_after4753,
+  forced_flush0. Tick já submetido;contador anterior é cache,não timestampGPU.
+  Espera incluída no readback:não somar tempos nem culpar largura de banda.
+- Sem falhas detectadas pelo analisador. Cache driver writer completed3,
+  failed0,latest_saved1. Correção/preload funcionalmente validados na partida,
+  mas persistem pausas grandes. Não prometer que shaders explicam as travadas.
+- Próximo:investigar trabalho anterior ao tick e produtor/consumidor da imagem,
+  além dos detilers internos sob demanda;identidade de luminância segue hipótese.
+  Nenhum runtime alterado,jogo iniciado ou teste repetido solicitado nesta análise.
