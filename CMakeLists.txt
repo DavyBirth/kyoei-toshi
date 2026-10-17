@@ -207,6 +207,10 @@ kyoei_replace_checked(KYOEI_LOADER
   "    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);"
   "    if (!no_gpu && !list_stubs && !getenv(\"GZ_READBACK_LINEAR\") && _putenv_s(\"GZ_READBACK_LINEAR\", \"1\")) fail(\"cannot configure linear image readback\");\n    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);")
 set(TLS_REJECTION "    if (main_tls[2]) fail(\"this eboot has static TLS; the Windows loader does not support it yet\");")
+set(KYOEI_COOPERATIVE_SELF_TEST [=[        const char *coop_test=getenv("KYOEI_COOPERATIVE_SELF_TEST");
+        if(coop_test && !strcmp(coop_test,"1")) { extern void kyoei_cooperative_readback_self_test(void); kyoei_cooperative_readback_self_test(); }
+        const char *cache_test=]=])
+kyoei_replace_checked(KYOEI_LOADER "        const char *cache_test=" "${KYOEI_COOPERATIVE_SELF_TEST}")
 string(FIND "${KYOEI_LOADER}" "${TLS_REJECTION}" TLS_ANCHOR)
 if(TLS_ANCHOR EQUAL -1)
   message(FATAL_ERROR "Review TLS adapter: shared loader changed")
@@ -464,6 +468,49 @@ kyoei_replace_checked(KYOEI_LIVERPOOL "                if (queue.submits.empty()
   "                if (queue.submits.empty()) {\n                    batch_detail.Empty();")
 kyoei_replace_checked(KYOEI_LIVERPOOL "            task.resume();"
   "            batch_detail.Resume(task);")
+set(KYOEI_LIVERPOOL "#include \"kyoei_cooperative_readback.h\"\n${KYOEI_LIVERPOOL}")
+set(KYOEI_COOPERATIVE_SCHEDULER_HEADER [=[#include "video_core/renderer_vulkan/vk_scheduler.h"]=])
+set(KYOEI_LIVERPOOL "${KYOEI_COOPERATIVE_SCHEDULER_HEADER}\n${KYOEI_LIVERPOOL}")
+set(KYOEI_COOPERATIVE_GFX [=[                if (rasterizer) {
+                    const auto completion_submits=num_submits.load();
+                    auto completion=KyoeiCooperativeReadback::Process(rasterizer->GetScheduler(),[this] { rasterizer->ProcessDownloadImages(); });
+                    unsigned completion_polls=0;
+                    bool completion_slept=false;
+                    while (completion && !completion->Ready()) {
+                        if ((num_submits==1 && num_commands==0) || ++completion_polls>=64) { completion_slept=true;completion->Wait(); }
+                        else { YIELD_GFX(); }
+                    }
+                    if(completion)KyoeiCooperativeReadback::Report(completion_submits,completion_polls,completion_slept);
+                }]=])
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "                if (rasterizer) {\n                    rasterizer->ProcessDownloadImages();\n                }"
+  "${KYOEI_COOPERATIVE_GFX}")
+set(KYOEI_COOPERATIVE_ASC [=[            if (rasterizer) {
+                const auto completion_submits=num_submits.load();
+                auto completion=KyoeiCooperativeReadback::Process(rasterizer->GetScheduler(),[this] { rasterizer->ProcessDownloadImages(); });
+                unsigned completion_polls=0;
+                bool completion_slept=false;
+                while (completion && !completion->Ready()) {
+                    if ((num_submits==1 && num_commands==0) || ++completion_polls>=64) { completion_slept=true;completion->Wait(); }
+                    else { YIELD_ASC(vqid); }
+                }
+                if(completion)KyoeiCooperativeReadback::Report(completion_submits,completion_polls,completion_slept);
+            }]=])
+kyoei_replace_checked(KYOEI_LIVERPOOL
+  "            if (rasterizer) {\n                rasterizer->ProcessDownloadImages();\n            }"
+  "${KYOEI_COOPERATIVE_ASC}")
+foreach(KYOEI_PACKET IN ITEMS EventWriteEos EventWriteEop ReleaseMem)
+  if(KYOEI_PACKET STREQUAL "ReleaseMem")
+    set(KYOEI_PACKET_VAR release_mem)
+  elseif(KYOEI_PACKET STREQUAL "EventWriteEos")
+    set(KYOEI_PACKET_VAR event_eos)
+  else()
+    set(KYOEI_PACKET_VAR event_eop)
+  endif()
+  kyoei_replace_checked(KYOEI_LIVERPOOL
+    "const auto* ${KYOEI_PACKET_VAR} = reinterpret_cast<const PM4Cmd${KYOEI_PACKET}*>(header);"
+    "const auto kyoei_${KYOEI_PACKET_VAR} = *reinterpret_cast<const PM4Cmd${KYOEI_PACKET}*>(header);\n                const auto* ${KYOEI_PACKET_VAR} = &kyoei_${KYOEI_PACKET_VAR};")
+endforeach()
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp" CONTENT "${KYOEI_LIVERPOOL}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_liverpool.cpp")
 # Patch only a private snapshot. The guest can reuse NOP storage by changing
@@ -625,6 +672,23 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE
   "void TextureCache::UnregisterImage(ImageId image_id) {\n    Image& image = slot_images[image_id];"
   "void TextureCache::UnregisterImage(ImageId image_id) {\n    Image& image = slot_images[image_id];\n    KyoeiPrompts::states.erase(image.image_uid);")
+set(KYOEI_TEXTURE_CACHE "#include \"kyoei_tiny_download.h\"\n${KYOEI_TEXTURE_CACHE}")
+set(KYOEI_COOPERATIVE_DOWNLOAD [=[    if (download_images.empty()) return;
+    if (auto* context=KyoeiCooperativeReadback::current; context && download_images.size()<=16 &&
+        std::ranges::all_of(download_images,[this](ImageId id) {
+            const auto& image=slot_images[id];
+            return False(image.flags & ImageFlagBits::GpuModified) || KyoeiTinyDownload::Eligible(image.info);
+        })) {
+        KyoeiCooperativeReadback::Recording recording(*context);
+        for (const ImageId id:download_images) DownloadImageMemory(id,true);
+        download_images.clear();
+        return;
+    }]=])
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "    if (download_images.empty()) return;" "${KYOEI_COOPERATIVE_DOWNLOAD}")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE
+  "    auto& download_buffer = buffer_cache.GetUtilityBuffer(MemoryUsage::Download);"
+  "    if (sync && KyoeiTinyDownload::Queue(image,instance,scheduler)) return;\n    auto& download_buffer = buffer_cache.GetUtilityBuffer(MemoryUsage::Download);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 
 # Kyoei-only driver cache. Keep the frozen dependency intact. Create the
@@ -977,6 +1041,9 @@ target_include_directories(test_kyoei_names PRIVATE src "${KYOEI_CORE}/src")
 target_compile_definitions(test_kyoei_names PRIVATE KYOEI_NAMES_TEST=1 _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_input_mode src/test_kyoei_input_mode.c)
 add_executable(test_kyoei_frame_stats src/test_kyoei_frame_stats.cpp)
+add_executable(test_kyoei_cooperative_readback src/test_kyoei_cooperative_readback.cpp)
+target_compile_features(test_kyoei_cooperative_readback PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_cooperative_readback PRIVATE _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_vertex_ranges src/test_kyoei_vertex_ranges.cpp)
 add_executable(test_kyoei_primed_detilers src/test_kyoei_primed_detilers.cpp)
 target_compile_features(test_kyoei_primed_detilers PRIVATE cxx_std_23)

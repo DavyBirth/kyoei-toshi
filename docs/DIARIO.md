@@ -3039,3 +3039,22 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   da corrotina, mantendo resultado pronto ANTES do SignalFence original.
   Esse desenho ainda não foi implementado neste ponto do diário. Não alegar
   que remover a espera ou retornar resultado antigo seria uma correção válida.
+
+### Checkpoint solicitado por Davy — interrupção para salvar
+- Salvo protótipo de readback cooperativo, desligado por padrão; só ativa com
+  KYOEI_COOPERATIVE_READBACK=1. Compilação, testes CPU ligado/desligado e
+  autoteste na GPU real passaram. Ainda não validado em partida com o caminho
+  ligado; não declarar correção das pausas nem ganho de FPS.
+- Autoteste GPU: pixel RGBA correto, padding preservado e staging liberado.
+  Evidências privadas: build/research/detiler-fix-20261016/gpu-cooperative.log
+  e gpu-cooperative.console.log. Nenhuma alteração no dump/saves originais.
+- Davy interrompeu a investigação para compilar e preparar as atualizações dos
+  amigos; depois pediu salvar imediatamente. Pacotes ainda não regenerados.
+- Falha Linux relatada: verificação de processos aborta ao encontrar maps de
+  qualquer processo do mesmo usuário sem permissão de leitura em /proc.
+  tools/apply_runtime_update_linux.py:require_closed confirma esse caminho.
+  Correção e testes do atualizador ainda pendentes; /usr/bin/kitten exit 1
+  acompanha o aborto e não foi demonstrado como causa independente.
+- Próxima tarefa: corrigir a detecção Linux com verificação segura dos processos
+  relevantes, testar e gerar/validar os dois pacotes cumulativos. Manter o
+  protótipo experimental desligado na distribuição normal.
