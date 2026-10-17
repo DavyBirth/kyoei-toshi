@@ -90,3 +90,31 @@ que faz ponte em ordem diferente e endereços próximos de UINT64_MAX. Compara
 o resultado ao algoritmo de referência. Fixture de CPU para200.000 conjuntos
 de8 intervalos sobrepostos:51,51ms antes,36,94ms com caminho conectado. Essa
 medição inclui contêineres da fixture e não é ganhoFPS ou porcentagem do quadro.
+
+## Readback cooperativo opt-in — 17/10/2026
+
+`KYOEI_COOPERATIVE_READBACK=1` ativa um protótipo para lotes de até 16 imagens
+lineares RGBA8 1×1, uma amostra, camada e mip. Outros formatos seguem pelo
+caminho original. Cada cópia usa staging próprio; callback após conclusão GPU
+publica somente os quatro bytes válidos, preservando padding. O evento nativo
+continua aguardando a publicação antes de sinalizar fence/IRQ. A corrotina
+pode ceder a outras filas; após 64 retomadas usa espera bloqueante para não
+girar sem limite. Isso não elimina a dependência do jogo nesse resultado.
+
+Testes CPU ligado/desligado e teste real GPU passaram, incluindo validade do
+pixel, preservação de padding e liberação de staging. Em 17/10 houve também
+partida isolada completa com o caminho ativo: imagem conferida e saída 0.
+Primeiros callbacks registraram nove submits pendentes e 64 retomadas seguidas
+de espera; pendência não prova progresso útil em outra fila.
+
+Recortes de aproximadamente 35 segundos com recentralização e giro:
+cooperativo 38,52 FPS/maior intervalo 50,24 ms (12 janelas, 1.440 intervalos),
+síncrono 35,71 FPS/67,45 ms (10 janelas, 1.200 intervalos). Ambos fecharam
+normalmente. Foco ausente em 10/61 verificações no primeiro e 61/61 no segundo;
+enquadramento/animação também diferem. As janelas resumidas podem atravessar
+as bordas do recorte. Não são evidência suficiente para atribuir ganho ou
+ativar por padrão. Protótipo permanece desligado no atalho e nos pacotes.
+
+Evidências privadas em `build/research/detiler-fix-20261016/`:
+`game-{cooperative,synchronous}-20261017.log`, `range-*.json`,
+`measured-*.json` e `scene-*.png`. Saves/cache usados foram cópias privadas.

@@ -3091,3 +3091,22 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Readback cooperativo segue desligado por padrão. Iniciado teste isolado
   cooperative-20261017 com cópia privada de saves/cache; resultado pendente
   neste checkpoint. Não alegar ganho de FPS nem resolução das travadas.
+
+### 17/10/2026 — teste de readback e preferência de áudio
+- Partida isolada com cooperativo ativo completada, imagem conferida e exit 0.
+  Comparador síncrono também exit 0. Recortes: 38,52 FPS/50,24 ms maior quadro
+  cooperativo (12 janelas); 35,71 FPS/67,45 ms síncrono (10 janelas).
+  Foco ausente 10/61 vs 61/61, enquadramento/animação diferentes. Não atribuir
+  ganho; manter opt-in. Contratos/limitações em docs/re/ENVIO-ANTECIPADO.md.
+- Logs/ranges/medições/imagens cooperative-20261017 e synchronous-20261017
+  preservados em build/research/detiler-fix-20261016. Nenhum save original tocado.
+- Davy pediu próximos testes mudos porque está vendo filme. Silenciada sessão
+  Windows somente do processo de teste 21152, retorno 1 sessão e GetMute=true;
+  outros aplicativos preservados. Ferramenta tools/mute_test_audio.ps1 verifica
+  o executável alvo. Regra registrada em AGENTS.md; harness privado run.ps1
+  configura SDL_AUDIO_DRIVER=dummy nas próximas execuções. Atalho normal intacto.
+- Removidos exe/pdb e objetos obsoletos de test_kyoei_submit_budget: sem alvo
+  no CMake/Ninja e sem processo em execução; fontes únicas privadas preservadas.
+- Pacotes 20261017 prontos e validados; protótipo segue desligado. Próxima
+  investigação: pausas de carregamento e qualidade durante sprint relatadas por
+  Davy; medir progresso real entre filas antes de promover readback cooperativo.
