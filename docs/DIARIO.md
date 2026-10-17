@@ -3193,3 +3193,26 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Redirecionamento stderr de aviso Git também foi corrigido; checkpoint real
   validado por hashes/CRC e rodadas Once sem desligamento passaram antes de armar.
   Fonte de controle fica ignorada em build; não distribuir auto-shutdown.
+
+### 17/10/2026 — perfil da rua e tentativa de cache descartada
+- Amostrador privado profile-street2-20261017 funcionou sem debugger attach;
+  jogo encerrou normalmente (exit 0). Entre 100 stacks do processador de comandos,
+  30 incluíram espera de condição dentro de ProcessGraphics, 17 preparação de
+  pipeline e 17 BindResources (categorias sobrepostas; não são percentuais de CPU).
+  Suspensão para amostrar altera tempos: não usar essa execução como benchmark.
+- Experimentado cache limitado/thread-local de ParseFetchShader: comparação de
+  todos os bytes consumidos, página única, snapshot antes/depois, sem reutilizar
+  descritores de recursos. Testes de mutação/colisão/página PASS; verificação
+  em jogo de mais de 10.000 acertos contra decoder original PASS, exit 0.
+- Par fetch-heavy-{old,fast}-20261017: 25,67 versus 25,70 FPS, máximos 68,15
+  versus 84,32 ms; seis janelas/720 intervalos em cada, exit 0 e foco 0/81 perdido.
+  Capturas mostram momentos diferentes do ataque: original HP90 em pé, novo
+  HP70 caído. Não são estados visuais equivalentes; resultado não prova ganho
+  nem regressão atribuível ao cache. Performance continua pendente.
+- Por não haver benefício demonstrado, removidos cache, alvo de teste e adaptação
+  do CMake; executável recompilado com decoder original. Pesquisa única preservada
+  e conferida em build/research/discarded-fetch-cache-20261017.zip, SHA256
+  4896db36fa6e643cb926e82588cb5bbbad410cf291ad5037670456a529b74787.
+  Nenhum efeito, resolução, velocidade ou sincronização removido. Dump/saves
+  originais intactos. Próximo perfil deve separar CPU convidada e esperas,
+  controlando dano/animação do gigante antes de comparar FPS.
