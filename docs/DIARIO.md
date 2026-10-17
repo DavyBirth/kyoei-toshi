@@ -3303,3 +3303,38 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   fixa. Os 6.000 casos continuam PASS. Verificacao real normalizada em andamento;
   proxima medicao registra acertos e prolonga janela para quatro blocos completos.
   Fontes experimentais ainda sem commit; evidencias privadas em build/research.
+- Verificacao normalizada terminou exit0, com todas as previsoes comparadas
+  ao caminho original, incluindo marco de 10.000, sem divergencia.
+- A/B normalizado na mesma partida: blocos antigos 29,93 e 29,88 FPS;
+  blocos novos 31,75 e 32,00 FPS. Ponderado: 29,90/31,89 FPS, com
+  960/1080 intervalos. Acertos do cache ~66,2%. Primeiro bloco novo teve
+  foco ausente em 25/39 checks; segundo novo e primeiro antigo em primeiro
+  plano em todos os checks. Ganho modesto consistente nesta vista, nao 60.
+  Exit0; captura final inspecionada, sem corrupcao visual aparente.
+- Davy relatou pequenas travadas ao girar a camera. Na verificacao anterior
+  existem esperas de GPU de 226,48 e 254,25 ms no readback 1x1 e uma nova
+  permutacao de shader. Correlacao nao prova causa: nao atribuir as pausas
+  apenas a compilacao nem remover o feedback da GPU. Nova verificacao com
+  giro e caminhada iniciada (stage-camera-verify-20261017), ainda pendente.
+- stage-camera-verify-20261017 terminou exit0, 21/21 checks em primeiro
+  plano. Giro/corrida confirmados nas capturas, sem corrupcao aparente;
+  marco de 10.000 previsoes e nenhuma divergencia. Resumos 22,51 FPS,
+  maximo 149,40 ms: verificacao duplica trabalho e capturas perturbam o
+  trecho; nao usar esse numero para medir ganho do cache.
+- Experimento com 64 entradas: exit0, acertos ~68%, sem beneficio
+  demonstrado. Bloco novo 7 coincidiu com compilacao do teste e nao serve
+  para comparar FPS; bloco novo 9 limpo 30,16 FPS, antigos ~29,86.
+  Voltado a 8 entradas. Ranges e logs preservados no perfil privado.
+- Retiradas da integracao somente as experiencias de vertex input e timer
+  desta sessao, sem beneficio de FPS demonstrado. Fontes e delta arquivados
+  em build/research/discarded-performance-20261017; nao e reestruturacao
+  geral. Executavel recompilado sem os dois caminhos.
+- Candidato refinado projeta os campos de recursos efetivamente lidos pela
+  especializacao fixa, preservando nullness, formatos/conversoes, swizzle,
+  storage, bindings e runtime. Binder continua recebendo dados atuais de
+  filtros, tamanhos e enderecos em todo desenho. 12.000 mutacoes diferenciais
+  e lotacao/expulsao PASS; build PASS. Validacao real com camera em andamento
+  (stage-projected-camera-verify-20261017), candidato ainda opt-in.
+- Verificacao refinada com camera/corrida concluiu exit0, 23/23 checks com
+  foco, marco de 10.000 e nenhuma divergencia; captura de corrida conferida.
+  A/B refinado iniciado, sem compilar nem capturar durante a amostra.

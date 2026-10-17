@@ -745,6 +745,21 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONT
 # Vulkan cache before WarmUp so preloaded pipelines benefit from its contents.
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_pipeline_cache.cpp" KYOEI_PIPELINE_CACHE)
 set(KYOEI_PIPELINE_CACHE "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_frame_stats.h\"\n#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_CACHE}")
+set(KYOEI_PIPELINE_CACHE "#include \"kyoei_stage_cache.h\"\n${KYOEI_PIPELINE_CACHE}")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "    info.RefreshFlatBuf();\n    auto spec = Shader::StageSpecialization(info, runtime_info, profile, binding);"
+  "    info.RefreshFlatBuf();\n    const auto prediction=KyoeiStageCache::Probe(this,info,runtime_info,binding,program->modules.size());\n    if (prediction && !KyoeiStageCache::Verify()) {\n        info.AddBindings(binding);\n        const auto& cached=program->modules[*prediction];\n        return std::make_tuple(&info,cached.module,cached.spec.fetch_shader_data,HashCombine(params.hash,*prediction));\n    }\n    auto spec = Shader::StageSpecialization(info, runtime_info, profile, binding);")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "    const auto it = std::ranges::find(program->modules, spec, &Program::Module::spec);"
+  "    const auto it = std::ranges::find(program->modules, spec, &Program::Module::spec);\n    const size_t original_index=std::distance(program->modules.begin(),it);\n    if (prediction) { ASSERT_MSG(*prediction==original_index,\"Kyoei stage cache prediction mismatch\"); KyoeiStageCache::Verified(); }\n    KyoeiStageCache::Record(info,runtime_info,binding,spec,original_index,program->modules.size()+size_t(it==program->modules.end()));")
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "    std::optional<vk::ShaderModule> new_module{};"
+  "    KyoeiStageCache::Invalidate();\n    std::optional<vk::ShaderModule> new_module{};")
+# The temporary is no longer consumed after this assignment. Transfer its
+# attribute vector instead of allocating/copying it again on every draw.
+kyoei_replace_checked(KYOEI_PIPELINE_CACHE
+  "            fetch_shader = fetch_shader_;"
+  "            fetch_shader = std::move(fetch_shader_);")
 kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "        GraphicsPipeline::SerializationSupport sdata{};"
   "        KyoeiFrameStats::Work kyoei_compile_work(7);\n        GraphicsPipeline::SerializationSupport sdata{};")
@@ -768,7 +783,7 @@ kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "    const auto properties=instance.GetPhysicalDevice().getProperties();\n    KyoeiPipelineCache::Identity identity{properties.vendorID,properties.deviceID,{}};\n    std::memcpy(identity.uuid.data(),properties.pipelineCacheUUID.data(),16);\n    auto initial=KyoeiPipelineCache::Load(identity);\n    auto [cache_result, cache] = instance.GetDevice().createPipelineCacheUnique({.initialDataSize=initial.size(),.pInitialData=initial.data()});\n    if(cache_result!=vk::Result::eSuccess && !initial.empty()) {\n        auto retry=instance.GetDevice().createPipelineCacheUnique({});\n        cache_result=retry.result; cache=std::move(retry.value);\n    }")
 kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "    pipeline_cache = std::move(cache);"
-  "    pipeline_cache = std::move(cache);\n    WarmUp();\n    KyoeiPipelineCache::Checkpoint(instance,pipeline_cache,uint64_t(num_new_pipelines)+1,true);")
+  "    pipeline_cache = std::move(cache);\n    KyoeiStageCache::Invalidate();\n    WarmUp();\n    KyoeiPipelineCache::Checkpoint(instance,pipeline_cache,uint64_t(num_new_pipelines)+1,true);")
 kyoei_replace_checked(KYOEI_PIPELINE_CACHE
   "const GraphicsPipeline* PipelineCache::GetGraphicsPipeline() {"
   "const GraphicsPipeline* PipelineCache::GetGraphicsPipeline() {\n    KyoeiPipelineCache::Checkpoint(instance,pipeline_cache,uint64_t(num_new_pipelines)+1);")
@@ -781,6 +796,10 @@ kyoei_replace_checked(KYOEI_PIPELINE_CACHE
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_cache.cpp" CONTENT "${KYOEI_PIPELINE_CACHE}" @ONLY)
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_pipeline_serialization.cpp" KYOEI_PIPELINE_SERIALIZATION)
 set(KYOEI_PIPELINE_SERIALIZATION "extern \"C\" {\n#include \"gz.h\"\n}\n#include \"kyoei_pipeline_cache.h\"\n${KYOEI_PIPELINE_SERIALIZATION}")
+set(KYOEI_PIPELINE_SERIALIZATION "#include \"kyoei_stage_cache.h\"\n${KYOEI_PIPELINE_SERIALIZATION}")
+kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
+  "bool PipelineCache::LoadPipelineStage(Serialization::Archive& ar, size_t stage) {"
+  "bool PipelineCache::LoadPipelineStage(Serialization::Archive& ar, size_t stage) {\n    KyoeiStageCache::Invalidate();")
 kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
   "if (std::memcmp(profile_data.data(), &profile, sizeof(profile)) != 0)"
   "if (!KyoeiPipelineCache::ShaderProfileMatches(std::span<const uint8_t>(profile_data),profile))")
@@ -1102,6 +1121,11 @@ target_compile_features(test_kyoei_image_lookup PRIVATE cxx_std_23)
 target_compile_features(test_kyoei_cooperative_readback PRIVATE cxx_std_23)
 target_compile_definitions(test_kyoei_cooperative_readback PRIVATE _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_vertex_ranges src/test_kyoei_vertex_ranges.cpp)
+add_executable(test_kyoei_stage_cache src/test_kyoei_stage_cache.cpp)
+target_compile_features(test_kyoei_stage_cache PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_stage_cache PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS)
+target_include_directories(test_kyoei_stage_cache PRIVATE $<TARGET_PROPERTY:kyoei_videoout,INCLUDE_DIRECTORIES>)
+target_link_libraries(test_kyoei_stage_cache PRIVATE ${KYOEI_GPU_LIBRARIES} ${KYOEI_SYSTEM_LIBRARIES})
 add_executable(test_kyoei_primed_detilers src/test_kyoei_primed_detilers.cpp)
 target_compile_features(test_kyoei_primed_detilers PRIVATE cxx_std_23)
 target_compile_features(test_kyoei_vertex_ranges PRIVATE cxx_std_23)
