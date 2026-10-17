@@ -52,4 +52,11 @@ do trecho usado para comparar FPS.
 O primeiro candidato normalizado mediu 29,90/31,89 FPS na mesma vista,
 com quatro blocos completos; foco variou em um bloco. A variante com 64
 entradas nao demonstrou beneficio e foi descartada. Evidencias privadas
-ficam em `build/research`; resultados seguintes estao em `docs/DIARIO.md`.
+ficam em `build/research`.
+
+O refinamento por projecao de campos passou na verificacao com giro/corrida,
+mas o A/B em vista parada mediu somente 29,89/30,22 FPS (960 intervalos por
+caminho). Maximos dos dois blocos antigos 50,25/51,67 ms, novos 35,70/35,63 ms;
+isso nao prova correcao das pausas durante movimento. Os tres ultimos blocos
+ficaram integralmente em primeiro plano. Mais acertos (~79%) nao produziram
+ganho medio suficiente. Permanece experimental e desligado por padrao.

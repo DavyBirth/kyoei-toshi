@@ -3338,3 +3338,14 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Verificacao refinada com camera/corrida concluiu exit0, 23/23 checks com
   foco, marco de 10.000 e nenhuma divergencia; captura de corrida conferida.
   A/B refinado iniciado, sem compilar nem capturar durante a amostra.
+- A/B refinado terminou exit0. Quatro blocos completos: antigos 29,90 e
+  29,88 FPS; novos 30,15 e 30,28. Ponderado 29,89/30,22 FPS, 960 intervalos
+  por caminho; maximos antigos 50,25/51,67 ms, novos 35,70/35,63 ms nesta
+  vista parada. Acertos ~79%; ganho medio insuficiente para promover como
+  solucao de desempenho. Foco ausente em 6/39 checks do primeiro antigo;
+  demais tres blocos integralmente em primeiro plano. Captura final conferida.
+- Cache permanece desligado por padrao. Nao atribuir ao candidato refinado
+  os 31,89 FPS do primeiro candidato de snapshots: sao implementacoes e
+  coletas diferentes. Nem a media de 60 FPS nem a correcao do stutter de
+  camera foram demonstradas. Avanco funcional/testes registrado em f56f059;
+  testes encerrados normalmente, sem alterar efeitos, resolucao ou simulacao.
