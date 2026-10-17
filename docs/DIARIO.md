@@ -3349,3 +3349,51 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   coletas diferentes. Nem a media de 60 FPS nem a correcao do stutter de
   camera foram demonstradas. Avanco funcional/testes registrado em f56f059;
   testes encerrados normalmente, sem alterar efeitos, resolucao ou simulacao.
+
+### 17/10/2026 - rodada com orcamento de 20 pontos da cota de 5h
+- Davy cobrou resolver desempenho dentro de 20% de uso. Leitura inicial
+  da telemetria da conversa: 27% restante (09:54 local), portanto reserva
+  de 7% para esta rodada; nenhum desligamento automatico rearmado.
+- Referencia budget-baseline-20261017: 29,90 FPS/1080 intervalos, maximo
+  51,35 ms. Depois da amostra, NVML mediu GPU global 36-38%, clocks graficos
+  1410-1560 MHz, memoria 7000 MHz; nao atribuir uso de outros apps ao jogo.
+  CPU em 2s: GpuCommandProcessor 1109 ms, guest main 703 ms. Perfil posterior
+  de 1000 pilhas: 343 esperando VO label, 586 em Draw; driver, decodificacao
+  fetch e alocacoes entre os custos ativos. Amostragem nao integra o FPS.
+- Novo candidato atua diretamente em ParseFetchShader: chave somente nos
+  bytes das instrucoes, sem refazer a chave de descritores da experiencia
+  anterior. 128 slots limitados por thread, ate 512 bytes dentro da mesma
+  pagina; primeira observacao apenas aquece e uma segunda leitura original
+  precisa estar entre snapshots iguais. Recursos seguem lidos normalmente.
+  Arquivo fonte original adaptado em build, sem mudar copia fixa/ABI.
+- Teste de 10.000 mutacoes, alteracao durante parser, comprimento/pagina e
+  colisao PASS; build PASS. Verificacao de todas as previsoes reais inclui
+  os nove campos dos atributos (mais rigorosa que operator== original),
+  marco de 10.000 sem divergencia. Giro/corrida concluiu exit0, foco ausente
+  em 8/20 checks; nao usar esse teste de verificacao para alegar ganho FPS.
+  fetch-ab-budget-20261017 em andamento; novo cache ainda opt-in.
+- Davy adicionou seis arquivos de fontes de outros ports e pediu priorizar
+  a analise, depois encerrar a analise por causa da cota. Extraidos apenas
+  codigo/documentacao para pesquisa privada; nenhum executavel externo rodou.
+  Relatorio em docs/re/PORTS-REFERENCIA-20261017.md, inventario/hashes ao lado.
+- Diferencas verificadas: Bloodborne tem gravacao Vulkan paralela e cache
+  direto do parser; GOW3/GR2/TLG/ISS preferem RAM cacheada para stream e a
+  familia TLG memoiza transicoes parciais. P.T. usa logica e renderer proprios.
+  Comparador de especializacao corrigido da familia TLG ja existe na base.
+  Nao copiar patches de FPS especificos de outros jogos para o Kyoei.
+- Teste stream-cached-budget-20261017: 30,00 FPS/1080 intervalos, maximo
+  62,13 ms, exit0; foco ausente em 57/69 checks. Flags reais 0xe (RAM cacheada)
+  contra 0x7 (device local/host visible/coherent) no caminho antigo. Sem
+  ganho comprovado contra referencia de 29,90 em primeiro plano.
+- fetch-ab-budget-20261017 encerrou ainda no menu, sem amostra. Nova tentativa
+  fetch-ab-device-budget-20261017 concluiu exit0: ponderado 26,29/27,12 FPS,
+  840 intervalos por caminho. Blocos antigos 27,87/24,44, novos 27,50/26,85;
+  quase todos os checks sem foco. Taxa de acertos ~82-84%, sem ganho suficiente
+  nem correcao de stutter. Nao promover candidato com essa evidencia.
+- A pedido de fechar a analise, nenhum novo teste iniciado. Fontes unicas e
+  delta CMake dos dois candidatos desta rodada arquivados em
+  build/research/budget-candidates-20261017; integracao de producao restaurada.
+  Executavel local de pesquisa permanece recriavel; nenhum pacote/atalho
+  recebeu novas flags. Testes fechados normalmente, sem processo kyoei ativo.
+  A diferenca estrutural de gravacao serial merece investigacao integrada,
+  nao mais uma rodada de flags. 60 FPS continuam nao demonstrados.

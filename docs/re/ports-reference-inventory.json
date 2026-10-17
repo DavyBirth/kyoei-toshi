@@ -1,0 +1,32 @@
+[
+  {
+    "archive": "bloodborne_pc-0.51.zip",
+    "sha256": "a37fed0b7f789689e48789691bbfd9b89fd3d1ac41d8c9997e7eeab4f82073b1",
+    "text_files": 845
+  },
+  {
+    "archive": "gow3_pc-windows-v2.4.1.zip",
+    "sha256": "793ffbf70db8b2c48f4bc5f9d0514c79b489a032f731debc2368a4abf737ec6c",
+    "text_files": 772
+  },
+  {
+    "archive": "gr2_pc-2026.10.15-3159679.zip",
+    "sha256": "eb0ab99bc6ac0b70604cb4a10a6879d76bab1e4add021890aeda96bc86108395",
+    "text_files": 749
+  },
+  {
+    "archive": "iss_pc-2026.10.17-1898d44.zip",
+    "sha256": "b3da1a0d46b4072c2a003b8ef470e5ad8452068a9f21c8e21a7dc753d58de0e8",
+    "text_files": 860
+  },
+  {
+    "archive": "tlg_pc-2026.10.16-3dd0230.zip",
+    "sha256": "e3fa3bf997a9d42bc5eb0fa4ca4d2b172dde65dedee6491432137331d33d9fce",
+    "text_files": 759
+  },
+  {
+    "archive": "pt-pc-1.0.5.zip",
+    "sha256": "911269e06613e6ac139176ab2c77f21b7584435ee36943a499e5191289242e6f",
+    "text_files": 829
+  }
+]
