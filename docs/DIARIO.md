@@ -3168,3 +3168,28 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   GetThreadContext/StackWalk64, sem debugger attach. Ainda sem amostra válida:
   primeira janela de perfil terminou enquanto se preparava a medição de cota.
   Segundo teste profile-street2-20261017 em andamento neste checkpoint.
+
+### 17/10/2026 — cota monitorada e desligamento autorizado
+- Davy autorizou continuar testando/corrigindo performance autonomamente e
+  checar uso do GPT Work a cada cinco minutos. Confirmou explicitamente que
+  13% significa RESTANTES. Nesse limite: interromper tarefas, salvar tudo e
+  desligar PC. Não exige nova aprovação ao chegar ao limite.
+- Skill OpenAI Docs consultada; documentação oficial confirma uso compartilhado
+  Work/Codex e consulta por painel/status. Percentuais lidos da telemetria local,
+  não estimados pelo tamanho do contexto. Fonte em docs/DESEMPENHO.md.
+- Corrigido check_usage: pin na conversa raiz, sem escolher auxiliar/revisor
+  mais novo. Esses auxiliares tinham sessão/conta compartilhadas, mas não são
+  o arquivo a selecionar por data. Leitura PowerShell do log grande ficou
+  lenta; substituída por Python limitado a 8 MiB, eventos válidos recentes.
+  Quatro testes PASS, incluindo 13/13,1%, semanal, dados antigos/futuros,
+  log grande e escrita parcial. Última leitura inicial armada: 44% principal,
+  91% semanal em 01:14:32; os valores continuam mudando durante o trabalho.
+- Monitor privado PID 2236, build/overnight/performance_watch.ps1, armado com
+  intervalo 300s e threshold13. Confere dados frescos antes de agir; salva ZIPs
+  verificáveis com hashes em cada leitura e antes de desligar. Testes novos
+  recusam iniciar se performance-stop-requested existir. Shutdown /s /t 0,
+  sem /f; não matar aplicações alheias por nome. Save/dump originais intactos.
+- Primeiro fsync com descritor rb falhou no Windows; corrigido para r+b.
+  Redirecionamento stderr de aviso Git também foi corrigido; checkpoint real
+  validado por hashes/CRC e rodadas Once sem desligamento passaram antes de armar.
+  Fonte de controle fica ignorada em build; não distribuir auto-shutdown.

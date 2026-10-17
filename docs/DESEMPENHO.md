@@ -1,5 +1,32 @@
 # Desempenho — objetivo de 60 FPS
 
+## Sessão autônoma de 17/10/2026
+
+Davy autorizou continuar os testes locais até resolver performance, mantendo
+fidelidade ao PS4 e testes mudos. Confirmou parar ao restarem 13% da cota,
+checar a cada cinco minutos, salvar e desligar o PC. O monitor privado desta
+sessão está em `build/overnight/performance_watch.ps1`; PID, histórico e
+checkpoints ficam na mesma pasta ignorada. Não integra launcher ou pacotes.
+
+`scripts/check_usage.ps1 -SessionPath <rollout.jsonl> -ReservePercent 13`
+consulta a telemetria da conversa explicitamente escolhida. Não selecionar
+automaticamente o arquivo de um auxiliar mais recente. Leitura limitada a
+8 MiB, ignora escrita final incompleta e marca dados antigos/futuros como
+inválidos para disparar desligamento. `tools/checkpoint_runtime.py` guarda
+diff binário, arquivos modificados/novos não ignorados e hashes, verifica o
+ZIP e sincroniza sua gravação. Quatro regressões do leitor passaram.
+
+O monitor lê e salva a cada 300 segundos; no limite fresco, bloqueia novas
+partidas de teste, encerra tarefas identificadas do projeto, registra o diário,
+verifica checkpoint final e solicita shutdown sem forçar descarte de outros
+aplicativos. Falha de checkpoint impede desligamento automático. Para cancelar
+esse monitor: criar `build/overnight/stop-performance-watch`. O marcador de
+parada de testes é `build/overnight/performance-stop-requested`.
+
+Referência de produto: [OpenAI Docs sobre uso compartilhado de Work/Codex e
+consulta dos limites](https://learn.chatgpt.com/docs/pricing?translationFallback=pt-BR).
+Os percentuais observados vêm dos registros locais, não de estimativa por tokens.
+
 Aprofundamento em [TEMPO-TAREFAS-ENTIDADES.md](re/TEMPO-TAREFAS-ENTIDADES.md):
 o estágio 44 da inicialização do Kyoei troca para o cálculo de tempo medido.
 O padrão fixo do construtor base não explica, sozinho, o gameplay. Mapeadas
