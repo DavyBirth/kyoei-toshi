@@ -14,6 +14,38 @@ extern "C" void gz_log(const char *format,...) {
 extern "C" uint64_t kyoei_tls_fault_count(void) { return 100; }
 #define CHECK(x) do { if(!(x)) { std::fprintf(stderr,"Frame stats failed at %d\n",__LINE__);return 1; } } while(0)
 int main(int argc,char **argv) {
+    if(argc>1 && std::string(argv[1])=="cycles-trace") {
+        using namespace KyoeiThreadCycles;
+        CHECK(Difference({10,1,true},{25,1,true})==15);
+        CHECK(Difference({10,1,true},{10,1,true})==0);
+        CHECK(!Difference({10,1,false},{25,1,true}));
+        CHECK(!Difference({10,1,true},{25,1,false}));
+        CHECK(!Difference({10,1,true},{25,2,true}));
+        CHECK(!Difference({25,1,true},{10,1,true}));
+        _putenv_s("KYOEI_FRAME_STATS","1");
+        _putenv_s("KYOEI_STUTTER_CYCLES","1");
+        _putenv_s("KYOEI_STUTTER_TRACE","frame-cycles-trace-fixture.csv");
+        const auto before=Read();Sample other{};
+        {
+            KyoeiFrameStats::Work batch(12);
+            std::thread worker([&]{other=Read();});worker.join();
+            std::this_thread::sleep_for(std::chrono::milliseconds(12));
+        }
+        CHECK(before.valid && other.valid && before.thread!=other.thread);
+        CHECK(!Difference(before,other));
+        CHECK(Difference(before,Read()).has_value());
+        CHECK(KyoeiStutterTrace::Flush().written);
+        std::ifstream file("frame-cycles-trace-fixture.csv");
+        unsigned batches=0,cycles=0;std::string line,batch_key,cycle_key;
+        while(std::getline(file,line)) {
+            const auto tail=line.rfind(",0x");
+            if(line.starts_with("12,")){++batches;batch_key=line.substr(3,tail-3);}
+            if(line.starts_with("112,")){++cycles;cycle_key=line.substr(4,tail-4);}
+        }
+        file.close();CHECK(std::remove("frame-cycles-trace-fixture.csv")==0);
+        CHECK(batches==1 && cycles==1 && batch_key==cycle_key);
+        std::puts("FRAME CYCLES PASS: API, thread isolation, invalid samples, exact batch pairing");return 0;
+    }
     if(argc>1 && std::string(argv[1])=="batch-trace") {
         _putenv_s("KYOEI_FRAME_STATS","1");
         _putenv_s("KYOEI_STUTTER_TRACE","frame-batch-trace-fixture.csv");
@@ -27,10 +59,13 @@ int main(int argc,char **argv) {
         }
         CHECK(KyoeiStutterTrace::Flush().written);
         std::ifstream file("frame-batch-trace-fixture.csv");
-        bool found=false;std::string line;
-        while(std::getline(file,line))if(line.starts_with("12,"))found=line.ends_with(",0x5,3,0");
+        bool found=false;unsigned cycles=0;std::string line;
+        while(std::getline(file,line)) {
+            if(line.starts_with("12,"))found=line.ends_with(",0x5,3,0");
+            if(line.starts_with("112,"))++cycles;
+        }
         file.close();CHECK(std::remove("frame-batch-trace-fixture.csv")==0);
-        CHECK(found);std::puts("FRAME BATCH TRACE PASS: exact draw/dispatch counts, thread isolation");return 0;
+        CHECK(found && cycles==0);std::puts("FRAME BATCH TRACE PASS: exact draw/dispatch counts, thread isolation, cycles off by default");return 0;
     }
     if(argc>1) {
         _putenv_s("KYOEI_FRAME_STATS","0");

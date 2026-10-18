@@ -16,10 +16,13 @@ DETAIL = {200: 'gfx-packet', 201: 'draw', 202: 'find-image', 203: 'refresh-image
 
 
 def summarize(events, start=None, end=None):
+    # Stage112 is metadata for the exact stage12 scope, never another timed scope.
+    cycle_samples = {(e['thread'], e['end_ms'], e['duration_ms']): e['address']
+                     for e in events if e['stage'] == 112}
     frames = [e for e in events if e['stage'] == 100 and
               (start is None or e['end_ms'] - e['duration_ms'] >= start) and
               (end is None or e['end_ms'] <= end)]
-    work = [e for e in events if e['stage'] != 100]
+    work = [e for e in events if e['stage'] not in (100, 112)]
     result = {}
     for label, diagnostic in [('unflagged', False), ('diagnostic', True)]:
         selected = [f for f in frames if f['diagnostic'] == diagnostic]
@@ -48,6 +51,9 @@ def summarize(events, start=None, end=None):
                                          k: scope[k] for k in ('duration_ms', 'thread', 'address', 'bytes', 'diagnostic')})
                 if scope['stage'] == 12:
                     entry.update(batch_draw_calls=scope['address'], batch_dispatch_calls=scope['bytes'])
+                    cycles = cycle_samples.get((scope['thread'], scope['end_ms'], scope['duration_ms']))
+                    if cycles is not None:
+                        entry['batch_thread_cycles'] = cycles
                 overlaps.append(entry)
         worst.append(dict(end_ms=frame['end_ms'], duration_ms=frame['duration_ms'],
                           overlaps=sorted(overlaps, key=lambda e: e['overlap_ms'], reverse=True)[:25]))
@@ -56,7 +62,8 @@ def summarize(events, start=None, end=None):
                       'Temporal overlap does not prove causation. Basic draw/dispatch scopes retain stride128; '
                       'optional packet/draw detail is unsampled and adds timing overhead. '
                       'Scopes >=8ms are traced, except detailed Vulkan backpressure >=1ms. '
-                      'No GPU timestamp measurement.')
+                      'Batch thread cycles, when available, cover the entire batch, not just its overlap; '
+                      'they are not milliseconds or a CPU utilization percentage. No GPU timestamp measurement.')
     return result
 
 

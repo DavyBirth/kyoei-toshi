@@ -3599,3 +3599,45 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Primeiro ler este diario/Git e verificar processos/uso. Marcador build/overnight/performance-stop-requested bloqueia novos testes; remover somente apos Davy retomar o trabalho e confirmar nova janela disponivel. Nao rearmar shutdown/limiares antigos automaticamente.
 - Proximo alvo: distinguir CPU efetivamente executada de desagendamento/esperas nos batches lentos, antes de tentar outro cache. Considerar QueryThreadCycleTime opt-in por batch, mantendo ciclos como ciclos (nao converter usando GHz presumidos), teste de isolamento e sem consultas por draw. Isso e proposta, NAO implementado. Depois perfilar BindResources/GetProgram/ObtainBuffer conforme evidencia; respeitar ABI da biblioteca precompilada. Nao repetir coalescencia/lote192/cache512 sem evidencia nova.
 - Evidencias e snapshots de experimentos permanecem privados em build/research. Nenhum dump/save/projeto Godzilla/copia fixa alterado; testes mudos via SDL dummy. Checkpoint final deve ser verificado antes de shutdown; diario e commit permitem retomar amanha.
+
+### 18/10/2026 - reserva de10% autorizada por Davy
+- Janela principal restante: 10.0%. Testes e compilacoes do projeto encerrados; checkpoint local solicitado. Retomar do diario/Git e dos logs em build/research. Desligamento autorizado por Davy depois do checkpoint verificado.
+
+## 18/10/2026 - retomada: referencia Uncharted e ciclos por batch
+
+- Davy adicionou novo projeto em third_party e pediu continuar. Identificados
+  fontes Uncharted0.2.3 TAR/ZIP e pacote Windows; analisados os fontes do TAR,
+  SHA2566ba36265422b656f410b69b4968f5b8c2ce9321dcb57c3a1e77c827d8d867a69.
+  Sem executar o pacote nem alterar Godzilla/copia fixa. Analise concreta em
+  docs/re/REFERENCIA-UNCHARTED.md: ResetBindings une intervalos apenas compute;
+  comentario da referencia relata custo ao ordenar tambem draws. Carga deles
+  nao equivale aos muitos draws/poucos dispatch do Kyoei. Copias delegadas ao
+  worker dependem de arenas/publicacao/sincronizacao proprias; nao transplantadas.
+- Reserva anterior conferida apos retomada: telemetria recente96%, pedido de
+  parada falso. Marcador antigo arquivado em performance-stop-previous-20261018.txt.
+  Nao rearmado monitor/desligamento da noite anterior. Nenhum teste antigo ativo.
+- Implementado KYOEI_STUTTER_CYCLES=1, opt-in Windows: duas consultas
+  QueryThreadCycleTime por batch12, nenhuma por draw. Stage112 e metadado
+  associado por thread/end/duracao exatos; nao altera percentis nem duplica
+  escopos no analisador. Amostras invalidas/regressivas/de outra thread omitidas,
+  zero valido mantido. Limite/overflow do recorder preservado. Sem mudar ABI da
+  biblioteca precompilada, efeitos, resolucao, simulacao ou sincronizacao.
+- Testes C++ de API real/isolamento/erros/zero/pares exatos PASS; FrameStats
+  normal/desligado e batch-trace (ciclos off por padrao) PASS. Analisador Python
+  com/sem ciclos e traces antigos PASS. Compilacao completa PASS; aviso u8path
+  ja existente, sem erro. Ultima alteracao apenas reforcou teste do default.
+- Rota muda stutter-cycles-route-20261018 exit0,163/163checks sem foco,
+  45.752eventos/zero descartes.2.825intervalos/90,071s,31,36FPS,p99=50,32ms,
+  max117,01ms;56>50ms/2>100ms. Todos2.825batches completos tinham ciclos.
+  Medianas32,196ms/46.328.322ciclos/1.642draw (independentes). Maior batch
+  124,597ms,2.038draw/17dispatch,255.536.242ciclos;125.386ciclos/draw contra
+  mediana27.043. Outro103,659ms/1.772draw/216.284.345ciclos. Picos tem consumo
+  de ciclos elevado tambem; nao atribuir tudo a desagendamento nem isolar funcao
+  culpada. Nao converter ciclos usando GHz presumidos. Proximo alvo continua
+  perfilar BindResources/GetProgram/ObtainBuffer em movimento equivalente.
+- Sem compilacao/captura/amostrador na janela medida; captura posterior
+  inspecionada,personagem em pe/HP90,fogo/desfoque presentes. Sem A/B nem ganho
+  de performance reivindicado; instrumentacao tem custo e contexto varia.
+  Teste encerrado. Portatil pessoal preservado em c01d852,sem instalar diagnosticos.
+  Nenhum ZIP de amigos alterado. Fontes do diagnostico/documentos versionados;
+  trace/relatorios/scripts de inspecao permanecem privados em build/research.

@@ -89,4 +89,41 @@ callback8,48ms explica parte pequena. Outro de109,31ms visita1.509draw/18dispatc
 com readback256bytes20,26ms. Na cena parada as medianas eram1.383..1.388draw.
 Mais chamadas contribuem em alguns casos, mas nao explicam sozinhas a variacao.
 Antes de outro tuning, distinguir execucao CPU de desagendamento/esperas;
-ciclos de thread seriam diagnostico possivel, ainda nao implementado.
+ciclos de thread permitem uma coleta adicional, descrita abaixo.
+
+## Ciclos da thread por batch (Windows, opt-in)
+
+`KYOEI_STUTTER_CYCLES=1`, junto de `KYOEI_FRAME_STATS=1` e do caminho do
+trace, consulta `QueryThreadCycleTime` apenas na entrada/saida do batch12.
+O stage112 conserva exatamente thread/end_ms/duration_ms do stage12; address
+guarda a diferenca de ciclos e bytes fica0. Falha da API, troca de thread ou
+contador regressivo omitem a amostra; zero ciclos valido continua registrado.
+O analisador associa esse metadado ao batch exato como `batch_thread_cycles`,
+sem criar outro escopo ou alterar os percentis de apresentacao. Traces antigos
+continuam aceitos. Limite/overflow/fechamento do recorder continuam iguais;
+o evento adicional consome uma entrada do limite existente.
+
+Sao ciclos da thread durante o batch inteiro, incluindo trabalho aninhado;
+nao sao ciclos da GPU, milissegundos ou porcentagem de utilizacao. Nao converter
+usando GHz presumidos: frequencia e escalonamento podem variar. Comparar ciclos
+por chamada e duracao em contextos equivalentes ajuda a decidir a proxima
+investigacao, mas nao identifica sozinho a origem de uma espera. As consultas
+adicionam custo e ficam desligadas por padrao, sem consulta por draw.
+
+Testes cobrem falha/regressao/troca de thread/zero valido, API real Windows,
+associacao exata entre eventos e preservacao dos percentis no analisador.
+
+Coleta real `stutter-cycles-route-20261018`: exit0,45.752eventos/zero descartes,
+2.825intervalos/90,071s,31,36FPS,p99=50,32ms,max117,01ms;56>50ms/2>100ms.
+Todos2.825batches inteiros na janela tinham par de ciclos. Medianas do batch:
+32,196ms,46.328.322ciclos,1.642draw e27.043ciclos/draw (medianas independentes).
+Maior batch124,597ms:2.038draw/17dispatch,255.536.242ciclos,125.386ciclos/draw;
+o outro de103,659ms:1.772draw/17dispatch,216.284.345ciclos. Assim, nesses picos
+ha tambem consumo elevado de ciclos, alem da variacao no numero de chamadas.
+Isso favorece perfilar trabalho interno da thread; nao isola funcao culpada,
+nao exclui esperas/desagendamento e nao converte ciclos em tempo de CPU.
+
+Captura posterior: personagem em pe/HP90, fogo e desfoque presentes;
+163/163checks sem foco. Sem compilacao/captura/amostrador na janela medida.
+Nao e A/B da instrumentacao nem prova de ganho/regressao: trajetoria e contexto
+podem variar, e as consultas extras tem custo. Stutter continua reproduzido.

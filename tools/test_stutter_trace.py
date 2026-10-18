@@ -30,4 +30,13 @@ assert all_frames['diagnostic']['frames'] == 1
 assert all_frames['diagnostic']['over_100ms'] == 0
 empty = summarize(events, 500, 600)
 assert empty['unflagged']['p99_ms'] is None and empty['worst'] == []
+cycles = event(112, 260, 120, address=123456)
+other_thread = event(112, 250, 110, address=999)
+other_thread['thread'] = 2
+with_cycles = summarize(events + [cycles, other_thread], 110, 270)
+assert with_cycles['unflagged'] == report['unflagged']
+assert len(with_cycles['worst'][0]['overlaps']) == 2
+assert with_cycles['worst'][0]['overlaps'][0]['batch_thread_cycles'] == 123456
+assert 'batch_thread_cycles' not in with_cycles['worst'][0]['overlaps'][1]
+assert 'batch_thread_cycles' not in report['worst'][0]['overlaps'][0]
 print('stutter analysis: individual percentiles, strict thresholds, diagnostic/window boundaries and nested overlaps PASS')

@@ -6,6 +6,7 @@
 #include <cstdint>
 #include "kyoei_diagnostic_activity.h"
 #include "kyoei_stutter_trace.h"
+#include "kyoei_thread_cycles.h"
 extern "C" uint64_t kyoei_tls_fault_count(void);
 
 // Intervals between completed game presents, excluding idle redraws.
@@ -60,6 +61,8 @@ class Work {
     std::chrono::steady_clock::time_point start;
     KyoeiDiagnosticActivity::Stamp diagnostic_start{};
     uint64_t draw_call_start,dispatch_call_start;
+    bool measure_cycles=false;
+    KyoeiThreadCycles::Sample cycle_start{};
 public:
     explicit Work(unsigned category_, uint64_t bytes=0, unsigned width=0, unsigned height=0, uint64_t address=0)
         : category(category_), transfer_bytes(bytes), transfer_address(address), transfer_width(width), transfer_height(height) {
@@ -72,9 +75,13 @@ public:
         if(category==12){draw_call_start=work_calls[0];dispatch_call_start=work_calls[1];}
         active = true;
         start = std::chrono::steady_clock::now();diagnostic_start=KyoeiDiagnosticActivity::Now();
+        measure_cycles=category==12 && KyoeiStutterTrace::Path() && KyoeiThreadCycles::Enabled();
+        if(measure_cycles)cycle_start=KyoeiThreadCycles::Read();
     }
     ~Work() {
         if (!active) return;
+        // Only two cycle queries per batch; none on the draw/dispatch path.
+        const auto cycle_end=measure_cycles?KyoeiThreadCycles::Read():KyoeiThreadCycles::Sample{};
         // Deferred publication may run on the scheduler worker. Keep samples
         // per thread rather than racing or mixing overlapping CPU scopes.
         static thread_local std::array<std::array<double, 120>, CategoryCount> samples{};
@@ -92,6 +99,11 @@ public:
             KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end),
             category==12?work_calls[0]-draw_call_start:transfer_address,
             category==12?work_calls[1]-dispatch_call_start:transfer_bytes);
+        if(measure_cycles && elapsed>=8.) {
+            if(const auto cycles=KyoeiThreadCycles::Difference(cycle_start,cycle_end))
+                KyoeiStutterTrace::Record(112,ended,elapsed,
+                    KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end),*cycles);
+        }
         values[count++] = elapsed;
         const char* names[] = {"prepare", "present", "linear-downloads",
                                "readback-finish", "readback-publish", "readback-map",
