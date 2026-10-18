@@ -3825,3 +3825,8 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   mas frequencia/distribuicao/tamanho ainda nao medidos no Kyoei. Sem isso,
   microteste privado nao justifica integrar. Rascunho escalar pequeno preserva
   caminho original nos ranges grandes;nenhum AVX novo/requisitoCPU acrescentado.
+
+- Janela atingiu reserva1% as17:42;monitor escreveu performance-stop-requested,
+  sem shutdown. Nenhum teste aberto. Guia PORT-NATIVO agora explicita
+  CMAKE_BUILD_TYPE=RelWithDebInfo,evitando Debug incompativel com prebuilt.
+  Encerramento salvo em commit/checkpoint verificado;continuar so em nova janela.

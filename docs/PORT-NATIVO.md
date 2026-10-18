@@ -111,7 +111,7 @@ sucesso para todas as funções ausentes.
 ```powershell
 python tools/snapshot_godzilla.py
 python tools/prepare_native.py
-cmake -S . -B build -G Ninja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+cmake -S . -B build -G Ninja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=RelWithDebInfo
 cmake --build build --parallel 4
 powershell -ExecutionPolicy Bypass -File scripts/run_native.ps1
 ```
