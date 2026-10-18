@@ -3641,3 +3641,103 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Teste encerrado. Portatil pessoal preservado em c01d852,sem instalar diagnosticos.
   Nenhum ZIP de amigos alterado. Fontes do diagnostico/documentos versionados;
   trace/relatorios/scripts de inspecao permanecem privados em build/research.
+
+## 18/10/2026 - trabalho autorizado ate o limite da janela de5h
+
+- Davy pediu continuar trabalhando ate esgotar o limite de5h. Monitor privado
+  work-window-20261018.ps1/PID/log iniciado na sessao atual exata, com checkpoints
+  verificados a cada5min. Margem final1% ou1min antes do reset desta janela para
+  salvar; sem rearmar shutdown antigo. Primeira telemetria91%, depois90%.
+- Perfil novo no giro inicial stutter-turn-profile-20261018 exit0:1.000amostras,
+  547incluem Draw,159BindResources,123GetProgram,57StageSpecialization;
+  339folhas de espera por condition-variable,33de espera Vulkan,19em alocacao.
+  Copias optional<FetchShaderData> dentro de GetProgram aparecem no alocador.
+  Nao e benchmark: amostragem suspende a thread. Captura final falhou porque a
+  janela estava minimizada; nao restaurada so para produzir uma prova visual.
+- Candidato pequeno em src/kyoei_fetch_return.h: no retorno de GetProgram,
+  mover o fetch temporario ja construido quando TODOS os campos sao iguais ao
+  fetch do modulo escolhido. Caso contrario copia original. A igualdade original
+  ignora size/inst_offset/data_format/num_format; a guarda nova compara tudo,
+  com representacao unica dos atributos comprovada no compile. Nao modifica
+  modulo, shader, parser, dados do jogo ou ABI; nenhuma busca/copia e pulada
+  por presuncao. Apenas experimental ON, opt-in KYOEI_FETCH_RETURN_MOVE=1.
+- Build PASS; teste dos campos omitidos/ownership/null/10.000mutacoes PASS.
+  A/B mesmo processo fetch-return-ab-20261018 em andamento; controle privado
+  amortizado a512consultas, ordem0/1/1/0. Sem instalar/promover antes do resultado.
+- Copia fetch: ABBA36,73/38,27FPS original versus38,52/38,41candidato;
+  agregado37,51->38,46(+2,53%),sem>50ms. Repeticao BAAB original31,25/36,95
+  versus candidato30,80/32,20;agregado34,09->31,51(-7,59%),p99=34,85->51,61ms,
+  9->32intervalos>50ms. Variacao entre blocos impede causalidade simples, mas
+  nao ha beneficio consistente. Candidato retirado, fontes/patch conferidos
+  por hash em build/research/fetch-return-rejected-20261018; nenhuma instalacao.
+- Considerada reducao de estados Vulkan repetidos; nao implementada: bindPipeline
+  ocorre a cada draw e estados estaticos invalidam os dinamicos. Referencia
+  oficial consultada: docs.vulkan.org/spec/latest/chapters/pipelines.html.
+  Nao pular setters/vinculos sem acompanhar as declaracoes de cada pipeline.
+- Proximo diagnostico opt-in KYOEI_VIEW_STATS=1 em copia gerada de image.cpp:
+  contar buscas/passos/indice encontrado,4resumos no maximo,sem relogio por
+  chamada. Build em andamento. Determinar se a busca de views justifica uma
+  otimizacao antes de adicionar outra pista/cache. Nenhuma mudanca no portatil.
+- Diagnostico expandido para KYOEI_LOOKUP_STATS,4resumos de100mil consultas
+  por tipo/thread; totals/empty/cap/isolation/disabled testados PASS. Controle
+  privado so ativa no giro inicial. image-view~1,51..1,53passos/consulta,max3;
+  shader-permutation~1,78no primeiro bloco e2,66..2,71depois,max42,zero misses,
+  ~74..85%de indice0. Nao justifica cache de views; foco nas variantes.
+  Rota exit0; FPS perturbado por coleta nao e benchmark. Depois do cap os
+  contadores agora param tambem a leitura do controle, para nao prolongar custo.
+- Candidato KYOEI_SPEC_LOOKUP_FILTER opt-in: filtro negativo de binding inicial
+  antes da igualdade completa, mantendo excecao both-bitsets-none e a busca
+  do primeiro compativel. Nao e MRU/cache de recursos. Teste10mil listas com42
+  variantes,invalidas/assimetricas/unbound/first-match PASS. Compilacao e modo
+  diferencial real10mil preparados; A/B ainda pendente. Sem promover/instalar.
+- Filtro passou10mil comparacoes reais antes do aquecimento,sem divergencia.
+  ABBA27,98->29,71FPS agregado; cauda tem picos grandes nos controles,nao
+  declarar causalidade/stutter resolvido. Repeticao BAAB em andamento.
+- Preparada alternativa independente para custo do Scope de diagnosticos
+  desligados (11folhas no perfil): guarda/destrutor inline,Begin/Finish fora
+  do caminho inativo,mesmos campos/layout/relatorios. So rascunho privado em
+  build/research/scope-guard-20261018,codigo ativo ainda original. Microteste
+  Clang-O2,50milhoes de scopes:455,8/463,5ms antigo,89,9/75,8ms proposto;
+  nao e FPS nem prova de ganho no jogo. Paridade4modos preparada,pendente;
+  nao compilar ate acabar a medicao do filtro.
+- Filtro de variantes BAAB37,12->36,47FPS(-1,74%),p99=34,42->34,81ms,
+  2->3intervalos>50ms. Beneficio nao consistente com ABBA; fontes/CMake
+  arquivados e conferidos em spec-lookup-rejected-20261018,alvo/flags retirados
+  do codigo ativo. Busca original restaurada. Contadores limitados mantidos
+  por enquanto como diagnostico experimental,desligados por padrao.
+- Scope: paridade reference/candidate nos modos disabled/streaming/detailed/both
+  PASS. Preparada gravacao A/B no MESMO executavel com wrapper temporario de
+  duas implementacoes; escolha preservada por vida do objeto. Teste especifico
+  de troca de modo antes do destrutor PASS (membro ativo correto da union).
+  Controle lido somente no batch e no maximo4vezes/s,transicoes com QPC no log;
+  nenhuma leitura de arquivo por draw/pacote. Build e4modos do wrapper PASS.
+  scope-guard-ab-20261018 em andamento. IMPORTANTE: src/kyoei_streaming_trace.h
+  esta TEMPORARIAMENTE na versao A/B; CMake chama ScopeGuardControl::Refresh.
+  Depois de medir,remover wrapper/controle/call e restaurar candidate.h ou
+  reference.h de build/research/scope-guard-20261018 conforme resultado.
+- Monitor atual atualizado/reiniciado e conferido: janela54% recente,mesmo
+  deadline. Em1% ou1min antes do reset,escreve stop,fecha SO testes cuja origem
+  e build/kyoei.exe com --user em build/research,e faz checkpoint verificado.
+  Sem shutdown do PC e sem tocar nos aplicativos de Davy. Nao rearmar regra10%.
+- ScopeABBA38,338->38,592FPS(+0,66%),p99=34,38->34,55ms,7->2>50ms,
+  max52,34->61,15ms. Variacao entre blocos,sem ganho conclusivo/stutter.
+  ScopeBAAB em andamento. Funcionalidade dos4modos e lifetime do wrapper PASS.
+- Rascunho separado de guarda curta para KyoeiFrameStats::Work,apenas privado
+  em frame-guard-20261018: Begin/Finish fora da guarda inativa,amostragem1/128
+  e contagens exatas preservadas. Mesmos testes original/candidato normal/off/
+  batch/cycles PASS. Micro50milhoes: off634/606ms->178/177ms; sampled670/661ms
+  ->229/227ms. Nao e FPS. Ainda NAO aplicado ao port,nao misturar com ScopeAB.
+- ScopeBAAB38,978->39,876FPS(+2,30%),p99=34,29->34,33ms,nenhum>50ms;
+  ABBA anterior+0,66%. Ambos logs confirmaram todas as transicoes nas janelas,
+  zero descartes/exit0. Cauda/60FPS nao resolvidos; ganho modesto nessa vista.
+  Mantida apenas guarda curta simples; wrapper/union/controle/call retirados.
+  Contadores temporarios de lookup tambem arquivados/conferidos e retirados,
+  inclusive copia extra de image.cpp,para nao deixar custo de compilacao/codigo
+  sem uso. CMake atual so acrescenta teste funcional da guarda. Build e4modos
+  finais PASS. Rota scope-guard-final-route-20261018 em andamento,sem instalar
+  no portatil. Metodo/numeros em docs/re/STUTTER-TRACE.md.
+- Rota final Scope concluida exit0,163/163checks sem foco,zero descartes;
+  3.113intervalos/90,205s,34,51FPS,p99=50,16ms,max116,33ms;48>50ms/1>100ms.
+  Captura inspecionada,em pe/HP100,fogo/desfoque presentes. Diferente da rotaHP90,
+  nao comparar medias como ganho. Guardas finais e4modos testados,sem wrapper.
+  Stutter continua; portatil pessoal nao atualizado com este conjunto diagnostico.

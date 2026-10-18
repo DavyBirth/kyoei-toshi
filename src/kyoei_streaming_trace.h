@@ -16,6 +16,12 @@ inline bool Enabled() {
 inline double Milliseconds() {
     return std::chrono::duration<double,std::milli>(std::chrono::steady_clock::now().time_since_epoch()).count();
 }
+// These options are already immutable after first use. Keep the hot guard
+// small; clock reads and reporting stay outside the inactive path.
+inline bool TimingEnabled() {
+    static const bool enabled=Enabled() || KyoeiStutterTrace::Detailed();
+    return enabled;
+}
 class Scope {
     const char* name;
     uint64_t address,bytes;
@@ -23,17 +29,17 @@ class Scope {
     double start=0;
     KyoeiDiagnosticActivity::Stamp diagnostic;
 public:
-    Scope(const char* label,uint64_t addr=0,uint64_t size=0,unsigned w=0,unsigned h=0)
-    {
-        // The disabled path runs for every draw/upload. Leave diagnostic
-        // payload untouched; the destructor only reads it when start is set.
-        if(!Enabled() && !KyoeiStutterTrace::Detailed())return;
+    [[gnu::always_inline]] Scope(const char* label,uint64_t addr=0,uint64_t size=0,unsigned w=0,unsigned h=0) {
+        if(TimingEnabled())Begin(label,addr,size,w,h);
+    }
+    [[gnu::always_inline]] ~Scope() { if(start)Finish(); }
+private:
+    [[gnu::noinline]] void Begin(const char* label,uint64_t addr,uint64_t size,unsigned w,unsigned h) {
         name=label;address=addr;bytes=size;width=w;height=h;
         if(KyoeiStutterTrace::Detailed())diagnostic=KyoeiDiagnosticActivity::Now();
         start=Milliseconds();
     }
-    ~Scope() {
-        if(!start)return;
+    [[gnu::noinline]] void Finish() {
         const auto ended=std::chrono::steady_clock::now();
         const auto end=std::chrono::duration<double,std::milli>(ended.time_since_epoch()).count();
         if(KyoeiStutterTrace::Detailed() && end-start>=8.){

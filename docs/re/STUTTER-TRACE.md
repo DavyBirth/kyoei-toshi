@@ -127,3 +127,41 @@ Captura posterior: personagem em pe/HP90, fogo e desfoque presentes;
 163/163checks sem foco. Sem compilacao/captura/amostrador na janela medida.
 Nao e A/B da instrumentacao nem prova de ganho/regressao: trajetoria e contexto
 podem variar, e as consultas extras tem custo. Stutter continua reproduzido.
+
+## Menor custo dos escopos desligados
+
+O perfil do giro incluiu11folhas no construtor de `KyoeiStreamingTrace::Scope`,
+mesmo com o detalhamento desligado. A guarda e o destrutor agora ficam pequenos
+e inline; `Begin/Finish` concentram o caminho ativo. O OR das opcoes ja imutaveis
+depois do primeiro uso e calculado uma vez. Layout/campos, limiares8/25ms,
+metadados, flags de diagnostico e limites de relatorios continuam iguais.
+Testes separados cobrem disabled/streaming/detailed/both, estagios200..206/299,
+endereco/bytes/dimensoes, marcador de captura e limite de oito relatos.
+
+Microteste Clang-O2,50milhoes de escopos vazios desligados,ABBA:455,8/463,5ms
+originais versus89,9/75,8ms com guarda curta. Isso comprova menor sobrecarga
+sintetica desse caminho, nao uma proporcao de ganho de FPS no jogo.
+
+Para comparar dentro do mesmo processo foi usado um wrapper temporario com
+duas implementacoes e escolha capturada por vida do objeto. Teste de troca
+antes do destrutor confirmou membro correto da union. Controle apenas no
+batch, no maximo4leituras/s; QPC de todas as transicoes conferido com os blocos,
+sem troca dentro das selecoes. Primeiro segundo de cada bloco descartado.
+
+| Ordem, Fifo | Original FPS | Guarda curta FPS | p99 original/curta | >50ms original/curta |
+| --- | ---: | ---: | ---: | ---: |
+| ABBA | 38,338 | 38,592 | 34,38/34,55ms | 7/2 |
+| BAAB | 38,978 | 39,876 | 34,29/34,33ms | 0/0 |
+
+Melhoras medias pequenas nessa vista local RTX2060 (0,66% e2,30%); cauda nao
+resolveu: noABBA max52,34->61,15ms. Nao somar com outros ganhos nem declarar
+stutter/60FPS resolvidos. Ambas execucoes exit0 e zero descartes. Nenhuma
+compilacao/captura/perfil na janela medida. Wrapper/controle removidos apos
+a comparacao; permanecem apenas a guarda curta e seus testes funcionais.
+
+Rota final sem wrapper `scope-guard-final-route-20261018`: exit0,163/163checks
+sem foco,3.113intervalos/90,205s,34,51FPS,p99=50,16ms,max116,33ms;
+48>50ms/1>100ms,zero descartes. Captura posterior conferida: em pe/HP100,
+fogo/desfoque presentes. Contexto/caminho diferentes da rota anteriorHP90:
+nao comparar suas medias como ganho. Stutter ainda reproduzido. Portatil
+pessoal preservado; nao instalado apenas este conjunto de diagnosticos.
