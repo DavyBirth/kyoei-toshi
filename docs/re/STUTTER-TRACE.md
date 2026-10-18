@@ -75,3 +75,18 @@ mostra personagem caido e HP80, enquanto o controle terminou em pe com HP100.
 Os mesmos comandos por tempo nao garantem o mesmo contexto. Nao atribuir a
 diferenca numerica inteira ao readback cooperativo nem reivindicar A/B
 controlado. Caminho permanece desligado por padrao, sem beneficio demonstrado.
+
+## Rota com contagem por batch
+
+`stutter-counts-route-20261018`:3.383intervalos/90,121s,37,54FPS;
+p99=50,06ms,p99,9=83,14ms,max133,30ms;35>50ms e2>100ms. Exit0,
+38.882eventos/zero descartes, sem capturas ou amostrador dentro da janela.
+Contexto final HP90, diferente da primeira rota HP100: nao comparar medias
+dessas partidas como ganho. Nenhum tuning novo ativo; stutter reproduzido.
+
+O batch associado ao maior intervalo leva134,26ms e visita2.043draw/17dispatch;
+callback8,48ms explica parte pequena. Outro de109,31ms visita1.509draw/18dispatch,
+com readback256bytes20,26ms. Na cena parada as medianas eram1.383..1.388draw.
+Mais chamadas contribuem em alguns casos, mas nao explicam sozinhas a variacao.
+Antes de outro tuning, distinguir execucao CPU de desagendamento/esperas;
+ciclos de thread seriam diagnostico possivel, ainda nao implementado.
