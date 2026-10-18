@@ -3800,3 +3800,19 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   isolam picos nem sao porcentagemCPU. Proximo passo:perfil dirigido aos batches
   longos com ciclos elevados/mesma trajetoria;nao repetir filtro de variants,
   fetch-return ou fusao draw sem evidencia nova. AnyInRange segue so privado.
+
+- Encerramento da janela:avancos funcionais5c504d0(ciclos),4740a38(Scope),
+  4ee1878(Work/intervalos). Build principal ON/rebuild limpo,OFF/RelWithDebInfo
+  e nove modos em ambas configuracoes PASS;rota final exit0. Sem wrappers A/B
+  ativos,sem testes abertos;portatil pessoal preservado. Stutter/60FPS pendentes.
+- Removido build/guard-off temporario apos verificar processos/dependencias:
+  158.334.931bytes;logs de configure/build/testes preservados. Tambem removida
+  somente third_party/Bloodborne-Windows (1).zip,121.908.719bytes,identica ao
+  original preservado;SHA256D2DF6AA37530F0D21F577C5CC05BD3366B1F95E8F402B96CAB89BBD8C8A219E5.
+  Nenhum arquivo do dump/save/trabalho unico apagado.
+- Para retomar:ler docs/re/REFERENCIA-UNCHARTED.md e STUTTER-TRACE.md. Priorizar
+  perfil dos picos em movimento,nao repetir atalhos rejeitados. Para medir FPS
+  sem Work:FRAME_STATS=0,PRESENT_INTERVALS_ONLY=1 e STUTTER_TRACE definido no
+  processo ANTES de iniciar. Registrar foco/rota/HP/transicoes;nenhuma compilacao,
+  captura ou profiler dentro de janelas comparadas. Perfil separado nao e A/B.
+  Ao copiar cabecalhos experimentais,tocar data e confirmar objetos recompilados.
