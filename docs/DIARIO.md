@@ -3816,3 +3816,12 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   processo ANTES de iniciar. Registrar foco/rota/HP/transicoes;nenhuma compilacao,
   captura ou profiler dentro de janelas comparadas. Perfil separado nao e A/B.
   Ao copiar cabecalhos experimentais,tocar data e confirmar objetos recompilados.
+
+- Revisao final da hipotese AnyInRange:refs locais Bloodborne0.51/GOW3/GR2/TLG/
+  ISS ja usam consulta direta em bit_array.h/RegionManager. ISS inclui AVX no
+  miolo e cpu_any atomico,com estrategia propria de locks. NAO importar esse
+  atalho atomico nem retirar locks do Kyoei:MemoryTracker atual protege CPU/GPU
+  com scoped_lock. Chamadas existem por buffer de vertices/indices/ObtainBuffer,
+  mas frequencia/distribuicao/tamanho ainda nao medidos no Kyoei. Sem isso,
+  microteste privado nao justifica integrar. Rascunho escalar pequeno preserva
+  caminho original nos ranges grandes;nenhum AVX novo/requisitoCPU acrescentado.
