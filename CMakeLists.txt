@@ -551,6 +551,23 @@ kyoei_replace_checked(KYOEI_GNM
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp" CONTENT "${KYOEI_GNM}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_gnmdriver.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/buffer_cache/buffer_cache.cpp" KYOEI_BUFFER_CACHE)
+if(KYOEI_EXPERIMENTAL_RENDERER)
+file(READ "${KYOEI_SHAD}/src/video_core/buffer_cache/buffer.cpp" KYOEI_BUFFER)
+set(KYOEI_BUFFER "#include \"kyoei_stream_watches.h\"\n${KYOEI_BUFFER}")
+set(KYOEI_OLD_STREAM_WATCH [=[    if (current_watch_cursor != 0 &&
+        current_watches[current_watch_cursor].tick == scheduler->CurrentTick()) {
+        current_watches[current_watch_cursor].upper_bound = offset;
+        return;
+    }]=])
+kyoei_replace_checked(KYOEI_BUFFER "${KYOEI_OLD_STREAM_WATCH}"
+  "    if (KyoeiStreamWatches::Enabled() && KyoeiStreamWatches::ExtendLast(current_watches,\n            current_watch_cursor,scheduler->CurrentTick(),offset)) return;")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer.cpp" CONTENT "${KYOEI_BUFFER}" @ONLY)
+target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer.cpp")
+target_sources(kyoei_videoout PRIVATE src/kyoei_stream_self_test.cpp)
+add_executable(test_kyoei_stream_watches src/test_kyoei_stream_watches.cpp)
+target_compile_features(test_kyoei_stream_watches PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_stream_watches PRIVATE _CRT_SECURE_NO_WARNINGS)
+endif()
 set(KYOEI_BUFFER_CACHE "#include \"kyoei_vertex_ranges.h\"\n${KYOEI_BUFFER_CACHE}")
 kyoei_replace_checked(KYOEI_BUFFER_CACHE
   "    if (!ranges.empty()) {\n        std::ranges::sort(ranges,"

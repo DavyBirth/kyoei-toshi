@@ -3511,3 +3511,58 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   modificado; manifesto privado continua sem nova finalizacao/varredura.
 - Metodo completo em docs/re/GRAVACAO-VULKAN.md; resumo atualizado em
   docs/DESEMPENHO.md. Sem reestruturacao ampla ou alteracao da qualidade.
+
+
+## 18/10/2026 - registros de vida util do stream, sem alterar os dados
+
+- Davy pediu continuar trabalhando. Diario, AGENTS e perfis anteriores lidos;
+  referencia local Bloodborne/TLG/GOW3. Sem modificar Godzilla nem a copia fixa.
+  Testes no mudo via SDL dummy, sem mexer no audio dos outros aplicativos.
+- Encontrado erro em StreamBuffer::Commit: current_watch_cursor aponta para
+  a proxima posicao livre, mas era usado ao tentar ampliar o ultimo registro
+  do mesmo tick. Referencias usam cursor-1. Adaptacao local em copia de
+  buffer.cpp via CMake, helper ExtendLast, sem mudanca de layout/ABI.
+  Map/Commit, flush/invalidate, rotacao e protecao por ticks preservados.
+- Teste de referencia: 100.000 alocacoes aleatorias, alinhamentos, ticks,
+  crescimento de armazenamento e 440 voltas. Mesmos ticks de protecao em
+  todas as consultas, registros100.000->5.644 no conjunto sintetico. PASS.
+- Nova fixture GPU opt-in dentro da infraestrutura --gpu-test: 2.048 copias
+  de128bytes para destinos distintos, stream com16 alocacoes, 127 voltas e
+  envios parciais a cada37 copias. Comparados todos262.144bytes depois da
+  conclusao. PASS com compactacao e com referencia individual. Fixture
+  RGBA/padding/publicacao tambem PASS em ambos. Alinhamento considera atom
+  size/noncoherent; headers VMA depois dos Vulkan e funcao com ligacao C.
+- A/B stream-watch-ab-20261018: Fifo, gravacao+fetch2+timer iguais, cache de
+  dados desligado. Warm80,094s depois do stage201, blocos0/1/1/0 com controles
+  nas pontas. Sem compactacao36,33/35,74FPS; com38,15/37,36FPS. Ponderado
+  36,0111/37,7521FPS (+4,8348%), 1.560/1.680 intervalos. Primeiro resumo por
+  bloco descartado; nenhum resumo diagnostic=1; 196/196checks sem foco.
+  Sem compilacao, captura ou pilhas durante a amostra. Exit0. Maximos
+  40,65/51,66ms nao melhoraram; nao declarar stutter resolvido ou60FPS.
+- Experimento separado de reutilizar snapshots de uploads pequenos, mesmo
+  tick/bytes completos, reaproveitou aproximadamente37%, mas FPS variaveis.
+  Primeiro AB0/1/0/1:30,40/30,18/33,31/38,55. Repeticao com watches corrigidos,
+  warm80 e ordem1/0/0/1:39,16/34,12/34,72/33,15. Medias positivas nao sao
+  ganho consistente; cache/flags/alvo de teste removidos do codigo mantido.
+  Fontes/integracao arquivadas em build/research/upload-reuse-rejected-20261018;
+  ultimo rascunho de captura depois de Map nao foi compilado/medido. Executavel,
+  PDB e objetos obsoletos removidos apos conferir substitutos/dependencias,
+  ausencia do processo e hashes das copias de evidencia. Mantidas provas.
+- Build final ON e teste de watches PASS; codigo novo so no renderer
+  experimental (OFF continua padrao do repositorio). Compactacao ON por
+  padrao na previa pessoal; =0 e referencia individual conservadora, sem
+  restaurar acesso incorreto a posicao livre. Controle privado amortizado
+  para A/B. Nenhuma alteracao de resolucao, efeitos, shaders ou simulacao.
+- Giro/caminhada/corrida stream-watch-camera-20261018 exit0, 34/34checks sem
+  foco, capturas inspecionadas com explosao/dano/particulas/desfoque preservados.
+  10.000 comparacoes completas fetch sem divergencias. FPS desse teste nao
+  e benchmark, por verificacao e capturas. Testes encerrados.
+- Portatil pessoal atualizado; runtime sanitizado SHA256
+  f095a67312bdb4ab71e011157c869c4ff72f3c43cb638b09089575b47199aa6d.
+  Runtime instalado passou as2.048copias/127voltas e fixtureRGBA/publicacao;
+  ambos launchers --check exit0. Tres arquivos persistentes identicos por hash
+  antes/depois (excluidos caches/logs). Audio normal dos atalhos preservado.
+  Nenhum ZIP para amigos modificado; manifesto privado sem nova finalizacao.
+- Metodo em docs/re/STREAM-WATCHES.md; resumo em docs/DESEMPENHO.md. Nao
+  somar percentuais de sessoes diferentes, prometer60FPS ou validar outras
+  GPUs/jogo inteiro. Sem reestruturacao ampla, mantida so a correcao comprovada.

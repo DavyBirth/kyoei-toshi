@@ -1,5 +1,14 @@
 # Desempenho — objetivo de 60 FPS
 
+## Resultado mais recente: 18/10/2026
+
+A compactacao correta dos registros que protegem a memoria de upload ganhou
+4,83% no A/B local: 36,01/37,75 FPS. Testes sinteticos e na GPU real conferiram
+que cada regiao continua protegida pelo mesmo envio. A alternativa de cache
+dos dados foi descartada por resultados inconsistentes.
+[Metodo e limites](re/STREAM-WATCHES.md). Os maximos dessa coleta nao melhoraram;
+a meta de 60 FPS e a eliminacao global das travadas continuam pendentes.
+
 ## Resultado mais recente: 17/10/2026, segunda rodada
 
 Depois do ganho local de 34,8% com gravacao Vulkan e cache fetch, o cache com

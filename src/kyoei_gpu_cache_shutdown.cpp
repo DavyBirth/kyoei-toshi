@@ -55,6 +55,12 @@ extern "C" void kyoei_cooperative_readback_self_test(void) {
     auto* rasterizer=Core::Memory::Instance()->GetRasterizer();
     if(!rasterizer || !KyoeiCooperativeReadback::Enabled())gz_stop(24,"COOPERATIVE READBACK TEST: unavailable");
     const auto& instance=*rasterizer->GetBufferCache().GetUtilityBuffer(VideoCore::MemoryUsage::Download).instance;
+#ifdef KYOEI_VULKAN_RECORDING_ENABLED
+    if(const auto* test=std::getenv("KYOEI_STREAM_SELF_TEST");test && test[0]=='1'){
+        extern void KyoeiStreamSelfTest(const Vulkan::Instance&);
+        KyoeiStreamSelfTest(instance);
+    }
+#endif
     std::array<u8,256> destination;destination.fill(0xCA);
     VideoCore::ImageInfo eligible{};
     eligible.pixel_format=vk::Format::eR8G8B8A8Unorm;
