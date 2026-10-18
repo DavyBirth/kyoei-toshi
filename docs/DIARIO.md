@@ -3566,3 +3566,12 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Metodo em docs/re/STREAM-WATCHES.md; resumo em docs/DESEMPENHO.md. Nao
   somar percentuais de sessoes diferentes, prometer60FPS ou validar outras
   GPUs/jogo inteiro. Sem reestruturacao ampla, mantida so a correcao comprovada.
+
+
+## 18/10/2026 - sessao continua de correcao do stutter
+
+- Orientacao atual de Davy: continuar trabalhando; quando a janela principal atingir10% restantes, encerrar testes/compilacoes do projeto, salvar/checkpoint verificado e desligar o PC. Substitui os limiares anteriores de7% e13%. Monitor privado sem forcar descarte de aplicativos; apenas testes do projeto sao encerrados pelo monitor. Sessao de telemetria escolhida explicitamente:01a14ba4-5a99-7423-8c18-a0c65460bdb7. Checkpoints a cada5min, parada apenas com leitura recente; falha de checkpoint impede desligamento. Fontes e diagnosticos continuam privados em build/research; registrar resultados antes da parada.
+
+- Diagnostico novo validado: trace por quadro/escopos >=8ms, reservado e limitado131.072eventos em memoria, dump somente no encerramento. Writer fecha sincronizado, overflow declarado, parser recusa trace truncado/janela sem QPC. Testes C++ e Python PASS, FrameStats ativo/desligado PASS, build PASS. Sem ganho de performance reivindicado por instrumentacao.
+- Referencia parada300s:12.960intervalos,43,21FPS,2>50ms/0>100ms,max51,89ms. Rota com giro/corrida/efeitos90s:3.176intervalos,35,22FPS,p95=34,19,p99=50,06,p99,9=98,19,max131,35ms;37>50ms,3>100ms. Trace38.306eventos,zero descartes,exit0,163/163sem foco. Sem capturas dentro da janela. Batches longos coincidem com picos; readback256bytes/21,25ms so explica parte de um deles. Nao culpar readback por todos os picos. Metodo em docs/re/STUTTER-TRACE.md.
+- Investigacao continua, monitor privado de10% ativo (PID e log em build/overnight/stutter-watch-20261018.*), sessao exata indicada acima. Teste cooperativo da mesma rota em andamento; nao e resultado validado ainda. Portatil pessoal permanece na versao funcional anterior, sem instalar apenas diagnosticos.

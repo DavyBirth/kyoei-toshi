@@ -10,12 +10,18 @@
 #include "kyoei_pipeline_cache.h"
 #include "kyoei_tiny_download.h"
 #include "kyoei_vulkan_recording.h"
+#include "kyoei_stutter_trace.h"
 extern "C" {
 #include "gz.h"
 }
 extern std::unique_ptr<AmdGpu::Liverpool> liverpool;
 static std::atomic<unsigned> observed_phase{};
 extern "C" void kyoei_gpu_cache_shutdown(void) {
+    if(KyoeiStutterTrace::Path()){
+        const auto trace=KyoeiStutterTrace::Flush();
+        gz_log("Kyoei stutter trace: written=%u records=%llu dropped=%llu",unsigned(trace.written),
+            (unsigned long long)trace.records,(unsigned long long)trace.dropped);
+    }
     KyoeiVulkanRecording::Report();
     if(!std::getenv("KYOEI_PIPELINE_CACHE_DIR") || !liverpool)return;
     auto *rasterizer=Core::Memory::Instance()->GetRasterizer();if(!rasterizer)return;

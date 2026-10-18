@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <cstdint>
 #include "kyoei_diagnostic_activity.h"
+#include "kyoei_stutter_trace.h"
 extern "C" uint64_t kyoei_tls_fault_count(void);
 
 // Intervals between completed game presents, excluding idle redraws.
@@ -81,7 +82,10 @@ public:
         diagnostics[category]|=KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end) ||
             (count && previous_generation[category]!=diagnostic_start.generation);
         previous_generation[category]=diagnostic_end.generation;
-        const double elapsed=std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - start).count();
+        const auto ended=std::chrono::steady_clock::now();
+        const double elapsed=std::chrono::duration<double, std::milli>(ended - start).count();
+        if(elapsed>=8.)KyoeiStutterTrace::Record(category,ended,elapsed,
+            KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end),transfer_address,transfer_bytes);
         values[count++] = elapsed;
         const char* names[] = {"prepare", "present", "linear-downloads",
                                "readback-finish", "readback-publish", "readback-map",
@@ -140,9 +144,11 @@ inline void PresentedAt(std::chrono::steady_clock::time_point now) {
     previous = now;
     auto diagnostic_now=KyoeiDiagnosticActivity::Now();
     if (!started) { started = true;previous_diagnostic=diagnostic_now;previous_faults=kyoei_tls_fault_count();return; }
-    diagnostic_window|=KyoeiDiagnosticActivity::Overlaps(previous_diagnostic,diagnostic_now);
+    const bool frame_diagnostic=KyoeiDiagnosticActivity::Overlaps(previous_diagnostic,diagnostic_now);
+    diagnostic_window|=frame_diagnostic;
     previous_diagnostic=diagnostic_now;
     if (milliseconds <= 0) return;
+    KyoeiStutterTrace::Record(KyoeiStutterTrace::Frame,now,milliseconds,frame_diagnostic);
     intervals[count++] = milliseconds;
     if (count != intervals.size()) return;
     double total = 0;
