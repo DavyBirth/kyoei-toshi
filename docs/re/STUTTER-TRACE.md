@@ -165,3 +165,51 @@ sem foco,3.113intervalos/90,205s,34,51FPS,p99=50,16ms,max116,33ms;
 fogo/desfoque presentes. Contexto/caminho diferentes da rota anteriorHP90:
 nao comparar suas medias como ganho. Stutter ainda reproduzido. Portatil
 pessoal preservado; nao instalado apenas este conjunto de diagnosticos.
+
+
+## Guarda de Work e medicao sem escopos CPU (18/10/2026)
+
+`Work` agora verifica habilitacao/amostragem antes de entrar em `Begin`;
+`Finish` fica fora do caminho inativo. Amostragem1/128, contagens draw/dispatch,
+metadados e ciclos opcionais por batch permanecem iguais. Testes normal/off,
+batch-trace/cycles-trace passaram. Micro50milhoes: off634/606->178/177ms;
+amostrado670/661->229/227ms. Numeros sinteticos, nao FPS do jogo.
+
+Para medir apresentacao com os escopos CPU desligados, usar:
+
+```powershell
+$env:KYOEI_FRAME_STATS='0'
+$env:KYOEI_PRESENT_INTERVALS_ONLY='1'
+$env:KYOEI_STUTTER_TRACE='caminho-local.csv'
+```
+
+A opcao nova e desligada por padrao. Mantem intervalos stage100 e resumos de
+apresentacao, sem habilitar Work nem contagens draw/dispatch. Teste dedicado
+confirma120eventos stage100 e zero contadores CPU. As opcoes sao lidas uma vez:
+iniciar outro processo para muda-las.
+
+Comparacao temporaria no mesmo processo, quatro blocos25s, excluido1s inicial,
+transicoes reais conferidas. Com FRAME_STATS=1, ABBA34,610->34,457FPS(-0,44%)
+e BAAB35,322->35,195(-0,36%): nenhum ganho de FPS com os escopos ativos.
+Com somente intervalos, ABBA43,103->44,633(+3,55%) e BAAB42,091->42,376(+0,68%).
+p99 respectivamente34,258->34,214ms e34,127->34,089ms. Na segunda rodada,
+max35,030->50,189ms (zero->um intervalo>50ms). Melhora media pequena/variavel,
+sem resolver stutter e sem somar percentuais de experimentos diferentes.
+Ambas rodadas somente stage100, zero descartes, exit0,197/197checks sem foco.
+Sem compilacao/captura/perfil na janela medida. Comparador/controle removidos.
+
+Revisao do build encontrou cabecalhos copiados com data antiga: a rota final
+Scope acima podia ainda conter objetos do comparador. Ela continua sendo
+observacao diagnostica, mas nao prova de executavel inteiramente sem wrapper.
+Forcada atualizacao das datas dos dois cabecalhos e recompilacao dos dependentes,
+inclusive rasterizer/buffer_cache/texture_cache/Liverpool. Os nove modos dos
+testes funcionais passaram novamente. Nova rota `guards-clean-final-20261018`
+valida o executavel recompilado; resultado registrado no diario.
+
+- Rota limpa guards-clean-final-20261018 concluida exit0,164/164sem foco.
+  Sem traceCSV configurado nesta execucao;nao atribuir p99/zero descartes.
+  Nos22grupos completos de120intervalos dentro da janela:2.640intervalos,
+  media aproximada29,75FPS,max117,33ms,59>50ms/2>100ms (valores arredondados
+  dos resumos). Nenhum relato Work. Captura conferida:em pe/HP80,fogo/desfoque
+  presentes. Contexto diferenteHP90/100 anterior,nao comparar FPS como ganho.
+  Teste confirma funcionamento final;stutter segue. Build padrao OFF em verificacao.

@@ -23,6 +23,11 @@ inline bool Enabled() {
     }();
     return enabled;
 }
+inline bool PresentedEnabled() {
+    if(Enabled())return true;
+    static const bool intervals=[] {auto* p=std::getenv("KYOEI_PRESENT_INTERVALS_ONLY");return p&&p[0]=='1';}();
+    return intervals;
+}
 inline void SmallImage(uint64_t address, unsigned width, unsigned height,
                        unsigned pitch, unsigned format, unsigned role) {
     if (width!=1 || height!=1 || !Enabled()) return;
@@ -64,22 +69,25 @@ class Work {
     bool measure_cycles=false;
     KyoeiThreadCycles::Sample cycle_start{};
 public:
-    explicit Work(unsigned category_, uint64_t bytes=0, unsigned width=0, unsigned height=0, uint64_t address=0)
-        : category(category_), transfer_bytes(bytes), transfer_address(address), transfer_width(width), transfer_height(height) {
-        if (!Enabled()) return;
-        // Millions of draw calls per session: sample before reading clocks or
-        // publishing logs. Other categories retain every call.
-        if (category == 16 || category == 17) {
-            if ((work_calls[category-16]++ % 128) != 0) return;
+    [[gnu::always_inline]] explicit Work(unsigned category_,uint64_t bytes=0,unsigned width=0,unsigned height=0,uint64_t address=0) {
+        if(!Enabled())return;
+        if(category_==16 || category_==17) {
+            if((work_calls[category_-16]++%128)!=0)return;
         }
+        Begin(category_,bytes,width,height,address);
+    }
+    [[gnu::always_inline]] ~Work(){if(active)Finish();}
+private:
+    [[gnu::noinline]] void Begin(unsigned category_,uint64_t bytes,unsigned width,unsigned height,uint64_t address) {
+        category=category_;transfer_bytes=bytes;transfer_address=address;
+        transfer_width=width;transfer_height=height;
         if(category==12){draw_call_start=work_calls[0];dispatch_call_start=work_calls[1];}
         active = true;
         start = std::chrono::steady_clock::now();diagnostic_start=KyoeiDiagnosticActivity::Now();
         measure_cycles=category==12 && KyoeiStutterTrace::Path() && KyoeiThreadCycles::Enabled();
         if(measure_cycles)cycle_start=KyoeiThreadCycles::Read();
     }
-    ~Work() {
-        if (!active) return;
+    [[gnu::noinline]] void Finish() {
         // Only two cycle queries per batch; none on the draw/dispatch path.
         const auto cycle_end=measure_cycles?KyoeiThreadCycles::Read():KyoeiThreadCycles::Sample{};
         // Deferred publication may run on the scheduler worker. Keep samples
@@ -149,7 +157,7 @@ public:
     }
 };
 inline void PresentedAt(std::chrono::steady_clock::time_point now) {
-    if (!Enabled()) return;
+    if (!PresentedEnabled()) return;
     using Clock = std::chrono::steady_clock;
     static auto previous = Clock::now();
     static bool started = false;
@@ -194,6 +202,6 @@ inline void PresentedAt(std::chrono::steady_clock::time_point now) {
     count = 0;diagnostic_window=false;
 }
 inline void Presented() {
-    if (Enabled()) PresentedAt(std::chrono::steady_clock::now());
+    if (PresentedEnabled()) PresentedAt(std::chrono::steady_clock::now());
 }
 }

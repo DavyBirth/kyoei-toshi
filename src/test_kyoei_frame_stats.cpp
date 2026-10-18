@@ -14,6 +14,23 @@ extern "C" void gz_log(const char *format,...) {
 extern "C" uint64_t kyoei_tls_fault_count(void) { return 100; }
 #define CHECK(x) do { if(!(x)) { std::fprintf(stderr,"Frame stats failed at %d\n",__LINE__);return 1; } } while(0)
 int main(int argc,char **argv) {
+    _putenv_s("KYOEI_PRESENT_INTERVALS_ONLY","0");
+    if(argc>1 && std::string(argv[1])=="interval-only") {
+        _putenv_s("KYOEI_FRAME_STATS","0");
+        _putenv_s("KYOEI_PRESENT_INTERVALS_ONLY","1");
+        _putenv_s("KYOEI_STUTTER_TRACE","frame-interval-only-fixture.csv");
+        {KyoeiFrameStats::Work batch(12);for(unsigned i=0;i<128;++i){KyoeiFrameStats::Work draw(16);}}
+        CHECK((KyoeiFrameStats::work_calls==std::array<uint64_t,2>{}));
+        auto tick=std::chrono::steady_clock::now();KyoeiFrameStats::PresentedAt(tick);
+        for(unsigned i=0;i<120;++i){tick+=std::chrono::milliseconds(10);KyoeiFrameStats::PresentedAt(tick);}
+        CHECK(logs.size()==3 && logs[0].find("Kyoei frame stats:")==0);
+        const auto result=KyoeiStutterTrace::Flush();CHECK(result.written && result.records==120 && result.dropped==0);
+        std::ifstream file("frame-interval-only-fixture.csv");std::string line;
+        CHECK(bool(std::getline(file,line)));CHECK(bool(std::getline(file,line)));
+        unsigned frames=0;while(std::getline(file,line)){CHECK(line.starts_with("100,"));++frames;}
+        CHECK(frames==120);file.close();CHECK(std::remove("frame-interval-only-fixture.csv")==0);
+        std::puts("FRAME INTERVAL-ONLY PASS: 120 presents traced, CPU scopes/counters remain disabled");return 0;
+    }
     if(argc>1 && std::string(argv[1])=="cycles-trace") {
         using namespace KyoeiThreadCycles;
         CHECK(Difference({10,1,true},{25,1,true})==15);

@@ -3741,3 +3741,62 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Captura inspecionada,em pe/HP100,fogo/desfoque presentes. Diferente da rotaHP90,
   nao comparar medias como ganho. Guardas finais e4modos testados,sem wrapper.
   Stutter continua; portatil pessoal nao atualizado com este conjunto diagnostico.
+- Guarda de streaming final salva em4740a38. Proximo experimento agora ativo
+  TEMPORARIAMENTE: src/kyoei_frame_stats.h contem duas implementacoes deWork
+  com wrapper/union e escolha capturada. CMake chama FrameGuardControl::Refresh
+  ANTES de criar Work12,para manter draw/dispatch da mesma implementacao no batch.
+  Teste lifetime com janelas de120relatos PASS; normal/off/batch/cycles PASS no
+  wrapper. frame-guard-ab-20261018 em andamento,Scope ja fixado na guarda curta.
+  Ao terminar,restaurar frame-guard-20261018/candidate.h ou reference.h e retirar
+  call/controle/wrapper do codigo ativo. Nada instalado no portatil.
+- Work com estatisticas CPU ligadas:ABBA34,610->34,457FPS(-0,44%);
+  BAAB35,322->35,195(-0,36%),caudas mistas. Metadados por batch conferidos,
+  medianas1383..1389draw,controles reais confirmados. Nao ha ganho FPS provado.
+- Necessidade metodologica: FPS antes exigia KYOEI_FRAME_STATS=1,ligando
+  justamente Work/sampling. Adicionado KYOEI_PRESENT_INTERVALS_ONLY=1 para
+  manter somente traceStage100/resumos de apresentacao sem habilitar Work.
+  Teste120presents/zero contadores draw/nenhum scope CPU PASS; modos antigos
+  normal/off/batch/cycles PASS. Guardas globais de Enabled para Work nao mudam.
+  frame-guard-frameonly-ab-20261018 em andamento,run privado forca FRAME_STATS=0.
+  Wrapper temporario deWork segue ativo; retirar depois das comparacoes.
+- Investigacao AnyInRange so privada em bit-range-20261018: consulta de bits
+  sem temporario128bytes.1milhao de casos vs original/oraculo escalar PASS;
+  microtiny159/159ms->69/74ms,mixed161/173->132/124,checksums iguais. Nao
+  integrado nem medido no jogo; precisa distribuicao real/prova antes de portar.
+
+- Work somente intervalos:ABBA43,103->44,633FPS(+3,55%);BAAB42,091->42,376
+  (+0,68%),p99 praticamente igual;BAAB max35,030->50,189ms,0->1>50ms.
+  Controles reais conferidos,so stage100,zero descartes,exit0. Ganho variavel,
+  stutter nao resolvido. Mantida guarda curta simples;wrapper/controle retirados.
+- Corrigida validacao do build:Copy-Item preservou data antiga do cabecalho
+  Scope,logo objetos da comparacao podiam persistir na rota antes chamada final.
+  Fontes commitadas estavam corretas;atualizadas datas de ambos cabecalhos e
+  rebuild dos dependentes(inclusive rasterizer/buffer_cache/texture_cache).
+  Nove modos frame/streaming PASS. Rota limpa guards-clean-final-20261018
+  em andamento,FRAME_STATS0/INTERVALS_ONLY1,muda,sem atualizar portatil.
+
+- Rota limpa guards-clean-final-20261018 concluida exit0,164/164sem foco.
+  Sem traceCSV configurado nesta execucao;nao atribuir p99/zero descartes.
+  Nos22grupos completos de120intervalos dentro da janela:2.640intervalos,
+  media aproximada29,75FPS,max117,33ms,59>50ms/2>100ms (valores arredondados
+  dos resumos). Nenhum relato Work. Captura conferida:em pe/HP80,fogo/desfoque
+  presentes. Contexto diferenteHP90/100 anterior,nao comparar FPS como ganho.
+  Teste confirma funcionamento final;stutter segue. Build padrao OFF em verificacao.
+
+- Limpeza:conferidos ausencia de refs em CMake/src/build.ninja e de processos,
+  arquivos experimentais arquivados;removidos apenas exe/pdb/obj/CMakeFiles dos
+  testes fetch_return/spec_lookup/view_stats/lookup_stats e image.cpp gerado
+  do diagnostico retirado. Dados/saves/fontes atuais/evidencias preservados.
+- Build OFF isolado inicialmente configurado sem BUILD_TYPE herdou Debug e
+  falhou no link por _ITERATOR_DEBUG_LEVEL0/2(prebuilt fixo). Reconfigurado
+  RelWithDebInfo,igual ao build principal;nao alterado codigo para mascarar isso.
+
+- Build isolado OFF/RelWithDebInfo concluido85/85,exit0. Nove modos funcionais
+  frame/streaming tambem PASS nesta configuracao. Build principal ON e rota
+  limpa ja validados. Portatil permanecec01d852;nenhum teste aberto.
+- Perfil existente do giro consolidado em host-profile-turn-summary-20261018.txt:
+  1000amostras,547inclusiveDraw,159BindResources,155GetGraphicsPipeline;
+  339folhas em espera de condvar,19operator==,11Scope antigo. Amostras nao
+  isolam picos nem sao porcentagemCPU. Proximo passo:perfil dirigido aos batches
+  longos com ciclos elevados/mesma trajetoria;nao repetir filtro de variants,
+  fetch-return ou fusao draw sem evidencia nova. AnyInRange segue so privado.
