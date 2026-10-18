@@ -58,6 +58,10 @@ inline const char* Path(){
     static const std::string path=[]{auto* p=std::getenv("KYOEI_STUTTER_TRACE");return std::string(p?p:"");}();
     return path.empty()?nullptr:path.c_str();
 }
+inline bool Detailed(){
+    static const bool enabled=[]{auto* p=std::getenv("KYOEI_STUTTER_PACKETS");return p&&p[0]=='1';}();
+    return enabled && Path();
+}
 inline Recorder& State(){
     // GPU/present threads may still exist during ExitProcess. Keep the
     // closed recorder alive until process teardown instead of racing a dtor.

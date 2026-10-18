@@ -4,6 +4,9 @@
 #include <cmath>
 #include <cstdint>
 #include <cstdlib>
+#include <cstring>
+#include "kyoei_stutter_trace.h"
+#include "kyoei_diagnostic_activity.h"
 extern "C" void gz_log(const char*,...);
 namespace KyoeiStreamingTrace {
 inline bool Enabled() {
@@ -18,18 +21,34 @@ class Scope {
     uint64_t address,bytes;
     unsigned width,height;
     double start=0;
+    KyoeiDiagnosticActivity::Stamp diagnostic;
 public:
     Scope(const char* label,uint64_t addr=0,uint64_t size=0,unsigned w=0,unsigned h=0)
     {
         // The disabled path runs for every draw/upload. Leave diagnostic
         // payload untouched; the destructor only reads it when start is set.
-        if(!Enabled())return;
+        if(!Enabled() && !KyoeiStutterTrace::Detailed())return;
         name=label;address=addr;bytes=size;width=w;height=h;
+        if(KyoeiStutterTrace::Detailed())diagnostic=KyoeiDiagnosticActivity::Now();
         start=Milliseconds();
     }
     ~Scope() {
         if(!start)return;
-        const auto end=Milliseconds();
+        const auto ended=std::chrono::steady_clock::now();
+        const auto end=std::chrono::duration<double,std::milli>(ended.time_since_epoch()).count();
+        if(KyoeiStutterTrace::Detailed() && end-start>=8.){
+            unsigned stage=299;
+            if(std::strcmp(name,"gfx-packet-inclusive")==0)stage=200;
+            else if(std::strcmp(name,"draw")==0)stage=201;
+            else if(std::strcmp(name,"find-image")==0)stage=202;
+            else if(std::strcmp(name,"refresh-image")==0)stage=203;
+            else if(std::strcmp(name,"texture-gc")==0)stage=204;
+            else if(std::strcmp(name,"image-buffer")==0)stage=205;
+            else if(std::strcmp(name,"command-callbacks")==0)stage=206;
+            KyoeiStutterTrace::Record(stage,ended,end-start,
+                KyoeiDiagnosticActivity::Overlaps(diagnostic,KyoeiDiagnosticActivity::Now()),address,bytes);
+        }
+        if(!Enabled())return;
         if(end-start<25)return;
         struct Counter {const char* name=nullptr;uint64_t key=0;unsigned count=0;};
         static thread_local std::array<Counter,32> counters{};

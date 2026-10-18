@@ -10,6 +10,9 @@ NAMES = ('prepare', 'present', 'linear-downloads', 'readback-finish', 'readback-
          'scheduler-submit', 'scheduler-wait', 'queue-lock', 'command-batch',
          'present-pacing', 'command-callback', 'video-label-wait', 'raster-draw',
          'raster-dispatch', 'cp-sync', 'graphics-construct', 'graphics-register', 'graphics-driver')
+DETAIL = {200: 'gfx-packet', 201: 'draw', 202: 'find-image', 203: 'refresh-image',
+          204: 'texture-gc', 205: 'image-buffer', 206: 'command-callbacks',
+          210: 'vulkan-record-backpressure', 211: 'vulkan-record-chunk', 299: 'streaming-other'}
 
 
 def summarize(events, start=None, end=None):
@@ -41,14 +44,16 @@ def summarize(events, start=None, end=None):
                 scope['end_ms'] - scope['duration_ms'], frame['end_ms'] - frame['duration_ms'])
             if duration > 0:
                 overlaps.append(dict(stage=NAMES[scope['stage']] if scope['stage'] < len(NAMES)
-                                     else str(scope['stage']), overlap_ms=duration, **{
+                                     else DETAIL.get(scope['stage'], str(scope['stage'])), overlap_ms=duration, **{
                                          k: scope[k] for k in ('duration_ms', 'thread', 'address', 'bytes', 'diagnostic')}))
         worst.append(dict(end_ms=frame['end_ms'], duration_ms=frame['duration_ms'],
                           overlaps=sorted(overlaps, key=lambda e: e['overlap_ms'], reverse=True)[:25]))
     result['worst'] = worst
     result['note'] = ('Host scopes are wall times, may overlap/nest, and may belong to different frames. '
-                      'Temporal overlap does not prove causation. Draw/dispatch scopes retain sampling stride128. '
-                      'Only scopes >=8ms are traced. No GPU timestamp measurement.')
+                      'Temporal overlap does not prove causation. Basic draw/dispatch scopes retain stride128; '
+                      'optional packet/draw detail is unsampled and adds timing overhead. '
+                      'Scopes >=8ms are traced, except detailed Vulkan backpressure >=1ms. '
+                      'No GPU timestamp measurement.')
     return result
 
 

@@ -12,6 +12,7 @@
 #include <thread>
 #include <type_traits>
 #include <utility>
+#include "kyoei_stutter_trace.h"
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -124,7 +125,13 @@ private:
     void Publish() {
         if (!current->count) return;
         std::unique_lock lock(mutex);
-        completed.wait(lock, [this] { return pending.size() < 8; });
+        if(pending.size()>=8 && KyoeiStutterTrace::Detailed()){
+            const auto start=std::chrono::steady_clock::now();
+            completed.wait(lock, [this] { return pending.size() < 8; });
+            const auto end=std::chrono::steady_clock::now();
+            const auto elapsed=std::chrono::duration<double,std::milli>(end-start).count();
+            if(elapsed>=1.)KyoeiStutterTrace::Record(210,end,elapsed,false);
+        }else completed.wait(lock, [this] { return pending.size() < 8; });
         pending.push_back(std::move(current));
         if (free.empty()) current = std::make_unique<Chunk>();
         else { current = std::move(free.back()); free.pop_back(); }
@@ -143,7 +150,14 @@ private:
             pending.pop_front();
             busy = true;
             lock.unlock();
+            const auto started=KyoeiStutterTrace::Detailed()?std::chrono::steady_clock::now():std::chrono::steady_clock::time_point{};
+            const auto payload_bytes=chunk->used;
             chunk->Execute();
+            if(started!=std::chrono::steady_clock::time_point{}){
+                const auto end=std::chrono::steady_clock::now();
+                const auto elapsed=std::chrono::duration<double,std::milli>(end-started).count();
+                if(elapsed>=8.)KyoeiStutterTrace::Record(211,end,elapsed,false,0,payload_bytes);
+            }
             lock.lock();
             free.push_back(std::move(chunk));
             busy = false;

@@ -51,3 +51,21 @@ medias como regressao da instrumentacao. Mais investigacao e necessaria.
 
 Dados detalhados, janelas e capturas permanecem privados em `build/research`.
 Nenhuma correcao de stutter foi demonstrada apenas por esta instrumentacao.
+
+## Detalhamento opcional dos pacotes
+
+`KYOEI_STUTTER_PACKETS=1`, junto do trace, mede cada pacote, draw e operacao
+de imagem ja coberta por `KyoeiStreamingTrace::Scope`. Registra apenas duracoes
+>=8ms: stages200..206 para pacote/draw/find-image/refresh-image/texture-gc/
+image-buffer/command-callbacks;299 para outros. O endereco de pacote representa
+o opcode PM4. Stage210 mede espera >=1ms pelo backlog da gravacao Vulkan;
+211 mede chunks >=8ms, com bytes de payload do host. Nao sao tempos da GPU.
+Este modo acrescenta consultas de relogio por pacote: serve para localizar
+trabalho, sem usar seu FPS como prova de ganho ou regressao.
+
+A rota cooperativa `stutter-route-coop-20261018` teve2.287intervalos/90,405s,
+25,30FPS,408>50ms/10>100ms e max166,18ms, sem descartes. A captura final
+mostra personagem caido e HP80, enquanto o controle terminou em pe com HP100.
+Os mesmos comandos por tempo nao garantem o mesmo contexto. Nao atribuir a
+diferenca numerica inteira ao readback cooperativo nem reivindicar A/B
+controlado. Caminho permanece desligado por padrao, sem beneficio demonstrado.
