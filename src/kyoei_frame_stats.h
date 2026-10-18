@@ -12,6 +12,9 @@ extern "C" uint64_t kyoei_tls_fault_count(void);
 // Opt-in; reports every 120 intervals, with no per-frame log traffic.
 namespace KyoeiFrameStats {
 inline constexpr unsigned CategoryCount = 22;
+// The existing sampling counters also identify how much draw/dispatch work a
+// command batch visited. Counts are host calls, not GPU primitives or frames.
+inline thread_local std::array<uint64_t,2> work_calls{};
 inline bool Enabled() {
     static const bool enabled = [] {
         const char* value = std::getenv("KYOEI_FRAME_STATS");
@@ -56,6 +59,7 @@ class Work {
     unsigned transfer_width = 0, transfer_height = 0;
     std::chrono::steady_clock::time_point start;
     KyoeiDiagnosticActivity::Stamp diagnostic_start{};
+    uint64_t draw_call_start,dispatch_call_start;
 public:
     explicit Work(unsigned category_, uint64_t bytes=0, unsigned width=0, unsigned height=0, uint64_t address=0)
         : category(category_), transfer_bytes(bytes), transfer_address(address), transfer_width(width), transfer_height(height) {
@@ -63,9 +67,9 @@ public:
         // Millions of draw calls per session: sample before reading clocks or
         // publishing logs. Other categories retain every call.
         if (category == 16 || category == 17) {
-            static thread_local std::array<uint64_t,2> calls{};
-            if ((calls[category-16]++ % 128) != 0) return;
+            if ((work_calls[category-16]++ % 128) != 0) return;
         }
+        if(category==12){draw_call_start=work_calls[0];dispatch_call_start=work_calls[1];}
         active = true;
         start = std::chrono::steady_clock::now();diagnostic_start=KyoeiDiagnosticActivity::Now();
     }
@@ -85,7 +89,9 @@ public:
         const auto ended=std::chrono::steady_clock::now();
         const double elapsed=std::chrono::duration<double, std::milli>(ended - start).count();
         if(elapsed>=8.)KyoeiStutterTrace::Record(category,ended,elapsed,
-            KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end),transfer_address,transfer_bytes);
+            KyoeiDiagnosticActivity::Overlaps(diagnostic_start,diagnostic_end),
+            category==12?work_calls[0]-draw_call_start:transfer_address,
+            category==12?work_calls[1]-dispatch_call_start:transfer_bytes);
         values[count++] = elapsed;
         const char* names[] = {"prepare", "present", "linear-downloads",
                                "readback-finish", "readback-publish", "readback-map",

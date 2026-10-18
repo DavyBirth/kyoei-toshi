@@ -21,6 +21,12 @@ as chamadas instrumentadas originais. Bytes/endereco sao metadados opcionais.
 O marcador diagnostic identifica sobreposicao com F9; nao prova ausencia de
 outras interferencias. O proprio trace tem custo e deve ser igual nos controles.
 
+Para batches novos (stage12), `address/bytes` guardam respectivamente chamadas
+host de draw/dispatch visitadas naquele batch/thread, reutilizando os contadores
+da amostragem. Nao sao enderecos, bytes, primitivas GPU nem quantidade de quadros.
+Traces anteriores deixavam ambos em zero. Serve para conferir variacao de carga;
+nao elimina esperas aninhadas e um batch pode incluir varias submissoes.
+
 `tools/analyze_stutter_trace.py` calcula percentis de intervalos individuais,
 limites estritos >50/>100ms e escopos que se sobrepoem aos20piores intervalos.
 Nao soma escopos aninhados. Sobreposicao temporal nao prova causalidade nem

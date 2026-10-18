@@ -43,9 +43,12 @@ def summarize(events, start=None, end=None):
             duration = min(scope['end_ms'], frame['end_ms']) - max(
                 scope['end_ms'] - scope['duration_ms'], frame['end_ms'] - frame['duration_ms'])
             if duration > 0:
-                overlaps.append(dict(stage=NAMES[scope['stage']] if scope['stage'] < len(NAMES)
+                entry = dict(stage=NAMES[scope['stage']] if scope['stage'] < len(NAMES)
                                      else DETAIL.get(scope['stage'], str(scope['stage'])), overlap_ms=duration, **{
-                                         k: scope[k] for k in ('duration_ms', 'thread', 'address', 'bytes', 'diagnostic')}))
+                                         k: scope[k] for k in ('duration_ms', 'thread', 'address', 'bytes', 'diagnostic')})
+                if scope['stage'] == 12:
+                    entry.update(batch_draw_calls=scope['address'], batch_dispatch_calls=scope['bytes'])
+                overlaps.append(entry)
         worst.append(dict(end_ms=frame['end_ms'], duration_ms=frame['duration_ms'],
                           overlaps=sorted(overlaps, key=lambda e: e['overlap_ms'], reverse=True)[:25]))
     result['worst'] = worst

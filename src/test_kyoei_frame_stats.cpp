@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <thread>
+#include <fstream>
 static std::vector<std::string> logs;
 extern "C" void gz_log(const char *format,...) {
     char line[2048];va_list args;va_start(args,format);std::vsnprintf(line,sizeof(line),format,args);va_end(args);logs.emplace_back(line);
@@ -12,7 +13,25 @@ extern "C" void gz_log(const char *format,...) {
 #include "kyoei_command_batch.h"
 extern "C" uint64_t kyoei_tls_fault_count(void) { return 100; }
 #define CHECK(x) do { if(!(x)) { std::fprintf(stderr,"Frame stats failed at %d\n",__LINE__);return 1; } } while(0)
-int main(int argc,char **) {
+int main(int argc,char **argv) {
+    if(argc>1 && std::string(argv[1])=="batch-trace") {
+        _putenv_s("KYOEI_FRAME_STATS","1");
+        _putenv_s("KYOEI_STUTTER_TRACE","frame-batch-trace-fixture.csv");
+        {
+            KyoeiFrameStats::Work batch(12);
+            for(unsigned i=0;i<5;++i){KyoeiFrameStats::Work draw(16);}
+            for(unsigned i=0;i<3;++i){KyoeiFrameStats::Work dispatch(17);}
+            std::thread other([]{for(unsigned i=0;i<100;++i){KyoeiFrameStats::Work draw(16);}});
+            other.join();
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+        CHECK(KyoeiStutterTrace::Flush().written);
+        std::ifstream file("frame-batch-trace-fixture.csv");
+        bool found=false;std::string line;
+        while(std::getline(file,line))if(line.starts_with("12,"))found=line.ends_with(",0x5,3,0");
+        file.close();CHECK(std::remove("frame-batch-trace-fixture.csv")==0);
+        CHECK(found);std::puts("FRAME BATCH TRACE PASS: exact draw/dispatch counts, thread isolation");return 0;
+    }
     if(argc>1) {
         _putenv_s("KYOEI_FRAME_STATS","0");
         { KyoeiFrameStats::Work work(0); }KyoeiFrameStats::Presented();
