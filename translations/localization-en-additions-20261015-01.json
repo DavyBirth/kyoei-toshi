@@ -6060,14 +6060,14 @@
         {
           "id": "p0/k17",
           "source_text_sha256": "77c3d4e3a0b2fd1fda34a399ca75b07c2a76d878bf0fb7f4425fd9411ba4313d",
-          "en": "This just in. We have an update on the giant plant-like\nlife form that appeared on the roof of the Akashia Department Store main building.",
+          "en": "This just in. We have an update on the giant plant-like life form\nthat appeared on the roof of the Akashia Department Store's main building.",
           "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k17; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k211",
           "source_text_sha256": "8ed16a83a88a66f37ed12e8a8c556ce718a652ccb2aa719fb3f043eb4a77ac74",
-          "en": "Reporter Apparently on His First Day: Masayuki Sudo",
+          "en": "Masayuki Sudo, Reporter on His First Day",
           "notes": "English draft imported from audited private workspace, translate-en-0126.json:p0/k211; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -6123,7 +6123,7 @@
         {
           "id": "p0/k626",
           "source_text_sha256": "cf09543a4a337897147eb3c2615d3eabd122fff200fe9cf829251bf23931ee3a",
-          "en": "We were supposed to meet in the [#ff44ff44]Iberis Tower Building observation room[/#].\nOnly if you happen to see him. His name is Norio Nakagawa.",
+          "en": "We were supposed to meet him in the [#ff44ff44]Iberis Tower observation deck[/#].\nOnly if you happen to see him. His name's Norio Nakagawa.",
           "notes": "English draft imported from audited private workspace, translate-en-0127.json:p0/k626; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
