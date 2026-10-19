@@ -3948,3 +3948,13 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   amigos preservados. Nenhuma correcao de desempenho promovida nesta rodada.
   Conclusoes e proximo alvo em STUTTER-TRACE.md:Map/esperas do staging,copia de
   memoria e comandos curtos;medir ciclos para picos90ms nao cobertos.
+- Distribuicao temporal buffer-sync:0..10s teve1.335criacoes/256,97ms e
+  42intervalos>50ms;10..20s148criacoes/12intervalos>50ms;20..30s23/zero;
+  30..60s7/4;60..90s3/1. Corrobora aquecimento percebido por Davy,mas
+  movimento/vista mudam;nao e ensaio controlado frio/quente ou ganho de FPS.
+  Maiores batches126/112/98/95ms aos1,54/1,42/1,31/1,64s da janela;
+  pico90,15ms nao coberto aos10,37s(transicao para correr na rota).
+- Estado para pausa:sem testes abertos,CMake e fontes gerados sem sondas,
+  rebuild limpo PASS. Evidencias e patches privados preservados. Proximo passo
+  permanece separar staging.Map/esperas,copia de memoria e geracao de comandos,
+  com ciclos por batch. Nao instalar candidato nem declarar stutter resolvido.
