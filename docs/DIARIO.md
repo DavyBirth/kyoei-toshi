@@ -3978,3 +3978,26 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   aberta em build/kyoei.exe nao interrompida. Traducao natural nao incluida.
   Investigacao de desempenho segue pausada pela reserva;somente atualizacao
   expressamente pedida executada,sem novo benchmark ou alteracao grafica.
+
+
+### 19/10/2026 - retomada e separacao de upload/espera
+- Retomada autorizada por Davy;Git limpo no inicio. Terminal isolado falha
+  antes de executar;comandos fora do isolamento funcionam. Janela renovada
+  99%/semanal43%;monitor5% reativado,sem desligamento.
+- Medicao privada upload-detail-r2-20261019 terminou exit0,zero descartes,
+  2593batches com ciclos. Rota90s,foco ausente163/163:diagnostico,nao ganhoFPS.
+  Captura conferida:em pe/HP90,fogo/Ultraman/HUD. Teste mudo,usuario privado,
+  saves montados read-only. Roteiro privado corrigido com Process.Refresh;
+  primeira tentativa no titulo nao usada para conclusoes da rua.
+- Staging Map>=0,1ms:37chamadas/9,22ms,max1,30;Wait4/1,54ms,max1,01;
+  Commit21/6,39ms. Upload2733/657,23ms,copia647/129,95ms,criacao1547/289,31ms.
+  Valores aninhados/abaixo0,1ms omitidos. Maior batch117,38ms/250,16Mciclos
+  tem40,38ms de uniao conhecida;outro109,64ms tem49,09ms. Espera longa do
+  staging nao explica esses picos nesta rota;sem compiles novos registrados.
+- Proximo alvo:tempo/contagem acumulados por batch nas fases de preparacao e
+  execucao dos draws,para capturar muitas operacoes curtas sem CSV por draw.
+  Preservar qualidade/locks/barreiras. Conclusoes em docs/re/STUTTER-TRACE.md;
+  patch/CSV/captura/relatorios privados em build/research. Sem ganho promovido.
+- Fontes geradas restauradas byte a byte e rebuild limpo PASS;nenhuma sonda
+  KyoeiUploadTrace no CMake/fontes ativos. Nenhum teste aberto;portatil e
+  atualizadores dos amigos preservados.54.664eventos/zero diagnosticos.

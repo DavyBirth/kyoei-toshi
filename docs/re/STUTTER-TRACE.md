@@ -279,3 +279,41 @@ comandos nos primeiros uploads;coletar ciclos por batch para os picos ainda
 nao cobertos. Preservar locks,barreiras e qualidade. Nao repetir subalocacao BDA
 ou tunings de stream sem evidencia nova. Uma preparacao de recursos antes de
 liberar o jogador exige provar que antecipa trabalho real sem mudar simulacao.
+
+
+## Espera do staging e copia de memoria (19/10/2026)
+
+Coleta privada `upload-detail-r2-20261019`, sem suspender threads: exit0,
+zero descartes,2593batches com ciclos. Rota90,25s, foco ausente163/163;
+nao usar media/p99 como comparacao de ganho. Captura posterior conferida:
+em pe,HP90,fogo,Ultraman e HUD. Audio dummy apenas no teste;usuario privado,
+saves SYSTEM-DATA/SAVEDATA-001 montados read-only. Primeira tentativa ficou
+no titulo: objeto Process guardava janela ainda nao criada; roteiro privado
+corrigido com Refresh e primeira coleta excluida da analise da rua.
+
+Sondas apenas nas copias geradas de buffer/cache, sem mudar CMake ou a copia
+fixa;chamadas abaixo0,1ms omitidas. Endereco de250..252 e MemoryUsage,nao VAddr.
+
+| Stage | Operacao | Chamadas >=0,1ms | Soma ms | Max ms |
+| --- | --- | ---: | ---: | ---: |
+| 250 | StreamBuffer.Map | 37 | 9,221 | 1,301 |
+| 251 | WaitPendingOperations | 4 | 1,544 | 1,013 |
+| 252 | Commit | 21 | 6,385 | 0,804 |
+| 253 | UploadCopies | 2733 | 657,232 | 3,939 |
+| 254 | CopySparseMemory / gz_memory_copy | 647 | 129,955 | 2,514 |
+| 255 | CreateBuffer | 1547 | 289,308 | 0,864 |
+
+Somas aninhadas nao se adicionam. Maior batch117,3847ms,1942draws/17dispatches,
+250.158.882ciclos da thread. Uniao dos escopos conhecidos na mesma thread
+40,3842ms:criacao23,010ms,upload3,857ms,copia3,686ms aninhada no upload,
+video-label13,517ms. Segundo109,6441ms tem uniao49,0935ms e244.100.325ciclos.
+Nao houve escopo de compilacao6/7/8/19/20/21 na janela.
+
+Nesta rota,espera longa de staging nao explica os maiores picos. As sondas
+nao descartam custo acumulado de muitas chamadas curtas;tempo de relogio por
+chamada tambem tem custo. Ciclos cobrem o batch inteiro,nao identificam uma
+funcao nem devem virar porcentagemCPU ou milissegundos. Ainda faltam trechos
+do processamento dos milhares de draws,preparacao de recursos/comandos e
+possivel custo curto do driver. Proxima medicao deve acumular tempo/contagem
+por batch nessas fases,sem CSV por draw e sem retirar locks/barreiras.
+Evidencias/patch/analisadores em build/research. Nenhum ganhoFPS declarado.
