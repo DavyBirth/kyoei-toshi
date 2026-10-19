@@ -98,3 +98,33 @@ e exigir dump do usuário, preservando as regras de conteúdo do projeto.
 Davy relata que o Godzilla está praticamente perfeito. Registrar como retorno
 dele, sem presumir que Kyoei terá os mesmos gargalos ou desempenho. Continuam
 valendo a preservação do core fixo e a proibição de modificar o projeto irmão.
+
+
+## Desempenho por resolucao, opcoes graficas e outros PCs
+
+Pedido de Davy em19/10/2026:continuar a correcao de desempenho e acrescentar
+opcoes de resolucao/qualidade,como nos outros ports;priorizar testes em1920x1080,
+resolucao do monitor dele. A referencia fiel ao PS4 permanece como padrao.
+Opcoes posteriores de qualidade sao escolhas explicitas do jogador,sem alterar
+velocidade da simulacao ou remover efeitos silenciosamente para esconder custo.
+
+- Separar resolucao de saida/janela de resolucao interna/escala de renderizacao.
+  Janela1080p sozinha nao comprova renderizacao interna1080p. Registrar ambas
+  em cada captura/benchmark e avaliar menus,Hud,fontes e proporcao da imagem.
+- Medir720p/1080p e,quando houver suporte validado,escala interna e opcoes
+  individuais de efeitos/sombras/pos-processamento. Mostrar impacto real
+  nas mesmas cenas,com FPS,tempos de quadro,p99,picos,VRAM e estabilidade.
+  Comparar frio/quente e manter camera,rota,save e foco comparaveis.
+- Oferecer configuracoes persistentes,com restauracao do padraoPS4. Confirmar
+  primeiro quais opcoes o renderer realmente consegue alterar com seguranca;
+  nao prometer que diminuir resolucao resolve gargalos de CPU/alocacao.
+- Matriz inicial:PC de Davy e PC do amigo com GTX1660SUPER/32GBRAM. Processador
+  do amigo informado como AMD1550G,modelo exato pendente de confirmacao.
+  Coletar GPU,VRAM,CPU,driver,Vulkan e resultados reais de cada maquina;
+  nao simular teste fisico da1660SUPER usando apenas o PC de Davy.
+- Priorizar caminhos Vulkan por capacidades e limites suportados,com fallback
+  e diagnostico util em placas distintas;evitar otimizar apenas para uma GPU.
+  Amplificar a matriz para outras placas conforme testes reais disponiveis.
+
+Este pedido amplia as opcoes futuras autorizadas,sem interromper a investigacao
+atual de stutter. Testes de1080p passam a integrar a verificacao corrente.

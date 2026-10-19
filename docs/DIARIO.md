@@ -4036,3 +4036,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Encerramento:4fontes geradas restauradas byte a byte,sem KyoeiDrawTotals
   em CMake/fontes ativos,rebuild limpo PASS. Nenhum teste aberto;sondas
   temporarias retiradas. Portatil/ZIPs preservados;nenhum ganhoFPS declarado.
+
+- Orientacao adicional de Davy19/10:priorizar testes em1080p(monitor dele),
+  adicionar no plano opcoes graficas/resolucao com impacto real de desempenho
+  e compatibilidade com outras GPUs. ReferenciaPS4 como padrao,qualidade
+  configuravel por escolha do jogador,sem mudar simulacao. PC do amigo:
+  GTX1660SUPER/32GBRAM,CPU informado AMD1550G a confirmar. Pedido registrado
+  em docs/PLANO.md;continuar investigacao de desempenho,sem pausar apos diagnostico.
