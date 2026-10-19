@@ -3830,3 +3830,17 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   sem shutdown. Nenhum teste aberto. Guia PORT-NATIVO agora explicita
   CMAKE_BUILD_TYPE=RelWithDebInfo,evitando Debug incompativel com prebuilt.
   Encerramento salvo em commit/checkpoint verificado;continuar so em nova janela.
+
+- Retomada de18/10:diario,REFERENCIA-UNCHARTED e STUTTER-TRACE lidos;Git limpo
+  no inicio. Terminal isolado falhou na inicializacao;leituras/testes via
+  PowerShell explicito fora do isolamento funcionaram. Nenhum jogo iniciado.
+- Analisador agora lista batches inteiros por duracao/ciclos,conservando
+  limites monotonicos/thread/draws/dispatches para perfil dirigido. Testes
+  cobrem limites,diagnostico,metadados exatos/ausentes,thread diferente e zero
+  draws. Coleta existente reanalisada:2.825batches com ciclos,metricas de
+  apresentacao preservadas;maior124,5966ms/255.536.242ciclos. Sem ganho FPS.
+- Lacuna concreta:amostrador privado antigo nao registra QPC por SAMPLE;
+  pilhas antigas nao podem ser ligadas aos picos por ordem. ID Windows tambem
+  nao equivale automaticamente ao identificador C++ do trace. Documentado
+  requisito de QPC/contexto/tempo de suspensao e identificacao antes de nova
+  coleta dirigida. Renderizador/portatil/dump/saves preservados;stutter pendente.

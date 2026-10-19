@@ -58,6 +58,26 @@ def summarize(events, start=None, end=None):
         worst.append(dict(end_ms=frame['end_ms'], duration_ms=frame['duration_ms'],
                           overlaps=sorted(overlaps, key=lambda e: e['overlap_ms'], reverse=True)[:25]))
     result['worst'] = worst
+    # Keep exact batch boundaries for a future timestamped host profile.
+    # Rank whole batches, never apportion their cycles to overlapping frames.
+    batches = []
+    for scope in work:
+        if scope['stage'] != 12 or scope['diagnostic']:
+            continue
+        begin = scope['end_ms'] - scope['duration_ms']
+        if (start is not None and begin < start) or (end is not None and scope['end_ms'] > end):
+            continue
+        entry = dict(start_ms=begin, **{k: scope[k] for k in ('end_ms', 'duration_ms', 'thread')},
+                     batch_draw_calls=scope['address'], batch_dispatch_calls=scope['bytes'])
+        cycles = cycle_samples.get((scope['thread'], scope['end_ms'], scope['duration_ms']))
+        if cycles is not None:
+            entry['batch_thread_cycles'] = cycles
+            entry['cycles_per_draw'] = cycles / scope['address'] if scope['address'] else None
+        batches.append(entry)
+    measured = [b for b in batches if 'batch_thread_cycles' in b]
+    result['batches'] = dict(count=len(batches), with_cycles=len(measured),
+                            longest=sorted(batches, key=lambda b: b['duration_ms'], reverse=True)[:20],
+                            highest_cycles=sorted(measured, key=lambda b: b['batch_thread_cycles'], reverse=True)[:20])
     result['note'] = ('Host scopes are wall times, may overlap/nest, and may belong to different frames. '
                       'Temporal overlap does not prove causation. Basic draw/dispatch scopes retain stride128; '
                       'optional packet/draw detail is unsampled and adds timing overhead. '

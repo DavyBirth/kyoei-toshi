@@ -37,6 +37,29 @@ diagnosticos e sobreposicao aninhada, alem do fechamento concorrente do writer.
 
 ## Primeiras evidencias
 
+### Selecao de batches para perfil dirigido (retomada de 18/10/2026)
+
+O analisador tambem exporta `batches`: quantidade de batches inteiros sem
+marcador diagnostic dentro da janela, quantidade com ciclos, os20mais longos
+e os20com mais ciclos. Cada entrada conserva inicio/fim no relogio do trace,
+thread, draws e dispatches. Ciclos so sao associados por thread/fim/duracao
+exatos; ausencia de metadados nao vira zero. `cycles_per_draw` fica nulo sem
+draws e inclui todo o trabalho do batch, inclusive dispatches e esperas;
+nao mede custo isolado de draw nem reparte ciclos entre quadros.
+
+Validacao na coleta existente `stutter-cycles-route-20261018`:2.825batches
+inteiros, todos com ciclos; maior124,5966ms/255.536.242ciclos. Percentis de
+apresentacao preservados. Relatorio privado `build/research/cycles-ranked-20261018.json`.
+Isto organiza evidencia existente; nao representa nova coleta ou ganho de FPS.
+
+Limitacao encontrada no amostrador privado: `SAMPLE` conserva numero e ID
+Windows da thread, mas nao registra QPC. Nao e possivel atribuir suas pilhas
+aos picos retrospectivamente pela ordem das amostras. Alem disso, `thread`
+do trace e um identificador C++ e nao deve ser presumido igual ao ID Windows.
+Antes de nova coleta dirigida, registrar QPC da captura/contexto e duracao
+da suspensao, com identificacao explicita da thread. O profiler suspende a
+thread e percorre pilhas; seus resultados nao servem como benchmark A/B.
+
 Referencia parada, `stutter-baseline-20261018`, sem trace: cinco minutos depois
 do aquecimento, 12.960 intervalos resumidos, 43,21 FPS, dois intervalos >50ms,
 nenhum >100ms, maximo51,89ms. Isso nao reproduz suficientemente o problema
