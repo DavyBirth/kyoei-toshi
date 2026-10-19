@@ -236,3 +236,46 @@ valida o executavel recompilado; resultado registrado no diario.
   dos resumos). Nenhum relato Work. Captura conferida:em pe/HP80,fogo/desfoque
   presentes. Contexto diferenteHP90/100 anterior,nao comparar FPS como ganho.
   Teste confirma funcionamento final;stutter segue. Build padrao OFF em verificacao.
+
+## Aquecimento de shaders e recursos (18/10/2026, retomada noturna)
+
+Hipotese de Davy: uma tela de compilacao completa pode evitar os engasgos
+iniciais, pois a sessao fica fluida depois. O WarmUp existente ja prepara os
+pipelines conhecidos antes de executar o jogo e nove conversores internos.
+Isso nao significa que todas as combinacoes de todas as cenas sejam conhecidas.
+
+A rota `resource-route-20261018` pre-carregou703pipelines. Durante a janela90s,
+nao houve mensagem nova de compilacao nem escopo6/7/8/19/20/21>=8ms, mas
+batches chegaram a112,74ms. A rota anterior de ciclos chegou a124,60ms com a
+mesma ausencia de compiles registrados. Portanto, a tela pode ajudar no
+primeiro uso, mas nao ha evidencia de que ela sozinha resolva todos os picos.
+Ausencia desses eventos nao exclui chamadas menores que8ms ou trabalho
+interno do driver. Nao distribuir cache com shaders derivados do jogo.
+
+Sondas privadas de criacao de buffers, sem suspender threads:
+
+- `buffer-growth-20261018`:1.918criacoes/375,92ms na janela. Alocacao363,91ms
+  (96,8% do tempo de criacao),busca de overlaps0,522ms,joins2,46ms,registro6,69ms.
+  Das criacoes,1.558nao sobrepunham buffer existente;baixar o limiar de stream
+  nao tem justificativa apenas pelos merges. Maiores batches126,13/124,10ms
+  incluem28,49/24,00ms de criacao. Outro62,73ms nao inclui criacoes.
+- `buffer-sync-20261018`:76.999eventos/zero descartes/exit0. Na janela,
+  1.516criacoes298,13ms,alocacao288,71ms. Tempos aninhados de sincronizacao,
+  upload e texturas nao podem ser somados. No maior batch126,35ms,uniao dos
+  escopos conhecidos86,94ms;criacao28,35ms,refresh31,36ms,video-label14,45ms.
+  Outro batch90,15ms tem apenas0,47ms coberto pelas sondas. Sem nova compilacao
+  registrada na janela. Captura posterior:em pe/HP90,fogo e Ultraman presentes.
+
+As rotas tem foco ausente163/163checks;servem para atribuicao de custo,nao
+para declarar ganho de FPS ou comparar medias entre trajetorias. As sondas
+240..245 guardam apenas chamadas>=0,1ms;fracao restante pode conter muitas
+chamadas curtas,esperas ou trabalho nao instrumentado. Sem inferencia de causa
+unica ou percentuais globais de CPU/GPU.
+
+Patches,analisadores,CSV e capturas preservados em `build/research/`;nenhuma
+sonda privada integrada ao produto. CMake original restaurado e rebuild limpo.
+Proximo passo:separar Map/espera do staging,copia `gz_memory_copy` e geracao de
+comandos nos primeiros uploads;coletar ciclos por batch para os picos ainda
+nao cobertos. Preservar locks,barreiras e qualidade. Nao repetir subalocacao BDA
+ou tunings de stream sem evidencia nova. Uma preparacao de recursos antes de
+liberar o jogador exige provar que antecipa trabalho real sem mudar simulacao.

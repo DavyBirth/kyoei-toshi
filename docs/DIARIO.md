@@ -3906,3 +3906,45 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   as cenas201..208. Previa compacta privada de2.532.599bytes,62recursos,
   leitura virtual verificada;nao distribuida aos amigos. Previa integral
   mantida como referencia do teste visual original;manifesto publico intacto.
+
+### 18/10/2026 - desempenho, reserva de 5% e hipotese de shaders
+- Davy confirmou: atualizadores18/10 sem traducao natural. Pediu continuar
+  desempenho e parar imediatamente a5% restantes da janela5h, salvando estado,
+  sem pedido de desligamento. Leitura local atual18% no inicio;monitor privado
+  performance-reserve5-20261018 consulta a cada5s e fecha so testes do projeto,
+  escreve marcador e checkpoint. Limite antigo1% substituido nesta execucao.
+- Hipotese de Davy: tela de compilacao completa, pois depois do inicio o jogo
+  fica fluido. Conferido WarmUp existente: prepara pipelines conhecidos antes
+  do guest e9conversores internos. Coleta resource-route ja pre-carregara703.
+  Nas janelas90s resource-route e stutter-cycles-route:zero mensagens novas
+  de compilacao,zero eventos6/7/8/19/20/21>=8ms,mas batches112,74/124,60ms.
+  Nao prova ausencia de qualquer custo interno do driver/compilacao curta;
+  mostra que uma tela isolada nao tem evidencia de resolver todos os picos.
+- Sonda TEMPORARIA no CMake gerado,sem alterar copia fixa:CreateBuffer230,
+  ResolveOverlaps231,alocacao232,JoinOverlap233,metadados234,Register235.
+  Stage230 address/bytes pedido original;234 address=numero de overlaps,
+  bytes=tamanho final. Build PASS. Rota buffer-growth-20261018 em andamento,
+  muda,mesmo en16/cache de teste. Remover hooks e rebuild antes de encerrar.
+- buffer-growth-20261018 concluiu exit0/55.411eventos/zero descartes.
+  Janela90s:1.918criacao,375,92ms total;363,91ms na alocacao(96,8%),
+  busca0,522ms,join2,46ms,registro6,69ms.1.558sem overlap,233com1,126com2,
+  1com5:nao ha base para baixar limiar de stream apenas por causa de merges.
+  Maiores batches126,13/124,10ms incluem28,49/24,00ms de criacao;resto ainda
+  nao explicado. Outro62,73ms sem nenhuma criacao. Nao e benchmark de ganho.
+  Captura posterior e foco163/163ausente registrados;sem comparacao de FPS.
+- Segunda sonda buffer-sync adiciona SynchronizeBuffer240,UploadCopies241,
+  ObtainBuffer242,ObtainBufferForImage243,RefreshImage244,FindImage245,
+  apenas eventos>=0,1ms. Build PASS;rota buffer-sync-20261018 em andamento.
+  Patch privado salvo como buffer-sync-instrumentation-20261018.patch;
+  CMake fonte ja RESTAURADO ao HEAD durante execucao (nao muda processo
+  carregado). Build principal precisa rebuild limpo quando o teste terminar.
+- buffer-sync-20261018 concluiu exit0,76.999eventos/zero descartes.
+  1.516criacoes298,13ms;alocacao288,71ms. Maior batch126,35ms:uniao conhecida
+  86,94ms,criacao28,35ms,refresh31,36ms,video-label14,45ms(nao somar aninhados).
+  Batch90,15ms so0,47ms explicado. Sem compiles novos na janela. Captura vista:
+  em pe/HP90,fogo/Ultraman;foco ausente163/163,nao comparar FPS com outra rota.
+- Build principal limpo PASS apos retirar TODOS os hooks de crescimento/sync;
+  grep em CMake e fontes gerados sem KyoeiGrowthTrace. Portatil e ZIPs dos
+  amigos preservados. Nenhuma correcao de desempenho promovida nesta rodada.
+  Conclusoes e proximo alvo em STUTTER-TRACE.md:Map/esperas do staging,copia de
+  memoria e comandos curtos;medir ciclos para picos90ms nao cobertos.
