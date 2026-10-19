@@ -1,5 +1,16 @@
 # Desempenho — objetivo de 60 FPS
 
+## Verificações de 19/10/2026
+
+Quatro rodadas ABBA com superfície interna1920x1080 deram36,82FPS com saída
+1080p e36,70FPS com saída720p: diminuir só a janela não trouxe ganho útil
+nesta vista parada. [Método e limites](re/SAIDA-720P-1080P.md). Não confundir
+com escala interna ou eliminação de travadas em movimento.
+
+As consultas de orçamentoVulkan também não explicaram picos grandes: nos
+grupos reportados de5.760chamadas por cache, texturas somaram60,66ms e buffers
+16,33ms; máximos0,2305/0,1157ms. A política de cache não foi alterada.
+
 ## Resultado mais recente: 18/10/2026
 
 A compactacao correta dos registros que protegem a memoria de upload ganhou
