@@ -3844,3 +3844,65 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   nao equivale automaticamente ao identificador C++ do trace. Documentado
   requisito de QPC/contexto/tempo de suspensao e identificacao antes de nova
   coleta dirigida. Renderizador/portatil/dump/saves preservados;stutter pendente.
+
+- Retomada noturna de18/10 a pedido de Davy:perfil privado com QPC por amostra
+  e tempo de suspensao compilado. ID Windows relacionado ao hash C++ por FNV1a
+  dos4bytes,conferido no STL local. Primeira coleta terminou nas maquinas,sem
+  fogo;maior batch103ms contem73ms de suspensao do profiler,nao atribuir ao jogo.
+- Coleta stutter-timed-overlay-20261018:3.000pilhas,36.145eventos/zero descartes,
+  exit0. Fogo/HP80/personagem caido na captura. Suspensao mediana2,92ms/max54,63;
+  FPS do profiler nao e benchmark. Nos maiores batches houve40pilhas em espera
+  de readback(763,7ms),21em DestroyAllocation/FreeDedicatedMemory(577,3ms),14em
+  CreateAllocation(357,5ms). Hipotese concreta de custo do driver/alocador,nao
+  prova isolada de causa de todos os picos. Diálogos integrados usados nos testes
+  para evitar cancelamento da lista nativa/minimizacao. Saves montados read-only.
+- Candidato BDA:retirar exigencia dedicada forcada,opcional no build ON.
+  Teste real Vulkan32buffers:32alocacoes dedicadas vs1compartilhada;enderecos
+  unicos,fill/copy GPU,conteudos vizinhos e enderecos sobreviventes PASS.
+  Quatro rotas sem profiler/Work,ordemABBA,exit0/zero descartes:
+  A1 39,55FPS/max469,02ms;B1 28,37/max400,22;B2 31,44/max103,16;A2 34,91/max101,81.
+  A1 terminou nas maquinas/HP100,B1noutra vista/HP80,B2/A2na mesma calcada/HP80;
+  foco variou. NAO atribuir diferencas inteiras ao candidato. B2/A2p99=50,40/50,18ms,
+  50/47intervalos>50ms e2/2>100ms. Beneficio nao demonstrado;flag/candidato
+  RETIRADOS do codigo ativo. Patch/teste/relatorios privados preservados.
+- Instrumentacao VMA privada TEMPORARIA em CMake,buffer/image gerados e
+  build/research/resource_trace_20261018.h. Mede diretamente criar/destruir
+  buffers/imagens(stages220..223),sem suspensao nem timing por pacote/draw.
+  resource-route-20261018 em andamento;retirar injecoes privadas e reconstruir
+  ao concluir. Nada instalado no portatil nem alterado no Godzilla/copia fixa.
+
+- resource-route-20261018 terminou exit0.5.806chamadas VMA,3.135na janela:
+  1.553criacoes de buffer(269,61ms)/372liberacoes(131,59ms),603criacoes de
+  imagem(10,97ms)/607liberacoes(2,18ms). Maiores batches112,74/108,69/95,42ms
+  incluem182/180/192chamadas,uniao temporal25,40/26,70/26,21ms. Maior chamada
+  individual3,33ms. Outro batch83,84ms nao tem VMA. Logo,recriacao em volume
+  explica parte dos primeiros picos,nao todos;proximo passo medir merges/
+  expansoes do BufferCache antes de mudar heuristicas. Sem profiler suspensivo.
+- Todas as injecoes VMA privadas retiradas,CMake igual ao HEAD,rebuild limpo
+  PASS. Subalocacao BDA rejeitada tambem ausente. Evidencias/patches privados
+  preservados;nenhuma melhoria de FPS declarada nesta rodada.
+- A pedido de Davy,iniciado teste da traducao natural do Claude em worktree
+  G:/kyoei-toshi-natural,commit7d426f9 congelado em copia privada.3.130EN
+  alteradas em9recursos(201..208 e item_data),13.260entradas/135recursos
+  validados por reinsercao/tokens/nomes. Fonte principal cobre todos93caracteres;
+  outras fontes nao cobrem e-agudo de cafe:conferir quando essas falas aparecerem.
+  Pilotos de abertura/rua inalterados pelo Claude. Previa privada independente
+  runtime-natural-test-7d426f9-20261018,hash9955ca6a811693a939ad3d88ad15a33be20f6f79cf2702d6d3418c832d21b160.
+  Nao ativada no manifesto principal nem mesclada ao trabalho do Claude.
+- Davy pediu novos atualizadores para os amigos. Build isolado de producao
+  OFF/RelWithDebInfo PASS77/77. Gerador aceita --runtime para empacotar esse
+  executavel sem substituir o binario de teste. Windows/Linux-Wine20261018
+  gerados,cumulativos para original/15/16/17/17b.3testes gerador+3Windows+
+  11Linux/WSL PASS;10cenarios com ZIPs reais PASS(preflight/aplicar/reaplicar/
+  hash/backup/save/prefixo). Hashes e instrucoes em ATUALIZACOES-AMIGOS.md.
+  Somente runtime;traducao natural separada;60FPS/stutter ainda pendentes.
+- Smoke final com o executavel extraido do ZIP Windows: save001 carregado,
+  rua renderizada, HP100, prompt de teclado e objetivo completo no minimapa.
+  Delta privado natural+UI aceito e 43 pares de prompts carregados. Teste mudo,
+  sem substituir o runtime pessoal. Captura update-smoke-scene-20261018.png.
+- Revisao natural: confirmadas visualmente na loja as falas alteradas do homem
+  escolhendo bento (Stage201 p0/k325,k328), sem corte, incluindo contracoes.
+  Evidencia natural-store-verified-7d426f9.png. Nao equivale a revisar todas
+  as cenas201..208. Previa compacta privada de2.532.599bytes,62recursos,
+  leitura virtual verificada;nao distribuida aos amigos. Previa integral
+  mantida como referencia do teste visual original;manifesto publico intacto.

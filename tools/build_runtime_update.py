@@ -25,6 +25,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--baseline', type=Path, required=True)
     parser.add_argument('--out', type=Path, required=True)
+    parser.add_argument('--runtime', type=Path, default=ROOT/'build/kyoei.exe',
+                        help='Runtime from a separate verified build')
     parser.add_argument('--linux-wine', action='store_true', help='Linux applicator for the shipped Wine/Proton version')
     parser.add_argument('--accept-update', type=Path, action='append', default=[], help='Previously distributed ZIP whose installed runtime is also accepted')
     args = parser.parse_args()
@@ -46,7 +48,7 @@ def main():
         raise ValueError('Choose a new ZIP under ignored build/')
     with tempfile.TemporaryDirectory(dir=ROOT/'build') as temporary:
         runtime = Path(temporary)/'kyoei.exe'
-        clean_pe(ROOT/'build/kyoei.exe', runtime)
+        clean_pe(args.runtime, runtime)
         metadata = dict(schema=1, platform='windows-x64', title=manifest['title'],
                         version=manifest['version'], sha256=digest(runtime),
                         accepted_sha256=accepted)
@@ -75,8 +77,10 @@ def main():
                       'fechados, copie o backup indicado sobre runtime/kyoei.exe.\n')
         command = ('@echo off\r\npowershell -NoProfile -ExecutionPolicy Bypass -File '
                    '"%~dp0apply_runtime_update.ps1" -GamePath "%~dp0.."\r\npause\r\n')
-        readme += ('\nMudanças desta revisão: pré-compilação de shaders conhecidos e de nove\n'
-                   'conversores internos; simplificação segura da união de buffers de vértices.\n'
+        readme += ('\nMudanças desta revisão: menor custo das verificações de diagnóstico\n'
+                   'desligadas; medição opcional dos intervalos de apresentação sem\n'
+                   'instrumentar cada chamada de desenho, e ciclos de CPU por lote.\n'
+                   'Mantém as melhorias anteriores de pré-compilação e buffers de vértices.\n'
                    'O protótipo de readback cooperativo fica desligado por padrão.\n'
                    'No Linux, processos protegidos sem relação com Wine não bloqueiam o update;\n'
                    'Wine/processos Windows ou sem identificação continuam sendo verificados.\n'

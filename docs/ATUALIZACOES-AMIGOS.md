@@ -1,6 +1,31 @@
 # Atualizações pequenas
 
-## Revisão atual: 17/10/2026b
+## Revisão atual: 18/10/2026
+
+- Windows: `build/Kyoei-Windows-Update-20261018.zip`, 7.346.824 bytes.
+- Linux/Wine: `build/Kyoei-Linux-Wine-Update-20261018.zip`, 7.348.002 bytes.
+- Cumulativos: aceitam Friends-Test original e os updates de 15, 16, 17 e 17b.
+- Runtime de produção separado, RelWithDebInfo, experimentos desligados.
+  Reduz o custo dos diagnósticos desligados e permite medir apresentação sem
+  instrumentar draws; mantém as melhorias das revisões anteriores. Engasgos
+  e a meta de 60 FPS continuam pendentes; não há ganho grande de FPS comprovado.
+- Três testes do gerador, três Windows e onze Linux/WSL passaram. Os ZIPs reais
+  passaram em dez cenários (cinco bases por sistema): preflight sem escrita,
+  aplicação, reaplicação, hash, backup exato, save e prefixo preservados.
+  Evidência privada: `build/research/update-validation-20261018.json`.
+- Somente runtime/aplicador/instruções/hashes. A revisão de inglês natural
+  do ramo `traducao-natural-en` não está incluída: segue em prévia separada.
+
+SHA256 Windows: `c6b12f1edec706e0f47d6a52d79deeb745aff0580d4c267c87aa94d1d2216ee4`.
+SHA256 Linux/Wine: `d3a9453ff41df207b6aba2fc6f2a6222b86ea0e567419050c3dcc910c88b8c73`.
+Runtime comum: `183bcfe24386fc698ac681b4bf4e36acd30ae3c511fb82e534173a9934229641`.
+
+Fechar jogo e launcher, extrair na pasta do jogo substituindo a pasta
+`Atualizacao-Kyoei`. Windows: abrir `Aplicar atualizacao.cmd`. Linux/Wine:
+executar `sh Atualizacao-Kyoei/Aplicar-no-Linux.sh`, com Python 3.11+, sem sudo.
+Abrir depois pelo launcher habitual. O Linux deste pacote usa Wine/Proton.
+
+## Revisão anterior: 17/10/2026b
 
 - Pacote Windows: `build/Kyoei-Windows-Update-20261017b.zip` (7.334.300 bytes).
 - Pacote Linux/Wine: `build/Kyoei-Linux-Wine-Update-20261017b.zip` (7.335.464 bytes).
