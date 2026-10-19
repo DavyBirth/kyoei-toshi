@@ -2317,7 +2317,7 @@
         {
           "id": "p0/k285",
           "source_text_sha256": "54b64ac00e9b37bc604c615f2048f8b939842136281e941bdc367e6ba56288c9",
-          "en": "If you see Morimoto,\nplease get the radio show tickets for me.",
+          "en": "If you run into Morimoto,\nremind him about my radio show tickets, okay?",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k285; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2331,21 +2331,21 @@
         {
           "id": "p0/k302",
           "source_text_sha256": "fca296c3365453c1ee2adb33f0c5e3086b4e824b6a5b06f90ba2e1f88ed5afd1",
-          "en": "Ask: \"Honoka Futaba has finally what?\"",
+          "en": "\"Honoka finally what?\"",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k302; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k314",
           "source_text_sha256": "cda211c023af758ba761159b860d668235cacec1e8b7a2e96ffd78e8fc8ea5c1",
-          "en": "Handed over ¥3,000 and got a \"Signed Photo of Honoka Futaba\"!",
+          "en": "Handed over 3,000 yen and got an \"Exclusive Photo of Honoka Futaba\"!",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k314; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k439",
           "source_text_sha256": "45c86eec43c1c5ea9983612299600595183a757c2f7512daee9a06502cc07504",
-          "en": "I'm Akimoto from the Nirasawa Police Station.\nI'd like to ask you about the person who murdered my brother.",
+          "en": "I'm Akimoto, from the Nirasawa Police.\nI have some questions about the woman who killed her brother.",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k439; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2366,14 +2366,14 @@
         {
           "id": "p0/k502",
           "source_text_sha256": "9d52db48dce527bae6e80e9326647b711f02d27aa4db4d6fd4d9dabd74e03ca1",
-          "en": "Wanted fugitive.\n・Minoru Damasuyama: Forgery of a sealed private document, fraud",
+          "en": "A wanted poster.\n・Minoru Damasuyama: Forgery of a sealed private document, fraud",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k502; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k574",
           "source_text_sha256": "8ec46121f82d0eac226fe8524a79709af96f95da044d36f0667e4b2147a4f28d",
-          "en": "And so, Takako was going on about Harumichi...",
+          "en": "So anyway, Takako's all like, Harumichi this, Harumichi that...",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k574; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5572,21 +5572,21 @@
         {
           "id": "r950/c25",
           "source_text_sha256": "06c5726644e0b5a1cc76c5d04674eafa2290e42a9579274feb9bae9346c4af6c",
-          "en": "Signed Photo of Idol Honoka Futaba",
+          "en": "Exclusive Photo of Idol Honoka Futaba",
           "notes": "English draft imported from audited private workspace, translate-en-0119.json:r950/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r950/c26",
           "source_text_sha256": "e039fbfe65809cacbcdf40ae5a7959b2fc2e23571395e62d9a1de57fb473cca7",
-          "en": "A signed photo of popular idol Honoka Futaba. It's not especially revealing; she's pictured in a fresh, springlike outfit.",
+          "en": "An exclusive photo of popular idol Honoka Futaba. It's not especially revealing; she's pictured in a fresh, springlike outfit.",
           "notes": "English draft imported from audited private workspace, translate-en-0119.json:r950/c26; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r950/c28",
           "source_text_sha256": "e039fbfe65809cacbcdf40ae5a7959b2fc2e23571395e62d9a1de57fb473cca7",
-          "en": "A signed photo of popular idol Honoka Futaba. It's not especially revealing; she's pictured in a fresh, springlike outfit.",
+          "en": "An exclusive photo of popular idol Honoka Futaba. It's not especially revealing; she's pictured in a fresh, springlike outfit.",
           "notes": "English draft imported from audited private workspace, translate-en-0119.json:r950/c28; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
