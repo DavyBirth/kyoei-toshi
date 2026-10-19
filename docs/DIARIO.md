@@ -4112,3 +4112,5 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   preservado. Repeticao privada com foco realWindows em andamento.
 
 - Foto: segunda tentativa de foco também sem captura/exit0. Sonda privada de pedido único no frame120 gerou photos/Kyoei-17924318058722041-1.png,1920x1080,tela inicial,visual conferido;log Photo saved. Isso prova readback/PNG,não F12 nem HUD em partida. Sonda removida dos gerados;rebuild limpo obrigatório. Fotos ignoradas no Git.
+
+- Encerramento na reserva5% conforme combinado:teste foto-readback saiu0,binario final recompilado/linkado apos restaurar e atualizar timestamp do presenter. Busca confirma ausencia de photo_probe_frames/MEMORY_SNAPSHOT/verificacao privada nos gerados. Commits0817300(experimento upload opt-in) e4b3b05f(piloto foto). Performance ainda sem ganhoFPS comprovado;proximos passos:validar F12/H em janela ativa,captura de cena e retomar memoria/CPU. Nenhum desligamento.
