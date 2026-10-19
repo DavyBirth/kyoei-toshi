@@ -3965,3 +3965,16 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   P.T. como refer?ncia futura; viabilidade de pausa/c?mera ainda a investigar.
   Apenas registro documental; investiga??o e testes de desempenho pausados
   pela reserva de5%, sem iniciar implementa??o do recurso.
+
+- Por pedido explicito de Davy, portable pessoal atualizado com o runtime de
+  producao do ZIP20261018, SHA256183bcfe24386fc698ac681b4bf4e36acd30ae3c511fb82e534173a9934229641.
+  Baseline pessoal f095a673..aa6d conferida com manifesto;nao constava no
+  allowlist dos amigos. Somente copia privada extraida do aplicador recebeu
+  essa baseline conhecida;ZIPs publicaveis intactos. Aplicacao atomica com
+  backup exato em data/update-backups/f095a67312bdb4ab71e011157c869c4ff72f3c43cb638b09089575b47199aa6d.exe.
+  Hashes de2.061arquivos existentes de data/ preservados;manifesto pessoal
+  atualizado,privacy_scan_passed=false mantido. Launcher --check exit0.
+  Prova build/research/personal-update-20261018/verification.json. Partida
+  aberta em build/kyoei.exe nao interrompida. Traducao natural nao incluida.
+  Investigacao de desempenho segue pausada pela reserva;somente atualizacao
+  expressamente pedida executada,sem novo benchmark ou alteracao grafica.
