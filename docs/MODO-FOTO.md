@@ -3,12 +3,11 @@
 Pedido de Davy em 19/10/2026: desenvolver em paralelo às melhorias de
 desempenho. A primeira etapa é tirar uma foto limpa, usando a câmera normal.
 
-- Durante a partida, **H** usa o comando original do jogo para mostrar ou
-  esconder a interface. Confira a tela antes de tirar a foto; menus e avisos
-  podem ter comportamento próprio.
+- **H** alterna somente o guia de controles entre grande, pequeno e oculto.
+  A sequência foi conferida na rua: HP, mapa, objetivo e interação continuam
+  visíveis. H não é um comando para ocultar a interface inteira.
 - **F12** salva uma imagem PNG em `photos/`, na pasta de execução do port.
   O nome inclui o instante e um número; fotos anteriores são preservadas.
-- Aperte **H** novamente para voltar à interface, se você a escondeu.
 
 O PNG recebe os pixels da superfície final do PS4 antes do redimensionamento
 da janela e da interface acrescentada pelo port. A resolução vem da imagem do
@@ -32,12 +31,26 @@ cores incorretas. Falhas de gravação também aparecem no log.
 Compilação completa passou. Em 19/10/2026, Davy ativou a janela e apertou F12:
 o port salvou uma foto real de 1920x1080 durante a partida. A imagem foi
 conferida: cena da rua com personagem, fogo, interface e mapa, sem desktop
-ou interface do port. Isso valida F12 e a gravação na partida; a sequência
-de esconder e restaurar a interface ainda precisa de confirmação.
+ou interface do port. Isso valida F12 e a gravação na partida.
 
-Próximo teste mudo: partida em 1080p, esconder HUD com H, F12, conferir PNG
-sem desktop/interface do port, cores e tamanho; H de novo deve recuperar a
-interface. Comparar com outra resolução de janela e testar tecla repetida,
+Na janela Controls do launcher, a opção **Photo preview** ativa
+`KYOEI_PHOTO_HUD=1`. F10 alterna a
+travessia de desenho de uma árvore nativa de HUD. O padrão continua desligado;
+não declarar cobertura de todos os elementos ou de todas as cenas antes de
+conferir. Restaurar ao perder foco, minimizar, fechar ou abrir confirmação,
+diálogo/mapa/menus. A atualização do jogo continua ativa.
+
+Em 19/10, duas vistas da rua foram conferidas antes, durante e depois:
+HP, mapa, objetivo e interação desapareceram e voltaram; cenário e animações
+continuaram. Uma sequência com foco real e teclas F10/F12 produziu dois PNGs
+de 1920x1080, um sem HUD e outro com HUD restaurado. O teste de entrada SDL
+passou para foco, repetição, janela errada e restauração por ações de diálogo,
+controle, minimização e fechamento. As sondas privadas foram retiradas antes
+da compilação usada na sequência real. O launcher compilou e sua tela de
+controles foi conferida; o pacote portátil pessoal ainda não foi atualizado.
+
+Próximos testes: conferir antes/durante/depois em outras cenas e transições,
+comparar com outra resolução de janela e testar tecla repetida,
 perda de foco e pasta de saída sem permissão. Câmera livre e pausa exigem
 investigação independente de câmera, lógica e desenho.
 

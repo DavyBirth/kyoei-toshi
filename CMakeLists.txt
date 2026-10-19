@@ -288,8 +288,14 @@ kyoei_replace_checked(KYOEI_LOADER
 kyoei_replace_checked(KYOEI_LOADER
   "void gz_log(const char *format, ...) { va_list a;"
   "void gz_log(const char *format, ...) { if (!kyoei_log_visible(format)) return; va_list a;")
+# Install the opt-in photo HUD draw gate before starting guest/GPU threads.
+set(KYOEI_LOADER "#include \"kyoei_photo_hud.h\"\n${KYOEI_LOADER}")
+kyoei_replace_checked(KYOEI_LOADER
+  "    kyoei_gpu_wait_configure(image, image_size);"
+  "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_photo_hud_configure(image, image_size);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
+target_sources(kyoei PRIVATE src/kyoei_photo_hud.c)
 set(KYOEI_PORT_EXE_NAME "kyoei" CACHE STRING "Prepared port binary: kyoei or kyoei-orb-trace")
 if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace|kyoei-orb-trace-next)$")
   message(FATAL_ERROR "Unsupported port executable name")
@@ -1155,6 +1161,9 @@ set(KYOEI_WINDOW "#include \"kyoei_photo.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "        KyoeiMouse::Event(window,event);"
   "        if (KyoeiPhoto::HandleEvent(window,event)) continue;\n        KyoeiMouse::Event(window,event);")
+kyoei_replace_checked(KYOEI_WINDOW
+  "    KyoeiOverlay::UpdateTextInput(window);"
+  "    KyoeiOverlay::UpdateTextInput(window);\n    KyoeiPhoto::Update(window);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
 file(READ "${KYOEI_CORE}/gpu/vendor/vk_presenter.cpp" KYOEI_PRESENTER)
@@ -1283,6 +1292,11 @@ target_link_libraries(test_kyoei_ime_overlay PRIVATE kyoei_imgui user32 gdi32)
 add_executable(test_kyoei_overlay_barriers src/test_kyoei_overlay_barriers.cpp)
 get_target_property(KYOEI_OVERLAY_GPU_INCLUDES kyoei_videoout INCLUDE_DIRECTORIES)
 add_executable(test_kyoei_mouse src/test_kyoei_mouse.cpp)
+add_executable(test_kyoei_photo src/test_kyoei_photo.cpp)
+target_include_directories(test_kyoei_photo PRIVATE ${KYOEI_OVERLAY_GPU_INCLUDES})
+target_compile_features(test_kyoei_photo PRIVATE cxx_std_23)
+target_compile_definitions(test_kyoei_photo PRIVATE NOMINMAX _CRT_SECURE_NO_WARNINGS)
+target_link_libraries(test_kyoei_photo PRIVATE "${KYOEI_CORE}/prebuilt/_deps/gz_sdl-build/SDL3-static.lib" ${KYOEI_SYSTEM_LIBRARIES})
 add_executable(test_kyoei_live_prompts src/test_kyoei_live_prompts.cpp src/kyoei_prompt_state.c)
 target_include_directories(test_kyoei_live_prompts PRIVATE src)
 target_compile_features(test_kyoei_live_prompts PRIVATE cxx_std_23)

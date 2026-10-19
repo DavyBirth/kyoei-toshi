@@ -18,6 +18,7 @@ class PortableLauncher : Form {
     Image artwork;
     FileStream profileLock;
     bool running;
+    bool photoHudPreview;
     decimal mouseSensitivity=1.8m;
     string promptMode="auto";
     [STAThread] static int Main(string[] args) {
@@ -97,14 +98,15 @@ class PortableLauncher : Form {
             if(lines.Length>4 && lines[4]=="controller")promptMode="controller";
             else if(lines.Length>4 && lines[4]=="keyboard-fixed")promptMode="keyboard";
             else promptMode="auto";
+            photoHudPreview=lines.Length>5 && lines[5]=="1";
         }catch{}
     }
     void SaveSettings() {
         Directory.CreateDirectory(Path.Combine(root,"data"));
-        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),promptMode=="keyboard"?"keyboard-fixed":promptMode});
+        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),promptMode=="keyboard"?"keyboard-fixed":promptMode,photoHudPreview?"1":"0"});
     }
     Form ControlsDialog() {
-        var dialog=new Form();dialog.Text="Controls";dialog.ClientSize=new Size(850,665);dialog.StartPosition=FormStartPosition.CenterParent;
+        var dialog=new Form();dialog.Text="Controls";dialog.ClientSize=new Size(850,710);dialog.StartPosition=FormStartPosition.CenterParent;
         dialog.BackColor=BackColor;dialog.ForeColor=ForeColor;dialog.Font=Font;dialog.FormBorderStyle=FormBorderStyle.FixedDialog;dialog.MaximizeBox=false;dialog.MinimizeBox=false;
         var table=new DataGridView();table.SetBounds(16,16,818,482);table.ReadOnly=true;table.AllowUserToAddRows=false;table.AllowUserToDeleteRows=false;table.AllowUserToResizeRows=false;
         table.BackgroundColor=Color.FromArgb(24,24,30);table.BorderStyle=BorderStyle.None;table.RowHeadersVisible=false;table.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
@@ -122,18 +124,21 @@ class PortableLauncher : Form {
             new[]{"Camera view toward third person","V","L2 / LT"},
             new[]{"Giant Shadow Camera","Right mouse / G","R2 / RT"},
             new[]{"Reset camera","Middle mouse / R","R3 / right stick click"},
-            new[]{"Change HUD size / visibility","H","L3 / left stick click"},
+            new[]{"Control guide: large / small / hidden","H","L3 / left stick click"},
             new[]{"Map","M","Touchpad / View"},
             new[]{"Menus / target selection","Arrow keys","D-pad"},
             new[]{"Pause / inventory menu","Esc / Tab","Options / Menu"},
-            new[]{"Release / capture mouse","F7; Alt+Tab releases automatically","—"}};
+            new[]{"Release / capture mouse","F7; Alt+Tab releases automatically","—"},
+            new[]{"Save photo (PNG, photos folder)","F12","—"},
+            new[]{"Hide HUD (photo preview below)","F10","—"}};
         foreach(var row in rows)table.Rows.Add(row);table.ClearSelection();dialog.Controls.Add(table);
         var note=new Label();note.SetBounds(18,505,815,40);note.Text="Actions depend on the scene. Vehicles use the same controller-to-key bindings.\nThe camera follows the game's maximum turning speed.";dialog.Controls.Add(note);
         var label=new Label();label.SetBounds(18,557,350,25);label.Text="Mouse sensitivity (default 1.80)";dialog.Controls.Add(label);
         var sensitivity=new NumericUpDown();sensitivity.SetBounds(390,552,120,28);sensitivity.Minimum=.2m;sensitivity.Maximum=5m;sensitivity.DecimalPlaces=2;sensitivity.Increment=.1m;sensitivity.Value=mouseSensitivity;dialog.Controls.Add(sensitivity);
         var promptsLabel=new Label();promptsLabel.SetBounds(18,602,350,25);promptsLabel.Text="On-screen button prompts";dialog.Controls.Add(promptsLabel);
         var prompts=new ComboBox();prompts.SetBounds(390,597,210,28);prompts.DropDownStyle=ComboBoxStyle.DropDownList;prompts.Items.AddRange(new object[]{"Automatic","Keyboard & mouse","PlayStation controller"});prompts.SelectedIndex=promptMode=="controller"?2:promptMode=="keyboard"?1:0;dialog.Controls.Add(prompts);
-        var save=new Button();save.SetBounds(620,609,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;promptMode=prompts.SelectedIndex==2?"controller":prompts.SelectedIndex==1?"keyboard":"auto";try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
+        var photo=new CheckBox();photo.SetBounds(18,646,590,28);photo.Text="Photo preview: F10 hides HUD; F12 saves PNG";photo.Checked=photoHudPreview;dialog.Controls.Add(photo);
+        var save=new Button();save.SetBounds(620,666,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;promptMode=prompts.SelectedIndex==2?"controller":prompts.SelectedIndex==1?"keyboard":"auto";photoHudPreview=photo.Checked;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
         return dialog;
     }
     void Launch() {
@@ -157,6 +162,7 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_TITLE_EXIT"]="1";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT_ART"]="assets/title-exit.kyart";
             start.EnvironmentVariables["KYOEI_PROMPT_MODE"]=promptMode;
+            start.EnvironmentVariables["KYOEI_PHOTO_HUD"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",lang,"prompts.kypack");
             if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,"ui-corrections.kydelta");
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";

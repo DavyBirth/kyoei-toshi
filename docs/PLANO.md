@@ -56,15 +56,17 @@ O código fixo do Godzilla continua preservado; adaptações do Kyoei ficam aqui
 
 Pedido de Davy em 19/10/2026: implementar esta frente em paralelo à
 investigação de desempenho. O port do P.T. é uma referência a estudar;
-o primeiro piloto aproveita a câmera e o comando de HUD originais do jogo.
+o primeiro piloto aproveita a câmera original do jogo.
 
 - Piloto implementado: F12 solicita PNG da superfície final PS4 na resolução
   nativa, antes do redimensionamento da janela e dos overlays do port.
-  H alterna manualmente a interface pelo comando original do jogo.
+  H alterna somente o guia de controles. A prévia opcional usa F10 para
+  ocultar/restaurar o HUD; fica desligada por padrão no launcher.
 - Sem captura automática durante benchmarks; o readback/compressão pode
   causar uma pausa curta quando o jogador solicita uma foto.
-- Compilação de sintaxe isolada passou. Compilação completa, captura real,
-  cores/resolução e retorno do HUD ainda aguardam validação em partida.
+- Compilação completa e testes de entrada passaram. F10/F12 reais salvaram
+  PNGs de 1920x1080 sem HUD e com HUD restaurado na rua. Outras cenas,
+  legendas e transições ainda precisam de validação.
 - Depois: identificar câmera e separar simulação/desenho antes de congelar
   o jogo ou liberar posição, rotação e campo de visão. Restaurar o estado
   ao sair; preservar saves, comportamento e áudio do atalho normal.
