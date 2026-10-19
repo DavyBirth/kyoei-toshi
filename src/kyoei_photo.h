@@ -23,7 +23,10 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
     if(event.type==SDL_EVENT_KEY_DOWN &&
        (event.key.key==SDLK_ESCAPE || event.key.key==SDLK_TAB ||
         event.key.key==SDLK_RETURN || event.key.key==SDLK_SPACE ||
-        event.key.key==SDLK_BACKSPACE))kyoei_photo_hud_restore();
+        event.key.key==SDLK_BACKSPACE || event.key.key==SDLK_M ||
+        event.key.key==SDLK_E || event.key.key==SDLK_F))kyoei_photo_hud_restore();
+    if(event.type==SDL_EVENT_MOUSE_BUTTON_DOWN && event.button.button==SDL_BUTTON_LEFT)
+        kyoei_photo_hud_restore();
     if(event.type==SDL_EVENT_GAMEPAD_BUTTON_DOWN) {
         const auto button=event.gbutton.button;
         if(button==SDL_GAMEPAD_BUTTON_START || button==SDL_GAMEPAD_BUTTON_TOUCHPAD ||

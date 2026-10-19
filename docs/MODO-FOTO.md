@@ -50,8 +50,8 @@ da compilação usada na sequência real. O launcher compilou e sua tela de
 controles foi conferida; o pacote portátil pessoal ainda não foi atualizado.
 
 Próximos testes: conferir antes/durante/depois em outras cenas e transições,
-comparar com outra resolução de janela e testar tecla repetida,
-perda de foco e pasta de saída sem permissão. Câmera livre e pausa exigem
+comparar fotos com outra resolução de janela e testar pasta de saída sem
+permissão. Câmera livre e pausa exigem
 investigação independente de câmera, lógica e desenho.
 
 Antes disso, uma solicitação privada no renderizador gerou PNG de 1920x1080

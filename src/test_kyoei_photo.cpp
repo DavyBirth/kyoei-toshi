@@ -25,11 +25,13 @@ int main(){
         hidden=1;KyoeiPhoto::pending.store(true);event={};event.type=type;
         KyoeiPhoto::HandleEvent(window,event);CHECK(!hidden && !KyoeiPhoto::TakeRequest());
     }
-    for(auto key:{SDLK_ESCAPE,SDLK_TAB,SDLK_RETURN,SDLK_SPACE,SDLK_BACKSPACE}){
+    for(auto key:{SDLK_ESCAPE,SDLK_TAB,SDLK_RETURN,SDLK_SPACE,SDLK_BACKSPACE,SDLK_M,SDLK_E,SDLK_F}){
         hidden=1;event={};event.type=SDL_EVENT_KEY_DOWN;event.key.key=key;
         event.key.windowID=SDL_GetWindowID(window);
         KyoeiPhoto::HandleEvent(window,event);CHECK(!hidden);
     }
+    hidden=1;event={};event.type=SDL_EVENT_MOUSE_BUTTON_DOWN;event.button.button=SDL_BUTTON_LEFT;
+    KyoeiPhoto::HandleEvent(window,event);CHECK(!hidden);
     for(auto button:{SDL_GAMEPAD_BUTTON_START,SDL_GAMEPAD_BUTTON_TOUCHPAD,
                      SDL_GAMEPAD_BUTTON_SOUTH,SDL_GAMEPAD_BUTTON_EAST,
                      SDL_GAMEPAD_BUTTON_WEST,SDL_GAMEPAD_BUTTON_NORTH}){

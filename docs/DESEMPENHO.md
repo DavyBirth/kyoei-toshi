@@ -11,6 +11,19 @@ As consultas de orçamentoVulkan também não explicaram picos grandes: nos
 grupos reportados de5.760chamadas por cache, texturas somaram60,66ms e buffers
 16,33ms; máximos0,2305/0,1157ms. A política de cache não foi alterada.
 
+Também foi comparado `KYOEI_FRAME_STATS=1/0/0/1`: 41,10 / 41,37 /
+40,24 / 40,38 FPS. Médias ponderadas: 40,74 ligado e 40,81 desligado
+(diferença de 0,17%, sem benefício consistente). Mesma compilação
+`55ddcde38c5807932d6b80baf6dc31dd68608705403a5e132a818a1e40714d21`,
+janela e superfície 1920x1080, posição parada/HP100/câmera conferidos nas
+quatro capturas, 60s de aquecimento após stage201 e cerca de20s por coleta.
+Todos sem foco durante a coleta, exit0, zero descartes e nenhum frame>50ms.
+`KYOEI_PRESENT_INTERVALS_ONLY=1` manteve a medição de apresentações em ambos;
+trace ativo, ciclos por thread desligados em ambos. Isso não mede o custo
+de todos os diagnósticos nem representa uma partida em movimento. Mantida
+a configuração do launcher; evidência privada em `build/research/`, resumo
+`stats-abba-summary-20261019.json` e relatórios `frame-stats-abba-{1..4}-20261019.json`.
+
 ## Resultado mais recente: 18/10/2026
 
 A compactacao correta dos registros que protegem a memoria de upload ganhou
