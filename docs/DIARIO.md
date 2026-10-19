@@ -3958,3 +3958,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   rebuild limpo PASS. Evidencias e patches privados preservados. Proximo passo
   permanece separar staging.Map/esperas,copia de memoria e geracao de comandos,
   com ciclos por batch. Nao instalar candidato nem declarar stutter resolvido.
+
+- Pedido posterior de Davy: modo foto inclu?do em docs/PLANO.md, ap?s a
+  melhoria de desempenho. Etapas: ocultar HUD/capturar, depois c?mera livre
+  com simula??o pausada, avaliar exposi??o/profundidade de campo. Port do
+  P.T. como refer?ncia futura; viabilidade de pausa/c?mera ainda a investigar.
+  Apenas registro documental; investiga??o e testes de desempenho pausados
+  pela reserva de5%, sem iniciar implementa??o do recurso.

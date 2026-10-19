@@ -52,6 +52,22 @@ shadPS4 e no port. Avançar fase por fase, incluindo salvamentos. Reimplementar
 sistemas aos poucos apenas quando seu comportamento estiver documentado.
 O código fixo do Godzilla continua preservado; adaptações do Kyoei ficam aqui.
 
+## Modo foto: depois da melhoria de desempenho
+
+Pedido de Davy em 18/10/2026: incluir um modo foto, usando o port do P.T.
+como refer?ncia a estudar. Implementar depois de resolver os problemas de
+desempenho da vers?o atual, sem depender da reimplementa??o final do renderer.
+
+- Primeiro: ocultar a interface e capturar imagens na resolu??o original.
+- Depois: congelar a simula??o mantendo a renderiza??o ativa e liberar a
+  c?mera, com posi??o, rota??o e campo de vis?o ajust?veis.
+- Avaliar exposi??o e profundidade de campo como op??es posteriores.
+
+Investigar como separar c?mera, simula??o e desenho antes de prometer c?mera
+livre com pausa. Ao sair do modo foto, restaurar c?mera, interface, controles
+e simula??o; preservar saves e o comportamento normal do jogo. Validar com
+Davy a entrada, a captura e o retorno ? jogatina. Nenhuma implementa??o iniciada.
+
 ## 6. Etapa final opcional: renderizador próprio e reimplementação nativa
 
 Direção esclarecida por Davy em 14/10/2026: manter e concluir o port híbrido,
