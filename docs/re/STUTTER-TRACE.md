@@ -317,3 +317,86 @@ do processamento dos milhares de draws,preparacao de recursos/comandos e
 possivel custo curto do driver. Proxima medicao deve acumular tempo/contagem
 por batch nessas fases,sem CSV por draw e sem retirar locks/barreiras.
 Evidencias/patch/analisadores em build/research. Nenhum ganhoFPS declarado.
+
+
+## Tempos acumulados por batch (19/10/2026)
+
+Sonda privada soma tempo/contagem por thread em16fases, sem CSV por draw.
+Teste nativo de nesting/retorno/isolamento entre threads PASS. Stage260..275
+usa duration_ms como intervalo do acumulador dentro do batch, address como
+NANOSEGUNDOS acumulados e bytes como chamadas. Nao interpretar esses registros
+como intervalos de execucao de cada fase nem soma-los com os escopos padrao.
+O analisador privado casa cada grupo completo com exatamente um batch da
+mesma thread. Pais e filhos sao inclusivos;contagens sao chamadas host.
+
+Primeira coleta draw-totals-20261019 teve38.808descartes:rejeitada como rota
+completa,sem metricas de FPS. Prefixo preservado e marcado incompleto.
+Repeticao draw-totals-r2-20261019 guarda apenas batches com acumulador>=40ms:
+exit0,66.020eventos/zero descartes,2062batches na janela,1234grupos completos,
+zero grupos sem correspondencia e zero diagnosticos. Foco ausente149/163;
+captura em pe/HP90,fogo/Ultraman/HUD,noutro angulo da rua. Nao comparar FPS
+com outras rotas nem atribuir diferencas ao custo da sonda.
+
+- Pico inicial152,468ms aos1,468s:2040draw/18dispatch,267.212.086ciclos.
+  Draws103,695ms;BindResources61,636ms,com20,162ms em buffers e40,854ms
+  em texturas. Vertex buffers22,381ms,busca de pipeline6,553ms. Valores
+  inclusivos:os subtempos nao se somam novamente aos103,695ms dos draws.
+- Outro pico102,304ms:draws88,856ms,BindResources49,314ms(19,944buffers/
+  28,705texturas),vertices17,272ms. Custo de muitas chamadas curtas agora
+  aparece;nao ha base para culpar apenas uma espera de staging ou shader.
+- Maior batch198,2865ms aos43,904s:2820draws,161.616.580ciclos. Draws61,841ms;
+  fora deles,leitura linear120,729ms/Finish120,692ms/Wait120,418ms aninhados,
+  mais video-label9,659ms. Esse pico tem espera concreta de readback,sem
+  inferir CPUpercent por ciclos ou somar escopos aninhados. Readback
+  cooperativo ja foi testado sem ganho demonstrado;nao ativa-lo por hipotese.
+
+Proximo detalhamento:separar FindImage/FindTexture/RefreshImage/samplers e
+FindBuffer/ObtainBuffer/CreateBuffer/UploadCopies nos batches lentos. Evitar
+atalhos que pulem atualizacoes,invalidation,locks ou barreiras. Sondas e
+analisadores privados,sem alteracao no portatil/ZIPs. Qualidade preservada.
+
+
+### Detalhamento dos caches na mesma rodada
+
+`resource-totals-20261019`:exit0,60.145eventos/zero descartes,2425batches,
+552grupos completos de24fases,zero sem correspondencia/diagnosticos. Novos
+stages276..283 continuam com ns em address e chamadas em bytes. Teste dos
+24acumuladores PASS. Foco ausente143/163;captura HP100,em pe,fogo/Ultraman,
+noutro ponto da calcada. Nao comparar desempenho com a rotaHP90 anterior.
+
+No pico inicial198,1082ms aos1,608s,2036draw/18dispatch,291.973.641ciclos:
+
+| Fase inclusiva | Tempo ms | Chamadas |
+| --- | ---: | ---: |
+| Draw | 113,874 | 2036 |
+| BindResources | 67,483 | 2049 |
+| BindTextures | 43,691 | 3829 |
+| FindImage | 3,163 | 8452 |
+| FindTexture | 37,275 | 5232 |
+| RefreshImage | 33,543 | 10128 |
+| FindBuffer | 26,190 | 5670 |
+| CreateBuffer | 25,337 | 103 |
+| ObtainBuffer | 23,690 | 8755 |
+| UploadCopies | 10,809 | 1848 |
+
+Alem dos draws,o mesmo batch contem readback74,654ms/Finish74,611ms/Wait74,085ms
+aninhados. Outros picos iniciais confirmam criacao e atualizacao:112,935ms
+com CreateBuffer25,276ms/RefreshImage25,600ms;105,770ms com28,284/25,398ms.
+FindImage custa2..3ms nesses casos;evitar repetir tuning de busca antes de
+separar o trabalho de refresh. Pais/filhos e cache de vertices podem incluir
+essas mesmas chamadas:nao somar as colunas.
+
+No pico195,9316ms aos30,479s,draws29,014ms e readback161,818ms(Wait161,066ms).
+Outros dois picos mostram uma terceira regiao importante:batch152,3358ms aos
+17,052s tem draws26,069ms,prepare111,065ms e label12,839ms;batch150,404ms aos
+34,504s tem draws18,497ms,prepare119,575ms e label10,662ms. Esses escopos estao
+na mesma thread e intersectam seus batches. Tempos inclusivos nao justificam
+atribuir todo pico a criacao de buffers,compilacao ou busca de imagens.
+
+Proximo passo:abrir RefreshImage em verificacao/hash,ObtainBufferForImage,
+detile e upload;separar tambem prepare(apresentacao) em aquisicao/copia/esperas.
+Preservar sincronizacao,leituras necessarias e qualidade;sem tuning de lookup
+ou limiar de stream por suposicao. As sondas usam relogio por chamada:nao sao
+benchmark de ganho. Fontes das4unidades restauradas e rebuild limpo ao final;
+CMake/copia fixa/portatil/atualizadores preservados. Evidencias privadas em
+build/research;nenhum candidato de desempenho integrado.

@@ -4001,3 +4001,38 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Fontes geradas restauradas byte a byte e rebuild limpo PASS;nenhuma sonda
   KyoeiUploadTrace no CMake/fontes ativos. Nenhum teste aberto;portatil e
   atualizadores dos amigos preservados.54.664eventos/zero diagnosticos.
+
+
+### 19/10/2026 - acumulacao de fases dos desenhos
+- Continuacao autorizada por Davy;diario lido,Git limpo no inicio;reserva5%
+  reativada. Sonda temporaria em copias geradas rasterizer/Liverpool acumula
+ 16fases por batch/thread,sem CSV por draw. Teste de nesting,retorno,contagem
+  e isolamento entre threads PASS. Nenhuma mudanca na copia fixa/CMake.
+- Primeira coleta lotou:38.808descartes,excluida de conclusoes da rota completa.
+  Repeticao limita registro aos batches>=40ms:exit0,66.020eventos/zero
+  descartes,2062batches/1234grupos completos,zero sem correspondencia/diagnosticos.
+  Foco149/163ausente,captura outro angulo/HP90/fogo/Ultraman/HUD;nao compararFPS.
+- Pico inicial152,47ms:103,69ms draws,61,64ms BindResources(incluindo40,85ms
+  texturas/20,16ms buffers),22,38ms vertices. Maior198,29ms aos43,90s tem
+  draw61,84ms e leituraGPU120,73ms(esperas aninhadas),mais label9,66ms.
+  Separadas duas cargas:preparacao em muitas chamadas curtas e readback longo.
+- Em andamento resource-totals-20261019:24fases,incluindo detalhes de caches;
+  teste acumuladores PASS. Fontes geradas das4unidades ja restauradas,processo
+  carregado ainda tem sondas. Fazer rebuild limpo apos concluir. Teste mudo,
+  usuario privado. Nenhum candidato de desempenho promovido nesta rodada.
+
+- resource-totals-20261019 concluiu exit0,60.145eventos/zero descartes,
+  2425batches/552grupos completos de24fases,zero sem correspondencia/diagnosticos.
+  Foco143/163ausente,captura HP100/em pe/fogo/Ultraman/noutro ponto da calcada.
+  Sem comparacaoFPS com a rotaHP90. SavesSYSTEM-DATA/SAVEDATA-001 read-only.
+- Pico198,11ms:FindImage3,16ms/8452chamadas,RefreshImage33,54ms/10128,
+  CreateBuffer25,34ms/103,UploadCopies10,81ms/1848;tempos inclusivos.
+  Readback74,65ms no mesmo batch. Busca de imagens nao e o custo principal
+  desses primeiros picos;nao repetir tuning de lookup/stream sem evidencia.
+- Pico195,93ms aos30,48s tem readback161,82ms/draw29,01ms. Picos152,34/150,40ms
+  tem prepare111,06/119,58ms na mesma thread,draw26,07/18,50ms e label12,84/10,66.
+  Proximo alvo:RefreshImage(hash,buffer de origem,detile/upload) e prepare
+  (aquisicao/copia/esperas). Sem alterar qualidade,sincronizacao ou simulacao.
+- Encerramento:4fontes geradas restauradas byte a byte,sem KyoeiDrawTotals
+  em CMake/fontes ativos,rebuild limpo PASS. Nenhum teste aberto;sondas
+  temporarias retiradas. Portatil/ZIPs preservados;nenhum ganhoFPS declarado.
