@@ -3844,3 +3844,17 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   nao equivale automaticamente ao identificador C++ do trace. Documentado
   requisito de QPC/contexto/tempo de suspensao e identificacao antes de nova
   coleta dirigida. Renderizador/portatil/dump/saves preservados;stutter pendente.
+
+### 18/10/2026 — inglês natural (ramo traducao-natural-en)
+
+- Davy aprovou deixar o inglês "naturalzão": escolhas viram a fala direta
+  (ação curta entre parênteses só quando precisa), contrações, voz própria
+  de cada personagem, sentido fiel ao japonês, nomes do glossário intactos.
+- Feito em worktree separada (G:/kyoei-toshi-natural) para não atrapalhar o
+  Codex; depois as duas versões serão auditadas lado a lado.
+- Prontas: fases 201–208 (um commit por fase). Corrigidos erros de sentido
+  (irmão de Saeki, foto "autografada" da Honoka, nome do navio em japonês,
+  fala da noiva atribuída ao jogador, "não é uma moto").
+- Fonte do jogo não tem ¥: usar "yen". Senha da fase 208 em ASCII.
+- Próximo: fases 209–218 (217 não tem falas), Text_Heroine, depois itens,
+  dicas de carregamento e notícias. Nada testado no jogo ainda.
