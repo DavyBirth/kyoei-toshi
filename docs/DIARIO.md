@@ -4114,3 +4114,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Foto: segunda tentativa de foco também sem captura/exit0. Sonda privada de pedido único no frame120 gerou photos/Kyoei-17924318058722041-1.png,1920x1080,tela inicial,visual conferido;log Photo saved. Isso prova readback/PNG,não F12 nem HUD em partida. Sonda removida dos gerados;rebuild limpo obrigatório. Fotos ignoradas no Git.
 
 - Encerramento na reserva5% conforme combinado:teste foto-readback saiu0,binario final recompilado/linkado apos restaurar e atualizar timestamp do presenter. Busca confirma ausencia de photo_probe_frames/MEMORY_SNAPSHOT/verificacao privada nos gerados. Commits0817300(experimento upload opt-in) e4b3b05f(piloto foto). Performance ainda sem ganhoFPS comprovado;proximos passos:validar F12/H em janela ativa,captura de cena e retomar memoria/CPU. Nenhum desligamento.
+
+### 19/10/2026 - retomada apos renovacao e F12 validado
+- Davy autorizou continuar consumindo o restante antes da renovacao;revisao automatica bloqueou por limite de uso,sem executar a ultima leitura. Apos renovacao,telemetria100% primaria/28% semanal.
+- Tentativa memory-snapshot-retry falhou antes do boot:Windows1450 na reserva de memoria,exit21. Sistema tinha cerca de6,7GiB de commit disponivel. Nao fechar apps nem mudar pagefile. Depois havia17,8GiB disponiveis,e memory-snapshot-ready saiu0.
+- Durante essa coleta Davy clicou na janela e apertou F12. Novo photos/Kyoei-17924437280986637-1.png1920x1080,visual conferido:rua,personagem,fogo,Hud/mapa,semdesktop. F12 real em partida validado. HUD continua visivel;nao afirmar ocultacao/restauracao validada. Interacao/foto contaminam benchmarkFPS;usar rodada somente como diagnostico de memoria.
+- Memoria na rua:device Vulkan~3,0..3,4GiB,bufferpayload~325..431MiB nesta rota. Contagem fria nao prova desuso,pois TouchBuffer parcial. Nao ligar GC incompleto por suposicao.
+- Nova sonda privada agrega tempo de GetDeviceMemoryUsage no GC de buffers/texturas;mesmas consultas/decisoes originais,sem alterar qualidade. Remover e recompilar ao terminar. Fontes limpas salvas em build/research/*.budget-clean.

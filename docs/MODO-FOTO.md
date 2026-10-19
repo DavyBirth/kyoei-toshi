@@ -29,9 +29,11 @@ O primeiro caminho aceita RGBA/BGRA de 8 bits. Outros formatos, incluindo
 HDR de 10 bits, são recusados com mensagem no log para evitar fotos com
 cores incorretas. Falhas de gravação também aparecem no log.
 
-Validação inicial: cópias isoladas da janela e do apresentador passaram na
-compilação de sintaxe. Compilação completa passou. Captura real durante a partida ainda precisa ser
-confirmadas antes de declarar o recurso pronto para uso.
+Compilação completa passou. Em 19/10/2026, Davy ativou a janela e apertou F12:
+o port salvou uma foto real de 1920x1080 durante a partida. A imagem foi
+conferida: cena da rua com personagem, fogo, interface e mapa, sem desktop
+ou interface do port. Isso valida F12 e a gravação na partida; a sequência
+de esconder e restaurar a interface ainda precisa de confirmação.
 
 Próximo teste mudo: partida em 1080p, esconder HUD com H, F12, conferir PNG
 sem desktop/interface do port, cores e tamanho; H de novo deve recuperar a
@@ -39,4 +41,6 @@ interface. Comparar com outra resolução de janela e testar tecla repetida,
 perda de foco e pasta de saída sem permissão. Câmera livre e pausa exigem
 investigação independente de câmera, lógica e desenho.
 
-Prova de gravação: solicitação privada no renderizador gerou PNG real de1920x1080 na tela inicial, conferido visualmente. Dois roteiros automáticos de F12 ficaram sem foco e não produziram fotos. Atalho durante a partida e sequência H/foto/H ainda pendentes. Sonda automática removida do código final.
+Antes disso, uma solicitação privada no renderizador gerou PNG de 1920x1080
+na tela inicial. Dois roteiros automáticos ficaram sem foco e não produziram
+fotos; não constituem falha do atalho. Sonda automática removida do código final.
