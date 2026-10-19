@@ -29,6 +29,33 @@ function(kyoei_replace_checked variable before after)
   string(REPLACE "${before}" "${after}" adapted "${${variable}}")
   set(${variable} "${adapted}" PARENT_SCOPE)
 endfunction()
+# Image uploads may read a resident guest view while holding the original VMA
+# lock. Keep generic copies on physical backing and preserve the fixed core.
+file(READ "${KYOEI_CORE}/src/rt_memory.c" KYOEI_MEMORY)
+set(KYOEI_MEMORY "#include \"kyoei_upload_source.h\"\n${KYOEI_MEMORY}")
+kyoei_replace_checked(KYOEI_MEMORY
+  "int gz_memory_copy(uintptr_t address, void *buffer, uint64_t size, int write) {"
+  "static int kyoei_memory_copy_impl(uintptr_t address, void *buffer, uint64_t size, int write, int upload_alias) {")
+kyoei_replace_checked(KYOEI_MEMORY
+  "            else memcpy(out, physical, n);"
+  "            else memcpy(out, kyoei_upload_source(address, physical, n, upload_alias), n);")
+set(KYOEI_MEMORY_COPY_ENTRIES [=[int gz_memory_copy(uintptr_t address, void *buffer, uint64_t size, int write) {
+    return kyoei_memory_copy_impl(address, buffer, size, write, 0);
+}
+/* GPU command thread only, after excluding GPU-modified image source data. */
+int gz_memory_copy_upload(uintptr_t address, void *buffer, uint64_t size) {
+    static _Thread_local int enabled = -1;
+    if (enabled < 0) {
+        const char *option = getenv("KYOEI_UPLOAD_ALIAS");
+        enabled = option && option[0] == '1';
+    }
+    return kyoei_memory_copy_impl(address, buffer, size, 0, enabled);
+}
+void gz_memory_gpu_protect]=])
+kyoei_replace_checked(KYOEI_MEMORY "void gz_memory_gpu_protect" "${KYOEI_MEMORY_COPY_ENTRIES}")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_memory.c" CONTENT "${KYOEI_MEMORY}" @ONLY)
+list(REMOVE_ITEM CORE_FILES "${KYOEI_CORE}/src/rt_memory.c")
+list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_memory.c")
 kyoei_replace_checked(KYOEI_SERVICES
   "getenv(\"GZ_USER_NAME\") : \"Davy\""
   "getenv(\"GZ_USER_NAME\") : \"Player\"")
@@ -602,6 +629,11 @@ set(KYOEI_BUFFER_CACHE "#include \"kyoei_streaming_trace.h\"\n${KYOEI_BUFFER_CAC
 kyoei_replace_checked(KYOEI_BUFFER_CACHE
   "std::pair<Buffer*, u32> BufferCache::ObtainBufferForImage(VAddr gpu_addr, u32 size) {"
   "std::pair<Buffer*, u32> BufferCache::ObtainBufferForImage(VAddr gpu_addr, u32 size) {\n    KyoeiStreamingTrace::Scope streaming_scope(\"image-buffer\",gpu_addr,size);")
+# Only this CPU-only image staging path opts into the resident-view copy.
+set(KYOEI_BUFFER_CACHE "#include <cstdint>\nextern \"C\" int gz_memory_copy_upload(uintptr_t, void*, uint64_t);\n${KYOEI_BUFFER_CACHE}")
+kyoei_replace_checked(KYOEI_BUFFER_CACHE
+  "    memory->CopySparseMemory(gpu_addr, data, size);"
+  "    if (!gz_memory_copy_upload(gpu_addr, data, size)) std::memset(data, 0, size);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp" CONTENT "${KYOEI_BUFFER_CACHE}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_buffer_cache.cpp")
 file(READ "${KYOEI_SHAD}/src/video_core/texture_cache/texture_cache.cpp" KYOEI_TEXTURE_CACHE)
@@ -1118,6 +1150,7 @@ set(KYOEI_WINDOW "#include \"kyoei_prompt_state.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "        KyoeiMouse::Event(window,event);"
   "        if (event.type==SDL_EVENT_KEY_DOWN && (event.key.key==SDLK_ESCAPE || event.key.key==SDLK_TAB || event.key.key==SDLK_SPACE || event.key.key==SDLK_BACKSPACE)) kyoei_prompt_reset();\n        KyoeiMouse::Event(window,event);")
+
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
 file(READ "${KYOEI_CORE}/gpu/vendor/vk_presenter.cpp" KYOEI_PRESENTER)
@@ -1158,6 +1191,7 @@ kyoei_replace_checked(KYOEI_PRESENTER
   "    kyoei_overlay_presented(kyoei_modal_revision);"
   "    kyoei_overlay_presented(kyoei_modal_revision);\n    KyoeiRasterTrace::Presented();\n    kyoei_prompt_presented();")
 set(KYOEI_PRESENTER "#include \"kyoei_prompt_state.h\"\n${KYOEI_PRESENTER}")
+
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp" CONTENT "${KYOEI_PRESENTER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp"
   src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp")
@@ -1246,6 +1280,11 @@ target_include_directories(test_kyoei_live_prompts PRIVATE src)
 target_compile_features(test_kyoei_live_prompts PRIVATE cxx_std_23)
 target_compile_options(test_kyoei_live_prompts PRIVATE -UNDEBUG)
 target_compile_definitions(test_kyoei_live_prompts PRIVATE _CRT_SECURE_NO_WARNINGS)
+add_executable(test_kyoei_upload_source src/test_kyoei_upload_source.cpp)
+target_compile_features(test_kyoei_upload_source PRIVATE cxx_std_23)
+target_compile_options(test_kyoei_upload_source PRIVATE -UNDEBUG)
+target_compile_definitions(test_kyoei_upload_source PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX)
+
 target_sources(test_kyoei_mouse PRIVATE src/kyoei_prompt_state.c)
 target_include_directories(test_kyoei_mouse PRIVATE ${KYOEI_OVERLAY_GPU_INCLUDES})
 target_compile_features(test_kyoei_mouse PRIVATE cxx_std_23)

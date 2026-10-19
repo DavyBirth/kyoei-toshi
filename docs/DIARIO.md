@@ -4043,3 +4043,61 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   configuravel por escolha do jogador,sem mudar simulacao. PC do amigo:
   GTX1660SUPER/32GBRAM,CPU informado AMD1550G a confirmar. Pedido registrado
   em docs/PLANO.md;continuar investigacao de desempenho,sem pausar apos diagnostico.
+- Davy confirmou o processador do amigo:AMD Ryzen5 5500GT,com GTX1660SUPER
+  e32GBRAM. Plano corrigido;resultado nessa maquina ainda depende de teste real.
+
+
+### 19/10/2026 - continuacao persistente e candidato de upload
+- Davy pediu continuar sem parar ao encerrar uma coleta;investigacao segue
+  ate haver correcao testavel ou atingir a reserva5%,sem desligamento.
+- leaf-timing-20261019:73.082eventos/zero descartes,2868batches/299grupos
+  completos,zero sem correspondencia. Pico137,86ms temRefresh33,81ms,
+  dos quais32,57ms emObtainBufferForImage. Outro125,70ms tem46,38/41,71ms.
+  Prompt/hash/detile/upload pequenos. Nesta rota,preparemax4,45ms eFlush4,42;
+  esperas por quadro/fence nao chegaram0,1ms. Nao extrapolar a todas as rotas.
+- source-1080-20261019 confirmou janela/saida1920x1080 fullscreen e superficie
+  finalPS4 de1920x1080.512fontes>=0,1ms/455,99ms,505copiasCPU/453,90ms,
+  966.737.408bytes;Map/Commit/consultaGPU sem eventos>=0,1ms. Copy-lock confirma
+  lock<0,1ms,custo em memcpy:1050chamadas/550,66ms,1.420.765.696bytes;rotas
+  diferentes,nao comparar FPS. Sondas na copia privada rt_memory,ja retiradas
+  do CMake/fontes ativos;core fixo preservado.
+- Microteste Vulkan real512MB upload/WC flags0x6:copias SSE2stream exatas,
+  alinhamento/bordas/GPU roundtripPASS,sem vantagem consistente em22MB.
+  CandidatoNT nao integrado. Mesma conclusao com CRT dinamico do jogo.
+- Microteste Windows de duas visoes da mesma secao:primeiro memcpy22MB pelo
+  backing13..14ms/5472..5474pagefaults,visao guest4,7..5,9ms/zero faults na
+  maioria das repeticoes. Demonstra custo de primeira leitura da outra visao,
+  nao por si so ganhoFPS no jogo.
+- Candidato Kyoei em src/kyoei_upload_source.h/CMake:API dedicada so ao caminho
+  de stagingCPU de imagens,apos excluir dadosGPUmodificados. Mantem lockVMA,
+  memcpy e fallbackphysical para guard/noaccess/COW/private/range incompleto,
+  transferencia<256KB ou KYOEI_UPLOAD_ALIAS=0. Core/Godzilla intactos.
+  Teste nativo de bytes/protecoes/fronteirasPASS. Verificacao privada dentro
+  do jogo:32uploads aliased iguais ao backing byte a byte. Rota saiu0,
+  captura1080p conferida:HP80/personagemcaido/fogo/HUD;nao usar como benchmark.
+- ComparacaoABBA em andamento,alias0/1/1/0,mesmo binario SHA256
+  25054c102d4da4d7f46dc1b22c833534913dcec46f042d87f5f1aee7d2587f41,
+  saida1080p e mesma superficiePS4,verificacao extra desligada. Mede todas as
+  copias>=256KB(stages390original/391fallback/392alias),sem filtro por tempo.
+  Aguardar4rodadas;comparar bytes/custos e conferir contextos antes de ganhoFPS.
+  CMake/generatedC ja limpos do helper privado,binario de comparacao ainda o
+  contem. Rebuild final necessario depois das4rodadas. Nada instalado no
+  portatil pessoal nem distribuido aos amigos. Sessao da comparacao55967.
+- As quatro rodadas moveis terminaram,mas capturas mostraram posicoes/HP
+  diferentes:nao sao prova de ganhoFPS. Corrigido key-up apenas no roteiro
+  privado seguinte,com scancode e flags de soltura;personagem parado em1080p.
+- ABBA estatico completo,zero eventos descartados. FPS original17,91/12,32;
+  candidato15,21/16,56. p99 original98,58/211,41ms;candidato148,99/132,43ms.
+  Mesma posicao/camera/HP100,mas fase do video da TV e carga variam. Nao ha
+  ganho consistente de FPS comprovado. Copias grandes custaram58,53/54,43ms
+  originais e41,59/49,44ms candidato em60s,com volumes diferentes. Candidato
+  agora desligado por padrao,ativacao apenas KYOEI_UPLOAD_ALIAS=1. Teste de
+  bytes/protecoes repetidoPASS;sonda privada de copia retirada na recompilacao.
+- Proxima coleta privada:memoria totalVulkan e volume/idade dos buffers,
+  sem ativar descarte. RunGarbageCollector define limpeza mas nao percorre
+  LRU;TouchBuffer tambem nao ocorre em todo uso. Nao ligar coleta sem estudar
+  idade real,dadosGPUmodificados e vida de recursos:risco de thrashing.
+- Pedido atual de Davy:modo foto em paralelo. Frente isolada em
+  build/research/photo-mode,sem alterar core fixo;investigar capturaPNG/HUD
+  primeiro,pausa/camera livre dependem de prova. Autoriza paralelismo apesar
+  da ordem antiga no plano. Testes de jogo sempre mudos e coordenados.
