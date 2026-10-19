@@ -1151,6 +1151,10 @@ kyoei_replace_checked(KYOEI_WINDOW
   "        KyoeiMouse::Event(window,event);"
   "        if (event.type==SDL_EVENT_KEY_DOWN && (event.key.key==SDLK_ESCAPE || event.key.key==SDLK_TAB || event.key.key==SDLK_SPACE || event.key.key==SDLK_BACKSPACE)) kyoei_prompt_reset();\n        KyoeiMouse::Event(window,event);")
 
+set(KYOEI_WINDOW "#include \"kyoei_photo.h\"\n${KYOEI_WINDOW}")
+kyoei_replace_checked(KYOEI_WINDOW
+  "        KyoeiMouse::Event(window,event);"
+  "        if (KyoeiPhoto::HandleEvent(window,event)) continue;\n        KyoeiMouse::Event(window,event);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp" CONTENT "${KYOEI_WINDOW}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
 file(READ "${KYOEI_CORE}/gpu/vendor/vk_presenter.cpp" KYOEI_PRESENTER)
@@ -1192,6 +1196,10 @@ kyoei_replace_checked(KYOEI_PRESENTER
   "    kyoei_overlay_presented(kyoei_modal_revision);\n    KyoeiRasterTrace::Presented();\n    kyoei_prompt_presented();")
 set(KYOEI_PRESENTER "#include \"kyoei_prompt_state.h\"\n${KYOEI_PRESENTER}")
 
+kyoei_replace_checked(KYOEI_PRESENTER "namespace Vulkan {" "#include \"kyoei_photo_gpu.h\"\nnamespace Vulkan {")
+kyoei_replace_checked(KYOEI_PRESENTER
+  "    draw_scheduler.EndRendering();\n    const auto cmdbuf = draw_scheduler.CommandBuffer();"
+  "    draw_scheduler.EndRendering();\n    KyoeiPhoto::Capture(instance,draw_scheduler,texture_cache.GetImage(image_id),GetFrameViewFormat(attribute.attrib.pixel_format));\n    const auto cmdbuf = draw_scheduler.CommandBuffer();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp" CONTENT "${KYOEI_PRESENTER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp"
   src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp")

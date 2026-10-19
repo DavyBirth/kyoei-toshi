@@ -52,21 +52,26 @@ shadPS4 e no port. Avançar fase por fase, incluindo salvamentos. Reimplementar
 sistemas aos poucos apenas quando seu comportamento estiver documentado.
 O código fixo do Godzilla continua preservado; adaptações do Kyoei ficam aqui.
 
-## Modo foto: depois da melhoria de desempenho
+## Modo foto: em paralelo à melhoria de desempenho
 
-Pedido de Davy em 18/10/2026: incluir um modo foto, usando o port do P.T.
-como refer?ncia a estudar. Implementar depois de resolver os problemas de
-desempenho da vers?o atual, sem depender da reimplementa??o final do renderer.
+Pedido de Davy em 19/10/2026: implementar esta frente em paralelo à
+investigação de desempenho. O port do P.T. é uma referência a estudar;
+o primeiro piloto aproveita a câmera e o comando de HUD originais do jogo.
 
-- Primeiro: ocultar a interface e capturar imagens na resolu??o original.
-- Depois: congelar a simula??o mantendo a renderiza??o ativa e liberar a
-  c?mera, com posi??o, rota??o e campo de vis?o ajust?veis.
-- Avaliar exposi??o e profundidade de campo como op??es posteriores.
+- Piloto implementado: F12 solicita PNG da superfície final PS4 na resolução
+  nativa, antes do redimensionamento da janela e dos overlays do port.
+  H alterna manualmente a interface pelo comando original do jogo.
+- Sem captura automática durante benchmarks; o readback/compressão pode
+  causar uma pausa curta quando o jogador solicita uma foto.
+- Compilação de sintaxe isolada passou. Compilação completa, captura real,
+  cores/resolução e retorno do HUD ainda aguardam validação em partida.
+- Depois: identificar câmera e separar simulação/desenho antes de congelar
+  o jogo ou liberar posição, rotação e campo de visão. Restaurar o estado
+  ao sair; preservar saves, comportamento e áudio do atalho normal.
+- Exposição e profundidade de campo ficam para avaliação posterior.
 
-Investigar como separar c?mera, simula??o e desenho antes de prometer c?mera
-livre com pausa. Ao sair do modo foto, restaurar c?mera, interface, controles
-e simula??o; preservar saves e o comportamento normal do jogo. Validar com
-Davy a entrada, a captura e o retorno ? jogatina. Nenhuma implementa??o iniciada.
+Controles, limites e próximo teste em [MODO-FOTO.md](MODO-FOTO.md).
+Nenhuma câmera livre ou pausa de simulação foi implementada ou comprovada.
 
 ## 6. Etapa final opcional: renderizador próprio e reimplementação nativa
 
@@ -119,7 +124,7 @@ velocidade da simulacao ou remover efeitos silenciosamente para esconder custo.
   primeiro quais opcoes o renderer realmente consegue alterar com seguranca;
   nao prometer que diminuir resolucao resolve gargalos de CPU/alocacao.
 - Matriz inicial:PC de Davy e PC do amigo com GTX1660SUPER/32GBRAM. Processador
-  do amigo informado como AMD1550G,modelo exato pendente de confirmacao.
+  do amigo confirmado por Davy:AMD Ryzen5 5500GT.
   Coletar GPU,VRAM,CPU,driver,Vulkan e resultados reais de cada maquina;
   nao simular teste fisico da1660SUPER usando apenas o PC de Davy.
 - Priorizar caminhos Vulkan por capacidades e limites suportados,com fallback

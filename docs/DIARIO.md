@@ -4101,3 +4101,14 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   build/research/photo-mode,sem alterar core fixo;investigar capturaPNG/HUD
   primeiro,pausa/camera livre dependem de prova. Autoriza paralelismo apesar
   da ordem antiga no plano. Testes de jogo sempre mudos e coordenados.
+- Sonda privada de memoria encerrou antes da cena e nao gerou amostras
+  utilizaveis;nao concluir causa nem tamanho do cache por esse teste.
+  Sonda removida dos gerados/binario na recompilacao seguinte.
+- Piloto foto integrado:H permanece comando original/manual,F12 pede PNG
+  nativo8bit antes de scaling/overlay. Corrigido na revisao o posicionamento
+  do readback:Finish troca command buffer,captura deve anteceder a obtencao
+  do cmdbuf usado na apresentacao. Build completoPASS. Primeiro smoke saiu0,
+  mas perdeu foco15/15 e nao salvou fotos;bloqueio de F12 fora de foco
+  preservado. Repeticao privada com foco realWindows em andamento.
+
+- Foto: segunda tentativa de foco também sem captura/exit0. Sonda privada de pedido único no frame120 gerou photos/Kyoei-17924318058722041-1.png,1920x1080,tela inicial,visual conferido;log Photo saved. Isso prova readback/PNG,não F12 nem HUD em partida. Sonda removida dos gerados;rebuild limpo obrigatório. Fotos ignoradas no Git.
