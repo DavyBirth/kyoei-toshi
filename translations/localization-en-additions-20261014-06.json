@@ -1335,7 +1335,7 @@
         {
           "id": "r1193/c25",
           "source_text_sha256": "e8dc3c891028b0b3c9cd4beb40abcf89d995db8f57823665bf6707d20ca1df83",
-          "en": "Deed to Miyato Cinema",
+          "en": "Miyato Cinema Deed",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1193/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1440,7 +1440,7 @@
         {
           "id": "r1199/c25",
           "source_text_sha256": "e8dc3c891028b0b3c9cd4beb40abcf89d995db8f57823665bf6707d20ca1df83",
-          "en": "Deed to Miyato Cinema",
+          "en": "Miyato Cinema Deed",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1199/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1678,7 +1678,7 @@
         {
           "id": "r1267/c25",
           "source_text_sha256": "c65cf80a94bb653bb2e0647c12d3802fb6161a04ef3fa684a9926d8824f2e957",
-          "en": "Box Containing an Engagement Ring",
+          "en": "Engagement Ring Box",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1267/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1699,7 +1699,7 @@
         {
           "id": "r1268/c25",
           "source_text_sha256": "2fdae653859075d0f51c55b4f7b95e9576b469a32bb5c64b0f2fd1991c53fe71",
-          "en": "Bloodstained Box Containing an Engagement Ring",
+          "en": "Bloodstained Engagement Ring Box",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1268/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2166,7 +2166,7 @@
         {
           "id": "p0/k243",
           "source_text_sha256": "86d0ecdf42edd3a03953f44e737b297ec2102e68ff768f2aa61f40ec8d1764a0",
-          "en": "Someone was erased...?\nAnd Otsuka's gone to investigate too... I'm worried...",
+          "en": "People are getting wiped out...?\nAnd Otsuka went off exploring too... I'm worried...",
           "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k243; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2187,21 +2187,21 @@
         {
           "id": "p0/k335",
           "source_text_sha256": "3c32cf2acc2645d021e857f81834c5c6fc525771c86b82e58dd83393e3592f49",
-          "en": "Point at Otsuka.",
+          "en": "(Point at Otsuka)",
           "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k335; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k363",
           "source_text_sha256": "6bbe8fc21250774975cf14efff14b14f3cfd3f5008df283d48d7219963ed9edf",
-          "en": "I can't let Otsuka do something so dangerous! I'll go scout the place!",
+          "en": "\"I can't let Otsuka do something that dangerous! I'll go scout!\"",
           "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k363; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k369",
           "source_text_sha256": "3044281d49ca801047640c50678e2f8150a8dca604743ab5865df96e01fdb30e",
-          "en": "I can't let Otsuka do something so dangerous!\nI'll go scout the place!",
+          "en": "I can't let Otsuka do something that dangerous!\nI'll go scout!",
           "notes": "English draft imported from audited private workspace, translate-en-0131.json:p0/k369; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
