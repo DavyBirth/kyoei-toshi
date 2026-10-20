@@ -1,4 +1,4 @@
-/* Select paired icon pixels at upload time; guest memory/archive stay intact.
+/* Select icon variants at upload time; guest memory/archive stay intact.
  * Microtile address calculation adapted from shadPS4 tiling.comp,
  * SPDX-FileCopyrightText: Copyright 2025 shadPS4 Emulator Project
  * SPDX-License-Identifier: GPL-2.0-or-later */
@@ -18,7 +18,10 @@ extern "C" void gz_log(const char *, ...);
 namespace KyoeiPrompts {
 struct Pair {
     uint32_t width{}, height{}, levels{}, storage{}, channels{}, kind{}, bytes{};
-    std::vector<unsigned char> controller, keyboard;
+    std::vector<unsigned char> controller, keyboard, american;
+    const std::vector<unsigned char> &Controller() const {
+        return american.empty() ? controller : american;
+    }
 };
 inline std::vector<Pair> pairs;
 inline bool initialized{};
@@ -30,14 +33,16 @@ inline void Initialize() {
     FILE *file = std::fopen(path, "rb");
     if (!file) return;
     char magic[8]; uint32_t count{};
-    bool ok = std::fread(magic, 1, 8, file) == 8 && !std::memcmp(magic, "KYPROMP1", 8) &&
+    bool ok = std::fread(magic, 1, 8, file) == 8;
+    const bool american = ok && !std::memcmp(magic, "KYPROMP2", 8);
+    ok = ok && (american || !std::memcmp(magic, "KYPROMP1", 8)) &&
               std::fread(&count, 4, 1, file) == 1 && count <= 128;
     size_t total{};
     for (uint32_t i = 0; ok && i < count; ++i) {
         uint32_t fields[7];
         if (std::fread(fields, 4, 7, file) != 7) { ok = false; break; }
         Pair p{fields[0], fields[1], fields[2], fields[3], fields[4], fields[5], fields[6], {}, {}};
-        total += size_t(p.bytes) * 2;
+        total += size_t(p.bytes) * (american ? 3 : 2);
         if (!p.width || !p.height || p.width > 4096 || p.height > 4096 || !p.levels ||
             p.levels > 14 || !p.bytes || total > 32 * 1024 * 1024 || (p.storage != 1 && p.storage != 13)) {
             ok = false; break;
@@ -45,11 +50,16 @@ inline void Initialize() {
         p.controller.resize(p.bytes); p.keyboard.resize(p.bytes);
         ok = std::fread(p.controller.data(), 1, p.bytes, file) == p.bytes &&
              std::fread(p.keyboard.data(), 1, p.bytes, file) == p.bytes;
+        if (ok && american) {
+            p.american.resize(p.bytes);
+            ok = std::fread(p.american.data(), 1, p.bytes, file) == p.bytes;
+        }
         if (ok) pairs.push_back(std::move(p));
     }
     ok = ok && std::fgetc(file) == EOF;
     std::fclose(file);
     if (!ok) pairs.clear();
+    if (ok && !american) gz_log("Kyoei prompts: legacy artwork; rebuild pack for physical American buttons");
     gz_log("Kyoei prompts: %zu paired textures; live input selection", pairs.size());
 }
 struct State { int pair{-1}; unsigned mode{~0u}; };

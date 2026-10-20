@@ -36,6 +36,8 @@ BINDINGS = {
     'font/icon/IC_options_18.tex': 'Esc',
     'font/icon/IC_touch_pad_20.tex': 'M',
     'texture/hud/maru_button.tex': 'E',
+    'texture/treasure_change/TC_maru_01.tex': 'E',
+    'texture/treasure_change/TC_batu_01.tex': 'Space',
     'texture/hud/sikaku_button.tex': 'Ctrl',
     # BC3 HUD/intermission prompts.
     'texture/intermission/IM_next_maru_button.tex': 'E',

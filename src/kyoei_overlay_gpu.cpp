@@ -73,7 +73,7 @@ void Initialize(const Vulkan::Instance &instance,vk::Format format,unsigned imag
     }
     surface_format=format; images=image_count; initialized=true;
     KyoeiOverlayModel::SetReady(true);
-    gz_log("Kyoei overlay: Vulkan modal backend ready; circle confirms, cross cancels");
+    gz_log("Kyoei overlay: Vulkan modal backend ready; physical cross confirms, circle cancels");
 }
 void Shutdown() {
     if (!initialized) return;

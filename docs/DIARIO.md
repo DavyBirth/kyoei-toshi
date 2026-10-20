@@ -4366,3 +4366,28 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Evidencias privadas transfer-20261020/physical-report.json e capturas/PNGs.
   Atalho Testar modo foto passa a expor foco/abertura experimentais; execucao
   normal continua sem override. Outra cena e variantes ainda pendentes.
+
+- Controles americanos implementados no pad gerado, dicas dos dialogos e
+  GPU packKYPROMP2: reconhecimento original separado da imagem americana.
+  Gerados45prompts em ja/en; pares nativos, HUD, conversas, esquiva e troca
+  de objetos adaptados. Teclado/mouse preservados. Launcher local exigepack2;
+  gerador portatil tambem produzpack2. Distribuicao Friends antiga nao alterada.
+- Build completo e teste dialogos com mapeamento SDL gerado PASS; leitor real
+  dos dois pacotes PASS. Partida privada mostrou X no marcador e dicas novas.
+  Contraste de glifos compostos corrigido apos folha visual. Falta nova partida
+  com pacote final e controle fisico. Quatro diagramas operation_normal* ainda
+  precisam adaptar chamadas/textos; pendencia emCONTROLES-AMERICANOS.md.
+- Prova optica salva no969427c. Partida privada37776 fechada normalmente;
+  janela liberada. Nao executar novos testes visuais sem necessidade.
+
+- Davy apontou defeito visual especificamente em salvar/conversar. Causa:
+  apagar para alpha0 e redesenhar linhas deixava fundo vazado/residuos; a
+  recompressao integral tambem alterava hastes. Corrigido com mascara suavizada
+  dos glifos nativos, fundo opaco original e preservacao dos blocos de mip nao
+  alterados. Teste dedicado com dump proprio PASS: sete interiores opacos,
+  pares nativos exatos e pixels das seis hastes inteiramente identicos.
+- Pacotes finais ja/en regenerados45entradas, leitor real PASS. Partida muda/
+  privada buttons-native-glyph confirmou X limpo no marcador de salvar; captura
+  native-glyph-loaded.png. Entrada de teclado foi somente ao PID26884 validado.
+  Diagrama completo e teste com controle fisico seguem pendentes; nao declarar
+  modo foto/desempenho ou todas as texturas concluidos por este avanco.

@@ -152,7 +152,7 @@ void name_box(float width,bool controller) {
             if (highlighted) ImGui::PopStyleColor();
             ImGui::PopID();
         }
-        ImGui::TextWrapped("D-pad: choose a key   Circle: select   X: cancel");
+        ImGui::TextWrapped("D-pad: choose a key   X: select   Circle: cancel");
         ImGui::TextWrapped("Square: erase   Triangle: shift   L1/R1: cursor   Options: done");
     } else ImGui::TextWrapped("Type your name. Arrows/Home/End: cursor   Backspace/Delete: erase   Ctrl+A: select all");
     ImGui::Spacing();
@@ -181,7 +181,7 @@ void list_box(float height) {
     if (ImGui::Button("Confirm",ImVec2(135*scale,36*scale))) finish_locked(0);
     ImGui::SameLine();
     if (ImGui::Button("Cancel",ImVec2(135*scale,36*scale))) finish_locked(1);
-    ImGui::TextDisabled("Circle / Enter: confirm   X / Esc: back");
+    ImGui::TextDisabled("X / Enter: confirm   Circle / Esc: back");
 }
 void message_box() {
     ImGui::TextWrapped("%s",caption.c_str());
@@ -199,7 +199,7 @@ void message_box() {
         if (ImGui::Button(label,ImVec2(135*scale,36*scale))) { selected=choice; finish_locked(0); }
         if (highlighted) ImGui::PopStyleColor();
     }
-    ImGui::TextDisabled("Circle / Enter: confirm   X / Esc: back");
+    ImGui::TextDisabled("X / Enter: confirm   Circle / Esc: back");
 }
 }
 

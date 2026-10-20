@@ -21,6 +21,17 @@ struct Info {
 struct Image { Info info; uint64_t image_uid{1}; };
 int main() {
     using namespace KyoeiPrompts;
+    if (std::getenv("KYOEI_PROMPT_PACK")) {
+        Initialize();
+        assert(!pairs.empty());
+        bool swapped=false;
+        for (const auto &p:pairs) {
+            assert(p.american.size()==p.controller.size());
+            swapped|=p.american!=p.controller;
+        }
+        assert(swapped);
+        pairs.clear();
+    }
     initialized=true;
     Pair pair{2,2,2,1,0,1,20,std::vector<unsigned char>(20,12),std::vector<unsigned char>(20,34)};
     Image image;
@@ -28,6 +39,9 @@ int main() {
         std::memcpy(guest.data()+at,pair.controller.data()+from,bytes);return true;
     }));
     pairs.push_back(pair);
+    pairs.back().american=std::vector<unsigned char>(20,56);
+    assert(pairs.back().Controller()[0]==56);
+    assert(pair.Controller()[0]==12); // Legacy packs keep their artwork.
     bool changed;unsigned mode;
     assert(Select(image,true,changed,mode) && changed && mode==KYOEI_INPUT_KEYBOARD);
     kyoei_prompt_presented();assert(kyoei_prompt_pause_active());

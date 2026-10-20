@@ -48,6 +48,15 @@ if ($Language -ne 'ja') {
     $env:KYOEI_TRANSLATION_ARCHIVE=$kyoeiArchive.archive
 }
 $env:KYOEI_WINDOW_WIDTH=[string]$Width
+$kyoeiPromptLanguage=if ($Language -eq 'ja') { 'ja' } else { 'en' }
+$kyoeiPromptPack=Join-Path $kyoeiRoot "build/prompts-$kyoeiPromptLanguage.kypack"
+if (-not (Test-Path -LiteralPath $kyoeiPromptPack -PathType Leaf)) { throw 'Pacote de botoes ausente; executar tools/build_prompt_pack.py para este idioma.' }
+$kyoeiPromptStream=[IO.File]::OpenRead($kyoeiPromptPack)
+try {
+    $kyoeiPromptMagic=New-Object byte[] 8
+    if ($kyoeiPromptStream.Read($kyoeiPromptMagic,0,8) -ne 8 -or [Text.Encoding]::ASCII.GetString($kyoeiPromptMagic) -ne 'KYPROMP2') { throw 'Pacote de botoes antigo; reconstruir com tools/build_prompt_pack.py.' }
+} finally { $kyoeiPromptStream.Dispose() }
+$env:KYOEI_PROMPT_PACK=$kyoeiPromptPack
 $env:KYOEI_WINDOW_HEIGHT=[string]$Height
 $env:KYOEI_FULLSCREEN=if ($Fullscreen) { '1' } else { '0' }
 $env:KYOEI_WINDOW_ICON="$kyoeiRoot\build\launcher-assets\game.ico"

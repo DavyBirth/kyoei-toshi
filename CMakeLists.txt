@@ -107,9 +107,7 @@ kyoei_replace_checked(KYOEI_DIALOG_UI
 kyoei_replace_checked(KYOEI_DIALOG_UI
   "w == VK_RETURN || w == VK_SPACE ? 0x4000 : w == VK_ESCAPE ? 0x2000"
   "w == VK_RETURN || w == VK_SPACE ? 0x2000 : w == VK_ESCAPE ? 0x4000")
-kyoei_replace_checked(KYOEI_DIALOG_UI
-  "X / Enter: confirmar     Setas: escolher     Círculo / Esc: voltar"
-  "Círculo / Enter: confirmar     Setas: escolher     X / Esc: voltar")
+# Host dialog hints describe physical American buttons; guest masks stay native.
 file(READ "${KYOEI_CORE}/src/rt_thread.c" KYOEI_THREADS)
 kyoei_replace_checked(KYOEI_THREADS
   "static const GzExport exports[] = {"
@@ -822,6 +820,7 @@ kyoei_replace_checked(KYOEI_TEXTURE_CACHE "void TextureCache::RunGarbageCollecto
   "void TextureCache::RunGarbageCollector() {\n    KyoeiStreamingTrace::Scope streaming_scope(\"texture-gc\");")
 kyoei_replace_checked(KYOEI_TEXTURE_CACHE "ImageId TextureCache::FindImage(ImageDesc& desc, bool exact_fmt) {"
   "ImageId TextureCache::FindImage(ImageDesc& desc, bool exact_fmt) {\n    KyoeiStreamingTrace::Scope streaming_scope(\"find-image\");")
+kyoei_replace_checked(KYOEI_TEXTURE_CACHE "prompt->controller:" "prompt->Controller():")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_texture_cache.cpp" CONTENT "${KYOEI_TEXTURE_CACHE}" @ONLY)
 
 # Kyoei-only driver cache. Keep the frozen dependency intact. Create the
@@ -1100,6 +1099,9 @@ target_compile_definitions(test_kyoei_vulkan_recording PRIVATE KYOEI_VULKAN_RECO
 target_include_directories(test_kyoei_vulkan_recording PRIVATE src "${KYOEI_SHAD}/src" "${KYOEI_GPU_HEADERS}/gz_vulkan-src/include")
 endif()
 file(READ "${KYOEI_CORE}/gpu/pad.cpp" KYOEI_PAD)
+kyoei_replace_checked(KYOEI_PAD
+  "{SDL_GAMEPAD_BUTTON_SOUTH,0x4000},{SDL_GAMEPAD_BUTTON_EAST,0x2000}"
+  "{SDL_GAMEPAD_BUTTON_SOUTH,0x2000},{SDL_GAMEPAD_BUTTON_EAST,0x4000}")
 set(KYOEI_PAD "#include \"kyoei_mouse.h\"\n#include \"kyoei_photo_controls.h\"\n${KYOEI_PAD}")
 set(KYOEI_PAD "#include \"kyoei_pc_controls.h\"\n${KYOEI_PAD}")
 set(KYOEI_OLD_KEYS [=[u32 key_mask(SDL_Scancode key) {

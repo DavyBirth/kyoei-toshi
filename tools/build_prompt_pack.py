@@ -1,4 +1,4 @@
-"""Private paired controller/keyboard texture payloads for live GPU selection."""
+"""Private original/keyboard/American texture payloads for live GPU selection."""
 import argparse
 import struct
 from pathlib import Path
@@ -7,11 +7,12 @@ from tex_preview import unpack_tex
 from make_keyboard_icons import build as keyboard_icons
 from make_keyboard_icons import cursor_lr
 from localize_textures import decode, encode_tex
+from make_american_icons import build as american_icons
 
 
 def build(base, output):
     keyboard = keyboard_icons(base)
-    packed = bytearray(b'KYPROMP1' + struct.pack('<I', len(keyboard)+2))
+    packed = bytearray(b'KYPROMP2' + struct.pack('<I', len(keyboard)+2))
     with Psarc(base) as archive:
         names = {e.name: e for e in archive.entries[1:]}
         status='texture/hud/status_base.tex'
@@ -22,15 +23,20 @@ def build(base, output):
         alternative=encode_tex(cursor_data,cursor_lr(cursor_image,page_keys=True),cursor_info)
         entries=[(name,replacement,int(name==cursor)) for name,replacement in keyboard.items()]
         entries += [(status,status_data,2),(cursor,alternative,3)]
+        originals={name:b''.join(archive.chunks(names[name])) for name,_,_ in entries}
+        american=american_icons(originals)
         for name, replacement,kind in entries:
-            original = b''.join(archive.chunks(names[name]))
+            original = originals[name]
             info, controller = unpack_tex(original)
             other, keys = unpack_tex(replacement)
             if info != other or len(controller) != len(keys):
                 raise ValueError('Prompt layouts differ: ' + name)
+            us_info,us=unpack_tex(american.get(name,original))
+            if any(us_info[k]!=info[k] for k in ('width','height','levels','storage_family','channel_layout')) or len(us)!=len(keys):
+                raise ValueError('American prompt layouts differ: '+name)
             packed += struct.pack('<7I', info['width'], info['height'], info['levels'],
                                   info['storage_family'], info['channel_layout'], kind, len(keys))
-            packed += controller + keys
+            packed += controller + keys + us
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_bytes(packed)
     print(f'Paired prompt pack: {len(keyboard)+2} textures; {len(packed)} bytes')
