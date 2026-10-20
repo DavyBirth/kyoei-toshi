@@ -289,13 +289,18 @@ kyoei_replace_checked(KYOEI_LOADER
   "void gz_log(const char *format, ...) { va_list a;"
   "void gz_log(const char *format, ...) { if (!kyoei_log_visible(format)) return; va_list a;")
 # Install the opt-in photo HUD draw gate before starting guest/GPU threads.
-set(KYOEI_LOADER "#include \"kyoei_photo_hud.h\"\n${KYOEI_LOADER}")
+set(KYOEI_LOADER "#include \"kyoei_photo_hud.h\"\n#include \"kyoei_photo_scene.h\"\n${KYOEI_LOADER}")
+kyoei_replace_checked(KYOEI_LOADER
+  "    kyoei_tls_optimize(out);"
+  "    kyoei_photo_save_mark_configure(image, image_size);\n    kyoei_tls_optimize(out);")
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
-  "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_photo_hud_configure(image, image_size);")
+  "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_photo_hud_configure(image, image_size);\n    kyoei_photo_scene_configure(image, image_size);\n    kyoei_photo_phone_configure(image, image_size);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
-target_sources(kyoei PRIVATE src/kyoei_photo_hud.c)
+target_sources(kyoei PRIVATE src/kyoei_photo_hud.c src/kyoei_photo_scene.c src/kyoei_photo_phone.c src/kyoei_photo_save_mark.c)
+add_executable(test_kyoei_photo_phone src/test_kyoei_photo_phone.c)
+target_compile_options(test_kyoei_photo_phone PRIVATE -UNDEBUG)
 set(KYOEI_PORT_EXE_NAME "kyoei" CACHE STRING "Prepared port binary: kyoei or kyoei-orb-trace")
 if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace|kyoei-orb-trace-next)$")
   message(FATAL_ERROR "Unsupported port executable name")
@@ -1083,7 +1088,7 @@ target_compile_definitions(test_kyoei_vulkan_recording PRIVATE KYOEI_VULKAN_RECO
 target_include_directories(test_kyoei_vulkan_recording PRIVATE src "${KYOEI_SHAD}/src" "${KYOEI_GPU_HEADERS}/gz_vulkan-src/include")
 endif()
 file(READ "${KYOEI_CORE}/gpu/pad.cpp" KYOEI_PAD)
-set(KYOEI_PAD "#include \"kyoei_mouse.h\"\n${KYOEI_PAD}")
+set(KYOEI_PAD "#include \"kyoei_mouse.h\"\n#include \"kyoei_photo_controls.h\"\n${KYOEI_PAD}")
 set(KYOEI_PAD "#include \"kyoei_pc_controls.h\"\n${KYOEI_PAD}")
 set(KYOEI_OLD_KEYS [=[u32 key_mask(SDL_Scancode key) {
     switch (key) {
@@ -1103,7 +1108,7 @@ kyoei_replace_checked(KYOEI_PAD "    u32 buttons = keys;"
   "    keys=0; for (unsigned i=1;i<held.size();++i) if(held[i]) keys|=key_mask(static_cast<SDL_Scancode>(i));\n    u32 buttons = keys;\n    if(KyoeiMouse::captured && !kyoei_overlay_kind()) {\n        auto mouse=SDL_GetMouseState(nullptr,nullptr);\n        if(mouse&SDL_BUTTON_LMASK)buttons|=0x2000;\n        if(mouse&SDL_BUTTON_RMASK)buttons|=0x200;\n        if(mouse&SDL_BUTTON_MMASK)buttons|=4;\n    }")
 kyoei_replace_checked(KYOEI_PAD
   "    if (buttons & 0x100) data.analogButtons.l2 = 255;"
-  "    KyoeiMouse::Apply(data.rightStick);\n    if (buttons & 0x100) data.analogButtons.l2 = 255;")
+  "    KyoeiPhotoControls::Apply(data,buttons);\n    if (buttons & 0x100) data.analogButtons.l2 = 255;")
 set(KYOEI_PAD "#include \"kyoei_title_exit.h\"
 ${KYOEI_PAD}")
 kyoei_replace_checked(KYOEI_PAD "    if (gz_dialog_input(buttons)) {"

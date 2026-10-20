@@ -1,59 +1,53 @@
-# Modo foto: primeiro piloto
+﻿# Modo foto: previa com pausa e camera livre
 
-Pedido de Davy em 19/10/2026: desenvolver em paralelo às melhorias de
-desempenho. A primeira etapa é tirar uma foto limpa, usando a câmera normal.
+Abra **Testar modo foto.cmd** na raiz do projeto, com outras partidas fechadas.
+Usa a compilacao atual, janela1920x1080, ingles e seus saves normais.
+Na rua, com a janela ativa:
 
-- **H** alterna somente o guia de controles entre grande, pequeno e oculto.
-  A sequência foi conferida na rua: HP, mapa, objetivo e interação continuam
-  visíveis. H não é um comando para ocultar a interface inteira.
-- **F12** salva uma imagem PNG em `photos/`, na pasta de execução do port.
-  O nome inclui o instante e um número; fotos anteriores são preservadas.
+- **F10:** entrar/sair; ocultar interface e pausar pela API nativa do jogo.
+- **WASD:** deslocar camera; **Espaco/Ctrl:** subir/descer.
+- **Mouse ou J/I/K/L:** olhar; **roda do mouse:** zoom pelo campo de visao.
+- **Shift:** deslocamento mais rapido.
+- **F12:** salvar PNG em `photos/`, na pasta de execucao.
 
-O PNG recebe os pixels da superfície final do PS4 antes do redimensionamento
-da janela e da interface acrescentada pelo port. A resolução vem da imagem do
-jogo: uma janela menor não reduz a foto. A resolução deve ser conferida nas
-propriedades do PNG; não presumir 1080p só porque o monitor é 1080p.
+Sair restaura a camera original e libera a pausa adquirida pela previa.
+Perder foco/minimizar restaura a interface; a proxima fase do jogo libera
+sua pausa. Esc/Tab e acoes de dialogo tambem encerram a previa. Espaco e
+movimento vertical enquanto a camera livre esta habilitada.
 
-A câmera e a partida continuam funcionando enquanto você prepara a foto.
-Não há câmera livre, congelamento da simulação, ajuste de exposição ou
-profundidade de campo neste piloto. A interface do jogo é controlada
-manualmente, sem presumir seu estado nem mexer em saves.
+O launcher portatil tem **Photo preview** em Controls, desligado por padrao.
+Codigo e tela atualizados; pacotes pessoais/dos amigos ainda precisam ser
+reconstruidos para receber esta versao. O arquivo de teste da raiz usa o
+executavel atual sem depender desses pacotes.
 
-F12 só solicita captura com a janela focada. Segurar a tecla não gera uma
-sequência de fotos. Sair do foco cancela a solicitação ainda pendente. Uma
-captura aguarda a GPU e comprime o PNG, podendo causar uma pausa curta naquele
-instante; tirar fotos deve ficar fora das medições de desempenho.
+## Fotos e limites
 
-O primeiro caminho aceita RGBA/BGRA de 8 bits. Outros formatos, incluindo
-HDR de 10 bits, são recusados com mensagem no log para evitar fotos com
-cores incorretas. Falhas de gravação também aparecem no log.
+O PNG vem da superficie final PS4 antes do redimensionamento e dos overlays
+do port. As fotos conferidas tem1920x1080. RGBA/BGRA8bit suportados; outros
+formatos, incluindo HDR10, recusados com mensagem no log. Nomes preservam
+fotos anteriores. Capturar aguarda GPU/comprime PNG e pode causar pausa
+curta; manter fotos fora dos benchmarks.
 
-Compilação completa passou. Em 19/10/2026, Davy ativou a janela e apertou F12:
-o port salvou uma foto real de 1920x1080 durante a partida. A imagem foi
-conferida: cena da rua com personagem, fogo, interface e mapa, sem desktop
-ou interface do port. Isso valida F12 e a gravação na partida.
+Deslocamento inicial limitado a10unidades do motor em torno da camera de
+entrada; campo de visao15..110graus. Outras cenas, cutscenes, transicoes,
+sombras/reflexos, transparencias e streaming ainda precisam de validacao.
+Exposicao e profundidade de campo ainda nao tem controles.
 
-Na janela Controls do launcher, a opção **Photo preview** ativa
-`KYOEI_PHOTO_HUD=1`. F10 alterna a
-travessia de desenho de uma árvore nativa de HUD. O padrão continua desligado;
-não declarar cobertura de todos os elementos ou de todas as cenas antes de
-conferir. Restaurar ao perder foco, minimizar, fechar ou abrir confirmação,
-diálogo/mapa/menus. A atualização do jogo continua ativa.
+H alterna so o guia original grande/pequeno/oculto. F10 usa estado proprio.
+Filtros adicionais reconhecem a arvore do icone de mensagens e a classe
+especifica do telefone3D do save; mensagens, maquina e APIs de save preservadas.
+A notificacao ativa ainda precisa de reproducao para confirmar cobertura.
 
-Em 19/10, duas vistas da rua foram conferidas antes, durante e depois:
-HP, mapa, objetivo e interação desapareceram e voltaram; cenário e animações
-continuaram. Uma sequência com foco real e teclas F10/F12 produziu dois PNGs
-de 1920x1080, um sem HUD e outro com HUD restaurado. O teste de entrada SDL
-passou para foco, repetição, janela errada e restauração por ações de diálogo,
-controle, minimização e fechamento. As sondas privadas foram retiradas antes
-da compilação usada na sequência real. O launcher compilou e sua tela de
-controles foi conferida; o pacote portátil pessoal ainda não foi atualizado.
+## Evidencia
 
-Próximos testes: conferir antes/durante/depois em outras cenas e transições,
-comparar fotos com outra resolução de janela e testar pasta de saída sem
-permissão. Câmera livre e pausa exigem
-investigação independente de câmera, lógica e desenho.
+Davy confirmou F12 em19/10. Em20/10 entrada real gerou fotos de camera girada,
+avancada e elevada durante a pausa. F10 restaurou a visao normal e permitiu
+reentrar. Roda do mouse alterou enquadramento; minimizar resultou em pausa0 e
+FOV original40. A pausa precisou de recomposicao explicita da vista principal:
+interceptar somente o compositor normal tambem congelava a camera livre.
 
-Antes disso, uma solicitação privada no renderizador gerou PNG de 1920x1080
-na tela inicial. Dois roteiros automáticos ficaram sem foco e não produziram
-fotos; não constituem falha do atalho. Sonda automática removida do código final.
+Compilacao completa/testeSDL/walker de proveniencia passaram. Na rodada final,
+o marcador azul3D do save desapareceu comF10 e voltou ao sair, preservando a
+maquina e o cenario. Uma notificacao de mensagem separada ainda precisa de
+reproducao; sua correcao nao foi declarada visualmente comprovada.
+Detalhes em [FOTO-CAMERA-PAUSA.md](re/FOTO-CAMERA-PAUSA.md).

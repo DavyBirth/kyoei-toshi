@@ -152,7 +152,7 @@ def main():
     readme=out/'README.txt'
     readme.write_text(readme.read_text(encoding='utf-8').replace('H: HUD.', 'H: control guide.').replace(
         'An SDL-compatible gamepad can also be used.',
-        'F12 saves a native-resolution PNG in photos/.\nEnable Photo preview in Controls to hide/restore HUD with F10.\nPhoto preview is experimental; free camera and simulation pause are unavailable.\nAn SDL-compatible gamepad can also be used.').replace(
+        'F12 saves a native-resolution PNG in photos/.\nEnable Photo preview in Controls for F10: native pause, hidden HUD and free camera.\nPhoto camera: WASD move, Space/Ctrl up/down, mouse or J/I/K/L look, wheel zoom, Shift faster.\nF10 exits and restores the game camera. Photo preview remains experimental.\nAn SDL-compatible gamepad can also be used.').replace(
         'and chooses keyboard or PlayStation button prompts.',
         'and chooses Automatic, keyboard or PlayStation button prompts.\nAutomatic follows the last device used without restarting the game.\nPause: Left/Right change pages on the main pause screen; A/D change pages\ninside the menus, leaving arrow keys available for item grids.'),encoding='utf-8')
     if not a.finalize and (out/'manifest.json').exists():

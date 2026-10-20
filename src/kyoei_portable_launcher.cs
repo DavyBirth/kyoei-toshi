@@ -130,14 +130,14 @@ class PortableLauncher : Form {
             new[]{"Pause / inventory menu","Esc / Tab","Options / Menu"},
             new[]{"Release / capture mouse","F7; Alt+Tab releases automatically","—"},
             new[]{"Save photo (PNG, photos folder)","F12","—"},
-            new[]{"Hide HUD (photo preview below)","F10","—"}};
+            new[]{"Photo mode (preview below)","F10","—"}};
         foreach(var row in rows)table.Rows.Add(row);table.ClearSelection();dialog.Controls.Add(table);
-        var note=new Label();note.SetBounds(18,505,815,40);note.Text="Actions depend on the scene. Vehicles use the same controller-to-key bindings.\nThe camera follows the game's maximum turning speed.";dialog.Controls.Add(note);
+        var note=new Label();note.SetBounds(18,505,815,40);note.Text="Photo preview: WASD move; Space/Ctrl up/down; mouse or J/I/K/L look.\nMouse wheel zooms; Shift moves faster; F10 returns to the game; F12 saves PNG.";dialog.Controls.Add(note);
         var label=new Label();label.SetBounds(18,557,350,25);label.Text="Mouse sensitivity (default 1.80)";dialog.Controls.Add(label);
         var sensitivity=new NumericUpDown();sensitivity.SetBounds(390,552,120,28);sensitivity.Minimum=.2m;sensitivity.Maximum=5m;sensitivity.DecimalPlaces=2;sensitivity.Increment=.1m;sensitivity.Value=mouseSensitivity;dialog.Controls.Add(sensitivity);
         var promptsLabel=new Label();promptsLabel.SetBounds(18,602,350,25);promptsLabel.Text="On-screen button prompts";dialog.Controls.Add(promptsLabel);
         var prompts=new ComboBox();prompts.SetBounds(390,597,210,28);prompts.DropDownStyle=ComboBoxStyle.DropDownList;prompts.Items.AddRange(new object[]{"Automatic","Keyboard & mouse","PlayStation controller"});prompts.SelectedIndex=promptMode=="controller"?2:promptMode=="keyboard"?1:0;dialog.Controls.Add(prompts);
-        var photo=new CheckBox();photo.SetBounds(18,646,590,28);photo.Text="Photo preview: F10 hides HUD; F12 saves PNG";photo.Checked=photoHudPreview;dialog.Controls.Add(photo);
+        var photo=new CheckBox();photo.SetBounds(18,646,590,28);photo.Text="Photo preview: pause + free camera with F10";photo.Checked=photoHudPreview;dialog.Controls.Add(photo);
         var save=new Button();save.SetBounds(620,666,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;promptMode=prompts.SelectedIndex==2?"controller":prompts.SelectedIndex==1?"keyboard":"auto";photoHudPreview=photo.Checked;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
         return dialog;
     }
@@ -163,6 +163,9 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_TITLE_EXIT_ART"]="assets/title-exit.kyart";
             start.EnvironmentVariables["KYOEI_PROMPT_MODE"]=promptMode;
             start.EnvironmentVariables["KYOEI_PHOTO_HUD"]=photoHudPreview?"1":"0";
+            start.EnvironmentVariables["KYOEI_PHOTO_SCENE"]=photoHudPreview?"preview":"0";
+            start.EnvironmentVariables["KYOEI_PHOTO_PHONE"]=photoHudPreview?"1":"0";
+            start.EnvironmentVariables["KYOEI_PHOTO_SAVE_MARK"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",lang,"prompts.kypack");
             if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,"ui-corrections.kydelta");
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";

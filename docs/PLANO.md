@@ -61,19 +61,19 @@ o primeiro piloto aproveita a câmera original do jogo.
 - Piloto implementado: F12 solicita PNG da superfície final PS4 na resolução
   nativa, antes do redimensionamento da janela e dos overlays do port.
   H alterna somente o guia de controles. A prévia opcional usa F10 para
-  ocultar/restaurar o HUD; fica desligada por padrão no launcher.
+  ocultar/restaurar o HUD, pausar e mover a câmera; desligada por padrão.
 - Sem captura automática durante benchmarks; o readback/compressão pode
   causar uma pausa curta quando o jogador solicita uma foto.
 - Compilação completa e testes de entrada passaram. F10/F12 reais salvaram
   PNGs de 1920x1080 sem HUD e com HUD restaurado na rua. Outras cenas,
   legendas e transições ainda precisam de validação.
-- Depois: identificar câmera e separar simulação/desenho antes de congelar
-  o jogo ou liberar posição, rotação e campo de visão. Restaurar o estado
-  ao sair; preservar saves, comportamento e áudio do atalho normal.
+- Em20/10, pausa nativa e recomposição da vista ativa permitiram giro,
+  avanço, subida e FOV com retorno à câmera original. Minimizar liberou a
+  pausa. Continuar validação de efeitos, menus, transições e outras cenas.
 - Exposição e profundidade de campo ficam para avaliação posterior.
 
 Controles, limites e próximo teste em [MODO-FOTO.md](MODO-FOTO.md).
-Nenhuma câmera livre ou pausa de simulação foi implementada ou comprovada.
+Pausa/câmera livre são prévia opt-in, com evidência local em partida.
 
 ## 6. Etapa final opcional: renderizador próprio e reimplementação nativa
 
