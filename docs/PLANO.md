@@ -162,3 +162,13 @@ atual de stutter. Testes de1080p passam a integrar a verificacao corrente.
 - Ordem atual: resolver foco/desfoque; luzes posicionaveis reais; clima e
   horario; so depois entrada no menu de pausa. Visibilidade do corpo ainda
   requer identificar componente visual correto. Ver diario/evidencias.
+
+- Continuacao20/10: primeiro DOF nativo visivel validado em viewport principal,
+  com PNG e restauracao exata. Comparacao dedicada de abertura e segunda cena
+  ainda pendentes; recurso continua opt-in. Ver FOTO-CAMERA-PAUSA.md.
+- Davy confirmou prioridade: concluir modo foto e depois retomar gargalos,
+  meta60fps e PCs mais fracos. Opcoes graficas fazem parte do plano: padrao
+  fielPS4, ajustes opcionais persistentes e restauraveis, somente controles
+  com efeito real comprovado. Separar resolucao de saida de escala interna.
+  Medir qualidade/tempos de quadro nas mesmas cenas; ajustes opcionais nao
+  substituem corrigir gargalos nem autorizam mudar velocidade da simulacao.

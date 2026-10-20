@@ -112,3 +112,29 @@ de override/restauracao. Teste real photo-dof-render-20261020: hook executa,
 parametros mudam e restauram; imagem estatica nao muda (media0, p99=0).
 Portanto DOF NAO funcional visualmente; opt-in de pesquisa somente,
 nao ativado no atalho. Precisa localizar o consumo real dos parametros.
+
+### Consumo por viewport confirmado em20/10, continuacao
+
+O prototipo anterior escrevia parametros legados+a0/+b0, ausentes do caminho
+efetivo de renderizacao da fase. A copia2464f0 (1664bytes,
+FNV17004802587f7a3b) transfere o bloco viewport-zero+790 para o ring de efeitos.
+O consumidor247310..24749b usa esse ring+4a10, chama1fa70->57780->57820,
+e a preparacao optica54ce0 le os campos correspondentes do CPostEffect.
+Nao confundir o bloco+850 com DOF:20610->46780 e motion blur, confirmado
+pelo aviso tecnico nativo; nenhuma alteracao nesse bloco foi integrada.
+
+Candidato opt-in agora intercepta2464f0 apenas para singleton/tabela conhecida,
+manager vivo e viewport principal atual. Ajusta habilitacao, intensidade1,
+modo manual, distancia, abertura e FOV em graus (consumidor converte a radianos).
+Preserva escala optica+7e8 e todos os demais campos; restaura o bloco fonte
+imediatamente apos a copia nativa. Nao escreve em camera, saves ou fontes antigas.
+
+Prova privada transfer-20261020,1920x1080,muda: foco0,74/f1 produziu desfoque
+visivel na tela e no PNG. Crop estatico820x500: diferenca media10,4892/canal;
+foco33,64, Desligado e Reset voltaram a diferenca0 nesse crop. PNG Reset e
+Original identicos byte a byte (SHA25649eff3c986ff6065278c1af9757d8efa89144da4b115a48cce4428b3466d5f27).
+Painel permaneceu nitido e fora do PNG. Primeira prova visual positiva de DOF.
+Comparacao dedicada f1/f32 ainda pendente: uma sequencia selecionou cores
+por conservar selecao anterior; tentativas corrigidas pararam por perda de
+foco. Nao usar essas capturas como prova de abertura. Segunda cena pendente.
+KYOEI_PHOTO_DOF=1 continua necessario; atalho normal ainda nao o ativa.

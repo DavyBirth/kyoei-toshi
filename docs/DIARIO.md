@@ -4318,3 +4318,22 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   conforme Davy; tudo salvo, testes encerrados0, nenhum kyoei.exe ativo.
   Desligamento imediato solicitado apos este checkpoint. Retomar foco visual,
   depois luzes/clima/horario e finalmente menu de pausa.
+
+- Retomada20/10 por Davy: concluir modo foto e depois desempenho/meta60fps,
+  incluindo opcoes graficas paraPCs mais fracos. Registrado noPLANO, mantendo
+  padraoPS4 fiel e ajustes opcionais, sem prometer60fps em qualquer maquina.
+- Falha do executor isolado helper_unknown_error contornada com execucao
+  revisada fora do isolamento; leitura/codigo/build locais voltaram a funcionar.
+- DOF: caminho efetivo identificado.2464f0 copia+790 para ring;247310..24749b
+  chama API optica1fa70->57780->57820. Campos legados+a0/+b0 do prototipo antigo
+  nao eram consumidos. Bloco+850 investigado e rejeitado: era motion blur.
+- Override opt-in transferido para copia por viewport principal, assinatura
+  completa validada. Preserva escala optica e restaura fonte imediatamente.
+  Build completo PASS; testes DOF/input/settings/player/phone PASS.
+- Prova real privada/muda transfer-20261020: foco0,74/f1 gerou desfoque visivel
+  nohost ePNG1080p. Crop estatico media10,4892/canal vsoriginal; foco33,64/off/
+  reset diferenca0 no crop. PNG reset identico byteabyte aooriginal. Primeira
+  prova positiva de desfoque, ainda opt-in; atalho normal preservado.
+- Prova dedicada de abertura ainda nao concluida: selecao herdada fez roteiro
+  atuar em cores; correcao interrompida por perda de foco, sem continuar inputs.
+  Nao declarar essas capturas evidencia de abertura. Segunda cena pendente.
