@@ -3,16 +3,21 @@
 #include <cstdio>
 #include <initializer_list>
 static int hidden=0,modal=0,exit_state=0,toggles=0,scene=0;
-static float move_right=0,move_forward=0,look_yaw=0,fov_delta=0;
+static int player_toggles=0;
+extern "C" void kyoei_input_controller_button(void){}
+extern "C" void kyoei_input_keyboard(void){}
+extern "C" int kyoei_photo_player_toggle(void){++player_toggles;return 1;}
+static float move_right=0,move_up=0,move_forward=0,look_yaw=0,fov_delta=0,speed=0;
 extern "C" int kyoei_photo_scene_available(void){return scene;}
 extern "C" void kyoei_photo_scene_fov(float value){fov_delta+=value;}
-extern "C" void kyoei_photo_scene_input(float right,float,float forward,float yaw,float,float){
-    move_right=right;move_forward=forward;look_yaw=yaw;
+extern "C" void kyoei_photo_scene_input(float right,float up,float forward,float yaw,float,float rate){
+    move_right=right;move_up=up;move_forward=forward;look_yaw=yaw;speed=rate;
 }
 extern "C" int kyoei_overlay_kind(void){return modal;}
 extern "C" int kyoei_title_exit_state(void){return exit_state;}
 extern "C" void kyoei_photo_hud_restore(void){hidden=0;}
 extern "C" int kyoei_photo_hud_hidden(void){return hidden;}
+extern "C" int kyoei_photo_hud_available(void){return 1;}
 extern "C" int kyoei_photo_hud_toggle(void){++toggles;hidden=!hidden;return 1;}
 #define CHECK(x) do{if(!(x)){std::fprintf(stderr,"Photo check failed: %d\n",__LINE__);return 1;}}while(0)
 int main(){
@@ -21,6 +26,11 @@ int main(){
     SDL_Event event{};event.type=SDL_EVENT_KEY_DOWN;event.key.windowID=SDL_GetWindowID(window);
     event.key.key=SDLK_F10;
     CHECK(KyoeiPhoto::HandleEvent(window,event));CHECK(toggles==0); // no focus
+    event.key.key=SDLK_F11;hidden=1;
+    CHECK(KyoeiPhoto::HandleEvent(window,event));CHECK(player_toggles==0);
+    event.key.windowID+=1;
+    CHECK(!KyoeiPhoto::HandleEvent(window,event));CHECK(player_toggles==0);
+    event.key.windowID=SDL_GetWindowID(window);event.key.key=SDLK_F10;hidden=0;
     event.key.repeat=true;KyoeiPhoto::HandleEvent(window,event);CHECK(toggles==0);
     event.key.key=SDLK_F12;event.key.repeat=false;
     CHECK(KyoeiPhoto::HandleEvent(window,event));CHECK(!KyoeiPhoto::TakeRequest());
@@ -29,7 +39,7 @@ int main(){
     CHECK(!KyoeiPhoto::HandleEvent(window,event));CHECK(KyoeiPhoto::TakeRequest());
     CHECK(!KyoeiPhoto::TakeRequest());
     for(auto type:{SDL_EVENT_WINDOW_FOCUS_LOST,SDL_EVENT_WINDOW_MINIMIZED,
-                   SDL_EVENT_QUIT,SDL_EVENT_WINDOW_CLOSE_REQUESTED}){
+                   SDL_EVENT_QUIT,SDL_EVENT_WINDOW_CLOSE_REQUESTED,SDL_EVENT_GAMEPAD_REMOVED}){
         hidden=1;KyoeiPhoto::pending.store(true);event={};event.type=type;
         KyoeiPhoto::HandleEvent(window,event);CHECK(!hidden && !KyoeiPhoto::TakeRequest());
     }
@@ -66,8 +76,15 @@ int main(){
         KyoeiPhotoControls::Apply(data,buttons);
         CHECK(move_right==0 && move_forward==0 && look_yaw==0);
     }
+    data.analogButtons={0,255};buttons=0x800;KyoeiPhotoControls::Apply(data,buttons);
+    CHECK(move_up==1 && speed==3 && !buttons && !data.analogButtons.r2);
+    data.analogButtons={255,0};buttons=0;KyoeiPhotoControls::Apply(data,buttons);
+    CHECK(move_up==-1 && speed==1);
+    data.analogButtons={8,8};KyoeiPhotoControls::Apply(data,buttons);CHECK(move_up==0);
+    SDL_Delay(2);buttons=0x10;KyoeiPhotoControls::Apply(data,buttons);CHECK(fov_delta<0);
+    const float zoomed=fov_delta;
     event={};event.type=SDL_EVENT_MOUSE_WHEEL;event.wheel.windowID=SDL_GetWindowID(window);event.wheel.y=1;
-    KyoeiPhoto::HandleEvent(window,event);CHECK(!fov_delta); // inactive window cannot zoom
+    KyoeiPhoto::HandleEvent(window,event);CHECK(fov_delta==zoomed); // inactive window cannot zoom
     SDL_DestroyWindow(window);SDL_Quit();
     std::puts("PHOTO INPUT PASS: focus, repeat, request, restore, guest input suppression, photo axis deadzone");
 }

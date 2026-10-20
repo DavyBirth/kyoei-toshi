@@ -301,6 +301,10 @@ add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" 
 target_sources(kyoei PRIVATE src/kyoei_photo_hud.c src/kyoei_photo_scene.c src/kyoei_photo_phone.c src/kyoei_photo_save_mark.c)
 add_executable(test_kyoei_photo_phone src/test_kyoei_photo_phone.c)
 target_compile_options(test_kyoei_photo_phone PRIVATE -UNDEBUG)
+add_executable(test_kyoei_photo_player src/test_kyoei_photo_player.c)
+target_include_directories(test_kyoei_photo_player PRIVATE "${KYOEI_CORE}/src")
+target_compile_options(test_kyoei_photo_player PRIVATE -UNDEBUG)
+target_compile_definitions(test_kyoei_photo_player PRIVATE _CRT_SECURE_NO_WARNINGS)
 set(KYOEI_PORT_EXE_NAME "kyoei" CACHE STRING "Prepared port binary: kyoei or kyoei-orb-trace")
 if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace|kyoei-orb-trace-next)$")
   message(FATAL_ERROR "Unsupported port executable name")
@@ -1182,7 +1186,7 @@ kyoei_replace_checked(KYOEI_PRESENTER
   "    flip_scheduler.Finish();\n    KyoeiOverlay::Shutdown();")
 kyoei_replace_checked(KYOEI_PRESENTER
   "    Check(instance.GetDevice().resetFences(frame->present_done));"
-  "    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());\n    const bool kyoei_modal=kyoei_overlay_kind()!=0 || kyoei_title_exit_state()!=0;\n    const auto kyoei_modal_revision=kyoei_overlay_revision();\n    Check(instance.GetDevice().resetFences(frame->present_done));")
+  "    KyoeiOverlay::Initialize(instance,swapchain.GetSurfaceFormat().format,swapchain.GetImageCount());\n    const bool kyoei_modal=kyoei_overlay_kind()!=0 || kyoei_title_exit_state()!=0 || kyoei_photo_hud_hidden();\n    const auto kyoei_modal_revision=kyoei_overlay_revision();\n    Check(instance.GetDevice().resetFences(frame->present_done));")
 set(KYOEI_OVERLAY_ORIGINAL_BARRIER [=[        vk::ImageMemoryBarrier{
             .srcAccessMask = vk::AccessFlagBits::eTransferWrite,
             .dstAccessMask = vk::AccessFlagBits::eNone,

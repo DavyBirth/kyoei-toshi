@@ -393,7 +393,7 @@ extern "C" int kyoei_title_exit_hit(float x,float y) {
     return r[2]>0 && x>=r[0] && y>=r[1] && x<r[0]+r[2] && y<r[1]+r[3];
 }
 namespace KyoeiOverlayModel {
-ImDrawData *Draw(unsigned width,unsigned height,float seconds) {
+ImDrawData *Draw(unsigned width,unsigned height,float seconds,void (*extra)()) {
     std::scoped_lock lock{mutex};
     auto &io=ImGui::GetIO(); io.DisplaySize=ImVec2((float)width,(float)height);
     io.DeltaTime=seconds>0 && seconds<1?seconds:1.f/60;
@@ -420,6 +420,7 @@ ImDrawData *Draw(unsigned width,unsigned height,float seconds) {
         else message_box();
         ImGui::End();
     } else title_exit(width,height);
+    if(extra)extra();
     ImGui::Render(); return ImGui::GetDrawData();
 }
 }

@@ -64,3 +64,19 @@ um poll do pad; pulsos instantaneos F10/F12 sao tratados pelo SDL diretamente.
 Pendentes: notificacao ativa,menus/posse de pausa,
 cutscenes/transicoes,outras placas,audio na pausa(testes agente mudos) e
 historicos temporais/iluminacao/culling que possam ler fontes originais.
+
+
+### Candidato20/10: protagonista e interface propria
+Filtro35b810 existente ampliado para UnitPlayer table12cba00, apenas quando
+HUDhidden e F11 ativo. Ctor9fccf0/296bytes FNV94d0a273f4b2854d e thunk740240/
+15bytes FNV810839f2dae557fa validados antesTLS; assinatura diferente desabilita
+opcao. Nao mexe em simulacao/collisao/save. Teste offline usa callback real:
+player omitido apenas ativo, NPC mantido, restauracao e assinatura indisponivel.
+Nao prova cabelo/roupas/sombras/reflexos/objetos carregados nem partida real.
+Barra ImGui em photo_panel, composta via callback antesRender do model, depois
+do readbackPNG nativo. Framebuffer do jogo preservado com loadOpLoad; barreiras
+existentes incluem photoHUD. Teste ImGui real verifica painel dentro da tela
+em720/1080, modos teclado/controle; integracao Vulkan em partida pendente.
+View/Share (SDL_BACK, sem mapeamento guest) entra/sai; gatilhos altura com zona
+morta16, L1/R1 rapidez, dpad FOV, SouthPNG/Northplayer/Westajuda. Comandos guest
+neutralizados enquanto foto; controles fisicos ainda precisam de validacao.

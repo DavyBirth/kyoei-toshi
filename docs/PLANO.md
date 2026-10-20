@@ -74,7 +74,12 @@ o primeiro piloto aproveita a câmera original do jogo.
   afastamento amplo do protagonista. Limite inicial10unidades nao representa
   a liberdade desejada. Wishlist: iluminacao, foco/profundidade de campo,
   protagonista invisivel, filtros, exposicao, contraste, clima e hora do dia.
-  Viabilidade pendente; detalhes/prioridades em MODO-FOTO.md.
+  Davy confirmou estabilidade e afastamento em20/10. Candidato novo: F11
+  para ocultar protagonista, barra de ajuda propria e mapeamento completo
+  do controle. Build/testes offline; validar renderizacao e controle fisico.
+  Wishlist inclui distancia focal da lente. Referencias de interface:
+  Spider-Man/Insomniac, TLOU2, Death Stranding2 e Ghost of Tsushima.
+  Demais opcoes com viabilidade pendente; detalhes em MODO-FOTO.md.
 
 Controles, limites e próximo teste em [MODO-FOTO.md](MODO-FOTO.md).
 Pausa/câmera livre são prévia opt-in, com evidência local em partida.

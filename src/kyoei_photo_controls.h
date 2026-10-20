@@ -21,14 +21,20 @@ template<class Data,class Buttons> inline void Apply(Data& data,Buttons& buttons
     previous=now;
     if(!Enabled()){KyoeiMouse::Apply(data.rightStick);return;}
     const auto* keys=SDL_GetKeyboardState(nullptr);
-    const float up=float(keys[SDL_SCANCODE_SPACE])-float(keys[SDL_SCANCODE_LCTRL]||keys[SDL_SCANCODE_RCTRL]);
+    const auto trigger=[](unsigned char value){return value<=16?0.f:float(value-16)/239.f;};
+    const float up=std::clamp(float(keys[SDL_SCANCODE_SPACE])-float(keys[SDL_SCANCODE_LCTRL]||keys[SDL_SCANCODE_RCTRL])+
+        trigger(data.analogButtons.r2)-trigger(data.analogButtons.l2),-1.f,1.f);
     const float right=StickAxis(data.leftStick.x);
     const float forward=-StickAxis(data.leftStick.y);
     float yaw=-StickAxis(data.rightStick.x)*dt*1.5f;
     float pitch=-StickAxis(data.rightStick.y)*dt*1.5f;
     if(KyoeiMouse::captured){yaw-=KyoeiMouse::dx*.002f;pitch-=KyoeiMouse::dy*.002f;}
     KyoeiMouse::dx=KyoeiMouse::dy=0;
-    kyoei_photo_scene_input(right,up,forward,yaw,pitch,keys[SDL_SCANCODE_LSHIFT]?3.f:1.f);
+    // PS4 pad masks: L1/R1 speed; d-pad up/down adjusts FOV continuously.
+    const float zoom=float((buttons&0x40)!=0)-float((buttons&0x10)!=0);
+    if(zoom)kyoei_photo_scene_fov(zoom*dt*30.f);
+    kyoei_photo_scene_input(right,up,forward,yaw,pitch,
+        keys[SDL_SCANCODE_LSHIFT] || (buttons&0xc00)?3.f:1.f);
     buttons=0;data.leftStick=data.rightStick={128,128};data.analogButtons={};
 }
 }

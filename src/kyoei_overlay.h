@@ -41,7 +41,7 @@ namespace KyoeiOverlayModel {
 void InitializeGui(const char *font_directory,bool headless);
 void SetReady(bool ready);
 void ShutdownGui();
-ImDrawData *Draw(unsigned width,unsigned height,float seconds);
+ImDrawData *Draw(unsigned width,unsigned height,float seconds,void (*extra)()=nullptr);
 }
 #endif
 #endif

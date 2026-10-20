@@ -14,6 +14,17 @@ typedef void (ABI *ModelDraw)(void *object);
 static ModelDraw original_draw;
 static unsigned char *base;
 static int observer;
+static int player_supported; /* immutable after boot signature validation */
+static _Atomic int player_hidden=0;
+void kyoei_photo_player_restore(void) {atomic_store(&player_hidden,0);}
+int kyoei_photo_player_toggle(void) {
+    if(!original_draw || !player_supported || !kyoei_photo_hud_hidden())return 0;
+    atomic_store(&player_hidden,!atomic_load(&player_hidden));
+    return 1;
+}
+int kyoei_photo_player_hidden(void) {
+    return player_supported && kyoei_photo_hud_hidden() && atomic_load(&player_hidden);
+}
 static _Atomic unsigned observations=0;
 static uint64_t hash_bytes(const unsigned char *data,size_t size) {
     uint64_t hash=UINT64_C(14695981039346656037);
@@ -23,6 +34,8 @@ static uint64_t hash_bytes(const unsigned char *data,size_t size) {
 static ABI void draw_model(void *object) {
     if(kyoei_photo_hud_hidden()) {
         uintptr_t table;memcpy(&table,object,sizeof(table));
+        if(player_supported && atomic_load(&player_hidden) &&
+           table==(uintptr_t)base+0x12cba00)return;
         if(table==(uintptr_t)base+0x12d2060) {
             if(observer && atomic_load_explicit(&observations,memory_order_relaxed)<16 &&
                atomic_fetch_add_explicit(&observations,1,memory_order_relaxed)<16)
@@ -56,6 +69,9 @@ void kyoei_photo_save_mark_configure(void *image,uint64_t size) {
         VirtualFree(relay,0,MEM_RELEASE);return;
     }
     original_draw=(ModelDraw)relay;base=image;
+    player_supported=hash_bytes((unsigned char*)image+0x9fccf0,296)==UINT64_C(0x94d0a273f4b2854d) &&
+        hash_bytes((unsigned char*)image+0x740240,15)==UINT64_C(0x810839f2dae557fa);
+    gz_log("Photo player: F11 draw filter %s",player_supported?"available; visual validation pending":"disabled: type signature differs");
     int32_t relative=(int32_t)distance;code[0]=0xe9;memcpy(code+1,&relative,4);code[5]=0x90;
     DWORD ignored;
     if(!VirtualProtect(code,6,previous,&ignored) || !FlushInstructionCache(GetCurrentProcess(),code,6))

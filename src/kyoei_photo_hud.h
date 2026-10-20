@@ -11,6 +11,9 @@ int kyoei_photo_hud_available(void);
 int kyoei_photo_hud_hidden(void);
 int kyoei_photo_hud_toggle(void);
 void kyoei_photo_hud_restore(void);
+int kyoei_photo_player_toggle(void);
+int kyoei_photo_player_hidden(void);
+void kyoei_photo_player_restore(void);
 uint64_t kyoei_photo_hud_observed_calls(void);
 #ifdef __cplusplus
 }

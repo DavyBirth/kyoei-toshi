@@ -1,4 +1,4 @@
-// Native PNG capture and opt-in HUD draw gate; simulation remains live.
+// Native PNG capture, opt-in photo scene and host controls.
 // SPDX-License-Identifier: GPL-2.0-or-later
 #pragma once
 #include <atomic>
@@ -7,8 +7,10 @@
 #include "kyoei_photo_scene.h"
 #include "kyoei_overlay.h"
 #include "kyoei_title_exit.h"
+#include "kyoei_input_mode.h"
 namespace KyoeiPhoto {
 inline std::atomic_bool pending{false};
+inline std::atomic_bool hints{true};
 inline bool Blocked(SDL_Window* window) {
     return !(SDL_GetWindowFlags(window)&SDL_WINDOW_INPUT_FOCUS) ||
         (SDL_GetWindowFlags(window)&SDL_WINDOW_MINIMIZED) ||
@@ -23,7 +25,8 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
         kyoei_photo_scene_fov(-event.wheel.y*2.f);return true;
     }
     if(event.type==SDL_EVENT_WINDOW_FOCUS_LOST || event.type==SDL_EVENT_WINDOW_MINIMIZED ||
-       event.type==SDL_EVENT_QUIT || event.type==SDL_EVENT_WINDOW_CLOSE_REQUESTED) {
+       event.type==SDL_EVENT_QUIT || event.type==SDL_EVENT_WINDOW_CLOSE_REQUESTED ||
+       event.type==SDL_EVENT_GAMEPAD_REMOVED) {
         pending.store(false);kyoei_photo_hud_restore();
     }
     if(event.type==SDL_EVENT_KEY_DOWN &&
@@ -35,6 +38,18 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
         kyoei_photo_hud_restore();
     if(event.type==SDL_EVENT_GAMEPAD_BUTTON_DOWN) {
         const auto button=event.gbutton.button;
+        // View/Share is unused by the normal guest mapping; preserve Start/map.
+        if(button==SDL_GAMEPAD_BUTTON_BACK && kyoei_photo_hud_available()) {
+            if(!Blocked(window)){kyoei_input_controller_button();kyoei_photo_hud_toggle();}
+            return true;
+        }
+        if(kyoei_photo_hud_hidden() && !Blocked(window)) {
+            kyoei_input_controller_button();
+            if(button==SDL_GAMEPAD_BUTTON_NORTH)kyoei_photo_player_toggle();
+            else if(button==SDL_GAMEPAD_BUTTON_SOUTH)pending.store(true);
+            else if(button==SDL_GAMEPAD_BUTTON_WEST)hints.store(!hints.load());
+            return true;
+        }
         if(button==SDL_GAMEPAD_BUTTON_START || button==SDL_GAMEPAD_BUTTON_TOUCHPAD ||
            button==SDL_GAMEPAD_BUTTON_SOUTH || button==SDL_GAMEPAD_BUTTON_EAST ||
            button==SDL_GAMEPAD_BUTTON_WEST || button==SDL_GAMEPAD_BUTTON_NORTH)
@@ -42,6 +57,19 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
     }
     if(event.type!=SDL_EVENT_KEY_DOWN && event.type!=SDL_EVENT_KEY_UP)return false;
     if(event.key.windowID!=SDL_GetWindowID(window))return false;
+    if(event.type==SDL_EVENT_KEY_DOWN && !event.key.repeat && !Blocked(window) &&
+       (event.key.key==SDLK_F9 || event.key.key==SDLK_F10 ||
+        event.key.key==SDLK_F11 || event.key.key==SDLK_F12))kyoei_input_keyboard();
+    if(event.key.key==SDLK_F9 && kyoei_photo_hud_hidden()) {
+        if(event.type==SDL_EVENT_KEY_DOWN && !event.key.repeat && !Blocked(window))
+            hints.store(!hints.load());
+        return true;
+    }
+    if(event.key.key==SDLK_F11) {
+        if(event.type==SDL_EVENT_KEY_DOWN && !event.key.repeat && !Blocked(window) &&
+           kyoei_photo_hud_hidden())kyoei_photo_player_toggle();
+        return true;
+    }
     if(event.key.key==SDLK_F10) {
         if(event.type==SDL_EVENT_KEY_DOWN && !event.key.repeat && !Blocked(window))
             kyoei_photo_hud_toggle();

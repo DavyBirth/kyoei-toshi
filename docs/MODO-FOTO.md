@@ -8,7 +8,30 @@ Na rua, com a janela ativa:
 - **WASD:** deslocar camera; **Espaco/Ctrl:** subir/descer.
 - **Mouse ou J/I/K/L:** olhar; **roda do mouse:** zoom pelo campo de visao.
 - **Shift:** deslocamento mais rapido.
+- **F11:** mostrar/ocultar protagonista (experimental; prova visual pendente).
+- **F9:** mostrar/ocultar a barra de ajuda do modo foto.
 - **F12:** salvar PNG em `photos/`, na pasta de execucao.
+
+Primeira barra de ajuda propria, com comandos e estado do protagonista.
+Ela e desenhada no host depois da captura, portanto fica fora do PNG.
+
+No controle (Xbox / PlayStation):
+
+| Comando | Acao |
+| --- | --- |
+| View / Share | Entrar/sair do modo foto |
+| Analogico esquerdo / direito | Mover / olhar |
+| LT/L2 / RT/R2 | Descer / subir |
+| LB/L1 ou RB/R1 segurado | Movimento rapido |
+| Direcional cima / baixo | Aproximar / afastar pelo campo de visao |
+| A / Cruz | Salvar PNG |
+| Y / Triangulo | Mostrar/ocultar protagonista |
+| X / Quadrado | Mostrar/ocultar ajuda |
+
+Mapeamento inicial; teste com controle fisico e renderizacao em partida
+pendentes. Interfaces de referencia pedidas por Davy: Spider-Man da
+Insomniac, The Last of Us Part II, Death Stranding 2 e Ghost of Tsushima.
+Referencia de organizacao/usabilidade, sem alegar equivalencia de recursos.
 
 Sair restaura a camera original e libera a pausa adquirida pela previa.
 Perder foco/minimizar restaura a interface; a proxima fase do jogo libera
@@ -24,28 +47,30 @@ executavel atual sem depender desses pacotes.
 
 ### Retorno de Davy em20/10/2026 e proximas prioridades
 
-1. **Bug relatado:** a camera se move sozinha no modo foto, mesmo sem comando
-   intencional. Reproduzir e identificar a origem; causa ainda nao confirmada.
+1. **Deriva corrigida e confirmada por Davy:** a camera se movia sozinha
+   no modo foto, mesmo sem comando intencional.
    Aceite: camera parada com entradas neutras, incluindo controle conectado,
    entrada/saida do modo e perda/retorno de foco.
    Rodada curta de20/10: reproduzido movimento com valores quase centrais do
    pad; adicionada zona morta aos quatro eixos, exclusiva da camera fotografica.
-   Teste falhou antes e passou depois; compilacao atualizada. Ainda confirmar
-   se isso resolve o movimento observado por Davy no jogo.
+   Teste falhou antes e passou depois; compilacao atualizada.
+   Retorno posterior de Davy em20/10: camera estavel e afastamento funcionando.
 2. **Liberdade de deslocamento:** Davy considera chato ficar perto do
    protagonista. O limite atual de10unidades e provisório; preferencia por
    camera realmente livre, sem ficar presa ao personagem. Revisar o limite
    junto com culling, streaming e iluminacao para permitir afastamento amplo
    com cenario correto, preservando posicao do personagem e retorno da camera.
    Limite radial removido na compilacao de20/10. Teste visual de afastamento
-   amplo ainda pendente: tentativas interrompidas por perda de foco e mudanca
+   amplo automatizado nao concluido: tentativas interrompidas por perda de foco e mudanca
    de cursor durante a validacao, sem continuar enviando entradas.
 
 **Opcoes desejadas, ainda sem implementacao/viabilidade comprovada:**
 
 - Controles de iluminacao.
 - Ajuste de foco e profundidade de campo.
-- Tornar o protagonista invisivel na foto.
+- Distancia focal da lente, pedida em20/10. O FOV ja muda o enquadramento;
+  valores em milimetros dependem de definir uma equivalencia de sensor.
+- Protagonista invisivel: candidato F11 integrado; prova visual pendente.
 - Filtros visuais, exposicao e contraste.
 - Alterar clima e hora do dia.
 - Espaco para ampliar os ajustes fotograficos conforme os mecanismos do jogo

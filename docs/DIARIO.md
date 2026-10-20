@@ -4154,3 +4154,31 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Correcao: zona morta16 emcadaeixo do pad na CAMERA FOTOGRAFICA,reamplitude suave fora dela,extremos preservados. Mouse e controles normais intactos. Buildkyoei+testPhotoPASS; teste inclui neutralidade e extremos/mouse/neutralizacao nativa. Executavel atual recompilado. Causa do relato deDavy ainda precisa confirmacao em hardware/partida; nao declarar eliminacao de toda deriva. Limite10unidades e wishlist continuam pendentes. Documentacao atualizada.
 - Davy pediu continuar: removido limite radialfixo10unidades da camera fotografica; movimento so rejeita coordenadas nao finitas. Log de saida agora informa distancia da entrada para provar afastamento. BuildkyoeiPASS. Teste privado/mudo photo-free-range-20261020 em andamento: S12s/subida3s/giro/F12/retorno; aguardar imagens/log e exit0 antes declarar validado. Sourcescene alterado, ainda nao commitado. Controle normal/save sem alteracao.
 - photo-free-range-20261020 terminouexit0 aposdoneflag. Primeiraautomacao perdeuprimeiroplanoantesF10; repeticao detectoucursoralteradodurantevalidacao e NAOclicou. Nenhum teste de distancia efetivamente executado,nao afirmarimagemlongedistanciaconferida. Protecoes defoco preservadas,semnovatentativa de forcarentrada. BuildPASS,limiteretirado como pedido,documentadoexperimental/validacaopendente. Sem jogo restante. Proxima prova: deixarjanelaativaeafastar>10unidades,conferirrender/culling/retorno. ListaefeitoscontinuaemMODO-FOTO.
+
+- Retorno de Davy em20/10: camera estavel e afastamento funcionando bem em
+  partida. Confirmacao humana registrada; nao substitui cobertura de outras
+  cenas/culling/streaming. GPU RTX2060 observada47%,5648MiB,99,61W,74C em
+  amostra nvidia-smi da placa inteira; counters porPID nao forneceram leitura.
+  Nao atribuir todo uso/barulho ao jogo nem diagnosticar origem do ruido.
+- Continuacao autorizada: F11 candidato para ocultar somente desenho do
+  UnitPlayer pelo hook35b810 existente; assinatura ctor/thunk antesTLS e
+  restauracao em saida/perdafoco. Teste callback real passou com NPCs
+  preservados/defaultvisivel/restore/assinatura indisponivel. Prova visual
+  de corpo/acessorios/sombra/reflexos em partida ainda pendente.
+- Novo pedido: interface propria e comandos de controle bem definidos,
+  referencias Spider-Man/Insomniac,TLOU2,DeathStranding2,GhostofTsushima.
+  Integrada barra hostImGui com comandos/estado, foraPNG; F9/West alterna
+  ajuda. View/Share entra/sai,sticks mover/olhar,gatilhos altura,L1/R1 rapidez,
+  dpadzoom,SouthPNG,Northplayer. UnitPhoto passou altura/velocidade/deadzone/
+  zoom/neutralizacao e foco; ImGui layout720/1080 teclado/controle passou
+  apos acomodar primeiro frame de autosize. Controle fisico/partida pendentes.
+- Davy acrescentou distancia focal da lente a wishlist. FOV existente nao
+  implica milimetros calibrados; definir equivalencia de sensor antes de
+  exibir valores. Foco/DOF/clima/hora/iluminacao/filtros ainda sem implementacao.
+- Jogo de Davy nao foi fechado nem alterado pelo agente. Processo deixou de
+  aparecer antes do link normal; build atualizado sem abrir outro jogo.
+- Fechamento desta etapa: buildkyoei final exit0; PHOTO INPUT, PHOTO PLAYER e
+  OVERLAY PASS; launcher1080CheckOnlyPASS; diffcheckPASS. Nenhum jogo de
+  teste aberto nesta rodada. Proxima abertura pelo cmd recebe candidato;
+  nao declarar validacao visual/F11/controle fisico concluida. Pacotes
+  externos permanecem antigos, sem alegar ganho de desempenho.

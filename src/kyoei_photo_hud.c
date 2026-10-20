@@ -21,12 +21,16 @@ static void *roots[16];
 
 int kyoei_photo_hud_available(void) {return atomic_load_explicit(&available,memory_order_acquire);}
 int kyoei_photo_hud_hidden(void) {return atomic_load_explicit(&hidden,memory_order_relaxed);}
-void kyoei_photo_hud_restore(void) {atomic_store_explicit(&hidden,0,memory_order_relaxed);}
+void kyoei_photo_hud_restore(void) {
+    atomic_store_explicit(&hidden,0,memory_order_relaxed);
+    kyoei_photo_player_restore();
+}
 int kyoei_photo_hud_toggle(void) {
     if(!kyoei_photo_hud_available())return 0;
     /* SDL is the only toggler; other host code can only request restore. */
     int next=!atomic_load_explicit(&hidden,memory_order_relaxed);
     atomic_store_explicit(&hidden,next,memory_order_relaxed);
+    if(!next)kyoei_photo_player_restore();
     return 1;
 }
 uint64_t kyoei_photo_hud_observed_calls(void) {

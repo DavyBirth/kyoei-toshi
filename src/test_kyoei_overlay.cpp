@@ -2,6 +2,7 @@
 #include "kyoei_overlay.h"
 #include "kyoei_input_mode.h"
 #include "imgui.h"
+#include "kyoei_photo_panel.h"
 #include "imgui_internal.h"
 #include <windows.h>
 #include <cmath>
@@ -39,6 +40,19 @@ int main() {
     _set_abort_behavior(0,_WRITE_ABORT_MSG|_CALL_REPORTFAULT);
     _putenv_s("KYOEI_IN_GAME_DIALOGS","1"); _putenv_s("KYOEI_LANGUAGE","en");
     KyoeiOverlayModel::InitializeGui(nullptr,true); KyoeiOverlayModel::SetReady(true);
+    for(bool controller:{false,true})for(unsigned height:{720u,1080u}) {
+        ImDrawData *photo=nullptr;
+        // Exercise the exact photo panel within the real ImGui frame callback.
+        for(int frame=0;frame<2;++frame) {
+            if(controller)photo=KyoeiOverlayModel::Draw(height*16/9,height,1.f/60,[]{KyoeiPhoto::DrawPanel(true,true);});
+            else photo=KyoeiOverlayModel::Draw(height*16/9,height,1.f/60,[]{KyoeiPhoto::DrawPanel(false,false);});
+            CHECK(photo && photo->Valid);
+            if(frame)CHECK(photo->TotalVtxCount>0); // auto-size windows settle after the first frame
+        }
+        auto *panel=ImGui::FindWindowByName("##photo-help");
+        CHECK(panel && panel->Pos.x>=0 && panel->Pos.y>=0);
+        CHECK(panel->Pos.x+panel->Size.x<=height*16/9 && panel->Pos.y+panel->Size.y<=height);
+    }
     const uint16_t initial[]={'K','e','n'};
     kyoei_overlay_input(0);
     CHECK(kyoei_overlay_begin_name(L"Synthetic name",initial,3,4));
