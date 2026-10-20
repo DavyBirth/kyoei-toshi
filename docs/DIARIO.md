@@ -4420,3 +4420,15 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Davy reforcou prioridade no modo foto; DLSS/desempenho/opcoes graficas ficam
   para a etapa posterior. Menu grafico em rascunho privado, nao publicado nem
   habilitado nos lancadores. Retomar luzes posicionaveis/clima/horario/pausa.
+
+- Luzes: observado singleton realvtable1254b48 (GxSysLight);1259ba0 ebase.
+  Lista privada92nos com point/spot e fontes ligadas a unidades. TiposGI do
+  RTTI nao provam uso na cena. Node setter1e9290 apenasguarda ponteiro; nao
+  presumir retencao. Destructor2f5d50 ret nao comprova finalizacao da unidade.
+- Observeropt-in343b10 validado por assinatura inteira e testeexecutavel do
+  relay5bytes/flags; preserva resultados. Partida muda antes/duranteF10
+  mostroucaller35f6df/cap4/count4. Sem nenhuma modificacao em luz/lista.
+  Primeira filtragem so aceitavabase e foi corrigida para a instancia real.
+- Atualizacao290b60->290b80 gera cache16bytes em+58/count+60/cap+64; consumidor
+  otimizado290cf0 tem assinatura maior. Proxima investigacao: cache e luz
+  propria na pausa. Novas fontes/clima/horario ainda nao implementados.

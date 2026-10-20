@@ -51,3 +51,34 @@ base; a primeira encaminha a2f5d50, a segunda tambem libera pelo alocador.
 Isso ainda nao prova retirada das listas da cena: antes de liberar, investigar
 finalizacao/gerenciamento de vida da unidade. Nao tratar essas entradas como
 API pronta para apagar luz em uso por jobs do renderizador.
+
+### Instancia ativa e copia compacta —20/10
+
+Leitura somente do perfil privado encontrou singleton1354420 apontando para
+vtable1254b48 (GxSysLight, finalizada no ctor290910). A tabela1259ba0 e a
+classe-base GxSysLightBase, escrita temporariamente pelo inicializador3439f0.
+Nao filtrar apenas pela tabela-base: isso descartava a instancia real.
+
+A lista emself+20 tinha92nos. No1257608 tem setter1e9290 que apenas guarda
+ponteiro em+8; nao presumir que esse registro retenha o objeto. Destructor
+2f5d50 e apenasret. A finalizacao/geracao da unidade ainda precisa prova.
+Tipos reais encontrados: GxUnitLightShadow, GxUnitLightPoint, UnitSpotLight,
+UnitAttachPointLight, UnitOneshotPointLight, UnitPointLightG e UnitSpotLightG.
+Os tiposGI registrados no executavel nao comprovam que sejam usados aqui.
+
+Observeropt-in `KYOEI_PHOTO_LIGHTS=observe` em343b10 preserva a saida nativa.
+Valida funcao inteira260bytes/FNV05e68dd6b0c7aae0. O trampolim de5bytes
+preserva EAX e flags de `xor eax,eax; test r8d,r8d`, incluindo aJE original.
+Teste executa ambos os ramos em codigo sintetico e cobre saidas inalteradas.
+
+Prova real privada/muda `light-observe-20261020/game-live-system.log`: coleta
+antes e durante foto, caller35f6df, types/viewsffffffff, capacity4/count4.
+Isso comprova atividade, nao emissao de luz nova nem que seja o coletor final.
+
+Caminho relevante encontrado: GxSysLight virtual30 ->290b60 limpa mortos via
+343a50 e chama290b80. Este monta cache self+58, count+60, capacity+64; cada
+entrada16bytes contem ponteiro de luz, tipo+8 e mascara+0c. A virtual40,
+290cf0 (1457bytes), consome esse cache, filtra tipos/camera e ordena fontes.
+Tem argumentos adicionais na pilha: nao reutilizar a assinatura simplificada
+de343b10. Proximo passo e observar a atualizacao/cache durante a pausa e
+provar uma fonte propria sem registrar ponteiros que possam ficar pendurados.
