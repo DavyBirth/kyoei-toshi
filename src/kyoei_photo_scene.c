@@ -134,7 +134,9 @@ static void leave(void *manager,int handoff) {
     if(owned && manager!=state.manager)gz_log("Photo scene preview: manager changed; old lifetime unavailable; no stale access");
     atomic_store_explicit(&requested,0,memory_order_relaxed);
     AcquireSRWLockExclusive(&input_lock);memset(&input,0,sizeof(input));ReleaseSRWLockExclusive(&input_lock);
-    gz_log("Photo scene preview: released; native_pause_handoff=%d",handoff);
+    Vec3 offset=add(state.eye,scale(state.initial_eye,-1));
+    gz_log("Photo scene preview: released; native_pause_handoff=%d camera_distance_from_entry=%.2f",
+        handoff,sqrtf(dot(offset,offset)));
 }
 static ABI void pause_hook(void *manager,const int32_t *paused,const Exclusions *excluded) {
     /* Own calls use the trampoline directly. Any original game request wins. */
@@ -178,9 +180,8 @@ static ABI void frame_hook(void *manager) {
         state.fov=fmaxf(15,fminf(110,state.fov+controls.fov));
         Vec3 forward,right,up;direction(&state,&forward,&right,&up);
         Vec3 step=add(add(scale(right,controls.right),scale(up,controls.up)),scale(forward,controls.forward));
-        state.eye=add(state.eye,scale(step,dt*2.f*fmaxf(.1f,controls.speed)));
-        Vec3 offset=add(state.eye,scale(state.initial_eye,-1));float radius=sqrtf(dot(offset,offset));
-        if(radius>10)state.eye=add(state.initial_eye,scale(offset,10/radius));
+        Vec3 next_eye=add(state.eye,scale(step,dt*2.f*fmaxf(.1f,controls.speed)));
+        if(finite3(next_eye))state.eye=next_eye;
         ReleaseSRWLockExclusive(&state_lock);
     }
     original_frame(manager);

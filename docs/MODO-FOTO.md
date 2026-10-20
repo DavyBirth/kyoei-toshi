@@ -37,6 +37,9 @@ executavel atual sem depender desses pacotes.
    camera realmente livre, sem ficar presa ao personagem. Revisar o limite
    junto com culling, streaming e iluminacao para permitir afastamento amplo
    com cenario correto, preservando posicao do personagem e retorno da camera.
+   Limite radial removido na compilacao de20/10. Teste visual de afastamento
+   amplo ainda pendente: tentativas interrompidas por perda de foco e mudanca
+   de cursor durante a validacao, sem continuar enviando entradas.
 
 **Opcoes desejadas, ainda sem implementacao/viabilidade comprovada:**
 
@@ -60,8 +63,10 @@ formatos, incluindo HDR10, recusados com mensagem no log. Nomes preservam
 fotos anteriores. Capturar aguarda GPU/comprime PNG e pode causar pausa
 curta; manter fotos fora dos benchmarks.
 
-Deslocamento inicial limitado a10unidades do motor em torno da camera de
-entrada; campo de visao15..110graus. Outras cenas, cutscenes, transicoes,
+O deslocamento nao tem mais o limite radial de10unidades; coordenadas nao
+finitas sao recusadas. Campo de visao15..110graus. A camera continua usando
+os dados carregados da cena; renderizacao/streaming a longa distancia ainda
+precisam ser conferidos. Outras cenas, cutscenes, transicoes,
 sombras/reflexos, transparencias e streaming ainda precisam de validacao.
 Exposicao e profundidade de campo ainda nao tem controles.
 
