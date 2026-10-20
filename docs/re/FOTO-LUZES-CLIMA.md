@@ -35,3 +35,13 @@ Guardar transformacoes e propriedades somente com identidade e dono atuais;
 restaurar ao sair/foco perdido, sem gravar save. Validar cena201 e uma segunda
 cena antes de promover para o atalho usado por Davy. Dumps/disassembly e
 screenshots permanecem na pasta privada ignorada build/research/photo-mode.
+
+### Registro e ciclo de vida
+
+GxSysLight ctor290910 aloca104bytes e chama3439f0. Esse inicializador define
+singleton1354420, inicializa lista emself+20 e sincronizacao emself+40.
+A insercao343c20 usa lock321250, lista2ff480, unlock3211e0. Portanto a chamada
+vista no construtor point e registro da luz no sistema, nao apenas metadado.
+Uma implementacao futura precisa provar a remocao simetrica antes de criar
+fontes extras: deletar copia host ou descartar ponteiro deixaria registro vivo.
+Nao chamar construtor de GxSysLight de novo: singleton da cena ja existe.

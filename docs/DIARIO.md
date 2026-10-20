@@ -4300,3 +4300,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Consumo DOF permanece sem prova; pesquisa encontrou tarefas246350/2485f0/
   246b70 e consumidores indiretos, sem promover novo hook nao validado.
   Quota propria chegou9% restantes da janela5horas; semanal nao foi usada.
+
+- Pesquisa adicional de luzes: ctorGxSysLight290910->3439f0 define singleton
+  1354420. Registro343c20 faz lock321250/lista2ff480/unlock3211e0. Proximo
+  requisito e provar remocao simetrica e destruicao da fonte propria; nunca
+  recriar singleton existente. Acrescentado documento de pesquisa.
+- Workingtree de save_mark so tinha normalizacaoLF/CRLF, diff vazio; indice
+  atualizado sem mudar conteudo. Arvore limpa apos commits, fora docs novos.
