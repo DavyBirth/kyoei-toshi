@@ -598,21 +598,21 @@
         {
           "id": "p0/k12",
           "source_text_sha256": "550042c69dd4bb215c9569497329ae28e06878652ba50191d94570c105f3cb8d",
-          "en": "Officer Yanai, Wearing a Friendly Expression",
+          "en": "Officer Yanai, Looking Friendly",
           "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k12; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k19",
           "source_text_sha256": "9c20b93b3ae254180a444682b64bd921218f218307fb5981e1a72de1ac1574d9",
-          "en": "Policewoman Kuribayashi",
+          "en": "Officer Kuribayashi",
           "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k19; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k1024",
           "source_text_sha256": "d98180c8b4d2bda7638abbbab462e4cdfa0db17f5d6175063596323858e15cf7",
-          "en": "Something seems to have happened. Kuribayashi, can you go?",
+          "en": "Looks like something happened. Kuribayashi, can you go?",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k1024; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
