@@ -135,7 +135,7 @@
         {
           "id": "p0/k33",
           "source_text_sha256": "bca4edf9292f6644117e9ad1e489db9dac63828ea27031709424bdf452136432",
-          "en": "Head west along this street to reach Mizuna City.",
+          "en": "Head west down this street and you'll reach Mizuna City.",
           "notes": "English draft imported from audited private workspace, translate-en-0082.json:p0/k33; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -148,21 +148,21 @@
         {
           "id": "p0/k164",
           "source_text_sha256": "b5e7dfa3b74c6522c0e2ce95360633cb0a8a8ea82ee617760c6082314f9c4875",
-          "en": "Have You Reached Mizuna City?",
+          "en": "Made It to Mizuna City?",
           "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k164; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k167",
           "source_text_sha256": "5af13fb2e59f57b1b025cceeb9e977113e748bcc4b0b85b96d17c72ce4ef19d0",
-          "en": "Have you reached Mizuna City?\nBe careful. There's no telling what might happen.\nGive Yuki my regards, too!",
+          "en": "Made it to Mizuna City?\nBe careful, you never know what might happen.\nSay hi to Yuki for me!",
           "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k167; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k195",
           "source_text_sha256": "7b2d194c1fa970650aa8c2974301dcf307c2a65df2b5369c2b34d3123f2884f1",
-          "en": "Another huge one seems to have appeared since then. Are you safe?\nI imagine you're heading for Mizuna City by now, but I have a favor to ask.\nThere's a place called Hananira Town near Mizuna City.\nAn editor-in-chief I've known for years is there.\nApparently, she hurt her leg and is in trouble because she can't escape.\nI'd like you to stop by on your way and help her.\nShe should be in Editorial Department 2 of the Ebine Publishing building.\nI'm counting on you.",
+          "en": "Sounds like another big one showed up since. You okay?\nYou're probably on your way to Mizuna City, but I need a favor.\nThere's a place called Hananira Town near Mizuna City.\nAn old friend of mine, an editor-in-chief, is there.\nShe hurt her leg and can't get out.\nCould you swing by and help her?\nShe should be in Editorial Dept. 2 of the Ebine Publishing building.\nI'm counting on you.",
           "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k195; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
