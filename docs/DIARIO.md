@@ -4307,3 +4307,8 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   recriar singleton existente. Acrescentado documento de pesquisa.
 - Workingtree de save_mark so tinha normalizacaoLF/CRLF, diff vazio; indice
   atualizado sem mudar conteudo. Arvore limpa apos commits, fora docs novos.
+
+- Antes do limite: fontes/lente/paleta e pesquisa em commits, build atual em
+  build/kyoei.exe. Workingtree conferida limpa, nenhum kyoei.exe em execucao.
+  Pesquisa de luz revelou vtable0/8 compartilhadas209b60/209b70; liberacao
+  nao comprova retirada de listas/jobs, pendencia explicitada na documentacao.

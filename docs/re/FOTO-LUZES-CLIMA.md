@@ -45,3 +45,9 @@ vista no construtor point e registro da luz no sistema, nao apenas metadado.
 Uma implementacao futura precisa provar a remocao simetrica antes de criar
 fontes extras: deletar copia host ou descartar ponteiro deixaria registro vivo.
 Nao chamar construtor de GxSysLight de novo: singleton da cena ja existe.
+
+A vtable point tem entradas0/8 em209b60/209b70, compartilhadas pelo objeto
+base; a primeira encaminha a2f5d50, a segunda tambem libera pelo alocador.
+Isso ainda nao prova retirada das listas da cena: antes de liberar, investigar
+finalizacao/gerenciamento de vida da unidade. Nao tratar essas entradas como
+API pronta para apagar luz em uso por jobs do renderizador.
