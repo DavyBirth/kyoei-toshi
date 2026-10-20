@@ -4432,3 +4432,11 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Atualizacao290b60->290b80 gera cache16bytes em+58/count+60/cap+64; consumidor
   otimizado290cf0 tem assinatura maior. Proxima investigacao: cache e luz
   propria na pausa. Novas fontes/clima/horario ainda nao implementados.
+
+- Cache de luzes: observacao opt-in290b80 validada por assinatura completa;
+  trampolim6bytes testado com prologo/pilha reais em funcao sintetica.
+  Teste privado/mudo game-cache.log mostrou8amostras durante a pausa F10,
+  caller345322, count29/cap64, e saida normal do modo foto. Teste unitario
+  PASS preservando lista, ponteiros e contadores. Nenhuma fonte adicionada
+  ainda; normal continua sem hooks de luz. Foco/F11 mantem validacao da cena
+  ja documentada, com outras cenas/roupas ainda pendentes.

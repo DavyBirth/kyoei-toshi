@@ -80,5 +80,16 @@ Caminho relevante encontrado: GxSysLight virtual30 ->290b60 limpa mortos via
 entrada16bytes contem ponteiro de luz, tipo+8 e mascara+0c. A virtual40,
 290cf0 (1457bytes), consome esse cache, filtra tipos/camera e ordena fontes.
 Tem argumentos adicionais na pilha: nao reutilizar a assinatura simplificada
-de343b10. Proximo passo e observar a atualizacao/cache durante a pausa e
-provar uma fonte propria sem registrar ponteiros que possam ficar pendurados.
+de343b10.
+
+Observer estendido a290b80 (361bytes/FNVdd610201f41bd4bc), com trampolim
+separado para prologo de6bytes; teste executavel cobre preservacao da pilha.
+Teste privado/mudo game-cache.log confirmou8amostras na pausa do modo foto:
+caller345322, count29/capacity64. Saida do modo foto registrada normalmente.
+Teste unitario confirma que entradas, ponteiros e contadores ficam intactos.
+As duas assinaturas completas sao conferidas antes da instalacao; sem a
+variavel opt-in nenhum observador e instalado. Ainda nao ha nova luz emitida.
+
+Proximo passo: provar uma fonte propria nesse caminho sem alterar as luzes
+originais nem registrar ponteiros que possam ficar pendurados. A atividade do
+cache na pausa nao comprova por si so que uma entrada extra sera renderizada.
