@@ -181,3 +181,8 @@ atual de stutter. Testes de1080p passam a integrar a verificacao corrente.
   exige provar velocidade de animacao, scripts, entrada e audio em tempo real.
   Primeiro corrigir gargalos mantendo referencia; depois habilitar frequencias
   e escalas comprovadas. Nao prometer4K120 pelo tamanho da janela ou monitor.
+
+- Davy acrescentou interesse emDLSS e modos de qualidade/desempenho, reforcando
+  que modo foto e suas funcionalidades vem primeiro. Avaliar essas tecnologias
+  na etapa grafica posterior; nao trocar a prioridade nem colocar um menu sem
+  implementacao comprovada. Pesquisa/provas graficas podem ficar guardadas.

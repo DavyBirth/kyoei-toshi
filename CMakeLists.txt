@@ -237,6 +237,8 @@ set(KYOEI_COOPERATIVE_SELF_TEST [=[        const char *coop_test=getenv("KYOEI_C
         if(coop_test && !strcmp(coop_test,"1")) { extern void kyoei_cooperative_readback_self_test(void); kyoei_cooperative_readback_self_test(); }
         const char *cache_test=]=])
 kyoei_replace_checked(KYOEI_LOADER "        const char *cache_test=" "${KYOEI_COOPERATIVE_SELF_TEST}")
+kyoei_replace_checked(KYOEI_LOADER "        const char *coop_test="
+  "        const char *graphics_test=getenv(\"KYOEI_GRAPHICS_SELF_TEST\");\n        if(graphics_test && !strcmp(graphics_test,\"1\")) { extern void kyoei_graphics_self_test(void); kyoei_graphics_self_test(); }\n        const char *coop_test=")
 string(FIND "${KYOEI_LOADER}" "${TLS_REJECTION}" TLS_ANCHOR)
 if(TLS_ANCHOR EQUAL -1)
   message(FATAL_ERROR "Review TLS adapter: shared loader changed")
@@ -901,6 +903,7 @@ kyoei_replace_checked(KYOEI_PIPELINE_SERIALIZATION
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" CONTENT "${KYOEI_PIPELINE_SERIALIZATION}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_cache.cpp"
   "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pipeline_serialization.cpp" src/kyoei_gpu_cache_shutdown.cpp)
+target_sources(kyoei_videoout PRIVATE src/kyoei_graphics_self_test.cpp)
 # Measure the driver call independently of layout/setup and serialization.
 # An explicit object overrides the same unit from the prebuilt static archive.
 file(READ "${KYOEI_SHAD}/src/video_core/renderer_vulkan/vk_graphics_pipeline.cpp" KYOEI_GRAPHICS_PIPELINE)

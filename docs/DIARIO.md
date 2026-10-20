@@ -4412,3 +4412,11 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   vblank60 participa do relogio/eventos convidados. Nao oferecer120 como mero
   aumento desse numero. FSR1 existe como ampliacao host, preserva superficie
   convidada; ainda falta prova real antes de promover como opcao grafica.
+
+- Prova GPU semcampanha: scripts/test_graphics.ps1 verificou1920x1080 nativo,
+  framebuffer3840x2160 e quatro cores lidasGPU, com FSR0 eFSR1 realmente ativo.
+  Evidencia privada build/research/graphics/4k-{default,fsr1}-20261020. Nao e
+  prova de4K interno nem de taxa de quadros/simulacao da campanha.
+- Davy reforcou prioridade no modo foto; DLSS/desempenho/opcoes graficas ficam
+  para a etapa posterior. Menu grafico em rascunho privado, nao publicado nem
+  habilitado nos lancadores. Retomar luzes posicionaveis/clima/horario/pausa.
