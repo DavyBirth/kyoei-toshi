@@ -5503,7 +5503,7 @@
         {
           "id": "r12/c4",
           "source_text_sha256": "b94529103358db825d2b139761229515d7421d826072b26f5f95bcb17d2ccf4a",
-          "en": "＜Membership Rules＞\\n・Love all forms of cosplay\\n・Always explore the possibilities of cosplay\\n・Spread the joy of cosplay among those who share your passion",
+          "en": "[Membership Rules]\\n• Love all forms of cosplay\\n• Always explore the possibilities of cosplay\\n• Spread the joy of cosplay among those who share your passion",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r12/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7448,7 +7448,7 @@
         {
           "id": "p0/k117",
           "source_text_sha256": "9717df4e7882ebf9828cf19eb243546c0f8bf600d5ceb6b03cdea10f79479983",
-          "en": "There's a café on the observation floor.",
+          "en": "There's a café on the observation deck.",
           "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k117; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -11261,7 +11261,7 @@
         {
           "id": "p0/k77",
           "source_text_sha256": "26c185b97268dfe86533579991c33ccfbd262a743ec016d095e3c410023eb9da",
-          "en": "What's taking so long?\nI'm at the top of the stairs on the observation floor.",
+          "en": "What's taking so long?\nI'm at the top of the stairs on the observation deck.",
           "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k77; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -43872,7 +43872,7 @@
         {
           "id": "p0/k113",
           "source_text_sha256": "1a3c7dc15e65179cbeabcbd568b24a202d19c2dc0515c875564b3f21affd4702",
-          "en": "<Background & Record>\nSix-time national high school hacking champion.\nHates the sun; unsuited to outdoor work.",
+          "en": "[Background & Record]\nSix-time national high school hacking champion.\nHates the sun; unsuited to outdoor work.",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k113; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -43886,7 +43886,7 @@
         {
           "id": "p0/k121",
           "source_text_sha256": "75bf8d70a5c2f3caac098bff75f4ad9231515fef403a0265d945ace2417ab1b6",
-          "en": "<Background & Record>\nStudied medicine in the US, then worked at a war-zone hospital.\nJoined us for revenge after a bombing wiped it out.",
+          "en": "[Background & Record]\nStudied medicine in the US, then worked at a war-zone hospital.\nJoined us for revenge after a bombing wiped it out.",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k121; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -43900,7 +43900,7 @@
         {
           "id": "p0/k129",
           "source_text_sha256": "cd3901bb6a9b3ebb14f32e0d045ded7da84ac82ba67c97c4e26e4b64981e9cef",
-          "en": "<Background & Record>\nEx-swimmer and international champion. After retiring,\nused his build to become a mercenary and learned to fight.",
+          "en": "[Background & Record]\nEx-swimmer and international champion. After retiring,\nused his build to become a mercenary and learned to fight.",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k129; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -43914,7 +43914,7 @@
         {
           "id": "p0/k137",
           "source_text_sha256": "e85fa4150941d3f13cea2b7a2cfe69da9e4085d805c543186f936a379b85b8bc",
-          "en": "<Background & Record>\nEx-boxer. Hot-headed; crippled an opponent in a rage\nand was banned from the ring. Also trained in MMA.",
+          "en": "[Background & Record]\nEx-boxer. Hot-headed; crippled an opponent in a rage\nand was banned from the ring. Also trained in MMA.",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k137; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -50833,7 +50833,7 @@
         {
           "id": "p0/k624",
           "source_text_sha256": "0e6e3d838597f40a05ca45a1dcdaab0cb01c86f41773c14ae4e082bcea96553d",
-          "en": "\"I'll help if you'll do 〇〇〇 for me.\" (smile)",
+          "en": "\"I'll help if you'll do a little something for me.\" (smile)",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k624; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -50854,7 +50854,7 @@
         {
           "id": "p0/k637",
           "source_text_sha256": "8f6db99d75e01cf471dee1dd1b29df088303919b35ac47275bfa90416553bc94",
-          "en": "\"I'll help if you'll do 〇〇〇 for me.\" (smile)",
+          "en": "\"I'll help if you'll do a little something for me.\" (smile)",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k637; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -50931,14 +50931,14 @@
         {
           "id": "p0/k663",
           "source_text_sha256": "0121fd49ac161a39b1d8c1ab966f32f7c1de6d4f20d37f0937b281174f755d23",
-          "en": "I'll help if you'll do 〇〇〇 for me.",
+          "en": "I'll help if you'll do a little something for me.",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k663; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k665",
           "source_text_sha256": "5bfaa553bfe71da29653694aefb080b2b55681996434e58477bbcb47dd3a7038",
-          "en": "I'll help if you'll do 〇〇〇 for me.",
+          "en": "I'll help if you'll do a little something for me.",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k665; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -55689,7 +55689,7 @@
         {
           "id": "p0/k107",
           "source_text_sha256": "22df03ab29a06a3b6d951c6984cabf0acf4cf03a65f06001676264a58fe64042",
-          "en": "＜Photo＞Car Crushed Beneath a Giant Foot",
+          "en": "[Photo] Car Crushed Beneath a Giant Foot",
           "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k107; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -55703,7 +55703,7 @@
         {
           "id": "p0/k111",
           "source_text_sha256": "b4c9462ede4e01205eac04eff77adee9489649103f726e4755de034e3008b2a4",
-          "en": "＜Photo＞Scars Left Across the City",
+          "en": "[Photo] Scars Left Across the City",
           "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k111; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -55717,7 +55717,7 @@
         {
           "id": "p0/k115",
           "source_text_sha256": "0adbc65a683460842a067f685c5c74763f24e310274fc52d0a913f8ac3584412",
-          "en": "＜Update＞Angel's Face Splits in Two",
+          "en": "[Update] Angel's Face Splits in Two",
           "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k115; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -55745,7 +55745,7 @@
         {
           "id": "p0/k123",
           "source_text_sha256": "4d01cd178be9d0730982f3c4442583de09440df2036c9f5fd7dc417eb744fb73",
-          "en": "＜Photo＞Giant Weapon Roars, Subdues Angel in Hand-to-Hand Combat",
+          "en": "[Photo] Giant Weapon Roars, Subdues Angel in Hand-to-Hand Combat",
           "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k123; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -57936,7 +57936,7 @@
         {
           "id": "p0/k73",
           "source_text_sha256": "c9600adf257efda7c232e60280e0649082dd07ef9af94c2b136e0c61c564605e",
-          "en": "＜Photo＞ Three Giant Humanoid Weapons Repel a Massive Angel",
+          "en": "[Photo] Three Giant Humanoid Weapons Repel a Massive Angel",
           "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k73; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },

@@ -455,7 +455,7 @@
         {
           "id": "p0/k113",
           "source_text_sha256": "757495b56c150739fbd67a757a7fdc0f0cf63dae1faa05985018d5d142d2776f",
-          "en": "＜Reporter's Eye＞ The Strange Events and the Lovers",
+          "en": "[Reporter's Eye] The Strange Events and the Lovers",
           "notes": "English draft imported from audited private workspace, translate-en-0010.json:p0/k113; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1174,7 +1174,7 @@
         {
           "id": "p0/k814",
           "source_text_sha256": "172273ba9e8fbad9ce22fc6d6d2632bb17850b4ba20500013a38128e13787869",
-          "en": "＜Ending Credits＞",
+          "en": "[Ending Credits]",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k814; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2359,14 +2359,14 @@
         {
           "id": "p0/k500",
           "source_text_sha256": "6b06305260edfdfb3dd5a98f1aecd036384621cdfed952c96b5690174e9e5010",
-          "en": "・Satoshi Bakuhatsu: Violation of the Explosives Control Penal Regulations\n・Toru Sakinomiya: Fraud, habitual gambling\n・Yuko Saeki: Murder",
+          "en": "• Satoshi Bakuhatsu: Violation of the Explosives Control Penal Regulations\n• Toru Sakinomiya: Fraud, habitual gambling\n• Yuko Saeki: Murder",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k500; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k502",
           "source_text_sha256": "9d52db48dce527bae6e80e9326647b711f02d27aa4db4d6fd4d9dabd74e03ca1",
-          "en": "A wanted poster.\n・Minoru Damasuyama: Forgery of a sealed private document, fraud",
+          "en": "A wanted poster.\n• Minoru Damasuyama: Forgery of a sealed private document, fraud",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k502; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5746,7 +5746,7 @@
         {
           "id": "p0/k178",
           "source_text_sha256": "3031bdfac9613ecaa22c7e5c3c07c6518f4dc780707c3d82e68b660e1d758a0a",
-          "en": "Around 9:00 p.m. today, Mr. Komori, who was viewing the night scenery on the observation floor of the Iberis Tower Building, noticed the sound of a helicopter.\nLooking around, he says he saw a blue Labor being carried to the roof. Could it be connected to the building fire?",
+          "en": "Around 9:00 p.m. today, Mr. Komori, who was viewing the night scenery on the observation deck of the Iberis Tower Building, noticed the sound of a helicopter.\nLooking around, he says he saw a blue Labor being carried to the roof. Could it be connected to the building fire?",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k178; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5774,7 +5774,7 @@
         {
           "id": "p0/k243",
           "source_text_sha256": "f3e3fb4198e57d4a5f89dd0d7d6abb12477178f0cec4e0e43f76abf73794f294",
-          "en": "We of the Hearty Appetite Squad heard rumors that the sandwiches sold at Café Iberis on the observation floor of the Iberis Tower Building are hugely popular and sell out quickly every day, so we went to investigate!\n\nThe No. 1 most popular is the \"Iberis Tower Sandwich\"! Sandwiched between bread as soft and chewy as marshmallow is... a deep-fried mochi!?\nThis mochi, eaten with tartar sauce made from fresh-picked vegetables and rich eggs, is no ordinary mochi!\nThis mochi (is it even mochi...?), kneaded with sticky rice, corn, red beans, and pumpkin, has gooey white sauce inside!\nThey say it's then breaded and deep-fried. Its carb content per serving is an astonishing three rice balls' worth! (122 grams!)\nWe lined up right after opening to buy one and took a bite at once, and it's delicious!\nIf you want one, you might find them sold out unless you arrive before opening. Café Iberis opens at 11:00, by the way.\nThe superb \"Ham and Egg Sandwich\" and \"Wagyu Steak Sandwich\" are also out of this world, so give them a try.",
+          "en": "We of the Hearty Appetite Squad heard rumors that the sandwiches sold at Café Iberis on the observation deck of the Iberis Tower Building are hugely popular and sell out quickly every day, so we went to investigate!\n\nThe No. 1 most popular is the \"Iberis Tower Sandwich\"! Sandwiched between bread as soft and chewy as marshmallow is... a deep-fried mochi!?\nThis mochi, eaten with tartar sauce made from fresh-picked vegetables and rich eggs, is no ordinary mochi!\nThis mochi (is it even mochi...?), kneaded with sticky rice, corn, red beans, and pumpkin, has gooey white sauce inside!\nThey say it's then breaded and deep-fried. Its carb content per serving is an astonishing three rice balls' worth! (122 grams!)\nWe lined up right after opening to buy one and took a bite at once, and it's delicious!\nIf you want one, you might find them sold out unless you arrive before opening. Café Iberis opens at 11:00, by the way.\nThe superb \"Ham and Egg Sandwich\" and \"Wagyu Steak Sandwich\" are also out of this world, so give them a try.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k243; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5907,7 +5907,7 @@
         {
           "id": "p0/k265",
           "source_text_sha256": "9a5453f805e78ffcc4af26284d54eec273d4594e3c43b3304657bb346222f43c",
-          "en": "The floor of the Iberis Tower Building's observation floor is popular for its lovely sparkle, but the other day, someone finally slipped and fell.\nSome visitors say, \"It's especially slippery on rainy days, so why not close it when it rains?\" while the owner of Café Iberis objects: \"If we can't open on rainy days, the business can't survive. Before that, just carpet the whole thing.\"\nWhat will the Iberis Tower Building do next?",
+          "en": "The floor of the Iberis Tower Building's observation deck is popular for its lovely sparkle, but the other day, someone finally slipped and fell.\nSome visitors say, \"It's especially slippery on rainy days, so why not close it when it rains?\" while the owner of Café Iberis objects: \"If we can't open on rainy days, the business can't survive. Before that, just carpet the whole thing.\"\nWhat will the Iberis Tower Building do next?",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k265; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5935,7 +5935,7 @@
         {
           "id": "p0/k269",
           "source_text_sha256": "27baa7eaff21a3e94c7f279b36ee2e7601f6a51dc8bb93cda7b512e2a1280e35",
-          "en": "Binoculars at night may let you see far away, but it's dark all around, so they aren't very practical.\nThe other day, however, there was an incident where nighttime binoculars played a starring role.\nAround 10:00 p.m. on the 24th of last month, during a robbery at a Clover convenience store in Sakura Ward, Miyato City, Miyato Prefecture, someone who happened to witness it through the binoculars at the Iberis Tower Building called it in, and the Miyato Prefectural Police rushed to the scene and the incident was resolved without harm.\nThat day, Ms. N-kawa (a 28-year-old woman) had broken up with the partner she'd dated for five years and, feeling reckless, went up to the observation floor of the Iberis Tower Building.\n\"I was looking through the binoculars thinking I'm worth about as much as binoculars at night, when I saw someone in a helmet holding a knife go into the convenience store. I called it in without thinking. And to think that got the case solved right away... Maybe I'm still worth something.\"\nThe heroic Ms. N-kawa is reportedly now looking for a partner.",
+          "en": "Binoculars at night may let you see far away, but it's dark all around, so they aren't very practical.\nThe other day, however, there was an incident where nighttime binoculars played a starring role.\nAround 10:00 p.m. on the 24th of last month, during a robbery at a Clover convenience store in Sakura Ward, Miyato City, Miyato Prefecture, someone who happened to witness it through the binoculars at the Iberis Tower Building called it in, and the Miyato Prefectural Police rushed to the scene and the incident was resolved without harm.\nThat day, Ms. N-kawa (a 28-year-old woman) had broken up with the partner she'd dated for five years and, feeling reckless, went up to the observation deck of the Iberis Tower Building.\n\"I was looking through the binoculars thinking I'm worth about as much as binoculars at night, when I saw someone in a helmet holding a knife go into the convenience store. I called it in without thinking. And to think that got the case solved right away... Maybe I'm still worth something.\"\nThe heroic Ms. N-kawa is reportedly now looking for a partner.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k269; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5963,7 +5963,7 @@
         {
           "id": "p0/k273",
           "source_text_sha256": "3874dcfcc8142bd0ab802bb591d162a0cc824039d0ac6caae6abc25d2c32f78f",
-          "en": "We'd like to introduce the night view from the observation floor of the Iberis Tower, one of the tallest skyscrapers in the country.\nThis observation floor is glass on all 360 degrees, letting you look down on the night view of Sakura Ward from every angle.\nHigh-performance binoculars are installed facing every direction, so you can gaze at distant sights and never get bored.\nThe floor's interior is refined, too, and you and your date are sure to be captivated by this gently glittering space.\nBe sure to pay a visit on your next day off.",
+          "en": "We'd like to introduce the night view from the observation deck of the Iberis Tower, one of the tallest skyscrapers in the country.\nThis observation deck is glass on all 360 degrees, letting you look down on the night view of Sakura Ward from every angle.\nHigh-performance binoculars are installed facing every direction, so you can gaze at distant sights and never get bored.\nThe floor's interior is refined, too, and you and your date are sure to be captivated by this gently glittering space.\nBe sure to pay a visit on your next day off.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k273; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5991,7 +5991,7 @@
         {
           "id": "p0/k277",
           "source_text_sha256": "9e9e3d6f758884a2545415ea4588a402803b0f5a43adf6cbfb1e1d3316bf2002",
-          "en": "So, this week, Q-chan went looking for something worth writing about, and headed to the observation floor of the Iberis Tower Building.\nCrowded with young people on their way home from work and couples on dates, it seemed like the perfect place to hear some interesting stories!\nOr so I thought as I happily showed up, but after that the tower caught fire... and the whole staff ran for it. But before that, I made sure to talk to someone interesting!\nBehind the stairs on the observation floor, I spotted a man crouching and sneakily talking on the phone! He was suspicious to the max, but so suspicious that no one went near him. So, we'll interview him ourselves.\n\nReporter Q: \"Um... sorry to bother you.\"\nMan: \"Wh... what is it? Sorry, I'm on the phone right now...\"\nReporter Q: \"I'm Q, and I post articles on a news site.\"\nMan: \"No, I'm on the phone. Give me a break.\"\nReporter Q: \"Sneakily talking on the phone behind the stairs seemed suspi... I mean, interesting. Please, tell me more.\"\nMan: \"Hey, this is way too pushy. Who the hell are you?\"\nReporter Q: \"Is it a work call?\"\nMan: \"That's right. We have an important operation coming up.\"\nReporter Q: \"I see, so it's confidential.\"\nMan: \"Huh? Oh, yes, that's right, it's confidential. Sorry, but please go somewhere else.\"\nReporter Q: \"Oh, I see. Excuse me. By the way, I think 'a man who keeps talking on the phone behind the stairs' is interesting. Can I write an article about it?\"\nMan: \"A-An article?!\"\nReporter Q: \"Yes. I didn't hear anything about your work in the first place, and I'll keep it all under wraps. Let me take a quick photo! Say cheese!\"\n\n...And so, the man stayed suspicious to the MAX right to the end, and I couldn't get any details, but it sure is suggestive. I smell something shady. I'm curious. See you tomorrow! (Written by weekly blog Charge-In Q-chan)",
+          "en": "So, this week, Q-chan went looking for something worth writing about, and headed to the observation deck of the Iberis Tower Building.\nCrowded with young people on their way home from work and couples on dates, it seemed like the perfect place to hear some interesting stories!\nOr so I thought as I happily showed up, but after that the tower caught fire... and the whole staff ran for it. But before that, I made sure to talk to someone interesting!\nBehind the stairs on the observation deck, I spotted a man crouching and sneakily talking on the phone! He was suspicious to the max, but so suspicious that no one went near him. So, we'll interview him ourselves.\n\nReporter Q: \"Um... sorry to bother you.\"\nMan: \"Wh... what is it? Sorry, I'm on the phone right now...\"\nReporter Q: \"I'm Q, and I post articles on a news site.\"\nMan: \"No, I'm on the phone. Give me a break.\"\nReporter Q: \"Sneakily talking on the phone behind the stairs seemed suspi... I mean, interesting. Please, tell me more.\"\nMan: \"Hey, this is way too pushy. Who the hell are you?\"\nReporter Q: \"Is it a work call?\"\nMan: \"That's right. We have an important operation coming up.\"\nReporter Q: \"I see, so it's confidential.\"\nMan: \"Huh? Oh, yes, that's right, it's confidential. Sorry, but please go somewhere else.\"\nReporter Q: \"Oh, I see. Excuse me. By the way, I think 'a man who keeps talking on the phone behind the stairs' is interesting. Can I write an article about it?\"\nMan: \"A-An article?!\"\nReporter Q: \"Yes. I didn't hear anything about your work in the first place, and I'll keep it all under wraps. Let me take a quick photo! Say cheese!\"\n\n...And so, the man stayed suspicious to the MAX right to the end, and I couldn't get any details, but it sure is suggestive. I smell something shady. I'm curious. See you tomorrow! (Written by weekly blog Charge-In Q-chan)",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k277; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -6406,7 +6406,7 @@
         {
           "id": "p0/k47",
           "source_text_sha256": "3d31d0f76d8a7b85d94dc0c57f4aa23ca2dc945f1609534dd8e21a8cc57e7ca6",
-          "en": "Opinion is divided even on the popular game info site \"Game Seaside Loop Line\"! An unconventional survival action-adventure!\n\n＜Story＞\nRookie newspaper reporter Masashi Shindo has arrived in his new posting, Safe City!\nOn his way by train to the newspaper office where he works, he arrived safely without incident!\nHe was introduced to his kind senior colleagues and reached the end of the workday with nothing particularly notable happening!\nOn the way back to the company dorm, he stopped into an izakaya and enjoyed some delicious local fish!\nBack at the dorm, he took a bath to relieve his fatigue and slept soundly!",
+          "en": "Opinion is divided even on the popular game info site \"Game Seaside Loop Line\"! An unconventional survival action-adventure!\n\n[Story]\nRookie newspaper reporter Masashi Shindo has arrived in his new posting, Safe City!\nOn his way by train to the newspaper office where he works, he arrived safely without incident!\nHe was introduced to his kind senior colleagues and reached the end of the workday with nothing particularly notable happening!\nOn the way back to the company dorm, he stopped into an izakaya and enjoyed some delicious local fish!\nBack at the dorm, he took a bath to relieve his fatigue and slept soundly!",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k47; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7542,7 +7542,7 @@
         {
           "id": "p0/k152",
           "source_text_sha256": "f5b11fe6d6df967d356b2b005678827957eff6cfd49e53b3f5441fe731f96a78",
-          "en": "Our reporting has revealed that Kanae Shimizu (20) (pseudonym), who was thrown into the sea in the collapse of the Sky Garden Bridge but rescued, did something astonishing when she came to.\nShe passed out when she was thrown into the sea and was pulled out onto the nearby shore. Her parents were able to rush over just then and rejoiced that their only beloved daughter had survived. Wrapped in a blanket, she woke up in her parents' arms and looked back and forth between their faces for a while. Her memory seemed to have gone blank from around when she fell off the bridge, and when her parents explained what had happened, she nodded again and again as if remembering. Just when it seemed \"all's well that ends well,\" she began searching her pockets and surroundings for her cell phone, ignoring her dumbfounded parents and the rescue workers around her. \"My phone, my phone's gone.\" Her parents tried to calm her as she searched desperately, saying, \"You can just buy another one,\" but for some reason she was fixated on the phone she'd had, and finally even started trying to dive into the sea herself.\nThanks to the quick action of the rescue workers, they managed to stop her from jumping in, but she is reportedly still fixated on that phone at the hospital she was taken to. Even her parents don't know why.　This writer is now intensely curious and hopes to bring you a follow-up at a later date.",
+          "en": "Our reporting has revealed that Kanae Shimizu (20) (pseudonym), who was thrown into the sea in the collapse of the Sky Garden Bridge but rescued, did something astonishing when she came to.\nShe passed out when she was thrown into the sea and was pulled out onto the nearby shore. Her parents were able to rush over just then and rejoiced that their only beloved daughter had survived. Wrapped in a blanket, she woke up in her parents' arms and looked back and forth between their faces for a while. Her memory seemed to have gone blank from around when she fell off the bridge, and when her parents explained what had happened, she nodded again and again as if remembering. Just when it seemed \"all's well that ends well,\" she began searching her pockets and surroundings for her cell phone, ignoring her dumbfounded parents and the rescue workers around her. \"My phone, my phone's gone.\" Her parents tried to calm her as she searched desperately, saying, \"You can just buy another one,\" but for some reason she was fixated on the phone she'd had, and finally even started trying to dive into the sea herself.\nThanks to the quick action of the rescue workers, they managed to stop her from jumping in, but she is reportedly still fixated on that phone at the hospital she was taken to. Even her parents don't know why. This writer is now intensely curious and hopes to bring you a follow-up at a later date.",
           "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k152; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7584,7 +7584,7 @@
         {
           "id": "p0/k188",
           "source_text_sha256": "1c682250ca919eafa83733701098a29969a9e3726faa7ce40e34ec05e3072ad9",
-          "en": "A woman cowering and trembling as giant flying creatures flew around overhead.\nWhen I spoke to her, she repeated like a mantra, \"I just want to go home.\"\nIt's a common sight, how people act when faced with terror they can do nothing about, in a place with no escape.\nFortunately, she survived the bridge collapse, though she suffered injuries including fractures.\nThe sight of her crying in her parents' arms in her hospital room warmed this writer's heart too.　(Written by Sudo)",
+          "en": "A woman cowering and trembling as giant flying creatures flew around overhead.\nWhen I spoke to her, she repeated like a mantra, \"I just want to go home.\"\nIt's a common sight, how people act when faced with terror they can do nothing about, in a place with no escape.\nFortunately, she survived the bridge collapse, though she suffered injuries including fractures.\nThe sight of her crying in her parents' arms in her hospital room warmed this writer's heart too. (Written by Sudo)",
           "notes": "English draft imported from audited private workspace, translate-en-0168.json:p0/k188; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7681,14 +7681,14 @@
         {
           "id": "r4/c5",
           "source_text_sha256": "d01878e3930fd0bd4425700a0ddf1c43fbf493b5522180733f30cc5f01f054fe",
-          "en": "~Company Information~\\n\\nThe W&P in our company name\\nstands for \"Weapon　&　Peace,\"\\nrepresenting our resolve to solve the problems of weapons and peace.\\n\\nEmployees　45\\nCapital　　4.3 billion yen\\nCEO　Reiko Kamio",
+          "en": "~Company Information~\\n\\nThe W&P in our company name\\nstands for \"Weapon & Peace,\"\\nrepresenting our resolve to solve the problems of weapons and peace.\\n\\nEmployees: 45\\nCapital: 4.3 billion yen\\nCEO: Reiko Kamio",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r4/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r5/c3",
           "source_text_sha256": "6614cbdc3559d8beeca79f760c1d807ceef114237cc072534adece18610b69f6",
-          "en": "　　　　　　　　　　　　Check\\nPlace of payment　　Sakura Ward, Miyato City, Miyato Prefecture\\nMiyato Bank　Yotsuba Branch\\nAmount　80,000,000 yen\\nPay the above amount to the bearer in exchange for this check.\\n\\nNo protest required\\nDate of issue　20XX　XX　XX\\nPlace of issue　Miyato Prefecture\\n\\nDrawer\\nW&P Consulting Co., Ltd.\\nCEO　Reiko Kamio",
+          "en": "　　　　　　　　　　　　Check\\nPlace of payment: Sakura Ward, Miyato City, Miyato Prefecture\\nMiyato Bank, Yotsuba Branch\\nAmount: 80,000,000 yen\\nPay the above amount to the bearer in exchange for this check.\\n\\nNo protest required\\nDate of issue: XX/XX/20XX\\nPlace of issue: Miyato Prefecture\\n\\nDrawer\\nW&P Consulting Co., Ltd.\\nCEO: Reiko Kamio",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r5/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7765,14 +7765,14 @@
         {
           "id": "r11/c4",
           "source_text_sha256": "3a0581a896865384aba0030a27c86b5598bb78c272575c7d0fdff45fc523baa7",
-          "en": "＜Story＞\\nRookie newspaper reporter Masashi Shindo has arrived in his new posting, Safe City!\\nOn his way by train to the newspaper office where he works, he arrived safely without incident!\\nHe was introduced to his kind senior colleagues and reached the end of the workday with nothing particularly notable happening!\\nOn the way back to the company dorm, he stopped into an izakaya and enjoyed some delicious local fish!\\nBack at the dorm, he took a bath to relieve his fatigue and slept soundly!",
+          "en": "[Story]\\nRookie newspaper reporter Masashi Shindo has arrived in his new posting, Safe City!\\nOn his way by train to the newspaper office where he works, he arrived safely without incident!\\nHe was introduced to his kind senior colleagues and reached the end of the workday with nothing particularly notable happening!\\nOn the way back to the company dorm, he stopped into an izakaya and enjoyed some delicious local fish!\\nBack at the dorm, he took a bath to relieve his fatigue and slept soundly!",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r11/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r13/c3",
           "source_text_sha256": "c11db41afaa03333e3e8ab1817aa5689feb79448712291757e25bd4afd291148",
-          "en": "Aya Suzumura　Midnight Live Invitation\\n@Midnight Sky Garden\\n\\n・Date/Time: 20XX　XX　XX　2:00 a.m.\\n・Venue: 1-8 Sumire Ward, Miyato City\\n　　　　　Radio Sky Garden 8F Live Room\\n・Organizer: Radio Sky Garden\\n・Sponsor: Granzella Music http://granzellamusic.jp/",
+          "en": "Aya Suzumura Midnight Live Invitation\\n@Midnight Sky Garden\\n\\n• Date/Time: XX/XX/20XX, 2:00 a.m.\\n• Venue: 1-8 Sumire Ward, Miyato City\\n　　　　　Radio Sky Garden 8F Live Room\\n• Organizer: Radio Sky Garden\\n• Sponsor: Granzella Music http://granzellamusic.jp/",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r13/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7786,7 +7786,7 @@
         {
           "id": "r14/c4",
           "source_text_sha256": "2ecaed6e40790350430e69bc678f763ec3b48005321dc27ee02e231ddfa7fecf",
-          "en": "＜The Story So Far＞\\nHikosawa, ace of the Nanahata High School water polo club, is reunited with Ushida, his close friend from middle school. But Ushida\\nhas become the leader of the delinquent gang \"Altair,\" leaving Hikosawa, with the prefectural tournament ahead, a little bewildered.\\n\\nOn the night of a summer festival they go to together, members of Altair are beaten up by a certain boy\\nand come crying to Ushida. Ushida challenges the boy to avenge them, but is easily defeated.\\nThat boy was Oribe, leader of the delinquent gang \"Vega.\"\\n\\nFrom the moment he first saw Oribe, Hikosawa was gripped by an indescribable feeling...",
+          "en": "[The Story So Far]\\nHikosawa, ace of the Nanahata High School water polo club, is reunited with Ushida, his close friend from middle school. But Ushida\\nhas become the leader of the delinquent gang \"Altair,\" leaving Hikosawa, with the prefectural tournament ahead, a little bewildered.\\n\\nOn the night of a summer festival they go to together, members of Altair are beaten up by a certain boy\\nand come crying to Ushida. Ushida challenges the boy to avenge them, but is easily defeated.\\nThat boy was Oribe, leader of the delinquent gang \"Vega.\"\\n\\nFrom the moment he first saw Oribe, Hikosawa was gripped by an indescribable feeling...",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r14/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7800,28 +7800,28 @@
         {
           "id": "r23/c3",
           "source_text_sha256": "a6f7ed0b7514662813542604c7252c790e4f8359e948efe171d325f256a78c79",
-          "en": "Employee ID\\nNo.140520\\nMasato Shibasaki\\nIssued 20XX　XX　XX\\n\\nMiyato Sky Tower Co., Ltd.",
+          "en": "Employee ID\\nNo.140520\\nMasato Shibasaki\\nIssued XX/XX/20XX\\n\\nMiyato Sky Tower Co., Ltd.",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r23/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r26/c3",
           "source_text_sha256": "f8741cb58b4b679a3518943277414d45be059156cfb0e1e1941015eaa2685dc2",
-          "en": "Giant Shadow Weekly　Issue 1517\\n\\n　　　　　~ Contents ~\\n1. Purple Flashes Across the Sky!\\n2. The Much-Talked-About Iberis Tower Building: Popular Gourmet Spots\\n3. Interview: Journalist Risa Kashiwagi\\n4. The Suspicious Ties Between Defense Officials and a Certain Organization\\n",
+          "en": "Giant Shadow Weekly, Issue 1517\\n\\n　　　　　~ Contents ~\\n1. Purple Flashes Across the Sky!\\n2. The Much-Talked-About Iberis Tower Building: Popular Gourmet Spots\\n3. Interview: Journalist Risa Kashiwagi\\n4. The Suspicious Ties Between Defense Officials and a Certain Organization\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r26/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r26/c4",
           "source_text_sha256": "6d989853e2bf1780b20edb8fb577b5c08e01646a66fa3b144ac79102f579e03b",
-          "en": "＜1. Purple Flashes Across the Sky!＞\\nMany of you have probably seen purple flashes in the sky over the past few days.\\nThese flashes have been sighted worldwide, mainly in the Northern Hemisphere, and astronomers and\\nspace and weather research institutions in many countries are investigating, but their true nature has yet to be revealed.\\nOur editorial team interviewed Deputy Director Sasaki of the National Cosmic Ray Research Institute about the flashes.\\n(The National Cosmic Ray Research Institute is an organization that studies the various high-energy radiation\\ntraveling through space.)\\n\\nReporter: What are those purple flashes?\\nDeputy Director: We don't know yet. They may be a type of weather phenomenon, but they have little in common\\n　　　　with the various weather phenomena observed so far, so the institute is skeptical of that theory.\\n　　　　Perhaps they are some other unknown luminous phenomenon. (Continued on next page)",
+          "en": "[1. Purple Flashes Across the Sky!]\\nMany of you have probably seen purple flashes in the sky over the past few days.\\nThese flashes have been sighted worldwide, mainly in the Northern Hemisphere, and astronomers and\\nspace and weather research institutions in many countries are investigating, but their true nature has yet to be revealed.\\nOur editorial team interviewed Deputy Director Sasaki of the National Cosmic Ray Research Institute about the flashes.\\n(The National Cosmic Ray Research Institute is an organization that studies the various high-energy radiation\\ntraveling through space.)\\n\\nReporter: What are those purple flashes?\\nDeputy Director: We don't know yet. They may be a type of weather phenomenon, but they have little in common\\n　　　　with the various weather phenomena observed so far, so the institute is skeptical of that theory.\\n　　　　Perhaps they are some other unknown luminous phenomenon. (Continued on next page)",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r26/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r26/c5",
           "source_text_sha256": "21dea396ec26fa7f0db2a161ec828c20f9dab10be9e696ed50c94e94f706e25e",
-          "en": "＜1. Purple Flashes Across the Sky!＞\\n(Continued from previous page)\\nReporter: What effects do the flashes have on the human body?\\nDeputy Director: So far, there have been no reports of anyone suffering physical or mental problems from exposure to the purple light.\\n　　　　Radiation levels are also no different from normal. However, because they suddenly flash purple,\\n　　　　there do seem to have been cases of people being startled or distracted and having accidents.\\n\\nReporter: How will you respond to the flashes going forward?\\nDeputy Director: The institute will continue investigating the flashes.\\n　　　　We hope to move the investigation forward as quickly as possible.\\n\\nThe true nature of the purple flashes is unknown, but for now it seems that worrying about them too much and getting distracted\\nis the greater danger. New information is eagerly awaited.\\n",
+          "en": "[1. Purple Flashes Across the Sky!]\\n(Continued from previous page)\\nReporter: What effects do the flashes have on the human body?\\nDeputy Director: So far, there have been no reports of anyone suffering physical or mental problems from exposure to the purple light.\\n　　　　Radiation levels are also no different from normal. However, because they suddenly flash purple,\\n　　　　there do seem to have been cases of people being startled or distracted and having accidents.\\n\\nReporter: How will you respond to the flashes going forward?\\nDeputy Director: The institute will continue investigating the flashes.\\n　　　　We hope to move the investigation forward as quickly as possible.\\n\\nThe true nature of the purple flashes is unknown, but for now it seems that worrying about them too much and getting distracted\\nis the greater danger. New information is eagerly awaited.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r26/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7835,14 +7835,14 @@
         {
           "id": "r26/c7",
           "source_text_sha256": "22ae160a887161fd635e06125cc712ead39b470536f6e9ad956f57ee9b429b07",
-          "en": "＜3. Interview: \"My Diary\"＞　Risa Kashiwagi (Journalist)\\nIn this edition of \"My Diary,\" we talk with journalist Risa Kashiwagi.\\n\\nReporter: You're known for your striking reportage on young people's behavioral psychology and how they\\n　　　　express themselves in their social lives, and you're active across many media.\\n　　　　You're also good at sports, speak seven languages, and are said to cook at a professional level.\\n　　　　How does someone as talented as you come to be?\\n　　　　First, may I ask what led you to become a journalist?\\nRisa Kashiwagi (Kashiwagi): In high school, because of my parents' work, I had the chance to live abroad.\\n　　　　That's when I learned that there were worlds with completely different languages and customs.\\n　　　　After that, I became interested in the culture and customs of my own country too.\\n　　　　I think that led to my current work. (Continued on next page)\\n",
+          "en": "[3. Interview: \"My Diary\"] Risa Kashiwagi (Journalist)\\nIn this edition of \"My Diary,\" we talk with journalist Risa Kashiwagi.\\n\\nReporter: You're known for your striking reportage on young people's behavioral psychology and how they\\n　　　　express themselves in their social lives, and you're active across many media.\\n　　　　You're also good at sports, speak seven languages, and are said to cook at a professional level.\\n　　　　How does someone as talented as you come to be?\\n　　　　First, may I ask what led you to become a journalist?\\nRisa Kashiwagi (Kashiwagi): In high school, because of my parents' work, I had the chance to live abroad.\\n　　　　That's when I learned that there were worlds with completely different languages and customs.\\n　　　　After that, I became interested in the culture and customs of my own country too.\\n　　　　I think that led to my current work. (Continued on next page)\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r26/c7; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r26/c8",
           "source_text_sha256": "ca864cfe7136232ed51c163aca1202c6819cb0c72bac2990265dfe6f9c43e2b0",
-          "en": "＜3. Interview: \"My Diary\"＞　Risa Kashiwagi (Journalist)\\n(Continued from previous page)\\nReporter: You started working as a journalist right after entering university, didn't you?\\nKashiwagi: Back then, it had already become normal for ordinary people to put out information online.\\n　　　　But I think I was lucky that so many people recognized my work.\\nReporter: What activities do you have planned going forward?\\nKashiwagi: I've been doing a lot of reporting in Japan lately, but I want to somehow make time\\n　　　　to go report abroad. Also, I'd like to go swimming this summer.\\n　　　　Oh, and also\\nReporter: What is it?\\nKashiwagi: My cooking isn't professional level. It's just average (laughs).\\nReporter: Pardon us (laughs). Thank you for your time today.\\n",
+          "en": "[3. Interview: \"My Diary\"] Risa Kashiwagi (Journalist)\\n(Continued from previous page)\\nReporter: You started working as a journalist right after entering university, didn't you?\\nKashiwagi: Back then, it had already become normal for ordinary people to put out information online.\\n　　　　But I think I was lucky that so many people recognized my work.\\nReporter: What activities do you have planned going forward?\\nKashiwagi: I've been doing a lot of reporting in Japan lately, but I want to somehow make time\\n　　　　to go report abroad. Also, I'd like to go swimming this summer.\\n　　　　Oh, and also\\nReporter: What is it?\\nKashiwagi: My cooking isn't professional level. It's just average (laughs).\\nReporter: Pardon us (laughs). Thank you for your time today.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r26/c8; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7856,7 +7856,7 @@
         {
           "id": "r27/c3",
           "source_text_sha256": "b2aa52119f80c80f157266cc561f1faf10af51acacc57426ce64eae4533ae3ec",
-          "en": "Women's fashion magazine \"Self-Conscious\" latest issue\\n\\nA Touch of Pretty: Active Outfits!\\n\\n・A rich lineup\\n・Ready for all kinds of situations\\n・Go out in something a little different from usual!\\n",
+          "en": "Women's fashion magazine \"Self-Conscious\" latest issue\\n\\nA Touch of Pretty: Active Outfits!\\n\\n• A rich lineup\\n• Ready for all kinds of situations\\n• Go out in something a little different from usual!\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r27/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7884,7 +7884,7 @@
         {
           "id": "r28/c3",
           "source_text_sha256": "3fc0529825051adad81d19e458fe539248c781f22c5f10b7cd45fb33cd349f24",
-          "en": "Men's fashion magazine \"Narcist\" latest issue\\n\\nSpring Survival Costume Special!\\n\\n・Outfits that stay attractive even when torn\\n・Spring rain is no problem\\n・More color variations, faster delivery\\n\\n",
+          "en": "Men's fashion magazine \"Narcist\" latest issue\\n\\nSpring Survival Costume Special!\\n\\n• Outfits that stay attractive even when torn\\n• Spring rain is no problem\\n• More color variations, faster delivery\\n\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r28/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -7912,28 +7912,28 @@
         {
           "id": "r29/c3",
           "source_text_sha256": "490ba876016d8292cba3cd03cb2373f29a0ecc6626409e128bcfb5b485390902",
-          "en": "Emergency Edition! Miyato Sports, Page 1\\n\\n＜Cities Destroyed: Giant Shadows Appear!＞\\nShortly after 6:00 p.m. today, two giant aliens appeared at the Sakuramachi intersection in Sakura Ward, Miyato City.\\nBoth giant aliens are massive, about 40 m tall, and fired heat rays and fought hand to hand,\\ndestroying nearby buildings and cars.\\nWhen the strange events began, many office workers and students on their way home were passing through the area,\\nand people fled in panic from the sudden event, creating a scene of utter pandemonium.\\n\\nBesides Sakura Ward, giant creatures have appeared in various parts of Miyato City, and a swift government response is awaited.",
+          "en": "Emergency Edition! Miyato Sports, Page 1\\n\\n[Cities Destroyed: Giant Shadows Appear!]\\nShortly after 6:00 p.m. today, two giant aliens appeared at the Sakuramachi intersection in Sakura Ward, Miyato City.\\nBoth giant aliens are massive, about 40 m tall, and fired heat rays and fought hand to hand,\\ndestroying nearby buildings and cars.\\nWhen the strange events began, many office workers and students on their way home were passing through the area,\\nand people fled in panic from the sudden event, creating a scene of utter pandemonium.\\n\\nBesides Sakura Ward, giant creatures have appeared in various parts of Miyato City, and a swift government response is awaited.",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r29/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r29/c4",
           "source_text_sha256": "3532b1b7edc193e593751f170f6aed850f50259821b2855ea09bba1fb12fb72d",
-          "en": "Miyato Sports, Page 2\\n\\n＜Soccer＞\\nFC Saigawa　1-0　FC Utatsuyama\\n10 minutes in, a purple flash lit up the sky, and while the players were distracted,\\nTsumura of FC Saigawa stole the ball and scored first. After that, FC Utatsuyama failed to capitalize on several\\nchances, and FC Saigawa held on to win.　",
+          "en": "Miyato Sports, Page 2\\n\\n[Soccer]\\nFC Saigawa　1-0　FC Utatsuyama\\n10 minutes in, a purple flash lit up the sky, and while the players were distracted,\\nTsumura of FC Saigawa stole the ball and scored first. After that, FC Utatsuyama failed to capitalize on several\\nchances, and FC Saigawa held on to win.",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r29/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r29/c5",
           "source_text_sha256": "34ee96bce5ca28173bb25976a3b6532825acd3e33b1a42be3c0acf4f8af129fb",
-          "en": "Miyato Sports, Page 3\\n\\n＜Coming Soon to Theaters＞\\n\"Unchained Silence\"\\nThe sequel to the spy action film about Gerald, an agent of a supranational spy organization.\\nThe highlight is the silent action of Gerald taking down enemies barehanded without a sound, and the scenes\\nwhere he takes down 50 enemy soldiers early on, 100 in the middle, and 200 at the climax\\nare breathtaking.\\nIt also includes the scenes of Gerald traveling on local trains and enjoying izakaya food, which were popular\\nin the previous film \"Powered Silence,\" making it a work that makes you think,\\n\"Movies are fun!\" (Yuko: film writer)\\n",
+          "en": "Miyato Sports, Page 3\\n\\n[Coming Soon to Theaters]\\n\"Unchained Silence\"\\nThe sequel to the spy action film about Gerald, an agent of a supranational spy organization.\\nThe highlight is the silent action of Gerald taking down enemies barehanded without a sound, and the scenes\\nwhere he takes down 50 enemy soldiers early on, 100 in the middle, and 200 at the climax\\nare breathtaking.\\nIt also includes the scenes of Gerald traveling on local trains and enjoying izakaya food, which were popular\\nin the previous film \"Powered Silence,\" making it a work that makes you think,\\n\"Movies are fun!\" (Yuko: film writer)\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r29/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r29/c6",
           "source_text_sha256": "de75d0453c676580d430f1505fa685cdcece38af0e8015167aa5b86f0b753356",
-          "en": "Miyato Sports, Page 4\\n\\n＜Gourmet＞\\n　Teppan Aokiba, Sakura Ward, Miyato City\\nWhen it comes to Miyato City's food, it's \"Miyato okonomiyaki.\"\\n\"Teppan Aokiba\" in Sakura Ward is famous as the birthplace of Miyato okonomiyaki.\\nMiyato okonomiyaki was originally devised for fishermen returning to port in the morning,\\nand is characterized by strong seasoning, a thick batter, and hearty fillings.\\nThe most popular dish at this restaurant is the \"Soft-Boiled Egg, Double Braised Pork & Extra Green Onion,\" said to be\\npopular mainly with students. The sweet-and-spicy sauce, chewy batter, and rich fillings\\nall come together, so you'll keep reaching for rice and beer! (Sugai)\\n",
+          "en": "Miyato Sports, Page 4\\n\\n[Gourmet]\\n　Teppan Aokiba, Sakura Ward, Miyato City\\nWhen it comes to Miyato City's food, it's \"Miyato okonomiyaki.\"\\n\"Teppan Aokiba\" in Sakura Ward is famous as the birthplace of Miyato okonomiyaki.\\nMiyato okonomiyaki was originally devised for fishermen returning to port in the morning,\\nand is characterized by strong seasoning, a thick batter, and hearty fillings.\\nThe most popular dish at this restaurant is the \"Soft-Boiled Egg, Double Braised Pork & Extra Green Onion,\" said to be\\npopular mainly with students. The sweet-and-spicy sauce, chewy batter, and rich fillings\\nall come together, so you'll keep reaching for rice and beer! (Sugai)\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r29/c6; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -8388,7 +8388,7 @@
         {
           "id": "r46/c9",
           "source_text_sha256": "1f4ddc1050c0635dad6755520702e9de25a91a048e8f59ad6c0cfe9141c00887",
-          "en": "With what little consciousness remained, Keen felt himself lifted up, pot and all,\\nand heard a gulping sound of something being swallowed.\\n\\nA voice echoed in the head of the unconscious Keen.\\n\"Honerarino　Funarama\"\\n\\nAlong with that voice, he heard the music from before once again.",
+          "en": "With what little consciousness remained, Keen felt himself lifted up, pot and all,\\nand heard a gulping sound of something being swallowed.\\n\\nA voice echoed in the head of the unconscious Keen.\\n\"Honerarino Funarama\"\\n\\nAlong with that voice, he heard the music from before once again.",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r46/c9; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -8668,7 +8668,7 @@
         {
           "id": "r51/c10",
           "source_text_sha256": "215b866e3f3170d45a99f750d198e7a048871905050d797e5c1b4c307e616b72",
-          "en": "Yes, he is a sword.\\nA holy sword, said to have been forged in this land long ago. He doesn't know what his nine brothers are doing now, but he has returned to his homeland like this. With the power that the smith of the people of the water instilled in him, he traveled sometimes in human form, and sometimes as a sword.\\nIt took a very long time to find his homeland, which had become a legendary land, but he returned safely.\\nAnd now, inside this shack, he is about to fall into a long sleep as a sword.\\nHe himself could decide here the incantation that the next one to wake him would have to recite,\\nand finding a good idea among the memories he had recalled last night, Keen grinned.\\n\\n\"Honerarino　Funarama\"\\n\\nAs a hard, metallic voice rang out, dazzling light covered the entire area.\\nWhen the light faded, all that remained were a single crumpled sheet of paper and one battered sword.\\n\"The Tale of the Last Sword, Final Volume: The Silence Chapter\" - The End",
+          "en": "Yes, he is a sword.\\nA holy sword, said to have been forged in this land long ago. He doesn't know what his nine brothers are doing now, but he has returned to his homeland like this. With the power that the smith of the people of the water instilled in him, he traveled sometimes in human form, and sometimes as a sword.\\nIt took a very long time to find his homeland, which had become a legendary land, but he returned safely.\\nAnd now, inside this shack, he is about to fall into a long sleep as a sword.\\nHe himself could decide here the incantation that the next one to wake him would have to recite,\\nand finding a good idea among the memories he had recalled last night, Keen grinned.\\n\\n\"Honerarino Funarama\"\\n\\nAs a hard, metallic voice rang out, dazzling light covered the entire area.\\nWhen the light faded, all that remained were a single crumpled sheet of paper and one battered sword.\\n\"The Tale of the Last Sword, Final Volume: The Silence Chapter\" - The End",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r51/c10; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -8787,7 +8787,7 @@
         {
           "id": "r65/c3",
           "source_text_sha256": "5d6e5a502ab9acad027df35b5292bbf6687b0f5a5ef0f5e95566a5e3d2d30654",
-          "en": "　　　　　　　　　　　　Check\\nPlace of payment　　Sakura Ward, Miyato City, Miyato Prefecture\\nMiyato Bank　Sakura Branch\\nAmount　5,000,000 yen\\nPay the above amount to the bearer in exchange for this check.\\n\\nNo protest required\\nDate of issue　20XX　XX　XX\\nPlace of issue　Miyato Prefecture\\n\\nDrawer\\nKunshiran Construction Co., Ltd.\\nCEO　Jiro Busujima",
+          "en": "　　　　　　　　　　　　Check\\nPlace of payment: Sakura Ward, Miyato City, Miyato Prefecture\\nMiyato Bank, Sakura Branch\\nAmount: 5,000,000 yen\\nPay the above amount to the bearer in exchange for this check.\\n\\nNo protest required\\nDate of issue: XX/XX/20XX\\nPlace of issue: Miyato Prefecture\\n\\nDrawer\\nKunshiran Construction Co., Ltd.\\nCEO: Jiro Busujima",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r65/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }

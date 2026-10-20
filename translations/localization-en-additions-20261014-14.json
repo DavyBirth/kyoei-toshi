@@ -162,7 +162,7 @@
         {
           "id": "p0/k195",
           "source_text_sha256": "7b2d194c1fa970650aa8c2974301dcf307c2a65df2b5369c2b34d3123f2884f1",
-          "en": "Sounds like another big one showed up since. You okay?\nYou're probably on your way to Mizuna City, but I need a favor.\nThere's a place called Hananira Town near Mizuna City.\nAn old friend of mine, an editor-in-chief, is there.\nShe hurt her leg and can't get out.\nCould you swing by and help her?\nShe should be in Editorial Dept. 2 of the Ebine Publishing building.\nI'm counting on you.",
+          "en": "Sounds like another big one showed up since. You okay?\nYou're probably on your way to Mizuna City, but I need a favor.\nThere's a place called Hananira-cho near Mizuna City.\nAn old friend of mine, an editor-in-chief, is there.\nShe hurt her leg and can't get out.\nCould you swing by and help her?\nShe should be in Editorial Dept. 2 of the Ebine Publishing building.\nI'm counting on you.",
           "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k195; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -251,7 +251,7 @@
         {
           "id": "p0/k630",
           "source_text_sha256": "02a52d22028dd81733e66cccacfbda25270848df7352401abb742fe64229357e",
-          "en": "There's a place called Hananira Town near Mizuna City.\nAn old friend of mine, an editor-in-chief, is there.",
+          "en": "There's a place called Hananira-cho near Mizuna City.\nAn old friend of mine, an editor-in-chief, is there.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k630; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -265,7 +265,7 @@
         {
           "id": "p0/k671",
           "source_text_sha256": "711c1e427f75187c85e8614826cdbd88defafa5f5c464364c48eafca81895b40",
-          "en": "《So we don't need to go to Mizuna City anymore, but\nwe happen to be in Hananira Town, so we'll go help her.》",
+          "en": "《So we don't need to go to Mizuna City anymore, but\nwe happen to be in Hananira-cho, so we'll go help her.》",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k671; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -402,7 +402,7 @@
         {
           "id": "p0/k220",
           "source_text_sha256": "de4f4b3d804ea7eaf99febd54db822f2e988306c68e6783d71ae9425d7c46ae2",
-          "en": "Hananira Town, Mizuna Road",
+          "en": "Hananira-cho, Mizuna Road",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k220; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
