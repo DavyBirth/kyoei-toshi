@@ -3428,7 +3428,7 @@
         {
           "id": "p0/k68",
           "source_text_sha256": "dab91942866d139c7e62520ccbede10fc9276da25b5fb17eb407e4b543cb7981",
-          "en": "Following Yuki, I arrived at the flying monsters' nest. Their cries can be heard all around.\nI need to find Yuki and escape the nest as soon as possible.",
+          "en": "I followed Yuki to the flying monsters' nest. Their cries echo all around.\nI need to find Yuki and get out of this nest, fast.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k68; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3470,14 +3470,14 @@
         {
           "id": "p0/k75",
           "source_text_sha256": "786d3428df2d0600fd7e3911519a6ee7f417eb355e5589d1170f5fe28a9a8910",
-          "en": "The stairs seem to be the only way down from the first floor of the observation deck. However, the passage to them is blocked by a locked door. It looks too sturdy to break down. I should look for the key.",
+          "en": "The stairs seem to be the only way down from the first floor of the observation deck, but a locked door blocks the way. It's way too sturdy to break. I need to find the key.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k75; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k78",
           "source_text_sha256": "809ee6e1917ed731dfdcbed739bd5e537f4a78ba8014e26d259df128bdc71e5e",
-          "en": "I found the key, but it's covered in a foul-smelling substance and doesn't seem usable. I'll have to clean it somewhere.",
+          "en": "I found the key, but it's covered in some disgusting, stinking gunk. I'll have to clean it somewhere.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k78; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3491,7 +3491,7 @@
         {
           "id": "p0/k80",
           "source_text_sha256": "c48cc9c0162497773293345f26dadc033653fef60ec928fe33af61f22670538c",
-          "en": "I managed to open the door.\nFrom here, I just need to keep heading down toward the ground.",
+          "en": "I got the door open.\nFrom here, I just need to keep heading down to the ground.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k80; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3505,21 +3505,21 @@
         {
           "id": "p0/k83",
           "source_text_sha256": "60fa284c5b9c690ac0e4ec6d5b3e30641518cfa4865e61013e39984397ee6057",
-          "en": "Iberis Tower",
+          "en": "Iberis Tower Building",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k83; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k84",
           "source_text_sha256": "95a27575eb8a0c835c000c4b6cf4e5a456b22afc3a801da1088a3931580b53cc",
-          "en": "'I'll be waiting in the Iberis Tower observation room in 30 minutes.' A message from an unknown sender arrived on the smartphone I borrowed from Kashiwagi.",
+          "en": "\"I'll be waiting in the Iberis Tower Building observation room in 30 minutes.\" A message from an unknown sender arrived on the phone Kashiwagi lent me.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k84; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k85",
           "source_text_sha256": "729d8bc820e192a82fe91f2c39c503cc10153d7cf4f004e83cd9beeb45934a33",
-          "en": "I don't know who's waiting, but I have nowhere else to go, so I'll try meeting them. The sender should be somewhere in this observation room.",
+          "en": "I don't know who's waiting, but I've got nowhere else to go, so I'll go see. The sender should be somewhere in this observation room.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k85; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3540,7 +3540,7 @@
         {
           "id": "p0/k90",
           "source_text_sha256": "5baf852dfd5de483e1fb2db9063b179fdb6adbd7293c2fa1f52498ff608fb80e",
-          "en": "We somehow reached the stairs. However, they seem to be exposed to the outside. We'd better proceed carefully to avoid being attacked by the flying monsters.",
+          "en": "We somehow made it to the stairs, but they're open to the outside. We'd better be careful not to get attacked by the flying monsters.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k90; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3554,35 +3554,35 @@
         {
           "id": "p0/k92",
           "source_text_sha256": "a5ddeb7ff63452f4a1513c98f3a5cc9174feac9090ab2eee28e28de057666468",
-          "en": "A flying monster appeared by the stairs and fired something like a beam. Will the stairs withstand it?",
+          "en": "A flying monster showed up at the stairs and fired some kind of beam. Will the stairs hold?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k92; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k93",
           "source_text_sha256": "c9d236f48202a0c74f9a569e45a86a4b5591626b6b0fd84b33d1bb26007a5e66",
-          "en": "The stairs were destroyed, separating me from Yuki. I need to find a way down to reach ground level.",
+          "en": "The stairs got destroyed, and I got cut off from Yuki. I need to find another way down.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k93; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k94",
           "source_text_sha256": "0059d643f98b25245615581bb24d9d1f667e44fe20dbe5dd7dfb1b7e57e977c2",
-          "en": "I broke through a door and reached a maintenance walkway. There are no railings, so there's a risk of falling. I have to keep moving and meet up with Yuki again!",
+          "en": "I broke down a door and came out onto a maintenance walkway. There are no railings, so one wrong step and I'll fall. I have to keep going and find Yuki again!",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k94; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k95",
           "source_text_sha256": "a72cabcf331f5d49d02dab513f37f300d51876ea90340f1f4ca846e9c76fd435",
-          "en": "I managed to meet up with Yuki, but the stairs down\nare still broken.\nI'll look farther along the maintenance walkway for a ladder.",
+          "en": "I found Yuki again, but the stairs down\nare still broken.\nI'll look for a ladder farther along the maintenance walkway.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k95; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k96",
           "source_text_sha256": "51a5e9d8ffa58c7d8ed94af2be504ff2232b75f2b98e7c855b4b8f3688ee61b1",
-          "en": "A different giant creature appeared and burned down the flying monsters' nest. We almost got caught up in it, but at least the flying monsters shouldn't be able to chase us anymore.",
+          "en": "A different giant creature showed up and burned the flying monsters' nest. We almost got caught in it, but at least the flying monsters can't chase us anymore.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k96; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3603,7 +3603,7 @@
         {
           "id": "p0/k100",
           "source_text_sha256": "fc554a12c8c580dd0ab60093032b2f130865f489c58e8006569d5e3d065146ed",
-          "en": "As we walked toward the bus stop, the two pursuers suddenly appeared with handguns. If we reach a busy street, they should hesitate to use them.",
+          "en": "As we walked toward the bus stop, the two pursuers suddenly showed up with guns. If we reach a busy street, they should think twice before shooting.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k100; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3617,7 +3617,7 @@
         {
           "id": "p0/k102",
           "source_text_sha256": "9caf6d2251dca1da9d7726af4bdff5cef1d67751ce875c2cd97e9de42262bd05",
-          "en": "A flying monster suddenly appeared, grabbed one of the pursuers, and flew away. We're safe from their guns, but...",
+          "en": "A flying monster swooped in out of nowhere, grabbed one of the pursuers, and flew off. We're safe from the guns, but...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k102; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3631,7 +3631,7 @@
         {
           "id": "p0/k106",
           "source_text_sha256": "09592aa5d2138df51d009ec3c41503e408463041320246646dedc09afd0a6e1d",
-          "en": "A huge flock of flying monsters suddenly appeared and began destroying the city. We need to head for the bus stop to get out of here.",
+          "en": "A huge flock of flying monsters swooped in and started tearing up the city. We need to get to the bus stop and get out of here.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k106; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3645,35 +3645,35 @@
         {
           "id": "p0/k108",
           "source_text_sha256": "a469c6caa7dde35564b6fb0ea57cc1e8faad1aa1f0b2ce67db23b32d1212ccb1",
-          "en": "Flying monsters landed on the road and caused traffic accidents, blocking the intersection. To escape them, we need to find a building we can pass through to reach the other side.",
+          "en": "Flying monsters landed on the road and caused a pileup that blocked the intersection. To get away from them, we need to find a building we can cut through to the other side.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k108; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k109",
           "source_text_sha256": "68b06f6dd7476e391af83d15f21d8c4da70199cbb7260ac60a3d79b7e2e96167",
-          "en": "We escaped the flying monsters and took shelter inside a building, but it seems dangerous here too. Is there a way to reach the other side of the intersection?",
+          "en": "We got away from the flying monsters and took shelter in a building, but it's not safe here either. Is there some way across the intersection?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k109; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k110",
           "source_text_sha256": "9980a089698360f0d18f6640e5a042a4f0c2912c0f5d1a4111d53cc31004ab41",
-          "en": "The bus stop is across the road. The flying monsters on the ground are closing in. We need to reach the bus as quickly as possible.",
+          "en": "The bus stop is across the road. The flying monsters on the ground are closing in. We need to get to that bus, fast.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k110; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k111",
           "source_text_sha256": "d5fa921c335bfdef69e19c47301f7778899b4b5b036fade1b4c8d243e670c56e",
-          "en": "We boarded the bus, but a flying monster overturned it, and Yuki was carried off by another flying monster...",
+          "en": "We got on the bus, but a flying monster flipped it over, and another one carried Yuki off...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k111; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k113",
           "source_text_sha256": "79377adb06fa0fd40784308a6d542c9b158f3d3253317c00e1fd0fd4aad3733b",
-          "en": "Lovers Parted by a Quarrel",
+          "en": "Lovers Split by a Fight",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k113; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3708,14 +3708,14 @@
         {
           "id": "p0/k127",
           "source_text_sha256": "5d380c449096cc334be451b985befa8c6fd7ca3be84d65498ee32a297b5515c9",
-          "en": "To escape the strange creatures we encountered underground, we followed a riot police officer's directions and drove away.",
+          "en": "To escape the bizarre creatures we ran into underground, we followed a riot officer's directions and drove off.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k127; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k128",
           "source_text_sha256": "9bdce25d70a53824e099cf4196dbdba123cfc59aed311c907e41062ce49a0932",
-          "en": "We reached Sky Garden Bridge. We should be safe now that we've made it this far.",
+          "en": "We made it to Sky Garden Bridge. We should be safe now.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k128; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3729,14 +3729,14 @@
         {
           "id": "p0/k131",
           "source_text_sha256": "5230627e8b686a693ad12d7371a82584ed411652b7ecde365cce68c9ddff13de",
-          "en": "As we reached Sky Garden Bridge, a black car rear-ended us. Sensing danger, we tried to get away.",
+          "en": "As we reached Sky Garden Bridge, a black car rammed us from behind. Sensing danger, we tried to get away.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k131; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k132",
           "source_text_sha256": "0ded25a6cac77245777d2ddd3b68ffb70507925ad2c029e2e88cf3dbccdac582",
-          "en": "The black car is clearly trying to ram us on purpose. We need to get away.",
+          "en": "The black car is ramming us on purpose. We have to get away from it.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k132; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3750,7 +3750,7 @@
         {
           "id": "p0/k134",
           "source_text_sha256": "97e022e4bc3c79def327534f759688b35a55594ff5f9b0566bc2d3b2f2ab6efa",
-          "en": "A fierce-looking man appeared and stepped in to stop the two pursuers, whom he seemed to know. It looks like we're safe for now.",
+          "en": "A scary-looking man showed up and held back the two pursuers, who he seemed to know. Looks like we're safe for now.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k134; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3764,63 +3764,63 @@
         {
           "id": "p0/k137",
           "source_text_sha256": "9a59221d93d9191cd68bfe07d6222f842e32cc414efbf96c6c8fe9fd172cd6d9",
-          "en": "While the black car was chasing us, a giant flying creature appeared overhead.\nWe need to get off this bridge quickly. There's nowhere to hide.",
+          "en": "While the black car was chasing us, a giant flying creature appeared overhead.\nWe need to get off this bridge fast. There's nowhere to hide.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k137; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k138",
           "source_text_sha256": "f3ce20175ce0ef30a695808c5e1ebc028d1d3287ae7b95e33c6eb4ef55a23425",
-          "en": "Two giant creatures appeared overhead.\nThe dark-colored one's beams are destroying cars one after another. We have to escape, quickly!",
+          "en": "Two giant creatures appeared overhead.\nThe dark one's beams are blowing up car after car. We need to get out of here!",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k138; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k139",
           "source_text_sha256": "d221d8740b29a2f4c52c787c94646041a1750b61b18bcd200afb0e61020cd6ef",
-          "en": "Even after we got out of the car, beams kept striking the bridge from time to time. We tried to get as far away as we could.",
+          "en": "Even after we got out of the car, beams kept hitting the bridge now and then. We tried to get as far away as we could.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k139; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k140",
           "source_text_sha256": "0c03f7466f6267f7340b460fcbceefab5925aead0ca7bf2bf51a337de8035729",
-          "en": "We entered the restaurant on the north side of the bridge. Going to its first floor should let us reach the bridge's lower level.",
+          "en": "We went into the restaurant on the north side of the bridge. Its first floor should lead to the bridge's lower level.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k140; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k141",
           "source_text_sha256": "51bddff5c39e604b46aa74232911c559fab654c4a2c0d9c105b4cea3dada0be3",
-          "en": "We somehow made it, but the lower level doesn't seem safe either. We need to find a way to the other side of the bridge...",
+          "en": "We made it, but the lower level doesn't look safe either. We need to find a way to the other side of the bridge...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k141; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k142",
           "source_text_sha256": "78c0351ee3d52d1f63702c41d9a3949aef3642916002b892b98ee489137d8eab",
-          "en": "A slope leading to the upper level has formed. It seems too steep to climb on foot. Is there some other way up?",
+          "en": "A slope up to the upper level has formed, but it's too steep to climb on foot. Is there some other way up?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k142; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k143",
           "source_text_sha256": "74d2b64f4528b09077d48cebbaa41784a9245e951fee8ca59e04feddf9669d1f",
-          "en": "We found a motorcycle. We can use it to speed up the slope and keep going.",
+          "en": "We found a motorcycle. We can ride it up the slope and keep going.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k143; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k144",
           "source_text_sha256": "85abfc80c9fc046baff2738f8020a5c5c70896423eac15d7604214d5d236fd39",
-          "en": "We somehow made it across before the bridge collapsed.",
+          "en": "We made it across before the bridge collapsed. Barely.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k144; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k146",
           "source_text_sha256": "b7f1f1adf14674e13401ed85f6580df71dbd08009c3faf8aa0f016e9f9940313",
-          "en": "Helping Each Other in a Crisis",
+          "en": "We're All in This Together",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k146; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3834,35 +3834,35 @@
         {
           "id": "p0/k148",
           "source_text_sha256": "15bf50b1cb9a88c22e96dfd9d67471f6060a5a0cced737e268db272ee5db927d",
-          "en": "He seems to have hurt his back when the earlier collapse startled him. Is there anything I can do to help?",
+          "en": "He seems to have thrown his back out when the collapse startled him. Is there anything I can do?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k148; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k149",
           "source_text_sha256": "245106d6815b61c79976f167af9ae393af9a96cf922091f2949ef602c181553f",
-          "en": "A woman on the lower level gave me a medicated patch. It should help treat his injury for now.",
+          "en": "A woman on the lower level gave me a pain-relief patch. That should help him for now.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k149; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k150",
           "source_text_sha256": "bb411d56860d10ff2d0611a49ff3c51b2332a5172fa4149344b1a952c4930571",
-          "en": "When I gave him the medicated patch, he put it on right away. It seems to be working well. I'm glad I could help.",
+          "en": "I gave him the patch, and he put it on right away. Looks like it's working. Glad I could help.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k150; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k152",
           "source_text_sha256": "1333845adaf60351a18421f5f85d27d8eef87203365dbeefe1a068ba5d5cd10c",
-          "en": "A Couple About to Marry",
+          "en": "A Couple About to Tie the Knot",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k152; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k154",
           "source_text_sha256": "b2843f392b9dd79f09c49afea6e7ca58c7657da0a0f72437828b13104f621462",
-          "en": "The two were caught up in this chaos on their way to meet the woman's father. They entrusted me with a game to give him if I meet him.",
+          "en": "The two got caught up in this mess on their way to meet the woman's father. They asked me to give him a game if I ever run into him.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k154; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3876,14 +3876,14 @@
         {
           "id": "p0/k158",
           "source_text_sha256": "755d4435279e432fc8d2b45d71a33e322fc5392578a644d1f11da5ec8eab9bcd",
-          "en": "Some of the stranded people are remarkably calm. They're even eager to make sales at a time like this.",
+          "en": "Some of the people left behind are surprisingly calm. One of them is even trying to make sales at a time like this.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k158; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k159",
           "source_text_sha256": "2c185b6be8944e59a69861e4bf6433f818ce70ea6ea0c82e5d05e8428cb09901",
-          "en": "I was asked to buy some karaage. Apparently, there's a sales quota to meet.",
+          "en": "He asked me to buy some karaage. Apparently he has a sales quota.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k159; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -3897,112 +3897,112 @@
         {
           "id": "p0/k163",
           "source_text_sha256": "db22238f585662bb21b9eb5d387eb3282f9ca2e9ef46a09cc5215bb980e6e4c3",
-          "en": "After escaping danger on the motorcycle and stopping at the traffic lights on Shirotsumekusa Street, Kashiwagi asked us to follow her somewhere.",
+          "en": "We escaped on the motorcycle and stopped at a light on Shirotsumekusa Street. Then Kashiwagi asked us to come with her somewhere.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k163; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k164",
           "source_text_sha256": "257f7f41c1498cf13e55c3bb475cfb1dcc8756cf660b0a1fc1cfbbfd3899f90a",
-          "en": "Kashiwagi asked us to follow her somewhere. We decided to go with her as a way of repaying her help.",
+          "en": "Kashiwagi asked us to come with her somewhere. We decided to go, to pay her back for helping us.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k164; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k165",
           "source_text_sha256": "078eda8d4385e33c3066c7213221c7b02b52be6c7c4ce99b8c57d89b159199a7",
-          "en": "An overpass suddenly collapsed. Beams are coming from above. Has another giant creature appeared? We should hurry to meet up with Kashiwagi and get out of here.",
+          "en": "An overpass suddenly came down. Beams from above... has another giant creature shown up? We need to catch up with Kashiwagi and get out of here.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k165; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k166",
           "source_text_sha256": "b2f66523c9f1e2d3c83e1d13580df0ba8a53c2627c55e83c2a8bada3e45cd0eb",
-          "en": "This time, a beam caused a tanker truck to explode, sending nearby cars flying. Where is Kashiwagi?",
+          "en": "Now a beam blew up a tanker truck and sent nearby cars flying. Where's Kashiwagi?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k166; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k167",
           "source_text_sha256": "1044b757be47fdc8679a3084da15742708cffede53a498d6c62c56094d10638d",
-          "en": "Just when we thought we'd made it through using a car transporter, we found ourselves having to pass beneath a golden giant creature's feet.",
+          "en": "Just when we thought we'd made it through with a car carrier, now we have to go right under the feet of a giant golden creature.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k167; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k168",
           "source_text_sha256": "6c662e9dbb3b6eb336adc7ab63db247cf22ac04b6180f6ef28af9e6b15264690",
-          "en": "It looks like we've somehow reached our destination. Hopefully, that means our part is done...",
+          "en": "Looks like we made it to where she was going. Hopefully that means we're off the hook...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k168; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k170",
           "source_text_sha256": "3cef9795d5a991c2e623dc9e53cec45077d3a6ca27b6dcd5ca31e0595560f0d4",
-          "en": "An Entrusted Package",
+          "en": "The Package Left with Us",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k170; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k172",
           "source_text_sha256": "eaf960bae8c94fe7661816280f6effb50aa74dd5201ebbdf9514b1d83d1c6148",
-          "en": "We entered a building and were introduced to someone who said they developed software. What's going to happen now?",
+          "en": "We went into a building and were introduced to someone who develops software. What's going to happen now?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k172; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k173",
           "source_text_sha256": "e9fc2fce37381a778558091bed62221b3fd3da0393e970638c4e9a8d1d1ffc74",
-          "en": "Kashiwagi received a package. For some reason, we're going along with her to the Cosmic Ray Research Institute.",
+          "en": "Kashiwagi picked up a package. For some reason, we're going with her to the Cosmic Ray Research Institute.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k173; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k174",
           "source_text_sha256": "07492562a5b6c02a163ef8e86254534ede1810fc6d22bd7a31cc3a6464125a5d",
-          "en": "When we left the building, we found that a giant creature had destroyed the motorcycle. We decided to head for the station north of here.",
+          "en": "When we came out of the building, a giant creature had wrecked the motorcycle. We decided to head for the station to the north.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k174; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k175",
           "source_text_sha256": "f6a514a71e7451dfa644904e2ea21473e5d001b5c204db8078155a5816b2386b",
-          "en": "Kashiwagi's injury prevented her from boarding the train. She entrusted us with taking the package to the Cosmic Ray Research Institute.",
+          "en": "Kashiwagi's injury kept her from getting on the train. She left it to us to take the package to the Cosmic Ray Research Institute.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k175; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k176",
           "source_text_sha256": "e7726fdc46401de96b23b956560a3272ade3142000f762bfc7047caa5fdc22d9",
-          "en": "We reached the Cosmic Ray Research Institute. Kashiwagi said we should give the software to its deputy director.\nHowever, something is wrong inside. After various conflicting concerns were raised, I ended up being sent to scout the institute.",
+          "en": "We reached the Cosmic Ray Research Institute. According to Kashiwagi, we're supposed to give the software to the deputy director.\nBut something's wrong inside. After some back-and-forth, I ended up being the one sent to scout the place.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k176; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k177",
           "source_text_sha256": "0b9cc6d1a966e9fdb3a53f08a2a19cd8fbdb3418877d0a68182a85d7fb342a86",
-          "en": "We don't know which room the deputy director is in, but entering the server\nroom and restarting the server should let us contact him through the institute's\nnetwork. I received a note with the code needed to enter the server room,\nbut the researcher who gave it to me...",
+          "en": "I don't know which room the deputy director is in, but if I get into the server\nroom and restart the server, I can reach him over the institute's\nnetwork. A researcher gave me a note with the server room code,\nbut then...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k177; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k178",
           "source_text_sha256": "36d4b919be35f23d540f5c95dfc1dc710270f8f047d5f0f40db38cd4172794b4",
-          "en": "I started the server. After sending a message through the institute's network, I received a reply from someone called Sawada.\nI'm to go to the storage room on the second floor.\nApparently, she'll open the door if I knock: 'Knock, knock-knock, knock (pause one beat), knock, knock, BANG!'",
+          "en": "I turned on the server. I sent a message around the institute and got a reply from someone named Sawada.\nI'm supposed to go to the storeroom on the second floor.\nIf I knock \"knock, kn-kn-knock (wait one beat) knock, knock, BANG!\" she'll open up.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k178; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k179",
           "source_text_sha256": "37a6a60dae72002478f0f5410558aec2cafd368954e8a104e743963c0347bdcf",
-          "en": "The deputy director is in the laboratory.\nChief Researcher Sawada gave me her locker key. I need to borrow the laboratory\nkeycard from her locker in the room behind the first-floor reception desk.\nThat should let me enter the laboratory.",
+          "en": "The deputy director is in the lab.\nChief Researcher Sawada gave me her locker key. I need to get the lab\nkeycard from her locker in the room behind the first-floor front desk.\nThat'll get me into the lab.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k179; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k180",
           "source_text_sha256": "43d3f74a6a9150fb24fa75daeae89897ded0353279994502b07ca421f1a18209",
-          "en": "I delivered the software Kashiwagi entrusted to us to the deputy director. But then a mysterious creature appeared, and the deputy director...",
+          "en": "I delivered the software Kashiwagi left with us to the deputy director. But then a mysterious alien appeared, and the deputy director...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k180; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4016,28 +4016,28 @@
         {
           "id": "p0/k184",
           "source_text_sha256": "2fa94a8c9171bbefb6aec6518b206b85b89a08d44692e00811c5a6adfc4c37b8",
-          "en": "I met a woman beside the station kiosk who was frustrated with her bad luck. Can I do anything to help?",
+          "en": "Next to the station kiosk, I met a woman fed up with her bad luck. Can I do anything to help?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k184; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k185",
           "source_text_sha256": "faf3ddecda64db9e53203e8edb682a7f7e96ee428c068135c35b6737216e4a52",
-          "en": "She says she lost one of her earrings. Apparently, she still had it when she arrived at work.",
+          "en": "She says she lost one of her earrings. Apparently she still had it when she got to work.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k185; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k186",
           "source_text_sha256": "f5843641b1ed6dde65097241d3c3bd88f627e39078b72d5f35d2ad5cd28cd1bb",
-          "en": "It seems she also dropped her wristwatch. She says she had it until she got out of a taxi near the intersection in front of the station...",
+          "en": "Looks like she dropped her watch, too. She says she had it until she got out of a taxi near the intersection in front of the station...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k186; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k187",
           "source_text_sha256": "241947d213ef6eac890fd54cffd5ec4441648aedf9ec7eb4eafac4ae8464cc1c",
-          "en": "I managed to find her wristwatch too. Hopefully, her luck will improve now, but what happens next is up to her.",
+          "en": "I found her watch too. Hopefully her luck turns around now, but the rest is up to her.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k187; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4051,28 +4051,28 @@
         {
           "id": "p0/k191",
           "source_text_sha256": "5d06f3e96aed46aabbf2965dc3aacaaaaa8a783bd91044d92518823af50a585d",
-          "en": "There's no telling what will happen if they catch us. We have to evade them and get out of this tower as quickly as possible!",
+          "en": "No telling what'll happen if they catch us. We have to dodge them and get out of this tower as fast as we can!",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k191; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k192",
           "source_text_sha256": "544191e542961a16d3f6c54a2138bb0cb997e9b6461033740ce4731b29e8f100",
-          "en": "We somehow got into the elevator and shook off the pursuers. We've escaped them, but...",
+          "en": "We made it into the elevator and lost the pursuers. We lost them, but...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k192; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k194",
           "source_text_sha256": "640e8f5b6b34e3676be4aa7268fdd9211d75d49b93707ba91037b559ef8331ed",
-          "en": "Escape Iberis Tower",
+          "en": "Escape the Iberis Tower Building",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k194; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k195",
           "source_text_sha256": "c0adbea32a813f8d986f543baacc8f646c5ae79d162eb1332d42ac2a6d01b3c5",
-          "en": "A fire has broken out inside the tower. We need to get out of this building as quickly as possible.",
+          "en": "A fire has broken out inside the tower. We need to get out of this building, fast.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k195; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4086,77 +4086,77 @@
         {
           "id": "p0/k197",
           "source_text_sha256": "e2c3d1007d29802a9a2b0c8752fd21b89c3a1a2608b7395c1837bdb17a7b3c70",
-          "en": "A mysterious Labor suddenly appeared, and we ended up in an office somewhere on the 20th floor. We should leave the office and find a route to ground level.",
+          "en": "A mysterious Labor suddenly appeared, and we ended up in an office somewhere on the 20th floor. We need to get out of the office and find a way to the ground.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k197; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k198",
           "source_text_sha256": "a4a32ce3a98d2e5b48ed1a6adc6dd12ee515e6bca3a66af008efccfb152449ad",
-          "en": "A large fire is blocking our path. We need to put it out somehow. Could there be something nearby we can use to extinguish it...?\n",
+          "en": "A big fire is blocking our way. We have to put it out somehow. Isn't there something around here we can use...?\n",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k198; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k203",
           "source_text_sha256": "2fc66628600ff402cba44f0a503ac36159a6d377fe07d685639cc92494349a92",
-          "en": "Escape the Harbor Warehouse Area",
+          "en": "Escape the Port Warehouses",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k203; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k204",
           "source_text_sha256": "1151db5f85fbe8253b8851d6805571258cbaa8d4a839433ecf67e51da333fdf4",
-          "en": "Harbor",
+          "en": "The Port",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k204; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k205",
           "source_text_sha256": "4e7326d8525ad8141f7fb06cf4ddfe631ee0ff502311052596cb198878083260",
-          "en": "We reached the harbor from the rescue boat, but the two pursuers caught up with us and spotted us again.",
+          "en": "We made it from the lifeboat to the port, but the two pursuers caught up and spotted us again.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k205; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k206",
           "source_text_sha256": "125bae359e31adac59fcec0e8b8f7e57f917d9c41be5151878d9032c179a6130",
-          "en": "We need to get out of this harbor, quickly. First, let's find somewhere to hide.",
+          "en": "We need to get away from this port, fast. First, let's find somewhere to hide.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k206; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k207",
           "source_text_sha256": "8b22139cdf5338fc8317024b1b70825d92d751e73af5ba49173388733fde5423",
-          "en": "We ducked into a warehouse, but they came inside too. They have handguns, so we can't afford to be spotted. We need to leave this warehouse without them seeing us.",
+          "en": "We ducked into a warehouse, but they followed us in. They have guns, so we can't let them see us. We need to sneak out of this warehouse without being spotted.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k207; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k209",
           "source_text_sha256": "aeb63393bff275fd4ec2ad9c2ee37e759d9470a63a62fba8a0c154c55c314729",
-          "en": "The black Labor that appeared on the ship flew into the air.\nWe need to get away from this increasingly ominous harbor, quickly...\nFor now, let's find a way forward.",
+          "en": "The black Labor that appeared on the ship took off into the sky.\nWe need to get away from this creepy port, fast...\nFor now, let's find a way forward.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k209; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k210",
           "source_text_sha256": "d4f887e8fb370753ae6007f7df97c9c2261829c05f1009e58c4131fc10da6826",
-          "en": "We saw the black Labor from earlier fighting other Labors. Kashiwagi has a motorcycle ready on the other side of their battle. We need to reach her quickly.",
+          "en": "We saw that black Labor fighting other Labors. Kashiwagi has a motorcycle waiting past where they're fighting. We need to get to her, fast.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k210; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k211",
           "source_text_sha256": "f44366630eef1855e07f518c3d006aa0bef35a05d1afd2816b64a44851a108bf",
-          "en": "The warehouse exploded.\nWe need to get out of this harbor as quickly as possible.",
+          "en": "The warehouse exploded.\nWe need to get away from this port as fast as we can.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k211; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k212",
           "source_text_sha256": "27ec08d450be6ebc6ac1afa40d07865951775185c4c11ce0de21b3b6ac3aa680",
-          "en": "We reached Kashiwagi and escaped the harbor on the motorcycle.",
+          "en": "We made it to Kashiwagi and escaped the port on the motorcycle.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k212; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4177,42 +4177,42 @@
         {
           "id": "p0/k216",
           "source_text_sha256": "557e2f854dbf3bf92ddf5ae6e00f6584057dcbf2dfc7f0dfde366c0373e89684",
-          "en": "The two pursuers finally caught us. They seem to work for W&P Consulting, a company dealing in weapons intelligence. There's no telling what they'll make us do if we stay captive. We have to escape somehow.",
+          "en": "The two pursuers finally caught us. Looks like they work for W&P Consulting, a company that deals in weapons intel. No telling what they'll make us do if we stay here. We have to escape somehow.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k216; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k217",
           "source_text_sha256": "a7b75ea59ab6ee3d874c940188acb916c50d296a95f8f149fcb6d1024702face",
-          "en": "First, I need to do something about these restraints. Is there anything I can use to cut the ropes?",
+          "en": "First, I need to deal with these ropes. Is there anything I can cut them with?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k217; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k218",
           "source_text_sha256": "11c71d0cbf84e29c9b4ad01b422524440703bf199054614b7a70c17eb70a7caf",
-          "en": "I managed to undo the ropes and free myself. I need to untie Yuki quickly so we can escape before the two W&P men spot us.",
+          "en": "I got the ropes off and freed myself. I need to untie Yuki fast so we can get out before the two W&P guys spot us.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k218; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k219",
           "source_text_sha256": "2a7ff7075c201bceed389fe4b3e09f78e38d1aeb079e9c8483c2c9c148af694e",
-          "en": "Has the battle outside the building ended...? The giant creature is gone, and a huge machine seems to be standing in the city... Let's get out of this building while we can.",
+          "en": "Is the battle outside the building over...? The giant creature is gone, and a huge machine seems to be just standing in the city... Let's get out of this building while we can.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k219; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k220",
           "source_text_sha256": "74879f478111539d92f4f91dca453e6aa6aa99579e18db94161bec0897ce395b",
-          "en": "The huge machine has gone berserk! It's coming toward us! If we don't escape quickly, it'll crush us along with the building...!",
+          "en": "The huge machine has gone berserk! It's heading this way! If we don't get out fast, it'll crush us, building and all...!",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k220; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k221",
           "source_text_sha256": "d770413f21c06a13d8df993e759bebdcd553ad8360060fbac432e4a9f73085eb",
-          "en": "We shook off the pursuers and escaped the W&P office.",
+          "en": "We lost the pursuers and escaped the W&P office.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k221; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4226,21 +4226,21 @@
         {
           "id": "p0/k224",
           "source_text_sha256": "701147d6430149b6e9a56aaa659def07ecda184ce64e62bc04f4c2a8a1f59c63",
-          "en": "In a room at the office they brought us to, they revealed why they'd been chasing us.",
+          "en": "In a room at the office they took us to, they told us why they'd been chasing us.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k224; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k225",
           "source_text_sha256": "efd763ac2e9d80de40913dbfad879f547051e37c91c7e4900b768d9b7037968a",
-          "en": "It seems they intend to use my ability to cause these incidents as a weapon.",
+          "en": "Apparently, they want to use my power to cause disasters as a weapon.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k225; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k226",
           "source_text_sha256": "285a37624694356a2caec0a5e5b3ad2df960bfac7ad8297c21f55202b7f3a3c7",
-          "en": "I obtained a brochure for their organization, W&P Consulting Co., Ltd. It might be worth searching the room for more information.",
+          "en": "I got a brochure for their company, W&P Consulting Co., Ltd. It might be worth searching the room for more info.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k226; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4261,7 +4261,7 @@
         {
           "id": "p0/k230",
           "source_text_sha256": "0fd594b695f5d608094ab2259aa528b7169225bf1862f250496e10a498eeca39",
-          "en": "I met up with Yuki at the park and boarded the subway with her to get away. However, the train suddenly stopped and wouldn't move again. It looks like we'll have to walk to the station and go up to the surface.",
+          "en": "I met up with Yuki at the park, and we got on the subway to get away. But the train suddenly stopped and won't move. Looks like we'll have to walk to the station and go up to the street.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k230; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4275,21 +4275,21 @@
         {
           "id": "p0/k232",
           "source_text_sha256": "acb5430c75c79b4fe64b953ff14e43078d96822600635a6f3ccc7fb7eb380490",
-          "en": "Unknown creatures appeared in the darkness, forcing us to take a detour. We need to keep heading for the station.",
+          "en": "Something unknown showed up in the dark, and we had to take a detour. We just need to keep heading for the station.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k232; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k233",
           "source_text_sha256": "154f7fd08f1e1eaa7ce4fccdccf0fe3b93bc612a719c6d77d23caf04a5e1ee49",
-          "en": "We met a woman named Risa Kashiwagi at the ticket gates. We'll look for a way to the surface with her.",
+          "en": "At the ticket gates, we met a woman named Risa Kashiwagi. We're looking for a way up to the street with her.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k233; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k234",
           "source_text_sha256": "87daad2f6c95be3bc51241e52d3719805ff42008e71f9350f1177a2951443a5a",
-          "en": "We reached the surface! But the creatures from underground came up too...",
+          "en": "We made it to the street! But the creatures from underground came up too...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k234; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4310,49 +4310,49 @@
         {
           "id": "p0/k238",
           "source_text_sha256": "9ec85db16ad9a6119e23daf42beba4ad25d96a0da3a51c7cfc4720ce17b8df0a",
-          "en": "When I came to, Yuki and I were somehow floating at sea in a small boat. As we drifted, a research vessel spotted us and brought us aboard.",
+          "en": "When I came to, Yuki and I were somehow drifting at sea in a little boat. A research ship spotted us and pulled us aboard.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k238; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k239",
           "source_text_sha256": "a3f19ac26f5fd2b9b27e4ef34c3ec0d32c1b2c47b80bc5827e7e6dadbafb940c",
-          "en": "We decided to visit the captain in the observation room to thank him for rescuing us.",
+          "en": "We decided to go thank the captain in the observation room for saving us.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k239; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k240",
           "source_text_sha256": "7e1a6dea99c2ed84755c8753e5ddacdc00ddccbc4277fcf56cd652223c4abfc2",
-          "en": "The captain suggested drying our clothes by the heater. Apparently, it's to the left as we leave the observation room.",
+          "en": "The captain suggested we dry our clothes by the heater. It's apparently on the left when you leave the observation room.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k240; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k241",
           "source_text_sha256": "78c12bfe60779c594a2ca21a52ff4e22cd371b1a36fa186631f19d3ae94517d7",
-          "en": "Yuki and I dried our clothes by the heater. It seems there's still some time before we reach the harbor. Maybe we should explore the ship.",
+          "en": "Yuki and I dried our clothes by the heater. Looks like we've still got time before we reach port. Maybe we should look around the ship.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k241; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k242",
           "source_text_sha256": "26fdb931690d89447516c2e43b68fd62aad9f3129b5556072e965fa8f58288d2",
-          "en": "I spoke with the captain. Apparently, he'll retire after this voyage. He gave me his captain's hat.",
+          "en": "I talked with the captain. He's retiring after this voyage. He gave me one of his caps.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k242; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k243",
           "source_text_sha256": "6cf9452c08d619d5cd2124b89fbcc5f5b6748e4637123520f54c3ea55ebac807",
-          "en": "They seem to have lost track of the shadow on the seabed that the scientist was studying.\nI'll tell the first mate at the stern to go to the wheelhouse.",
+          "en": "Looks like they've lost track of the shadow on the seafloor the professor was studying.\nI'll go tell the first mate at the stern to head to the bridge.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k243; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k244",
           "source_text_sha256": "66e039b9c6505e67382c63f5b3118befd76be840df228d1c3a9ccac1e11ec21d",
-          "en": "The sea suddenly swelled, and a giant monster appeared!\nHurry to the lifeboat!",
+          "en": "The sea suddenly swelled up, and a giant monster appeared!\nHurry to the lifeboat!",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k244; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4366,14 +4366,14 @@
         {
           "id": "p0/k248",
           "source_text_sha256": "836d8653537081db3b214d9fa42daa590044c19a7306355bf3ea59c3a698e99e",
-          "en": "Research Vessel: Stern",
+          "en": "Research Ship: Stern",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k248; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k256",
           "source_text_sha256": "c3d7e4e332b5c02bb8867e2ae34410f4203a1600aa6c322989a83c2fc1abbae7",
-          "en": "To Meet the Fierce-Looking Man",
+          "en": "To Meet the Scary-Looking Man",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k256; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4387,14 +4387,14 @@
         {
           "id": "p0/k260",
           "source_text_sha256": "c5923da76a6b141b2ee8bd310116569f01ea49f3eb94b82bf2c5205d5a7a027b",
-          "en": "A giant shadow suddenly appeared during the live show at the radio station. Kashiwagi called, wanting to meet up, but apparently she can't move. I'll go south of the radio station to rescue Risa.",
+          "en": "A giant shadow suddenly appeared during the live show at the radio station. Kashiwagi called. She wants to meet up, but she can't move. I'll head south of the radio station to rescue Risa.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k260; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k264",
           "source_text_sha256": "08c8b541f09dd4e5c0a5a262ee4e16faedbb4ffe3763c64e00243407d7add1cb",
-          "en": "We managed to meet the fierce-looking man. But, unbelievably, W&P carried Yuki off. I couldn't get to my feet, just staring up at the sky on the rooftop after the strong winds died down.",
+          "en": "We met the scary-looking man. But then, of all things, W&P took Yuki. Up on the rooftop, after the wind died down, I couldn't stand up. I just stared at the sky.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k264; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4415,14 +4415,14 @@
         {
           "id": "p0/k268",
           "source_text_sha256": "9f0669ac6ffcdd0646347665b31761725dcf9023d2e0dc534bd218403d5183db",
-          "en": "W&P took Yuki away. Not knowing what to do, I wandered the streets until Risa came to tell me she'd found out where Yuki was. I'll go with Risa to rescue her.",
+          "en": "W&P took Yuki. Not knowing what to do, I wandered the streets until Risa came to tell me she'd found out where Yuki was. I'm going with Risa to rescue her.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k268; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k269",
           "source_text_sha256": "1b1e21b592de9453ed2739cf05499f4564748d8294076983a4522e4cc9e03cd8",
-          "en": "The rain is heavy, so I'll share Risa's umbrella as we head toward Yuki.",
+          "en": "It's pouring, so I'm sharing Risa's umbrella as we head toward Yuki.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k269; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4450,77 +4450,77 @@
         {
           "id": "p0/k277",
           "source_text_sha256": "63fc68eeba57c2d3e6fe71caaede580d4f5558814b3fcbfb53a7a93f89b2aded",
-          "en": "While making our way through a burning building, we found a little girl struggling after inhaling smoke. After discussing it with Yuki, we decided to take her with us.",
+          "en": "While we were making our way through a burning building, we found a little girl choking on smoke. Yuki and I talked it over and decided to take her with us.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k277; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k278",
           "source_text_sha256": "08f4eae3116260bb5603dd3a63915054f1a0a4322ee6450c2d3644ef7edb324a",
-          "en": "The girl's name is Miho, and she seems to mistake Yuki for her sister. I'll carry Miho on my back as we try to escape the building.",
+          "en": "The girl's name is Miho, and she seems to think Yuki is her big sister. I'll carry Miho on my back and get us out of the building.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k278; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k279",
           "source_text_sha256": "5984ea5ca77005f622c1afe14ca29383d9bb15dfe458395d602a47656eaed1da",
-          "en": "We reached the district with the hospital where the girl's father is staying. I'll carry her the rest of the way there.",
+          "en": "We made it to the district with the hospital where the girl's dad is. I'll carry her the rest of the way.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k279; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k280",
           "source_text_sha256": "ecff5e56ca215d52f42149cc9cebfd931f1b2ad44a548ecbe82231588386859e",
-          "en": "We visited the girl's usual curry stand. Apparently, her sister had quite an appetite. Thanks to that, I'm completely full. Time to head for the hospital.",
+          "en": "We went to the girl's favorite curry stand. Apparently her sister was a big eater. Thanks to that, I'm stuffed. Time to head for the hospital.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k280; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k281",
           "source_text_sha256": "4836698292727e8f1d0f7f442c3ad8eaf9bc0e75d769dede3e026156fab873ef",
-          "en": "As I walked with Yuki, carrying the girl on my back, a nearby tanker truck caught fire. Yuki was surrounded by flames. The girl begged me to save her. We somehow made it through the danger. We'll head for the hospital.",
+          "en": "As I walked with Yuki, carrying the girl, a tanker truck nearby burst into flames, trapping Yuki in the fire. The girl begged me to save her. We somehow got through it. Now, to the hospital.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k281; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k282",
           "source_text_sha256": "60b9e99ed7ab7efb7c76353f066d7a1410ef947ebebbfbfde5692571f2fb49f4",
-          "en": "We managed to bring the girl to her father. Apparently, her sister died in a traffic accident a week ago. Her father explained it several times, but she refused to believe him. He also said Yuki looked like her sister.",
+          "en": "We got the girl to her dad. Apparently her sister died in a car accident a week ago. Her dad had explained it to her several times, but she wouldn't believe it. He said Yuki looked like her sister, too.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k282; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k284",
           "source_text_sha256": "120f2922667aacc4e1687f2c19d067ac0ca6ce480c74ca52ce4254edb58b8565",
-          "en": "Working Late Despite the Danger",
+          "en": "Working Late, Danger or Not",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k284; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k285",
           "source_text_sha256": "f14c0c922adf041aaa9222ea92d4554f1dcb4ce40fbc833d2cf582da8b433b25",
-          "en": "Deeper inside the office where Kashiwagi received the package, there were people still working.",
+          "en": "In the back of the office where Kashiwagi picked up the package, some people were still working.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k285; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k286",
           "source_text_sha256": "9b3b3797bdae8db127e09148d0d47768d842f0dd8ba87c51a01f6107b3f7c6ca",
-          "en": "It seems they're being burdened with far too much responsibility. There might be something I can do to help.",
+          "en": "Looks like they've been saddled with way too much. Maybe I can help.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k286; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k287",
           "source_text_sha256": "c85cf7dfc5df6caebcae7ff0b253a1c4fc521c03c77ee62655532ac948b5e8af",
-          "en": "They don't know the password, so they can't get on with their work. The person who used to handle it apparently often sat down beside the multifunction printer...",
+          "en": "They don't know the password, so they can't get any work done. The person who used to handle it apparently sat next to the all-in-one printer a lot...",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k287; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k288",
           "source_text_sha256": "1ed5cf0567415ec8a868e12ad9903711ceaf0ea68acfa28c06e5c5c2fdd0e8ea",
-          "en": "The string I gave them seems to have been the correct password.\nIt looks like I helped a little.",
+          "en": "Looks like the string I gave them was the right password.\nGuess I helped a little.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k288; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4562,7 +4562,7 @@
         {
           "id": "p0/k296",
           "source_text_sha256": "3d008d343aef6fdba9c742a2d143386df6f9aabb86cbe90cff569a86c8eceb68",
-          "en": "We met the editor-in-chief. We'll gather their belongings and escape the building.",
+          "en": "We met the editor-in-chief. We're going to pack up her things and get out of the building.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k296; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -4576,7 +4576,7 @@
         {
           "id": "p0/k301",
           "source_text_sha256": "b8411fd6944a9a660a68a3f93d566f7c96bb9b2cd8c80ab554be9706831a786a",
-          "en": "The ground caved in during the battle between the giant aliens, and we fled into the sewers. Let's find an exit to the surface.",
+          "en": "The ground caved in during the giant aliens' battle, and we escaped into the sewers. Let's find a way up to the street.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k301; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
