@@ -131,7 +131,8 @@ finitas sao recusadas. Campo de visao15..110graus. A camera continua usando
 os dados carregados da cena; renderizacao/streaming a longa distancia ainda
 precisam ser conferidos. Outras cenas, cutscenes, transicoes,
 sombras/reflexos, transparencias e streaming ainda precisam de validacao.
-Exposicao tem controle host; profundidade de campo ainda nao tem controle.
+Exposicao tem controle host. Foco/desfoque tem prototipo interno opt-in,
+ainda sem efeito visual comprovado; nao e oferecido no atalho normal.
 
 H alterna so o guia original grande/pequeno/oculto. F10 usa estado proprio.
 Filtros adicionais reconhecem a arvore do icone de mensagens e a classe
@@ -151,3 +152,7 @@ o marcador azul3D do save desapareceu comF10 e voltou ao sair, preservando a
 maquina e o cenario. Uma notificacao de mensagem separada ainda precisa de
 reproducao; sua correcao nao foi declarada visualmente comprovada.
 Detalhes em [FOTO-CAMERA-PAUSA.md](re/FOTO-CAMERA-PAUSA.md).
+
+A distancia focal segue a convencao optica nativa de35mm; a HUD mostra mm e
+explica que cima aproxima e baixo amplia o enquadramento. O filtro Kaiju anime
+usa agora cores suaves, sem faixas de posterizacao; grao/vinheta sao ajustaveis.

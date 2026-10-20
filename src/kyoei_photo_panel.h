@@ -3,7 +3,7 @@
 #include "imgui.h"
 #include "kyoei_photo_settings.h"
 namespace KyoeiPhoto {
-inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll=0) {
+inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll=0,bool dof_available=false) {
         const auto size=ImGui::GetIO().DisplaySize;
         ImGui::SetNextWindowPos(ImVec2(16,size.y-16),ImGuiCond_Always,ImVec2(0,1));
         ImGui::SetNextWindowSizeConstraints(ImVec2(0,0),ImVec2(size.x-32,size.y-32));
@@ -17,8 +17,12 @@ inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll
         ImGui::Text("Lente: %.1f mm* | FOV: %.1f | Rotacao: %.0f graus | Velocidade: %.2fx",
             fov>0?FocalLength(fov):0,fov,roll,camera_speed.load());
         ImGui::Text("Exposicao: %+.1f EV | Contraste: %.2f | Saturacao: %.1f",grade.exposure,grade.contrast,grade.saturation);
-        ImGui::Text("Filtro: %s | *Sensor virtual de 24 mm de altura",FilterName(grade.filter));
+        ImGui::Text("Filtro: %s | *Lente equivalente a convencao nativa de 35 mm",FilterName(grade.filter));
         ImGui::Text("Granulacao: %.0f%% | Vinheta: %.0f%%",grade.grain*100,grade.vignette*100);
+        constexpr const char* modes[]={"Original","Manual","Desligado"};
+        if(experimental_dof.load())ImGui::Text("Desfoque experimental: %s%s | Foco: %.2f m | Abertura: f/%.1f",modes[dof_mode.load()],dof_available?"":" (indisponivel)",focus_distance.load(),aperture.load());
+        if(Field(selected.load())==Field::FocusDistance || Field(selected.load())==Field::Aperture)
+            ImGui::TextUnformatted("Foco: distancia nitida | Abertura menor (f/): mais desfoque");
         if(Field(selected.load())==Field::Lens)
             ImGui::TextColored(ImVec4(1,.8f,.35f,1),"Lente: cima = +2 mm (aproxima) | baixo = -2 mm (amplia)");
         ImGui::Separator();

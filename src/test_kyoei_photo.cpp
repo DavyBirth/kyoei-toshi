@@ -9,6 +9,8 @@ extern "C" void kyoei_input_keyboard(void){}
 extern "C" int kyoei_photo_player_toggle(void){++player_toggles;return 1;}
 static float move_right=0,move_up=0,move_forward=0,look_yaw=0,fov_delta=0,speed=0;
 extern "C" int kyoei_photo_scene_available(void){return scene;}
+extern "C" int kyoei_photo_dof_available(void){return 0;}
+extern "C" void kyoei_photo_dof_input(int,float,float,float){}
 extern "C" void kyoei_photo_scene_fov(float value){fov_delta+=value;}
 extern "C" float kyoei_photo_scene_fov_value(void){return 40;}
 extern "C" float kyoei_photo_scene_initial_fov(void){return 40;}

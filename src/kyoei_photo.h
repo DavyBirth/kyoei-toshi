@@ -16,7 +16,7 @@ inline void AdjustSelected(int direction) {
     const auto field=Field(selected.load());
     if(field==Field::Lens) {
         const float fov=kyoei_photo_scene_fov_value();
-        if(fov>0){const float mm=std::clamp(FocalLength(fov)+direction*2.f,8.5f,90.f);
+        if(fov>0){const float mm=std::clamp(FocalLength(fov)+direction*2.f,12.25f,133.f);
             kyoei_photo_scene_fov(FovFromFocal(mm)-fov);}
     } else if(field==Field::Roll)kyoei_photo_scene_roll(direction*2.f);
     else AdjustGrade(field,direction);

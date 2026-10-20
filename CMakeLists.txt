@@ -288,23 +288,28 @@ kyoei_replace_checked(KYOEI_LOADER
 kyoei_replace_checked(KYOEI_LOADER
   "void gz_log(const char *format, ...) { va_list a;"
   "void gz_log(const char *format, ...) { if (!kyoei_log_visible(format)) return; va_list a;")
+set(KYOEI_LOADER "#include \"kyoei_photo_dof.h\"\n${KYOEI_LOADER}")
 # Install the opt-in photo HUD draw gate before starting guest/GPU threads.
 set(KYOEI_LOADER "#include \"kyoei_photo_hud.h\"\n#include \"kyoei_photo_scene.h\"\n${KYOEI_LOADER}")
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_tls_optimize(out);"
-  "    kyoei_photo_save_mark_configure(image, image_size);\n    kyoei_tls_optimize(out);")
+  "    kyoei_photo_dof_configure(image, image_size);\n    kyoei_photo_save_mark_configure(image, image_size);\n    kyoei_tls_optimize(out);")
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
   "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_photo_hud_configure(image, image_size);\n    kyoei_photo_scene_configure(image, image_size);\n    kyoei_photo_phone_configure(image, image_size);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
-target_sources(kyoei PRIVATE src/kyoei_photo_hud.c src/kyoei_photo_scene.c src/kyoei_photo_phone.c src/kyoei_photo_save_mark.c)
+target_sources(kyoei PRIVATE src/kyoei_photo_dof.c src/kyoei_photo_hud.c src/kyoei_photo_scene.c src/kyoei_photo_phone.c src/kyoei_photo_save_mark.c)
 add_executable(test_kyoei_photo_phone src/test_kyoei_photo_phone.c)
 target_compile_options(test_kyoei_photo_phone PRIVATE -UNDEBUG)
 add_executable(test_kyoei_photo_player src/test_kyoei_photo_player.c)
 target_include_directories(test_kyoei_photo_player PRIVATE "${KYOEI_CORE}/src")
 target_compile_options(test_kyoei_photo_player PRIVATE -UNDEBUG)
 target_compile_definitions(test_kyoei_photo_player PRIVATE _CRT_SECURE_NO_WARNINGS)
+add_executable(test_kyoei_photo_dof src/test_kyoei_photo_dof.c)
+target_include_directories(test_kyoei_photo_dof PRIVATE "${KYOEI_CORE}/src")
+target_compile_options(test_kyoei_photo_dof PRIVATE -UNDEBUG)
+target_compile_definitions(test_kyoei_photo_dof PRIVATE _CRT_SECURE_NO_WARNINGS)
 add_executable(test_kyoei_photo_settings src/test_kyoei_photo_settings.cpp)
 target_compile_features(test_kyoei_photo_settings PRIVATE cxx_std_17)
 target_compile_options(test_kyoei_photo_settings PRIVATE -UNDEBUG)

@@ -40,7 +40,8 @@ int main() {
     _set_abort_behavior(0,_WRITE_ABORT_MSG|_CALL_REPORTFAULT);
     _putenv_s("KYOEI_IN_GAME_DIALOGS","1"); _putenv_s("KYOEI_LANGUAGE","en");
     KyoeiOverlayModel::InitializeGui(nullptr,true); KyoeiOverlayModel::SetReady(true);
-    for(bool controller:{false,true})for(unsigned height:{720u,1080u}) {
+    for(bool prototype:{false,true})for(bool controller:{false,true})for(unsigned height:{720u,1080u}) {
+        KyoeiPhoto::experimental_dof=prototype;
         ImDrawData *photo=nullptr;
         // Exercise the exact photo panel within the real ImGui frame callback.
         for(int frame=0;frame<2;++frame) {
@@ -53,6 +54,7 @@ int main() {
         CHECK(panel && panel->Pos.x>=0 && panel->Pos.y>=0);
         CHECK(panel->Pos.x+panel->Size.x<=height*16/9 && panel->Pos.y+panel->Size.y<=height);
     }
+    KyoeiPhoto::experimental_dof=false;
     const uint16_t initial[]={'K','e','n'};
     kyoei_overlay_input(0);
     CHECK(kyoei_overlay_begin_name(L"Synthetic name",initial,3,4));

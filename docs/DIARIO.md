@@ -4264,3 +4264,28 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   na proxima etapa. Pesquisa nativaDOF confirmou GxUnitFilterDepthOfField
   table1252008/update252960, GxSysFilter singleton13425a8, enable+a0 e36bytes
   de parametros+b0..d0. Ainda pesquisa, nenhuma alteracao de foco integrada.
+
+- Continuacao: foco nativo prototipado sob KYOEI_PHOTO_DOF=1, sem ativar no
+  atalho. Unidade252960 ausente na fase; hook2458a0 de SysFilter executa,
+  mas NAO produz desfoque visivel. RTTI confirmou SysFilter148f7f0 derivado
+  de1341320/table127bb30. Crop original/near/far/off/reset: media0/p99=0.
+  Leitura de memoria confirmou enable1 e foco/abertura/FOV; falta consumo real
+  na renderizacao. HUD explicita experimental. Ambas rodadas privadas mudas
+  1080p encerradas0, saves particulares intactos. Nao declarar DOF pronto.
+- Lente agora segue convencao optica nativa35mm:17.5/tan(FOV/2). Substitui
+  sensorvirtual24mm para coerencia comDOF; passos2mm/instrucaoHUD mantidos.
+- Anime suavizado com saturacao e paleta sombra/highlight, sem posterizacao
+  por canal. Screenshot1080p conferido; teste de gradiente preserva tons.
+- Compilacao completa e testes input/settings/ImGui/overrideDOF passaram.
+  Override valida singleton/tipo/camera, preserva exposicao e restaura saida;
+  nao toca fonte da camera. Prototipo opt-in, jogo normal nao alterado.
+- Luzes: GxUnitLightPoint1254ed0 presente drawgroup7, ctor2ac650. Ainda sem
+  controle de fonte; clima/horario/menu permanecem pendentes na ordem pedida.
+- Quota propria acompanhada29->25->24->23->21->20->19->17->16->14 restantes
+  da janela300min. Continuar ate5 e desligar conforme autorizacao anterior.
+
+- Anime suave preview/PNG: crop estatico1250x650, media0,02711 e p99=1.
+  Rodada photo-dof-render saiu0; nenhum teste/jogo do agente permanece aberto.
+  ControlesDOF experimentais ficam ocultos se o hook opt-in nao estiver ativo,
+  evitando oferecer opcao sem efeito no atalho normal. RegressaoUI cobre
+  painel normal/prototipo, teclado/controle,720p/1080p.

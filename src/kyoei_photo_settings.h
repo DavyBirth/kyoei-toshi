@@ -6,25 +6,32 @@
 #include <cmath>
 #include <cstdint>
 namespace KyoeiPhoto {
-enum class Field {Lens,Roll,Speed,Exposure,Contrast,Saturation,Filter,Grain,Vignette,Count};
+enum class Field {Lens,Roll,Speed,Exposure,Contrast,Saturation,Filter,Grain,Vignette,DofMode,FocusDistance,Aperture,Count};
 enum class Look {Original,Mono,Sepia,Cool,Warm,Kaiju1954,Tokusatsu,KaijuNight,AnimeKaiju,Count};
 struct Grade {float exposure=0,contrast=1,saturation=1;int filter=0;float grain=0,vignette=0;};
 inline std::atomic<int> selected{0},filter{0};
 inline std::atomic<float> exposure{0},contrast{1},saturation{1},camera_speed{1};
+inline std::atomic<bool> experimental_dof{false};
+inline std::atomic<int> dof_mode{0};
+inline std::atomic<float> focus_distance{5},aperture{2.8f};
 inline std::atomic<float> grain{0},vignette{0};
 inline const char* FieldName(Field field) {
-    constexpr const char* names[]={"Distancia focal da lente","Rotacao","Velocidade","Exposicao","Contraste","Saturacao","Filtro","Granulacao","Vinheta"};
+    constexpr const char* names[]={"Distancia focal da lente","Rotacao","Velocidade","Exposicao","Contraste","Saturacao","Filtro","Granulacao","Vinheta","Desfoque","Distancia de foco","Abertura"};
     return names[std::clamp(int(field),0,int(Field::Count)-1)];
 }
 inline const char* FilterName(int value) {
     constexpr const char* names[]={"Original","Preto e branco","Sepia","Frio","Quente","Kaiju 1954","Tokusatsu retro","Kaiju noturno","Kaiju anime"};
     return names[std::clamp(value,0,int(Look::Count)-1)];
 }
-inline void SelectField(int direction) {selected.store((selected.load()+direction+int(Field::Count))%int(Field::Count));}
+inline int FieldCount(){return experimental_dof.load()?int(Field::Count):int(Field::DofMode);}
+inline void SelectField(int direction) {const int count=FieldCount();selected.store((selected.load()+direction+count)%count);}
 inline Grade GetGrade(){return {exposure.load(),contrast.load(),saturation.load(),filter.load(),grain.load(),vignette.load()};}
 inline bool Neutral(Grade g){return g.exposure==0 && g.contrast==1 && g.saturation==1 && g.filter==0 && g.grain==0 && g.vignette==0;}
-inline void ResetGrade(){exposure=0;contrast=1;saturation=1;filter=0;camera_speed=1;grain=0;vignette=0;}
+inline void ResetGrade(){exposure=0;contrast=1;saturation=1;filter=0;camera_speed=1;grain=0;vignette=0;dof_mode=0;focus_distance=5;aperture=2.8f;}
 inline void AdjustGrade(Field field,int direction) {
+    if(field==Field::DofMode)dof_mode=(dof_mode.load()+direction+3)%3;
+    if(field==Field::FocusDistance){focus_distance=std::clamp(focus_distance.load()*std::pow(1.1f,float(direction)),.2f,1000.f);dof_mode=1;}
+    if(field==Field::Aperture){aperture=std::clamp(aperture.load()+direction*.2f,1.f,32.f);dof_mode=1;}
     if(field==Field::Exposure)exposure=std::clamp(exposure.load()+direction*.1f,-3.f,3.f);
     if(field==Field::Contrast)contrast=std::clamp(contrast.load()+direction*.05f,0.f,2.f);
     if(field==Field::Saturation)saturation=std::clamp(saturation.load()+direction*.1f,0.f,2.f);
@@ -38,8 +45,8 @@ inline void AdjustGrade(Field field,int direction) {
         grain=grains[next];vignette=vignettes[next];
     }
 }
-inline float FocalLength(float vertical_fov) {return 12.f/std::tan(vertical_fov*.00872664625997f);}
-inline float FovFromFocal(float mm){return 114.591559026f*std::atan(12.f/mm);}
+inline float FocalLength(float vertical_fov) {return 17.5f/std::tan(vertical_fov*.00872664625997f);}
+inline float FovFromFocal(float mm){return 114.591559026f*std::atan(17.5f/mm);}
 inline float Decode(float x){return x<=.04045f?x/12.92f:std::pow((x+.055f)/1.055f,2.4f);}
 inline float Encode(float x){x=std::clamp(x,0.f,1.f);return x<=.0031308f?x*12.92f:1.055f*std::pow(x,1.f/2.4f)-.055f;}
 inline void GradeLinear(float& r,float& g,float& b,Grade grade) {
@@ -59,8 +66,10 @@ inline void GradeLinear(float& r,float& g,float& b,Grade grade) {
         const float shadow=1-std::clamp(l*2.f,0.f,1.f);
         r*=1.03f-.25f*shadow;g*=.95f+.15f*shadow;b*=1.15f+.15f*shadow;
     } else if(grade.filter==int(Look::AnimeKaiju)) {
-        const auto tones=[](float value){return Decode(std::floor(Encode(value)*9.f+.5f)/9.f);};
-        r=tones(l+(r-l)*1.25f);g=tones(l+(g-l)*1.25f);b=tones(l+(b-l)*1.25f);
+        const float shadow=1-std::clamp(l*2.f,0.f,1.f);
+        r=(l+(r-l)*1.16f)*(1.06f-.10f*shadow);
+        g=(l+(g-l)*1.16f)*(1.02f+.02f*shadow);
+        b=(l+(b-l)*1.16f)*(.97f+.13f*shadow);
     }
 }
 inline uint32_t FilmHash(uint32_t x,uint32_t y) {

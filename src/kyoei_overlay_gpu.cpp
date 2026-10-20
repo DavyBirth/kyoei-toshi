@@ -11,6 +11,7 @@
 #include "kyoei_title_exit.h"
 #include "kyoei_photo.h"
 #include "kyoei_photo_panel.h"
+#include "kyoei_photo_dof.h"
 #include "imgui.h"
 #include "imgui_impl_vulkan.h"
 #include "video_core/renderer_vulkan/vk_instance.h"
@@ -158,7 +159,7 @@ void Render(vk::CommandBuffer command,vk::ImageView view,vk::Extent2D extent) {
     auto *draw=KyoeiOverlayModel::Draw(extent.width,extent.height,elapsed,[]{
         if(!kyoei_photo_hud_hidden() || !KyoeiPhoto::hints.load() || kyoei_overlay_kind())return;
         KyoeiPhoto::DrawPanel(kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER,kyoei_photo_player_hidden()!=0,
-            kyoei_photo_scene_fov_value(),kyoei_photo_scene_roll_value());
+            kyoei_photo_scene_fov_value(),kyoei_photo_scene_roll_value(),kyoei_photo_dof_available()!=0);
     });
     const auto attachment=Attachment(view);
     command.beginRendering(vk::RenderingInfo{

@@ -82,7 +82,7 @@ morta16, L1/R1 rapidez, dpad FOV, SouthPNG/Northplayer/Westajuda. Comandos guest
 neutralizados enquanto foto; controles fisicos ainda precisam de validacao.
 
 ### Ajustes host20/10
-Lente usa convencao sensorvirtual24mmaltura: f=12/tan(FOV/2), com limite
+Lente segue agora a convencao optica nativa35mm: f=17.5/tan(FOV/2), com limite
 nativo15..110. Roll aplica rotacao do par right/up emtorno forward somente
 no compositor temporario; reset usa FOV de entrada/roll0. Velocidade host.
 GradeGPU fullscreen amostra frame de apresentacao e escreve swapchain; nada
@@ -94,4 +94,21 @@ sRGB/grade linear. Neutro nao transforma pixels nem executa passagemGPU.
 Grade: ganho2^EV, curva contraste emtorno18%, saturacao/lumaRec709,5presets.
 Telas e fotos privadas verificadas; ajuda foraPNG, reset e lens/roll reais.
 F11 filtrando35b810 (base/UnitMrPlayer2) NAOocultou corpo: root e componente
-visual sao separados. Binding682a50->276ac0 sobreplayer+6c0 em investigacao.
+visual sao separados. Binding682a50->276ac0 REJEITADO: player+6c0 e GxModObjectHit (colisao). Nao usar para invisibilidade.
+
+### Prototipo de foco nativo20/10
+KYOEI_PHOTO_DOF=1 instala override opt-in antes da otimizacaoTLS, somente com
+assinatura completa conferida. Hook inicial na unidade DOF nao executou nesta
+fase; retirado. A fase usa SysFilter (derivado registrado de GxSysFilter), e
+nao instancia a unidade DOF generica. O candidato atual usa preparacao de fila
+de efeitos2458a0 e aceita somente singleton/tipos base ou derivado conhecidos.
+ModoOriginal e padrao. Manual calcula transicoes opticas conforme convencao
+nativa e conserva exposicao; fonte da camera permanece intacta. Desligado usa
+enable nativo; parametros originais voltam na preparacao apos sair. Mudanca
+de singleton/manager invalida cache antigo, sem escrever em objeto antigo.
+Foco .2..1000, abertura f/1..32; campos novos no fim da selecao. HUD indica
+indisponivel ate observar sistema valido. Teste isolado exercita codigo real
+de override/restauracao. Teste real photo-dof-render-20261020: hook executa,
+parametros mudam e restauram; imagem estatica nao muda (media0, p99=0).
+Portanto DOF NAO funcional visualmente; opt-in de pesquisa somente,
+nao ativado no atalho. Precisa localizar o consumo real dos parametros.

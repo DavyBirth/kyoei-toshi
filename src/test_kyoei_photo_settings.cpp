@@ -37,6 +37,16 @@ int main(){
     for(size_t i=0;i<film.size();i+=4)assert(film[i]==film[i+1] && film[i+1]==film[i+2] && film[i+3]==73);
     AdjustGrade(Field::Grain,1);assert(grain>.35f && filter==int(Look::Kaiju1954));
     ResetGrade();assert(Neutral(GetGrade()));
-    selected=0;SelectField(-1);assert(selected==int(Field::Count)-1);SelectField(1);assert(selected==0);
+    selected=0;SelectField(-1);assert(selected==FieldCount()-1);SelectField(1);assert(selected==0);
+    for(int i=0;i<200;++i){AdjustGrade(Field::FocusDistance,-1);AdjustGrade(Field::Aperture,1);}
+    assert(dof_mode==1 && focus_distance==.2f && aperture==32);
+    AdjustGrade(Field::DofMode,1);assert(dof_mode==2);
+    ResetGrade();assert(dof_mode==0 && focus_distance==5 && aperture==2.8f);
+    experimental_dof=true;selected=0;SelectField(-1);assert(selected==int(Field::Aperture));
+    experimental_dof=false;selected=0;
+    // Smooth anime palette must retain nearby tones instead of posterizing them.
+    float ar=.10f,ag=.10f,ab=.10f,br=.101f,bg=.101f,bb=.101f;
+    Grade anime;anime.filter=int(Look::AnimeKaiju);GradeLinear(ar,ag,ab,anime);GradeLinear(br,bg,bb,anime);
+    assert(br>ar && bg>ag && bb>ab && br-ar<.002f);
     puts("PHOTO SETTINGS PASS: neutral bytes, linear EV, color order, alpha, filters, lens roundtrip, limits/reset");
 }
