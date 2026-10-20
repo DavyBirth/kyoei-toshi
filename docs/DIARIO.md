@@ -3873,3 +3873,18 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   japonês, nenhum glifo ausente. Os \n dos CSV .csh continuam escapados.
 - Nada testado no jogo ainda. Próximo: traduzir as texturas
   (tools/localize_textures.py, translations/textures-en.json).
+
+### 20/10/2026 — texturas em inglês completas (168)
+
+- Levantamento das 1.412 candidatas: traduzidas só as que o jogador lê
+  (controles, menus, abas, avisos de ação, nomes das fases, dicas de comando).
+  Cenário, anúncios do site, fotos de notícias, telas de carregamento e itens
+  de leitura (texto já aparece traduzido no leitor) ficam como no original.
+- tools/localize_textures.py ganhou o modo "regions": apaga só as letras e
+  reconstrói o fundo (degradê, brilho girado, fundo de outra tela do mesmo
+  desenho), aceita RGBA8, quebra de linha e tamanho único por tela.
+- translations/textures-en.json: 168 texturas, sem nenhum texto japonês.
+- Versões sem texto para o português: build/textures-blank (privado, fora do
+  repositório), geradas com KYOEI_ERASE_ONLY=1.
+- Conferência visual com zoom, lado a lado; galeria privada
+  build/texture-review-natural. Nada testado no jogo ainda.
