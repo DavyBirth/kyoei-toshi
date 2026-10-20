@@ -4312,3 +4312,9 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   build/kyoei.exe. Workingtree conferida limpa, nenhum kyoei.exe em execucao.
   Pesquisa de luz revelou vtable0/8 compartilhadas209b60/209b70; liberacao
   nao comprova retirada de listas/jobs, pendencia explicitada na documentacao.
+
+- LIMITE ATINGIDO: telemetria propria2026-10-20T06:06:16.955Z marcou5%
+  restantes da janela300min, verificada06:06:43UTC. Trabalho interrompido
+  conforme Davy; tudo salvo, testes encerrados0, nenhum kyoei.exe ativo.
+  Desligamento imediato solicitado apos este checkpoint. Retomar foco visual,
+  depois luzes/clima/horario e finalmente menu de pausa.
