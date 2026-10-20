@@ -70,7 +70,11 @@ o primeiro piloto aproveita a câmera original do jogo.
 - Em20/10, pausa nativa e recomposição da vista ativa permitiram giro,
   avanço, subida e FOV com retorno à câmera original. Minimizar liberou a
   pausa. Continuar validação de efeitos, menus, transições e outras cenas.
-- Exposição e profundidade de campo ficam para avaliação posterior.
+- Retorno de Davy em20/10: corrigir camera movendo sozinha e permitir
+  afastamento amplo do protagonista. Limite inicial10unidades nao representa
+  a liberdade desejada. Wishlist: iluminacao, foco/profundidade de campo,
+  protagonista invisivel, filtros, exposicao, contraste, clima e hora do dia.
+  Viabilidade pendente; detalhes/prioridades em MODO-FOTO.md.
 
 Controles, limites e próximo teste em [MODO-FOTO.md](MODO-FOTO.md).
 Pausa/câmera livre são prévia opt-in, com evidência local em partida.

@@ -22,6 +22,34 @@ executavel atual sem depender desses pacotes.
 
 ## Fotos e limites
 
+### Retorno de Davy em20/10/2026 e proximas prioridades
+
+1. **Bug relatado:** a camera se move sozinha no modo foto, mesmo sem comando
+   intencional. Reproduzir e identificar a origem; causa ainda nao confirmada.
+   Aceite: camera parada com entradas neutras, incluindo controle conectado,
+   entrada/saida do modo e perda/retorno de foco.
+2. **Liberdade de deslocamento:** Davy considera chato ficar perto do
+   protagonista. O limite atual de10unidades e provisório; preferencia por
+   camera realmente livre, sem ficar presa ao personagem. Revisar o limite
+   junto com culling, streaming e iluminacao para permitir afastamento amplo
+   com cenario correto, preservando posicao do personagem e retorno da camera.
+
+**Opcoes desejadas, ainda sem implementacao/viabilidade comprovada:**
+
+- Controles de iluminacao.
+- Ajuste de foco e profundidade de campo.
+- Tornar o protagonista invisivel na foto.
+- Filtros visuais, exposicao e contraste.
+- Alterar clima e hora do dia.
+- Espaco para ampliar os ajustes fotograficos conforme os mecanismos do jogo
+  forem identificados.
+
+Registrar como direcao desejada, sem prometer suporte antes de investigar.
+Priorizar estabilidade e liberdade da camera. Ajustes fotograficos devem ser
+opcionais, restritos ao modo foto e restaurados ao sair; ocultar protagonista
+deve atuar no desenho, preservando sua logica e os saves. Clima/hora precisam
+de pesquisa propria sobre efeitos, scripts e estados da cena.
+
 O PNG vem da superficie final PS4 antes do redimensionamento e dos overlays
 do port. As fotos conferidas tem1920x1080. RGBA/BGRA8bit suportados; outros
 formatos, incluindo HDR10, recusados com mensagem no log. Nomes preservam
