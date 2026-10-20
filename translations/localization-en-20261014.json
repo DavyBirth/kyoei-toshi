@@ -37226,14 +37226,14 @@
         {
           "id": "p0/k14",
           "source_text_sha256": "352afdd723e0ad274fc917f81aa50ab149ed44a39c767cabf3ba297d60de93d8",
-          "en": "A sturdy-looking door...\nIt seems to be locked.",
+          "en": "A heavy-duty door...\nLooks like it's locked.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k14; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k16",
           "source_text_sha256": "b74fa7abac6dc0111ce6981586fabf6fd19ba8dd7bbf942f71e69d3f6da91ff6",
-          "en": "I could never break this down.\nI need a key to open it.",
+          "en": "No way I'm breaking this down.\nI need a key.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k16; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37247,28 +37247,28 @@
         {
           "id": "p0/k20",
           "source_text_sha256": "95e1dcbf9c5ac52df3530f11cdf2d91efec46d530c1dd1a3d7ed4219d5d3289e",
-          "en": "A sturdy-looking door...\nLooks like it’s locked.",
+          "en": "A heavy-duty door...\nLooks like it's locked.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k20; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k22",
           "source_text_sha256": "5ad8ef59df40512d4f3afc3cb6de85f4266ce557a66b87b3ba232ac959813f4b",
-          "en": "No way I can break this down.\nI’ll need a key to open it.",
+          "en": "No way I'm breaking this down.\nI'll need a key.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k22; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k25",
           "source_text_sha256": "71c7d5f26f45d2178375de547bfc5d9e7951d706cfcf47c9b6ea08a15c521ddd",
-          "en": "There’s a calendar for May.",
+          "en": "A May calendar.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k27",
           "source_text_sha256": "b9750efe6688869f0f9c21272ed435b94c2da6db199aa3ce750c0f66a966a2bc",
-          "en": "May 8 is circled.\nIf I remember right, that’s Mother’s Day.",
+          "en": "May 8th is circled.\nThat's Mother's Day, if I remember right.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k27; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37289,63 +37289,63 @@
         {
           "id": "p0/k33",
           "source_text_sha256": "1eb8a9a14839db1b969b7987b4e6f8b5ea2cfabef0b3035504cfbe16c11cbdb4",
-          "en": "There’s a calendar for May.",
+          "en": "A May calendar.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k33; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k35",
           "source_text_sha256": "41a773785f968717843e1c39df03fb28c4c50662e68a5d42745245139faff946",
-          "en": "May 8 is circled.\nThat’s Mother’s Day, if I remember right.",
+          "en": "May 8th is circled.\nThat's Mother's Day, if I remember right.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k35; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k37",
           "source_text_sha256": "9a9d475d994152485a506073e3bef325350ecc781b5da4f7297582c33945243b",
-          "en": "Cardboard boxes are stacked up.",
+          "en": "A stack of cardboard boxes.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k37; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k40",
           "source_text_sha256": "dfe9dfd4b245fe39f251b857c87d89bae5d66c07df79cc2e388cd9ee433bc8a5",
-          "en": "The sink is kept clean.",
+          "en": "The sink's nice and clean.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k40; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k42",
           "source_text_sha256": "41f3846f61d05f9aceaf211188ee1e6519a8df493a5b5d4179c7e68098716d1d",
-          "en": "The water seems to be running.\nI could wash the key here.",
+          "en": "The water still works.\nI could wash the key here.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k42; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k44",
           "source_text_sha256": "38f82eada04a9537b9f6e69f1cf5478f2e09414acfa927d1229ed4e490c6a54d",
-          "en": "Wash the key",
+          "en": "(Wash the key)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k44; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k46",
           "source_text_sha256": "ec9f971155f1edefa557f1dd9b554d6593a04aeca3d33904f4e30b1f5e576e5c",
-          "en": "Take care of something else first",
+          "en": "(Do something else first)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k46; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k48",
           "source_text_sha256": "667ff1602c738a364c3ae803c9395b6b4ea7b4f8728ec4d0598e8bf1af1246da",
-          "en": "Washed the grime off the key.\nObtained [#ff44ff44]Key to the Outdoor Stairs[/#].",
+          "en": "Scrubbed the gunk off the key.\nObtained [#ff44ff44]Key to the Outdoor Stairs[/#].",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k48; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k51",
           "source_text_sha256": "7560214a2430ddcc24838fbbd0006a6321ca7fc2e8e958d17deafa3670f5d638",
-          "en": "Looks like the water is running.\nI could wash the key here.",
+          "en": "The water still works.\nI could wash the key here.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k51; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37366,28 +37366,28 @@
         {
           "id": "p0/k57",
           "source_text_sha256": "ec16c996aacf92602ac2d34c4101e6ac0941ce379097fbe63201e8d1e2cd46e7",
-          "en": "It looks well maintained.",
+          "en": "Looks well kept.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k57; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k59",
           "source_text_sha256": "c6698488f63597d3ccefbfc57a5ab85003cc7f904f322916a5e256c6dffb7554",
-          "en": "Looks well maintained.",
+          "en": "Looks well kept.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k59; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k61",
           "source_text_sha256": "d432da73dd72c4e09f5dbf92e899a4f63f4ef7c3a7439ee7d624208d4d5a73c4",
-          "en": "...Better leave this one alone.",
+          "en": "...Better not mess with this one.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k61; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k64",
           "source_text_sha256": "24d13d1f4fd75782bf69be0957e88109c7d4939726d5e303e58083c3efb982c8",
-          "en": "Looks like an employee locker.",
+          "en": "Looks like a staff locker.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k64; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37401,63 +37401,63 @@
         {
           "id": "p0/k68",
           "source_text_sha256": "24d349bc07030a6a664559a6934607b238c317ddfc60e4519d1500d2afacf2ed",
-          "en": "There doesn’t seem to be anything useful left inside.",
+          "en": "Nothing worth taking left in here.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k68; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k70",
           "source_text_sha256": "5040382c4e2f1315b9d289802a0faea9bf14746f2fd583ecf8382181e3a46945",
-          "en": "Looks like an employee locker.",
+          "en": "Looks like a staff locker.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k70; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k73",
           "source_text_sha256": "3693388e5febfc7c71cfa6a4ef1595f8d79932402ed10aab5858a221634a3280",
-          "en": "Doesn’t seem to be anything useful left inside.",
+          "en": "Nothing worth taking left in here.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k73; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k75",
           "source_text_sha256": "d148d023ed6926bd82e4b15202ff40abcb329d048dd82deb36be4c9b77f96ae7",
-          "en": "A fire hydrant.\nNo need to use it right now.",
+          "en": "A fire hose cabinet.\nDon't need it right now.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k75; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k78",
           "source_text_sha256": "7523d17ecd90c13fb134682ea3a90b7625412ae7a3829ff7da5986513c80172e",
-          "en": "The elevator doesn’t respond when I press the button.\nLooks like it really is out of order.",
+          "en": "I press the elevator button, but nothing happens.\nYep, it's dead.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k78; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k80",
           "source_text_sha256": "e90a6983048bff156629264d8f4e5f38a337813dc19a12221857fb5c0dba749f",
-          "en": "The elevator doesn’t respond when I press the button.\nLooks like it really is out of order.",
+          "en": "I press the elevator button, but nothing happens.\nYep, it's dead.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k80; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k84",
           "source_text_sha256": "d2b5447a8c46cf11c5908a3ddc78d2af17c0705e765d84b9c16b4cf365d99ab0",
-          "en": "(Whoa!\nWhat is this foul-smelling thing?\nI should get away before the smell rubs off on me.)",
+          "en": "(Whoa!\nWhat is this stinking blob?\nI'd better back off before the smell gets on me.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k84; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k86",
           "source_text_sha256": "f8b91a0e958754e4c99796337a00e0e4a873bf70ef0ff2a2663915931fd770b6",
-          "en": "(Looks like there’s nothing inside...)",
+          "en": "(Nothing in there...)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k86; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k88",
           "source_text_sha256": "b3de8d54e4133c52672acf4894c3efde53df52388335e42ef9aff0b0a63da746",
-          "en": "(Huh? Looks like there’s something inside.)",
+          "en": "(Hm? There's something in there.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k88; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37471,119 +37471,119 @@
         {
           "id": "p0/k92",
           "source_text_sha256": "5ea05ee3831e8c0a3beccfd7b152b403c61c5c34180e5819f26f6b8482d7e3e0",
-          "en": "The key is unbelievably filthy...!\nI’ll have to wash it somewhere.",
+          "en": "The key's absolutely disgusting...!\nI'll have to wash it somewhere.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k92; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k94",
           "source_text_sha256": "48b09591a5cb06112c3600ac7bc65adac53bcb7eab750dd8992561d4fd95765a",
-          "en": "Found a canned drink!",
+          "en": "Found a can of juice!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k94; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k96",
           "source_text_sha256": "de1dd15386ca65d56c24212ac0c309f88d71cdd236b530d34cc2e8a16a64696a",
-          "en": "(Ugh!\nWhat is this foul-smelling thing?\nI’d better get away before the smell rubs off on me.)",
+          "en": "(Ugh!\nWhat is this stinking blob?\nI'd better back off before the smell gets on me.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k96; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k98",
           "source_text_sha256": "fcaabb4c16e900d70255267245dc439760847bb754a3778bf7d94119ed39fd8b",
-          "en": "(Looks like there’s nothing inside...)",
+          "en": "(Nothing in there...)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k98; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k100",
           "source_text_sha256": "ba1908efd5a8c84d03f17e38760a1e114a6f16991099f5252968eb89e24eed9f",
-          "en": "(Huh? Looks like there’s something inside.)",
+          "en": "(Hm? There's something in there.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k100; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k103",
           "source_text_sha256": "b5dfb798b728b6960c6edc6612b4a66632ae49f4ca995847fd8fcd73e1d5f48c",
-          "en": "The key is unbelievably filthy...!\nI’ll have to find somewhere to wash it.",
+          "en": "The key's absolutely disgusting...!\nI'll have to find somewhere to wash it.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k103; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k106",
           "source_text_sha256": "5094f89fe8f3e65658a994b457bd0618d95d27a07af781c15d1b93b11919cb19",
-          "en": "(Going back would only put me in danger...)",
+          "en": "(Going back would just be dangerous...)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k106; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k108",
           "source_text_sha256": "f0c0ce2fd3de6c946c107fe61286bbd9531a34f889e7db4533d2e78500c0638a",
-          "en": "(Going back would only put me in danger...)",
+          "en": "(Going back would just be dangerous...)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k108; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k110",
           "source_text_sha256": "34b982a3b225081f4c3a21c80123ffd01836c8026edff8d8fa4fcc090e84ba41",
-          "en": "(It looks like things are terrible all over the city.)",
+          "en": "(Looks like the whole city's in chaos.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k110; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k112",
           "source_text_sha256": "b9283c4ce9a0cd594c99dd543aecbab50809a9fa0cc2b5ef7cf78fa910d62da9",
-          "en": "(It looks like things are terrible all over the city.)",
+          "en": "(Looks like the whole city's in chaos.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k112; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k114",
           "source_text_sha256": "5b35e87d32c61ea89e1f55ba0b7a55eee67da910006935bfc83b5f3b274b2ad7",
-          "en": "(The door to the service passage is a little loose...\n I might be able to force it open with my shoulder.)",
+          "en": "(The door to the service passage is kind of loose...\n I could probably bust it open with my shoulder.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k114; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k116",
           "source_text_sha256": "0200feb3e2ff9347f653074d7385cdf03cdcf9ec5b0eddabbde2c3dbd330f7c8",
-          "en": "(The door to the service passage is a little loose...\n Maybe I can force it open with my shoulder.)",
+          "en": "(The door to the service passage is kind of loose...\n Maybe I can bust it open with my shoulder.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k116; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k118",
           "source_text_sha256": "6922c02982e5a277f9ce299590ce65904af8a17b0e5e09f26f374dd7a9b89182",
-          "en": "Fires are raging all over the city...",
+          "en": "The whole city's on fire...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k118; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k120",
           "source_text_sha256": "6437f562d687dbfa29654743870ef4b712e11732f995696ab7d385a801527a3e",
-          "en": "Fires are raging all over the city...",
+          "en": "The whole city's on fire...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k120; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k122",
           "source_text_sha256": "9afcceb642bfa3dcb192c6d384d3f2f0a5ebfdfedccd56b3952027633b8d79bc",
-          "en": "This is no time to turn back...",
+          "en": "No time to go back...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k122; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k124",
           "source_text_sha256": "eb86479e33a6f7220c045290030f5ba83982fb94b56284e78a313d2ec54e133c",
-          "en": "This is no time to turn back...",
+          "en": "No time to go back...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k124; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k126",
           "source_text_sha256": "796e42dfcf78e310f92a33545cdd1f943954e0c46546ab4820284953f3e6a5b3",
-          "en": "There’s a bucket on the ground...",
+          "en": "There's a bucket lying here...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k126; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37597,7 +37597,7 @@
         {
           "id": "p0/k130",
           "source_text_sha256": "66f906b61076b33366dd3716c1926b07371f7cc5076a397c59b56be72ef1dd3a",
-          "en": "There’s another bucket here...",
+          "en": "Another bucket here...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k130; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37611,7 +37611,7 @@
         {
           "id": "p0/k134",
           "source_text_sha256": "e3a49ed4bdb45c80e4189158bae96b67e30f1b9770de8cc05b7f312f517939b6",
-          "en": "There’s a bucket on the ground...",
+          "en": "There's a bucket lying here...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k134; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37625,98 +37625,98 @@
         {
           "id": "p0/k138",
           "source_text_sha256": "7c2583e97ef15a73d6ab6f179ec40c57a14dac2be34e3f1443949e0ce40bb4c3",
-          "en": "There’s another bucket here...",
+          "en": "Another bucket here...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k138; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k142",
           "source_text_sha256": "1cafab6c74788545e0d96ec0b44395c49b16c1a438b12d2902f9845339726f3b",
-          "en": "(Going back would only be dangerous...\nI’d better get down the stairs quickly.)",
+          "en": "(Going back would just be dangerous...\nBetter hurry down the stairs.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k142; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k144",
           "source_text_sha256": "e7e56cfc498d556411448032a544617b47308f81da1ec6b710a4b53b9928df64",
-          "en": "(Going back would only be dangerous...\nI’d better get down the stairs quickly.)",
+          "en": "(Going back would just be dangerous...\nBetter hurry down the stairs.)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k144; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k146",
           "source_text_sha256": "b23c6edf8092ed2c8dae1b15f20d5661a8427eabc2366131266b219d215e24f7",
-          "en": "The stairs leading down have collapsed.",
+          "en": "The stairs going down have collapsed.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k146; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k148",
           "source_text_sha256": "b4accab50ac46179c79dfea0ea1eb15ecefc5fe2b3addb53586902f09eb702e1",
-          "en": "Maybe I can escape using that ladder over there...",
+          "en": "Maybe I can get out using that ladder over there...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k148; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k152",
           "source_text_sha256": "6bdf0ab895546141fa5a8c23e0ca49c574c754e1ac0016501b11ba80f8519850",
-          "en": "The stairs leading down have collapsed.",
+          "en": "The stairs going down have collapsed.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k152; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k154",
           "source_text_sha256": "180615ab684cfb4d947121cfa5f8c66803404b87809637411b8c482a5f1e63ed",
-          "en": "Maybe I can escape using that ladder over there...",
+          "en": "Maybe I can get out using that ladder over there...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k154; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k162",
           "source_text_sha256": "0303493d9afbf4aea4663bc371de59ac4f7120beee76dc157404d87e3464d072",
-          "en": "Heroine’s Full Name",
+          "en": "Heroine's Full Name",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k162; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k163",
           "source_text_sha256": "a2355213fb3ca75285d0f38c9db606c260abd4530da1653795aa805b82a92479",
-          "en": "I'm glad you're safe...\nCome on, let's hurry.",
+          "en": "I'm so glad you're okay...\nCome on, let's hurry.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k163; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k166",
           "source_text_sha256": "de7b223241482d01a427dfc90f51329ec0ac1ad1eca45295f554715c883518e4",
-          "en": "Eavesdrop",
+          "en": "(Eavesdrop)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k166; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k168",
           "source_text_sha256": "e7b2555e5a7b8336385a30637851017011d2dac6638d298ccd33e3dade5893f7",
-          "en": "Talk to them",
+          "en": "(Talk to them)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k168; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k170",
           "source_text_sha256": "c43d6155ed4b510e81721cc212d7a88195ef3fc42c67095aab9584ddade2e9fa",
-          "en": "See what’s happening",
+          "en": "(Watch for a bit)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k170; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k172",
           "source_text_sha256": "af7ba197a48600c810560a371ee6cfb97e603d9c8266f121b5a8d63dada4578d",
-          "en": "Listen closely",
+          "en": "(Listen in)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k172; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k175",
           "source_text_sha256": "db58b696f2884f3ee58153e2e946d2020a7ade2c8dfe6ee73e85b7e41b9c915e",
-          "en": "Take a closer look",
+          "en": "(Take a closer look)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k175; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37730,21 +37730,21 @@
         {
           "id": "p0/k179",
           "source_text_sha256": "46c08c8a43323f8b16c3f41d4d145298bc8e763b0ab5ce3942675286ce74a961",
-          "en": "Peer inside",
+          "en": "(Peek inside)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k179; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k181",
           "source_text_sha256": "3375adc9d4b067739e85210332ce1e30da3138275f900bac61a52a09b39f796d",
-          "en": "Reach inside and search.",
+          "en": "(Stick your hand in and feel around)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k181; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k183",
           "source_text_sha256": "f79e924f15a77cb3e3e0c9647bc8dcc87cd73c441a8b7b977550d4aded4f2c09",
-          "en": "Go downstairs",
+          "en": "Go down",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k183; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37758,7 +37758,7 @@
         {
           "id": "p0/k187",
           "source_text_sha256": "611153de8263d347941d0339601b53f15aa8433c1425bcadfa2ecea0f883f6ea",
-          "en": "Try pressing the button.",
+          "en": "(Try the button)",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k187; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37779,105 +37779,105 @@
         {
           "id": "p0/k193",
           "source_text_sha256": "955cfbad456aeec929c8890a416e23184bce1a9649e7dd81d088e3af54a4d850",
-          "en": "This vomit...",
+          "en": "This puke...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k193; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k196",
           "source_text_sha256": "0bfd961be8d32e244e38814ad4c30d88611220cc85c345a13d8cda9302b61540",
-          "en": "Cautious man",
+          "en": "Cautious Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k196; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k197",
           "source_text_sha256": "77f739bc5b205f76c6e9dbe7a7ba944be709b95ea6d1f9a7c0a2d5141bc6cb80",
-          "en": "Watch your step.\nThose flying monsters seem to react to sound too.",
+          "en": "Watch your step.\nThose flying monsters seem to react to noise too.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k197; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k199",
           "source_text_sha256": "0a9f57dc10d3ffacf9b94dcebe8fe6fce7e26775fba95a62c6ef00cca6374dba",
-          "en": "Maybe we could use that to lure them away...\nNo, that would be far too dangerous...",
+          "en": "Maybe we could use that to lure them...\nNo, that's way too dangerous...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k199; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k201",
           "source_text_sha256": "6c12200e5622cea291aa12f7fd27e2736078b2a449d7cdddf9c29eba41eae2ca",
-          "en": "Man watching the situation",
+          "en": "Man Keeping Watch",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k201; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k202",
           "source_text_sha256": "6271d49008088e568c20b5e1347ffa8966ce80773852b4cf6c88958ac0b007c0",
-          "en": "They don't seem to leave their own territory.",
+          "en": "Looks like they don't leave their own turf.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k202; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k204",
           "source_text_sha256": "2e0925c7232e3a9af3984009a9a7b39a07a2d07e76c646e695e3bf08fdb404b1",
-          "en": "Sobbing woman",
+          "en": "Sobbing Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k204; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k205",
           "source_text_sha256": "5c90c120a9dbda27ff792737f54c4a6608e7c33eb271c4570af0a6e3e48cfa65",
-          "en": "I can't take this anymore! If this is a dream, let me wake up!",
+          "en": "I can't take this anymore! If this is a dream, wake me up!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k205; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k207",
           "source_text_sha256": "9c9028abea268e4e41dbaf0fb2d3fc3c8f3f3f001aaf909b91d74d0ae04c8b0f",
-          "en": "Dazed man",
+          "en": "Dazed Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k207; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k208",
           "source_text_sha256": "fab11a73cc3a81d6a79a29eb24b5f0d6ca060a95507f1201e5583a71e1f9f03f",
-          "en": "Just now, right in front of me, someone...",
+          "en": "Just now, right in front of me, a person...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k208; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k210",
           "source_text_sha256": "427666d5b23df23ee1be04cdd86ccbf08ef55cf9fbbaaad57629aa4403c4c122",
-          "en": "Exhausted-looking man",
+          "en": "Worn-Out Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k210; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k211",
           "source_text_sha256": "e1eea93d5533252ac6d643e1011502ba0be66608b2022c3be950be2754286bba",
-          "en": "Damn it! I'm not getting eaten...!",
+          "en": "Damn it! I'm not gonna get eaten...!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k211; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k218",
           "source_text_sha256": "7bab3c36d11f20a89093942ea32b5ba25d3fad6c138bd03b1bc5530e2efe51f1",
-          "en": "Tired-looking man",
+          "en": "Tired Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k218; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k219",
           "source_text_sha256": "06598760a1bcbbf2afb16f9220fde234085467d1eba53c93ee1ca1be1d8c5a9e",
-          "en": "I thought we'd be able to get outside now. You've got to be kidding...",
+          "en": "I thought we could finally get outside. You've gotta be kidding me...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k219; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k221",
           "source_text_sha256": "f89554d2ff67ca72781a7b9dac93fd8ba5627d7b968d45ce9c16095a673392b9",
-          "en": "If only there were some other way down...",
+          "en": "If only there were another way down...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k221; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -37891,105 +37891,105 @@
         {
           "id": "p0/k225",
           "source_text_sha256": "2ed99c463a5b2128eb3c93d0537128770256b341a244c8391322b64ee044efc0",
-          "en": "Shop clerk",
+          "en": "Shop Clerk",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k225; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k226",
           "source_text_sha256": "d82ca8c7c9090c14c143b8a69cc319503cfc42f4ab8b643778b8868843e40726",
-          "en": "Huh? You want to shop?\nWell, this is all I can offer right now...",
+          "en": "Huh? You want to buy something?\nThis is all I've got right now, but...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k226; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k228",
           "source_text_sha256": "74db213e6b5a5f91c17e43e0cce213f69339609e227c6df99f8891c0db2bd434",
-          "en": "Thank you very much.",
+          "en": "Thank you!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k228; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k230",
           "source_text_sha256": "ada6b9cfdf97e27bb54a0931e82e253dd6f9c14316e98201b5378ac3f6dd091c",
-          "en": "Wary woman",
+          "en": "Wary Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k230; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k231",
           "source_text_sha256": "4b7aa282f0e69c1535609a46a11c8eded43abc519532ca33aa29dde0d6f42b72",
-          "en": "Who knows when that monster will attack again...",
+          "en": "Who knows when that monster will come back...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k231; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k233",
           "source_text_sha256": "d7da3ea72ae62f3b84854891c2f369a7b7df571ae0133ffa4928da73edcc03d2",
-          "en": "I can hear growling from above. It's terrifying...",
+          "en": "I can hear growling from up there. It's so scary...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k233; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k235",
           "source_text_sha256": "3e0edbf29a396f4efd033bfd57f1eab86d60480dd7f8a4f1e1fa0c06d6349adc",
-          "en": "What should we do...?",
+          "en": "What do we do...?",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k235; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k237",
           "source_text_sha256": "beeabdc24844b27a8d7a4d34d95d6d5217d1ee7d582414a7181919c5dbcb2450",
-          "en": "Troubled man",
+          "en": "Worried Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k237; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k238",
           "source_text_sha256": "32984414f8a58a6d03820eb3cbe5fcbc94f4dc7763edf37224ae639cb8095c5a",
-          "en": "I want to get out of here, but how...?\nThe door to the stairs seems to be locked...",
+          "en": "I wanna get out of here, but how...?\nThe stairwell door's locked...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k238; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k240",
           "source_text_sha256": "d5629fa30d44eb7f70abe7615277ea4bda7713b087a4a75d432083c8499341e1",
-          "en": "Someone, please unlock it...",
+          "en": "Somebody hurry up and unlock it...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k240; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k242",
           "source_text_sha256": "5a0342516a63b5a66c8e48571c4da71f124f15478e4bba826c763f340b565b1d",
-          "en": "I-I can't believe it broke through the ceiling!",
+          "en": "I-I can't believe it came right through the ceiling!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k242; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k244",
           "source_text_sha256": "bd3e8593d1c4cb29ff09854223f6c93ad1a8812a7a705303328849e2d9f4bbc4",
-          "en": "Dejected woman",
+          "en": "Dejected Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k244; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k245",
           "source_text_sha256": "ddcf49255522dbf2f486fbaa286a1c2bd079d8c78048b5bf861042ec68a6f561",
-          "en": "I hope it's safe here...\nI'm too tired to move anymore...",
+          "en": "I hope it's safe here...\nI'm too tired to move...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k245; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k247",
           "source_text_sha256": "2cfa6946147ffffb149abe35348fb5a5ae8bef53355b3178fb623aac869a30c6",
-          "en": "I can't move anymore...\nI'll just have to leave it to luck...",
+          "en": "I can't move anyway...\nGuess it's all up to luck now...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k247; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k249",
           "source_text_sha256": "c42f584ee1b562f2299c9e9e2be3e816a9a5478964f4abda15187cd34c6b1512",
-          "en": "Agitated man",
+          "en": "Furious Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k249; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -38003,287 +38003,287 @@
         {
           "id": "p0/k252",
           "source_text_sha256": "e62bd2ad2ab27599a3d5d57da15162e0e7a4cef0d1f5248cb800955ae2e8a350",
-          "en": "Shit! I'll survive, even if I'm the only one...",
+          "en": "Shit! I'll make it out, even if nobody else does...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k252; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k254",
           "source_text_sha256": "371c26a96dbcf88c9a0cb1535ff4970cf0b9aa48eff4c563d18205141a67b763",
-          "en": "Woman calling for help",
+          "en": "Woman Waving for Help",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k254; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k255",
           "source_text_sha256": "78901c57685f0b9e564f6d6ee10579d7d3811a721d4836b3a73ce22e4ada97ac",
-          "en": "No matter how much I wave, they won't come rescue us...",
+          "en": "I've been waving and waving, and no one's coming...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k255; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k257",
           "source_text_sha256": "cd4974942f63560846053d39b1188fb4ecbc54f13e785c3f88ee86f9452f2e0b",
-          "en": "Haven't they noticed us...?\nOr... They haven't abandoned us, have they...?",
+          "en": "Haven't they seen us...?\nOr... did they give up on us...?",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k257; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k259",
           "source_text_sha256": "d58538e5189e49e49dbec915b127b275f41045d5d2e41bbf71039d75bed01e67",
-          "en": "It's all over...",
+          "en": "It's hopeless...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k259; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k261",
           "source_text_sha256": "1012a45de3dee025551c7395f4558303bf305939d4650ce615bc8e9b89873f95",
-          "en": "Indignant woman",
+          "en": "Angry Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k261; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k262",
           "source_text_sha256": "9e1d835df07adc67a33a76332423af1fffa6fa7ee6bb7f27925ddc580f751eb9",
-          "en": "That helicopter's just been circling the area...\nWe're right here...!",
+          "en": "That helicopter's just been circling around...\nWe're right here...!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k262; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k264",
           "source_text_sha256": "7b475a079806f6c9ef5a060adc37333f26e264d303b4d423279ab741cd668646",
-          "en": "Why won't they come rescue us...?",
+          "en": "Why won't they come get us...?",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k264; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k266",
           "source_text_sha256": "963b5626939e0b5debb591694bf04261841795c06260ca18cd9de190bf6189d7",
-          "en": "Is giving up all we can do now...?",
+          "en": "Is there nothing left to do but give up...?",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k266; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k268",
           "source_text_sha256": "036ed0c3caa5ace52a742a4d7e3999295766ddedcc56194c49f682a94753f5a6",
-          "en": "Worker in a predicament",
+          "en": "Stuck Worker",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k268; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k269",
           "source_text_sha256": "62de923203a62de3bfa2b542cc5791b5588cefb294a25a84039b947bbbbd0f3e",
-          "en": "My partner brought the [#ff44ff44]Key to the Outdoor Stairs[/#],\nbut that monster ate him.",
+          "en": "My buddy brought the [#ff44ff44]Key to the Outdoor Stairs[/#] up here,\nbut that monster ate him.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k269; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k271",
           "source_text_sha256": "1b932dc08a9a57c7391508a3914c7c879647a514c4be1a547b78f61b43c87232",
-          "en": "The [#ff44ff44]Key to the Outdoor Stairs[/#] is in its stomach too...\nThere's no other way out...\nI don't know what to do anymore.",
+          "en": "And the [#ff44ff44]Key to the Outdoor Stairs[/#] went down with him...\nThere's no other way out...\nI just don't know what to do anymore.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k271; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k273",
           "source_text_sha256": "42883af6633cd2cbbc72e9f315f9a5d58173a3f52a88ec2019048e5050d22c5f",
-          "en": "Come to think of it, after that monster ate my partner,\nit crouched down near the elevator hall for a while.",
+          "en": "Come to think of it, after the monster ate my buddy,\nit hunched over by the elevator hall for a while.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k273; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k275",
           "source_text_sha256": "d1d5982315b2e17d3e96116f6cdd63caf0a2b3e215ce5de80efb5eea90ecc873",
-          "en": "What was it doing...?",
+          "en": "Wonder what it was doing...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k275; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k277",
           "source_text_sha256": "3d6f99d64a6a3433f614ab57792bb4ab64f1221fecddfab0ce2c76edaa7750a2",
-          "en": "Scholarly-looking man",
+          "en": "Professor-Looking Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k277; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k278",
           "source_text_sha256": "6dceacbe5a1c83e0ec18124832d347929bbde73da83da57994b87642755fc02f",
-          "en": "I came to this city to give a lecture at a biology conference,\nand now this...",
+          "en": "I came here to give a talk at a biology conference,\nand now this...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k278; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k280",
           "source_text_sha256": "da149d0679ee1a14e9f3bbf0b90ef39c5fd9bb8198761e52d0db397f2d9985f4",
-          "en": "Apparently, that creature regurgitates\nanything it can't digest.\nFascinating. Birds exhibit similar behavior.",
+          "en": "It seems that creature coughs up\nwhatever it can't digest.\nBirds do that too. Fascinating.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k280; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k282",
           "source_text_sha256": "3eead24ea5cb04267b990b589edf0776057c7fa6887333fcb4a550de31e0e90a",
-          "en": "Man who has almost given up",
+          "en": "Man Who's Nearly Given Up",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k282; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k283",
           "source_text_sha256": "10b43d29e99a528a41d82d492e5f5604ac570af0d6a17f8198bd6450b633ac0b",
-          "en": "Will we make it...? No, I don't think we will...",
+          "en": "Will we make it...? No, probably not...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k283; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k285",
           "source_text_sha256": "696a42cdc03abb73f85866b60cada911a9cac9b6c785b2c8a2cfcc4cd6109f16",
-          "en": "So this really is the end...",
+          "en": "Guess this is it...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k285; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k287",
           "source_text_sha256": "c960d724c45f0b89e1d41f4f724e6d99847c4be051066c732512bf543275b04a",
-          "en": "Dazed woman",
+          "en": "Dazed Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k287; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k288",
           "source_text_sha256": "d11e0e02427827814a1cf25c5ac94f830c73f19a28e3a205dbb927614b8a1126",
-          "en": "This night view with you is the last thing I'll ever see...",
+          "en": "So this night view with you is the last thing I'll ever see...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k288; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k290",
           "source_text_sha256": "b1bf31ad54a0de9fa950c066aa646d1de753a42fd669318365356474bd229384",
-          "en": "I just want to enjoy this night view with you a little longer...",
+          "en": "I just want a little more time with you and this view...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k290; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k292",
           "source_text_sha256": "a49250125cdc4e22123db37bc1d0cde4fca1766ea6f42293097555ef7222b515",
-          "en": "Man gazing blankly outside",
+          "en": "Man Staring Out the Window",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k292; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k293",
           "source_text_sha256": "615d2352341500b71c92b562eca7d0cf8b23f56f25ec3aed092a0e608ec8f9b9",
-          "en": "If I'm with you, I have no regrets...",
+          "en": "As long as I'm with you, I have no regrets...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k293; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k295",
           "source_text_sha256": "518e663b34b3fe5b24be663b737bf1eae9fb734381c454eabbc741ebc930d5c0",
-          "en": "I'll always be with you...",
+          "en": "I'll be with you forever...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k295; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k297",
           "source_text_sha256": "6de940c4c8ba40bd3a3a3bb18e3035598a057ebad53f46a4f5146f3d34f36216",
-          "en": "Lamenting man",
+          "en": "Lamenting Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k297; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k298",
           "source_text_sha256": "a568bbc28b71bc1c6ae911fb96338c274cdd9294c1f489d99783ca75fa908224",
-          "en": "Oh, why did this happen...?",
+          "en": "Oh, how did it come to this...?",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k298; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k300",
           "source_text_sha256": "494f6470d897c6f0b5df2124e591364104b60ebd699ab419ed04e09a274d7400",
-          "en": "Irresponsible-looking man",
+          "en": "Slacker-Looking Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k300; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k301",
           "source_text_sha256": "fe7cb9125f2d6f94752288a2b44bd9f3cf909042e1f663df41c81fc5ca9ff359",
-          "en": "For this to happen on a workday...\nThis is the worst day of my life!",
+          "en": "This had to happen on a workday...\nWorst day of my life!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k301; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k303",
           "source_text_sha256": "82d99285c5690ebcf8f6786321dac732b3113c206dcbc0b929db5d0a371d045c",
-          "en": "I should've skipped work.",
+          "en": "Should've called in sick.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k303; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k305",
           "source_text_sha256": "f79aa5574350bb21f7208cc483408b10436f9f88bc041d6129b94a29231b08e2",
-          "en": "Selfish woman",
+          "en": "Selfish Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k305; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k306",
           "source_text_sha256": "e4a626f010b46fb076a4d45e6fc70a6ff57d59afc24086bcfb57aa4a5a0fb382",
-          "en": "This is because you wanted to see the night view from the tower!",
+          "en": "This is your fault for wanting to see the view from the tower!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k306; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k308",
           "source_text_sha256": "e8b53f15209230453d1d403c35df0931a5ebd57e8e99bf67a2dcccab06f46f70",
-          "en": "Selfish man",
+          "en": "Selfish Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k308; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k309",
           "source_text_sha256": "79ffa92b7d6beee4d5de87db42981bfca89fd831a55dbd9868218d8d6e0f81f5",
-          "en": "You were excited about it too, weren't you?!",
+          "en": "You were all for it too, weren't you?!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k309; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k311",
           "source_text_sha256": "07eda25111e6e4fda04a71f33d4bc2022ac5d78a2aa028c61a6e511b9b7f3458",
-          "en": "Worried woman",
+          "en": "Worried Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k311; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k312",
           "source_text_sha256": "ff29ec9e20ce5ab1704d7f2e9084fc2d00fe6826d0f2fa97ddf0a4ad8dcf812b",
-          "en": "The last time we came here,\nwe came up the stairs.",
+          "en": "Last time we came here,\nwe walked up the stairs.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k312; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k314",
           "source_text_sha256": "8f68b2eb9eb3c6537ee2474c3d31179f83ca2431e1947baa05cd24749ccba451",
-          "en": "I'd like to share what we know with everyone else, but...",
+          "en": "I'd like to let the others know too, but...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k314; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k316",
           "source_text_sha256": "9b9ddddb893f07ec04e30206870199b1360487dd303364e57b4c7084f27cd6f6",
-          "en": "If someone would go out ahead of us...",
+          "en": "If only someone would go first...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k316; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k318",
           "source_text_sha256": "bfad4b00f420a31b6f87e6fbb42715c1f7783252197ce7b1616f9ea83e145e96",
-          "en": "Oh, that reminds me. Here, use this if you'd like.",
+          "en": "Oh, right. Here, you can have this.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k318; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k320",
           "source_text_sha256": "b8c119e6c3906641d57aff2ba933474a311665a738cba3f49ffcf80775b59c35",
-          "en": "Troubled woman",
+          "en": "Worried Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k320; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -38304,14 +38304,14 @@
         {
           "id": "p0/k325",
           "source_text_sha256": "04ab4c9ee01baa93ec50b91726e207445b33c148ebc50103d81edfa5b74d18a8",
-          "en": "Isn't there a staff member around...?",
+          "en": "Isn't there anyone from the staff around...?",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k325; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k327",
           "source_text_sha256": "757811b20366a7855f6f7cdeb5929b54b8595b246a68486b722e61ff2eebf4b5",
-          "en": "The door's open, but...\nIf a few people would check that it's safe first...",
+          "en": "The door's open, but...\nIf only a few people would make sure it's safe first...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k327; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -38332,91 +38332,91 @@
         {
           "id": "p0/k346",
           "source_text_sha256": "fa5e9683f9898ec6cf5b68ad457e409f0465f27b6f3b56a6171bf908951c6b1b",
-          "en": "Not right now",
+          "en": "\"Not right now.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k346; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k357",
           "source_text_sha256": "f0c2f5e6f6159ca9e8207b74191b9557322747063dc178e6c128d149ea7c2a2e",
-          "en": "Ugh... The wound from when that monster caught me...",
+          "en": "Ugh... My wound from when the monster grabbed me...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k357; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k366",
           "source_text_sha256": "075ef9218926e8c9aee40fc6935fc1cee4302cc8ce19bede6d545e2ba56f8c31",
-          "en": "Ugh... Uuugh...",
+          "en": "Ugh... Ngh...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k366; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k383",
           "source_text_sha256": "8b46a21217a98b0cf6317c9de3b847b99d20426be5da840babb401612c144321",
-          "en": "Don't worry about us. Please get out of here first.",
+          "en": "Don't worry about us. Go on ahead and get out.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k383; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k389",
           "source_text_sha256": "da1271f2cc5d1cbd73684367a096594ef8ad3bb5ffbbd2d3e3ff06893168c298",
-          "en": "Discouraged woman",
+          "en": "Discouraged Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k389; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k390",
           "source_text_sha256": "c5973666f4f945201591c0796f9ecc071b602acaec0c07c2318643e5bf24674d",
-          "en": "We made it this far, but this might be the end...",
+          "en": "We made it this far, but I think we're done for...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k390; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k392",
           "source_text_sha256": "059339b1e71be2c4c683330245921761c01b61495752b0358ef2ae0eece5742c",
-          "en": "Cautious woman",
+          "en": "Careful Woman",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k392; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k393",
           "source_text_sha256": "8e45990816376a2349c30ad9f0aae3bd788a7684b6455458f412f8f4109d0f0f",
-          "en": "These stairs are completely exposed from outside.\nIf we go down, we'll have to be ready for those flying monsters to spot us...",
+          "en": "These stairs are totally out in the open.\nIf we go down, we have to be ready for the flying monsters to spot us...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k393; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k395",
           "source_text_sha256": "31a8f9f98f2b0d4357cfcc6088ef4eaef7fc756eb881711977f30b6fa470c749",
-          "en": "Fearful man",
+          "en": "Scaredy-Cat Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k395; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k396",
           "source_text_sha256": "9a129d135d92850785774f74b04508055b02690ec57dba46f63e6794be458ddd",
-          "en": "Surely they won't come this far in, right?\nIf I just hide here...",
+          "en": "They won't come this far in, right?\nIf I just hide here...",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k396; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k398",
           "source_text_sha256": "eb2c6e21ca68ba5867f1eba9a087d7fe1163d71b087982311faf894806e59b9d",
-          "en": "Irritated man",
+          "en": "Irritated Man",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k398; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k399",
           "source_text_sha256": "2d61731070626ea970da84c9aff866c84ba21f516ae6a8c0e143a8b4b3cdcd56",
-          "en": "They shoot beams that can cut through anything!\nYou saw it when they carried you off, didn't you?!",
+          "en": "Those things shoot beams that slice through anything!\nYou saw it when they carried you off!",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k399; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k401",
           "source_text_sha256": "25b59090135190120b51facdfdcbc5da2eb0b00ba77fb22905a8c183ddc03c95",
-          "en": "That beam looked like it could cut through anything.\nIf they find us, we're done for.",
+          "en": "That beam looked like it could cut through anything.\nIf they spot us, we're dead.",
           "notes": "English draft imported from audited private workspace, translate-en-0053.json:p0/k401; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -38451,7 +38451,7 @@
         {
           "id": "p0/k641",
           "source_text_sha256": "8121094eabe859ae5156f952b8a82fb8140fecf66a3f0af60f84f974841f5e97",
-          "en": "Obtained 【16050 yen】.",
+          "en": "Obtained 【16,050 yen】.",
           "notes": "English draft imported from audited private workspace, translate-en-0054.json:p0/k641; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -38465,14 +38465,14 @@
         {
           "id": "p0/k651",
           "source_text_sha256": "f9e6a22bd9bb741802e647b56b0e3f9a64c47f953f9c898814c1b292d2266765",
-          "en": "Will you marry me...? Uh, sorry.\nI had a whole speech planned, but I forgot it...",
+          "en": "Will you marry me...? Uh, sorry.\nI had this whole thing planned out, but I forgot it...",
           "notes": "English draft imported from audited private workspace, translate-en-0054.json:p0/k651; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k654",
           "source_text_sha256": "5c115200a1f64a53dbb0a3a1594a4adaa328f9bb19ceb2592ed66a8d0b52c512",
-          "en": "...But what do we do now?\nHow are we supposed to get out of here...?",
+          "en": "...But now what?\nHow do we get out of here...?",
           "notes": "English draft imported from audited private workspace, translate-en-0054.json:p0/k654; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
