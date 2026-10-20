@@ -26,12 +26,12 @@ static unsigned char *base;
 static int preview,observer;
 static _Atomic int available=0,requested=0,active=0,owned_pause=0,foreign_pause=0;
 static SRWLOCK state_lock=SRWLOCK_INIT,input_lock=SRWLOCK_INIT;
-typedef struct {float right,up,forward,yaw,pitch,fov,speed;} Input;
+typedef struct {float right,up,forward,yaw,pitch,fov,speed,roll;} Input;
 static Input input;
 typedef struct {
     void *manager,*camera,*table;
     Vec3 eye,initial_eye,initial_forward,initial_up;
-    float distance,yaw,pitch,fov;
+    float distance,yaw,pitch,fov,roll,initial_fov;
     LARGE_INTEGER previous;
 } State;
 static State state;
@@ -75,6 +75,20 @@ static void direction(const State *s,Vec3 *forward,Vec3 *right,Vec3 *up) {
     *right=cross(*forward,s->initial_up);unit(right);
     *forward=rotate(*forward,*right,s->pitch);unit(forward);
     *up=cross(*right,*forward);unit(up);
+    *right=rotate(*right,*forward,s->roll);*up=rotate(*up,*forward,s->roll);
+}
+float kyoei_photo_scene_fov_value(void) {
+    AcquireSRWLockShared(&state_lock);float value=state.fov;ReleaseSRWLockShared(&state_lock);return value;
+}
+float kyoei_photo_scene_roll_value(void) {
+    AcquireSRWLockShared(&state_lock);float value=state.roll;ReleaseSRWLockShared(&state_lock);return value*57.295779513f;
+}
+float kyoei_photo_scene_initial_fov(void) {
+    AcquireSRWLockShared(&state_lock);float value=state.initial_fov;ReleaseSRWLockShared(&state_lock);return value;
+}
+void kyoei_photo_scene_roll(float delta) {
+    if(!isfinite(delta))return;
+    AcquireSRWLockExclusive(&input_lock);input.roll+=delta*.01745329252f;ReleaseSRWLockExclusive(&input_lock);
 }
 int kyoei_photo_scene_active(void){return atomic_load_explicit(&active,memory_order_relaxed);}
 int kyoei_photo_scene_available(void){return atomic_load_explicit(&available,memory_order_acquire);}
@@ -109,6 +123,7 @@ static int enter(void *manager,void *camera) {
     Vec3 target;
     memcpy(&fresh.eye,(char*)camera+0x80,12);memcpy(&target,(char*)camera+0x260,12);
     memcpy(&fresh.initial_up,(char*)camera+0x270,12);memcpy(&fresh.fov,(char*)camera+0x284,4);
+    fresh.initial_fov=fresh.fov;
     fresh.initial_forward=add(target,scale(fresh.eye,-1));fresh.distance=sqrtf(dot(fresh.initial_forward,fresh.initial_forward));
     if(!finite3(fresh.eye)||!unit(&fresh.initial_forward)||!unit(&fresh.initial_up)||
        fabsf(dot(fresh.initial_up,fresh.initial_forward))>.999f ||
@@ -170,7 +185,7 @@ static ABI void frame_hook(void *manager) {
     }
     if(kyoei_photo_scene_active()) {
         Input controls;AcquireSRWLockExclusive(&input_lock);controls=input;
-        input.yaw=input.pitch=input.fov=0;ReleaseSRWLockExclusive(&input_lock);
+        input.yaw=input.pitch=input.fov=input.roll=0;ReleaseSRWLockExclusive(&input_lock);
         LARGE_INTEGER now;QueryPerformanceCounter(&now);
         AcquireSRWLockExclusive(&state_lock);
         float dt=(float)((double)(now.QuadPart-state.previous.QuadPart)/frequency.QuadPart);
@@ -178,6 +193,7 @@ static ABI void frame_hook(void *manager) {
         state.yaw+=fmaxf(-.5f,fminf(.5f,controls.yaw));
         state.pitch=fmaxf(-1.45f,fminf(1.45f,state.pitch+fmaxf(-.5f,fminf(.5f,controls.pitch))));
         state.fov=fmaxf(15,fminf(110,state.fov+controls.fov));
+        state.roll=remainderf(state.roll+controls.roll,6.28318530718f);
         Vec3 forward,right,up;direction(&state,&forward,&right,&up);
         Vec3 step=add(add(scale(right,controls.right),scale(up,controls.up)),scale(forward,controls.forward));
         Vec3 next_eye=add(state.eye,scale(step,dt*2.f*fmaxf(.1f,controls.speed)));

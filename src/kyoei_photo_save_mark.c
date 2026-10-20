@@ -15,11 +15,15 @@ static ModelDraw original_draw;
 static unsigned char *base;
 static int observer;
 static int player_supported; /* immutable after boot signature validation */
+static int player2_supported;
 static _Atomic int player_hidden=0;
+static _Atomic unsigned player_draw_observations=0;
 void kyoei_photo_player_restore(void) {atomic_store(&player_hidden,0);}
 int kyoei_photo_player_toggle(void) {
     if(!original_draw || !player_supported || !kyoei_photo_hud_hidden())return 0;
     atomic_store(&player_hidden,!atomic_load(&player_hidden));
+    gz_log("Photo player: requested_hidden=%d derived_signature=%d model_draw_matches=%u",
+        atomic_load(&player_hidden),player2_supported,atomic_load(&player_draw_observations));
     return 1;
 }
 int kyoei_photo_player_hidden(void) {
@@ -35,7 +39,13 @@ static ABI void draw_model(void *object) {
     if(kyoei_photo_hud_hidden()) {
         uintptr_t table;memcpy(&table,object,sizeof(table));
         if(player_supported && atomic_load(&player_hidden) &&
-           table==(uintptr_t)base+0x12cba00)return;
+           (table==(uintptr_t)base+0x12cba00 ||
+            (player2_supported && table==(uintptr_t)base+0x12b3140))) {
+            unsigned count=atomic_load(&player_draw_observations);
+            if(count<16 && atomic_fetch_add(&player_draw_observations,1)<16 && observer)
+                gz_log("Photo player: suppressed model draw object=%p table=%llx",object,(unsigned long long)table);
+            return;
+        }
         if(table==(uintptr_t)base+0x12d2060) {
             if(observer && atomic_load_explicit(&observations,memory_order_relaxed)<16 &&
                atomic_fetch_add_explicit(&observations,1,memory_order_relaxed)<16)
@@ -71,6 +81,8 @@ void kyoei_photo_save_mark_configure(void *image,uint64_t size) {
     original_draw=(ModelDraw)relay;base=image;
     player_supported=hash_bytes((unsigned char*)image+0x9fccf0,296)==UINT64_C(0x94d0a273f4b2854d) &&
         hash_bytes((unsigned char*)image+0x740240,15)==UINT64_C(0x810839f2dae557fa);
+    player2_supported=player_supported &&
+        hash_bytes((unsigned char*)image+0x8f7bc0,96)==UINT64_C(0x22b1184494d9a34e);
     gz_log("Photo player: F11 draw filter %s",player_supported?"available; visual validation pending":"disabled: type signature differs");
     int32_t relative=(int32_t)distance;code[0]=0xe9;memcpy(code+1,&relative,4);code[5]=0x90;
     DWORD ignored;

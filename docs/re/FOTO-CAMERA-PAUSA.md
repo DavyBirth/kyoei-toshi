@@ -80,3 +80,18 @@ em720/1080, modos teclado/controle; integracao Vulkan em partida pendente.
 View/Share (SDL_BACK, sem mapeamento guest) entra/sai; gatilhos altura com zona
 morta16, L1/R1 rapidez, dpad FOV, SouthPNG/Northplayer/Westajuda. Comandos guest
 neutralizados enquanto foto; controles fisicos ainda precisam de validacao.
+
+### Ajustes host20/10
+Lente usa convencao sensorvirtual24mmaltura: f=12/tan(FOV/2), com limite
+nativo15..110. Roll aplica rotacao do par right/up emtorno forward somente
+no compositor temporario; reset usa FOV de entrada/roll0. Velocidade host.
+GradeGPU fullscreen amostra frame de apresentacao e escreve swapchain; nada
+na imagem guest e modificado. Descriptor por slotFrame, atualizado somente
+apos fence existente; barreiraColorWrite->ReadWrite antes da ajuda. Recursos
+liberados apos schedulersFinish, recompostos comwaitIdle sobsubmit_mutex se
+formato muda. Apenas8bitRGBA/BGRA SDR; CPUnoPNG usa a mesma transferencia
+sRGB/grade linear. Neutro nao transforma pixels nem executa passagemGPU.
+Grade: ganho2^EV, curva contraste emtorno18%, saturacao/lumaRec709,5presets.
+Telas e fotos privadas verificadas; ajuda foraPNG, reset e lens/roll reais.
+F11 filtrando35b810 (base/UnitMrPlayer2) NAOocultou corpo: root e componente
+visual sao separados. Binding682a50->276ac0 sobreplayer+6c0 em investigacao.

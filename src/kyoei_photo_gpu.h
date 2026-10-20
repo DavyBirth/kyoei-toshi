@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #pragma once
 #include "kyoei_photo.h"
+#include "kyoei_photo_settings.h"
+#include "kyoei_photo_post.h"
 #include "video_core/buffer_cache/buffer.h"
 #include "video_core/texture_cache/image.h"
 #include <filesystem>
@@ -51,6 +53,7 @@ inline void Capture(Vulkan::Instance& instance,Vulkan::Scheduler& scheduler,Vide
         scheduler.Finish();
         vmaInvalidateAllocation(instance.GetAllocator(),readback.buffer.allocation,0,size);
         std::vector<u8> pixels(readback.mapped_data.begin(),readback.mapped_data.begin()+size);
+        if(kyoei_photo_hud_hidden())GradePixels(pixels.data(),pixels.size(),bgra,GetGrade());
         // Private prototype destination. No dump/save changes, no desktop capture.
         const auto directory=std::filesystem::path("photos");std::filesystem::create_directories(directory);
         static u64 sequence{};

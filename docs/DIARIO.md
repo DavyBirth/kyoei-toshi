@@ -4182,3 +4182,51 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   teste aberto nesta rodada. Proxima abertura pelo cmd recebe candidato;
   nao declarar validacao visual/F11/controle fisico concluida. Pacotes
   externos permanecem antigos, sem alegar ganho de desempenho.
+
+- Davy autorizou continuar sem acompanhar testes, pediu aproximar dos modos
+  foto citados (goldstandard) e descobrir pelo menu de pausa. Nao solicitar
+  validacao humana para cada etapa; testes separados/mudos permanecem regra.
+- Implementado candidato de lente virtual24mmaltura (FOV15..110), roll,
+  velocidade0,25..5x e painel selecionavel por setas/dpad; R/R3 restaura lente,
+  roll, grade e velocidade. Nao alegar lente fisicamente calibrada do PS4.
+- GradeSDR: exposicao-3..3EV, contraste0..2, saturacao0..2, Original/PB/Sepia/
+  Frio/Quente. Passagem hostVulkan amostra apenas frame de apresentacao; sem
+  modificar imagem guest. PNG recebe gradeCPU linear equivalente. Neutro
+  preserva bytes; foraFoto caminho normal. Shaders proprios GLSL compilados
+  por glslc do VulkanSDK (novorequisito Windows), SPIRV derivados em build.
+- Build inicial corrigiu palavra GLSL reservada filter e construtoresVulkan
+  desabilitados (usar designatedinitializers). Build final passou; testes
+  INPUT,PLAYER,SETTINGS,OVERLAY passaram. Nao rodar duas builds simultaneas:
+  tentativa de segundo target durante primeira causou recompactionpermission;
+  regeneracao sequencial seguinte resolveu, sem apagar arquivos do usuario.
+- Rodada privada/muda photo-adjust-20261020 saiu0. Exposure0,5EV e PB vistos
+  em host e PNG: comparacao top700linhas (foraajuda), erro medio0,0611/0,0356
+  por canal8bit, p99=1 emambos.6PNGs1920x1080. Inicio foi cedo enquanto mapa
+  ainda carregava; primeira captura tem culling/loading incompleto, NAOusar
+  base/reset como prova de identidade. Repetir apos PROFILE READY.
+- Prova real rejeitou F11 original: painel mudava mas personagem permanecia.
+  Causa: cena usa UnitMrPlayer2 table12b3140, derivadoUnitPlayer (ctor8f7bc0
+  chama9fccf0), nao tabela base12cba00. Lido em grupo1 da cena privada. Novo
+  filtro reconhece essa classe com hash96bytes22b1184494d9a34e; teste estatico
+  garante tambem classe derivada/assinatura indisponivel. Prova visual repetida
+  em photo-adjust-final-20261020 apos recompilar; ainda em andamento.
+- Pesquisa menu: UnitHudPause descriptor153d6d0/ctorae3660/table12e1520,
+  rotinasae2e90/ae2f40/ae2f90/ae3220. Objeto existe em grupo12 mesmo fora do
+  menu; nao usar so existencia/pausa global para exibir opcao. Ainda sem
+  entrada implementada; preservar menus/dialogos e posse de pausa original.
+- photo-adjust-final e photo-grade-final encerraram0, sem fechar processo de
+  Davy. Lente39mm/FOV34,2 e roll10graus conferidos, R voltou lente33mm/FOV40/
+  roll0. Segunda rodada reset erro medio0,0000233 por canal vsbase. Contraste
+  passou a curva logaritmica emtorno18% para preservar sombras, teste dedicado.
+- Terceira rodada grade-final repetiu preview/PNG com contraste suave e
+  filtros; detalhes em relatorio privado. Uma tentativa de screenshot falhou
+  porque destino ja existia (protecao correta); repetida com nomes novos e
+  foco resetado por minimizar/restaurar somente janela privada verificada.
+- F11 continua reprovado visualmente:16matches exatos UnitMrPlayer2 omitidos
+  no35b810 e corpo ainda visivel. Rejeitada hipotese de bastar derivacao;
+  desenho real usa outro componente. Nao declarar invisibilidade pronta.
+- Investigacao seguinte achou binding setVisible682a50: resolve personagem e
+  chama276ac0 sobre componente+6c0. Setter67bytes controla visibilidade+48 via
+  virtuais88/90; corpo do protagonista privado tem componente table1254138,
+  visibilidade1. Novo candidato deve preservar/restaurar esse estado no thread
+  guest, validar dono atual e nunca alterar flag de NPC generico.

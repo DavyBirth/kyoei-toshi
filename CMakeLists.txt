@@ -305,6 +305,9 @@ add_executable(test_kyoei_photo_player src/test_kyoei_photo_player.c)
 target_include_directories(test_kyoei_photo_player PRIVATE "${KYOEI_CORE}/src")
 target_compile_options(test_kyoei_photo_player PRIVATE -UNDEBUG)
 target_compile_definitions(test_kyoei_photo_player PRIVATE _CRT_SECURE_NO_WARNINGS)
+add_executable(test_kyoei_photo_settings src/test_kyoei_photo_settings.cpp)
+target_compile_features(test_kyoei_photo_settings PRIVATE cxx_std_17)
+target_compile_options(test_kyoei_photo_settings PRIVATE -UNDEBUG)
 set(KYOEI_PORT_EXE_NAME "kyoei" CACHE STRING "Prepared port binary: kyoei or kyoei-orb-trace")
 if(NOT KYOEI_PORT_EXE_NAME MATCHES "^(kyoei|kyoei-orb-trace|kyoei-orb-trace-next)$")
   message(FATAL_ERROR "Unsupported port executable name")
@@ -1198,6 +1201,8 @@ set(KYOEI_OVERLAY_ORIGINAL_BARRIER [=[        vk::ImageMemoryBarrier{
 kyoei_replace_checked(KYOEI_PRESENTER "${KYOEI_OVERLAY_ORIGINAL_BARRIER}"
   "        KyoeiOverlay::BeforeDraw(swapchain.Image(),range,kyoei_modal)")
 set(KYOEI_OVERLAY_PRESENT [=[    if (kyoei_modal) {
+        KyoeiPhoto::RenderPost(instance,cmd,frame,frame->image_view,frame->width,frame->height,
+            swapchain.ImageView(),{swapchain.GetWidth(),swapchain.GetHeight()},swapchain.GetSurfaceFormat().format);
         KyoeiOverlay::Render(cmd,swapchain.ImageView(),{swapchain.GetWidth(),swapchain.GetHeight()});
         const auto to_present=KyoeiOverlay::AfterDraw(swapchain.Image(),range);
         cmd.pipelineBarrier(vk::PipelineStageFlagBits::eColorAttachmentOutput,vk::PipelineStageFlagBits::eBottomOfPipe,{}, {}, {},to_present);
@@ -1218,9 +1223,21 @@ kyoei_replace_checked(KYOEI_PRESENTER "namespace Vulkan {" "#include \"kyoei_pho
 kyoei_replace_checked(KYOEI_PRESENTER
   "    draw_scheduler.EndRendering();\n    const auto cmdbuf = draw_scheduler.CommandBuffer();"
   "    draw_scheduler.EndRendering();\n    KyoeiPhoto::Capture(instance,draw_scheduler,texture_cache.GetImage(image_id),GetFrameViewFormat(attribute.attrib.pixel_format));\n    const auto cmdbuf = draw_scheduler.CommandBuffer();")
+kyoei_replace_checked(KYOEI_PRESENTER "    KyoeiOverlay::Shutdown();"
+  "    KyoeiOverlay::Shutdown();\n    KyoeiPhoto::ShutdownPost();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp" CONTENT "${KYOEI_PRESENTER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_presenter.cpp"
   src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp")
+find_program(KYOEI_GLSLC glslc HINTS "$ENV{VULKAN_SDK}/Bin" REQUIRED)
+foreach(stage vert frag)
+  add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/photo.${stage}.inc"
+    COMMAND "${KYOEI_GLSLC}" -mfmt=c "${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/photo.${stage}"
+      -o "${CMAKE_CURRENT_BINARY_DIR}/photo.${stage}.inc"
+    DEPENDS "src/shaders/photo.${stage}" VERBATIM)
+endforeach()
+target_sources(kyoei_videoout PRIVATE src/kyoei_photo_post.cpp
+  "${CMAKE_CURRENT_BINARY_DIR}/photo.vert.inc" "${CMAKE_CURRENT_BINARY_DIR}/photo.frag.inc")
+target_include_directories(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 target_include_directories(kyoei_videoout PRIVATE "${KYOEI_IMGUI_DIR}" "${KYOEI_IMGUI_DIR}/backends")
 set_source_files_properties(src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
   PROPERTIES COMPILE_DEFINITIONS IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1)

@@ -144,3 +144,13 @@ velocidade da simulacao ou remover efeitos silenciosamente para esconder custo.
 
 Este pedido amplia as opcoes futuras autorizadas,sem interromper a investigacao
 atual de stutter. Testes de1080p passam a integrar a verificacao corrente.
+
+### Evolucao foto20/10: ajustes e descoberta
+- Davy pediu aproximar acabamento/usabilidade das referencias, com previa real
+  e entrada no menu de pausa para o jogador descobrir. Nao equivale a prometer
+  todos os recursos dessas producoes antes de conhecer os mecanismos do jogo.
+- Novo candidato integra roll/lente virtual/velocidade e grading hostGPU:
+  exposicao/contraste/saturacao e5filtros, com CPU equivalente no PNG.
+- Menu de pausa: UnitHudPause table12e1520/ctorae3660 localizado; entrada e
+  restauracao da posse de pausa ainda pendentes. Foco/DOF, iluminacao, clima e
+  horario continuam em pesquisa; nao substituir por efeitos com outro nome.

@@ -36,8 +36,9 @@ void checked(VkResult result) {
 }
 }
 void Initialize(const Vulkan::Instance &instance,vk::Format format,unsigned image_count) {
-    const char *setting=std::getenv("KYOEI_IN_GAME_DIALOGS"),*title=std::getenv("KYOEI_TITLE_EXIT");
-    if ((!setting || std::strcmp(setting,"1")) && (!title || std::strcmp(title,"1"))) return;
+    const char *setting=std::getenv("KYOEI_IN_GAME_DIALOGS"),*title=std::getenv("KYOEI_TITLE_EXIT"),*photo=std::getenv("KYOEI_PHOTO_HUD");
+    if ((!setting || std::strcmp(setting,"1")) && (!title || std::strcmp(title,"1")) &&
+        (!photo || std::strcmp(photo,"1"))) return;
     if (initialized && surface_format==format && images==image_count) return;
     if (initialized) {
         // Rebuilding backend allocations requires all previous draws to finish.
@@ -156,7 +157,8 @@ void Render(vk::CommandBuffer command,vk::ImageView view,vk::Extent2D extent) {
     ImGui_ImplVulkan_NewFrame();
     auto *draw=KyoeiOverlayModel::Draw(extent.width,extent.height,elapsed,[]{
         if(!kyoei_photo_hud_hidden() || !KyoeiPhoto::hints.load() || kyoei_overlay_kind())return;
-        KyoeiPhoto::DrawPanel(kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER,kyoei_photo_player_hidden()!=0);
+        KyoeiPhoto::DrawPanel(kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER,kyoei_photo_player_hidden()!=0,
+            kyoei_photo_scene_fov_value(),kyoei_photo_scene_roll_value());
     });
     const auto attachment=Attachment(view);
     command.beginRendering(vk::RenderingInfo{

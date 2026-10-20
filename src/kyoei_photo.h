@@ -8,9 +8,24 @@
 #include "kyoei_overlay.h"
 #include "kyoei_title_exit.h"
 #include "kyoei_input_mode.h"
+#include "kyoei_photo_settings.h"
 namespace KyoeiPhoto {
 inline std::atomic_bool pending{false};
 inline std::atomic_bool hints{true};
+inline void AdjustSelected(int direction) {
+    const auto field=Field(selected.load());
+    if(field==Field::Lens) {
+        const float fov=kyoei_photo_scene_fov_value();
+        if(fov>0){const float mm=std::clamp(FocalLength(fov)+direction*2.f,8.5f,90.f);
+            kyoei_photo_scene_fov(FovFromFocal(mm)-fov);}
+    } else if(field==Field::Roll)kyoei_photo_scene_roll(direction*2.f);
+    else AdjustGrade(field,direction);
+}
+inline void ResetAdjustments() {
+    ResetGrade();kyoei_photo_scene_roll(-kyoei_photo_scene_roll_value());
+    const float initial=kyoei_photo_scene_initial_fov();
+    if(initial>0)kyoei_photo_scene_fov(initial-kyoei_photo_scene_fov_value());
+}
 inline bool Blocked(SDL_Window* window) {
     return !(SDL_GetWindowFlags(window)&SDL_WINDOW_INPUT_FOCUS) ||
         (SDL_GetWindowFlags(window)&SDL_WINDOW_MINIMIZED) ||
@@ -48,6 +63,11 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
             if(button==SDL_GAMEPAD_BUTTON_NORTH)kyoei_photo_player_toggle();
             else if(button==SDL_GAMEPAD_BUTTON_SOUTH)pending.store(true);
             else if(button==SDL_GAMEPAD_BUTTON_WEST)hints.store(!hints.load());
+            else if(button==SDL_GAMEPAD_BUTTON_DPAD_LEFT)SelectField(-1);
+            else if(button==SDL_GAMEPAD_BUTTON_DPAD_RIGHT)SelectField(1);
+            else if(button==SDL_GAMEPAD_BUTTON_DPAD_UP)AdjustSelected(1);
+            else if(button==SDL_GAMEPAD_BUTTON_DPAD_DOWN)AdjustSelected(-1);
+            else if(button==SDL_GAMEPAD_BUTTON_RIGHT_STICK)ResetAdjustments();
             return true;
         }
         if(button==SDL_GAMEPAD_BUTTON_START || button==SDL_GAMEPAD_BUTTON_TOUCHPAD ||
@@ -57,6 +77,18 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
     }
     if(event.type!=SDL_EVENT_KEY_DOWN && event.type!=SDL_EVENT_KEY_UP)return false;
     if(event.key.windowID!=SDL_GetWindowID(window))return false;
+    if(kyoei_photo_hud_hidden() && (event.key.key==SDLK_LEFT || event.key.key==SDLK_RIGHT ||
+       event.key.key==SDLK_UP || event.key.key==SDLK_DOWN || event.key.key==SDLK_R)) {
+        if(event.type==SDL_EVENT_KEY_DOWN && !Blocked(window)) {
+            kyoei_input_keyboard();
+            if(event.key.key==SDLK_LEFT)SelectField(-1);
+            else if(event.key.key==SDLK_RIGHT)SelectField(1);
+            else if(event.key.key==SDLK_UP)AdjustSelected(1);
+            else if(event.key.key==SDLK_DOWN)AdjustSelected(-1);
+            else if(!event.key.repeat)ResetAdjustments();
+        }
+        return true;
+    }
     if(event.type==SDL_EVENT_KEY_DOWN && !event.key.repeat && !Blocked(window) &&
        (event.key.key==SDLK_F9 || event.key.key==SDLK_F10 ||
         event.key.key==SDLK_F11 || event.key.key==SDLK_F12))kyoei_input_keyboard();

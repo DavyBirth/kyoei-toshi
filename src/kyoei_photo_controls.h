@@ -4,6 +4,7 @@
 #include "kyoei_mouse.h"
 #include "kyoei_photo_hud.h"
 #include "kyoei_photo_scene.h"
+#include "kyoei_photo_settings.h"
 namespace KyoeiPhotoControls {
 inline bool Enabled(){return kyoei_photo_scene_available() && kyoei_photo_hud_hidden();}
 inline float StickAxis(unsigned char value){
@@ -30,11 +31,9 @@ template<class Data,class Buttons> inline void Apply(Data& data,Buttons& buttons
     float pitch=-StickAxis(data.rightStick.y)*dt*1.5f;
     if(KyoeiMouse::captured){yaw-=KyoeiMouse::dx*.002f;pitch-=KyoeiMouse::dy*.002f;}
     KyoeiMouse::dx=KyoeiMouse::dy=0;
-    // PS4 pad masks: L1/R1 speed; d-pad up/down adjusts FOV continuously.
-    const float zoom=float((buttons&0x40)!=0)-float((buttons&0x10)!=0);
-    if(zoom)kyoei_photo_scene_fov(zoom*dt*30.f);
+    // D-pad adjustment edges are handled by the host event loop.
     kyoei_photo_scene_input(right,up,forward,yaw,pitch,
-        keys[SDL_SCANCODE_LSHIFT] || (buttons&0xc00)?3.f:1.f);
+        KyoeiPhoto::camera_speed.load()*(keys[SDL_SCANCODE_LSHIFT] || (buttons&0xc00)?3.f:1.f));
     buttons=0;data.leftStick=data.rightStick={128,128};data.analogButtons={};
 }
 }

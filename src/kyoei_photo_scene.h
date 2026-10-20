@@ -12,6 +12,10 @@ int kyoei_photo_scene_active(void);
  * Focus loss must restore the HUD request even without a new key event. */
 void kyoei_photo_scene_input(float right,float up,float forward,float yaw,float pitch,float speed);
 void kyoei_photo_scene_fov(float delta_degrees);
+void kyoei_photo_scene_roll(float delta_degrees);
+float kyoei_photo_scene_fov_value(void);
+float kyoei_photo_scene_initial_fov(void);
+float kyoei_photo_scene_roll_value(void);
 #ifdef __cplusplus
 }
 #endif

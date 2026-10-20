@@ -10,6 +10,10 @@ extern "C" int kyoei_photo_player_toggle(void){++player_toggles;return 1;}
 static float move_right=0,move_up=0,move_forward=0,look_yaw=0,fov_delta=0,speed=0;
 extern "C" int kyoei_photo_scene_available(void){return scene;}
 extern "C" void kyoei_photo_scene_fov(float value){fov_delta+=value;}
+extern "C" float kyoei_photo_scene_fov_value(void){return 40;}
+extern "C" float kyoei_photo_scene_initial_fov(void){return 40;}
+extern "C" float kyoei_photo_scene_roll_value(void){return 0;}
+extern "C" void kyoei_photo_scene_roll(float){}
 extern "C" void kyoei_photo_scene_input(float right,float up,float forward,float yaw,float,float rate){
     move_right=right;move_up=up;move_forward=forward;look_yaw=yaw;speed=rate;
 }
@@ -81,7 +85,9 @@ int main(){
     data.analogButtons={255,0};buttons=0;KyoeiPhotoControls::Apply(data,buttons);
     CHECK(move_up==-1 && speed==1);
     data.analogButtons={8,8};KyoeiPhotoControls::Apply(data,buttons);CHECK(move_up==0);
-    SDL_Delay(2);buttons=0x10;KyoeiPhotoControls::Apply(data,buttons);CHECK(fov_delta<0);
+    SDL_Delay(2);buttons=0x10;KyoeiPhotoControls::Apply(data,buttons);CHECK(fov_delta==0);
+    // Settings are adjusted once by SDL events, not again by held guest masks.
+    KyoeiPhoto::selected=int(KyoeiPhoto::Field::Lens);KyoeiPhoto::AdjustSelected(1);CHECK(fov_delta<0);
     const float zoomed=fov_delta;
     event={};event.type=SDL_EVENT_MOUSE_WHEEL;event.wheel.windowID=SDL_GetWindowID(window);event.wheel.y=1;
     KyoeiPhoto::HandleEvent(window,event);CHECK(fov_delta==zoomed); // inactive window cannot zoom

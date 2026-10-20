@@ -10,6 +10,8 @@ Na rua, com a janela ativa:
 - **Shift:** deslocamento mais rapido.
 - **F11:** mostrar/ocultar protagonista (experimental; prova visual pendente).
 - **F9:** mostrar/ocultar a barra de ajuda do modo foto.
+- **Setas esquerda/direita:** escolher ajuste; **cima/baixo:** alterar valor.
+- **R:** restaurar lente, rotacao, cores e velocidade.
 - **F12:** salvar PNG em `photos/`, na pasta de execucao.
 
 Primeira barra de ajuda propria, com comandos e estado do protagonista.
@@ -23,13 +25,14 @@ No controle (Xbox / PlayStation):
 | Analogico esquerdo / direito | Mover / olhar |
 | LT/L2 / RT/R2 | Descer / subir |
 | LB/L1 ou RB/R1 segurado | Movimento rapido |
-| Direcional cima / baixo | Aproximar / afastar pelo campo de visao |
+| Direcional esquerda / direita | Escolher ajuste |
+| Direcional cima / baixo | Alterar valor do ajuste selecionado |
+| R3 | Restaurar ajustes |
 | A / Cruz | Salvar PNG |
 | Y / Triangulo | Mostrar/ocultar protagonista |
 | X / Quadrado | Mostrar/ocultar ajuda |
 
-Mapeamento inicial; teste com controle fisico e renderizacao em partida
-pendentes. Interfaces de referencia pedidas por Davy: Spider-Man da
+Mapeamento inicial; teste com controle fisico pendente. Interfaces de referencia pedidas por Davy: Spider-Man da
 Insomniac, The Last of Us Part II, Death Stranding 2 e Ghost of Tsushima.
 Referencia de organizacao/usabilidade, sem alegar equivalencia de recursos.
 
@@ -64,7 +67,33 @@ executavel atual sem depender desses pacotes.
    amplo automatizado nao concluido: tentativas interrompidas por perda de foco e mudanca
    de cursor durante a validacao, sem continuar enviando entradas.
 
-**Opcoes desejadas, ainda sem implementacao/viabilidade comprovada:**
+### Ajustes fotograficos implementados nesta previa
+
+O painel mostra o ajuste selecionado e os valores. Disponiveis:
+
+- Lente: distancia focal em milimetros, usando sensor virtual de24mm de altura.
+  E uma convencao fotografica do port, nao calibracao fisica da camera PS4.
+  O FOV nativo continua limitado a15..110graus.
+- Rotacao da camera (roll), em passos de2graus.
+- Velocidade da camera de0,25x a5x; Shift/L1/R1 acrescentam rapidez temporaria.
+- Exposicao de-3 a+3EV, contraste de0 a2 e saturacao de0 a2.
+- Filtros Original, Preto e branco, Sepia, Frio e Quente.
+
+Cores opcionais atuam apenas na apresentacao do modo foto e no PNG salvo.
+O framebuffer original do jogo nao e alterado; ao sair, a imagem normal volta.
+Os valores escolhidos de cor/velocidade ficam na memoria desta execucao para
+reutilizar em outra foto. R/R3 restaura os padroes, incluindo a lente de entrada.
+Preview de cor para superficies8bit RGBA/BGRA SDR; HDR continua sem suporte.
+A imagem de ajuda fica fora do PNG. Testes agente usam perfil privado/mudo.
+
+### Pedidos que continuam em pesquisa
+
+- Entrada descoberta no menu de pausa nativo: pedido explicito de Davy em20/10.
+  Classe UnitHudPause localizada; acao de entrada/retorno ainda nao integrada.
+- Iluminacao virtual, foco/profundidade de campo, clima e hora do dia.
+- Ampliar cobertura de protagonista invisivel para variantes e acessorios.
+
+**Historico da lista desejada:**
 
 - Controles de iluminacao.
 - Ajuste de foco e profundidade de campo.
@@ -93,7 +122,7 @@ finitas sao recusadas. Campo de visao15..110graus. A camera continua usando
 os dados carregados da cena; renderizacao/streaming a longa distancia ainda
 precisam ser conferidos. Outras cenas, cutscenes, transicoes,
 sombras/reflexos, transparencias e streaming ainda precisam de validacao.
-Exposicao e profundidade de campo ainda nao tem controles.
+Exposicao tem controle host; profundidade de campo ainda nao tem controle.
 
 H alterna so o guia original grande/pequeno/oculto. F10 usa estado proprio.
 Filtros adicionais reconhecem a arvore do icone de mensagens e a classe

@@ -28,5 +28,8 @@ int main(void){
     draw_model(&player);assert(draws==6);
     player_supported=0;assert(!kyoei_photo_player_toggle());
     atomic_store(&player_hidden,1);draw_model(&player);assert(draws==7);
+    uintptr_t derived=0x12b3140;
+    player_supported=1;player2_supported=1;draw_model(&derived);assert(draws==7);
+    player2_supported=0;draw_model(&derived);assert(draws==8);
     puts("PHOTO PLAYER PASS");return 0;
 }
