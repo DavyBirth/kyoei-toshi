@@ -158,3 +158,19 @@ de sombra/reflexo ainda precisam cobertura; nao certificar todas as cenas.
 Outra cadeia da pesquisa antiga rotulada RENDER BODY (+1620->+50->+d0,
 table1270a88) foi descartada: metodos fazem consultas/transformacoes de
 colisao, nao emissao visual. Nenhuma modificacao nessa cadeia foi integrada.
+
+## Correcao optica validada em 20/10/2026
+
+O primeiro desfoque positivo ainda usava modo0, constante. A prova f1/f32
+revelou que nao representava abertura. O consumidor178ee0 exige modo2 para
+optica: fonte+7d8 recebe abertura; +7e0 distancia; +7e4 FOV. Mantem-se a
+escala nativa+7e8. O bloco fonte continua restaurado apos a copia por viewport.
+
+Na partida privada/muda `american-physical`, foco0,74/f1 desfocou a cena;
+mesmo foco/f32 recuperou a nitidez. Crop820x500 diferiu9,70067/canal em f1
+e0 em f32. Reset produziu PNG identico ao original, SHA256
+`64788a6915d81f8850f40983016e167770e0fd14951d91633365a356ba72a987`.
+Uma segunda sequencia mantevef1 e variou foco0,74/33,64, tambem com mudanca
+visivel. Evidencias ignoradas em `build/research/photo-mode/transfer-20261020`.
+O atalho de teste habilita o recurso experimental; outra cena permanece
+pendente. Nao confundir esta prova com os resultados do modo constante.

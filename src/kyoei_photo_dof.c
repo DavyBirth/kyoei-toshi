@@ -69,8 +69,10 @@ static ABI void update_dof(void *filter,void *viewport) {
     if(mode==1) {
         put_f(filter,0x794,1); // optical effect strength, not exposure
         put_u(filter,0x79c,0); // manual, bypass native autofocus feedback
-        put_f(filter,0x7d8,distance);put_u(filter,0x7dc,0);
-        put_f(filter,0x7e0,aperture);put_f(filter,0x7e4,fov);
+        // 57780/57820 -> 54ce0 -> 178ee0: mode 2 computes optical DOF;
+        // modes 0/1 are constant near/far blur and ignore focus distance.
+        put_f(filter,0x7d8,aperture);put_u(filter,0x7dc,2);
+        put_f(filter,0x7e0,distance);put_f(filter,0x7e4,fov);
         // Preserve the scene's native optical scale at +7e8.
     }
     if(observations++<8)gz_log("Photo DOF: native mode=%d focus=%.3f aperture=%.2f fov=%.2f",mode,distance,aperture,fov);

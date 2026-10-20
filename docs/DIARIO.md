@@ -4351,3 +4351,18 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   incorreto. Achado seguinte: seletor optico0 e desfoque constante; modo2
   calcula optica. Apertura e distancia estavam invertidas no novo bloco.
   Preparar correcao e repetir prova antes de ativarDOF noatalho.
+
+- Pedido adicional de Davy20/10: padrao americano no controle (X confirma,
+  bola volta), incluindo icones. Preferencia de sistema ja anunciava cross;
+  jogo mantem mascaras japonesas. Adaptacao propria SDL troca somente SOUTH/
+  EAST antes do consumo nativo; teclado/mouse e snapshot Godzilla preservados.
+- DOF corrigido: modo optico2, abertura+7d8 e distancia+7e0. Build/teste PASS.
+  Partida privada/muda american-physical carregou; teste anterior physical
+  caiu antes da foto no carregamento (execute0x1), nao reproduzido nesta.
+- Prova real1080p: mesmo foco0,74, f1 produz desfoque; f32 nitido. Crop820x500:
+  diferenca media9,70067 vsoriginal em f1;0 em f32. R restaura PNG inteiro
+  identico SHA25664788a6915d81f8850f40983016e167770e0fd14951d91633365a356ba72a987.
+  Segunda sequencia comparou foco0,74/33,64 comf1; alteracao visivel confirmada.
+  Evidencias privadas transfer-20261020/physical-report.json e capturas/PNGs.
+  Atalho Testar modo foto passa a expor foco/abertura experimentais; execucao
+  normal continua sem override. Outra cena e variantes ainda pendentes.

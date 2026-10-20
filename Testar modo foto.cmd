@@ -8,10 +8,12 @@ set "KYOEI_PHOTO_PHONE=1"
 set "KYOEI_PHOTO_PHONE_OBSERVE=0"
 set "KYOEI_PHOTO_SAVE_MARK=1"
 set "KYOEI_PHOTO_SAVE_MARK_OBSERVE=0"
+set "KYOEI_PHOTO_DOF=1"
 echo Previa em 1080p. F10: entrar/sair do modo foto. F12: salvar PNG em photos.
 echo WASD: mover camera. Espaco/Ctrl: subir/descer. Mouse ou J/I/K/L: olhar.
 echo Roda do mouse: zoom. Shift: mover mais rapido. A partida pausa durante a foto.
 echo F11: mostrar/ocultar protagonista (experimental).
+echo Foco e abertura: ajustes experimentais nas setas; R restaura o original.
 echo F9: ajuda. Controle View/Share: entrar/sair; os comandos aparecem no modo foto.
 echo Setas/direcional: selecionar e ajustar lente, rotacao, velocidade, cores e filtros.
 echo R ou R3: restaurar ajustes. Cores aparecem na previa e na foto salva.

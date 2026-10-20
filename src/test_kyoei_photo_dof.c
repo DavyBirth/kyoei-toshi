@@ -12,7 +12,7 @@ void gz_log(const char *format,...){(void)format;}
 void gz_stop(int code,const char *format,...){(void)format;exit(code);}
 size_t kyoei_hud_trace_relay(unsigned char *r,const void *p,const void *c){(void)r;(void)p;(void)c;abort();}
 static float getf(const void *p,size_t n){float v;memcpy(&v,(const char*)p+n,4);return v;}
-static ABI void spy(void *filter,void *viewport){(void)viewport;++calls;sampled_focus=getf(filter,0x7d8);memcpy(render_copy,(char*)filter+0x790,sizeof(render_copy));}
+static ABI void spy(void *filter,void *viewport){(void)viewport;++calls;sampled_focus=getf(filter,0x7e0);memcpy(render_copy,(char*)filter+0x790,sizeof(render_copy));}
 static void ptr(void *p,size_t n,void *value){memcpy((char*)p+n,&value,sizeof(value));}
 int main(void){
     base=VirtualAlloc(NULL,0x13425b0,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);assert(base);
@@ -24,8 +24,9 @@ int main(void){
     unsigned char original[sizeof(filter_data)];memcpy(original,filter_data,sizeof(original));
     kyoei_photo_dof_input(1,2,1.4f,40);update_dof(filter_data,view_data);
     assert(kyoei_photo_dof_available() && calls==1 && sampled_focus==2);
-    assert(getf(render_copy,0x50)==1.4f && getf(filter_data,0xb0)==7);
-    assert(render_copy[0]==1 && getf(render_copy,0x48)==2 && getf(render_copy,0x54)==40);
+    assert(getf(render_copy,0x48)==1.4f && getf(filter_data,0xb0)==7);
+    assert(render_copy[0]==1 && getf(render_copy,0x50)==2 && getf(render_copy,0x54)==40);
+    unsigned optical_mode;memcpy(&optical_mode,render_copy+0x4c,4);assert(optical_mode==2);
     assert(getf(render_copy,0x58)==2 && !memcmp(original,filter_data,sizeof(original)));
     update_dof(filter_data,camera_manager_data);assert(!memcmp(render_copy,original+0x790,sizeof(render_copy)));
     kyoei_photo_dof_input(2,2,1.4f,40);update_dof(filter_data,view_data);assert(render_copy[0]==0 && !memcmp(original,filter_data,sizeof(original)));

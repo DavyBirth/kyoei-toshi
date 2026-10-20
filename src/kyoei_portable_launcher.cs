@@ -166,6 +166,7 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_PHOTO_SCENE"]=photoHudPreview?"preview":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_PHONE"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_SAVE_MARK"]=photoHudPreview?"1":"0";
+            start.EnvironmentVariables["KYOEI_PHOTO_DOF"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",lang,"prompts.kypack");
             if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,"ui-corrections.kydelta");
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
