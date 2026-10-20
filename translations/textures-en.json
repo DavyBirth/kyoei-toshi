@@ -3169,14 +3169,50 @@
    "regions": [
     {
      "box": [
+      1320,
+      480,
+      1500,
+      514
+     ],
+     "erase": "inpaint",
+     "threshold": 7,
+     "grow": 4,
+     "text": null,
+     "size": 28,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      238,
+      242,
+      242,
+      255
+     ],
+     "shadow": true,
+     "shadow_color": [
+      40,
+      200,
+      150,
+      170
+     ],
+     "shadow_blur": 4,
+     "dy": -1,
+     "text_box": [
+      1320,
+      480,
+      1700,
+      514
+     ]
+    },
+    {
+     "box": [
       198,
       90,
       432,
       148
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Controls",
      "size": 52,
      "font": "bold",
@@ -3211,8 +3247,8 @@
       248
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Switch Target",
      "size": 28,
      "font": "bold",
@@ -3247,8 +3283,8 @@
       298
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -3277,8 +3313,8 @@
       406
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Move: Dash",
      "size": 28,
      "font": "bold",
@@ -3313,8 +3349,8 @@
       458
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Left Stick +",
      "size": 26,
      "font": "bold",
@@ -3339,6 +3375,12 @@
       418,
       428,
       450
+     ],
+     "anchor_box": [
+      262,
+      414,
+      425,
+      454
      ]
     },
     {
@@ -3393,6 +3435,13 @@
       420,
       640,
       452
+     ],
+     "anchor": "y",
+     "anchor_box": [
+      432,
+      416,
+      612,
+      456
      ]
     },
     {
@@ -3403,8 +3452,8 @@
       556
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Move: Run",
      "size": 28,
      "font": "bold",
@@ -3439,8 +3488,8 @@
       609
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Left Stick +",
      "size": 26,
      "font": "bold",
@@ -3465,6 +3514,12 @@
       572,
       430,
       602
+     ],
+     "anchor_box": [
+      262,
+      568,
+      425,
+      606
      ]
     },
     {
@@ -3519,6 +3574,13 @@
       572,
       640,
       604
+     ],
+     "anchor": "y",
+     "anchor_box": [
+      432,
+      568,
+      612,
+      608
      ]
     },
     {
@@ -3529,8 +3591,8 @@
       700
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Move: Walk",
      "size": 28,
      "font": "bold",
@@ -3565,8 +3627,8 @@
       748
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Left Stick",
      "size": 26,
      "font": "bold",
@@ -3601,8 +3663,8 @@
       850
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Crawl",
      "size": 28,
      "font": "bold",
@@ -3637,8 +3699,8 @@
       896
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button + Left Stick Down",
      "size": 26,
      "font": "bold",
@@ -3673,8 +3735,8 @@
       232
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Switch Camera",
      "size": 28,
      "font": "bold",
@@ -3709,8 +3771,8 @@
       270
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "(Third → Middle → First)",
      "size": 24,
      "font": "bold",
@@ -3745,8 +3807,8 @@
       310
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Press Touchpad",
      "size": 26,
      "font": "bold",
@@ -3781,8 +3843,8 @@
       366
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Open Play Menu",
      "size": 28,
      "font": "bold",
@@ -3817,8 +3879,8 @@
       412
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -3853,9 +3915,9 @@
       478
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
-     "text": "Examine / Talk / Collect",
+     "threshold": 7,
+     "grow": 4,
+     "text": "Get Down",
      "size": 28,
      "font": "bold",
      "align": "left",
@@ -3879,41 +3941,11 @@
       444,
       1700,
       478
-     ]
-    },
-    {
-     "box": [
+     ],
+     "anchor_box": [
       1320,
-      480,
-      1500,
-      514
-     ],
-     "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
-     "text": "Advance Messages",
-     "size": 28,
-     "font": "bold",
-     "align": "left",
-     "color": [
-      238,
-      242,
-      242,
-      255
-     ],
-     "shadow": true,
-     "shadow_color": [
-      40,
-      200,
-      150,
-      170
-     ],
-     "shadow_blur": 4,
-     "dy": -1,
-     "text_box": [
-      1320,
-      480,
-      1700,
+      444,
+      1646,
       514
      ]
     },
@@ -3925,8 +3957,8 @@
       566
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -3961,9 +3993,9 @@
       630
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
-     "text": "Get Down",
+     "threshold": 7,
+     "grow": 4,
+     "text": "Interact / Advance Text",
      "size": 28,
      "font": "bold",
      "align": "left",
@@ -3997,8 +4029,8 @@
       678
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -4033,8 +4065,8 @@
       744
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Emergency Dodge",
      "size": 28,
      "font": "bold",
@@ -4069,8 +4101,8 @@
       792
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -4105,8 +4137,8 @@
       852
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Move Camera",
      "size": 28,
      "font": "bold",
@@ -4141,8 +4173,8 @@
       898
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Right Stick",
      "size": 26,
      "font": "bold",
@@ -4177,8 +4209,8 @@
       1008
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "* These controls are for a PS4 controller connected to a PC.",
      "size": 28,
      "font": "bold",
@@ -4198,13 +4230,65 @@
      ],
      "shadow_blur": 4,
      "dy": -1
+    },
+    {
+     "paste": {
+      "res": "texture/2D/title_02.tex",
+      "from": [
+       1323,
+       534,
+       1357,
+       570
+      ],
+      "to": [
+       268,
+       863
+      ]
+     }
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/2D/title_01.tex",
    "mode": "regions",
    "regions": [
+    {
+     "box": [
+      1320,
+      480,
+      1500,
+      514
+     ],
+     "erase": "inpaint",
+     "threshold": 7,
+     "grow": 4,
+     "text": null,
+     "size": 28,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      238,
+      242,
+      242,
+      255
+     ],
+     "shadow": true,
+     "shadow_color": [
+      40,
+      200,
+      150,
+      170
+     ],
+     "shadow_blur": 4,
+     "dy": -1,
+     "text_box": [
+      1320,
+      480,
+      1700,
+      514
+     ]
+    },
     {
      "box": [
       198,
@@ -4213,8 +4297,8 @@
       148
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Controls",
      "size": 52,
      "font": "bold",
@@ -4249,8 +4333,8 @@
       248
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Switch Target",
      "size": 28,
      "font": "bold",
@@ -4285,8 +4369,8 @@
       300
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "D-Pad Left / Right",
      "size": 26,
      "font": "bold",
@@ -4321,8 +4405,8 @@
       406
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Move: Dash",
      "size": 28,
      "font": "bold",
@@ -4357,8 +4441,8 @@
       458
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Left Stick +",
      "size": 26,
      "font": "bold",
@@ -4383,6 +4467,12 @@
       418,
       428,
       450
+     ],
+     "anchor_box": [
+      262,
+      414,
+      425,
+      454
      ]
     },
     {
@@ -4437,6 +4527,13 @@
       420,
       640,
       452
+     ],
+     "anchor": "y",
+     "anchor_box": [
+      432,
+      416,
+      612,
+      456
      ]
     },
     {
@@ -4447,8 +4544,8 @@
       556
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Move: Run",
      "size": 28,
      "font": "bold",
@@ -4483,8 +4580,8 @@
       609
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Left Stick +",
      "size": 26,
      "font": "bold",
@@ -4509,6 +4606,12 @@
       572,
       430,
       602
+     ],
+     "anchor_box": [
+      262,
+      568,
+      425,
+      606
      ]
     },
     {
@@ -4563,6 +4666,13 @@
       572,
       640,
       604
+     ],
+     "anchor": "y",
+     "anchor_box": [
+      432,
+      568,
+      612,
+      608
      ]
     },
     {
@@ -4573,8 +4683,8 @@
       700
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Move: Walk",
      "size": 28,
      "font": "bold",
@@ -4609,8 +4719,8 @@
       748
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Left Stick",
      "size": 26,
      "font": "bold",
@@ -4645,8 +4755,8 @@
       850
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Crawl",
      "size": 28,
      "font": "bold",
@@ -4681,8 +4791,8 @@
       896
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button + Left Stick Down",
      "size": 26,
      "font": "bold",
@@ -4717,8 +4827,8 @@
       232
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Switch Camera",
      "size": 28,
      "font": "bold",
@@ -4753,8 +4863,8 @@
       270
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "(Third → Middle → First)",
      "size": 24,
      "font": "bold",
@@ -4789,8 +4899,8 @@
       310
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Press Touchpad",
      "size": 26,
      "font": "bold",
@@ -4825,8 +4935,8 @@
       366
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Open Play Menu",
      "size": 28,
      "font": "bold",
@@ -4861,8 +4971,8 @@
       412
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -4897,9 +5007,9 @@
       478
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
-     "text": "Examine / Talk / Collect",
+     "threshold": 7,
+     "grow": 4,
+     "text": "Get Down",
      "size": 28,
      "font": "bold",
      "align": "left",
@@ -4923,41 +5033,11 @@
       444,
       1700,
       478
-     ]
-    },
-    {
-     "box": [
+     ],
+     "anchor_box": [
       1320,
-      480,
-      1500,
-      514
-     ],
-     "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
-     "text": "Advance Messages",
-     "size": 28,
-     "font": "bold",
-     "align": "left",
-     "color": [
-      238,
-      242,
-      242,
-      255
-     ],
-     "shadow": true,
-     "shadow_color": [
-      40,
-      200,
-      150,
-      170
-     ],
-     "shadow_blur": 4,
-     "dy": -1,
-     "text_box": [
-      1320,
-      480,
-      1700,
+      444,
+      1646,
       514
      ]
     },
@@ -4969,8 +5049,8 @@
       566
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -5005,9 +5085,9 @@
       630
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
-     "text": "Get Down",
+     "threshold": 7,
+     "grow": 4,
+     "text": "Interact / Advance Text",
      "size": 28,
      "font": "bold",
      "align": "left",
@@ -5041,8 +5121,8 @@
       678
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -5077,8 +5157,8 @@
       744
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Emergency Dodge",
      "size": 28,
      "font": "bold",
@@ -5113,8 +5193,8 @@
       792
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Button",
      "size": 26,
      "font": "bold",
@@ -5149,8 +5229,8 @@
       852
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Move Camera",
      "size": 28,
      "font": "bold",
@@ -5185,8 +5265,8 @@
       898
      ],
      "erase": "inpaint",
-     "threshold": 14,
-     "grow": 3,
+     "threshold": 7,
+     "grow": 4,
      "text": "Right Stick",
      "size": 26,
      "font": "bold",
@@ -5212,8 +5292,24 @@
       1700,
       898
      ]
+    },
+    {
+     "paste": {
+      "res": "texture/2D/title_01.tex",
+      "from": [
+       1323,
+       534,
+       1357,
+       570
+      ],
+      "to": [
+       268,
+       863
+      ]
+     }
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_normal_207.tex",
@@ -5253,7 +5349,7 @@
       293
      ],
      "erase": "plate",
-     "text": "Examine / Talk / Collect\n/ Advance Messages",
+     "text": "Cancel /\nStop Crawling",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -5987,7 +6083,7 @@
       905
      ],
      "erase": "keep_green",
-     "text": "Cancel /\nStop Crawling",
+     "text": "Interact /\nAdvance Text",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -6180,7 +6276,8 @@
      "plate": "texture/controller_operation/operation_bike.tex",
      "min_size": 16
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_abraham.tex",
@@ -6723,7 +6820,7 @@
       291
      ],
      "erase": "plate",
-     "text": "Advance Messages",
+     "text": "Cancel",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -6866,7 +6963,7 @@
       882
      ],
      "erase": "keep_green",
-     "text": "Cancel",
+     "text": "Advance Messages",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -6919,7 +7016,8 @@
      "plate": "texture/controller_operation/operation_car.tex",
      "min_size": 16
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_bike.tex",
@@ -7491,7 +7589,7 @@
       355
      ],
      "erase": "plate",
-     "text": "Brake / Reverse",
+     "text": "Accelerate",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -7636,7 +7734,7 @@
       883
      ],
      "erase": "keep_green",
-     "text": "Accelerate",
+     "text": "Brake / Reverse",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -7715,7 +7813,8 @@
      "plate": "texture/controller_operation/operation_car.tex",
      "min_size": 16
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_car.tex",
@@ -8287,7 +8386,7 @@
       305
      ],
      "erase": "plate",
-     "text": "Brake / Reverse",
+     "text": "Accelerate",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -8432,7 +8531,7 @@
       883
      ],
      "erase": "keep_green",
-     "text": "Accelerate",
+     "text": "Brake / Reverse",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -8454,7 +8553,8 @@
      "max_lines": 2,
      "min_size": 16
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_forklift.tex",
@@ -9140,7 +9240,7 @@
       300
      ],
      "erase": "plate",
-     "text": "Brake / Reverse",
+     "text": "Accelerate",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -9342,7 +9442,7 @@
       883
      ],
      "erase": "keep_green",
-     "text": "Accelerate",
+     "text": "Brake / Reverse",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -9364,12 +9464,70 @@
      "max_lines": 2,
      "min_size": 16
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_sibari.tex",
    "mode": "regions",
    "regions": [
+    {
+     "box": [
+      441,
+      222,
+      495,
+      244
+     ],
+     "erase": "plate",
+     "text": null,
+     "size": 13,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      205,
+      205,
+      205,
+      255
+     ],
+     "text_box": [
+      442,
+      223,
+      592,
+      243
+     ],
+     "plate": "texture/controller_operation/operation_204_syorui.tex"
+    },
+    {
+     "box": [
+      414,
+      246,
+      677,
+      292
+     ],
+     "erase": "plate",
+     "text": null,
+     "size": 16,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      242,
+      242,
+      242,
+      255
+     ],
+     "line_height": 22,
+     "text_box": [
+      426,
+      249,
+      650,
+      339
+     ],
+     "wrap": true,
+     "valign": "top",
+     "max_lines": 3,
+     "plate": "texture/controller_operation/operation_204_syorui.tex",
+     "min_size": 16
+    },
     {
      "box": [
       419,
@@ -9733,63 +9891,6 @@
      "wrap": true,
      "valign": "top",
      "max_lines": 2,
-     "plate": "texture/controller_operation/operation_204_syorui.tex",
-     "min_size": 16
-    },
-    {
-     "box": [
-      441,
-      222,
-      495,
-      244
-     ],
-     "erase": "plate",
-     "text": "Button",
-     "size": 13,
-     "font": "bold",
-     "align": "left",
-     "color": [
-      205,
-      205,
-      205,
-      255
-     ],
-     "text_box": [
-      442,
-      223,
-      592,
-      243
-     ],
-     "plate": "texture/controller_operation/operation_204_syorui.tex"
-    },
-    {
-     "box": [
-      414,
-      246,
-      677,
-      292
-     ],
-     "erase": "plate",
-     "text": "Examine / Talk / Collect\n/ Advance Messages",
-     "size": 16,
-     "font": "bold",
-     "align": "left",
-     "color": [
-      242,
-      242,
-      242,
-      255
-     ],
-     "line_height": 22,
-     "text_box": [
-      426,
-      249,
-      650,
-      339
-     ],
-     "wrap": true,
-     "valign": "top",
-     "max_lines": 3,
      "plate": "texture/controller_operation/operation_204_syorui.tex",
      "min_size": 16
     },
@@ -10163,11 +10264,86 @@
      "min_size": 16
     },
     {
+     "paste": {
+      "res": "texture/controller_operation/operation_204_syorui.tex",
+      "from": [
+       420,
+       218,
+       441,
+       246
+      ],
+      "to": [
+       420,
+       218
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_204_syorui.tex",
+      "from": [
+       420,
+       241,
+       666,
+       251
+      ],
+      "to": [
+       420,
+       241
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_204_syorui.tex",
+      "from": [
+       654,
+       243,
+       668,
+       692
+      ],
+      "to": [
+       654,
+       243
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_normal.tex",
+      "from": [
+       584,
+       640,
+       790,
+       990
+      ],
+      "to": [
+       584,
+       640
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_204_syorui.tex",
+      "from": [
+       654,
+       600,
+       668,
+       692
+      ],
+      "to": [
+       654,
+       600
+      ]
+     }
+    },
+    {
      "box": [
-      619,
-      835,
-      674,
-      856
+      618,
+      836,
+      672,
+      857
      ],
      "erase": "keep_green",
      "text": "Button",
@@ -10181,20 +10357,79 @@
       255
      ],
      "text_box": [
-      620,
-      836,
-      770,
-      855
-     ]
+      619,
+      837,
+      769,
+      856
+     ],
+     "anchor": false
     },
     {
      "box": [
       593,
-      860,
-      694,
-      884
+      859,
+      763,
+      905
      ],
      "erase": "keep_green",
+     "text": "Interact /\nAdvance Text",
+     "size": 16,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      242,
+      242,
+      242,
+      255
+     ],
+     "line_height": 22,
+     "text_box": [
+      605,
+      862,
+      760,
+      952
+     ],
+     "wrap": true,
+     "valign": "top",
+     "max_lines": 3,
+     "min_size": 16,
+     "anchor": false
+    },
+    {
+     "box": [
+      619,
+      915,
+      675,
+      936
+     ],
+     "erase": "plate",
+     "text": "Button",
+     "size": 13,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      205,
+      205,
+      205,
+      255
+     ],
+     "text_box": [
+      620,
+      916,
+      770,
+      935
+     ],
+     "plate": "texture/controller_operation/operation_car.tex",
+     "anchor": false
+    },
+    {
+     "box": [
+      593,
+      940,
+      763,
+      964
+     ],
+     "erase": "plate",
      "text": "Emergency Dodge",
      "size": 16,
      "font": "bold",
@@ -10208,16 +10443,19 @@
      "line_height": 22,
      "text_box": [
       605,
-      863,
+      943,
       760,
-      953
+      1033
      ],
      "wrap": true,
      "valign": "top",
-     "max_lines": 2,
-     "min_size": 16
+     "max_lines": 3,
+     "plate": "texture/controller_operation/operation_car.tex",
+     "min_size": 16,
+     "anchor": false
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_uma.tex",
@@ -10789,7 +11027,7 @@
       358
      ],
      "erase": "plate",
-     "text": "Brake Hard",
+     "text": "Speed Up",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -10934,7 +11172,7 @@
       883
      ],
      "erase": "keep_green",
-     "text": "Speed Up",
+     "text": "Brake Hard",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -11013,12 +11251,128 @@
      "plate": "texture/controller_operation/operation_car.tex",
      "min_size": 16
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_204_syorui.tex",
    "mode": "regions",
    "regions": [
+    {
+     "box": [
+      618,
+      836,
+      672,
+      857
+     ],
+     "erase": "keep_green",
+     "text": null,
+     "size": 13,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      205,
+      205,
+      205,
+      255
+     ],
+     "text_box": [
+      619,
+      837,
+      769,
+      856
+     ]
+    },
+    {
+     "box": [
+      592,
+      859,
+      744,
+      883
+     ],
+     "erase": "keep_green",
+     "text": null,
+     "size": 16,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      242,
+      242,
+      242,
+      255
+     ],
+     "line_height": 22,
+     "text_box": [
+      604,
+      862,
+      760,
+      952
+     ],
+     "wrap": true,
+     "valign": "top",
+     "max_lines": 2,
+     "min_size": 16
+    },
+    {
+     "kill": [
+      [
+       594,
+       850,
+       722,
+       864
+      ]
+     ]
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_sibari.tex",
+      "from": [
+       593,
+       690,
+       606,
+       851
+      ],
+      "to": [
+       593,
+       690
+      ]
+     }
+    },
+    {
+     "graft": {
+      "res": "texture/controller_operation/operation_normal.tex",
+      "boxes": [
+       [
+        420,
+        241,
+        666,
+        251
+       ],
+       [
+        654,
+        243,
+        668,
+        672
+       ]
+      ],
+      "green_only": true
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_normal.tex",
+      "from": [
+       420,
+       218,
+       441,
+       246
+      ],
+      "to": [
+       420,
+       218
+      ]
+     }
+    },
     {
      "box": [
       186,
@@ -11186,61 +11540,6 @@
     },
     {
      "box": [
-      618,
-      836,
-      672,
-      857
-     ],
-     "erase": "keep_green",
-     "text": "Button",
-     "size": 13,
-     "font": "bold",
-     "align": "left",
-     "color": [
-      205,
-      205,
-      205,
-      255
-     ],
-     "text_box": [
-      619,
-      837,
-      769,
-      856
-     ]
-    },
-    {
-     "box": [
-      592,
-      859,
-      744,
-      883
-     ],
-     "erase": "keep_green",
-     "text": "Drop the Safe",
-     "size": 16,
-     "font": "bold",
-     "align": "left",
-     "color": [
-      242,
-      242,
-      242,
-      255
-     ],
-     "line_height": 22,
-     "text_box": [
-      604,
-      862,
-      760,
-      952
-     ],
-     "wrap": true,
-     "valign": "top",
-     "max_lines": 2,
-     "min_size": 16
-    },
-    {
-     "box": [
       619,
       901,
       675,
@@ -11295,8 +11594,79 @@
      "max_lines": 2,
      "plate": "texture/controller_operation/operation_car.tex",
      "min_size": 16
+    },
+    {
+     "kill": [
+      [
+       592,
+       833,
+       728,
+       886
+      ]
+     ],
+     "kill_all": true
+    },
+    {
+     "box": [
+      441,
+      223,
+      495,
+      245
+     ],
+     "erase": "none",
+     "text": "Button",
+     "size": 13,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      205,
+      205,
+      205,
+      255
+     ],
+     "text_box": [
+      442,
+      224,
+      592,
+      244
+     ],
+     "plate": "texture/controller_operation/operation_204_syorui.tex",
+     "anchor": false
+    },
+    {
+     "box": [
+      414,
+      247,
+      677,
+      293
+     ],
+     "erase": "none",
+     "text": "Drop the Safe",
+     "size": 16,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      242,
+      242,
+      242,
+      255
+     ],
+     "line_height": 22,
+     "text_box": [
+      426,
+      250,
+      650,
+      340
+     ],
+     "wrap": true,
+     "valign": "top",
+     "max_lines": 3,
+     "plate": "texture/controller_operation/operation_204_syorui.tex",
+     "min_size": 16,
+     "anchor": false
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_normal.tex",
@@ -11336,7 +11706,7 @@
       293
      ],
      "erase": "plate",
-     "text": "Examine / Talk / Collect\n/ Advance Messages",
+     "text": "Cancel /\nStop Crawling",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -12127,7 +12497,7 @@
       905
      ],
      "erase": "keep_green",
-     "text": "Cancel /\nStop Crawling",
+     "text": "Interact /\nAdvance Text",
      "size": 16,
      "font": "bold",
      "align": "left",
@@ -12206,12 +12576,43 @@
      "plate": "texture/controller_operation/operation_car.tex",
      "min_size": 16
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_normal_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_normal_s.tex",
+      "from": [
+       30,
+       239,
+       72,
+       276
+      ],
+      "to": [
+       30,
+       202
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_normal_s.tex",
+      "from": [
+       30,
+       202,
+       72,
+       239
+      ],
+      "to": [
+       30,
+       239
+      ]
+     }
+    },
     {
      "box": [
       93,
@@ -12674,12 +13075,43 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_normal_207_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_normal_207_s.tex",
+      "from": [
+       30,
+       202,
+       72,
+       239
+      ],
+      "to": [
+       30,
+       165
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_normal_207_s.tex",
+      "from": [
+       30,
+       165,
+       72,
+       202
+      ],
+      "to": [
+       30,
+       202
+      ]
+     }
+    },
     {
      "box": [
       93,
@@ -13175,12 +13607,43 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_abraham_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_abraham_s.tex",
+      "from": [
+       30,
+       313,
+       72,
+       350
+      ],
+      "to": [
+       30,
+       276
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_abraham_s.tex",
+      "from": [
+       30,
+       276,
+       72,
+       313
+      ],
+      "to": [
+       30,
+       313
+      ]
+     }
+    },
     {
      "box": [
       94,
@@ -13577,12 +14040,43 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_bike_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_bike_s.tex",
+      "from": [
+       30,
+       313,
+       72,
+       350
+      ],
+      "to": [
+       30,
+       276
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_bike_s.tex",
+      "from": [
+       30,
+       276,
+       72,
+       313
+      ],
+      "to": [
+       30,
+       313
+      ]
+     }
+    },
     {
      "box": [
       94,
@@ -13979,12 +14473,43 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_car_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_car_s.tex",
+      "from": [
+       30,
+       351,
+       72,
+       388
+      ],
+      "to": [
+       30,
+       314
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_car_s.tex",
+      "from": [
+       30,
+       314,
+       72,
+       351
+      ],
+      "to": [
+       30,
+       351
+      ]
+     }
+    },
     {
      "box": [
       94,
@@ -14348,12 +14873,43 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_forklift_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_forklift_s.tex",
+      "from": [
+       30,
+       239,
+       72,
+       276
+      ],
+      "to": [
+       30,
+       202
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_forklift_s.tex",
+      "from": [
+       30,
+       202,
+       72,
+       239
+      ],
+      "to": [
+       30,
+       239
+      ]
+     }
+    },
     {
      "box": [
       94,
@@ -14816,12 +15372,28 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_sibari_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_normal_s.tex",
+      "from": [
+       30,
+       239,
+       72,
+       276
+      ],
+      "to": [
+       30,
+       239
+      ]
+     }
+    },
     {
      "box": [
       93,
@@ -15251,12 +15823,43 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_uma_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_uma_s.tex",
+      "from": [
+       30,
+       314,
+       72,
+       351
+      ],
+      "to": [
+       30,
+       277
+      ]
+     }
+    },
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_uma_s.tex",
+      "from": [
+       30,
+       277,
+       72,
+       314
+      ],
+      "to": [
+       30,
+       314
+      ]
+     }
+    },
     {
      "box": [
       93,
@@ -15653,12 +16256,28 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/controller_operation/operation_204_syorui_s.tex",
    "mode": "regions",
    "regions": [
+    {
+     "paste": {
+      "res": "texture/controller_operation/operation_normal_s.tex",
+      "from": [
+       30,
+       202,
+       72,
+       239
+      ],
+      "to": [
+       30,
+       534
+      ]
+     }
+    },
     {
      "box": [
       93,
@@ -15824,7 +16443,8 @@
       170
      ]
     }
-   ]
+   ],
+   "american": true
   },
   {
    "resource": "texture/hud/forklift_operation.tex",

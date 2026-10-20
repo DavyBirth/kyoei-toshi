@@ -3888,3 +3888,26 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   repositório), geradas com KYOEI_ERASE_ONLY=1.
 - Conferência visual com zoom, lado a lado; galeria privada
   build/texture-review-natural. Nada testado no jogo ainda.
+
+### 20/10/2026 — QA do inglês, padrão americano e plano pós-tradução
+
+- QA automático do texto (13.130 entradas): símbolos japoneses de rótulo
+  viram [Photo]/•, colchetes seguros (sem < > que o motor pode ler como
+  tag), termos únicos (observation deck, Hananira-cho), verbos de ação
+  alinhados (Examine/Talk/Collect). pxcheck: 0 excessos, 0 glifos ausentes.
+- Texturas: posição do inglês ancorada na tinta japonesa original (mesma
+  borda/centro em relação a ícones); tamanho único por tela; auditoria de
+  alinhamento em 511 regiões, desvios restantes são da régua (multilinha).
+- Pedido do Codex (docs/INSTRUCOES-TEXTURAS-CLAUDE.md) feito: diagramas de
+  controle no padrão americano (X confirma/interage, bola cancela), símbolos
+  físicos do controle intactos; telas grandes, listas pequenas e menu
+  inicial. Telas "amarrado" e "cofre" tiveram linhas de chamada refeitas
+  com linhas nativas de outras telas do mesmo desenho.
+- PLANO agendado por Davy, logo após fechar o inglês e antes do PT-BR:
+  1. Diálogos/popup de save, load e teclado virtual com símbolos de botão
+     (não texto por extenso) e design mais "PlayStation", mesmo estilo.
+  2. Detecção automática do controle (PlayStation, Xbox, Nintendo,
+     teclado) com escolha manual; Nintendo usa o padrão japonês (A = bola).
+  3. Teclado como jogo de PC nativo: teclas personalizáveis (já iniciado,
+     setas substituindo L1/R1), e todas as texturas de tutorial/menu
+     trocadas conforme o dispositivo, no mesmo estilo visual.

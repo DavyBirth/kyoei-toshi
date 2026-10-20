@@ -323,8 +323,43 @@ def refill(im, holes, box, iters=600):
 def regions(im, item):
     """Erase listed boxes and draw English text in them; for multi-label UI art."""
     out = im.copy(); px = out.load(); src = im.load(); body = None
+    blank = None
+    if not item.get('_blank') and any(r.get('text') and r.get('anchor', True) for r in item['regions']):
+        # The source glyphs were placed by the original artists against icons and frames;
+        # English is anchored to where they were (same edge, same optical centre).
+        blank = np.asarray(regions(im, dict(item, _blank=True, regions=[dict(r, text=None) for r in item['regions']]))).astype(int)
+        orig = np.asarray(im).astype(int)
     for r in item['regions']:
         x0, y0, x1, y1 = r.get('box', (0, 0, im.width, im.height))
+        if 'kill' in r:
+            # Remove leader-line pixels (green strokes and their soft edges) and rebuild what lies beneath.
+            a = np.asarray(out).astype(int); holes = []
+            for bx0, by0, bx1, by1 in r['kill']:
+                c = a[by0:by1, bx0:bx1]; gg, mm = c[..., 1], np.maximum(c[..., 0], c[..., 2])
+                m = (c[..., 3] > 15) & (gg > 1.12 * mm) & (gg > 25) if not r.get('kill_all') else c[..., 3] >= 0
+                holes += [(bx0 + x, by0 + y) for y, x in zip(*np.where(m))]
+            for x, y in holes: px[x, y] = (0, 0, 0, 0)
+            if holes:
+                xs = [h[0] for h in holes]; ys = [h[1] for h in holes]
+                out = refill(out, holes, (min(xs), min(ys), max(xs) + 1, max(ys) + 1)); px = out.load()
+            if not r.get('text') and 'graft' not in r and 'paste' not in r: continue
+        if 'graft' in r:
+            # Copy native leader lines / button symbols from another screen of the same artwork.
+            gv = r['graft']; other = np.asarray(decode((item['_source'] / gv['res']).read_bytes())[1]).astype(int)
+            a = np.asarray(out).astype(int)
+            for bx0, by0, bx1, by1 in gv['boxes']:
+                o, c = other[by0:by1, bx0:bx1], a[by0:by1, bx0:bx1]
+                m = np.abs(o - c).max(axis=2) > 24
+                if gv.get('green_only'):
+                    gg, mm = o[..., 1], np.maximum(o[..., 0], o[..., 2]); m &= (o[..., 3] > 15) & (gg > 1.12 * mm)
+                c[m] = o[m]; a[by0:by1, bx0:bx1] = c
+            out = Image.fromarray(a.astype(np.uint8), 'RGBA'); px = out.load()
+            if not r.get('text') and 'paste' not in r: continue
+        if 'paste' in r:
+            # Replace a block with untouched source art (e.g. swap a button icon), keeping alpha exactly.
+            pv = r['paste']; base = decode((item['_source'] / pv['res']).read_bytes())[1] if pv.get('res') else im
+            out.paste(base.crop(tuple(pv['from'])), tuple(pv['to'])); px = out.load()
+            if not r.get('text') and r.get('erase', 'none') == 'none': continue
         erase = r.get('erase', 'auto'); holes = []
         if erase == 'plate':
             # Copy the untouched background from another screen of the same artwork that has no text here,
@@ -475,6 +510,25 @@ def regions(im, item):
             lw = font.getlength(l); align = r.get('align', 'center')
             x = x0 if align == 'left' else x1 - lw if align == 'right' else (x0 + x1 - lw) / 2
             pos.append((x, top + i * lh, l))
+        if blank is not None and r.get('anchor', True):
+            ax0, ay0, ax1, ay1 = r.get('anchor_box', r.get('box', [x0, y0, x1, y1]))
+            ax0, ay0 = max(0, ax0), max(0, ay0); ax1, ay1 = min(out.width, ax1), min(out.height, ay1)
+            a, b = orig[ay0:ay1, ax0:ax1], blank[ay0:ay1, ax0:ax1]
+            m = (np.abs(a - b).max(axis=2) > 60) & (a[..., 3] > 120) & (a[..., :3].max(axis=2) > 110)
+            m &= ~(a[..., 1] > 1.15 * np.maximum(a[..., 0], a[..., 2]))  # leader lines are not glyphs
+            if m.sum() >= 8:
+                ys, xs = np.where(m); jx0, jx1 = ax0 + xs.min(), ax0 + xs.max() + 1; jy0, jy1 = ay0 + ys.min(), ay0 + ys.max() + 1
+                align = r.get('align', 'center'); new = []
+                for i, (x, y, l) in enumerate(pos):
+                    bb = font.getbbox(l)
+                    if len(lines) == 1: ny = (jy0 + jy1) / 2 - (cap[1] + cap[3]) / 2
+                    else: ny = jy0 - cap[1] + i * lh
+                    if align == 'left': nx = jx0 - bb[0]
+                    elif align == 'right': nx = jx1 - bb[2]
+                    else: nx = (jx0 + jx1) / 2 - (bb[0] + bb[2]) / 2
+                    if r.get('anchor') == 'y': nx = x
+                    new.append((round(nx), round(ny), l))
+                pos = new
         if r.get('shadow'):
             sh = Image.new('RGBA', out.size, (0, 0, 0, 0)); sd = ImageDraw.Draw(sh)
             ox, oy = r.get('shadow_offset', (1, 2))
