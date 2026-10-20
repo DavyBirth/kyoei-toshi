@@ -60,8 +60,14 @@ int main(){
     CHECK(move_right==1 && move_forward==1 && look_yaw<0);
     CHECK(!buttons && data.leftStick.x==128 && data.leftStick.y==128 &&
           data.rightStick.x==128 && !data.analogButtons.l2 && !data.analogButtons.r2 && !KyoeiMouse::dx);
+    KyoeiMouse::captured=false;SDL_Delay(2);
+    for(unsigned char neutral:{127,128,129,120,136}){
+        data.leftStick=data.rightStick={neutral,neutral};
+        KyoeiPhotoControls::Apply(data,buttons);
+        CHECK(move_right==0 && move_forward==0 && look_yaw==0);
+    }
     event={};event.type=SDL_EVENT_MOUSE_WHEEL;event.wheel.windowID=SDL_GetWindowID(window);event.wheel.y=1;
     KyoeiPhoto::HandleEvent(window,event);CHECK(!fov_delta); // inactive window cannot zoom
     SDL_DestroyWindow(window);SDL_Quit();
-    std::puts("PHOTO INPUT PASS: inactive focus, repeat, foreign window, request consumption, close/modal/dialog/controller restore");
+    std::puts("PHOTO INPUT PASS: focus, repeat, request, restore, guest input suppression, photo axis deadzone");
 }

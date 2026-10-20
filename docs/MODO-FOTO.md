@@ -28,6 +28,10 @@ executavel atual sem depender desses pacotes.
    intencional. Reproduzir e identificar a origem; causa ainda nao confirmada.
    Aceite: camera parada com entradas neutras, incluindo controle conectado,
    entrada/saida do modo e perda/retorno de foco.
+   Rodada curta de20/10: reproduzido movimento com valores quase centrais do
+   pad; adicionada zona morta aos quatro eixos, exclusiva da camera fotografica.
+   Teste falhou antes e passou depois; compilacao atualizada. Ainda confirmar
+   se isso resolve o movimento observado por Davy no jogo.
 2. **Liberdade de deslocamento:** Davy considera chato ficar perto do
    protagonista. O limite atual de10unidades e provisório; preferencia por
    camera realmente livre, sem ficar presa ao personagem. Revisar o limite

@@ -6,6 +6,14 @@
 #include "kyoei_photo_scene.h"
 namespace KyoeiPhotoControls {
 inline bool Enabled(){return kyoei_photo_scene_available() && kyoei_photo_hud_hidden();}
+inline float StickAxis(unsigned char value){
+    // Center quantization and small stick noise must not move a paused camera.
+    const int delta=int(value)-128;
+    constexpr int deadzone=16;
+    if(std::abs(delta)<=deadzone)return 0.f;
+    const float magnitude=std::min(1.f,float(std::abs(delta)-deadzone)/(127-deadzone));
+    return delta<0?-magnitude:magnitude;
+}
 template<class Data,class Buttons> inline void Apply(Data& data,Buttons& buttons){
     static Uint64 previous=0;
     const auto now=SDL_GetTicksNS();
@@ -14,10 +22,10 @@ template<class Data,class Buttons> inline void Apply(Data& data,Buttons& buttons
     if(!Enabled()){KyoeiMouse::Apply(data.rightStick);return;}
     const auto* keys=SDL_GetKeyboardState(nullptr);
     const float up=float(keys[SDL_SCANCODE_SPACE])-float(keys[SDL_SCANCODE_LCTRL]||keys[SDL_SCANCODE_RCTRL]);
-    const float right=std::clamp((int(data.leftStick.x)-128)/127.f,-1.f,1.f);
-    const float forward=std::clamp((128-int(data.leftStick.y))/127.f,-1.f,1.f);
-    float yaw=(128-int(data.rightStick.x))/127.f*dt*1.5f;
-    float pitch=(128-int(data.rightStick.y))/127.f*dt*1.5f;
+    const float right=StickAxis(data.leftStick.x);
+    const float forward=-StickAxis(data.leftStick.y);
+    float yaw=-StickAxis(data.rightStick.x)*dt*1.5f;
+    float pitch=-StickAxis(data.rightStick.y)*dt*1.5f;
     if(KyoeiMouse::captured){yaw-=KyoeiMouse::dx*.002f;pitch-=KyoeiMouse::dy*.002f;}
     KyoeiMouse::dx=KyoeiMouse::dy=0;
     kyoei_photo_scene_input(right,up,forward,yaw,pitch,keys[SDL_SCANCODE_LSHIFT]?3.f:1.f);
