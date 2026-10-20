@@ -138,3 +138,23 @@ Comparacao dedicada f1/f32 ainda pendente: uma sequencia selecionou cores
 por conservar selecao anterior; tentativas corrigidas pararam por perda de
 foco. Nao usar essas capturas como prova de abertura. Segunda cena pendente.
 KYOEI_PHOTO_DOF=1 continua necessario; atalho normal ainda nao o ativa.
+
+### Protagonista por pecas,20/10
+
+UnitMrPlayer2 possui17ponteiros2410..2490 para UnitCharPartsBase table1284d10.
+As pecas possuem modelo+228 e desenho74ca00->35b810 independente do objeto
+principal. O filtro agora confirma pertença nas17slots de um UnitMrPlayer2
+vivo na group5; classe sozinha nao basta, pois NPCs tambem usam pecas.
+Walker limitado256nos, leituras verificadas, sem guardar instancia entre
+chamadas; sem alterar flags de unidade, animacao, colisao ou saves.
+Construtor74dce0/471bytes FNVcf7d4b0de2affc43 e thunk74ca00/15bytes
+FNV26dce38149b9c232 conferidos antes deTLS. Teste sintetico cobre NPC da
+mesma classe, troca de dono, tipo diferente, ciclo e ausencia de manager.
+
+Prova real game-parts, perfil privado/mudo1080p: corpo/cabelo/roupa sumiram
+comF11 e voltaram no segundoF11. NPC ao lado e maquina permaneceram visiveis.
+Variantes do protagonista, roupas adicionais, objetos carregados e passes
+de sombra/reflexo ainda precisam cobertura; nao certificar todas as cenas.
+Outra cadeia da pesquisa antiga rotulada RENDER BODY (+1620->+50->+d0,
+table1270a88) foi descartada: metodos fazem consultas/transformacoes de
+colisao, nao emissao visual. Nenhuma modificacao nessa cadeia foi integrada.

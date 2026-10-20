@@ -31,5 +31,23 @@ int main(void){
     uintptr_t derived=0x12b3140;
     player_supported=1;player2_supported=1;draw_model(&derived);assert(draws==7);
     player2_supported=0;draw_model(&derived);assert(draws==8);
+    // Real traversal, synthetic ownership. Same-type NPC parts must survive.
+    base=VirtualAlloc(NULL,0x13425b0,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);assert(base);
+    unsigned char manager[0x30]={0},groups[48]={0},group[0x28]={0},node[0x28]={0},actor[0x2498]={0};
+    uintptr_t part=(uintptr_t)base+0x1284d10,npc_part=part;
+    void *value=manager;memcpy(base+0x1336200,&value,8);
+    value=groups;memcpy(manager+0x28,&value,8);value=group;memcpy(groups+40,&value,8);
+    value=node;memcpy(group+8,&value,8);value=actor;memcpy(node+8,&value,8);
+    value=base+0x12b3140;memcpy(actor,&value,8);value=&part;memcpy(actor+0x2410,&value,8);
+    player2_supported=player_parts_supported=1;
+    draw_model(&part);assert(draws==8);draw_model(&npc_part);assert(draws==9);
+    value=&npc_part;memcpy(actor+0x2410,&value,8);draw_model(&part);assert(draws==10);
+    draw_model(&npc_part);assert(draws==10);
+    hud=0;draw_model(&npc_part);assert(draws==11);hud=1;
+    player_parts_supported=0;draw_model(&npc_part);assert(draws==12);player_parts_supported=1;
+    value=base+0x1284630;memcpy(actor,&value,8);draw_model(&npc_part);assert(draws==13);
+    value=node;memcpy(node+0x20,&value,8);assert(!current_player_part(&npc_part));
+    value=NULL;memcpy(base+0x1336200,&value,8);assert(!current_player_part(&npc_part));
+    VirtualFree(base,0,MEM_RELEASE);
     puts("PHOTO PLAYER PASS");return 0;
 }

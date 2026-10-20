@@ -4337,3 +4337,17 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Prova dedicada de abertura ainda nao concluida: selecao herdada fez roteiro
   atuar em cores; correcao interrompida por perda de foco, sem continuar inputs.
   Nao declarar essas capturas evidencia de abertura. Segunda cena pendente.
+
+- F11 destravado: UnitMrPlayer2+2410..2490 aponta17UnitCharPartsBase table1284d10,
+  com draw proprio74ca00->35b810. Filtro exige pertença ao jogador vivo,
+  nao apenas classe. Assinaturas completas construtor/thunk conferidas; teste
+  cobre NPC de mesma classe, troca de dono, ausencia de manager e ciclo PASS.
+- game-parts1080p privado/mudo confirmou corpo/cabelo/roupa somem/voltamF11,
+  NPC e maquina preservados. Davy liberou janela por alguns minutos para
+  testes visuais. Variantes/roupas/acessorios/sombras/reflexos pendentes.
+- Cadeia antiga rotulada RENDER BODY (+1620/+50/+d0/table1270a88) tambem era
+  colisao; rejeitada sem integrar alteracoes. Pecas provadas por slotsdiretas.
+- Prova real f1/f32 executou, mas manteve desfoque excessivo: controle ainda
+  incorreto. Achado seguinte: seletor optico0 e desfoque constante; modo2
+  calcula optica. Apertura e distancia estavam invertidas no novo bloco.
+  Preparar correcao e repetir prova antes de ativarDOF noatalho.

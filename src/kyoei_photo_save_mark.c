@@ -16,6 +16,7 @@ static unsigned char *base;
 static int observer;
 static int player_supported; /* immutable after boot signature validation */
 static int player2_supported;
+static int player_parts_supported;
 static _Atomic int player_hidden=0;
 static _Atomic unsigned player_draw_observations=0;
 void kyoei_photo_player_restore(void) {atomic_store(&player_hidden,0);}
@@ -35,12 +36,43 @@ static uint64_t hash_bytes(const unsigned char *data,size_t size) {
     for(size_t i=0;i<size;++i)hash=(hash^data[i])*UINT64_C(1099511628211);
     return hash;
 }
+static int readable(const void *pointer,size_t size) {
+    MEMORY_BASIC_INFORMATION info;
+    if(!pointer || !VirtualQuery(pointer,&info,sizeof(info)) || info.State!=MEM_COMMIT ||
+       (info.Protect&(PAGE_NOACCESS|PAGE_GUARD)))return 0;
+    uintptr_t offset=(uintptr_t)pointer-(uintptr_t)info.BaseAddress;
+    return offset<=info.RegionSize && size<=info.RegionSize-offset;
+}
+static void *pointer_at(const void *object,size_t offset) {
+    void *value=NULL;
+    if(object && readable((const char*)object+offset,sizeof(value)))memcpy(&value,(const char*)object+offset,sizeof(value));
+    return value;
+}
+static int current_player_part(const void *part) {
+    // Scene group 5 owns the live UnitMrPlayer2. Its 17 part slots are the
+    // provenance: the same UnitCharPartsBase type is also used by other actors.
+    // No cached object pointers survive a scene/character change.
+    void *manager=pointer_at(base,0x1336200),*groups=pointer_at(manager,0x28);
+    void *group=pointer_at(groups,5*sizeof(void*)),*node=pointer_at(group,8);
+    for(unsigned work=0;node && node!=group && work<256;++work) {
+        void *actor=pointer_at(node,8);
+        if(pointer_at(actor,0)==base+0x12b3140 && readable(actor,0x2498)) {
+            for(size_t offset=0x2410;offset<=0x2490;offset+=sizeof(void*))
+                if(pointer_at(actor,offset)==part)return 1;
+        }
+        void *next=pointer_at(node,0x20);
+        if(next==node)break;
+        node=next;
+    }
+    return 0;
+}
 static ABI void draw_model(void *object) {
     if(kyoei_photo_hud_hidden()) {
         uintptr_t table;memcpy(&table,object,sizeof(table));
         if(player_supported && atomic_load(&player_hidden) &&
            (table==(uintptr_t)base+0x12cba00 ||
-            (player2_supported && table==(uintptr_t)base+0x12b3140))) {
+            (player2_supported && table==(uintptr_t)base+0x12b3140) ||
+            (player_parts_supported && table==(uintptr_t)base+0x1284d10 && current_player_part(object)))) {
             unsigned count=atomic_load(&player_draw_observations);
             if(count<16 && atomic_fetch_add(&player_draw_observations,1)<16 && observer)
                 gz_log("Photo player: suppressed model draw object=%p table=%llx",object,(unsigned long long)table);
@@ -83,6 +115,9 @@ void kyoei_photo_save_mark_configure(void *image,uint64_t size) {
         hash_bytes((unsigned char*)image+0x740240,15)==UINT64_C(0x810839f2dae557fa);
     player2_supported=player_supported &&
         hash_bytes((unsigned char*)image+0x8f7bc0,96)==UINT64_C(0x22b1184494d9a34e);
+    player_parts_supported=player2_supported &&
+        hash_bytes((unsigned char*)image+0x74dce0,471)==UINT64_C(0xcf7d4b0de2affc43) &&
+        hash_bytes((unsigned char*)image+0x74ca00,15)==UINT64_C(0x26dce38149b9c232);
     gz_log("Photo player: F11 draw filter %s",player_supported?"available; visual validation pending":"disabled: type signature differs");
     int32_t relative=(int32_t)distance;code[0]=0xe9;memcpy(code+1,&relative,4);code[5]=0x90;
     DWORD ignored;
