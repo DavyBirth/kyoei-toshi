@@ -1356,7 +1356,7 @@
         {
           "id": "r1194/c25",
           "source_text_sha256": "5dcc404d6124506a0fe3e3edc5d8b85abd9b9fad716d71f310f8e45a0cbf0b5b",
-          "en": "Deed to Ristorante Miyato",
+          "en": "Ristorante Miyato Deed",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1194/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1398,7 +1398,7 @@
         {
           "id": "r1196/c25",
           "source_text_sha256": "e18aad551ab59ad2551402a0a1a5986dd75a72f92a3bd078d3fd14548c653636",
-          "en": "Deed to the Ebine Publishing Building",
+          "en": "Ebine Publishing Building Deed",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1196/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1461,7 +1461,7 @@
         {
           "id": "r1200/c25",
           "source_text_sha256": "5dcc404d6124506a0fe3e3edc5d8b85abd9b9fad716d71f310f8e45a0cbf0b5b",
-          "en": "Deed to Ristorante Miyato",
+          "en": "Ristorante Miyato Deed",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1200/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1503,7 +1503,7 @@
         {
           "id": "r1202/c25",
           "source_text_sha256": "e18aad551ab59ad2551402a0a1a5986dd75a72f92a3bd078d3fd14548c653636",
-          "en": "Deed to the Ebine Publishing Building",
+          "en": "Ebine Publishing Building Deed",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1202/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1783,7 +1783,7 @@
         {
           "id": "r1273/c25",
           "source_text_sha256": "51461561f05b9916151c176d4010148a66eddee9a5e4d437f3b6216562cf28bd",
-          "en": "Prickly Pear Cactus \"Golden Honey\"",
+          "en": "Prickly Pear \"Golden Honey\"",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1273/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2234,14 +2234,14 @@
         {
           "id": "p0/k53",
           "source_text_sha256": "0a90abb1dbd673073e89005dca0fb4dcc021c35785a4f4d68ab40cd5e4fa6b38",
-          "en": "Let's look for the [#ff88ff88]Ebine Publishing[/#] building,\nwhere Otsuka's acquaintance is.",
+          "en": "Let's look for the [#ff88ff88]Ebine Publishing[/#] building,\nwhere Otsuka's friend is.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k53; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k444",
           "source_text_sha256": "3c81871acfae1ae16395c5064c66fe6247e3e02bd85b3ae890731b3309c5e821",
-          "en": "It seems this article was written by a reporter called Otsuka.",
+          "en": "Looks like this article was written by a reporter named Otsuka.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k444; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2255,140 +2255,140 @@
         {
           "id": "p0/k643",
           "source_text_sha256": "f46b428f865b7630bbe4f71acb3e5cb7701aca7502be6661bad35e155d266b1b",
-          "en": "Go help the editor-in-chief and ask about Otsuka's past!",
+          "en": "Let's go help the editor-in-chief and ask about Otsuka's past!",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k643; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k649",
           "source_text_sha256": "7b1c1439c933215ea2e4f8ef49a09982108ae25462d5599168de438a36afc3c5",
-          "en": "Go help the editor-in-chief and ask about Otsuka's past!",
+          "en": "Let's go help the editor-in-chief and ask about Otsuka's past!",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k649; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k668",
           "source_text_sha256": "b77b76ca70992305534e2ff569c5981fb59717278b0e4fbae98cef03269d3712",
-          "en": "《To Otsuka:\nThe W&P building collapsed, and their organization seems to have been wiped out.》",
+          "en": "《To Otsuka:\nThe W&P building came down. Looks like their outfit's been wiped out.》",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k668; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k681",
           "source_text_sha256": "d2978d17c78d15ac4d9013a648c849179f0a8ba78eca10d13e882a43225e38f0",
-          "en": "Um... Are you two\nthe people Otsuka called to help?",
+          "en": "Um... are you two\nthe help Otsuka sent?",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k681; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k683",
           "source_text_sha256": "006fa5349a663cb9c3bef338e593dbcfb06346ca1b4adb5df7ddee9a4cb8d504",
-          "en": "Yes, that's right. Are you the editor-in-chief who's an old friend of Otsuka's?",
+          "en": "\"Yes. Are you Otsuka's old friend, the editor-in-chief?\"",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k683; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k687",
           "source_text_sha256": "03f4fa8502b7345d60d40086769cf64d86b11beef920ba94eefd43382a0918f2",
-          "en": "That's right! Are you the editor-in-chief who's an old friend of Otsuka's?",
+          "en": "That's right! Are you Otsuka's old friend, the editor-in-chief?",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k687; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k720",
           "source_text_sha256": "0467e68ca8bc82ced992ec26f2bcc7490c79b0ef8074fc213ea1ae3ac8d9256f",
-          "en": "An issue of Giant Shadow Weekly from 16 years ago, the first one I worked on.\nIt even includes a battlefield report by Otsuka, who joined the company at the same time as me.",
+          "en": "The first Giant Shadow Weekly I ever worked on, 16 years ago.\nIt's got a war report by Otsuka, who started the same year as me.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k720; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k722",
           "source_text_sha256": "3a0f44eff0d6f89e91f7fcfa07644c056221fd70350defb108adcb590bde7743",
-          "en": "What? Otsuka was a war correspondent?",
+          "en": "\"Wait, Otsuka was a war correspondent?\"",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k722; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k724",
           "source_text_sha256": "388b4ba2502d6f1a9ca3acbabd90e2c72c07a0896ebcbe8db7f84195d720a2f5",
-          "en": "What was Otsuka like when he joined the company?",
+          "en": "\"What was Otsuka like when he started?\"",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k724; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k730",
           "source_text_sha256": "97956b416352b972315bce1154229afb28321ddb7b0a35f901232cc7a9e18884",
-          "en": "What? Otsuka was a war correspondent?",
+          "en": "Wait, Otsuka was a war correspondent?",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k730; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k733",
           "source_text_sha256": "4d859a70e0d59cbff5a9d26e4534e226982a30a84b39723c01356930d25ebdfc",
-          "en": "Oh, sorry. Otsuka told me\nnot to talk about the past. You'll have to ask him directly for anything more.",
+          "en": "Oh, sorry. Otsuka made me promise\nnot to talk about the old days. Ask him yourself.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k733; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k740",
           "source_text_sha256": "7ba0b000743b4770cef57d24b14d1069b13b932c8d6f2d7895bfb5f2174e4465",
-          "en": "We're coworkers. Oh, right, Otsuka told me not to talk about\nthe past. You'll have to ask him directly for anything more.",
+          "en": "We work together. Oh, right, Otsuka made me promise\nnot to talk about the old days. Ask him yourself.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k740; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k745",
           "source_text_sha256": "7a16180702507f2f4bbe816a39b92954561213eea897b762c11145922c3bbd6b",
-          "en": "Yes. Still, this brings back memories. Otsuka, back then...",
+          "en": "Yeah. Man, this takes me back. Otsuka, back then...",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k745; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k749",
           "source_text_sha256": "5ebd8738820cbce9f867ca56aa87e01195cd84b3685596480bb3351849b50d23",
-          "en": "Well, Otsuka seems to have been working quite seriously lately.\nPerhaps the rising younger generation has spurred him on.",
+          "en": "Well, Otsuka seems to be working pretty hard lately.\nMaybe the young up-and-comers lit a fire under him.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k749; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k779",
           "source_text_sha256": "41825b05b8d0095674af1eb4dba3823f09493f1f0a0114705dbfbbf60ff95731",
-          "en": "She'd been successful as a freelancer since her student days. She said she wanted\nto work with Otsuka, and for a while, they were on the same team.",
+          "en": "She was a big-deal freelancer even in college. She wanted\nto work with Otsuka, so they were on a team for a while.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k779; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k781",
           "source_text_sha256": "30a1146e1f4588d2fe5f3d8689e0d0e9cc7f306d7c9b1c6f9194e750d4a7d17d",
-          "en": "But Otsuka kept doing whatever he pleased,\nso Risa got fed up with him, and the team broke up.",
+          "en": "But Otsuka kept doing whatever he wanted,\nso Risa got sick of him and the team split up.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k781; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k783",
           "source_text_sha256": "40c71805546049df10828a4b9eb0081ad2c2610ad2cf486b22d90a3c7c4f88b0",
-          "en": "Otsuka was awful back then... Well, I'm a hyena of the same pack,\nso I'm hardly one to talk.",
+          "en": "Otsuka was terrible back then... Then again, I'm a hyena\nfrom the same pack, so I can't talk.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k783; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k785",
           "source_text_sha256": "927f5a664be76d39a3d6708664e29d7794781d4bbca26f492ae192f5a26c843a",
-          "en": "After that, Risa Kashiwagi kept making a name for herself,\nwhile Otsuka fell farther and farther behind.",
+          "en": "After that, Risa Kashiwagi's name just kept growing,\nand Otsuka got left in the dust.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k785; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k799",
           "source_text_sha256": "898e9dcb4afb59a95a7421aa6f91a233682df7fbda134bce1e1c46ca1a657bd3",
-          "en": "I told Risa that W&P had been wiped out\nand that we'd come to rescue the editor-in-chief at Otsuka's request.",
+          "en": "I told Risa W&P was wiped out, and that\nwe came to rescue the editor-in-chief for Otsuka.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k799; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k804",
           "source_text_sha256": "5df2068bc6bc1d18dce801ea75de5d4316aecf8bdf1cecc6ecc6be7c23620b3e",
-          "en": "I heard about how you and Otsuka used to work together\nand parted on bad terms.",
+          "en": "\"We heard how you and Otsuka worked together\nand split up after a fight.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k804; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }

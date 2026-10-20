@@ -174,7 +174,7 @@
         {
           "id": "p0/k637",
           "source_text_sha256": "bb68f4ff1e94009c3f711453d2535fdcea4868f2129814fd2bc868c89fcfd88a",
-          "en": "\"I'll hold them off. You run!\" (sacrifice yourself for Yuki)",
+          "en": "\"I'll hold them off. You run!\" (sacrifice yourself)",
           "notes": "English draft imported from audited private workspace, translate-en-0024.json:p0/k637; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -236,14 +236,14 @@
         {
           "id": "p0/k860",
           "source_text_sha256": "6b00149acde0b35cae5f605ad38665ad3e1b4e75f68b65b68f6395d4a9b35e5b",
-          "en": "Don't underestimate W&P.\nHurry up and go meet the man at the Yamabuki Building in Mizuna City.",
+          "en": "Don't underestimate W&P.\nHurry and go see the man at the Yamabuki Building in Mizuna City.",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k860; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k863",
           "source_text_sha256": "2af34c52f6c67a29f1be0adb18cc63329144092bf9427b11c11d6ecaee9bdaea",
-          "en": "W&P is still chasing us...\nWe have to get to the Yamabuki Building in Mizuna City...",
+          "en": "W&P is still after us...\nWe have to get to the Yamabuki Building in Mizuna City...",
           "notes": "English draft imported from audited private workspace, translate-en-0085.json:p0/k863; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }

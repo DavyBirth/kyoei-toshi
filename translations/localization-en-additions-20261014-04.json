@@ -479,49 +479,49 @@
         {
           "id": "p0/k51",
           "source_text_sha256": "ba4ef888e2440a09f6eb0833084ec194e3fe1f5de2840f1d2f7a973613428cb2",
-          "en": "It looks like Hananira Town isn't this way...",
+          "en": "Hananira Town isn't this way...",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k51; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k90",
           "source_text_sha256": "972317124ca30d07453006b7be291884aeb0126469b3f106af78ef81222bf39c",
-          "en": "I handle the 'Street Style Snapshots'\ncolumn in Giant Shadow Weekly.\nSince you're here, let me feature you in an article.",
+          "en": "I run the \"Street Style Snaps\" section\nin Giant Shadow Weekly.\nYou're here, so let me put you in it.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k90; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k149",
           "source_text_sha256": "6197d1bb0acbdf0fcea888bcb31f5de90004c5f1212e24931d00f93e518c54b2",
-          "en": "Hey, you! Would you like to buy my restaurant?\nIt's called 'Ristorante Miyato.'",
+          "en": "Say, you! How'd you like to buy my restaurant?\nIt's called \"Ristorante Miyato.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k149; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k156",
           "source_text_sha256": "4df486d8c0a5eccfb84f606ce3ecd7b82015624280b579c9ec6953eb1d4640d0",
-          "en": "Buy the upscale French restaurant 'Ristorante Miyato' for 1 billion yen.",
+          "en": "(Buy the fancy French restaurant \"Ristorante Miyato\" for 1 billion yen)",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k156; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k166",
           "source_text_sha256": "7146479bd720a4f34cdad2d805b8d37c5c129dfefbdb1fa618736fd7629a381a",
-          "en": "You obtained the 【Deed to Ristorante Miyato】.",
+          "en": "Obtained 【Ristorante Miyato Deed】.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k166; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k168",
           "source_text_sha256": "d2ec467c9c6d3288031b0aefe7cb9e7f9d569e11e54cd9d7068805046593dfb5",
-          "en": "Congratulations! You're now the owner of Ristorante Miyato.\nThe restaurant has plenty of skilled chefs,\nso I think there are all kinds of possibilities.",
+          "en": "Congratulations! You're the owner of Ristorante Miyato.\nWe've got plenty of skilled chefs,\nso the sky's the limit.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k168; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k170",
           "source_text_sha256": "d985fb4bb9caf55775f5deb0b9e84ef52b49d74c2e19e06b2bdb7eed7d06c2fb",
-          "en": "What kind of restaurant do you want Ristorante Miyato to become?",
+          "en": "So, what kind of place do you want Ristorante Miyato to be?",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k170; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -542,126 +542,126 @@
         {
           "id": "p0/k211",
           "source_text_sha256": "0a1e8755cb0a5835b16c8636482325e79cbdbba18987ac62d353648805ca1455",
-          "en": "Do you know where the Ebine Publishing building is?",
+          "en": "\"Do you know where the Ebine Publishing building is?\"",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k211; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k213",
           "source_text_sha256": "35959056be20346d1dd2cab028f5969a2659278183bda6f51279208eb54c60a5",
-          "en": "Ebine Publishing? Oh, that sounds familiar...",
+          "en": "Ebine Publishing? Oh, that kinda rings a bell...",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k213; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k224",
           "source_text_sha256": "df18a650ae82340a8916527a35df2515eedd5954106c441a6a56ca09ba564db1",
-          "en": "Hey, you! Would you like to buy Ebine Publishing and its building from me?\nHow about it? I'll let you have them for a bargain price of 1.5 billion yen!",
+          "en": "Say! How'd you like to buy Ebine Publishing and its building from me?\nFor you, right now, a steal at 1.5 billion yen!",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k224; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k226",
           "source_text_sha256": "e1a5629acd31990460a39bbc429552b5d98581f23484eceea6aa4eaf0cca90b6",
-          "en": "Buy Ebine Publishing for 1.5 billion yen!",
+          "en": "(Buy Ebine Publishing for 1.5 billion yen!)",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k226; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k237",
           "source_text_sha256": "95e05113dcc5c5df6431e3fb57def6d6b91254eb94d4d60f0510b0b5121719d4",
-          "en": "You received the 【Deed to the Ebine Publishing Building】.",
+          "en": "You got the 【Ebine Publishing Building Deed】.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k237; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k243",
           "source_text_sha256": "a5541958531f34b5930450c23cc114a24178bfdac40996cea572a9c04d5b3269",
-          "en": "...The building is damaged, but Ebine Publishing is a publisher with a long history.\nIt has published 'Giant Shadow Weekly' for over 30 years.",
+          "en": "...The building's damaged, but Ebine Publishing has history.\nIt's put out Giant Shadow Weekly for over 30 years.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k243; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k245",
           "source_text_sha256": "a9d69fd67692c1fb251b69e7c88303363932988ff809dd0013fe90b969e02f0e",
-          "en": "How do you plan to run\nEbine Publishing from now on?",
+          "en": "So, what do you plan to do\nwith Ebine Publishing?",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k245; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k247",
           "source_text_sha256": "4f5e5306168f5d341a6bd63251a39e8b3e2f05b582e667a8e8cba8a004292a1d",
-          "en": "I'll repair the building and try to revive Ebine Publishing.",
+          "en": "\"Fix up the building and bring Ebine Publishing back.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k247; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k251",
           "source_text_sha256": "75d2db950d38292621c87a1febfbd0dfd2519d913132dd75e8cf782ad1aa0793",
-          "en": "Thank you. As its former owner, I'd be very happy\nif you kept the history of 'Giant Shadow Weekly' going.",
+          "en": "Thank you. As the old owner, I'd be thrilled\nto see Giant Shadow Weekly's story continue.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k251; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k255",
           "source_text_sha256": "d087c5e96f24eb3598f531523868525d2b5415a1674de3ba0a5eef78df01266c",
-          "en": "...Well, you're the owner. You have the right to decide.\nThat would be one way to put Ebine Publishing to use too.",
+          "en": "...No, you're the owner. It's your call.\nThat's one way to make use of Ebine Publishing too.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k255; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k261",
           "source_text_sha256": "d47c13c123105a391b329bad30b7e5859c7cfc2cf60fdf29955ed93505830811",
-          "en": "Buy the Ebine Publishing building for 1,499,990,000 yen!",
+          "en": "(Buy the Ebine Publishing building for 1,499,990,000 yen!)",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k261; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k422",
           "source_text_sha256": "f32ab15b86efec5d5be4d637d7ef6fc7c041c46b3e500bf06380124cb996adb6",
-          "en": "There's a book you can take on the shelf: 'The Tale of the Last Sword: The Open Sky Chapter.'",
+          "en": "There's a book on the shelf you can take: \"The Tale of the Last Sword: The Open Sky Chapter.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k422; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k428",
           "source_text_sha256": "caee37be917ad077d30758a8bdde757ea6275d7adbc7cbe64fb1588a2021d7b6",
-          "en": "You obtained 【The Tale of the Last Sword: The Open Sky Chapter】!",
+          "en": "You got 【The Tale of the Last Sword: The Open Sky Chapter】!",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k428; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k432",
           "source_text_sha256": "d36ea891e79124d70c5679e64e56046c9bd1e436e6f045fd4007272f0fb9dd9f",
-          "en": "Old issues of 'Giant Shadow Weekly' line the bookshelves.",
+          "en": "Old issues of Giant Shadow Weekly line the shelf.",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k432; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k451",
           "source_text_sha256": "7073259dc96419967a2e2913d67193da3131de4de919f903b1051430c0a0d266",
-          "en": "'Risa Kashiwagi's article in this week's issue was excellent.\nHer incisive approach to her subject and clear organization of the information made it easy to follow.'",
+          "en": "\"Risa Kashiwagi's article in this week's issue was great.\nShe really digs in, and lays it all out clearly.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k451; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k453",
           "source_text_sha256": "c36dd8f4bf1f87d37ed871d4b5b1cdb552f94c734c3fd9fe3e00e5d64f1232c6",
-          "en": "'I'm a fan of Risa Kashiwagi's articles. I've been following her\nsince she began making a name for herself as a student journalist.'",
+          "en": "\"I'm a fan of Risa Kashiwagi. I've followed her since\nshe first made a name for herself as a student journalist.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k453; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k455",
           "source_text_sha256": "df4479299d2741a997f8aae9d787b7f017112bed847b94abe16ec5baff5f5f9f",
-          "en": "'I'm sad that Ms. Kashiwagi's articles no longer appear in Giant Shadow Weekly. She's contributing to other magazines, so she's clearly still active, but I'd like her to return to Giant Shadow Weekly.'",
+          "en": "\"I miss Ms. Kashiwagi's articles in Giant Shadow Weekly. She still writes for other magazines, but I want her back in Giant Shadow Weekly.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k455; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k459",
           "source_text_sha256": "56ec63617e5ef02c3c584808e39431da598d86e51b1952b58cf8b143bab80c46",
-          "en": "Look at the information on Miyato City.",
+          "en": "(Read about Miyato City)",
           "notes": "English draft imported from audited private workspace, translate-en-0084.json:p0/k459; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
