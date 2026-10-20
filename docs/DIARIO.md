@@ -4391,3 +4391,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   native-glyph-loaded.png. Entrada de teclado foi somente ao PID26884 validado.
   Diagrama completo e teste com controle fisico seguem pendentes; nao declarar
   modo foto/desempenho ou todas as texturas concluidos por este avanco.
+
+- Nova orientacao de Davy: Claude fica com texturas traduzidas/diagramas;
+  Codex registra instrucoes e segue em modo foto/desempenho/opcoes graficas,
+  incluindo4K/120fps como capacidades a investigar, sem garantir desempenho.
+  Repasse local em docs/INSTRUCOES-TEXTURAS-CLAUDE.md: mapeamento, diagramas,
+  preservacao dos marcadores/mips, reconstruirpack da base exata e evitar
+  duplo swap/custo de reconhecimento de diagramas grandes por upload.

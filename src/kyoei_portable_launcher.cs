@@ -115,8 +115,8 @@ class PortableLauncher : Form {
         string[][] rows={
             new[]{"Move / walk / run","W A S D","Left stick"},
             new[]{"Look around","Mouse / I J K L","Right stick"},
-            new[]{"Interact / talk / pick up / confirm","E / Enter / left mouse","Circle / B"},
-            new[]{"Back / cancel / stand up","Space / Backspace","Cross / A"},
+            new[]{"Interact / talk / pick up / confirm","E / Enter / left mouse","Cross / A"},
+            new[]{"Back / cancel / stand up","Space / Backspace","Circle / B"},
             new[]{"Dodge / go prone","Ctrl","Square / X"},
             new[]{"Read incoming mail","F","Triangle / Y"},
             new[]{"Sprint (while moving)","Shift","R1 / RB"},

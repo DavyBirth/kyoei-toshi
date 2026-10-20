@@ -172,3 +172,12 @@ atual de stutter. Testes de1080p passam a integrar a verificacao corrente.
   com efeito real comprovado. Separar resolucao de saida de escala interna.
   Medir qualidade/tempos de quadro nas mesmas cenas; ajustes opcionais nao
   substituem corrigir gargalos nem autorizam mudar velocidade da simulacao.
+
+- Pedido20/10: incluir4K e120fps na investigacao. 3840x2160 de saida e diferente
+  de renderizar internamente em4K; documentar e medir separadamente. O shim
+  oferece GZ_FPS_LIMIT, mas o present driver atual nao consome GetFrameLimit;
+  nao exibir um seletor que apenas grava essa variavel sem efeito. A frequencia
+  GZ_VBLANK_HZ participa dos eventos/contadores convidados: aumentar para120
+  exige provar velocidade de animacao, scripts, entrada e audio em tempo real.
+  Primeiro corrigir gargalos mantendo referencia; depois habilitar frequencias
+  e escalas comprovadas. Nao prometer4K120 pelo tamanho da janela ou monitor.
