@@ -150,7 +150,15 @@ atual de stutter. Testes de1080p passam a integrar a verificacao corrente.
   e entrada no menu de pausa para o jogador descobrir. Nao equivale a prometer
   todos os recursos dessas producoes antes de conhecer os mecanismos do jogo.
 - Novo candidato integra roll/lente virtual/velocidade e grading hostGPU:
-  exposicao/contraste/saturacao e5filtros, com CPU equivalente no PNG.
+  exposicao/contraste/saturacao e9estilos (incluindo original), com CPU equivalente no PNG.
 - Menu de pausa: UnitHudPause table12e1520/ctorae3660 localizado; entrada e
   restauracao da posse de pausa ainda pendentes. Foco/DOF, iluminacao, clima e
   horario continuam em pesquisa; nao substituir por efeitos com outro nome.
+
+- Atualizacao: lente alinhada a convencao optica nativa35mm; estilos1954,
+  tokusatsu retro, noturno e anime suave conferidos em1080p. Grao/vinheta
+  ajustaveis. Foco tem prototipo opt-in com restauracao testada, mas nao
+  produz desfoque visivel; permanece oculto no atalho normal.
+- Ordem atual: resolver foco/desfoque; luzes posicionaveis reais; clima e
+  horario; so depois entrada no menu de pausa. Visibilidade do corpo ainda
+  requer identificar componente visual correto. Ver diario/evidencias.

@@ -4289,3 +4289,14 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   ControlesDOF experimentais ficam ocultos se o hook opt-in nao estiver ativo,
   evitando oferecer opcao sem efeito no atalho normal. RegressaoUI cobre
   painel normal/prototipo, teclado/controle,720p/1080p.
+
+- Avanco salvo no commit3605033: lente/estiloanime refinados e prototipo de
+  foco protegido. Controles de foco ocultos na execucao normal. Quatro testes
+  finais PASS; buildkyoei completo PASS. Nenhum teste do agente aberto.
+- Mapeamento inicial de luzes/ambiente documentado emFOTO-LUZES-CLIMA.md:
+  point624bytes/spot656bytes; accessorRGBself+230 e update2ac830 de alcance.
+  Virtual359f00 e culling, nao emissao; ainda falta coleta/posse emGxSysLight.
+  UnitSkySphere localizado, mas nao comprova ciclo dinamico de clima/horario.
+- Consumo DOF permanece sem prova; pesquisa encontrou tarefas246350/2485f0/
+  246b70 e consumidores indiretos, sem promover novo hook nao validado.
+  Quota propria chegou9% restantes da janela5horas; semanal nao foi usada.
