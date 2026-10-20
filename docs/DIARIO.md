@@ -4230,3 +4230,37 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   virtuais88/90; corpo do protagonista privado tem componente table1254138,
   visibilidade1. Novo candidato deve preservar/restaurar esse estado no thread
   guest, validar dono atual e nunca alterar flag de NPC generico.
+
+- Davy autorizou trabalhar ate5% RESTANTES DA JANELA DE5HORAS, depois salvar,
+  encerrar testes e desligar imediatamente. Confirmou explicitamente que nao
+  e limite semanal. Meta ativa criada; telemetria desta thread token_count
+  possui primary window300min. Leitura55% depois54/48/45/41restantes. Check
+  privado build/overnight/check_photo_usage.py exporta apenas metadados de
+  quota, sem credenciais/mensagens; nao usar usage-current antigo como atual.
+- Skill OpenAI Docs lida para monitoramento; documentacao oficial app-server
+  consultada, sem instalar integracao nem ler autenticacao. Snapshot local
+  recente da propria thread foi suficiente para acompanhar esta janela.
+- Novos pedidos: lente AJUSTAVEL com instrucao explicita na HUD; filtros
+  criativos de todo genero kaiju, liveaction/anime, nao so1954. Prioridade
+  menuPAUSA caiu para DEPOIS de foco/DOF, luzes posicionaveis estiloSpider-Man,
+  clima e horario. Atualizado plano pratico; nao aguardar Davy olhando teste.
+- Candidato de visibilidade276ac0 REPROVOU: componente1254138 identificado
+  por RTTI como GxModObjectHit, binding682a50 era de UnitMrE009, nao jogador.
+  Flag voltou ao estado original no teste privado e rodada visibility saiu0.
+  Codigo/teste/APIbridge removidos do build, copias privadas preservadas como
+  evidencia rejeitada. Nunca promover hipotese de offset por coincidencia de
+  layout; confirmar tipo/reflexao completo antes de nova chamada. F11 antigo
+  permanece experimental e sem invisibilidade comprovada; UI explicita isso.
+- Kaiju1954/TokusatsuRetro/KaijuNoturno/KaijuAnime, grao/vinheta independentes
+  integrados. Gr?o deterministico por pixel nativo, mesma funcaohashCPU/GLSL;
+  preset1954 adiciona marcas/riscos discretos. PNG conserva alfa e RGBA/BGRA.
+  Testes de repetibilidade,cinza,alfa,limites/controles e layout720/1080 PASS.
+- photo-kaiju-20261020 aposPROFILE READY, mudo/perfilprivado,8PNGs1920x1080:
+  lente33->39mmvirtual ajustada viaUI; 1954/PBgrao, retro, noturno, anime e
+  anime+grao conferidos. Crop estatico foraHUD/TV: preview/PNG medias0,0301/
+  0,0277/0,0305/0,0108/0,0202 e p99=1. ForaFoto a cena muda normalmente, nao
+  usar capturas separadas como prova de identidade. R/F10 restauram. Exit0.
+- Revisao artistica: presetAnime tem faixas de cor fortes demais; suavizar
+  na proxima etapa. Pesquisa nativaDOF confirmou GxUnitFilterDepthOfField
+  table1252008/update252960, GxSysFilter singleton13425a8, enable+a0 e36bytes
+  de parametros+b0..d0. Ainda pesquisa, nenhuma alteracao de foco integrada.

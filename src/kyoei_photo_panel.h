@@ -10,7 +10,7 @@ inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll
         ImGui::SetNextWindowBgAlpha(.78f);
         ImGui::Begin("##photo-help",nullptr,ImGuiWindowFlags_NoDecoration|ImGuiWindowFlags_AlwaysAutoResize|
             ImGuiWindowFlags_NoInputs|ImGuiWindowFlags_NoSavedSettings|ImGuiWindowFlags_NoFocusOnAppearing);
-        ImGui::Text("MODO FOTO | Protagonista: %s",player_hidden?"oculto":"visivel");
+        ImGui::Text("MODO FOTO | Ocultar protagonista: %s (experimental)",player_hidden?"ligado":"desligado");
         const auto grade=GetGrade();
         ImGui::Separator();
         ImGui::TextColored(ImVec4(1,.8f,.35f,1),"Ajuste: %s",FieldName(Field(selected.load())));
@@ -18,6 +18,9 @@ inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll
             fov>0?FocalLength(fov):0,fov,roll,camera_speed.load());
         ImGui::Text("Exposicao: %+.1f EV | Contraste: %.2f | Saturacao: %.1f",grade.exposure,grade.contrast,grade.saturation);
         ImGui::Text("Filtro: %s | *Sensor virtual de 24 mm de altura",FilterName(grade.filter));
+        ImGui::Text("Granulacao: %.0f%% | Vinheta: %.0f%%",grade.grain*100,grade.vignette*100);
+        if(Field(selected.load())==Field::Lens)
+            ImGui::TextColored(ImVec4(1,.8f,.35f,1),"Lente: cima = +2 mm (aproxima) | baixo = -2 mm (amplia)");
         ImGui::Separator();
         if(controller) {
             ImGui::TextUnformatted("Analogicos: mover / olhar | LT/RT (L2/R2): descer / subir");

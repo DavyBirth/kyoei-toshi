@@ -77,7 +77,12 @@ O painel mostra o ajuste selecionado e os valores. Disponiveis:
 - Rotacao da camera (roll), em passos de2graus.
 - Velocidade da camera de0,25x a5x; Shift/L1/R1 acrescentam rapidez temporaria.
 - Exposicao de-3 a+3EV, contraste de0 a2 e saturacao de0 a2.
-- Filtros Original, Preto e branco, Sepia, Frio e Quente.
+- Filtros Original, Preto e branco, Sepia, Frio, Quente, Kaiju1954,
+  Tokusatsu retro, Kaiju noturno e Kaiju anime.
+- Granulacao e vinheta ajustaveis de0 a100%, inclusive em outros filtros.
+  O preset1954 inclui preto e branco, grao e pequenas marcas de pelicula.
+  O anime usa uma paleta grafica; nao modifica modelos ou animacoes.
+  Trocar preset escolhe grao/vinheta iniciais; ambos continuam ajustaveis.
 
 Cores opcionais atuam apenas na apresentacao do modo foto e no PNG salvo.
 O framebuffer original do jogo nao e alterado; ao sair, a imagem normal volta.
@@ -90,6 +95,9 @@ A imagem de ajuda fica fora do PNG. Testes agente usam perfil privado/mudo.
 
 - Entrada descoberta no menu de pausa nativo: pedido explicito de Davy em20/10.
   Classe UnitHudPause localizada; acao de entrada/retorno ainda nao integrada.
+  Por orientacao posterior de Davy, fica DEPOIS de foco/desfoque, iluminacao,
+  clima e horario. Luzes desejadas sao fontes posicionaveis com cor/intensidade,
+  como a referencia Spider-Man, e nao somente exposicao.
 - Iluminacao virtual, foco/profundidade de campo, clima e hora do dia.
 - Ampliar cobertura de protagonista invisivel para variantes e acessorios.
 
@@ -99,7 +107,8 @@ A imagem de ajuda fica fora do PNG. Testes agente usam perfil privado/mudo.
 - Ajuste de foco e profundidade de campo.
 - Distancia focal da lente, pedida em20/10. O FOV ja muda o enquadramento;
   valores em milimetros dependem de definir uma equivalencia de sensor.
-- Protagonista invisivel: candidato F11 integrado; prova visual pendente.
+- Protagonista invisivel: F11 experimental; testes reais ainda NAO ocultam o corpo.
+  Painel indica pedido experimental, nao garante invisibilidade aplicada.
 - Filtros visuais, exposicao e contraste.
 - Alterar clima e hora do dia.
 - Espaco para ampliar os ajustes fotograficos conforme os mecanismos do jogo

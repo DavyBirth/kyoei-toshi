@@ -53,7 +53,7 @@ inline void Capture(Vulkan::Instance& instance,Vulkan::Scheduler& scheduler,Vide
         scheduler.Finish();
         vmaInvalidateAllocation(instance.GetAllocator(),readback.buffer.allocation,0,size);
         std::vector<u8> pixels(readback.mapped_data.begin(),readback.mapped_data.begin()+size);
-        if(kyoei_photo_hud_hidden())GradePixels(pixels.data(),pixels.size(),bgra,GetGrade());
+        if(kyoei_photo_hud_hidden())GradePixels(pixels.data(),pixels.size(),bgra,GetGrade(),width);
         // Private prototype destination. No dump/save changes, no desktop capture.
         const auto directory=std::filesystem::path("photos");std::filesystem::create_directories(directory);
         static u64 sequence{};

@@ -20,8 +20,8 @@ vk::Sampler sampler;
 vk::PipelineLayout layout;
 vk::Pipeline pipeline;
 std::unordered_map<void*,vk::DescriptorSet> sets;
-struct Push {Grade grade;int encoded;};
-static_assert(sizeof(Push)==20);
+struct Push {Grade grade;int encoded;unsigned width,height;};
+static_assert(sizeof(Push)==36);
 static constexpr uint32_t vertex[]=
 #include "photo.vert.inc"
 ;
@@ -93,7 +93,7 @@ void RenderPost(const Vulkan::Instance& instance,vk::CommandBuffer cmd,void* slo
     cmd.setViewport(0,viewport);cmd.setScissor(0,scissor);
     cmd.bindPipeline(vk::PipelineBindPoint::eGraphics,pipeline);
     cmd.bindDescriptorSets(vk::PipelineBindPoint::eGraphics,layout,0,set,{});
-    const Push push{grade,srgb?0:1};
+    const Push push{grade,srgb?0:1,width,height};
     cmd.pushConstants(layout,vk::ShaderStageFlagBits::eFragment,0,sizeof(push),&push);
     cmd.draw(3,1,0,0);cmd.endRendering();
     const vk::MemoryBarrier barrier{.srcAccessMask=vk::AccessFlagBits::eColorAttachmentWrite,
