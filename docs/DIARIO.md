@@ -3858,3 +3858,18 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Fonte do jogo não tem ¥: usar "yen". Senha da fase 208 em ASCII.
 - Próximo: fases 209–218 (217 não tem falas), Text_Heroine, depois itens,
   dicas de carregamento e notícias. Nada testado no jogo ainda.
+
+### 20/10/2026 — inglês natural: revisão de texto concluída
+
+- Revisados até o fim: fases 209–218, Yuki, Risa, Common/Plan00/Epilogue/
+  Mail, nomes de itens (padronizados e iguais nas falas), dicas de
+  carregamento, recapitulações, marcadores e objetivos do mapa, registro de
+  missões, anúncios, descrições de itens, leituras (Last Sword) e notícias.
+- Normalizados em todo o texto: pontuação e letras de largura japonesa
+  viraram ASCII, ¥ virou "yen", aspas retas, manchetes com maiúsculas de
+  título, citações com aspas duplas, nomes de lugares/lojas/falantes únicos.
+- Verificação de pixels com as larguras reais da fonte do jogo (baseada em
+  tools/measure_translation_layout.py): nenhum texto com mais linhas que o
+  japonês, nenhum glifo ausente. Os \n dos CSV .csh continuam escapados.
+- Nada testado no jogo ainda. Próximo: traduzir as texturas
+  (tools/localize_textures.py, translations/textures-en.json).
