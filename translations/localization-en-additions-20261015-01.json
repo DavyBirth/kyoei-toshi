@@ -1236,35 +1236,35 @@
         {
           "id": "r2/c0",
           "source_text_sha256": "e93f8ebb1930126794622143984f48ff7f39dd527302e433b3734eee83dbe28f",
-          "en": "Convenience Store, Aokiba-cho Branch",
+          "en": "Clover, Aokiba-cho Branch",
           "notes": "English draft imported from audited private workspace, translate-en-0032.json:r2/c0; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r3/c0",
           "source_text_sha256": "5011b358869493b694bcba98e1f595db4665116043f4259aa66187ceb32d540c",
-          "en": "Man Who Is a Honoka Futaba Fan",
+          "en": "Honoka Futaba Fan",
           "notes": "English draft imported from audited private workspace, translate-en-0032.json:r3/c0; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r9/c0",
           "source_text_sha256": "e6e5b140861b550896c3e298f5fe021aa6093a900a7328bba497c1a50f751318",
-          "en": "Miyato Sky Tower Observation Deck 1F Shop",
+          "en": "Miyato Sky Tower Observation Deck 1F Kiosk",
           "notes": "English draft imported from audited private workspace, translate-en-0032.json:r9/c0; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r10/c0",
           "source_text_sha256": "e3557b947e89b19f6bd7f4298bb2667931b5ba14aa1f9cdabaf133e8e8265ab5",
-          "en": "Convenience Store, Sumire Northeast Branch",
+          "en": "Clover, Sumire Northeast Branch",
           "notes": "English draft imported from audited private workspace, translate-en-0032.json:r10/c0; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r12/c0",
           "source_text_sha256": "f3d13327987ffef13779a8e16e7fc5c825c26626bccf700f293039c0b3fe6212",
-          "en": "Convenience Store, Hananira-cho West Branch",
+          "en": "Clover, Hananira-cho West Branch",
           "notes": "English draft imported from audited private workspace, translate-en-0032.json:r12/c0; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -1574,7 +1574,7 @@
         {
           "id": "p0/k866",
           "source_text_sha256": "d42b589c6f91248663e3255a851c0ffddbdbed2a36dca95b505327af73af868f",
-          "en": "Program Staff＿０",
+          "en": "Show Staff＿０",
           "notes": "English draft imported from audited private workspace, translate-en-0044.json:p0/k866; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1608,28 +1608,28 @@
         {
           "id": "p0/k15",
           "source_text_sha256": "bb1278630c46b33097acd355b5561a589127dbad74ae650645fefd4de9965a52",
-          "en": "Natsume Soseki",
+          "en": "Soseki Natsume",
           "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k15; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k18",
           "source_text_sha256": "95b25bc405dc930352bacea5a0012cc5407ec31c9bebafa04b0c5d0be08685b9",
-          "en": "Nitobe Inazo",
+          "en": "Inazo Nitobe",
           "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k18; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k20",
           "source_text_sha256": "12393b35253afc8264946a059151e7f530ff28323b53cfcdbf390d3a508af792",
-          "en": "Fukuzawa Yukichi",
+          "en": "Yukichi Fukuzawa",
           "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k20; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k23",
           "source_text_sha256": "870c836f968382cacc67c53f1f11aaa29c3eeb5a78372a94d22b45ad2aa2e49a",
-          "en": "Higuchi Ichiyo",
+          "en": "Ichiyo Higuchi",
           "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k23; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1965,14 +1965,14 @@
         {
           "id": "p0/k142",
           "source_text_sha256": "1432d1fa56dc734bbd974b4a5dc4f499273dd2c67fc0fe803807b1112a1ae99b",
-          "en": "Lab Researcher B＿０",
+          "en": "Researcher B＿０",
           "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k142; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k143",
           "source_text_sha256": "799eaf9b283fc3b1d5f15edc124934cbb23de1e45d1cad93e352326067e1db09",
-          "en": "Lab Researcher C＿０",
+          "en": "Researcher C＿０",
           "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k143; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
