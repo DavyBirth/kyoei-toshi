@@ -174,3 +174,23 @@ Uma segunda sequencia mantevef1 e variou foco0,74/33,64, tambem com mudanca
 visivel. Evidencias ignoradas em `build/research/photo-mode/transfer-20261020`.
 O atalho de teste habilita o recurso experimental; outra cena permanece
 pendente. Nao confundir esta prova com os resultados do modo constante.
+
+## Uso do controle e resultado da captura
+
+Em20/10, direcional passou a repetir apos350ms, a cada80ms. Usa relogio host;
+nao acumula rajadas apos travamento. Soltar, perder foco, desconectar ou sair
+limpa a repeticao. Bola/B sai do modo foto. A entrada convidada fica neutra
+ate soltar botoes, analogicos e gatilhos usados na foto, impedindo cancelar
+ou mover o personagem com o comando que acabou de fechar o modo.
+
+Captura agora informa sucesso somente apos fechar o arquivo sem erro, com
+nome e dimensoes reais; erro tambem aparece. Aviso dura5s, funciona com ajuda
+F9 oculta e e desenhado depois da captura, portanto nao aparece no PNG.
+Build/testes de entrada e layout720p/1080p PASS. Repeticao, opostos, atraso,
+perda de foco e bloqueio ate liberar entrada cobertos offline; controle
+fisico ainda precisa teste. Nenhuma alteracao na simulacao.
+
+Partida privada/muda `ux-20261020`: destino photos artificialmente bloqueado
+por arquivo proprio exibiu falha real. Removido somente esse arquivo-prova,
+dois PNGs1080p foram gravados e aviso de sucesso apareceu mesmo comF9 oculto.
+Imagens/relatorio privados na mesma pasta; pasta photos normal nao foi tocada.

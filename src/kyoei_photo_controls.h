@@ -17,11 +17,23 @@ inline float StickAxis(unsigned char value){
     return delta<0?-magnitude:magnitude;
 }
 template<class Data,class Buttons> inline void Apply(Data& data,Buttons& buttons){
+    static bool release_gate=false;
     static Uint64 previous=0;
     const auto now=SDL_GetTicksNS();
     const float dt=previous?std::clamp(float(now-previous)/1e9f,0.f,.1f):0.f;
     previous=now;
-    if(!Enabled()){KyoeiMouse::Apply(data.rightStick);return;}
+    if(!Enabled()){
+        if(release_gate){
+            const bool neutral=!buttons && !StickAxis(data.leftStick.x) && !StickAxis(data.leftStick.y) &&
+                !StickAxis(data.rightStick.x) && !StickAxis(data.rightStick.y) &&
+                data.analogButtons.l2<=16 && data.analogButtons.r2<=16;
+            release_gate=!neutral;
+            buttons=0;data.leftStick=data.rightStick={128,128};data.analogButtons={};
+            KyoeiMouse::dx=KyoeiMouse::dy=0;return;
+        }
+        KyoeiMouse::Apply(data.rightStick);return;
+    }
+    release_gate=true;
     KyoeiPhoto::experimental_dof=kyoei_photo_dof_available()!=0;
     kyoei_photo_dof_input(KyoeiPhoto::dof_mode.load(),KyoeiPhoto::focus_distance.load(),KyoeiPhoto::aperture.load(),kyoei_photo_scene_fov_value());
     const auto* keys=SDL_GetKeyboardState(nullptr);

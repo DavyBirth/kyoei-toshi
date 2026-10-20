@@ -4398,3 +4398,17 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Repasse local em docs/INSTRUCOES-TEXTURAS-CLAUDE.md: mapeamento, diagramas,
   preservacao dos marcadores/mips, reconstruirpack da base exata e evitar
   duplo swap/custo de reconhecimento de diagramas grandes por upload.
+
+- Modo foto: direcional repete350/80ms por tempo host, sem rajada aposstutter;
+  bola/B fecha, gate neutraliza comandos ate soltar botoes/sticks/gatilhos.
+  Feedback de captura so confirma aposgravacao real; falhas tambem visiveis,
+  aviso5s independenteF9 e excluidoPNG. Build completo/entrada/layout PASS.
+- Prova privada/muda ux-20261020: arquivo artificial no destino photos gerou
+  aviso de falha; removido somente esse arquivo-prova. Duas capturas1080p
+  gravadas e aviso de sucesso mostrado comF9 oculto. PNGs identicos apesar
+  dos nomes diferentes no aviso host. Nenhuma foto/save normal alterado.
+  Bola/repeticao/releasegate testados offline, controle fisico pendente.
+- Investigacao: GetFrameLimit existe no shim, sem consumidor no driver atual;
+  vblank60 participa do relogio/eventos convidados. Nao oferecer120 como mero
+  aumento desse numero. FSR1 existe como ampliacao host, preserva superficie
+  convidada; ainda falta prova real antes de promover como opcao grafica.

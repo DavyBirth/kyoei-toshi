@@ -9,9 +9,15 @@
 #include "kyoei_title_exit.h"
 #include "kyoei_input_mode.h"
 #include "kyoei_photo_settings.h"
+#include "kyoei_photo_repeat.h"
 namespace KyoeiPhoto {
 inline std::atomic_bool pending{false};
 inline std::atomic_bool hints{true};
+inline AdjustmentRepeat adjustment_repeat;
+inline unsigned AdjustmentBit(unsigned button){
+    return button==SDL_GAMEPAD_BUTTON_DPAD_LEFT?1u:button==SDL_GAMEPAD_BUTTON_DPAD_RIGHT?2u:
+        button==SDL_GAMEPAD_BUTTON_DPAD_UP?4u:button==SDL_GAMEPAD_BUTTON_DPAD_DOWN?8u:0u;
+}
 inline void AdjustSelected(int direction) {
     const auto field=Field(selected.load());
     if(field==Field::Lens) {
@@ -32,9 +38,19 @@ inline bool Blocked(SDL_Window* window) {
         kyoei_overlay_kind() || kyoei_title_exit_state();
 }
 // Call each SDL poll even without events: opening a host modal restores HUD.
-inline void Update(SDL_Window* window) {if(Blocked(window))kyoei_photo_hud_restore();}
+inline void Update(SDL_Window* window) {
+    if(Blocked(window)){adjustment_repeat.Clear();kyoei_photo_hud_restore();return;}
+    if(!kyoei_photo_scene_available() || !kyoei_photo_hud_hidden()){adjustment_repeat.Clear();return;}
+    const unsigned repeat=adjustment_repeat.Tick(SDL_GetTicksNS());
+    if(repeat&1)SelectField(-1);
+    if(repeat&2)SelectField(1);
+    if(repeat&4)AdjustSelected(1);
+    if(repeat&8)AdjustSelected(-1);
+}
 inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
     const bool scene_controls=kyoei_photo_scene_available() && kyoei_photo_hud_hidden();
+    if(event.type==SDL_EVENT_GAMEPAD_BUTTON_UP)
+        adjustment_repeat.Release(AdjustmentBit(event.gbutton.button),SDL_GetTicksNS());
     if(scene_controls && !Blocked(window) && event.type==SDL_EVENT_MOUSE_WHEEL &&
        event.wheel.windowID==SDL_GetWindowID(window)){
         kyoei_photo_scene_fov(-event.wheel.y*2.f);return true;
@@ -42,7 +58,7 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
     if(event.type==SDL_EVENT_WINDOW_FOCUS_LOST || event.type==SDL_EVENT_WINDOW_MINIMIZED ||
        event.type==SDL_EVENT_QUIT || event.type==SDL_EVENT_WINDOW_CLOSE_REQUESTED ||
        event.type==SDL_EVENT_GAMEPAD_REMOVED) {
-        pending.store(false);kyoei_photo_hud_restore();
+        pending.store(false);adjustment_repeat.Clear();kyoei_photo_hud_restore();
     }
     if(event.type==SDL_EVENT_KEY_DOWN &&
        (event.key.key==SDLK_ESCAPE || event.key.key==SDLK_TAB ||
@@ -55,12 +71,16 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
         const auto button=event.gbutton.button;
         // View/Share is unused by the normal guest mapping; preserve Start/map.
         if(button==SDL_GAMEPAD_BUTTON_BACK && kyoei_photo_hud_available()) {
+            adjustment_repeat.Clear();
             if(!Blocked(window)){kyoei_input_controller_button();kyoei_photo_hud_toggle();}
             return true;
         }
         if(kyoei_photo_hud_hidden() && !Blocked(window)) {
             kyoei_input_controller_button();
+            const unsigned bit=AdjustmentBit(button);
+            if(bit)adjustment_repeat.Press(bit,SDL_GetTicksNS());
             if(button==SDL_GAMEPAD_BUTTON_NORTH)kyoei_photo_player_toggle();
+            else if(button==SDL_GAMEPAD_BUTTON_EAST){adjustment_repeat.Clear();kyoei_photo_hud_restore();}
             else if(button==SDL_GAMEPAD_BUTTON_SOUTH)pending.store(true);
             else if(button==SDL_GAMEPAD_BUTTON_WEST)hints.store(!hints.load());
             else if(button==SDL_GAMEPAD_BUTTON_DPAD_LEFT)SelectField(-1);

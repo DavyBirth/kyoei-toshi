@@ -27,6 +27,14 @@ extern "C" int kyoei_photo_hud_available(void){return 1;}
 extern "C" int kyoei_photo_hud_toggle(void){++toggles;hidden=!hidden;return 1;}
 #define CHECK(x) do{if(!(x)){std::fprintf(stderr,"Photo check failed: %d\n",__LINE__);return 1;}}while(0)
 int main(){
+    KyoeiPhoto::AdjustmentRepeat repeat;
+    repeat.Press(4,100);
+    CHECK(!repeat.Tick(350000099));CHECK(repeat.Tick(350000100)==4);
+    CHECK(!repeat.Tick(430000099));CHECK(repeat.Tick(430000100)==4);
+    CHECK(repeat.Tick(10000000000)==4);CHECK(!repeat.Tick(10000000001));
+    repeat.Press(8,10000000001);CHECK(!repeat.Tick(10350000001)); // opposite directions cancel
+    repeat.Release(8,10400000000);CHECK(repeat.Tick(10750000000)==4);
+    repeat.Clear();CHECK(!repeat.Tick(20000000000));
     SDL_SetHint(SDL_HINT_VIDEO_DRIVER,"dummy");CHECK(SDL_Init(SDL_INIT_VIDEO));
     auto* window=SDL_CreateWindow("photo-test",64,64,SDL_WINDOW_HIDDEN);CHECK(window);
     SDL_Event event{};event.type=SDL_EVENT_KEY_DOWN;event.key.windowID=SDL_GetWindowID(window);
@@ -63,6 +71,8 @@ int main(){
         KyoeiPhoto::HandleEvent(window,event);CHECK(!hidden);
     }
     hidden=1;KyoeiPhoto::Update(window);CHECK(!hidden); // focus loss without event
+    KyoeiPhoto::adjustment_repeat.Press(4,0);hidden=1;KyoeiPhoto::Update(window);
+    CHECK(!KyoeiPhoto::adjustment_repeat.held && !hidden);
     hidden=1;modal=1;KyoeiPhoto::Update(window);CHECK(!hidden);modal=0;
     hidden=1;exit_state=1;KyoeiPhoto::Update(window);CHECK(!hidden);
     scene=1;hidden=1;exit_state=0;
@@ -93,6 +103,12 @@ int main(){
     const float zoomed=fov_delta;
     event={};event.type=SDL_EVENT_MOUSE_WHEEL;event.wheel.windowID=SDL_GetWindowID(window);event.wheel.y=1;
     KyoeiPhoto::HandleEvent(window,event);CHECK(fov_delta==zoomed); // inactive window cannot zoom
+    scene=0;hidden=0;buttons=0x4000;data.leftStick={255,128};
+    KyoeiPhotoControls::Apply(data,buttons);CHECK(!buttons && data.leftStick.x==128);
+    buttons=0x4000;KyoeiPhotoControls::Apply(data,buttons);CHECK(!buttons); // held exit cannot leak
+    buttons=0;data.leftStick=data.rightStick={128,128};data.analogButtons={};
+    KyoeiPhotoControls::Apply(data,buttons);CHECK(!buttons); // release opens the gate
+    buttons=0x4000;KyoeiPhotoControls::Apply(data,buttons);CHECK(buttons==0x4000);
     SDL_DestroyWindow(window);SDL_Quit();
     std::puts("PHOTO INPUT PASS: focus, repeat, request, restore, guest input suppression, photo axis deadzone");
 }

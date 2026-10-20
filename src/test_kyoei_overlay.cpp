@@ -40,21 +40,31 @@ int main() {
     _set_abort_behavior(0,_WRITE_ABORT_MSG|_CALL_REPORTFAULT);
     _putenv_s("KYOEI_IN_GAME_DIALOGS","1"); _putenv_s("KYOEI_LANGUAGE","en");
     KyoeiOverlayModel::InitializeGui(nullptr,true); KyoeiOverlayModel::SetReady(true);
+    CHECK(KyoeiPhoto::CurrentCaptureNotice().message.empty());
+    KyoeiPhoto::ReportCapture(false);CHECK(KyoeiPhoto::CurrentCaptureNotice().error);
+    KyoeiPhoto::ReportCapture(true,"synthetic.png",1920,1080);
+    CHECK(!KyoeiPhoto::CurrentCaptureNotice().error &&
+        KyoeiPhoto::CurrentCaptureNotice().message.find("1920 x 1080")!=std::string::npos);
     for(bool prototype:{false,true})for(bool controller:{false,true})for(unsigned height:{720u,1080u}) {
         KyoeiPhoto::experimental_dof=prototype;
         ImDrawData *photo=nullptr;
         // Exercise the exact photo panel within the real ImGui frame callback.
         for(int frame=0;frame<2;++frame) {
-            if(controller)photo=KyoeiOverlayModel::Draw(height*16/9,height,1.f/60,[]{KyoeiPhoto::DrawPanel(true,true);});
-            else photo=KyoeiOverlayModel::Draw(height*16/9,height,1.f/60,[]{KyoeiPhoto::DrawPanel(false,false);});
+            if(controller)photo=KyoeiOverlayModel::Draw(height*16/9,height,1.f/60,[]{KyoeiPhoto::DrawCaptureNotice();KyoeiPhoto::DrawPanel(true,true);});
+            else photo=KyoeiOverlayModel::Draw(height*16/9,height,1.f/60,[]{KyoeiPhoto::DrawCaptureNotice();KyoeiPhoto::DrawPanel(false,false);});
             CHECK(photo && photo->Valid);
             if(frame)CHECK(photo->TotalVtxCount>0); // auto-size windows settle after the first frame
         }
         auto *panel=ImGui::FindWindowByName("##photo-help");
         CHECK(panel && panel->Pos.x>=0 && panel->Pos.y>=0);
         CHECK(panel->Pos.x+panel->Size.x<=height*16/9 && panel->Pos.y+panel->Size.y<=height);
+        auto *notice=ImGui::FindWindowByName("##photo-result");
+        CHECK(notice && notice->Pos.x>=0 && notice->Pos.y>=0 &&
+            notice->Pos.x+notice->Size.x<=height*16/9 && notice->Pos.y+notice->Size.y<=height);
     }
     KyoeiPhoto::experimental_dof=false;
+    KyoeiPhoto::capture_notice_until=std::chrono::steady_clock::now()-std::chrono::seconds(1);
+    CHECK(KyoeiPhoto::CurrentCaptureNotice().message.empty());
     const uint16_t initial[]={'K','e','n'};
     kyoei_overlay_input(0);
     CHECK(kyoei_overlay_begin_name(L"Synthetic name",initial,3,4));

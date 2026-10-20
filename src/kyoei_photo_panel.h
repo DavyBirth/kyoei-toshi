@@ -2,7 +2,19 @@
 #pragma once
 #include "imgui.h"
 #include "kyoei_photo_settings.h"
+#include "kyoei_photo_notice.h"
 namespace KyoeiPhoto {
+inline void DrawCaptureNotice(){
+    const auto notice=CurrentCaptureNotice();if(notice.message.empty())return;
+    const auto size=ImGui::GetIO().DisplaySize;
+    ImGui::SetNextWindowPos(ImVec2(size.x*.5f,16),ImGuiCond_Always,ImVec2(.5f,0));
+    ImGui::SetNextWindowSize(ImVec2(std::min(700.f,size.x-32),0));
+    ImGui::SetNextWindowBgAlpha(.88f);
+    ImGui::Begin("##photo-result",nullptr,ImGuiWindowFlags_NoDecoration|ImGuiWindowFlags_AlwaysAutoResize|
+        ImGuiWindowFlags_NoInputs|ImGuiWindowFlags_NoSavedSettings|ImGuiWindowFlags_NoFocusOnAppearing);
+    ImGui::PushStyleColor(ImGuiCol_Text,notice.error?ImVec4(1,.5f,.45f,1):ImVec4(.7f,1,.7f,1));
+    ImGui::TextWrapped("%s",notice.message.c_str());ImGui::PopStyleColor();ImGui::End();
+}
 inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll=0,bool dof_available=false) {
         const auto size=ImGui::GetIO().DisplaySize;
         ImGui::SetNextWindowPos(ImVec2(16,size.y-16),ImGuiCond_Always,ImVec2(0,1));
@@ -30,7 +42,8 @@ inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll
             ImGui::TextUnformatted("Analogicos: mover / olhar | LT/RT (L2/R2): descer / subir");
             ImGui::TextUnformatted("LB/RB (L1/R1): rapido | Direcional: selecionar / ajustar | R3: restaurar");
             ImGui::TextUnformatted("A/Cruz: foto | Y/Triangulo: protagonista | X/Quadrado: ajuda");
-            ImGui::TextUnformatted("View/Share: sair | A captura nao inclui esta interface");
+            ImGui::TextUnformatted("B/Bola ou View/Share: sair | A foto nao inclui esta interface");
+            ImGui::TextUnformatted("Segure o direcional para repetir o ajuste");
         } else {
             ImGui::TextUnformatted("WASD: mover | Espaco/Ctrl: altura | Mouse/JKIL: olhar");
             ImGui::TextUnformatted("Roda: zoom | Shift: rapido | F11: protagonista");
