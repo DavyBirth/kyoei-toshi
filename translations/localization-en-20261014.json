@@ -12,63 +12,63 @@
         {
           "id": "r0/c5",
           "source_text_sha256": "39a74cfd279dcee8fdf44fc071d7609b06b6bdc95190368c8db0889f4d7967e9",
-          "en": "Horse controls\\nWhile riding, use [i2] to accelerate and [i1] to brake sharply.\\nThe horse will keep running even when you release [i2], but will gradually slow down.",
+          "en": "Riding a Horse\\nWhile riding, press [i2] to speed up and [i1] to brake hard.\\nThe horse keeps running if you let go of [i2], but slowly loses speed.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r0/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r1/c5",
           "source_text_sha256": "ea707e5be8a25555cb86378ec775bd8d1a811bd90447ddd0547678df81912bae",
-          "en": "When a violent car comes after you...\\nIf you find yourself being chased by a runaway car,\\ntry escaping past utility poles and streetlights.",
+          "en": "Chased by a Killer Car...\\nIf a runaway car comes after you,\\nrun past utility poles and streetlights to shake it.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r1/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r2/c5",
           "source_text_sha256": "bd813548e3d336c87f3233e30501e8d596b6514847087f17d9ac6f26b404af2f",
-          "en": "Door indicator lights\\nDoors in the research facility have indicator lights beside them.\\nBlue means you can pass, red means you cannot, and yellow means access depends on certain conditions.",
+          "en": "Door Lights\\nDoors in the institute have a light next to them.\\nBlue: you can go through. Red: you can't. Yellow: only under certain conditions.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r2/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r3/c5",
           "source_text_sha256": "85e1e2b0dcfb991cf746b2b79467d769ceb5e5f7b2bb9fec11a5a2ef51f7de54",
-          "en": "Stay calm when attacked...\\nFirst, look around and work out where to go next.\\nEscaping should be easier than trying to find a route after an attack begins.",
+          "en": "Don't Panic When Attacked...\\nFirst, look around and figure out where to go next.\\nIt's easier than looking for an escape route mid-attack.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r3/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r4/c5",
           "source_text_sha256": "cabfe519dcc837c60c4b2d9111543a132c7b8685f48d88a1ccb6955824664f6f",
-          "en": "Observation deck, first floor\\nTalk to different people and examine your surroundings.\\nBesides helping you escape, this will help you get a feel for the layout.",
+          "en": "Observation Deck, 1F\\nTalk to people and check out everything around you.\\nIt'll help you escape, and you'll learn the layout along the way.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r4/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r5/c5",
           "source_text_sha256": "9dc000e7373f4913442267ce57bc3aa27f6d96be1b76112eaab5dd341f8a1350",
-          "en": "Avoiding danger\\nWatch above you as well as ahead and to the sides as you move.\\nThis should help you avoid danger.",
+          "en": "Avoiding Danger\\nKeep an eye above you, not just ahead and to the sides.\\nIt'll help you stay out of harm's way.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r5/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r6/c5",
           "source_text_sha256": "13f74f8d8a5c891b58828636576cd2ad4aa9ef9676083bd29146fc294145a787",
-          "en": "When buildings collapse...\\nIf a nearby building starts to collapse, get as far away as you can.\\nFalling chunks of debris are extremely dangerous.",
+          "en": "When Buildings Collapse...\\nIf a nearby building starts to come down, get as far away as you can.\\nFalling debris is extremely dangerous.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r6/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r7/c5",
           "source_text_sha256": "a5814807a32136e1dd0476b6e131a4588de6afc6c9a0af8e76c9d95fb187adcc",
-          "en": "When a violent man chases you...\\nStay calm and press [i4] at the right moment to evade danger.\\nYou can also escape by sprinting with [i12].",
+          "en": "Chased by a Violent Man...\\nStay calm and press [i4] at the right moment to dodge.\\nSprinting away with [i12] works too.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r7/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r8/c5",
           "source_text_sha256": "031dc4eb3dbff29160fd9639f2bde2be1b540a3a0e8ce95533f41a852bcdf705",
-          "en": "Hiding effectively\\nWhile your pursuer has their back turned, move to your next hiding place.\\nIt also helps to spot possible hiding places ahead of time.",
+          "en": "Hiding Well\\nMove to your next hiding spot while they have their back to you.\\nIt also helps to scout out hiding spots ahead of time.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r8/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -82,56 +82,56 @@
         {
           "id": "r10/c5",
           "source_text_sha256": "7a36b3dc734fe86a5a4e2c85d8089dd438295638ba584f58884bf6f4d12bf681",
-          "en": "Talk to Yuki\\nEven during peaceful moments, try talking to Yuki when you feel like it.\\nYou might discover a new side of her.",
+          "en": "Talking to Yuki\\nEven when things are calm, talk to Yuki whenever you like.\\nYou might see a new side of her.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r10/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r11/c5",
           "source_text_sha256": "a5814807a32136e1dd0476b6e131a4588de6afc6c9a0af8e76c9d95fb187adcc",
-          "en": "When a violent man chases you...\\nStay calm and press [i4] at the right moment to evade danger.\\nYou can also escape by sprinting with [i12].",
+          "en": "Chased by a Violent Man...\\nStay calm and press [i4] at the right moment to dodge.\\nSprinting away with [i12] works too.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r11/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r12/c5",
           "source_text_sha256": "6f47cc51e5767c447e7a4e48fb954eda563b8f13c9d24a0e6d3b0a73198808cf",
-          "en": "If you get stuck...\\nTry talking to different people.\\nYou might discover a way forward.",
+          "en": "Stuck?\\nTry talking to different people.\\nThey might point you to a new path.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r12/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r13/c5",
           "source_text_sha256": "2b16bf3f196ab21ebb4c40b2497af23388f708c7c9e4c0b49f0dd59ff7d26eb4",
-          "en": "Inside the collapsing restaurant...\\nWatch above you as well as underfoot as you move.\\nA little caution can help you avoid danger.",
+          "en": "In the Crumbling Restaurant...\\nWatch above you, not just your feet.\\nA little caution goes a long way.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r13/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r14/c5",
           "source_text_sha256": "74cbd7364af0f332e523e22d5ee8b8038f0ae027aeefe923dfed91fd3c82afe7",
-          "en": "On the lower levels...\\nTake your time exploring your surroundings.\\nYou may find a way forward.",
+          "en": "On the Lower Level...\\nTake your time and look around.\\nYou might find a way forward.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r14/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r15/c5",
           "source_text_sha256": "dc7255a131fb14207f4b5d0be3b51afddfc2893a688348f692023c2f0f27ef3d",
-          "en": "Costume effects\\nSome costumes increase the maximum capacity of your health gauge or\\nstamina gauge while equipped.",
+          "en": "Costume Effects\\nSome costumes raise the maximum of your health gauge\\nor stamina gauge while you wear them.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r15/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r16/c5",
           "source_text_sha256": "ed3e7b4f86d2fc671f49811e64c16ff5ff06f88a60c9c78d8c97dbf2237c26c5",
-          "en": "Food and drink effects\\nSome food and drink items reduce the rate at which stamina\\ndecreases for a limited time.",
+          "en": "Food and Drink Effects\\nSome food and drink items slow down how fast\\nyour stamina drains for a while.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r16/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r17/c5",
           "source_text_sha256": "e602e31e45538ac3a5d7b6c67b087936727b9b6ac8c753f2cca4dee1defb243f",
-          "en": "Stamina\\nThe lower gauge at the top left of the screen shows your stamina.\\nWhen it runs out, you cannot sprint for a while.",
+          "en": "Stamina\\nThe lower gauge at the top left of the screen is your stamina.\\nIf it runs out, you can't sprint for a while.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r17/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -145,70 +145,70 @@
         {
           "id": "r19/c5",
           "source_text_sha256": "32fc418a27e42370cc7206de358e4ef634bfc176651fa8dc46f630f8b8fef4df",
-          "en": "Changing your hairstyle\\nIf you find a mirror, try examining it.\\nYou can change your hairstyle.",
+          "en": "Changing Your Hairstyle\\nIf you find a mirror, check it out.\\nYou can change your hairstyle there.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r19/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r20/c5",
           "source_text_sha256": "a744089af00b9174989751a238600ffe7b21c8b03fe40a99dfacc0197b4d621d",
-          "en": "Emergency evasion\\nIf a ! symbol appears above the protagonist’s head, try pressing [i4].\\nYou might be able to escape danger.",
+          "en": "Emergency Dodge\\nIf a ! appears over the protagonist's head, press [i4].\\nYou might get out of a tight spot.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r20/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r21/c5",
           "source_text_sha256": "7df4f3c4ab03070b424fd025920a2143338373d7c4787e43ed0ac249d6e99263",
-          "en": "Preventing a fall\\nIf you feel yourself about to fall, try pressing [i4].\\nYou can prevent yourself from falling.",
+          "en": "Don't Fall\\nIf you're about to trip, press [i4].\\nYou can keep yourself from falling.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r21/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r22/c5",
           "source_text_sha256": "dc8b5685262dde5a02a6b78e37ee564cab35aa200d7141035fea96c5f32a3e06",
-          "en": "If something looks dangerous...\\nYou never know what might happen near a giant shadow.\\nIt is wise not to approach anything that looks dangerous carelessly.",
+          "en": "If It Looks Dangerous...\\nYou never know what might happen near a giant shadow.\\nIt's smart not to wander carelessly toward anything dangerous.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r22/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r23/c5",
           "source_text_sha256": "060f18c3b6938ef4a84a2c3b595134b843e4525a934c1a6799cd31154b115ba2",
-          "en": "When your hands and feet are tied\\nYour actions are limited while you are tied up.\\nIt seems you cannot open doors or desks.",
+          "en": "Tied Hand and Foot\\nThere's not much you can do while tied up.\\nLooks like you can't open doors or desks.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r23/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r24/c5",
           "source_text_sha256": "b1613af7d0967993ac1013e35ff400ffb9dacc8938d55ac6483ed8d4f7679d92",
-          "en": "Yuki’s outfit\\nIf you speak to Yuki when things are calm,\\nshe may agree to change her clothes or hairstyle.",
+          "en": "Yuki's Outfit\\nTalk to Yuki when things are calm,\\nand she might agree to change her clothes or hairstyle.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r24/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r25/c5",
           "source_text_sha256": "b1613af7d0967993ac1013e35ff400ffb9dacc8938d55ac6483ed8d4f7679d92",
-          "en": "Yuki’s outfit\\nIf you speak to Yuki when things are calm,\\nshe may agree to change her clothes or hairstyle.",
+          "en": "Yuki's Outfit\\nTalk to Yuki when things are calm,\\nand she might agree to change her clothes or hairstyle.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r25/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r26/c5",
           "source_text_sha256": "b1613af7d0967993ac1013e35ff400ffb9dacc8938d55ac6483ed8d4f7679d92",
-          "en": "Yuki’s outfit\\nIf you speak to Yuki when things are calm,\\nshe may agree to change her clothes or hairstyle.",
+          "en": "Yuki's Outfit\\nTalk to Yuki when things are calm,\\nand she might agree to change her clothes or hairstyle.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r26/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r27/c5",
           "source_text_sha256": "e6f9cd2ecee79ed7e00be81fea69a57a42ccee49669891d7ef32acd8a724e5c9",
-          "en": "The black giant alien’s roar\\nYou can avoid damage by hiding behind obstacles.\\nTime your movements between its roars.",
+          "en": "The Black Giant Alien's Roar\\nHide behind obstacles to avoid taking damage.\\nMove in the gaps between roars.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r27/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r28/c5",
           "source_text_sha256": "cec9edea689bbc57cac1593c63d3c85a4675fc7a495e8881233297bff8b28351",
-          "en": "Fire!\\nStaying at the scene of a fire for too long is dangerous.\\nHurry to the stairs.",
+          "en": "Fire!\\nStaying in a fire too long is dangerous.\\nHurry to the stairs!",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r28/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
