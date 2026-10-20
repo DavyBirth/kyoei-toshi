@@ -5001,14 +5001,14 @@
         {
           "id": "r0/c3",
           "source_text_sha256": "2ba788272a5dca97ad80487a6279de23f4fdf4ae1c3375a618a4134548c391fb",
-          "en": "It was just past six in the evening.\\nEven though spring had arrived, the rain was cold today.\\nI'd forgotten to bring an umbrella,\\nbut I walked through the city anyway.\\nHuh? Where was I going again?\\nI stopped suddenly and looked around.\\n",
+          "en": "It was just past six in the evening.\\nIt was spring already, but the rain felt cold today.\\nI'd forgotten my umbrella,\\nbut I kept walking through the city anyway.\\nHuh? Where was I going again?\\nI stopped and looked around.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r0/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r0/c4",
           "source_text_sha256": "dfda78ef89f73698887442fef07ebd437fd98a68166c2183b0b76e2d9245b220",
-          "en": "It was just past six in the evening.\\nEven though spring had arrived, the rain was cold today.\\nI'd forgotten to bring an umbrella,\\nbut I walked through the city anyway.\\nHuh? Where was I going again?\\nI stopped suddenly and looked around.",
+          "en": "It was just past six in the evening.\\nIt was spring already, but the rain felt cold today.\\nI'd forgotten my umbrella,\\nbut I kept walking through the city anyway.\\nHuh? Where was I going again?\\nI stopped and looked around.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r0/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5036,56 +5036,56 @@
         {
           "id": "r2/c3",
           "source_text_sha256": "c0baab6d9927f0dd24211096051e61b5ad77df6cbd6b4cab4576e3773afb988f",
-          "en": "Streets, restaurants, stations, harbors...\\nToday, too, people come and go, and others work there...\\nA familiar modern city like this is the setting of our story.\\n",
+          "en": "Streets, restaurants, stations, harbors...\\nPeople coming and going, people at work...\\nA familiar modern city like this is where our story takes place.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r2/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r2/c4",
           "source_text_sha256": "c0baab6d9927f0dd24211096051e61b5ad77df6cbd6b4cab4576e3773afb988f",
-          "en": "Streets, restaurants, stations, harbors...\\nToday, too, people come and go, and others work there...\\nA familiar modern city like this is the setting of our story.\\n",
+          "en": "Streets, restaurants, stations, harbors...\\nPeople coming and going, people at work...\\nA familiar modern city like this is where our story takes place.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r2/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r3/c3",
           "source_text_sha256": "b224aa42c28e2ee93c894afddfae387a83c215e73a15a0d17b86c83e34f3e901",
-          "en": "Their everyday lives\\ngo on as usual today.\\n",
+          "en": "Their everyday lives\\ngo on, just like always.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r3/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r3/c4",
           "source_text_sha256": "b224aa42c28e2ee93c894afddfae387a83c215e73a15a0d17b86c83e34f3e901",
-          "en": "Their everyday lives\\ngo on as usual today.\\n",
+          "en": "Their everyday lives\\ngo on, just like always.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r3/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r4/c3",
           "source_text_sha256": "ecf6dbfd4db960aea213c773e852306a5f61b4f929d6220b5b3fa5d72d110c7f",
-          "en": "One April, in the midst of that ordinary life,\\nit was a little after six in the evening.\\n",
+          "en": "It was just another day, one April.\\nThe time was a little after six in the evening.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r4/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r4/c4",
           "source_text_sha256": "ecf6dbfd4db960aea213c773e852306a5f61b4f929d6220b5b3fa5d72d110c7f",
-          "en": "One April, in the midst of that ordinary life,\\nit was a little after six in the evening.\\n",
+          "en": "It was just another day, one April.\\nThe time was a little after six in the evening.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r4/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r5/c3",
           "source_text_sha256": "816690f41e141aabcb67dd498f83357a3b4c37e428038eb9deacb5edf512626f",
-          "en": "A light rain was falling that day.\\nIt was a little chilly, despite the spring weather.\\nA young person walked through it without an umbrella.\\n",
+          "en": "A light rain was falling that day,\\nand it was chilly for spring.\\nA young person was walking through it without an umbrella.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r5/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r5/c4",
           "source_text_sha256": "816690f41e141aabcb67dd498f83357a3b4c37e428038eb9deacb5edf512626f",
-          "en": "A light rain was falling that day.\\nIt was a little chilly, despite the spring weather.\\nA young person walked through it without an umbrella.\\n",
+          "en": "A light rain was falling that day,\\nand it was chilly for spring.\\nA young person was walking through it without an umbrella.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r5/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5099,14 +5099,14 @@
         {
           "id": "r7/c3",
           "source_text_sha256": "c61213c98b24d5de6ed7228da90c37fe28c8f05ad24e24d0353c54e95d671f7c",
-          "en": "A gigantic foot comes crashing down beside me.\\nIf that huge foot crushed me,\\nI would never survive.",
+          "en": "A gigantic foot slammed down right beside me.\\nIf that thing stepped on me,\\nI wouldn't stand a chance.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r7/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r7/c4",
           "source_text_sha256": "de1077a2172ac8f361e13b86449b650b90196a96a803c6564137f49d811dcf84",
-          "en": "A gigantic foot comes crashing down beside me.\\nIf that huge foot crushed me,\\nI would never survive.",
+          "en": "A gigantic foot slammed down right beside me.\\nIf that thing stepped on me,\\nI wouldn't stand a chance.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r7/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5120,14 +5120,14 @@
         {
           "id": "r8/c3",
           "source_text_sha256": "88dd867c8a6dcdca8d0afdc5a15c3e75e83942523746cc58c4ce6b9b1b52105f",
-          "en": "Fires are breaking out across the city.\\nPushing against the crowds fleeing in panic,\\nI head for the park where we agreed to meet.",
+          "en": "Fires broke out all over the city.\\nPushing against the crowds running for their lives,\\nI headed for the park where we'd planned to meet.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r8/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r8/c4",
           "source_text_sha256": "d965e7f785dd11b525a0530e0ca153aee1732f16488ba4ecadf1fac5c2b33e26",
-          "en": "Fires are breaking out across the city.\\nPushing against the crowds fleeing in panic,\\nI head for the park where we agreed to meet.",
+          "en": "Fires broke out all over the city.\\nPushing against the crowds running for their lives,\\nI headed for the park where we'd planned to meet.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r8/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5141,14 +5141,14 @@
         {
           "id": "r9/c3",
           "source_text_sha256": "356c19e00c342d67ad3585746d2744a3fb3e6318ca06fe59ef9e259396f7e9fe",
-          "en": "Amid the chaos of an attack by a gigantic alien,\\nI happened to witness what looked like a deal\\nbetween some suspicious men...\\nThey started chasing me.",
+          "en": "In a city thrown into chaos by a giant alien attack,\\nI saw what looked like some kind of deal\\nbetween a couple of shady men...\\nAnd then they came after me.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r9/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r9/c4",
           "source_text_sha256": "d195a78a0ebf69120ddeb8625e6643c1b347f1bc355d5a7dde83f37f8916d9bb",
-          "en": "Amid the chaos of an attack by a gigantic alien,\\nI happened to witness what looked like a deal\\nbetween some suspicious men...\\nThey started chasing me.",
+          "en": "In a city thrown into chaos by a giant alien attack,\\nI saw what looked like some kind of deal\\nbetween a couple of shady men...\\nAnd then they came after me.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r9/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5162,14 +5162,14 @@
         {
           "id": "r10/c3",
           "source_text_sha256": "d96a859ffddc10ae6ba31647b9f57669471ed89e706c146acb7c94475d8691fa",
-          "en": "The city was in chaos after an attack by a gigantic alien.\\nJust as I tried to escape from two men,\\na bus suddenly exploded and toppled over.",
+          "en": "In a city thrown into chaos by a giant alien attack,\\nI was trying to get away from two men\\nwhen a bus suddenly exploded and came toppling over.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r10/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r10/c4",
           "source_text_sha256": "d96a859ffddc10ae6ba31647b9f57669471ed89e706c146acb7c94475d8691fa",
-          "en": "The city was in chaos after an attack by a gigantic alien.\\nJust as I tried to escape from two men,\\na bus suddenly exploded and toppled over.",
+          "en": "In a city thrown into chaos by a giant alien attack,\\nI was trying to get away from two men\\nwhen a bus suddenly exploded and came toppling over.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r10/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5183,14 +5183,14 @@
         {
           "id": "r11/c3",
           "source_text_sha256": "dd32ca08d7df5efe89f50f7bcfb53eaa5c6dd2de24937a29d0d2fc2af0d3c503",
-          "en": "I got caught in a battle between two gigantic aliens.\\nOne of them fell backward onto the pedestrian overpass!",
+          "en": "I got caught in a fight between two giant aliens.\\nOne of them fell right onto the pedestrian bridge!",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r11/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r11/c4",
           "source_text_sha256": "dd32ca08d7df5efe89f50f7bcfb53eaa5c6dd2de24937a29d0d2fc2af0d3c503",
-          "en": "I got caught in a battle between two gigantic aliens.\\nOne of them fell backward onto the pedestrian overpass!",
+          "en": "I got caught in a fight between two giant aliens.\\nOne of them fell right onto the pedestrian bridge!",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r11/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5204,14 +5204,14 @@
         {
           "id": "r12/c3",
           "source_text_sha256": "218f71bf38b6ad9dabcaa48b9a1cf5352df4197fcfc3c3d5a6ff731fa6f0b94b",
-          "en": "As I tried to get down from the overpass,\\nthe gigantic alien revealed its true form and attacked.\\nI hurried down the stairs...",
+          "en": "As I tried to get down from the pedestrian bridge,\\nthe giant alien showed its true form and attacked.\\nI raced down the stairs...",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r12/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r12/c4",
           "source_text_sha256": "218f71bf38b6ad9dabcaa48b9a1cf5352df4197fcfc3c3d5a6ff731fa6f0b94b",
-          "en": "As I tried to get down from the overpass,\\nthe gigantic alien revealed its true form and attacked.\\nI hurried down the stairs...",
+          "en": "As I tried to get down from the pedestrian bridge,\\nthe giant alien showed its true form and attacked.\\nI raced down the stairs...",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r12/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5232,14 +5232,14 @@
         {
           "id": "r14/c3",
           "source_text_sha256": "5560b2aea3daabc9ab634cec69344006ec1f4b55bb050f04317fbe87fa4c130f",
-          "en": "The gigantic alien destroys streets and cars one after another.\\nAll I can do is keep running.\\nThe park where we agreed to meet is almost here.\\nI have to keep running.",
+          "en": "The giant alien tore through streets and cars one after another.\\nAll I could do was run.\\nThe park where we'd planned to meet was close now.\\nI just had to keep running.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r14/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r14/c4",
           "source_text_sha256": "b0e76b57e41117de23413dfb3c016cc9ea4bb47923ae171311d48a8e8ba878b6",
-          "en": "The gigantic alien destroys streets and cars one after another.\\nAll I can do is keep running.\\nThe park where we agreed to meet is almost here.\\nI have to keep running.",
+          "en": "The giant alien tore through streets and cars one after another.\\nAll I could do was run.\\nThe park where we'd planned to meet was close now.\\nI just had to keep running.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r14/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5253,14 +5253,14 @@
         {
           "id": "r15/c3",
           "source_text_sha256": "8cda6cb9442a74b43305bf99a3ed9c2bb47b8ebe1ac0c858c9b9bdff3235bf47",
-          "en": "I take her hand after we meet at the appointed spot\\nand run as fast as I can.\\nI have no idea which way we've gone; I just keep running.\\nDesperate to get away from this place,\\nI rush down the stairs ahead of me.\\nShe runs with me without saying a word.",
+          "en": "I met her at the park, took her hand,\\nand ran like crazy.\\nI had no idea where we were going. I just ran.\\nDesperate to get away,\\nI rushed down the stairs in front of us.\\nShe ran with me without a word.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r15/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r15/c4",
           "source_text_sha256": "aa39a39b514f79fb87ba70b16a88c091a6ca00c881a2e3921daf1e3693ee06ff",
-          "en": "I take her hand after we meet at the appointed spot\\nand run as fast as I can.\\nI have no idea which way we've gone; I just keep running.\\nDesperate to get away from this place,\\nI rush down the stairs ahead of me.\\nShe runs with me without saying a word.",
+          "en": "I met her at the park, took her hand,\\nand ran like crazy.\\nI had no idea where we were going. I just ran.\\nDesperate to get away,\\nI rushed down the stairs in front of us.\\nShe ran with me without a word.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r15/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5274,14 +5274,14 @@
         {
           "id": "r16/c3",
           "source_text_sha256": "37237485e56f585d578e49fd588188faee6444e52db6b2dbb435328c77d5fbb5",
-          "en": "I encountered an unknown creature in the subway tunnel.\\nIt attacked people one after another.",
+          "en": "In the subway tunnel, we ran into an unknown creature.\\nIt attacked people one after another.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r16/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r16/c4",
           "source_text_sha256": "37237485e56f585d578e49fd588188faee6444e52db6b2dbb435328c77d5fbb5",
-          "en": "I encountered an unknown creature in the subway tunnel.\\nIt attacked people one after another.",
+          "en": "In the subway tunnel, we ran into an unknown creature.\\nIt attacked people one after another.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r16/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5295,28 +5295,28 @@
         {
           "id": "r17/c3",
           "source_text_sha256": "42712714ef0431a193c9afd7ee571db7900d00cd764e21a8f6f7990e77c99cb8",
-          "en": "Mysterious creatures were roaming the platform too.\\nIf I can get through here, I can reach the ticket gates.\\nSomehow, I have to get past them.",
+          "en": "Mysterious creatures were prowling the platform too.\\nIf we could get past them, we'd reach the ticket gates.\\nWe had to get through somehow.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r17/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r17/c4",
           "source_text_sha256": "42712714ef0431a193c9afd7ee571db7900d00cd764e21a8f6f7990e77c99cb8",
-          "en": "Mysterious creatures were roaming the platform too.\\nIf I can get through here, I can reach the ticket gates.\\nSomehow, I have to get past them.",
+          "en": "Mysterious creatures were prowling the platform too.\\nIf we could get past them, we'd reach the ticket gates.\\nWe had to get through somehow.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r17/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r94/c2",
           "source_text_sha256": "84be650cab9e4169473b529df57287460abd9f3ce97a5e678644a902a2f8e45e",
-          "en": "A giant figure right in front of us...",
+          "en": "A Giant Body Right in Front of Us...",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r94/c2; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r95/c2",
           "source_text_sha256": "84be650cab9e4169473b529df57287460abd9f3ce97a5e678644a902a2f8e45e",
-          "en": "A giant figure right in front of us...",
+          "en": "A Giant Body Right in Front of Us...",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r95/c2; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5421,7 +5421,7 @@
         {
           "id": "r120/c2",
           "source_text_sha256": "280454edd3158d0f8f4bcb54272c31f6a1807121c32c65a9510f41270d3f10c6",
-          "en": "A Powerful Gust from the Superweapon",
+          "en": "A Gale from the Superweapon",
           "notes": "English draft imported from audited private workspace, translate-en-0046.json:r120/c2; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
