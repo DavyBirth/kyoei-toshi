@@ -46,7 +46,9 @@ float kyoei_text_wrap_measure(void *font, const char *text, uint32_t index, uint
     float width = original(font, text, index, length, state, params, out);
 #ifndef KYOEI_TEXT_WRAP_TEST
     static volatile LONG reports;
-    if (getenv("KYOEI_WRAP_TRACE") && text && params && out && length>40 && out->end<length &&
+    static int trace = -1; /* getenv scans the environment; this runs per measured line */
+    if (trace < 0) trace = getenv("KYOEI_WRAP_TRACE") != NULL;
+    if (trace && text && params && out && length>40 && out->end<length &&
         InterlockedIncrement(&reports)<=16) {
         gz_log("Kyoei wrap probe: length=%u start=%u end=%u explicit=%u index=%u",length,params->start,out->end,out->newline,index);
     }
