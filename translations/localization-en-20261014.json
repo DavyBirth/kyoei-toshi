@@ -5001,7 +5001,7 @@
         {
           "id": "r0/c3",
           "source_text_sha256": "2ba788272a5dca97ad80487a6279de23f4fdf4ae1c3375a618a4134548c391fb",
-          "en": "It was just past six in the evening.\\nIt was spring already, but the rain felt cold today.\\nI'd forgotten my umbrella,\\nbut I kept walking through the city anyway.\\nHuh? Where was I going again?\\nI stopped and looked around.",
+          "en": "It was just past six in the evening.\\nIt was spring already, but the rain felt cold today.\\nI'd forgotten my umbrella,\\nbut I kept walking through the city anyway.\\nHuh? Where was I going again?\\nI stopped and looked around.\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r0/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5503,7 +5503,7 @@
         {
           "id": "r12/c4",
           "source_text_sha256": "b94529103358db825d2b139761229515d7421d826072b26f5f95bcb17d2ccf4a",
-          "en": "[Membership Rules]\\n• Love all forms of cosplay\\n• Always explore the possibilities of cosplay\\n• Spread the joy of cosplay among those who share your passion",
+          "en": "＜Membership Rules＞\\n• Love all forms of cosplay\\n• Always explore the possibilities of cosplay\\n• Spread the joy of cosplay among those who share your passion",
           "notes": "English draft imported from audited private workspace, translate-en-0170.json:r12/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -43872,7 +43872,7 @@
         {
           "id": "p0/k113",
           "source_text_sha256": "1a3c7dc15e65179cbeabcbd568b24a202d19c2dc0515c875564b3f21affd4702",
-          "en": "[Background & Record]\nSix-time national high school hacking champion.\nHates the sun; unsuited to outdoor work.",
+          "en": "＜Background & Record＞\nSix-time national high school hacking champion.\nHates the sun; unsuited to outdoor work.",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k113; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -43886,7 +43886,7 @@
         {
           "id": "p0/k121",
           "source_text_sha256": "75bf8d70a5c2f3caac098bff75f4ad9231515fef403a0265d945ace2417ab1b6",
-          "en": "[Background & Record]\nStudied medicine in the US, then worked at a war-zone hospital.\nJoined us for revenge after a bombing wiped it out.",
+          "en": "＜Background & Record＞\nStudied medicine in the US, then worked at a war-zone hospital.\nJoined us for revenge after a bombing wiped it out.",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k121; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -43900,7 +43900,7 @@
         {
           "id": "p0/k129",
           "source_text_sha256": "cd3901bb6a9b3ebb14f32e0d045ded7da84ac82ba67c97c4e26e4b64981e9cef",
-          "en": "[Background & Record]\nEx-swimmer and international champion. After retiring,\nused his build to become a mercenary and learned to fight.",
+          "en": "＜Background & Record＞\nEx-swimmer and international champion. After retiring,\nused his build to become a mercenary and learned to fight.",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k129; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -43914,7 +43914,7 @@
         {
           "id": "p0/k137",
           "source_text_sha256": "e85fa4150941d3f13cea2b7a2cfe69da9e4085d805c543186f936a379b85b8bc",
-          "en": "[Background & Record]\nEx-boxer. Hot-headed; crippled an opponent in a rage\nand was banned from the ring. Also trained in MMA.",
+          "en": "＜Background & Record＞\nEx-boxer. Hot-headed; crippled an opponent in a rage\nand was banned from the ring. Also trained in MMA.",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k137; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -53793,7 +53793,7 @@
         {
           "id": "p0/k11",
           "source_text_sha256": "8349ce19abb40fd44a6ee75cf6e9c825527035d976a0e6ea9c0137d11d5fff39",
-          "en": "A Rainy Sidewalk Just After Sunset",
+          "en": "Rainy Sidewalk at Dusk",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k11; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -53933,7 +53933,7 @@
         {
           "id": "p0/k35",
           "source_text_sha256": "e7195b6bd593b56e7655f57483d8811f4795e9c7e2bed614d97a21649d92a35b",
-          "en": "Behind the Convenience Store Counter",
+          "en": "Behind the Counter",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k35; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -53975,7 +53975,7 @@
         {
           "id": "p0/k47",
           "source_text_sha256": "20a9a72232673e561030b9ecb4405d96b5742307c0c8569bc1e7f87d9f93be48",
-          "en": "A Flower Stand on the Street",
+          "en": "Street Flower Stand",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k47; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -54003,7 +54003,7 @@
         {
           "id": "p0/k58",
           "source_text_sha256": "87e4716e1edd48554a4296cf89585b97fbc19966b8270ad9e8fc27085bacc7ac",
-          "en": "The Building with Flying Bills",
+          "en": "Building of Flying Cash",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k58; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -54031,21 +54031,21 @@
         {
           "id": "p0/k64",
           "source_text_sha256": "ad624e2753c6bc03c216d665612c6bb78bc67c53d7c0799896d70e5ad8bc0dd1",
-          "en": "8th Floor of an Office Building",
+          "en": "Office Building 8F",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k64; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k66",
           "source_text_sha256": "574fa86e47c9f184487555003201dea6194ada24b87f3bf725ebc522205e34d3",
-          "en": "Explore the Collapsed Tower",
+          "en": "Search the Fallen Tower",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k66; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k67",
           "source_text_sha256": "c0dca3f9c10673f1aeb6b455a46906dc59fdc0e81baa1f94d6d9e2dcfd666796",
-          "en": "The Flying Monsters' Nest",
+          "en": "Flying Monsters' Nest",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k67; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -55689,7 +55689,7 @@
         {
           "id": "p0/k107",
           "source_text_sha256": "22df03ab29a06a3b6d951c6984cabf0acf4cf03a65f06001676264a58fe64042",
-          "en": "[Photo] Car Crushed Beneath a Giant Foot",
+          "en": "＜Photo＞ Car Crushed Beneath a Giant Foot",
           "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k107; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -55703,7 +55703,7 @@
         {
           "id": "p0/k111",
           "source_text_sha256": "b4c9462ede4e01205eac04eff77adee9489649103f726e4755de034e3008b2a4",
-          "en": "[Photo] Scars Left Across the City",
+          "en": "＜Photo＞ Scars Left Across the City",
           "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k111; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -55717,7 +55717,7 @@
         {
           "id": "p0/k115",
           "source_text_sha256": "0adbc65a683460842a067f685c5c74763f24e310274fc52d0a913f8ac3584412",
-          "en": "[Update] Angel's Face Splits in Two",
+          "en": "＜Update＞ Angel's Face Splits in Two",
           "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k115; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -55745,7 +55745,7 @@
         {
           "id": "p0/k123",
           "source_text_sha256": "4d01cd178be9d0730982f3c4442583de09440df2036c9f5fd7dc417eb744fb73",
-          "en": "[Photo] Giant Weapon Roars, Subdues Angel in Hand-to-Hand Combat",
+          "en": "＜Photo＞ Giant Weapon Roars, Subdues Angel in Hand-to-Hand Combat",
           "notes": "English draft imported from audited private workspace, translate-en-0039.json:p0/k123; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -57936,7 +57936,7 @@
         {
           "id": "p0/k73",
           "source_text_sha256": "c9600adf257efda7c232e60280e0649082dd07ef9af94c2b136e0c61c564605e",
-          "en": "[Photo] Three Giant Humanoid Weapons Repel a Massive Angel",
+          "en": "＜Photo＞ Three Giant Humanoid Weapons Repel a Massive Angel",
           "notes": "English draft imported from audited private workspace, translate-en-0066.json:p0/k73; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },

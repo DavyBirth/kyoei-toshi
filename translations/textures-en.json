@@ -158,99 +158,707 @@
   },
   {
    "resource": "texture/menu_option/M_option_selection_01.tex",
-   "en": "Vibration",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      224,
+      36
+     ],
+     "erase": "clear",
+     "text": "Vibration",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      222,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_02.tex",
-   "en": "Vertical Look",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      176,
+      36
+     ],
+     "erase": "clear",
+     "text": "Vertical Look",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      174,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_03.tex",
-   "en": "Horizontal Look",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      176,
+      36
+     ],
+     "erase": "clear",
+     "text": "Horizontal Look",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      174,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_04.tex",
-   "en": "Player Voice",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      152,
+      36
+     ],
+     "erase": "clear",
+     "text": "Player Voice",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      150,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_05.tex",
-   "en": "Character Voices",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      172,
+      36
+     ],
+     "erase": "clear",
+     "text": "Character Voices",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      170,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_06.tex",
-   "en": "HP & Stamina",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      36
+     ],
+     "erase": "clear",
+     "text": "HP & Stamina",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      254,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_07.tex",
-   "en": "Camera Display",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      168,
+      36
+     ],
+     "erase": "clear",
+     "text": "Camera Display",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      166,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_08.tex",
-   "en": "Minimap",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      216,
+      36
+     ],
+     "erase": "clear",
+     "text": "Minimap",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      214,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_09.tex",
-   "en": "Rotate Minimap",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      216,
+      36
+     ],
+     "erase": "clear",
+     "text": "Rotate Minimap",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      214,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_10.tex",
-   "en": "Control Guide",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      168,
+      36
+     ],
+     "erase": "clear",
+     "text": "Control Guide",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      166,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_11.tex",
-   "en": "Brightness",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      176,
+      36
+     ],
+     "erase": "clear",
+     "text": "Brightness",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      174,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_12.tex",
-   "en": "Voice Volume",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      236,
+      36
+     ],
+     "erase": "clear",
+     "text": "Voice Volume",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      234,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_13.tex",
-   "en": "Music Volume",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      236,
+      36
+     ],
+     "erase": "clear",
+     "text": "Music Volume",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      234,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_14.tex",
-   "en": "Effects Volume",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      236,
+      36
+     ],
+     "erase": "clear",
+     "text": "Effects Volume",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      234,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_selection_15.tex",
-   "en": "Cutscene Subtitles",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      268,
+      36
+     ],
+     "erase": "clear",
+     "text": "Cutscene Subtitles",
+     "size": 20,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      9,
+      8,
+      266,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/menu_option/M_option_sselect_08.tex",
-   "en": "Display 1: HP & Stamina",
-   "mode": "label",
-   "size": 19
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      512,
+      32
+     ],
+     "erase": "clear",
+     "text": "Display 1: HP & Stamina",
+     "size": 27,
+     "font": "sans",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      3,
+      3,
+      510,
+      29
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": false,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
   },
   {
    "resource": "texture/stage_title/ST_01.tex",
