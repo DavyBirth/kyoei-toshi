@@ -16,8 +16,10 @@ namespace {
 using Dispatcher = std::remove_reference_t<decltype(VULKAN_HPP_DEFAULT_DISPATCHER)>;
 bool Enabled() {
     static const bool enabled = [] {
+        // Opt-in since 21/10/2026: a lagging worker made SubmitExecution's Drain hold
+        // the shared submit lock for 100+ ms while turning the camera.
         const auto* value = std::getenv("KYOEI_VULKAN_RECORDING");
-        return !value || std::strcmp(value, "1") == 0;
+        return value && std::strcmp(value, "1") == 0;
     }();
     return enabled;
 }
