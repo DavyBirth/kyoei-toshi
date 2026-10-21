@@ -39,7 +39,7 @@ Variaveis de ambiente, lidas no inicio do processo:
 
 | Variavel | Efeito |
 | --- | --- |
-| `KYOEI_STAGE_CACHE=1` | Habilita o caminho experimental; padrao desligado. |
+| `KYOEI_STAGE_CACHE=0` | Desliga o reuso (ligado por padrao desde 21/10/2026). |
 | `KYOEI_VERIFY_STAGE_CACHE=1` | Executa tambem construtor/busca originais e confere toda previsao. |
 | `KYOEI_STAGE_CACHE_AB=1` | Alterna caminhos antigo/novo a cada 20 segundos para coleta privada. |
 
@@ -60,3 +60,11 @@ caminho). Maximos dos dois blocos antigos 50,25/51,67 ms, novos 35,70/35,63 ms;
 isso nao prova correcao das pausas durante movimento. Os tres ultimos blocos
 ficaram integralmente em primeiro plano. Mais acertos (~79%) nao produziram
 ganho medio suficiente. Permanece experimental e desligado por padrao.
+
+## Ligado por padrao (21/10/2026)
+
+Depois que o getenv por textura saiu da thread da GPU, o reuso passou a
+aparecer: mesmo save, mesma vista, giro L/J 4x2,5 s, 1280x720 mudo.
+Desligado 34,6 FPS parado / 24,7 girando; ligado 39,0 / 28,6 (+13%).
+Verificacao (`KYOEI_VERIFY_STAGE_CACHE=1`) no giro: 10000 previsoes iguais
+ao caminho original. Teste offline PASS.

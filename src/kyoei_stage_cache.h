@@ -10,10 +10,11 @@
 extern "C" void gz_log(const char*,...);
 namespace KyoeiStageCache {
 inline thread_local uint64_t attempts=0,hits=0;
-// Experimental: skip specialization construction only when all its inputs
-// equal a previously decoded, stable observation. Never cache bound resources.
+// Skip specialization construction only when all its inputs equal a previously
+// decoded, stable observation. Never cache bound resources. On by default since
+// 21/10/2026 (verified 10000 in-game predictions); KYOEI_STAGE_CACHE=0 disables.
 inline bool Enabled(){
-    static const bool v=[]{auto*p=std::getenv("KYOEI_STAGE_CACHE");return p&&p[0]=='1';}();
+    static const bool v=[]{auto*p=std::getenv("KYOEI_STAGE_CACHE");return !p||p[0]!='0';}();
     static const bool ab=[]{auto*p=std::getenv("KYOEI_STAGE_CACHE_AB");return p&&p[0]=='1';}();
     if(!ab)return v;
     // Private same-process experiment: alternate equivalent host paths without
