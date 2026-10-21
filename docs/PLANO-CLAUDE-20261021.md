@@ -114,3 +114,15 @@ Florista: balões encurtados (k645/k647/k649), commit a491fdb no ramo natural.
   a escala de resolução quando a latência estiver resolvida.
 - getenv por linha medida no wrap de texto: 42,3 → 45,7 FPS parado (commit 47cead7).
 - readable() do HUD sem VirtualQuery para memória do jogo: 45,7 → ~47,5 FPS parado (commit 57d1e35). HUD conferido na captura.
+
+### Travada da 1ª virada de câmera: causa localizada (21/10, 02:40)
+- Thread "guest main" fica até 264 ms em semáforo do jogo (função guest 0x321470,
+  sem_wait com timeout; espera em 0x3214dc). Durante o giro, a thread
+  GpuCommandProcessor fica 66% ocupada e é o caminho crítico: o jogo espera a
+  GPU emulada terminar o lote (texturas novas: FindTexture/RefreshImage/upload,
+  RefreshGraphicsKey). Nenhum pipeline compilado; não é shader.
+- Solução de fundo: tirar trabalho da thread de comandos (criação/upload de
+  imagens em paralelo ou assíncrono, cache de chaves de pipeline por draw) —
+  mudança de arquitetura no núcleo de vídeo; o fork do inFAMOUS tem peças
+  (compile pool, native bindings, batch timers) a estudar para isso.
+- Ganhos desta noite (cena parada): 26,5 → ~47,5 FPS (+79%).
