@@ -113,3 +113,4 @@ Florista: balões encurtados (k645/k647/k649), commit a491fdb no ramo natural.
 - 4K: com GPU ociosa, subir a resolução interna deve custar pouco; validar com
   a escala de resolução quando a latência estiver resolvida.
 - getenv por linha medida no wrap de texto: 42,3 → 45,7 FPS parado (commit 47cead7).
+- readable() do HUD sem VirtualQuery para memória do jogo: 45,7 → ~47,5 FPS parado (commit 57d1e35). HUD conferido na captura.
