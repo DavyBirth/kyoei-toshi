@@ -126,7 +126,7 @@ int main(){
     // owner's result. Touching a live entry must protect it from the next miss.
     Shader::Info empty{};
     empty.stage=Shader::Stage::Fragment;empty.l_stage=Shader::LogicalStage::Fragment;
-    std::array<int,KyoeiStageCache::entries.size()+1> owners{};
+    std::array<int,KyoeiStageCache::Capacity+1> owners{};
     KyoeiStageCache::Invalidate();
     for(auto& cache_owner:owners){
         CHECK(!KyoeiStageCache::Probe(&cache_owner,empty,runtime,start,1));

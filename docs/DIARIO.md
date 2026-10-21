@@ -4643,3 +4643,11 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   nao basta adotar pausa do menu como se fosse a pausa fotografica/exclusao12.
   F10 atual recusa pausa preexistente; protecao preservada. Proxima pesquisa:
   listaB00 e momento de fechamento/animacao. Jogo permaneceu fechado.
+
+- Retomada21/10 apos o Windows Terminal fechar sozinho (falha de heap do
+  proprio Terminal, nao do port). Commitado o trabalho de desempenho pendente:
+  processo com prioridade acima do normal (KYOEI_PRIORITY=normal desliga),
+  drenagem da gravacao Vulkan fora do submit_mutex (trace 304) e cache de
+  estagios com 1024 entradas e indice hash. Build completo OK; testes nativos
+  PASS (pc_names/png/vmem_reference exigem argumentos/endereco proprio, sem
+  relacao). Ganho de FPS ainda nao medido em jogo.

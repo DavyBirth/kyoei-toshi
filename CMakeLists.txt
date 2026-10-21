@@ -231,6 +231,11 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" CONTENT "${
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c" CONTENT "${KYOEI_DIALOG_UI}" @ONLY)
 list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c")
 file(READ "${KYOEI_CORE}/src/loader.c" KYOEI_LOADER)
+# The guest's own thread priorities never reach Windows; keep the game ahead of
+# background apps (browser, OBS) competing for the GPU command thread's core.
+kyoei_replace_checked(KYOEI_LOADER
+  "    SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);"
+  "    SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);\n    { const char *priority=getenv(\"KYOEI_PRIORITY\"); if(!priority || strcmp(priority,\"normal\")) SetPriorityClass(GetCurrentProcess(), ABOVE_NORMAL_PRIORITY_CLASS); }")
 kyoei_replace_checked(KYOEI_LOADER
   "    gz_log(\"Exit code %d\", code);"
   "    extern void kyoei_gpu_cache_shutdown(void);\n    if(code==0) kyoei_gpu_cache_shutdown();\n    gz_log(\"Exit code %d\", code);")
@@ -1113,7 +1118,7 @@ kyoei_replace_checked(KYOEI_SCHEDULER
   "    { KyoeiFrameStats::Work measurement(9); SubmitExecution(info); }\n    { KyoeiFrameStats::Work measurement(10); Wait(presubmit_tick); }")
 kyoei_replace_checked(KYOEI_SCHEDULER
   "    std::scoped_lock lk{submit_mutex};"
-  "    auto lk = [] { KyoeiFrameStats::Work measurement(11); return std::unique_lock{submit_mutex}; }();\n    KyoeiLockHold kyoei_submit_hold(300);")
+  "    // Finish this scheduler's delegated recording before taking the lock shared\n    // with the presenter; draining under it stalled presents by 100+ ms.\n    EndRendering();\n    { KyoeiLockHold drain_unlocked(304); KyoeiVulkanRecording::Drain(this); }\n    auto lk = [] { KyoeiFrameStats::Work measurement(11); return std::unique_lock{submit_mutex}; }();\n    KyoeiLockHold kyoei_submit_hold(300);")
 set(KYOEI_SCHEDULER "#include \"kyoei_lock_hold.h\"\n${KYOEI_SCHEDULER}")
 kyoei_replace_checked(KYOEI_SCHEDULER
   "    KyoeiVulkanRecording::Drain(this);\n    Check(current_cmdbuf.end());"

@@ -5,6 +5,8 @@
 #include <cstring>
 #include <cstdlib>
 #include <optional>
+#include <unordered_map>
+#include <vector>
 #include "shader_recompiler/specialization.h"
 
 extern "C" void gz_log(const char*,...);
@@ -100,7 +102,13 @@ struct Entry {
     std::array<unsigned char,512> code;
     Key key;
 };
-inline thread_local std::array<Entry,8> entries;
+// One frame binds hundreds of shader programs; 8 slots thrashed. Entries live on
+// the heap of the thread that uses them, found by (owner, info) hash lookup.
+inline constexpr size_t Capacity=1024;
+struct Slot { const void* owner; const Shader::Info* info; bool operator==(const Slot&)const=default; };
+struct SlotHash { size_t operator()(const Slot& s)const{return std::hash<const void*>{}(s.owner)*31u^std::hash<const void*>{}(s.info);} };
+inline thread_local std::vector<Entry> entries;
+inline thread_local std::unordered_map<Slot,size_t,SlotHash> index;
 inline thread_local uint64_t age=0;
 inline thread_local Entry* pending=nullptr;
 inline thread_local Key before,after;
@@ -122,11 +130,19 @@ inline std::optional<size_t> Probe(const void* owner,const Shader::Info& info,
     if((!Enabled()&&!Verify())||!Supported(info))return {};
     ++attempts;
     const uint64_t current_epoch=epoch.load(std::memory_order_relaxed);
+    if(entries.empty())entries.resize(Capacity);
     Entry* entry=nullptr;
-    for(auto& e:entries)if(e.owner==owner&&e.info==&info&&e.epoch==current_epoch){entry=&e;break;}
+    const Slot slot{owner,&info};
+    auto found=index.find(slot);
+    if(found!=index.end()&&entries[found->second].epoch==current_epoch)entry=&entries[found->second];
     if(!entry){
-        entry=&entries[0];
-        for(auto& e:entries)if(!e.owner||e.age<entry->age)entry=&e;
+        if(found!=index.end())entry=&entries[found->second];
+        else{
+            entry=&entries[0];
+            for(auto& e:entries){if(!e.owner){entry=&e;break;}if(e.age<entry->age)entry=&e;}
+            if(entry->owner)index.erase(Slot{entry->owner,entry->info});
+            index.emplace(slot,size_t(entry-entries.data()));
+        }
         entry->owner=owner;entry->info=&info;entry->epoch=current_epoch;
         entry->valid=false;entry->fetch.reset();entry->code_size=0;
     }
