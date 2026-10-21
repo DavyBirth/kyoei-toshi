@@ -3911,3 +3911,20 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   3. Teclado como jogo de PC nativo: teclas personalizáveis (já iniciado,
      setas substituindo L1/R1), e todas as texturas de tutorial/menu
      trocadas conforme o dispositivo, no mesmo estilo visual.
+
+### 20/10/2026 — textos de menu fora das tabelas (HUD e eboot)
+
+- Comparação com o kit de fã (Test7) revelou textos fixos em arquivos .hud e
+  no eboot.bin que nossas tabelas não cobriam. Levantamento próprio completo:
+  394 propriedades de texto em 77 HUDs (maioria texto-modelo substituído em
+  tempo de execução) e strings C do eboot (maioria nomes internos do motor).
+- Traduzidos 397 textos visíveis: janelas de salvar/título/próxima fase,
+  resultados, loja, troca de moedas, e-mail, brilho, relógio do HUD, nomes dos
+  pontos de salvamento, "Start from Stage N", nomes/descrições da Collection,
+  categorias de item, nomes de fase da lista. 168 a mais que o kit de fã.
+- translations/binary-en.json (sem texto japonês, só hash do original) e
+  tools/apply_binary_text.py: troca no lugar, inglês nunca maior que o espaço,
+  verificação de hash, tokens e campo de tamanho. Aplicação PASS 397/397.
+- Limite de bytes obrigou títulos de fase mais curtos que os das texturas
+  nesses espaços. Falta integrar ao portable (delta de recursos + eboot) e
+  testar no jogo.
