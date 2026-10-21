@@ -15,8 +15,9 @@ Para o Codex e para o Davy. Atualizado a cada passo; ver commits recentes.
   (commit 7a4617e). `build/prompts-en.kypack` reconstruído, teste PASS.
 - **Desempenho:** `KyoeiPrompts::Select` chamava `getenv` 3x por textura ligada;
   o amostrador mostrou ~25% da thread GpuCommandProcessor em `strchr`.
-  Variáveis lidas uma vez (commit 269fb53). A/B ainda NÃO válido: Davy moveu o
-  personagem durante a coleta. Medir de novo com a cena parada.
+  Variáveis lidas uma vez (commit 269fb53). **A/B válido, mesma cena/posição
+  (save SAVEDATA-001, máquina de bebidas, 1280x720, 40s): 26,54 → 42,28 FPS
+  (+59%).** Capturas privadas claude-test/shots/s-011611 (antes) e s-011326.
 
 ## Teste privado do agente (não usar como atalho)
 
@@ -26,7 +27,7 @@ Para o Codex e para o Davy. Atualizado a cada passo; ver commits recentes.
 
 ## Prioridades (ordem)
 
-1. Medir de novo o ganho do getenv (A/B parado) e reamostrar a thread da GPU;
+1. Reamostrar a thread da GPU com o ganho aplicado;
    próximos alvos vistos no perfil: `TextureCache::RefreshImage/FindTexture`
    (~28%), `PipelineCache::RefreshGraphicsKey` (~11%), espera em `Cnd_wait`
    (~20%), `BeginRendering/FindDepthTarget` (~9%).
