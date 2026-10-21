@@ -83,7 +83,22 @@ endfunction()
 # MSVC's std::array iterator is a class, not a pointer.
 gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
     "auto* slot = std::ranges::find(readback_images" "auto slot = std::ranges::find(readback_images")
-add_library(gow3_core OBJECT ${VIDEO_CORE} ${RECOMPILER})
+set(COMMON decoder error io_file native_clock number_utils path_util rdtsc spin_lock
+    recursive_lock string_util thread signal_context)
+list(TRANSFORM COMMON PREPEND "${GOW3}/shadps4/common/")
+list(TRANSFORM COMMON APPEND ".cpp")
+file(GLOB AVPLAYER CONFIGURE_DEPENDS "${GOW3}/shadps4/core/libraries/avplayer/*.cpp")
+# GoW3 game features (orbs, actors, cheats), its menu and its runtime glue stay out;
+# gow3gpu.cpp is replaced by Kyoei's glue to the Godzilla runtime.
+file(GLOB SHIM CONFIGURE_DEPENDS "${GOW3}/shim/*.cpp" "${GOW3}/shim/*/*.cpp")
+list(FILTER SHIM EXCLUDE REGEX "gow3_(orbs|actors|overlay)\.cpp$|gow3gpu\.cpp$")
+set(DRIVERS "${GOW3}/shadps4/core/libraries/gnmdriver/gnmdriver.cpp"
+    "${GOW3}/shadps4/core/libraries/videoout/driver.cpp" "${GOW3}/shadps4/core/libraries/videoout/video_out.cpp"
+    "${GOW3}/shadps4/core/libraries/kernel/equeue.cpp" "${GOW3}/shadps4/core/libraries/videodec/video_utils.cpp")
+# Reach compat/common/ntapi.h instead of the sibling header.
+gow3_adapt(COMMON shadps4/common/thread.cpp "#include \"ntapi.h\"" "#include \"common/ntapi.h\"")
+add_library(gow3_core OBJECT ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS}
+    "${GOW3}/shim/common/logging/log.cpp")
 add_dependencies(gow3_core gow3_host_shaders)
 set(FSR_VULKAN "${CMAKE_CURRENT_SOURCE_DIR}/../build/fsr-vulkan-src" CACHE PATH "FSR-Vulkan source (MIT)")
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
@@ -95,7 +110,9 @@ target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/compat
     "${DEPS}/gz_sdl-src/include" "${DEPS}/gz_sdl-build/include-revision" "${DEPS}/gz_boost-src"
     "${DEPS}/gz_xbyak-src" "${DEPS}/gz_xxhash-src" "${DEPS}/gz_zydis-src/include"
     "${DEPS}/gz_zydis-build" "${DEPS}/gz_zydis-src/dependencies/zycore/include" "${DEPS}/gz_zydis-build/zycore"
-    "${DEPS}/gz_miniz-src" "${DEPS}/gz_miniz-build")
+    "${DEPS}/gz_miniz-src" "${DEPS}/gz_miniz-build"
+    "${GOW3}/shadps4/core/libraries" "${GOW3}/shadps4/core/libraries/gnmdriver" "${DEPS}/gz_ffmpeg-src/include"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/godzilla-core/prebuilt/externals/ffmpeg-94dde08/include")
 file(GLOB BOOST_INCLUDES "${DEPS}/gz_boost-src/libs/*/include")
 target_include_directories(gow3_core SYSTEM PRIVATE ${BOOST_INCLUDES})
 target_compile_definitions(gow3_core PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS

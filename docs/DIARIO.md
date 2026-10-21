@@ -4671,3 +4671,15 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   (texture_cache28, liverpool19, pipeline_cache15, scheduler11, tile8,
   rasterizer8), a refazer sobre o nucleo novo. Alternativa: portar os ganhos
   um a um para a copia atual. Decisao de caminho pendente com Davy.
+
+- Nucleo GoW3 (ramo nucleo-gow3, 21/10, Davy aprovou incluir): copia fixa
+  third_party/gow3-gpu = gow3_pc tag windows-v2.4.1 (1436e7e), gpu/ do tag
+  oficial (a release nao trazia shaders/opcodes.inc); manifesto
+  docs/gow3-gpu.json. FSR-Vulkan (MIT, c64f093) em build/fsr-vulkan-src.
+  gpu-gow3/CMakeLists.txt compila video_core+recompilador+common+shim+
+  gnmdriver/videoout/avplayer com clang do Kyoei: 0 erros. Adaptacoes
+  verificadas (gow3_adapt) e compat/: pthread.h vazio, cheat_hook minimo,
+  ntapi.h renomeando enum, iterador std::array. Proximo: cola gz_gpu_* (bridge
+  Godzilla + partes do gow3gpu.cpp; libs.h do Godzilla para resolver por
+  nome), Ajm/AudioOut/Pad/janela, ligar kyoei.exe opt-in, depois refazer os
+  ~125 remendos de video_core do Kyoei. Jogo nao aberto (Davy em aula).
