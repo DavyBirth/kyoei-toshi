@@ -186,3 +186,12 @@ atual de stutter. Testes de1080p passam a integrar a verificacao corrente.
   que modo foto e suas funcionalidades vem primeiro. Avaliar essas tecnologias
   na etapa grafica posterior; nao trocar a prioridade nem colocar um menu sem
   implementacao comprovada. Pesquisa/provas graficas podem ficar guardadas.
+
+## Escala do minimapa — pedido de 20/10
+
+Investigar o tamanho do minimapa ao trocar resolucao, junto das pendencias
+atuais de modo foto, desempenho, traducao e controles. Comparar a mesma cena
+em720p/1080p, separando saida de resolucao interna; reduzir ocupacao somente
+com alinhamento, icones e legibilidade preservados. Caminhos nativos normal/
+wide e limites das provas em [MINIMAPA-ESCALA.md](re/MINIMAPA-ESCALA.md).
+Causa e correcao visual ainda pendentes; nao usar FitHud como escala do mapa.

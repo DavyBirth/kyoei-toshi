@@ -4440,3 +4440,28 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   PASS preservando lista, ponteiros e contadores. Nenhuma fonte adicionada
   ainda; normal continua sem hooks de luz. Foco/F11 mantem validacao da cena
   ja documentada, com outras cenas/roupas ainda pendentes.
+
+- Pedido de Davy em 20/10/2026: ao mudar a resolucao, vida e stamina
+  diminuem, mas o minimapa continua grande. Investigar a escala do minimapa
+  para reduzir a ocupacao da tela, preservando legibilidade, icones e
+  alinhamento. Relato do usuario; causa ainda nao confirmada no codigo.
+  Etapa limitada pelo pedido de gastar menos de 5% do limite; nao ha medidor
+  dessa cota disponivel nesta sessao. Diario lido, mas execucoes seguintes
+  falharam na inicializacao da ferramenta (setup refresh had errors).
+  Nenhuma alteracao de runtime ou teste visual realizado nesta etapa.
+  Retomar comparando vida/stamina/minimapa na mesma cena em resolucoes
+  diferentes e localizar seus caminhos de escala antes de alterar.
+  Incluir nos proximos planos junto da finalizacao do modo foto, melhorias
+  de desempenho, implementacao da traducao e mudancas de controle.
+
+- Retomada20/10 (continua ai): terminal voltou a funcionar com PowerShell
+  explicito e login=false; falha de setup recorrente exigiu execucao revisada.
+- Investigacao offline da escala do minimapa: Width/Height alteram janela SDL;
+  FitHud mede textos, nao escala o conjunto. Inicializador a599c0 mapeado:
+  recursos normal/wide em +10/+20 e objetos +18/+28/+30 da estrutura +40.
+  Atualizacao a5a560 e seletor a5fc20 usam modo derivado de13bda60; origem e
+  relacao com resolucao ainda nao provadas. Nao forcar modo nem floats.
+- Notas em docs/re/MINIMAPA-ESCALA.md; relatorio privado de referencias com
+  hash do ELF proprio confirmado. Nenhuma partida iniciada, nenhum processo
+  kyoei observado, nenhum runtime alterado. Prova720p/1080p ainda pendente.
+  Preservadas alteracoes preexistentes no launcher/build_launcher e diario.
