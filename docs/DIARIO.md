@@ -4583,3 +4583,14 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   desenho independente dos filhos. ae6820 continua apos chamar base2e56e0;
   filtrar apenas sprite324720 nao garante ocultacao. Sem novo hook ainda.
   Provas e caminho de retomada registrados em docs/re/FOTO-DICAS.md.
+
+- Encerramento preparado junto ao limite solicitado: studio-3 saiu do modo
+  foto com camera_distance_from_entry=0.00 e luz desativada; PID28168 fechado
+  normalmente. studio-2/PID29748 tambem encerrado antes. Nenhum processo do
+  agente deixado aberto. Build atual em build/kyoei.exe; atalho Testar modo foto
+  utiliza os recursos novos. Alteracoes paralelas launcher/build_launcher
+  preservadas fora dos commits desta rodada.
+- Retomada: FOTO-DICAS.md (fontes independentes), depois segunda cena/pad e
+  menu nativo; clima precisa provar recurso/consumidor real (FOTO-LUZES-CLIMA).
+  Alternativas viaveis catalogadas em FOTO-REFERENCIAS; nao declarar recurso
+  nativo impossivel so porque nao ha prova na cena201.
