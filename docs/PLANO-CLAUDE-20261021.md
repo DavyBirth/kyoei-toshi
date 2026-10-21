@@ -53,3 +53,24 @@ Para o Codex e para o Davy. Atualizado a cada passo; ver commits recentes.
 
 - Davy pediu salvar a cada 5 minutos: commits pequenos e frequentes.
 - Claude não consegue ler o /status; Davy (ou irmão) desliga o PC.
+
+## Perfil depois do ganho (21/10, 01:25)
+
+Thread GpuCommandProcessor agora espera trabalho 36% do tempo (Cnd_wait): o
+gargalo passou para as threads do jogo (CPU convidada). Restante na GPU:
+Rasterizer::Draw 54%, GetGraphicsPipeline/RefreshGraphicsKey ~13%, BindTextures 11%,
+BufferCache::ObtainBuffer 10%.
+
+## Fork shadPS4 do inFAMOUS Second Son (third_party, v1.0.2) — análise
+
+Fonte em build/research/reference-sources/ss-shadps4 (privado). Útil para nós:
+- `vk_pipeline_compile_pool.*`: compila pipelines em worker pool (o pipeline
+  existe na hora, só o VkPipeline fica pendente); evita bloquear o processador
+  de comandos no 1º uso. É a peça para a travada ao virar a câmera.
+- `vk_pipeline_precompile.cpp` / WarmUp: no boot recompila do cache salvo
+  e mostra progresso no título da janela (pré-aquecimento antes de jogar).
+- `vk_pipeline_serialization.*` existe também no nosso shadPS4 base; verificar
+  se o nosso já grava/recarrega o cache entre sessões.
+- Também traz DLSS, binding nativo, timers por batch: avaliar depois.
+Próximo passo: portar o compile pool para gráficos+compute no nosso
+vk_pipeline_cache (adaptação em src/, sem editar a cópia fixa), medir travada.
