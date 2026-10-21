@@ -129,10 +129,23 @@ const Pair *Select(Image &image, bool dirty, bool &changed, unsigned &mode) {
             info.size.width,info.size.height,unsigned(info.props.is_tiled),info.num_bits,
             info.resources.levels,info.resources.layers,unsigned(info.props.is_block),info.guest_size);
     }
-    bool candidate = false;
-    for (const auto &p : pairs) if (Dimensions(p,info) &&
-        info.resources.levels <= p.levels && (p.storage == 13) == bool(info.props.is_block)) { candidate = true; break; }
-    if (!candidate) return nullptr;
+    // Runs for every bound texture: one hash lookup instead of testing every pair.
+    // Same predicate as Dimensions() + levels + block storage over all pairs.
+    static std::unordered_map<uint64_t, uint32_t> shapes;
+    static const Pair *shapes_data = nullptr;
+    static size_t shapes_size = 0;
+    if (shapes_data != pairs.data() || shapes_size != pairs.size()) {
+        shapes.clear(); shapes_data = pairs.data(); shapes_size = pairs.size();
+        for (const auto &p : pairs)
+            for (const uint32_t w : {p.width, std::bit_ceil(p.width)})
+                for (const uint32_t h : {p.height, std::bit_ceil(p.height)}) {
+                    auto &levels = shapes[uint64_t(w) << 33 | uint64_t(h) << 1 | uint64_t(p.storage == 13)];
+                    levels = std::max<uint32_t>(levels, p.levels);
+                }
+    }
+    const auto candidate = shapes.find(uint64_t(info.size.width) << 33 | uint64_t(info.size.height) << 1 |
+                                       uint64_t(bool(info.props.is_block)));
+    if (candidate == shapes.end() || info.resources.levels > candidate->second) return nullptr;
     static unsigned reports=0;
     static std::unordered_map<uint64_t,bool> reported;
     if (input_test && reports<24 && reported.try_emplace(image.image_uid,true).second) {

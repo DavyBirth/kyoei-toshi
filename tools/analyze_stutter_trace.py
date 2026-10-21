@@ -12,7 +12,8 @@ NAMES = ('prepare', 'present', 'linear-downloads', 'readback-finish', 'readback-
          'raster-dispatch', 'cp-sync', 'graphics-construct', 'graphics-register', 'graphics-driver')
 DETAIL = {200: 'gfx-packet', 201: 'draw', 202: 'find-image', 203: 'refresh-image',
           204: 'texture-gc', 205: 'image-buffer', 206: 'command-callbacks',
-          210: 'vulkan-record-backpressure', 211: 'vulkan-record-chunk', 299: 'streaming-other'}
+          210: 'vulkan-record-backpressure', 211: 'vulkan-record-chunk', 299: 'streaming-other',
+          300: 'submit-lock-held', 301: 'present-lock-held', 302: 'record-drain', 303: 'queue-submit'}
 
 
 def summarize(events, start=None, end=None):

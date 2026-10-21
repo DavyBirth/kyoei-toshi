@@ -984,6 +984,23 @@ kyoei_replace_checked(KYOEI_TILE_MANAGER
 kyoei_replace_checked(KYOEI_TILE_MANAGER
   "TileManager::~TileManager() = default;"
   "TileManager::~TileManager() { KyoeiPrimedDetilers::Forget(this); }")
+# Recycle detile/tile scratch buffers instead of a driver allocation per upload.
+set(KYOEI_TILE_MANAGER "#include \"kyoei_scratch_pool.h\"\n${KYOEI_TILE_MANAGER}")
+kyoei_replace_checked(KYOEI_TILE_MANAGER
+  "TileManager::ScratchBuffer TileManager::GetScratchBuffer(u32 size) {"
+  "static void KyoeiReleaseScratch(VmaAllocator allocator,u32 size,vk::Buffer buffer,VmaAllocation allocation) {\n    for (const auto& e : KyoeiScratchPool::Shared<vk::Buffer,VmaAllocation>().Give({KyoeiScratchPool::Class(size),buffer,allocation}))\n        vmaDestroyBuffer(allocator, e.buffer, e.allocation);\n}\nTileManager::ScratchBuffer TileManager::GetScratchBuffer(u32 size) {\n    if (const auto e = KyoeiScratchPool::Shared<vk::Buffer,VmaAllocation>().Take(size)) return {e->buffer, e->allocation};")
+kyoei_replace_checked(KYOEI_TILE_MANAGER
+  "        .size = size,\n        .usage = usage,"
+  "        .size = KyoeiScratchPool::Class(size),\n        .usage = usage,")
+kyoei_replace_checked(KYOEI_TILE_MANAGER
+  "    scheduler.DeferOperation([this, out_buffer, out_allocation]() {\n        vmaDestroyBuffer(instance.GetAllocator(), out_buffer, out_allocation);"
+  "    scheduler.DeferOperation([this, out_buffer, out_allocation, size = info.guest_size]() {\n        KyoeiReleaseScratch(instance.GetAllocator(), size, out_buffer, out_allocation);")
+kyoei_replace_checked(KYOEI_TILE_MANAGER
+  "    scheduler.DeferOperation([this, temp_buffer, temp_allocation]() {\n        vmaDestroyBuffer(instance.GetAllocator(), temp_buffer, temp_allocation);"
+  "    scheduler.DeferOperation([this, temp_buffer, temp_allocation, size = info.guest_size]() {\n        KyoeiReleaseScratch(instance.GetAllocator(), size, temp_buffer, temp_allocation);")
+kyoei_replace_checked(KYOEI_TILE_MANAGER
+  "TileManager::~TileManager() { KyoeiPrimedDetilers::Forget(this); }"
+  "TileManager::~TileManager() {\n    KyoeiPrimedDetilers::Forget(this);\n    for (const auto& e : KyoeiScratchPool::Shared<vk::Buffer,VmaAllocation>().Drain()) vmaDestroyBuffer(instance.GetAllocator(), e.buffer, e.allocation);\n}")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_tile_manager.cpp" CONTENT "${KYOEI_TILE_MANAGER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_tile_manager.cpp")
 add_executable(test_kyoei_pipeline_cache src/test_kyoei_pipeline_cache.cpp)
@@ -1089,7 +1106,14 @@ kyoei_replace_checked(KYOEI_SCHEDULER
   "    { KyoeiFrameStats::Work measurement(9); SubmitExecution(info); }\n    { KyoeiFrameStats::Work measurement(10); Wait(presubmit_tick); }")
 kyoei_replace_checked(KYOEI_SCHEDULER
   "    std::scoped_lock lk{submit_mutex};"
-  "    auto lk = [] { KyoeiFrameStats::Work measurement(11); return std::unique_lock{submit_mutex}; }();")
+  "    auto lk = [] { KyoeiFrameStats::Work measurement(11); return std::unique_lock{submit_mutex}; }();\n    KyoeiLockHold kyoei_submit_hold(300);")
+set(KYOEI_SCHEDULER "#include \"kyoei_lock_hold.h\"\n${KYOEI_SCHEDULER}")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "    KyoeiVulkanRecording::Drain(this);\n    Check(current_cmdbuf.end());"
+  "    { KyoeiLockHold drain_hold(302); KyoeiVulkanRecording::Drain(this); }\n    Check(current_cmdbuf.end());")
+kyoei_replace_checked(KYOEI_SCHEDULER
+  "    auto submit_result = instance.GetGraphicsQueue().submit(submit_info, info.fence);"
+  "    auto submit_result = [&] { KyoeiLockHold queue_hold(303); return instance.GetGraphicsQueue().submit(submit_info, info.fence); }();")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_scheduler.cpp" CONTENT "${KYOEI_SCHEDULER}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_scheduler.cpp")
 
@@ -1244,6 +1268,10 @@ kyoei_replace_checked(KYOEI_PRESENTER
 set(KYOEI_PRESENTER "#include \"kyoei_prompt_state.h\"\n${KYOEI_PRESENTER}")
 
 kyoei_replace_checked(KYOEI_PRESENTER "namespace Vulkan {" "#include \"kyoei_photo_gpu.h\"\nnamespace Vulkan {")
+set(KYOEI_PRESENTER "#include \"kyoei_lock_hold.h\"\n${KYOEI_PRESENTER}")
+kyoei_replace_checked(KYOEI_PRESENTER
+  "        std::scoped_lock lock{Scheduler::submit_mutex};\n        swapchain.Present();"
+  "        std::scoped_lock lock{Scheduler::submit_mutex};\n        KyoeiLockHold present_hold(301);\n        swapchain.Present();")
 kyoei_replace_checked(KYOEI_PRESENTER
   "    draw_scheduler.EndRendering();\n    const auto cmdbuf = draw_scheduler.CommandBuffer();"
   "    draw_scheduler.EndRendering();\n    KyoeiPhoto::Capture(instance,draw_scheduler,texture_cache.GetImage(image_id),GetFrameViewFormat(attribute.attrib.pixel_format));\n    const auto cmdbuf = draw_scheduler.CommandBuffer();")
@@ -1401,3 +1429,6 @@ foreach(DLL IN LISTS GPU_DLLS)
   add_custom_command(TARGET kyoei POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_if_different
     "${DLL}" "$<TARGET_FILE_DIR:kyoei>")
 endforeach()
+add_executable(test_kyoei_scratch_pool src/test_kyoei_scratch_pool.cpp)
+target_compile_features(test_kyoei_scratch_pool PRIVATE cxx_std_20)
+target_include_directories(test_kyoei_scratch_pool PRIVATE src)
