@@ -4,6 +4,11 @@
 #include <stdio.h>
 static int calls,hud=1,active=1;
 static int pose_ready=1,created,updated;
+static float camera_forward[3]={0,0,1};
+int kyoei_photo_scene_light_move(float right,float up,float forward,float xyz[3]){
+    (void)right;(void)up;if(!pose_ready)return 0;
+    for(unsigned i=0;i<3;++i)xyz[i]=camera_forward[i]*forward;return 1;
+}
 int kyoei_photo_hud_hidden(void){return hud;}
 int kyoei_photo_scene_active(void){return active;}
 int kyoei_photo_scene_light_position(float xyz[3]){
@@ -39,7 +44,7 @@ static ABI void *spot_factory_spy(void){
 static ABI void spot_update_spy(void *point){
     assert(point==native_spots[0]);
     const float dx=scalar_at(point,0x250),dy=scalar_at(point,0x254),dz=scalar_at(point,0x258);
-    assert(fabsf(dx*dx+dy*dy+dz*dz-1)<.00001f && dy<0 && dz>0);
+    assert(fabsf(dx*dx+dy*dy+dz*dz-1)<.00001f && dy<0);
     assert(fabsf(scalar_at(point,0x260)-.78539816f)<.00001f && scalar_at(point,0x264)<scalar_at(point,0x260));
     float range=20;memcpy((char*)point+0x22c,&range,4);++updated_spots;
 }
@@ -123,6 +128,13 @@ int main(void){
     kyoei_photo_lights_input(1,0,1,.1f,.1f,-2,0,0,1,0,-15,45);update_owned_point(system,1);
     kyoei_photo_lights_input(1,1,1,.1f,.1f,-2,0,0,1,0,-15,45);update_owned_point(system,1);
     assert(created_spots==1 && updated_spots==2 && owned_sources[1].point==native_spots[0]);
+    // A newly enabled spot follows the camera, then stays fixed as it turns.
+    hud=0;update_owned_point(system,1);hud=1;
+    camera_forward[0]=-1;camera_forward[2]=0;update_owned_point(system,1);
+    assert(scalar_at(native_spots[0],0x250)<-.9f && fabsf(scalar_at(native_spots[0],0x258))<.00001f);
+    camera_forward[0]=0;camera_forward[2]=1;
+    kyoei_photo_lights_input(1,1,1,.1f,.1f,-2,0,0,1,90,-15,45);update_owned_point(system,1);
+    assert(fabsf(scalar_at(native_spots[0],0x250))<.00001f && scalar_at(native_spots[0],0x258)>.9f);
     unsigned char replacement_system[0x68]={0};put_pointer(replacement_system,0,base+0x1254b48);
     put_pointer(base,0x1354420,replacement_system);hud=1;update_owned_point(replacement_system,0);
     assert(source_failed && created==3 && updated==11);

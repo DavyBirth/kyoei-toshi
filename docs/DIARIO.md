@@ -4543,3 +4543,13 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Documentacao e atalho atualizados com categorias e tres luzes. Launcher e
   build_launcher de trabalho paralelo preservados. Clima/horario e menu de
   pausa permanecem pendentes; nao declarar modo foto inteiro finalizado.
+
+- Rodada autonoma solicitada: parar/salvar ao restar5% da janela300min.
+  Saldo recuperado dos eventos token_count/rate_limits locais, sem credenciais;
+  inicio28% restantes, ultima leitura23%. Nao depender de aviso manual de Davy.
+- studio-2 PID29748, teste mudo/user privado: direct-clean concluiu todos os
+  passos (WASD/D e apontamentoJ); painel mostra offsetZ-0.59 e camera fixa.
+  Prova de deslocamento direto em PNG; controlador fisico/segunda cena pendem.
+- Melhorado inicio da spot: direcao passa a ser relativa a camera ao ligar,
+  ancora preservada ao reenquadrar. Teste cobre camera voltada-X e giro90,
+  sem arrastar fonte quando a camera gira. Build completo/lights PASS.

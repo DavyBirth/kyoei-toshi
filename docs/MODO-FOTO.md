@@ -170,7 +170,8 @@ Em Controle escolha **Luz selecionada** para usar WASD/analogico esquerdo no
 posicionamento, Espaco/Ctrl ou gatilhos na altura e mouse/JKIL/analogico direito
 na direcao. A camera fica parada. Volte Controle para Camera para reenquadrar.
 Tambem e possivel ajustar X/altura/Z pelas linhas do painel. Giro e inclinacao
-usam os eixos do mundo. Ligar posiciona perto da camera; desligar e ligar ancora
+partem da direcao da camera no momento de ligar. Depois permanecem fixos ao
+reenquadrar. Ligar posiciona perto da camera; desligar e ligar ancora
 novamente. R/R3 restaura todos os ajustes e desliga as tres fontes.
 
 As fontes iluminam personagem/cenario e aparecem no PNG. Sao desativadas ao

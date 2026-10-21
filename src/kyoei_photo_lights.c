@@ -32,7 +32,7 @@ static int source_controls;
 static _Atomic int source_available;
 typedef struct {int enabled,type;float rgb[3],offset[3],yaw,pitch,cone;} SourceInput;
 static SourceInput source_input[KYOEI_PHOTO_LIGHT_COUNT];
-typedef struct {void *point,*objects[2];int was_active,object_type;SourceInput previous;float anchor[3];} OwnedSource;
+typedef struct {void *point,*objects[2];int was_active,object_type;SourceInput previous;float anchor[3],anchor_yaw,anchor_pitch;} OwnedSource;
 static OwnedSource owned_sources[KYOEI_PHOTO_LIGHT_COUNT];
 static SRWLOCK source_lock=SRWLOCK_INIT;
 int kyoei_photo_lights_available(void){return atomic_load_explicit(&source_available,memory_order_acquire);}
@@ -68,8 +68,9 @@ static void update_owned_point(void *system,unsigned slot){
     SourceInput request={slot==0,0,{8.f,.2f,.2f},{0,0,0},0,-15,45};
     if(source_controls){AcquireSRWLockShared(&source_lock);request=source_input[slot];ReleaseSRWLockShared(&source_lock);}
     const int wanted=request.enabled && kyoei_photo_hud_hidden() && kyoei_photo_scene_active();
-    float xyz[3];
-    if(wanted && !source->was_active && !kyoei_photo_scene_light_position(xyz))return;
+    float xyz[3],forward[3];
+    if(wanted && !source->was_active && (!kyoei_photo_scene_light_position(xyz) ||
+       !kyoei_photo_scene_light_move(0,0,1,forward)))return;
     if(wanted && (!source->point || source->object_type!=request.type)){
         void *created=source->objects[request.type];
         if(!created){
@@ -90,7 +91,11 @@ static void update_owned_point(void *system,unsigned slot){
     void *owned_point=source->point;
     if(!owned_point || (wanted==source->was_active && (!wanted || !memcmp(&request,&source->previous,sizeof(request)))))return;
     if(wanted){
-        if(!source->was_active)memcpy(source->anchor,xyz,sizeof(xyz));
+        if(!source->was_active){
+            memcpy(source->anchor,xyz,sizeof(xyz));
+            source->anchor_yaw=atan2f(forward[0],forward[2]);
+            source->anchor_pitch=asinf(fmaxf(-1,fminf(1,forward[1])));
+        }
         for(unsigned i=0;i<3;++i)xyz[i]=source->anchor[i]+request.offset[i];
         memcpy((char*)owned_point+0x80,xyz,sizeof(xyz));
         memcpy((char*)owned_point+0x230,request.rgb,sizeof(request.rgb));
@@ -98,7 +103,8 @@ static void update_owned_point(void *system,unsigned slot){
          * this proof does not enter the ordinary unit-update/culling jobs. */
         set_word(owned_point,0x30,1);set_word(owned_point,0x228,1);
         if(request.type){
-            const float yaw=request.yaw*.01745329252f,pitch=request.pitch*.01745329252f;
+            const float yaw=source->anchor_yaw+request.yaw*.01745329252f;
+            const float pitch=fmaxf(-1.553343f,fminf(1.553343f,source->anchor_pitch+request.pitch*.01745329252f));
             const float direction[3]={cosf(pitch)*sinf(yaw),sinf(pitch),cosf(pitch)*cosf(yaw)};
             const float cone[2]={request.cone*.01745329252f,request.cone*.75f*.01745329252f};
             memcpy((char*)owned_point+0x250,direction,sizeof(direction));memcpy((char*)owned_point+0x260,cone,sizeof(cone));
