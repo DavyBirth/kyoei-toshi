@@ -118,3 +118,41 @@ Proximo passo: coletar a selecao real na pausa quando a partida concorrente
 terminar, identificar fontes pontuais efetivamente selecionadas e concluir o
 ciclo de vida de uma fonte propria antes de oferecer posicionamento na HUD.
 Nao copiar uma luz da fase nem chamar destructor incompleto como atalho.
+
+### Fonte propria experimental — continuacao20/10
+
+Modo separado KYOEI_PHOTO_LIGHTS=source-proof. Nao habilitado em lancadores.
+O modo observe continua sem modificar fontes. O prototipo chama a fabrica
+nativa2ac650 na thread que reconstrui o cache, somente ao entrar na foto com
+camera valida. Nao copia uma luz existente nem modifica fontes da fase.
+Fabrica, inicializadores358af0/359b90/357410 e update2ac830 sao conferidos por
+assinatura integral antes da instalacao. Posicao inicial:3unidades a frente
+mais1para cima no referencial da camera fotografica. RGB de prova8/.2/.2;
+update nativo calcula alcance. Mascara limitada ao viewport principal.
+Ainda nao ha controles de posicionamento/cor na HUD: e uma prova de emissao.
+
+Ciclo deliberadamente limitado: uma unica instancia nativa reutilizavel por
+processo, registrada pela propria fabrica; fica desativada (+220=0/+30=0)
+ao sair da foto, antes da reconstrucao do cache. Nao liberar enquanto caches/
+jobs possam guardar o ponteiro. A alocacao permanece ate terminar o processo;
+nao alegar que destructor/remocao simetrica foram resolvidos. Troca do ponteiro
+de sistema encerra a prova sem seguir a instancia antiga. Isso ainda nao
+certifica recarga de cena, reutilizacao do endereco ou funcionamento geral.
+
+Teste com fabrica/update substituidos por spies PASS: nao criar fora da foto
+ou sem camera, criar uma unica vez, ativar/desativar/reentrar, nao tocar fontes
+originais/cache e recusar sistema substituido. Isso nao e prova de chamada da
+fabrica real ou iluminacao visivel. Compilacao dos fontes reais e vinculacao
+completa do executavel privado PASS.
+
+Sessao privada/muda preparada em
+build/research/photo-mode/light-source-20261020/run.ps1, com user separado.
+Executavel: build/research/photo-mode/kyoei-photo-lights.exe. Roteiro recusa
+iniciar se kyoei ou kyoei-photo-lights estiver ativo. PID24736/claude-test
+continua aberto, preservado; nenhum jogo iniciado nesta etapa.
+
+Quando houver janela livre: carregar cena201, capturar antes/F10/depois,
+conferir created/enabled/disabled no log e selected_photo_source=1 na selecao
+final; comparar PNG e host. Testar sair/reentrar e perda de foco. Se nao houver
+emissao, rastrear montagem dos parametros de luz, sem promover o prototipo.
+So apos prova visivel implementar controles e validar uma segunda cena.

@@ -3,8 +3,12 @@
 #include <assert.h>
 #include <stdio.h>
 static int calls,hud=1,active=1;
+static int pose_ready=1,created,updated;
 int kyoei_photo_hud_hidden(void){return hud;}
 int kyoei_photo_scene_active(void){return active;}
+int kyoei_photo_scene_light_position(float xyz[3]){
+    if(!pose_ready)return 0;xyz[0]=10;xyz[1]=20;xyz[2]=30;return 1;
+}
 void gz_log(const char *format,...){(void)format;}
 void gz_stop(int code,const char *format,...){(void)format;exit(code);}
 static void put_pointer(void *p,size_t at,void *v){memcpy((char*)p+at,&v,sizeof(v));}
@@ -14,6 +18,16 @@ static ABI uint32_t spy(void *sys,uint32_t types,uint32_t views,void **out,uint3
 static ABI void cache_spy(void *sys){(void)sys;++calls;}
 static void *selection_system;
 static unsigned char selected_point[0x270],selected_spot[0x290];
+static unsigned char native_point[0x270];
+static ABI void *factory_spy(void){
+    ++created;memset(native_point,0,sizeof(native_point));
+    put_pointer(native_point,0,base+0x1254ed0);return native_point;
+}
+static ABI void update_spy(void *point){
+    assert(point==native_point && scalar_at(point,0x80)==10 && scalar_at(point,0x88)==30);
+    assert(scalar_at(point,0x230)==8);float range=12;
+    memcpy((char*)point+0x22c,&range,4);++updated;
+}
 static ABI uint32_t selection_spy(void *sys,uint32_t types,uint32_t views,const void *origin,
                                   const void *camera,const void *filter,void **out,uint32_t capacity,uint32_t viewport){
     assert(sys==selection_system && types==0x0c && views==0x81);
@@ -49,6 +63,21 @@ int main(void){
     assert(select_lights(system,0x0c,0x81,(void*)0x1110,(void*)0x2220,(void*)0x3330,selected,3,7)==2 && calls==7);
     selection_system=NULL;
     assert(select_lights(NULL,0x0c,0x81,(void*)0x1110,(void*)0x2220,(void*)0x3330,selected,3,7)==2 && calls==8);
+    source_proof=1;create_point=factory_spy;update_point=update_spy;
+    hud=active=0;update_owned_point(system);assert(!created);
+    hud=active=1;pose_ready=0;update_owned_point(system);assert(!created);
+    pose_ready=1;update_owned_point(system);
+    assert(created==1 && updated==1 && source_was_active && scalar_at(native_point,0x22c)==12);
+    uint32_t enabled;memcpy(&enabled,native_point+0x220,4);assert(enabled==1);
+    update_owned_point(system);assert(created==1 && updated==1);
+    active=0;update_owned_point(system);memcpy(&enabled,native_point+0x220,4);assert(!enabled && !source_was_active);
+    active=1;update_owned_point(system);assert(created==1 && updated==2 && source_was_active);
+    hud=0;update_owned_point(system);memcpy(&enabled,native_point+0x220,4);assert(!enabled);
+    assert(!memcmp(before,system,sizeof(system)) && !memcmp(point_before,selected_point,sizeof(selected_point)) && !memcmp(spot_before,selected_spot,sizeof(selected_spot)));
+    unsigned char replacement_system[0x68]={0};put_pointer(replacement_system,0,base+0x1254b48);
+    put_pointer(base,0x1354420,replacement_system);hud=1;update_owned_point(replacement_system);
+    assert(source_failed && created==1 && updated==2);
+    source_proof=0;
     VirtualFree(base,0,MEM_RELEASE);
     unsigned char *memory=VirtualAlloc(NULL,4096,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);assert(memory);
     const unsigned char function[]={0x31,0xc0,0x45,0x85,0xc0,0x74,0x06,0xb8,77,0,0,0,0xc3,0xb8,33,0,0,0,0xc3};

@@ -7,6 +7,8 @@ extern "C" {
 void kyoei_photo_scene_configure(void *image,uint64_t size);
 int kyoei_photo_scene_available(void);
 int kyoei_photo_scene_active(void);
+/* Copy a point in front of the photo camera; never exposes guest pointers. */
+int kyoei_photo_scene_light_position(float xyz[3]);
 /* SDL host input only; axes in[-1,1], look in radians, speed in[.1,10].
  * Moves are latched; look/fov impulses are accumulated until guest consumes.
  * Focus loss must restore the HUD request even without a new key event. */

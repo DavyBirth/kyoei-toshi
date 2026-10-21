@@ -4477,3 +4477,15 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Nenhuma partida nova iniciada. Falta prova do seletor em cena e luz propria;
   nao declarar iluminacao extra implementada. Retomar modo foto por essa prova,
   depois clima/horario e pausa. Launcher e texturas preexistentes preservados.
+
+- Continuacao modo foto: prototipo source-proof cria fonte point pela fabrica
+  nativa, com assinaturas completas e posicao derivada da camera fotografica.
+  RGB/posicao fixos para prova; ainda sem controles HUD ou prova de emissao.
+- Uma instancia reutilizavel por processo, desativada ao sair da foto; memoria
+  retida para caches/jobs, sem alegar destructor resolvido. Troca do sistema
+  encerra a prova. Observe e lancadores normais continuam sem fonte adicional.
+- Testes com spies de fabrica/update PASS para criacao unica, camera ausente,
+  saida/reentrada, fontes originais intactas e troca do sistema. Compilacao e
+  link completo privado PASS. Sessao muda light-source-20261020 preparada com
+  saves de teste separados. PID24736/claude-test permanece aberto/preservado;
+  nenhum jogo iniciado. Proxima prova: fonte selecionada e luz visivel emF10.

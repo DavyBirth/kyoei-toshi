@@ -77,6 +77,14 @@ static void direction(const State *s,Vec3 *forward,Vec3 *right,Vec3 *up) {
     *up=cross(*right,*forward);unit(up);
     *right=rotate(*right,*forward,s->roll);*up=rotate(*up,*forward,s->roll);
 }
+int kyoei_photo_scene_light_position(float xyz[3]) {
+    if(!xyz || !atomic_load_explicit(&active,memory_order_acquire))return 0;
+    AcquireSRWLockShared(&state_lock);State pose=state;ReleaseSRWLockShared(&state_lock);
+    Vec3 forward,right,up;direction(&pose,&forward,&right,&up);
+    Vec3 point=add(add(pose.eye,scale(forward,3.f)),scale(up,1.f));
+    if(!finite3(point) || !atomic_load_explicit(&active,memory_order_acquire))return 0;
+    xyz[0]=point.x;xyz[1]=point.y;xyz[2]=point.z;return 1;
+}
 float kyoei_photo_scene_fov_value(void) {
     AcquireSRWLockShared(&state_lock);float value=state.fov;ReleaseSRWLockShared(&state_lock);return value;
 }
