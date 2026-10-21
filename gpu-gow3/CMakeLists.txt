@@ -1,0 +1,104 @@
+# Kyoei on the GoW3 PC GPU core (third_party/gow3-gpu, bbport-derived, GPL-2.0).
+# The fixed copy is not edited; Kyoei adaptations live here and in src/.
+# Stage 1: compile the core with Kyoei's toolchain (clang, MSVC ABI) and the
+# dependency headers the current renderer already uses.
+cmake_minimum_required(VERSION 3.28)
+project(kyoei_gow3gpu C CXX)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(GOW3 "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/gow3-gpu")
+set(DEPS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
+find_program(GLSLANG_COMPILER NAMES glslangValidator glslang HINTS "$ENV{VULKAN_SDK}/Bin" REQUIRED)
+
+# Host shaders -> headers, same list as the GoW3 build.
+set(SHADER_SRC "${GOW3}/shadps4/video_core/host_shaders")
+set(SHADER_INCLUDE "${CMAKE_CURRENT_BINARY_DIR}/include")
+set(SHADER_DIR "${SHADER_INCLUDE}/video_core/host_shaders")
+set(SHADER_HEADERS "")
+function(add_host_shader FILENAME SHADER_NAME)
+    set(OUT "${SHADER_DIR}/${SHADER_NAME}.h")
+    string(TOUPPER ${SHADER_NAME} SYMBOL)
+    set(DEFINES ${ARGN})
+    list(TRANSFORM DEFINES PREPEND "-D")
+    add_custom_command(OUTPUT "${OUT}"
+        COMMAND ${CMAKE_COMMAND} -E make_directory "${SHADER_DIR}"
+        COMMAND "${GLSLANG_COMPILER}" --target-env vulkan1.3 -o "${OUT}" --vn ${SYMBOL} ${DEFINES} "${SHADER_SRC}/${FILENAME}"
+        COMMAND ${CMAKE_COMMAND} "-DHEADER_FILE=${OUT}" -P "${SHADER_SRC}/AddShaderHeaderInclude.cmake"
+        DEPENDS "${SHADER_SRC}/${FILENAME}" VERBATIM)
+    set(SHADER_HEADERS ${SHADER_HEADERS} "${OUT}" PARENT_SCOPE)
+endfunction()
+add_host_shader(color_to_ms_depth.frag color_to_ms_depth_frag)
+add_host_shader(color_to_ms_depth.frag color_to_ms_depth_fallback_frag SAMPLE_FALLBACK=1)
+add_host_shader(ms_image_blit.frag ms_image_blit_frag)
+add_host_shader(ms_image_blit.frag ms_image_blit_msaa_frag SRC_MSAA=1)
+add_host_shader(fault_buffer_process.comp fault_buffer_process_comp)
+add_host_shader(fs_tri.vert fs_tri_vert)
+add_host_shader(fsr.comp fsr_easu_comp SAMPLE_EASU=1)
+add_host_shader(fsr.comp fsr_rcas_comp SAMPLE_RCAS=1)
+add_host_shader(post_process.frag post_process_frag)
+add_host_shader(camera_motion.comp camera_motion_comp)
+add_host_shader(upscale_merge.comp upscale_merge_comp)
+add_host_shader(upscale_reactive.comp upscale_reactive_comp)
+add_host_shader(taa.comp taa_comp)
+add_host_shader(taa_sharpen.comp taa_sharpen_comp)
+add_host_shader(taa_sharpen.comp taa_sharpen_ldr_comp LDR_OUTPUT=1)
+add_host_shader(buffer_multi_copy.comp buffer_multi_copy_comp)
+add_host_shader(depth_resample.frag depth_resample_frag)
+add_host_shader(depth_resample.frag depth_stencil_resample_frag HAS_STENCIL=1)
+add_host_shader(depth_resample.frag depth_stencil_bits_frag STENCIL_BITS=1)
+add_host_shader(camera_motion.comp camera_motion_debug_comp DEBUG_OVERLAY=1)
+foreach(BPP IN ITEMS 8 16 32 64 96 128)
+    add_host_shader(tiling.comp tiling_micro_${BPP}_comp BITS_PER_PIXEL=${BPP} IS_MACRO_TILED=0)
+    add_host_shader(tiling.comp tiling_macro_${BPP}_comp BITS_PER_PIXEL=${BPP} IS_MACRO_TILED=1)
+endforeach()
+add_custom_target(gow3_host_shaders DEPENDS ${SHADER_HEADERS})
+
+file(GLOB_RECURSE VIDEO_CORE CONFIGURE_DEPENDS "${GOW3}/shadps4/video_core/*.cpp")
+file(GLOB_RECURSE RECOMPILER CONFIGURE_DEPENDS "${GOW3}/shadps4/shader_recompiler/*.cpp")
+list(FILTER VIDEO_CORE EXCLUDE REGEX "renderdoc\\.cpp$")
+# Checked source adaptations, written to the build tree; the fixed copy stays as is.
+function(gow3_adapt list_var relative)
+    set(source "${GOW3}/${relative}")
+    file(READ "${source}" text)
+    set(pairs ${ARGN})
+    list(LENGTH pairs count)
+    math(EXPR last "${count} - 1")
+    foreach(i RANGE 0 ${last} 2)
+        math(EXPR j "${i} + 1")
+        list(GET pairs ${i} before)
+        list(GET pairs ${j} after)
+        string(FIND "${text}" "${before}" position)
+        if(position EQUAL -1)
+            message(FATAL_ERROR "GoW3 core changed; review adaptation of ${relative}: ${before}")
+        endif()
+        string(REPLACE "${before}" "${after}" text "${text}")
+    endforeach()
+    set(out "${CMAKE_CURRENT_BINARY_DIR}/adapted/${relative}")
+    file(CONFIGURE OUTPUT "${out}" CONTENT "${text}" @ONLY)
+    set(files ${${list_var}})
+    list(REMOVE_ITEM files "${source}")
+    list(APPEND files "${out}")
+    set(${list_var} ${files} PARENT_SCOPE)
+endfunction()
+# MSVC's std::array iterator is a class, not a pointer.
+gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
+    "auto* slot = std::ranges::find(readback_images" "auto slot = std::ranges::find(readback_images")
+add_library(gow3_core OBJECT ${VIDEO_CORE} ${RECOMPILER})
+add_dependencies(gow3_core gow3_host_shaders)
+set(FSR_VULKAN "${CMAKE_CURRENT_SOURCE_DIR}/../build/fsr-vulkan-src" CACHE PATH "FSR-Vulkan source (MIT)")
+# compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
+target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
+    "${FSR_VULKAN}/include" "${DEPS}/gz_sirit-src/externals/SPIRV-Headers/include" "${GOW3}/shim" "${GOW3}/shadps4" "${SHADER_INCLUDE}"
+    "${GOW3}/third_party/gcn/include" "${GOW3}/third_party/half/include" "${GOW3}/third_party/sirit/include"
+    "$ENV{VULKAN_SDK}/Include" "${DEPS}/gz_fmt-src/include" "${DEPS}/gz_magic-src/include"
+    "${DEPS}/gz_magic-src/include/magic_enum" "${DEPS}/gz_robin-src/include" "${DEPS}/gz_vma-src/include"
+    "${DEPS}/gz_sdl-src/include" "${DEPS}/gz_sdl-build/include-revision" "${DEPS}/gz_boost-src"
+    "${DEPS}/gz_xbyak-src" "${DEPS}/gz_xxhash-src" "${DEPS}/gz_zydis-src/include"
+    "${DEPS}/gz_zydis-build" "${DEPS}/gz_zydis-src/dependencies/zycore/include" "${DEPS}/gz_zydis-build/zycore"
+    "${DEPS}/gz_miniz-src" "${DEPS}/gz_miniz-build")
+file(GLOB BOOST_INCLUDES "${DEPS}/gz_boost-src/libs/*/include")
+target_include_directories(gow3_core SYSTEM PRIVATE ${BOOST_INCLUDES})
+target_compile_definitions(gow3_core PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS
+    BOOST_ASIO_STANDALONE NDEBUG VULKAN_HPP_DISPATCH_LOADER_DYNAMIC=1)
+target_compile_options(gow3_core PRIVATE -O2 -D_ITERATOR_DEBUG_LEVEL=0 -Wno-deprecated-declarations
+    -Wno-missing-field-initializers -include "${GOW3}/shim/gow3_win_compat.h")
