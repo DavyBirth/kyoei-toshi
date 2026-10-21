@@ -100,3 +100,15 @@ Florista: balões encurtados (k645/k647/k649), commit a491fdb no ramo natural.
   quadros de 150 ms. Amostrador também mostrou corridas de 30–47 ms em
   Cnd_wait da thread da GPU no meio do giro: a GPU fica esperando o JOGO
   (threads convidadas). Próximo: amostrar a thread "guest main" no giro.
+
+### Onde está o limite agora (21/10, 02:20)
+- nvidia-smi no jogo (RTX 2060, 1280x720): GPU só 26–45% ocupada → NÃO é GPU-bound.
+- Thread "guest main": 56% em cond_wait/cond_timedwait (chamado de 0x80037101b /
+  0x800345377, laço do motor 0x345140). Thread da GPU: 31–36% em Cnd_wait.
+- Ou seja: latência de sincronização jogo↔GPU (o jogo espera labels/flip da
+  GPU, a GPU espera o próximo lote). Caminho para mais FPS: reduzir a ida-e-volta
+  (readbacks síncronos: Scheduler::Finish/ProcessDownloadImages ~3%, ver
+  LUMINANCIA-READBACK.md; tempo de resposta do label/flip) e paralelismo do
+  processamento de comandos — não otimizar shaders ou cópias.
+- 4K: com GPU ociosa, subir a resolução interna deve custar pouco; validar com
+  a escala de resolução quando a latência estiver resolvida.
