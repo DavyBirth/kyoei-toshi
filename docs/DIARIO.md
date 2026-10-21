@@ -4660,3 +4660,14 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Esta maquina nao sustenta30 firmes no giro; travar nao estabiliza. Padrao
   continua sem trava. Foco perdido nas rodadas3/4 (29/29). GZ_VBLANK_HZ ja
   existe para testar120 depois. Proximo: perfil CPU do giro.
+
+- Estudo offline21/10 (Davy em aula, jogo nao aberto): o Kyoei compila o
+  video_core do shadPS4 comum (KYOEI_SHAD). O nucleo otimizado do bbport
+  (draw pipe em2 estagios, constant ring, memos de textura/render state,
+  janela de faltas, copias paralelas; Bloodborne 65->145FPS no doc
+  parallel_gpu.md) esta em third_party/bloodborne_pc mas nao e compilado e e
+  so Linux/AMD. gow3_pc-windows-v2.4.1 (GPL-2.0) traz o mesmo nucleo ja no
+  Windows (+DLSS). Custo de trocar: 226 remendos CMake, ~125 em video_core
+  (texture_cache28, liverpool19, pipeline_cache15, scheduler11, tile8,
+  rasterizer8), a refazer sobre o nucleo novo. Alternativa: portar os ganhos
+  um a um para a copia atual. Decisao de caminho pendente com Davy.
