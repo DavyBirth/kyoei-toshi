@@ -1,4 +1,4 @@
-/* Offline-validated provenance for tip fonts. Not yet installed as a draw gate.
+/* Offline-validated provenance for the experimental independent tip-font gate.
  * Always resolve current owners; never retain guest pointers between calls.
  * SPDX-License-Identifier: GPL-2.0-or-later */
 #pragma once

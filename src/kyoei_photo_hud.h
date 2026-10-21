@@ -6,6 +6,7 @@ extern "C" {
 #endif
 void kyoei_photo_hud_configure(void *image,uint64_t size);
 void kyoei_photo_phone_configure(void *image,uint64_t size);
+void kyoei_photo_tips_configure(void *image,uint64_t size);
 void kyoei_photo_save_mark_configure(void *image,uint64_t size);
 int kyoei_photo_hud_available(void);
 int kyoei_photo_hud_hidden(void);

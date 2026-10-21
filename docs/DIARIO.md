@@ -4611,3 +4611,19 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Preservadas alteracoes preexistentes launcher/build_launcher/stage_cache e
   prioridade em CMakeLists. Proximo passo: lifetime/gates das duas fontes,
   depois prova visual somente quando Davy autorizar abrir o jogo.
+
+- Continuacao21/10 solicitada por Davy: mantida proibicao de abrir o jogo.
+  Gates de fontes tips preparados em src/kyoei_photo_tips.c, somente opt-in
+  KYOEI_PHOTO_TIPS=1; nenhum atalho habilitado. Duas assinaturas integrais
+  conferidas no ELF proprio; preparo dos dois gates antes de qualquer escrita.
+  Desenho original fora da foto/falha de leitura; leitura segura via API do
+  Windows, sem cache de objetos ou escritas em fontes/listas. Snapshot/lifetime
+  concorrente ainda sem prova visual; recurso permanece experimental.
+- Testes nativos gate/membership/phone PASS. Prova de instalacao em copia de
+  memoria das duas funcoes PASS: assinatura adulterada rejeitada, relays/RX e
+  reconfigure; nenhum codigo convidado executado. Relay sintetico real PASS;
+  dependencia gz_memory_clamp ausente no teste antigo foi corrigida.
+- Build completo do port vinculado com sucesso, sem executar kyoei.exe.
+  Continuada pesquisa estatica do menu de pausa; entrada nativa ainda pendente.
+  Trabalho preexistente launcher/stage_cache/prioridade/analyze_stutter_trace
+  permanece separado. Nao declarar dicas removidas do PNG sem teste em cena.

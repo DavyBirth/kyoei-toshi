@@ -77,10 +77,53 @@ leitura, singleton destruido e ponteiros invalidos. Teste anterior
 `test_kyoei_photo_phone` PASS, incluindo ciclos e limites de trabalho.
 Compilacao direta com Clang C11, `-Wall -Wextra -Werror -UNDEBUG`.
 
-**Ainda nao conectado ao runtime.** Esta e prova estrutural offline, nao prova
+**Estado no commit `0891278`: ainda nao conectado ao runtime.** Prova estrutural offline, nao prova
 de ocultacao. Antes de instalar gates em `ae6820` e `2e56e0`, conferir assinaturas
 integrais e sincronizacao de lifetime com o desenho. A releitura detecta troca
 de ponteiro, mas nao garante lifetime em concorrencia nem detecta reutilizacao
 do mesmo endereco. Evitar busca em arvore para cada glifo; avaliar custo por
 objeto de fonte. Depois, quando Davy liberar execucao, provar PNG sem dicas,
 letreiros preservados e restauracao em saida/foco/transicao/segunda cena.
+
+## Gates experimentais preparados em 21/10/2026
+
+`src/kyoei_photo_tips.c` instala os dois gates somente com
+`KYOEI_PHOTO_TIPS=1` e gate HUD disponivel. Nenhum atalho foi alterado para
+habilitar esta opcao. Entrada pelo configure da HUD, durante boot e antes
+das threads convidadas. Fora de HUD oculta **e** cena fotografica ativa,
+encaminha a chamada original. A condicao e conferida novamente depois da busca.
+
+Hashes integrais e limites do unwind conferidos novamente no ELF proprio:
+`ae6820`, 3681bytes/FNV`168be630d35f5764`;
+`2e56e0`, 588bytes/FNV`b1205c06d881b81c`.
+Ambas com prologo completo6bytes `push rbp/mov rbp,rsp/push r15`, coberto
+pelo relay SysV existente. A unica chamada direta encontrada entre elas e
+`ae705a -> 2e56e0`; filtrar apenas a base continuaria permitindo o desenho
+posterior da estendida. Ha um gate na entrada de cada objeto, nao por glifo.
+
+As duas assinaturas, relays e permissoes sao preparados antes de alterar
+qualquer entrada. Falha preparatoria conserva ambas. Originais publicados
+antes das escritas; falha irrecuperavel de protecao/cache encerra como nos
+outros gates. Leitura de dados via `ReadProcessMemory` evita o intervalo
+inseguro entre VirtualQuery e memcpy para memoria liberada. Nenhuma escrita
+em fontes, flags, raiz ou listas; nenhum ponteiro de cena fica em cache.
+Releituras continuam sem garantir snapshot coerente ou detectar reutilizacao
+do mesmo endereco. Por isso a opcao permanece experimental/desligada.
+
+Validacao offline:
+
+- `test_kyoei_photo_tips_gate`: callbacks reais com spies SysV; ocultacao das
+  duas fontes, caminho original fora da foto, texto externo do mesmo tipo,
+  restauracao durante a busca, dono destruido, PAGE_NOACCESS/memoria liberada,
+  e log limitado a oito amostras. PASS.
+- Argumento opcional com caminho do ELF proprio: copia somente as duas funcoes
+  para memoria de teste e verifica instalacao, prologos dos relays, protecaoRX,
+  segunda assinatura adulterada sem instalar a primeira e chamada repetida.
+  **Nenhuma funcao do jogo e chamada.** PASS.
+- `test_kyoei_hud_trace`: relay real executado com codigo sintetico, argumentos
+  e retorno SysV preservados. Corrigida dependencia ausente de
+  `gz_memory_clamp` no teste, com adaptador para memoria das fixtures. PASS.
+- Testes estruturais tips/phone PASS; build completo `kyoei.exe` vinculado.
+
+Falta executar em cena com dicas presentes e comparar PNG/letreiros/custo,
+saida/foco/transicoes e segunda cena. Nao declarar vazamento visual resolvido.

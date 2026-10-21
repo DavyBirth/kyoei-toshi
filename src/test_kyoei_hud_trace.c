@@ -8,6 +8,14 @@
 #include <stdlib.h>
 void gz_log(const char *format,...) { va_list args; va_start(args,format); vprintf(format,args); va_end(args); puts(""); }
 void gz_stop(int code,const char *format,...) { (void)format; ExitProcess(code); }
+/* This test uses host fixtures rather than the guest allocation registry. */
+uint64_t gz_memory_clamp(uintptr_t address,uint64_t size) {
+    MEMORY_BASIC_INFORMATION info;
+    if(!address || !VirtualQuery((void*)address,&info,sizeof(info)) || info.State!=MEM_COMMIT ||
+       (info.Protect&(PAGE_NOACCESS|PAGE_GUARD)))return 0;
+    size_t available=info.RegionSize-(address-(uintptr_t)info.BaseAddress);
+    return size<available?size:available;
+}
 static ABI uintptr_t callback(void *first,const void *second) {
     return (uintptr_t)first+2*(uintptr_t)second;
 }

@@ -89,6 +89,7 @@ void kyoei_photo_hud_configure(void *image,uint64_t size) {
     if(!VirtualProtect(code,6,previous,&ignored) || !FlushInstructionCache(GetCurrentProcess(),code,6))
         gz_stop(21,"STOP: cannot finalize photo HUD gate code protection/cache");
     atomic_store_explicit(&available,1,memory_order_release);
+    kyoei_photo_tips_configure(image,size);
     gz_log("Photo HUD: experimental draw traversal available; hidden=0 observer=%d; full coverage unverified",observer);
     return;
 fail:
