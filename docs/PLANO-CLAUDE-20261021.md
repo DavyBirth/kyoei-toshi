@@ -74,3 +74,12 @@ Fonte em build/research/reference-sources/ss-shadps4 (privado). Útil para nós:
 - Também traz DLSS, binding nativo, timers por batch: avaliar depois.
 Próximo passo: portar o compile pool para gráficos+compute no nosso
 vk_pipeline_cache (adaptação em src/, sem editar a cópia fixa), medir travada.
+
+## Travada ao girar a câmera (21/10, medido)
+
+Teste: save SAVEDATA-001, girar câmera L/J 4x2,5s. Cache de pipelines JÁ persiste
+(694 pré-carregados; 2ª sessão compila 0). Mesmo com 0 compilações, giro dá
+quadro de 152–167 ms no início e picos de 67–100 ms. **Causa NÃO é shader.**
+Próximo: KYOEI_STUTTER_TRACE durante o giro para achar o escopo (suspeitas:
+upload/criação de texturas e buffers quando entra geometria nova na tela).
+Florista: balões encurtados (k645/k647/k649), commit a491fdb no ramo natural.
