@@ -55,6 +55,9 @@ BINDINGS = {
     'texture/hud/demo_skip_icon.tex': '@skip',
     'texture/hud/cursor_lr.tex': '@cursor_lr',
     **{f'texture/text marker/talk_icon_0{i}.tex': '@talk' for i in range(1, 7)},
+    'texture/hud/cursol_nextchat.tex': '@nextchat',
+    'texture/stage_clear/sc_next.tex': '@scnext',
+    'texture/hud/resalt_next.tex': '@resalt',
 }
 SCALE = 8
 
@@ -196,7 +199,41 @@ def cursor_lr(original_image, page_keys=False):
     return im
 
 
+def face_key(original_image, box):
+    """Replace one face-button glyph (inside box) by an E keycap of the same height."""
+    im = original_image.copy(); x0, y0, x1, y1 = box
+    im.paste(Image.new('RGBA', (x1 - x0, y1 - y0), (0, 0, 0, 0)), (x0, y0))
+    size = y1 - y0
+    im.alpha_composite(keycap(size, size, 'E'), ((x0 + x1 - size) // 2, y0))
+    return im
+
+
+def face_box(original_image):
+    """Bounding box of the colored button disc (opaque pixels with chroma)."""
+    px = original_image.load(); w, h = original_image.size
+    pts = [(x, y) for y in range(h) for x in range(w) if px[x, y][3] > 150 and max(px[x, y][:3]) - min(px[x, y][:3]) > 18]
+    xs = [p[0] for p in pts]; ys = [p[1] for p in pts]
+    cx, cy = (min(xs) + max(xs)) // 2, (min(ys) + max(ys)) // 2; r = max(max(xs) - min(xs), max(ys) - min(ys)) // 2 + 6
+    return (max(0, cx - r), max(0, cy - r), min(w, cx + r + 1), min(h, cy + r + 1))
+
+
+def resalt(original_image):
+    """'Press ◎ Button': the ◎ becomes an E keycap; the background behind it is rebuilt."""
+    from make_american_icons import refill
+    cx, cy, r = 251.5, 62.5, 16
+    holes = [(x, y) for y in range(int(cy - r), int(cy + r) + 2) for x in range(int(cx - r), int(cx + r) + 2) if (x - cx) ** 2 + (y - cy) ** 2 <= r * r]
+    im = original_image.copy(); px = im.load()
+    for x, y in holes: px[x, y] = (0, 0, 0, 0)
+    im = refill(im, holes, (int(cx - r) - 1, int(cy - r) - 1, int(cx + r) + 3, int(cy + r) + 3))
+    size = 30
+    im.alpha_composite(keycap(size, size, 'E'), (int(cx - size / 2 + .5), int(cy - size / 2 + .5)))
+    return im
+
+
 def draw(label, w, h, english, original_image=None):
+    if label == '@nextchat': return face_key(original_image, face_box(original_image))
+    if label == '@scnext': return face_key(original_image, face_box(original_image))
+    if label == '@resalt': return resalt(original_image)
     if label == '@cursor_lr': return cursor_lr(original_image)
     if label == '@talk': return talk(original_image)
     if label == '@skip': return skip(original_image, english)

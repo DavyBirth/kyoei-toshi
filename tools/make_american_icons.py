@@ -48,7 +48,7 @@ def encode_patch(original, image):
     return bytes(head)+compressed
 
 
-def glyph(image, reference, circle=False, glow=False):
+def glyph(image, reference, circle=False, glow=False, blue=False):
     """Transplant the native glyph, preserving the opaque pin/button interior."""
     image = image.convert('RGBA')
     pixels = list(image.getdata())
@@ -65,7 +65,7 @@ def glyph(image, reference, circle=False, glow=False):
     ref_pixels=list(reference.getdata())
     # Font faces have a neutral shared button body. Their colored glyph's
     # chroma gives its antialiased coverage without copying the button body.
-    chroma=lambda p:max(0,p[2]-p[0]) if circle else max(0,p[0]-p[2])
+    chroma=lambda p:max(0,p[2]-p[0]) if circle or blue else max(0,p[0]-p[2])
     peak=max(chroma(p) for p in ref_pixels if p[3]>160)
     mask=Image.new('L',reference.size)
     mask.putdata([round(max(0,min(1,(chroma(p)-2)/(peak-2)))*p[3]) for p in ref_pixels])
@@ -96,10 +96,70 @@ def glyph(image, reference, circle=False, glow=False):
     return image
 
 
+import numpy as np
+
+
+def refill(im, holes, box, iters=600):
+    """Diffuse premultiplied colour into cleared pixels so soft halos continue under removed glyphs."""
+    x0, y0, x1, y1 = box
+    # Work on a slightly larger window so real pixels around the box seed the fill.
+    x0, y0 = max(0, x0 - 4), max(0, y0 - 4); x1, y1 = min(im.width, x1 + 4), min(im.height, y1 + 4)
+    a = np.asarray(im, dtype=np.float32).copy()
+    sub = a[y0:y1, x0:x1]; pm = sub.copy(); pm[..., :3] *= pm[..., 3:4] / 255
+    mask = np.zeros(sub.shape[:2], bool)
+    for x, y in holes: mask[y - y0, x - x0] = True
+    # Solid leader lines must not bleed into the fill; treat them as unknown, then put them back.
+    g, mx = sub[..., 1], np.maximum(sub[..., 0], sub[..., 2])
+    strong = (sub[..., 3] > 150) & (g > 90) & (g > 1.4 * mx)
+    near = strong.copy()
+    for _ in range(3):
+        n = near.copy(); n[1:] |= near[:-1]; n[:-1] |= near[1:]; n[:, 1:] |= near[:, :-1]; n[:, :-1] |= near[:, 1:]; near = n
+    # Leader lines and their anti-aliased edges, plus coloured button icons, are kept but never seed the fill.
+    icon = (sub[..., 3] > 60) & (sub[..., :3].max(axis=2) - sub[..., :3].min(axis=2) > 35) & ~(g > 1.2 * mx)
+    line = ((near & (sub[..., 3] > 20) & (g > 1.15 * mx)) | icon) & ~mask
+    keep = sub.copy(); mask |= line; pm[mask] = 0
+    for _ in range(iters):
+        p = np.pad(pm, ((1, 1), (1, 1), (0, 0)), mode='edge')
+        avg = (p[1:-1, :-2] + p[1:-1, 2:] + p[:-2, 1:-1] + p[2:, 1:-1]) / 4
+        pm[mask] = avg[mask]
+    al = pm[..., 3:4]; rgb = np.where(al > 0.5, pm[..., :3] * 255 / np.maximum(al, 1e-3), 0)
+    sub[mask] = np.concatenate([rgb, al], axis=2)[mask]
+    sub[line] = keep[line]
+    a[y0:y1, x0:x1] = sub
+    return Image.fromarray(np.clip(a + 0.5, 0, 255).astype(np.uint8), 'RGBA').copy()
+
+
+def ring_cross(image, center, ring, stroke):
+    """'Press ◎ Button': remove only the thin outer ring (rebuilt from the striped banner
+    around it), keep the bold inner ring and draw the white cross inside it: the ⊗ used
+    by the control screens."""
+    cx, cy = center
+    holes = [(x, y) for y in range(int(cy - 17), int(cy + 18)) for x in range(int(cx - 17), int(cx + 18))
+             if 12.5 ** 2 <= (x - cx) ** 2 + (y - cy) ** 2 <= 16.5 ** 2]
+    out = image.convert('RGBA').copy(); px = out.load(); src = image.convert('RGBA').load()
+    # The banner's stripes run diagonally (constant along x+t, y-t): follow the stripe in both
+    # directions to clean pixels outside the glyph and blend them by distance.
+    for x, y in holes:
+        ends = []
+        for sgn in (1, -1):
+            t = 1
+            while (x + sgn * t - cx) ** 2 + (y - sgn * t - cy) ** 2 <= 18.5 ** 2: t += 1
+            ends.append((t, src[x + sgn * t, y - sgn * t]))
+        (t1, a), (t2, b) = ends; w1 = t2 / (t1 + t2)
+        px[x, y] = tuple(round(a[i] * w1 + b[i] * (1 - w1)) for i in range(4))
+    S = 4; arm = ring * 0.5
+    layer = Image.new('RGBA', (out.width * S, out.height * S)); d = ImageDraw.Draw(layer)
+    for sx in (-1, 1):
+        d.line([((cx - sx * arm) * S, (cy - arm) * S), ((cx + sx * arm) * S, (cy + arm) * S)], fill=(255, 255, 255, 255), width=round(stroke * S))
+    out.alpha_composite(layer.resize(out.size, Image.Resampling.LANCZOS))
+    return out
+
+
 def build(originals):
     out={}
     cross=preview(originals['font/icon/IC_batu_2.tex'])[0]
     circle=preview(originals['font/icon/IC_maru_1.tex'])[0]
+    big_cross=preview(originals['texture/intermission/IM_next_batu_button.tex'])[0]
     for a,b in PAIRS:
         ia,pa=unpack_tex(originals[a]);ib,pb=unpack_tex(originals[b])
         layout=lambda i:tuple(i[k] for k in ('width','height','levels','storage_family','channel_layout'))
@@ -108,7 +168,13 @@ def build(originals):
         out[a]=originals[b];out[b]=originals[a]
     for name,original in originals.items():
         if name=='texture/hud/maru_button.tex' or name.startswith('texture/text marker/talk_icon_'):
-            image=glyph(preview(original)[0],cross)
+            # The large native blue cross (same family as the swapped dialog buttons) keeps the
+            # stroke weight and the game's cross color; the 13 px font glyph came out thin and salmon.
+            image=glyph(preview(original)[0],big_cross,blue=True)
+        elif name in ('texture/hud/cursol_nextchat.tex', 'texture/stage_clear/sc_next.tex'):
+            image=glyph(preview(original)[0],big_cross,blue=True)
+        elif name=='texture/hud/resalt_next.tex':
+            image=ring_cross(preview(original)[0],(251.5,62.5),8.5,2.4)
         elif name.startswith('texture/hud/action_kaihi_batu_'):
             image=glyph(preview(original)[0],circle,circle=True,glow=name.endswith('_2.tex'))
         else:
