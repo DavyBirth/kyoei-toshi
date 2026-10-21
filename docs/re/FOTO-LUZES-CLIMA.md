@@ -93,3 +93,28 @@ variavel opt-in nenhum observador e instalado. Ainda nao ha nova luz emitida.
 Proximo passo: provar uma fonte propria nesse caminho sem alterar as luzes
 originais nem registrar ponteiros que possam ficar pendurados. A atividade do
 cache na pausa nao comprova por si so que uma entrada extra sera renderizada.
+
+### Selecao final de luzes — retomada20/10
+
+Prioridade reafirmada por Davy: continuar modo foto; minimapa fica para depois.
+Observer opt-in agora inclui290cf0,1457bytes/FNVff3f63c35f31e2dc. Assinatura
+SysV reconstruida com seis argumentos nos registradores e tres na pilha:
+sistema, tipos, views, origem, camera, filtro, saida, capacidade, viewport.
+Origem/camera/filtro sao encaminhados sem interpretar seus contratos completos.
+A rotina ordena as fontes e limita a saida pela capacidade. O observer chama
+primeiro a rotina original, preserva retorno/ordem e registra somente depois.
+Registros limitados a4amostras normais/8na foto, com tipos point/spot escolhidos.
+Nao confundir selecao para o renderer com prova de iluminacao visivel.
+
+Teste executavel PASS: nove argumentos, resultado, sentinela alem do retorno,
+conteudo das fontes/cache intacto e trampolim6bytes com os tres argumentos da
+pilha preservados. Build completo vinculado em executavel privado
+build/research/photo-mode/kyoei-photo-lights.exe. O kyoei.exe normal estava
+ocupado pelo PID24736, com pasta preparada claude-test; partida preservada.
+Nenhum jogo novo iniciado. A prova desse novo observer em cena ainda falta.
+Sem KYOEI_PHOTO_LIGHTS=observe, nenhum dos tres hooks e instalado.
+
+Proximo passo: coletar a selecao real na pausa quando a partida concorrente
+terminar, identificar fontes pontuais efetivamente selecionadas e concluir o
+ciclo de vida de uma fonte propria antes de oferecer posicionamento na HUD.
+Nao copiar uma luz da fase nem chamar destructor incompleto como atalho.

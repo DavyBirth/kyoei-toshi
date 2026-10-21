@@ -12,11 +12,16 @@
 #include <math.h>
 typedef uint32_t (ABI *Collect)(void*,uint32_t,uint32_t,void**,uint32_t);
 typedef void (ABI *CacheUpdate)(void*);
+/* 290cf0 consumes three stack arguments in addition to the six SysV registers.
+ * Keep the selection/culling inputs opaque and forward every argument. */
+typedef uint32_t (ABI *SelectLights)(void*,uint32_t,uint32_t,const void*,const void*,const void*,void**,uint32_t,uint32_t);
 static Collect original_collect;
 static CacheUpdate original_cache_update;
+static SelectLights original_select;
 static unsigned char *base;
 static _Atomic unsigned samples[2];
 static _Atomic unsigned cache_samples[2];
+static _Atomic unsigned selection_samples[2];
 static int readable(const void *p,size_t size){
     MEMORY_BASIC_INFORMATION info;
     if(!p || !VirtualQuery(p,&info,sizeof(info)) || info.State!=MEM_COMMIT ||
@@ -28,6 +33,29 @@ static void *pointer_at(const void *p,size_t at){void *v=NULL;if(p && readable((
 static float scalar_at(const void *p,size_t at){float v;memcpy(&v,(const char*)p+at,4);return v;}
 typedef struct {void *light;uint32_t type,views;} LightEntry;
 _Static_assert(sizeof(LightEntry)==16,"native light cache entry");
+static ABI uint32_t select_lights(void *system,uint32_t types,uint32_t views,const void *origin,
+                                  const void *camera,const void *filter,void **output,uint32_t capacity,uint32_t viewport){
+    const uint32_t count=original_select(system,types,views,origin,camera,filter,output,capacity,viewport);
+    if(system!=pointer_at(base,0x1354420) || pointer_at(system,0)!=base+0x1254b48)return count;
+    const int photo=kyoei_photo_hud_hidden() && kyoei_photo_scene_active();
+    if(atomic_fetch_add_explicit(&selection_samples[photo],1,memory_order_relaxed)>=(photo?8u:4u))return count;
+    gz_log("Photo light selection observer: active=%d caller=%p types=%x views=%x viewport=%u capacity=%u count=%u",
+        photo,__builtin_return_address(0),types,views,viewport,capacity,count);
+    if(count>capacity || count>512 || !readable(output,(size_t)count*sizeof(*output)))return count;
+    unsigned points=0,spots=0;
+    for(uint32_t i=0;i<count;++i){
+        void *light=output[i];uint32_t type;
+        if(!readable(light,0x240))continue;
+        memcpy(&type,(char*)light+0x224,4);
+        if(type==2)++points;else if(type==3)++spots;else continue;
+        if(i>=8)continue;
+        gz_log("Photo light selection observer: index=%u type=%u light=%p table=%p xyz=%.3f,%.3f,%.3f rgb=%.3f,%.3f,%.3f range=%.3f",
+            i,type,light,pointer_at(light,0),scalar_at(light,0x80),scalar_at(light,0x84),scalar_at(light,0x88),
+            scalar_at(light,0x230),scalar_at(light,0x234),scalar_at(light,0x238),scalar_at(light,0x22c));
+    }
+    gz_log("Photo light selection observer: selected_points=%u selected_spots=%u",points,spots);
+    return count;
+}
 static ABI void update_light_cache(void *system){
     original_cache_update(system);
     if(system!=pointer_at(base,0x1354420) || pointer_at(system,0)!=base+0x1254b48 || !readable(system,0x68))return;
@@ -82,23 +110,25 @@ void kyoei_photo_lights_configure(void *image,uint64_t size){
     if(!option || strcmp(option,"observe") || !image || size<0x1354430 || original_collect)return;
     const struct {size_t offset,length,displaced;uint64_t hash;const void *callback;} hooks[]={
         {0x343b10,260,5,UINT64_C(0x05e68dd6b0c7aae0),(const void*)collect_lights},
-        {0x290b80,361,6,UINT64_C(0xdd610201f41bd4bc),(const void*)update_light_cache}};
-    for(unsigned i=0;i<2;++i)if(hash_bytes((unsigned char*)image+hooks[i].offset,hooks[i].length)!=hooks[i].hash){
+        {0x290b80,361,6,UINT64_C(0xdd610201f41bd4bc),(const void*)update_light_cache},
+        {0x290cf0,1457,6,UINT64_C(0xff3f63c35f31e2dc),(const void*)select_lights}};
+    const unsigned hook_count=(unsigned)(sizeof(hooks)/sizeof(hooks[0]));
+    for(unsigned i=0;i<hook_count;++i)if(hash_bytes((unsigned char*)image+hooks[i].offset,hooks[i].length)!=hooks[i].hash){
         gz_log("Photo lights observer: signature differs; native collector retained");return;
     }
     unsigned char *relay=NULL;
     for(unsigned i=0;i<16 && !relay;++i)relay=VirtualAlloc((unsigned char*)image+0xd000000+i*0x10000,4096,MEM_COMMIT|MEM_RESERVE,PAGE_READWRITE);
     if(!relay)return;
-    for(unsigned i=0;i<2;++i){
+    for(unsigned i=0;i<hook_count;++i){
         unsigned char *code=(unsigned char*)image+hooks[i].offset,*slot=relay+64*i;
         const int64_t delta=(int64_t)(uintptr_t)(slot+32)-(int64_t)(uintptr_t)(code+5);
         if(delta<INT32_MIN || delta>INT32_MAX){VirtualFree(relay,0,MEM_RELEASE);return;}
         passthrough(slot,code,hooks[i].displaced);absolute_jump(slot+32,hooks[i].callback);
     }
     DWORD previous;
-    if(!VirtualProtect(relay,4096,PAGE_EXECUTE_READ,&previous) || !FlushInstructionCache(GetCurrentProcess(),relay,110)){VirtualFree(relay,0,MEM_RELEASE);return;}
-    original_collect=(Collect)relay;original_cache_update=(CacheUpdate)(relay+64);base=image;
-    for(unsigned i=0;i<2;++i){
+    if(!VirtualProtect(relay,4096,PAGE_EXECUTE_READ,&previous) || !FlushInstructionCache(GetCurrentProcess(),relay,64*hook_count)){VirtualFree(relay,0,MEM_RELEASE);return;}
+    original_collect=(Collect)relay;original_cache_update=(CacheUpdate)(relay+64);original_select=(SelectLights)(relay+128);base=image;
+    for(unsigned i=0;i<hook_count;++i){
         unsigned char *code=base+hooks[i].offset;
         if(!VirtualProtect(code,hooks[i].displaced,PAGE_EXECUTE_READWRITE,&previous)){
             gz_log("Photo lights observer: partial passthrough hooks; no light modifications");return;
@@ -109,5 +139,5 @@ void kyoei_photo_lights_configure(void *image,uint64_t size){
         if(!VirtualProtect(code,hooks[i].displaced,previous,&ignored) || !FlushInstructionCache(GetCurrentProcess(),code,hooks[i].displaced))
             gz_stop(21,"STOP: cannot finalize photo light observer");
     }
-    gz_log("Photo lights observer: collector/cache passthrough installed; no light/list modifications");
+    gz_log("Photo lights observer: collector/cache/selection passthrough installed; no light/list modifications");
 }

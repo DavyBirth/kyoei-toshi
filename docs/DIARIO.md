@@ -4465,3 +4465,15 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   hash do ELF proprio confirmado. Nenhuma partida iniciada, nenhum processo
   kyoei observado, nenhum runtime alterado. Prova720p/1080p ainda pendente.
   Preservadas alteracoes preexistentes no launcher/build_launcher e diario.
+
+- Davy reafirmou prioridade no modo foto; investigacao do minimapa suspensa.
+- Luzes: observer estendido ao seletor final290cf0, assinatura integral1457bytes
+  validada. Encaminha nove argumentos SysV, preserva retorno/ordem e registra
+  point/spot selecionados com limite de amostras. Normal sem hooks preservado.
+- Teste nativo PASS, inclusive trampolim6bytes com tres argumentos na pilha e
+  fontes/cache intocados. Build completo privado vinculado com sucesso em
+  build/research/photo-mode/kyoei-photo-lights.exe. Link do kyoei.exe normal
+  encontrou arquivo ocupado: PID24736 usa claude-test; partida preservada.
+- Nenhuma partida nova iniciada. Falta prova do seletor em cena e luz propria;
+  nao declarar iluminacao extra implementada. Retomar modo foto por essa prova,
+  depois clima/horario e pausa. Launcher e texturas preexistentes preservados.

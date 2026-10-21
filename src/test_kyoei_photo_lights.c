@@ -12,6 +12,15 @@ static ABI uint32_t spy(void *sys,uint32_t types,uint32_t views,void **out,uint3
     (void)sys;assert(types==4 && views==1 && cap==4);++calls;out[0]=(void*)0x1234;return 1;
 }
 static ABI void cache_spy(void *sys){(void)sys;++calls;}
+static void *selection_system;
+static unsigned char selected_point[0x270],selected_spot[0x290];
+static ABI uint32_t selection_spy(void *sys,uint32_t types,uint32_t views,const void *origin,
+                                  const void *camera,const void *filter,void **out,uint32_t capacity,uint32_t viewport){
+    assert(sys==selection_system && types==0x0c && views==0x81);
+    assert(origin==(void*)0x1110 && camera==(void*)0x2220 && filter==(void*)0x3330);
+    assert(capacity==3 && viewport==7);++calls;
+    out[0]=selected_point;out[1]=selected_spot;return 2;
+}
 int main(void){
     base=VirtualAlloc(NULL,0x1354430,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);assert(base);
     unsigned char system[0x68]={0};put_pointer(base,0x1354420,system);put_pointer(system,0,base+0x1259ba0);
@@ -27,6 +36,19 @@ int main(void){
     unsigned char before[sizeof(system)];memcpy(before,system,sizeof(system));
     update_light_cache(system);assert(calls==5 && !memcmp(before,system,sizeof(system)));
     assert(entries[0].light==(void*)0x1234 && entries[1].light==NULL);
+    uint32_t point_type=2,spot_type=3;
+    memcpy(selected_point+0x224,&point_type,4);memcpy(selected_spot+0x224,&spot_type,4);
+    original_select=selection_spy;selection_system=system;hud=active=1;
+    void *selected[3]={NULL,NULL,(void*)0x4440};
+    unsigned char point_before[sizeof(selected_point)],spot_before[sizeof(selected_spot)];
+    memcpy(point_before,selected_point,sizeof(selected_point));memcpy(spot_before,selected_spot,sizeof(selected_spot));
+    assert(select_lights(system,0x0c,0x81,(void*)0x1110,(void*)0x2220,(void*)0x3330,selected,3,7)==2);
+    assert(calls==6 && selected[0]==selected_point && selected[1]==selected_spot && selected[2]==(void*)0x4440);
+    assert(!memcmp(before,system,sizeof(system)) && !memcmp(point_before,selected_point,sizeof(selected_point)) && !memcmp(spot_before,selected_spot,sizeof(selected_spot)));
+    hud=0;
+    assert(select_lights(system,0x0c,0x81,(void*)0x1110,(void*)0x2220,(void*)0x3330,selected,3,7)==2 && calls==7);
+    selection_system=NULL;
+    assert(select_lights(NULL,0x0c,0x81,(void*)0x1110,(void*)0x2220,(void*)0x3330,selected,3,7)==2 && calls==8);
     VirtualFree(base,0,MEM_RELEASE);
     unsigned char *memory=VirtualAlloc(NULL,4096,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);assert(memory);
     const unsigned char function[]={0x31,0xc0,0x45,0x85,0xc0,0x74,0x06,0xb8,77,0,0,0,0xc3,0xb8,33,0,0,0,0xc3};
@@ -39,5 +61,17 @@ int main(void){
     assert(trampoline(NULL,0,0,NULL,0)==33);assert(trampoline(NULL,0,0,NULL,1)==77);
     trampoline=(Collect)(memory+128);assert(trampoline(NULL,0,0,NULL,0)==42);
     VirtualFree(memory,0,MEM_RELEASE);
-    puts("PHOTO LIGHT OBSERVER PASS: native outputs unchanged, invalid pointers ignored, relay preserves branch flags");
+    /* Exercise the real displaced selector prologue with nine SysV arguments:
+     * the three stack arguments must survive the two relay jumps as well. */
+    memory=VirtualAlloc(NULL,4096,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);assert(memory);
+    const unsigned char selector_body[]={0x55,0x48,0x89,0xe5,0x41,0x57,0x41,0x5f,0x5d};
+    memcpy(memory,selector_body,sizeof(selector_body));absolute_jump(memory+sizeof(selector_body),selection_spy);
+    passthrough(memory+64,memory,6);
+    assert(VirtualProtect(memory,4096,PAGE_EXECUTE_READ,&protection));
+    assert(FlushInstructionCache(GetCurrentProcess(),memory,96));
+    SelectLights selection_relay=(SelectLights)(memory+64);
+    assert(selection_relay(NULL,0x0c,0x81,(void*)0x1110,(void*)0x2220,(void*)0x3330,selected,3,7)==2 && calls==9);
+    assert(selected[0]==selected_point && selected[1]==selected_spot && selected[2]==(void*)0x4440);
+    VirtualFree(memory,0,MEM_RELEASE);
+    puts("PHOTO LIGHT OBSERVER PASS: native outputs unchanged, selection forwards all nine arguments, invalid pointers ignored, relay preserves branch flags");
 }
