@@ -4576,3 +4576,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   UnitHudLoadingTips identificados em listas; desenho/propriedade das fontes
   ainda nao provados. Preservar textos de cenario ao resolver. Menu nativo,
   segunda cena e controle fisico continuam pendentes.
+
+- Investigacao adicional das dicas: UnitHudLoadingTips possui UnitFontEx2
+  (12e1d78, drawae6820) com flags1b/5b; UnitHudTips possui UnitDummyText
+  (12e1ec0, draw2e56e0) flags19. Ambos walkers2f01f0 ja bloqueados; ha
+  desenho independente dos filhos. ae6820 continua apos chamar base2e56e0;
+  filtrar apenas sprite324720 nao garante ocultacao. Sem novo hook ainda.
+  Provas e caminho de retomada registrados em docs/re/FOTO-DICAS.md.
