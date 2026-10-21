@@ -83,3 +83,15 @@ quadro de 152–167 ms no início e picos de 67–100 ms. **Causa NÃO é shader
 Próximo: KYOEI_STUTTER_TRACE durante o giro para achar o escopo (suspeitas:
 upload/criação de texturas e buffers quando entra geometria nova na tela).
 Florista: balões encurtados (k645/k647/k649), commit a491fdb no ramo natural.
+
+### Travada ao girar: diagnóstico (21/10, 02:00)
+- Trace: piores quadros coincidem com lotes de comando de 190–340 ms.
+- Amostrador: corridas de 30–64 ms em `kyoei_memory_copy_impl` via
+  `BufferCache::ObtainBufferForImage` (upload de imagem). KYOEI_UPLOAD_TIMING=1
+  (novo, desligado por padrão) registra cópias >=2 ms: 4–22 MB cada, ~3,6 GB/s,
+  ~800 ms somados em 15 s de giro; repetidas (vídeos das TVs/streaming).
+- Cópia paralela em 4 threads: SEM ganho (mesmos ~3,6 GB/s) → limite não é CPU,
+  provável falta de página (backing/staging). Revertida.
+- Próximo: medir faltas de página na cópia (pré-tocar/VirtualAlloc com
+  MEM_COMMIT da staging, ou PrefetchVirtualMemory na origem), e evitar
+  re-upload de imagens não modificadas (por que 10,7 MB 44x?).

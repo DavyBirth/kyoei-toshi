@@ -49,7 +49,15 @@ int gz_memory_copy_upload(uintptr_t address, void *buffer, uint64_t size) {
         const char *option = getenv("KYOEI_UPLOAD_ALIAS");
         enabled = option && option[0] == '1';
     }
-    return kyoei_memory_copy_impl(address, buffer, size, 0, enabled);
+    static _Thread_local int timed = -1;
+    if (timed < 0) { const char *t = getenv("KYOEI_UPLOAD_TIMING"); timed = t && t[0] == '1'; }
+    if (!timed) return kyoei_memory_copy_impl(address, buffer, size, 0, enabled);
+    LARGE_INTEGER a, b, f; QueryPerformanceCounter(&a);
+    int r = kyoei_memory_copy_impl(address, buffer, size, 0, enabled);
+    QueryPerformanceCounter(&b); QueryPerformanceFrequency(&f);
+    double ms = (double)(b.QuadPart - a.QuadPart) * 1000.0 / (double)f.QuadPart;
+    if (ms >= 2.0) gz_log("Kyoei upload copy: bytes=%llu ms=%.2f MBps=%.0f dst=%p", (unsigned long long)size, ms, size / 1048576.0 / (ms / 1000.0), buffer);
+    return r;
 }
 void gz_memory_gpu_protect]=])
 kyoei_replace_checked(KYOEI_MEMORY "void gz_memory_gpu_protect" "${KYOEI_MEMORY_COPY_ENTRIES}")
