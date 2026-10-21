@@ -4594,3 +4594,20 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   menu nativo; clima precisa provar recurso/consumidor real (FOTO-LUZES-CLIMA).
   Alternativas viaveis catalogadas em FOTO-REFERENCIAS; nao declarar recurso
   nativo impossivel so porque nao ha prova na cena201.
+
+- Retomada21/10: Davy pediu continuar SEM abrir o jogo. Nenhuma partida aberta.
+  Terminal sandbox falhou no setup; leituras/compilacoes locais funcionaram
+  com PowerShell explicito/login=false em execucao revisada.
+- Dicas: donos localizados estaticamente no ELF proprio/hash conferido.
+  LoadingTips singleton152cbf0; Tips comuns via dono14976d0/vtable12d7708,
+  campo78 aponta para raiz12d8e58. Criacao/destruicao/publicacao mapeadas em
+  FOTO-DICAS.md; campo40 e recurso de layout, nao pai.
+- Preparado filtro estrutural puro para fontes das duas raizes, sem instalar
+  hooks novos. Reutiliza walker limitado do MailIcon; valida donos/tipos e
+  rechecks. Testes sinteticos tips e phone PASS com Clang/avisos como erros;
+  ambos tambem compilados/executados pelos alvos CMake. Diff whitespace PASS.
+  Ponteiros de cena nao sao retidos; concorrencia/lifetime ainda pede prova
+  antes da integracao. Nao declarar dicas removidas do PNG.
+- Preservadas alteracoes preexistentes launcher/build_launcher/stage_cache e
+  prioridade em CMakeLists. Proximo passo: lifetime/gates das duas fontes,
+  depois prova visual somente quando Davy autorizar abrir o jogo.
