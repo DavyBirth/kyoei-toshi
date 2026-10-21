@@ -116,10 +116,14 @@ const Pair *Select(Image &image, bool dirty, bool &changed, unsigned &mode) {
     Initialize(); changed = false;
     if (pairs.empty()) return nullptr;
     const auto &info = image.info;
+    // getenv scans the whole process environment; this runs for every bound texture,
+    // so read the switches once (they are fixed for the session).
+    static const bool input_test = std::getenv("KYOEI_INPUT_TEST") != nullptr;
+    static const char *const forced = std::getenv("KYOEI_PROMPT_MODE");
     static unsigned initial_reports=0;
     static std::unordered_map<uint64_t,bool> initial_shapes;
     const uint64_t shape=uint64_t(info.size.width)<<32|uint64_t(info.size.height)<<8|info.resources.levels;
-    if (std::getenv("KYOEI_INPUT_TEST") && initial_reports<160 && info.size.width>1 && info.size.width<512 && info.size.height<600 && initial_shapes.try_emplace(shape,true).second) {
+    if (input_test && initial_reports<160 && info.size.width>1 && info.size.width<512 && info.size.height<600 && initial_shapes.try_emplace(shape,true).second) {
         ++initial_reports;
         gz_log("Kyoei prompt image: %ux%u tiled=%u bits=%u mips=%u layers=%u block=%u bytes=%u",
             info.size.width,info.size.height,unsigned(info.props.is_tiled),info.num_bits,
@@ -131,7 +135,7 @@ const Pair *Select(Image &image, bool dirty, bool &changed, unsigned &mode) {
     if (!candidate) return nullptr;
     static unsigned reports=0;
     static std::unordered_map<uint64_t,bool> reported;
-    if (std::getenv("KYOEI_INPUT_TEST") && reports<24 && reported.try_emplace(image.image_uid,true).second) {
+    if (input_test && reports<24 && reported.try_emplace(image.image_uid,true).second) {
         ++reports;
         gz_log("Kyoei prompt candidate: %ux%u tiled=%u bits=%u mips=%u layers=%u bytes=%u pitch=%u",
             info.size.width,info.size.height,unsigned(info.props.is_tiled),info.num_bits,
@@ -164,7 +168,6 @@ const Pair *Select(Image &image, bool dirty, bool &changed, unsigned &mode) {
     const Pair &p = pairs[size_t(state.pair)];
     if (p.kind==1) kyoei_prompt_pause_seen();
     if (p.kind==2) { kyoei_prompt_status_seen(); return nullptr; }
-    const char *forced = std::getenv("KYOEI_PROMPT_MODE");
     mode = forced && !std::strcmp(forced, "controller") ? KYOEI_INPUT_CONTROLLER :
            forced && !std::strcmp(forced, "keyboard") ? KYOEI_INPUT_KEYBOARD : kyoei_input_current_mode();
     const unsigned variant=mode | (p.kind==1 && !kyoei_prompt_pause_root()?2u:0u);
