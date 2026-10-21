@@ -4627,3 +4627,19 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Continuada pesquisa estatica do menu de pausa; entrada nativa ainda pendente.
   Trabalho preexistente launcher/stage_cache/prioridade/analyze_stutter_trace
   permanece separado. Nao declarar dicas removidas do PNG sem teste em cena.
+
+- Pesquisa menu21/10: separados UnitHudPause(global153d780), UnitMenuManager
+  (singleton1543dd0) e UnitMainMenu(manager+A10); tipos/tabelas/fabricas e
+  assinaturas documentados em docs/re/FOTO-MENU-PAUSA.md. Mascara317c/e0 tem
+  outros consumidores, nao zerar globalmente ao transferir pausa para foto.
+- Menu principal possui seis entradas/curvas e limites0..5, arrays/cursor e
+  tratamento especial do indice5. b303d0 faz transicao circular de categorias,
+  nao e callback generico para um ID novo. Layout proprio inspecionado/hash
+  registrado, sem modificar nem versionar dados. Falta provar transferencia
+  de posse/animacoes antes de acrescentar linha. Nenhum hook de menu instalado.
+- Elo nativo confirmado depois: update do menu chama6f4600 em b2d566 com
+  paused1 e em b2e6d7 com paused0, ambos usando exclusoes menu_manager+B00.
+  Repetir paused1 enquanto ja pausado retorna cedo e nao reaplica exclusoes;
+  nao basta adotar pausa do menu como se fosse a pausa fotografica/exclusao12.
+  F10 atual recusa pausa preexistente; protecao preservada. Proxima pesquisa:
+  listaB00 e momento de fechamento/animacao. Jogo permaneceu fechado.
