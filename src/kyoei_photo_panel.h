@@ -6,6 +6,29 @@
 #include "kyoei_photo_settings.h"
 #include "kyoei_photo_notice.h"
 namespace KyoeiPhoto {
+inline void DrawCompositionGuide(){
+    const int mode=guide.load();if(!mode)return;
+    const auto size=ImGui::GetIO().DisplaySize;
+    const float scale=std::min(size.x/1920.f,size.y/1080.f);
+    const ImVec2 image(1920*scale,1080*scale),origin((size.x-image.x)*.5f,(size.y-image.y)*.5f);
+    const auto r=VisibleFrame(1920,1080,frame.load());
+    const ImVec2 a(origin.x+r.x*image.x,origin.y+r.y*image.y),b(a.x+r.w*image.x,a.y+r.h*image.y);
+    auto* draw=ImGui::GetBackgroundDrawList();
+    const auto line=[&](ImVec2 from,ImVec2 to){
+        draw->AddLine(from,to,IM_COL32(0,0,0,110),3);
+        draw->AddLine(from,to,IM_COL32(220,245,238,145),1);
+    };
+    if(mode==3){const ImVec2 center((a.x+b.x)*.5f,(a.y+b.y)*.5f);
+        line(ImVec2(center.x-12,center.y),ImVec2(center.x+12,center.y));
+        line(ImVec2(center.x,center.y-12),ImVec2(center.x,center.y+12));
+    }else{
+        const float fraction=mode==1?1.f/3.f:.381966011f;
+        for(float t:{fraction,1-fraction}){
+            line(ImVec2(a.x+(b.x-a.x)*t,a.y),ImVec2(a.x+(b.x-a.x)*t,b.y));
+            line(ImVec2(a.x,a.y+(b.y-a.y)*t),ImVec2(b.x,a.y+(b.y-a.y)*t));
+        }
+    }
+}
 inline void DrawCaptureNotice(){
     const auto notice=CurrentCaptureNotice();if(notice.message.empty())return;
     const auto size=ImGui::GetIO().DisplaySize;
@@ -23,6 +46,8 @@ inline std::string FieldValue(Field field,float fov,float roll) {
     case Field::Lens:std::snprintf(text,sizeof(text),"%.1f mm",fov>0?FocalLength(fov):0);break;
     case Field::Roll:std::snprintf(text,sizeof(text),"%.0f graus",roll);break;
     case Field::Speed:std::snprintf(text,sizeof(text),"%.2fx",camera_speed.load());break;
+    case Field::Guide:return GuideName(guide.load());
+    case Field::Frame:return FrameName(frame.load());
     case Field::Exposure:std::snprintf(text,sizeof(text),"%+.1f EV",grade.exposure);break;
     case Field::Contrast:std::snprintf(text,sizeof(text),"%.2f",grade.contrast);break;
     case Field::Saturation:std::snprintf(text,sizeof(text),"%.1f",grade.saturation);break;
@@ -96,7 +121,10 @@ inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll
     }
     ImGui::Separator();
     ImGui::PushStyleColor(ImGuiCol_Text,muted);
-    if(group==int(Group::Camera))ImGui::TextWrapped("Protagonista: %s | %s",player_hidden?"oculto":"visivel",controller?"Y/Triangulo alterna":"F11 alterna");
+    if(group==int(Group::Camera)){
+        ImGui::TextWrapped("Guias ficam fora do PNG. Enquadramento adiciona barras na foto, sem esticar a imagem.");
+        ImGui::TextWrapped("Protagonista: %s | %s",player_hidden?"oculto":"visivel",controller?"Y/Triangulo alterna":"F11 alterna");
+    }
     else if(group==int(Group::Image))ImGui::TextWrapped("Ajustes aparecem na cena e no PNG. A interface fica fora da foto.");
     else if(group==int(Group::Focus)){
         ImGui::TextWrapped("Distancia de foco: onde fica nitido. Menor numero f/: mais desfoque.");

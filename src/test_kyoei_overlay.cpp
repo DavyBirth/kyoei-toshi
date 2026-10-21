@@ -65,6 +65,19 @@ int main() {
         CHECK(notice && notice->Pos.x>=0 && notice->Pos.y>=0 &&
             notice->Pos.x+notice->Size.x<=height*16/9 && notice->Pos.y+notice->Size.y<=height);
     }
+    // Guides render with no panel and stay inside the chosen photographic frame.
+    for(unsigned height:{720u,1080u})for(int style=0;style<6;++style)for(int mode=1;mode<4;++mode){
+        KyoeiPhoto::frame=style;KyoeiPhoto::guide=mode;
+        auto* guide=KyoeiOverlayModel::Draw(height*16/9,height,1.f/60,[]{KyoeiPhoto::DrawCompositionGuide();});
+        CHECK(guide && guide->Valid && guide->TotalVtxCount>0);
+        const auto r=KyoeiPhoto::VisibleFrame(1920,1080,style);
+        const float width=float(height*16/9);
+        for(auto* list:guide->CmdLists)for(const auto& v:list->VtxBuffer){
+            CHECK(v.pos.x>=r.x*width-3 && v.pos.x<=(r.x+r.w)*width+3);
+            CHECK(v.pos.y>=r.y*height-3 && v.pos.y<=(r.y+r.h)*height+3);
+        }
+    }
+    KyoeiPhoto::frame=0;KyoeiPhoto::guide=0;
     KyoeiPhoto::experimental_dof=false;
     KyoeiPhoto::experimental_lights=false;
     KyoeiPhoto::capture_notice_until=std::chrono::steady_clock::now()-std::chrono::seconds(1);

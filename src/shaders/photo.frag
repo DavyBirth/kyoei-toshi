@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 #version 450
 layout(set=0,binding=0) uniform sampler2D image;
-layout(push_constant) uniform Grade {float exposure;float contrast;float saturation;int preset;float grain;float vignette;int encoded;uint width;uint height;} grade;
+layout(push_constant) uniform Grade {float exposure;float contrast;float saturation;int preset;float grain;float vignette;int frame;int encoded;uint width;uint height;} grade;
 layout(location=0) in vec2 uv;
 layout(location=0) out vec4 color;
 vec3 decodeRGB(vec3 c){return mix(c/12.92,pow((c+.055)/1.055,vec3(2.4)),greaterThan(c,vec3(.04045)));}
@@ -9,6 +9,14 @@ vec3 encodeRGB(vec3 c){c=clamp(c,0,1);return mix(c*12.92,1.055*pow(c,vec3(1.0/2.
 uint filmHash(uint x,uint y){uint h=x*0x9e3779b9u^y*0x85ebca6bu^0x1954u;h^=h>>16;h*=0x7feb352du;h^=h>>15;h*=0x846ca68bu;return h^(h>>16);}
 void main(){
     vec4 source=texture(image,uv);
+    if(grade.frame!=0){
+        const float ratios[6]=float[6](0,2.39,21.0/9.0,1,.8,4.0/3.0);
+        float ratio=ratios[clamp(grade.frame,0,5)],aspect=float(grade.width)/grade.height;
+        vec2 visible=aspect>ratio?vec2(ratio/aspect,1):vec2(1,aspect/ratio);
+        // Match CPU capture pixel centers even when the preview is resized.
+        vec2 center=(floor(uv*vec2(grade.width,grade.height))+.5)/vec2(grade.width,grade.height);
+        if(any(lessThan(center,(1-visible)*.5)) || any(greaterThan(center,(1+visible)*.5))){color=vec4(0,0,0,source.a);return;}
+    }
     vec3 input_color=source.rgb;
     if(grade.encoded!=0)input_color=decodeRGB(input_color);
     vec3 c=grade.contrast==0?vec3(.18):.18*pow(max(input_color*exp2(grade.exposure),vec3(0))/.18,vec3(grade.contrast));

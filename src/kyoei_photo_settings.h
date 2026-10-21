@@ -7,9 +7,10 @@
 #include <cstdint>
 #include "kyoei_photo_lights.h"
 namespace KyoeiPhoto {
-enum class Field {Lens,Roll,Speed,Exposure,Contrast,Saturation,Filter,Grain,Vignette,DofMode,FocusDistance,Aperture,LightSlot,LightControl,LightType,LightMode,LightColor,LightPower,LightX,LightY,LightZ,LightYaw,LightPitch,LightCone,Count};
+enum class Field {Lens,Roll,Speed,Guide,Frame,Exposure,Contrast,Saturation,Filter,Grain,Vignette,DofMode,FocusDistance,Aperture,LightSlot,LightControl,LightType,LightMode,LightColor,LightPower,LightX,LightY,LightZ,LightYaw,LightPitch,LightCone,Count};
 enum class Look {Original,Mono,Sepia,Cool,Warm,Kaiju1954,Tokusatsu,KaijuNight,AnimeKaiju,Count};
-struct Grade {float exposure=0,contrast=1,saturation=1;int filter=0;float grain=0,vignette=0;};
+struct Grade {float exposure=0,contrast=1,saturation=1;int filter=0;float grain=0,vignette=0;int frame=0;};
+inline std::atomic<int> guide{0},frame{0};
 inline std::atomic<int> selected{0},filter{0};
 inline std::atomic<float> exposure{0},contrast{1},saturation{1},camera_speed{1};
 inline std::atomic<bool> experimental_dof{false};
@@ -23,7 +24,7 @@ inline std::atomic<int> dof_mode{0};
 inline std::atomic<float> focus_distance{5},aperture{2.8f};
 inline std::atomic<float> grain{0},vignette{0};
 inline const char* FieldName(Field field) {
-    constexpr const char* names[]={"Distancia focal da lente","Rotacao","Velocidade","Exposicao","Contraste","Saturacao","Filtro","Granulacao","Vinheta","Desfoque","Distancia de foco","Abertura","Luz selecionada","Controle","Tipo de luz","Luz ligada","Cor","Intensidade","Posicao X","Altura","Posicao Z","Direcao horizontal","Inclinacao","Abertura do facho"};
+    constexpr const char* names[]={"Distancia focal da lente","Rotacao","Velocidade","Guia de composicao","Enquadramento","Exposicao","Contraste","Saturacao","Filtro","Granulacao","Vinheta","Desfoque","Distancia de foco","Abertura","Luz selecionada","Controle","Tipo de luz","Luz ligada","Cor","Intensidade","Posicao X","Altura","Posicao Z","Direcao horizontal","Inclinacao","Abertura do facho"};
     return names[std::clamp(int(field),0,int(Field::Count)-1)];
 }
 inline const char* FilterName(int value) {
@@ -67,10 +68,25 @@ inline void LightRgb(float rgb[3],int slot=-1){
     const auto& color=colors[std::clamp(light.color.load(),0,6)];
     for(int i=0;i<3;++i)rgb[i]=color[i]*light.power.load();
 }
-inline Grade GetGrade(){return {exposure.load(),contrast.load(),saturation.load(),filter.load(),grain.load(),vignette.load()};}
-inline bool Neutral(Grade g){return g.exposure==0 && g.contrast==1 && g.saturation==1 && g.filter==0 && g.grain==0 && g.vignette==0;}
-inline void ResetGrade(){exposure=0;contrast=1;saturation=1;filter=0;camera_speed=1;grain=0;vignette=0;dof_mode=0;focus_distance=5;aperture=2.8f;light_slot=0;light_control=false;for(auto& light:lights){light.mode=0;light.color=0;light.power=1;light.x=0;light.y=0;light.z=0;light.type=0;light.yaw=0;light.pitch=-15;light.cone=45;}}
+inline const char* GuideName(int value){constexpr const char* names[]={"Desligada","Tercos","Proporcao aurea","Centro"};return names[std::clamp(value,0,3)];}
+inline const char* FrameName(int value){constexpr const char* names[]={"Original","Cinema 2.39:1","Panoramico 21:9","Quadrado 1:1","Retrato 4:5","Classico 4:3"};return names[std::clamp(value,0,5)];}
+inline float FrameRatio(int value){constexpr float ratios[]={0,2.39f,21.f/9.f,1,.8f,4.f/3.f};return ratios[std::clamp(value,0,5)];}
+// Normalized visible rectangle; image pixels outside become black bars.
+struct FrameRect {float x=0,y=0,w=1,h=1;};
+inline FrameRect VisibleFrame(unsigned width,unsigned height,int value){
+    FrameRect r;const float ratio=FrameRatio(value);
+    if(!ratio || !width || !height)return r;
+    const float aspect=float(width)/height;
+    if(aspect>ratio){r.w=ratio/aspect;r.x=(1-r.w)*.5f;}
+    else {r.h=aspect/ratio;r.y=(1-r.h)*.5f;}
+    return r;
+}
+inline Grade GetGrade(){return {exposure.load(),contrast.load(),saturation.load(),filter.load(),grain.load(),vignette.load(),frame.load()};}
+inline bool Neutral(Grade g){return g.exposure==0 && g.contrast==1 && g.saturation==1 && g.filter==0 && g.grain==0 && g.vignette==0 && g.frame==0;}
+inline void ResetGrade(){guide=0;frame=0;exposure=0;contrast=1;saturation=1;filter=0;camera_speed=1;grain=0;vignette=0;dof_mode=0;focus_distance=5;aperture=2.8f;light_slot=0;light_control=false;for(auto& light:lights){light.mode=0;light.color=0;light.power=1;light.x=0;light.y=0;light.z=0;light.type=0;light.yaw=0;light.pitch=-15;light.cone=45;}}
 inline void AdjustGrade(Field field,int direction) {
+    if(field==Field::Guide)guide=(guide.load()+direction+4)%4;
+    if(field==Field::Frame)frame=(frame.load()+direction+6)%6;
     if(field==Field::LightSlot)light_slot=(light_slot.load()+direction+KYOEI_PHOTO_LIGHT_COUNT)%KYOEI_PHOTO_LIGHT_COUNT;
     if(field==Field::LightControl)light_control=!light_control.load();
     auto& light=CurrentLight();
@@ -147,8 +163,11 @@ inline void GradePixels(uint8_t* pixels,size_t bytes,bool bgra,Grade grade,unsig
     if(!width)width=unsigned(bytes/4);
     if(!width || bytes%(size_t(width)*4))return;
     const unsigned height=unsigned(bytes/(size_t(width)*4));
+    const auto rect=VisibleFrame(width,height,grade.frame);
     for(size_t i=0;i+3<bytes;i+=4) {
         auto* p=pixels+i;const int ri=bgra?2:0,bi=bgra?0:2;
+        const float x=(float(i/4%width)+.5f)/width,y=(float(i/4/width)+.5f)/height;
+        if(x<rect.x || x>rect.x+rect.w || y<rect.y || y>rect.y+rect.h){p[0]=p[1]=p[2]=0;continue;}
         float r=Decode(p[ri]/255.f),g=Decode(p[1]/255.f),b=Decode(p[bi]/255.f);
         GradeLinear(r,g,b,grade);
         r=Encode(r);g=Encode(g);b=Encode(b);

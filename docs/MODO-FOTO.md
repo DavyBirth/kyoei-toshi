@@ -183,3 +183,23 @@ de direcao visiveis na parede; PNG1080p e HUD lateral na cena201. Build e testes
 de luzes, entrada, selecao e layout720p/1080p passaram. Controle direto tem prova
 offline; roteiro visual interrompido por perda de foco. Segunda cena e controle
 fisico ainda pendem. Clima/horario e entrada pelo menu nativo seguem em pesquisa.
+
+## Composicao e enquadramento
+
+Na categoria **Camera**, Guia de composicao alterna desligada/tercos/proporcao
+aurea/centro. As linhas acompanham a area visivel do enquadramento e permanecem
+visiveis ao ocultar o painel comF9; desligue a guia para uma previa limpa.
+Guias sao apenas ajuda e nunca entram no PNG.
+
+Enquadramento oferece Original, Cinema2.39:1, Panoramico21:9, Quadrado1:1,
+Retrato4:5 e Classico4:3. Acrescenta barras pretas na previa e no PNG1080p;
+nao estica a cena, nao muda resolucao interna nem exporta arquivo recortado.
+R/R3 restaura original e desliga as guias. Prova real studio-3: cinema com138px
+acima/abaixo, quadrado420px nas laterais, retrato528px nas laterais.
+
+Pendencia encontrada nessa prova: dicas do jogo ainda podem aparecer no PNG.
+UnitHudTips/UnitHudLoadingTips identificados; propriedade/desenho dos textos
+precisam pesquisa para oculta-los sem apagar textos do cenario.
+
+Referencias e viabilidade dos proximos recursos em
+[FOTO-REFERENCIAS.md](re/FOTO-REFERENCIAS.md).

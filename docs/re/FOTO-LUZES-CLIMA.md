@@ -1,8 +1,9 @@
 # Pesquisa de luzes e ambiente no modo foto
 
-Estado em20/10/2026: pesquisa local do dump proprio. Nenhuma luz extra, troca
-de clima ou horario implementada. Nao confundir exposicao/paleta com esses
-recursos. Prioridade segue foco/desfoque, luzes, clima/horario e menu de pausa.
+Estado atual em20/10/2026: tres luzes extras implementadas e comprovadas,
+com tipos geral/spot, cor, potencia, posicao e direcao. Clima/horario ainda
+nao implementados. As secoes anteriores abaixo preservam a evolucao da pesquisa;
+o resultado mais recente esta ao fim deste documento.
 
 ## Fontes de luz
 
@@ -192,3 +193,49 @@ Pesquisa de ambiente avancou: registro ba89d0 de UnitSkySphere expoe
  astronomicas. UnitHudDateTime registra _day/_time junto de _place/_money/
  _treasure: nao e prova de relogio de iluminacao. Falta provar instancia ativa
  de SkySphere na fase e consumidor temporal antes de decidir viabilidade.
+
+### Tres luzes, HUD e apontamento relativo
+
+Tres slots independentes; duas instancias reutilizaveis por slot (geral/spot),
+no maximo seis alocacoes nativas por processo. Instancia do tipo anterior e
+desativada antes de alternar. Mantida a restricao de ciclo de vida descrita
+acima: nao liberar unidade registrada com referencias possivelmente pendentes.
+
+Spot factory2ac8f0/vtable1254fc8, update2acad0. Direcao normalizada+250 e
+angulos externo/interno+260/+264 em radianos; setters nativos358da0/358de0
+fazem conversao de graus. Consumidor293e40 transforma a direcao na vista e usa
+2acb90 para cosenos/meio angulo. Prova studio-1 capturas6a9: cone60 ilumina
+parede amplamente, cone15 forma foco estreito, girar retira facho da parede.
+
+Ao ligar, origem e orientacao sao ancoradas na camera fotografica. Os controles
+de giro/inclinacao aplicam offsets dessa orientacao; a luz permanece fixa ao
+reenquadrar. Teste cobre camera voltada-X e giro90. Controle direto WASD/pad
+neutraliza entrada da camera. Prova privada studio-2: deslocamentoZ-0.59,
+PNG e painel; ao sair camera_distance_from_entry=0.00, luz desativada. Controle
+fisico e segunda cena ainda precisam prova.
+
+### Viabilidade de clima e horario: leitura do ambiente ativo
+
+Pesquisa somente leitura do perfil privado studio-2. GxSysEnvironment ativo
+em singleton1385028, vtable1259898, tamanho710; inicializador33c450. Existe
+calculo astronomico real na virtual30/33cb40: data+38, fracao temporal double
++48, passo+58, direcao solar+70 e cores derivadas+80/+90. Isso e infraestrutura
+do motor; nao comprova que as luzes da fase acompanhem esses valores.
+
+Registro33fca0 expoe latitude+20, longitude+24, altitude+28, obliquidade+2c,
+rotationTime+48, rotationSpeedScale+58, cloudyFactor+64, stormyFactor+68 e
+blizzardFactor+6c. Na partida observada, fatores clim?ticos e passo temporal
+estavam zerados. Leitura de2313 referencias de unidades em listas de update/
+draw nao encontrou UnitSkySphere; cobertura limitada as listas examinadas.
+
+Os consumidores diretos do singleton recuperados foram gerenciamento do
+sistema (344cc0/345170) e metodos de UnitSkySphere. Nao foi provada ligacao
+entre esse relogio e a iluminacao carregada da cena201. PARAM_WEATHER e
+WEATHER_1..4 sao constantes registradas na API Lua6980b0; icones de clima sao
+usados no HUD. Nenhum desses identificadores prova troca visual de clima.
+
+Decisao desta rodada: nao expor hora/clima a partir desses campos, nem alterar
+estado narrativo para simular o recurso. Ainda nao e prova de impossibilidade.
+Faltam identificar emissores de chuva por recurso e uma fase com SkySphere,
+bem como restauracao segura e dependencias de sombras/GI/ceu. Priorizar
+funcionalidades fotografias independentes enquanto isso.

@@ -21,7 +21,7 @@ vk::PipelineLayout layout;
 vk::Pipeline pipeline;
 std::unordered_map<void*,vk::DescriptorSet> sets;
 struct Push {Grade grade;int encoded;unsigned width,height;};
-static_assert(sizeof(Push)==36);
+static_assert(sizeof(Push)==40);
 static constexpr uint32_t vertex[]=
 #include "photo.vert.inc"
 ;

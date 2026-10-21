@@ -4553,3 +4553,26 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Melhorado inicio da spot: direcao passa a ser relativa a camera ao ligar,
   ancora preservada ao reenquadrar. Teste cobre camera voltada-X e giro90,
   sem arrastar fonte quando a camera gira. Build completo/lights PASS.
+
+- Composicao: guias tercos/aurea/centro fora do PNG, com painel oculto ou
+  visivel, acompanhando area fotografica. Enquadramentos original/cinema2.39/
+  panoramico21:9/quadrado/retrato4:5/classico4:3 com barras no shader e CPU.
+  Sem esticar imagem, mudar resolucao interna ou alterar simulacao.
+- Build completo e testes settings/input/overlay/lights PASS. Teste ImGui cobre
+  guias sem painel nos seis enquadramentos720p/1080p e limites geom?tricos;
+  CPU cobre RGBA/BGRA/alpha/centro preservado/reset. Prova studio-3 PID28168:
+  PNGcinema138px superiores, quadrado420px laterais, retrato528px laterais.
+  Guias nao entram no PNG. PNGs e capturas permanecem privados.
+- Spot relativa a camera comprovada visualmente ao ligar; controle diretoJ
+  gira facho para lateral (HUD-30graus) mantendo camera. studio-2 saiu com
+  camera_distance_from_entry=0.00 e fonte desativada.
+- Pesquisa clima/hora: sistema astronomico ativo, mas nenhum SkySphere entre
+  referencias2313listas examinadas; fatoresclima/passo zerados. Identificadores
+  PARAM_WEATHER sao constantes Lua, nao prova de clima visual. Nao declarar
+  impossibilidade nem expor controles sem consumidor efetivo. Detalhes em
+  docs/re/FOTO-LUZES-CLIMA.md; sem escritas de ambiente na partida.
+- Referencias oficiais estudadas e matriz de viabilidade em FOTO-REFERENCIAS.
+  Pendencia nova reproduzida: dicas do jogo vazam no PNG. UnitHudTips e
+  UnitHudLoadingTips identificados em listas; desenho/propriedade das fontes
+  ainda nao provados. Preservar textos de cenario ao resolver. Menu nativo,
+  segunda cena e controle fisico continuam pendentes.

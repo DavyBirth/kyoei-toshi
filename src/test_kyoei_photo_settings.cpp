@@ -37,7 +37,7 @@ int main(){
     for(size_t i=0;i<film.size();i+=4)assert(film[i]==film[i+1] && film[i+1]==film[i+2] && film[i+3]==73);
     AdjustGrade(Field::Grain,1);assert(grain>.35f && filter==int(Look::Kaiju1954));
     ResetGrade();assert(Neutral(GetGrade()));
-    selected=0;SelectField(-1);assert(selected==int(Field::Speed));SelectField(1);assert(selected==0);
+    selected=0;SelectField(-1);assert(selected==int(Field::Frame));SelectField(1);assert(selected==0);
     for(int i=0;i<200;++i){AdjustGrade(Field::FocusDistance,-1);AdjustGrade(Field::Aperture,1);}
     assert(dof_mode==1 && focus_distance==.2f && aperture==32);
     AdjustGrade(Field::DofMode,1);assert(dof_mode==2);
@@ -79,6 +79,18 @@ int main(){
     assert(CurrentLight().pitch==89 && CurrentLight().cone==5 && std::abs(CurrentLight().yaw.load())<=180);
     ResetGrade();for(const auto& light:lights)assert(light.mode==0 && light.color==0 && light.power==1 && light.x==0 && light.y==0 && light.z==0);
     assert(!light_control && CurrentLight().type==0 && CurrentLight().pitch==-15 && CurrentLight().cone==45);
+    // Framing is identical for RGBA/BGRA and preserves alpha and center pixels.
+    for(int style=1;style<=5;++style){
+        Grade framed;framed.frame=style;assert(!Neutral(framed));
+        std::vector<uint8_t> rgba(160*90*4,128);for(size_t i=3;i<rgba.size();i+=4)rgba[i]=73;
+        auto bgra=rgba;GradePixels(rgba.data(),rgba.size(),false,framed,160);
+        GradePixels(bgra.data(),bgra.size(),true,framed,160);assert(rgba==bgra);
+        const size_t center=(45*160+80)*4;assert(rgba[center]==128 && rgba[center+3]==73);
+        assert(rgba[0]==0 && rgba[1]==0 && rgba[2]==0 && rgba[3]==73);
+    }
+    guide=1;assert(Neutral(GetGrade()));AdjustGrade(Field::Guide,-1);assert(guide==0);
+    AdjustGrade(Field::Guide,-1);assert(guide==3);AdjustGrade(Field::Frame,-1);assert(frame==5);
+    ResetGrade();assert(guide==0 && frame==0 && Neutral(GetGrade()));
     // Smooth anime palette must retain nearby tones instead of posterizing them.
     float ar=.10f,ag=.10f,ab=.10f,br=.101f,bg=.101f,bb=.101f;
     Grade anime;anime.filter=int(Look::AnimeKaiju);GradeLinear(ar,ag,ab,anime);GradeLinear(br,bg,bb,anime);

@@ -159,7 +159,9 @@ void Render(vk::CommandBuffer command,vk::ImageView view,vk::Extent2D extent) {
     auto *draw=KyoeiOverlayModel::Draw(extent.width,extent.height,elapsed,[]{
         if(kyoei_overlay_kind())return;
         KyoeiPhoto::DrawCaptureNotice();
-        if(!kyoei_photo_hud_hidden() || !KyoeiPhoto::hints.load())return;
+        if(!kyoei_photo_hud_hidden())return;
+        KyoeiPhoto::DrawCompositionGuide();
+        if(!KyoeiPhoto::hints.load())return;
         KyoeiPhoto::DrawPanel(kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER,kyoei_photo_player_hidden()!=0,
             kyoei_photo_scene_fov_value(),kyoei_photo_scene_roll_value(),kyoei_photo_dof_available()!=0);
     });
