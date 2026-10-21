@@ -1,4 +1,4 @@
-/* Opt-in observation of the verified CUSA03562 command-marker consumer.
+﻿/* Opt-in observation of the verified CUSA03562 command-marker consumer.
  * Original routine runs unchanged through a SysV trampoline; no text/layout
  * edits, and no per-frame logging. SPDX-License-Identifier: GPL-2.0-or-later */
 #include "gz.h"
@@ -42,7 +42,12 @@ static int load_metrics(const char *path) {
     return 1;
 }
 
+uint64_t gz_memory_clamp(uintptr_t address, uint64_t size);
 static int readable(const void *pointer, size_t size) {
+    /* Guest heap: the runtime's region table answers without a VirtualQuery syscall
+     * (this ran several times per HUD marker per frame). A GPU-watched page then faults
+     * into the runtime handler exactly as a guest read would. */
+    if ((uintptr_t)pointer >= UINT64_C(0x1000000000)) return pointer && size && gz_memory_clamp((uintptr_t)pointer, size) == size;
     MEMORY_BASIC_INFORMATION info;
     if (!pointer || !VirtualQuery(pointer, &info, sizeof(info)) || info.State!=MEM_COMMIT ||
         (info.Protect&(PAGE_NOACCESS|PAGE_GUARD))) return 0;
