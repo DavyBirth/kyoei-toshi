@@ -4651,3 +4651,12 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   estagios com 1024 entradas e indice hash. Build completo OK; testes nativos
   PASS (pc_names/png/vmem_reference exigem argumentos/endereco proprio, sem
   relacao). Ganho de FPS ainda nao medido em jogo.
+
+- Trava30 (21/10): KYOEI_FRAME_CAP=30/20 opt-in apresenta a cada2/3 vblanks,
+  vblank/tempo convidado intactos (jogo usa passo medido, modo0, minimo15).
+  ABBA framecap-20261021 sem/30/30/sem, mudo, 20s parado+giro L, exit0:
+  33,53/26,55/26,25/28,75FPS; >50ms 36/55/56/47; >100ms 3/6/8/6; p99
+  83/100/101/101ms. Trava30 PIOROU: quadro que perde o slot33ms espera66ms.
+  Esta maquina nao sustenta30 firmes no giro; travar nao estabiliza. Padrao
+  continua sem trava. Foco perdido nas rodadas3/4 (29/29). GZ_VBLANK_HZ ja
+  existe para testar120 depois. Proximo: perfil CPU do giro.

@@ -415,6 +415,12 @@ add_library(kyoei_videoout OBJECT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_videoout.cp
 # Release the old surface before publishing completion. Otherwise a guest
 # woken by the event can lock it for a new flip before the late reset to zero.
 file(READ "${KYOEI_SHAD}/src/core/libraries/videoout/driver.cpp" KYOEI_VIDEOOUT_DRIVER)
+# KYOEI_FRAME_CAP=30/20 presents every 2nd/3rd vblank, like the guest's own
+# flip rates 1/2. Vblank events and guest time keep running at full rate; the
+# game measures elapsed time per frame, so simulation speed is unchanged.
+kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
+  "        if (vblank_status.count % (main_port.flip_rate + 1) == 0) {"
+  "        static const s32 kyoei_min_flip_rate = [] { const char* cap = std::getenv(\"KYOEI_FRAME_CAP\"); const int fps = cap ? std::atoi(cap) : 0; return fps >= 15 && fps < 60 ? 60 / fps - 1 : 0; }();\n        if (vblank_status.count % (std::max(main_port.flip_rate, kyoei_min_flip_rate) + 1) == 0) {")
 if(KYOEI_EXPERIMENTAL_RENDERER)
 set(KYOEI_VIDEOOUT_DRIVER "#include \"kyoei_present_timer.h\"\n${KYOEI_VIDEOOUT_DRIVER}")
 kyoei_replace_checked(KYOEI_VIDEOOUT_DRIVER
