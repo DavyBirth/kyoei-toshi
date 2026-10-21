@@ -95,3 +95,8 @@ Florista: balões encurtados (k645/k647/k649), commit a491fdb no ramo natural.
 - Próximo: medir faltas de página na cópia (pré-tocar/VirtualAlloc com
   MEM_COMMIT da staging, ou PrefetchVirtualMemory na origem), e evitar
   re-upload de imagens não modificadas (por que 10,7 MB 44x?).
+- Cópia repetida 2x: 2ª quase tão lenta → NÃO é falta de página; é banda pura
+  (~4–5 GB/s, cópias legítimas: vídeos das TVs). Somadas não explicam os
+  quadros de 150 ms. Amostrador também mostrou corridas de 30–47 ms em
+  Cnd_wait da thread da GPU no meio do giro: a GPU fica esperando o JOGO
+  (threads convidadas). Próximo: amostrar a thread "guest main" no giro.
