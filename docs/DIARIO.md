@@ -4489,3 +4489,17 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   link completo privado PASS. Sessao muda light-source-20261020 preparada com
   saves de teste separados. PID24736/claude-test permanece aberto/preservado;
   nenhum jogo iniciado. Proxima prova: fonte selecionada e luz visivel emF10.
+
+- Davy autorizou testar luzes; clima/horario sao pesquisa de viabilidade, sem
+  forcar. Se inviaveis, finalizar modo foto util, integrar menu e seguir.
+- Prova real muda native-source-1: luz nativa propria ilumina cenario/corpo e
+  PNG1080p; selecionada no renderer. Criacao1, dois ciclos ligar/desligar,
+  saida0. RGB da parede sobe de34/36/35 para118/42/41 e retorna33/34/34.
+- Controles integrados no painel: ligar/desligar, sete cores, intensidade e
+  X/altura/Z; desligada por padrao. Prova controls-1: branca/vermelha, potencia3,
+  X+2/-2 e resetR; fonte desligou antes de sairF10. PNGs/painel privados.
+- Build completo/testes luzes/settings/input/layout720p1080p PASS. Atalho
+  Testar modo foto habilita preview; normal/distribuicao antiga preservados.
+  PIDs37992/28176 encerrados normalmente0. Segunda cena/controle fisico pendem.
+- Ceu ba89d0 expoe cores dia/noite e sol/lua; instancia ativa e tempo consumidor
+  ainda precisam prova. Nao confundir horario do HUD com iluminacao da fase.

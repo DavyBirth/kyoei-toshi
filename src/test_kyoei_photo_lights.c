@@ -19,13 +19,14 @@ static ABI void cache_spy(void *sys){(void)sys;++calls;}
 static void *selection_system;
 static unsigned char selected_point[0x270],selected_spot[0x290];
 static unsigned char native_point[0x270];
+static float expected_x=10,expected_y=20,expected_z=30,expected_red=8;
 static ABI void *factory_spy(void){
     ++created;memset(native_point,0,sizeof(native_point));
     put_pointer(native_point,0,base+0x1254ed0);return native_point;
 }
 static ABI void update_spy(void *point){
-    assert(point==native_point && scalar_at(point,0x80)==10 && scalar_at(point,0x88)==30);
-    assert(scalar_at(point,0x230)==8);float range=12;
+    assert(point==native_point && scalar_at(point,0x80)==expected_x && scalar_at(point,0x84)==expected_y && scalar_at(point,0x88)==expected_z);
+    assert(scalar_at(point,0x230)==expected_red);float range=12;
     memcpy((char*)point+0x22c,&range,4);++updated;
 }
 static ABI uint32_t selection_spy(void *sys,uint32_t types,uint32_t views,const void *origin,
@@ -73,10 +74,19 @@ int main(void){
     active=0;update_owned_point(system);memcpy(&enabled,native_point+0x220,4);assert(!enabled && !source_was_active);
     active=1;update_owned_point(system);assert(created==1 && updated==2 && source_was_active);
     hud=0;update_owned_point(system);memcpy(&enabled,native_point+0x220,4);assert(!enabled);
+    source_controls=1;hud=1;expected_x=14;expected_y=22;expected_z=27;expected_red=.5f;
+    kyoei_photo_lights_input(1,.5f,1,2,4,2,-3);update_owned_point(system);
+    assert(created==1 && updated==3);
+    expected_x=15;kyoei_photo_lights_input(1,.5f,1,2,5,2,-3);update_owned_point(system);
+    assert(created==1 && updated==4);
+    kyoei_photo_lights_input(1,NAN,1,2,0,0,0);update_owned_point(system);assert(updated==4);
+    kyoei_photo_lights_input(1,.5f,1,2,51,0,0);update_owned_point(system);assert(updated==4);
+    kyoei_photo_lights_input(0,1,1,1,0,0,0);update_owned_point(system);
+    memcpy(&enabled,native_point+0x220,4);assert(!enabled);
     assert(!memcmp(before,system,sizeof(system)) && !memcmp(point_before,selected_point,sizeof(selected_point)) && !memcmp(spot_before,selected_spot,sizeof(selected_spot)));
     unsigned char replacement_system[0x68]={0};put_pointer(replacement_system,0,base+0x1254b48);
     put_pointer(base,0x1354420,replacement_system);hud=1;update_owned_point(replacement_system);
-    assert(source_failed && created==1 && updated==2);
+    assert(source_failed && created==1 && updated==4);
     source_proof=0;
     VirtualFree(base,0,MEM_RELEASE);
     unsigned char *memory=VirtualAlloc(NULL,4096,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);assert(memory);

@@ -44,6 +44,20 @@ int main(){
     ResetGrade();assert(dof_mode==0 && focus_distance==5 && aperture==2.8f);
     experimental_dof=true;selected=0;SelectField(-1);assert(selected==int(Field::Aperture));
     experimental_dof=false;selected=0;
+    for(bool dof:{false,true})for(bool lights:{false,true}) {
+        experimental_dof=dof;experimental_lights=lights;selected=0;
+        for(int i=0;i<FieldCount()*2;++i){SelectField(1);assert(FieldEnabled(selected.load()));}
+        assert(selected==0);
+        for(int i=0;i<FieldCount();++i){SelectField(-1);assert(FieldEnabled(selected.load()));}
+        assert(selected==0);
+    }
+    experimental_lights=false;experimental_dof=false;
+    AdjustGrade(Field::LightMode,1);assert(light_mode==1);
+    AdjustGrade(Field::LightColor,-1);assert(light_color==6);
+    for(int i=0;i<300;++i){AdjustGrade(Field::LightPower,1);AdjustGrade(Field::LightX,1);AdjustGrade(Field::LightY,-1);}
+    assert(light_power==16 && light_x==50 && light_y==-50);
+    float rgb[3];LightRgb(rgb);assert(rgb[0]>rgb[1] && rgb[2]==16);
+    ResetGrade();assert(light_mode==0 && light_color==0 && light_power==1 && light_x==0 && light_y==0 && light_z==0);
     // Smooth anime palette must retain nearby tones instead of posterizing them.
     float ar=.10f,ag=.10f,ab=.10f,br=.101f,bg=.101f,bb=.101f;
     Grade anime;anime.filter=int(Look::AnimeKaiju);GradeLinear(ar,ag,ab,anime);GradeLinear(br,bg,bb,anime);

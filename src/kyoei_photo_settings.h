@@ -6,29 +6,49 @@
 #include <cmath>
 #include <cstdint>
 namespace KyoeiPhoto {
-enum class Field {Lens,Roll,Speed,Exposure,Contrast,Saturation,Filter,Grain,Vignette,DofMode,FocusDistance,Aperture,Count};
+enum class Field {Lens,Roll,Speed,Exposure,Contrast,Saturation,Filter,Grain,Vignette,DofMode,FocusDistance,Aperture,LightMode,LightColor,LightPower,LightX,LightY,LightZ,Count};
 enum class Look {Original,Mono,Sepia,Cool,Warm,Kaiju1954,Tokusatsu,KaijuNight,AnimeKaiju,Count};
 struct Grade {float exposure=0,contrast=1,saturation=1;int filter=0;float grain=0,vignette=0;};
 inline std::atomic<int> selected{0},filter{0};
 inline std::atomic<float> exposure{0},contrast{1},saturation{1},camera_speed{1};
 inline std::atomic<bool> experimental_dof{false};
+inline std::atomic<bool> experimental_lights{false};
+inline std::atomic<int> light_mode{0},light_color{0};
+inline std::atomic<float> light_power{1},light_x{0},light_y{0},light_z{0};
 inline std::atomic<int> dof_mode{0};
 inline std::atomic<float> focus_distance{5},aperture{2.8f};
 inline std::atomic<float> grain{0},vignette{0};
 inline const char* FieldName(Field field) {
-    constexpr const char* names[]={"Distancia focal da lente","Rotacao","Velocidade","Exposicao","Contraste","Saturacao","Filtro","Granulacao","Vinheta","Desfoque","Distancia de foco","Abertura"};
+    constexpr const char* names[]={"Distancia focal da lente","Rotacao","Velocidade","Exposicao","Contraste","Saturacao","Filtro","Granulacao","Vinheta","Desfoque","Distancia de foco","Abertura","Luz adicional","Cor da luz","Intensidade da luz","Luz: eixo X","Luz: altura","Luz: eixo Z"};
     return names[std::clamp(int(field),0,int(Field::Count)-1)];
 }
 inline const char* FilterName(int value) {
     constexpr const char* names[]={"Original","Preto e branco","Sepia","Frio","Quente","Kaiju 1954","Tokusatsu retro","Kaiju noturno","Kaiju anime"};
     return names[std::clamp(value,0,int(Look::Count)-1)];
 }
-inline int FieldCount(){return experimental_dof.load()?int(Field::Count):int(Field::DofMode);}
-inline void SelectField(int direction) {const int count=FieldCount();selected.store((selected.load()+direction+count)%count);}
+inline bool FieldEnabled(int field){return field<int(Field::DofMode) ||
+    (field<int(Field::LightMode)?experimental_dof.load():experimental_lights.load());}
+inline int FieldCount(){return int(Field::DofMode)+(experimental_dof.load()?3:0)+(experimental_lights.load()?6:0);}
+inline void SelectField(int direction) {
+    int next=selected.load();const int count=int(Field::Count);
+    do{next=(next+(direction<0?-1:1)+count)%count;}while(!FieldEnabled(next));selected=next;
+}
+inline const char* LightColorName(int color){constexpr const char* names[]={"Branca","Quente","Fria","Vermelha","Verde","Azul","Violeta"};return names[std::clamp(color,0,6)];}
+inline void LightRgb(float rgb[3]){
+    constexpr float colors[][3]={{1,1,1},{1,.65f,.3f},{.4f,.65f,1},{1,.025f,.025f},{.025f,1,.025f},{.025f,.025f,1},{.65f,.05f,1}};
+    const auto& color=colors[std::clamp(light_color.load(),0,6)];
+    for(int i=0;i<3;++i)rgb[i]=color[i]*light_power.load();
+}
 inline Grade GetGrade(){return {exposure.load(),contrast.load(),saturation.load(),filter.load(),grain.load(),vignette.load()};}
 inline bool Neutral(Grade g){return g.exposure==0 && g.contrast==1 && g.saturation==1 && g.filter==0 && g.grain==0 && g.vignette==0;}
-inline void ResetGrade(){exposure=0;contrast=1;saturation=1;filter=0;camera_speed=1;grain=0;vignette=0;dof_mode=0;focus_distance=5;aperture=2.8f;}
+inline void ResetGrade(){exposure=0;contrast=1;saturation=1;filter=0;camera_speed=1;grain=0;vignette=0;dof_mode=0;focus_distance=5;aperture=2.8f;light_mode=0;light_color=0;light_power=1;light_x=0;light_y=0;light_z=0;}
 inline void AdjustGrade(Field field,int direction) {
+    if(field==Field::LightMode)light_mode=!light_mode.load();
+    if(field==Field::LightColor)light_color=(light_color.load()+direction+7)%7;
+    if(field==Field::LightPower)light_power=std::clamp(light_power.load()+direction*.25f,.25f,16.f);
+    if(field==Field::LightX)light_x=std::clamp(light_x.load()+direction*.25f,-50.f,50.f);
+    if(field==Field::LightY)light_y=std::clamp(light_y.load()+direction*.25f,-50.f,50.f);
+    if(field==Field::LightZ)light_z=std::clamp(light_z.load()+direction*.25f,-50.f,50.f);
     if(field==Field::DofMode)dof_mode=(dof_mode.load()+direction+3)%3;
     if(field==Field::FocusDistance){focus_distance=std::clamp(focus_distance.load()*std::pow(1.1f,float(direction)),.2f,1000.f);dof_mode=1;}
     if(field==Field::Aperture){aperture=std::clamp(aperture.load()+direction*.2f,1.f,32.f);dof_mode=1;}

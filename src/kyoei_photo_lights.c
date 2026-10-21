@@ -26,6 +26,19 @@ static UpdatePoint update_point;
  * free a registered unit while native caches/jobs may still reference it. */
 static void *owned_point,*owned_system;
 static int source_proof,source_was_active,source_failed;
+static int source_controls;
+static _Atomic int source_available;
+typedef struct {int enabled;float rgb[3],offset[3];} SourceInput;
+static SourceInput source_input,previous_input;
+static float source_anchor[3];
+static SRWLOCK source_lock=SRWLOCK_INIT;
+int kyoei_photo_lights_available(void){return atomic_load_explicit(&source_available,memory_order_acquire);}
+void kyoei_photo_lights_input(int enabled,float red,float green,float blue,float x,float y,float z){
+    SourceInput value={!!enabled,{red,green,blue},{x,y,z}};
+    for(unsigned i=0;i<3;++i)if(!isfinite(value.rgb[i]) || value.rgb[i]<0 || value.rgb[i]>16 ||
+        !isfinite(value.offset[i]) || fabsf(value.offset[i])>50)return;
+    AcquireSRWLockExclusive(&source_lock);source_input=value;ReleaseSRWLockExclusive(&source_lock);
+}
 static unsigned char *base;
 static _Atomic unsigned samples[2];
 static _Atomic unsigned cache_samples[2];
@@ -45,32 +58,36 @@ static void update_owned_point(void *system){
     if(system!=pointer_at(base,0x1354420) || pointer_at(system,0)!=base+0x1254b48)return;
     /* A changed system ends this proof. Do not follow an old allocator/unit
      * across an unproven scene lifetime or register the same unit twice. */
-    if(owned_system && owned_system!=system){source_failed=1;return;}
-    const int wanted=kyoei_photo_hud_hidden() && kyoei_photo_scene_active();
+    if(owned_system && owned_system!=system){source_failed=1;atomic_store(&source_available,0);return;}
+    SourceInput request={1,{8.f,.2f,.2f},{0,0,0}};
+    if(source_controls){AcquireSRWLockShared(&source_lock);request=source_input;ReleaseSRWLockShared(&source_lock);}
+    const int wanted=request.enabled && kyoei_photo_hud_hidden() && kyoei_photo_scene_active();
     float xyz[3];
     if(wanted && !source_was_active && !kyoei_photo_scene_light_position(xyz))return;
     if(wanted && !owned_point){
         owned_system=system;owned_point=create_point();
         if(!readable(owned_point,0x270) || pointer_at(owned_point,0)!=base+0x1254ed0){
-            source_failed=1;gz_log("Photo light source proof: native factory failed; no further writes");return;
+            source_failed=1;atomic_store(&source_available,0);gz_log("Photo light source proof: native factory failed; no further writes");return;
         }
         gz_log("Photo light source proof: created native point=%p; single process-lifetime allocation",owned_point);
     }
-    if(!owned_point || wanted==source_was_active)return;
+    if(!owned_point || (wanted==source_was_active && (!wanted || !memcmp(&request,&previous_input,sizeof(request)))))return;
     if(wanted){
-        const float rgb[3]={8.f,.2f,.2f};
+        if(!source_was_active)memcpy(source_anchor,xyz,sizeof(xyz));
+        for(unsigned i=0;i<3;++i)xyz[i]=source_anchor[i]+request.offset[i];
         memcpy((char*)owned_point+0x80,xyz,sizeof(xyz));
-        memcpy((char*)owned_point+0x230,rgb,sizeof(rgb));
+        memcpy((char*)owned_point+0x230,request.rgb,sizeof(request.rgb));
         /* Main viewport only. Native point range calculation is retained;
          * this proof does not enter the ordinary unit-update/culling jobs. */
         set_word(owned_point,0x30,1);set_word(owned_point,0x228,1);
         update_point(owned_point);set_word(owned_point,0x220,1);
-        gz_log("Photo light source proof: enabled xyz=%.3f,%.3f,%.3f range=%.3f",xyz[0],xyz[1],xyz[2],scalar_at(owned_point,0x22c));
+        if(!source_was_active)gz_log("Photo light source proof: enabled xyz=%.3f,%.3f,%.3f range=%.3f",xyz[0],xyz[1],xyz[2],scalar_at(owned_point,0x22c));
     }else{
         set_word(owned_point,0x220,0);set_word(owned_point,0x30,0);
         gz_log("Photo light source proof: disabled; allocation retained for outstanding native references");
     }
     source_was_active=wanted;
+    previous_input=request;
 }
 typedef struct {void *light;uint32_t type,views;} LightEntry;
 _Static_assert(sizeof(LightEntry)==16,"native light cache entry");
@@ -150,8 +167,8 @@ static void passthrough(unsigned char *out,const unsigned char *code,size_t disp
 }
 void kyoei_photo_lights_configure(void *image,uint64_t size){
     const char *option=getenv("KYOEI_PHOTO_LIGHTS");
-    if(!option || (strcmp(option,"observe") && strcmp(option,"source-proof")) || !image || size<0x1354430 || original_collect)return;
-    source_proof=!strcmp(option,"source-proof");
+    if(!option || (strcmp(option,"observe") && strcmp(option,"source-proof") && strcmp(option,"preview")) || !image || size<0x1354430 || original_collect)return;
+    source_controls=!strcmp(option,"preview");source_proof=source_controls || !strcmp(option,"source-proof");
     if(source_proof){
         const struct {size_t offset,length;uint64_t hash;} factory[]={
             {0x2ac650,121,UINT64_C(0xd49bd3916f22f555)},
@@ -197,5 +214,6 @@ void kyoei_photo_lights_configure(void *image,uint64_t size){
         if(!VirtualProtect(code,hooks[i].displaced,previous,&ignored) || !FlushInstructionCache(GetCurrentProcess(),code,hooks[i].displaced))
             gz_stop(21,"STOP: cannot finalize photo light observer");
     }
+    atomic_store_explicit(&source_available,source_controls,memory_order_release);
     gz_log("Photo lights: collector/cache/selection hooks installed; source_proof=%d; observer-only=%d",source_proof,!source_proof);
 }

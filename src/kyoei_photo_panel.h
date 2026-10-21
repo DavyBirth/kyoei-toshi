@@ -33,6 +33,11 @@ inline void DrawPanel(bool controller,bool player_hidden,float fov=40,float roll
         ImGui::Text("Granulacao: %.0f%% | Vinheta: %.0f%%",grade.grain*100,grade.vignette*100);
         constexpr const char* modes[]={"Original","Manual","Desligado"};
         if(experimental_dof.load())ImGui::Text("Desfoque experimental: %s%s | Foco: %.2f m | Abertura: f/%.1f",modes[dof_mode.load()],dof_available?"":" (indisponivel)",focus_distance.load(),aperture.load());
+        if(experimental_lights.load()) {
+            ImGui::Text("Luz adicional: %s | Cor: %s | Intensidade: %.2f",light_mode.load()?"ligada":"desligada",LightColorName(light_color.load()),light_power.load());
+            ImGui::Text("Posicao da luz: X %+.2f | Altura %+.2f | Z %+.2f",light_x.load(),light_y.load(),light_z.load());
+            if(selected.load()>=int(Field::LightMode))ImGui::TextUnformatted("Ao ligar, posiciona perto da camera. Desligue e ligue para reposicionar.");
+        }
         if(Field(selected.load())==Field::FocusDistance || Field(selected.load())==Field::Aperture)
             ImGui::TextUnformatted("Foco: distancia nitida | Abertura menor (f/): mais desfoque");
         if(Field(selected.load())==Field::Lens)

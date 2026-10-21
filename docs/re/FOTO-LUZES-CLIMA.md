@@ -156,3 +156,39 @@ conferir created/enabled/disabled no log e selected_photo_source=1 na selecao
 final; comparar PNG e host. Testar sair/reentrar e perda de foco. Se nao houver
 emissao, rastrear montagem dos parametros de luz, sem promover o prototipo.
 So apos prova visivel implementar controles e validar uma segunda cena.
+
+### Emissao real e controles comprovados —20/10
+
+Davy autorizou testes e esclareceu que clima/horario devem ser estudados sem
+ forcar: se nao forem viaveis, finalizar os recursos uteis, integrar no menu
+ e seguir as outras frentes. Nao chamar falta de prova de impossibilidade.
+
+Partida muda native-source-1, PID37992: fabrica nativa criou uma unica fonte,
+ selecionada em290cf0 (selected_photo_source=1). A luz vermelha iluminou
+ personagem, parede e maquina, inclusive PNG1920x1080. Dois ciclos F10:
+ created1/enabled2/disabled2; saida normal0. Amostra da parede em
+ (750,100)-(1250,330): RGB medio antes33.95/35.85/35.43, ligada117.99/41.72/40.88,
+ depois32.65/34.35/33.62. Segundo ciclo confirma o comportamento. Chuva/videos
+ voltam a correr fora da foto; nao alegar igualdade de PNG inteiro.
+ Relatorio privado light-source-20261020/native-source-report.json.
+
+Modo adicional preview exposto somente em Testar modo foto.cmd. Fonte inicia
+ desligada; painel permite ligar/desligar, sete cores, intensidade0.25..16 e
+ offsetsX/Y/Z -50..50. Origem fixada ao ligar: a camera pode se mover sem
+ arrastar a fonte. Desligar/religar reposiciona perto da camera. R/R3 restaura
+ desligada. Entrada host sanitizada/transferida com lock; escreve na instancia
+ propria na thread de reconstrucao do cache, sem alterar fontes originais.
+
+Partida muda controls-1, PID28176: ligou branca, mudou para vermelha, aumentou
+ intensidade a3, moveuX+2 eX-2, resetou comR e saiu comF10. Painel e PNGs
+ confirmados, disabled no reset, saida normal0. Capturas privadas
+ controls-panel.png e cincoPNGs da rodada. Testes de parametros invalidos,
+ limites/reset, navegacao com/semDOF/luzes e layout real720p/1080p PASS.
+ Build completo PASS. Ambas as partidas do agente encerradas normalmente.
+ Segunda cena/roupas/controle fisico continuam pendentes.
+
+Pesquisa de ambiente avancou: registro ba89d0 de UnitSkySphere expoe
+ _skyDayColor/_skyNightColor, sol/lua e horizonte, alem de rotacao e propriedades
+ astronomicas. UnitHudDateTime registra _day/_time junto de _place/_money/
+ _treasure: nao e prova de relogio de iluminacao. Falta provar instancia ativa
+ de SkySphere na fase e consumidor temporal antes de decidir viabilidade.

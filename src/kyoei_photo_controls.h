@@ -5,6 +5,7 @@
 #include "kyoei_photo_hud.h"
 #include "kyoei_photo_scene.h"
 #include "kyoei_photo_dof.h"
+#include "kyoei_photo_lights.h"
 #include "kyoei_photo_settings.h"
 namespace KyoeiPhotoControls {
 inline bool Enabled(){return kyoei_photo_scene_available() && kyoei_photo_hud_hidden();}
@@ -35,6 +36,11 @@ template<class Data,class Buttons> inline void Apply(Data& data,Buttons& buttons
     }
     release_gate=true;
     KyoeiPhoto::experimental_dof=kyoei_photo_dof_available()!=0;
+    KyoeiPhoto::experimental_lights=kyoei_photo_lights_available()!=0;
+    if(!KyoeiPhoto::FieldEnabled(KyoeiPhoto::selected.load()))KyoeiPhoto::SelectField(1);
+    float light_rgb[3];KyoeiPhoto::LightRgb(light_rgb);
+    kyoei_photo_lights_input(KyoeiPhoto::light_mode.load(),light_rgb[0],light_rgb[1],light_rgb[2],
+        KyoeiPhoto::light_x.load(),KyoeiPhoto::light_y.load(),KyoeiPhoto::light_z.load());
     kyoei_photo_dof_input(KyoeiPhoto::dof_mode.load(),KyoeiPhoto::focus_distance.load(),KyoeiPhoto::aperture.load(),kyoei_photo_scene_fov_value());
     const auto* keys=SDL_GetKeyboardState(nullptr);
     const auto trigger=[](unsigned char value){return value<=16?0.f:float(value-16)/239.f;};

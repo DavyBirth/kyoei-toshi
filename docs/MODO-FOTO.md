@@ -8,7 +8,7 @@ Na rua, com a janela ativa:
 - **WASD:** deslocar camera; **Espaco/Ctrl:** subir/descer.
 - **Mouse ou J/I/K/L:** olhar; **roda do mouse:** zoom pelo campo de visao.
 - **Shift:** deslocamento mais rapido.
-- **F11:** mostrar/ocultar protagonista (experimental; prova visual pendente).
+- **F11:** mostrar/ocultar protagonista (experimental; validado na cena de teste, outras roupas pendentes).
 - **F9:** mostrar/ocultar a barra de ajuda do modo foto.
 - **Setas esquerda/direita:** escolher ajuste; **cima/baixo:** alterar valor.
 - **R:** restaurar lente, rotacao, cores e velocidade.
@@ -131,8 +131,8 @@ finitas sao recusadas. Campo de visao15..110graus. A camera continua usando
 os dados carregados da cena; renderizacao/streaming a longa distancia ainda
 precisam ser conferidos. Outras cenas, cutscenes, transicoes,
 sombras/reflexos, transparencias e streaming ainda precisam de validacao.
-Exposicao tem controle host. Foco/desfoque tem prototipo interno opt-in,
-ainda sem efeito visual comprovado; nao e oferecido no atalho normal.
+Exposicao tem controle host. Foco/desfoque foi validado na cena de teste e
+esta no atalho experimental; outras cenas ainda precisam de verificacao.
 
 H alterna so o guia original grande/pequeno/oculto. F10 usa estado proprio.
 Filtros adicionais reconhecem a arvore do icone de mensagens e a classe
@@ -156,3 +156,21 @@ Detalhes em [FOTO-CAMERA-PAUSA.md](re/FOTO-CAMERA-PAUSA.md).
 A distancia focal segue a convencao optica nativa de35mm; a HUD mostra mm e
 explica que cima aproxima e baixo amplia o enquadramento. O filtro Kaiju anime
 usa agora cores suaves, sem faixas de posterizacao; grao/vinheta sao ajustaveis.
+
+## Luz adicional experimental
+
+Disponivel em **Testar modo foto.cmd**. Comeca desligada. Nas setas ou no
+ direcional, selecione Luz adicional e ajuste para ligar. Ha sete cores,
+ intensidade e deslocamento em X/altura/Z. A luz fica perto da camera ao ser
+ ligada e permanece posicionada enquanto voce reenquadra. Desligue e ligue
+ para posicionar novamente perto da camera. R/R3 desliga e restaura os ajustes.
+
+E uma fonte real do jogo: ilumina personagem/cenario e aparece no PNG, sem
+ alterar as luzes da fase. Ao sair do modo foto fica desativada. Valores ficam
+ apenas na memoria desta execucao, sem gravar save. Nao adiciona sombras novas.
+
+Prova visual em20/10: branca, vermelha, intensidade, deslocamento horizontal,
+ reset e dois ciclos de entrada/saida na cena201, com PNG1080p. Ainda falta
+ segunda cena e controle fisico. A fonte nativa e reutilizada (uma alocacao por
+ processo); trocar o sistema de luz encerra a previa por seguranca. Atalho
+ normal e distribuicao anterior permanecem sem esta ativacao experimental.
