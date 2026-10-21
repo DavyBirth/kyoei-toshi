@@ -112,3 +112,4 @@ Florista: balões encurtados (k645/k647/k649), commit a491fdb no ramo natural.
   processamento de comandos — não otimizar shaders ou cópias.
 - 4K: com GPU ociosa, subir a resolução interna deve custar pouco; validar com
   a escala de resolução quando a latência estiver resolvida.
+- getenv por linha medida no wrap de texto: 42,3 → 45,7 FPS parado (commit 47cead7).
