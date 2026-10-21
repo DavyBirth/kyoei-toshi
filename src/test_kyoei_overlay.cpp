@@ -45,9 +45,11 @@ int main() {
     KyoeiPhoto::ReportCapture(true,"synthetic.png",1920,1080);
     CHECK(!KyoeiPhoto::CurrentCaptureNotice().error &&
         KyoeiPhoto::CurrentCaptureNotice().message.find("1920 x 1080")!=std::string::npos);
-    for(bool lights:{false,true})for(bool prototype:{false,true})for(bool controller:{false,true})for(unsigned height:{720u,1080u}) {
+    for(bool lights:{false,true})for(bool prototype:{false,true})for(bool controller:{false,true})for(unsigned height:{720u,1080u})for(int group=0;group<4;++group) {
         KyoeiPhoto::experimental_lights=lights;
         KyoeiPhoto::experimental_dof=prototype;
+        KyoeiPhoto::CurrentLight().type=1;KyoeiPhoto::light_control=lights;
+        if(!KyoeiPhoto::SetGroup(group))continue;
         ImDrawData *photo=nullptr;
         // Exercise the exact photo panel within the real ImGui frame callback.
         for(int frame=0;frame<2;++frame) {

@@ -38,9 +38,10 @@ template<class Data,class Buttons> inline void Apply(Data& data,Buttons& buttons
     KyoeiPhoto::experimental_dof=kyoei_photo_dof_available()!=0;
     KyoeiPhoto::experimental_lights=kyoei_photo_lights_available()!=0;
     if(!KyoeiPhoto::FieldEnabled(KyoeiPhoto::selected.load()))KyoeiPhoto::SelectField(1);
-    float light_rgb[3];KyoeiPhoto::LightRgb(light_rgb);
-    kyoei_photo_lights_input(KyoeiPhoto::light_mode.load(),light_rgb[0],light_rgb[1],light_rgb[2],
-        KyoeiPhoto::light_x.load(),KyoeiPhoto::light_y.load(),KyoeiPhoto::light_z.load());
+    for(unsigned slot=0;slot<KYOEI_PHOTO_LIGHT_COUNT;++slot){
+        float rgb[3];KyoeiPhoto::LightRgb(rgb,int(slot));const auto& light=KyoeiPhoto::lights[slot];
+        kyoei_photo_lights_input(slot,light.mode.load(),rgb[0],rgb[1],rgb[2],light.x.load(),light.y.load(),light.z.load(),light.type.load(),light.yaw.load(),light.pitch.load(),light.cone.load());
+    }
     kyoei_photo_dof_input(KyoeiPhoto::dof_mode.load(),KyoeiPhoto::focus_distance.load(),KyoeiPhoto::aperture.load(),kyoei_photo_scene_fov_value());
     const auto* keys=SDL_GetKeyboardState(nullptr);
     const auto trigger=[](unsigned char value){return value<=16?0.f:float(value-16)/239.f;};
@@ -53,8 +54,19 @@ template<class Data,class Buttons> inline void Apply(Data& data,Buttons& buttons
     if(KyoeiMouse::captured){yaw-=KyoeiMouse::dx*.002f;pitch-=KyoeiMouse::dy*.002f;}
     KyoeiMouse::dx=KyoeiMouse::dy=0;
     // D-pad adjustment edges are handled by the host event loop.
-    kyoei_photo_scene_input(right,up,forward,yaw,pitch,
-        KyoeiPhoto::camera_speed.load()*(keys[SDL_SCANCODE_LSHIFT] || (buttons&0xc00)?3.f:1.f));
+    if(KyoeiPhoto::experimental_lights.load() && KyoeiPhoto::light_control.load()){
+        auto& light=KyoeiPhoto::CurrentLight();float delta[3];
+        const float rate=dt*2.f*KyoeiPhoto::camera_speed.load()*(keys[SDL_SCANCODE_LSHIFT] || (buttons&0x2)?3.f:1.f);
+        if(kyoei_photo_scene_light_move(right*rate,up*rate,forward*rate,delta)){
+            light.x=std::clamp(light.x.load()+delta[0],-50.f,50.f);
+            light.y=std::clamp(light.y.load()+delta[1],-50.f,50.f);
+            light.z=std::clamp(light.z.load()+delta[2],-50.f,50.f);
+        }
+        light.yaw=std::remainder(light.yaw.load()-yaw*57.29578f,360.f);
+        light.pitch=std::clamp(light.pitch.load()+pitch*57.29578f,-89.f,89.f);
+        kyoei_photo_scene_input(0,0,0,0,0,1);
+    }else kyoei_photo_scene_input(right,up,forward,yaw,pitch,
+        KyoeiPhoto::camera_speed.load()*(keys[SDL_SCANCODE_LSHIFT] || (buttons&0x2)?3.f:1.f));
     buttons=0;data.leftStick=data.rightStick={128,128};data.analogButtons={};
 }
 }

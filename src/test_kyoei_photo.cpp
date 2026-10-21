@@ -2,7 +2,7 @@
 #include "kyoei_photo_controls.h"
 #include <cstdio>
 #include <initializer_list>
-static int hidden=0,modal=0,exit_state=0,toggles=0,scene=0;
+static int hidden=0,modal=0,exit_state=0,toggles=0,scene=0,lights_available=0;
 static int player_toggles=0;
 extern "C" void kyoei_input_controller_button(void){}
 extern "C" void kyoei_input_keyboard(void){}
@@ -10,8 +10,9 @@ extern "C" int kyoei_photo_player_toggle(void){++player_toggles;return 1;}
 static float move_right=0,move_up=0,move_forward=0,look_yaw=0,fov_delta=0,speed=0;
 extern "C" int kyoei_photo_scene_available(void){return scene;}
 extern "C" int kyoei_photo_dof_available(void){return 0;}
-extern "C" int kyoei_photo_lights_available(void){return 0;}
-extern "C" void kyoei_photo_lights_input(int,float,float,float,float,float,float){}
+extern "C" int kyoei_photo_lights_available(void){return lights_available;}
+extern "C" void kyoei_photo_lights_input(unsigned,int,float,float,float,float,float,float,int,float,float,float){}
+extern "C" int kyoei_photo_scene_light_move(float right,float up,float forward,float xyz[3]){xyz[0]=right;xyz[1]=up;xyz[2]=forward;return 1;}
 extern "C" void kyoei_photo_dof_input(int,float,float,float){}
 extern "C" void kyoei_photo_scene_fov(float value){fov_delta+=value;}
 extern "C" float kyoei_photo_scene_fov_value(void){return 40;}
@@ -80,6 +81,8 @@ int main(){
     scene=1;hidden=1;exit_state=0;
     event={};event.type=SDL_EVENT_KEY_DOWN;event.key.windowID=SDL_GetWindowID(window);event.key.key=SDLK_SPACE;
     KyoeiPhoto::HandleEvent(window,event);CHECK(hidden); // vertical photo control
+    event.key.key=SDLK_TAB;const int before_category=KyoeiPhoto::selected.load();
+    KyoeiPhoto::HandleEvent(window,event);CHECK(hidden && KyoeiPhoto::selected==before_category); // blocked category never exits photo
     struct Stick{unsigned char x=128,y=128;};
     struct Data{Stick leftStick,rightStick;struct{unsigned char l2=0,r2=0;}analogButtons;} data;
     unsigned buttons=0xffff;data.leftStick={255,0};data.analogButtons={255,255};
@@ -94,7 +97,7 @@ int main(){
         KyoeiPhotoControls::Apply(data,buttons);
         CHECK(move_right==0 && move_forward==0 && look_yaw==0);
     }
-    data.analogButtons={0,255};buttons=0x800;KyoeiPhotoControls::Apply(data,buttons);
+    data.analogButtons={0,255};buttons=0x2;KyoeiPhotoControls::Apply(data,buttons);
     CHECK(move_up==1 && speed==3 && !buttons && !data.analogButtons.r2);
     data.analogButtons={255,0};buttons=0;KyoeiPhotoControls::Apply(data,buttons);
     CHECK(move_up==-1 && speed==1);
@@ -105,6 +108,11 @@ int main(){
     const float zoomed=fov_delta;
     event={};event.type=SDL_EVENT_MOUSE_WHEEL;event.wheel.windowID=SDL_GetWindowID(window);event.wheel.y=1;
     KyoeiPhoto::HandleEvent(window,event);CHECK(fov_delta==zoomed); // inactive window cannot zoom
+    lights_available=1;KyoeiPhoto::light_control=true;
+    data.leftStick={255,128};data.rightStick={255,128};SDL_Delay(10);KyoeiPhotoControls::Apply(data,buttons);
+    CHECK(move_right==0 && move_forward==0 && look_yaw==0 && KyoeiPhoto::CurrentLight().x>0 && KyoeiPhoto::CurrentLight().yaw>0);
+    KyoeiPhoto::ResetGrade();CHECK(!KyoeiPhoto::light_control && KyoeiPhoto::CurrentLight().x==0);
+    lights_available=0;
     scene=0;hidden=0;buttons=0x4000;data.leftStick={255,128};
     KyoeiPhotoControls::Apply(data,buttons);CHECK(!buttons && data.leftStick.x==128);
     buttons=0x4000;KyoeiPhotoControls::Apply(data,buttons);CHECK(!buttons); // held exit cannot leak

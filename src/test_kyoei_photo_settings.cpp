@@ -37,27 +37,48 @@ int main(){
     for(size_t i=0;i<film.size();i+=4)assert(film[i]==film[i+1] && film[i+1]==film[i+2] && film[i+3]==73);
     AdjustGrade(Field::Grain,1);assert(grain>.35f && filter==int(Look::Kaiju1954));
     ResetGrade();assert(Neutral(GetGrade()));
-    selected=0;SelectField(-1);assert(selected==FieldCount()-1);SelectField(1);assert(selected==0);
+    selected=0;SelectField(-1);assert(selected==int(Field::Speed));SelectField(1);assert(selected==0);
     for(int i=0;i<200;++i){AdjustGrade(Field::FocusDistance,-1);AdjustGrade(Field::Aperture,1);}
     assert(dof_mode==1 && focus_distance==.2f && aperture==32);
     AdjustGrade(Field::DofMode,1);assert(dof_mode==2);
     ResetGrade();assert(dof_mode==0 && focus_distance==5 && aperture==2.8f);
-    experimental_dof=true;selected=0;SelectField(-1);assert(selected==int(Field::Aperture));
+    experimental_dof=true;SetGroup(2);SelectField(-1);assert(selected==int(Field::Aperture));SetGroup(0);
     experimental_dof=false;selected=0;
-    for(bool dof:{false,true})for(bool lights:{false,true}) {
-        experimental_dof=dof;experimental_lights=lights;selected=0;
-        for(int i=0;i<FieldCount()*2;++i){SelectField(1);assert(FieldEnabled(selected.load()));}
-        assert(selected==0);
-        for(int i=0;i<FieldCount();++i){SelectField(-1);assert(FieldEnabled(selected.load()));}
-        assert(selected==0);
+    for(bool dof:{false,true})for(bool lights_enabled:{false,true}) {
+        experimental_dof=dof;experimental_lights=lights_enabled;
+        for(int group=0;group<4;++group){
+            if(!SetGroup(group))continue;
+            const int first=selected.load();int count=0;
+            for(int field=group_begin[group];field<group_end[group];++field)count+=FieldEnabled(field);
+            for(int i=0;i<count;++i){SelectField(1);assert(FieldEnabled(selected.load()) && FieldGroup(selected.load())==group);}
+            assert(selected==first);
+            for(int i=0;i<count;++i)SelectField(-1);
+            assert(selected==first);
+        }
+        SetGroup(0);SelectGroup(1);assert(FieldGroup(selected.load())==1);
+        SelectGroup(1);assert(FieldGroup(selected.load())==(dof?2:lights_enabled?3:0));
     }
+    SetGroup(1);selected=int(Field::Exposure);SelectField(1);SetGroup(0);SetGroup(1);assert(selected==int(Field::Contrast));
     experimental_lights=false;experimental_dof=false;
-    AdjustGrade(Field::LightMode,1);assert(light_mode==1);
-    AdjustGrade(Field::LightColor,-1);assert(light_color==6);
+    AdjustGrade(Field::LightMode,1);assert(CurrentLight().mode==1);
+    AdjustGrade(Field::LightColor,-1);assert(CurrentLight().color==6);
     for(int i=0;i<300;++i){AdjustGrade(Field::LightPower,1);AdjustGrade(Field::LightX,1);AdjustGrade(Field::LightY,-1);}
-    assert(light_power==16 && light_x==50 && light_y==-50);
+    assert(CurrentLight().power==16 && CurrentLight().x==50 && CurrentLight().y==-50);
     float rgb[3];LightRgb(rgb);assert(rgb[0]>rgb[1] && rgb[2]==16);
-    ResetGrade();assert(light_mode==0 && light_color==0 && light_power==1 && light_x==0 && light_y==0 && light_z==0);
+    ResetGrade();assert(CurrentLight().mode==0 && CurrentLight().color==0 && CurrentLight().power==1 && CurrentLight().x==0 && CurrentLight().y==0 && CurrentLight().z==0);
+    AdjustGrade(Field::LightMode,1);AdjustGrade(Field::LightColor,1);
+    AdjustGrade(Field::LightSlot,1);assert(light_slot==1 && CurrentLight().mode==0 && CurrentLight().color==0);
+    AdjustGrade(Field::LightMode,1);AdjustGrade(Field::LightX,1);
+    AdjustGrade(Field::LightSlot,1);assert(light_slot==2 && CurrentLight().mode==0 && CurrentLight().x==0);
+    AdjustGrade(Field::LightMode,1);AdjustGrade(Field::LightPower,1);
+    AdjustGrade(Field::LightSlot,1);assert(light_slot==0 && CurrentLight().mode==1 && CurrentLight().color==1 && CurrentLight().x==0);
+    assert(lights[1].mode==1 && lights[1].x==.25f && lights[2].mode==1 && lights[2].power==1.25f);
+    AdjustGrade(Field::LightType,1);assert(CurrentLight().type==1);
+    AdjustGrade(Field::LightControl,1);assert(light_control);
+    for(int i=0;i<300;++i){AdjustGrade(Field::LightPitch,1);AdjustGrade(Field::LightCone,-1);AdjustGrade(Field::LightYaw,1);}
+    assert(CurrentLight().pitch==89 && CurrentLight().cone==5 && std::abs(CurrentLight().yaw.load())<=180);
+    ResetGrade();for(const auto& light:lights)assert(light.mode==0 && light.color==0 && light.power==1 && light.x==0 && light.y==0 && light.z==0);
+    assert(!light_control && CurrentLight().type==0 && CurrentLight().pitch==-15 && CurrentLight().cone==45);
     // Smooth anime palette must retain nearby tones instead of posterizing them.
     float ar=.10f,ag=.10f,ab=.10f,br=.101f,bg=.101f,bb=.101f;
     Grade anime;anime.filter=int(Look::AnimeKaiju);GradeLinear(ar,ag,ab,anime);GradeLinear(br,bg,bb,anime);

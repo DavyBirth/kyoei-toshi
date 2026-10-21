@@ -10,7 +10,8 @@ Na rua, com a janela ativa:
 - **Shift:** deslocamento mais rapido.
 - **F11:** mostrar/ocultar protagonista (experimental; validado na cena de teste, outras roupas pendentes).
 - **F9:** mostrar/ocultar a barra de ajuda do modo foto.
-- **Setas esquerda/direita:** escolher ajuste; **cima/baixo:** alterar valor.
+- **Tab ou 1-4:** trocar entre Camera, Imagem, Foco e Luzes.
+- **Setas cima/baixo:** escolher ajuste; **esquerda/direita:** alterar valor.
 - **R:** restaurar lente, rotacao, cores e velocidade.
 - **F12:** salvar PNG em `photos/`, na pasta de execucao.
 
@@ -24,9 +25,10 @@ No controle (Xbox / PlayStation):
 | View / Share | Entrar/sair do modo foto |
 | Analogico esquerdo / direito | Mover / olhar |
 | LT/L2 / RT/R2 | Descer / subir |
-| LB/L1 ou RB/R1 segurado | Movimento rapido |
-| Direcional esquerda / direita | Escolher ajuste |
-| Direcional cima / baixo | Alterar valor do ajuste selecionado |
+| LB/L1 ou RB/R1 | Trocar categoria |
+| L3 segurado | Movimento rapido |
+| Direcional cima / baixo | Escolher ajuste |
+| Direcional esquerda / direita | Alterar valor do ajuste selecionado |
 | R3 | Restaurar ajustes |
 | A / Cruz | Salvar PNG |
 | Y / Triangulo | Mostrar/ocultar protagonista |
@@ -38,7 +40,7 @@ Referencia de organizacao/usabilidade, sem alegar equivalencia de recursos.
 
 Sair restaura a camera original e libera a pausa adquirida pela previa.
 Perder foco/minimizar restaura a interface; a proxima fase do jogo libera
-sua pausa. Esc/Tab e acoes de dialogo tambem encerram a previa. Espaco e
+sua pausa. Esc e acoes de dialogo tambem encerram a previa. Tab troca categoria. Espaco e
 movimento vertical enquanto a camera livre esta habilitada.
 
 O launcher portatil tem **Photo preview** em Controls, desligado por padrao.
@@ -157,20 +159,26 @@ A distancia focal segue a convencao optica nativa de35mm; a HUD mostra mm e
 explica que cima aproxima e baixo amplia o enquadramento. O filtro Kaiju anime
 usa agora cores suaves, sem faixas de posterizacao; grao/vinheta sao ajustaveis.
 
-## Luz adicional experimental
+## Tres luzes experimentais
 
-Disponivel em **Testar modo foto.cmd**. Comeca desligada. Nas setas ou no
- direcional, selecione Luz adicional e ajuste para ligar. Ha sete cores,
- intensidade e deslocamento em X/altura/Z. A luz fica perto da camera ao ser
- ligada e permanece posicionada enquanto voce reenquadra. Desligue e ligue
- para posicionar novamente perto da camera. R/R3 desliga e restaura os ajustes.
+Disponiveis em **Testar modo foto.cmd**, desligadas por padrao. Abra a categoria
+Luzes com **4**, Tab ou L1/R1. Selecione a fonte 1, 2 ou 3; cada uma tem estado,
+cor, intensidade, posicao e tipo independentes. Geral espalha luz em todas as
+direcoes; Direcionada permite ajustar giro, inclinacao e abertura do facho.
 
-E uma fonte real do jogo: ilumina personagem/cenario e aparece no PNG, sem
- alterar as luzes da fase. Ao sair do modo foto fica desativada. Valores ficam
- apenas na memoria desta execucao, sem gravar save. Nao adiciona sombras novas.
+Em Controle escolha **Luz selecionada** para usar WASD/analogico esquerdo no
+posicionamento, Espaco/Ctrl ou gatilhos na altura e mouse/JKIL/analogico direito
+na direcao. A camera fica parada. Volte Controle para Camera para reenquadrar.
+Tambem e possivel ajustar X/altura/Z pelas linhas do painel. Giro e inclinacao
+usam os eixos do mundo. Ligar posiciona perto da camera; desligar e ligar ancora
+novamente. R/R3 restaura todos os ajustes e desliga as tres fontes.
 
-Prova visual em20/10: branca, vermelha, intensidade, deslocamento horizontal,
- reset e dois ciclos de entrada/saida na cena201, com PNG1080p. Ainda falta
- segunda cena e controle fisico. A fonte nativa e reutilizada (uma alocacao por
- processo); trocar o sistema de luz encerra a previa por seguranca. Atalho
- normal e distribuicao anterior permanecem sem esta ativacao experimental.
+As fontes iluminam personagem/cenario e aparecem no PNG. Sao desativadas ao
+sair ou perder foco. Nao gravam save nem adicionam sombras novas. Objetos nativos
+sao reutilizados por processo; trocar o sistema de luz encerra a previa.
+
+Provas em20/10: tres gerais simultaneas; spot com facho largo/estreito e mudanca
+de direcao visiveis na parede; PNG1080p e HUD lateral na cena201. Build e testes
+de luzes, entrada, selecao e layout720p/1080p passaram. Controle direto tem prova
+offline; roteiro visual interrompido por perda de foco. Segunda cena e controle
+fisico ainda pendem. Clima/horario e entrada pelo menu nativo seguem em pesquisa.

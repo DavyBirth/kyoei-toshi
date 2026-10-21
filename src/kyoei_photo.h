@@ -42,10 +42,10 @@ inline void Update(SDL_Window* window) {
     if(Blocked(window)){adjustment_repeat.Clear();kyoei_photo_hud_restore();return;}
     if(!kyoei_photo_scene_available() || !kyoei_photo_hud_hidden()){adjustment_repeat.Clear();return;}
     const unsigned repeat=adjustment_repeat.Tick(SDL_GetTicksNS());
-    if(repeat&1)SelectField(-1);
-    if(repeat&2)SelectField(1);
-    if(repeat&4)AdjustSelected(1);
-    if(repeat&8)AdjustSelected(-1);
+    if(repeat&1)AdjustSelected(-1);
+    if(repeat&2)AdjustSelected(1);
+    if(repeat&4)SelectField(-1);
+    if(repeat&8)SelectField(1);
 }
 inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
     const bool scene_controls=kyoei_photo_scene_available() && kyoei_photo_hud_hidden();
@@ -59,6 +59,21 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
        event.type==SDL_EVENT_QUIT || event.type==SDL_EVENT_WINDOW_CLOSE_REQUESTED ||
        event.type==SDL_EVENT_GAMEPAD_REMOVED) {
         pending.store(false);adjustment_repeat.Clear();kyoei_photo_hud_restore();
+    }
+    if(scene_controls && (event.type==SDL_EVENT_KEY_DOWN || event.type==SDL_EVENT_KEY_UP) &&
+       event.key.windowID==SDL_GetWindowID(window) &&
+       (event.key.key==SDLK_TAB || event.key.key==SDLK_HOME || event.key.key==SDLK_END ||
+        (event.key.key>=SDLK_1 && event.key.key<=SDLK_4))){
+        if(event.type==SDL_EVENT_KEY_DOWN && !event.key.repeat && !Blocked(window)){
+            adjustment_repeat.Clear();kyoei_input_keyboard();
+            if(event.key.key==SDLK_TAB)SelectGroup(event.key.mod&SDL_KMOD_SHIFT?-1:1);
+            else if(event.key.key==SDLK_HOME || event.key.key==SDLK_END){
+                const int group=FieldGroup(selected.load());selected=group_begin[group];
+                if(event.key.key==SDLK_END)SelectField(-1);else remembered_field[group]=selected.load();
+            }
+            else SetGroup(int(event.key.key-SDLK_1));
+        }
+        return true;
     }
     if(event.type==SDL_EVENT_KEY_DOWN &&
        (event.key.key==SDLK_ESCAPE || event.key.key==SDLK_TAB ||
@@ -83,10 +98,12 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
             else if(button==SDL_GAMEPAD_BUTTON_EAST){adjustment_repeat.Clear();kyoei_photo_hud_restore();}
             else if(button==SDL_GAMEPAD_BUTTON_SOUTH)pending.store(true);
             else if(button==SDL_GAMEPAD_BUTTON_WEST)hints.store(!hints.load());
-            else if(button==SDL_GAMEPAD_BUTTON_DPAD_LEFT)SelectField(-1);
-            else if(button==SDL_GAMEPAD_BUTTON_DPAD_RIGHT)SelectField(1);
-            else if(button==SDL_GAMEPAD_BUTTON_DPAD_UP)AdjustSelected(1);
-            else if(button==SDL_GAMEPAD_BUTTON_DPAD_DOWN)AdjustSelected(-1);
+            else if(button==SDL_GAMEPAD_BUTTON_LEFT_SHOULDER){adjustment_repeat.Clear();SelectGroup(-1);}
+            else if(button==SDL_GAMEPAD_BUTTON_RIGHT_SHOULDER){adjustment_repeat.Clear();SelectGroup(1);}
+            else if(button==SDL_GAMEPAD_BUTTON_DPAD_LEFT)AdjustSelected(-1);
+            else if(button==SDL_GAMEPAD_BUTTON_DPAD_RIGHT)AdjustSelected(1);
+            else if(button==SDL_GAMEPAD_BUTTON_DPAD_UP)SelectField(-1);
+            else if(button==SDL_GAMEPAD_BUTTON_DPAD_DOWN)SelectField(1);
             else if(button==SDL_GAMEPAD_BUTTON_RIGHT_STICK)ResetAdjustments();
             return true;
         }
@@ -101,10 +118,10 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
        event.key.key==SDLK_UP || event.key.key==SDLK_DOWN || event.key.key==SDLK_R)) {
         if(event.type==SDL_EVENT_KEY_DOWN && !Blocked(window)) {
             kyoei_input_keyboard();
-            if(event.key.key==SDLK_LEFT)SelectField(-1);
-            else if(event.key.key==SDLK_RIGHT)SelectField(1);
-            else if(event.key.key==SDLK_UP)AdjustSelected(1);
-            else if(event.key.key==SDLK_DOWN)AdjustSelected(-1);
+            if(event.key.key==SDLK_LEFT)AdjustSelected(-1);
+            else if(event.key.key==SDLK_RIGHT)AdjustSelected(1);
+            else if(event.key.key==SDLK_UP)SelectField(-1);
+            else if(event.key.key==SDLK_DOWN)SelectField(1);
             else if(!event.key.repeat)ResetAdjustments();
         }
         return true;

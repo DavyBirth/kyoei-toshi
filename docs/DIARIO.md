@@ -4503,3 +4503,43 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   PIDs37992/28176 encerrados normalmente0. Segunda cena/controle fisico pendem.
 - Ceu ba89d0 expoe cores dia/noite e sol/lua; instancia ativa e tempo consumidor
   ainda precisam prova. Nao confundir horario do HUD com iluminacao da fase.
+
+- Continuacao20/10: Davy pediu2ou3luzes; ampliado para3slots independentes.
+  Depois pediu posicionamento controlavel, direcao, tipo geral/direcionada e
+  HUD mais clara/bonita, integrada a estetica do jogo. Referencias visuais
+  Ghost of Tsushima/Spider-Man2/Death Stranding2 recebidas e vistas; imagens
+  guardadas somente em build/research/photo-mode/hud-references.
+- Tres pontuais comprovadas juntas em triple-1: objetos distintos, selecao
+  native selected_photo_source=3 e tresPNGs. Houve interferencia de entrada/
+  foco, confirmada por Davy: interrompidos roteiros; luzes desligaram na perda
+  de foco. Nao usar sequencias interrompidas como prova de direcao ou cone.
+- Spot nativo integrado experimentalmente: fabrica2ac8f0/vtable1254fc8,
+  update2acad0, direcao vetorial+250 e cone em radianos+260/+264, conforme
+  setters/consumidores auditados. Selecao real2pontuais+1spot comprovada no
+  triple-2; comparacao visual isolada de direcao/abertura AINDA pendente.
+- Controle direto teclado/analogicos implementado para luz selecionada,
+  camera neutralizada; testes offline PASS. Sequencia visual interrompida e
+  retomada ficou sem estado controlado; nao declarar prova visual desse modo.
+- HUD reorganizada em4categorias Camera/Imagem/Foco/Luzes, painel lateral
+  escuro/translucido com verdeagua e faixa inferior. Tab/1-4 ouL1/R1 trocam;
+  cima/baixo selecionam, esq/dir ajustam. L3/Shift agora aceleram. Memoria da
+  selecao por categoria e parametros de spot ocultos na luz geral.
+- Build/testes luzes/settings/input/layout720p1080p PASS. Ultimo ajuste somente
+  visual (sublinhado e setas no valor) ainda aguarda rebuild. Proxima etapa:
+  screenshot HUD nova e prova deterministica spot/direcao/cone/controle direto.
+
+- Fechamento da rodada HUD/luzes20/10: build completo atualizado e quatro testes
+  lights/settings/input/overlay PASS; diff sem erros de whitespace.
+- HUD nova vista no jogo: painel lateral translucido verdeagua, quatro abas,
+  linha destacada com setas, rodape de comandos; PNG continua sem interface.
+- Spot COMPROVADO visualmente em hud-studio-20261020/photos capturas6a9:
+  yaw-90 aponta para parede (camera olha-X); cone60 ilumina area ampla,
+  cone15 cria circulo estreito; yaw-180 retira o facho da parede. A comparacao
+  anterior olhava para outro eixo, nao era defeito do shader. Direcao e cone
+  nativos funcionam sem alterar luzes originais.
+- Controle direto: nova tentativa parou ao perder foco apos HOLD_D, sem
+  continuar comandos. Prova visual completa ainda pendente; testes offline
+  preservados. Nao declarar essa sequencia como validacao concluida.
+- Documentacao e atalho atualizados com categorias e tres luzes. Launcher e
+  build_launcher de trabalho paralelo preservados. Clima/horario e menu de
+  pausa permanecem pendentes; nao declarar modo foto inteiro finalizado.

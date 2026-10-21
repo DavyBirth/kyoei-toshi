@@ -18,16 +18,30 @@ static ABI uint32_t spy(void *sys,uint32_t types,uint32_t views,void **out,uint3
 static ABI void cache_spy(void *sys){(void)sys;++calls;}
 static void *selection_system;
 static unsigned char selected_point[0x270],selected_spot[0x290];
-static unsigned char native_point[0x270];
+static unsigned char native_points[KYOEI_PHOTO_LIGHT_COUNT][0x270];
+static unsigned char native_spots[KYOEI_PHOTO_LIGHT_COUNT][0x290];
+static int created_spots,updated_spots;
+#define native_point native_points[0]
 static float expected_x=10,expected_y=20,expected_z=30,expected_red=8;
 static ABI void *factory_spy(void){
-    ++created;memset(native_point,0,sizeof(native_point));
-    put_pointer(native_point,0,base+0x1254ed0);return native_point;
+    assert(created<KYOEI_PHOTO_LIGHT_COUNT);void *point=native_points[created++];memset(point,0,0x270);
+    put_pointer(point,0,base+0x1254ed0);return point;
 }
 static ABI void update_spy(void *point){
-    assert(point==native_point && scalar_at(point,0x80)==expected_x && scalar_at(point,0x84)==expected_y && scalar_at(point,0x88)==expected_z);
-    assert(scalar_at(point,0x230)==expected_red);float range=12;
+    if(point==native_point){assert(scalar_at(point,0x80)==expected_x && scalar_at(point,0x84)==expected_y && scalar_at(point,0x88)==expected_z);assert(scalar_at(point,0x230)==expected_red);}
+    else assert(point==native_points[1] || point==native_points[2]);float range=12;
     memcpy((char*)point+0x22c,&range,4);++updated;
+}
+static ABI void *spot_factory_spy(void){
+    assert(created_spots<KYOEI_PHOTO_LIGHT_COUNT);void *point=native_spots[created_spots++];
+    memset(point,0,0x290);put_pointer(point,0,base+0x1254fc8);return point;
+}
+static ABI void spot_update_spy(void *point){
+    assert(point==native_spots[0]);
+    const float dx=scalar_at(point,0x250),dy=scalar_at(point,0x254),dz=scalar_at(point,0x258);
+    assert(fabsf(dx*dx+dy*dy+dz*dz-1)<.00001f && dy<0 && dz>0);
+    assert(fabsf(scalar_at(point,0x260)-.78539816f)<.00001f && scalar_at(point,0x264)<scalar_at(point,0x260));
+    float range=20;memcpy((char*)point+0x22c,&range,4);++updated_spots;
 }
 static ABI uint32_t selection_spy(void *sys,uint32_t types,uint32_t views,const void *origin,
                                   const void *camera,const void *filter,void **out,uint32_t capacity,uint32_t viewport){
@@ -65,28 +79,53 @@ int main(void){
     selection_system=NULL;
     assert(select_lights(NULL,0x0c,0x81,(void*)0x1110,(void*)0x2220,(void*)0x3330,selected,3,7)==2 && calls==8);
     source_proof=1;create_point=factory_spy;update_point=update_spy;
-    hud=active=0;update_owned_point(system);assert(!created);
-    hud=active=1;pose_ready=0;update_owned_point(system);assert(!created);
-    pose_ready=1;update_owned_point(system);
-    assert(created==1 && updated==1 && source_was_active && scalar_at(native_point,0x22c)==12);
+    hud=active=0;update_owned_point(system,0);assert(!created);
+    hud=active=1;pose_ready=0;update_owned_point(system,0);assert(!created);
+    pose_ready=1;update_owned_point(system,0);
+    assert(created==1 && updated==1 && owned_sources[0].was_active && scalar_at(native_point,0x22c)==12);
     uint32_t enabled;memcpy(&enabled,native_point+0x220,4);assert(enabled==1);
-    update_owned_point(system);assert(created==1 && updated==1);
-    active=0;update_owned_point(system);memcpy(&enabled,native_point+0x220,4);assert(!enabled && !source_was_active);
-    active=1;update_owned_point(system);assert(created==1 && updated==2 && source_was_active);
-    hud=0;update_owned_point(system);memcpy(&enabled,native_point+0x220,4);assert(!enabled);
+    update_owned_point(system,0);assert(created==1 && updated==1);
+    active=0;update_owned_point(system,0);memcpy(&enabled,native_point+0x220,4);assert(!enabled && !owned_sources[0].was_active);
+    active=1;update_owned_point(system,0);assert(created==1 && updated==2 && owned_sources[0].was_active);
+    hud=0;update_owned_point(system,0);memcpy(&enabled,native_point+0x220,4);assert(!enabled);
     source_controls=1;hud=1;expected_x=14;expected_y=22;expected_z=27;expected_red=.5f;
-    kyoei_photo_lights_input(1,.5f,1,2,4,2,-3);update_owned_point(system);
+    kyoei_photo_lights_input(0,1,.5f,1,2,4,2,-3,0,0,-15,45);update_owned_point(system,0);
     assert(created==1 && updated==3);
-    expected_x=15;kyoei_photo_lights_input(1,.5f,1,2,5,2,-3);update_owned_point(system);
+    expected_x=15;kyoei_photo_lights_input(0,1,.5f,1,2,5,2,-3,0,0,-15,45);update_owned_point(system,0);
     assert(created==1 && updated==4);
-    kyoei_photo_lights_input(1,NAN,1,2,0,0,0);update_owned_point(system);assert(updated==4);
-    kyoei_photo_lights_input(1,.5f,1,2,51,0,0);update_owned_point(system);assert(updated==4);
-    kyoei_photo_lights_input(0,1,1,1,0,0,0);update_owned_point(system);
+    kyoei_photo_lights_input(0,1,NAN,1,2,0,0,0,0,0,-15,45);update_owned_point(system,0);assert(updated==4);
+    kyoei_photo_lights_input(0,1,.5f,1,2,51,0,0,0,0,-15,45);update_owned_point(system,0);assert(updated==4);
+    kyoei_photo_lights_input(0,0,1,1,1,0,0,0,0,0,-15,45);update_owned_point(system,0);
     memcpy(&enabled,native_point+0x220,4);assert(!enabled);
     assert(!memcmp(before,system,sizeof(system)) && !memcmp(point_before,selected_point,sizeof(selected_point)) && !memcmp(spot_before,selected_spot,sizeof(selected_spot)));
+    kyoei_photo_lights_input(1,1,1,.1f,.1f,-2,0,0,0,0,-15,45);
+    kyoei_photo_lights_input(2,1,.1f,.1f,2,2,1,0,0,0,-15,45);
+    update_owned_point(system,1);update_owned_point(system,2);
+    assert(created==3 && updated==6);
+    assert(owned_sources[0].point!=owned_sources[1].point && owned_sources[1].point!=owned_sources[2].point);
+    assert(scalar_at(native_points[1],0x80)==8 && scalar_at(native_points[2],0x80)==12);
+    unsigned char second_before[0x270],third_before[0x270];
+    memcpy(second_before,native_points[1],sizeof(second_before));memcpy(third_before,native_points[2],sizeof(third_before));
+    expected_x=10;expected_y=20;expected_z=30;expected_red=1;
+    kyoei_photo_lights_input(0,1,1,1,1,0,0,0,0,0,-15,45);update_owned_point(system,0);
+    assert(created==3 && updated==7 && !memcmp(second_before,native_points[1],sizeof(second_before)) && !memcmp(third_before,native_points[2],sizeof(third_before)));
+    kyoei_photo_lights_input(KYOEI_PHOTO_LIGHT_COUNT,1,1,1,1,0,0,0,0,0,-15,45);
+    hud=0;for(unsigned i=0;i<KYOEI_PHOTO_LIGHT_COUNT;++i){update_owned_point(system,i);memcpy(&enabled,native_points[i]+0x220,4);assert(!enabled);}
+    hud=1;for(unsigned i=0;i<KYOEI_PHOTO_LIGHT_COUNT;++i)update_owned_point(system,i);
+    assert(created==3 && updated==10);
+    create_spot=spot_factory_spy;update_spot=spot_update_spy;
+    kyoei_photo_lights_input(1,1,1,.1f,.1f,-2,0,0,1,0,-15,45);update_owned_point(system,1);
+    assert(created_spots==1 && updated_spots==1 && owned_sources[1].point==native_spots[0]);
+    memcpy(&enabled,native_points[1]+0x220,4);assert(!enabled);
+    kyoei_photo_lights_input(1,1,1,.1f,.1f,-2,0,0,0,0,-15,45);update_owned_point(system,1);
+    assert(created==3 && updated==11 && owned_sources[1].point==native_points[1]);
+    memcpy(&enabled,native_spots[0]+0x220,4);assert(!enabled);
+    kyoei_photo_lights_input(1,0,1,.1f,.1f,-2,0,0,1,0,-15,45);update_owned_point(system,1);
+    kyoei_photo_lights_input(1,1,1,.1f,.1f,-2,0,0,1,0,-15,45);update_owned_point(system,1);
+    assert(created_spots==1 && updated_spots==2 && owned_sources[1].point==native_spots[0]);
     unsigned char replacement_system[0x68]={0};put_pointer(replacement_system,0,base+0x1254b48);
-    put_pointer(base,0x1354420,replacement_system);hud=1;update_owned_point(replacement_system);
-    assert(source_failed && created==1 && updated==4);
+    put_pointer(base,0x1354420,replacement_system);hud=1;update_owned_point(replacement_system,0);
+    assert(source_failed && created==3 && updated==11);
     source_proof=0;
     VirtualFree(base,0,MEM_RELEASE);
     unsigned char *memory=VirtualAlloc(NULL,4096,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);assert(memory);

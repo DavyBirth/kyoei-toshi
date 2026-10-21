@@ -85,6 +85,15 @@ int kyoei_photo_scene_light_position(float xyz[3]) {
     if(!finite3(point) || !atomic_load_explicit(&active,memory_order_acquire))return 0;
     xyz[0]=point.x;xyz[1]=point.y;xyz[2]=point.z;return 1;
 }
+int kyoei_photo_scene_light_move(float right_amount,float up_amount,float forward_amount,float xyz[3]) {
+    if(!xyz || !isfinite(right_amount) || !isfinite(up_amount) || !isfinite(forward_amount) ||
+       !atomic_load_explicit(&active,memory_order_acquire))return 0;
+    AcquireSRWLockShared(&state_lock);State pose=state;ReleaseSRWLockShared(&state_lock);
+    Vec3 forward,right,up;direction(&pose,&forward,&right,&up);
+    Vec3 movement=add(add(scale(right,right_amount),scale(up,up_amount)),scale(forward,forward_amount));
+    if(!finite3(movement))return 0;
+    xyz[0]=movement.x;xyz[1]=movement.y;xyz[2]=movement.z;return 1;
+}
 float kyoei_photo_scene_fov_value(void) {
     AcquireSRWLockShared(&state_lock);float value=state.fov;ReleaseSRWLockShared(&state_lock);return value;
 }
