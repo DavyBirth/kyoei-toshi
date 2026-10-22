@@ -4,7 +4,11 @@
 // thread, screenshot requests, fault recovery for speculative draw preparation).
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include <boost/asio/io_context.hpp>
+#include <algorithm>
 #include <atomic>
+#include <chrono>
+#include <cstdio>
+#include <unordered_map>
 #include <condition_variable>
 #include <cstring>
 #include <mutex>
@@ -264,7 +268,98 @@ extern "C" uintptr_t gz_gpu_resolve(const char* library, const char* symbol) {
         if (entry.library == library && entry.name == symbol) return entry.address;
     return 0;
 }
+// KYOEI_FAULT_REPORT=1: guest writes to GPU-tracked pages, by instruction, every 5 s, with the
+// copy registers (rsi/rdi) of the last fault: which game code writes GPU memory, from where.
+static void ReportWriteFault(void* exception, void* address) {
+    static const bool enabled = [] { const char* v = std::getenv("KYOEI_FAULT_REPORT"); return v && v[0] == '1'; }();
+    if (!enabled) return;
+    const auto* e = static_cast<EXCEPTION_POINTERS*>(exception);
+    if (e->ExceptionRecord->ExceptionInformation[0] != 1) return;
+    struct Stat { u64 count, rsi, rdi, low, high; };
+    static std::mutex mutex;
+    static std::unordered_map<u64, Stat> stats;
+    static auto window = std::chrono::steady_clock::now();
+    std::scoped_lock lock{mutex};
+    const u64 at = reinterpret_cast<u64>(address);
+    auto [it, fresh] = stats.try_emplace(e->ContextRecord->Rip, Stat{0, 0, 0, at, at});
+    auto& s = it->second;
+    ++s.count;
+    s.rsi = e->ContextRecord->Rsi;
+    s.rdi = e->ContextRecord->Rdi;
+    s.low = std::min(s.low, at);
+    s.high = std::max(s.high, at);
+    if (std::chrono::steady_clock::now() - window < std::chrono::seconds(5)) return;
+    std::vector<std::pair<u64, Stat>> top(stats.begin(), stats.end());
+    std::sort(top.begin(), top.end(), [](auto& a, auto& b) { return a.second.count > b.second.count; });
+    std::printf("Kyoei write faults (5 s): %zu instructions\n", top.size());
+    for (size_t i = 0; i < std::min<size_t>(top.size(), 6); ++i) {
+        const auto& [rip, st] = top[i];
+        std::printf("  rip %#llx: %llu faults, %#llx..%#llx, rsi %#llx rdi %#llx\n", (unsigned long long)rip,
+                    (unsigned long long)st.count, (unsigned long long)st.low, (unsigned long long)st.high,
+                    (unsigned long long)st.rsi, (unsigned long long)st.rdi);
+    }
+    stats.clear();
+    window = std::chrono::steady_clock::now();
+}
+// KYOEI_PROTECT_WATCH=<hex low>-<hex high> (diagnostic): guest memory there is write-protected
+// when mapped; each page's first guest write is logged with the copy registers, then allowed.
+// Finds the game code that fills memory before the GPU core tracks it.
+static std::pair<u64, u64> ProtectWatch() {
+    static const std::pair<u64, u64> range = [] {
+        const char* v = std::getenv("KYOEI_PROTECT_WATCH");
+        if (!v) return std::pair<u64, u64>{0, 0};
+        char* end{};
+        const u64 low = std::strtoull(v, &end, 16);
+        return std::pair<u64, u64>{low, *end == '-' ? std::strtoull(end + 1, nullptr, 16) : 0};
+    }();
+    return range;
+}
+static std::mutex protect_watch_mutex;
+static std::unordered_map<u64, bool> protect_watch_pages;
+static void ProtectWatchMap(uintptr_t address, uint64_t size) {
+    const auto [low, high] = ProtectWatch();
+    const u64 start = std::max<u64>(low, address) & ~u64(4095), end = std::min<u64>(high, address + size);
+    if (!high || start >= end) return;
+    const auto arm = [start, end] {
+        std::scoped_lock lock{protect_watch_mutex};
+        for (u64 page = start; page < end; page += 4096) protect_watch_pages[page] = true;
+        gz_memory_gpu_protect(start, end - start, 1, 0);
+    };
+    // KYOEI_PROTECT_DELAY=<seconds>: arm later (after start-up clears the memory).
+    const char* delay = std::getenv("KYOEI_PROTECT_DELAY");
+    if (delay && std::atoi(delay) > 0) {
+        std::thread([arm, seconds = std::atoi(delay)] {
+            std::this_thread::sleep_for(std::chrono::seconds(seconds));
+            arm();
+            std::printf("Kyoei protect watch armed\n");
+        }).detach();
+        return;
+    }
+    arm();
+    std::printf("Kyoei protect watch: %#llx..%#llx write-protected\n", (unsigned long long)start, (unsigned long long)end);
+}
+static bool ProtectWatchFault(void* exception, void* address) {
+    if (!ProtectWatch().second) return false;
+    const auto* e = static_cast<EXCEPTION_POINTERS*>(exception);
+    if (e->ExceptionRecord->ExceptionInformation[0] != 1) return false;
+    const u64 page = reinterpret_cast<u64>(address) & ~u64(4095);
+    std::scoped_lock lock{protect_watch_mutex};
+    const auto it = protect_watch_pages.find(page);
+    if (it == protect_watch_pages.end()) return false;
+    protect_watch_pages.erase(it);
+    static std::unordered_map<u64, unsigned> per_instruction;
+    if (per_instruction[e->ContextRecord->Rip]++ < 3) {
+        std::printf("Kyoei protected write: page %#llx rip %#llx rsi %#llx rdi %#llx rcx %#llx\n",
+                    (unsigned long long)page, (unsigned long long)e->ContextRecord->Rip,
+                    (unsigned long long)e->ContextRecord->Rsi, (unsigned long long)e->ContextRecord->Rdi,
+                    (unsigned long long)e->ContextRecord->Rcx);
+    }
+    gz_memory_gpu_protect(page, 4096, 1, 1);
+    return true;
+}
 extern "C" int gz_gpu_handle_fault(void* exception, void* address) {
+    if (ProtectWatchFault(exception, address)) return 1;
+    ReportWriteFault(exception, address);
     // Page tracking handlers registered by the core (PageManager, SRT walker) come first.
     if (Core::Signals::Instance()->DispatchAccessViolation(exception, address)) return 1;
     if (runtime_fault_recover) {
@@ -286,6 +381,7 @@ extern "C" void gz_gpu_map(uintptr_t address, uint64_t size) {
         r->RegisterMemory(address, size);
         r->MapMemory(address, size);
         gz_log("GPU memory mapped: 0x%llx size=0x%llx", (unsigned long long)address, (unsigned long long)size);
+        ProtectWatchMap(address, size);
     }
 }
 extern "C" void gz_gpu_unmap(uintptr_t address, uint64_t size) {

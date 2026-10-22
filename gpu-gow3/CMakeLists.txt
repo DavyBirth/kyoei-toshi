@@ -130,7 +130,13 @@ gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
     "ImageView& TextureCache::FindRenderTarget(ImageId image_id, const ImageDesc& desc) {
     Image& image = slot_images[image_id]"
     "ImageView& TextureCache::FindRenderTarget(ImageId image_id, const ImageDesc& desc) {
-    Image& image = (KyoeiUploadReport::NoteTarget(slot_images[image_id]), slot_images[image_id])"
+    Image& image = (KyoeiUploadReport::NoteTarget(slot_images[image_id]),
+        KyoeiUploadReport::WatchImage(\"target\", slot_images[image_id]), slot_images[image_id])"
+    "                                     bool refresh) {
+    Image& image = slot_images[image_id]"
+    "                                     bool refresh) {
+    Image& image = (KyoeiUploadReport::WatchImage(desc.type == BindingType::Storage ? \"storage\" : \"texture\",
+        slot_images[image_id]), slot_images[image_id])"
     "void TextureCache::UnregisterImage(ImageId image_id) {
     Image& image = slot_images[image_id]"
     "void TextureCache::UnregisterImage(ImageId image_id) {
@@ -210,7 +216,9 @@ set(AUDIO "${CMAKE_CURRENT_BINARY_DIR}/audioout.cpp" "${SHAD}/src/core/libraries
 set_source_files_properties("${SHAD}/src/core/libraries/audio/sdl_audio_out.cpp" PROPERTIES
     COMPILE_OPTIONS "-msse4.1;-include;core/libraries/kernel/time.h")
 gow3_adapt(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp
-    "#include \"video_core/renderer_vulkan/vk_rasterizer.h\"" "#include \"video_core/renderer_vulkan/vk_rasterizer.h\"\n#include \"kyoei_upload_report.h\""
+    "#include \"video_core/renderer_vulkan/vk_rasterizer.h\"" "#include \"video_core/renderer_vulkan/vk_rasterizer.h\"\n#include \"kyoei_upload_report.h\"\n#include \"kyoei_gow3_experiments.h\""
+    "                         mrt1_desc.view_info.range)"
+    "                         mrt1_desc.view_info.range), KyoeiGow3Experiments::ResolveWritten(mrt1_image)"
     "                    texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
     "                    KyoeiUploadReport::NoteWrite(stage.pgm_hash, vsharp.base_address, size), texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
     "    texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)"

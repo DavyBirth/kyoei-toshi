@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <mutex>
 #include <unordered_map>
+#include <string>
 #include <vector>
 #include "video_core/texture_cache/image.h"
 
@@ -50,9 +51,15 @@ inline int Note(const VideoCore::Image& image) {
 inline int NoteWrite(u64 shader, u64 address, u64 size) {
     static const bool enabled = [] { const char* v = std::getenv("KYOEI_UPLOAD_REPORT"); return v && v[0] == '1'; }();
     if (!enabled) return 0;
-    // KYOEI_UPLOAD_WATCH=<hex address>: every GPU write that touches the 16 MiB from there.
-    static const u64 watch = [] { const char* v = std::getenv("KYOEI_UPLOAD_WATCH"); return v ? std::strtoull(v, nullptr, 16) : 0ull; }();
-    if (watch && address < watch + (16u << 20) && watch < address + size) {
+    // KYOEI_UPLOAD_WATCH=<hex low>-<hex high>: every GPU write that touches that range.
+    static const std::pair<u64, u64> watch = [] {
+        const char* v = std::getenv("KYOEI_UPLOAD_WATCH");
+        if (!v) return std::pair<u64, u64>{0, 0};
+        char* end{};
+        const u64 low = std::strtoull(v, &end, 16);
+        return std::pair<u64, u64>{low, *end == '-' ? std::strtoull(end + 1, nullptr, 16) : low + (16u << 20)};
+    }();
+    if (watch.second && address < watch.second && watch.first < address + size) {
         std::printf("Kyoei watched write: shader %#llx at %#llx, %llu bytes\n", (unsigned long long)shader,
                     (unsigned long long)address, (unsigned long long)size);
     }
@@ -120,6 +127,7 @@ inline bool NoteCopy(u64 dst, u64 src, u32 bytes, bool gds, bool src_gpu, bool s
 // KYOEI_UPLOAD_REPORT=1, in TextureCache::RefreshImage: an image of 4 MiB or more uploaded from
 // guest memory although a GPU-written image overlaps it (which one, and how they differ).
 #define KYOEI_UPLOAD_OVERLAPS(image)                                                              \
+    KyoeiUploadReport::WatchImage("upload", image);                                              \
     if (KyoeiUploadReport::CopyEnabled() && (image).info.guest_size >= (4u << 20) &&            \
         True((image).flags & ImageFlagBits::CpuDirty)) {                                         \
         ForEachImageInRegion((image).info.guest_address, (image).info.guest_size,                \
@@ -175,6 +183,32 @@ inline int NoteTarget(const VideoCore::Image& image) {
                 (unsigned long long)image.info.guest_address, image.info.size.width, image.info.size.height,
                 unsigned(image.info.pixel_format), unsigned(image.info.props.is_tiled), unsigned(image.info.tile_mode),
                 unsigned(image.info.array_mode), image.info.guest_size, unsigned(image.flags));
+    return 0;
+}
+} // namespace KyoeiUploadReport
+
+namespace KyoeiUploadReport {
+/// KYOEI_IMAGE_WATCH=<hex low>-<hex high>: every distinct use of an image starting there
+/// (event, size, format, tiling, flags), printed once.
+inline int WatchImage(const char* event, const VideoCore::Image& image) {
+    static const std::pair<u64, u64> range = [] {
+        const char* v = std::getenv("KYOEI_IMAGE_WATCH");
+        if (!v) return std::pair<u64, u64>{0, 0};
+        char* end{};
+        const u64 low = std::strtoull(v, &end, 16);
+        return std::pair<u64, u64>{low, *end == '-' ? std::strtoull(end + 1, nullptr, 16) : low};
+    }();
+    const u64 at = image.info.guest_address;
+    if (!range.second || at < range.first || at > range.second) return 0;
+    static std::mutex mutex;
+    static std::unordered_map<std::string, bool> seen;
+    char line[256];
+    std::snprintf(line, sizeof(line), "%s %#llx %ux%u fmt %u tiled %u/%u/%u size %u flags %#x uid %llu", event,
+                  (unsigned long long)at, image.info.size.width, image.info.size.height, unsigned(image.info.pixel_format),
+                  unsigned(image.info.props.is_tiled), unsigned(image.info.tile_mode), unsigned(image.info.array_mode),
+                  image.info.guest_size, unsigned(image.flags), (unsigned long long)image.image_uid);
+    std::scoped_lock lock{mutex};
+    if (seen.try_emplace(line, true).second) std::printf("Kyoei image watch: %s\n", line);
     return 0;
 }
 } // namespace KyoeiUploadReport

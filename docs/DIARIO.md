@@ -4829,3 +4829,15 @@ Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga)
   Contra a regra de fidelidade; desligar (GOW3_UPSCALER=off) antes de usar.
 - Davy viu "Return to Desktop" aparecer no titulo antes das outras opcoes no
   nucleo GoW3: corrigir o momento de exibicao.
+- 23/10 continuacao pausa GoW3: imagem do fundo (1920x1080 fmt97, endereco
+  variavel ~0x1067e..0x1068f..) so e usada como textura; nenhum alvo/storage/
+  escrita de buffer GPU/DMA na faixa; armadilha de escrita CPU
+  (KYOEI_PROTECT_WATCH + KYOEI_PROTECT_DELAY) armada na cidade nao viu escrita
+  nenhuma ao pausar. Marcar destino do Resolve como GPU (KYOEI_RESOLVE_WRITTEN=1,
+  opt-in) nao resolveu. Hipotese restante: o conteudo no nucleo antigo vem de
+  imagem existente achada por FindImage com regras diferentes (mesmo endereco,
+  outro tamanho/formato) ou de caminho de GPU nao instrumentado. Proximo passo
+  sugerido: captura do quadro da pausa nos dois nucleos (RenderDoc/descritores)
+  em vez de mais sondas cegas.
+- Davy: "Return to Desktop" voltou a responder ao mouse no nucleo GoW3 (no
+  antigo nao respondia) e aparece antes das outras opcoes.
