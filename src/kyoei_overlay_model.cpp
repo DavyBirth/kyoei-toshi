@@ -334,7 +334,7 @@ void ShutdownGui() {
 // (tools/make_title_exit_art.py): a sharp layer plus a blurred focus layer,
 // placed and faded from the game's own menu nodes (HUD space 1920x1080).
 constexpr float TITLE_ART_DX=0, TITLE_ART_DY=0; // calibrated against the native items
-float title_rect[4];
+
 // Both layers live in the font atlas (custom rects) so they upload through the
 // same path as the glyphs; a separate user texture upload faulted in the driver.
 ImFontAtlasRectId title_art[2]={ImFontAtlasRectId_Invalid,ImFontAtlasRectId_Invalid};
@@ -371,13 +371,12 @@ void release_title_art() {
 }
 void title_exit(unsigned width,unsigned height) {
     KyoeiTitleItem item;
-    if (!title_art_width || !kyoei_title_exit_item(&item)) { title_rect[2]=0; return; }
+    if (!title_art_width || !kyoei_title_exit_item(&item)) return;
     // 16:9 HUD letterboxed into the swapchain, as the game composes it.
     float unit=std::min(float(width)/1920.f,float(height)/1080.f);
     float left=(float(width)-1920*unit)/2, top=(float(height)-1080*unit)/2;
     ImVec2 at(left+(item.x+TITLE_ART_DX)*unit, top+(item.y+TITLE_ART_DY)*unit);
     ImVec2 end(at.x+title_art_width*unit, at.y+title_art_height*unit);
-    title_rect[0]=at.x; title_rect[1]=at.y; title_rect[2]=end.x-at.x; title_rect[3]=end.y-at.y;
     auto *draw=ImGui::GetBackgroundDrawList();
     int alpha=(int)(std::clamp(item.alpha,0.f,1.f)*255);
     int glow=(int)(std::clamp(item.focus,0.f,1.f)*alpha);
@@ -387,10 +386,6 @@ void title_exit(unsigned width,unsigned height) {
     if (glow>0) draw->AddImage(atlas->TexRef,at,end,focus.uv0,focus.uv1,IM_COL32(255,255,255,glow));
     draw->AddImage(atlas->TexRef,at,end,normal.uv0,normal.uv1,IM_COL32(255,255,255,alpha));
 }
-}
-extern "C" int kyoei_title_exit_hit(float x,float y) {
-    const float *r=KyoeiOverlayModel::title_rect;
-    return r[2]>0 && x>=r[0] && y>=r[1] && x<r[0]+r[2] && y<r[1]+r[3];
 }
 namespace KyoeiOverlayModel {
 ImDrawData *Draw(unsigned width,unsigned height,float seconds,void (*extra)()) {

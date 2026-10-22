@@ -15,11 +15,6 @@ typedef struct { float alpha, x, y, focus; } KyoeiTitleItem;
 int kyoei_title_exit_item(KyoeiTitleItem *item);
 /* Returns 1 once after the player confirmed; the window thread then quits. */
 int kyoei_title_exit_take_quit(void);
-/* Mouse activation from the overlay; returns nonzero when consumed. */
-int kyoei_title_exit_click(void);
-void kyoei_title_exit_hover(int inside);
-/* Implemented by the overlay model: physical pixel hit test of the drawn entry. */
-int kyoei_title_exit_hit(float x,float y);
 #ifdef KYOEI_TITLE_EXIT_TEST
 void kyoei_title_exit_test_frame(int cursor,uint64_t now_ms);
 void kyoei_title_exit_test_clock(uint64_t now_ms);

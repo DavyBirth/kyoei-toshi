@@ -17,7 +17,7 @@ static GuestUpdate original_update;
 #endif
 
 enum { VISIBLE_MS=200, CONFIRM=0x2000, UP=0x10, DOWN=0x40 };
-static _Atomic int cursor=-1, accepting, state=KYOEI_TITLE_EXIT_HIDDEN, hover;
+static _Atomic int cursor=-1, accepting, state=KYOEI_TITLE_EXIT_HIDDEN;
 static _Atomic uint64_t last_frame;
 static uint32_t previous_buttons;
 static int previous_down,previous_up,swallow;
@@ -48,19 +48,11 @@ static int shown(void) {
 static int usable(void) { return shown() && accepting && cursor>=0; }
 int kyoei_title_exit_state(void) {
     if (!shown()) return KYOEI_TITLE_EXIT_HIDDEN;
-    int value=state;
-    if (value<=KYOEI_TITLE_EXIT_IDLE) return hover&&usable()?KYOEI_TITLE_EXIT_SELECTED:KYOEI_TITLE_EXIT_IDLE;
-    return value;
+    return state<=KYOEI_TITLE_EXIT_IDLE?KYOEI_TITLE_EXIT_IDLE:state;
 }
 int kyoei_title_exit_item(KyoeiTitleItem *item) {
     if (!item || !shown()) return 0;
     item->alpha=item_alpha; item->x=item_x; item->y=item_y; item->focus=item_focus;
-    return 1;
-}
-void kyoei_title_exit_hover(int inside) { hover=inside!=0; }
-int kyoei_title_exit_click(void) {
-    if (!usable()) return 0;
-    request_quit();
     return 1;
 }
 
@@ -115,7 +107,7 @@ static ABI void title_update(void *self) {
     float base=items[0]->x, selected_x=items[0]->x;
     for (int i=0;i<4;++i) { if (items[i]->x<base) base=items[i]->x; if (items[i]->x>selected_x) selected_x=items[i]->x; }
     float shift=selected_x>base?selected_x-base:50.f;
-    int ours=state>=KYOEI_TITLE_EXIT_SELECTED || (hover && ready);
+    int ours=state>=KYOEI_TITLE_EXIT_SELECTED;
     if (ours && value==3) {
         // Hand the native highlight to our row: item 4 returns to its resting
         // column and its glow layer hides; the game's underline follows us.
@@ -128,7 +120,13 @@ static ABI void title_update(void *self) {
     item_x=item_x+(target-item_x)*0.35f;
     if (item_x<base-1||item_x>base+shift+1) item_x=target;
     item_focus=item_focus+((ours?1.f:0.f)-item_focus)*0.35f;
-    item_y=slot->y; item_alpha=alpha;
+    // The native items reach the screen a frame or two after this update (the GPU core
+    // records ahead): fade in no sooner than they do, fade out at once.
+    static float recent[2];
+    float shown_alpha=alpha<recent[0]?alpha:recent[0];
+    if (recent[1]<shown_alpha) shown_alpha=recent[1];
+    recent[1]=recent[0]; recent[0]=alpha;
+    item_y=slot->y; item_alpha=shown_alpha;
     cursor=value>=0&&value<=3?value:-1; accepting=ready;
     last_frame=now_ms();
 }

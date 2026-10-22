@@ -92,26 +92,8 @@ bool HandleEvent(const SDL_Event &event) {
     if (event.type==SDL_EVENT_QUIT || event.type==SDL_EVENT_WINDOW_CLOSE_REQUESTED) {
         kyoei_overlay_abort_all(); return false;
     }
-    if (!kyoei_overlay_kind()) {
-        if (!kyoei_title_exit_state()) return false;
-        // The title releases the mouse pointer so the PC entry can be clicked.
-        if (event.type==SDL_EVENT_MOUSE_MOTION || event.type==SDL_EVENT_MOUSE_BUTTON_DOWN) {
-            auto id=event.type==SDL_EVENT_MOUSE_MOTION?event.motion.windowID:event.button.windowID;
-            auto *window=SDL_GetWindowFromID(id);
-            float density=window?SDL_GetWindowPixelDensity(window):1.f;
-            float x=(event.type==SDL_EVENT_MOUSE_MOTION?event.motion.x:event.button.x)*density;
-            float y=(event.type==SDL_EVENT_MOUSE_MOTION?event.motion.y:event.button.y)*density;
-            int inside=kyoei_title_exit_hit(x,y);
-            kyoei_title_exit_hover(inside);
-            if (inside && event.type==SDL_EVENT_MOUSE_BUTTON_DOWN && event.button.button==SDL_BUTTON_LEFT)
-            {
-                int consumed=kyoei_title_exit_click();
-                if (kyoei_title_exit_take_quit()) { SDL_Event quit{}; quit.type=SDL_EVENT_QUIT; SDL_PushEvent(&quit); }
-                return consumed!=0;
-            }
-        }
-        return false;
-    }
+    // Return to Desktop answers only to the game's own inputs, like the native title items.
+    if (!kyoei_overlay_kind()) return false;
     if (event.type==SDL_EVENT_TEXT_INPUT) { kyoei_overlay_text(event.text.text); return true; }
     if (event.type==SDL_EVENT_KEY_DOWN) {
         if (event.key.key==SDLK_ESCAPE && event.key.repeat) return true;

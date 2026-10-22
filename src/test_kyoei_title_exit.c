@@ -1,7 +1,6 @@
 #include "kyoei_title_exit.h"
 #include <stdio.h>
 #define CHECK(x) do{if(!(x)){fprintf(stderr,"Title exit failed: %d\n",__LINE__);return 1;}}while(0)
-int kyoei_title_exit_hit(float x,float y){(void)x;(void)y;return 0;}
 int main(void){
     CHECK(!kyoei_title_exit_state()&&!kyoei_title_exit_input(0x40,128));
     kyoei_title_exit_test_frame(2,1000);
@@ -20,7 +19,6 @@ int main(void){
     kyoei_title_exit_test_clock(1500);
     CHECK(!kyoei_title_exit_state()&&!kyoei_title_exit_input(0x2000,128));
     kyoei_title_exit_test_frame(3,2000);
-    CHECK(kyoei_title_exit_click());
     KyoeiTitleItem item; CHECK(kyoei_title_exit_item(&item)&&item.alpha==1);
-    puts("TITLE EXIT PASS: native cursor handoff, input consumption, native confirm, timeout and click");return 0;
+    puts("TITLE EXIT PASS: native cursor handoff, input consumption, native confirm and timeout");return 0;
 }
