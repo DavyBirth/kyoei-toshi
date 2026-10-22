@@ -4742,3 +4742,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   ~60 FPS, parado e no giro (limite do monitor 60Hz, FIFO), pior quadro ~31ms;
   DrawRec ~91%. Captura final confirma giro. Sem diferenca da leitura adiada:
   fica desligada. Rodadas anteriores tinham OneDrive consumindo CPU.
+- 22/10: prioridade HIGHEST para GpuCommandProcessor/DrawRec/VkRecorder testada
+  em ABBA com OneDrive aberto: giro 45,3/47,3 (normal) vs 48,4/46,2 e 45,4/46,9
+  (alta): sem efeito, revertida. CORRECAO: janelas de "60 FPS no giro" das
+  rodadas anteriores nao sao confiaveis: a rota manda teclas por PostMessage a
+  janela sem foco e o giro nem sempre acontece (ultima rodada nem terminou).
+  Numero confiavel atual: parado ~60 (teto do motor), giro 45-48. Proximo:
+  rota que confirme o giro (ex.: comparar capturas antes/depois ou log da camera).
