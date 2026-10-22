@@ -4723,3 +4723,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Sem trava (GZ_VBLANK_HZ=0, Mailbox): parado 59,5-59,9 FPS (mediana 14,4-14,8ms),
   giro 45,0-49,1. Estagio B (gravacao de draws) 80-86% ocupado = limite atual
   neste Xeon; estagio A espera 25-39%.
+- ABBA LTO (21/10 noite, sem trava/Mailbox): copia falhou na rodada2 (rodou sem
+  LTO). Parado ~60 em todas (limite do monitor 60Hz; Mailbox indisponivel ->
+  FIFO). Giro: sem LTO 43,7/46,6, 46,0/48,3, 43,6/47,5; com LTO 45,4/46,4.
+  Sem diferenca mensuravel; LTO fica ligado (padrao do GoW3). Limpeza disco:
+  apagados runtime-preview-en-15/-en-04/natural-test (substituidos pela en-16 e
+  pacote natural) e build/gow3 de sonda; pacote Friends-Test apagado com
+  autorizacao de Davy (jogo eram hardlinks: quase nao liberou). G: 38->55GB livres.
