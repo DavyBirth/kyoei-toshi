@@ -196,7 +196,7 @@ kyoei_replace_checked(KYOEI_SERVICES
   "    if (p->mode != 2 && p->mode != 3 && p->mode != 4 && p->mode != 5) {")
 kyoei_replace_checked(KYOEI_SERVICES
   "    if (p->mode == 2) {"
-  "    if (p->mode == 3) {\n        const uint32_t *system = p->system;\n        if (!system || p->display < 1 || p->display > 3 || (system[0] != 2 && system[0] != 3)) { free(work); return (int32_t)0x80B8000F; }\n        work->type = 1;\n        wcscpy(work->text, system[0] == 3 ? L\"Substituir este save?\" : p->display == 1 ? L\"Salvar neste slot?\" : p->display == 2 ? L\"Carregar este save?\" : L\"Excluir este save?\");\n    } else if (p->mode == 2) {")
+  "    if (p->mode == 3) {\n        const uint32_t *system = p->system;\n        if (!system || p->display < 1 || p->display > 3) { free(work); return (int32_t)0x80B8000F; }\n        const int action = p->display - 1; /* save, load, delete */\n        int text;\n        work->type = 0; /* OK only, except the questions */\n        switch (system[0]) {\n        case 1: text = KYOEI_TEXT_NODATA; break;\n        case 2: work->type = 1; text = KYOEI_TEXT_ASK_SAVE + action; break;\n        case 3: work->type = 1; text = KYOEI_TEXT_ASK_OVERWRITE; break;\n        case 4: case 8: text = KYOEI_TEXT_NOSPACE; break;\n        case 6: text = KYOEI_TEXT_CORRUPTED; break;\n        case 7: text = KYOEI_TEXT_SAVED + action; break;\n        default:\n            gz_log(\"Runtime: SaveDataDialog system message %u not supported yet\", system[0]);\n            free(work); return (int32_t)0x80B8000F;\n        }\n        wcscpy(work->text, kyoei_system_text(text));\n    } else if (p->mode == 2) {")
 kyoei_replace_checked(KYOEI_DIALOG_UI
   "int gz_dialog_input(uint32_t buttons) {"
   "int kyoei_ime_input(uint32_t buttons);\nint gz_dialog_input(uint32_t buttons) {\n    if (kyoei_overlay_input(buttons) || kyoei_ime_input(buttons)) { release_gate = 1; return 1; }")
@@ -227,6 +227,26 @@ kyoei_replace_checked(KYOEI_DIALOG_UI
 kyoei_replace_checked(KYOEI_DIALOG_UI
   "d->type == 256 ? L\"Aguarde...\""
   "d->type == 256 || d->type == 2 ? L\"Aguarde...\"")
+# System dialog texts follow the launcher's language (Godzilla's are Portuguese).
+kyoei_replace_checked(KYOEI_SERVICES
+  "static ABI int32_t error_open(const ErrorParam *p) {"
+  "#include \"kyoei_system_text.h\"\nstatic ABI int32_t error_open(const ErrorParam *p) {")
+kyoei_replace_checked(KYOEI_SERVICES
+  "L\"Ocorreu um erro.\\n\\nCódigo: 0x%08X\""
+  "kyoei_system_text(KYOEI_TEXT_ERROR)")
+kyoei_replace_checked(KYOEI_SERVICES
+  "L\"Erro nos dados salvos.\\n\\nCódigo: 0x%08X\""
+  "kyoei_system_text(KYOEI_TEXT_SAVE_ERROR)")
+kyoei_replace_checked(KYOEI_SERVICES
+  "p->progress->system == 2 ? L\"Restaurando dados salvos...\" :\n                p->progress->system == 0 ? L\"\" : p->display == 1 ? L\"Salvando...\" :\n                p->display == 2 ? L\"Carregando...\" : L\"Excluindo...\";"
+  "p->progress->system == 2 ? kyoei_system_text(KYOEI_TEXT_RESTORING) :\n                p->progress->system == 0 ? L\"\" : kyoei_system_text(KYOEI_TEXT_SAVING + p->display - 1);")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "(i ? L\"Não\" : L\"Sim\") : (i ? L\"Cancelar\" : L\"OK\")"
+  "kyoei_system_text(i ? KYOEI_TEXT_NO : KYOEI_TEXT_YES) : (i ? kyoei_system_text(KYOEI_TEXT_CANCEL) : L\"OK\")")
+kyoei_replace_checked(KYOEI_DIALOG_UI
+  "L\"Aguarde...\" : L\"X / Enter: confirmar     Setas: escolher     Círculo / Esc: voltar\""
+  "kyoei_system_text(KYOEI_TEXT_WAIT) : kyoei_system_text(KYOEI_TEXT_HINT)")
+set(KYOEI_DIALOG_UI "#include \"kyoei_system_text.h\"\n${KYOEI_DIALOG_UI}")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" CONTENT "${KYOEI_SERVICES}" @ONLY)
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c" CONTENT "${KYOEI_DIALOG_UI}" @ONLY)
 list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c")
