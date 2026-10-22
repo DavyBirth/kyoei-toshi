@@ -4785,3 +4785,15 @@ Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga)
   (Claude Design), "Sair para o desktop" voltar ao menu com som, opcao de modo foto.
 - Alteracoes preexistentes nao relacionadas mantidas sem commit:
   src/kyoei_launcher.cs, tools/build_launcher.ps1 (so quebras de linha).
+
+- 22/10 tarde: overlay Kyoei ligado ao presenter GoW3 (stubs Gow3Overlay ->
+  KyoeiOverlay; driver.cpp redesenha com kyoei_overlay_needs_redraw). kyoei-gow3
+  liga e roda (commit 53e5cf8). Teste mudo com as opcoes do launcher na pasta
+  portatil (copia dos saves): janela 1600x900 e icone ok, titulo/menu em
+  ingles, "Return to Desktop" aparece. Rota por teclas ainda cai em New Game
+  (Down no menu nao pegou: conferir tempo/entrada). Falta: lista de saves no
+  overlay, pos do modo foto (RenderPost/Capture), texturas traduzidas
+  (KYOEI_TEXTURE_CACHE), HUD fit, demais remendos do nucleo antigo.
+- Davy perguntou por "A City Sinking Beneath Giant Shadows": japones e
+  巨影ニ沈ム都市 (livro do Otsuka/titulo do Stage 17), nao o titulo 巨影都市.
+  Sugerido "City Sunk in Shadow" (eco do titulo); aguardando aprovacao.
