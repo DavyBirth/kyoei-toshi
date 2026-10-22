@@ -4730,3 +4730,11 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   apagados runtime-preview-en-15/-en-04/natural-test (substituidos pela en-16 e
   pacote natural) e build/gow3 de sonda; pacote Friends-Test apagado com
   autorizacao de Davy (jogo eram hardlinks: quase nao liberou). G: 38->55GB livres.
+- 22/10 madrugada: getenv("GOW3_RENDER_RES") por draw em FixedRenderSession (via
+  TemporalUpscaler::OnFrameStart) era ~10% do DrawRec no amostrador (copias
+  sample_threads_*-gow3 em build/research/gow3-first-20261021). Lido uma vez:
+  ABBA giro 46,7 -> 48,1 FPS, DrawRec 81-86% -> 74-81%. Commit 8ebc3a8.
+  ABBA GOW3_DEFERRED_READBACK=1 inconclusivo: controles iguais variaram 40-42 ->
+  31-32 FPS no giro; OneDrive com ~17 mil s de CPU e 22% de CPU ocioso no PC.
+  Repetir com OneDrive pausado. STALE_READBACK (leitura 1 quadro atrasada)
+  nao ligado: muda comportamento, exige comparacao de fidelidade.
