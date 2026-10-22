@@ -4738,3 +4738,7 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   31-32 FPS no giro; OneDrive com ~17 mil s de CPU e 22% de CPU ocioso no PC.
   Repetir com OneDrive pausado. STALE_READBACK (leitura 1 quadro atrasada)
   nao ligado: muda comportamento, exige comparacao de fidelidade.
+- ABBA leitura adiada repetido com OneDrive fechado (22/10): TODAS as janelas
+  ~60 FPS, parado e no giro (limite do monitor 60Hz, FIFO), pior quadro ~31ms;
+  DrawRec ~91%. Captura final confirma giro. Sem diferenca da leitura adiada:
+  fica desligada. Rodadas anteriores tinham OneDrive consumindo CPU.
