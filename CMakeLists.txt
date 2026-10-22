@@ -1455,6 +1455,8 @@ target_include_directories(test_kyoei_scratch_pool PRIVATE src)
 # old-core adaptations above. kyoei.exe is unchanged.
 option(KYOEI_GOW3_CORE "Also build kyoei-gow3.exe on the GoW3 GPU core" ON)
 if(KYOEI_GOW3_CORE)
+  set(KYOEI_GOW3_PAD "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp")
+  set(KYOEI_GOW3_WINDOW "${CMAKE_CURRENT_BINARY_DIR}/kyoei_window.cpp")
   add_subdirectory(gpu-gow3)
   get_target_property(KYOEI_GOW3_SOURCES kyoei SOURCES)
   list(FILTER KYOEI_GOW3_SOURCES EXCLUDE REGEX "TARGET_OBJECTS:kyoei_videoout")

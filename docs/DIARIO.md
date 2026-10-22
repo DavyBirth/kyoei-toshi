@@ -4763,3 +4763,25 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Refinar invalidacao por regiao renderia ~2% (estimativa pelo doc do bbport).
   Diagnostico de chamadores de UntrackImage (KYOEI_UPLOAD_REPORT=1) mantido
   desligado por padrao.
+
+## RETOMADA (22/10 04:2x, PC desligado a pedido de Davy: 5% da cota)
+Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga):
+- kyoei-gow3 passou a usar kyoei_pad.cpp/kyoei_window.cpp do Kyoei
+  (KYOEI_GOW3_PAD/WINDOW no CMake principal; include ../src no gpu-gow3).
+  Faltam KyoeiOverlay::HandleEvent/UpdateTextInput: proximo passo e compilar
+  src/kyoei_overlay_gpu.cpp (+ imgui vulkan backend, kyoei_overlay_barriers)
+  no gow3_core e fazer os stubs Gow3Overlay::Init/Render chamarem
+  KyoeiOverlay::Initialize/Render (mesma assinatura; o presenter GoW3 chama
+  Render com a imagem em ColorAttachmentOptimal; Gow3Overlay::Visible deve
+  devolver true quando o overlay Kyoei tiver algo a desenhar). Conferir
+  BeforeDraw/AfterDraw do overlay antigo (presenter Godzilla) vs barreiras GoW3.
+- Depois: texturas/botoes traduzidos (patches KYOEI_TEXTURE_CACHE), modo foto
+  (src/kyoei_photo_post.cpp), HUD fit, tamanho da janela do launcher.
+- Desempenho atual confiavel (rota com giro interno KYOEI_BENCH_TURN_FILE e
+  captura conferida): parado ~60 (teto do motor), giro 43-46 (antigo 28-33).
+  Opcoes usadas: GOW3_GC_BUDGET_MB=5000 GOW3_PIPELINE_BINARIES=0 GZ_GPU_LOG=warning.
+- Pedidos novos de Davy na memoria (ui-wishlist): launcher inspirado nos outros
+  ports, popups salvar/carregar/teclado e HUD do modo foto no estilo do jogo
+  (Claude Design), "Sair para o desktop" voltar ao menu com som, opcao de modo foto.
+- Alteracoes preexistentes nao relacionadas mantidas sem commit:
+  src/kyoei_launcher.cs, tools/build_launcher.ps1 (so quebras de linha).
