@@ -4711,3 +4711,15 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   (logging do Godzilla usa INFO por padrao): reduzir antes de medir de novo.
   Janela abre 1280x720 (tamanho do launcher nao ligado); controle fisico
   ignorado pelos scripts de teste de proposito.
+- Ajustes nucleo GoW3 (21/10 noite, mudo, rota com X+Enter e giro L):
+  GOW3_PIPELINE_BINARIES=0 liga pre-aquecimento em segundo plano: compilacoes
+  no giro 3,3s/5s -> 0. GOW3_GC_BUDGET_MB=5000 para de descartar texturas
+  (orcamento padrao 1,9GB na RTX2060). Parado 55-58 FPS, giro 39-41 (60Hz FIFO).
+  Diagnostico KYOEI_UPLOAD_REPORT=1 (gpu-gow3/kyoei_upload_report.h): 7 alvos
+  de render 1920x1080/1920x540/960x540 recarregados todo quadro (~2,7GB/s,
+  flags GpuModified|GpuDirty), por escritas de buffer do shader 0xb9263d29
+  (~7 por quadro na base das imagens). Provavel limpeza/preparo por buffer;
+  recarga necessaria para correcao, nao alterada.
+  Sem trava (GZ_VBLANK_HZ=0, Mailbox): parado 59,5-59,9 FPS (mediana 14,4-14,8ms),
+  giro 45,0-49,1. Estagio B (gravacao de draws) 80-86% ocupado = limite atual
+  neste Xeon; estagio A espera 25-39%.

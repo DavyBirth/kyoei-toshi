@@ -82,8 +82,13 @@ function(gow3_adapt list_var relative)
     set(${list_var} ${files} PARENT_SCOPE)
 endfunction()
 # MSVC's std::array iterator is a class, not a pointer.
+# KYOEI_UPLOAD_REPORT=1 (kyoei_upload_report.h): the images re-uploaded most, every 5 s.
 gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
-    "auto* slot = std::ranges::find(readback_images" "auto slot = std::ranges::find(readback_images")
+    "auto* slot = std::ranges::find(readback_images" "auto slot = std::ranges::find(readback_images"
+    "#include \"video_core/texture_cache/texture_cache.h\"" "#include \"video_core/texture_cache/texture_cache.h\"
+#include \"kyoei_upload_report.h\""
+    "    Gow3Stats::image_upload_bytes.fetch_add(image.info.guest_size, std::memory_order_relaxed)"
+    "    KyoeiUploadReport::Note(image), Gow3Stats::image_upload_bytes.fetch_add(image.info.guest_size, std::memory_order_relaxed)")
 set(COMMON decoder error io_file native_clock number_utils path_util rdtsc spin_lock
     recursive_lock string_util thread signal_context)
 list(TRANSFORM COMMON PREPEND "${GOW3}/shadps4/common/")
@@ -121,6 +126,12 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/audioout.cpp" CONTENT "${AUDI
 set(AUDIO "${CMAKE_CURRENT_BINARY_DIR}/audioout.cpp" "${SHAD}/src/core/libraries/audio/sdl_audio_out.cpp")
 set_source_files_properties("${SHAD}/src/core/libraries/audio/sdl_audio_out.cpp" PROPERTIES
     COMPILE_OPTIONS "-msse4.1;-include;core/libraries/kernel/time.h")
+gow3_adapt(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp
+    "#include \"video_core/renderer_vulkan/vk_rasterizer.h\"" "#include \"video_core/renderer_vulkan/vk_rasterizer.h\"\n#include \"kyoei_upload_report.h\""
+    "                    texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
+    "                    KyoeiUploadReport::NoteWrite(stage.pgm_hash, vsharp.base_address, size), texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
+    "    texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)"
+    "    KyoeiUploadReport::NoteWrite(0, dst, num_bytes), texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)")
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
     kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp)
 # The core's own Sirit (newer SPIR-V ops) and FSR-Vulkan (MIT), as in the GoW3 build.
@@ -134,7 +145,7 @@ target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-mic
 target_link_libraries(gow3_core PUBLIC sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
-target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
+target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
     "${FSR_VULKAN}/include" "${DEPS}/gz_sirit-src/externals/SPIRV-Headers/include" "${GOW3}/shim" "${GOW3}/shadps4" "${SHADER_INCLUDE}"
     "${GOW3}/third_party/gcn/include" "${GOW3}/third_party/half/include" "${GOW3}/third_party/sirit/include"
     "$ENV{VULKAN_SDK}/Include" "${DEPS}/gz_fmt-src/include" "${DEPS}/gz_magic-src/include"
