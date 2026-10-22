@@ -68,4 +68,28 @@ inline int NoteWrite(u64 shader, u64 address, u64 size) {
     window = std::chrono::steady_clock::now();
     return 0;
 }
+
+/// Who removes write tracking from large images (>= 4 MB): caller address, symbolized every 5 s.
+int NoteUntrackSymbolize(void* caller, char* out, size_t size);
+inline int NoteUntrack(const VideoCore::Image& image, void* caller, int kind) {
+    static const bool enabled = [] { const char* v = std::getenv("KYOEI_UPLOAD_REPORT"); return v && v[0] == '1'; }();
+    if (!enabled || image.info.guest_size < (4u << 20)) return 0;
+    static std::mutex mutex;
+    static std::unordered_map<void*, std::pair<int, u32>> callers;
+    static auto window = std::chrono::steady_clock::now();
+    std::scoped_lock lock{mutex};
+    auto& entry = callers[caller];
+    entry.first = kind;
+    ++entry.second;
+    if (std::chrono::steady_clock::now() - window < std::chrono::seconds(5)) return 0;
+    std::printf("Kyoei untrack of large images (5 s):\n");
+    for (const auto& [address, stat] : callers) {
+        char name[256];
+        NoteUntrackSymbolize(address, name, sizeof(name));
+        std::printf("  %s from %s: %u\n", stat.first == 0 ? "whole" : stat.first == 1 ? "head" : "tail", name, stat.second);
+    }
+    callers.clear();
+    window = std::chrono::steady_clock::now();
+    return 0;
+}
 }

@@ -88,7 +88,16 @@ gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
     "#include \"video_core/texture_cache/texture_cache.h\"" "#include \"video_core/texture_cache/texture_cache.h\"
 #include \"kyoei_upload_report.h\""
     "    Gow3Stats::image_upload_bytes.fetch_add(image.info.guest_size, std::memory_order_relaxed)"
-    "    KyoeiUploadReport::Note(image), Gow3Stats::image_upload_bytes.fetch_add(image.info.guest_size, std::memory_order_relaxed)")
+    "    KyoeiUploadReport::Note(image), Gow3Stats::image_upload_bytes.fetch_add(image.info.guest_size, std::memory_order_relaxed)"
+    "void TextureCache::UntrackImage(ImageId image_id) {"
+    "void TextureCache::UntrackImage(ImageId image_id) {
+    if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 0)) {}"
+    "void TextureCache::UntrackImageHead(ImageId image_id) {"
+    "void TextureCache::UntrackImageHead(ImageId image_id) {
+    if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 1)) {}"
+    "void TextureCache::UntrackImageTail(ImageId image_id) {"
+    "void TextureCache::UntrackImageTail(ImageId image_id) {
+    if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 2)) {}")
 set(COMMON decoder error io_file native_clock number_utils path_util rdtsc spin_lock
     recursive_lock string_util thread signal_context)
 list(TRANSFORM COMMON PREPEND "${GOW3}/shadps4/common/")
@@ -154,7 +163,7 @@ gow3_adapt(SHIM shim/gow3_settings.cpp
     "    const char* size = std::getenv(\"GOW3_RENDER_RES\")"
     "    static const char* const size = std::getenv(\"GOW3_RENDER_RES\")")
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
-    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp)
+    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp)
 # The core's own Sirit (newer SPIR-V ops) and FSR-Vulkan (MIT), as in the GoW3 build.
 set(SIRIT_USE_SYSTEM_SPIRV_HEADERS OFF CACHE BOOL "" FORCE)
 add_subdirectory("${GOW3}/third_party/sirit" sirit EXCLUDE_FROM_ALL)
@@ -163,7 +172,7 @@ set(FFX_VK_PORTABLE_BUILD_PROBE OFF CACHE BOOL "" FORCE)
 add_subdirectory("${FSR_VULKAN}" fsr-vulkan EXCLUDE_FROM_ALL)
 # MSVC-ABI enums are int: FFX error codes above INT_MAX narrow in switch cases (same values).
 target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-microsoft-enum-value)
-target_link_libraries(gow3_core PUBLIC sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
+target_link_libraries(gow3_core PUBLIC dbghelp sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
 target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"

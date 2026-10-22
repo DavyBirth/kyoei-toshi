@@ -4755,3 +4755,11 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   cena de abertura (rota nao carregou o save) = invalida; rodadas 2/3 na cidade
   girando: 42,8/44,0 e 40,6/46,2 FPS. Referencia confiavel: parado ~60 (teto do
   motor), giro 43-46. Toda medicao exige conferir a captura final na cidade.
+- 22/10 diagnosticos: untrack de imagens grandes raro (1-2/5s): o "vai e vem"
+  de protecao e de texturas pequenas atualizadas pelo jogo, legitimo. No giro,
+  GOW3_PERF_DIAG: 527 imagens criadas/5s (texturas novas entrando, "nothing
+  cached"); cada registro sobe registry_generation global e invalida o memo de
+  conjuntos de texturas (misses por geracao ~47k/5s no giro, 6k parado).
+  Refinar invalidacao por regiao renderia ~2% (estimativa pelo doc do bbport).
+  Diagnostico de chamadores de UntrackImage (KYOEI_UPLOAD_REPORT=1) mantido
+  desligado por padrao.
