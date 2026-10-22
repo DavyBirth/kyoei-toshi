@@ -81,6 +81,16 @@ function(gow3_adapt list_var relative)
     list(APPEND files "${out}")
     set(${list_var} ${files} PARENT_SCOPE)
 endfunction()
+# Header copies with Kyoei changes, found before the fixed ones (adapted/shadps4 comes first
+# in the include path). The image flag marks Kyoei button prompts (see texture_cache.cpp).
+set(GOW3_ADAPTED_HEADERS "")
+gow3_adapt(GOW3_ADAPTED_HEADERS shadps4/video_core/texture_cache/image.h
+    "    Aliased = 1 << 8,     ///< gow3: another image has the same guest address (alias_states)"
+    "    Aliased = 1 << 8,     ///< gow3: another image has the same guest address (alias_states)
+    KyoeiPromptImage = 1 << 30, ///< Kyoei: button prompt artwork, selected on every binding")
+gow3_adapt(GOW3_ADAPTED_HEADERS shadps4/video_core/texture_cache/texture_cache.h
+    "constexpr u32 Aliased = static_cast<u32>(ImageFlagBits::Aliased);"
+    "constexpr u32 Aliased = static_cast<u32>(ImageFlagBits::Aliased | ImageFlagBits::KyoeiPromptImage);")
 # MSVC's std::array iterator is a class, not a pointer.
 # KYOEI_UPLOAD_REPORT=1 (kyoei_upload_report.h): the images re-uploaded most, every 5 s.
 gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
@@ -97,7 +107,29 @@ gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
     if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 1)) {}"
     "void TextureCache::UntrackImageTail(ImageId image_id) {"
     "void TextureCache::UntrackImageTail(ImageId image_id) {
-    if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 2)) {}")
+    if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 2)) {}"
+    # Kyoei button prompts: gpu-gow3/kyoei_gow3_prompts.h (CMake lists split on semicolons,
+    # so the code lives there).
+    "#include \"video_core/texture_cache/texture_cache.h\""
+    "#include \"video_core/texture_cache/texture_cache.h\"
+#include \"kyoei_gow3_prompts.h\""
+    "void TextureCache::RefreshImage(Image& image) {
+    if (False(image.flags & ImageFlagBits::Dirty) || image.info.guest_samples > 1) {"
+    "void TextureCache::RefreshImage(Image& image) {
+    KYOEI_PROMPT_SELECT(image)
+    if (False(image.flags & ImageFlagBits::Dirty) || image.info.guest_samples > 1) {"
+    "if (is_gpu_modified && !is_gpu_dirty) {"
+    "if (is_gpu_modified && !is_gpu_dirty && !prompt) {"
+    "    const auto [in_buffer, in_offset] =
+        buffer_cache.ObtainBufferForImage(image.info.guest_address, image.info.guest_size)"
+    "    KYOEI_PROMPT_SOURCE(image)"
+    "tile_manager.DetileImage(in_buffer, in_offset, image.info)"
+    "prompt ? std::pair<const Buffer*, u64>{in_buffer, in_offset}
+                                         : tile_manager.DetileImage(in_buffer, in_offset, image.info)"
+    "void TextureCache::UnregisterImage(ImageId image_id) {
+    Image& image = slot_images[image_id]"
+    "void TextureCache::UnregisterImage(ImageId image_id) {
+    Image& image = (KyoeiPrompts::states.erase(slot_images[image_id].image_uid), slot_images[image_id])")
 set(COMMON decoder error io_file native_clock number_utils path_util rdtsc spin_lock
     recursive_lock string_util thread signal_context)
 list(TRANSFORM COMMON PREPEND "${GOW3}/shadps4/common/")
@@ -195,7 +227,7 @@ target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-mic
 target_link_libraries(gow3_core PUBLIC kyoei_imgui dbghelp sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
-target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/../src" "${KYOEI_IMGUI_DIR}/backends" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
+target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/adapted/shadps4" "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/../src" "${KYOEI_IMGUI_DIR}/backends" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
     "${FSR_VULKAN}/include" "${DEPS}/gz_sirit-src/externals/SPIRV-Headers/include" "${GOW3}/shim" "${GOW3}/shadps4" "${SHADER_INCLUDE}"
     "${GOW3}/third_party/gcn/include" "${GOW3}/third_party/half/include" "${GOW3}/third_party/sirit/include"
     "$ENV{VULKAN_SDK}/Include" "${DEPS}/gz_fmt-src/include" "${DEPS}/gz_magic-src/include"

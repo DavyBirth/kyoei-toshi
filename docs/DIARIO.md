@@ -4797,3 +4797,18 @@ Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga)
 - Davy perguntou por "A City Sinking Beneath Giant Shadows": japones e
   巨影ニ沈ム都市 (livro do Otsuka/titulo do Stage 17), nao o titulo 巨影都市.
   Sugerido "City Sunk in Shadow" (eco do titulo); aguardando aprovacao.
+- 22/10 noite: botoes ao vivo (prompts.kypack) no nucleo GoW3: gpu-gow3/
+  kyoei_gow3_prompts.h + adaptacao de texture_cache.cpp/.h/image.h (flag
+  KyoeiPromptImage tira imagens casadas dos atalhos de imagem limpa). Casam
+  48x88 (E no "Save"), 276x320 (status) e 1920x1080 da pausa (setas do teclado).
+  Exclui render target/GpuModified/Aliased. Mensagens do sistema de save/erro no
+  idioma do launcher + NODATA (Load Game sem saves dava erro 0x80B8000F, tambem
+  no nucleo antigo). Lista de saves e carga ok no GoW3.
+- DEFEITO ABERTO nucleo GoW3: fundo do menu de pausa vira preto e depois lixo
+  colorido (velho: cidade desfocada). Independe dos botoes (testado com pack
+  desligado). Ao pausar, imagem 1920x1080 fmt97 em 0x1067ee0000 sobe 1x como
+  "CPU-written": o jogo copia o quadro pela memoria sem readback do alvo GPU.
+  GOW3_READBACK_LINEAR=1 e GOW3_READBACKS=2 nao resolvem. Proximo: achar o
+  caminho da copia (DMA/CPU) e garantir leitura do alvo antes.
+- Pendente sem regressao: rodape "設定の変更" das Opcoes em japones tambem no
+  nucleo antigo (nao esta no pack de prompts).
