@@ -105,7 +105,23 @@ set(DRIVERS "${GOW3}/shadps4/core/libraries/gnmdriver/gnmdriver.cpp"
 gow3_adapt(COMMON shadps4/common/thread.cpp "#include \"ntapi.h\"" "#include \"common/ntapi.h\"")
 # Godzilla's host pieces: window, pad, logging into the runtime log, paths.
 set(GZ "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/godzilla-core")
-set(HOST "${GZ}/gpu/window.cpp" "${GZ}/gpu/pad.cpp" "${GZ}/gpu/logging.cpp" "${GZ}/gpu/paths.cpp"
+# Benchmarks: while the file named by KYOEI_BENCH_TURN_FILE exists, the right stick is held
+# right. Turns the camera from inside the game, whatever window has focus (SDL clears held
+# keys when the window loses focus). Unset: no effect.
+file(READ "${GZ}/gpu/pad.cpp" PAD_SOURCE)
+set(PAD_ANCHOR "                       keyboard_axis(SDL_SCANCODE_I,SDL_SCANCODE_K,data.rightStick.y)};")
+string(FIND "${PAD_SOURCE}" "${PAD_ANCHOR}" PAD_POSITION)
+if(PAD_POSITION EQUAL -1)
+    message(FATAL_ERROR "Godzilla pad changed; review the benchmark turn adaptation")
+endif()
+string(REPLACE "${PAD_ANCHOR}" "${PAD_ANCHOR}
+    {
+        static const char* turn_file = std::getenv(\"KYOEI_BENCH_TURN_FILE\");
+        if (turn_file && GetFileAttributesA(turn_file) != INVALID_FILE_ATTRIBUTES) data.rightStick.x = 255;
+    }" PAD_SOURCE "${PAD_SOURCE}")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/adapted/pad.cpp" CONTENT "#include <windows.h>
+${PAD_SOURCE}" @ONLY)
+set(HOST "${GZ}/gpu/window.cpp" "${CMAKE_CURRENT_BINARY_DIR}/adapted/pad.cpp" "${GZ}/gpu/logging.cpp" "${GZ}/gpu/paths.cpp"
     "${GZ}/gpu/windows_api.cpp")
 # Audio and pad libraries the GoW3 core does not carry, from Godzilla's shadPS4. Its
 # headers come last in the include order, after the GoW3 ones.
@@ -150,7 +166,7 @@ target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-mic
 target_link_libraries(gow3_core PUBLIC sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
-target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
+target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
     "${FSR_VULKAN}/include" "${DEPS}/gz_sirit-src/externals/SPIRV-Headers/include" "${GOW3}/shim" "${GOW3}/shadps4" "${SHADER_INCLUDE}"
     "${GOW3}/third_party/gcn/include" "${GOW3}/third_party/half/include" "${GOW3}/third_party/sirit/include"
     "$ENV{VULKAN_SDK}/Include" "${DEPS}/gz_fmt-src/include" "${DEPS}/gz_magic-src/include"

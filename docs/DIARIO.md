@@ -4749,3 +4749,9 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   janela sem foco e o giro nem sempre acontece (ultima rodada nem terminou).
   Numero confiavel atual: parado ~60 (teto do motor), giro 45-48. Proximo:
   rota que confirme o giro (ex.: comparar capturas antes/depois ou log da camera).
+- 22/10: giro por dentro do jogo (KYOEI_BENCH_TURN_FILE: analogico direito
+  enquanto o arquivo existe; adaptacao do pad.cpp do Godzilla no gpu-gow3) para
+  nao depender de foco. 3 repeticoes: rodada1 media "60" mas a captura mostra a
+  cena de abertura (rota nao carregou o save) = invalida; rodadas 2/3 na cidade
+  girando: 42,8/44,0 e 40,6/46,2 FPS. Referencia confiavel: parado ~60 (teto do
+  motor), giro 43-46. Toda medicao exige conferir a captura final na cidade.
