@@ -91,14 +91,46 @@ file(GLOB AVPLAYER CONFIGURE_DEPENDS "${GOW3}/shadps4/core/libraries/avplayer/*.
 # GoW3 game features (orbs, actors, cheats), its menu and its runtime glue stay out;
 # gow3gpu.cpp is replaced by Kyoei's glue to the Godzilla runtime.
 file(GLOB SHIM CONFIGURE_DEPENDS "${GOW3}/shim/*.cpp" "${GOW3}/shim/*/*.cpp")
-list(FILTER SHIM EXCLUDE REGEX "gow3_(orbs|actors|overlay)\.cpp$|gow3gpu\.cpp$")
+list(FILTER SHIM EXCLUDE REGEX "gow3_(orbs|actors|overlay)\.cpp$|gow3gpu\.cpp$|shim/window\.cpp$|shim/common/(assert|logging/log)\.cpp$")
 set(DRIVERS "${GOW3}/shadps4/core/libraries/gnmdriver/gnmdriver.cpp"
     "${GOW3}/shadps4/core/libraries/videoout/driver.cpp" "${GOW3}/shadps4/core/libraries/videoout/video_out.cpp"
     "${GOW3}/shadps4/core/libraries/kernel/equeue.cpp" "${GOW3}/shadps4/core/libraries/videodec/video_utils.cpp")
 # Reach compat/common/ntapi.h instead of the sibling header.
 gow3_adapt(COMMON shadps4/common/thread.cpp "#include \"ntapi.h\"" "#include \"common/ntapi.h\"")
-add_library(gow3_core OBJECT ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS}
-    "${GOW3}/shim/common/logging/log.cpp")
+# Godzilla's host pieces: window, pad, logging into the runtime log, paths.
+set(GZ "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/godzilla-core")
+set(HOST "${GZ}/gpu/window.cpp" "${GZ}/gpu/pad.cpp" "${GZ}/gpu/logging.cpp" "${GZ}/gpu/paths.cpp"
+    "${GZ}/gpu/windows_api.cpp")
+# Audio and pad libraries the GoW3 core does not carry, from Godzilla's shadPS4. Its
+# headers come last in the include order, after the GoW3 ones.
+set(SHAD "${GZ}/third_party/shadPS4")
+file(GLOB AJM CONFIGURE_DEPENDS "${SHAD}/src/core/libraries/ajm/*.cpp")
+list(REMOVE_ITEM AJM "${SHAD}/src/core/libraries/ajm/ajm_aac.cpp")
+file(READ "${SHAD}/src/core/libraries/ajm/ajm_aac.cpp" AJM_AAC_SOURCE)
+string(REPLACE "externals/aacdec/fdk-aac/" "${DEPS}/gz_aac-src/" AJM_AAC_SOURCE "${AJM_AAC_SOURCE}")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/ajm_aac.cpp" CONTENT "${AJM_AAC_SOURCE}" @ONLY)
+list(APPEND AJM "${CMAKE_CURRENT_BINARY_DIR}/ajm_aac.cpp")
+file(READ "${SHAD}/src/core/libraries/audio/audioout.cpp" AUDIO_SOURCE)
+string(REPLACE "if (EmulatorSettings.GetAudioBackend() == AudioBackend::OpenAL) {
+        audio = std::make_unique<OpenALAudioOut>();
+    } else {
+        audio = std::make_unique<SDLAudioOut>();
+    }" "audio = std::make_unique<SDLAudioOut>();" AUDIO_SOURCE "${AUDIO_SOURCE}")
+file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/audioout.cpp" CONTENT "${AUDIO_SOURCE}" @ONLY)
+set(AUDIO "${CMAKE_CURRENT_BINARY_DIR}/audioout.cpp" "${SHAD}/src/core/libraries/audio/sdl_audio_out.cpp")
+set_source_files_properties("${SHAD}/src/core/libraries/audio/sdl_audio_out.cpp" PROPERTIES
+    COMPILE_OPTIONS "-msse4.1;-include;core/libraries/kernel/time.h")
+add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
+    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp)
+# The core's own Sirit (newer SPIR-V ops) and FSR-Vulkan (MIT), as in the GoW3 build.
+set(SIRIT_USE_SYSTEM_SPIRV_HEADERS OFF CACHE BOOL "" FORCE)
+add_subdirectory("${GOW3}/third_party/sirit" sirit EXCLUDE_FROM_ALL)
+set(FFX_VK_PORTABLE_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(FFX_VK_PORTABLE_BUILD_PROBE OFF CACHE BOOL "" FORCE)
+add_subdirectory("${FSR_VULKAN}" fsr-vulkan EXCLUDE_FROM_ALL)
+# MSVC-ABI enums are int: FFX error codes above INT_MAX narrow in switch cases (same values).
+target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-microsoft-enum-value)
+target_link_libraries(gow3_core PUBLIC sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
 set(FSR_VULKAN "${CMAKE_CURRENT_SOURCE_DIR}/../build/fsr-vulkan-src" CACHE PATH "FSR-Vulkan source (MIT)")
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
@@ -112,7 +144,10 @@ target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/compat
     "${DEPS}/gz_zydis-build" "${DEPS}/gz_zydis-src/dependencies/zycore/include" "${DEPS}/gz_zydis-build/zycore"
     "${DEPS}/gz_miniz-src" "${DEPS}/gz_miniz-build"
     "${GOW3}/shadps4/core/libraries" "${GOW3}/shadps4/core/libraries/gnmdriver" "${DEPS}/gz_ffmpeg-src/include"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/godzilla-core/prebuilt/externals/ffmpeg-94dde08/include")
+    "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/godzilla-core/prebuilt/externals/ffmpeg-94dde08/include"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/godzilla-core/src"
+    "${SHAD}/src" "${SHAD}/src/core/libraries/ajm" "${DEPS}/gz_mp3-src"
+    "${DEPS}/gz_atrac9-src/C/src" "${DEPS}/gz_aac-src/libAACdec/include" "${DEPS}/gz_aac-src/libAACenc/include" "${DEPS}/gz_aac-src/libArithCoding/include" "${DEPS}/gz_aac-src/libDRCdec/include" "${DEPS}/gz_aac-src/libFDK/include" "${DEPS}/gz_aac-src/libMpegTPDec/include" "${DEPS}/gz_aac-src/libMpegTPEnc/include" "${DEPS}/gz_aac-src/libPCMutils/include" "${DEPS}/gz_aac-src/libSACdec/include" "${DEPS}/gz_aac-src/libSACenc/include" "${DEPS}/gz_aac-src/libSBRdec/include" "${DEPS}/gz_aac-src/libSBRenc/include" "${DEPS}/gz_aac-src/libSYS/include")
 file(GLOB BOOST_INCLUDES "${DEPS}/gz_boost-src/libs/*/include")
 target_include_directories(gow3_core SYSTEM PRIVATE ${BOOST_INCLUDES})
 target_compile_definitions(gow3_core PRIVATE WIN32_LEAN_AND_MEAN NOMINMAX _CRT_SECURE_NO_WARNINGS

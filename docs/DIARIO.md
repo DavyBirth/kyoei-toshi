@@ -4683,3 +4683,13 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Godzilla + partes do gow3gpu.cpp; libs.h do Godzilla para resolver por
   nome), Ajm/AudioOut/Pad/janela, ligar kyoei.exe opt-in, depois refazer os
   ~125 remendos de video_core do Kyoei. Jogo nao aberto (Davy em aula).
+- Biblioteca gow3_core completa (21/10): cola gpu-gow3/kyoei_gow3_bridge.cpp
+  (gz_gpu_* do Godzilla + copias paralelas, NoteBackingWrite, servico kernel,
+  recuperacao de falha da preparacao especulativa via gow3_setjmp/longjmp no
+  gz_gpu_handle_fault), stubs do menu GoW3, configuracoes lidas de GZ_*
+  (compat/core/emulator_settings.h), libs.h/sdl_window/threads do Godzilla,
+  Ajm/AudioOut/pad/janela do Godzilla, Sirit do nucleo e FSR-Vulkan compilados.
+  Teste de ligacao: so restam simbolos gz_* do runtime; 0 duplicados.
+  Proximo: alvo opt-in no CMake principal (KYOEI_GPU_CORE=gow3) ligando
+  kyoei.exe a essa biblioteca, sem os remendos do nucleo antigo; depois
+  primeira partida muda quando Davy liberar.
