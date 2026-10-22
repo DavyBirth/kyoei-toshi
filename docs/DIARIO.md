@@ -4841,3 +4841,7 @@ Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga)
   em vez de mais sondas cegas.
 - Davy: "Return to Desktop" voltou a responder ao mouse no nucleo GoW3 (no
   antigo nao respondia) e aparece antes das outras opcoes.
+
+### 22/10/2026 — mudo dos testes e FSR desligado no motor GoW3
+- Testes estavam com som: `tools/mute_test_audio.ps1` rodava antes do jogo abrir a sessão de áudio e silenciava 0 sessões sem erro. Agora espera até 60 s a sessão aparecer; se não conseguir, falha (e o roteiro de teste fecha o jogo). Conferido: 1 sessão silenciada.
+- `kyoei-gow3`: o upscaler temporal do GoW3 (FSR 3.1, ligado por padrão) fica desligado (`GOW3_UPSCALER=none` se não definido), pela regra de fidelidade ao PS4. Log sem linha "Upscaler"; cidade normal.

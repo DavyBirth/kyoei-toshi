@@ -231,6 +231,8 @@ u32 Gow3DisplayRefreshHz() {
 
 extern "C" void gz_gpu_start(uint32_t sdk, int headless) {
     sdk_version = sdk;
+    // PS4 fidelity: GoW3's temporal upscaler (FSR 3.1 on by default) stays off for Kyoei.
+    if (!std::getenv("GOW3_UPSCALER")) _putenv_s("GOW3_UPSCALER", "none");
     Gow3Settings::Load();
     Core::Emulator::FillElfInfo(sdk);
     if (!headless) Libraries::Kernel::service_thread = std::jthread{Libraries::Kernel::KernelServiceThread};

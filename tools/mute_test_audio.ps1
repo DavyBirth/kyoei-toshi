@@ -1,4 +1,4 @@
-param([Parameter(Mandatory=$true)][int]$TargetId)
+param([Parameter(Mandatory=$true)][int]$TargetId,[int]$WaitSeconds=60)
 $ErrorActionPreference='Stop'
 $expected=@('kyoei.exe','kyoei-gow3.exe') | ForEach-Object { Join-Path (Split-Path $PSScriptRoot -Parent) "build\$_" }
 $process=Get-Process -Id $TargetId
@@ -57,4 +57,12 @@ public static class KyoeiTestAudio {
 }
 '@
 }
-[KyoeiTestAudio]::Mute([uint32]$TargetId)
+# The game opens its audio session some seconds after the window: wait for it.
+$deadline=(Get-Date).AddSeconds($WaitSeconds)
+do {
+ $muted=[KyoeiTestAudio]::Mute([uint32]$TargetId)
+ if($muted -gt 0){ return $muted }
+ if($process.HasExited){ throw 'O jogo fechou antes de abrir o audio.' }
+ Start-Sleep -Milliseconds 250
+} while((Get-Date) -lt $deadline)
+throw 'Nenhuma sessao de audio do jogo para silenciar.'
