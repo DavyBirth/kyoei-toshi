@@ -4701,3 +4701,13 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   (troca de texturas/botoes traduzidos, overlay de dialogos/IME, pos do modo
   foto, HUD fit, frame stats, correcoes de detiler/readback). Ainda nao
   executado: primeira partida muda depende de Davy (estava em aula).
+- PRIMEIRA PARTIDA no nucleo GoW3 (21/10 noite, mudo, rota framecap com giro L,
+  GOW3_FRAME_STATS=1): logos, titulo, save e cidade (stage201) renderizados
+  corretamente, ingles do runtime ok, exit0. Parado aquecendo: 51,4-55,4 FPS
+  (nucleo antigo, mesma cena: 37-41). Janela medida (reset+giro): 44,2/35,0/
+  38,6 FPS por janela de 5s (antigo na mesma rota: 33,5 e 28,7 de media).
+  Picos do giro 50-84ms com 70-113MB de upload de imagens por quadro (texturas
+  novas entrando), 0 compilacoes. Log INFO "Making range resident" em excesso
+  (logging do Godzilla usa INFO por padrao): reduzir antes de medir de novo.
+  Janela abre 1280x720 (tamanho do launcher nao ligado); controle fisico
+  ignorado pelos scripts de teste de proposito.
