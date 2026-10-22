@@ -110,6 +110,13 @@ list(FILTER SHIM EXCLUDE REGEX "gow3_(orbs|actors|overlay)\.cpp$|gow3gpu\.cpp$|s
 set(DRIVERS "${GOW3}/shadps4/core/libraries/gnmdriver/gnmdriver.cpp"
     "${GOW3}/shadps4/core/libraries/videoout/driver.cpp" "${GOW3}/shadps4/core/libraries/videoout/video_out.cpp"
     "${GOW3}/shadps4/core/libraries/kernel/equeue.cpp" "${GOW3}/shadps4/core/libraries/videodec/video_utils.cpp")
+# Kyoei's overlay asks for frames while a dialog is open and the game stops flipping
+# (the old core's ImGui::Core::MustKeepDrawing adaptation).
+gow3_adapt(DRIVERS shadps4/core/libraries/videoout/driver.cpp
+    "#include \"common/assert.h\"" "#include \"kyoei_overlay.h\"
+#include \"common/assert.h\""
+    "} else if (ImGui::Core::MustKeepDrawing()) {"
+    "} else if (ImGui::Core::MustKeepDrawing() || kyoei_overlay_needs_redraw()) {")
 # Reach compat/common/ntapi.h instead of the sibling header.
 gow3_adapt(COMMON shadps4/common/thread.cpp "#include \"ntapi.h\"" "#include \"common/ntapi.h\"")
 # Godzilla's host pieces: window, pad, logging into the runtime log, paths.
@@ -171,7 +178,12 @@ gow3_adapt(SHIM shim/gow3_settings.cpp
     "    const char* size = std::getenv(\"GOW3_RENDER_RES\")"
     "    static const char* const size = std::getenv(\"GOW3_RENDER_RES\")")
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
-    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp)
+    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp
+    ../src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp")
+set_source_files_properties("${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp" PROPERTIES
+    COMPILE_DEFINITIONS IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1)
+set_source_files_properties(../src/kyoei_overlay_gpu.cpp PROPERTIES
+    COMPILE_DEFINITIONS "IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1;KYOEI_GUI_FONT_DIR=\"assets/fonts\"")
 # The core's own Sirit (newer SPIR-V ops) and FSR-Vulkan (MIT), as in the GoW3 build.
 set(SIRIT_USE_SYSTEM_SPIRV_HEADERS OFF CACHE BOOL "" FORCE)
 add_subdirectory("${GOW3}/third_party/sirit" sirit EXCLUDE_FROM_ALL)
@@ -180,10 +192,10 @@ set(FFX_VK_PORTABLE_BUILD_PROBE OFF CACHE BOOL "" FORCE)
 add_subdirectory("${FSR_VULKAN}" fsr-vulkan EXCLUDE_FROM_ALL)
 # MSVC-ABI enums are int: FFX error codes above INT_MAX narrow in switch cases (same values).
 target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-microsoft-enum-value)
-target_link_libraries(gow3_core PUBLIC dbghelp sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
+target_link_libraries(gow3_core PUBLIC kyoei_imgui dbghelp sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
-target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/../src" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
+target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/../src" "${KYOEI_IMGUI_DIR}/backends" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
     "${FSR_VULKAN}/include" "${DEPS}/gz_sirit-src/externals/SPIRV-Headers/include" "${GOW3}/shim" "${GOW3}/shadps4" "${SHADER_INCLUDE}"
     "${GOW3}/third_party/gcn/include" "${GOW3}/third_party/half/include" "${GOW3}/third_party/sirit/include"
     "$ENV{VULKAN_SDK}/Include" "${DEPS}/gz_fmt-src/include" "${DEPS}/gz_magic-src/include"

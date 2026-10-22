@@ -11,8 +11,8 @@ public class KyoeiInput {
 }
 '@
 $kyoeiProcess = Get-Process -Id $TargetId -ErrorAction Stop
-$kyoeiExe = [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) 'build/kyoei.exe'))
-if ($kyoeiProcess.ProcessName -ne 'kyoei' -or $kyoeiProcess.Path -ne $kyoeiExe -or -not $kyoeiProcess.MainWindowHandle) { throw 'Janela diferente do port Kyoei' }
+$kyoeiExe = @('kyoei.exe','kyoei-gow3.exe') | ForEach-Object { [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) "build/$_")) }
+if ($kyoeiProcess.Path -notin $kyoeiExe -or -not $kyoeiProcess.MainWindowHandle) { throw 'Janela diferente do port Kyoei' }
 $kyoeiKeys = @{Enter=13; Space=32; E=69; F=70; Escape=27; Tab=9; Z=90; X=88; Q=81; Up=38; Down=40; Left=37; Right=39; W=87; A=65; S=83; D=68; I=73; J=74; K=75; L=76}
 $kyoeiKeys['F8']=119
 $kyoeiVirtual = [uint32]$kyoeiKeys[$Key]

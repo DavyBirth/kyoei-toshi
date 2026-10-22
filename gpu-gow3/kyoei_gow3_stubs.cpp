@@ -1,18 +1,32 @@
 // Kyoei: pieces of the GoW3 port outside its GPU folder. Its in-game menu (Gow3Overlay)
-// is not used: Kyoei has its own overlay. Runtime services map to the Kyoei runtime.
+// is replaced by Kyoei's overlay (dialogs, title exit, photo HUD), drawn by the GoW3
+// presenter at the same point. Runtime services map to the Kyoei runtime.
 // SPDX-License-Identifier: GPL-2.0-or-later
 #include <cstddef>
 #include <string>
 #include "gow3_overlay.h"
+#include "kyoei_overlay.h"
+#include "kyoei_overlay_gpu.h"
 extern "C" {
 #include "gz.h"
+#include "kyoei_title_exit.h"
+int kyoei_photo_hud_hidden(void);
 void gz_thread_attach_host(const char*);
 }
 
 namespace Gow3Overlay {
-bool Visible() { return false; }
-void Init(const Vulkan::Instance&, vk::Format, u32) {}
-void Render(vk::CommandBuffer, vk::ImageView, vk::Extent2D) {}
+bool Visible() {
+    return kyoei_overlay_kind() != 0 || kyoei_title_exit_state() != 0 || kyoei_photo_hud_hidden();
+}
+void Init(const Vulkan::Instance& instance, vk::Format format, u32 images) {
+    KyoeiOverlay::Initialize(instance, format, images);
+}
+// Also called for the start-up loading frame; the Kyoei overlay draws only its own state.
+void Render(vk::CommandBuffer command, vk::ImageView view, vk::Extent2D extent) {
+    const auto revision = kyoei_overlay_revision();
+    KyoeiOverlay::Render(command, view, extent);
+    kyoei_overlay_presented(revision);
+}
 void SetBackgroundLoading(u32, u32) {}
 void SetLoading(bool, u32, u32) {}
 void ShowNotice(const std::string&, int) {}
