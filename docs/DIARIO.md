@@ -4812,3 +4812,20 @@ Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga)
   caminho da copia (DMA/CPU) e garantir leitura do alvo antes.
 - Pendente sem regressao: rodape "設定の変更" das Opcoes em japones tambem no
   nucleo antigo (nao esta no pack de prompts).
+- Investigacao fundo da pausa (GoW3), 22-23/10. Fatos: ao pausar surge imagem
+  1920x1080 fmt97 (16 bytes/2px, HDR) em endereco variavel (0x1067e4..,
+  0x1068040000), enviada 1x da memoria como "CPU-written"; nenhum alvo de
+  render, escrita de GPU (watch), copia DMA >=256KB ou imagem GPU sobreposta
+  nesse endereco. Logo o jogo a preenche pela CPU a partir de algo que no
+  nucleo antigo esta certo na memoria. Descartados (sem efeito): pack de botoes,
+  GOW3_READBACK_LINEAR=1, GOW3_READBACKS=2, GOW3_COPY_GPU_BUFFERS=1,
+  GOW3_DIRECT_MEMORY_ACCESS=1, KYOEI_SYNC_READS=1 (novo, opt-in), upscaler off,
+  todas as otimizacoes GoW3 off (GZ_DISABLED_OPTIMIZATIONS=0x607ffff400fffff).
+  Nucleo antigo com GZ_READBACK_LINEAR=0 continua certo. Proximo: achar o codigo
+  do jogo que escreve a imagem (PC da falta de escrita) e de onde ele le.
+  Diagnosticos KYOEI_UPLOAD_REPORT=1 ampliados: copias DMA, leituras CPU,
+  alvos de render, uploads sobrepostos, KYOEI_UPLOAD_WATCH=<hex>.
+- Achado: o nucleo GoW3 liga FSR 3.1 por padrao ("Upscaler: FSR 3.1 ... (on)").
+  Contra a regra de fidelidade; desligar (GOW3_UPSCALER=off) antes de usar.
+- Davy viu "Return to Desktop" aparecer no titulo antes das outras opcoes no
+  nucleo GoW3: corrigir o momento de exibicao.

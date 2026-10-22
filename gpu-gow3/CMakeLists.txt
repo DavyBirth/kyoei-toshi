@@ -122,10 +122,15 @@ gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
     "if (is_gpu_modified && !is_gpu_dirty && !prompt) {"
     "    const auto [in_buffer, in_offset] =
         buffer_cache.ObtainBufferForImage(image.info.guest_address, image.info.guest_size)"
-    "    KYOEI_PROMPT_SOURCE(image)"
+    "    KYOEI_UPLOAD_OVERLAPS(image)
+    KYOEI_PROMPT_SOURCE(image)"
     "tile_manager.DetileImage(in_buffer, in_offset, image.info)"
     "prompt ? std::pair<const Buffer*, u64>{in_buffer, in_offset}
                                          : tile_manager.DetileImage(in_buffer, in_offset, image.info)"
+    "ImageView& TextureCache::FindRenderTarget(ImageId image_id, const ImageDesc& desc) {
+    Image& image = slot_images[image_id]"
+    "ImageView& TextureCache::FindRenderTarget(ImageId image_id, const ImageDesc& desc) {
+    Image& image = (KyoeiUploadReport::NoteTarget(slot_images[image_id]), slot_images[image_id])"
     "void TextureCache::UnregisterImage(ImageId image_id) {
     Image& image = slot_images[image_id]"
     "void TextureCache::UnregisterImage(ImageId image_id) {
@@ -149,6 +154,12 @@ gow3_adapt(DRIVERS shadps4/core/libraries/videoout/driver.cpp
 #include \"common/assert.h\""
     "} else if (ImGui::Core::MustKeepDrawing()) {"
     "} else if (ImGui::Core::MustKeepDrawing() || kyoei_overlay_needs_redraw()) {")
+gow3_adapt(VIDEO_CORE shadps4/video_core/buffer_cache/buffer_cache.cpp
+    "#include \"video_core/buffer_cache/buffer_cache.h\""
+    "#include \"video_core/buffer_cache/buffer_cache.h\"
+#include \"kyoei_gow3_experiments.h\""
+    "if (is_texel_buffer && !is_written) {"
+    "if ((is_texel_buffer || KyoeiGow3Experiments::SyncAllReads()) && !is_written) {")
 # Reach compat/common/ntapi.h instead of the sibling header.
 gow3_adapt(COMMON shadps4/common/thread.cpp "#include \"ntapi.h\"" "#include \"common/ntapi.h\"")
 # Godzilla's host pieces: window, pad, logging into the runtime log, paths.
@@ -203,7 +214,17 @@ gow3_adapt(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp
     "                    texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
     "                    KyoeiUploadReport::NoteWrite(stage.pgm_hash, vsharp.base_address, size), texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
     "    texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)"
-    "    KyoeiUploadReport::NoteWrite(0, dst, num_bytes), texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)")
+    "    KyoeiUploadReport::NoteWrite(0, dst, num_bytes), texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)"
+    "void Rasterizer::CopyBuffer(VAddr dst, VAddr src, u32 num_bytes, bool dst_gds, bool src_gds) {
+    DrainDrawPipe()"
+    "void Rasterizer::CopyBuffer(VAddr dst, VAddr src, u32 num_bytes, bool dst_gds, bool src_gds) {
+    DrainDrawPipe(), KyoeiUploadReport::CopyEnabled() && KyoeiUploadReport::NoteCopy(dst, src, num_bytes,
+        dst_gds || src_gds, !src_gds && buffer_cache.IsRegionGpuModified(src, num_bytes),
+        !src_gds && bool(texture_cache.FindImageFromRange(src, num_bytes)))"
+    "bool Rasterizer::ReadMemory(VAddr addr, u64 size, bool assume_locks) {
+    DrainDrawPipe()"
+    "bool Rasterizer::ReadMemory(VAddr addr, u64 size, bool assume_locks) {
+    DrainDrawPipe(), KyoeiUploadReport::NoteRead(addr, size)")
 # FixedRenderSession() ran getenv on every draw (TemporalUpscaler::OnFrameStart): ~10% of
 # the draw recording thread on Windows, where getenv scans the environment. Read it once.
 gow3_adapt(SHIM shim/gow3_settings.cpp
