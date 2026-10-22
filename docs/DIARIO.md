@@ -4693,3 +4693,11 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Proximo: alvo opt-in no CMake principal (KYOEI_GPU_CORE=gow3) ligando
   kyoei.exe a essa biblioteca, sem os remendos do nucleo antigo; depois
   primeira partida muda quando Davy liberar.
+- kyoei-gow3.exe ligado (21/10 21:50): alvo opt-in no CMake principal
+  (KYOEI_GOW3_CORE, padrao ON) com todo o lado C do Kyoei + gow3_core; o
+  kyoei.exe normal nao muda. Faltavam so 5 ganchos do nucleo antigo
+  (autotestes e flush do cache ao sair): stubs que registram "not available".
+  Ainda NAO portados os recursos do Kyoei que viviam nos objetos kyoei_videoout
+  (troca de texturas/botoes traduzidos, overlay de dialogos/IME, pos do modo
+  foto, HUD fit, frame stats, correcoes de detiler/readback). Ainda nao
+  executado: primeira partida muda depende de Davy (estava em aula).

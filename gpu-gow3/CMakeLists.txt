@@ -7,6 +7,7 @@ project(kyoei_gow3gpu C CXX)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(GOW3 "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/gow3-gpu")
+set(FSR_VULKAN "${CMAKE_CURRENT_SOURCE_DIR}/../build/fsr-vulkan-src") # FSR-Vulkan source (MIT)
 set(DEPS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
 find_program(GLSLANG_COMPILER NAMES glslangValidator glslang HINTS "$ENV{VULKAN_SDK}/Bin" REQUIRED)
 
@@ -132,7 +133,6 @@ add_subdirectory("${FSR_VULKAN}" fsr-vulkan EXCLUDE_FROM_ALL)
 target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-microsoft-enum-value)
 target_link_libraries(gow3_core PUBLIC sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
-set(FSR_VULKAN "${CMAKE_CURRENT_SOURCE_DIR}/../build/fsr-vulkan-src" CACHE PATH "FSR-Vulkan source (MIT)")
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
 target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
     "${FSR_VULKAN}/include" "${DEPS}/gz_sirit-src/externals/SPIRV-Headers/include" "${GOW3}/shim" "${GOW3}/shadps4" "${SHADER_INCLUDE}"

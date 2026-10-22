@@ -1450,3 +1450,23 @@ endforeach()
 add_executable(test_kyoei_scratch_pool src/test_kyoei_scratch_pool.cpp)
 target_compile_features(test_kyoei_scratch_pool PRIVATE cxx_std_20)
 target_include_directories(test_kyoei_scratch_pool PRIVATE src)
+# Kyoei on the GoW3 PC GPU core (gpu-gow3/, branch nucleo-gow3): same C runtime and
+# Kyoei features, the newer bbport-derived renderer instead of the prebuilt one and the
+# old-core adaptations above. kyoei.exe is unchanged.
+option(KYOEI_GOW3_CORE "Also build kyoei-gow3.exe on the GoW3 GPU core" ON)
+if(KYOEI_GOW3_CORE)
+  add_subdirectory(gpu-gow3)
+  get_target_property(KYOEI_GOW3_SOURCES kyoei SOURCES)
+  list(FILTER KYOEI_GOW3_SOURCES EXCLUDE REGEX "TARGET_OBJECTS:kyoei_videoout")
+  add_executable(kyoei-gow3 ${KYOEI_GOW3_SOURCES})
+  foreach(property INCLUDE_DIRECTORIES COMPILE_DEFINITIONS COMPILE_OPTIONS COMPILE_FEATURES LINKER_LANGUAGE CXX_STANDARD C_STANDARD)
+    get_target_property(value kyoei ${property})
+    if(value)
+      set_target_properties(kyoei-gow3 PROPERTIES ${property} "${value}")
+    endif()
+  endforeach()
+  set(KYOEI_GOW3_PREBUILT ${KYOEI_GPU_LIBRARIES})
+  list(FILTER KYOEI_GOW3_PREBUILT EXCLUDE REGEX "gzgpu\.lib$|sirit\.lib$")
+  target_link_libraries(kyoei-gow3 PRIVATE kyoei_imgui gow3_core ${KYOEI_GOW3_PREBUILT}
+    ${KYOEI_SYSTEM_LIBRARIES} synchronization pdh ntdll dbghelp "$ENV{VULKAN_SDK}/Lib/vulkan-1.lib")
+endif()
