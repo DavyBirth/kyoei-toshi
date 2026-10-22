@@ -132,6 +132,11 @@ gow3_adapt(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp
     "                    KyoeiUploadReport::NoteWrite(stage.pgm_hash, vsharp.base_address, size), texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
     "    texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)"
     "    KyoeiUploadReport::NoteWrite(0, dst, num_bytes), texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)")
+# FixedRenderSession() ran getenv on every draw (TemporalUpscaler::OnFrameStart): ~10% of
+# the draw recording thread on Windows, where getenv scans the environment. Read it once.
+gow3_adapt(SHIM shim/gow3_settings.cpp
+    "    const char* size = std::getenv(\"GOW3_RENDER_RES\")"
+    "    static const char* const size = std::getenv(\"GOW3_RENDER_RES\")")
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
     kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp)
 # The core's own Sirit (newer SPIR-V ops) and FSR-Vulkan (MIT), as in the GoW3 build.
