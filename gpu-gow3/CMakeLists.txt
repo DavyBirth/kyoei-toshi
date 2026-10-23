@@ -157,9 +157,12 @@ set(DRIVERS "${GOW3}/shadps4/core/libraries/gnmdriver/gnmdriver.cpp"
 # (the old core's ImGui::Core::MustKeepDrawing adaptation).
 gow3_adapt(DRIVERS shadps4/core/libraries/videoout/driver.cpp
     "#include \"common/assert.h\"" "#include \"kyoei_overlay.h\"
+#include \"kyoei_gow3_flip_rate.h\"
 #include \"common/assert.h\""
     "} else if (ImGui::Core::MustKeepDrawing()) {"
-    "} else if (ImGui::Core::MustKeepDrawing() || kyoei_overlay_needs_redraw()) {")
+    "} else if (ImGui::Core::MustKeepDrawing() || kyoei_overlay_needs_redraw()) {"
+    "    RunPresenter([this, frame = req.frame, hdr = req.port->is_hdr] {"
+    "    KyoeiGow3FlipRate::Flip(), RunPresenter([this, frame = req.frame, hdr = req.port->is_hdr] {")
 gow3_adapt(VIDEO_CORE shadps4/video_core/buffer_cache/buffer_cache.cpp
     "#include \"video_core/buffer_cache/buffer_cache.h\""
     "#include \"video_core/buffer_cache/buffer_cache.h\"
