@@ -236,6 +236,9 @@ extern "C" void gz_gpu_start(uint32_t sdk, int headless) {
     // Stale readback hands the CPU the previous frame's GPU data: the pause menu copies the
     // city once into its background and got black, then garbage. Reads stay current.
     if (!std::getenv("GOW3_STALE_READBACK")) _putenv_s("GOW3_STALE_READBACK", "0");
+    // Async compilation skips a draw until its pipeline is built (a new effect can miss frames);
+    // the inFamous port also keeps it off. Compiles finish before the draw.
+    if (!std::getenv("GOW3_ASYNC_SHADERS")) _putenv_s("GOW3_ASYNC_SHADERS", "0");
     Gow3Settings::Load();
     Core::Emulator::FillElfInfo(sdk);
     if (!headless) Libraries::Kernel::service_thread = std::jthread{Libraries::Kernel::KernelServiceThread};
