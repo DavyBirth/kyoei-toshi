@@ -19,6 +19,8 @@ int kyoei_title_exit_take_quit(void);
 void kyoei_title_exit_test_frame(int cursor,uint64_t now_ms);
 void kyoei_title_exit_test_clock(uint64_t now_ms);
 int kyoei_title_exit_test_quit_requested(void);
+/* Returns and clears the pending sound (1 move, 2 confirm). */
+int kyoei_title_exit_test_sound(void);
 #endif
 #ifdef __cplusplus
 }

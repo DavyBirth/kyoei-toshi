@@ -14,9 +14,18 @@
 #include <stdio.h>
 typedef void (ABI *GuestUpdate)(void *);
 static GuestUpdate original_update;
+/* The game's sound effect call (manager, cue sheet, cue), as the native items use it. */
+typedef void *(ABI *GuestPlaySound)(void *, const char *, const char *);
+static GuestPlaySound play_sound;
+static void *const *sound_manager;
+static const char *sound_sheet, *sound_move, *sound_set;
 #endif
 
 enum { VISIBLE_MS=200, CONFIRM=0x2000, UP=0x10, DOWN=0x40 };
+/* The confirm sound plays before the window closes. */
+enum { QUIT_DELAY_MS=350, SOUND_MOVE=1, SOUND_SET=2 };
+static _Atomic int sound_request;
+static _Atomic uint64_t quit_at;
 static _Atomic int cursor=-1, accepting, state=KYOEI_TITLE_EXIT_HIDDEN;
 static _Atomic uint64_t last_frame;
 static uint32_t previous_buttons;
@@ -28,19 +37,20 @@ static volatile float item_alpha, item_x, item_y, item_focus;
 #ifdef KYOEI_TITLE_EXIT_TEST
 static uint64_t test_now;
 static uint64_t now_ms(void) { return test_now; }
-static void request_quit(void) { quit_requested=1; }
+static void request_quit(void) { if (!quit_requested) quit_at=test_now+QUIT_DELAY_MS; quit_requested=1; }
 void kyoei_title_exit_test_frame(int value,uint64_t now) { cursor=value; accepting=1; item_alpha=1; last_frame=now; test_now=now; }
 void kyoei_title_exit_test_clock(uint64_t now) { test_now=now; }
 int kyoei_title_exit_test_quit_requested(void) { return quit_requested; }
 #else
 static uint64_t now_ms(void) { return GetTickCount64(); }
 static void request_quit(void) {
-    if (!quit_requested) gz_log("Kyoei title: Return to Desktop confirmed");
+    if (!quit_requested) { gz_log("Kyoei title: Return to Desktop confirmed"); quit_at=now_ms()+QUIT_DELAY_MS; }
     quit_requested=1;
 }
 #endif
 
-int kyoei_title_exit_take_quit(void) { return quit_requested && !atomic_exchange(&quit_taken,1); }
+int kyoei_title_exit_take_quit(void) { return quit_requested && now_ms()>=quit_at && !atomic_exchange(&quit_taken,1); }
+int kyoei_title_exit_test_sound(void) { return atomic_exchange(&sound_request,0); }
 static int shown(void) {
     uint64_t frame=last_frame;
     return frame && now_ms()-frame<VISIBLE_MS && item_alpha>0;
@@ -76,12 +86,12 @@ int kyoei_title_exit_input(uint32_t buttons,unsigned stick_y) {
     if (swallow) { if (buttons || down || up) return 1; swallow=0; }
     if (state<=KYOEI_TITLE_EXIT_IDLE) {
         set_state(KYOEI_TITLE_EXIT_IDLE);
-        if (cursor==3 && down_edge) { set_state(KYOEI_TITLE_EXIT_SELECTED); return 1; }
+        if (cursor==3 && down_edge) { set_state(KYOEI_TITLE_EXIT_SELECTED); sound_request=SOUND_MOVE; return 1; }
         return 0;
     }
     // Our entry owns the cursor: the game must not see these inputs.
-    if (up_edge) { set_state(KYOEI_TITLE_EXIT_IDLE); swallow=1; }
-    else if (pressed&CONFIRM) request_quit();
+    if (up_edge) { set_state(KYOEI_TITLE_EXIT_IDLE); swallow=1; sound_request=SOUND_MOVE; }
+    else if ((pressed&CONFIRM) && !quit_requested) { sound_request=SOUND_SET; request_quit(); }
     return 1;
 }
 
@@ -96,6 +106,10 @@ static HudNode *node(void *self,int index) {
 }
 static ABI void title_update(void *self) {
     original_update(self);
+    // Guest thread: the sound requested by the pad thread plays like a native item's.
+    const int sound=atomic_exchange(&sound_request,0);
+    if (sound && play_sound && *sound_manager)
+        play_sound(*sound_manager,sound_sheet,sound==SOUND_SET?sound_set:sound_move);
     int value=-1,ready=0;
     memcpy(&value,(const char *)self+0x1b8,sizeof(value));
     // +0x1b0 gates the game's own cursor input: zero during intro/fades.
@@ -155,6 +169,15 @@ void kyoei_title_exit_configure(void *image,uint64_t size) {
         VirtualFree(relay,0,MEM_RELEASE); gz_log("Kyoei title: relay unavailable; exit entry skipped"); return;
     }
     original_update=(GuestUpdate)relay;
+    // Sound call of the native items (title update 0xaafa5f): verified prologue and strings.
+    static const unsigned char sound_prologue[]={0x55,0x48,0x89,0xe5,0x41,0x57,0x41,0x56,0x41,0x54,0x53,0x49,0x89,0xd7};
+    const char *base=(const char *)image;
+    if (size>0x13370e8 && !memcmp(base+0x6f1df0,sound_prologue,sizeof(sound_prologue)) &&
+        !strcmp(base+0x10cbd78,"se0") && !strcmp(base+0x109d592,"Cursor_Move") && !strcmp(base+0x10c5993,"Cursor_Set")) {
+        sound_manager=(void *const *)(base+0x13370e0);
+        sound_sheet=base+0x10cbd78; sound_move=base+0x109d592; sound_set=base+0x10c5993;
+        play_sound=(GuestPlaySound)(base+0x6f1df0);
+    } else gz_log("Kyoei title: menu sound call differs; Return to Desktop stays silent");
     int32_t relative=(int32_t)distance;
     code[0]=0xe9; memcpy(code+1,&relative,4); code[5]=0x90;
     DWORD ignored;
