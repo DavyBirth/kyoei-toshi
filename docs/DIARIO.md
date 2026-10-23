@@ -4862,3 +4862,10 @@ Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga)
 - Último passo, NÃO testado no jogo: sons nativos no "Return to Desktop" (se0/Cursor_Move ao entrar/sair da linha, se0/Cursor_Set ao confirmar, chamando a função de som do jogo 0x6f1df0 com prólogo e textos verificados; fechamento atrasado 350 ms para o som tocar). Só o teste unitário test_kyoei_title_exit passou; o teste no jogo foi interrompido. Próximo: testar navegação/confirmação no título (log sem "menu sound call differs", sem travar, jogo fecha após confirmar) e Davy ouvir o som.
 - Pendente: confirmar com Davy o "voltar pro menu" do pedido do botão; frames_ahead=2 candidato (+~2 FPS, ruído, +1 quadro de latência); travada de ~1 s ao abrir a pausa (jogo despeja 1.300 linhas de log; causa não provada); BP de desenho (03/04/05/10/11) e oclusão real a avaliar com comparação visual.
 - Alterações preexistentes mantidas sem commit: src/kyoei_launcher.cs, tools/build_launcher.ps1.
+
+### 23/10/2026 (noite) — sons do Return to Desktop conferidos no jogo
+- `kyoei-gow3` em inglês, no mudo, com KYOEI_TITLE_EXIT=1 e a arte do portátil: descer até a 5ª linha mostra "Return to Desktop" com o sublinhado nativo; subir e descer de novo funciona; Enter fecha o jogo (log "Return to Desktop confirmed", código de saída 0), sem "menu sound call differs" nem travar. O som em si (cursor e confirmação) falta Davy ouvir, já que os testes ficam no mudo.
+- Sem KYOEI_TITLE_EXIT_ART o item fica selecionável mas invisível; o launcher portátil define as duas variáveis.
+- O núcleo GoW3 cria `user/` na pasta atual quando aberto direto do repositório; apagado (cache recriável).
+- src/kyoei_launcher.cs e tools/build_launcher.ps1 só diferiam em fim de linha; restaurados.
+
