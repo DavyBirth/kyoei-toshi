@@ -90,10 +90,17 @@ gow3_adapt(GOW3_ADAPTED_HEADERS shadps4/video_core/texture_cache/image.h
     KyoeiPromptImage = 1 << 30, ///< Kyoei: button prompt artwork, selected on every binding")
 gow3_adapt(GOW3_ADAPTED_HEADERS shadps4/video_core/texture_cache/texture_cache.h
     "constexpr u32 Aliased = static_cast<u32>(ImageFlagBits::Aliased);"
-    "constexpr u32 Aliased = static_cast<u32>(ImageFlagBits::Aliased | ImageFlagBits::KyoeiPromptImage);")
+    "constexpr u32 Aliased = static_cast<u32>(ImageFlagBits::Aliased | ImageFlagBits::KyoeiPromptImage);"
+    "    /// Runs the garbage collector."
+    "#include \"kyoei_gow3_image_lookup.inc\"
+    /// Runs the garbage collector.")
 # MSVC's std::array iterator is a class, not a pointer.
 # KYOEI_UPLOAD_REPORT=1 (kyoei_upload_report.h): the images re-uploaded most, every 5 s.
 gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
+    "    ForEachImageInRegion(address, size, [&](ImageId image_id, Image& image) {
+        if (image.info.guest_address != address) {"
+    "    KyoeiForEachImageWithAddress(address, [&](ImageId image_id, Image& image) {
+        if (image.info.guest_address != address) {"
     "auto* slot = std::ranges::find(readback_images" "auto slot = std::ranges::find(readback_images"
     "#include \"video_core/texture_cache/texture_cache.h\"" "#include \"video_core/texture_cache/texture_cache.h\"
 #include \"kyoei_upload_report.h\""
