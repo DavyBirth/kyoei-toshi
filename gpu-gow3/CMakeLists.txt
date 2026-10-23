@@ -236,6 +236,32 @@ gow3_adapt(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp
     DrainDrawPipe()"
     "bool Rasterizer::ReadMemory(VAddr addr, u64 size, bool assume_locks) {
     DrainDrawPipe(), KyoeiUploadReport::NoteRead(addr, size)")
+# Kyoei photo mode: capture of the guest display buffer, the photo grade under the overlay, and the
+# overlay/grade pipelines released with the presenter.
+gow3_adapt(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_presenter.cpp
+    "#include \"video_core/texture_cache/image.h\""
+    "#include \"video_core/texture_cache/image.h\"
+#include \"kyoei_overlay_gpu.h\"
+#include \"kyoei_photo_post.h\"
+#include \"kyoei_gow3_photo.h\""
+    "        if (frame_dump) {
+            runtime.Transit(&image,"
+    "        if (KyoeiGow3Photo::Capture(instance, draw_scheduler, cmdbuf, runtime, image, view_info.format, ScreenshotToRgba8),
+            frame_dump) {
+            runtime.Transit(&image,"
+    "            Gow3Overlay::Render(cmdbuf, swapchain.ImageView(), extent)"
+    "            KyoeiPhoto::RenderPost(instance, cmdbuf, frame, frame->image_view, frame->width,
+                                   frame->height, swapchain.ImageView(), extent,
+                                   swapchain.GetSurfaceFormat().format),
+                Gow3Overlay::Render(cmdbuf, swapchain.ImageView(), extent)"
+    "    Check(draw_scheduler.CommandBuffer().reset())"
+    "    KyoeiPhoto::ShutdownPost(), KyoeiOverlay::Shutdown(), Check(draw_scheduler.CommandBuffer().reset())")
+foreach(stage vert frag)
+    add_custom_command(OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/photo.${stage}.inc"
+        COMMAND "${KYOEI_GLSLC}" -mfmt=c "${CMAKE_CURRENT_SOURCE_DIR}/../src/shaders/photo.${stage}"
+            -o "${CMAKE_CURRENT_BINARY_DIR}/photo.${stage}.inc"
+        DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/../src/shaders/photo.${stage}" VERBATIM)
+endforeach()
 # FixedRenderSession() ran getenv on every draw (TemporalUpscaler::OnFrameStart): ~10% of
 # the draw recording thread on Windows, where getenv scans the environment. Read it once.
 gow3_adapt(SHIM shim/gow3_settings.cpp
@@ -243,7 +269,8 @@ gow3_adapt(SHIM shim/gow3_settings.cpp
     "    static const char* const size = std::getenv(\"GOW3_RENDER_RES\")")
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
     kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp
-    ../src/kyoei_overlay_gpu.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp")
+    ../src/kyoei_overlay_gpu.cpp ../src/kyoei_photo_post.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
+    "${CMAKE_CURRENT_BINARY_DIR}/photo.vert.inc" "${CMAKE_CURRENT_BINARY_DIR}/photo.frag.inc")
 set_source_files_properties("${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp" PROPERTIES
     COMPILE_DEFINITIONS IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1)
 set_source_files_properties(../src/kyoei_overlay_gpu.cpp PROPERTIES
@@ -259,7 +286,7 @@ target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-mic
 target_link_libraries(gow3_core PUBLIC kyoei_imgui dbghelp sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
-target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/adapted/shadps4" "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/../src" "${KYOEI_IMGUI_DIR}/backends" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
+target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_BINARY_DIR}" "${CMAKE_CURRENT_BINARY_DIR}/adapted/shadps4" "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/../src" "${KYOEI_IMGUI_DIR}/backends" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
     "${FSR_VULKAN}/include" "${DEPS}/gz_sirit-src/externals/SPIRV-Headers/include" "${GOW3}/shim" "${GOW3}/shadps4" "${SHADER_INCLUDE}"
     "${GOW3}/third_party/gcn/include" "${GOW3}/third_party/half/include" "${GOW3}/third_party/sirit/include"
     "$ENV{VULKAN_SDK}/Include" "${DEPS}/gz_fmt-src/include" "${DEPS}/gz_magic-src/include"
