@@ -4868,4 +4868,4 @@ Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga)
 - Sem KYOEI_TITLE_EXIT_ART o item fica selecionável mas invisível; o launcher portátil define as duas variáveis.
 - O núcleo GoW3 cria `user/` na pasta atual quando aberto direto do repositório; apagado (cache recriável).
 - src/kyoei_launcher.cs e tools/build_launcher.ps1 só diferiam em fim de linha; restaurados.
-
+- Davy esclareceu: o pedido era só o "Return to Desktop" estar no menu título (já está) com o som do jogo. Não existe pedido de "voltar pro menu"; a pendência foi anotada errado e está encerrada.
