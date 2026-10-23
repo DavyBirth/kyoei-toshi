@@ -1,0 +1,36 @@
+SamplerSetMemo (inFamous port, iss_pc 1.0, 2026-10-17): texture_cache.h.
+<<<<<<<
+    /// gow3: changes whenever an image is registered or unregistered.
+    [[nodiscard]] u64 RegistryGeneration() const noexcept {
+        return registry_generation.load(std::memory_order_acquire);
+    }
+=======
+    /// gow3: changes whenever an image is registered or unregistered.
+    [[nodiscard]] u64 RegistryGeneration() const noexcept {
+        return registry_generation.load(std::memory_order_acquire);
+    }
+
+    /// Kyoei (SamplerSetMemo): changes whenever the collector destroys a sampler, so a memo of
+    /// resolved samplers can drop the ones that would dangle.
+    [[nodiscard]] u64 SamplerGeneration() const noexcept {
+        return sampler_generation.load(std::memory_order_acquire);
+    }
+>>>>>>>
+<<<<<<<
+                                         bool is_depth, float extra_lod_bias = 0.0f);
+=======
+                                         bool is_depth, float extra_lod_bias = 0.0f,
+                                         u64* lru_id = nullptr);
+
+    /// Kyoei (SamplerSetMemo): marks the samplers of a memoized set as used, under one lock.
+    /// A memo hit skips GetSampler's hash and map lookup, so it must still keep those LRU
+    /// entries fresh: the collector evicts by age and a recorded command may still use them.
+    /// False when a sampler was destroyed since `generation` (the ids may be gone or reused).
+    bool TouchSamplers(const u64* lru_ids, u32 count, u64 generation);
+>>>>>>>
+<<<<<<<
+    std::atomic<u64> registry_generation{0};
+=======
+    std::atomic<u64> registry_generation{0};
+    std::atomic<u64> sampler_generation{0}; ///< Kyoei: SamplerGeneration
+>>>>>>>

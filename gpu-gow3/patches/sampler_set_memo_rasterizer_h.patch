@@ -1,0 +1,29 @@
+SamplerSetMemo (inFamous port, iss_pc 1.0, 2026-10-17): vk_rasterizer.h.
+<<<<<<<
+    void BindSamplers(const Shader::Info& stage, const PreparedStage* prepared,
+                      Shader::Backend::Bindings& binding, u32& write_index);
+=======
+    struct TextureSet;
+    /// `set_slot` is the texture set this stage's textures belong to (BindTexturesFromSet):
+    /// SamplerSetMemo resolves its samplers once and a hit reuses them.
+    void BindSamplers(const Shader::Info& stage, const PreparedStage* prepared,
+                      Shader::Backend::Bindings& binding, u32& write_index,
+                      TextureSet* set_slot);
+    /// Kyoei (SamplerSetMemo): hash of everything GetSampler depends on for this stage: its
+    /// S#s, the border color base, the per-sampler depth flags and this draw's LOD bias.
+    u64 SamplerSetKey(const Shader::Info& stage, const PreparedStage* prepared) const;
+>>>>>>>
+<<<<<<<
+        std::array<TextureSetEntry, MaxImages> entries{};
+    };
+=======
+        std::array<TextureSetEntry, MaxImages> entries{};
+        /// Kyoei (SamplerSetMemo): the stage's samplers, resolved once per set, with
+        /// SamplerSetKey's hash, the sampler cache generation and their LRU entries.
+        std::array<vk::Sampler, Shader::NUM_SAMPLERS> samplers{};
+        std::array<u64, Shader::NUM_SAMPLERS> sampler_lru_ids{};
+        u64 sampler_key = 0;
+        u64 sampler_generation = ~0ull;
+        u32 sampler_count = 0;
+    };
+>>>>>>>

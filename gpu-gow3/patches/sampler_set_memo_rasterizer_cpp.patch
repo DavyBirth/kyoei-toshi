@@ -1,0 +1,91 @@
+SamplerSetMemo (inFamous port, iss_pc 1.0, 2026-10-17): vk_rasterizer.cpp.
+<<<<<<<
+#include <xxhash.h>
+#include "video_core/renderer_vulkan/ui_composition.h"
+=======
+#include <xxhash.h>
+#include "common/hash.h"
+#include "video_core/renderer_vulkan/ui_composition.h"
+>>>>>>>
+<<<<<<<
+            set_write.pImageInfo = &image_infos[first_image_idx + i];
+        }
+        BindSamplers(stage, prepared, binding, write_index);
+        return;
+=======
+            set_write.pImageInfo = &image_infos[first_image_idx + i];
+        }
+        BindSamplers(stage, prepared, binding, write_index, set_slot);
+        return;
+>>>>>>>
+<<<<<<<
+    BindSamplers(stage, prepared, binding, write_index);
+}
+
+void Rasterizer::BindSamplers(const Shader::Info& stage, const PreparedStage* prepared,
+                              Shader::Backend::Bindings& binding, u32& write_index) {
+    for (u32 sampler_index = 0; sampler_index < stage.samplers.size(); ++sampler_index) {
+        const auto& sampler = stage.samplers[sampler_index];
+        auto ssharp =
+            prepared ? prepared->sampler_sharps[sampler_index] : sampler.GetSharp(stage);
+        const auto vk_sampler = texture_cache.GetSampler(
+            ssharp, Regs().ta_bc_base, sampler.is_depth, sampler.is_depth ? 0.0f : sampler_lod_bias);
+        image_infos.emplace_back(vk_sampler, VK_NULL_HANDLE, vk::ImageLayout::eGeneral);
+=======
+    BindSamplers(stage, prepared, binding, write_index, set_slot);
+}
+
+u64 Rasterizer::SamplerSetKey(const Shader::Info& stage, const PreparedStage* prepared) const {
+    const u32 count = static_cast<u32>(stage.samplers.size());
+    u64 key = count ? XXH3_64bits(prepared->sampler_sharps, count * sizeof(AmdGpu::Sampler)) : 0;
+    key = HashCombine(key, u64(Regs().ta_bc_base.base_addr));
+    key = HashCombine(key, u64(std::bit_cast<u32>(sampler_lod_bias)));
+    u32 depth_flags = 0;
+    for (u32 i = 0; i < count; ++i) {
+        depth_flags |= u32(stage.samplers[i].is_depth) << i;
+    }
+    return HashCombine(key, u64(depth_flags));
+}
+
+void Rasterizer::BindSamplers(const Shader::Info& stage, const PreparedStage* prepared,
+                              Shader::Backend::Bindings& binding, u32& write_index,
+                              TextureSet* set_slot) {
+    const u32 count = static_cast<u32>(stage.samplers.size());
+    // Kyoei (SamplerSetMemo, from the inFamous port): the set these textures were bound from
+    // resolved these samplers already, so reuse their handles instead of a hash and a map
+    // lookup per sampler. The LRU entries are still marked used under TouchSamplers' one lock,
+    // which also drops the memo when the collector destroyed a sampler since.
+    bool memo = false;
+    bool store = false;
+    if (set_slot != nullptr && set_slot->key != 0 && prepared != nullptr &&
+        count <= Shader::NUM_SAMPLERS) {
+        const u64 generation = texture_cache.SamplerGeneration();
+        const u64 key = SamplerSetKey(stage, prepared);
+        memo = set_slot->sampler_count == count && set_slot->sampler_key == key &&
+               set_slot->sampler_generation == generation &&
+               texture_cache.TouchSamplers(set_slot->sampler_lru_ids.data(), count, generation);
+        store = !memo;
+        if (store) {
+            set_slot->sampler_key = key;
+            set_slot->sampler_generation = generation;
+            set_slot->sampler_count = count;
+        }
+    }
+    for (u32 sampler_index = 0; sampler_index < count; ++sampler_index) {
+        const auto& sampler = stage.samplers[sampler_index];
+        vk::Sampler vk_sampler;
+        if (memo) {
+            vk_sampler = set_slot->samplers[sampler_index];
+        } else {
+            const auto ssharp =
+                prepared ? prepared->sampler_sharps[sampler_index] : sampler.GetSharp(stage);
+            vk_sampler = texture_cache.GetSampler(
+                ssharp, Regs().ta_bc_base, sampler.is_depth,
+                sampler.is_depth ? 0.0f : sampler_lod_bias,
+                store ? &set_slot->sampler_lru_ids[sampler_index] : nullptr);
+            if (store) {
+                set_slot->samplers[sampler_index] = vk_sampler;
+            }
+        }
+        image_infos.emplace_back(vk_sampler, VK_NULL_HANDLE, vk::ImageLayout::eGeneral);
+>>>>>>>

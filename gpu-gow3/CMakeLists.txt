@@ -81,6 +81,67 @@ function(gow3_adapt list_var relative)
     list(APPEND files "${out}")
     set(${list_var} ${files} PARENT_SCOPE)
 endfunction()
+# Larger adaptations kept as patch files (gpu-gow3/patches): blocks of
+#   <<<<<<< (line)  text to find  ======= (line)  replacement  >>>>>>> (line)
+# applied in order to the adapted copy (or the fixed one), each block found exactly once.
+# Patch text may hold semicolons, unlike gow3_adapt's arguments. Call after gow3_adapt.
+function(gow3_patch list_var relative patch)
+    set(source "${GOW3}/${relative}")
+    set(out "${CMAKE_CURRENT_BINARY_DIR}/adapted/${relative}")
+    set(files ${${list_var}})
+    list(FIND files "${out}" adapted)
+    if(adapted EQUAL -1)
+        file(READ "${source}" text)
+    else()
+        file(READ "${out}" text)
+    endif()
+    file(READ "${CMAKE_CURRENT_SOURCE_DIR}/patches/${patch}" blocks)
+    string(REPLACE "
+" "
+" text "${text}")
+    string(REPLACE "
+" "
+" blocks "${blocks}")
+    set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/patches/${patch}")
+    while(TRUE)
+        string(FIND "${blocks}" "<<<<<<<
+" start)
+        if(start EQUAL -1)
+            break()
+        endif()
+        string(FIND "${blocks}" "
+=======
+" middle)
+        string(FIND "${blocks}" "
+>>>>>>>" end)
+        if(middle LESS start OR end LESS middle)
+            message(FATAL_ERROR "Malformed block in ${patch}")
+        endif()
+        math(EXPR before_at "${start} + 8")
+        math(EXPR before_length "${middle} - ${before_at}")
+        math(EXPR after_at "${middle} + 9")
+        math(EXPR after_length "${end} - ${after_at}")
+        string(SUBSTRING "${blocks}" ${before_at} ${before_length} before)
+        string(SUBSTRING "${blocks}" ${after_at} ${after_length} after)
+        math(EXPR rest "${end} + 8")
+        string(SUBSTRING "${blocks}" ${rest} -1 blocks)
+        string(FIND "${text}" "${before}" first)
+        string(FIND "${text}" "${before}" last REVERSE)
+        if(first EQUAL -1 OR NOT first EQUAL last)
+            message(FATAL_ERROR "GoW3 core changed; ${patch} block not found once in ${relative}:
+${before}")
+        endif()
+        string(SUBSTRING "${text}" 0 ${first} head)
+        string(LENGTH "${before}" before_size)
+        math(EXPR tail_at "${first} + ${before_size}")
+        string(SUBSTRING "${text}" ${tail_at} -1 tail)
+        set(text "${head}${after}${tail}")
+    endwhile()
+    file(CONFIGURE OUTPUT "${out}" CONTENT "${text}" @ONLY)
+    list(REMOVE_ITEM files "${source}" "${out}")
+    list(APPEND files "${out}")
+    set(${list_var} ${files} PARENT_SCOPE)
+endfunction()
 # Header copies with Kyoei changes, found before the fixed ones (adapted/shadps4 comes first
 # in the include path). The image flag marks Kyoei button prompts (see texture_cache.cpp).
 set(GOW3_ADAPTED_HEADERS "")
@@ -274,6 +335,11 @@ endforeach()
 gow3_adapt(SHIM shim/gow3_settings.cpp
     "    const char* size = std::getenv(\"GOW3_RENDER_RES\")"
     "    static const char* const size = std::getenv(\"GOW3_RENDER_RES\")")
+# SamplerSetMemo from the inFamous port: a memoized texture set reuses its resolved samplers.
+gow3_patch(GOW3_ADAPTED_HEADERS shadps4/video_core/texture_cache/texture_cache.h sampler_set_memo_texture_cache_h.patch)
+gow3_patch(GOW3_ADAPTED_HEADERS shadps4/video_core/renderer_vulkan/vk_rasterizer.h sampler_set_memo_rasterizer_h.patch)
+gow3_patch(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp sampler_set_memo_texture_cache_cpp.patch)
+gow3_patch(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp sampler_set_memo_rasterizer_cpp.patch)
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
     kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp
     ../src/kyoei_overlay_gpu.cpp ../src/kyoei_photo_post.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
