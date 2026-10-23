@@ -96,10 +96,12 @@ function(gow3_patch list_var relative patch)
         file(READ "${out}" text)
     endif()
     file(READ "${CMAKE_CURRENT_SOURCE_DIR}/patches/${patch}" blocks)
-    string(REPLACE "
+    string(REPLACE "
+
 " "
 " text "${text}")
-    string(REPLACE "
+    string(REPLACE "
+
 " "
 " blocks "${blocks}")
     set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/patches/${patch}")
@@ -341,7 +343,7 @@ gow3_patch(GOW3_ADAPTED_HEADERS shadps4/video_core/renderer_vulkan/vk_rasterizer
 gow3_patch(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp sampler_set_memo_texture_cache_cpp.patch)
 gow3_patch(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp sampler_set_memo_rasterizer_cpp.patch)
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
-    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp
+    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp kyoei_thread_sampler.cpp
     ../src/kyoei_overlay_gpu.cpp ../src/kyoei_photo_post.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
     "${CMAKE_CURRENT_BINARY_DIR}/photo.vert.inc" "${CMAKE_CURRENT_BINARY_DIR}/photo.frag.inc")
 set_source_files_properties("${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp" PROPERTIES
@@ -356,7 +358,7 @@ set(FFX_VK_PORTABLE_BUILD_PROBE OFF CACHE BOOL "" FORCE)
 add_subdirectory("${FSR_VULKAN}" fsr-vulkan EXCLUDE_FROM_ALL)
 # MSVC-ABI enums are int: FFX error codes above INT_MAX narrow in switch cases (same values).
 target_compile_options(ffx_vulkan_portable PRIVATE -Wno-c++11-narrowing -Wno-microsoft-enum-value)
-target_link_libraries(gow3_core PUBLIC kyoei_imgui dbghelp sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
+target_link_libraries(gow3_core PUBLIC kyoei_imgui dbghelp winmm sirit ffx-vulkan::portable ffx-vulkan::fsr4-v07-vulkan)
 add_dependencies(gow3_core gow3_host_shaders)
 # compat/a/b makes the GoW3 shim's "../../src/cheat_hook.h" resolve to compat/src.
 target_include_directories(gow3_core PRIVATE "${CMAKE_CURRENT_BINARY_DIR}" "${CMAKE_CURRENT_BINARY_DIR}/adapted/shadps4" "${CMAKE_CURRENT_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/../src" "${KYOEI_IMGUI_DIR}/backends" "${GZ}/gpu" "${CMAKE_CURRENT_SOURCE_DIR}/compat" "${CMAKE_CURRENT_SOURCE_DIR}/compat/a/b"
