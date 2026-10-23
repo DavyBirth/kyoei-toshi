@@ -7,6 +7,7 @@
 #include <chrono>
 #include <cstdlib>
 extern "C" void gz_log(const char* format, ...);
+extern "C" void kyoei_thread_sampler_slow_flip(double interval_ms);
 
 namespace KyoeiGow3FlipRate {
 inline void Flip() {
@@ -17,7 +18,9 @@ inline void Flip() {
     static unsigned flips;
     static double worst_ms;
     const auto now = Clock::now();
-    worst_ms = std::max(worst_ms, std::chrono::duration<double, std::milli>(now - last).count());
+    const double interval_ms = std::chrono::duration<double, std::milli>(now - last).count();
+    kyoei_thread_sampler_slow_flip(interval_ms);
+    worst_ms = std::max(worst_ms, interval_ms);
     last = now;
     if (++flips < 120) return;
     const double seconds = std::chrono::duration<double>(now - start).count();

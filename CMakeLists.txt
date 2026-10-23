@@ -331,6 +331,11 @@ kyoei_replace_checked(KYOEI_LOADER
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
   "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_photo_hud_configure(image, image_size);\n    kyoei_photo_scene_configure(image, image_size);\n    kyoei_photo_phone_configure(image, image_size);")
+# The game prints ~1300 console lines when pausing; flushing each one stalls the
+# frame. Guest lines stay buffered; the next runtime line flushes them.
+kyoei_replace_checked(KYOEI_LOADER
+  "if (log_file) { fputs(line, log_file); fputc('\\n', log_file); fflush(log_file); }"
+  "if (log_file) { fputs(line, log_file); fputc('\\n', log_file); if (strncmp(line, \"Guest: \", 7)) fflush(log_file); }")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 target_sources(kyoei PRIVATE src/kyoei_photo_dof.c src/kyoei_photo_hud.c src/kyoei_photo_scene.c src/kyoei_photo_phone.c src/kyoei_photo_save_mark.c)

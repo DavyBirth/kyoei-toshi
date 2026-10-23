@@ -2,7 +2,10 @@
 //   KYOEI_SAMPLE_THREADS=<name part>[,<name part>...]  threads whose description contains one
 //   (* = every named thread)
 //   KYOEI_SAMPLE_START=<seconds after GPU start> (default 120), KYOEI_SAMPLE_SECONDS (default 20)
-// About every millisecond each matching thread is suspended, its stack unwound (16 frames) and
+//   KYOEI_SAMPLE_SLOW_MS=<ms>  report only samples taken during flips slower than this
+//   (needs KYOEI_FRAME_STATS=1, which reports the slow flips)
+//   KYOEI_SAMPLE_FOCUS=<symbol part>  also print the most frequent whole stacks through it
+// About every millisecond each matching thread is suspended, its stack unwound (48 frames) and
 // resumed. At the end the run log gets, per thread, the functions most often on top of the
 // stack (self) and anywhere in it (total), as percentages of that thread's samples.
 // SPDX-License-Identifier: GPL-2.0-or-later
@@ -16,6 +19,7 @@
 #include <chrono>
 #include <cwchar>
 #include <map>
+#include <mutex>
 #include <string>
 #include <thread>
 #include <unordered_map>
@@ -25,12 +29,16 @@
 extern "C" void gz_log(const char* format, ...);
 
 namespace {
+using Clock = std::chrono::steady_clock;
 struct Target {
     DWORD id;
     HANDLE handle;
     std::string name;
     std::vector<std::vector<DWORD64>> stacks;
+    std::vector<Clock::time_point> times;
 };
+std::mutex slow_mutex;
+std::vector<std::pair<Clock::time_point, Clock::time_point>> slow_frames;
 
 std::string Narrow(const wchar_t* text) {
     std::string out;
@@ -66,9 +74,9 @@ std::vector<Target> FindThreads(const std::vector<std::string>& parts) {
 }
 
 // Runs while the thread is suspended: no allocation (it may hold the heap lock).
-size_t Unwind(CONTEXT context, DWORD64 (&frames)[16]) {
+size_t Unwind(CONTEXT context, DWORD64 (&frames)[48]) {
     size_t count = 0;
-    for (; count < 16 && context.Rip; ++count) {
+    for (; count < 48 && context.Rip; ++count) {
         frames[count] = context.Rip;
         DWORD64 image_base = 0;
         PRUNTIME_FUNCTION function = RtlLookupFunctionEntry(context.Rip, &image_base, nullptr);
@@ -108,6 +116,20 @@ void Report(std::vector<Target>& targets) {
     SymSetOptions(SYMOPT_UNDNAME | SYMOPT_DEFERRED_LOADS);
     SymInitialize(GetCurrentProcess(), nullptr, TRUE);
     std::unordered_map<DWORD64, std::string> cache;
+    if (std::getenv("KYOEI_SAMPLE_SLOW_MS")) {
+        std::lock_guard lock{slow_mutex};
+        gz_log("Kyoei sample: keeping samples from %zu slow flips", slow_frames.size());
+        for (auto& target : targets) {
+            std::vector<std::vector<DWORD64>> kept;
+            for (size_t i = 0; i < target.stacks.size(); ++i) {
+                const auto at = target.times[i];
+                if (std::any_of(slow_frames.begin(), slow_frames.end(),
+                                [&](const auto& frame) { return at >= frame.first && at <= frame.second; }))
+                    kept.push_back(std::move(target.stacks[i]));
+            }
+            target.stacks = std::move(kept);
+        }
+    }
     for (auto& target : targets) {
         if (target.stacks.empty()) continue;
         std::map<std::string, unsigned> self, total;
@@ -123,7 +145,7 @@ void Report(std::vector<Target>& targets) {
             std::vector<std::pair<unsigned, std::string>> top;
             for (const auto& [name, count] : counts) top.emplace_back(count, name);
             std::sort(top.rbegin(), top.rend());
-            for (size_t i = 0; i < std::min<size_t>(top.size(), 25); ++i) {
+            for (size_t i = 0; i < std::min<size_t>(top.size(), 60); ++i) {
                 gz_log("Kyoei sample %s [%s]: %5.1f%% %s", kind, target.name.c_str(),
                        100.0 * top[i].first / target.stacks.size(), top[i].second.substr(0, 160).c_str());
             }
@@ -131,6 +153,24 @@ void Report(std::vector<Target>& targets) {
         gz_log("Kyoei sample: thread %s, %zu samples", target.name.c_str(), target.stacks.size());
         print("self", self);
         print("total", total);
+        if (const char* focus = std::getenv("KYOEI_SAMPLE_FOCUS")) {
+            std::map<std::string, unsigned> paths;
+            for (const auto& stack : target.stacks) {
+                std::string path;
+                bool hit = false;
+                for (const DWORD64 address : stack) {
+                    const std::string name = Symbol(address, cache);
+                    hit = hit || name.find(focus) != std::string::npos;
+                    if (name.rfind("Drv", 0) == 0 || name.rfind("vkGetInstanceProcAddr", 0) == 0) { if (path.size() < 4 || path.compare(path.size() - 4, 4, " ...")) path += " ..."; } else path += (path.empty() ? "" : " < ") + name.substr(0, 60);
+                }
+                if (hit) ++paths[path];
+            }
+            std::vector<std::pair<unsigned, std::string>> top;
+            for (const auto& [path, count] : paths) top.emplace_back(count, path);
+            std::sort(top.rbegin(), top.rend());
+            for (size_t i = 0; i < std::min<size_t>(top.size(), 8); ++i)
+                gz_log("Kyoei sample stack [%s] %u: %s", target.name.c_str(), top[i].first, top[i].second.c_str());
+        }
     }
 }
 
@@ -145,14 +185,17 @@ void Run(std::vector<std::string> parts, unsigned start, unsigned seconds) {
             if (SuspendThread(target.handle) == DWORD(-1)) continue;
             CONTEXT context{};
             context.ContextFlags = CONTEXT_FULL;
-            DWORD64 frames[16];
+            DWORD64 frames[48];
             size_t count = 0;
             if (GetThreadContext(target.handle, &context)) {
                 // Unwinding reads the thread's stack only; nothing it holds is touched.
                 count = Unwind(context, frames);
             }
             ResumeThread(target.handle);
-            if (count) target.stacks.emplace_back(frames, frames + count);
+            if (count) {
+                target.stacks.emplace_back(frames, frames + count);
+                target.times.push_back(Clock::now());
+            }
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
@@ -161,6 +204,17 @@ void Run(std::vector<std::string> parts, unsigned start, unsigned seconds) {
     for (auto& target : targets) CloseHandle(target.handle);
 }
 } // namespace
+
+extern "C" void kyoei_thread_sampler_slow_flip(double interval_ms) {
+    static const double threshold = [] {
+        const char* value = std::getenv("KYOEI_SAMPLE_SLOW_MS");
+        return value ? std::atof(value) : 0.0;
+    }();
+    if (threshold <= 0 || interval_ms < threshold) return;
+    const auto now = Clock::now();
+    std::lock_guard lock{slow_mutex};
+    slow_frames.emplace_back(now - std::chrono::microseconds(static_cast<long long>(interval_ms * 1000)), now);
+}
 
 extern "C" void kyoei_thread_sampler_start(void) {
     const char* names = std::getenv("KYOEI_SAMPLE_THREADS");

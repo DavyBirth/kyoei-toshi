@@ -229,6 +229,7 @@ u32 Gow3DisplayRefreshHz() {
     return hz;
 }
 
+extern "C" void kyoei_thread_sampler_start(void);
 extern "C" void gz_gpu_start(uint32_t sdk, int headless) {
     sdk_version = sdk;
     // PS4 fidelity: GoW3's temporal upscaler (FSR 3.1 on by default) stays off for Kyoei.
@@ -270,6 +271,7 @@ extern "C" void gz_gpu_start(uint32_t sdk, int headless) {
     gz_log("GPU (GoW3 core): %s, %zu registered symbols, SDK 0x%x",
            headless ? "symbols registered without window" : "Vulkan backend ready", symbols.size(), sdk);
     gz_memory_replay_gpu();
+    kyoei_thread_sampler_start(); // KYOEI_SAMPLE_THREADS diagnostics, off by default
 }
 extern "C" uintptr_t gz_gpu_resolve(const char* library, const char* symbol) {
     for (const auto& entry : symbols)
