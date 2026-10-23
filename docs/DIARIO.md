@@ -4869,3 +4869,13 @@ Ramo nucleo-gow3. kyoei.exe normal intacto. Ultimo passo EM ANDAMENTO (nao liga)
 - O núcleo GoW3 cria `user/` na pasta atual quando aberto direto do repositório; apagado (cache recriável).
 - src/kyoei_launcher.cs e tools/build_launcher.ps1 só diferiam em fim de linha; restaurados.
 - Davy esclareceu: o pedido era só o "Return to Desktop" estar no menu título (já está) com o som do jogo. Não existe pedido de "voltar pro menu"; a pendência foi anotada errado e está encerrada.
+
+### 23/10/2026 (noite) — travada ao abrir/fechar a pausa (núcleo GoW3)
+- Medida (cidade, KYOEI_FRAME_STATS): ~117-200 ms ao abrir e ao fechar a pausa; a 1ª pausa da sessão chega a ~366 ms. Bem menor que o ~1 s anotado antes.
+- Descartados: compilação de shaders (2ª pausa sem compilar trava igual); espera da cópia do fundo da pausa (GOW3_STALE_READBACK=1 trava igual).
+- Registro: o jogo escreve ~1.300 linhas ao pausar; cada uma forçava o arquivo ao disco (1.325 linhas: 22 ms contra 4 ms sem forçar). Agora só as linhas do runtime forçam (CMakeLists, adaptação do loader). Ganho ~18 ms por pausa.
+- Medidor KYOEI_SAMPLE_THREADS: a chamada que o liga tinha ficado fora do commit 38124a8; recolocada em gz_gpu_start. Novo KYOEI_SAMPLE_SLOW_MS=<ms> (só amostras de quadros mais lentos que isso; precisa KYOEI_FRAME_STATS=1) e KYOEI_SAMPLE_FOCUS=<função> (pilhas completas que passam por ela); pilha de 48 níveis.
+- Nos quadros lentos: guest main ~66% esperando; DrawRec ~30% esperando a GPU, ~24% em Presenter::PrepareFrame, ~21% criando memória no driver e ~8% em VirtualProtect (vigias de página). A criação de memória vem de StagingBufferPool::RequestFromRing (DetileImage/ObtainBufferForImage), com blocos novos de 16 MB, e só ocorre nas duas primeiras pausas (os blocos ficam guardados por 50 s): explica o excesso da 1ª pausa. Pré-alocar exigiria ~800 MB; não feito.
+- Achado lateral: imagens de 2-16 MB (ex.: 0x1048cb0000, 0x1052610000, 0x104b680000) são recopiadas do buffer para a imagem (GpuDirty, flags 0x4c/0x44) ~8 vezes por quadro o jogo todo, porque shaders escrevem buffers no mesmo endereço (InvalidateMemoryFromGPU em vk_rasterizer.cpp). É trabalho de GPU (~77 MB/quadro); pode pesar no giro da câmera, mas mexer nisso exige cuidado de fidelidade.
+- Teste automático: precisa da janela em foco (capture_native -Focus logo após abrir); com a saída redirecionada o passo do mudo falha ou trava. Roteiro em scratchpad (prof.ps1). Uma queda no driver NVIDIA (nvoglv64) ocorreu uma vez durante o carregamento, com o medidor ainda ocioso; dump em build/kyoei-fault-20261023-195004-2600.dmp; não repetiu em 6 carregamentos.
+
