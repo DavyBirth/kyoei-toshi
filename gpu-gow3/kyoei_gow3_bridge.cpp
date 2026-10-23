@@ -240,6 +240,10 @@ extern "C" void gz_gpu_start(uint32_t sdk, int headless) {
     // Async compilation skips a draw until its pipeline is built (a new effect can miss frames);
     // the inFamous port also keeps it off. Compiles finish before the draw.
     if (!std::getenv("GOW3_ASYNC_SHADERS")) _putenv_s("GOW3_ASYNC_SHADERS", "0");
+    // With driver pipeline binaries the cache runs on demand: every session translated each
+    // shader again when first drawn (~1100 compiles, stalls while turning the camera). The
+    // background warm-up loads the cached pipelines instead, while the game runs.
+    if (!std::getenv("GOW3_PIPELINE_BINARIES")) _putenv_s("GOW3_PIPELINE_BINARIES", "0");
     Gow3Settings::Load();
     Core::Emulator::FillElfInfo(sdk);
     if (!headless) Libraries::Kernel::service_thread = std::jthread{Libraries::Kernel::KernelServiceThread};
