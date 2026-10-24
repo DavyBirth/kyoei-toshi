@@ -4977,3 +4977,13 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Limite de bytes obrigou títulos de fase mais curtos que os das texturas
   nesses espaços. Falta integrar ao portable (delta de recursos + eboot) e
   testar no jogo.
+
+### 24/10/2026 — tradução natural integrada; modo foto no estilo do jogo
+- Davy notou narração, dicas e carregamento ainda estranhos: a versão jogada usava runtime-preview-en-16 (15/10). O ramo traducao-natural-en (texto revisado, 168 texturas, 397 textos de HUD/executável) nunca tinha sido integrado. Com autorização de Davy, fundido em nucleo-gow3 (merge 55b6d20; diário corrigido em a456575, as entradas do ramo ficam numa seção própria).
+- Prévia nova runtime-preview-en-17 (13.138 textos + 168 texturas, incluindo os 19 diagramas de controle em padrão americano; meu gerador de diagramas apagado por ser substituído). Manifesto docs/m4/runtime-preview.json aponta en-17.
+- Textos de HUD (148) entram no delta de leitura (build_ui_corrections, base en-17). Textos do executável (249): tools/build_eboot_text.py mapeia as posições do eboot.bin (SELF) para endereços via eboot.elf; pacote KYTEXT1 sem japonês (endereço, tamanho, FNV do original, inglês); kyoei_ui_text.c aplica com KYOEI_EBOOT_TEXT só se o original confere.
+- run_native.ps1 agora define KYOEI_ARCHIVE_DELTA (build/ui-corrections-en.kydelta), KYOEI_EBOOT_TEXT (build/eboot-text-en.kytext) e KYOEI_UI_ART (build/ui-art.kyart); antes o atalho local nem usava o delta. Portátil (build_portable + launcher) gera e passa os mesmos. Pacote de ícones refeito sobre en-17.
+- Modo foto: HUD no estilo do menu de Opções do jogo (tools/make_ui_art.py, atlas KYART2 no atlas de fontes do overlay; fonte Segoe UI Semibold + CJK), textos em inglês/português/japonês (src/kyoei_ui_text.h), barra de comandos com ícones do controle em uso. Conferido no jogo (teclado). Aprovado por Davy pela maquete; entrada "Photo Mode" na pausa aprovada; atalho Share/View mantido (o PS4 não entrega Share ao jogo).
+- NÃO TESTADO NO JOGO (Davy pediu para não abrir agora): en-17, HUD texts, executável. Depois de conferir, apagar runtime-preview-en-16 (6,3 GB).
+- Pendentes desta rodada: controle Nintendo (A à direita confirma, padrão japonês; ícones A/B/X/Y nas posições Nintendo, L/R, ZL/ZR, +/−), entrada "Photo Mode" na pausa, telas de salvar/carregar/teclado no mesmo estilo, clima/horário no modo foto, desempenho do giro.
+
