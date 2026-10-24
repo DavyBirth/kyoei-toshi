@@ -81,6 +81,25 @@ size_t Unwind(CONTEXT context, DWORD64 (&frames)[48]) {
         DWORD64 image_base = 0;
         PRUNTIME_FUNCTION function = RtlLookupFunctionEntry(context.Rip, &image_base, nullptr);
         if (!function) {
+            // Guest code has no unwind data: follow its frame pointer chain within the
+            // committed stack region, keeping only return addresses in guest code.
+            if (count) {
+                MEMORY_BASIC_INFORMATION region{};
+                if (!VirtualQuery(reinterpret_cast<void*>(context.Rsp), &region, sizeof(region))) return count + 1;
+                const DWORD64 high = DWORD64(region.BaseAddress) + region.RegionSize;
+                DWORD64 low = context.Rsp, rbp = context.Rbp;
+                ++count;
+                while (count < 48 && rbp >= low && rbp + 16 <= high && !(rbp & 7)) {
+                    const DWORD64 next = reinterpret_cast<DWORD64*>(rbp)[0];
+                    const DWORD64 ret = reinterpret_cast<DWORD64*>(rbp)[1];
+                    if (ret < 0x800000000ull || ret >= 0x900000000ull) break;
+                    frames[count++] = ret;
+                    if (next <= rbp) break;
+                    low = rbp;
+                    rbp = next;
+                }
+                return count;
+            }
             // Leaf function: the return address is on top of the stack.
             context.Rip = *reinterpret_cast<DWORD64*>(context.Rsp);
             context.Rsp += 8;

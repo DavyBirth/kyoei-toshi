@@ -245,6 +245,7 @@ extern "C" void gz_gpu_start(uint32_t sdk, int headless) {
     // background warm-up loads the cached pipelines instead, while the game runs.
     if (!std::getenv("GOW3_PIPELINE_BINARIES")) _putenv_s("GOW3_PIPELINE_BINARIES", "0");
     Gow3Settings::Load();
+    gz_log("GPU (GoW3 core): vsync=%d", int(Gow3Settings::Get().vsync.load()));
     Core::Emulator::FillElfInfo(sdk);
     if (!headless) Libraries::Kernel::service_thread = std::jthread{Libraries::Kernel::KernelServiceThread};
     Core::Loader::SymbolsResolver resolver;
