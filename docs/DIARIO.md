@@ -5043,3 +5043,9 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Controle Nintendo: código e testes prontos; falta conferir com controle físico.
 - Portátil pessoal atualizada com o runtime novo (telas no estilo do jogo, filtros) e a en-18.
 - Launcher: opção 3840 × 2160 (saída 4K; resolução interna do jogo continua a do PS4, 1080p, pela regra de fidelidade). Conferido em segundo plano: janela 3840x2160 abre e roda.
+
+### 24/10/2026 — novo plano (pedido de Davy)
+1. Ícones de botão próprios de cada plataforma (Xbox, Nintendo, teclado/mouse), não o desenho do PS com o símbolo trocado (ex.: View/Menu do Xbox, sem formato de touchpad).
+2. Texturas de controle (diagramas e tutoriais) em versões Xbox, Nintendo e teclado/mouse, trocando conforme o dispositivo.
+3. Desempenho do giro: trabalho longo no núcleo (tradução de comandos).
+4. Opções gráficas de PC: regra de fidelidade relaxada (AGENTS.md): resolução interna maior/menor, upscaler, presets.
