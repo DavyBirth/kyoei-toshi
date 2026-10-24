@@ -47,6 +47,12 @@ def main():
     for language in ('ja','en','pt-BR'):
         expected='ORIGINAL' if language=='ja' else 'TRANSLATED'
         subprocess.run([str(binary),str(BUILD/'dump'),str(BUILD/'user'),expected,'unused'],env=dict(env,KYOEI_LANGUAGE=language),check=True)
+    # Whole translation as a delta: no archive copy needed, no STOP. A delta that
+    # does not match the base keeps the original bytes.
+    stale=BUILD/'stale.kydelta';stale.write_bytes(b'KYDELTA1'+bytes(40))
+    plain={k:v for k,v in env.items() if k!='KYOEI_TRANSLATION_ARCHIVE'}
+    subprocess.run([str(binary),str(BUILD/'dump'),str(BUILD/'user'),'ORIGINAL','unused'],
+                   env=dict(plain,KYOEI_LANGUAGE='en',KYOEI_ARCHIVE_DELTA=str(stale)),check=True)
     if (dump/'common.psarc').read_text()!='ORIGINAL':raise RuntimeError('Original modified')
 
 if __name__=='__main__':main()

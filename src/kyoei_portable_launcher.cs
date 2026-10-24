@@ -86,7 +86,7 @@ class PortableLauncher : Form {
         c.BackColor=Color.FromArgb(30,28,35);c.ForeColor=Color.WhiteSmoke;c.Items.AddRange(items);c.SelectedIndex=0;Controls.Add(c);
     }
     void Check() {
-        foreach(string name in new string[]{"runtime/kyoei.exe","runtime/out/boot-linked.bin","runtime/out/imports.tsv","runtime/out/deferred.tsv","runtime/out/tls-sites.tsv","game/eboot.bin","game/sce_sys/param.sfo","game/DAT/common.psarc","languages/en/common.psarc","assets/fonts/NotoSans-Regular.ttf","assets/fonts/NotoSansCJK-Regular.ttc","assets/hud-metrics.bin"})
+        foreach(string name in new string[]{"runtime/kyoei.exe","runtime/out/boot-linked.bin","runtime/out/imports.tsv","runtime/out/deferred.tsv","runtime/out/tls-sites.tsv","game/eboot.bin","game/sce_sys/param.sfo","game/DAT/common.psarc","assets/fonts/NotoSans-Regular.ttf","assets/fonts/NotoSansCJK-Regular.ttc","assets/hud-metrics.bin"})
             if(!File.Exists(Path.Combine(root,name)))throw new IOException("Missing portable file: "+name);
     }
     void LoadSettings() {
@@ -171,12 +171,14 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_PHOTO_DOF"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",lang,"prompts.kypack");
             foreach(var variable in new[]{"KYOEI_ARCHIVE_DELTA","KYOEI_EBOOT_TEXT","KYOEI_TRANSLATION_ARCHIVE"})start.EnvironmentVariables.Remove(variable);
-            if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,"ui-corrections.kydelta");
+            // translation.kydelta: whole translation over the disc archive; older installs keep the 6 GB copy.
+            bool wholeDelta=File.Exists(Path.Combine(root,"languages",lang,"translation.kydelta"));
+            if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,wholeDelta?"translation.kydelta":"ui-corrections.kydelta");
             if(lang=="en")start.EnvironmentVariables["KYOEI_EBOOT_TEXT"]=Path.Combine("languages",lang,"eboot-text.kytext");
             start.EnvironmentVariables["KYOEI_UI_ART"]="assets/ui-art.kyart";
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
             start.EnvironmentVariables["GZ_LANGUAGE"]=lang=="ja"?"0":"1";
-            if(lang=="en")start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";
+            if(lang=="en"&&!wholeDelta)start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";
             start.EnvironmentVariables["KYOEI_HUD_FIT"]=lang=="en"?"1":"0";
             start.EnvironmentVariables["KYOEI_HUD_METRICS"]="assets/hud-metrics.bin";
             start.EnvironmentVariables["KYOEI_GUI_FONT_DIR"]="assets/fonts";

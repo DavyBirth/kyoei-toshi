@@ -107,15 +107,21 @@ def main():
         if source.is_file():copy_file(source,out/'game'/source.relative_to(game))
     for name in ['boot-linked.bin','imports.tsv','deferred.tsv','tls-sites.tsv']:
         copy_file(prepared/name,out/'runtime/out'/name)
-    copy_file(Path(preview['archive']),out/'languages/en/common.psarc')
+    english=Path(preview['archive'])
     # Return to Desktop title item, drawn in the native menu style from the dump.
     subprocess.run([str(ROOT/'build/image-tools/Scripts/python.exe'),str(ROOT/'tools/make_title_exit_art.py'),
                     str(out/'game/DAT/common.psarc'),str(out/'assets')],check=True)
     # Paired button payloads switch live; UI corrections stay a read-time delta.
     imaging=ROOT/'build/image-tools/Scripts/python.exe'
-    subprocess.run([str(sys.executable),str(ROOT/'tools/build_ui_corrections.py'),
-                    str(out/'languages/en/common.psarc'),str(out/'languages/en/ui-corrections.kydelta')],check=True)
-    for language,base in (('en',out/'languages/en/common.psarc'),('ja',out/'game/DAT/common.psarc')):
+    # The whole translation (archive resources + HUD corrections) is one small
+    # read-time delta over the untouched disc archive; no 6 GB English copy.
+    overlay=ROOT/'build/ui-corrections-en.kydelta';overlay.unlink(missing_ok=True)
+    subprocess.run([str(sys.executable),str(ROOT/'tools/build_ui_corrections.py'),str(english),str(overlay)],check=True)
+    delta=out/'languages/en/translation.kydelta';delta.unlink(missing_ok=True)
+    subprocess.run([str(sys.executable),str(ROOT/'tools/build_translation_delta.py'),str(out/'game/DAT/common.psarc'),
+                    str(english),str(delta),'--overlay',str(overlay)],check=True)
+    for obsolete in ('common.psarc','ui-corrections.kydelta'):(out/'languages/en'/obsolete).unlink(missing_ok=True)
+    for language,base in (('en',english),('ja',out/'game/DAT/common.psarc')):
         subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/build_prompt_pack.py'),
                         str(base),str(out/'languages'/language/'prompts.kypack')],check=True)
         # Replaced by the verified paired pack above; no runtime reads this.
@@ -158,7 +164,7 @@ def main():
     readme=out/'README.txt'
     readme.write_text(readme.read_text(encoding='utf-8').replace('H: HUD.', 'H: control guide.').replace(
         'An SDL-compatible gamepad can also be used.',
-        'F12 saves a native-resolution PNG in photos/.\nEnable Photo preview in Controls for F10: native pause, hidden HUD and free camera.\nPhoto camera: WASD move, Space/Ctrl up/down, mouse or J/I/K/L look, wheel zoom, Shift faster.\nF10 exits and restores the game camera. Photo preview remains experimental.\nAn SDL-compatible gamepad can also be used.').replace(
+        'F12 saves a native-resolution PNG in photos/.\nEnable Photo preview in Controls for F10: native pause, hidden HUD and free camera.\nPhoto camera: WASD move, Space/Ctrl up/down, mouse look, wheel zoom, Shift faster.\nF10 exits and restores the game camera. Photo preview remains experimental.\nAn SDL-compatible gamepad can also be used.').replace(
         'and chooses keyboard or PlayStation button prompts.',
         'and chooses Automatic, keyboard or PlayStation button prompts.\nAutomatic follows the last device used without restarting the game.\nPause: Left/Right change pages on the main pause screen; A/D change pages\ninside the menus, leaving arrow keys available for item grids.'),encoding='utf-8')
     if not a.finalize and (out/'manifest.json').exists():
@@ -167,13 +173,13 @@ def main():
         manifest=json.loads((out/'manifest.json').read_text(encoding='utf-8'))
         if manifest.get('title')!='CUSA03562' or manifest.get('version')!='01.03':
             raise ValueError('Existing portable manifest targets another game')
-        manifest['files']=[row for row in manifest['files'] if not row['path'].endswith('/keyboard-icons.kydelta')]
+        manifest['files']=[row for row in manifest['files'] if not row['path'].endswith('/keyboard-icons.kydelta') and row['path'] not in {'languages/en/common.psarc','languages/en/ui-corrections.kydelta'}]
         prompt_paths={p.relative_to(out).as_posix() for p in (out/'languages').rglob('*') if p.suffix in {'.kypack','.kydelta'}}
         prompt_paths.add('Start on Linux.sh')
         for row in manifest['files']:
             path=out/row['path']
             if not path.is_file():raise ValueError('Portable manifest file missing: '+row['path'])
-            if row['path'] in {'runtime/kyoei.exe','City Shrouded in Shadow.exe','languages/en/common.psarc','README.txt'} | prompt_paths:
+            if row['path'] in {'runtime/kyoei.exe','City Shrouded in Shadow.exe','README.txt'} | prompt_paths:
                 row.update(bytes=path.stat().st_size,sha256=digest(path))
         recorded={row['path'] for row in manifest['files']}
         for name in sorted(prompt_paths-recorded):

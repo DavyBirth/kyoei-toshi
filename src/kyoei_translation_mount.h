@@ -6,6 +6,12 @@ static void kyoei_translation_mount(void) {
     if (strcmp(language,"en") && strcmp(language,"pt-BR"))
         gz_stop(GZ_EXIT_RUNTIME_STOP,"STOP: unsupported Kyoei language: %s",language);
     const char* archive=getenv("KYOEI_TRANSLATION_ARCHIVE");
+    const char* delta=getenv("KYOEI_ARCHIVE_DELTA");
+    /* Translation delivered as a read-time delta over the untouched disc archive. */
+    if ((!archive || !*archive) && delta && *delta) {
+        gz_log("Kyoei language: %s (partial experimental translation); delta=%s",language,delta);
+        return;
+    }
     wchar_t wide[1024];
     if (!archive || !*archive || gz_widen(archive,wide,1024))
         gz_stop(GZ_EXIT_RUNTIME_STOP,"STOP: translation archive not configured");
