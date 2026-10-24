@@ -161,7 +161,7 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_NAME_STORE"]="data/user/character-names.bin";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT"]="1";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT_ART"]="assets/title-exit.kyart";
-            // Automatic follows the last input and the pad it came from (PlayStation or Xbox art).
+            // Automatic follows the last input and its PlayStation, Xbox or Nintendo art.
             start.EnvironmentVariables["KYOEI_PROMPT_MODE"]=promptMode=="xbox"||promptMode=="nintendo"?"controller":promptMode;
             start.EnvironmentVariables["KYOEI_CONTROLLER_STYLE"]=promptMode=="xbox"||promptMode=="nintendo"?promptMode:promptMode=="controller"?"playstation":"auto";
             start.EnvironmentVariables["KYOEI_PHOTO_HUD"]=photoHudPreview?"1":"0";
@@ -170,6 +170,7 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_PHOTO_SAVE_MARK"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_DOF"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",lang,"prompts.kypack");
+            foreach(var variable in new[]{"KYOEI_ARCHIVE_DELTA","KYOEI_EBOOT_TEXT","KYOEI_TRANSLATION_ARCHIVE"})start.EnvironmentVariables.Remove(variable);
             if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,"ui-corrections.kydelta");
             if(lang=="en")start.EnvironmentVariables["KYOEI_EBOOT_TEXT"]=Path.Combine("languages",lang,"eboot-text.kytext");
             start.EnvironmentVariables["KYOEI_UI_ART"]="assets/ui-art.kyart";

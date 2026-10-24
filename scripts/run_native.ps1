@@ -61,6 +61,8 @@ $env:KYOEI_PROMPT_PACK=$kyoeiPromptPack
 Remove-Item Env:KYOEI_ARCHIVE_DELTA -ErrorAction SilentlyContinue
 if ($Language -eq 'en' -and (Test-Path -LiteralPath "$kyoeiRoot\build\ui-corrections-en.kydelta")) { $env:KYOEI_ARCHIVE_DELTA="$kyoeiRoot\build\ui-corrections-en.kydelta" }
 # Game-styled PC screens (tools/make_ui_art.py) and English executable strings (tools/build_eboot_text.py).
+Remove-Item Env:KYOEI_UI_ART -ErrorAction SilentlyContinue
+Remove-Item Env:KYOEI_EBOOT_TEXT -ErrorAction SilentlyContinue
 if (Test-Path -LiteralPath "$kyoeiRoot\build\ui-art.kyart") { $env:KYOEI_UI_ART="$kyoeiRoot\build\ui-art.kyart" }
 if ($Language -eq 'en' -and (Test-Path -LiteralPath "$kyoeiRoot\build\eboot-text-en.kytext")) { $env:KYOEI_EBOOT_TEXT="$kyoeiRoot\build\eboot-text-en.kytext" }
 $env:KYOEI_WINDOW_HEIGHT=[string]$Height

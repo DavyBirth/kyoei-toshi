@@ -4987,3 +4987,12 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - NÃO TESTADO NO JOGO (Davy pediu para não abrir agora): en-17, HUD texts, executável. Depois de conferir, apagar runtime-preview-en-16 (6,3 GB).
 - Pendentes desta rodada: controle Nintendo (A à direita confirma, padrão japonês; ícones A/B/X/Y nas posições Nintendo, L/R, ZL/ZR, +/−), entrada "Photo Mode" na pausa, telas de salvar/carregar/teclado no mesmo estilo, clima/horário no modo foto, desempenho do giro.
 
+
+### 24/10/2026 — retomada da integração Nintendo, sem abrir o jogo
+- Retomado o trabalho de Claude a pedido de Davy. Nintendo já estava no commit faa565f; helpers visuais no 69b4fbf. Não foram reimplementados.
+- Build do port e dos testes de entrada, prompts, foto, overlay e teclado virtual concluído. Os cinco executáveis de teste passaram; CTest não registra testes nesta configuração, portanto foram executados diretamente.
+- Pacotes locais en/ja validados: KYPROMP4, 48 entradas cada; atlas KYART2 com 75 imagens, 16 Nintendo. Atalho verificado com -CheckOnly em inglês e japonês, sem iniciar o jogo.
+- Corrigida a herança de variáveis de tradução ao alternar para japonês: atalho limpa EBOOT_TEXT/UI_ART e launcher portátil limpa delta, texto de executável e arquivo de tradução antes de definir o idioma.
+- Preservada a alteração já existente em tools/build_portable.py que retira J/I/K/L da descrição da câmera; não incluída no commit desta retomada.
+- A confirmação visual e física de Nintendo, en-17 e textos HUD/eboot continua pendente: nenhum jogo aberto. Preservada en-16 até essa conferência. As outras tarefas planejadas (entrada na pausa, telas salvar/carregar/teclado, clima/horário e desempenho do giro) continuam separadas desta finalização da integração.
+- Cópia privada build/City-Shrouded-in-Shadow-Portable atualizada com sucesso (sem iniciar): runtime, launcher recompilado, delta com 148 textos HUD, 249 textos do executável, prompts Nintendo en/ja e atlas de 75 imagens. Pacotes comparados byte a byte com os locais. Log: build/finalize-20261024-portable.log. Não foi feito pacote público de distribuição.
