@@ -1,0 +1,950 @@
+{
+ "format": "kyoei-translation-draft-v1",
+ "title": "CUSA03562",
+ "version": "01.03",
+ "status": "draft_requires_human_review",
+ "runtime_verified": false,
+ "resources": [
+  {
+   "path": "common/lua/Text_Stage_201.luc",
+   "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+   "entries": [
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "9a2bcf855a91a2e0b32aa8321e1e91ebbb7a6bee9864bf08ff990468978f5cce",
+     "en": "This isn't the way to where I'm meeting her...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k9",
+     "source_text_sha256": "4385d0283a1f06db7f4a0cf101d7e3422e5033e25f76d70905947a7bee3c74ff",
+     "en": "This isn't the way to where I'm meeting her...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "b1ddf0a2d8324948da901a24e719d6a1a565b19946acd4c5ac8bd2f6dd5e7697",
+     "en": "Too dangerous to go down there...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k13",
+     "source_text_sha256": "3595f1f2b886bb8cb05d538e26a9bf258634c00749eccefcf2629a4d734c1eeb",
+     "en": "Too dangerous to go down there...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "de7b223241482d01a427dfc90f51329ec0ac1ad1eca45295f554715c883518e4",
+     "en": "Eavesdrop",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "9384293b2c26f412077767c3099f347aad12e3492dbc68702e4ce866795e3a07",
+     "en": "Listen to them talk",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "10238f52102fdd5cf5c02a2012f4a58420f4ca25a1ce1a3c4ad9f7f5e64b3ba8",
+     "en": "Call out",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "2bbed3ce1cd23b3a5b2b44394995194d0f9895187b047376637f83e2bfe89e01",
+     "en": "Casually listen in",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "e7b2555e5a7b8336385a30637851017011d2dac6638d298ccd33e3dade5893f7",
+     "en": "Talk",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "0f9485c48f08ef1fac746c949d98433bf57a3d2268e1ccac150aaf6716b975d1",
+     "en": "Go inside",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "a7b8f4b31985e053fbce3cf2a73410d8407ce4239409f3049f687d8a9c14fe41",
+     "en": "Leave",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "ae2f81219d6e307c267b5a92e5668083a6e97bd248bd67b86b74358d189a6f6d",
+     "en": "Peek in",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "a60298fe46ed2eb49e045c4aec15fde1f3cecad61413afa009cd33f4f319e5ce",
+     "en": "Stare",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "6e7ee9c703f8091339688cff01c5c8b07d8b6c62b19055e70507914819ad40b1",
+     "en": "See how ripe it is",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "ce8ce6cec830137e5cccbdf72cd9642ec86ccf5c3f41bc78cef14bd68cfa8560",
+     "en": "Open the dresser",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "a3cebeb581885bb8fd3b24e6675f4903fc6af298f55ecb8f225020529a524de9",
+     "en": "Look in the mirror",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "c1ee2c0cd4e9e38c42d6133c938fa606cd39807eb350cf6f9631e92dfb384e25",
+     "en": "Look",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "70abbcadd6aa1af73a57759f46fbc0cc5b0eac9dc45197624738a09f22cd1322",
+     "en": "Listen",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "ef45183c1eac398a62cd7b00e3c9ab29e8c46950ff9d9f711028ad870c91487b",
+     "en": "Listen to the muttering",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k57",
+     "source_text_sha256": "d9291ccba400db30a740fa6a877a740f939f30503930152aeb24244597b680d2",
+     "en": "Listen",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "e9da82c3959d39aff603535c186cfba5c1c5162e1fff0ca5e2a034e5058c30fc",
+     "en": "Watch",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "b1fa3b1bd45f0c7e8ad0b9aa78c7a6bd30cb7258f5cfbb2194dc10654d126904",
+     "en": "Hear them out",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "dad0775adb904b35e1579217be219feb608e93a0ea6c9b85d1ab9b48adf6980b",
+     "en": "(Rain...)",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "9479ec6aad3368e93a44f7141659a96bd355a7c5d2edf35bf5c898f4de3fc9a0",
+     "en": "\"Right now, I'm...\" (Male protagonist)",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "b00510c950cbfaf33c3fee5314be082069ab0dfea7871a3f42e448566eb70e5c",
+     "en": "\"Right now, I'm...\" (Female protagonist)",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "53ab6fdba8f398112a205ebc6b6c290e1be9e4bd9b9860748563ca9a4c89b062",
+     "en": "Right now, I'm...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "e8e5b0467f6fc3c9d7494f08b81a066c8e124255c8482098af6cf3701a246e94",
+     "en": "Right now, I'm...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "a70396579647fad804cb9c729df44918437a63146ec93a40e80f1e57c69f860e",
+     "en": "Leaving the office after work",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "8df86ddab295976bd0b584efc14938556f7cb470ba5ab688fafc1d887814ccd7",
+     "en": "Leaving campus after class",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "219a00cf5ed0a5c29a41067bcdef82973f4e240f8ffd776bc951ea5fbb785f9e",
+     "en": "Hitting the town, totally pumped!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "a5ec45637a2be2996846c8b6a7547254e95e8b190ace9a3d21d5e781c64ea627",
+     "en": "Here for no real reason",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "a18fa95c4c7674d97b602afa54c61fddd6c4676b9e2b04d85a0a9048ab326a53",
+     "en": "Hitting the town, SUPER pumped!!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "2ecfd66113bc71888f0a5746412a58485fdb07c3b10dbd412a11f17650d48736",
+     "en": "Leaving the office after work",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "0ec5756d530f0cebddde66e2ec171aa0be343a508176590f30b63568ffa15c09",
+     "en": "Leaving campus after class",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "3e9a8d2545ff6dd514ad064664cd36951723d32c6a678097056b217b50f549ff",
+     "en": "Hitting the town, totally pumped!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "2093a36af7904e175d35b52ce66273e4c45db7202c5552ca1c8700e394716de2",
+     "en": "Here for no real reason",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "2fc5aec900733214dae26999c2af8d86eba8b2bff5692d5f2ad1b4e1d56e6eee",
+     "en": "Hitting the town, SUPER pumped!!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "9ca6820d233d91c4668b3f32ce3e01a47bd70c3efd148c072f400a0b4234def5",
+     "en": "I just got off work and left the office.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "358fafe533692c9b78d873a531d0591a1c0056b1c3d01fd9a725be3f2f904d13",
+     "en": "I just got off work and left the office.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "7656751dde24607d81194c2c5af7554bb920ccc8923211745d2a919a75a20e02",
+     "en": "I just got out of class and left campus.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "56c55a4869e0e708bd9fb3b839eeae82244bf56e4a2d036af63834ac2254dc5c",
+     "en": "I just got out of class and left campus.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "77dcfebadb93d4e764244993fb51cbd283fd32bccb5c6097459335acb5b8feb6",
+     "en": "I just hit the town, and I'm totally pumped!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "ff6955bfdf9b5ae5bf8288d048e50fa7179d947b4fb313f495d903a65676a2d2",
+     "en": "I just hit the town, and I'm totally pumped!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "da74415f31c04adbb259ecbda598505518863b96a6d62d404976909a1526454a",
+     "en": "...Somehow, I just ended up here.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "5b40353f4036e4cde372cf47b2e37305635209ab78c21eb6fd878a25bf89dd47",
+     "en": "...Somehow, I just ended up here.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "d9bef0f4e3de6a845889b3a7eb8e7bc5c3f2972189b6c0c9c6c42aa5a0e41e66",
+     "en": "My name is...\n(Enter your [#ff44ff44]last name[/#] and [#ff44ff44]first name[/#].)",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "8553f4d12c93bedc88d2df97891c28a3e571861f7c0e3652151781b50be9c179",
+     "en": "My name is...\n(Enter your [#ff44ff44]last name[/#] and [#ff44ff44]first name[/#].)",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "7f985b9058ef5c83cfbcd3315ef615523a2f42904b56c67e692188e0c0efd580",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm a young office worker.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "b5e0cf16ba24d4ae9b8057ce84beb32c6e72774b139602825eed76699d3c8b92",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm a young office worker.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "2b2499487a4a7d9874278ddc4149e60e28ec82ab26b0aa93889a1af724bc3058",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm a student.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "52c35f0c8eab8243ba6e176eec3f436ec01a25b501c82de6fd5ec723deaacb6e",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm a student.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "03fedb5ed17a8ccd70a1bdb3f7d8c929484c4d02c18d80343771a58a9f17991d",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm young and full of energy!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "8db47f8941a329659e1a73f1e82ca43bc7b20d62840b952e9141a65956164dad",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm young and full of energy!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "076480a55bd37bdde4498b4e6934b6f757a1c91e46cd8aa5f655bb15a6310c48",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm young and kind of go with the flow.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "8a014200ef41f3370db7fbe81cf68e539d811b0c43304e4e3abe5c1aa3251999",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm young and kind of go with the flow.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "c837b6503651e9dba1d0e836365b69ea4177212f496430c980cb6f68bb6c198b",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm young and SUPER full of energy!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "19463e6c9bd72a8e8d7d7f350db1f01281ad1bb43caec53f9aec24bf1bd1715d",
+     "en": "My name is <P_FNAME> <P_LNAME>.\nI'm young and SUPER full of energy!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "060ddc3622b808fd1c080f12ed9db5882fd01ec628f3c8bfc990e68ee834f432",
+     "en": "...I'm on my way to [#ff44ff44]meet a woman[/#] at [#ff44ff44]our meeting spot[/#].",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "caa0138db5aa08afb1d8b3a523312a07d71573c3cb013455129f06cf0b9d04b6",
+     "en": "...I'm on my way to [#ff44ff44]meet a woman[/#] at [#ff44ff44]our meeting spot[/#].",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "3d5ab712d24196c0beef5c635a376692dd5e7097b34449803d1e0619840f710b",
+     "en": "She's my friend.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "bd652ae37fc91e5fd851e1da5d75b2eb1e1aa6c6f426d11eae68c6907cbba1e6",
+     "en": "She's someone very important to me.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "b99ae69e4080acc4bced070923ba25f42345a817cc58c7268e2f98c46608c0da",
+     "en": "She's my girlfriend.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "38eda07e3bc67b8e5433f41f8ab2b035c2a440b460e46852c626763a568ec225",
+     "en": "...I don't really know her that well...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "ed300b13bac376a92ec9d26488faa10aa7ec3449eba4ebac6d473426254b54f8",
+     "en": "She's my friend.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "d9c0785a0352f39221e221eea61ef797abec33e0efe631fffbf53510a723fc44",
+     "en": "She's someone very important to me.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "80ef3a8b0ead253a4dad7a7dc8b6fe587f2eedd86a0770103d15c74195492a00",
+     "en": "She's my girlfriend♪",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "1f8461e5d03cfe1a97ff92d5defb4d3000c35d7de7d310f3db03efbc65633810",
+     "en": "...I don't really know her that well...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "6b1e5a50cb4ff68917184667d42d51a05621494612737180486c0ae6ce57b747",
+     "en": "We're meeting at [#ff44ff44]the park to the right,\ndown that main street[/#].",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "a678a36253a3026aa2e324911b6095f81a2fba5e882ce87a31c236de9965f35d",
+     "en": "We're meeting at [#ff44ff44]the park to the right,\ndown that main street[/#], I think.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "4eaa5a6d21b693a74f996d3cf8501f577f4eaf19f41c8ee3f6c9f7cd2ff8b4bd",
+     "en": "Well, let's go.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "000eee5a7a7a433eda2692d528d740893520e6fbc905ecee2c18996963daea07",
+     "en": "Okay, let's go.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "cac05ddb50604638589d1b5af47d96747471fed3a97aa52a252e88ce1ada9712",
+     "en": "Businessman Without an Umbrella",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "634c5adf40f4e5fa6986380463bde259477239c91285330e380adb12675698f5",
+     "en": "Should've trusted the forecast and brought an umbrella.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "d4ad97f2d3512a1f9d2645037fa96074c160857ab29665ab519dbe8f083626be",
+     "en": "What's all the commotion...?",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "be0581bf55e52766163234d304e8e15540709ebb3988aaa9ecae1a10779a6c90",
+     "en": "Woman Worried About the Weather",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "7f699cbf4d477888ff396c8f82f473dfa1504edf1cbeedd67b13a2dc345193bf",
+     "en": "So much rain. It's been pouring for days.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "5170ce12e90eb8791f01636da15b6267450ac5c9adbfbb848a3879a78b7b8706",
+     "en": "What? What's going on?",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "e5955631ab734c74119c3d4142e82ca2553876f63839bdcf43abf08398a5c8f8",
+     "en": "Shivering Woman",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "a6258ae436f126477a3dc57a81e38e9c59d8e2bec2316375e09bb62c28f9e6bc",
+     "en": "It's supposed to be spring, but it's freezing.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "09650b9f5345e035f0af813f6edc9984095a177a96553efeba38eccbff966cf0",
+     "en": "Sounds like it came from the intersection... What on earth...?",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "2363fbb76d9cebc03f938076958f33872a827a0e8d0620b42e34a5e57408770e",
+     "en": "Fed-Up Man",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "9a0b6da9225edcb344516e430765ad08a2289bdaf458a9e010f3af55dd28707f",
+     "en": "Don't talk to me.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "ad537af9ac03871e70f1b25845940aa79ecf1f8f4bc8339b9c4e864b5d40679c",
+     "en": "I'm fed up.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "8b709fd50f907ef653575125d03b875f4ec8d7f2e6effa7c528b67b9e42b5cac",
+     "en": "\"Sorry!\" (Apologize without thinking)",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "6c780ff31caa536a92ad0d2eb5857fcb3c59a7ee026d86db06a2b9d37ab1bb63",
+     "en": "\"What are you so fed up about?\"",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "bdf43fbda501eea6629647290d43de2e73e72a08de43962118d9fcbfd06ab085",
+     "en": "\"You didn't have to shove me that hard!\" (Get annoyed)",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "810091224e39c90f210fe72cb689ad937b62c70c64eff2312d93fd2734011afb",
+     "en": "(Walk away without a word)",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "a1b574d7bb71513dfd74b040330b1f824b4f84cbc85856f0a39a5ec229f6bddd",
+     "en": "Tch!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "d9263635a7f95bbd4ac75182b7a45e04ed42af40ae02d877a33e4c89b2868d8e",
+     "en": "What am I fed up about?",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "aa43f8d0cc24d27437b5d77ba3b5d3d3854c0ce19efb95190644aaa69ab99f61",
+     "en": "How peaceful this world is!\nEveryone complains, but they just put up with it anyway.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "626f6b2015108bca0b8eee83f8013bc9692ef48691683b1e6fe5fb0df82eb479",
+     "en": "Nothing's ever bad enough to matter. This boring world drives me nuts.\nI wish something would just go BOOM already.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "c487ac7f081461df01e37b6eed5f924c8fd31b55e3e4b4842f49ca05164d32f0",
+     "en": "Got it? Now leave me alone!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "a7bb73d296d2b44b7073ae74b2d91471264f6171c29eda0b79498f6ceeb8f613",
+     "en": "Felt like something went boom,\nbut I'm not listening to anything right now.\nSo don't talk to me.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "3c4536579cf2f8593289bd17b87b827d6bde168813e51dd84765d583f59f7cfc",
+     "en": "Cornered Man",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "84184ddf7fc55abfe981b6d646cb2993cdb5ef6323e8ffed3d4ef1be39fffeed",
+     "en": "I can't take it... I just want to confess and get it over with...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "46c2ef58259061c0be83fe56241a2d379732aa0e44e7f0bd0a8d23eaf9de12e4",
+     "en": "Sounds like something loud went off at the intersection...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "1209abb802038d41df5ea864d497383b159ab317b73c29c31dfeee6f4fbb385d",
+     "en": "Accusing Woman",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k255",
+     "source_text_sha256": "06de8d1a290d50821a8c3334d8db272b5b1016b0b423654c1ff92cfc81782220",
+     "en": "Hey, just come out and say it!\nYou were seeing her again, weren't you!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k257",
+     "source_text_sha256": "5a2e9c0070f334f43118c3ab3f939a2df36a9bb35b5d1f00caec66a26e4d22f0",
+     "en": "What? What's happening?!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k259",
+     "source_text_sha256": "c81174b7cab4eaf379e5f7c7084bf878d7d4c9d67b2f157d00063f72b4efcc59",
+     "en": "Man Sheltering from the Rain",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k260",
+     "source_text_sha256": "3a4ca88c0f542f50afb009db638c692496a96f102fce8a437665c08f92525ae7",
+     "en": "This rain just won't stop...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "1a3e6d61132e707cc458102f97233f342c93cfbfa2fbcbd8a49d59f7597dfec1",
+     "en": "Eeeeeek...",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "95d0fd5e409d0c71e2767218cc1fc82488b3e01f1aad40f1dcad50c40a84da26",
+     "en": "Counter Clerk",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k265",
+     "source_text_sha256": "91427722fc2ad15951bb6ce3a8b2fa8cd65e0ab72a52210dbcaf167554258425",
+     "en": "Welcome!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k267",
+     "source_text_sha256": "571c03e12ea28d7f19699ba082411c2e7245770cedef506ab15693a10ded2845",
+     "en": "...What's that...? Sounds noisy outside...\nOh! Welcome!",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k269",
+     "source_text_sha256": "b77269d9f4f20b8f51add0d5661a75828bcc8783e02bd237cff3767f850c8ca3",
+     "en": "How about some fresh fried chicken?",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/map_goal_text.luc",
+   "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+   "entries": [
+    {
+     "id": "p0/k15",
+     "source_text_sha256": "29cbe6f3e0155e340d0d84b6be21836194da9c33eae3d6b6832a6856d14eafba",
+     "en": "Park: Meeting a Woman",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "22ccd3158e6c29972f7d672b5a0c6c4e1886abc2c2ca3cdb5b819df1ba509343",
+     "en": "Park: Meeting a Friend",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k19",
+     "source_text_sha256": "03ff57b7a78734db6c7090ddd1cd4ebfd75ae1c125c87693e02309bd5701e8e1",
+     "en": "Park: Meeting Someone Special",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k21",
+     "source_text_sha256": "4f1a330340dc63fc8459ceb1f11b434671af71b0b2e65ff00eecb5107052bf0e",
+     "en": "Park: Meeting My Girlfriend",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "d069020f8f4cdad6850db862cc3612a347deeec44f38fe801c3c0f07e577f46a",
+     "en": "Head to where I'm meeting a woman. First, get to the main street.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "6252a2f4d9ad299e2de72f0976ffa1bd818c4ef9e7efd2dbe99b0293ae9437bb",
+     "en": "Head to where I'm meeting a friend. First, get to the main street.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "f1e5f6d7929e83637fad43c47e5dc1efa3a6ff3b9627c314433db1efd26ac005",
+     "en": "Head to where I'm meeting someone special. First, get to the main street.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "7d6aae80af058648c43501a69e272aea3efb5bb6f9dc744ebd5a0ee798525919",
+     "en": "Head to where I'm meeting my girlfriend. First, get to the main street.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "f8d0cf09db333ab62224974f37473204329240181e551d5bec6c128a1bca497e",
+     "en": "Get away from the shady cash handoff, fast.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/option_menu_text.luc",
+   "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+   "entries": [
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "84d5f963078fdc287d39c2423d5696619aa01019e5026151c2c2c9a2cdba223e",
+     "en": "Turn controller vibration on or off.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k10",
+     "source_text_sha256": "37e6bcedbc32e0f205b944e4bf94c71401c7be787ff4ab6748f6c9cfcfd21f0b",
+     "en": "Choose vertical camera controls.\n- Normal: Up looks up, Down looks down.\n- Inverted: Up looks down, Down looks up.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k12",
+     "source_text_sha256": "c82978fa0ce5ddaf7e9ffde17187eeadf90feff39cfa494e67c6bb3f59488f59",
+     "en": "Choose horizontal camera controls.\n- Normal: Right looks right, Left looks left.\n- Inverted: Right looks left, Left looks right.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "851cd4228ace6d7669690aec05e926bb48b0863fa4e8629e0caafe8e2fc75b5d",
+     "en": "Turn the protagonist's voice on or off.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "42f8209da8d4f88573dda36f1d93382ee2d7641161c20224f84e98ed40e1c1e0",
+     "en": "Turn other characters' voices on or off.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "703378e3680aab2c6fb3fa375b88f70365e6e7e4e8968f5459466ed5d800604a",
+     "en": "Show or hide the health and stamina gauges.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "22608d8e1a481c01f85990df705f463e0798e45f73fd2b008244ed8cc5eb81e1",
+     "en": "Choose the camera type.\nYou can also switch it in-game with [i10]/[i11].",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "a4c0fb91958e426705b3e76772b3ac91a382e948de6381791945d1f5bcbdf0ea",
+     "en": "Turn the on-screen MAP on or off.\nYou can also toggle it in-game with the touch pad button.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "071248fa187fd10a689b0b95299b4d88e8788dc69a845297773f182f0c58367f",
+     "en": "Choose the size of the on-screen control guide.\nDetailed shows the full diagram; Simple shows just the icons.\n",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "b5582d00d9ffef8552557aaf4704ec583518039e3147ba595755d64d27687929",
+     "en": "Adjust screen brightness.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "f3552f95c12d4eaff02d33423c5f3868f64bf9ef918def9027a80c4d885d914b",
+     "en": "Adjust character voice volume.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "dc44ae6c5b726351d21e440594fb0609ae3097f19ae40bec92d116807db0afd5",
+     "en": "Adjust music volume.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "a57ce9b37b84d7f9d413b6b4368c94a201452f2458bab54380b635cb1707ec4f",
+     "en": "Adjust sound effect volume.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "abee47e41d6828cd2d3c81cccfd2fafe53517c6c2edd32e30a47d2380284ba25",
+     "en": "Turn rotation of the on-screen MAP on or off.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "7e57e3c69a90e7a268fe0c7b4c42d42b0e26ece8ae0c4dcfe6d580c76f5455cf",
+     "en": "Turn cutscene subtitles on or off.",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/csv/reading_material.csh",
+   "source_sha256": "1b9ed830b5435611e69d1f78474859544992df35340fc3029b6c5c70cade3661",
+   "entries": [
+    {
+     "id": "r37/c4",
+     "source_text_sha256": "ad6eb6f2c7a1eb43ab6941b97e33e1f63316deab85268d85035cc958939497d9",
+     "en": "                    A City Bayfront Land Development, Development Manager Hebisaki\\n\\nPresident Busujima,\\nRegarding the land development near B Beach in A City, I am reporting on the chemicals\\nabove the standard limits that were detected in the reclaimed soil.\\n\\nFollowing renewed advice from Professor D of C University and Mr. E of the survey agency,\\nwe conducted 12 surveys in total and were able to obtain values at an acceptable level.\\nWe believe these values will have no impact on the ecosystem or scenery of B Beach,\\nor at most an extremely minor one.\\n\\nThis survey will not affect the development schedule.\\nWe will also pay advisory fees to Professor D and Mr. E for their cooperation.\\nThat is all.\\n",
+     "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
+     "editorial_status": "pending"
+    }
+   ]
+  }
+ ]
+}
