@@ -1216,6 +1216,11 @@ kyoei_replace_checked(KYOEI_PAD "    if (gz_dialog_input(buttons)) {"
 kyoei_replace_checked(KYOEI_PAD
   "keyboard_axis(SDL_SCANCODE_A,SDL_SCANCODE_D,data.leftStick.x)"
   "(kyoei_prompt_pause_active()?data.leftStick.x:keyboard_axis(SDL_SCANCODE_A,SDL_SCANCODE_D,data.leftStick.x))")
+# PC controls: the camera turns with the mouse or a gamepad, not with I/J/K/L (Davy, 23/10).
+kyoei_replace_checked(KYOEI_PAD
+  "    data.rightStick = {keyboard_axis(SDL_SCANCODE_J,SDL_SCANCODE_L,data.rightStick.x),
+                       keyboard_axis(SDL_SCANCODE_I,SDL_SCANCODE_K,data.rightStick.y)};"
+  "    // Kyoei: no keyboard camera; the mouse and the gamepad turn it.")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp" CONTENT "${KYOEI_PAD}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp")
 set(KYOEI_WINDOW "#include \"kyoei_mouse.h\"\n${KYOEI_WINDOW}")
