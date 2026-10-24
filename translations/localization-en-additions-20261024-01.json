@@ -481,28 +481,28 @@
     {
      "id": "p0/k201",
      "source_text_sha256": "6b1e5a50cb4ff68917184667d42d51a05621494612737180486c0ae6ce57b747",
-     "en": "We're meeting at [#ff44ff44]the park to the right,\ndown that main street[/#].",
+     "en": "We're meeting at [#ff44ff44]the park off to the right,\ndown that main street[/#].",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k203",
      "source_text_sha256": "a678a36253a3026aa2e324911b6095f81a2fba5e882ce87a31c236de9965f35d",
-     "en": "We're meeting at [#ff44ff44]the park to the right,\ndown that main street[/#], I think.",
+     "en": "I think we're meeting at [#ff44ff44]the park off to the right,\ndown that main street[/#].",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k205",
      "source_text_sha256": "4eaa5a6d21b693a74f996d3cf8501f577f4eaf19f41c8ee3f6c9f7cd2ff8b4bd",
-     "en": "Well, let's go.",
+     "en": "All right, let's go.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k207",
      "source_text_sha256": "000eee5a7a7a433eda2692d528d740893520e6fbc905ecee2c18996963daea07",
-     "en": "Okay, let's go.",
+     "en": "All right, let's go.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -516,7 +516,7 @@
     {
      "id": "p0/k210",
      "source_text_sha256": "634c5adf40f4e5fa6986380463bde259477239c91285330e380adb12675698f5",
-     "en": "Should've trusted the forecast and brought an umbrella.",
+     "en": "Should've listened to the forecast and brought an umbrella.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -537,14 +537,14 @@
     {
      "id": "p0/k215",
      "source_text_sha256": "7f699cbf4d477888ff396c8f82f473dfa1504edf1cbeedd67b13a2dc345193bf",
-     "en": "So much rain. It's been pouring for days.",
+     "en": "Man, this rain. It's been pouring for days.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k217",
      "source_text_sha256": "5170ce12e90eb8791f01636da15b6267450ac5c9adbfbb848a3879a78b7b8706",
-     "en": "What? What's going on?",
+     "en": "Huh? What's going on?!",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -558,14 +558,14 @@
     {
      "id": "p0/k220",
      "source_text_sha256": "a6258ae436f126477a3dc57a81e38e9c59d8e2bec2316375e09bb62c28f9e6bc",
-     "en": "It's supposed to be spring, but it's freezing.",
+     "en": "It's supposed to be spring, and it's freezing.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k222",
      "source_text_sha256": "09650b9f5345e035f0af813f6edc9984095a177a96553efeba38eccbff966cf0",
-     "en": "Sounds like it came from the intersection... What on earth...?",
+     "en": "Sounds like it came from the intersection... What's going on over there?",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -586,14 +586,14 @@
     {
      "id": "p0/k227",
      "source_text_sha256": "ad537af9ac03871e70f1b25845940aa79ecf1f8f4bc8339b9c4e864b5d40679c",
-     "en": "I'm fed up.",
+     "en": "I'm just fed up, okay?",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k229",
      "source_text_sha256": "8b709fd50f907ef653575125d03b875f4ec8d7f2e6effa7c528b67b9e42b5cac",
-     "en": "\"Sorry!\" (Apologize without thinking)",
+     "en": "\"Sorry!\" (Apologize on reflex)",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -635,14 +635,14 @@
     {
      "id": "p0/k241",
      "source_text_sha256": "aa43f8d0cc24d27437b5d77ba3b5d3d3854c0ce19efb95190644aaa69ab99f61",
-     "en": "How peaceful this world is!\nEveryone complains, but they just put up with it anyway.",
+     "en": "Everything's so peaceful!\nEveryone complains, but they just put up with it anyway.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k243",
      "source_text_sha256": "626f6b2015108bca0b8eee83f8013bc9692ef48691683b1e6fe5fb0df82eb479",
-     "en": "Nothing's ever bad enough to matter. This boring world drives me nuts.\nI wish something would just go BOOM already.",
+     "en": "Nothing's ever bad enough to actually matter. This boring world drives me nuts.\nI wish something would just blow up already.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -656,7 +656,7 @@
     {
      "id": "p0/k247",
      "source_text_sha256": "a7bb73d296d2b44b7073ae74b2d91471264f6171c29eda0b79498f6ceeb8f613",
-     "en": "Felt like something went boom,\nbut I'm not listening to anything right now.\nSo don't talk to me.",
+     "en": "Thought I heard a boom,\nbut I'm not listening to anything right now.\nSo leave me alone.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -670,14 +670,14 @@
     {
      "id": "p0/k250",
      "source_text_sha256": "84184ddf7fc55abfe981b6d646cb2993cdb5ef6323e8ffed3d4ef1be39fffeed",
-     "en": "I can't take it... I just want to confess and get it over with...",
+     "en": "I can't take it anymore... I just want to come clean...",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k252",
      "source_text_sha256": "46c2ef58259061c0be83fe56241a2d379732aa0e44e7f0bd0a8d23eaf9de12e4",
-     "en": "Sounds like something loud went off at the intersection...",
+     "en": "Sounds like something went off by the intersection...",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -691,7 +691,7 @@
     {
      "id": "p0/k255",
      "source_text_sha256": "06de8d1a290d50821a8c3334d8db272b5b1016b0b423654c1ff92cfc81782220",
-     "en": "Hey, just come out and say it!\nYou were seeing her again, weren't you!",
+     "en": "Come on, just admit it!\nYou were seeing her again, weren't you?!",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -719,7 +719,7 @@
     {
      "id": "p0/k262",
      "source_text_sha256": "1a3e6d61132e707cc458102f97233f342c93cfbfa2fbcbd8a49d59f7597dfec1",
-     "en": "Eeeeeek...",
+     "en": "Aaaaah...!",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -740,14 +740,14 @@
     {
      "id": "p0/k267",
      "source_text_sha256": "571c03e12ea28d7f19699ba082411c2e7245770cedef506ab15693a10ded2845",
-     "en": "...What's that...? Sounds noisy outside...\nOh! Welcome!",
+     "en": "...Huh? What's all that noise outside...?\nOh! Welcome!",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k269",
      "source_text_sha256": "b77269d9f4f20b8f51add0d5661a75828bcc8783e02bd237cff3767f850c8ca3",
-     "en": "How about some fresh fried chicken?",
+     "en": "How about some fresh karaage? Just fried!",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     }
@@ -774,7 +774,7 @@
     {
      "id": "p0/k19",
      "source_text_sha256": "03ff57b7a78734db6c7090ddd1cd4ebfd75ae1c125c87693e02309bd5701e8e1",
-     "en": "Park: Meeting Someone Special",
+     "en": "Park: Meeting Someone Important",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -802,7 +802,7 @@
     {
      "id": "p0/k38",
      "source_text_sha256": "f1e5f6d7929e83637fad43c47e5dc1efa3a6ff3b9627c314433db1efd26ac005",
-     "en": "Head to where I'm meeting someone special. First, get to the main street.",
+     "en": "Head to where I'm meeting someone important to me. First, get to the main street.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -871,14 +871,14 @@
     {
      "id": "p0/k20",
      "source_text_sha256": "22608d8e1a481c01f85990df705f463e0798e45f73fd2b008244ed8cc5eb81e1",
-     "en": "Choose the camera type.\nYou can also switch it in-game with [i10]/[i11].",
+     "en": "Choose the camera view.\nYou can also switch views in-game with [i10]/[i11].",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k22",
      "source_text_sha256": "a4c0fb91958e426705b3e76772b3ac91a382e948de6381791945d1f5bcbdf0ea",
-     "en": "Turn the on-screen MAP on or off.\nYou can also toggle it in-game with the touch pad button.",
+     "en": "Show or hide the map.\nYou can also toggle it in-game with the touch pad button.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
@@ -920,7 +920,7 @@
     {
      "id": "p0/k34",
      "source_text_sha256": "abee47e41d6828cd2d3c81cccfd2fafe53517c6c2edd32e30a47d2380284ba25",
-     "en": "Turn rotation of the on-screen MAP on or off.",
+     "en": "Turn map rotation on or off.",
      "notes": "Natural English, coverage audit 2026-10-24 (opening, objectives, options, memo).",
      "editorial_status": "pending"
     },
