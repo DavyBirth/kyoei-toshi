@@ -1,0 +1,83 @@
+{
+  "format": "kyoei-translation-draft-v1",
+  "title": "CUSA03562",
+  "version": "01.03",
+  "status": "draft_requires_human_review",
+  "runtime_verified": false,
+  "resources": [
+    {
+      "path": "common/lua/intermission_result_data.luc",
+      "source_sha256": "9cbfcc123adb7a33140ad4956d9d9574289239662d5e4a2935dd61f5fa70f3a2",
+      "entries": [
+        {
+          "id": "p0/k69",
+          "source_text_sha256": "6fb91ecdc523fabc0f1dfa7debc388240af077671eb88897c1b2c0503c8220f7",
+          "en": "Stage 10-1",
+          "notes": "Natural English, coverage audit 2026-10-21.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k71",
+          "source_text_sha256": "2093a469fa1ac61791c1e53e41c08f99c27309aa783e67c41f505436db86a58e",
+          "en": "Stage 10-2A",
+          "notes": "Natural English, coverage audit 2026-10-21.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k73",
+          "source_text_sha256": "c79f8177005f6ff4cea7a23959e70663c7f6dee612521887c3356832705fdf5a",
+          "en": "Stage 10-2B",
+          "notes": "Natural English, coverage audit 2026-10-21.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/hud_data.luc",
+      "source_sha256": "8500c9ddb1872f485a22c43011fe264e4e645195231e1015d56a1eab6445dd66",
+      "entries": [
+        {
+          "id": "p0/k48",
+          "source_text_sha256": "5b92397068212b027f63256f916c37f53618f513ad30a2341632e791de14ca98",
+          "en": "St10-1",
+          "notes": "Natural English, coverage audit 2026-10-21.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k50",
+          "source_text_sha256": "b8943f6a8954ee661f75d6778f811c364c0d299e90252382f2dd8cb228d538de",
+          "en": "St10-2A",
+          "notes": "Natural English, coverage audit 2026-10-21.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k52",
+          "source_text_sha256": "4aa8b38613938a46d85d48e59d2d39af174c2318da1c4099e6fcbbdb72248646",
+          "en": "St10-2B",
+          "notes": "Natural English, coverage audit 2026-10-21.",
+          "editorial_status": "pending"
+        }
+      ]
+    },
+    {
+      "path": "common/lua/stage_207_news_text.luc",
+      "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
+      "entries": [
+        {
+          "id": "p0/k150",
+          "source_text_sha256": "f0cc8b88c7e01796a8bdb17070961f51a501021b742ac6407f6c9e38cbc3e22c",
+          "en": "Late at night on the wharf, Hajime Kariya was taking a breather.\nHe works for a company that people call exploitative. He had turned down our interviews several times, but this time he finally opened up.\nHe says he doesn't think of his employer as exploitative at all.\nIt's true that his overtime goes beyond the legal limit, and his shifts are highly irregular.\nBut as he puts it:\n\"The company told me exactly how it was before I took the job. In exchange, my base pay is higher and every hour of overtime gets paid. They've kept their word, so personally, I'm fine with it.\"\n\nHe has two children, both still in elementary school, and wants to save as much as he can for their education through college and for lessons for their future. His wife's poor health was another reason he chose this job.\n\nIn an age of ever-widening income gaps, he decided he couldn't count on success in a white-collar career, and felt that an ordinary job wouldn't be enough to support his family.\nWith what he earns now, he expects to save enough to retire early and live comfortably with his wife once the children are on their own, so he says he actually enjoys the work.\n\nWith that, he went back to work.",
+          "notes": "Natural English, coverage audit 2026-10-21.",
+          "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k152",
+          "source_text_sha256": "336f2f717818560a6ad5c52bc1e3ae0a0b8a7a5353885584ebeb2a4d62d58cf9",
+          "en": "An interview with Toshiya Okinaga, who works at Asaseo Wharf, revealed some shocking facts.\n\nHe says his company deals widely in illegal goods such as weapons and drugs.\nUsing its know-how as a shipping company, it apparently makes enormous profits through all sorts of loopholes and connections.\n\nAt first, this writer couldn't believe it either, but after being shown cargo that actually contained such goods, there was no denying it.\n\nWhen he first found out, he says, he was torn, but blinded by the high pay, he pretended not to know.\nFive years later, he now earns tens of millions of yen a year, but he has decided he can't live this way anymore.\nThe guilt of helping with crimes never leaves him, and lately he says he can no longer taste his food.\nAbove all, the more the company values him, the more of his time it takes, and he can barely even see his family.\n\n\"It was never about the money. As long as I have time with my family, the bare minimum wage is enough.\"\nWith that, Mr. Okinaga looked down and let out a long, deep sigh.\n\nThe information from this interview has been passed to the police, and an investigation is already underway.\nWe will bring you exclusive updates as the story develops.\n\nA month after the interview, this writer happened to run into Mr. Okinaga on the street. He had quit the company,\nand he looked bright and refreshed, as if a weight had been lifted.",
+          "notes": "Natural English, coverage audit 2026-10-21.",
+          "editorial_status": "pending"
+        }
+      ]
+    }
+  ]
+}

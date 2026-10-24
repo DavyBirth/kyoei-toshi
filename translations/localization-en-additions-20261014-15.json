@@ -12,14 +12,14 @@
         {
           "id": "r1268/c26",
           "source_text_sha256": "4b93ef22d2a0c56d3ebf6c0c9be47e83d81c769172d9e5b974f7d402e5e4c3db",
-          "en": "A box containing an engagement ring, smeared with blood.<br>It lay where Kumi, the girlfriend of Naoki, the man encountered downtown, apparently came under attack by a monstrous bird.",
+          "en": "A box containing an engagement ring, smeared with blood.<br>It was lying where Kumi, girlfriend of Naoki (the man you met downtown), seems to have been attacked by a monster bird.",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1268/c26; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r1268/c28",
           "source_text_sha256": "4b93ef22d2a0c56d3ebf6c0c9be47e83d81c769172d9e5b974f7d402e5e4c3db",
-          "en": "A box containing an engagement ring, smeared with blood.<br>It lay where Kumi, the girlfriend of Naoki, the man encountered downtown, apparently came under attack by a monstrous bird.",
+          "en": "A box containing an engagement ring, smeared with blood.<br>It was lying where Kumi, girlfriend of Naoki (the man you met downtown), seems to have been attacked by a monster bird.",
           "notes": "English draft imported from audited private workspace, translate-en-0122.json:r1268/c28; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -32,14 +32,14 @@
         {
           "id": "r43/c3",
           "source_text_sha256": "6b140be42b009bf2c18de40f1ce824290b14f8a09a8d6f29f22138308ebb96d9",
-          "en": "The shadow resting on the seabed seems to have vanished.\\nI'll go call First Mate Oda at the stern.",
+          "en": "Apparently, the shadow sitting on the seafloor had vanished.\\nI went to get First Mate Oda at the stern.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r43/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r43/c4",
           "source_text_sha256": "6b140be42b009bf2c18de40f1ce824290b14f8a09a8d6f29f22138308ebb96d9",
-          "en": "The shadow resting on the seabed seems to have vanished.\\nI'll go call First Mate Oda at the stern.",
+          "en": "Apparently, the shadow sitting on the seafloor had vanished.\\nI went to get First Mate Oda at the stern.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r43/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -99,21 +99,21 @@
         {
           "id": "p0/k502",
           "source_text_sha256": "27bffa41bb348e2ad90c5114285e06cce47a7f2112d96ded48371effec430105",
-          "en": "It looked like the first mate gave you something.\nCould it be for Dr. Fukazawa?",
+          "en": "Looked like the first mate gave you something.\nIs it for Dr. Fukazawa?",
           "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k502; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k506",
           "source_text_sha256": "9e9ee458c36eb2f6fd3135063f794bd2a4bf4e2b439d49d25968a140ec7f608d",
-          "en": "Dr. Fukazawa is wonderful, isn't she?\nA message from the first mate?",
+          "en": "Dr. Fukazawa's amazing, isn't she?\nA message from the first mate?",
           "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k506; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k508",
           "source_text_sha256": "8ac4f28c68c8ad96570c8457a2fc20d4b1686d6f9f853184fd7c49bee01dd478",
-          "en": "It looked like Dr. Fukazawa gave you something.\nAre you taking it to the first mate?",
+          "en": "Looked like Dr. Fukazawa gave you something.\nAre you taking it to the first mate?",
           "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k508; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -126,14 +126,14 @@
         {
           "id": "p0/k397",
           "source_text_sha256": "c4382739a3538bbee2808e99d9daca589a6f9d47cad350595fb72c42e79bbefc",
-          "en": "Kunshiran Construction President Busujima",
+          "en": "Busujima, President of Kunshiran Construction",
           "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k397; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k400",
           "source_text_sha256": "e51fb3e66c8293ae3dcd164d36c989a8a2720b8667a86a8ab60c4c7bb263f1f0",
-          "en": "Me? I'm Busujima, the head of Kunshiran Construction.\nThe view from the observation deck is exceptional.\nPlease take your time and enjoy it.",
+          "en": "Me? I'm Busujima, head of Kunshiran Construction.\nThe view from up here is something else.\nPlease, take your time and enjoy it.",
           "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k400; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -146,21 +146,21 @@
         {
           "id": "p0/k355",
           "source_text_sha256": "ac8951b8c15d71f8881fede03aca2d90107a2fc57de2bc21de59e4ff0fe6d991",
-          "en": "Kumi, please be safe...!",
+          "en": "Kumi, please be okay...!",
           "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k355; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k529",
           "source_text_sha256": "b3aa030fc8ea5352cd283520d8d8cf07bd860c8dd77bc424f3b98d3c58a62c3c",
-          "en": "If only I hadn't criticized Kumi over something so trivial...\nWe'd still be together now...!",
+          "en": "If I hadn't picked a fight with Kumi over nothing...\nwe'd still be together right now...!",
           "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k529; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k531",
           "source_text_sha256": "ff920920bffc84327c1f0fea3b879c273c6970dc445c517dee7f1a7450d7cc26",
-          "en": "Kumi! Where are you...!?\nI have to go save her...!",
+          "en": "Kumi! Where are you...?!\nI have to go save her...!",
           "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k531; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -174,14 +174,14 @@
         {
           "id": "p0/k544",
           "source_text_sha256": "818008097992d8fa03b6bd2389c4ea2eadff07ebeb5865f65eeafa31a177454c",
-          "en": "Offer baseless reassurance: 'I'm sure Kumi is safe!'",
+          "en": "\"I'm sure Kumi's okay!\" (with no real reason to think so)",
           "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k544; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k558",
           "source_text_sha256": "da5a9ecad34772bc1e3f429db444c50152d8cddf6c224f8c615c2512b4cdaecc",
-          "en": "What are you talking about!? Kumi is outside!\nIf the monster attacked her...!",
+          "en": "What are you talking about?! Kumi's out there!\nIf the monster got her...!",
           "notes": "English draft imported from audited private workspace, translate-en-0156.json:p0/k558; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -194,7 +194,7 @@
         {
           "id": "p0/k643",
           "source_text_sha256": "cd14dde5f55ef0afd55d5b2de2a5dbf71cb128f75b356668120988a5b2450d0d",
-          "en": "A-all right! Kumi, let's get out of here!",
+          "en": "O-Okay! Kumi, let's get out of here!",
           "notes": "English draft imported from audited private workspace, translate-en-0054.json:p0/k643; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -221,21 +221,21 @@
         {
           "id": "p0/k883",
           "source_text_sha256": "dd722e08deb976644901107a598a3a07ee10f1e7418b5a5faae0defefcecc620",
-          "en": "Give them Captain Oda's Photo for 400,000 yen as proof of their discipleship.",
+          "en": "(Grant \"Captain Oda's Photo\" as a disciple's token for 400,000 yen)",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k883; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k912",
           "source_text_sha256": "4ac8252672a178c8a2e501fb6f94f540dbfc5d637cc46fcbc31147ac8fad5fdf",
-          "en": "This time, give them Captain Oda's Photo for 400,000 yen as proof of their discipleship.",
+          "en": "(This time for real, grant \"Captain Oda's Photo\" for 400,000 yen)",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k912; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k1096",
           "source_text_sha256": "6bc82b708e07c18b404bcc59174975ba6f6a2ee94fc078e2fb26555ad919253e",
-          "en": "Offer them Captain Oda's Photo for 400,000 yen as a protective charm.",
+          "en": "(Sell \"Captain Oda's Photo\" as a charm for 400,000 yen)",
           "notes": "English draft imported from audited private workspace, translate-en-0031.json:p0/k1096; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -276,7 +276,7 @@
         {
           "id": "p0/k23",
           "source_text_sha256": "c4d063912aaf7dff83bf0cb698fd8f41ab97e2589ffe6b33b94ef2c765b98325",
-          "en": "Beautiful memories with you.\nSuch wonderful times, both painful and joyful.\nBut even the most vivid, deeply cherished memories\nwill one day fade, and eventually be forgotten.\nThe future that must come will transform those memories.\nYet I want to hold this moment in my heart for as long as I can.\n\nMaking your memories just a little stronger:\nKaraage Minister Special Memory Flavor.",
+          "en": "Beautiful memories with you.\nSuch wonderful times, both painful and joyful.\nBut even the most vivid, deeply cherished memories\nwill one day fade, and eventually be forgotten.\nThe future that must come will transform those memories.\nYet I want to hold this moment in my heart for as long as I can.\n\nMaking your memories just a little stronger:\nKaraage Minister Special Memories Flavor.",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k23; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -297,28 +297,28 @@
         {
           "id": "p0/k43",
           "source_text_sha256": "c2c38039b916cace625d0984abb15241d5d0374b648183e3b0ca9bff805ca50b",
-          "en": "Andromeda: the blazing-hot chili said to be the hottest in the universe.\nThis spring finally sees the arrival of Karaage Minister Super-Spicy Red Flavor, made with this pepper.\nIt boasts roughly 120 times the heat of Karaage Minister Chili Flavor, according to our own comparison.\nOne bite sends sweat cascading like a waterfall, a sight said to resemble the Milky Way glittering in the night sky...\nCan you withstand this heat?\n\n※Small children, pregnant customers, elderly customers, and those sensitive to spicy food should take care.",
+          "en": "Andromeda: the blazing-hot chili said to be the hottest in the universe.\nThis spring finally sees the arrival of Karaage Minister Blazing Red Flavor, made with this pepper.\nIt boasts roughly 120 times the heat of Karaage Minister Chili Flavor, according to our own comparison.\nOne bite sends sweat cascading like a waterfall, a sight said to resemble the Milky Way glittering in the night sky...\nCan you withstand this heat?\n\n※Small children, pregnant customers, elderly customers, and those sensitive to spicy food should take care.",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k43; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k44",
           "source_text_sha256": "6fc1d2b7861f6e7b64cf5d33fc8c00feaf40ad57f9544570bf8303738eecc961",
-          "en": "～Karaage Minister (Super-Spicy Red Flavor)～",
+          "en": "~Karaage Minister (Blazing Red Flavor)~",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k44; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k46",
           "source_text_sha256": "069178612fd3a7e69d81c798dc2ce63e341beadc4752bf1ee6aa7c8b9ae5cdbd",
-          "en": "The Bizarre Game Absolutely Safe City",
+          "en": "The Bizarre Cult Game Absolutely Safe City",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k46; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k48",
           "source_text_sha256": "6f219a4f205bb905cc382a5fb220118566385a76e4eb6313c418176b597de5c8",
-          "en": "～Absolutely Safe City Game～",
+          "en": "~Absolutely Safe City~",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k48; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -339,35 +339,35 @@
         {
           "id": "p0/k52",
           "source_text_sha256": "8530e726cd174a2b17bbecd473ef3ab60c7e1b30fe967a0e980afb3af56b1a5c",
-          "en": "～Fire Extinguisher～",
+          "en": "~Fire Extinguisher~",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k52; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k54",
           "source_text_sha256": "5ced0a978679725dde7f35f1e9669cecd093539d85a31db129fa8f480d2da908",
-          "en": "Extremely Rare! Tickets to Watch Aya Suzumura on the Radio",
+          "en": "Super Rare! Tickets to Aya Suzumura's Radio Show",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k54; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k56",
           "source_text_sha256": "8983b7d5bfb4192fa566570e77cbbda81425cfc30e3f87f31800e70b2b8a8d08",
-          "en": "～Midnight Sky Garden Radio Audience Ticket～",
+          "en": "~Midnight Sky Garden Audience Ticket~",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k56; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k58",
           "source_text_sha256": "687de156c8c1a9250f313e9abcd6234bdc77ea85dedfb0b5324a1232f2f1435e",
-          "en": "A Popular Series! A Tale of Two People Bound by Fate!",
+          "en": "A Hit Series! Two Souls Bound by Fate!",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k58; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k60",
           "source_text_sha256": "925d6b4fb4df5d53d23072f0925d35d5488e0ca54dfb96a65b97f8c01a12c7c2",
-          "en": "～Hard Boys Z～",
+          "en": "~Hard Boys Z~",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k60; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -381,7 +381,7 @@
         {
           "id": "p0/k68",
           "source_text_sha256": "3e09abee077c0d75ceeb5d5c24738b8610a454b5a2ead1891881340b0de96ba4",
-          "en": "～Koshinicool～",
+          "en": "~Koshinicool~",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k68; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -395,7 +395,7 @@
         {
           "id": "p0/k72",
           "source_text_sha256": "e291de18aeaf079ba08f5c09097fc57081366aeacb8db8d5624e0ec219e2d5d0",
-          "en": "～Piggy Bank～",
+          "en": "~Piggy Bank~",
           "notes": "English draft imported from audited private workspace, translate-en-0139.json:p0/k72; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -519,7 +519,7 @@
         {
           "id": "p0/k166",
           "source_text_sha256": "0cc9bc014349bddddf20b0cc5337d9968ddbe1c823a4be82ea656bf0c02c3cd4",
-          "en": "Labors from Division 2 of Special Vehicles Section 2, Security Bureau, Tokyo Metropolitan Police Department, were deployed to help rescue people from the fire at the Iberis Tower Building in Sakura Ward, Miyato City, Miyato Prefecture.\nThe unit was transported to the roof by helicopter and carried out rescues using cables. However, possibly because of an operating error, a Labor damaged the building, sending debris falling to the ground.\nFortunately, nobody was injured, but nearby residents have voiced concerns about the Labor unit.",
+          "en": "Labors from Platoon 2, Security Bureau, Tokyo Metropolitan Police Department, were deployed to help rescue people from the fire at the Iberis Tower Building in Sakura Ward, Miyato City, Miyato Prefecture.\nThe unit was transported to the roof by helicopter and carried out rescues using cables. However, possibly because of an operating error, a Labor damaged the building, sending debris falling to the ground.\nFortunately, nobody was injured, but nearby residents have voiced concerns about the Labor unit.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k166; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -554,14 +554,14 @@
         {
           "id": "p0/k198",
           "source_text_sha256": "489f0372bad5e3f1c99cdb36f68ff6690b893c85b27e0504405268f25abf05ba",
-          "en": "Around 9 p.m. today, a man with a mohawk chased a couple while shouting loudly on the observation-deck floor of the Iberis Tower Building, which later caught fire.\nThe fire had begun before Miyato Prefectural Police arrived in response to the report. The matter remains under investigation, and no solid information was available.\nWitnesses described the pursuer as 'a tall, dark-complexioned man in a suit with a mohawk.' Any connection with the fire is unknown.",
+          "en": "Around 9 p.m. today, a man with a mohawk chased a couple while shouting loudly on the observation-deck floor of the Iberis Tower Building, which later caught fire.\nThe fire had begun before Miyato Prefectural Police arrived in response to the report. The matter remains under investigation, and no solid information was available.\nWitnesses described the pursuer as \"a tall, dark-complexioned man in a suit with a mohawk.\" Any connection with the fire is unknown.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k198; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k200",
           "source_text_sha256": "d43100b14efb0c5c3629df3070187812551e150877ee992e3e4f71a05184d4c9",
-          "en": "Around 9:30 p.m. today, a report was received of two people carrying handguns on an office floor of the Iberis Tower Building.\nBefore this, 'a tall, dark-complexioned man in a suit with a mohawk' had chased a couple on the observation-deck floor. Miyato Prefectural Police are investigating on the assumption that the same person was involved.\nT, who made the report, said, 'They suddenly came into the room shouting loudly and seemed to be looking for someone. I couldn't really tell what their hair was like.' Any connection with the fire is unknown.",
+          "en": "Around 9:30 p.m. today, a report was received of two people carrying handguns on an office floor of the Iberis Tower Building.\nBefore this, \"a tall, dark-complexioned man in a suit with a mohawk\" had chased a couple on the observation-deck floor. Miyato Prefectural Police are investigating on the assumption that the same person was involved.\nT, who made the report, said, 'They suddenly came into the room shouting loudly and seemed to be looking for someone. I couldn't really tell what their hair was like.' Any connection with the fire is unknown.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k200; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -575,7 +575,7 @@
         {
           "id": "p0/k204",
           "source_text_sha256": "4339f578dd02f624880ff469cb59f08d63af8aab618468bf4ff820112c428c61",
-          "en": "T, who survived the Iberis Tower Building fire, says they heard a dog inside the twentieth-floor office during the blaze.\nAccording to T, the only animals kept there are hamsters, making a stray dog that wandered inside the most likely explanation.\n'It had a energetic voice, but I couldn't find it when I searched. It probably couldn't have survived that smoke. I feel terrible,' T laments.",
+          "en": "T, who survived the Iberis Tower Building fire, says they heard a dog inside the twentieth-floor office during the blaze.\nAccording to T, the only animals kept there are hamsters, making a stray dog that wandered inside the most likely explanation.\n'It had an energetic voice, but I couldn't find it when I searched. It probably couldn't have survived that smoke. I feel terrible,' T laments.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k204; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -617,7 +617,7 @@
         {
           "id": "p0/k218",
           "source_text_sha256": "7326aa0b0df83a73d85ec768100ce49b1030ee6ec1f2131f59da59ed60bb6d8c",
-          "en": "It rarely comes up in conversation, but do you know how long an answering machine records? Twenty seconds? Thirty? You would need about that long to leave a message. Yet Mossy, the latest landline phone from industry leader Irodori Electric, offers an astonishing five seconds! Isn't that rather short? We decided to ask why.\nUs: 'Hello. Why does Mossy record for only five seconds?'\nIrodori: 'Well, when we averaged the recorded messages on all the landline phones we've sold, it came to 2.5 seconds. We figured twice that would be enough, so we made it five.'\nUs: 'What!? 2.5 seconds? Could you even say hello in that time?'\nIrodori: 'Our own investigation confirmed an average of 2.5 seconds. For privacy reasons, we measured only the duration, not the content.'\nUs: 'D-doesn't that include calls where people hung up without leaving a message...?'\nTo be continued next issue.",
+          "en": "It rarely comes up in conversation, but do you know how long an answering machine records? Twenty seconds? Thirty? You would need about that long to leave a message. Yet Mossy, the latest landline phone from industry leader Irodori Electric, offers an astonishing five seconds! Isn't that rather short? We decided to ask why.\nUs: \"Hello. Why does Mossy record for only five seconds?\"\nIrodori: 'Well, when we averaged the recorded messages on all the landline phones we've sold, it came to 2.5 seconds. We figured twice that would be enough, so we made it five.'\nUs: \"What!? 2.5 seconds? Could you even say hello in that time?\"\nIrodori: \"Our own investigation confirmed an average of 2.5 seconds. For privacy reasons, we measured only the duration, not the content.\"\nUs: 'D-doesn't that include calls where people hung up without leaving a message...?'\nTo be continued next issue.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k218; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -631,7 +631,7 @@
         {
           "id": "p0/k222",
           "source_text_sha256": "d83952db188c97f5b5438f7aca4633ae2494204a9502b0e2731d5dcc18651427",
-          "en": "'Do not use elevators during an emergency, even if they are running,' says U from Irodori Electric's public relations department.\n'A disaster can deform equipment or cause malfunctions. Apart from stopping, an elevator could cause an unexpected accident such as electric shock.'\nOn the twenty-second of last month, when an earthquake of seismic intensity 4 occurred off Miyato Prefecture, a Sakura Ward man became trapped when the elevator he used to evacuate stopped.\nTake care not to use elevators during an emergency.",
+          "en": "\"Do not use elevators during an emergency, even if they are running,\" says U from Irodori Electric's public relations department.\n\"A disaster can deform equipment or cause malfunctions. Apart from stopping, an elevator could cause an unexpected accident such as electric shock.\"\nOn the twenty-second of last month, when an earthquake of seismic intensity 4 occurred off Miyato Prefecture, a Sakura Ward man became trapped when the elevator he used to evacuate stopped.\nTake care not to use elevators during an emergency.",
           "notes": "English draft imported from audited private workspace, translate-en-0125.json:p0/k222; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -721,7 +721,7 @@
         {
           "id": "p0/k64",
           "source_text_sha256": "0743ffa3e0da1901768385813aaef9c1a2b10a109c0f82bef8339ec523e9df8e",
-          "en": "Dr. Fukazawa, leader of the survey team aboard the research vessel Shibazakura, earned her doctorate overseas at a young age and was regarded internationally as a promising marine life researcher.\nHer paper published three years ago, 'The Relationship Between Pulse Rate and Lifespan in Giant Creatures Inhabiting the Seabed,' was selected as the best paper of its time by Poseidon Neptune, the most authoritative journal in marine biology.\nNews of Dr. Fukazawa's death has brought expressions of grief from marine researchers around the world.\n",
+          "en": "Dr. Fukazawa, leader of the survey team aboard the research vessel Shibazakura, earned her doctorate overseas at a young age and was regarded internationally as a promising marine life researcher.\nHer paper published three years ago, \"The Relationship Between Pulse Rate and Lifespan in Giant Creatures Inhabiting the Seabed,\" was selected as the best paper of its time by Poseidon Neptune, the most authoritative journal in marine biology.\nNews of Dr. Fukazawa's death has brought expressions of grief from marine researchers around the world.\n",
           "notes": "English draft imported from audited private workspace, translate-en-0037.json:p0/k64; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -761,7 +761,7 @@
         {
           "id": "p0/k208",
           "source_text_sha256": "fb7f5b7ae2e089d3bb4cb41522a19bf54725cf03186e3b8ad77c8175c4096851",
-          "en": "Ebine Publishing, headquartered in Hananira Town, Miyato City, suffered major damage to its building from the giant alien that appeared there today. Amid this, it has welcomed a new owner and is aiming to recover. Employee Mukojima said, 'Much of the roof has collapsed, and we don't know where our other colleagues are. Honestly, I thought it was all over. But the new owner said they want to revive Ebine Publishing. I intend to do everything I can to live up to that.'\nHowever, Ebine Publishing faces an extremely difficult road. Not only its building but the surrounding roads are badly damaged, making normal work impossible. It seems questionable whether it needs to remain attached to this building. Its next moves will attract attention.",
+          "en": "Ebine Publishing, headquartered in Hananira-cho, Miyato City, suffered major damage to its building from the giant alien that appeared there today. Amid this, it has welcomed a new owner and is aiming to recover. Employee Mukojima said, 'Much of the roof has collapsed, and we don't know where our other colleagues are. Honestly, I thought it was all over. But the new owner said they want to revive Ebine Publishing. I intend to do everything I can to live up to that.'\nHowever, Ebine Publishing faces an extremely difficult road. Not only its building but the surrounding roads are badly damaged, making normal work impossible. It seems questionable whether it needs to remain attached to this building. Its next moves will attract attention.",
           "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k208; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -838,7 +838,7 @@
         {
           "id": "p0/k248",
           "source_text_sha256": "01a7bde18d702d8f2592c102c0ece8a037d9058c52aaf0d319d83f6d232f2820",
-          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nHe said this women's qipao was a recent acquisition♪\nApparently, wearing it has made him even more passionate about cosplay!\nAn outfit to remember♪\n(Teru Mukojima)",
+          "en": "Here's the outfit of a man who happened to visit our editorial office♪\nHe said this women's cheongsam was a recent acquisition♪\nApparently, wearing it has made him even more passionate about cosplay!\nAn outfit to remember♪\n(Teru Mukojima)",
           "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k248; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -943,7 +943,7 @@
         {
           "id": "p0/k277",
           "source_text_sha256": "5dfcb47cb55a567977f7400524c60f6ea1a71da5bf97e4268234c65add391ee6",
-          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nShe said this qipao was a recent acquisition♪\nApparently, she felt a little embarrassed when she first wore it, but now it feels completely natural♪\nIt looks very sexy on her!\n(Teru Mukojima)",
+          "en": "Here's the outfit of a woman who happened to visit our editorial office♪\nShe said this cheongsam was a recent acquisition♪\nApparently, she felt a little embarrassed when she first wore it, but now it feels completely natural♪\nIt looks very sexy on her!\n(Teru Mukojima)",
           "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k277; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -971,7 +971,7 @@
         {
           "id": "p0/k290",
           "source_text_sha256": "088dcd47b3557d6f27c841e8f97bc6875561736c2732c43cffb362a2bff52766",
-          "en": "Ebine Publishing, publisher of Giant Shadow Weekly, announced that it will sell its entire business, land, and building. This week's issue will be the magazine's last. The main cause is believed to be the extensive damage from the giant alien that appeared today in Hananira Town, where its building stands.\nEmployee Mukojima said, 'The roof is badly damaged, and our other colleagues are missing. I didn't think we could keep going. Hearing that the magazine was closing, I thought, just as I feared. I have no idea what to do from tomorrow.'\nEbine Publishing had changed owners shortly before this. The sale is said to have earned that owner at least two billion yen.",
+          "en": "Ebine Publishing, publisher of Giant Shadow Weekly, announced that it will sell its entire business, land, and building. This week's issue will be the magazine's last. The main cause is believed to be the extensive damage from the giant alien that appeared today in Hananira-cho, where its building stands.\nEmployee Mukojima said, 'The roof is badly damaged, and our other colleagues are missing. I didn't think we could keep going. Hearing that the magazine was closing, I thought, just as I feared. I have no idea what to do from tomorrow.'\nEbine Publishing had changed owners shortly before this. The sale is said to have earned that owner at least two billion yen.",
           "notes": "English draft imported from audited private workspace, translate-en-0154.json:p0/k290; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }

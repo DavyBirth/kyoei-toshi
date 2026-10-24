@@ -1,0 +1,2760 @@
+{
+ "format": "kyoei-binary-text-v1",
+ "language": "en",
+ "notes": "Fixed-size display strings in HUD resources (inside BILZ, text property f6287f44) and eboot.bin C strings. English must not exceed the original slot; HUD pads with spaces, eboot with NUL.",
+ "files": [
+  {
+   "path": "common/hud/Intermission/IM_detail_news.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "70d9ca86cd862edc41a42874f65f1bbb64548bf912c89dc12c73af69d1f7cec3",
+   "changes": [
+    {
+     "offset": 4244,
+     "bytes": 55,
+     "source_sha256": "d6fd36f4ba108e5b93d570015c8df4b3422cd6bb08137b5bea281dcdb50572ba",
+     "en": "[i5]Twitter  [i7]Facebook  [i2]Close"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_detail_pr.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "4f8cc11bbc8dd0d541e379c6b955f7a6bb222900ada55f6a21083617be536f30",
+   "changes": [
+    {
+     "offset": 4398,
+     "bytes": 55,
+     "source_sha256": "d6fd36f4ba108e5b93d570015c8df4b3422cd6bb08137b5bea281dcdb50572ba",
+     "en": "[i5]Twitter  [i7]Facebook  [i2]Close"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_detail_pr_item.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "929ec1d75c0e7ce7fef13820cb4a123b54d158f01289ca79ec42c948cf88f1ae",
+   "changes": [
+    {
+     "offset": 6568,
+     "bytes": 55,
+     "source_sha256": "d6fd36f4ba108e5b93d570015c8df4b3422cd6bb08137b5bea281dcdb50572ba",
+     "en": "[i5]Twitter  [i7]Facebook  [i2]Close"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_dialog.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "a0807d047dc7b0c413abe59550309a3c85c5799fa6285fe315751d55cbca61d1",
+   "changes": [
+    {
+     "offset": 1961,
+     "bytes": 27,
+     "source_sha256": "e20d910000057a85edabc92f91ea3e1eb1e324521e14fc8603fe2846f20a5363",
+     "en": "Next Stage"
+    },
+    {
+     "offset": 2452,
+     "bytes": 15,
+     "source_sha256": "6ce09ac47eebe9fc430a7bb19803925e604b989d7a10087a8f24da2777573c40",
+     "en": "Save"
+    },
+    {
+     "offset": 2931,
+     "bytes": 27,
+     "source_sha256": "48f07c8be008dd05240ac5b942c500f3ff656407054a40dabc3584435ddab00b",
+     "en": "Title Screen"
+    },
+    {
+     "offset": 3766,
+     "bytes": 6,
+     "source_sha256": "8fc7f899161b2076651a211a123ccbad0f7ad032c023f59aa3ffd06983e887b8",
+     "en": "Back"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_dialog_title.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "cb3c676b3ad131864f7f603f9bc199678e3287d7d08aef2b68d465864646e0bc",
+   "changes": [
+    {
+     "offset": 2130,
+     "bytes": 39,
+     "source_sha256": "dcaa906dcfdd49e093bf861699c8ae908354f963abd5bcd22609c0e3ddc440ea",
+     "en": "Return to the title screen?"
+    },
+    {
+     "offset": 2617,
+     "bytes": 6,
+     "source_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "en": "Yes"
+    },
+    {
+     "offset": 3070,
+     "bytes": 9,
+     "source_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "en": "No"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_header.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "0e15905b5f8ce2a7c11e80864a2ab6b4120496f2e39793f1d4a1d9e9c0e1b515",
+   "changes": [
+    {
+     "offset": 3664,
+     "bytes": 18,
+     "source_sha256": "439e44a82b28f76c2661e4e65537f0f3963df49beaed16276f0938471f86a7d2",
+     "en": "Hello."
+    },
+    {
+     "offset": 4626,
+     "bytes": 15,
+     "source_sha256": "d2e071bd997def78c8c0cbfa8dd7af80f7f612a43aa3691163e464dacf214a14",
+     "en": "Today"
+    },
+    {
+     "offset": 5033,
+     "bytes": 15,
+     "source_sha256": "cfd2b252523963610dde372e9a6b9ee23e9ea5e5083bb46437a3846d873862e8",
+     "en": "Tomorrow"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_main.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "677abe40297c21b6656fb7e8d31e06b4121903b05a5a8065f9ff276218bd5784",
+   "changes": [
+    {
+     "offset": 6946,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 9208,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 12333,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 15458,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 18583,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 22113,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 24562,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 27026,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 29490,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 32584,
+     "bytes": 18,
+     "source_sha256": "0e2aa03a5f8a11c72dad7887f78164950c3120c6cec5641bcdb65fef08e0a49b",
+     "en": "Coins Found"
+    },
+    {
+     "offset": 33392,
+     "bytes": 3,
+     "source_sha256": "1fd3686a0aec5234bf749b3dc756cb78c4236b04843d6e71ae904551393aa8e3",
+     "en": "x"
+    },
+    {
+     "offset": 33787,
+     "bytes": 6,
+     "source_sha256": "487b5360273661e1764f98aec6204cf56f54cbe5b05fd320c15cab41ed9fc83e",
+     "en": "Assets"
+    },
+    {
+     "offset": 34589,
+     "bytes": 3,
+     "source_sha256": "6da3e5c03ac7e66cdc5f307308e136ff9a65b05fdd2022bd96fc27132b9d6373",
+     "en": "x"
+    },
+    {
+     "offset": 34984,
+     "bytes": 12,
+     "source_sha256": "1c3bf34aa336aeed355eee71727b0e459395385441b030cb7e96a608a6d5ecdd",
+     "en": "Distance"
+    },
+    {
+     "offset": 36641,
+     "bytes": 30,
+     "source_sha256": "e7f49091b6fcb51f4a80d13031c1448978424303941cd93d62ca3dba3f13805a",
+     "en": "Editor's Picks"
+    },
+    {
+     "offset": 39186,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 40296,
+     "bytes": 35,
+     "source_sha256": "ac50e37adb3ba0c7ed37898c0f08a8c074ce9c9de6cb9525840f179b0ca7d56a",
+     "en": "[Back Issues]"
+    },
+    {
+     "offset": 63039,
+     "bytes": 12,
+     "source_sha256": "843e7bc46efdb1b679ae16af9a2fa1614071f0edffb2964e953fcd3a73bd1410",
+     "en": "Dodges"
+    },
+    {
+     "offset": 64621,
+     "bytes": 11,
+     "source_sha256": "1892c296837ccc0ea2536ed6bb650524085d338ae7dfaa66e7cccab24d25499f",
+     "en": "ST Used"
+    },
+    {
+     "offset": 65414,
+     "bytes": 11,
+     "source_sha256": "fed65fdc2d34cfea41273e1ec587547e828954dd35a42f73f726ae2252de7566",
+     "en": "HP Used"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_next_page.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "21f8e6007597263fefebb7eaecc14b1e1af5a79369880de052aafb68b42a3d74",
+   "changes": [
+    {
+     "offset": 2130,
+     "bytes": 39,
+     "source_sha256": "79c4699f3083673700db0ced343977d9b507f835036f7282e2bddee62c3020b3",
+     "en": "Go to the next stage?"
+    },
+    {
+     "offset": 2617,
+     "bytes": 6,
+     "source_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "en": "Yes"
+    },
+    {
+     "offset": 3070,
+     "bytes": 9,
+     "source_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "en": "No"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_result_window.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "42fa83371064bb7cbb55c38b3aa4db1fb9a77ee0f1e112df9eb3a599fabca579",
+   "changes": [
+    {
+     "offset": 4007,
+     "bytes": 18,
+     "source_sha256": "0e2aa03a5f8a11c72dad7887f78164950c3120c6cec5641bcdb65fef08e0a49b",
+     "en": "Coins Found"
+    },
+    {
+     "offset": 4964,
+     "bytes": 3,
+     "source_sha256": "1fd3686a0aec5234bf749b3dc756cb78c4236b04843d6e71ae904551393aa8e3",
+     "en": "x"
+    },
+    {
+     "offset": 5430,
+     "bytes": 6,
+     "source_sha256": "487b5360273661e1764f98aec6204cf56f54cbe5b05fd320c15cab41ed9fc83e",
+     "en": "Assets"
+    },
+    {
+     "offset": 6385,
+     "bytes": 3,
+     "source_sha256": "6da3e5c03ac7e66cdc5f307308e136ff9a65b05fdd2022bd96fc27132b9d6373",
+     "en": "x"
+    },
+    {
+     "offset": 6845,
+     "bytes": 12,
+     "source_sha256": "1c3bf34aa336aeed355eee71727b0e459395385441b030cb7e96a608a6d5ecdd",
+     "en": "Distance"
+    },
+    {
+     "offset": 8245,
+     "bytes": 12,
+     "source_sha256": "843e7bc46efdb1b679ae16af9a2fa1614071f0edffb2964e953fcd3a73bd1410",
+     "en": "Dodges"
+    },
+    {
+     "offset": 10115,
+     "bytes": 21,
+     "source_sha256": "6cb31131f9d8d00bc7b38cf499bf53da0c358e1856c14dca17610044218e60c6",
+     "en": "Stamina Used"
+    },
+    {
+     "offset": 11069,
+     "bytes": 11,
+     "source_sha256": "fed65fdc2d34cfea41273e1ec587547e828954dd35a42f73f726ae2252de7566",
+     "en": "HP Used"
+    },
+    {
+     "offset": 12004,
+     "bytes": 14,
+     "source_sha256": "dbd6169fff0a4cf9d29b86ec69f454713dc8350a22516710a4ee0117388ddf84",
+     "en": "[i02]Close"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_save_dialog.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "2433633683d5b0ce53f1eb522ee1af3048bc3c978cd2d9a4a31ab9d7634fab3f",
+   "changes": [
+    {
+     "offset": 2130,
+     "bytes": 121,
+     "source_sha256": "543f619b8493fcdf265ce11a707a60f933a96c9873c2710f770689d8dc4304a4",
+     "en": "If you don't save, your progress so far will be lost. Continue anyway?"
+    },
+    {
+     "offset": 2699,
+     "bytes": 6,
+     "source_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "en": "Yes"
+    },
+    {
+     "offset": 3152,
+     "bytes": 9,
+     "source_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "en": "No"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/Intermission/IM_save_dialog_2.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "ff0bfa981e1e588ce4c06974d9a41258b50bc95870322ee708b48af4f50ab902",
+   "changes": [
+    {
+     "offset": 672,
+     "bytes": 30,
+     "source_sha256": "e351db6206423b93e0d827adef791662bc21c5d63d04d710d1b11ea0a403ead8",
+     "en": "Opening the save screen."
+    }
+   ]
+  },
+  {
+   "path": "common/hud/cockpit/timedate/cockpit_timedate.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "a8c268a3cb46aa6289331a37beda5df2a99300535cfc7e34c222d7461f54764d",
+   "changes": [
+    {
+     "offset": 2645,
+     "bytes": 9,
+     "source_sha256": "e4b60effccf25f5df060b2fbbe576361da8f45c4d64a6c32ae4a0ef1f343918a",
+     "en": "Day 1"
+    },
+    {
+     "offset": 4796,
+     "bytes": 6,
+     "source_sha256": "43622b07368125745661da830caad952ce7dc951d9d8d23421fcc2410210ef68",
+     "en": "PM"
+    },
+    {
+     "offset": 5265,
+     "bytes": 6,
+     "source_sha256": "bc79d84d3df7763a5abf9d8981e367c8d45d696c9051a3fe12c320a29e005585",
+     "en": "Sky"
+    },
+    {
+     "offset": 5737,
+     "bytes": 9,
+     "source_sha256": "dac9eaa9a6d0328c472547e07f0066bd8d12cfbe95d55e995a8cccf36ed76c3d",
+     "en": "Location"
+    },
+    {
+     "offset": 6212,
+     "bytes": 10,
+     "source_sha256": "8db442a8d997b7f2e426949e13594a99919c7b13508281df5f81349df98545b7",
+     "en": "Money:"
+    },
+    {
+     "offset": 6694,
+     "bytes": 24,
+     "source_sha256": "a928e9f19dafd2ee0a095fc025ee0c03ad2d2f416357f2679bb6a137165e9fc8",
+     "en": "Shadow Coins:"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/controller_operation.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "8ae4298d3a0c4606909ca05a6020147c47e359df019fec389e3d40f1d5dfc2b0",
+   "changes": [
+    {
+     "offset": 853,
+     "bytes": 15,
+     "source_sha256": "a5ec8c6c6d00b153100b830a4b226a0478b4af15d25970b383e378e11edff79d",
+     "en": "[i16] Close"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/intermission.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "c1dbe0516172585a8efd43de87a9b21b5cec5773023330bd3b0de7b80ce880c0",
+   "changes": [
+    {
+     "offset": 3131,
+     "bytes": 17,
+     "source_sha256": "5aa69877865346810108132036749ac13558b2195266478912eb623cb29ca4a2",
+     "en": "[Read more]"
+    },
+    {
+     "offset": 15277,
+     "bytes": 24,
+     "source_sha256": "f63f2f37464aa1c08a2f161f52d7af1d0accf17e371bc3e4c6702e423659d2d9",
+     "en": "Today (Tokyo)"
+    },
+    {
+     "offset": 17953,
+     "bytes": 24,
+     "source_sha256": "ffd6bd4f2db1846b99b8fc75afca4f5332474cd766d0f09d60184a715c54af87",
+     "en": "Tomorrow (Tokyo)"
+    },
+    {
+     "offset": 37044,
+     "bytes": 12,
+     "source_sha256": "653894ed2bd987db3fa79859464da4cbf99913a9c767b711323ceea4b4096113",
+     "en": "Results"
+    },
+    {
+     "offset": 37865,
+     "bytes": 18,
+     "source_sha256": "433dcd618f814d27b93d876aeb00d1088fc5f2fb6dc05c4761e43c58a720c525",
+     "en": "Clear Time"
+    },
+    {
+     "offset": 38808,
+     "bytes": 15,
+     "source_sha256": "12827187dbcc2bd76e2eb84e279cbd1b7907d5533c4ae94564102e18c67693d1",
+     "en": "Deaths:"
+    },
+    {
+     "offset": 44287,
+     "bytes": 12,
+     "source_sha256": "6cff0051059a5ea6ffbfd6ef88ec74ad20f3d0cfe300e9ea9d6c1ace3e137434",
+     "en": "Shares"
+    },
+    {
+     "offset": 45225,
+     "bytes": 9,
+     "source_sha256": "05a76b2eb609fb57bc7a5cb41437eaca52d15ac3ae1163e865999eb38b2550d7",
+     "en": "Score"
+    },
+    {
+     "offset": 46150,
+     "bytes": 67,
+     "source_sha256": "06967df1d1008dc6c709e6b66c328aad69da18778844e123ffa9ee8c57d7c31b",
+     "en": "Hello, <P_FNAME> <P_LNAME>  [Log Out]"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/intermission_ad_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "efdf890c8a23da3f0dac9fe54f27094fbe1495cdba8c1e9e99209d154d889673",
+   "changes": [
+    {
+     "offset": 3960,
+     "bytes": 84,
+     "source_sha256": "0cb4d2eaca0e3b99206834bb1e59f04172a473bbc9291ed49a8c9d064d498deb",
+     "en": "[s39][i2][/s] Close  [s39][i6][/s] Twitter  [s39][i8][/s] Facebook"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/intermission_exit_dialog.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "709feac125c500ebf38aba358abbe640d2b41c1b60c3dadc6ac9cb68acc14143",
+   "changes": [
+    {
+     "offset": 1309,
+     "bytes": 39,
+     "source_sha256": "79c4699f3083673700db0ced343977d9b507f835036f7282e2bddee62c3020b3",
+     "en": "Go to the next stage?"
+    },
+    {
+     "offset": 1728,
+     "bytes": 6,
+     "source_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "en": "Yes"
+    },
+    {
+     "offset": 2113,
+     "bytes": 9,
+     "source_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "en": "No"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/intermission_item_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "3811d9fe2e1d5f05ed53d8f1c469284f48a8aacffc9988ff9e7591518a9e14cb",
+   "changes": [
+    {
+     "offset": 6926,
+     "bytes": 119,
+     "source_sha256": "ea6c452be849638959ddb9c8f1a56971a68e6e6dc0570e3b039e4276873037e7",
+     "en": "[s39][i2][/s] Close  [s39][i10][/s] Rate Item  [s39][i6][/s] Twitter  [s39][i8][/s] Facebook"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/intermission_movie_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "7734a97737814def5964af379725a88896b8db433c4cba7958c50c6bf439fc16",
+   "changes": [
+    {
+     "offset": 2902,
+     "bytes": 59,
+     "source_sha256": "4a78e9c1d2755dddb1c79d055b5f72ec338b5d160ae8848ca0c39a51777bc7dd",
+     "en": "[s39][i2][/s] Close  [s39][i1][/s] Play from Start"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/intermission_news_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "19c77f6170cc79f7617c87e01943f19607baf3e0dba716f6df539fa20a3a99fd",
+   "changes": [
+    {
+     "offset": 6747,
+     "bytes": 84,
+     "source_sha256": "0cb4d2eaca0e3b99206834bb1e59f04172a473bbc9291ed49a8c9d064d498deb",
+     "en": "[s39][i2][/s] Close  [s39][i6][/s] Twitter  [s39][i8][/s] Facebook"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/intermission_op_top.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "55ffbee7fde27a3f6d093cf16bc2dcefbe3ef44f503ca3c5c5cc59c0afe5ae0f",
+   "changes": [
+    {
+     "offset": 1061,
+     "bytes": 18,
+     "source_sha256": "911ce6bf1e61e01464e1b8401ad77e39392d7570f5168d14e505f9bbbe2b8277",
+     "en": "Move Cursor"
+    },
+    {
+     "offset": 1530,
+     "bytes": 15,
+     "source_sha256": "656987c9ba794f901ef03e3c1d254ee72b95eb09e9bc30fb73c4776087b63ef7",
+     "en": "Scroll"
+    },
+    {
+     "offset": 2001,
+     "bytes": 12,
+     "source_sha256": "d172e80cd7e704290858d9f25f754a5d5c53c61ae4f392e58ce2f0790da222d0",
+     "en": "Details"
+    },
+    {
+     "offset": 2468,
+     "bytes": 21,
+     "source_sha256": "83daded92f854d1d40b5d3ba755b8affa886c75b4eebcd46778a956c58df66d1",
+     "en": "Next Stage"
+    },
+    {
+     "offset": 3280,
+     "bytes": 146,
+     "source_sha256": "3aeb27885b925fe2555dd87b4fc9e517f5083c31882d05359972b4dc945b622c",
+     "en": "[s45][i5][/s] or [s45][i14][/s]Move Cursor  [s45][i15][/s]Scroll  [s45][i1][/s]Details  [s45][i2][/s]Next Stage"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/intermission_result_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "d64f91036685b9adf040e764b0903809a6f5bb539f7514bc11f750551eba4d4a",
+   "changes": [
+    {
+     "offset": 784,
+     "bytes": 18,
+     "source_sha256": "433dcd618f814d27b93d876aeb00d1088fc5f2fb6dc05c4761e43c58a720c525",
+     "en": "Clear Time"
+    },
+    {
+     "offset": 1825,
+     "bytes": 12,
+     "source_sha256": "646ccc48140877ff03dba3c8f25e522d787abf43bf895d560cc644f48a741c93",
+     "en": "Deaths"
+    },
+    {
+     "offset": 2843,
+     "bytes": 15,
+     "source_sha256": "8802bf68da0883da3306304c2d2a6413e296f6e2cb67b1a21ba7993048bdbf42",
+     "en": "Shares"
+    },
+    {
+     "offset": 3870,
+     "bytes": 18,
+     "source_sha256": "1fa187732998b5be6b1e0f1825ce53940c657cdfd112b56a0f0b25f7ff31f786",
+     "en": "Stage Score"
+    },
+    {
+     "offset": 4912,
+     "bytes": 12,
+     "source_sha256": "2732402ee30acbdf0ac40e08147efd14890079f083d7098337941e24cf95b050",
+     "en": "Earnings"
+    },
+    {
+     "offset": 20845,
+     "bytes": 62,
+     "source_sha256": "3d494930f5e06652c43d270e1095f22248e21dbc37bd6092169ad7a9b39b925c",
+     "en": "[s39][i2][/s]Close  [s39][i1][/s]Best Clear Times"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/character/menu_character.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "b4548b2d0eb08aec65a9d9b6c8a18abde4d6df181c4a64dd9c812dc2b91d67d0",
+   "changes": [
+    {
+     "offset": 3240,
+     "bytes": 25,
+     "source_sha256": "cd7f6ba7f63cedc9d1c1328ec260c0a5f5401771df09fcef0e0db0c9349e3b67",
+     "en": " Rotate Character"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/character/menu_character_hpst.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "9622eccccbf450351d47f19e998890732c31789c4af4c47e00d288f3c87f19e5",
+   "changes": [
+    {
+     "offset": 7901,
+     "bytes": 24,
+     "source_sha256": "3cf53baa8fa2af3b450c7b668601d331219b6d78df1594377256df646d6ea421",
+     "en": "Purple Light Level"
+    },
+    {
+     "offset": 8839,
+     "bytes": 21,
+     "source_sha256": "2499ee96938a903faba99ceeffa684088ab94d94cc8d2bedbd13d376ba88fc1f",
+     "en": "Cosplay Level"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/collection/menu_collection.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "ff2696eec5879c04569606bbfc49e24e19a69cf77d8cc5af3ab7e27dd061bfb1",
+   "changes": [
+    {
+     "offset": 5370,
+     "bytes": 6,
+     "source_sha256": "df3535a64718d11cf8080216b26b76d9139828438c59a75569744ab2d399a7a8",
+     "en": "OK"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/hair/menu_hair.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "b327ff04aec518c35da7bd135d19fff92f4892e47f47227c0e90d993a1241408",
+   "changes": [
+    {
+     "offset": 1443,
+     "bytes": 72,
+     "source_sha256": "cdb18957a70e67928575f7b71812d78d141cb151fb542481e2c36c781abed231",
+     "en": "[i5] Select  [i15] Rotate  [i1] OK  [i2] Exit"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/hair/menu_hair_info.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "8778ec8726eac0443894d8389f356c3dd1e6edf45611d38ba2c4b580badecf5f",
+   "changes": [
+    {
+     "offset": 3233,
+     "bytes": 11,
+     "source_sha256": "fbc00332e57a1a65392d8b7cdaedaf9dd43066c7204bd8b13b4ff0d5a7652246",
+     "en": "[i1] Equip"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/item/menu_item.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "73c44725d068c1f94a254e1f4b80ffaa87650bf82ba27a1240acb65debe79346",
+   "changes": [
+    {
+     "offset": 1245,
+     "bytes": 24,
+     "source_sha256": "e536e36171e2f9e0f4e11a22de444a029dd93a9c8ef5eba238c896cbdfc42339",
+     "en": "Rotate Character"
+    },
+    {
+     "offset": 2271,
+     "bytes": 6,
+     "source_sha256": "9652e7b5f69922bdce983e3534b7b370bd965dce40e4f7ec2f39a443eed006d6",
+     "en": "Info"
+    },
+    {
+     "offset": 3336,
+     "bytes": 12,
+     "source_sha256": "3a7e28881ee4532c2a24f650595566c226b224ea1d6a5c6ad305d87f1d0983e1",
+     "en": "Unequip"
+    },
+    {
+     "offset": 4931,
+     "bytes": 12,
+     "source_sha256": "3a7e28881ee4532c2a24f650595566c226b224ea1d6a5c6ad305d87f1d0983e1",
+     "en": "Unequip"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/item/menu_item_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "fd523742caeb46cef1f1139aa26db72c427190e4b1f56395b9cd4dd7d9259d13",
+   "changes": [
+    {
+     "offset": 6386,
+     "bytes": 11,
+     "source_sha256": "7e2cae065026d2365794747517cefdf88b7386647f9ac364da1c3e872b650fce",
+     "en": "[i4] Back"
+    },
+    {
+     "offset": 7132,
+     "bytes": 11,
+     "source_sha256": "082729f6f4dd59652d8be97c763dde76e604dcf3c34672ad6c1811f2ea593384",
+     "en": "[i1] Use"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/item/menu_item_dialog.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "8c7257db3bcf67c0e6899deaab6170d995d6bd6e2eeded41f21d71a6ec25a9b1",
+   "changes": [
+    {
+     "offset": 2124,
+     "bytes": 6,
+     "source_sha256": "cdfd0b34e4918648910bd74bb862cf6076871cdf7fb6c6571a8a5bda78e9b942",
+     "en": "Use"
+    },
+    {
+     "offset": 2577,
+     "bytes": 6,
+     "source_sha256": "8fc7f899161b2076651a211a123ccbad0f7ad032c023f59aa3ffd06983e887b8",
+     "en": "Back"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/item/menu_item_equip.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "64cfd1996c1468b61c3fe42e1a741f73f8bb86ff77032e7904cfabb45523de74",
+   "changes": [
+    {
+     "offset": 10156,
+     "bytes": 6,
+     "source_sha256": "1ae67cfcaf80a821cd0255763b8224b0743b26acd16a205b6883f8f786186cf6",
+     "en": "Equip"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/item/menu_item_info.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "6578c34b844ec8a2d3c2051f3534e5d373c78e32d685dde594d261a3050d897a",
+   "changes": [
+    {
+     "offset": 3297,
+     "bytes": 6,
+     "source_sha256": "1ae67cfcaf80a821cd0255763b8224b0743b26acd16a205b6883f8f786186cf6",
+     "en": "Equip"
+    },
+    {
+     "offset": 3754,
+     "bytes": 6,
+     "source_sha256": "9652e7b5f69922bdce983e3534b7b370bd965dce40e4f7ec2f39a443eed006d6",
+     "en": "Info"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/item/menu_item_reading.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "cff6004c30b1b1c1b3f411d67a2f828d8f62c829e087f8434ef776b114f913c8",
+   "changes": [
+    {
+     "offset": 9293,
+     "bytes": 32,
+     "source_sha256": "53d30c613124133d7edbf4df379706647b5b601c45ce599831305f660a3f272b",
+     "en": "[i5] Turn Page  [i2] Back"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/mail/mail_plate_reply_message.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "03e77e1dfa977009f0c1b481bbcf07a69f2acc224a80e3165e2d828a20b971f3",
+   "changes": [
+    {
+     "offset": 888,
+     "bytes": 33,
+     "source_sha256": "f9e68add75f685bd285ee929a64529d0a22752b916ea21abf79e09016d86d626",
+     "en": "Reply sent."
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/mail/menu_mail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "64c21177d061f01377bc2b85a3b72529c8693439b28a616358d0318f346d5220",
+   "changes": [
+    {
+     "offset": 6731,
+     "bytes": 54,
+     "source_sha256": "7f8e602bc2772770c2cb271e1e2f61262874cf81d7071dd11c135a7601de40ad",
+     "en": "You have no messages."
+    },
+    {
+     "offset": 7242,
+     "bytes": 11,
+     "source_sha256": "5a8ef92aaee01ebdeff304e93f7ab88cd229ea0c78418690d40203d9fd31d695",
+     "en": "[i2] Back"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/mail/menu_mail_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "edec326e5408f14472685f0ab18c89fc842bab70332318dfd633b57627d086e8",
+   "changes": [
+    {
+     "offset": 1300,
+     "bytes": 12,
+     "source_sha256": "b5f024ecbcf929d589a21cfb6abf81fb1fc1b011bf62ec8c2931b698b0c89a37",
+     "en": "From:"
+    },
+    {
+     "offset": 4962,
+     "bytes": 12,
+     "source_sha256": "7b2864f39f0e66b3c61d05d3cb7165bc83b148f9c74d2403d2460c6b4ce32dbb",
+     "en": "Reply..."
+    },
+    {
+     "offset": 5901,
+     "bytes": 9,
+     "source_sha256": "f6c244f98893cd951392f88864ef16a239999b2e95a6cebf5f6aa8d670460637",
+     "en": "Close"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/mail/menu_mail_detail_reply.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "eb911f363aaabbc203c92d4e0cb25f5fbca15d1ea48cd446e8bccf837b818444",
+   "changes": [
+    {
+     "offset": 2135,
+     "bytes": 12,
+     "source_sha256": "b5f024ecbcf929d589a21cfb6abf81fb1fc1b011bf62ec8c2931b698b0c89a37",
+     "en": "From:"
+    },
+    {
+     "offset": 5948,
+     "bytes": 6,
+     "source_sha256": "21ce2c9aa9b64bff0f69267bcc6d2390b399f6acbb1cd8b6bd21ad8211fddf42",
+     "en": "Reply"
+    },
+    {
+     "offset": 7494,
+     "bytes": 9,
+     "source_sha256": "f6c244f98893cd951392f88864ef16a239999b2e95a6cebf5f6aa8d670460637",
+     "en": "Close"
+    },
+    {
+     "offset": 8918,
+     "bytes": 9,
+     "source_sha256": "aed209f2d448f9e9a7216813382078cdc14f17d7e99dae352102783e7a5431ed",
+     "en": "Re: Re:"
+    },
+    {
+     "offset": 9391,
+     "bytes": 6,
+     "source_sha256": "7ec26292414bccefa35290004928d8cf8f5e19d2bfb8b0c0322ee9e8b2854349",
+     "en": "Name"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/mail/menu_mail_detail_select.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "901a09ee3c55d6f483fc9ec132e7dc341fc6f389e90f40decf58a779105717a0",
+   "changes": [
+    {
+     "offset": 1327,
+     "bytes": 12,
+     "source_sha256": "7b2864f39f0e66b3c61d05d3cb7165bc83b148f9c74d2403d2460c6b4ce32dbb",
+     "en": "Reply..."
+    },
+    {
+     "offset": 2992,
+     "bytes": 6,
+     "source_sha256": "df3535a64718d11cf8080216b26b76d9139828438c59a75569744ab2d399a7a8",
+     "en": "OK"
+    },
+    {
+     "offset": 4043,
+     "bytes": 9,
+     "source_sha256": "f6c244f98893cd951392f88864ef16a239999b2e95a6cebf5f6aa8d670460637",
+     "en": "Close"
+    },
+    {
+     "offset": 5097,
+     "bytes": 6,
+     "source_sha256": "e721d064de4863b29d2b5fd328338b20a076e3636d48d7ff1f13a2bda2b3685f",
+     "en": "Select"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/mission/menu_mission.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "cae64e109cdbc7f0cd843874b6ec24ec669231586210ee18b0114476189a1cad",
+   "changes": [
+    {
+     "offset": 5473,
+     "bytes": 6,
+     "source_sha256": "df3535a64718d11cf8080216b26b76d9139828438c59a75569744ab2d399a7a8",
+     "en": "OK"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/mission/menu_mission_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "7bcd0a0f64148f633a7000886bedd9b989296cc519876f400ffe835f72646b0b",
+   "changes": [
+    {
+     "offset": 6262,
+     "bytes": 11,
+     "source_sha256": "5a8ef92aaee01ebdeff304e93f7ab88cd229ea0c78418690d40203d9fd31d695",
+     "en": "[i2] Back"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/option/menu_option.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "5c41b79c02e55446addf0d10b6031f7f9938008c2391f4f29c3ac8dbf2028ce3",
+   "changes": [
+    {
+     "offset": 51005,
+     "bytes": 16,
+     "source_sha256": "3217a775ed1c6b2943745112da3ccb602739d2c8750fd2d47a5742c32705634e",
+     "en": " Change Setting"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/menu/option/menu_option_brightness.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "a36e84fcd1f4969c1993b3ca3a31658fd72266333563e76ec5650753259878ee",
+   "changes": [
+    {
+     "offset": 2527,
+     "bytes": 78,
+     "source_sha256": "c1246d43bfca24fd6de19576e37c6b4e58c3ea92c2cae02c7cc393f54fb53da4",
+     "en": "Adjust until each image looks as its label describes."
+    },
+    {
+     "offset": 3059,
+     "bytes": 9,
+     "source_sha256": "8c0c3a5f9a1c5c5a284002da7ad36dd8c1bd854099778bf8814e653f551b4cde",
+     "en": "Bright"
+    },
+    {
+     "offset": 4674,
+     "bytes": 70,
+     "source_sha256": "de0edbb12e175e84e128c80f60f9c5cb7cc948e9b6f3d8f1a80d215b88a39486",
+     "en": "[i14] Left: darker  Right: brighter"
+    },
+    {
+     "offset": 5202,
+     "bytes": 35,
+     "source_sha256": "57f1627ffdf75bffd6fba221b25d4fe388608392b1a175fe0ec40fc75ef21183",
+     "en": " [i1] OK  [i2] Cancel"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/operation/operation.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "a12c156091286994d524f956db75b692168895bf7e7542eac758cc961f008084",
+   "changes": [
+    {
+     "offset": 592,
+     "bytes": 186,
+     "source_sha256": "870ed6a6e708731c98f00799e05df4b7233ac8742400152cdacd21a9182eceac",
+     "en": "[#ffffffff][i14][/#]Move  [#ffffffff][i1][/#]Details  [#ffffffff][i4][/#]Trade Items  [#ffffffff][i3][/#]Back Issues  [#ffffffff][i2][/#]Next"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/store.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "a7e486aeeb0e0422243af2a3b7249e39dcb794691e3a466f02efef40e617fe02",
+   "changes": [
+    {
+     "offset": 749,
+     "bytes": 15,
+     "source_sha256": "abaad3df0ee27258c3d2c0812ddf539ae3e0780f535b416157b2f005880e6638",
+     "en": "Money ￥"
+    },
+    {
+     "offset": 5628,
+     "bytes": 9,
+     "source_sha256": "4d6af40b5b69c9e9c4799999ae61aecc2e202b559038f61626b9fae26722d590",
+     "en": "Qty"
+    },
+    {
+     "offset": 6437,
+     "bytes": 12,
+     "source_sha256": "6a1e45f83b66f4d86a9bbaffea8b84e5e9237b178a4d030e2e5c07caa9135abf",
+     "en": "Confirm"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/store_dialog.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "0ba2e2e2efe3cd9914dd366a9c5e563adf26cfbedb05aed880a9ad8f2e3bcada",
+   "changes": [
+    {
+     "offset": 1485,
+     "bytes": 6,
+     "source_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "en": "Yes"
+    },
+    {
+     "offset": 1945,
+     "bytes": 9,
+     "source_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "en": "No"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/store_operation.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "9d368c38399e3742578405cca58241574b72f2d28ce42ad02af1ef2a32c46bb3",
+   "changes": [
+    {
+     "offset": 261,
+     "bytes": 12,
+     "source_sha256": "4c93d9e2d1c156d237067316c775a53987f27516521cf22b71ac34ba56c8ff6d",
+     "en": "Controls"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/store_select_num.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "50023373beb77cfdf8e19ee309e976da09d47aef7ce2e9bb2396ac9cefe36a2f",
+   "changes": [
+    {
+     "offset": 1516,
+     "bytes": 36,
+     "source_sha256": "1a7f1efdd4ecdd48f535fb42efc6dc63da583ea19bde836f9d542566b88bfb1d",
+     "en": "Enter the quantity to buy."
+    },
+    {
+     "offset": 4903,
+     "bytes": 9,
+     "source_sha256": "13d1b0c10a84dd3337fbc031a7b29d73509d8eaded8f7821dbbd46377c62197a",
+     "en": "Total"
+    },
+    {
+     "offset": 5851,
+     "bytes": 54,
+     "source_sha256": "d16b57b23b5f7d823fae07126a0eb4aefb50eab7a3fcf6d353fa85cb85dca657",
+     "en": "[i5] Quantity  [i1] OK  [i2] Cancel"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/store_select_num_cstm.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "04e204a9b976e98d3129729e6889df88c0a4da31e24606357cbcd10e6bde2ce5",
+   "changes": [
+    {
+     "offset": 1185,
+     "bytes": 9,
+     "source_sha256": "13d1b0c10a84dd3337fbc031a7b29d73509d8eaded8f7821dbbd46377c62197a",
+     "en": "Total"
+    },
+    {
+     "offset": 2519,
+     "bytes": 12,
+     "source_sha256": "66e073f9766b425c2202f62d8b0af9f5f4ae39f4607fcd447cf780b5942182ee",
+     "en": "Repair"
+    },
+    {
+     "offset": 2995,
+     "bytes": 15,
+     "source_sha256": "ccff02404d1f0c0ad32b509395f6f5e0560d678f7e1db1be9ea96d7656bedd0e",
+     "en": "Cancel"
+    },
+    {
+     "offset": 5062,
+     "bytes": 15,
+     "source_sha256": "abaad3df0ee27258c3d2c0812ddf539ae3e0780f535b416157b2f005880e6638",
+     "en": "Money ￥"
+    },
+    {
+     "offset": 5537,
+     "bytes": 66,
+     "source_sha256": "d6078c947ce35966f3bcda01ef24a1c1c96675199a16bd3c8360fe89144df56d",
+     "en": "Repair the outfit you're wearing?"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/store_warning.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "6af3c7360e320891df69146e2ac4449c3293a81a6f60d655fc91d597ee003e59",
+   "changes": [
+    {
+     "offset": 601,
+     "bytes": 33,
+     "source_sha256": "78131fc0a7fe1279dd5ffaa5e60b1f487d62a53438509e25dcdbc74b4dffb54f",
+     "en": "Not enough money."
+    }
+   ]
+  },
+  {
+   "path": "common/hud/treasure_change/TC_dialog.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "446704dd7196e081a32fa6244c4ab150790621aef56b42bef2df6df73dfd8dce",
+   "changes": [
+    {
+     "offset": 1790,
+     "bytes": 6,
+     "source_sha256": "c0be6499c92ec64e88ccf3a935d5078bf17e1071a26a905dfc6542b51912464f",
+     "en": "Trade"
+    },
+    {
+     "offset": 2247,
+     "bytes": 6,
+     "source_sha256": "8fc7f899161b2076651a211a123ccbad0f7ad032c023f59aa3ffd06983e887b8",
+     "en": "Back"
+    },
+    {
+     "offset": 2702,
+     "bytes": 36,
+     "source_sha256": "ee2ed2509edc7cc5a6a77547744999687d96d36ad380365412f075683960ab8d",
+     "en": "Trade for this item?"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/treasure_change/TC_dialog_2.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "757055485e475d5d92e4865e9d39306b4ffe62399e8c0268cdfb0e89ec63458d",
+   "changes": [
+    {
+     "offset": 668,
+     "bytes": 60,
+     "source_sha256": "773652f0074e82054b8b922a379cc72738699620473d96684bf33cb223079a94",
+     "en": "No items are available to trade right now."
+    }
+   ]
+  },
+  {
+   "path": "common/hud/treasure_change/TC_item_detail.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "075ef36201328298b7da2abfc52dbfed92ac8fa990faba258df8400876297df7",
+   "changes": [
+    {
+     "offset": 3409,
+     "bytes": 18,
+     "source_sha256": "82fe0b9ef5e2177190c9098cb549dec2edbeae5c8cc3e7bf0be590be994bf99c",
+     "en": "Coins Needed"
+    }
+   ]
+  },
+  {
+   "path": "common/hud/treasure_change/TC_main.hud",
+   "kind": "hud_text_property",
+   "source_sha256": "701637621bb240de48a3c87de0c6a44a78b3328d108b1b58a7e07c406c760317",
+   "changes": [
+    {
+     "offset": 5035,
+     "bytes": 21,
+     "source_sha256": "d33f666071ebb791f4e434ddba2e59f610420cde3cc2cbf6f9a3b09d35961a7d",
+     "en": "Your Coins"
+    },
+    {
+     "offset": 6679,
+     "bytes": 18,
+     "source_sha256": "82fe0b9ef5e2177190c9098cb549dec2edbeae5c8cc3e7bf0be590be994bf99c",
+     "en": "Coins Needed"
+    },
+    {
+     "offset": 7668,
+     "bytes": 18,
+     "source_sha256": "12235a9f862d77ff5659c4ff4f4b29b6184db9d3b7d6f6c9916079831b190bf3",
+     "en": "Trade Items"
+    },
+    {
+     "offset": 8991,
+     "bytes": 30,
+     "source_sha256": "ebad8bc4677107fb9c01832935bb6e47e4f5c12716834f2b63a7cb81aeced55f",
+     "en": "[i01] Trade  [i02] Close"
+    }
+   ]
+  },
+  {
+   "path": "eboot.bin",
+   "kind": "eboot_cstring",
+   "source_sha256": "42b058e57358cdb0516fb39ddafe583634b03d9987a7950f8fd0c317a8f3af83",
+   "changes": [
+    {
+     "offset": 17361819,
+     "bytes": 27,
+     "source_sha256": "1515133f87c2c93a67ca24e23fee2eca22deca8d23619f815848a37364522a3c",
+     "en": "All Items Found"
+    },
+    {
+     "offset": 17361847,
+     "bytes": 27,
+     "source_sha256": "423f43c29460c2d695f8c884a9f41d926aabbcb3ce5eef5c066e43a0a6bd7b8e",
+     "en": "Items Missing"
+    },
+    {
+     "offset": 17362005,
+     "bytes": 6,
+     "source_sha256": "f045b9ca8f63f35d8c8da4254d18f914ac5b2d47f87e763b3b2e435ad2f7373d",
+     "en": "Hat"
+    },
+    {
+     "offset": 17362012,
+     "bytes": 9,
+     "source_sha256": "2c3330f6c55341719383ffd24c4e2e354f8e7d6c9e3df3ea7d443db8fe13195d",
+     "en": "Glasses"
+    },
+    {
+     "offset": 17362022,
+     "bytes": 9,
+     "source_sha256": "939627cad6d52d5a6ca212b4b3f8c7b34cc81c631c6319258f55f9dd9d76aa70",
+     "en": "Mask"
+    },
+    {
+     "offset": 17362032,
+     "bytes": 18,
+     "source_sha256": "0b059d023f7b36b72d433c58ddfbba98043d793a012f793eb110febc95d94fdc",
+     "en": "Costume"
+    },
+    {
+     "offset": 17362051,
+     "bytes": 12,
+     "source_sha256": "929af90d4bf91bd88d4bae564e64834887fca493f89dd8489a4deb4bc295aebe",
+     "en": "Gloves"
+    },
+    {
+     "offset": 17362064,
+     "bytes": 9,
+     "source_sha256": "39ea4985c8a335a0299ac0354c1ad433a94af08809036d381c70411377f1b439",
+     "en": "Held Item"
+    },
+    {
+     "offset": 17362074,
+     "bytes": 19,
+     "source_sha256": "830e57f7b5dcb45036273720bb27cc760663a14c518dd3557c631b62bcbfeeb9",
+     "en": "Accessory A"
+    },
+    {
+     "offset": 17362094,
+     "bytes": 19,
+     "source_sha256": "79b83d6604edc386c1fe056f93cc7afaa1278cb51da6433d4a7d05d445062ce7",
+     "en": "Accessory B"
+    },
+    {
+     "offset": 17362114,
+     "bytes": 3,
+     "source_sha256": "40a2391a45d943bf5046107b607dbc960a975a34b52aa0e980b68d00e37c0e8a",
+     "en": "Ft."
+    },
+    {
+     "offset": 17362118,
+     "bytes": 9,
+     "source_sha256": "9b6b79e27b828111c909fc89d92e0a658d9e2f777e81220e02ab1cf599119056",
+     "en": "Food"
+    },
+    {
+     "offset": 17362128,
+     "bytes": 18,
+     "source_sha256": "ebb389015781694f8c96f2b755cd8ac035de568d4eeb1bfd016f5358c4921520",
+     "en": "Collection"
+    },
+    {
+     "offset": 17362147,
+     "bytes": 6,
+     "source_sha256": "fc82942ac1daa201d85953a82d2c27a01873f93f20103a5695ca2e6a1774e25f",
+     "en": "Hair"
+    },
+    {
+     "offset": 17362154,
+     "bytes": 12,
+     "source_sha256": "2aef2323a206d80732e9e32c2faa34e42e09dc38a5e930920176b209ce0217a5",
+     "en": "Face"
+    },
+    {
+     "offset": 17362167,
+     "bytes": 9,
+     "source_sha256": "3830a3788cd7208aff2fe553665a89e65452b147ad70425b12ab25c4cff0f3a3",
+     "en": "Reading"
+    },
+    {
+     "offset": 17362177,
+     "bytes": 3,
+     "source_sha256": "1c59564ec66ed2d3fa1e611f43f781483c2ed4b44374d5673b933389c5779853",
+     "en": "Key"
+    },
+    {
+     "offset": 17362181,
+     "bytes": 6,
+     "source_sha256": "91e25f4ddc6f6cd81cfe6ad1fd6c7980bb23e8e64c7bd04499e40bc0c166342c",
+     "en": "Other"
+    },
+    {
+     "offset": 17371237,
+     "bytes": 30,
+     "source_sha256": "c52e929c505d456ca9044af5e6e0a9fa7cb006c1008e60a8cc98c317b7664071",
+     "en": "Project City in Shadow"
+    },
+    {
+     "offset": 17371268,
+     "bytes": 87,
+     "source_sha256": "6f41b7c54484aa628e35843a17905c07913c30132d8b08ff93233e8983b3cf5e",
+     "en": "You survived the giant shadows and earned every trophy."
+    },
+    {
+     "offset": 17371356,
+     "bytes": 30,
+     "source_sha256": "d32d5ff18207981fc704080ac8fef860f3ac871d7f4b555e1663f3731e213086",
+     "en": "Strange Lights in the Sky"
+    },
+    {
+     "offset": 17371387,
+     "bytes": 120,
+     "source_sha256": "58ba8635789dc87f8551d41b321bf3d6d6e140276b9ee78fa290266b27c836c5",
+     "en": "A rainy night downtown. I was on my way to the park to meet someone."
+    },
+    {
+     "offset": 17371508,
+     "bytes": 33,
+     "source_sha256": "12defb9818d3d7d629a9e04fc3d4df146fc89eea03a38d09e12cb52bde30fa8c",
+     "en": "A Trampled Flower"
+    },
+    {
+     "offset": 17371542,
+     "bytes": 105,
+     "source_sha256": "ab0548f0b6aef98ec13223d726c730864fef58b4bb78acf8fee2a6cc87b71e2c",
+     "en": "A single flower from the florist. Such a small flower, carrying such big feelings."
+    },
+    {
+     "offset": 17371648,
+     "bytes": 30,
+     "source_sha256": "1a334df3007f125203a6131202470df1088f98a34f61ca83a7a8473bc57a9ce1",
+     "en": "Secret Cosplay Club Member"
+    },
+    {
+     "offset": 17371679,
+     "bytes": 168,
+     "source_sha256": "c5f42cfa4049aa51fea198738dd53386d9a725881d8747e0ac2a52de8b26a2f6",
+     "en": "A male police officer gave me a Secret Cosplay Club membership card. It seems to be a club for lovers of niche cosplay."
+    },
+    {
+     "offset": 17371848,
+     "bytes": 21,
+     "source_sha256": "93ec59ea840d081b9f3040b2c259dcdb4591ee25e455d12581650f00301b116e",
+     "en": "The Men in Black"
+    },
+    {
+     "offset": 17371870,
+     "bytes": 117,
+     "source_sha256": "9d4680a506d53b097de4885d4388d9c032177cfa96da7df4b84bbcf2307469a7",
+     "en": "I peeked into a ruined building and saw bundles of cash flying everywhere. Who are those two men in black?"
+    },
+    {
+     "offset": 17371988,
+     "bytes": 27,
+     "source_sha256": "8d74977fc1aebfd8c17a523a5b10cfa3f6eeb886af9adc75ff5d607013045986",
+     "en": "City in Shadow Begins!"
+    },
+    {
+     "offset": 17372016,
+     "bytes": 96,
+     "source_sha256": "a8c1c57fd5a90460d39a313ce188bcf9a41d802fbd1de7ecec2eb2f04da341e3",
+     "en": "My first run-in with a giant shadow. I need to get out of this city, fast..."
+    },
+    {
+     "offset": 17372113,
+     "bytes": 24,
+     "source_sha256": "b8db78227bf71301cb90ee6ec7b543d512a746898a46e9be26014c9e985bbfbb",
+     "en": "Dad's Hamburger"
+    },
+    {
+     "offset": 17372138,
+     "bytes": 57,
+     "source_sha256": "e16febfc93ea945c203a87d996e99533953057c6402416f6fdc035dbfac2dde6",
+     "en": "A girl seeking the hamburger she and her dad shared."
+    },
+    {
+     "offset": 17372196,
+     "bytes": 18,
+     "source_sha256": "97ef279f831b8f31be83e6a33fef029f0ea8a91403b7a860c58dcb85de053249",
+     "en": "Scary Stranger"
+    },
+    {
+     "offset": 17372215,
+     "bytes": 127,
+     "source_sha256": "b0de862359ce7db2bc2039545f2163db724212dde584980c21a3c4dfe9b3fd2a",
+     "en": "While the two men in black were chasing me, a mysterious man saved me. Is he on my side...?"
+    },
+    {
+     "offset": 17372343,
+     "bytes": 6,
+     "source_sha256": "900ea37872dc2cf35eb364cb9c49e727fd35fac09faed143a719de1682075f68",
+     "en": "Fire!"
+    },
+    {
+     "offset": 17372350,
+     "bytes": 108,
+     "source_sha256": "42a1c96b778ca81cc4fc1de37eb6c35e6951bab6b57d3819e256ea42abce56fa",
+     "en": "I put out lots of fires. When using an extinguisher, make sure the fire's really out."
+    },
+    {
+     "offset": 17372459,
+     "bytes": 45,
+     "source_sha256": "658d1fd461f1652a085e9d67bb74bf9fed2dd51edbbe2672c0de3494d1063f2c",
+     "en": "A Girl, Her Dad, and a Sister Like Yuki"
+    },
+    {
+     "offset": 17372505,
+     "bytes": 114,
+     "source_sha256": "7803c5d94e9237dcbaddc5bdfb06a2343a028a936c8d26301d61c0f84cfe5aa1",
+     "en": "I brought the girl back to her father. Yuki was as kind to her as a big sister."
+    },
+    {
+     "offset": 17372620,
+     "bytes": 33,
+     "source_sha256": "1eda854d6ca9d10d5b1040e24441fe147017c9f6389bdb6c6dffe1efe217f13d",
+     "en": "A Promise on the Night Ship"
+    },
+    {
+     "offset": 17372654,
+     "bytes": 78,
+     "source_sha256": "9fee988c37f572bb3d339d5e5e21ce42e25e03d9282fc17ee8a0876374fe202f",
+     "en": "The first mate and Dr. Fukazawa promised to share their hidden feelings."
+    },
+    {
+     "offset": 17372733,
+     "bytes": 30,
+     "source_sha256": "cd5b104c457b2d49af862332fa07ee7353ff1d5ec048106cb9d79d5358b0b4fc",
+     "en": "Forklift Driver"
+    },
+    {
+     "offset": 17372764,
+     "bytes": 114,
+     "source_sha256": "096234c5f1a97330a3237be2ded212378bc5eb383543ce675fe564069f500322",
+     "en": "I drove a forklift for the first time. Now I can lift containers with it."
+    },
+    {
+     "offset": 17372879,
+     "bytes": 21,
+     "source_sha256": "1355ab40dd758db7df0854d63f36362142585bef387e416310ba0734a37ea479",
+     "en": "The Late-Night Crew"
+    },
+    {
+     "offset": 17372901,
+     "bytes": 193,
+     "source_sha256": "0dd2e2e3a1d4c79b671d64e7715a2dd98b1a849146f7b8adf0e7f538b8a0c723",
+     "en": "I gave the backup password to office workers still on the job.\\nThey were fighting a deadline while giant shadows attacked the city."
+    },
+    {
+     "offset": 17373095,
+     "bytes": 18,
+     "source_sha256": "a7445ac40804e9d5f70047f28dfb322a8a0c6f58368648b105d734ccbad4401d",
+     "en": "A Sympathetic Ear"
+    },
+    {
+     "offset": 17373114,
+     "bytes": 145,
+     "source_sha256": "cdc00b8afc1012e3332fcc22a58f6d325568bcdbdd5da347fbc0812d3107603f",
+     "en": "The train driver was worn out by passengers who did nothing but complain.\\nAgreeing with him seemed to cheer him up a little."
+    },
+    {
+     "offset": 17373260,
+     "bytes": 18,
+     "source_sha256": "f0ac72d35a1c5db863931320a90e9badf0403ba1937773a6c57713e2cbbd66ef",
+     "en": "The Alluring ATM"
+    },
+    {
+     "offset": 17373279,
+     "bytes": 183,
+     "source_sha256": "f3c189ed5f191f6a6e74856b0823c9729877328499f4189d0ab6c262c78093ec",
+     "en": "I never expected a balance that big. Maybe that's normal for a company account, but it reminded me: the money's always out there somewhere."
+    },
+    {
+     "offset": 17373463,
+     "bytes": 144,
+     "source_sha256": "db57d9bf1c9be7234e4fdb4d09d0427ff0309d27572c1ba91710ed5d42ae4e64",
+     "en": "I rescued Yuki and escaped the tower. It turns out the tower had become the giant birds' nest."
+    },
+    {
+     "offset": 17373608,
+     "bytes": 96,
+     "source_sha256": "ed85301d9528f0e47c8df51896bbe72da709aa0a0a5c35bb5d47b5e16a4dc9e3",
+     "en": "I want to see Yuki again... And she answered my feelings."
+    },
+    {
+     "offset": 17373705,
+     "bytes": 24,
+     "source_sha256": "2198fccf717080a75a3caffb346a2a73b19dad272549093def61ba8ded34055e",
+     "en": "A Night with the Chief"
+    },
+    {
+     "offset": 17373730,
+     "bytes": 58,
+     "source_sha256": "4d74595069720c54901bc013f6e686f0aec6810fd6b073f51fc54d58f21e2fae",
+     "en": "The chief researcher and I made a secret promise."
+    },
+    {
+     "offset": 17373789,
+     "bytes": 27,
+     "source_sha256": "7546b74d82d98172dc94c92106efe9194749ea2fdb708e2e38d98c47e336b90b",
+     "en": "Delivery Complete"
+    },
+    {
+     "offset": 17373817,
+     "bytes": 117,
+     "source_sha256": "e868ba629d2f9da54ccdcb7efd6cd4eab431429b9bdabaa0f27160decc993940",
+     "en": "I delivered the program to the institute's deputy director. That should move the sky-flash research along."
+    },
+    {
+     "offset": 17373935,
+     "bytes": 15,
+     "source_sha256": "b115ddf9c099bcf32b4d7ac0d94f2ac66bd979dea76170e1c03aea199d8a852c",
+     "en": "Boss's Secret"
+    },
+    {
+     "offset": 17373951,
+     "bytes": 120,
+     "source_sha256": "3596f633a3fa8a73436ccc388725d73b55beb5a3aad54b5211662fd4f1630074",
+     "en": "I feel like I got a really nice costume. I just have that feeling."
+    },
+    {
+     "offset": 17374072,
+     "bytes": 75,
+     "source_sha256": "690fabe7906fda503dee5c9a450382ed89316656f9fabf27cc51e8d33983190f",
+     "en": "The Pursuers' Company: W&P Consulting"
+    },
+    {
+     "offset": 17374148,
+     "bytes": 120,
+     "source_sha256": "da5c38c5d11cb47fc72ca1b75968a15f22d67c936451ef1641cee767a562a946",
+     "en": "I got a W&P Consulting brochure. It seems to be a company that deals in weapons intelligence."
+    },
+    {
+     "offset": 17374269,
+     "bytes": 33,
+     "source_sha256": "37a2ffad42cbdf7177c5ad30a7be2dbd705bd40dde3d30c0772b83b88b28a6cb",
+     "en": "Ebine Building Owner"
+    },
+    {
+     "offset": 17374303,
+     "bytes": 82,
+     "source_sha256": "d7d7210fb8a169ed89956be506ff4319100813cbc5e325100b6e323343871836",
+     "en": "I bought a building from a certain gentleman.\\nNow I own a building!"
+    },
+    {
+     "offset": 17374386,
+     "bytes": 15,
+     "source_sha256": "2684b284755caeb3c02fe4c9d513debb19a3e8f59493f9a3ed04c3aba7e0c398",
+     "en": "Close with Yuki"
+    },
+    {
+     "offset": 17374402,
+     "bytes": 139,
+     "source_sha256": "1ac3d5be530e3d0b9b47fb889b8d764d7e47fa7e5e79c99e30043e78cd301b6b",
+     "en": "In the raging wind, Yuki reached out her hand to me. We've overcome so much together already."
+    },
+    {
+     "offset": 17374542,
+     "bytes": 27,
+     "source_sha256": "7e2994d9b3c06ece696fe32fb7d406d9078ee5532589cc011a9a92356e3731dc",
+     "en": "Gust of Wind"
+    },
+    {
+     "offset": 17374570,
+     "bytes": 115,
+     "source_sha256": "95e80e695399cb2baf388b1027375b4de92d00ea2602158ffb56290205c17155",
+     "en": "I made it through! Riding out the blast behind us with Risa, on to the next stage."
+    },
+    {
+     "offset": 17374686,
+     "bytes": 18,
+     "source_sha256": "4154f77de4608a6a0ce7f4dab9dee5f1e2ef52bef8615fb52e791a978b229bf8",
+     "en": "Woman on the Run"
+    },
+    {
+     "offset": 17374705,
+     "bytes": 99,
+     "source_sha256": "70d54d99fd16001989306e43316ff784b84e0b54779f3ddfd1d1d9c3cbf4b5be",
+     "en": "In a convenience store in the evacuated city, I met a woman hiding out."
+    },
+    {
+     "offset": 17374805,
+     "bytes": 15,
+     "source_sha256": "632732bdcf66c8b47274de28777aef5a0867d0dec08e4cb7b6bfd03fe0b724e8",
+     "en": "Savior Descends"
+    },
+    {
+     "offset": 17374821,
+     "bytes": 162,
+     "source_sha256": "db351ed19c153295e53ba8414dd2ae529132e41aa7f55f02ee233b4750b9abb7",
+     "en": "I accepted that I am the savior and blessed the people. Those who received my blessing will be safe from the giant shadows."
+    },
+    {
+     "offset": 17374984,
+     "bytes": 18,
+     "source_sha256": "c4d6adb3e85bb7b2c88b47db9646d0bad2385c81d0847f1922d4354a5b5fba59",
+     "en": "The End"
+    },
+    {
+     "offset": 17375003,
+     "bytes": 39,
+     "source_sha256": "b0b909a62b313fbb328ae2cbcdbd973fce82fa37d6bed9474f7c9df0ad37fc71",
+     "en": "You cleared the final stage."
+    },
+    {
+     "offset": 17375043,
+     "bytes": 27,
+     "source_sha256": "242f1ea2f2a206bab621d81d78a23eb31d2a80b915d5c2e8154660293073c5b5",
+     "en": "First Purchase"
+    },
+    {
+     "offset": 17375071,
+     "bytes": 30,
+     "source_sha256": "1baacb21e9ba281bc820ca0411fa754c213a20b3e12bf576ab397f8a5020b1ca",
+     "en": "You bought your first item."
+    },
+    {
+     "offset": 17375102,
+     "bytes": 24,
+     "source_sha256": "732c6a0bb53f44a75704534d14a38b2c21803126c987ef47c9a8773b78be8883",
+     "en": "First Tackle"
+    },
+    {
+     "offset": 17375127,
+     "bytes": 54,
+     "source_sha256": "1bf5a889266f99e4ab3df9c85a04b7bc092d9fbb49cefc7ffe2ae9cd50c10958",
+     "en": "You smashed something with a tackle."
+    },
+    {
+     "offset": 17375182,
+     "bytes": 18,
+     "source_sha256": "db28169c4175a57883dee3dead3c6773ca5abf00347b7d2ba97c337f886e6730",
+     "en": "First Meal"
+    },
+    {
+     "offset": 17375201,
+     "bytes": 30,
+     "source_sha256": "8ddbc4026c454706bc6107d1549639e61dd92bbffaaf332dd325c60f2f99b268",
+     "en": "You ate or drank something."
+    },
+    {
+     "offset": 17375232,
+     "bytes": 18,
+     "source_sha256": "dd0b4583d4b59d6e37ca886b17e0f368928e539e593983f054e68de91c266552",
+     "en": "Karaage Minister"
+    },
+    {
+     "offset": 17375251,
+     "bytes": 40,
+     "source_sha256": "419b69167b407b6264f55e87b0fc1508e27a0605b19dcf5bfb40aaddd4476ee2",
+     "en": "You collected all 6 karaage flavors."
+    },
+    {
+     "offset": 17375292,
+     "bytes": 21,
+     "source_sha256": "f9565e9e5bdfa105d9df461edf61c6050c47ea84662edf0badab41bb12532133",
+     "en": "First Change"
+    },
+    {
+     "offset": 17375314,
+     "bytes": 45,
+     "source_sha256": "3d6634362c3db70f06a7f838d79e898f4813cb9c81d09abcde3efe31b8dcb80d",
+     "en": "You changed costumes for the first time."
+    },
+    {
+     "offset": 17375360,
+     "bytes": 18,
+     "source_sha256": "9318863a947798c2e5701c0221d3191385b3a4a81d6342aa07fd6bba983ebd63",
+     "en": "First Swimsuit"
+    },
+    {
+     "offset": 17375379,
+     "bytes": 33,
+     "source_sha256": "fc57f542224b64bdd0f552fe906e6470ac07af134ad0428df7fa515fdf337a20",
+     "en": "You wore a swimsuit."
+    },
+    {
+     "offset": 17375413,
+     "bytes": 33,
+     "source_sha256": "1c86683c61c0a0ca4d2f4963cac51646a9f630a76685196641c92c4246e5000b",
+     "en": "1 Million Yen in Hand!"
+    },
+    {
+     "offset": 17375447,
+     "bytes": 45,
+     "source_sha256": "daad1180d6dd36e8a2736f6ef2caf56e4cd80f8cae5db13f1d8eebf2798413fc",
+     "en": "Your money passed 1 million yen."
+    },
+    {
+     "offset": 17375493,
+     "bytes": 33,
+     "source_sha256": "ba7d7c2e90ba360745c2588967e0a61eec0b1b00b0d5ce461a445ff3421d7316",
+     "en": "Assets: 100 Million Yen!"
+    },
+    {
+     "offset": 17375527,
+     "bytes": 42,
+     "source_sha256": "528ea41bfa5c411b3f9537388143e0bbc02c7c05b2efe8dbb3f61417232125dc",
+     "en": "Your assets passed 100 million yen."
+    },
+    {
+     "offset": 17375570,
+     "bytes": 42,
+     "source_sha256": "9a09466947066861e7090ac0d33ccbad1abeef656315a75fdba2bd063a714d7d",
+     "en": "Assets: 10 Billion Yen!"
+    },
+    {
+     "offset": 17375613,
+     "bytes": 48,
+     "source_sha256": "043ab9b1ccfd9698651c05122e48db40ba43c6fdc06ad632a9b067afa529f7e8",
+     "en": "Your assets passed 10 billion yen."
+    },
+    {
+     "offset": 17375662,
+     "bytes": 31,
+     "source_sha256": "e70e7efff6fefe9f37a7a0446e54a66b671404c1db3588f619ea7aa23830be86",
+     "en": "Legendary KYOEI NEWS Writer"
+    },
+    {
+     "offset": 17375694,
+     "bytes": 49,
+     "source_sha256": "3382fb34a7b055b30a05c8dc5697f338de21ccb4fae8414760ce0762fbe39da9",
+     "en": "You collected loads of KYOEI NEWS stories."
+    },
+    {
+     "offset": 17378269,
+     "bytes": 27,
+     "source_sha256": "72658675d1bc703c42763ccec8a476a71d43206fcd9f673bc9884362fa4e8d7b",
+     "en": "New System Data"
+    },
+    {
+     "offset": 17378297,
+     "bytes": 21,
+     "source_sha256": "1cf31874e165d89696c54b83a927afca499fbd2f7b685c8d9ef6e9ef22de9bf6",
+     "en": "System Data"
+    },
+    {
+     "offset": 17378319,
+     "bytes": 85,
+     "source_sha256": "589e8dbbe02d01c448a5e6527a5a2ef72b9d2a3a9eb5f1827fc50c5f8134870a",
+     "en": "Best assets at clear: ￥%lld. Longest distance at clear: %lldm"
+    },
+    {
+     "offset": 17378405,
+     "bytes": 29,
+     "source_sha256": "0ad5ad0faceb187e53e2d06e3f35be9797af18aa25252e5510459eb42717d083",
+     "en": "New Save Data %03d"
+    },
+    {
+     "offset": 17378501,
+     "bytes": 121,
+     "source_sha256": "df4b118d743281691425760c21fc2d38c2e91aa9e1b510ab0476ec23dccdf89b",
+     "en": "If you don't save, your progress so far\\nwill be lost. Continue anyway?"
+    },
+    {
+     "offset": 17379044,
+     "bytes": 14,
+     "source_sha256": "f0397e746d893bd6601309c6ba7ee14ba7f1ed091203f2c44fbb622091fc3e82",
+     "en": "Stage 10-1"
+    },
+    {
+     "offset": 17379059,
+     "bytes": 15,
+     "source_sha256": "c99c35837192f428ccb715cfff942cf1abcfdc6acd857bfb9b75ea2de6581647",
+     "en": "Stage 10-2A"
+    },
+    {
+     "offset": 17379075,
+     "bytes": 15,
+     "source_sha256": "86a6ec3e7e5c5b916fd536c9135243127ac9ce2de1de40536feb7a8bb4fceea0",
+     "en": "Stage 10-2B"
+    },
+    {
+     "offset": 17379154,
+     "bytes": 30,
+     "source_sha256": "4d4530a0cf2ad139cf185124124ec7eef2e79bf3b7a7e6910900003bf6bc773a",
+     "en": "Vending Machine in the Rain"
+    },
+    {
+     "offset": 17379185,
+     "bytes": 30,
+     "source_sha256": "0b39ac0ea8fbb5727d11efabba5b40b7989a5814771905390b53cd79fd6dc399",
+     "en": "Sakuramachi Intersection"
+    },
+    {
+     "offset": 17379216,
+     "bytes": 24,
+     "source_sha256": "fc3e493c7ce32b12baed850c063b07602712e4df692e96fec2634bf47a9da11f",
+     "en": "8F, Fire Closing In"
+    },
+    {
+     "offset": 17379241,
+     "bytes": 24,
+     "source_sha256": "ca6fabfc1adfb81271dd2ba33ae55165a9454a1432c77dc27a2457062686608a",
+     "en": "By the Fallen Building"
+    },
+    {
+     "offset": 17379266,
+     "bytes": 24,
+     "source_sha256": "bac13097373a9693462eaf3cde02c2c719af192b644affe96dca075639ab89fc",
+     "en": "Subway Tunnel"
+    },
+    {
+     "offset": 17379291,
+     "bytes": 18,
+     "source_sha256": "196ee851856015af2dfe69e53c833749ec389942055519b476b337c4ef8bc9ab",
+     "en": "Stalled Train"
+    },
+    {
+     "offset": 17379310,
+     "bytes": 18,
+     "source_sha256": "b83e2e007bed515499d5cc25ad520d7ac602ffa023254ad03f742b7e1ae66a74",
+     "en": "Subway Gates"
+    },
+    {
+     "offset": 17379329,
+     "bytes": 21,
+     "source_sha256": "2cdad56e6f9d082111f6339e847f03593f7cbefe1278c112a86e0a3421987cb0",
+     "en": "Underground Café"
+    },
+    {
+     "offset": 17379351,
+     "bytes": 18,
+     "source_sha256": "cc0e6a8309518daa0b763207ce47614aa945fcd541b90364e17e1d7be8e47923",
+     "en": "Swaying Bridge"
+    },
+    {
+     "offset": 17379370,
+     "bytes": 36,
+     "source_sha256": "a840811a7a9e678acb37c1f1220729a6bbc4be7ce2c3136a5ad2d503573e66a1",
+     "en": "Iberis Tower Observation Deck"
+    },
+    {
+     "offset": 17379407,
+     "bytes": 33,
+     "source_sha256": "7a8b31911b7afa885c14d3b6bdf5a353f87873cacd7e2d61fe1a4117900ffdc4",
+     "en": "Iberis Tower Truss Floor"
+    },
+    {
+     "offset": 17379441,
+     "bytes": 30,
+     "source_sha256": "7f8fc168a435612294951a72a037c0a04ac053373fb8a33a22bdbaa43ff972c3",
+     "en": "Iberis Tower 20th Floor"
+    },
+    {
+     "offset": 17379472,
+     "bytes": 30,
+     "source_sha256": "918205f8db6a332a931af5fa5704b1e5eaa666e5567fbdbe8c355677160954e4",
+     "en": "Iberis Tower 19th Floor"
+    },
+    {
+     "offset": 17379503,
+     "bytes": 27,
+     "source_sha256": "7ef2e03e693676a47ce48a77d97ff95dd89e74f366dea6f8a4f09024ad75b5a8",
+     "en": "Sewer Construction Sign"
+    },
+    {
+     "offset": 17379531,
+     "bytes": 27,
+     "source_sha256": "d2fe167276c0722628a9da476e6266881aca30a5e7b5382a22da54b87f50a036",
+     "en": "By the Store Trash Bins"
+    },
+    {
+     "offset": 17379559,
+     "bytes": 51,
+     "source_sha256": "f23bf732d152be825a8c96e9e37a69d772d7eb4f93a6ffa0d9b47f25abe41899",
+     "en": "Sidewalk by the Burning Tanker Truck"
+    },
+    {
+     "offset": 17379611,
+     "bytes": 18,
+     "source_sha256": "9e49f182e95fe615a1ecc06550abb50af9e6a8434e4fa8406d8e0ce11d047e15",
+     "en": "Research Ship Deck"
+    },
+    {
+     "offset": 17379630,
+     "bytes": 27,
+     "source_sha256": "47172d7cbe452618737f6eba4c049f082b4e4aa6d99953d7af221dbfedd659f5",
+     "en": "Hiding in the Warehouse"
+    },
+    {
+     "offset": 17379658,
+     "bytes": 18,
+     "source_sha256": "ef15040eb10196fe14a6ea89d42d5b324725118542fc3ef64a501384baf9565b",
+     "en": "Warehouse Office"
+    },
+    {
+     "offset": 17379677,
+     "bytes": 21,
+     "source_sha256": "bc0143369d7e814a8df788c038ca652df5e68cb9c79b866ec627367fe8b3264e",
+     "en": "Burning Warehouse"
+    },
+    {
+     "offset": 17379699,
+     "bytes": 27,
+     "source_sha256": "01adb2a855554b2a48e848b739a7797fe7dd6660a6ba0d7fcf38feca9d1b6e1f",
+     "en": "Office Building 14F"
+    },
+    {
+     "offset": 17379727,
+     "bytes": 37,
+     "source_sha256": "56439e3dc5aa15c5a43909e1ee6f6d59ff7a1e175122ad885e00e2f1a07ffe89",
+     "en": "Pole Beside the Train"
+    },
+    {
+     "offset": 17379765,
+     "bytes": 48,
+     "source_sha256": "cc2a4c5eefceb47c0a9fd3586bf176fd597782df65fe54434800d5c6d3b164fd",
+     "en": "Pole Beside the Stoned Train"
+    },
+    {
+     "offset": 17379814,
+     "bytes": 33,
+     "source_sha256": "9445475f9bdeab875273379be1ffbe9b19bfc3c935c30b3809b50b6725d1d613",
+     "en": "Car Parked on Suzuran Ave."
+    },
+    {
+     "offset": 17379848,
+     "bytes": 15,
+     "source_sha256": "2b7a44792194ae12c7770c8a274608353d165b75cb63f39ea147e3a7211595e3",
+     "en": "In the Truck"
+    },
+    {
+     "offset": 17379864,
+     "bytes": 33,
+     "source_sha256": "b650aea3ca4bf737beb606f06f63a474dbcc5f677ee5b15442bd245c49110a01",
+     "en": "Suzuran Ave. Median Strip"
+    },
+    {
+     "offset": 17379898,
+     "bytes": 30,
+     "source_sha256": "54f4391a88f6a6acf3c5725cf8e59cc71b512618ff3320bb44102054ca1b1ce4",
+     "en": "PANSIE West Wing ATM"
+    },
+    {
+     "offset": 17379929,
+     "bytes": 39,
+     "source_sha256": "03145e8ff9689f43a53e2888f203cac26a9d010e000b2cd55ca8bec4d0701176",
+     "en": "Sky Tower: Gyaos Nest"
+    },
+    {
+     "offset": 17379969,
+     "bytes": 42,
+     "source_sha256": "0ee28f679e0808a1ed1b4e3ba3b8747f1c69827eef06454dc6d586771875fa80",
+     "en": "Sky Tower Observation Deck 1F"
+    },
+    {
+     "offset": 17380012,
+     "bytes": 45,
+     "source_sha256": "81c4f566d4c093d96163b1ff133b14e0f9ca2cd5246834e752de4374e059eeb3",
+     "en": "Sky Tower Direct Stairs to Ground"
+    },
+    {
+     "offset": 17380058,
+     "bytes": 39,
+     "source_sha256": "564bbd2416e40e44a2adf3d75a521e1174ac1f719b476d530e1dd8e98adc8485",
+     "en": "Sky Tower Maintenance Walkway"
+    },
+    {
+     "offset": 17380108,
+     "bytes": 36,
+     "source_sha256": "7f409b83ab7a14895a2f326d6fc59b68a50693ba56739d963194d61ae529815c",
+     "en": "Cosmic Ray Institute Entrance"
+    },
+    {
+     "offset": 17380145,
+     "bytes": 33,
+     "source_sha256": "59e676103742ca6b42dc64f3fa7c182d975b0634d6f568f14f3ccc393f96ec64",
+     "en": "Institute 2F Storeroom"
+    },
+    {
+     "offset": 17380179,
+     "bytes": 42,
+     "source_sha256": "ca0b9ca1e31ffe160ad215f00c0900faacc3f0fe9e209a4cbbcabf098c474b21",
+     "en": "1F: Chief Researcher's Locker Room"
+    },
+    {
+     "offset": 17380222,
+     "bytes": 21,
+     "source_sha256": "c9b088c9d743c3a2c563fc89454797401d9087c1ea61839d49a5adafd31480b4",
+     "en": "The Four Who Fled"
+    },
+    {
+     "offset": 17380244,
+     "bytes": 24,
+     "source_sha256": "7a6d66beeda73aeb127a2baa34ccc29d9e706d8b12fa94037385257f6ae28456",
+     "en": "Late-Night Radio Station"
+    },
+    {
+     "offset": 17380269,
+     "bytes": 24,
+     "source_sha256": "a1733a1d4733a3a111801344be2280c8ef32ce79989a1f59016a6edd9d32e665",
+     "en": "Meeting Point with Risa"
+    },
+    {
+     "offset": 17380294,
+     "bytes": 21,
+     "source_sha256": "e22ed59a0a4544dc3d5fa1d2d60a592a007dae4a3a406b1e42bba7e72437539b",
+     "en": "Conference Room Plant"
+    },
+    {
+     "offset": 17380316,
+     "bytes": 24,
+     "source_sha256": "5895feb07b9d9c34bfcaffee8536ee35f9e1091ddaf1cb54cfa78b277ef3ef48",
+     "en": "Office Plant"
+    },
+    {
+     "offset": 17380341,
+     "bytes": 18,
+     "source_sha256": "8943977b07a0d6f47b54461b013d2f34be2190124504cbed94e18e4e1a6e9b5d",
+     "en": "Hananira 1-chome"
+    },
+    {
+     "offset": 17380360,
+     "bytes": 21,
+     "source_sha256": "869f011767ab58c47aac11e273f063e85b945d6c541d43755b04e7bd86994745",
+     "en": "Giant Shadow Weekly"
+    },
+    {
+     "offset": 17380382,
+     "bytes": 27,
+     "source_sha256": "07ac4736c6f4c9a8164520d2ff280d1882231e920535a15fa421eaf5423dfb0e",
+     "en": "Ebine Publishing West Exit"
+    },
+    {
+     "offset": 17380410,
+     "bytes": 24,
+     "source_sha256": "aeee02c86ca65949109d1af0d98371ed804f6b148d7362d9fd82db1f863f0911",
+     "en": "Hananira Conv. Store"
+    },
+    {
+     "offset": 17380435,
+     "bytes": 36,
+     "source_sha256": "5db0133a234264dc7085833736fd15f759e0874b35b4c5386bbe8b0059e0cc00",
+     "en": "Mizuna Shopping St. Vending Machine"
+    },
+    {
+     "offset": 17380472,
+     "bytes": 42,
+     "source_sha256": "3ab521e746d931c188de96077cc6691dc4b64d0066a9924de8ec8142fb928198",
+     "en": "On the Run from Those Men"
+    },
+    {
+     "offset": 17380515,
+     "bytes": 36,
+     "source_sha256": "c7ef2348c14236067be9814006ac8291bafbf228983b2d056b192bcb9ad57335",
+     "en": "Windswept Rooftop"
+    },
+    {
+     "offset": 17380552,
+     "bytes": 18,
+     "source_sha256": "d8c57d66c5c8dddbe6f55df49fc91b0129528822a10043b688672a2994dcb6e7",
+     "en": "Evacuated City"
+    },
+    {
+     "offset": 17380571,
+     "bytes": 48,
+     "source_sha256": "08c11fdb55c593bf882c7a8750e0650b01e9f5db2c1a16c5e2ff8344f008993d",
+     "en": "Outside a Store After the Rain"
+    },
+    {
+     "offset": 17380620,
+     "bytes": 45,
+     "source_sha256": "3ff574a4fd931bc0af3c53c0e18174a560dd0c85c40435f2b1d232d7972f33ff",
+     "en": "Ride the Motorcycle West!"
+    },
+    {
+     "offset": 17380666,
+     "bytes": 33,
+     "source_sha256": "74e03cc800694ec51bc27335fc169178afa95734c7dbb4c7bb61a1909fcf9d10",
+     "en": "Ride the Horse West!"
+    },
+    {
+     "offset": 17380700,
+     "bytes": 18,
+     "source_sha256": "c02b0ef4cbad61a3aeb7448decb9e3ff5ae85f2a1c21ba50447e84c38ee5d93f",
+     "en": "Run West!"
+    },
+    {
+     "offset": 17380719,
+     "bytes": 24,
+     "source_sha256": "a99fbbac0054e38df57c655e2cc88a7f39b5778e7195879348b2fc1881cf8ca3",
+     "en": "The Meeting Park"
+    },
+    {
+     "offset": 17380744,
+     "bytes": 39,
+     "source_sha256": "54f85c3ed2597b14fb8bae04f8a9dd796fb4b63fefca07cab083a348d6ad46d5",
+     "en": "By the Building I Fell From"
+    },
+    {
+     "offset": 17380784,
+     "bytes": 27,
+     "source_sha256": "78a3c96750953b4c0dab4a94ef26b0a36d455cf57fbc76d1c2243fc38a87347f",
+     "en": "Abandoned Patrol Car"
+    },
+    {
+     "offset": 17380812,
+     "bytes": 36,
+     "source_sha256": "073083ade903e31c3d347a9c62d195f9d7de1c7903c3199be32266394d630ed3",
+     "en": "Kick the Vent to the Next Room"
+    },
+    {
+     "offset": 17380849,
+     "bytes": 30,
+     "source_sha256": "38c83e7760b493da755a1a6b36339d461a487a5e8a22fea0b1641de8241b200f",
+     "en": "Saved Yuki at W&P"
+    },
+    {
+     "offset": 17380880,
+     "bytes": 36,
+     "source_sha256": "0937c5b7f592fc6292f16667a7904e536116916c5fec3c11a9a05109aba45986",
+     "en": "W&P Water Cooler"
+    },
+    {
+     "offset": 17380917,
+     "bytes": 27,
+     "source_sha256": "bd1b6a5abc8fa191afc34b3b07fab28d6e475d08af50e1611f8926ef6d9213a9",
+     "en": "Start from Stage 2"
+    },
+    {
+     "offset": 17380945,
+     "bytes": 27,
+     "source_sha256": "23f929a494bd0908b93a2094a2347eb90e14c2e8b4df0079d53bcf4624bad373",
+     "en": "Start from Stage 3"
+    },
+    {
+     "offset": 17380973,
+     "bytes": 27,
+     "source_sha256": "fd48edc7e60a9ce2b548de31ddb1a7c7bb7c0855b79da5f5526245c509256dad",
+     "en": "Start from Stage 4"
+    },
+    {
+     "offset": 17381001,
+     "bytes": 27,
+     "source_sha256": "4f5bb4361c54e7da1b1104947dfab68632fadc5483e122eca54ba0d618440d51",
+     "en": "Start from Stage 5"
+    },
+    {
+     "offset": 17381029,
+     "bytes": 27,
+     "source_sha256": "f764a2ab93343b35810f3d0f0924250214cc54b9e7bbc35021ca4bc6219be017",
+     "en": "Start from Stage 6"
+    },
+    {
+     "offset": 17381057,
+     "bytes": 27,
+     "source_sha256": "11ea0a95e25be290fe765431d7b05d507803159dd98fa909a784323e13235aa2",
+     "en": "Start from Stage 7"
+    },
+    {
+     "offset": 17381085,
+     "bytes": 27,
+     "source_sha256": "590bd0d4a41a883ace2a1ba33865d32b5474f33b09f104d20b34c02a144d0fdc",
+     "en": "Start from Stage 8"
+    },
+    {
+     "offset": 17381113,
+     "bytes": 27,
+     "source_sha256": "8afdc16bb1a96c77cc179683925200585d7dd5a6c947eee41ea8969a85dd7231",
+     "en": "Start from Stage 9"
+    },
+    {
+     "offset": 17381141,
+     "bytes": 36,
+     "source_sha256": "c96a1c62cdb739f5da69852dae52612cf1b46bf0c0035af2cacf2882072fdb3a",
+     "en": "Start from Stage 10-1"
+    },
+    {
+     "offset": 17381178,
+     "bytes": 39,
+     "source_sha256": "8fa102b49d9e35df64f23df09e84f0d55cdf125cbaac24b4983c2988181921b9",
+     "en": "Start from Stage 10-2A"
+    },
+    {
+     "offset": 17381218,
+     "bytes": 39,
+     "source_sha256": "76dfbe4b6b6ca86dbe7154f3e08e5df55ca7ab0512805165a3d3c78843ddd94c",
+     "en": "Start from Stage 10-2B"
+    },
+    {
+     "offset": 17381258,
+     "bytes": 30,
+     "source_sha256": "28163af409aed785bfe0cc424a24714625191b91a7d492b476a4c6aeeb52f4cb",
+     "en": "Start from Stage 11"
+    },
+    {
+     "offset": 17381289,
+     "bytes": 30,
+     "source_sha256": "0e095a31d06572cb34f79973b2608f6631f3383aec8a9142d9af836db8e1805d",
+     "en": "Start from Stage 12"
+    },
+    {
+     "offset": 17381320,
+     "bytes": 30,
+     "source_sha256": "33eaf2db19163b6355816a1947255e8320c83f036b7faafa02d28d607f5a98bc",
+     "en": "Start from Stage 13"
+    },
+    {
+     "offset": 17381351,
+     "bytes": 30,
+     "source_sha256": "39801882295dbc1b07ab331c8e6dcb48d62f15cd771fd07a60a5feffe69130f0",
+     "en": "Start from Stage 14"
+    },
+    {
+     "offset": 17381382,
+     "bytes": 30,
+     "source_sha256": "52de2bf9ebcf0792f7a20c24c2e3e97c47e38b482d12722709fc400950500141",
+     "en": "Start from Stage 15"
+    },
+    {
+     "offset": 17381413,
+     "bytes": 30,
+     "source_sha256": "1ac3d7944ab4fa2e536d82f6a418bc37e184109f4cc2777d28b66a77f55f2076",
+     "en": "Start from Stage 16"
+    },
+    {
+     "offset": 17381444,
+     "bytes": 30,
+     "source_sha256": "17496dce07116cdb064a18fa46e09aa7d8a28a5a36e37a9594e95cc5fe32cafc",
+     "en": "Start from Stage 17"
+    },
+    {
+     "offset": 17381475,
+     "bytes": 36,
+     "source_sha256": "80b46eb8e3f6bee60f1e2ab5b2e3c8d61f0045cbad8ba1b095e6016ff8239dcf",
+     "en": "New Game from Stage 1"
+    },
+    {
+     "offset": 17381512,
+     "bytes": 45,
+     "source_sha256": "ae870bdd6c3c7646b171aee1e49df39fa9004209104e5a03c9bec1a2990f4f42",
+     "en": "Checking for additional content..."
+    },
+    {
+     "offset": 17381558,
+     "bytes": 36,
+     "source_sha256": "352036b3919a52d09997eafce56a8a85c7621805c8b431a0841e689823783304",
+     "en": "Enter your given name."
+    },
+    {
+     "offset": 17381595,
+     "bytes": 36,
+     "source_sha256": "a267edd28935b2bd9e1ff86aa02ff6a41533854da3fa75f3f258d412fbbf2cec",
+     "en": "Enter your family name."
+    },
+    {
+     "offset": 17381642,
+     "bytes": 24,
+     "source_sha256": "1d6a1efdc8be725495b9cf0cca3c43d59fc3ed24de4049b3372bb77f65b96206",
+     "en": "Clear Bonus"
+    },
+    {
+     "offset": 17381851,
+     "bytes": 237,
+     "source_sha256": "fedcc20a60dc8461ca2464c8c2c59679737265035a0eca195fd292dbac300878",
+     "en": "Items you traded for with Shadow Coins this playthrough\\nwill be in the trade lineup from the start next time.\\n* Some items are only added when you\\n  replay as the same gender."
+    },
+    {
+     "offset": 17461957,
+     "bytes": 26,
+     "source_sha256": "aecd6deb14008c40fb2376c70c2abce73cf953b22fc8422753b7d57965e570d3",
+     "en": "Obtained %ITEM!"
+    },
+    {
+     "offset": 17609272,
+     "bytes": 15,
+     "source_sha256": "4ffd1bc1161572dec2be3bedbbeb970b810df130751dcdfd531da83aa9aacbff",
+     "en": "No Location"
+    },
+    {
+     "offset": 17609297,
+     "bytes": 6,
+     "source_sha256": "1ce5d91ba605cc9bd2554baa6f4807fb1d519785c5ce082f1fac3dcf6d49d8c4",
+     "en": "AM"
+    },
+    {
+     "offset": 17609304,
+     "bytes": 6,
+     "source_sha256": "43622b07368125745661da830caad952ce7dc951d9d8d23421fcc2410210ef68",
+     "en": "PM"
+    },
+    {
+     "offset": 17611211,
+     "bytes": 12,
+     "source_sha256": "d9b115e1a1a0edff6a3677b292400561c533234c4a1b9572d805898ffccdfa90",
+     "en": "Open"
+    },
+    {
+     "offset": 17611224,
+     "bytes": 12,
+     "source_sha256": "8b65fd8e27a5a92d5df95ca2c6bcae4c9b951f0cedfc0bc75ef9636da346b00a",
+     "en": "Close"
+    },
+    {
+     "offset": 17616367,
+     "bytes": 13,
+     "source_sha256": "6fb91ecdc523fabc0f1dfa7debc388240af077671eb88897c1b2c0503c8220f7",
+     "en": "Stage 10-1"
+    },
+    {
+     "offset": 17616437,
+     "bytes": 14,
+     "source_sha256": "2093a469fa1ac61791c1e53e41c08f99c27309aa783e67c41f505436db86a58e",
+     "en": "Stage 10-2A"
+    },
+    {
+     "offset": 17616452,
+     "bytes": 14,
+     "source_sha256": "c79f8177005f6ff4cea7a23959e70663c7f6dee612521887c3356832705fdf5a",
+     "en": "Stage 10-2B"
+    },
+    {
+     "offset": 17616467,
+     "bytes": 33,
+     "source_sha256": "5e4198d1e82f55eee6d1ac69f88b6fa745692b4f5a93ce54ecc2ac7f991ac6b9",
+     "en": "Giant Shadow in the Night City"
+    },
+    {
+     "offset": 17616501,
+     "bytes": 18,
+     "source_sha256": "ea298186c7802ba6c0bd5daa6809ab93afcf7351f1848b524a4d78fce518c720",
+     "en": "Shadow Below"
+    },
+    {
+     "offset": 17616520,
+     "bytes": 24,
+     "source_sha256": "e20fd9b085f80f02f4605359102b608b26fcdec4a462529a09c921e8cecdb50e",
+     "en": "Shadow Over the Bridge"
+    },
+    {
+     "offset": 17616545,
+     "bytes": 21,
+     "source_sha256": "8fdda62400a0f263edd000d28e8d24cfaa9ac0dee56b4dc070ea612350aaffbc",
+     "en": "Shadow That Steals"
+    },
+    {
+     "offset": 17616567,
+     "bytes": 39,
+     "source_sha256": "8f7abd764d0f0046e3d724444b8072e734d7495c85ebd998f21d25bd0e51011b",
+     "en": "Shadow of Uncontrollable Urges"
+    },
+    {
+     "offset": 17616607,
+     "bytes": 33,
+     "source_sha256": "0889e573c0b4a599e3e8d512a0eb5a307254d76940cc9208347cd4a649be32b1",
+     "en": "Night Sea, Waves, and Shadow"
+    },
+    {
+     "offset": 17616641,
+     "bytes": 30,
+     "source_sha256": "e62c3da5b574b18401efc2de096e405814da20c681e9bea60f3fd3da41fe33b1",
+     "en": "Shadows in Fierce Struggle"
+    },
+    {
+     "offset": 17616672,
+     "bytes": 24,
+     "source_sha256": "c340875888bfd1172154780a30901f99b761b930f6e7d8921cbb5f672f8116e0",
+     "en": "Ominous Golden Shadow"
+    },
+    {
+     "offset": 17616697,
+     "bytes": 45,
+     "source_sha256": "4367514a783b740ce84ba7580736b4bbcddce1c2d29576d1c2b262f0fcbdec39",
+     "en": "Clashing Convictions, Colliding Shadows"
+    },
+    {
+     "offset": 17616743,
+     "bytes": 42,
+     "source_sha256": "6f82bb2fd61d82dce9d12646679d4eaf2692d93d8b341835197d59bb741da917",
+     "en": "Shadow with a Voracious Appetite"
+    },
+    {
+     "offset": 17616786,
+     "bytes": 33,
+     "source_sha256": "0bd6ea6b620296c76ee4d9feeb3fed7ea1aa59a21d81a76e90feead63d51252c",
+     "en": "A Shadow Right Beside You"
+    },
+    {
+     "offset": 17616820,
+     "bytes": 30,
+     "source_sha256": "caf4274cdc6f6aa795a684d8a07e0fdbdce543c2bfdcc78c63a29ea6251d78b3",
+     "en": "Shadow That Cuts Anything"
+    },
+    {
+     "offset": 17616851,
+     "bytes": 33,
+     "source_sha256": "2f23be3b8da065b4a41ad16b571f3fe2593a25998a039f05ad161b972f4b32fe",
+     "en": "Shadow That Closes In"
+    },
+    {
+     "offset": 17616885,
+     "bytes": 39,
+     "source_sha256": "21c2b7a3b5fafbdc88e6ca4634478e4fe1a0af9da98e6cb929ee8c49d69c3010",
+     "en": "Shadow That Tramples All"
+    },
+    {
+     "offset": 17616925,
+     "bytes": 42,
+     "source_sha256": "46f6e244ba4e23a4fb3d5e58524b8effdfd603230deb669a2560d5389e16781b",
+     "en": "Great Shadow Coming at You"
+    },
+    {
+     "offset": 17616968,
+     "bytes": 36,
+     "source_sha256": "35139f2c91929317573a1c78c3c0f2f95e2cb4f5752115202da0f0be54413770",
+     "en": "Giant Shadow from the Sky"
+    },
+    {
+     "offset": 17617005,
+     "bytes": 21,
+     "source_sha256": "2d9a88bcc959711eba4da313d19595cb00cc953287926f95a58c5af089c614e1",
+     "en": "City in Shadow"
+    },
+    {
+     "offset": 17617027,
+     "bytes": 27,
+     "source_sha256": "e131187a761bd0f51047659cb59994d70e483eb74741025a28ac8cf18a5f48f6",
+     "en": "Shadow Soaring High"
+    },
+    {
+     "offset": 17617055,
+     "bytes": 24,
+     "source_sha256": "e215cf2f6890cdf40969abfd1ee931e785020540eb5b88f8cf693b00447222f6",
+     "en": "Shadow Slipping Inside"
+    },
+    {
+     "offset": 17618511,
+     "bytes": 12,
+     "source_sha256": "7b2864f39f0e66b3c61d05d3cb7165bc83b148f9c74d2403d2460c6b4ce32dbb",
+     "en": "Reply..."
+    },
+    {
+     "offset": 17618524,
+     "bytes": 12,
+     "source_sha256": "360ef9797998f438d7a5ccc554ff18cd5b23edad34673d4145e8aae46fdcad06",
+     "en": "Pick a Reply"
+    },
+    {
+     "offset": 17618549,
+     "bytes": 6,
+     "source_sha256": "df3535a64718d11cf8080216b26b76d9139828438c59a75569744ab2d399a7a8",
+     "en": "OK"
+    },
+    {
+     "offset": 17618556,
+     "bytes": 6,
+     "source_sha256": "e721d064de4863b29d2b5fd328338b20a076e3636d48d7ff1f13a2bda2b3685f",
+     "en": "Select"
+    },
+    {
+     "offset": 17618563,
+     "bytes": 12,
+     "source_sha256": "5dfb5809afa5a7ef811641aed38d882b1f77f8c127d21fdec9b6fd0baf5035b9",
+     "en": "Send Reply"
+    },
+    {
+     "offset": 17621409,
+     "bytes": 10,
+     "source_sha256": "f76688c3d0db51da390c0b5f4128ba2df1154b9bf13c9a06c93cbcb15c03510c",
+     "en": "[i1]Equip"
+    },
+    {
+     "offset": 17621879,
+     "bytes": 15,
+     "source_sha256": "e42eb9aecbe11bf7a7786cc503875c6a7c73b20dea1eaea2268ca9518fc7850e",
+     "en": "%d/%d/%d"
+    },
+    {
+     "offset": 17621940,
+     "bytes": 25,
+     "source_sha256": "6de4940a967331115fcc2cb43ab852edd90d312bc2d3380556fbc6aafa80801a",
+     "en": "%d/%d  %d:%02d"
+    },
+    {
+     "offset": 17622428,
+     "bytes": 31,
+     "source_sha256": "d2eacac46a6ed963a1c1a79fb7b4eabf01d3a4dff66c53268b41520968d0d86f",
+     "en": "%d/%d/%d  %d:%02d"
+    },
+    {
+     "offset": 17624977,
+     "bytes": 54,
+     "source_sha256": "d93350e3f6e82b648fce9e08902539964738fbb03e149a6fdc00904618ff3f1d",
+     "en": "[Video] Giant Monster Appears Out of Nowhere"
+    },
+    {
+     "offset": 17625101,
+     "bytes": 24,
+     "source_sha256": "f065fa48f320ded8c8c4fc5295b2075df48644a49740dc0dfc26250246d44046",
+     "en": "Obtained %ITEM!"
+    },
+    {
+     "offset": 17628912,
+     "bytes": 9,
+     "source_sha256": "567382d1e69c560a123d1f1355866f5a4bb95b9840994e6e9bde1b29494f67e9",
+     "en": "Sold Out"
+    },
+    {
+     "offset": 17628926,
+     "bytes": 74,
+     "source_sha256": "e2f18144b34b30ad81ea4ed8b4dc70ed340b4594f008de9138f19199515b5e57",
+     "en": "Sell [#ff88ff88]%s[/#] x%d?\\nAre you sure?"
+    },
+    {
+     "offset": 17629025,
+     "bytes": 33,
+     "source_sha256": "78131fc0a7fe1279dd5ffaa5e60b1f487d62a53438509e25dcdbc74b4dffb54f",
+     "en": "Not enough money."
+    },
+    {
+     "offset": 17629059,
+     "bytes": 69,
+     "source_sha256": "2fa85fea392401e7faca52ee2523239cac66165455b7f3ff2ead68031a755a7c",
+     "en": "You can't carry any more of this item."
+    },
+    {
+     "offset": 17629129,
+     "bytes": 74,
+     "source_sha256": "b771074b67271b2bb210840a1e3332b3a5c70aa6a473c45b930f89e87da9d775",
+     "en": "Buy [#ff88ff88]%s[/#] x%d?\\nAre you sure?"
+    },
+    {
+     "offset": 17629237,
+     "bytes": 17,
+     "source_sha256": "77dcab014a5dd8d4feba04e86958592204941cce8b0914a9c94708e3ff114971",
+     "en": "Restores all HP"
+    },
+    {
+     "offset": 17629426,
+     "bytes": 36,
+     "source_sha256": "a3ce75f5ba42003459eeff00ad98cf1abf10f0ca0f87ad8cc5c0914cd96c33d1",
+     "en": "Enter the quantity to sell."
+    },
+    {
+     "offset": 17629552,
+     "bytes": 66,
+     "source_sha256": "d6078c947ce35966f3bcda01ef24a1c1c96675199a16bd3c8360fe89144df56d",
+     "en": "Repair the outfit you're wearing?"
+    },
+    {
+     "offset": 17629619,
+     "bytes": 30,
+     "source_sha256": "c282ff45d3fad1199bc543ee2bbbcf0c916c872edde862fec0d5de026536786f",
+     "en": "Go ahead with the repair?"
+    },
+    {
+     "offset": 17632267,
+     "bytes": 12,
+     "source_sha256": "3a7e28881ee4532c2a24f650595566c226b224ea1d6a5c6ad305d87f1d0983e1",
+     "en": "Unequip"
+    },
+    {
+     "offset": 17632280,
+     "bytes": 6,
+     "source_sha256": "1ae67cfcaf80a821cd0255763b8224b0743b26acd16a205b6883f8f786186cf6",
+     "en": "Equip"
+    },
+    {
+     "offset": 17632287,
+     "bytes": 6,
+     "source_sha256": "12413235d333fe11016da623fa1f439425b42c22b0cb246387bb88ad546d0952",
+     "en": "Use"
+    },
+    {
+     "offset": 17632294,
+     "bytes": 6,
+     "source_sha256": "818417a13955f3a116cfb32e8d311d2a958241771381d8b1d5b02354016f90ef",
+     "en": "Read"
+    },
+    {
+     "offset": 17632301,
+     "bytes": 9,
+     "source_sha256": "e547903f387947397b41e08c864e666e407d7db8f1be1e44f0c9680e3cc31933",
+     "en": "Mail"
+    },
+    {
+     "offset": 17632311,
+     "bytes": 6,
+     "source_sha256": "9652e7b5f69922bdce983e3534b7b370bd965dce40e4f7ec2f39a443eed006d6",
+     "en": "Info"
+    },
+    {
+     "offset": 17632332,
+     "bytes": 33,
+     "source_sha256": "e2f1d62eb11c4b31a1c345e23d1a51245ac95d43bb9d6125bdcf6365487b1253",
+     "en": "HP loss cut to %d%% for a while"
+    },
+    {
+     "offset": 17632366,
+     "bytes": 33,
+     "source_sha256": "c2a4b070249c9f84956d1e7f739177316ccd365c445ef047372aa393e108fbd5",
+     "en": "ST loss cut to %d%% for a while"
+    },
+    {
+     "offset": 17632400,
+     "bytes": 11,
+     "source_sha256": "d38e6f3ec060c63ca4042dc51dc682b987de9d9dcc529aa69e9098e04decbe17",
+     "en": "Full HP"
+    },
+    {
+     "offset": 17632412,
+     "bytes": 13,
+     "source_sha256": "76a772353b7359fa7e9f3d0812318becd6d4f57e8b7dc48f932601c9d4ef5908",
+     "en": "+%d HP"
+    },
+    {
+     "offset": 17632570,
+     "bytes": 41,
+     "source_sha256": "8d5ff3b9e948080b93783bb7e2ce77c391bd57a18f4afbe2eaabee45f7f33462",
+     "en": "Use [#ff00ff00]%s[/#]?"
+    },
+    {
+     "offset": 17632612,
+     "bytes": 13,
+     "source_sha256": "7d1dc0b0e87d83f64aecb9f645502b2e09d350bb866e2966060152aa9c5fc52c",
+     "en": "%d -> %d"
+    },
+    {
+     "offset": 17632716,
+     "bytes": 57,
+     "source_sha256": "a4c468e01aa6b2ce53474642c7e352221b485babf561024b34ef09c236a623d0",
+     "en": "Max HP  <NOW_HP> -> <NEW_HP>  (<DIFF_HP>)"
+    },
+    {
+     "offset": 17632774,
+     "bytes": 57,
+     "source_sha256": "fc4fa168b496711d3c9f9fd282735f1b459e4bd08aefe503d142935438ae47a8",
+     "en": "Max ST  <NOW_ST> -> <NEW_ST>  (<DIFF_ST>)"
+    },
+    {
+     "offset": 17632892,
+     "bytes": 57,
+     "source_sha256": "6087478944392a3268a70fd1a9e94b8826fa57e0dc7094181f0d4950d1b734d1",
+     "en": "HP loss cut to <PERCENT_HP>% for a while"
+    },
+    {
+     "offset": 17632950,
+     "bytes": 57,
+     "source_sha256": "1818c86f72e6b72c2c6861a945f39a6c359301ad97a7497314d8a92bef6cc362",
+     "en": "ST loss cut to <PERCENT_ST>% for a while"
+    },
+    {
+     "offset": 17633034,
+     "bytes": 32,
+     "source_sha256": "b5746f3367369c7d9820355e5648ef2aaeaa10bd33cf00cbbc977ef3b310c0da",
+     "en": "Restores <RECOVERY_VAL> HP"
+    },
+    {
+     "offset": 17633067,
+     "bytes": 21,
+     "source_sha256": "f2019fbb38b93a63375b91a872c40c7822f5552c119fa29029f8188c8f49045e",
+     "en": "Restores all HP"
+    },
+    {
+     "offset": 17633516,
+     "bytes": 15,
+     "source_sha256": "bc30238ae718342277bb5f578093423884c71fdad429e91a172e60cc997ec80c",
+     "en": "Status"
+    },
+    {
+     "offset": 17634557,
+     "bytes": 7,
+     "source_sha256": "5b92397068212b027f63256f916c37f53618f513ad30a2341632e791de14ca98",
+     "en": "St10-1"
+    },
+    {
+     "offset": 17634565,
+     "bytes": 8,
+     "source_sha256": "b8943f6a8954ee661f75d6778f811c364c0d299e90252382f2dd8cb228d538de",
+     "en": "St10-2A"
+    },
+    {
+     "offset": 17634574,
+     "bytes": 8,
+     "source_sha256": "4aa8b38613938a46d85d48e59d2d39af174c2318da1c4099e6fcbbdb72248646",
+     "en": "St10-2B"
+    }
+   ]
+  }
+ ]
+}

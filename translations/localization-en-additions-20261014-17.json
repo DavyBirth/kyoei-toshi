@@ -12,14 +12,14 @@
         {
           "id": "r6/c3",
           "source_text_sha256": "9908a80f0f1defa36bfa71dfb7c8758122a984614336678daf8abf83f1bc4431",
-          "en": "The young person suddenly stopped.\\nThen casually looked up at the sky.\\nThis story begins with such an ordinary scene.\\nFrom the prologue to A City Sinking Beneath Giant Shadows, by Hideyasu Otsuka.\\n",
+          "en": "The young person suddenly stopped\\nand glanced up at the sky.\\nThis story begins with a scene just like any other.\\n  - from the prologue of \"A City Sinking into Giant Shadows\" by Hideyasu Otsuka\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r6/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r6/c4",
           "source_text_sha256": "9908a80f0f1defa36bfa71dfb7c8758122a984614336678daf8abf83f1bc4431",
-          "en": "The young person suddenly stopped.\\nThen casually looked up at the sky.\\nThis story begins with such an ordinary scene.\\nFrom the prologue to A City Sinking Beneath Giant Shadows, by Hideyasu Otsuka.\\n",
+          "en": "The young person suddenly stopped\\nand glanced up at the sky.\\nThis story begins with a scene just like any other.\\n  - from the prologue of \"A City Sinking into Giant Shadows\" by Hideyasu Otsuka\\n",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r6/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -266,14 +266,14 @@
         {
           "id": "p0/k126",
           "source_text_sha256": "6d0fccc8cea6181ab53bc85b936875d8471f3fda45f57b5e8fcd7cf5c44b279e",
-          "en": "(She's someone very precious to me...\nYuki Kono.)",
+          "en": "(She's someone really important to me...\nYuki Kono.)",
           "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k126; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k128",
           "source_text_sha256": "d97efcfc9d7dd4fa2b7dc73b7bb91dc8eff54399814e3fc668c0028fb61289f9",
-          "en": "(She's someone very precious to me...\nYuki Kono.)",
+          "en": "(She's someone really important to me...\nYuki Kono.)",
           "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k128; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -301,7 +301,7 @@
         {
           "id": "p0/k136",
           "source_text_sha256": "4a1288b712c3f8097e49693c25eeb4c94a285a3f15eb4e41d442eefb7dcb7ec6",
-          "en": "(...I don't really know her... Her name was...\nYuki Kono... I think?)",
+          "en": "(...I don't really know much about her... Her name was...\nYuki Kono... I think?)",
           "notes": "English draft imported from audited private workspace, translate-en-0018.json:p0/k136; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -361,98 +361,98 @@
         {
           "id": "p0/k91",
           "source_text_sha256": "81a3fe6054fe8d1ccaca781e5ecaeabcc41a15888707b863e270ff170c8472ca",
-          "en": "＜Career and Achievements＞\n・Requested favors from relevant officials in connection with weapons sales by Rijesu in the home country.\n・Assassinated opponents of introducing weapons from North American Boruhesu to the European revolutionary organization Coffin.",
+          "en": "＜Background & Record＞\n- Lobbied officials for Rijesu's arms sales at home\n- Assassinated opponents of Boruhesu arms going to Coffin",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k91; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k93",
           "source_text_sha256": "9a788f4f5e3137ee2bb13673335f430039156b7ca7af7258ffbb7a1110500803",
-          "en": "・Guarded weapons shipments in Kanama, Central America; won eighteen engagements against antigovernment forces.\n・Protected leaders of the North American revolutionary organization Grave from an attack by government forces.\n・Tracked down and assassinated leaders of Mezara, an antigovernment organization in the Middle Eastern country of Yaguma.",
+          "en": "- Guarded arms shipments in Kanama; won 18 clashes with rebels\n- Protected Grave leaders from a government raid\n- Hunted down and killed Mezara leaders in Yaguma",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k93; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k99",
           "source_text_sha256": "4782eaf7601418787baaabec98dd32e816845e9996c4e6af11e596beadc09cb0",
-          "en": "＜Career and Achievements＞\nA former detective, once known as the 'Tiger of Interrogation.'\n・Interrogated the leader of the antigovernment organization Buiro and obtained the location of its hideout.",
+          "en": "＜Background & Record＞\nEx-detective once called \"the Interrogation Tiger.\"\n- Got the Buiro leader to give up their hideout",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k99; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k101",
           "source_text_sha256": "373d3ced3b871b89aa9d08e9307fd7905183a0e598ffecad2f6356e7c2795896",
-          "en": "・Obtained the locations of Mezara leaders, an antigovernment organization in the Middle Eastern country of Yaguma.\n・Obtained the location of the prince of Sanon, abducted by an antigovernment organization.",
+          "en": "- Located Mezara's leaders in Yaguma\n- Located the prince of Sanon, kidnapped by rebels",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k101; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k107",
           "source_text_sha256": "c7a52b1f88e894fe5678cf17e1c10297fc5d5e2d16583ab192358824b744bf14",
-          "en": "＜Career and Achievements＞\n・Entered the vault at Miyato Bank's Sakura Branch and seized documents.\n・Infiltrated the hideout of the antigovernment organization Tenebris and rescued an important government official.",
+          "en": "＜Background & Record＞\n- Broke into the Miyato Bank Sakura Branch vault, stole papers\n- Infiltrated the Tenebris hideout, rescued a VIP",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k107; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k115",
           "source_text_sha256": "2dc51b2e2a743f9c3332fee590c7823d6da7183f0797d425515ac273c40a67d9",
-          "en": "・Infiltrated and disabled the security system of the antigovernment organization Tenebris.\n・Broke into computers in the Otsu Army's operations room and disrupted information.",
+          "en": "- Hacked and disabled Tenebris's security system\n- Hacked the Otsu Army war room and scrambled its data",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k115; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k123",
           "source_text_sha256": "9d4e3ff7244ccad54a1d0ccd4805c73964d81b508581c21c6a6e6a6e6903c844",
-          "en": "・Created poison used to assassinate an Otsu Army officer.\n・Created poison used to assassinate an executive at a competitor of European Sarukofa.",
+          "en": "- Made the poison used to kill an Otsu Army officer\n- Made the poison used to kill a Sarukofa rival's executive",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k123; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k131",
           "source_text_sha256": "2347cac8a62ae307520e2a8373c40be828b3a5c27cf952e2d1ab65b7a61223d4",
-          "en": "・Infiltrated a shipboard hideout of the European antigovernment organization Tenebris and rescued an important government official.\n・Guarded leaders of the South American antigovernment organization Sombra.",
+          "en": "- Infiltrated Tenebris's ship hideout, rescued a VIP\n- Guarded leaders of the South American rebel group Sombra",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k131; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k139",
           "source_text_sha256": "f37cccb94a5be1c9127af1915e1d9e09a9626e17b7fb53402a0230b65448a740",
-          "en": "・Repelled ten agents of a rival company in connection with weapons sales by North American Taburuto.\n・Assassinated four executives of a rival company in connection with European Kisuton's expansion into new markets.\n・Rescued a leader of the revolutionary organization Pechimachi held by the government, and repelled pursuing troops.",
+          "en": "- Fought off 10 rival agents for Taburuto's arms sales\n- Killed 4 rival executives to grow Kisuton's market\n- Freed a Pechimachi leader from prison, beat off pursuers",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k139; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k145",
           "source_text_sha256": "713ab9a4cc4667bcac4d1eabd3af5e240188aa533ed12cf82154329ce5c1078b",
-          "en": "＜Career and Achievements＞\n・Successfully sniped two Mezara leaders, an antigovernment organization in the Middle Eastern country of Yaguma.\n・Successfully sniped three leaders of the European antigovernment organization Buiro.",
+          "en": "＜Background & Record＞\n- Sniped two Mezara leaders in Yaguma\n- Sniped three Buiro leaders in Europe",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k145; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k151",
           "source_text_sha256": "42b8534834f230fd7c7c27b8d9fe0ad4f457fba9c6ed3e02d52b9d8088b14adb",
-          "en": "＜Career and Achievements＞\n・Investigated the movements of executives at a competitor of European Dekisuto.\n・Protected an executive of South American Sakuwuru targeted by agents from a rival company.",
+          "en": "＜Background & Record＞\n- Tracked the movements of a Dekisuto rival's executives\n- Guarded a Sakuwuru executive targeted by rival agents",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k151; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k153",
           "source_text_sha256": "241daf528ca5eac22a4b84df8ae908c4a132733c89d4fa92ae8e165be1237888",
-          "en": "・Located and protected ten beloved pet dogs that had run away from the chancellor of the Middle Eastern country of Eho.",
+          "en": "- Found and rescued ten runaway dogs belonging to Eho's chancellor",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k153; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k267",
           "source_text_sha256": "f17c40610042671fc5cc677ebb715ab037c1d3ab695a0dde3a9fe5120cf15a4b",
-          "en": "Inside are color-printed documents bearing the cover title\n\"Candidate Weapons List Requested by the Otsu Army.\"",
+          "en": "Inside is a color printout titled\n\"Weapon Candidates Requested by the Otsu Army.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k267; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k269",
           "source_text_sha256": "d85893db0245bcc99ead5683000dc8ae617f7b99fb1c1c4ecd2e70eadfb8d3df",
-          "en": "Read \"Candidate Weapons List Requested by the Otsu Army.\"",
+          "en": "(Read \"Weapon Candidates Requested by the Otsu Army\")",
           "notes": "English draft imported from audited private workspace, translate-en-0023.json:p0/k269; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -478,7 +478,7 @@
         {
           "id": "p0/k256",
           "source_text_sha256": "542da5e3e023ab7e23481bdbbb941afb14765d6f1789655768958df4f060a9d5",
-          "en": "Turn right at that traffic light to reach Azami 1-chome Station.\nThe subway station where we first met.",
+          "en": "Turn right at that light and you'll hit Azami 1-chome Station.\nThe subway station where we first met.",
           "notes": "English draft imported from audited private workspace, translate-en-0089.json:p0/k256; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -491,14 +491,14 @@
         {
           "id": "p0/k160",
           "source_text_sha256": "18e2028df09e53db1c4ab7f9e0af774b6d9347685b2e7ca4c8aa2b51ab369624",
-          "en": "Why take such a risk?\nWhat is Kamio, the president of W&P Consulting, really after?",
+          "en": "Why take a risk like this?\nWhat's Kamio, W&P Consulting's president, really after?",
           "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k160; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k166",
           "source_text_sha256": "9c50d48c81ca1b3adf2eec4fd152cab5730b15b2eb8ed22e9a70bd17e8a329be",
-          "en": "Then you should ask Kamio herself.",
+          "en": "Then why not ask Kamio yourself?",
           "notes": "English draft imported from audited private workspace, translate-en-0081.json:p0/k166; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -531,7 +531,7 @@
         {
           "id": "p0/k279",
           "source_text_sha256": "0f304b58c22a8b3360e0bb3ebd3563acab2eb7c15e1ab8637b3ea773ab33b253",
-          "en": "Head to Hinageshidai Station",
+          "en": "Head to Hinageshidai Station.",
           "notes": "English draft imported from audited private workspace, translate-en-0004.json:p0/k279; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -565,28 +565,28 @@
         {
           "id": "p0/k200",
           "source_text_sha256": "3486f06a3c2fc77d5ba3a10ec1f26af928110df81fd5804d7e8f0185dee25fe3",
-          "en": "One of our pursuers has appeared again. We must reach the Ingram as quickly as possible!",
+          "en": "One of our pursuers is back on our tail. We have to get to the Ingram, fast!",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k200; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k201",
           "source_text_sha256": "0635331a6b5eaf472be3363487a234955cf1b0adad586a0ec237d933928da7fd",
-          "en": "The Ingram rescued us, allowing us to get down from the tower safely.",
+          "en": "The Ingram rescued us, and we got down from the tower safely.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k201; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k208",
           "source_text_sha256": "ca1ee3d3e528102aa909986f385d25aff94db6e20b001dd140898374e6527865",
-          "en": "After escaping the warehouse, we encountered an Ingram. Why are they here?",
+          "en": "Right after we got out of the warehouse, we ran into an Ingram. What are they doing here?",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k208; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k271",
           "source_text_sha256": "2d9b8a368f1bead4d0d429a338d32dd4500aed8bc352c2c0316ced3a439ead28",
-          "en": "I met the riot police officer from our earlier escape by vehicle again. Apparently, the giant plant is likely to burst, and we must leave this area immediately. Travel by vehicle.",
+          "en": "I ran into the riot officer from when we escaped by car. The giant \"plant\" is likely to burst, so we have to leave the area right away. Time to ride.",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k271; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -620,7 +620,7 @@
         {
           "id": "p0/k172",
           "source_text_sha256": "33517758062208248b62ffb8c6e4df6d1924db645da951339e9f3c2664b0561a",
-          "en": "Outside Acacia Department Store",
+          "en": "Outside Akashia Department Store",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k172; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -669,7 +669,7 @@
         {
           "id": "p0/k182",
           "source_text_sha256": "8edcbc7c2d88274bb062e14695bdf0c0a415cef689cf46e6480ebb9c6b221d53",
-          "en": "Clover Mokuren Street Store",
+          "en": "Clover Mokuren Street Branch",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k182; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -718,28 +718,28 @@
         {
           "id": "p0/k196",
           "source_text_sha256": "cfd836026fa0fe3b8b75ad059c4029483ec7e36867f983c0215d855f1cbb7c8f",
-          "en": "Inside a Miyato Electric Railway Tozai Line Train",
+          "en": "Miyato Electric Railway Tozai Line, Train Car",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k196; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k197",
           "source_text_sha256": "329f670b44e916ef2782dd862c567aecd29a7529a0119c28173beb8b4893893d",
-          "en": "Miyato Electric Railway Tozai Line Elevated Tracks",
+          "en": "Miyato Electric Railway Tozai Line, Elevated Tracks",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k197; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k198",
           "source_text_sha256": "d2936100b5c80f565032855a8eddd99c19e7b62b37c492b8226cf57eeea361a5",
-          "en": "Miyato Electric Railway Tozai Line Railway Bridge",
+          "en": "Miyato Electric Railway Tozai Line, Railway Bridge",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k198; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k199",
           "source_text_sha256": "8ebd9eccb5aa02e6a4f214c730c7d6ed15a4df626e97d938cdeee969a2e0df0f",
-          "en": "Near the Next Station on the Miyato Electric Railway Tozai Line",
+          "en": "Tozai Line, Near the Next Station",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k199; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -809,28 +809,28 @@
         {
           "id": "p0/k215",
           "source_text_sha256": "8943977b07a0d6f47b54461b013d2f34be2190124504cbed94e18e4e1a6e9b5d",
-          "en": "Hananira Town 1-chome",
+          "en": "Hananira-cho 1-chome",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k215; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k217",
           "source_text_sha256": "561e93a31ad767d09da43a6f5ffc244763d2eff2d08044315e8fd86d07e03bc2",
-          "en": "Hananira Town Intersection",
+          "en": "Hananira-cho Intersection",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k217; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k218",
           "source_text_sha256": "29236f793496deb981938da90d1c54041e11d54c7b2182553f642e828cf19d87",
-          "en": "Hananira Town Sewers",
+          "en": "Hananira-cho Sewers",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k218; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k219",
           "source_text_sha256": "02712299ee010e048e39416b5944ac9ad9c1cca10de25fcd5237f4624c0295b0",
-          "en": "Clover Hananira West Store",
+          "en": "Clover Hananira West Branch",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k219; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -871,21 +871,21 @@
         {
           "id": "p0/k96",
           "source_text_sha256": "afa4494e29ebe358dfe493ac4ff64db29d8743b7da5c2af5eb5199a966c5fb6b",
-          "en": "Shortly after 6 p.m. today, an unknown giant plant approximately one hundred meters tall appeared at Acacia Department Store in Sakura Ward. Authorities are investigating a possible connection with the crustacean-like creatures that appeared around the same time inside nearby Azami 1-chome Station.\nBecause the area had already been closed off following attacks on people by unknown crustacean-like creatures at the nearby municipal subway station, no injuries are believed to have resulted from this incident.\n\nWitnesses say cracks suddenly appeared in the department store building, followed by something resembling an enormous flower bursting through the roof. Authorities are questioning the company responsible for managing the building.",
+          "en": "Shortly after 6 p.m. today, an unknown giant plant approximately one hundred meters tall appeared at Akashia Department Store in Sakura Ward. Authorities are investigating a possible connection with the crustacean-like creatures that appeared around the same time inside nearby Azami 1-chome Station.\nBecause the area had already been closed off following attacks on people by unknown crustacean-like creatures at the nearby municipal subway station, no injuries are believed to have resulted from this incident.\n\nWitnesses say cracks suddenly appeared in the department store building, followed by something resembling an enormous flower bursting through the roof. Authorities are questioning the company responsible for managing the building.",
           "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k96; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k98",
           "source_text_sha256": "f49aa7722eda9eca7a20ba5b24128ac77425ce01532de347d03f7f03a3aca72d",
-          "en": "In connection with the attacks on people by unknown crustacean-like creatures at municipal subway Azami 1-chome Station, an enormous plant-like organism has also been found inside the station.\nAccording to passengers who escaped, it has spread root-like structures several meters thick throughout the station and adjoining underground shopping area. Many people remain trapped after these structures blocked their escape routes.\n\nAuthorities are investigating whether this organism forms the roots of the enormous plant that burst through the nearby department store's roof. They also announced that the various giant creatures appearing in the area will collectively be named 'Legion.'",
+          "en": "In connection with the attacks on people by unknown crustacean-like creatures at municipal subway Azami 1-chome Station, an enormous plant-like organism has also been found inside the station.\nAccording to passengers who escaped, it has spread root-like structures several meters thick throughout the station and adjoining underground shopping area. Many people remain trapped after these structures blocked their escape routes.\n\nAuthorities are investigating whether this organism forms the roots of the enormous plant that burst through the nearby department store's roof. They also announced that the various giant creatures appearing in the area will collectively be named \"Legion.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k98; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k104",
           "source_text_sha256": "f57e9f9cbb3e5ca189dd000c0fd1dd95e09391fd32d0dc7e03a8f29dc1251b32",
-          "en": "Around 7:30 p.m. today, numerous witnesses reported a giant creature descending from the sky near Acacia Department Store. Riot police and firefighters had been deployed because of the enormous plant, and the creature arrived while they were directing traffic.\nThe government called it Gamera and maintained a watch. However, after approaching the enormous plant at the department store, it reportedly rose into the sky again and disappeared.\n",
+          "en": "Around 7:30 p.m. today, numerous witnesses reported a giant creature descending from the sky near Akashia Department Store. Riot police and firefighters had been deployed because of the enormous plant, and the creature arrived while they were directing traffic.\nThe government called it Gamera and maintained a watch. However, after approaching the enormous plant at the department store, it reportedly rose into the sky again and disappeared.\n",
           "notes": "English draft imported from audited private workspace, translate-en-0041.json:p0/k104; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1078,7 +1078,7 @@
         {
           "id": "p0/k72",
           "source_text_sha256": "c13eb0483293d81dc4ac92d2e7c4e431e4d6fef45ab10c82578c4b1295488b92",
-          "en": "Footage posted online before dawn today shows a giant creature walking along the main road, Ayame Street. It reportedly headed toward the enormous plant at Acacia Department Store.\n",
+          "en": "Footage posted online before dawn today shows a giant creature walking along the main road, Ayame Street. It reportedly headed toward the enormous plant at Akashia Department Store.\n",
           "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k72; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1092,14 +1092,14 @@
         {
           "id": "p0/k76",
           "source_text_sha256": "83778a61009bfdc7833fd2066b43d3ef38b1ca6db5e3f198fe7c9bfc777260a1",
-          "en": "Before dawn today, an evacuation order was issued for the area around Azami 1-chome Station.\nCreatures appearing near the station since the previous night had devastated the neighborhood. However, reports that the enormous plant attached to Acacia Department Store would burst prompted the Self-Defense Forces to order an evacuation.\n",
+          "en": "Before dawn today, an evacuation order was issued for the area around Azami 1-chome Station.\nCreatures appearing near the station since the previous night had devastated the neighborhood. However, reports that the enormous plant attached to Akashia Department Store would burst prompted the Self-Defense Forces to order an evacuation.\n",
           "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k76; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k86",
           "source_text_sha256": "5fdd1b34627d0778343c33dc4a404df840a87d45a30ee22c6e0d4cf939661477",
-          "en": "We have learned that a horse escaped from a racecourse ten kilometers from Acacia Department Store the day before the evacuation order concerning the enormous plant. Its whereabouts remain unknown, and police are gathering information.\n",
+          "en": "We have learned that a horse escaped from a racecourse ten kilometers from Akashia Department Store the day before the evacuation order concerning the enormous plant. Its whereabouts remain unknown, and police are gathering information.\n",
           "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k86; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -1120,21 +1120,21 @@
         {
           "id": "p0/k95",
           "source_text_sha256": "94fed40c5f63e2da51801fb8097d49a891525b9b0d7812b026942de1f2d1c71f",
-          "en": "Acacia Department Store Gone: Ninety Years of History End",
+          "en": "Akashia Department Store Gone: Ninety Years of History End",
           "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k95; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k96",
           "source_text_sha256": "c58ef7a0a0e01cfca920c18d0d5f511b169a0adba7cc7e2fe09d11a2330d1796",
-          "en": "Before dawn today, the plant attached to Acacia Department Store burst, causing immense damage nearby.\nAt the center of the explosion, the department store vanished without a trace, bringing its long history to an end.\nBefore the war, it opened as a privately owned shop called Acacia-do, reportedly earning a reputation among locals for good-quality goods at low prices.\nIt expanded during the postwar economic boom and continued operating with the goal of improving local quality of life.\nHearing of its destruction, nearby residents said, 'It's terribly sad. We hope they won't give up and will rebuild.'",
+          "en": "Before dawn today, the plant attached to Akashia Department Store burst, causing immense damage nearby.\nAt the center of the explosion, the department store vanished without a trace, bringing its long history to an end.\nBefore the war, it opened as a privately owned shop called Acacia-do, reportedly earning a reputation among locals for good-quality goods at low prices.\nIt expanded during the postwar economic boom and continued operating with the goal of improving local quality of life.\nHearing of its destruction, nearby residents said, 'It's terribly sad. We hope they won't give up and will rebuild.'",
           "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k96; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k100",
           "source_text_sha256": "0796e65084db164b925eddf4ee09ae8eeb88ff5dd321d2da73a5e270b3860e49",
-          "en": "Some people are confronting the anomalies now afflicting Miyato Prefecture head-on. Trickster Transport, in business since before the war, lives by the motto 'Through Fire and Water,' devoting itself to delivering every package regardless of the difficulty.\nOne delivery worker, Tsuro Haita, has been dodging attacks by small creatures emerging from the ground to deliver packages to doorsteps around Azami Station, devastated on the incidents' first day. He declared, 'Monsters? We never stopped delivering even when bombs were falling. Bring them on!'\nFaced with an unprecedented crisis, their determination to fulfill their duties without regard for danger commands admiration.",
+          "en": "Some people are confronting the anomalies now afflicting Miyato Prefecture head-on. Trickster Transport, in business since before the war, lives by the motto \"Through Fire and Water,\" devoting itself to delivering every package regardless of the difficulty.\nOne delivery worker, Tsuro Haita, has been dodging attacks by small creatures emerging from the ground to deliver packages to doorsteps around Azami Station, devastated on the incidents' first day. He declared, \"Monsters? We never stopped delivering even when bombs were falling. Bring them on!\"\nFaced with an unprecedented crisis, their determination to fulfill their duties without regard for danger commands admiration.",
           "notes": "English draft imported from audited private workspace, translate-en-0095.json:p0/k100; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
