@@ -232,7 +232,20 @@ gow3_adapt(DRIVERS shadps4/core/libraries/videoout/driver.cpp
     "} else if (ImGui::Core::MustKeepDrawing()) {"
     "} else if (ImGui::Core::MustKeepDrawing() || kyoei_overlay_needs_redraw()) {"
     "    RunPresenter([this, frame = req.frame, hdr = req.port->is_hdr] {"
-    "    KyoeiGow3FlipRate::Flip(), RunPresenter([this, frame = req.frame, hdr = req.port->is_hdr] {")
+    "    KyoeiGow3FlipRate::Flip(), RunPresenter([this, frame = req.frame, hdr = req.port->is_hdr] {"
+    "void VideoOutDriver::SubmitFlipInternal(VideoOutPort* port, s32 index, s64 flip_arg, bool is_eop) {"
+    "void VideoOutDriver::SubmitFlipInternal(VideoOutPort* port, s32 index, s64 flip_arg, bool is_eop) {
+    if (index != -1 && KyoeiGow3FlipRate::Stage(0)) {}"
+    "    request_cv.notify_one();"
+    "    if (index != -1 && KyoeiGow3FlipRate::Stage(1)) {}
+    request_cv.notify_one();")
+# KYOEI_FRAME_STATS: time from the guest's SubmitAndFlip to the flip.
+gow3_adapt(DRIVERS shadps4/core/libraries/gnmdriver/gnmdriver.cpp
+    "#include \"common/assert.h\"" "#include \"kyoei_gow3_flip_rate.h\"
+#include \"common/assert.h\""
+    "    u32* ccb_sizes_in_bytes, u32 vo_handle, u32 buf_idx, u32 flip_mode, s64 flip_arg) {"
+    "    u32* ccb_sizes_in_bytes, u32 vo_handle, u32 buf_idx, u32 flip_mode, s64 flip_arg) {
+    if (KyoeiGow3FlipRate::Submit(), true) {}")
 gow3_adapt(VIDEO_CORE shadps4/video_core/buffer_cache/buffer_cache.cpp
     "#include \"video_core/buffer_cache/buffer_cache.h\""
     "#include \"video_core/buffer_cache/buffer_cache.h\"
