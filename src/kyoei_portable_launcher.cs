@@ -58,7 +58,7 @@ class PortableLauncher : Form {
         AddText("LANGUAGE",496,255,180,22,9,Color.Silver);
         Setup(language,496,282,430,new string[]{"English","日本語 · Original"});
         AddText("DISPLAY",496,330,180,22,9,Color.Silver);
-        Setup(resolution,496,356,220,new string[]{"1280 × 720","1600 × 900","1920 × 1080","2560 × 1440"});
+        Setup(resolution,496,356,220,new string[]{"1280 × 720","1600 × 900","1920 × 1080","2560 × 1440","3840 × 2160"});
         fullscreen.SetBounds(735,356,200,28);fullscreen.Text="Fullscreen";fullscreen.ForeColor=Color.Silver;Controls.Add(fullscreen);
         var controlsButton=new Button();controlsButton.SetBounds(496,389,430,27);controlsButton.Text="CONTROLS & MOUSE SENSITIVITY";
         controlsButton.FlatStyle=FlatStyle.Flat;controlsButton.ForeColor=Color.WhiteSmoke;

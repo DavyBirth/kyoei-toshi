@@ -5042,3 +5042,4 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Giro da câmera: roteiro de medição em segundo plano (janela fora da tela, mudo, KYOEI_BENCH_TURN_FILE, rua do início após a criação do personagem) — base 47-56 FPS girando, picos 34 ms. Gargalo segue sendo CPU do núcleo (processador de comandos + DrawRec, ver 23/10); a recópia GpuDirty é trabalho de GPU, que está ~50% livre, então não é o limite. Sem mudança segura nesta rodada.
 - Controle Nintendo: código e testes prontos; falta conferir com controle físico.
 - Portátil pessoal atualizada com o runtime novo (telas no estilo do jogo, filtros) e a en-18.
+- Launcher: opção 3840 × 2160 (saída 4K; resolução interna do jogo continua a do PS4, 1080p, pela regra de fidelidade). Conferido em segundo plano: janela 3840x2160 abre e roda.
