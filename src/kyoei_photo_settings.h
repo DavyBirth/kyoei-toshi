@@ -1,6 +1,7 @@
 // Optional photographic adjustments, independent of guest simulation.
 // SPDX-License-Identifier: GPL-2.0-or-later
 #pragma once
+#include "kyoei_ui_text.h"
 #include <algorithm>
 #include <atomic>
 #include <cmath>
@@ -24,19 +25,34 @@ inline std::atomic<int> dof_mode{0};
 inline std::atomic<float> focus_distance{5},aperture{2.8f};
 inline std::atomic<float> grain{0},vignette{0};
 inline const char* FieldName(Field field) {
-    constexpr const char* names[]={"Distancia focal da lente","Rotacao","Velocidade","Guia de composicao","Enquadramento","Exposicao","Contraste","Saturacao","Filtro","Granulacao","Vinheta","Desfoque","Distancia de foco","Abertura","Luz selecionada","Controle","Tipo de luz","Luz ligada","Cor","Intensidade","Posicao X","Altura","Posicao Z","Direcao horizontal","Inclinacao","Abertura do facho"};
-    return names[std::clamp(int(field),0,int(Field::Count)-1)];
+    using KyoeiUiText::T;
+    constexpr const char* en[]={"Focal Length","Roll","Speed","Composition Guide","Frame","Exposure","Contrast","Saturation","Filter","Grain","Vignette","Depth of Field","Focus Distance","Aperture","Light","Control","Light Type","Light On","Color","Intensity","Position X","Height","Position Z","Direction","Tilt","Beam Width"};
+    constexpr const char* pt[]={"Distância focal","Rotação","Velocidade","Guia de composição","Enquadramento","Exposição","Contraste","Saturação","Filtro","Granulação","Vinheta","Desfoque","Distância de foco","Abertura","Luz selecionada","Controle","Tipo de luz","Luz ligada","Cor","Intensidade","Posição X","Altura","Posição Z","Direção horizontal","Inclinação","Abertura do facho"};
+    constexpr const char* ja[]={"焦点距離","回転","移動速度","構図ガイド","フレーム","露出","コントラスト","彩度","フィルター","粒子","周辺減光","被写界深度","ピント距離","絞り","ライト","操作対象","ライトの種類","点灯","色","明るさ","位置 X","高さ","位置 Z","水平方向","傾き","照射角"};
+    const int i=std::clamp(int(field),0,int(Field::Count)-1);
+    return T(en[i],pt[i],ja[i]);
 }
 inline const char* FilterName(int value) {
-    constexpr const char* names[]={"Original","Preto e branco","Sepia","Frio","Quente","Kaiju 1954","Tokusatsu retro","Kaiju noturno","Kaiju anime"};
-    return names[std::clamp(value,0,int(Look::Count)-1)];
+    using KyoeiUiText::T;
+    constexpr const char* en[]={"Original","Black & White","Sepia","Cool","Warm","Kaiju 1954","Retro Tokusatsu","Kaiju Night","Kaiju Anime"};
+    constexpr const char* pt[]={"Original","Preto e branco","Sépia","Frio","Quente","Kaiju 1954","Tokusatsu retrô","Kaiju noturno","Kaiju anime"};
+    constexpr const char* ja[]={"オリジナル","モノクロ","セピア","クール","ウォーム","怪獣 1954","レトロ特撮","夜の怪獣","怪獣アニメ"};
+    const int i=std::clamp(value,0,int(Look::Count)-1);
+    return T(en[i],pt[i],ja[i]);
 }
 enum class Group {Camera,Image,Focus,Lights,Count};
 inline constexpr int group_begin[]={0,int(Field::Exposure),int(Field::DofMode),int(Field::LightSlot)};
 inline constexpr int group_end[]={int(Field::Exposure),int(Field::DofMode),int(Field::LightSlot),int(Field::Count)};
 inline std::atomic<int> remembered_field[4]{{0},{int(Field::Exposure)},{int(Field::DofMode)},{int(Field::LightSlot)}};
 inline int FieldGroup(int field){return field<int(Field::Exposure)?0:field<int(Field::DofMode)?1:field<int(Field::LightSlot)?2:3;}
-inline const char* GroupName(int group){constexpr const char* names[]={"CAMERA","IMAGEM","FOCO","LUZES"};return names[std::clamp(group,0,3)];}
+inline const char* GroupName(int group) {
+    using KyoeiUiText::T;
+    constexpr const char* en[]={"Camera","Image","Focus","Lights"};
+    constexpr const char* pt[]={"Câmera","Imagem","Foco","Luzes"};
+    constexpr const char* ja[]={"カメラ","画像","ピント","ライト"};
+    const int i=std::clamp(group,0,3);
+    return T(en[i],pt[i],ja[i]);
+}
 inline bool FieldEnabled(int field){
     if(field<0 || field>=int(Field::Count))return false;
     if(field<int(Field::DofMode))return true;
@@ -61,15 +77,36 @@ inline void SelectField(int direction) {
     do{next=begin+(next-begin+(direction<0?-1:1)+(end-begin))%(end-begin);}while(!FieldEnabled(next));
     selected=next;remembered_field[group]=next;
 }
-inline const char* LightColorName(int color){constexpr const char* names[]={"Branca","Quente","Fria","Vermelha","Verde","Azul","Violeta"};return names[std::clamp(color,0,6)];}
+inline const char* LightColorName(int color) {
+    using KyoeiUiText::T;
+    constexpr const char* en[]={"White","Warm","Cool","Red","Green","Blue","Violet"};
+    constexpr const char* pt[]={"Branca","Quente","Fria","Vermelha","Verde","Azul","Violeta"};
+    constexpr const char* ja[]={"白","暖色","寒色","赤","緑","青","紫"};
+    const int i=std::clamp(color,0,6);
+    return T(en[i],pt[i],ja[i]);
+}
 inline void LightRgb(float rgb[3],int slot=-1){
     const auto& light=slot<0?CurrentLight():lights[slot];
     constexpr float colors[][3]={{1,1,1},{1,.65f,.3f},{.4f,.65f,1},{1,.025f,.025f},{.025f,1,.025f},{.025f,.025f,1},{.65f,.05f,1}};
     const auto& color=colors[std::clamp(light.color.load(),0,6)];
     for(int i=0;i<3;++i)rgb[i]=color[i]*light.power.load();
 }
-inline const char* GuideName(int value){constexpr const char* names[]={"Desligada","Tercos","Proporcao aurea","Centro"};return names[std::clamp(value,0,3)];}
-inline const char* FrameName(int value){constexpr const char* names[]={"Original","Cinema 2.39:1","Panoramico 21:9","Quadrado 1:1","Retrato 4:5","Classico 4:3"};return names[std::clamp(value,0,5)];}
+inline const char* GuideName(int value) {
+    using KyoeiUiText::T;
+    constexpr const char* en[]={"Off","Thirds","Golden Ratio","Center"};
+    constexpr const char* pt[]={"Desligada","Terços","Proporção áurea","Centro"};
+    constexpr const char* ja[]={"なし","三分割","黄金比","中央"};
+    const int i=std::clamp(value,0,3);
+    return T(en[i],pt[i],ja[i]);
+}
+inline const char* FrameName(int value) {
+    using KyoeiUiText::T;
+    constexpr const char* en[]={"Original","Cinema 2.39:1","Ultrawide 21:9","Square 1:1","Portrait 4:5","Classic 4:3"};
+    constexpr const char* pt[]={"Original","Cinema 2.39:1","Panorâmico 21:9","Quadrado 1:1","Retrato 4:5","Clássico 4:3"};
+    constexpr const char* ja[]={"オリジナル","シネマ 2.39:1","ウルトラワイド 21:9","正方形 1:1","縦 4:5","クラシック 4:3"};
+    const int i=std::clamp(value,0,5);
+    return T(en[i],pt[i],ja[i]);
+}
 inline float FrameRatio(int value){constexpr float ratios[]={0,2.39f,21.f/9.f,1,.8f,4.f/3.f};return ratios[std::clamp(value,0,5)];}
 // Normalized visible rectangle; image pixels outside become black bars.
 struct FrameRect {float x=0,y=0,w=1,h=1;};

@@ -7,6 +7,9 @@
 #include "kyoei_list_model.h"
 #include "kyoei_input_mode.h"
 #include "kyoei_title_exit.h"
+#include "kyoei_ui_art.h"
+extern "C" void gz_log(const char *, ...);
+#include <unordered_map>
 #include "imgui.h"
 #include "imgui_internal.h"
 #include <cstdio>
@@ -297,6 +300,7 @@ extern "C" uint64_t kyoei_overlay_revision() { std::scoped_lock lock{mutex}; ret
 extern "C" void kyoei_overlay_presented(uint64_t value) { std::scoped_lock lock{mutex}; presented=value; }
 
 namespace KyoeiOverlayModel {
+ImFont *hud_font;
 void InitializeGui(const char *font_directory,bool headless) {
     std::scoped_lock lock{mutex};
     IMGUI_CHECKVERSION(); ImGui::CreateContext();
@@ -317,6 +321,17 @@ void InitializeGui(const char *font_directory,bool headless) {
         }
     }
     if (io.Fonts->Fonts.empty()) io.Fonts->AddFontDefault();
+    // The PC screens in the game's style use a heavier face, close to the game's labels
+    // (Segoe UI Semibold when installed), with the same Japanese fallback.
+    hud_font=nullptr;
+    if (FILE *probe=std::fopen("C:/Windows/Fonts/seguisb.ttf","rb")) {
+        std::fclose(probe);
+        hud_font=io.Fonts->AddFontFromFileTTF("C:/Windows/Fonts/seguisb.ttf",20);
+        if (hud_font && font_directory && *font_directory) {
+            ImFontConfig config; config.MergeMode=true;
+            io.Fonts->AddFontFromFileTTF((std::string(font_directory)+"/NotoSansCJK-Regular.ttc").c_str(),20,&config);
+        }
+    }
     if (headless) { io.Fonts->Build(); io.Fonts->SetTexID(ImTextureID(1)); }
     scale=1;
 }
@@ -325,9 +340,10 @@ void SetReady(bool value) {
     if (!value) finish_locked(2);
 }
 void release_title_art();
+void release_ui_art();
 void ShutdownGui() {
     std::scoped_lock lock{mutex}; ready=false; finish_locked(2);
-    release_title_art();
+    release_title_art(); release_ui_art();
     ImGui::DestroyContext();
 }
 // The PC title item is drawn from art made in the native item style
@@ -369,6 +385,41 @@ void release_title_art() {
     title_art[0]=title_art[1]=ImFontAtlasRectId_Invalid;
     title_art_loaded=false; title_art_width=0;
 }
+// KYART2 (tools/make_ui_art.py): named pieces for the PC screens, loaded once into the atlas.
+struct UiPiece { ImFontAtlasRectId id; int w, h; };
+std::unordered_map<std::string,UiPiece> ui_art;
+bool ui_art_loaded;
+void load_ui_art() {
+    ui_art_loaded=true;
+    const char *path=std::getenv("KYOEI_UI_ART");
+    if (!path || !*path) return;
+    FILE *file=std::fopen(path,"rb");
+    if (!file) { gz_log("Kyoei UI art: missing %s",path); return; }
+    unsigned char head[12]; uint32_t count=0;
+    bool ok=std::fread(head,1,12,file)==12 && !std::memcmp(head,"KYART2\0\0",8);
+    if (ok) { std::memcpy(&count,head+8,4); ok=count && count<=256; }
+    ImFontAtlas *atlas=ImGui::GetIO().Fonts;
+    atlas->TexPixelsUseColors=true;
+    std::vector<unsigned char> pixels;
+    for (uint32_t i=0; ok && i<count; ++i) {
+        char name[25]={}; uint32_t size[2]={};
+        ok=std::fread(name,1,24,file)==24 && std::fread(size,4,2,file)==2 && size[0] && size[1] &&
+           size[0]<=1024 && size[1]<=512;
+        if (!ok) break;
+        pixels.resize((size_t)size[0]*size[1]*4);
+        ok=std::fread(pixels.data(),1,pixels.size(),file)==pixels.size();
+        ImFontAtlasRect r;
+        ImFontAtlasRectId id=ok?atlas->AddCustomRect((int)size[0],(int)size[1],&r):ImFontAtlasRectId_Invalid;
+        if (id==ImFontAtlasRectId_Invalid || atlas->TexData->Format!=ImTextureFormat_RGBA32) { ok=false; break; }
+        for (uint32_t y=0; y<size[1]; ++y)
+            std::memcpy(atlas->TexData->GetPixelsAt(r.x,r.y+(int)y),pixels.data()+(size_t)y*size[0]*4,(size_t)size[0]*4);
+        ImFontAtlasTextureBlockQueueUpload(atlas,atlas->TexData,r.x,r.y,r.w,r.h);
+        ui_art[name]={id,(int)size[0],(int)size[1]};
+    }
+    std::fclose(file);
+    gz_log("Kyoei UI art: %zu pieces%s",ui_art.size(),ok?"":" (file damaged; the rest is skipped)");
+}
+void release_ui_art() { ui_art.clear(); ui_art_loaded=false; }
 void title_exit(unsigned width,unsigned height) {
     KyoeiTitleItem item;
     if (!title_art_width || !kyoei_title_exit_item(&item)) return;
@@ -402,6 +453,7 @@ ImDrawData *Draw(unsigned width,unsigned height,float seconds,void (*extra)()) {
     auto &style=ImGui::GetStyle(); style=base_style; style.ScaleAllSizes(next);
     style.FontScaleMain=next; scale=next;
     if (!title_art_loaded) load_title_art();
+    if (!ui_art_loaded) load_ui_art();
     ImGui::NewFrame();
     if (kind && !done) {
         bool controller=kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER;
@@ -417,5 +469,25 @@ ImDrawData *Draw(unsigned width,unsigned height,float seconds,void (*extra)()) {
     } else title_exit(width,height);
     if(extra)extra();
     ImGui::Render(); return ImGui::GetDrawData();
+}
+}
+namespace KyoeiUiArt {
+bool Draw(ImDrawList *draw,const char *name,ImVec2 min,ImVec2 max,ImU32 tint) {
+    const auto it=KyoeiOverlayModel::ui_art.find(name);
+    if (it==KyoeiOverlayModel::ui_art.end()) return false;
+    ImFontAtlas *atlas=ImGui::GetIO().Fonts; ImFontAtlasRect r;
+    if (!atlas->GetCustomRect(it->second.id,&r)) return false;
+    draw->AddImage(atlas->TexRef,min,max,r.uv0,r.uv1,tint);
+    return true;
+}
+ImVec2 Size(const char *name) {
+    const auto it=KyoeiOverlayModel::ui_art.find(name);
+    return it==KyoeiOverlayModel::ui_art.end()?ImVec2(0,0):ImVec2((float)it->second.w,(float)it->second.h);
+}
+ImFont *Font() { return KyoeiOverlayModel::hud_font?KyoeiOverlayModel::hud_font:ImGui::GetFont(); }
+const char *Pad(const char *button) {
+    static thread_local std::string name;
+    name=std::string(kyoei_input_current_family()==KYOEI_PAD_XBOX?"xbox_":"ps_")+button;
+    return name.c_str();
 }
 }

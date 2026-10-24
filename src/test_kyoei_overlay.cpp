@@ -12,6 +12,7 @@
 #include <thread>
 #include <vector>
 #include <string>
+extern "C" void gz_log(const char *, ...) {}
 #define CHECK(x) do { if (!(x)) { std::fprintf(stderr,"line %d: %s\n",__LINE__,#x); std::exit(1); } } while(0)
 static void wait_kind(int expected) {
     for (unsigned attempt=0;attempt<1000;++attempt) {
@@ -58,9 +59,9 @@ int main() {
             CHECK(photo && photo->Valid);
             if(frame)CHECK(photo->TotalVtxCount>0); // auto-size windows settle after the first frame
         }
-        auto *panel=ImGui::FindWindowByName("##photo-help");
-        CHECK(panel && panel->Pos.x>=0 && panel->Pos.y>=0);
-        CHECK(panel->Pos.x+panel->Size.x<=height*16/9 && panel->Pos.y+panel->Size.y<=height);
+        // The panel is drawn on the HUD itself: every vertex stays on screen.
+        for(auto* list:photo->CmdLists)for(const auto& v:list->VtxBuffer)
+            CHECK(v.pos.x>=-1 && v.pos.y>=-1 && v.pos.x<=height*16/9+1 && v.pos.y<=height+1);
         auto *notice=ImGui::FindWindowByName("##photo-result");
         CHECK(notice && notice->Pos.x>=0 && notice->Pos.y>=0 &&
             notice->Pos.x+notice->Size.x<=height*16/9 && notice->Pos.y+notice->Size.y<=height);
