@@ -17,6 +17,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <chrono>
+#include <cstring>
 #include <cwchar>
 #include <map>
 #include <mutex>
@@ -180,7 +181,16 @@ void Report(std::vector<Target>& targets) {
                 for (const DWORD64 address : stack) {
                     const std::string name = Symbol(address, cache);
                     hit = hit || name.find(focus) != std::string::npos;
-                    if (name.rfind("Drv", 0) == 0 || name.rfind("vkGetInstanceProcAddr", 0) == 0) { if (path.size() < 4 || path.compare(path.size() - 4, 4, " ...")) path += " ..."; } else path += (path.empty() ? "" : " < ") + name.substr(0, 60);
+                    std::string where;
+                    IMAGEHLP_LINE64 line{};
+                    line.SizeOfStruct = sizeof(line);
+                    DWORD offset = 0;
+                    // Return addresses: the call is just before; its line names an inlined caller.
+                    if (SymGetLineFromAddr64(GetCurrentProcess(), address - 1, &offset, &line)) {
+                        const char* file = std::strrchr(line.FileName, '\\');
+                        where = std::string("@") + (file ? file + 1 : line.FileName) + ":" + std::to_string(line.LineNumber);
+                    }
+                    if (name.rfind("Drv", 0) == 0 || name.rfind("vkGetInstanceProcAddr", 0) == 0) { if (path.size() < 4 || path.compare(path.size() - 4, 4, " ...")) path += " ..."; } else path += (path.empty() ? "" : " < ") + name.substr(0, 60) + where;
                 }
                 if (hit) ++paths[path];
             }
