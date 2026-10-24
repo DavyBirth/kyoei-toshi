@@ -65,3 +65,33 @@ static Shader::PushData MakeUserData(const AmdGpu::Regs& regs) {
                                                 stage.sw_stage == Shader::SwStage::Vertex, buffer_index);
             }
 >>>>>>>
+<<<<<<<
+    motion_draw = pipeline->GetGraphicsKey().motion_vectors;
+    motion_geometry = 0;
+
+    PrepareRenderState(pipeline);
+=======
+    motion_draw = pipeline->GetGraphicsKey().motion_vectors;
+    motion_geometry = 0;
+
+    // Kyoei: the post-processing starts with a graphics pass (not GoW3's compute combine):
+    // GOW3_UPSCALE_BEFORE_CS names its pixel shader, and the upscaler runs right before it.
+    if (KyoeiCamera() && upscaler->Enabled()) {
+        if (const auto* ps = pipeline->GetStages()[u32(Shader::SwStage::Fragment)]) {
+            upscaler->OnDispatch(ps->pgm_hash);
+        }
+    }
+    PrepareRenderState(pipeline);
+>>>>>>>
+<<<<<<<
+    if (camera_motion->Enabled() && regs.color_buffers[0] &&
+        FrameCapture::IsDisplayBuffer(regs.color_buffers[0].Address())) {
+        scene_started = false;
+=======
+    // Kyoei draws its UI straight into the display buffer: only the first display draw after a
+    // scene starts the next frame (else every UI draw restarted it, ~10 FPS with FSR on).
+    if (camera_motion->Enabled() && regs.color_buffers[0] &&
+        FrameCapture::IsDisplayBuffer(regs.color_buffers[0].Address()) &&
+        (!KyoeiCamera() || camera_motion->Depth())) {
+        scene_started = false;
+>>>>>>>

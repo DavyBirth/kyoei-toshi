@@ -28,6 +28,18 @@ void CameraMotion::OnKyoeiConstants(const float* data, u32 size, bool vertex, u3
     // The view looks down -z; camera_motion.comp wants +z forward: negate the third row.
     std::array<float, 12> v{};
     std::memcpy(v.data(), data, sizeof(v));
+    static const bool inverse = [] {
+        const char* env = std::getenv("KYOEI_CAMERA_INVERSE");
+        return env && env[0] == '1';
+    }();
+    if (inverse) {
+        // The constants hold the camera's world matrix: invert it into a view first.
+        std::array<float, 12> w = v;
+        for (int r = 0; r < 3; ++r) {
+            for (int c = 0; c < 3; ++c) v[r * 4 + c] = w[c * 4 + r];
+            v[r * 4 + 3] = -(w[r] * w[3] + w[4 + r] * w[7] + w[8 + r] * w[11]);
+        }
+    }
     for (int c = 0; c < 4; ++c) v[8 + c] = -v[8 + c];
     for (int r = 0; r < 3; ++r) {
         const float n = v[r * 4] * v[r * 4] + v[r * 4 + 1] * v[r * 4 + 1] + v[r * 4 + 2] * v[r * 4 + 2];

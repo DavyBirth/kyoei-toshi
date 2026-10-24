@@ -39,3 +39,17 @@ GOW3_UPSCALER=fsr3/dlss e opção no launcher (qualidade/equilíbrio/desempenho,
   gráficos (#43 em diante na captura): falta escolher o ponto certo (depois das
   transparências #40-62, antes do pós) e conferir a imagem. Primeiro teste: protagonista
   escurecido/quebrado com fsr3 ligado — não usar ainda.
+
+## 24/10/2026 (tarde) — FSR 3 rodando no Kyoei (experimental)
+- Gatilho: GOW3_UPSCALE_BEFORE_CS=2c411de9 (pixel shader do 1º passe de pós, #68 da captura,
+  que lê profundidade + cor da cena); o patch chama OnDispatch(ps) antes de cada desenho.
+- Câmera: as constantes do PS slot 0 são a matriz de MUNDO da câmera; KYOEI_CAMERA_INVERSE=1
+  inverte (com isso o cenário fica limpo girando; sem, rastros fortes).
+- Início de quadro: só o 1º desenho no buffer de exibição depois de uma cena (o Kyoei desenha
+  a UI direto nele; antes reiniciava o upscaler a cada desenho de UI).
+- Parado: imagem limpa, AA do FSR. Girando: cenário ok; protagonista com blocos (ele se move
+  com a câmera e não há vetores de objeto: falta máscara reativa/vetores do personagem).
+- Custo: base 47-58 FPS girando; FSR 3 ~14; sem jitter (bit 25) ~38-42; FSR em si ~1 ms de
+  GPU. O limite é CPU (DrawRec): o jitter por desenho e o Run no meio do fluxo encarecem a
+  tradução. Conclusão importante: nesta máquina a placa sobra (~50%), então reduzir a
+  resolução interna NÃO aumenta FPS; upscaler serve para qualidade (AA, saída 4K).
