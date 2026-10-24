@@ -1,0 +1,17 @@
+Kyoei: scene camera for the temporal upscaler (docs/re/UPSCALER-KYOEI.md).
+<<<<<<<
+    void OnConstants(const float* data);
+=======
+    void OnConstants(const float* data);
+
+    /// Kyoei: a constant buffer of a scene-colour draw. The projection is the VS slot 1 4x4
+    /// (rows), the view the PS slot 0 3x4 (rows); the first pair of a frame is the camera.
+    void OnKyoeiConstants(const float* data, u32 size, bool vertex, u32 slot);
+>>>>>>>
+<<<<<<<
+    bool frame_has_camera = false;
+=======
+    bool frame_has_camera = false;
+    std::array<float, 4> kyoei_proj{};
+    bool kyoei_has_proj = false;
+>>>>>>>

@@ -1,0 +1,67 @@
+Kyoei: scene camera for the temporal upscaler (docs/re/UPSCALER-KYOEI.md). Opt-in with
+KYOEI_UPSCALER_CAMERA=1 until the motion vectors are validated.
+<<<<<<<
+static Shader::PushData MakeUserData(const AmdGpu::Regs& regs) {
+=======
+static bool KyoeiCamera() {
+    static const bool on = [] {
+        const char* env = std::getenv("KYOEI_UPSCALER_CAMERA");
+        return env && env[0] == '1';
+    }();
+    return on;
+}
+
+static Shader::PushData MakeUserData(const AmdGpu::Regs& regs) {
+>>>>>>>
+<<<<<<<
+    if (gbuffer_draw) {
+        camera_motion->OnGBufferPass(db_desc.first);
+    }
+=======
+    if (gbuffer_draw) {
+        camera_motion->OnGBufferPass(db_desc.first);
+    }
+    // Kyoei: the scene colour pass draws one RGBA16F target over the scene depth (read only).
+    if (!gbuffer_draw && KyoeiCamera() && camera_motion->Enabled() && db_desc.first &&
+        cb_descs[0].first && std::popcount(key.mrt_mask) == 1 && !regs.depth_control.depth_write_enable) {
+        const auto& color = texture_cache.GetImage(cb_descs[0].first).info;
+        const auto& depth = texture_cache.GetImage(db_desc.first).info;
+        gbuffer_draw = color.pixel_format == vk::Format::eR16G16B16A16Sfloat &&
+                       color.size.width == depth.size.width && color.size.height == depth.size.height &&
+                       color.size.width >= 1280;
+        if (gbuffer_draw) {
+            camera_motion->OnGBufferPass(db_desc.first);
+        }
+    }
+>>>>>>>
+<<<<<<<
+                if (ring->size == 864 && gbuffer_draw &&
+                    memory->IsValidGpuMapping(ring->address, 0)) {
+                    camera_motion->OnConstants(reinterpret_cast<const float*>(ring->address));
+                }
+=======
+                if (ring->size == 864 && gbuffer_draw &&
+                    memory->IsValidGpuMapping(ring->address, 0)) {
+                    camera_motion->OnConstants(reinterpret_cast<const float*>(ring->address));
+                }
+                if (gbuffer_draw && KyoeiCamera() && memory->IsValidGpuMapping(ring->address, 0)) {
+                    camera_motion->OnKyoeiConstants(reinterpret_cast<const float*>(ring->address), ring->size,
+                                                    stage.sw_stage == Shader::SwStage::Vertex, buffer_index);
+                }
+>>>>>>>
+<<<<<<<
+            if (vsharp.GetSize() == 864 && gbuffer_draw &&
+                memory->IsValidGpuMapping(vsharp.base_address, 0)) {
+                camera_motion->OnConstants(reinterpret_cast<const float*>(vsharp.base_address));
+            }
+=======
+            if (vsharp.GetSize() == 864 && gbuffer_draw &&
+                memory->IsValidGpuMapping(vsharp.base_address, 0)) {
+                camera_motion->OnConstants(reinterpret_cast<const float*>(vsharp.base_address));
+            }
+            if (gbuffer_draw && KyoeiCamera() && memory->IsValidGpuMapping(vsharp.base_address, 0)) {
+                camera_motion->OnKyoeiConstants(reinterpret_cast<const float*>(vsharp.base_address),
+                                                u32(vsharp.GetSize()),
+                                                stage.sw_stage == Shader::SwStage::Vertex, buffer_index);
+            }
+>>>>>>>
