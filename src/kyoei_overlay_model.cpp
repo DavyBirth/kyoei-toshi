@@ -8,6 +8,10 @@
 #include "kyoei_input_mode.h"
 #include "kyoei_title_exit.h"
 #include "kyoei_ui_art.h"
+#include "kyoei_ui_draw.h"
+#include "kyoei_ui_text.h"
+#include <cfloat>
+#include <cmath>
 extern "C" void gz_log(const char *, ...);
 #include <unordered_map>
 #include "imgui.h"
@@ -55,6 +59,18 @@ std::string utf8(const wchar_t *text) {
 }
 std::string ui_text(const wchar_t *text) {
     const char *language=std::getenv("KYOEI_LANGUAGE");
+    if (language && !std::strcmp(language,"ja") && text) {
+        const std::pair<const wchar_t *,const char *> known[]={
+            {L"Escolha onde salvar","セーブする場所を選んでください"},
+            {L"Escolha o save para carregar","ロードするデータを選んでください"},
+            {L"Escolha o save para excluir","削除するデータを選んでください"},
+            {L"Criar novo save","新規作成"},
+            {L"Substituir este save?","このデータに上書きしますか？"},
+            {L"Salvar neste slot?","ここにセーブしますか？"},
+            {L"Carregar este save?","このデータをロードしますか？"},
+            {L"Excluir este save?","このデータを削除しますか？"}};
+        for (const auto &[source,target]:known) if (!std::wcscmp(text,source)) return target;
+    }
     if (language && !std::strcmp(language,"en") && text) {
         const std::pair<const wchar_t *,const char *> known[]={
             {L"Escolha onde salvar","Choose a save slot"},
@@ -116,93 +132,151 @@ void keyboard_locked(unsigned key) {
     ++revision;
 }
 bool available_locked() { return ready && enabled() && kind==KYOEI_OVERLAY_NONE; }
-void name_box(float width,bool controller) {
-    ImGui::TextUnformatted("Character name");
-    if (!caption.empty()) ImGui::TextWrapped("%s",caption.c_str());
-    ImGui::Spacing();
-    auto value=utf8((const wchar_t *)name.text);
-    if (name.select_all) ImGui::PushStyleColor(ImGuiCol_FrameBg,ImVec4(.08f,.27f,.43f,1));
-    ImGui::BeginChild("name-value",ImVec2(0,65*scale),ImGuiChildFlags_Borders,ImGuiWindowFlags_HorizontalScrollbar);
-    // Horizontal scrolling keeps the actual cursor visible, without truncating names.
-    std::wstring prefix((const wchar_t *)name.text,name.cursor);
-    float cursor=ImGui::CalcTextSize(utf8(prefix.c_str()).c_str()).x;
-    ImGui::TextUnformatted(value.c_str());
-    auto origin=ImGui::GetItemRectMin();
-    if (!name.select_all) ImGui::GetWindowDrawList()->AddLine(
-        ImVec2(origin.x+cursor,origin.y),ImVec2(origin.x+cursor,origin.y+ImGui::GetTextLineHeight()),IM_COL32(245,245,245,255),2);
-    float available=ImGui::GetContentRegionAvail().x;
-    ImGui::SetScrollX(std::max(0.f,cursor-available+18*scale));
-    ImGui::EndChild();
-    if (name.select_all) ImGui::PopStyleColor();
-    if (kyoei_name_is_roman_default(&name)) ImGui::TextDisabled("Default name");
-    else ImGui::TextDisabled("%u / %u",(unsigned)name.length,(unsigned)(name.extended?name.limit:name.native_limit));
-    if (!kyoei_name_can_accept(&name)) ImGui::TextWrapped("Use up to %u characters, or keep the default name.",(unsigned)name.native_limit);
-    if (controller) {
-        const float gap=6*scale,key_width=(width-40*scale-gap*9)/10;
-        for (unsigned key=0;key<40;++key) {
-            if (key%10) ImGui::SameLine(0,gap);
-            ImGui::PushID((int)key);
-            std::string label;
-            if (key<26) label=char((name.upper?'A':'a')+key);
-            else if (key<36) label=char('0'+key-26);
-            else label=key==36?"Space":key==37?"Shift":key==38?"Erase":"Done";
-            const bool highlighted=key==name.key;
-            if (highlighted) ImGui::PushStyleColor(ImGuiCol_Button,ImVec4(.13f,.45f,.67f,1));
-            if (ImGui::Button(label.c_str(),ImVec2(key_width,40*scale))) {
-                name.key=key; kyoei_name_activate(&name); ++revision;
-                if (name.result) finish_locked(0);
-            }
-            if (highlighted) ImGui::PopStyleColor();
-            ImGui::PopID();
-        }
-        ImGui::TextWrapped("D-pad: choose a key   X: select   Circle: cancel");
-        ImGui::TextWrapped("Square: erase   Triangle: shift   L1/R1: cursor   Options: done");
-    } else ImGui::TextWrapped("Type your name. Arrows/Home/End: cursor   Backspace/Delete: erase   Ctrl+A: select all");
-    ImGui::Spacing();
-    ImGui::BeginDisabled(!kyoei_name_can_accept(&name));
-    if (ImGui::Button("Confirm",ImVec2(135*scale,36*scale))) finish_locked(0);
-    ImGui::EndDisabled();
-    ImGui::SameLine();
-    if (ImGui::Button("Cancel",ImVec2(135*scale,36*scale))) finish_locked(1);
-    if (!controller) ImGui::TextDisabled("Enter: confirm   Esc: cancel");
+// The modals are drawn like the game's Option screen (tools/make_ui_art.py pieces): title bar,
+// selection marker, row lines, description frame and a prompt bar with the pad's icons.
+// Mouse hit boxes are invisible ImGui buttons over the same rows.
+using KyoeiUiText::T;
+using namespace KyoeiUiDraw;
+const ImU32 text_color=IM_COL32(232,232,228,255), dim_color=IM_COL32(150,158,158,255);
+bool hit(const HudSpace &hud,const char *id,float x0,float y0,float x1,float y1) {
+    ImGui::SetCursorScreenPos(hud.P(x0,y0));
+    return ImGui::InvisibleButton(id,ImVec2((x1-x0)*hud.unit,(y1-y0)*hud.unit));
 }
-void list_box(float height) {
-    ImGui::TextWrapped("%s",caption.c_str());
-    ImGui::Separator();
-    ImGui::BeginChild("save-slots",ImVec2(0,height-155*scale),ImGuiChildFlags_Borders);
-    ImGuiListClipper clipper; clipper.Begin((int)items.size(),40*scale);
-    clipper.IncludeItemByIndex((int)selected);
-    while (clipper.Step()) for (int index=clipper.DisplayStart;index<clipper.DisplayEnd;++index) {
-        ImGui::PushID(index);
-        if (ImGui::Selectable(items[index].c_str(),selected==(unsigned)index,0,ImVec2(0,36*scale))) {
-            selected=(unsigned)index; ++revision;
-        }
-        if (selected==(unsigned)index) ImGui::SetScrollHereY(.5f);
-        ImGui::PopID();
+bool hovered_now() { return ImGui::IsItemHovered() && (ImGui::GetIO().MouseDelta.x || ImGui::GetIO().MouseDelta.y); }
+void backdrop(ImDrawList *draw,const HudSpace &hud,const char *title) {
+    draw->AddRectFilled(ImVec2(0,0),ImGui::GetIO().DisplaySize,IM_COL32(4,7,9,170));
+    const ImVec2 bar=KyoeiUiArt::Size("option_title");
+    KyoeiUiArt::Draw(draw,"option_title",hud.P(0,54),hud.P(bar.x,54+bar.y));
+    HudText(draw,hud,236,90,34,title);
+}
+struct Prompt { const char *pad, *key, *label; };
+void prompt_bar(ImDrawList *draw,const HudSpace &hud,bool controller,std::initializer_list<Prompt> prompts) {
+    draw->AddRectFilled(hud.P(0,962),hud.P(1920,1080),IM_COL32(6,10,12,165));
+    KyoeiUiArt::Draw(draw,"pause_line",hud.P(0,960),hud.P(1920,964));
+    float x=60;
+    for (const auto &prompt:prompts) {
+        const char *button=controller?prompt.pad:prompt.key;
+        if (!button) continue;
+        const std::string piece=controller?std::string(KyoeiUiArt::Pad(button)):std::string("key_")+button;
+        // LB stands for the L1/R1 pair (cursor left/right).
+        const std::string pair=controller && !std::strcmp(button,"LB")?std::string(KyoeiUiArt::Pad("RB")):std::string();
+        x=pair.empty()?HudPrompt(draw,hud,x,1030,{piece.c_str()},prompt.label):HudPrompt(draw,hud,x,1030,{piece.c_str(),pair.c_str()},prompt.label);
     }
-    ImGui::EndChild();
-    if (ImGui::Button("Confirm",ImVec2(135*scale,36*scale))) finish_locked(0);
-    ImGui::SameLine();
-    if (ImGui::Button("Cancel",ImVec2(135*scale,36*scale))) finish_locked(1);
-    ImGui::TextDisabled("X / Enter: confirm   Circle / Esc: back");
 }
-void message_box() {
-    ImGui::TextWrapped("%s",caption.c_str());
-    ImGui::Spacing();
+// One option row: marker when chosen, label, the native line under it. True on click.
+bool option_row(ImDrawList *draw,const HudSpace &hud,int id,float x0,float x1,float y,const char *label,bool chosen,bool &hover,float align=0) {
+    char name[16]; std::snprintf(name,sizeof name,"##row%d",id);
+    const bool clicked=hit(hud,name,x0-10,y-38,x1,y+14);
+    hover=hovered_now();
+    if (chosen) KyoeiUiArt::Draw(draw,"option_point",hud.P(x0-10,y-30),hud.P(align?x1:x0+(x1-x0)*.45f,y+2));
+    HudText(draw,hud,align?(x0+x1)/2:x0+8,y,31,label,chosen?text_color:dim_color,align);
+    KyoeiUiArt::Draw(draw,"option_line",hud.P(x0,y+8),hud.P(x1,y+18));
+    return clicked;
+}
+void list_screen(ImDrawList *draw,const HudSpace &hud,bool controller) {
+    backdrop(draw,hud,caption.c_str());
+    const float x0=560,x1=1360,top=230,step=58; const unsigned rows=11;
+    const unsigned count=(unsigned)items.size();
+    unsigned first=selected>=rows/2?selected-rows/2:0;
+    if (count<=rows) first=0; else if (first>count-rows) first=count-rows;
+    draw->AddRectFilled(hud.P(x0-40,top-60),hud.P(x1+40,top+std::min(rows,count)*step+10),IM_COL32(6,10,12,140),6*hud.unit);
+    for (unsigned row=0;row<rows && first+row<count;++row) {
+        const unsigned index=first+row; bool hover=false;
+        if (option_row(draw,hud,(int)index,x0,x1,top+row*step,items[index].c_str(),index==selected,hover)) {
+            if (selected==index) finish_locked(0); else selected=index;
+            ++revision;
+        } else if (hover && selected!=index) { selected=index; ++revision; }
+    }
+    if (first) HudText(draw,hud,(x0+x1)/2,top-24,26,"\xE2\x96\xB2",dim_color,.5f);
+    if (first+rows<count) HudText(draw,hud,(x0+x1)/2,top+rows*step-4,26,"\xE2\x96\xBC",dim_color,.5f);
+    if (const float wheel=ImGui::GetIO().MouseWheel) {
+        const int next=std::clamp((int)selected+(wheel>0?-1:1),0,(int)count-1);
+        if ((unsigned)next!=selected) { selected=(unsigned)next; ++revision; }
+    }
+    prompt_bar(draw,hud,controller,{{"A","Enter",T("Confirm","Confirmar","決定")},
+                                    {"B","Esc",T("Back","Voltar","戻る")},
+                                    {"DPAD_UD","arrows",T("Select","Selecionar","選択")}});
+}
+void message_screen(ImDrawList *draw,const HudSpace &hud,bool controller) {
+    draw->AddRectFilled(ImVec2(0,0),ImGui::GetIO().DisplaySize,IM_COL32(4,7,9,150));
+    const float x0=520,x1=1400,wrap=x1-x0-60;
+    const float text_height=KyoeiUiArt::Font()->CalcTextSizeA(30*hud.unit,FLT_MAX,wrap*hud.unit,caption.c_str()).y/hud.unit;
+    const float body=std::max(38.f,text_height+8);
+    const float choices=message_choices?message_choices*58.f:70.f;
+    const float height=60+body+40+choices, top=540-height/2;
+    draw->AddRectFilled(hud.P(x0-30,top-20),hud.P(x1+30,top+height+20),IM_COL32(6,10,12,215),6*hud.unit);
+    KyoeiUiArt::Draw(draw,"option_bar",hud.P(x0-30,top-20),hud.P(x1+30,top-16));
+    KyoeiUiArt::Draw(draw,"option_frame",hud.P(x0-10,top+10),hud.P(x1+10,top+40+body));
+    HudText(draw,hud,x0+20,top+52,30,caption.c_str(),text_color,0,wrap);
+    const float y=top+60+body+58;
     if (!message_choices) {
-        ImGui::ProgressBar(float(progress)/100.f,ImVec2(-1,28*scale));
-        ImGui::TextDisabled("Please wait..."); return;
+        const float w=x1-x0-120;
+        draw->AddRectFilled(hud.P(x0+60,y-24),hud.P(x0+60+w,y-16),IM_COL32(40,48,50,255));
+        KyoeiUiArt::Draw(draw,"option_bar",hud.P(x0+60,y-24),hud.P(x0+60+w*float(progress)/100.f,y-16));
+        HudText(draw,hud,(x0+x1)/2,y+26,26,T("Please wait...","Aguarde...","しばらくお待ちください"),dim_color,.5f);
+        return;
     }
     for (unsigned choice=0;choice<message_choices;++choice) {
-        if (choice) ImGui::SameLine();
-        const bool highlighted=choice==selected;
-        if (highlighted) ImGui::PushStyleColor(ImGuiCol_Button,ImVec4(.13f,.45f,.67f,1));
-        const char *label=message_choices==1?"OK":
-            message_type==1 || message_type==7?(choice?"No":"Yes"):(choice?"Cancel":"OK");
-        if (ImGui::Button(label,ImVec2(135*scale,36*scale))) { selected=choice; finish_locked(0); }
-        if (highlighted) ImGui::PopStyleColor();
+        const char *label=message_choices==1?"OK":message_type==1 || message_type==7?
+            (choice?T("No","Não","いいえ"):T("Yes","Sim","はい")):(choice?T("Cancel","Cancelar","キャンセル"):"OK");
+        bool hover=false;
+        if (option_row(draw,hud,(int)choice,x0+220,x1-220,y+choice*58.f,label,choice==selected,hover,.5f)) { selected=choice; finish_locked(0); }
+        else if (hover && selected!=choice) { selected=choice; ++revision; }
     }
-    ImGui::TextDisabled("X / Enter: confirm   Circle / Esc: back");
+    prompt_bar(draw,hud,controller,{{"A","Enter",T("Confirm","Confirmar","決定")},
+                                    {"B","Esc",T("Back","Voltar","戻る")}});
+}
+void name_screen(ImDrawList *draw,const HudSpace &hud,bool controller) {
+    backdrop(draw,hud,T("Character Name","Nome do personagem","名前入力"));
+    const float x0=460,x1=1460,top=200;
+    draw->AddRectFilled(hud.P(x0-40,top-40),hud.P(x1+40,controller?720:520),IM_COL32(6,10,12,150),6*hud.unit);
+    if (!caption.empty()) HudText(draw,hud,x0,top,28,caption.c_str(),dim_color,0,x1-x0);
+    // Name field in the native frame; the text scrolls to keep the cursor visible.
+    const float fy=top+40, fh=86;
+    KyoeiUiArt::Draw(draw,"option_frame",hud.P(x0,fy),hud.P(x1,fy+fh));
+    const auto value=utf8((const wchar_t *)name.text);
+    std::wstring prefix((const wchar_t *)name.text,name.cursor);
+    const float cursor=HudTextWidth(hud,40,utf8(prefix.c_str()).c_str());
+    const float shift=std::max(0.f,cursor-(x1-x0-60));
+    draw->PushClipRect(hud.P(x0+20,fy),hud.P(x1-20,fy+fh),true);
+    if (name.select_all) draw->AddRectFilled(hud.P(x0+28-shift,fy+20),hud.P(x0+32-shift+HudTextWidth(hud,40,value.c_str()),fy+68),IM_COL32(30,110,110,200));
+    HudText(draw,hud,x0+30-shift,fy+58,40,value.c_str());
+    if (!name.select_all && std::fmod(ImGui::GetTime(),1.0)<.6)
+        draw->AddLine(hud.P(x0+32-shift+cursor,fy+22),hud.P(x0+32-shift+cursor,fy+66),text_color,2*hud.unit);
+    draw->PopClipRect();
+    char counter[64];
+    if (kyoei_name_is_roman_default(&name)) std::snprintf(counter,sizeof counter,"%s",T("Default name","Nome padrão","デフォルトの名前"));
+    else std::snprintf(counter,sizeof counter,"%u / %u",(unsigned)name.length,(unsigned)(name.extended?name.limit:name.native_limit));
+    HudText(draw,hud,x1,fy+fh+36,24,counter,dim_color,1);
+    if (!kyoei_name_can_accept(&name)) {
+        char limit[128]; std::snprintf(limit,sizeof limit,T("Up to %u characters, or keep the default name.",
+            "Até %u caracteres, ou mantenha o nome padrão.","%u文字以内で入力するか、デフォルトの名前のままにしてください。"),(unsigned)name.native_limit);
+        HudText(draw,hud,x0,fy+fh+36,24,limit,IM_COL32(240,150,120,255));
+    }
+    if (!controller) {
+        HudText(draw,hud,x0,fy+fh+90,26,T("Type your name.","Digite seu nome.","名前を入力してください。"),dim_color);
+        prompt_bar(draw,hud,false,{{nullptr,"Enter",T("Confirm","Confirmar","決定")},{nullptr,"Esc",T("Cancel","Cancelar","キャンセル")},
+            {nullptr,"Backspace",T("Erase","Apagar","削除")},{nullptr,"arrows",T("Cursor","Cursor","カーソル")}});
+        return;
+    }
+    const float ky=fy+fh+80, kw=(x1-x0)/10, kh=72;
+    for (unsigned key=0;key<40;++key) {
+        const float kx=x0+(key%10)*kw, kt=ky+(key/10)*kh;
+        std::string label;
+        if (key<26) label=char((name.upper?'A':'a')+key);
+        else if (key<36) label=char('0'+key-26);
+        else label=key==36?T("Space","Espaço","スペース"):key==37?T("Shift","Maiúsc.","大/小"):key==38?T("Erase","Apagar","削除"):T("Done","Pronto","決定");
+        char id[16]; std::snprintf(id,sizeof id,"##key%u",key);
+        if (hit(hud,id,kx+4,kt+4,kx+kw-4,kt+kh-4)) { name.key=key; kyoei_name_activate(&name); ++revision; if (name.result) finish_locked(0); }
+        else if (hovered_now() && name.key!=key) { name.key=key; ++revision; }
+        const bool chosen=key==name.key;
+        draw->AddRectFilled(hud.P(kx+4,kt+4),hud.P(kx+kw-4,kt+kh-4),chosen?IM_COL32(24,92,92,230):IM_COL32(16,24,28,200),4*hud.unit);
+        if (chosen) KyoeiUiArt::Draw(draw,"option_bar",hud.P(kx+4,kt+kh-10),hud.P(kx+kw-4,kt+kh-6));
+        HudText(draw,hud,kx+kw/2,kt+kh/2+12,label.size()>1?24:32,label.c_str(),chosen?text_color:dim_color,.5f);
+    }
+    prompt_bar(draw,hud,true,{{"A",nullptr,T("Enter","Inserir","入力")},{"B",nullptr,T("Cancel","Cancelar","キャンセル")},
+        {"X",nullptr,T("Erase","Apagar","削除")},{"Y",nullptr,T("Shift","Maiúsc.","大/小")},
+        {"LB",nullptr,T("Cursor","Cursor","カーソル")},{"MENU",nullptr,T("Done","Pronto","決定")}});
 }
 }
 
@@ -457,14 +531,14 @@ ImDrawData *Draw(unsigned width,unsigned height,float seconds,void (*extra)()) {
     ImGui::NewFrame();
     if (kind && !done) {
         bool controller=kyoei_input_current_mode()==KYOEI_INPUT_CONTROLLER;
-        float panel_width=std::min(850*scale,float(width)-32*scale);
-        float panel_height=std::min((kind==KYOEI_OVERLAY_NAME?(controller?600:440):kind==KYOEI_OVERLAY_LIST?540:340)*scale,float(height)-32*scale);
-        ImGui::SetNextWindowPos(ImVec2(float(width)/2,float(height)/2),ImGuiCond_Always,ImVec2(.5f,.5f));
-        ImGui::SetNextWindowSize(ImVec2(panel_width,panel_height));
-        ImGui::Begin("##kyoei-modal",nullptr,ImGuiWindowFlags_NoDecoration|ImGuiWindowFlags_NoMove|ImGuiWindowFlags_NoSavedSettings);
-        if (kind==KYOEI_OVERLAY_NAME) name_box(panel_width,controller);
-        else if (kind==KYOEI_OVERLAY_LIST) list_box(panel_height);
-        else message_box();
+        // A transparent full-screen window only carries the mouse hit boxes.
+        ImGui::SetNextWindowPos(ImVec2(0,0)); ImGui::SetNextWindowSize(ImVec2(float(width),float(height)));
+        ImGui::Begin("##kyoei-modal",nullptr,ImGuiWindowFlags_NoDecoration|ImGuiWindowFlags_NoMove|ImGuiWindowFlags_NoSavedSettings|
+                     ImGuiWindowFlags_NoBackground|ImGuiWindowFlags_NoScrollWithMouse);
+        auto *draw=ImGui::GetBackgroundDrawList(); const HudSpace hud=Hud();
+        if (kind==KYOEI_OVERLAY_NAME) name_screen(draw,hud,controller);
+        else if (kind==KYOEI_OVERLAY_LIST) list_screen(draw,hud,controller);
+        else message_screen(draw,hud,controller);
         ImGui::End();
     } else title_exit(width,height);
     if(extra)extra();
