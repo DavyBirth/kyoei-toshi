@@ -5049,3 +5049,4 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 2. Texturas de controle (diagramas e tutoriais) em versões Xbox, Nintendo e teclado/mouse, trocando conforme o dispositivo.
 3. Desempenho do giro: trabalho longo no núcleo (tradução de comandos).
 4. Opções gráficas de PC: regra de fidelidade relaxada (AGENTS.md): resolução interna maior/menor, upscaler, presets.
+- Ícones Xbox/Nintendo redesenhados do zero (tools/make_pad_icons.py) para os 19 ícones de fonte (font/icon/IC_*): botões redondos (Xbox colorido, Nintendo branco), bumpers, gatilhos, sticks, Menu ☰/View ⧉ e +/− redondos, D-pad cruz inteira. Mesma caixa ocupada e sombra suave dos nativos. Texturas com contexto (balões de fala, NEXT, pular cena) seguem com a troca de símbolo. Conferido no jogo forçando Xbox (pausa com LB/RB). Diagramas de comandos ainda PS (próximo trabalho de arte; o gerador antigo está no histórico, 026211f).

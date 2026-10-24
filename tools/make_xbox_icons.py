@@ -200,6 +200,10 @@ def cursor_tags(image, family='xbox'):
 
 
 def draw(name, image, family='xbox'):
+    # The game's font icons are redrawn whole in each pad's own shapes (make_pad_icons).
+    if name.startswith('font/icon/'):
+        from make_pad_icons import font_icon
+        return font_icon(name, image, family)
     if name in KEEP: return None
     if name == 'texture/hud/cursor_lr.tex': return cursor_tags(image, family)
     if name in TEXT: return text_tag(image, TEXT[name], 140 if TEXT[name] == '@view' else 185, family)
