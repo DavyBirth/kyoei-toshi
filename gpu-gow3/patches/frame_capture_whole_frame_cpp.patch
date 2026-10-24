@@ -1,0 +1,23 @@
+Kyoei: a frame capture spans flip to flip. Kyoei writes the display buffer in more than one pass
+per frame (scene blit, then UI), so ending at the next display pass captured only 3 passes.
+<<<<<<<
+    if (display && new_pass) {
+        if (state.load(std::memory_order_relaxed) == Recording) {
+=======
+    static u64 recording_since = 0;
+    if (display && new_pass) {
+        if (state.load(std::memory_order_relaxed) == Recording &&
+            flips.load(std::memory_order_acquire) == recording_since) {
+            // Same frame: keep recording.
+        } else if (state.load(std::memory_order_relaxed) == Recording) {
+>>>>>>>
+<<<<<<<
+        pass_open = false;
+        state.store(Recording, std::memory_order_release);
+    }
+=======
+        pass_open = false;
+        recording_since = flips.load(std::memory_order_acquire);
+        state.store(Recording, std::memory_order_release);
+    }
+>>>>>>>

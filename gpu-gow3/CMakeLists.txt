@@ -359,6 +359,7 @@ gow3_patch(GOW3_ADAPTED_HEADERS shadps4/video_core/texture_cache/texture_cache.h
 gow3_patch(GOW3_ADAPTED_HEADERS shadps4/video_core/renderer_vulkan/vk_rasterizer.h sampler_set_memo_rasterizer_h.patch)
 gow3_patch(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp sampler_set_memo_texture_cache_cpp.patch)
 gow3_patch(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp sampler_set_memo_rasterizer_cpp.patch)
+gow3_patch(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_frame_capture.cpp frame_capture_whole_frame_cpp.patch)
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
     kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp kyoei_thread_sampler.cpp
     ../src/kyoei_overlay_gpu.cpp ../src/kyoei_photo_post.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
