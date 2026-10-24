@@ -4,6 +4,9 @@
 #include <stdint.h>
 #include <string.h>
 enum { KYOEI_INPUT_KEYBOARD, KYOEI_INPUT_CONTROLLER };
+/* Button art for the controller in use: PlayStation pads keep the game's own icons;
+ * every other pad (Xbox, generic) gets Xbox labels. */
+enum { KYOEI_PAD_PLAYSTATION, KYOEI_PAD_XBOX };
 typedef struct { unsigned mode; unsigned char axis_engaged[6]; } KyoeiInputMode;
 static inline void kyoei_input_model_keyboard(KyoeiInputMode *m) { m->mode=KYOEI_INPUT_KEYBOARD; }
 static inline void kyoei_input_model_button(KyoeiInputMode *m) { m->mode=KYOEI_INPUT_CONTROLLER; }
@@ -27,6 +30,10 @@ void kyoei_input_controller_button(void);
 void kyoei_input_controller_axis(unsigned axis, int value);
 void kyoei_input_release(void);
 unsigned kyoei_input_current_mode(void);
+/* Whether the pad that sent the last input is a PlayStation one. KYOEI_CONTROLLER_STYLE=
+ * playstation|xbox (launcher choice) overrides it; auto or unset follows the pad. */
+void kyoei_input_controller_playstation(int playstation);
+unsigned kyoei_input_current_family(void);
 #ifdef __cplusplus
 }
 #endif

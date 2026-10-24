@@ -1238,9 +1238,16 @@ kyoei_replace_checked(KYOEI_WINDOW
   "    SDL_Event event;"
   "    KyoeiOverlay::UpdateTextInput(window);\n    SDL_Event event;")
 set(KYOEI_WINDOW "#include \"kyoei_input_mode.h\"\n${KYOEI_WINDOW}")
+# The pad family picks Xbox or PlayStation button art (kyoei_live_prompts.h).
+set(KYOEI_WINDOW "#include <SDL3/SDL.h>
+static bool kyoei_playstation_pad(SDL_JoystickID id) {
+    const SDL_GamepadType type = SDL_GetGamepadTypeForID(id);
+    return type == SDL_GAMEPAD_TYPE_PS3 || type == SDL_GAMEPAD_TYPE_PS4 || type == SDL_GAMEPAD_TYPE_PS5;
+}
+${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "        gz_pad_event(event);"
-  "        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT) kyoei_input_keyboard();\n        else if (event.type == SDL_EVENT_GAMEPAD_BUTTON_DOWN) kyoei_input_controller_button();\n        else if (event.type == SDL_EVENT_GAMEPAD_AXIS_MOTION) kyoei_input_controller_axis(event.gaxis.axis,event.gaxis.value);\n        else if (event.type == SDL_EVENT_WINDOW_FOCUS_LOST || event.type == SDL_EVENT_GAMEPAD_REMOVED) kyoei_input_release();\n        if (KyoeiOverlay::HandleEvent(event)) continue;\n        gz_pad_event(event);")
+  "        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT) kyoei_input_keyboard();\n        else if (event.type == SDL_EVENT_GAMEPAD_BUTTON_DOWN) { kyoei_input_controller_playstation(kyoei_playstation_pad(event.gbutton.which)); kyoei_input_controller_button(); }\n        else if (event.type == SDL_EVENT_GAMEPAD_AXIS_MOTION) { kyoei_input_controller_playstation(kyoei_playstation_pad(event.gaxis.which)); kyoei_input_controller_axis(event.gaxis.axis,event.gaxis.value); }\n        else if (event.type == SDL_EVENT_WINDOW_FOCUS_LOST || event.type == SDL_EVENT_GAMEPAD_REMOVED) kyoei_input_release();\n        if (KyoeiOverlay::HandleEvent(event)) continue;\n        gz_pad_event(event);")
 set(KYOEI_WINDOW "#include \"kyoei_window_options.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "base_title{title}"

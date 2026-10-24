@@ -18,8 +18,9 @@ extern "C" void gz_log(const char *, ...);
 namespace KyoeiPrompts {
 struct Pair {
     uint32_t width{}, height{}, levels{}, storage{}, channels{}, kind{}, bytes{};
-    std::vector<unsigned char> controller, keyboard, american;
+    std::vector<unsigned char> controller, keyboard, american, xbox;
     const std::vector<unsigned char> &Controller() const {
+        if (!xbox.empty() && kyoei_input_current_family() == KYOEI_PAD_XBOX) return xbox;
         return american.empty() ? controller : american;
     }
 };
@@ -34,7 +35,9 @@ inline void Initialize() {
     if (!file) return;
     char magic[8]; uint32_t count{};
     bool ok = std::fread(magic, 1, 8, file) == 8;
-    const bool american = ok && !std::memcmp(magic, "KYPROMP2", 8);
+    // KYPROMP3 adds the Xbox artwork after the American one.
+    const bool with_xbox = ok && !std::memcmp(magic, "KYPROMP3", 8);
+    const bool american = with_xbox || (ok && !std::memcmp(magic, "KYPROMP2", 8));
     ok = ok && (american || !std::memcmp(magic, "KYPROMP1", 8)) &&
               std::fread(&count, 4, 1, file) == 1 && count <= 128;
     size_t total{};
@@ -42,7 +45,7 @@ inline void Initialize() {
         uint32_t fields[7];
         if (std::fread(fields, 4, 7, file) != 7) { ok = false; break; }
         Pair p{fields[0], fields[1], fields[2], fields[3], fields[4], fields[5], fields[6], {}, {}};
-        total += size_t(p.bytes) * (american ? 3 : 2);
+        total += size_t(p.bytes) * (with_xbox ? 4 : american ? 3 : 2);
         if (!p.width || !p.height || p.width > 4096 || p.height > 4096 || !p.levels ||
             p.levels > 14 || !p.bytes || total > 32 * 1024 * 1024 || (p.storage != 1 && p.storage != 13)) {
             ok = false; break;
@@ -53,6 +56,10 @@ inline void Initialize() {
         if (ok && american) {
             p.american.resize(p.bytes);
             ok = std::fread(p.american.data(), 1, p.bytes, file) == p.bytes;
+        }
+        if (ok && with_xbox) {
+            p.xbox.resize(p.bytes);
+            ok = std::fread(p.xbox.data(), 1, p.bytes, file) == p.bytes;
         }
         if (ok) pairs.push_back(std::move(p));
     }
@@ -183,7 +190,8 @@ const Pair *Select(Image &image, bool dirty, bool &changed, unsigned &mode) {
     if (p.kind==2) { kyoei_prompt_status_seen(); return nullptr; }
     mode = forced && !std::strcmp(forced, "controller") ? KYOEI_INPUT_CONTROLLER :
            forced && !std::strcmp(forced, "keyboard") ? KYOEI_INPUT_KEYBOARD : kyoei_input_current_mode();
-    const unsigned variant=mode | (p.kind==1 && !kyoei_prompt_pause_root()?2u:0u);
+    const unsigned variant=mode | (p.kind==1 && !kyoei_prompt_pause_root()?2u:0u) |
+        (mode==KYOEI_INPUT_CONTROLLER && kyoei_input_current_family()==KYOEI_PAD_XBOX?4u:0u);
     changed = state.mode != variant;
     state.mode = variant;
     if (p.kind==1 && !kyoei_prompt_pause_root() && mode==KYOEI_INPUT_KEYBOARD)

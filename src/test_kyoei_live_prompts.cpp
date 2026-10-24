@@ -3,7 +3,9 @@
 #include <cassert>
 static unsigned current_mode;
 static std::vector<unsigned char> guest(64);
+static unsigned current_family=KYOEI_PAD_PLAYSTATION;
 extern "C" unsigned kyoei_input_current_mode(void) { return current_mode; }
+extern "C" unsigned kyoei_input_current_family(void) { return current_family; }
 extern "C" int gz_memory_copy(uintptr_t address,void *out,uint64_t size,int write) {
     if(write || address<0x1000 || address-0x1000>guest.size() || size>guest.size()-(address-0x1000))return 0;
     std::memcpy(out,guest.data()+address-0x1000,size);return 1;
@@ -69,5 +71,12 @@ int main() {
         if(from<32)assert(at==first_row[from/4]);
         assert(bytes==4);return true;
     },true));
-    std::puts("LIVE PROMPTS PASS: padded mips, mode changes, memory reuse, layout rejection, pause frame lifetime");
+    {   // Xbox pads get the Xbox artwork; PlayStation pads the American one.
+        KyoeiPrompts::Pair pair{};
+        pair.controller={1}; pair.american={2}; pair.xbox={3};
+        current_family=KYOEI_PAD_XBOX; assert(pair.Controller()[0]==3);
+        current_family=KYOEI_PAD_PLAYSTATION; assert(pair.Controller()[0]==2);
+        pair.xbox.clear(); current_family=KYOEI_PAD_XBOX; assert(pair.Controller()[0]==2);
+    }
+    std::puts("LIVE PROMPTS PASS: padded mips, mode changes, memory reuse, layout rejection, pause frame lifetime, Xbox art");
 }
