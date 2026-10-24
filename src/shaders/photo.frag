@@ -30,6 +30,9 @@ void main(){
     else if(grade.preset==6)c=vec3(.015,.010,.015)+mix(vec3(l),c,1.12)*vec3(1.08,1.02,.83);
     else if(grade.preset==7){float shadow=1-clamp(l*2,0,1);c*=vec3(1.03-.25*shadow,.95+.15*shadow,1.15+.15*shadow);}
     else if(grade.preset==8){float shadow=1-clamp(l*2,0,1);c=mix(vec3(l),c,1.16)*vec3(1.06-.10*shadow,1.02+.02*shadow,.97+.13*shadow);}
+    else if(grade.preset==9)c*=vec3(1.18,1.02,.78);
+    else if(grade.preset==10)c*=vec3(.72,.84,1.08);
+    else if(grade.preset==11)c=mix(vec3(l),c,.7)*vec3(.96,1,1.05);
     c=clamp(c,0,1);
     if(grade.grain!=0 || grade.vignette!=0) {
         c=encodeRGB(c);

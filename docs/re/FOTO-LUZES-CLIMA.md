@@ -239,3 +239,13 @@ estado narrativo para simular o recurso. Ainda nao e prova de impossibilidade.
 Faltam identificar emissores de chuva por recurso e uma fase com SkySphere,
 bem como restauracao segura e dependencias de sombras/GI/ceu. Priorizar
 funcionalidades fotografias independentes enquanto isso.
+
+### Decisao final de clima/horario — 24/10/2026
+
+Horario e clima reais nao entram no modo foto: a iluminacao de cada cena vem
+pronta dos recursos da fase, o relogio astronomico do GxSysEnvironment fica
+parado (passo zero) e nenhum consumidor visual dele foi encontrado; chuva e ceu
+sao das cenas. Mudar isso exigiria trocar o sistema de luz do jogo, contra a
+regra de fidelidade. Oferecido em seu lugar, deixando claro que e cor apenas:
+filtros "Golden Hour", "Blue Hour" e "Overcast" (mesma conta na CPU, PNG, e no
+shader photo.frag, previa).

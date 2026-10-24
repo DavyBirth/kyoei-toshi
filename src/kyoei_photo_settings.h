@@ -9,7 +9,7 @@
 #include "kyoei_photo_lights.h"
 namespace KyoeiPhoto {
 enum class Field {Lens,Roll,Speed,Guide,Frame,Exposure,Contrast,Saturation,Filter,Grain,Vignette,DofMode,FocusDistance,Aperture,LightSlot,LightControl,LightType,LightMode,LightColor,LightPower,LightX,LightY,LightZ,LightYaw,LightPitch,LightCone,Count};
-enum class Look {Original,Mono,Sepia,Cool,Warm,Kaiju1954,Tokusatsu,KaijuNight,AnimeKaiju,Count};
+enum class Look {Original,Mono,Sepia,Cool,Warm,Kaiju1954,Tokusatsu,KaijuNight,AnimeKaiju,GoldenHour,BlueHour,Overcast,Count};
 struct Grade {float exposure=0,contrast=1,saturation=1;int filter=0;float grain=0,vignette=0;int frame=0;};
 inline std::atomic<int> guide{0},frame{0};
 inline std::atomic<int> selected{0},filter{0};
@@ -34,9 +34,9 @@ inline const char* FieldName(Field field) {
 }
 inline const char* FilterName(int value) {
     using KyoeiUiText::T;
-    constexpr const char* en[]={"Original","Black & White","Sepia","Cool","Warm","Kaiju 1954","Retro Tokusatsu","Kaiju Night","Kaiju Anime"};
-    constexpr const char* pt[]={"Original","Preto e branco","Sépia","Frio","Quente","Kaiju 1954","Tokusatsu retrô","Kaiju noturno","Kaiju anime"};
-    constexpr const char* ja[]={"オリジナル","モノクロ","セピア","クール","ウォーム","怪獣 1954","レトロ特撮","夜の怪獣","怪獣アニメ"};
+    constexpr const char* en[]={"Original","Black & White","Sepia","Cool","Warm","Kaiju 1954","Retro Tokusatsu","Kaiju Night","Kaiju Anime","Golden Hour","Blue Hour","Overcast"};
+    constexpr const char* pt[]={"Original","Preto e branco","Sépia","Frio","Quente","Kaiju 1954","Tokusatsu retrô","Kaiju noturno","Kaiju anime","Fim de tarde","Anoitecer","Nublado"};
+    constexpr const char* ja[]={"オリジナル","モノクロ","セピア","クール","ウォーム","怪獣 1954","レトロ特撮","夜の怪獣","怪獣アニメ","夕暮れ","ブルーアワー","曇り"};
     const int i=std::clamp(value,0,int(Look::Count)-1);
     return T(en[i],pt[i],ja[i]);
 }
@@ -179,6 +179,10 @@ inline void GradeLinear(float& r,float& g,float& b,Grade grade) {
         g=(l+(g-l)*1.16f)*(1.02f+.02f*shadow);
         b=(l+(b-l)*1.16f)*(.97f+.13f*shadow);
     }
+    // Time-of-day and weather looks: colour only; the scene's own lighting is unchanged.
+    else if(grade.filter==int(Look::GoldenHour)){r*=1.18f;g*=1.02f;b*=.78f;}
+    else if(grade.filter==int(Look::BlueHour)){r*=.72f;g*=.84f;b*=1.08f;}
+    else if(grade.filter==int(Look::Overcast)){r=(l+(r-l)*.7f)*.96f;g=(l+(g-l)*.7f);b=(l+(b-l)*.7f)*1.05f;}
 }
 inline uint32_t FilmHash(uint32_t x,uint32_t y) {
     uint32_t h=x*UINT32_C(0x9e3779b9)^y*UINT32_C(0x85ebca6b)^UINT32_C(0x1954);
