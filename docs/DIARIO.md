@@ -5039,3 +5039,6 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Créditos (staffroll) ficam em japonês: não há créditos oficiais em inglês (jogo só saiu no Japão); romanizar nomes reais seria chute.
 - Davy: narração do carregamento estranha e "(Rain...)" parecia legenda de som. Reescritas as telas de introdução (loading_image_and_text r0-r5) e "(It's raining...)" (pensamento do protagonista).
 - Modo foto: clima/horário reais descartados (ver docs/re/FOTO-LUZES-CLIMA.md, decisão final); adicionados filtros Golden Hour/Blue Hour/Overcast (só cor; CPU e shader iguais). test_kyoei_photo_settings passa.
+- Giro da câmera: roteiro de medição em segundo plano (janela fora da tela, mudo, KYOEI_BENCH_TURN_FILE, rua do início após a criação do personagem) — base 47-56 FPS girando, picos 34 ms. Gargalo segue sendo CPU do núcleo (processador de comandos + DrawRec, ver 23/10); a recópia GpuDirty é trabalho de GPU, que está ~50% livre, então não é o limite. Sem mudança segura nesta rodada.
+- Controle Nintendo: código e testes prontos; falta conferir com controle físico.
+- Portátil pessoal atualizada com o runtime novo (telas no estilo do jogo, filtros) e a en-18.
