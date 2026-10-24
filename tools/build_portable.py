@@ -121,6 +121,12 @@ def main():
         # Replaced by the verified paired pack above; no runtime reads this.
         obsolete=out/'languages'/language/'keyboard-icons.kydelta'
         if obsolete.exists():obsolete.unlink()
+    # English display strings of the executable (translations/binary-en.json), and the
+    # game-styled art of the PC screens (photo mode, saves).
+    subprocess.run([str(sys.executable),str(ROOT/'tools/build_eboot_text.py'),str(ROOT/'translations/binary-en.json'),
+                    str(out/'languages/en/eboot-text.kytext'),'--eboot',str(game/'eboot.bin'),'--elf',str(prepared/'eboot.elf')],check=True)
+    subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/make_ui_art.py'),
+                    str(out/'game/DAT/common.psarc'),str(out/'assets/ui-art.kyart')],check=True)
     fonts=ROOT/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts'
     for name in ['NotoSans-Regular.ttf','NotoSansCJK-Regular.ttc']:copy_file(fonts/name,out/'assets/fonts'/name)
     for name in ['artwork.png','game.ico']:copy_file(ROOT/'build/launcher-assets'/name,out/'assets'/name)

@@ -12,7 +12,7 @@ from english_typography import native_english
 from psarc import Psarc
 from psarc_delta import build, verify
 from text_tool import export, insert
-import make_controller_diagram
+import apply_binary_text
 
 HUD_LABELS = {
     '\u88c5\u5099': 'Gear',
@@ -75,7 +75,9 @@ def hud_labels(data):
 def corrections(base):
     manifest = json.loads(Path('docs/m4/runtime-preview.json').read_text(encoding='utf8'))
     resources = {row['resource'].split('/',1)[1] for row in manifest['languages']['en']['resources']}
-    changed = {}; counts = {'punctuation_strings':0, 'hud_labels':0, 'diagrams':0}
+    table = json.loads(Path('translations/binary-en.json').read_text(encoding='utf8'))
+    hud_texts = {r['path'].split('/', 1)[1]: r for r in table['files'] if r['kind'] == 'hud_text_property'}
+    changed = {}; counts = {'punctuation_strings':0, 'hud_labels':0, 'hud_texts':0}
     with Psarc(base) as archive:
         for entry in archive.entries[1:]:
             name = entry.name
@@ -93,12 +95,15 @@ def corrections(base):
                             s['translation'] = normalized; modified = True
                             counts['punctuation_strings'] += int(native_english(value) != value)
                 if modified: changed[name] = insert(data,doc)
-            elif name in make_controller_diagram.VARIANTS:
-                changed[name] = make_controller_diagram.VARIANTS[name](b''.join(archive.chunks(entry)))
-                counts['diagrams'] += 1
             elif name.startswith('hud/') and name.endswith('.hud'):
-                data = b''.join(archive.chunks(entry)); result, count = hud_labels(data)
-                if count: changed[name] = result; counts['hud_labels'] += count
+                data = b''.join(archive.chunks(entry))
+                # Fixed-slot HUD texts (translations/binary-en.json) first, then the labels.
+                record = hud_texts.get(name)
+                if record:
+                    data = apply_binary_text.patch(record, data); counts['hud_texts'] += len(record['changes'])
+                result, count = hud_labels(data)
+                if count: counts['hud_labels'] += count
+                if count or record: changed[name] = result
     return changed, counts
 
 

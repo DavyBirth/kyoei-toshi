@@ -5,10 +5,10 @@
   "source_archive_sha256": "3a54e70d40b57562cbf350028ab8b75ee09c8143f8f1e766cc04bd81ce133966",
   "languages": {
     "en": {
-      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-16\\en\\common.psarc",
-      "sha256": "489f1cb783d1b4b5ea62b8cd1432b59ce57efb94d1b33a8dcb7bb18c8a7a9d58",
-      "bytes": 6349250165,
-      "textures": 59,
+      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-en-17\\en\\common.psarc",
+      "sha256": "c06e2d4044559c664fa7d9d304314390495befa9162bd222679bd110c0b63e28",
+      "bytes": 6352908181,
+      "textures": 168,
       "status": "experimental_partial_translation",
       "runtime_verified": false,
       "resources": [
@@ -95,7 +95,7 @@
         {
           "resource": "common/lua/Text_Stage_201.luc",
           "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
-          "entries": 730
+          "entries": 624
         },
         {
           "resource": "common/lua/Text_Stage_202.luc",
@@ -200,12 +200,12 @@
         {
           "resource": "common/lua/hud_data.luc",
           "source_sha256": "8500c9ddb1872f485a22c43011fe264e4e645195231e1015d56a1eab6445dd66",
-          "entries": 2
+          "entries": 5
         },
         {
           "resource": "common/lua/intermission_result_data.luc",
           "source_sha256": "9cbfcc123adb7a33140ad4956d9d9574289239662d5e4a2935dd61f5fa70f3a2",
-          "entries": 19
+          "entries": 22
         },
         {
           "resource": "common/lua/item_ad_text.luc",
@@ -220,7 +220,7 @@
         {
           "resource": "common/lua/map_goal_text.luc",
           "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
-          "entries": 197
+          "entries": 188
         },
         {
           "resource": "common/lua/mission_text.luc",
@@ -230,7 +230,7 @@
         {
           "resource": "common/lua/option_menu_text.luc",
           "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
-          "entries": 16
+          "entries": 1
         },
         {
           "resource": "common/lua/place_text.luc",
@@ -375,7 +375,7 @@
         {
           "resource": "common/lua/stage_207_news_text.luc",
           "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
-          "entries": 118
+          "entries": 120
         },
         {
           "resource": "common/lua/stage_207_npc.luc",
@@ -688,7 +688,7 @@
           "entries": 1
         }
       ],
-      "translated_entries": 13260
+      "translated_entries": 13138
     },
     "pt-BR": {
       "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-02\\pt-BR\\common.psarc",
@@ -800,7 +800,7 @@
     {
       "resource": "common/lua/Text_Stage_201.luc",
       "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
-      "entries": 730
+      "entries": 624
     },
     {
       "resource": "common/lua/Text_Stage_202.luc",
@@ -905,12 +905,12 @@
     {
       "resource": "common/lua/hud_data.luc",
       "source_sha256": "8500c9ddb1872f485a22c43011fe264e4e645195231e1015d56a1eab6445dd66",
-      "entries": 2
+      "entries": 5
     },
     {
       "resource": "common/lua/intermission_result_data.luc",
       "source_sha256": "9cbfcc123adb7a33140ad4956d9d9574289239662d5e4a2935dd61f5fa70f3a2",
-      "entries": 19
+      "entries": 22
     },
     {
       "resource": "common/lua/item_ad_text.luc",
@@ -925,7 +925,7 @@
     {
       "resource": "common/lua/map_goal_text.luc",
       "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
-      "entries": 197
+      "entries": 188
     },
     {
       "resource": "common/lua/mission_text.luc",
@@ -935,7 +935,7 @@
     {
       "resource": "common/lua/option_menu_text.luc",
       "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
-      "entries": 16
+      "entries": 1
     },
     {
       "resource": "common/lua/place_text.luc",
@@ -1080,7 +1080,7 @@
     {
       "resource": "common/lua/stage_207_news_text.luc",
       "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
-      "entries": 118
+      "entries": 120
     },
     {
       "resource": "common/lua/stage_207_npc.luc",
@@ -1398,7 +1398,7 @@
   "runtime_verified": false,
   "original_dump_modified": false,
   "entries_by_language": {
-    "en": 13260,
+    "en": 13138,
     "pt-BR": 94
   }
 }

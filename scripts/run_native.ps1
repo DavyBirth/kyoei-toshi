@@ -57,6 +57,12 @@ try {
     if ($kyoeiPromptStream.Read($kyoeiPromptMagic,0,8) -ne 8 -or [Text.Encoding]::ASCII.GetString($kyoeiPromptMagic) -notin @('KYPROMP2','KYPROMP3')) { throw 'Pacote de botoes antigo; reconstruir com tools/build_prompt_pack.py.' }
 } finally { $kyoeiPromptStream.Dispose() }
 $env:KYOEI_PROMPT_PACK=$kyoeiPromptPack
+# Read-time UI corrections: HUD texts of the natural English translation (tools/build_ui_corrections.py).
+Remove-Item Env:KYOEI_ARCHIVE_DELTA -ErrorAction SilentlyContinue
+if ($Language -eq 'en' -and (Test-Path -LiteralPath "$kyoeiRoot\build\ui-corrections-en.kydelta")) { $env:KYOEI_ARCHIVE_DELTA="$kyoeiRoot\build\ui-corrections-en.kydelta" }
+# Game-styled PC screens (tools/make_ui_art.py) and English executable strings (tools/build_eboot_text.py).
+if (Test-Path -LiteralPath "$kyoeiRoot\build\ui-art.kyart") { $env:KYOEI_UI_ART="$kyoeiRoot\build\ui-art.kyart" }
+if ($Language -eq 'en' -and (Test-Path -LiteralPath "$kyoeiRoot\build\eboot-text-en.kytext")) { $env:KYOEI_EBOOT_TEXT="$kyoeiRoot\build\eboot-text-en.kytext" }
 $env:KYOEI_WINDOW_HEIGHT=[string]$Height
 $env:KYOEI_FULLSCREEN=if ($Fullscreen) { '1' } else { '0' }
 $env:KYOEI_WINDOW_ICON="$kyoeiRoot\build\launcher-assets\game.ico"

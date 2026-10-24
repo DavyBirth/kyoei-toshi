@@ -171,6 +171,8 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_PHOTO_DOF"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",lang,"prompts.kypack");
             if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,"ui-corrections.kydelta");
+            if(lang=="en")start.EnvironmentVariables["KYOEI_EBOOT_TEXT"]=Path.Combine("languages",lang,"eboot-text.kytext");
+            start.EnvironmentVariables["KYOEI_UI_ART"]="assets/ui-art.kyart";
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
             start.EnvironmentVariables["GZ_LANGUAGE"]=lang=="ja"?"0":"1";
             if(lang=="en")start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";
