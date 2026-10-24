@@ -6,7 +6,7 @@
 enum { KYOEI_INPUT_KEYBOARD, KYOEI_INPUT_CONTROLLER };
 /* Button art for the controller in use: PlayStation pads keep the game's own icons;
  * every other pad (Xbox, generic) gets Xbox labels. */
-enum { KYOEI_PAD_PLAYSTATION, KYOEI_PAD_XBOX };
+enum { KYOEI_PAD_PLAYSTATION, KYOEI_PAD_XBOX, KYOEI_PAD_NINTENDO };
 typedef struct { unsigned mode; unsigned char axis_engaged[6]; } KyoeiInputMode;
 static inline void kyoei_input_model_keyboard(KyoeiInputMode *m) { m->mode=KYOEI_INPUT_KEYBOARD; }
 static inline void kyoei_input_model_button(KyoeiInputMode *m) { m->mode=KYOEI_INPUT_CONTROLLER; }
@@ -30,10 +30,13 @@ void kyoei_input_controller_button(void);
 void kyoei_input_controller_axis(unsigned axis, int value);
 void kyoei_input_release(void);
 unsigned kyoei_input_current_mode(void);
-/* Whether the pad that sent the last input is a PlayStation one. KYOEI_CONTROLLER_STYLE=
- * playstation|xbox (launcher choice) overrides it; auto or unset follows the pad. */
-void kyoei_input_controller_playstation(int playstation);
+/* Family of the pad that sent the last input (KYOEI_PAD_*). KYOEI_CONTROLLER_STYLE=
+ * playstation|xbox|nintendo (launcher choice) overrides it; auto or unset follows the pad. */
+void kyoei_input_controller_family(unsigned family);
 unsigned kyoei_input_current_family(void);
+/* Nintendo layout: the right face button confirms and the bottom one goes back, as the
+ * circle and cross of the game's Japanese layout (the others confirm with the bottom one). */
+static inline int kyoei_input_confirm_on_right(unsigned family) { return family==KYOEI_PAD_NINTENDO; }
 #ifdef __cplusplus
 }
 #endif

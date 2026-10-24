@@ -1187,7 +1187,7 @@ kyoei_replace_checked(KYOEI_PAD
   "{SDL_GAMEPAD_BUTTON_SOUTH,0x4000},{SDL_GAMEPAD_BUTTON_EAST,0x2000}"
   "{SDL_GAMEPAD_BUTTON_SOUTH,0x2000},{SDL_GAMEPAD_BUTTON_EAST,0x4000}")
 set(KYOEI_PAD "#include \"kyoei_mouse.h\"\n#include \"kyoei_photo_controls.h\"\n${KYOEI_PAD}")
-set(KYOEI_PAD "#include \"kyoei_pc_controls.h\"\n${KYOEI_PAD}")
+set(KYOEI_PAD "#include \"kyoei_pc_controls.h\"\n#include \"kyoei_input_mode.h\"\n${KYOEI_PAD}")
 set(KYOEI_OLD_KEYS [=[u32 key_mask(SDL_Scancode key) {
     switch (key) {
     case SDL_SCANCODE_UP: return 0x10; case SDL_SCANCODE_RIGHT: return 0x20;
@@ -1204,6 +1204,11 @@ kyoei_replace_checked(KYOEI_PAD "${KYOEI_OLD_KEYS}"
   "u32 key_mask(SDL_Scancode key) { return KyoeiPcControls::KeyMask(key); }")
 kyoei_replace_checked(KYOEI_PAD "    u32 buttons = keys;"
   "    keys=0; for (unsigned i=1;i<held.size();++i) if(held[i]) keys|=key_mask(static_cast<SDL_Scancode>(i));\n    u32 buttons = keys;\n    if(KyoeiMouse::captured && !kyoei_overlay_kind()) {\n        auto mouse=SDL_GetMouseState(nullptr,nullptr);\n        if(mouse&SDL_BUTTON_LMASK)buttons|=0x2000;\n        if(mouse&SDL_BUTTON_RMASK)buttons|=0x200;\n        if(mouse&SDL_BUTTON_MMASK)buttons|=4;\n    }")
+# Nintendo layout: the right face button (A) confirms, the bottom one (B) goes back.
+kyoei_replace_checked(KYOEI_PAD "        buttons |= physical_buttons;"
+  "        if (kyoei_input_confirm_on_right(kyoei_input_current_family()))
+            physical_buttons = (physical_buttons & ~0x6000u) | ((physical_buttons & 0x2000u) << 1) | ((physical_buttons & 0x4000u) >> 1);
+        buttons |= physical_buttons;")
 kyoei_replace_checked(KYOEI_PAD
   "    if (buttons & 0x100) data.analogButtons.l2 = 255;"
   "    KyoeiPhotoControls::Apply(data,buttons);\n    if (buttons & 0x100) data.analogButtons.l2 = 255;")
@@ -1238,16 +1243,22 @@ kyoei_replace_checked(KYOEI_WINDOW
   "    SDL_Event event;"
   "    KyoeiOverlay::UpdateTextInput(window);\n    SDL_Event event;")
 set(KYOEI_WINDOW "#include \"kyoei_input_mode.h\"\n${KYOEI_WINDOW}")
-# The pad family picks Xbox or PlayStation button art (kyoei_live_prompts.h).
+# The pad family picks the button art (kyoei_live_prompts.h) and, for Nintendo, the confirm button.
 set(KYOEI_WINDOW "#include <SDL3/SDL.h>
-static bool kyoei_playstation_pad(SDL_JoystickID id) {
-    const SDL_GamepadType type = SDL_GetGamepadTypeForID(id);
-    return type == SDL_GAMEPAD_TYPE_PS3 || type == SDL_GAMEPAD_TYPE_PS4 || type == SDL_GAMEPAD_TYPE_PS5;
+#include \"kyoei_input_mode.h\"
+static unsigned kyoei_pad_family(SDL_JoystickID id) {
+    switch (SDL_GetGamepadTypeForID(id)) {
+    case SDL_GAMEPAD_TYPE_PS3: case SDL_GAMEPAD_TYPE_PS4: case SDL_GAMEPAD_TYPE_PS5: return KYOEI_PAD_PLAYSTATION;
+    case SDL_GAMEPAD_TYPE_NINTENDO_SWITCH_PRO: case SDL_GAMEPAD_TYPE_NINTENDO_SWITCH_JOYCON_LEFT:
+    case SDL_GAMEPAD_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT: case SDL_GAMEPAD_TYPE_NINTENDO_SWITCH_JOYCON_PAIR:
+        return KYOEI_PAD_NINTENDO;
+    default: return KYOEI_PAD_XBOX;
+    }
 }
 ${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "        gz_pad_event(event);"
-  "        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT) kyoei_input_keyboard();\n        else if (event.type == SDL_EVENT_GAMEPAD_BUTTON_DOWN) { kyoei_input_controller_playstation(kyoei_playstation_pad(event.gbutton.which)); kyoei_input_controller_button(); }\n        else if (event.type == SDL_EVENT_GAMEPAD_AXIS_MOTION) { kyoei_input_controller_playstation(kyoei_playstation_pad(event.gaxis.which)); kyoei_input_controller_axis(event.gaxis.axis,event.gaxis.value); }\n        else if (event.type == SDL_EVENT_WINDOW_FOCUS_LOST || event.type == SDL_EVENT_GAMEPAD_REMOVED) kyoei_input_release();\n        if (KyoeiOverlay::HandleEvent(event)) continue;\n        gz_pad_event(event);")
+  "        if (event.type == SDL_EVENT_KEY_DOWN || event.type == SDL_EVENT_TEXT_INPUT) kyoei_input_keyboard();\n        else if (event.type == SDL_EVENT_GAMEPAD_BUTTON_DOWN) { kyoei_input_controller_family(kyoei_pad_family(event.gbutton.which)); kyoei_input_controller_button(); }\n        else if (event.type == SDL_EVENT_GAMEPAD_AXIS_MOTION) { kyoei_input_controller_family(kyoei_pad_family(event.gaxis.which)); kyoei_input_controller_axis(event.gaxis.axis,event.gaxis.value); }\n        else if (event.type == SDL_EVENT_WINDOW_FOCUS_LOST || event.type == SDL_EVENT_GAMEPAD_REMOVED) kyoei_input_release();\n        if (KyoeiOverlay::HandleEvent(event)) continue;\n        gz_pad_event(event);")
 set(KYOEI_WINDOW "#include \"kyoei_window_options.h\"\n${KYOEI_WINDOW}")
 kyoei_replace_checked(KYOEI_WINDOW
   "base_title{title}"

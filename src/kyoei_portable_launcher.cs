@@ -95,7 +95,7 @@ class PortableLauncher : Form {
             int i;if(int.TryParse(lines[1],out i)&&i>=0&&i<resolution.Items.Count)resolution.SelectedIndex=i;
             fullscreen.Checked=lines[2]=="1";
             decimal sensitivity;if(lines.Length>3&&decimal.TryParse(lines[3],NumberStyles.Number,CultureInfo.InvariantCulture,out sensitivity))mouseSensitivity=Math.Max(.2m,Math.Min(5m,sensitivity));
-            if(lines.Length>4 && (lines[4]=="controller"||lines[4]=="xbox"))promptMode=lines[4];
+            if(lines.Length>4 && (lines[4]=="controller"||lines[4]=="xbox"||lines[4]=="nintendo"))promptMode=lines[4];
             else if(lines.Length>4 && lines[4]=="keyboard-fixed")promptMode="keyboard";
             else promptMode="auto";
             photoHudPreview=lines.Length>5 && lines[5]=="1";
@@ -136,9 +136,9 @@ class PortableLauncher : Form {
         var label=new Label();label.SetBounds(18,557,350,25);label.Text="Mouse sensitivity (default 1.80)";dialog.Controls.Add(label);
         var sensitivity=new NumericUpDown();sensitivity.SetBounds(390,552,120,28);sensitivity.Minimum=.2m;sensitivity.Maximum=5m;sensitivity.DecimalPlaces=2;sensitivity.Increment=.1m;sensitivity.Value=mouseSensitivity;dialog.Controls.Add(sensitivity);
         var promptsLabel=new Label();promptsLabel.SetBounds(18,602,350,25);promptsLabel.Text="On-screen button prompts";dialog.Controls.Add(promptsLabel);
-        var prompts=new ComboBox();prompts.SetBounds(390,597,210,28);prompts.DropDownStyle=ComboBoxStyle.DropDownList;prompts.Items.AddRange(new object[]{"Automatic","Keyboard & mouse","PlayStation controller","Xbox controller"});prompts.SelectedIndex=promptMode=="xbox"?3:promptMode=="controller"?2:promptMode=="keyboard"?1:0;dialog.Controls.Add(prompts);
+        var prompts=new ComboBox();prompts.SetBounds(390,597,210,28);prompts.DropDownStyle=ComboBoxStyle.DropDownList;prompts.Items.AddRange(new object[]{"Automatic","Keyboard & mouse","PlayStation controller","Xbox controller","Nintendo controller"});prompts.SelectedIndex=promptMode=="nintendo"?4:promptMode=="xbox"?3:promptMode=="controller"?2:promptMode=="keyboard"?1:0;dialog.Controls.Add(prompts);
         var photo=new CheckBox();photo.SetBounds(18,646,590,28);photo.Text="Photo preview: pause + free camera with F10";photo.Checked=photoHudPreview;dialog.Controls.Add(photo);
-        var save=new Button();save.SetBounds(620,666,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;promptMode=prompts.SelectedIndex==3?"xbox":prompts.SelectedIndex==2?"controller":prompts.SelectedIndex==1?"keyboard":"auto";photoHudPreview=photo.Checked;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
+        var save=new Button();save.SetBounds(620,666,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;promptMode=prompts.SelectedIndex==4?"nintendo":prompts.SelectedIndex==3?"xbox":prompts.SelectedIndex==2?"controller":prompts.SelectedIndex==1?"keyboard":"auto";photoHudPreview=photo.Checked;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
         return dialog;
     }
     void Launch() {
@@ -162,8 +162,8 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_TITLE_EXIT"]="1";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT_ART"]="assets/title-exit.kyart";
             // Automatic follows the last input and the pad it came from (PlayStation or Xbox art).
-            start.EnvironmentVariables["KYOEI_PROMPT_MODE"]=promptMode=="xbox"?"controller":promptMode;
-            start.EnvironmentVariables["KYOEI_CONTROLLER_STYLE"]=promptMode=="xbox"?"xbox":promptMode=="controller"?"playstation":"auto";
+            start.EnvironmentVariables["KYOEI_PROMPT_MODE"]=promptMode=="xbox"||promptMode=="nintendo"?"controller":promptMode;
+            start.EnvironmentVariables["KYOEI_CONTROLLER_STYLE"]=promptMode=="xbox"||promptMode=="nintendo"?promptMode:promptMode=="controller"?"playstation":"auto";
             start.EnvironmentVariables["KYOEI_PHOTO_HUD"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_SCENE"]=photoHudPreview?"preview":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_PHONE"]=photoHudPreview?"1":"0";

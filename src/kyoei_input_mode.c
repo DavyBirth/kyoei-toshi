@@ -21,14 +21,15 @@ unsigned kyoei_input_current_mode(void) {
     AcquireSRWLockShared(&mode_lock); unsigned result=mode_state.mode; ReleaseSRWLockShared(&mode_lock); return result;
 }
 static volatile LONG family=KYOEI_PAD_PLAYSTATION;
-void kyoei_input_controller_playstation(int playstation) {
-    InterlockedExchange(&family,playstation?KYOEI_PAD_PLAYSTATION:KYOEI_PAD_XBOX);
+void kyoei_input_controller_family(unsigned value) {
+    InterlockedExchange(&family,(LONG)value);
 }
 unsigned kyoei_input_current_family(void) {
     static int forced=-2;
     if (forced==-2) {
         const char *style=getenv("KYOEI_CONTROLLER_STYLE");
-        forced=style && !strcmp(style,"playstation")?KYOEI_PAD_PLAYSTATION:style && !strcmp(style,"xbox")?KYOEI_PAD_XBOX:-1;
+        forced=style && !strcmp(style,"playstation")?KYOEI_PAD_PLAYSTATION:style && !strcmp(style,"xbox")?KYOEI_PAD_XBOX:
+               style && !strcmp(style,"nintendo")?KYOEI_PAD_NINTENDO:-1;
     }
     return forced>=0?(unsigned)forced:(unsigned)family;
 }

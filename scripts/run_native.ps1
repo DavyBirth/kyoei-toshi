@@ -54,7 +54,7 @@ if (-not (Test-Path -LiteralPath $kyoeiPromptPack -PathType Leaf)) { throw 'Paco
 $kyoeiPromptStream=[IO.File]::OpenRead($kyoeiPromptPack)
 try {
     $kyoeiPromptMagic=New-Object byte[] 8
-    if ($kyoeiPromptStream.Read($kyoeiPromptMagic,0,8) -ne 8 -or [Text.Encoding]::ASCII.GetString($kyoeiPromptMagic) -notin @('KYPROMP2','KYPROMP3')) { throw 'Pacote de botoes antigo; reconstruir com tools/build_prompt_pack.py.' }
+    if ($kyoeiPromptStream.Read($kyoeiPromptMagic,0,8) -ne 8 -or [Text.Encoding]::ASCII.GetString($kyoeiPromptMagic) -notin @('KYPROMP2','KYPROMP3','KYPROMP4')) { throw 'Pacote de botoes antigo; reconstruir com tools/build_prompt_pack.py.' }
 } finally { $kyoeiPromptStream.Dispose() }
 $env:KYOEI_PROMPT_PACK=$kyoeiPromptPack
 # Read-time UI corrections: HUD texts of the natural English translation (tools/build_ui_corrections.py).

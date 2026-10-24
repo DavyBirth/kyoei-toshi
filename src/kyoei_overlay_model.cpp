@@ -487,7 +487,8 @@ ImVec2 Size(const char *name) {
 ImFont *Font() { return KyoeiOverlayModel::hud_font?KyoeiOverlayModel::hud_font:ImGui::GetFont(); }
 const char *Pad(const char *button) {
     static thread_local std::string name;
-    name=std::string(kyoei_input_current_family()==KYOEI_PAD_XBOX?"xbox_":"ps_")+button;
+    const unsigned family=kyoei_input_current_family();
+    name=std::string(family==KYOEI_PAD_XBOX?"xbox_":family==KYOEI_PAD_NINTENDO?"nintendo_":"ps_")+button;
     return name.c_str();
 }
 }

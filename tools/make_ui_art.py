@@ -4,7 +4,7 @@ Pieces come from the owner's dump: the Option menu's title bar (its label
 removed), selection marker, row line, accent bar and description frame, the
 pause screen's line, and the button icons for each pad. PlayStation uses the
 American layout (cross confirms, circle goes back); Xbox and keyboard use the
-same drawings as the live prompts (make_xbox_icons, make_keyboard_icons).
+same drawings as the live prompts (make_xbox_icons, make_keyboard_icons); Nintendo too.
 Output KYART2: magic, count, then per image a 24-byte name, width, height and
 RGBA pixels. It stays private, next to the game data.
 """
@@ -60,9 +60,12 @@ def build(archive_path):
         images['option_title'] = title_bar(look(TITLE))
         for key, name in PIECES.items(): images[key] = look(name)
         for key, name in {**FACE, **OTHER}.items(): images['ps_' + key] = look(name)
-        for key, name in {**XBOX_SOURCE, **OTHER}.items():
-            drawn = make_xbox_icons.draw(name, look(name))
-            images['xbox_' + key] = drawn if drawn is not None else look(name)
+        # Named by role: A confirms, B goes back, X is the left button, Y the top one. Nintendo
+        # draws them where its pad has them (A right, B bottom, Y left, X top).
+        for family in ('xbox', 'nintendo'):
+            for key, name in {**XBOX_SOURCE, **OTHER}.items():
+                drawn = make_xbox_icons.draw(name, look(name), family)
+                images[family + '_' + key] = drawn if drawn is not None else look(name)
     # Long lines are stretched on screen anyway: keep the font atlas small.
     for key, image in images.items():
         if image.width > 1024: images[key] = image.resize((1024, image.height), Image.LANCZOS)

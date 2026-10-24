@@ -5,6 +5,7 @@
 static int hidden=0,modal=0,exit_state=0,toggles=0,scene=0,lights_available=0;
 static int player_toggles=0;
 extern "C" void kyoei_input_controller_button(void){}
+extern "C" unsigned kyoei_input_current_family(void){return KYOEI_PAD_PLAYSTATION;}
 extern "C" void kyoei_input_keyboard(void){}
 extern "C" int kyoei_photo_player_toggle(void){++player_toggles;return 1;}
 static float move_right=0,move_up=0,move_forward=0,look_yaw=0,fov_delta=0,speed=0;

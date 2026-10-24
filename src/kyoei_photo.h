@@ -83,7 +83,10 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
     if(!scene_controls && event.type==SDL_EVENT_MOUSE_BUTTON_DOWN && event.button.button==SDL_BUTTON_LEFT)
         kyoei_photo_hud_restore();
     if(event.type==SDL_EVENT_GAMEPAD_BUTTON_DOWN) {
-        const auto button=event.gbutton.button;
+        auto button=SDL_GamepadButton(event.gbutton.button);
+        // Nintendo layout: A (right) takes the photo and B (bottom) leaves, as confirm/back.
+        if(kyoei_input_confirm_on_right(kyoei_input_current_family()))
+            button=button==SDL_GAMEPAD_BUTTON_SOUTH?SDL_GAMEPAD_BUTTON_EAST:button==SDL_GAMEPAD_BUTTON_EAST?SDL_GAMEPAD_BUTTON_SOUTH:button;
         // View/Share is unused by the normal guest mapping; preserve Start/map.
         if(button==SDL_GAMEPAD_BUTTON_BACK && kyoei_photo_hud_available()) {
             adjustment_repeat.Clear();

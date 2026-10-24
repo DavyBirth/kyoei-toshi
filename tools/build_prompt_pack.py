@@ -1,4 +1,4 @@
-"""Private original/keyboard/American/Xbox texture payloads for live GPU selection."""
+"""Private original/keyboard/American/Xbox/Nintendo texture payloads for live GPU selection."""
 import argparse
 import struct
 from pathlib import Path
@@ -13,7 +13,7 @@ from make_xbox_icons import build as xbox_icons
 
 def build(base, output):
     keyboard = keyboard_icons(base)
-    packed = bytearray(b'KYPROMP3' + struct.pack('<I', len(keyboard)+2))
+    packed = bytearray(b'KYPROMP4' + struct.pack('<I', len(keyboard)+2))
     with Psarc(base) as archive:
         names = {e.name: e for e in archive.entries[1:]}
         status='texture/hud/status_base.tex'
@@ -27,6 +27,7 @@ def build(base, output):
         originals={name:b''.join(archive.chunks(names[name])) for name,_,_ in entries}
         american=american_icons(originals)
         xbox=xbox_icons(originals)
+        nintendo=xbox_icons(originals,'nintendo')
         for name, replacement,kind in entries:
             original = originals[name]
             info, controller = unpack_tex(original)
@@ -41,7 +42,10 @@ def build(base, output):
             xb_info,xb=unpack_tex(xbox.get(name,original))
             if any(xb_info[k]!=info[k] for k in ('width','height','levels','storage_family','channel_layout')) or len(xb)!=len(keys):
                 raise ValueError('Xbox prompt layouts differ: '+name)
-            packed += controller + keys + us + xb
+            nt_info,nt=unpack_tex(nintendo.get(name,original))
+            if any(nt_info[k]!=info[k] for k in ('width','height','levels','storage_family','channel_layout')) or len(nt)!=len(keys):
+                raise ValueError('Nintendo prompt layouts differ: '+name)
+            packed += controller + keys + us + xb + nt
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_bytes(packed)
     print(f'Paired prompt pack: {len(keyboard)+2} textures; {len(packed)} bytes')

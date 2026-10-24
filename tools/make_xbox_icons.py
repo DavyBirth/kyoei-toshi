@@ -1,4 +1,4 @@
-"""Xbox button prompts drawn over the game's own PlayStation icons.
+"""Xbox and Nintendo button prompts drawn over the game's own PlayStation icons.
 
 Each icon keeps its native body (disc, shoulder tag, pin, banner): only the
 PlayStation symbol is removed, the background under it rebuilt (refill) and the
@@ -22,6 +22,11 @@ LETTER_FONT = BOLD if BOLD.exists() else FONT
 from make_american_icons import refill, encode_patch
 
 COLORS = {'A': (125, 183, 0), 'B': (239, 78, 41), 'X': (0, 159, 235), 'Y': (254, 181, 4)}
+# Nintendo pads print plain letters; the red dodge prompt stays red (the game's danger color).
+NINTENDO_LETTER = (238, 238, 236)
+# Nintendo: A on the right confirms, as the circle in the Japanese layout; X on top, Y on the left.
+NINTENDO_FACE = {'A': 'A', 'B': 'B', 'Y': 'X', 'X': 'Y'}
+NINTENDO_TEXT = {'LB': 'L', 'RB': 'R', 'LT': 'ZL', 'RT': 'ZR', 'LS': 'LS', 'RS': 'RS', '@menu': '@plus', '@view': '@minus'}
 SCALE = 8
 
 # archive path -> what replaces the PlayStation symbol
@@ -92,8 +97,8 @@ def letter(d, box, text, color, width=1.3):
     d.text(((x0 + x1) / 2, (y0 + y1) / 2 - t / 2), text, font=font, fill=color, anchor='ms')
 
 
-def face(image, name):
-    """Colored PlayStation glyph -> colored Xbox letter, same box, same glow."""
+def face(image, name, family='xbox'):
+    """Colored PlayStation glyph -> Xbox (colored) or Nintendo (plain) letter, same box, same glow."""
     a = np.asarray(image, dtype=np.int16)
     chroma = a[..., :3].max(axis=2) - a[..., :3].min(axis=2)
     if name == 'texture/hud/resalt_next.tex':
@@ -112,12 +117,13 @@ def face(image, name):
     glow = 'kaihi_batu_2' in name or 'nextchat' in name
     out, box = erase(image, mask, 2 if 'kaihi' in name else 1)
     text = face_letter(name)
-    color = COLORS[text] + (255,)
-    if 'kaihi' in name and not glow: color = tuple(int(c * .7) for c in COLORS[text]) + (230,)
+    if family == 'nintendo': text = NINTENDO_FACE[text]
+    color = (NINTENDO_LETTER if family == 'nintendo' and 'kaihi' not in name else COLORS[text if 'kaihi' not in name else 'B']) + (255,)
+    if 'kaihi' in name and not glow: color = tuple(int(c * .7) for c in color[:3]) + (230,)
     if name == 'texture/hud/resalt_next.tex':
         # A full Xbox disc with a white letter replaces the ring, like the Kenney glyph.
         def disc(d, b):
-            d.ellipse(b, fill=COLORS['A'] + (255,)); x0, y0, x1, y1 = b
+            d.ellipse(b, fill=(COLORS['A'] if family == 'xbox' else (58, 60, 62)) + (255,)); x0, y0, x1, y1 = b
             letter(d, (x0, y0 + (y1 - y0) * .25, x1, y1 - (y1 - y0) * .25), 'A', (255, 255, 255, 255))
         layer = symbol_layer(out.size, (236, 47, 268, 79), disc)
     else:
@@ -131,7 +137,7 @@ def face(image, name):
     return out
 
 
-def text_tag(image, label, white_level=185):
+def text_tag(image, label, white_level=185, family='xbox'):
     """White label on a grey tag (L1, OPTIONS, ...) -> Xbox label in the same white.
     white_level: lower bound of the label's channels (the triggers' lit dome is light too)."""
     a = np.asarray(image, dtype=np.int16)
@@ -141,7 +147,8 @@ def text_tag(image, label, white_level=185):
     out, box = erase(image, bright, 1)
     white = (245, 245, 245, 255)
     x0, y0, x1, y1 = box
-    if label in ('@menu', '@view'):
+    if family == 'nintendo': label = NINTENDO_TEXT[label]
+    if label in ('@menu', '@view', '@plus', '@minus'):
         # Symbols take the size of the button, not of the text they replace.
         ys, xs = np.nonzero(a[..., 3] > 120)
         cx, cy = (xs.min() + xs.max() + 1) / 2, (ys.min() + ys.max() + 1) / 2
@@ -159,6 +166,12 @@ def text_tag(image, label, white_level=185):
             d.rounded_rectangle((cx - s * 1.1, cy - s * 1.1, cx + s * .5, cy + s * .5), s * .15, outline=white, width=round(w))
             d.rounded_rectangle((cx - s * .5, cy - s * .5, cx + s * 1.1, cy + s * 1.1), s * .15, fill=(70, 72, 76, 255), outline=white, width=round(w))
         return out_with(out, symbol_layer(out.size, box, view))
+    if label in ('@plus', '@minus'):
+        def sign(d, b):
+            bx0, by0, bx1, by1 = b; cx, cy = (bx0 + bx1) / 2, (by0 + by1) / 2; s = (by1 - by0) * .34; w = s * .3
+            d.rounded_rectangle((cx - s, cy - w / 2, cx + s, cy + w / 2), w / 2, fill=white)
+            if label == '@plus': d.rounded_rectangle((cx - w / 2, cy - s, cx + w / 2, cy + s), w / 2, fill=white)
+        return out_with(out, symbol_layer(out.size, box, sign))
     # Same cap height as the native label; two letters may be a little wider.
     cy, h = (y0 + y1) / 2, y1 - y0
     return out_with(out, symbol_layer(out.size, (x0, cy - h / 2, x1, cy + h / 2), lambda d, b: letter(d, b, label, white, 1.6)))
@@ -169,8 +182,8 @@ def out_with(base, layer):
     return base
 
 
-def cursor_tags(image):
-    """Pause page arrows: the dark L1/R1 tags above the arrows become LB/RB."""
+def cursor_tags(image, family='xbox'):
+    """Pause page arrows: the dark L1/R1 tags above the arrows become LB/RB (L/R on Nintendo)."""
     out = image.copy()
     w, h = out.size
     for half, label in ((0, 'LB'), (1, 'RB')):
@@ -181,25 +194,25 @@ def cursor_tags(image):
         if not len(xs): raise ValueError('cursor tag missing')
         bx0, by0, bx1, by1 = int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1
         crop = part.crop((bx0, by0, bx1, by1))
-        part.paste(text_tag(crop, label), (bx0, by0))
+        part.paste(text_tag(crop, label, family=family), (bx0, by0))
         out.paste(part, (half * w // 2, 0))
     return out
 
 
-def draw(name, image):
+def draw(name, image, family='xbox'):
     if name in KEEP: return None
-    if name == 'texture/hud/cursor_lr.tex': return cursor_tags(image)
-    if name in TEXT: return text_tag(image, TEXT[name], 140 if TEXT[name] == '@view' else 185)
-    return face(image, name)
+    if name == 'texture/hud/cursor_lr.tex': return cursor_tags(image, family)
+    if name in TEXT: return text_tag(image, TEXT[name], 140 if TEXT[name] == '@view' else 185, family)
+    return face(image, name, family)
 
 
-def build(originals):
+def build(originals, family='xbox'):
     """originals: archive path -> .tex bytes. Returns the changed icons only."""
     out = {}
     for name, original in originals.items():
         if name not in BINDINGS and name != 'texture/hud/status_base.tex': continue
         if name == 'texture/hud/status_base.tex': continue
-        image = draw(name, preview(original)[0].convert('RGBA'))
+        image = draw(name, preview(original)[0].convert('RGBA'), family)
         if image is not None:
             out[name] = encode_patch(original, image)
     return out
@@ -208,13 +221,14 @@ def build(originals):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('archive', type=Path, help="common.psarc from the user's dump")
-    parser.add_argument('--sheet', type=Path, help='write original/Xbox preview pairs')
+    parser.add_argument('--sheet', type=Path, help='write original/new preview pairs')
+    parser.add_argument('--family', choices=('xbox', 'nintendo'), default='xbox')
     args = parser.parse_args()
     from psarc import Psarc
     with Psarc(args.archive) as archive:
         names = {e.name: e for e in archive.entries[1:]}
         originals = {n: b''.join(archive.chunks(names[n])) for n in BINDINGS}
-    icons = build(originals)
+    icons = build(originals, args.family)
     if args.sheet:
         cell, cols = 150, 8
         items = list(originals)

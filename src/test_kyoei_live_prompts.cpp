@@ -77,6 +77,9 @@ int main() {
         current_family=KYOEI_PAD_XBOX; assert(pair.Controller()[0]==3);
         current_family=KYOEI_PAD_PLAYSTATION; assert(pair.Controller()[0]==2);
         pair.xbox.clear(); current_family=KYOEI_PAD_XBOX; assert(pair.Controller()[0]==2);
+        // Nintendo: its own art, else the original (right button confirms, as the circle).
+        current_family=KYOEI_PAD_NINTENDO; assert(pair.Controller()[0]==1);
+        pair.nintendo={4}; assert(pair.Controller()[0]==4);
     }
-    std::puts("LIVE PROMPTS PASS: padded mips, mode changes, memory reuse, layout rejection, pause frame lifetime, Xbox art");
+    std::puts("LIVE PROMPTS PASS: padded mips, mode changes, memory reuse, layout rejection, pause frame lifetime, Xbox/Nintendo art");
 }
