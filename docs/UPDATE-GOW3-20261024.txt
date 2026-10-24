@@ -1,0 +1,24 @@
+Atualização experimental do núcleo gráfico — 24/10/2026
+
+Windows x64: feche o jogo e o launcher, extraia o ZIP na pasta do jogo e
+execute Atualizacao-Kyoei/Aplicar atualizacao.cmd.
+Linux com Wine/Proton: feche o jogo e o launcher, extraia na pasta do jogo e
+execute sh Atualizacao-Kyoei/Aplicar-no-Linux.sh (Python 3.11+, sem sudo).
+Use somente o ZIP correspondente ao seu sistema.
+
+Troca o núcleo gráfico antigo pelo núcleo GoW3. O carregador e o formato
+dos arquivos preparados são compartilhados pelos dois executáveis.
+Preserva o launcher, a tradução instalada, os arquivos do jogo, saves,
+configurações, cache e prefixo Wine. Não contém arquivos do jogo.
+Não inclui a tradução natural en-17 nem os novos pacotes de interface.
+O primeiro carregamento pode demorar enquanto compila shaders.
+
+O aplicador aceita a distribuição original e os updates até 18/10,
+confere SHA256 e guarda o executável anterior em data/update-backups.
+Para desfazer, com jogo e launcher fechados, copie o backup indicado para
+runtime/kyoei.exe. Preserve o backup.
+
+Aplicação e preservação de arquivos são verificadas sem abrir o jogo.
+O núcleo novo já foi usado localmente, mas esta migração com o launcher
+e os arquivos antigos ainda precisa de teste de jogo no PC do amigo.
+Não há promessa de ganho de FPS; o Linux continua usando Wine/Proton.

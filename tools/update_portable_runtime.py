@@ -14,7 +14,7 @@ def main():
         with (portable/name).open('r+b'):pass
     with (portable/'data/session.lock').open('a+b'):
         temporary=portable/'runtime/kyoei-update.tmp'
-        clean_pe(ROOT/'build/kyoei.exe',temporary)
+        clean_pe(ROOT/'build/kyoei-gow3.exe',temporary)
         temporary.replace(portable/'runtime/kyoei.exe')
         for row in manifest['files']:
             if row['path']=='runtime/kyoei.exe':

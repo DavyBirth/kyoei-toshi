@@ -131,7 +131,7 @@ def main():
     for name in ['NotoSans-Regular.ttf','NotoSansCJK-Regular.ttc']:copy_file(fonts/name,out/'assets/fonts'/name)
     for name in ['artwork.png','game.ico']:copy_file(ROOT/'build/launcher-assets'/name,out/'assets'/name)
     copy_file(ROOT/'build/hud-native-metrics-01.bin',out/'assets/hud-metrics.bin')
-    scrubbed=clean_pe(ROOT/'build/kyoei.exe',out/'runtime/kyoei.exe')
+    scrubbed=clean_pe(ROOT/'build/kyoei-gow3.exe',out/'runtime/kyoei.exe')
     for name in ['msvcp140.dll','msvcp140_atomic_wait.dll','vcruntime140.dll','vcruntime140_1.dll']:
         copy_file(Path(os.environ['WINDIR'])/'System32'/name,out/'runtime'/name)
     copy_file(ROOT/'LICENSE',out/'licenses/GPL-2.0.txt')

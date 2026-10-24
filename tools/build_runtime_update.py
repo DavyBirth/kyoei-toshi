@@ -23,22 +23,33 @@ def accepted_update_hash(path, title, version):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--baseline', type=Path, required=True)
+    baseline_group = parser.add_mutually_exclusive_group(required=True)
+    baseline_group.add_argument('--baseline', type=Path)
+    baseline_group.add_argument('--baseline-update', type=Path, help='Previously verified cumulative update when the original folder is unavailable')
+    parser.add_argument('--release-notes', type=Path, help='Replace historical notes with this release description')
     parser.add_argument('--out', type=Path, required=True)
-    parser.add_argument('--runtime', type=Path, default=ROOT/'build/kyoei.exe',
+    parser.add_argument('--runtime', type=Path, default=ROOT/'build/kyoei-gow3.exe',
                         help='Runtime from a separate verified build')
     parser.add_argument('--linux-wine', action='store_true', help='Linux applicator for the shipped Wine/Proton version')
     parser.add_argument('--accept-update', type=Path, action='append', default=[], help='Previously distributed ZIP whose installed runtime is also accepted')
     args = parser.parse_args()
-    baseline = args.baseline.resolve()
-    manifest = json.loads((baseline/'manifest.json').read_text(encoding='utf8'))
-    if (manifest['title'], manifest['version']) != ('CUSA03562', '01.03'):
-        raise ValueError('Wrong game revision')
-    previous_hash = digest(baseline/'runtime/kyoei.exe')
-    entry = next(row for row in manifest['files'] if row['path']=='runtime/kyoei.exe')
-    if entry['sha256'] != previous_hash:
-        raise ValueError('Baseline runtime differs from the distributed manifest')
-    accepted = [previous_hash]
+    if args.baseline_update:
+        previous_hash = accepted_update_hash(args.baseline_update, 'CUSA03562', '01.03')
+        with zipfile.ZipFile(args.baseline_update) as archive:
+            manifest = json.loads(archive.read('Atualizacao-Kyoei/update.json'))
+        accepted = list(dict.fromkeys([previous_hash, *manifest['accepted_sha256']]))
+        if any(len(value) != 64 or any(c not in '0123456789abcdef' for c in value) for value in accepted):
+            raise ValueError('Invalid accepted runtime hash')
+    else:
+        baseline = args.baseline.resolve()
+        manifest = json.loads((baseline/'manifest.json').read_text(encoding='utf8'))
+        if (manifest['title'], manifest['version']) != ('CUSA03562', '01.03'):
+            raise ValueError('Wrong game revision')
+        previous_hash = digest(baseline/'runtime/kyoei.exe')
+        entry = next(row for row in manifest['files'] if row['path']=='runtime/kyoei.exe')
+        if entry['sha256'] != previous_hash:
+            raise ValueError('Baseline runtime differs from the distributed manifest')
+        accepted = [previous_hash]
     for previous in args.accept_update:
         value = accepted_update_hash(previous, manifest['title'], manifest['version'])
         if value not in accepted:
@@ -88,6 +99,8 @@ def main():
                    'Aceita a distribuição original e os updates anteriores listados no manifest.\n'
                    'Se já existe Atualizacao-Kyoei, substitua seus arquivos ao extrair.\n'
                    'O pacote troca apenas o runtime; não inclui mudanças nos arquivos do jogo.\n')
+        if args.release_notes:
+            readme = args.release_notes.read_text(encoding='utf-8')
         prefix = 'Atualizacao-Kyoei/'
         with zipfile.ZipFile(output, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
             archive.write(runtime, prefix+'kyoei.exe')

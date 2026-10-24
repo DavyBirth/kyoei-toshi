@@ -1,6 +1,24 @@
 # Atualizações pequenas
 
-## Revisão atual: 18/10/2026
+## Revisão experimental: 24/10/2026 — migração para GoW3
+
+- Windows: `build/Kyoei-Windows-Update-20261024-GoW3.zip` (8.474.419 bytes).
+- Linux/Wine: `build/Kyoei-Linux-Wine-Update-20261024-GoW3.zip` (8.475.525 bytes).
+- Troca somente `runtime/kyoei.exe` pelo núcleo GoW3; carregador e arquivos preparados são compartilhados pelos dois targets CMake. Saves, prefixo Wine, cache, launcher e tradução instalada permanecem como estavam.
+- Não inclui en-17, novos ícones ou interface. Não contém arquivos do jogo.
+- Cumulativo: aceita o hash da distribuição original e os updates de 15, 16, 17, 17b e 18/10. A lista vem do ZIP cumulativo de 18/10 com payload verificado; a pasta Friends-Test original não existe mais.
+- ZIPs reais aplicados/reaplicados em dez cenários (cinco versões anteriores × Windows/WSL), com preflight sem escrita, hash final, backup exato, save e prefixo preservados. A instalação original está na allowlist; seu payload não estava disponível para repetir o teste. Seis testes unitários existentes passaram.
+- Nenhum jogo iniciado. A migração completa com launcher/tradução antigos precisa de teste jogável; não prometer ganho de FPS. O núcleo GoW3 já tem testes locais descritos no diário.
+- Fechar jogo e launcher; extrair o ZIP na pasta do jogo substituindo `Atualizacao-Kyoei`. Windows: abrir `Aplicar atualizacao.cmd`. Linux/Wine: `sh Atualizacao-Kyoei/Aplicar-no-Linux.sh` (Python 3.11+, sem sudo). Depois iniciar pelo launcher habitual. Backup/reversão nas instruções do ZIP.
+- Evidência: `build/research/update-validation-20261024-gow3.json`.
+
+SHA256 Kyoei-Windows-Update-20261024-GoW3.zip: `544e402be3e8256bcb94c8651a1fa6f5497be9ab278fca16000c18499acbe9c7`.
+
+SHA256 Kyoei-Linux-Wine-Update-20261024-GoW3.zip: `1e62742a6214d1ecdce7866d8dda589c64ca0eaac4de14b5160de9e62bd26f7b`.
+
+Runtime GoW3: `284e1a81623ce5ef2cc3a49ba727eac5f065a676bda52021f9e5c6c9ff0e7a1f`.
+
+## Revisão anterior: 18/10/2026
 
 - Windows: `build/Kyoei-Windows-Update-20261018.zip`, 7.346.824 bytes.
 - Linux/Wine: `build/Kyoei-Linux-Wine-Update-20261018.zip`, 7.348.002 bytes.
