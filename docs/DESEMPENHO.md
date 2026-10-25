@@ -474,3 +474,22 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   comandos espera o fim da gravação no fim da submissão. O quadro inteiro só começa a ser
   traduzido quando o jogo o envia, então a latência é a soma das etapas por quadro.
 - Mantido por ser mais barato e equivalente.
+- Perfil de todas as threads no giro (KYOEI_SAMPLE_THREADS=*): nenhuma satura. Ocupação
+  aproximada: guest main ~58%, 4 threads de tarefas do jogo ~43%, GpuCommandProcessor ~50%
+  (24% em ZwDelayExecution dentro de DrainDrawPipe), DrawRec ~60%, VkRecorder ~59% (21% no
+  driver), DrawPrep/DrawScan/Copy quase ociosas. O quadro é uma corrente: jogo -> comandos ->
+  gravação -> driver, cada etapa esperando a anterior.
+- Próximo alvo: os esvaziamentos do draw pipe (DrainDrawPipe: fim de submissão, compute,
+  ReasonDraw...). Medir por local com GOW3_FRAME_STATS (drain_sites) e ver se o Kyoei
+  esvazia várias vezes por quadro (há 3 dispatches de compute fc5139ae no meio das
+  transparências). Cuidado: o esvaziamento no fim da submissão protege os rótulos de fence
+  (heap do jogo corrompido se escritos tarde).
+- Medido (25/10, giro, GOW3_FRAME_STATS=1, run drains-1): o único esvaziamento que espera é
+  o do fim da submissão (liverpool.cpp:184), ~1 por quadro (44-59/s), 18-25% do tempo da
+  thread de comandos. Compute, ConstRam, ReasonDraw e os demais não esperam: a hipótese de
+  vários esvaziamentos por quadro está descartada.
+- Leitura: essa espera é a thread de comandos aguardando a gravação (DrawRec, 50-64%
+  ocupada) terminar o quadro antes de avisar GpuIdle ao jogo. Não é trabalho desperdiçado;
+  só encolhe se a gravação ficar mais rápida, ou se as escritas de fence puderem ser
+  sinalizadas depois sem o jogo liberar a memória antes (arriscado: ver a nota acima).
+  Próximo alvo: o custo por draw do DrawRec.
