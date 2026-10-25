@@ -9,6 +9,35 @@ from make_keyboard_icons import cursor_lr
 from localize_textures import decode, encode_tex
 from make_american_icons import build as american_icons
 from make_xbox_icons import build as xbox_icons
+from PIL import Image
+import numpy as np
+
+
+def bleed(image):
+    """Fill fully transparent texels with the colour of their visible neighbours.
+
+    The native talk marker stores them as black: filtering blended that black into the
+    white ring, a dark outline where the ring overlaps the white text plate."""
+    rgba = np.asarray(image.convert('RGBA'), dtype=np.float32)
+    rgb, known = rgba[..., :3].copy(), rgba[..., 3] > 0
+    for _ in range(max(image.size)):
+        if known.all():
+            break
+        total = np.zeros_like(rgb); count = np.zeros(known.shape, np.float32)
+        for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1), (-1, -1), (-1, 1), (1, -1), (1, 1)):
+            k = np.roll(known, (dy, dx), (0, 1)); c = np.roll(rgb, (dy, dx), (0, 1))
+            total += c * k[..., None]; count += k
+        grow = ~known & (count > 0)
+        if not grow.any():
+            break
+        rgb[grow] = total[grow] / count[grow][:, None]; known = known | grow
+    rgba[..., :3] = rgb
+    return Image.fromarray(rgba.round().astype(np.uint8), 'RGBA')
+
+
+def bled(data):
+    info, image = decode(data)
+    return encode_tex(data, bleed(image), info)
 
 
 def build(base, output):
@@ -30,6 +59,11 @@ def build(base, output):
         nintendo=xbox_icons(originals,'nintendo')
         for name, replacement,kind in entries:
             original = originals[name]
+            if name.startswith('texture/text marker/talk_icon_'):
+                american[name] = bled(american.get(name, original))
+                xbox[name] = bled(xbox.get(name, original))
+                nintendo[name] = bled(nintendo.get(name, original))
+                replacement = bled(replacement)  # the original stays: it recognises uploads
             info, controller = unpack_tex(original)
             other, keys = unpack_tex(replacement)
             if info != other or len(controller) != len(keys):
