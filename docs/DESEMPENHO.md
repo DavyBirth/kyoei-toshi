@@ -463,3 +463,14 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
 - Otimização de fila vazia permanece candidata local; sem aumentoFPS validado
   nem update novo para amigos. Próximo backend: identificar produtor/consumidor
   da imagem1x1 antes de considerar leitura adiada. Não remover fences.
+
+### 25/10/2026 — giro: varredura dos registradores sujos
+- Perfil do giro (amostrador, sem FSR): PostDraw era 16,6% "self" da thread GpuCommandProcessor:
+  no Windows o laço testava cada um dos blocos de registradores com bitset::test por desenho.
+  Patch kyoei_dirty_blocks_scan_cpp varre as palavras do bitset (como o caminho libstdc++).
+  Depois: PostDraw 4,7%; a thread passa a esperar mais.
+- FPS e latência envio→flip não mudaram (ABBA com ruído de outros programas: 49-50 nas duas;
+  submit_to_flip ~26 ms nas duas). DrawRec fica ~33% ociosa esperando pacotes; a thread de
+  comandos espera o fim da gravação no fim da submissão. O quadro inteiro só começa a ser
+  traduzido quando o jogo o envia, então a latência é a soma das etapas por quadro.
+- Mantido por ser mais barato e equivalente.

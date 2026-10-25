@@ -1,0 +1,32 @@
+Kyoei (performance): PostDraw scanned every register block with bitset::test on Windows
+(17% of the GPU command thread while turning the camera; 5% after). Scan the dirty words
+instead, like the libstdc++ _Find_first/_Find_next path.
+<<<<<<<
+#else
+    if (dirty.blocks.any()) {
+        for (size_t block = 0; block < dirty.blocks.size(); ++block) {
+            if (dirty.blocks.test(block)) {
+                blocks[num_blocks++] = static_cast<u16>(block);
+            }
+        }
+    }
+#endif
+=======
+#elif defined(_MSVC_STL_VERSION)
+    constexpr size_t word_bits = sizeof(dirty.blocks._Getword(0)) * 8;
+    constexpr size_t words = (AmdGpu::RegDirty::NumBlocks + word_bits - 1) / word_bits;
+    for (size_t w = 0; w < words; ++w) {
+        for (auto word = dirty.blocks._Getword(w); word; word &= word - 1) {
+            blocks[num_blocks++] = static_cast<u16>(w * word_bits + std::countr_zero(word));
+        }
+    }
+#else
+    if (dirty.blocks.any()) {
+        for (size_t block = 0; block < dirty.blocks.size(); ++block) {
+            if (dirty.blocks.test(block)) {
+                blocks[num_blocks++] = static_cast<u16>(block);
+            }
+        }
+    }
+#endif
+>>>>>>>
