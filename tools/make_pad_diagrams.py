@@ -110,9 +110,15 @@ class Xbox:
         side instead of sharing one path."""
         x, y = self.points[button]
         if button == 'dpad':  # each direction its own arm, so two D-pad lines never share a path
-            return {'up': (x + 2, y - 20), 'down': (x + 2, y + 20), 'side': (x - 20, y)}.get(kind, (x, y))
-        if button == 'View':
-            return x - 11, y  # left edge: the right column's lines start just past it
+            return {'up': (x - 4, y - 20), 'down': (x + 6, y + 20), 'side': (x - 20, y)}.get(kind, (x, y))
+        if button in ('View', 'Minus'):
+            # Left edge: the right column's lines start just past it. Held with the right stick
+            # (map drag), the line reaches its top instead, beside the press line.
+            return (x - 3, y - 10) if kind == 'hold' else (x - 13, y)
+        # Shoulder lines spread apart (trigger outer, bumper inner) so no two run side by side.
+        spread = {'LT': -14, 'LB': 10, 'RT': 14, 'RB': -12}
+        if button in spread:
+            return x + spread[button], y
         return (x - 12, y) if kind == 'move' else (x + 6, y) if kind == 'press' else (x, y)
 
     def body(self, d):
@@ -180,6 +186,21 @@ def pair_regions(regions):
     return pairs
 
 
+_tables = {}
+
+
+def drawing_table(drawing):
+    """Summed-area table of the drawing's visible pixels: any box tested in constant time."""
+    if drawing is None:
+        return None
+    if id(drawing) not in _tables:
+        visible = (np.asarray(drawing.getchannel('A')) > 40).astype(np.int32)
+        table = np.zeros((visible.shape[0] + 1, visible.shape[1] + 1), np.int32)
+        table[1:, 1:] = visible.cumsum(0).cumsum(1)
+        _tables.clear(); _tables[id(drawing)] = (drawing, table)
+    return _tables[id(drawing)][1]
+
+
 def audit(entries, drawing, buttons=None):
     """Layout problems: lines crossing, lines through text or over another button, texts touching,
     text over the drawing."""
@@ -205,11 +226,11 @@ def audit(entries, drawing, buttons=None):
         x, y = v[0][0], h[0][1]
         return (min(h[0][0], h[1][0]) + 1 < x < max(h[0][0], h[1][0]) - 1 and
                 min(v[0][1], v[1][1]) + 1 < y < max(v[0][1], v[1][1]) - 1)
-    alpha = None if drawing is None else np.asarray(drawing.getchannel('A'))
+    covered = drawing_table(drawing)
     for i, e in enumerate(entries):
         for box in e['boxes']:
             x0, y0, x1, y1 = map(int, box)
-            if alpha is not None and (alpha[y0:y1, x0:x1] > 40).any():
+            if covered is not None and covered[y1, x1] - covered[y0, x1] - covered[y1, x0] + covered[y0, x0]:
                 issues.append(f"text over drawing: {e['name']}")
         for j, f in enumerate(entries):
             if i == j:
@@ -222,6 +243,11 @@ def audit(entries, drawing, buttons=None):
                     for other in f['segments']:
                         if cross(seg, other):
                             issues.append(f"lines cross: {e['name']} / {f['name']}")
+                        # Two vertical runs side by side read as one line.
+                        if (seg[0][0] == seg[1][0] and other[0][0] == other[1][0] and abs(seg[0][0] - other[0][0]) < 8 and
+                                min(max(seg[0][1], seg[1][1]), max(other[0][1], other[1][1])) -
+                                max(min(seg[0][1], seg[1][1]), min(other[0][1], other[1][1])) > 10):
+                            issues.append(f"lines run together: {e['name']} / {f['name']}")
             if j > i:
                 for a in e['boxes']:
                     for b in f['boxes']:
@@ -259,7 +285,11 @@ def render(resource, regions, base, device):
             raise ValueError(f'{resource}: no symbol found at {label["box"]}')
         controls, rest = classify(label.get('text') or '', icon)
         if controls == ['slide']:
-            continue  # no touch surface on this device
+            # No touch surface: holding the touch pad button and moving the right stick drags
+            # (src/kyoei_touch.h). Left out where the left stick already does the same.
+            if any(a is not action and (a.get('text') or '') == (action.get('text') or '') for _, a in pair_regions(regions)):
+                continue
+            controls = ['touchpad', 'rstick']
         buttons = [mapping[c] for c in controls]
         sticks = {'LS': 'Left Stick', 'RS': 'Right Stick', 'dpad': 'D-Pad'}
         name = ' + '.join(NAMES[b] if b in NAMES else sticks[b] for b in buttons)
@@ -269,8 +299,11 @@ def render(resource, regions, base, device):
         kind = 'press' if controls in (['L3'], ['R3']) else 'move' if controls[-1] in ('lstick', 'rstick') else ''
         if controls == ['dpad']:
             kind = 'up' if 'Up' in rest else 'down' if 'Down' in rest else 'side' if 'Left' in rest else ''
+        aim = buttons[0] if controls == ['touchpad', 'rstick'] else buttons[-1]
+        if controls == ['touchpad', 'rstick']:
+            kind = 'hold'
         entries.append({'label': label, 'action': action, 'name': name + rest, 'rows': rows,
-                        'target': pad.anchor(buttons[-1], kind)})
+                        'target': pad.anchor(aim, kind)})
     # Columns: labels sharing a left edge (within 50 px), above or below the body. Inside a
     # column the order of the entries is free: the one whose lines cross nothing and run through
     # no text is kept, as the native diagrams nest theirs.
@@ -311,9 +344,10 @@ def render(resource, regions, base, device):
             e['x0'] = x0
     # Each column takes the lowest place (nearest the native one) and widest spacing where some
     # order of its entries has no layout problem; a column above the body may climb to the top.
-    for column in columns:
-        native_top, best = column['top'], None
-        tops = [native_top] if column['below'] else range(native_top, 23, -4)
+    native_tops = {id(c): c['top'] for c in columns}
+    def solve(column):
+        native_top, best = native_tops[id(column)], None
+        tops = [native_top] if column['below'] else range(native_top, 23, -8)
         for gap in (14, 10, 6):
             column['gap'] = gap
             for top in tops:
@@ -330,7 +364,26 @@ def render(resource, regions, base, device):
             if not best[0]:
                 break
         _, order, column['top'], column['gap'] = best
+        column['entries'] = list(order)
         place(order, column)
+        return best[0]
+    scores = {id(c): solve(c) for c in columns}
+    # A column with no clean layout hands one entry to another column on its side of the body.
+    for column in columns:
+        if not scores[id(column)]:
+            continue
+        for e in list(column['entries']):
+            for other in columns:
+                if other is column or other['below'] != column['below'] or not scores[id(column)]:
+                    continue
+                before = scores[id(column)] + scores[id(other)]
+                column['entries'].remove(e); other['entries'].append(e)
+                a_score, b_score = solve(column), solve(other)
+                if a_score + b_score < before:
+                    scores[id(column)], scores[id(other)] = a_score, b_score
+                else:
+                    other['entries'].remove(e); column['entries'].append(e)
+                    solve(column); solve(other)
     e_issues = audit(entries, drawing, pad.points)
     for e in entries:
         x0 = e['x0']; ax = x0 - 4; y = e['y']
@@ -432,7 +485,23 @@ def classify_glyph(templates, image, box, text=''):
 
 def render_list(resource, regions, base, templates, icons):
     out = base.copy()
-    for row in list_rows(regions):
+    rows = list_rows(regions)
+    # A touch pad row that repeats the row above (the left stick's action) has no meaning without a
+    # touch surface: it goes, and the rows above move down into its place.
+    for i in range(len(rows) - 1, 0, -1):
+        glyphs = list_glyphs(base, rows[i])
+        if (rows[i]['text'] == rows[i - 1]['text'] and len(glyphs) == 1 and
+                classify_glyph(templates, base, glyphs[0], rows[i]['text']) == 'touchpad'):
+            x0, y0, x1, y1 = rows[i]['box']; top = min(r['box'][1] for r in rows)
+            above = out.crop((0, top, out.width, y0))
+            out.paste(Image.new('RGBA', (out.width, y1 - top), (0, 0, 0, 0)), (0, top))
+            out.paste(above, (0, top + (y1 - y0)))
+            shifted = Image.new('RGBA', base.size, (0, 0, 0, 0)); shifted.paste(base.crop((0, top, base.width, y0)), (0, top + (y1 - y0)))
+            base = shifted
+            rows = [dict(r, box=[r['box'][0], r['box'][1] + (y1 - y0), r['box'][2], r['box'][3] + (y1 - y0)])
+                    for r in rows[:i]]
+            break
+    for row in rows:
         for box in list_glyphs(base, row):
             name = classify_glyph(templates, base, box, row['text'])
             if name in LIST_KEEP:
