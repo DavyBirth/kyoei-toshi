@@ -123,7 +123,7 @@ def main():
     for obsolete in ('common.psarc','ui-corrections.kydelta'):(out/'languages/en'/obsolete).unlink(missing_ok=True)
     for language,base in (('en',english),('ja',out/'game/DAT/common.psarc')):
         subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/build_prompt_pack.py'),
-                        str(base),str(out/'languages'/language/'prompts.kypack')],check=True)
+                        str(base),str(out/'languages'/language/'prompts.kypack')]+(['--diagrams'] if language=='en' else []),check=True)
         # Replaced by the verified paired pack above; no runtime reads this.
         obsolete=out/'languages'/language/'keyboard-icons.kydelta'
         if obsolete.exists():obsolete.unlink()

@@ -9,6 +9,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <mutex>
 #include <vector>
 #include <unordered_map>
 #include "kyoei_input_mode.h"
@@ -29,8 +30,12 @@ struct Pair {
 };
 inline std::vector<Pair> pairs;
 inline bool initialized{};
-inline void Initialize() {
-    if (initialized) return;
+inline std::once_flag loaded;
+inline void Load();
+// Threads binding textures wait for the whole pack: one that went on while another still read
+// it (177 MB with the controls diagrams) cached its images as unmatched for good.
+inline void Initialize() { std::call_once(loaded, Load); }
+inline void Load() {
     initialized = true;
     const char *path = std::getenv("KYOEI_PROMPT_PACK");
     if (!path || !*path) return;
@@ -51,7 +56,8 @@ inline void Initialize() {
         Pair p{fields[0], fields[1], fields[2], fields[3], fields[4], fields[5], fields[6], {}, {}};
         total += size_t(p.bytes) * (with_nintendo ? 5 : with_xbox ? 4 : american ? 3 : 2);
         if (!p.width || !p.height || p.width > 4096 || p.height > 4096 || !p.levels ||
-            p.levels > 14 || !p.bytes || total > 32 * 1024 * 1024 || (p.storage != 1 && p.storage != 13)) {
+            p.levels > 14 || !p.bytes || total > 256 * 1024 * 1024 ||  // controls diagrams: ~180 MB
+            (p.storage != 1 && p.storage != 13)) {
             ok = false; break;
         }
         p.controller.resize(p.bytes); p.keyboard.resize(p.bytes);

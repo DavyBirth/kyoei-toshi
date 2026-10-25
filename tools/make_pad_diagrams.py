@@ -25,11 +25,15 @@ XBOX = {'cross': 'A', 'circle': 'B', 'square': 'X', 'triangle': 'Y', 'L1': 'LB',
 NINTENDO = {'cross': 'A', 'circle': 'B', 'square': 'Y', 'triangle': 'X', 'L1': 'L', 'L2': 'ZL',
             'R1': 'R', 'R2': 'ZR', 'L3': 'LS', 'R3': 'RS', 'touchpad': 'Minus', 'options': 'Plus',
             'lstick': 'LS', 'rstick': 'RS', 'dpad': 'dpad'}
+KEYBOARD = {'cross': 'E', 'circle': 'Space', 'square': 'Ctrl', 'triangle': 'F', 'L1': 'Q', 'L2': 'V',
+            'R1': 'Shift', 'R2': 'RMB', 'L3': 'H', 'R3': 'MMB', 'touchpad': 'M', 'options': 'Esc',
+            'lstick': 'WASD', 'rstick': 'Mouse', 'dpad': 'dpad'}  # src/kyoei_pc_controls.h
+KEY_NAMES = {'E': 'E Key', 'Space': 'Space Bar', 'Ctrl': 'Ctrl Key', 'F': 'F Key', 'Q': 'Q Key', 'V': 'V Key',
+             'Shift': 'Shift Key', 'RMB': 'Right Mouse Button', 'H': 'H Key', 'MMB': 'Mouse Wheel Button',
+             'M': 'M Key', 'Esc': 'Esc Key', 'WASD': 'W A S D', 'Mouse': 'Mouse', 'dpad': 'Arrow Keys'}
 NAMES = {'A': 'A Button', 'B': 'B Button', 'X': 'X Button', 'Y': 'Y Button', 'LB': 'LB', 'LT': 'LT',
          'RB': 'RB', 'RT': 'RT', 'L': 'L Button', 'ZL': 'ZL Button', 'R': 'R Button', 'ZR': 'ZR Button',
          'View': 'View Button', 'Menu': 'Menu Button', 'Minus': '− Button', 'Plus': '+ Button'}
-# Labels that the new drawing would cover: (left, top) instead of the native place.
-LABEL_MOVES = {}
 FACE_COLORS = {'xbox': {'A': (96, 176, 60), 'B': (210, 60, 52), 'X': (52, 120, 210), 'Y': (232, 186, 40)},
                'nintendo': {}}
 
@@ -163,9 +167,134 @@ class Xbox:
         for dy in (-4, 0, 4):
             d.line([k(x - 5, y + dy), k(x + 5, y + dy)], fill=(255, 255, 255, 255), width=S + S // 2)
         ring((458, 588), 17, 2, (40, 40, 40, 255))  # guide button
+        self.shoulder_text(d, k)
+
+    FROM_BELOW = {'A'}
+    SHOULDERS = (('LB', (300, 549)), ('RB', (616, 549)), ('LT', (296, 518)), ('RT', (620, 518)))
+
+    def shoulder_text(self, d, k):
         small = ImageFont.truetype(str(FONTS['bold']), 10 * S)
-        for b, (x, y) in (('LB', (300, 549)), ('RB', (616, 549)), ('LT', (296, 518)), ('RT', (620, 518))):
+        for b, (x, y) in self.SHOULDERS:
             d.text(k(x, y), b, font=small, fill=(255, 255, 255, 255), anchor='mm')
+
+
+class Nintendo(Xbox):
+    """Nintendo Pro Controller: the Xbox outline and stick layout, with its own face (X top, A right,
+    B bottom, Y left, plain letters), Minus/Plus, Home and Capture, L/R and ZL/ZR."""
+    FROM_BELOW = {'B'}
+    SHOULDERS = (('L', (300, 549)), ('R', (616, 549)), ('ZL', (296, 518)), ('ZR', (620, 518)))
+
+    def __init__(self):
+        super().__init__()
+        p = self.points
+        p['X'], p['A'], p['B'], p['Y'] = (617, 610), (649, 642), (617, 674), (585, 642)
+        p['Minus'], p['Plus'] = p.pop('View'), p.pop('Menu')
+        p['L'], p['R'], p['ZL'], p['ZR'] = p.pop('LB'), p.pop('RB'), p.pop('LT'), p.pop('RT')
+
+    def anchor(self, button, kind=''):
+        alias = {'Minus': 'View', 'Plus': 'Menu', 'L': 'LB', 'R': 'RB', 'ZL': 'LT', 'ZR': 'RT'}
+        if button in alias:
+            self.points[alias[button]] = self.points[button]
+            try:
+                return Xbox.anchor(self, alias[button], kind)
+            finally:
+                del self.points[alias[button]]
+        return Xbox.anchor(self, button, kind)
+
+    def details(self, d, face, names):
+        k = lambda x, y: (x * S, y * S)
+        ring = lambda p, r, w=2, fill=(8, 8, 8, 255): d.ellipse(
+            [k(p[0] - r, p[1] - r), k(p[0] + r, p[1] + r)], fill=fill, outline=(255, 255, 255, 255), width=w * S)
+        for stick in ('LS', 'RS'):
+            p = self.points[stick]; ring(p, 34, 2, (20, 20, 20, 255)); ring(p, 22, 2, (30, 30, 30, 255))
+        x, y = self.points['dpad']; w, r = 9, 25
+        cross = [(x - w, y - r), (x + w, y - r), (x + w, y - w), (x + r, y - w), (x + r, y + w), (x + w, y + w),
+                 (x + w, y + r), (x - w, y + r), (x - w, y + w), (x - r, y + w), (x - r, y - w), (x - w, y - w)]
+        d.polygon([k(*p) for p in cross], fill=(30, 30, 30, 255), outline=(255, 255, 255, 255), width=2 * S)
+        font = ImageFont.truetype(str(FONTS['bold']), 17 * S)
+        for b in ('A', 'B', 'X', 'Y'):
+            p = self.points[b]; ring(p, 15, 2, (12, 12, 12, 255))
+            d.text(k(*p), b, font=font, fill=(240, 240, 240, 255), anchor='mm')
+        sign = ImageFont.truetype(str(FONTS['bold']), 16 * S)
+        for b, glyph in (('Minus', '−'), ('Plus', '+')):
+            p = self.points[b]; ring(p, 11, 2, (20, 20, 20, 255))
+            d.text(k(p[0], p[1] - 1), glyph, font=sign, fill=(255, 255, 255, 255), anchor='mm')
+        ring((480, 676), 10, 2, (40, 40, 40, 255))  # Home
+        d.rounded_rectangle([k(428, 668), k(444, 684)], 3 * S, fill=(40, 40, 40, 255),
+                            outline=(255, 255, 255, 255), width=2 * S)  # Capture
+        self.shoulder_text(d, k)
+
+
+
+class Keyboard(Xbox):
+    """The keys the game uses (left block, arrows) and a mouse, in the native diagram's footprint."""
+    FROM_BELOW = {'Space', 'Ctrl'}
+    U = 26  # one key: the whole drawing stays left of the right column (x 600)
+    RIGHT_COLUMN = 600
+    SPLIT = 390  # left of the arrow keys
+    ROWS = [(0, [('Esc', 1)]), (1, [('Tab', 1.5), ('Q', 1), ('W', 1), ('E', 1), ('R', 1), ('T', 1)]),
+            (2, [('Caps', 1.75), ('A', 1), ('S', 1), ('D', 1), ('F', 1), ('G', 1), ('H', 1)]),
+            (3, [('Shift', 2.25), ('Z', 1), ('X', 1), ('C', 1), ('V', 1), ('B', 1), ('N', 1), ('M', 1)]),
+            (4, [('Ctrl', 1.5), ('Win', 1.25), ('Alt', 1.25), ('Space', 5)])]
+    ARROWS = ('Up', 'Down', 'Left', 'Right')
+    USED = {'Esc', 'Q', 'W', 'E', 'R', 'A', 'S', 'D', 'F', 'G', 'H', 'Shift', 'V', 'M', 'Ctrl', 'Space'} | set(ARROWS)
+
+    def __init__(self):
+        self.keys = {}
+        x0, y0, u = 160, 790, self.U  # low in the frame: the labels need the room above
+        for row, keys in self.ROWS:
+            x, top = x0, y0 + row * (u + 4) + (8 if row else 0)
+            for name, width in keys:
+                self.keys[name] = (x + 2, top, x + width * u - 2, top + u - 2)
+                x += width * u
+        ax, ay = 400, 878  # arrows: up above, left/down/right below
+        for name, (cx, cy) in {'Up': (ax + u, ay), 'Left': (ax, ay + u + 4), 'Down': (ax + u, ay + u + 4),
+                               'Right': (ax + 2 * u, ay + u + 4)}.items():
+            self.keys[name] = (cx + 2, cy, cx + u - 2, cy + u - 2)
+        self.mouse = (500, 806, 556, 900)
+        self.points = {n: self.centre(n) for n in ('Esc', 'Q', 'E', 'R', 'F', 'G', 'H', 'Shift', 'V', 'M', 'Ctrl', 'Space')}
+        self.points.update({'WASD': self.centre('S'), 'dpad': self.centre('Down'), 'Mouse': (516, 880),
+                            'RMB': (544, 822), 'MMB': (528, 818)})
+
+    def centre(self, name):
+        x0, y0, x1, y1 = self.keys[name]
+        return (x0 + x1) / 2, (y0 + y1) / 2
+
+    def anchor(self, button, kind=''):
+        if button == 'dpad':  # Up and Down share a column of keys: their lines arrive apart
+            x, y = self.centre({'up': 'Up', 'down': 'Down', 'side': 'Left'}.get(kind, 'Down'))
+            return (x - 6, y) if kind == 'up' else (x + 6, y) if kind == 'down' else (x, y)
+        x, y = self.points[button]
+        if button == 'M' and kind == 'hold':
+            return x + 9, y
+        if button == 'WASD' and kind == 'move':
+            return x - 6, y
+        return x, y
+
+    def body(self, d):
+        k = lambda box: [box[0] * S, box[1] * S, box[2] * S, box[3] * S]
+        white = (255, 255, 255, 255)
+        for name, box in self.keys.items():
+            used = name in self.USED
+            d.rounded_rectangle(k(box), 4 * S, fill=(14, 14, 14, 255) if used else (8, 8, 8, 255),
+                                outline=white if used else (110, 110, 110, 255), width=(2 if used else 1) * S)
+        mx0, my0, mx1, my1 = self.mouse
+        mid = (mx0 + mx1) / 2
+        d.rounded_rectangle(k(self.mouse), 27 * S, fill=(14, 14, 14, 255), outline=white, width=2 * S)
+        d.line([mid * S, my0 * S, mid * S, (my0 + 34) * S], fill=white, width=2 * S)
+        d.line([mx0 * S, (my0 + 34) * S, mx1 * S, (my0 + 34) * S], fill=white, width=2 * S)
+        d.rounded_rectangle(k((mid - 4, my0 + 7, mid + 4, my0 + 24)), 4 * S, fill=(40, 40, 40, 255),
+                            outline=white, width=S + S // 2)
+        xs = [b[0] for b in self.keys.values()] + [b[2] for b in self.keys.values()] + [mx0, mx1]
+        ys = [b[1] for b in self.keys.values()] + [b[3] for b in self.keys.values()] + [my0, my1]
+        return [(min(xs), min(ys)), (max(xs), min(ys)), (max(xs), max(ys)), (min(xs), max(ys))]
+
+    def details(self, d, face, names):
+        font = ImageFont.truetype(str(FONTS['bold']), 10 * S)
+        arrows = {'Up': '\u2191', 'Down': '\u2193', 'Left': '\u2190', 'Right': '\u2192'}
+        for name, box in self.keys.items():
+            d.text(((box[0] + box[2]) / 2 * S, (box[1] + box[3]) / 2 * S), arrows.get(name, name), font=font,
+                   fill=(255, 255, 255, 255) if name in self.USED else (120, 120, 120, 255), anchor='mm')
 
 
 def wrap_lines(text):
@@ -229,8 +358,10 @@ def audit(entries, drawing, buttons=None):
     covered = drawing_table(drawing)
     for i, e in enumerate(entries):
         for box in e['boxes']:
-            x0, y0, x1, y1 = map(int, box)
-            if covered is not None and covered[y1, x1] - covered[y0, x1] - covered[y1, x0] + covered[y0, x0]:
+            x0, y0, x1, y1 = int(box[0]) - 4, int(box[1]), int(box[2]) + 4, int(box[3])  # 4 px clear of the drawing
+            if y1 > 1075:
+                issues.append(f"text off the picture: {e['name']}")
+            elif covered is not None and covered[y1, x1] - covered[y0, x1] - covered[y1, x0] + covered[y0, x0]:
                 issues.append(f"text over drawing: {e['name']}")
         for j, f in enumerate(entries):
             if i == j:
@@ -257,15 +388,18 @@ def audit(entries, drawing, buttons=None):
 
 
 def render(resource, regions, base, device):
-    mapping = XBOX if device == 'xbox' else NINTENDO
-    pad = Xbox()
+    mapping = {'xbox': XBOX, 'nintendo': NINTENDO, 'keyboard': KEYBOARD}[device]
+    pad = {'xbox': Xbox, 'nintendo': Nintendo, 'keyboard': Keyboard}[device]()
     size = base.size
     big = Image.new('RGBA', (size[0] * S, size[1] * S), (0, 0, 0, 0))
     d = ImageDraw.Draw(big)
     outline = pad.body(d)
     # Glow: blurred silhouette under the drawing, in the native green.
     mask = Image.new('L', size, 0)
-    ImageDraw.Draw(mask).polygon(outline, fill=255)
+    if device == 'keyboard':  # keys and mouse, not one block
+        mask = big.getchannel('A').resize(size, Image.BILINEAR).point(lambda v: 255 if v > 30 else 0)
+    else:
+        ImageDraw.Draw(mask).polygon(outline, fill=255)
     glow = mask.filter(ImageFilter.MaxFilter(15)).filter(ImageFilter.GaussianBlur(14))
     glow_layer = Image.new('RGBA', size, GLOW + (0,))
     glow_layer.putalpha(glow.point(lambda v: v * 70 // 255))
@@ -292,9 +426,12 @@ def render(resource, regions, base, device):
             controls = ['touchpad', 'rstick']
         buttons = [mapping[c] for c in controls]
         sticks = {'LS': 'Left Stick', 'RS': 'Right Stick', 'dpad': 'D-Pad'}
-        name = ' + '.join(NAMES[b] if b in NAMES else sticks[b] for b in buttons)
-        if controls == ['L3']: name = 'Left Stick Button'
-        if controls == ['R3']: name = 'Right Stick Button'
+        if device == 'keyboard':
+            name = ' + '.join(KEY_NAMES[b] for b in buttons)
+        else:
+            name = ' + '.join(NAMES[b] if b in NAMES else sticks[b] for b in buttons)
+            if controls == ['L3']: name = 'Left Stick Button'
+            if controls == ['R3']: name = 'Right Stick Button'
         rows = (action['text'] or '').split('\n')
         kind = 'press' if controls in (['L3'], ['R3']) else 'move' if controls[-1] in ('lstick', 'rstick') else ''
         if controls == ['dpad']:
@@ -303,36 +440,72 @@ def render(resource, regions, base, device):
         if controls == ['touchpad', 'rstick']:
             kind = 'hold'
         entries.append({'label': label, 'action': action, 'name': name + rest, 'rows': rows,
-                        'target': pad.anchor(aim, kind)})
-    # Columns: labels sharing a left edge (within 50 px), above or below the body. Inside a
-    # column the order of the entries is free: the one whose lines cross nothing and run through
-    # no text is kept, as the native diagrams nest theirs.
-    columns = []
-    for e in sorted(entries, key=lambda e: e['label']['box'][0]):
-        x0, y0 = e['label']['box'][:2]
-        below = y0 > 760
-        if e['name'].startswith('D-Pad'):
-            x0 += 45  # its native place sits beside the PlayStation body: join the column above
+                        'target': pad.anchor(aim, kind), 'button': aim})
+    def native_columns():
+        """Labels sharing a left edge (within 50 px), above or below the body, as drawn natively."""
+        columns = []
+        for e in sorted(entries, key=lambda e: e['label']['box'][0]):
+            x0, y0 = e['label']['box'][:2]
+            below = y0 > 760
+            e['native_y'] = y0
+            if e.get('button') in pad.FROM_BELOW and not below:
+                # The bottom face button, reached from above, would cross the one over it.
+                below, y0 = True, 836
+                e['native_y'] = y0
+                x0 = max(c['label']['box'][0] for c in entries if c['label']['box'][1] > 760)
+            if e['name'].startswith('D-Pad'):
+                x0 += 45  # its native place sits beside the PlayStation body: join the column above
+            e['native_x'] = x0 if e.get('button') in pad.FROM_BELOW else e['label']['box'][0]
+            for column in columns:
+                if column['below'] == below and abs(column['x0'] - x0) < 50:
+                    column['entries'].append(e); break
+            else:
+                columns.append({'x0': x0, 'below': below, 'entries': [e]})
         for column in columns:
-            if column['below'] == below and abs(column['x0'] - x0) < 50:
-                column['entries'].append(e); break
-        else:
-            columns.append({'x0': x0, 'below': below, 'entries': [e]})
-    for column in columns:
-        column['x0'] = min(e['label']['box'][0] for e in column['entries'])
-        column['top'] = min(e['label']['box'][1] for e in column['entries'])
-        for e in column['entries']:
-            if e['name'].startswith('D-Pad') and device in LABEL_MOVES:
-                e['place'] = LABEL_MOVES[device]
+            column['x0'] = min(e['native_x'] for e in column['entries'])
+            column['top'] = min(e['native_y'] for e in column['entries'])
+            # Lines below the body climb past the rows above them: a button under the column's own
+            # labels always meets one. Such a column moves right of its buttons, lines coming in leftwards.
+            widest = max(label_font.getlength(e['name']) for e in column['entries']) + 12
+            if column['below'] and any(column['x0'] - 6 < e['target'][0] < column['x0'] + widest
+                                       for e in column['entries']) and column['x0'] > 400:
+                column['x0'] = int(max(e['target'][0] for e in column['entries']) + 18)
+        return columns
+
+    def target_columns():
+        """Four columns around the drawing, each entry on the side of its button (a bottom key
+        below), when the native places do not suit the drawing."""
+        ys, xs = np.nonzero(np.asarray(drawing.getchannel('A')) > 40)
+        bx0, by0, bx1, by1 = xs.min(), ys.min(), xs.max(), ys.max()
+        middle = (bx0 + bx1) / 2 - 30
+        columns = {(below, right): {'x0': (getattr(pad, 'RIGHT_COLUMN', 430) if right else 50), 'below': below, 'entries': [],
+                                    'top': int(by1 + 16) if below else int(by0 - 70)}
+                   for below in (False, True) for right in (False, True)}
+        height = lambda e: 24 + 22 * len(e['rows']) + 10
+        room = {False: by0 - 10 - 24, True: 1075 - (by1 + 16)}
+        for below in (False, True):
+            side = sorted((e for e in entries if (e.get('button') in pad.FROM_BELOW) == below),
+                          key=lambda e: e['target'][0])
+            # The left column takes the leftmost buttons that fit, the right one the rest: no line
+            # of one column then meets a line of the other.
+            used = 0
+            for e in side:
+                split = getattr(pad, 'SPLIT', middle)  # keyboard: keys left, arrows and mouse right
+                left = used + height(e) <= room[below] and e['target'][0] <= split
+                if left:
+                    used += height(e)
+                columns[(below, not left)]['entries'].append(e)
+        for (below, _), column in columns.items():
+            if not below:  # an above column ends just over the drawing
+                column['top'] = int(by0 - 10 - sum(map(height, column['entries'])))
+        return [c for c in columns.values() if c['entries']]
+
     def place(order, column):
         y = column['top']; gap = column.get('gap', 14)
         for e in order:
             x0 = column['x0']
-            if 'place' in e:
-                x0, e['y'] = e['place']
-            else:
-                e['y'] = y
-                y += 24 + 22 * len(e['rows']) + gap
+            e['y'] = y
+            y += 24 + 22 * len(e['rows']) + gap
             ax = x0 - 4
             e['boxes'] = [(x0 + 2, e['y'] + 1, x0 + 2 + label_font.getlength(e['name']), e['y'] + 17)]
             e['boxes'] += [(ax + 10, e['y'] + 27 + 22 * n, ax + 10 + action_font.getlength(row), e['y'] + 45 + 22 * n)
@@ -342,48 +515,81 @@ def render(resource, regions, base, device):
             left, right = min(tx, x0 - 6), max(tx, x0 + label_font.getlength(e['name']) + 12)
             e['segments'] = [((left, under), (right, under)), ((tx, under), (tx, ty))]
             e['x0'] = x0
-    # Each column takes the lowest place (nearest the native one) and widest spacing where some
-    # order of its entries has no layout problem; a column above the body may climb to the top.
-    native_tops = {id(c): c['top'] for c in columns}
-    def solve(column):
-        native_top, best = native_tops[id(column)], None
-        tops = [native_top] if column['below'] else range(native_top, 23, -8)
-        for gap in (14, 10, 6):
-            column['gap'] = gap
-            for top in tops:
-                column['top'] = top
-                for order in itertools.permutations(column['entries']):
-                    place(order, column)
-                    score = len(audit(list(order), drawing, pad.points))
-                    if best is None or score < best[0]:
-                        best = (score, order, top, gap)
-                    if not score:
+
+    def lay_out(columns):
+        """Each column takes the lowest place (nearest its first one) and widest spacing where some
+        order of its entries has no layout problem; a column above the body may climb to the top.
+        A column with no clean layout hands one entry to another column on its side of the body."""
+        native_tops = {id(c): c['top'] for c in columns}
+        def orders(column):
+            entries_ = column['entries']
+            if len(entries_) <= 5:
+                yield from itertools.permutations(entries_)
+                return
+            # Larger columns: the nesting order (by button, as the lines need), then neighbour
+            # swaps while they help.
+            order = sorted(entries_, key=lambda e: e['target'][0], reverse=not column['below'])
+            yield tuple(order)
+            score = lambda o: (place(o, column), len(audit(list(o), drawing, pad.points)))[1]
+            current, improved = score(order), True
+            while improved and current:
+                improved = False
+                for i in range(len(order) - 1):
+                    trial = order[:i] + [order[i + 1], order[i]] + order[i + 2:]
+                    value = score(trial)
+                    if value < current:
+                        order, current, improved = trial, value, True
+                        yield tuple(order)
+        def solve(column):
+            native_top, best = native_tops[id(column)], None
+            tops = [native_top] if column['below'] else list(range(native_top, 23, -8)) or [24]
+            for gap in (14, 10, 6):
+                column['gap'] = gap
+                for top in tops:
+                    column['top'] = top
+                    for order in orders(column):
+                        place(order, column)
+                        score = len(audit(list(order), drawing, pad.points))
+                        if best is None or score < best[0]:
+                            best = (score, order, top, gap)
+                        if not score:
+                            break
+                    if not best[0]:
                         break
                 if not best[0]:
                     break
-            if not best[0]:
-                break
-        _, order, column['top'], column['gap'] = best
-        column['entries'] = list(order)
-        place(order, column)
-        return best[0]
-    scores = {id(c): solve(c) for c in columns}
-    # A column with no clean layout hands one entry to another column on its side of the body.
-    for column in columns:
-        if not scores[id(column)]:
-            continue
-        for e in list(column['entries']):
-            for other in columns:
-                if other is column or other['below'] != column['below'] or not scores[id(column)]:
-                    continue
-                before = scores[id(column)] + scores[id(other)]
-                column['entries'].remove(e); other['entries'].append(e)
-                a_score, b_score = solve(column), solve(other)
-                if a_score + b_score < before:
-                    scores[id(column)], scores[id(other)] = a_score, b_score
-                else:
-                    other['entries'].remove(e); column['entries'].append(e)
-                    solve(column); solve(other)
+            _, order, column['top'], column['gap'] = best
+            column['entries'] = list(order)
+            place(order, column)
+            return best[0]
+        scores = {id(c): solve(c) for c in columns}
+        for column in columns:
+            if not scores[id(column)]:
+                continue
+            for e in list(column['entries']):
+                for other in columns:
+                    if other is column or other['below'] != column['below'] or not scores[id(column)]:
+                        continue
+                    before = scores[id(column)] + scores[id(other)]
+                    column['entries'].remove(e); other['entries'].append(e)
+                    a_score, b_score = solve(column), solve(other)
+                    if a_score + b_score < before:
+                        scores[id(column)], scores[id(other)] = a_score, b_score
+                    else:
+                        other['entries'].remove(e); column['entries'].append(e)
+                        solve(column); solve(other)
+        return len(audit(entries, drawing, pad.points))
+
+    # The native places unless they leave problems and the other layout has fewer.
+    layout_keys = ('y', 'x0', 'boxes', 'segments')
+    native = None
+    if device != 'keyboard':
+        native_score = lay_out(native_columns())
+        native = [{k: e[k] for k in layout_keys} for e in entries]
+    if native is None or native_score:
+        if lay_out(target_columns()) >= (native_score if native else 1 << 30) and native:
+            for e, saved in zip(entries, native):
+                e.update(saved)
     e_issues = audit(entries, drawing, pad.points)
     for e in entries:
         x0 = e['x0']; ax = x0 - 4; y = e['y']
@@ -483,7 +689,8 @@ def classify_glyph(templates, image, box, text=''):
     return name
 
 
-def render_list(resource, regions, base, templates, icons):
+def render_list(resource, regions, base, templates, icons, keep=None):
+    keep = LIST_KEEP if keep is None else keep
     out = base.copy()
     rows = list_rows(regions)
     # A touch pad row that repeats the row above (the left stick's action) has no meaning without a
@@ -504,7 +711,7 @@ def render_list(resource, regions, base, templates, icons):
     for row in rows:
         for box in list_glyphs(base, row):
             name = classify_glyph(templates, base, box, row['text'])
-            if name in LIST_KEEP:
+            if name in keep:
                 continue
             icon = icons[LIST_ICONS[name]]
             icon = icon.crop(icon.getchannel('A').point(lambda v: 255 if v > 30 else 0).getbbox())
@@ -527,7 +734,14 @@ def build_all(archive_path, devices=('xbox', 'nintendo')):
     with Psarc(archive_path) as archive:
         names = {e.name: e for e in archive.entries[1:]}
         originals = {n: b''.join(archive.chunks(names[n])) for n in set(LIST_ICONS.values())}
-        icons = {d: {n: decode(v)[1] for n, v in pad_icons(originals, d).items()} for d in devices}
+        icons = {}
+        for d in devices:
+            if d == 'keyboard':  # keys for every symbol, sticks and D-pad included (WASD, mouse, arrows)
+                from make_keyboard_icons import build as key_icons
+                made = key_icons(archive_path)
+            else:
+                made = pad_icons(originals, d)
+            icons[d] = {n: decode(v)[1] for n, v in made.items() if n in set(LIST_ICONS.values())}
         for d in devices:  # sticks and D-pad keep the native art on every pad
             for n in LIST_ICONS.values():
                 icons[d].setdefault(n, decode(originals[n])[1])
@@ -543,7 +757,8 @@ def build_all(archive_path, devices=('xbox', 'nintendo')):
             base = preview(b''.join(archive.chunks(names[name])))[0].convert('RGBA')
             if name.endswith('_s.tex'):
                 for device in devices:
-                    out[device][name] = render_list(name, t['regions'], base, templates, icons[device])
+                    out[device][name] = render_list(name, t['regions'], base, templates, icons[device],
+                                                    {'plus', 'or'} if device == 'keyboard' else None)
                 continue
             for device in devices:
                 image = render(name, t['regions'], base, device)
@@ -556,7 +771,7 @@ def build_all(archive_path, devices=('xbox', 'nintendo')):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('base_png', type=Path, help='English PlayStation diagram as PNG (icon detection)')
-    ap.add_argument('resource'); ap.add_argument('device', choices=('xbox', 'nintendo'))
+    ap.add_argument('resource'); ap.add_argument('device', choices=('xbox', 'nintendo', 'keyboard'))
     ap.add_argument('output', type=Path)
     a = ap.parse_args()
     data = json.loads((REPO / 'translations/textures-en.json').read_text(encoding='utf-8'))

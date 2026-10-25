@@ -40,9 +40,8 @@ def bled(data):
     return encode_tex(data, bleed(image), info)
 
 
-def build(base, output):
+def build(base, output, diagrams=False):
     keyboard = keyboard_icons(base)
-    packed = bytearray(b'KYPROMP4' + struct.pack('<I', len(keyboard)+2))
     with Psarc(base) as archive:
         names = {e.name: e for e in archive.entries[1:]}
         status='texture/hud/status_base.tex'
@@ -57,6 +56,19 @@ def build(base, output):
         american=american_icons(originals)
         xbox=xbox_icons(originals)
         nintendo=xbox_icons(originals,'nintendo')
+        if diagrams:
+            # Controls diagrams for each device (make_pad_diagrams), from the English base: the
+            # PlayStation art stays the American English one already in the archive.
+            from make_pad_diagrams import build_all
+            drawn = build_all(base, ('keyboard', 'xbox', 'nintendo'))
+            for name in drawn['xbox']:
+                original = b''.join(archive.chunks(names[name]))
+                info = decode(original)[0]
+                originals[name] = original
+                entries.append((name, encode_tex(original, drawn['keyboard'][name], info), 0))
+                xbox[name] = encode_tex(original, drawn['xbox'][name], info)
+                nintendo[name] = encode_tex(original, drawn['nintendo'][name], info)
+        packed = bytearray(b'KYPROMP4' + struct.pack('<I', len(entries)))
         for name, replacement,kind in entries:
             original = originals[name]
             if name.startswith('texture/text marker/talk_icon_'):
@@ -82,12 +94,13 @@ def build(base, output):
             packed += controller + keys + us + xb + nt
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_bytes(packed)
-    print(f'Paired prompt pack: {len(keyboard)+2} textures; {len(packed)} bytes')
+    print(f'Paired prompt pack: {len(entries)} textures; {len(packed)} bytes')
 
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('base', type=Path)
     p.add_argument('output', type=Path)
+    p.add_argument('--diagrams', action='store_true', help='controls diagrams per device (English base)')
     a = p.parse_args()
-    build(a.base, a.output)
+    build(a.base, a.output, a.diagrams)
