@@ -15,8 +15,16 @@ void gz_thread_attach_host(const char*);
 }
 
 namespace Gow3Overlay {
+// The presenter asks this for every frame. A frame without the overlay already shows its
+// closed state: acknowledge it, or the driver kept redrawing the last frame on every idle
+// vblank after the first dialog closed (~60 -> ~33 FPS).
 bool Visible() {
-    return kyoei_overlay_kind() != 0 || kyoei_title_exit_state() != 0 || kyoei_photo_hud_hidden();
+    const bool visible =
+        kyoei_overlay_kind() != 0 || kyoei_title_exit_state() != 0 || kyoei_photo_hud_hidden();
+    if (!visible) {
+        kyoei_overlay_presented(kyoei_overlay_revision());
+    }
+    return visible;
 }
 void Init(const Vulkan::Instance& instance, vk::Format format, u32 images) {
     KyoeiOverlay::Initialize(instance, format, images);

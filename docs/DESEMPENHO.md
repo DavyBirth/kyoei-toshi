@@ -497,7 +497,13 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   (SubmitFlip -> PrepareFrame), esperando a GPU: Scheduler::Wait do limite GOW3_FRAMES_AHEAD=1
   (~13%) e GetRenderFrame esperando o present_done de um quadro anterior (~16%). O resto:
   DrawRecord/BindResources/BindTextures.
-- ABBA GOW3_FRAMES_AHEAD 1/2/2/1 (giro, Mailbox sem limite): parado 33,3 -> 35,3 FPS,
-  girando 28-32 -> 33-34 (~6%); picos iguais. Kyoei passa a usar 2 por padrão
-  (kyoei_gow3_bridge.cpp); custo: até 1 quadro a mais de atraso de entrada.
-  O PC estava mais carregado que em medições anteriores (~33 FPS em vez de 47-56).
+- REGRESSÃO achada (25/10): desde 53e5cf8 (22/10, overlay do Kyoei no presenter GoW3) o
+  jogo caía de ~58 para ~33 FPS parado. Ao fechar um diálogo (o de carregar o save) a
+  revisão do overlay mudava, mas só era confirmada quando o overlay estava visível: depois,
+  kyoei_overlay_needs_redraw ficava verdadeiro para sempre e o driver chamava DrawLastFrame
+  em todo vblank livre, disputando o presenter com os flips do jogo. Busca binária com
+  builds em worktree (bis-*: a241010/bf83e49 ~53 parado; 5370d4a/d44aac1/4c5a9cf ~33).
+  Correção: Gow3Overlay::Visible() confirma a revisão quando nada do overlay está visível
+  (kyoei_gow3_stubs.cpp). Depois: parado 57-59, girando 41-50 (Mailbox sem limite).
+- As esperas no flip e o ganho de GOW3_FRAMES_AHEAD=2 (~6%) eram efeito da regressão:
+  com a correção, ABBA 1/2/2/1 deu o mesmo (57-58 parado, 41-50 girando). Mantido 1.

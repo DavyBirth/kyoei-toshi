@@ -244,9 +244,6 @@ extern "C" void gz_gpu_start(uint32_t sdk, int headless) {
     // shader again when first drawn (~1100 compiles, stalls while turning the camera). The
     // background warm-up loads the cached pipelines instead, while the game runs.
     if (!std::getenv("GOW3_PIPELINE_BINARIES")) _putenv_s("GOW3_PIPELINE_BINARIES", "0");
-    // One frame ahead left the draw recording thread waiting ~30% for the previous frame on
-    // the GPU (PrepareFrame); two let it record the next one meanwhile: ~6% more FPS turning.
-    if (!std::getenv("GOW3_FRAMES_AHEAD")) _putenv_s("GOW3_FRAMES_AHEAD", "2");
     Gow3Settings::Load();
     gz_log("GPU (GoW3 core): vsync=%d", int(Gow3Settings::Get().vsync.load()));
     Core::Emulator::FillElfInfo(sdk);
