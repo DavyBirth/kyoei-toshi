@@ -46,13 +46,20 @@ uint64_t gz_memory_clamp(uintptr_t address, uint64_t size);
 static int readable(const void *pointer, size_t size) {
     /* Guest heap: the runtime's region table answers without a VirtualQuery syscall
      * (this ran several times per HUD marker per frame). A GPU-watched page then faults
-     * into the runtime handler exactly as a guest read would. */
-    if ((uintptr_t)pointer >= UINT64_C(0x1000000000)) return pointer && size && gz_memory_clamp((uintptr_t)pointer, size) == size;
+     * into the runtime handler exactly as a guest read would. Guest stacks (the marker's
+     * text object) are not in that table: VirtualQuery, remembering the last region. */
+    if (!pointer || !size) return 0;
+    if ((uintptr_t)pointer >= UINT64_C(0x1000000000) && gz_memory_clamp((uintptr_t)pointer, size) == size) return 1;
+    static __declspec(thread) uintptr_t known_start, known_end;
+    const uintptr_t start=(uintptr_t)pointer;
+    if (start>=known_start && size<=known_end-start && start<known_end) return 1;
     MEMORY_BASIC_INFORMATION info;
-    if (!pointer || !VirtualQuery(pointer, &info, sizeof(info)) || info.State!=MEM_COMMIT ||
+    if (!VirtualQuery(pointer, &info, sizeof(info)) || info.State!=MEM_COMMIT ||
         (info.Protect&(PAGE_NOACCESS|PAGE_GUARD))) return 0;
-    uintptr_t offset=(uintptr_t)pointer-(uintptr_t)info.BaseAddress;
-    return offset<=info.RegionSize && size<=info.RegionSize-offset;
+    uintptr_t offset=start-(uintptr_t)info.BaseAddress;
+    if (offset>info.RegionSize || size>info.RegionSize-offset) return 0;
+    known_start=(uintptr_t)info.BaseAddress; known_end=known_start+info.RegionSize;
+    return 1;
 }
 static void *field_pointer(const void *object, size_t offset) {
     void *value=NULL;

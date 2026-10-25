@@ -75,6 +75,9 @@ static int check_fit_callback(void) {
     if (kyoei_hud_test_map(fake_unicode_count,"\xc3\xa9")!=1) return 21;
     fake_assign(&source,curved);kyoei_hud_test_marker(object,&source);
     if (strcmp(actual->pointer,curved)) return 22;
+    KyoeiHudFit star;
+    if (!kyoei_hud_fit(&metrics,"\xe2\x98\x85W",4,0,&star) ||
+        fabsf(star.scale_x-(2*29.f/36.f+32.f/36.f))>.001f) return 23;
     return 0;
 }
 int main(int argc,char **argv) {
