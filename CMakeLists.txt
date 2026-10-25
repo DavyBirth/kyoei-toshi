@@ -1226,6 +1226,17 @@ kyoei_replace_checked(KYOEI_PAD
   "    data.rightStick = {keyboard_axis(SDL_SCANCODE_J,SDL_SCANCODE_L,data.rightStick.x),
                        keyboard_axis(SDL_SCANCODE_I,SDL_SCANCODE_K,data.rightStick.y)};"
   "    // Kyoei: no keyboard camera; the mouse and the gamepad turn it.")
+# Xbox View and Nintendo Minus are the touch pad button (map on/off), as the launcher lists.
+kyoei_replace_checked(KYOEI_PAD
+  "{SDL_GAMEPAD_BUTTON_TOUCHPAD,0x100000}};"
+  "{SDL_GAMEPAD_BUTTON_TOUCHPAD,0x100000},{SDL_GAMEPAD_BUTTON_BACK,0x100000}};")
+# Touch pad fingers reach the game (slide actions); see kyoei_touch.h.
+set(KYOEI_PAD "#include \"kyoei_touch.h\"
+${KYOEI_PAD}")
+kyoei_replace_checked(KYOEI_PAD
+  "    // Kyoei: no keyboard camera; the mouse and the gamepad turn it."
+  "    // Kyoei: no keyboard camera; the mouse and the gamepad turn it.
+    KyoeiTouch::Fill(device, data, buttons);")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp" CONTENT "${KYOEI_PAD}" @ONLY)
 target_sources(kyoei_videoout PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/kyoei_pad.cpp")
 set(KYOEI_WINDOW "#include \"kyoei_mouse.h\"\n${KYOEI_WINDOW}")
