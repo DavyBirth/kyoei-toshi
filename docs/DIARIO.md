@@ -5055,3 +5055,4 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 
 ### 25/10/2026 — esvaziamentos do draw pipe medidos
 - Giro em segundo plano, mudo, GOW3_FRAME_STATS=1: só o esvaziamento do fim da submissão espera (~1 por quadro, 18-25% da thread de comandos). Os dispatches de compute não esvaziam. Hipótese de vários esvaziamentos por quadro descartada; sem mudança de código. Próximo alvo: custo por draw da gravação (DrawRec). Detalhes em docs/DESEMPENHO.md.
+- Perfil da gravação (DrawRec): ~30% esperando a GPU no flip, pelo limite de 1 quadro à frente. GOW3_FRAMES_AHEAD=2 deu ~6% mais FPS (ABBA 1/2/2/1) e virou o padrão do Kyoei; conferido no jogo em segundo plano, imagem normal. Falta Davy sentir se o controle ficou mais atrasado (até 1 quadro). Voltar: GOW3_FRAMES_AHEAD=1.

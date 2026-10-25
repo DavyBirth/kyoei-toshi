@@ -493,3 +493,11 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   só encolhe se a gravação ficar mais rápida, ou se as escritas de fence puderem ser
   sinalizadas depois sem o jogo liberar a memória antes (arriscado: ver a nota acima).
   Próximo alvo: o custo por draw do DrawRec.
+- Perfil da thread DrawRec no giro (25/10, prof2): ~30% das amostras dentro do flip
+  (SubmitFlip -> PrepareFrame), esperando a GPU: Scheduler::Wait do limite GOW3_FRAMES_AHEAD=1
+  (~13%) e GetRenderFrame esperando o present_done de um quadro anterior (~16%). O resto:
+  DrawRecord/BindResources/BindTextures.
+- ABBA GOW3_FRAMES_AHEAD 1/2/2/1 (giro, Mailbox sem limite): parado 33,3 -> 35,3 FPS,
+  girando 28-32 -> 33-34 (~6%); picos iguais. Kyoei passa a usar 2 por padrão
+  (kyoei_gow3_bridge.cpp); custo: até 1 quadro a mais de atraso de entrada.
+  O PC estava mais carregado que em medições anteriores (~33 FPS em vez de 47-56).
