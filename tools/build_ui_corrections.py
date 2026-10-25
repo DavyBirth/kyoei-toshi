@@ -36,6 +36,7 @@ HUD_LABELS = {
     '\u9078\u629e': 'Select',
     '\u8fd4\u4fe1': 'Reply',
     '\u9589\u3058\u308b': 'Close',
+    '[i16] \u9589\u3058\u308b': '[i16] Close',  # controls screen footer: the L3 icon, then the word
     '\u623b\u308b': 'Back',
     '\u5348\u5f8c': 'PM',
     '\u5348\u524d': 'AM',
