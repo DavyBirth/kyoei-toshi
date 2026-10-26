@@ -815,3 +815,22 @@ qBittorrent na cauda 0,18/0,30 núcleo. Resultado parcial não prova ganho nem s
 Preservado em `guarded-abba-completed-174528-partial.json`. Conferir também recompilação
 integral da base sem protótipos na retomada. Nenhuma otimização de FPS adotada. Testes e
 compilação pausados; executável/PDB de referência validados restaurados com hash conferido.
+
+### 26/10/2026 — base recompilada e custo da preparação (18:35–19:07)
+
+Rebuild integral sem protótipos: 28 alvos/30 chamadas passam. `baseline-clean` SHA256
+`c95cf34f8ce78f4a671c7eeae4273fbec052aa9bf43a3db68409aa8ddf1ae5f5`. Arquivo completo
+idêntico a baseline-metrics após normalizar exclusivamente timestamps COFF/debug e GUID/age
+do PDB; `.text`, `.data`, `.pdata`, `.reloc`, `.rsrc`, `.tls` idênticos sem normalização.
+Não atribuir o resultado isolado de batch0 a código diferente da base recompilada.
+
+Perfil `codex-clean-profile-1849`: identificado SubmitGfx em outra thread guest, não em
+guest main. DrawPreparation::Build ocupa 9,8% das 642 amostras dessa thread; maior parcela
+na criação dos arrays PreparedDraw. Amostrar todas as threads perturba mais a execução;
+esses números não são FPS nem ganho previsto. Preparados protótipos independentes de
+reutilização de arrays no último release (16 MiB, layout de Submission preservado) e de
+cópia agrupada de constantes. Ambos inativos, ainda sem compilação/testes/ABBA.
+
+Controle prep0 no mesmo executável: 36,08 / 34,51 / 27,90 FPS, última referência interrompida
+a pedido de Davy para dar aula. Grupo incompleto, sem ganho aprovado. Evidência privada
+`guarded-abba-completed-185434-partial.json`. Testes pausados; referência restaurada.
