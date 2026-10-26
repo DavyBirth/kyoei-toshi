@@ -40,6 +40,34 @@ def bled(data):
     return encode_tex(data, bleed(image), info)
 
 
+ICON_PAGE = 'font/utf8all_icon_0.tex'
+
+
+def icon_cells(page, icons):
+    """Where each font/icon/IC_* image sits in the font's icon page ([iN] in texts are drawn
+    from the page, not from the IC_* files): exact matches, found once per base archive."""
+    from numpy.lib.stride_tricks import sliding_window_view as windows
+    sheet = np.asarray(page, np.int16); cells = {}
+    for name, icon in icons.items():
+        art = np.asarray(icon, np.int16); h, w = art.shape[:2]
+        distance = sum(np.abs(windows(sheet[..., c], (h, w)) - art[..., c]).sum(axis=(2, 3)) for c in range(4))
+        y, x = np.unravel_index(distance.argmin(), distance.shape)
+        if distance[y, x]:
+            raise ValueError(f'{name} is not in the icon page')
+        cells[name] = (int(x), int(y))
+    return cells
+
+
+def icon_page(original, cells, variant):
+    """The icon page with each icon replaced by its variant (same size, same place)."""
+    info, page = decode(original)
+    page = page.copy()
+    for name, at in cells.items():
+        if name in variant:
+            page.paste(decode(variant[name])[1], at)
+    return encode_tex(original, page, info)
+
+
 def build(base, output, diagrams=False):
     keyboard = keyboard_icons(base)
     with Psarc(base) as archive:
@@ -56,6 +84,15 @@ def build(base, output, diagrams=False):
         american=american_icons(originals)
         xbox=xbox_icons(originals)
         nintendo=xbox_icons(originals,'nintendo')
+        # The font's icon page, per device, from the icon variants above.
+        page_data = b''.join(archive.chunks(names[ICON_PAGE]))
+        icon_names = [n for n in originals if n.startswith('font/icon/IC_')]
+        cells = icon_cells(decode(page_data)[1], {n: decode(originals[n])[1] for n in icon_names})
+        originals[ICON_PAGE] = page_data
+        entries.append((ICON_PAGE, icon_page(page_data, cells, keyboard), 0))
+        american[ICON_PAGE] = icon_page(page_data, cells, american)
+        xbox[ICON_PAGE] = icon_page(page_data, cells, xbox)
+        nintendo[ICON_PAGE] = icon_page(page_data, cells, nintendo)
         if diagrams:
             # Controls diagrams for each device (make_pad_diagrams), from the English base: the
             # PlayStation art stays the American English one already in the archive.
