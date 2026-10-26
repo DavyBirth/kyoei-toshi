@@ -514,3 +514,11 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   Medições com GOW3_FRAME_STATS=1 (bench-exe.sh) também não servem para FPS absoluto.
   Perfil da DrawRec: ~82% esperando trabalho; o gargalo já não é a gravação. Próximo: perfil
   de todas as threads no giro (guest main, GpuCommandProcessor) com o PC livre.
+- Amostragem de todas as threads só nos quadros lentos (KYOEI_SAMPLE_THREADS=*,
+  KYOEI_SAMPLE_SLOW_MS=20, run samp-all2): guest main ~49% em espera de condição, threads do
+  jogo ~68%, GpuCommandProcessor ~42% esperando comandos + 20% em DrainDrawPipe, DrawRec e
+  VkRecorder ~60% parados. Ninguém satura: o quadro é uma corrente serial (jogo -> tradução de
+  comandos ~12-13 ms -> gravação ~4 ms -> GPU/apresentação ~11 ms; submit_to_flip ~27 ms) e
+  o jogo espera o fim dela antes do próximo quadro. Ganho real no giro = encurtar a corrente,
+  sobretudo ProcessGraphics/PostDraw/Draw na thread de comandos (58% dela) e a espera do fim
+  da submissão. Trabalho longo; nenhuma opção de apresentação resolve.
