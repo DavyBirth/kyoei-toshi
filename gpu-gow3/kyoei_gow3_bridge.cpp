@@ -244,8 +244,15 @@ extern "C" void gz_gpu_start(uint32_t sdk, int headless) {
     // shader again when first drawn (~1100 compiles, stalls while turning the camera). The
     // background warm-up loads the cached pipelines instead, while the game runs.
     if (!std::getenv("GOW3_PIPELINE_BINARIES")) _putenv_s("GOW3_PIPELINE_BINARIES", "0");
+    // PS4 look: the core sharpens (RCAS) whenever the game's image fills the window, as at
+    // 1920x1080. Off unless chosen (the launcher's graphics.ini, GOW3_CONFIG, or GOW3_RCAS).
+    if (!std::getenv("GOW3_RCAS") && !std::getenv("GOW3_CONFIG")) _putenv_s("GOW3_RCAS", "0");
     Gow3Settings::Load();
-    gz_log("GPU (GoW3 core): vsync=%d", int(Gow3Settings::Get().vsync.load()));
+    {
+        const auto& g = Gow3Settings::Get();
+        gz_log("GPU (GoW3 core): vsync=%d anisotropy=%d sharpening=%d strength=%d fsr1=%d", int(g.vsync.load()),
+               g.anisotropy.load(), int(g.rcas.load()), g.rcas_strength.load(), int(g.fsr1.load()));
+    }
     Core::Emulator::FillElfInfo(sdk);
     if (!headless) Libraries::Kernel::service_thread = std::jthread{Libraries::Kernel::KernelServiceThread};
     Core::Loader::SymbolsResolver resolver;

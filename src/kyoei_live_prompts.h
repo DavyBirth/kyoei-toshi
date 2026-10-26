@@ -35,24 +35,49 @@ inline void Load();
 // Threads binding textures wait for the whole pack: one that went on while another still read
 // it (177 MB with the controls diagrams) cached its images as unmatched for good.
 inline void Initialize() { std::call_once(loaded, Load); }
+// KYPROMZ1: a KYPROMP4 pack, zlib-compressed (u64 size first): the controls diagrams are mostly
+// transparent, 177 MB stored, about 9 MB compressed.
+extern "C" int mz_uncompress(unsigned char *, unsigned long *, const unsigned char *, unsigned long);
+inline bool ReadAll(const char *path, std::vector<unsigned char> &data) {
+    FILE *file = std::fopen(path, "rb");
+    if (!file) return false;
+    std::fseek(file, 0, SEEK_END); const long size = std::ftell(file); std::fseek(file, 0, SEEK_SET);
+    data.resize(size > 0 ? size_t(size) : 0);
+    const bool ok = size > 0 && std::fread(data.data(), 1, data.size(), file) == data.size();
+    std::fclose(file);
+    if (ok && data.size() > 16 && !std::memcmp(data.data(), "KYPROMZ1", 8)) {
+        uint64_t raw{}; std::memcpy(&raw, data.data() + 8, 8);
+        if (raw > 512u * 1024 * 1024) return false;
+        std::vector<unsigned char> plain(raw);
+        unsigned long length = (unsigned long)raw;
+        if (mz_uncompress(plain.data(), &length, data.data() + 16, (unsigned long)(data.size() - 16)) != 0 ||
+            length != raw) return false;
+        data.swap(plain);
+    }
+    return ok;
+}
 inline void Load() {
     initialized = true;
     const char *path = std::getenv("KYOEI_PROMPT_PACK");
     if (!path || !*path) return;
-    FILE *file = std::fopen(path, "rb");
-    if (!file) return;
+    std::vector<unsigned char> data;
+    if (!ReadAll(path, data)) { gz_log("Kyoei prompts: cannot read %s", path); return; }
+    size_t at = 0;
+    auto read = [&](void *to, size_t bytes) {
+        if (bytes > data.size() - at) return false;
+        std::memcpy(to, data.data() + at, bytes); at += bytes; return true;
+    };
     char magic[8]; uint32_t count{};
-    bool ok = std::fread(magic, 1, 8, file) == 8;
+    bool ok = read(magic, 8);
     // KYPROMP3 adds the Xbox artwork after the American one, KYPROMP4 the Nintendo one.
     const bool with_nintendo = ok && !std::memcmp(magic, "KYPROMP4", 8);
     const bool with_xbox = with_nintendo || (ok && !std::memcmp(magic, "KYPROMP3", 8));
     const bool american = with_xbox || (ok && !std::memcmp(magic, "KYPROMP2", 8));
-    ok = ok && (american || !std::memcmp(magic, "KYPROMP1", 8)) &&
-              std::fread(&count, 4, 1, file) == 1 && count <= 128;
+    ok = ok && (american || !std::memcmp(magic, "KYPROMP1", 8)) && read(&count, 4) && count <= 128;
     size_t total{};
     for (uint32_t i = 0; ok && i < count; ++i) {
         uint32_t fields[7];
-        if (std::fread(fields, 4, 7, file) != 7) { ok = false; break; }
+        if (!read(fields, sizeof(fields))) { ok = false; break; }
         Pair p{fields[0], fields[1], fields[2], fields[3], fields[4], fields[5], fields[6], {}, {}};
         total += size_t(p.bytes) * (with_nintendo ? 5 : with_xbox ? 4 : american ? 3 : 2);
         if (!p.width || !p.height || p.width > 4096 || p.height > 4096 || !p.levels ||
@@ -60,25 +85,12 @@ inline void Load() {
             (p.storage != 1 && p.storage != 13)) {
             ok = false; break;
         }
-        p.controller.resize(p.bytes); p.keyboard.resize(p.bytes);
-        ok = std::fread(p.controller.data(), 1, p.bytes, file) == p.bytes &&
-             std::fread(p.keyboard.data(), 1, p.bytes, file) == p.bytes;
-        if (ok && american) {
-            p.american.resize(p.bytes);
-            ok = std::fread(p.american.data(), 1, p.bytes, file) == p.bytes;
-        }
-        if (ok && with_xbox) {
-            p.xbox.resize(p.bytes);
-            ok = std::fread(p.xbox.data(), 1, p.bytes, file) == p.bytes;
-        }
-        if (ok && with_nintendo) {
-            p.nintendo.resize(p.bytes);
-            ok = std::fread(p.nintendo.data(), 1, p.bytes, file) == p.bytes;
-        }
+        auto part = [&](std::vector<unsigned char> &to) { to.resize(p.bytes); return read(to.data(), p.bytes); };
+        ok = part(p.controller) && part(p.keyboard) && (!american || part(p.american)) &&
+             (!with_xbox || part(p.xbox)) && (!with_nintendo || part(p.nintendo));
         if (ok) pairs.push_back(std::move(p));
     }
-    ok = ok && std::fgetc(file) == EOF;
-    std::fclose(file);
+    ok = ok && at == data.size();
     if (!ok) pairs.clear();
     if (ok && !american) gz_log("Kyoei prompts: legacy artwork; rebuild pack for physical American buttons");
     gz_log("Kyoei prompts: %zu paired textures; live input selection", pairs.size());

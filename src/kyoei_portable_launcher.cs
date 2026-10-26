@@ -21,6 +21,10 @@ class PortableLauncher : Form {
     bool photoHudPreview;
     decimal mouseSensitivity=1.8m;
     string promptMode="auto";
+    // Graphics (data/graphics.ini, read by the GPU core). The PS4 look by default.
+    int anisotropy=0, sharpening=0; bool fsr1=false;
+    static readonly int[] Anisotropies={0,2,4,8,16};
+    static readonly int[] Sharpness={0,25,50,75};
     [STAThread] static int Main(string[] args) {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
@@ -37,6 +41,13 @@ class PortableLauncher : Form {
                 using(var controls=app.ControlsDialog()) {
                     controls.ShowInTaskbar=false;controls.Opacity=0;controls.Show();Application.DoEvents();
                     using(var b=new Bitmap(controls.Width,controls.Height)){controls.DrawToBitmap(b,new Rectangle(0,0,b.Width,b.Height));b.Save(Path.Combine(app.root,"controls-preview.png"));}
+                }
+                return 0;
+            }
+            if(args.Length==1 && args[0]=="--render-graphics-preview") {
+                using(var graphics=app.GraphicsDialog()) {
+                    graphics.ShowInTaskbar=false;graphics.Opacity=0;graphics.Show();Application.DoEvents();
+                    using(var b=new Bitmap(graphics.Width,graphics.Height)){graphics.DrawToBitmap(b,new Rectangle(0,0,b.Width,b.Height));b.Save(Path.Combine(app.root,"graphics-preview.png"));}
                 }
                 return 0;
             }
@@ -60,9 +71,12 @@ class PortableLauncher : Form {
         AddText("DISPLAY",496,330,180,22,9,Color.Silver);
         Setup(resolution,496,356,220,new string[]{"1280 × 720","1600 × 900","1920 × 1080","2560 × 1440","3840 × 2160"});
         fullscreen.SetBounds(735,356,200,28);fullscreen.Text="Fullscreen";fullscreen.ForeColor=Color.Silver;Controls.Add(fullscreen);
-        var controlsButton=new Button();controlsButton.SetBounds(496,389,430,27);controlsButton.Text="CONTROLS & MOUSE SENSITIVITY";
+        var controlsButton=new Button();controlsButton.SetBounds(496,389,280,27);controlsButton.Text="CONTROLS & MOUSE";
         controlsButton.FlatStyle=FlatStyle.Flat;controlsButton.ForeColor=Color.WhiteSmoke;
         controlsButton.Click+=delegate{using(var dialog=ControlsDialog())dialog.ShowDialog(this);};Controls.Add(controlsButton);
+        var graphicsButton=new Button();graphicsButton.SetBounds(784,389,142,27);graphicsButton.Text="GRAPHICS";
+        graphicsButton.FlatStyle=FlatStyle.Flat;graphicsButton.ForeColor=Color.WhiteSmoke;
+        graphicsButton.Click+=delegate{using(var dialog=GraphicsDialog())dialog.ShowDialog(this);};Controls.Add(graphicsButton);
         play.SetBounds(496,421,430,56);play.Text="START GAME";play.Font=new Font("Segoe UI",14,FontStyle.Bold);
         play.FlatStyle=FlatStyle.Flat;play.FlatAppearance.BorderSize=0;play.BackColor=Color.FromArgb(162,31,49);play.ForeColor=Color.White;
         play.Cursor=Cursors.Hand;play.Click+=delegate{Launch();};Controls.Add(play);
@@ -99,11 +113,47 @@ class PortableLauncher : Form {
             else if(lines.Length>4 && lines[4]=="keyboard-fixed")promptMode="keyboard";
             else promptMode="auto";
             photoHudPreview=lines.Length>5 && lines[5]=="1";
+            int value;
+            if(lines.Length>6&&int.TryParse(lines[6],out value)&&Array.IndexOf(Anisotropies,value)>=0)anisotropy=value;
+            if(lines.Length>7&&int.TryParse(lines[7],out value)&&Array.IndexOf(Sharpness,value)>=0)sharpening=value;
+            fsr1=lines.Length>8&&lines[8]=="1";
         }catch{}
     }
     void SaveSettings() {
         Directory.CreateDirectory(Path.Combine(root,"data"));
-        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),promptMode=="keyboard"?"keyboard-fixed":promptMode,photoHudPreview?"1":"0"});
+        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),promptMode=="keyboard"?"keyboard-fixed":promptMode,photoHudPreview?"1":"0",
+            anisotropy.ToString(CultureInfo.InvariantCulture),sharpening.ToString(CultureInfo.InvariantCulture),fsr1?"1":"0"});
+    }
+    // The GPU core's settings file: only the options this launcher offers.
+    void WriteGraphics() {
+        File.WriteAllLines(Path.Combine(root,"data","graphics.ini"),new string[]{
+            "anisotropy="+anisotropy.ToString(CultureInfo.InvariantCulture),
+            "rcas="+(sharpening>0?"1":"0"),"rcas_strength="+Math.Max(sharpening,25).ToString(CultureInfo.InvariantCulture),
+            "fsr1="+(fsr1?"1":"0")});
+    }
+    Form GraphicsDialog() {
+        var dialog=new Form();dialog.Text="Graphics";dialog.ClientSize=new Size(560,330);dialog.StartPosition=FormStartPosition.CenterParent;
+        dialog.BackColor=BackColor;dialog.ForeColor=ForeColor;dialog.Font=Font;dialog.FormBorderStyle=FormBorderStyle.FixedDialog;dialog.MaximizeBox=false;dialog.MinimizeBox=false;
+        Func<string,int,string[],int,ComboBox> row=(text,y,items,selected)=>{
+            var label=new Label();label.SetBounds(18,y+4,250,25);label.Text=text;dialog.Controls.Add(label);
+            var box=new ComboBox();box.SetBounds(290,y,250,28);box.DropDownStyle=ComboBoxStyle.DropDownList;box.Items.AddRange(items);box.SelectedIndex=selected;dialog.Controls.Add(box);return box;};
+        var preset=row("Preset",18,new string[]{"PS4 original","Enhanced","Custom"},0);
+        var af=row("Anisotropic filtering",62,new string[]{"Off (PS4)","2x","4x","8x","16x"},Array.IndexOf(Anisotropies,anisotropy));
+        var sharp=row("Sharpening (AMD RCAS)",106,new string[]{"Off (PS4)","Low","Medium","High"},Array.IndexOf(Sharpness,sharpening));
+        var scale=row("Scaling above 1080p",150,new string[]{"Bilinear (PS4)","AMD FSR 1"},fsr1?1:0);
+        bool syncing=false;
+        Action fromChoices=()=>{if(syncing)return;syncing=true;
+            preset.SelectedIndex=af.SelectedIndex==0&&sharp.SelectedIndex==0&&scale.SelectedIndex==0?0:af.SelectedIndex==4&&sharp.SelectedIndex==2&&scale.SelectedIndex==1?1:2;syncing=false;};
+        af.SelectedIndexChanged+=delegate{fromChoices();};sharp.SelectedIndexChanged+=delegate{fromChoices();};scale.SelectedIndexChanged+=delegate{fromChoices();};
+        preset.SelectedIndexChanged+=delegate{if(syncing||preset.SelectedIndex==2)return;syncing=true;
+            bool enhanced=preset.SelectedIndex==1;af.SelectedIndex=enhanced?4:0;sharp.SelectedIndex=enhanced?2:0;scale.SelectedIndex=enhanced?1:0;syncing=false;};
+        fromChoices();
+        var note=new Label();note.SetBounds(18,196,525,70);note.ForeColor=Color.Silver;
+        note.Text="The game renders at 1920 x 1080, as on PS4. Its frame rate is limited by the processor,\nso these options change the look, not the speed. Applied when the game starts.";dialog.Controls.Add(note);
+        var save=new Button();save.SetBounds(330,280,210,36);save.Text="SAVE & CLOSE";save.UseMnemonic=false;
+        save.Click+=delegate{anisotropy=Anisotropies[af.SelectedIndex];sharpening=Sharpness[sharp.SelectedIndex];fsr1=scale.SelectedIndex==1;
+            try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
+        return dialog;
     }
     Form ControlsDialog() {
         var dialog=new Form();dialog.Text="Controls";dialog.ClientSize=new Size(850,710);dialog.StartPosition=FormStartPosition.CenterParent;
@@ -114,7 +164,7 @@ class PortableLauncher : Form {
         table.Columns.Add("action","Action");table.Columns.Add("pc","Keyboard / mouse");table.Columns.Add("pad","PlayStation / Xbox");
         string[][] rows={
             new[]{"Move / walk / run","W A S D","Left stick"},
-            new[]{"Look around","Mouse / I J K L","Right stick"},
+            new[]{"Look around","Mouse","Right stick"},
             new[]{"Interact / talk / pick up / confirm","E / Enter / left mouse","Cross / A"},
             new[]{"Back / cancel / stand up","Space / Backspace","Circle / B"},
             new[]{"Dodge / go prone","Ctrl","Square / X"},
@@ -126,6 +176,7 @@ class PortableLauncher : Form {
             new[]{"Reset camera","Middle mouse / R","R3 / right stick click"},
             new[]{"Control guide: large / small / hidden","H","L3 / left stick click"},
             new[]{"Map","M","Touchpad / View"},
+            new[]{"Drag the minimap","Hold M + mouse","Slide on touchpad / hold View + right stick"},
             new[]{"Menus / target selection","Arrow keys","D-pad"},
             new[]{"Pause / inventory menu","Esc / Tab","Options / Menu"},
             new[]{"Release / capture mouse","F7; Alt+Tab releases automatically","—"},
@@ -138,7 +189,7 @@ class PortableLauncher : Form {
         var promptsLabel=new Label();promptsLabel.SetBounds(18,602,350,25);promptsLabel.Text="On-screen button prompts";dialog.Controls.Add(promptsLabel);
         var prompts=new ComboBox();prompts.SetBounds(390,597,210,28);prompts.DropDownStyle=ComboBoxStyle.DropDownList;prompts.Items.AddRange(new object[]{"Automatic","Keyboard & mouse","PlayStation controller","Xbox controller","Nintendo controller"});prompts.SelectedIndex=promptMode=="nintendo"?4:promptMode=="xbox"?3:promptMode=="controller"?2:promptMode=="keyboard"?1:0;dialog.Controls.Add(prompts);
         var photo=new CheckBox();photo.SetBounds(18,646,590,28);photo.Text="Photo preview: pause + free camera with F10";photo.Checked=photoHudPreview;dialog.Controls.Add(photo);
-        var save=new Button();save.SetBounds(620,666,210,36);save.Text="SAVE & CLOSE";save.Click+=delegate{mouseSensitivity=sensitivity.Value;promptMode=prompts.SelectedIndex==4?"nintendo":prompts.SelectedIndex==3?"xbox":prompts.SelectedIndex==2?"controller":prompts.SelectedIndex==1?"keyboard":"auto";photoHudPreview=photo.Checked;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
+        var save=new Button();save.SetBounds(620,666,210,36);save.Text="SAVE & CLOSE";save.UseMnemonic=false;save.Click+=delegate{mouseSensitivity=sensitivity.Value;promptMode=prompts.SelectedIndex==4?"nintendo":prompts.SelectedIndex==3?"xbox":prompts.SelectedIndex==2?"controller":prompts.SelectedIndex==1?"keyboard":"auto";photoHudPreview=photo.Checked;try{SaveSettings();dialog.Close();}catch(Exception e){MessageBox.Show(e.Message,"Settings");}};dialog.Controls.Add(save);
         return dialog;
     }
     void Launch() {
@@ -177,6 +228,7 @@ class PortableLauncher : Form {
             if(lang=="en")start.EnvironmentVariables["KYOEI_EBOOT_TEXT"]=Path.Combine("languages",lang,"eboot-text.kytext");
             start.EnvironmentVariables["KYOEI_UI_ART"]="assets/ui-art.kyart";
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
+            WriteGraphics();start.EnvironmentVariables["GOW3_CONFIG"]=Path.Combine(root,"data","graphics.ini");
             start.EnvironmentVariables["GZ_LANGUAGE"]=lang=="ja"?"0":"1";
             if(lang=="en"&&!wholeDelta)start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";
             start.EnvironmentVariables["KYOEI_HUD_FIT"]=lang=="en"?"1":"0";

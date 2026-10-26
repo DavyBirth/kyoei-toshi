@@ -353,7 +353,10 @@ endforeach()
 # the draw recording thread on Windows, where getenv scans the environment. Read it once.
 gow3_adapt(SHIM shim/gow3_settings.cpp
     "    const char* size = std::getenv(\"GOW3_RENDER_RES\")"
-    "    static const char* const size = std::getenv(\"GOW3_RENDER_RES\")")
+    "    static const char* const size = std::getenv(\"GOW3_RENDER_RES\")"
+    # Kyoei's launcher offers FSR 1 for windows larger than the game's 1920x1080 image.
+    "        v.fsr1 = false;"
+    "        v.fsr1 = i != 0;")
 # SamplerSetMemo from the inFamous port: a memoized texture set reuses its resolved samplers.
 gow3_patch(GOW3_ADAPTED_HEADERS shadps4/video_core/texture_cache/texture_cache.h sampler_set_memo_texture_cache_h.patch)
 gow3_patch(GOW3_ADAPTED_HEADERS shadps4/video_core/renderer_vulkan/vk_rasterizer.h sampler_set_memo_rasterizer_h.patch)

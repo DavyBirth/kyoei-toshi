@@ -1,6 +1,7 @@
 """Private original/keyboard/American/Xbox/Nintendo texture payloads for live GPU selection."""
 import argparse
 import struct
+import zlib
 from pathlib import Path
 from psarc import Psarc
 from tex_preview import unpack_tex
@@ -130,8 +131,10 @@ def build(base, output, diagrams=False):
                 raise ValueError('Nintendo prompt layouts differ: '+name)
             packed += controller + keys + us + xb + nt
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_bytes(packed)
-    print(f'Paired prompt pack: {len(entries)} textures; {len(packed)} bytes')
+    # KYPROMZ1: the pack compressed (the runtime inflates it once at start; 177 MB -> ~9 MB).
+    stored = b'KYPROMZ1' + struct.pack('<Q', len(packed)) + zlib.compress(bytes(packed), 6)
+    output.write_bytes(stored)
+    print(f'Paired prompt pack: {len(entries)} textures; {len(packed)} bytes, {len(stored)} compressed')
 
 
 if __name__ == '__main__':
