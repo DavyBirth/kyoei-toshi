@@ -7,6 +7,7 @@
 #include <chrono>
 #include <atomic>
 #include <cstdlib>
+#include "gow3_toggles.h"
 extern "C" void gz_log(const char* format, ...);
 extern "C" void kyoei_thread_sampler_slow_flip(double interval_ms);
 
@@ -31,6 +32,7 @@ inline void Flip() {
     using Clock = std::chrono::steady_clock;
     static Clock::time_point start = Clock::now(), last = start;
     static unsigned flips;
+    static std::uint64_t last_draws = Gow3Stats::draws.load(std::memory_order_relaxed);
     static double worst_ms, latency_sum, latency_max, part_sum[3];
     const auto now = Clock::now();
     if (flipped < submitted) {
@@ -51,10 +53,13 @@ inline void Flip() {
     last = now;
     if (++flips < 120) return;
     const double seconds = std::chrono::duration<double>(now - start).count();
+    const auto draws = Gow3Stats::draws.load(std::memory_order_relaxed);
     gz_log("Kyoei frame stats: intervals=120 fps=%.2f mean_ms=%.2f max_ms=%.2f submit_to_flip_ms=%.1f/%.1f "
-           "to_recorder=%.1f prepare=%.1f to_flip=%.1f",
+           "to_recorder=%.1f prepare=%.1f to_flip=%.1f draws_per_frame=%.1f",
            flips / seconds, seconds * 1000 / flips, worst_ms, latency_sum / flips, latency_max,
-           part_sum[0] / flips, part_sum[1] / flips, part_sum[2] / flips);
+           part_sum[0] / flips, part_sum[1] / flips, part_sum[2] / flips,
+           double(draws - last_draws) / flips);
+    last_draws = draws;
     latency_sum = latency_max = part_sum[0] = part_sum[1] = part_sum[2] = 0;
     start = now;
     flips = 0;

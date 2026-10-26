@@ -322,6 +322,29 @@ add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} $
     kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_thread_sampler.cpp
     ../src/kyoei_overlay_gpu.cpp ../src/kyoei_photo_post.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
     "${CMAKE_CURRENT_BINARY_DIR}/photo.vert.inc" "${CMAKE_CURRENT_BINARY_DIR}/photo.frag.inc")
+# A newly added shadow header is absent from the old objects' dependency files. Change
+# the compile command when the set of adapted headers changes, so none retain the fixed
+# header's old layout. Subsequent content changes use the normal header dependencies.
+# Remove headers whose adaptations were removed, otherwise their stale copies still
+# shadow the fixed headers. Only this build directory's adapted headers are eligible.
+set(GOW3_HEADER_MANIFEST "${CMAKE_CURRENT_BINARY_DIR}/adapted-headers.txt")
+set(GOW3_ADAPTED_ROOT "${CMAKE_CURRENT_BINARY_DIR}/adapted")
+if(EXISTS "${GOW3_HEADER_MANIFEST}")
+    file(STRINGS "${GOW3_HEADER_MANIFEST}" old_headers)
+    foreach(header IN LISTS old_headers)
+        if(NOT header IN_LIST GOW3_ADAPTED_HEADERS)
+            cmake_path(IS_PREFIX GOW3_ADAPTED_ROOT "${header}" NORMALIZE inside_adapted)
+            if(NOT inside_adapted)
+                message(FATAL_ERROR "Adapted header manifest points outside this build: ${header}")
+            endif()
+            file(REMOVE "${header}")
+        endif()
+    endforeach()
+endif()
+string(REPLACE ";" "\n" header_manifest "${GOW3_ADAPTED_HEADERS}")
+file(CONFIGURE OUTPUT "${GOW3_HEADER_MANIFEST}" CONTENT "${header_manifest}\n" @ONLY)
+string(SHA256 GOW3_HEADER_LAYOUT "${GOW3_ADAPTED_HEADERS}")
+target_compile_definitions(gow3_core PRIVATE "KYOEI_GOW3_HEADER_LAYOUT=\"${GOW3_HEADER_LAYOUT}\"")
 set_source_files_properties("${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp" PROPERTIES
     COMPILE_DEFINITIONS IMGUI_IMPL_VULKAN_NO_PROTOTYPES=1)
 set_source_files_properties(../src/kyoei_overlay_gpu.cpp PROPERTIES

@@ -522,3 +522,63 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   o jogo espera o fim dela antes do próximo quadro. Ganho real no giro = encurtar a corrente,
   sobretudo ProcessGraphics/PostDraw/Draw na thread de comandos (58% dela) e a espera do fim
   da submissão. Trabalho longo; nenhuma opção de apresentação resolve.
+
+### 26/10/2026 — Codex: lista de blocos descartada; medição de trabalho
+
+- Ramo `desempenho-codex`, referência `3d4c516`, executável SHA256
+  `e4d6b5df075d394b93e42524315a2435e0363816c5973c641e499407e1dd43a4`.
+  Xeon E5-2640 v3 (8 núcleos/16 threads); Davy fechou Wallpaper Engine e qBittorrent.
+  Rota original em 1920x1080/Fifo, mudo, medidor leve, sem `GOW3_FRAME_STATS`.
+- Candidata: `RegDirty::Mark` mantém uma lista sem repetições dos blocos alterados;
+  `PostDraw` e `RegDelta::Capture` leem essa lista. Os blocos não se sobrepõem, portanto
+  a ordem da cópia não muda os registros. Teste compara 2.000 replays com o arquivo
+  completo de registradores; 31 executáveis C/C++ passam (33 invocações com fixtures/modos).
+- ABBA curto, **três últimas linhas de estatísticas do log**, médias harmônicas:
+
+  | Rota | Versão | Giro (FPS) | Máximo nessas janelas (ms) |
+  | --- | --- | ---: | ---: |
+  | `codex-sparse-abba-a1` | Referência | 40,68 | 50,24 |
+  | `codex-sparse-abba-b1r` | Candidata | 43,11 | 51,00 |
+  | `codex-sparse-abba-b2` | Candidata | 37,37 | 50,43 |
+  | `codex-sparse-abba-a2` | Referência | 38,10 | 50,39 |
+
+  Agregado: 39,34 → 40,03 FPS (+1,75%), menor que a variação entre rodadas.
+  Usando apenas as três últimas janelas **dentro** dos bytes marcados pela rota,
+  o agregado fica praticamente igual (40,83 → 40,71). **Sem ganho de FPS comprovado.**
+  Nenhuma compilação de shader dentro desses intervalos. Duas rodadas preliminares
+  foram descartadas: cache frio e leitura PowerShell da telemetria presa consumindo CPU.
+- Verificação separada antiga/nova com `GOW3_PIPE_VERIFY=16`, `codex-reference-verify`
+  e `codex-sparse-verify`: encerramento 0, sem mensagens de diferença nos registradores
+  ou de tabelas alteradas. Capturas com R reposicionando a câmera não mostraram defeito
+  novo. O desenho azul perto do save também aparece na referência: ângulo/animação,
+  não regressão demonstrada. FPS dessas rodadas diagnósticas não conta.
+- A inclusão de um cabeçalho adaptado novo deixou objetos antigos com o layout anterior
+  (`vk_draw_prep`/`vk_pipeline_cache` de 22/10), causando falha em SearchBinaryInfo antes
+  da abertura dos arquivos. A integração agora invalida os objetos quando o conjunto dos
+  cabeçalhos adaptados muda. Núcleo inteiro recompilado e partida conferida em seguida.
+- ABBA prolongado: clone privado da mesma rota, mesmo save/aquecimento,
+  cerca de 62 s girando em vez de 10 s. Usar janelas completas após o início do giro,
+  excluindo a primeira janela que mistura câmera parada e giro. Evidência privada em
+  `build/research/desempenho-codex-20261026/`. Meta de 60 FPS continua pendente.
+- Resultado longo (janelas completas do giro): antiga 38,55; nova 34,17; nova 31,96;
+  antiga 31,71 FPS. Agregados por tempo/intervalos: 35,09 → 33,03 FPS. A referência
+  também caiu muito entre as pontas, portanto não atribuir toda a diferença à candidata.
+  **Lista descartada por não demonstrar benefício.** Patch/teste guardados no checkpoint
+  privado `checkpoint-20261026-024142.zip`; fontes e executáveis de teste obsoletos removidos.
+- Sondagem do modo já existente `GOW3_DRAW_PIPE=0`, com a referência original:
+  `codex-nopipe-probe`, 34,45 FPS nas três últimas linhas, sem compilação durante a coleta.
+  Não é ABBA nem prova de ganho; não adotado.
+- Mantida a correção de compilação: a lista de cabeçalhos adaptados muda o comando do
+  compilador, e um manifesto elimina cabeçalhos gerados cuja adaptação saiu. Bloco real
+  testado em fixture: remove só o obsoleto, conserva o atual, reconfigura sem alteração e
+  recusa caminho fora de `adapted/` antes de apagar. Snapshot fixo intacto.
+- Medidor leve agora acrescenta `draws_per_frame` lendo o contador existente a cada
+  120 flips; não adiciona operações por desenho. `codex-unchanged-abba-a1` (referência
+  com a métrica): 39,86 FPS no giro; ~1.390 desenhos/quadro parado e 1.917–2.173 nas três
+  últimas janelas do giro. GPU observada em P0/1.860–1.890 MHz. Compilação e os **28 alvos
+  atuais** de testes C/C++ passam (30 chamadas com modos/fixtures). As execuções anteriores
+  de 31 testes incluíam dois binários de alvos já removidos na limpeza de 26/10; apagados.
+- Em 02:55 foi identificado `gzport.exe` do Godzilla usando ~145% de um núcleo. Essa
+  instância começou em 02:54:51, depois da última coleta Kyoei, e não explica por si as
+  variações anteriores. Próximas medições suspensas aguardando Davy pausar os testes dele;
+  revisão/compilação do Kyoei continuam. Não encerrar nem alterar trabalho do outro projeto.
