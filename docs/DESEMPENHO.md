@@ -582,3 +582,73 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   instância começou em 02:54:51, depois da última coleta Kyoei, e não explica por si as
   variações anteriores. Próximas medições suspensas aguardando Davy pausar os testes dele;
   revisão/compilação do Kyoei continuam. Não encerrar nem alterar trabalho do outro projeto.
+
+### 26/10/2026 — candidatas seguintes, aguardando comparação válida
+
+Todas partem da referência com medidor leve (`418f59f`) e foram compiladas separadamente.
+Executáveis/PDBs/hashes e roteiros privados ficam em
+`build/research/desempenho-codex-20261026/`; `artifacts.json` confere cada variante.
+
+| Candidata | Mudança | Verificação sem jogo |
+| --- | --- | --- |
+| `unchanged` | Não copiar/marcar registradores cujo pacote repete os valores atuais; checksum e efeitos específicos do opcode continuam | 60.000 escritas, 3.000 replays completos |
+| `checksum` | xxHash existente a partir de quatro palavras; algoritmo antigo para pacotes menores e vazio | 60.000 pacotes; identidade/cópia/rebase iguais entre decodificador, scanner e worker |
+| `completion` | Bloquear a espera depois do spin inicial do draw pipe; publicação de conclusão continua após o handler | 30.000 handoffs reais; sem liberação de prefixo incompleto, incluindo wrap e visibilidade da memória |
+
+Os 30 alvos atuais de testes C/C++ passam; teste adicional do checksum lê o mesmo cabeçalho
+usado pela candidata. O microbenchmark de checksum mostrou vantagem para pacotes maiores
+(de quatro a 64 palavras), sem medir FPS. Nenhuma dessas candidatas está aprovada ainda.
+
+O agendador só aceita coletas sem outros ports/compiladores e abandona apenas nossa execução
+caso reapareçam. A primeira fila foi interrompida para terminar a preparação das candidatas;
+a fila final (`guarded-abba-resumed.log`) faz ABBA de cada uma, sem mais compilações no meio.
+O contador `draws_per_frame` permite verificar variações de trabalho entre os ângulos/cenas;
+não é tempo de CPU nem taxa da simulação. Comparação visual e 60 FPS continuam pendentes.
+
+### 26/10/2026 — ABBA sem interferência, 07:08–07:52
+
+Fila `guarded-abba-resumed.log`: 12 partidas completas, sem outros ports/compiladores
+durante as coletas. Mesma rota original, 1080p, Fifo, áudio dummy e medidor leve; hashes
+conferidos antes de cada partida. FPS abaixo são as três últimas linhas de cada log,
+agregadas por tempo (média harmônica).
+
+| Candidata | Antiga A1 | Nova B1 | Nova B2 | Antiga A2 | Agregado antiga → nova |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `unchanged` | 48,21 | 46,96 | 47,27 | 47,47 | 47,84 → 47,11 (−1,51%) |
+| `checksum` | 47,47 | 48,11 | 46,75 | 47,25 | 47,36 → 47,42 (+0,13%) |
+| `completion` | 44,81 | 47,57 | 46,15 | 47,16 | 45,96 → 46,85 (+1,94%) |
+
+`unchanged` e `checksum` descartadas: sem ganho que justifique manter a mudança.
+Fontes/teste retirados, preservados no checkpoint privado `checkpoint-20261026-075326.zip`;
+executáveis/PDBs, logs, capturas e resultados JSON continuam como evidência. O microbenchmark
+do checksum não se traduziu em ganho de FPS. Capturas de referência/candidatas conferidas
+sem defeito novo evidente (animação e ângulo variam entre rotas).
+
+`completion` continua experimental: +1,94% é menor que a variação das próprias referências
+(44,81–47,16). Nenhuma adoção com base nessa diferença. As quatro partidas encerraram
+normalmente; faltam repetição e conferência com o verificador no jogo. Perfil novo da
+referência sem `GOW3_PIPE_VERIFY`/`GOW3_FRAME_STATS` iniciado em 07:53: o verificador
+copia o arquivo completo de registradores e não representa o custo normal da fila.
+
+Perfil `codex-profile-normal-0753`, referência: `PostDraw` 18,4% total da thread de
+comandos, incluindo `CopySparseMemory`/`kyoei_memory_copy_impl` 9,8%/9,7%; `DrainDrawPipe`
+24,2%, principalmente yield; `GetGraphicsPipeline` 9,6%, aplicação de pacotes 4,7%.
+São amostras de parede (incluem a espera entre quadros), não porcentagens de CPU ativa.
+No recorder, `BindResources` 18,7%, `BindTextures` 15,2%, `ResolveVertexBuffers` 9,0%.
+
+`codex-completion-verify-0756` passou no jogo com `GOW3_PIPE_VERIFY=16`: nenhuma
+divergência de registros/tabelas, saída 0. Capturas com câmera reposta por R conferidas
+contra a referência, sem defeito novo evidente. A candidata continua sem aprovação de FPS.
+
+Nova candidata independente `vmahint`: consultas de clamp/cópia lembram só o último índice
+da tabela, por thread. Conferem os limites da entrada **atual sob a mesma trava** antes de
+reutilizar; no erro continuam na busca binária original. Não guardam ponteiros nem retiram
+travas. Inserir/apagar/remapear uma região pode mudar a entrada, mas nunca permite aceitar
+um índice cujo intervalo atual não contém o endereço. Teste do helper real: 3.000 mudanças
+de tabela (incluindo relocação, tabela vazia e buracos) e quatro leitores, 100.000 iterações
+cada, mais fronteiras. Todos os 30 alvos atuais passam (32 invocações).
+
+Executável `kyoei-vmahint.exe` SHA256
+`00f9153a0096dd3864291092fc32a69c818e17a46c362d8dffada54b83711441`.
+Fila `guarded-abba-repeat.log`: ABBA de `vmahint`, depois repetição de `completion`;
+referência/candidatas preservadas e sem compilar durante a fila. Resultado pendente.
