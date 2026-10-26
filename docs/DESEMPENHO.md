@@ -507,3 +507,10 @@ Próximo: detalhar o lote de comandos e correlacionar pausas sem alterar o jogo.
   (kyoei_gow3_stubs.cpp). Depois: parado 57-59, girando 41-50 (Mailbox sem limite).
 - As esperas no flip e o ganho de GOW3_FRAMES_AHEAD=2 (~6%) eram efeito da regressão:
   com a correção, ABBA 1/2/2/1 deu o mesmo (57-58 parado, 41-50 girando). Mantido 1.
+- 25/10 noite (após a correção da regressão), modo normal do jogador (Fifo, vblank 60), PC com
+  qBittorrent/Wallpaper Engine abertos: parado 50-56 FPS, girando 37-45, picos 47-63 ms.
+  Testado sem ganho no giro: Mailbox, GOW3_FRAMES_AHEAD=2, GOW3_GC_BUDGET_MB=5000,
+  GZ_VBLANK_HZ=0/GZ_FPS_LIMIT=0, KYOEI_FRAME_CAP=0, GZ_GPU_LOG=warning e todas juntas.
+  Medições com GOW3_FRAME_STATS=1 (bench-exe.sh) também não servem para FPS absoluto.
+  Perfil da DrawRec: ~82% esperando trabalho; o gargalo já não é a gravação. Próximo: perfil
+  de todas as threads no giro (guest main, GpuCommandProcessor) com o PC livre.
