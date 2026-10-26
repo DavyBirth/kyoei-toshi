@@ -652,3 +652,50 @@ Executável `kyoei-vmahint.exe` SHA256
 `00f9153a0096dd3864291092fc32a69c818e17a46c362d8dffada54b83711441`.
 Fila `guarded-abba-repeat.log`: ABBA de `vmahint`, depois repetição de `completion`;
 referência/candidatas preservadas e sem compilar durante a fila. Resultado pendente.
+
+Resultado `vmahint`: A1 45,47; B1 45,37; B2 45,00; A2 44,44 FPS. Agregado 44,95 → 45,19
+(+0,53%), insuficiente para manter a mudança. Protótipo descartado após checkpoint
+`checkpoint-20261026-082026.zip`. Logs/resultados privados preservados. A fila foi encerrada
+entre esse grupo completo e a repetição de completion para preparar o teste seguinte.
+
+`constant-copy`, candidata independente seguinte: funde clamp + cópia dos pequenos buffers
+CPU-only em uma trava. Verificações de alteração pela GPU e escritas pendentes cobrem a
+faixa pedida inteira antes da leitura; o caminho anterior continua para os demais buffers.
+A alocação pode reservar mais bytes que o prefixo mapeado, mas só os bytes copiados entram
+no binding e o carimbo conserva a faixa inteira até terminar na GPU. Sem antecipar fences.
+Fixture usa o `kyoei_memory.c` e o VMEM reais gerados pela compilação: compara comprimento,
+bytes e cauda não tocada contra clamp + copy em 500 tabelas/128 mil consultas aleatórias,
+fronteiras, buracos, reservas, remapeamentos físicos, vazio/overflow e regiões nativas.
+Todos os 30 alvos atuais passam. SHA256
+`5b111a7ba35f67ded1d85184f92357c8a8d938499129ef7b64135d4a42017334`.
+
+Fila `guarded-abba-constants.log`: grupos independentes `constant-copy`, `noring`, `prep1`,
+repetição de `completion`. `noring`/`prep1` usam a referência com opções já existentes
+(`GZ_DISABLED_OPTIMIZATIONS=68719476736`, `GOW3_PREP_WORKERS=1`). Cada grupo tem referências
+próprias; nenhum resultado de FPS atribuído ainda. Não recompilar durante a fila.
+
+`constant-copy` terminou com 44,10 / 44,26 / 33,75 / 32,59 FPS (ABBA). Agregado
+37,48 → 38,30 (+2,18%) **inconclusivo**: a referência perdeu 26% entre pontas e a carga
+em segundo plano mudou. Host passou de ~59% a 73–74% de CPU; Chrome observado em 08:40
+consumia ~1,6 núcleos. Correlação, sem atribuição exclusiva da queda. Capturas sem defeito
+novo evidente, com ângulo/animação diferentes. A fila foi interrompida na tentativa de
+noring seguinte, encerrando só nosso Kyoei; navegador e outros aplicativos preservados.
+
+Guard ampliado para aguardar 60 s com Chrome usando menos de 0,8 núcleo (GetProcessTimes,
+somado entre processos), além das exclusões anteriores. Medições antigas com mudança de
+carga não contam como prova de ganho. Observação privada de tempo de CPU por thread usa
+GetThreadTimes, sem suspensão; nomes são consultados e guardados durante o aquecimento.
+Leitor corrigido para aceitar HRESULT positivo de sucesso deste Windows; amostras anteriores
+com `unnamed` não permitem identificar os papéis das threads.
+
+Nova candidata `alignment`: só separa em linhas de cache os cursores de alocação A e os
+carimbos B do ConstantRing, e o contador de ciclos B do contador de pacotes A do DrawPipe.
+Nenhuma mudança de sincronização, fila ou simulação. Núcleo inteiro recompilado e 30 alvos
+de testes passam. SHA256 `5e8faa8040b0cc52dc0aaf7c7d3a13cfbda5925311fa1de18a81411d93a07c33`.
+Fila nova `guarded-abba-threading.log`: `prep1`, `noring`, `alignment`, `completion`.
+Resultados e validação no jogo pendentes; constant-copy continua sem aprovação/inativa.
+
+Fila ativa ajustada em 08:58: `guarded-abba-threading-v2.log`. O limite do Chrome usa
+média de aproximadamente 10 s (mínimo 8 s), para distinguir carga sustentada de um pico
+curto de interface; continua exigindo 60 s quietos antes de abrir cada rodada. As partidas
+da primeira tentativa dessa fila não chegaram a começar. Navegador preservado.
