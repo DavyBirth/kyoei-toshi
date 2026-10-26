@@ -699,3 +699,119 @@ Fila ativa ajustada em 08:58: `guarded-abba-threading-v2.log`. O limite do Chrom
 média de aproximadamente 10 s (mínimo 8 s), para distinguir carga sustentada de um pico
 curto de interface; continua exigindo 60 s quietos antes de abrir cada rodada. As partidas
 da primeira tentativa dessa fila não chegaram a começar. Navegador preservado.
+
+### 26/10/2026 — cópias pequenas e limite de streaming
+
+Diagnósticos separados do FPS: oito workers somaram ~0,54 núcleo e um ~0,36 nas últimas
+janelas observadas; comandos/DrawRec/VkRecorder ~0,6–0,7 cada. Perfil novo do VkRecorder:
+~59% em espera, ~16% spin, ~9% cópia de buffers. Contadores existentes do BufferCache
+reportaram 95–130 mil cópias pequenas/s, 257–377 MB/s de streaming e 78–89 MB/s de reenvios.
+MB de buffers **vinculados** não são bytes copiados. Carga do navegador variável; esses
+ensaios não são comparações de FPS. Observador de CPU desligado nas rodadas de desempenho.
+
+Leitor privado do console corrigido para UTF-16 (PowerShell); relidas as verificações antigas
+com zero divergências. O arquivo leve de FPS é UTF-8 e sempre foi lido corretamente.
+
+Candidata `alignment-stream4k-native`: cache existente para mais buffers entre 4 e 16 KiB,
+somente quando a faixa inteira pertence ao domínio rastreado do runtime Windows. Endereços
+nativos/fora da faixa/overflow mantêm 16 KiB; Linux também. As duas decisões (captura de
+constantes e ObtainBuffer) usam o mesmo helper. Preserva o tratamento de escrita e de
+alteração pela GPU. Teste do helper real com oráculo de 128 bits e 100 mil casos; todos os
+31 alvos atuais passam. SHA256
+`9d8ee1230c784780714b656bab67198701b900e985d8fdf5f9641231f659b234`.
+
+Protótipo anterior global de 4 KiB passou no verificador e na imagem da rua, mas foi
+substituído para não ampliar o cache sobre dados nativos sem rastreamento equivalente.
+Suas taxas ~49–56 MB/s de streaming e ~100–107 MB/s de reenvio só mostram a mudança de
+caminho; incluem verificador e não provam ganho de FPS. Código preservado no checkpoint
+`checkpoint-20261026-094959.zip`.
+
+Por preferência explícita de Davy, Chrome continua em uso. Modo `--allow-chrome` registra
+carga média/máxima e média/máximo das últimas ~8 amostras (~16 s), sem encerrar o navegador.
+ABBA atual: referência `alignment` (16 KiB), candidata `alignment-stream4k-native`, mesma
+base e opções; log `guarded-abba-stream4k-native.log`. Repetir quando a dispersão ou a
+mudança da carga impedir concluir. Ainda sem adoção de FPS.
+
+ABBA `095604` completo: 46,69 / 45,90 / 50,35 / 47,26 FPS. Agregados 46,97 → 48,02
+(+2,23%), menor que a dispersão das candidatas. Chrome na cauda: 0,31 / 0,74 / 0,37 /
+0,23 núcleo. Não aprovado como ganho. Nova comparação contra a referência original
+aguarda: Davy confirmou Chrome fechado em 12:40 e pediu pausar testes para usar o Buzz
+em 12:43. A nova fila parou no início da primeira partida, sem resultados aceitos.
+
+### 26/10/2026 — filtro da assinatura dos shaders, pendente de FPS
+
+`alignment-stream4k-native-search` acrescenta um filtro pela primeira palavra da assinatura
+BinaryInfo, seguido da mesma validação completa. Mantém o salto direto ao cabeçalho e
+busca vetorizada dentro de cada página de 4 KiB, respeitando a parada antes de páginas
+posteriores inacessíveis. Nenhum ponteiro de shader é guardado entre buscas.
+
+Teste contra a varredura original em 1.200 buffers aleatórios/adversariais, incluindo falsos
+prefixos, limites e cabeçalho antes de PAGE_NOACCESS. Todos os 32 alvos atuais passam;
+partida `codex-shader-search-verify-1351` sem divergências, saída 0, imagem após R conferida.
+SHA256 `59bba820eecbf617f6fa5a730a8d9828fa79121b4aae8738ba92600cabb4b611`.
+
+Ainda sem ABBA completo: retomada após Buzz teve 45,43/47,87 FPS (referência/cache de 4 KiB),
+mas qBittorrent voltou a usar CPU. Grupo parcial não prova ganho. Fila suplementar com carga
+do qBittorrent registrada foi pausada por pedido de Davy em 13:59, durante a primeira
+referência. Código experimental preservado sem commit; versão validada selecionada.
+
+### 26/10/2026 — retomada e primeiras reprovações (16:08)
+
+ABBA `160854`, 1080p/Fifo, estatística leve, aplicações do usuário preservadas e carga
+Chrome/qBittorrent registrada por rodada:
+
+| Candidata | A1 / B1 / B2 / A2 (FPS) | Agregado A → B | Decisão |
+| --- | --- | --- | --- |
+| alignment + cache 4 KiB + filtro BinaryInfo | 38,56 / 33,75 / 39,37 / 41,46 | 39,95 → 36,34 (−9,04%) | Reprovada |
+| gravação Vulkan na própria thread (`GOW3_VK_RECORD_THREAD=0`) | 42,77 / 35,06 / 38,09 / 42,51 | 42,64 → 36,51 (−14,37%) | Reprovada |
+
+Sem compilação de shaders durante essas coletas. A reprovação da combinação não identifica
+qual componente regrediu. A/B sempre contra `baseline-metrics`, executável validado com
+diagnóstico leve do commit `418f59f`. Evidência privada: `guarded-abba-completed.json`,
+`summary-codex-*-guard-160854-*.json` e relatórios `result-*160854*.json`.
+
+Terceiro ABBA, alignment + cache 4 KiB sem o filtro de assinatura: 39,47 / 39,93 / 45,19 /
+40,52 FPS, agregado 39,99 → 42,39 (+6,01%). Candidatas dispersam 13%; qBittorrent na cauda
+0,85 / 0,48 / 0,17 / 0,20 núcleo, Chrome zero; nenhuma compilação na coleta. Hipótese ainda
+aberta, sem adoção. Os 12 ensaios estão preservados em `guarded-abba-completed-160854.json`.
+As chamadas dos seis patches experimentais saíram do CMake normal antes de nova compilação;
+as versões de comparação continuam nos artefatos privados com hashes registrados.
+
+Controle `noring` (`165832`), movendo as cópias pequenas à gravação: 40,60 / 36,59 / 38,57 /
+40,04 FPS; agregado 40,31 → 37,55 (−6,85%). Reprovado.
+
+Novo protótipo isolado `kyoei_draw_batch_submit_cpp.patch`: envio normal do scheduler a cada
+512 draws para começar trabalho GPU antes do fim da tradução do quadro. Não altera GpuIdle,
+fences, readback nem `OnSubmit`/`TickFrame`. Não divide passes com clear; novo command buffer
+recebe `RecordFullBarrier` antes de outros comandos, preservando dependências de memória ao
+retomar attachments com LOAD. A [especificação Vulkan](https://docs.vulkan.org/spec/latest/chapters/synchronization.html)
+define o alcance da barreira sobre comandos anteriores da mesma fila, incluindo outras
+submissões. Build, validação Vulkan comparativa, imagem e ABBA ainda pendentes.
+
+Build `draw-batch512` concluído, SHA256
+`8a65f7ea096c0fb9802fe8fb5892dcb41ffde2bcbe4b78be814352b3898da054`;
+28 alvos normais passam (30 chamadas). Validação de sincronização Vulkan, imagem e ABBA
+continuam pendentes. `KYOEI_GPU_BATCH_DRAWS=0` permite controlar o efeito no mesmo binário;
+outras quantidades entre 1 e 65536 são apenas opções privadas do protótipo.
+
+Validação comparativa `codex-batch-sync-{a,b}-1721`: ambas saídas 0, camada do SDK realmente
+carregada (módulo confirmado), sincronização completa habilitada, PIPE_VERIFY=16 sem
+divergências. Referência apresenta VUIDs layout-07988, CopyImage-01548, Draw-07939 e
+Draw-09600; candidata tem os três primeiros, sem novos tipos e sem SYNC-HAZARD. Não tratar
+ausência pontual de Draw-09600 como correção. Capturas após R sem defeito novo evidente.
+Erros já presentes no núcleo ficam como pendência; essa rota não valida o jogo inteiro.
+ABBA normal iniciado em 17:29, sem a camada/amostrador/verificador pesado.
+
+Resultado ABBA `172942`: 44,08 / 36,77 / 35,95 / 39,25 FPS; agregado 41,53 → 36,35
+(−12,45%). **Reprovado**, patch retirado do CMake normal. Controle com o mesmo executável e
+`KYOEI_GPU_BATCH_DRAWS=0` em andamento. Sua primeira referência é explicitamente a A2 do
+grupo anterior (39,25 FPS), compartilhada para formar A1/B1/B2/A2/C1/C2/A3. Não apresentar
+os dois grupos como independentes. Todos os dados anteriores preservados em
+`guarded-abba-completed-172942.json`.
+
+Controle `batch0` interrompido a pedido de Davy em 17:49, entre rodadas: 39,25 (referência
+compartilhada) e 46,24 FPS (mesmo exe novo, envio extra desligado). Modo 0 confirmado;
+qBittorrent na cauda 0,18/0,30 núcleo. Resultado parcial não prova ganho nem substitui ABBA.
+Preservado em `guarded-abba-completed-174528-partial.json`. Conferir também recompilação
+integral da base sem protótipos na retomada. Nenhuma otimização de FPS adotada. Testes e
+compilação pausados; executável/PDB de referência validados restaurados com hash conferido.
