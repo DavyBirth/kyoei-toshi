@@ -1,6 +1,6 @@
 param([Parameter(Mandatory=$true)][int]$TargetId,[int]$WaitSeconds=60)
 $ErrorActionPreference='Stop'
-$expected=@('kyoei.exe','kyoei-gow3.exe') | ForEach-Object { Join-Path (Split-Path $PSScriptRoot -Parent) "build\$_" }
+$expected=@('kyoei.exe') | ForEach-Object { Join-Path (Split-Path $PSScriptRoot -Parent) "build\$_" }
 $process=Get-Process -Id $TargetId
 if($process.Path -notin $expected){throw 'O alvo deve ser o runtime Kyoei deste projeto.'}
 if(-not ('KyoeiTestAudio' -as [type])) {

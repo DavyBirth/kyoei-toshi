@@ -28,7 +28,7 @@ def main():
     baseline_group.add_argument('--baseline-update', type=Path, help='Previously verified cumulative update when the original folder is unavailable')
     parser.add_argument('--release-notes', type=Path, help='Replace historical notes with this release description')
     parser.add_argument('--out', type=Path, required=True)
-    parser.add_argument('--runtime', type=Path, default=ROOT/'build/kyoei-gow3.exe',
+    parser.add_argument('--runtime', type=Path, default=ROOT/'build/kyoei.exe',
                         help='Runtime from a separate verified build')
     parser.add_argument('--linux-wine', action='store_true', help='Linux applicator for the shipped Wine/Proton version')
     parser.add_argument('--accept-update', type=Path, action='append', default=[], help='Previously distributed ZIP whose installed runtime is also accepted')

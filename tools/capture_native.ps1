@@ -16,8 +16,7 @@ public class KyoeiWindow {
 }
 '@
 $kyoeiProcess = Get-Process -Id $TargetId -ErrorAction Stop
-$kyoeiAllowed = @('kyoei.exe','kyoei-gow3.exe','kyoei-orb-trace.exe','kyoei-orb-trace-next.exe') | ForEach-Object { [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) "build/$_")) }
-$kyoeiAllowed += [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) 'build/orb-pending/kyoei-orb-trace-next.exe'))
+$kyoeiAllowed = @('kyoei.exe') | ForEach-Object { [IO.Path]::GetFullPath((Join-Path (Split-Path $PSScriptRoot) "build/$_")) }
 if ($kyoeiProcess.Path -notin $kyoeiAllowed) { throw 'Processo diferente do port Kyoei' }
 $kyoeiWindow = $kyoeiProcess.MainWindowHandle
 if (-not $kyoeiWindow) { throw 'Sem janela' }
