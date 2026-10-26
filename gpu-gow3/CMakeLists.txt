@@ -158,26 +158,12 @@ gow3_adapt(GOW3_ADAPTED_HEADERS shadps4/video_core/texture_cache/texture_cache.h
     "#include \"kyoei_gow3_image_lookup.inc\"
     /// Runs the garbage collector.")
 # MSVC's std::array iterator is a class, not a pointer.
-# KYOEI_UPLOAD_REPORT=1 (kyoei_upload_report.h): the images re-uploaded most, every 5 s.
 gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
     "    ForEachImageInRegion(address, size, [&](ImageId image_id, Image& image) {
         if (image.info.guest_address != address) {"
     "    KyoeiForEachImageWithAddress(address, [&](ImageId image_id, Image& image) {
         if (image.info.guest_address != address) {"
     "auto* slot = std::ranges::find(readback_images" "auto slot = std::ranges::find(readback_images"
-    "#include \"video_core/texture_cache/texture_cache.h\"" "#include \"video_core/texture_cache/texture_cache.h\"
-#include \"kyoei_upload_report.h\""
-    "    Gow3Stats::image_upload_bytes.fetch_add(image.info.guest_size, std::memory_order_relaxed)"
-    "    KyoeiUploadReport::Note(image), Gow3Stats::image_upload_bytes.fetch_add(image.info.guest_size, std::memory_order_relaxed)"
-    "void TextureCache::UntrackImage(ImageId image_id) {"
-    "void TextureCache::UntrackImage(ImageId image_id) {
-    if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 0)) {}"
-    "void TextureCache::UntrackImageHead(ImageId image_id) {"
-    "void TextureCache::UntrackImageHead(ImageId image_id) {
-    if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 1)) {}"
-    "void TextureCache::UntrackImageTail(ImageId image_id) {"
-    "void TextureCache::UntrackImageTail(ImageId image_id) {
-    if (KyoeiUploadReport::NoteUntrack(slot_images[image_id], __builtin_return_address(0), 2)) {}"
     # Kyoei button prompts: gpu-gow3/kyoei_gow3_prompts.h (CMake lists split on semicolons,
     # so the code lives there).
     "#include \"video_core/texture_cache/texture_cache.h\""
@@ -192,21 +178,10 @@ gow3_adapt(VIDEO_CORE shadps4/video_core/texture_cache/texture_cache.cpp
     "if (is_gpu_modified && !is_gpu_dirty && !prompt) {"
     "    const auto [in_buffer, in_offset] =
         buffer_cache.ObtainBufferForImage(image.info.guest_address, image.info.guest_size)"
-    "    KYOEI_UPLOAD_OVERLAPS(image)
-    KYOEI_PROMPT_SOURCE(image)"
+    "    KYOEI_PROMPT_SOURCE(image)"
     "tile_manager.DetileImage(in_buffer, in_offset, image.info)"
     "prompt ? std::pair<const Buffer*, u64>{in_buffer, in_offset}
                                          : tile_manager.DetileImage(in_buffer, in_offset, image.info)"
-    "ImageView& TextureCache::FindRenderTarget(ImageId image_id, const ImageDesc& desc) {
-    Image& image = slot_images[image_id]"
-    "ImageView& TextureCache::FindRenderTarget(ImageId image_id, const ImageDesc& desc) {
-    Image& image = (KyoeiUploadReport::NoteTarget(slot_images[image_id]),
-        KyoeiUploadReport::WatchImage(\"target\", slot_images[image_id]), slot_images[image_id])"
-    "                                     bool refresh) {
-    Image& image = slot_images[image_id]"
-    "                                     bool refresh) {
-    Image& image = (KyoeiUploadReport::WatchImage(desc.type == BindingType::Storage ? \"storage\" : \"texture\",
-        slot_images[image_id]), slot_images[image_id])"
     "void TextureCache::UnregisterImage(ImageId image_id) {
     Image& image = slot_images[image_id]"
     "void TextureCache::UnregisterImage(ImageId image_id) {
@@ -246,12 +221,6 @@ gow3_adapt(DRIVERS shadps4/core/libraries/gnmdriver/gnmdriver.cpp
     "    u32* ccb_sizes_in_bytes, u32 vo_handle, u32 buf_idx, u32 flip_mode, s64 flip_arg) {"
     "    u32* ccb_sizes_in_bytes, u32 vo_handle, u32 buf_idx, u32 flip_mode, s64 flip_arg) {
     if (KyoeiGow3FlipRate::Submit(), true) {}")
-gow3_adapt(VIDEO_CORE shadps4/video_core/buffer_cache/buffer_cache.cpp
-    "#include \"video_core/buffer_cache/buffer_cache.h\""
-    "#include \"video_core/buffer_cache/buffer_cache.h\"
-#include \"kyoei_gow3_experiments.h\""
-    "if (is_texel_buffer && !is_written) {"
-    "if ((is_texel_buffer || KyoeiGow3Experiments::SyncAllReads()) && !is_written) {")
 # Reach compat/common/ntapi.h instead of the sibling header.
 gow3_adapt(COMMON shadps4/common/thread.cpp "#include \"ntapi.h\"" "#include \"common/ntapi.h\"")
 # Godzilla's host pieces: window, pad, logging into the runtime log, paths.
@@ -305,24 +274,6 @@ file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/audioout.cpp" CONTENT "${AUDI
 set(AUDIO "${CMAKE_CURRENT_BINARY_DIR}/audioout.cpp" "${SHAD}/src/core/libraries/audio/sdl_audio_out.cpp")
 set_source_files_properties("${SHAD}/src/core/libraries/audio/sdl_audio_out.cpp" PROPERTIES
     COMPILE_OPTIONS "-msse4.1;-include;core/libraries/kernel/time.h")
-gow3_adapt(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp
-    "#include \"video_core/renderer_vulkan/vk_rasterizer.h\"" "#include \"video_core/renderer_vulkan/vk_rasterizer.h\"\n#include \"kyoei_upload_report.h\"\n#include \"kyoei_gow3_experiments.h\""
-    "                         mrt1_desc.view_info.range)"
-    "                         mrt1_desc.view_info.range), KyoeiGow3Experiments::ResolveWritten(mrt1_image)"
-    "                    texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
-    "                    KyoeiUploadReport::NoteWrite(stage.pgm_hash, vsharp.base_address, size), texture_cache.InvalidateMemoryFromGPU(vsharp.base_address, size)"
-    "    texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)"
-    "    KyoeiUploadReport::NoteWrite(0, dst, num_bytes), texture_cache.InvalidateMemoryFromGPU(dst, num_bytes)"
-    "void Rasterizer::CopyBuffer(VAddr dst, VAddr src, u32 num_bytes, bool dst_gds, bool src_gds) {
-    DrainDrawPipe()"
-    "void Rasterizer::CopyBuffer(VAddr dst, VAddr src, u32 num_bytes, bool dst_gds, bool src_gds) {
-    DrainDrawPipe(), KyoeiUploadReport::CopyEnabled() && KyoeiUploadReport::NoteCopy(dst, src, num_bytes,
-        dst_gds || src_gds, !src_gds && buffer_cache.IsRegionGpuModified(src, num_bytes),
-        !src_gds && bool(texture_cache.FindImageFromRange(src, num_bytes)))"
-    "bool Rasterizer::ReadMemory(VAddr addr, u64 size, bool assume_locks) {
-    DrainDrawPipe()"
-    "bool Rasterizer::ReadMemory(VAddr addr, u64 size, bool assume_locks) {
-    DrainDrawPipe(), KyoeiUploadReport::NoteRead(addr, size)")
 # Kyoei photo mode: capture of the guest display buffer, the photo grade under the overlay, and the
 # overlay/grade pipelines released with the presenter.
 gow3_adapt(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_presenter.cpp
@@ -368,7 +319,7 @@ gow3_patch(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_camera_motion.cpp ky
 gow3_patch(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp kyoei_camera_rasterizer_cpp.patch)
 gow3_patch(VIDEO_CORE shadps4/video_core/renderer_vulkan/vk_rasterizer.cpp kyoei_dirty_blocks_scan_cpp.patch)
 add_library(gow3_core STATIC ${VIDEO_CORE} ${RECOMPILER} ${COMMON} ${AVPLAYER} ${SHIM} ${DRIVERS} ${HOST} ${AJM} ${AUDIO}
-    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_upload_report.cpp kyoei_thread_sampler.cpp
+    kyoei_gow3_bridge.cpp kyoei_gow3_stubs.cpp kyoei_thread_sampler.cpp
     ../src/kyoei_overlay_gpu.cpp ../src/kyoei_photo_post.cpp "${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp"
     "${CMAKE_CURRENT_BINARY_DIR}/photo.vert.inc" "${CMAKE_CURRENT_BINARY_DIR}/photo.frag.inc")
 set_source_files_properties("${KYOEI_IMGUI_DIR}/backends/imgui_impl_vulkan.cpp" PROPERTIES

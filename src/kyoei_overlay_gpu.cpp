@@ -4,7 +4,6 @@
 // gpu/shim/gow3_overlay.cpp (GPL-2.0-or-later). Modal/state/UI implementation
 // is separate and Kyoei-specific. Dear ImGui itself retains its MIT license.
 #include "kyoei_overlay_gpu.h"
-#include "kyoei_vulkan_recording.h"
 #include "kyoei_overlay_barriers.h"
 #include "kyoei_overlay.h"
 #include "kyoei_input_mode.h"
@@ -154,7 +153,6 @@ void Render(vk::CommandBuffer command,vk::ImageView view,vk::Extent2D extent) {
         // ImGui font uploads submit to this same queue. Match the scheduler's
         // host synchronization rather than racing concurrent guest submissions.
         std::scoped_lock lock{Vulkan::Scheduler::submit_mutex};
-        KyoeiVulkanRecording::DrainCommand(command);
         ImGui_ImplVulkan_RenderDrawData(draw,command);
     }
     command.endRendering();

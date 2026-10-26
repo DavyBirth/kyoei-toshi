@@ -45,11 +45,5 @@ extern "C" int runtime_file_translate(const char* guest, char* out, size_t size)
 }
 extern "C" void runtime_thread_attach_host(const char* name) { gz_thread_attach_host(name); }
 
-// Loader hooks from the old-core build. The self tests exercised that renderer's
-// adaptations; on this core they report that they did not run. The GoW3 core keeps its
-// own pipeline cache, so the old shutdown flush has nothing to do here.
+// The loader's GPU test mode (gz_gpu_self_test) has no test on this core.
 extern "C" void gz_gpu_self_test(void) { gz_log("GPU TEST: not available on the GoW3 core"); }
-extern "C" void kyoei_gpu_cache_self_test(void) { gz_log("Kyoei cache self test: not available on the GoW3 core"); }
-extern "C" void kyoei_graphics_self_test(void) { gz_log("Kyoei graphics self test: not available on the GoW3 core"); }
-extern "C" void kyoei_cooperative_readback_self_test(void) { gz_log("Kyoei readback self test: not available on the GoW3 core"); }
-extern "C" void kyoei_gpu_cache_shutdown(void) {}

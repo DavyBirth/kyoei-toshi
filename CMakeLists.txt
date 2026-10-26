@@ -256,21 +256,9 @@ kyoei_replace_checked(KYOEI_LOADER
   "    SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);"
   "    SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);\n    { const char *priority=getenv(\"KYOEI_PRIORITY\"); if(!priority || strcmp(priority,\"normal\")) SetPriorityClass(GetCurrentProcess(), ABOVE_NORMAL_PRIORITY_CLASS); }")
 kyoei_replace_checked(KYOEI_LOADER
-  "    gz_log(\"Exit code %d\", code);"
-  "    extern void kyoei_gpu_cache_shutdown(void);\n    if(code==0) kyoei_gpu_cache_shutdown();\n    gz_log(\"Exit code %d\", code);")
-kyoei_replace_checked(KYOEI_LOADER
-  "        gz_gpu_self_test(); gz_stop(0, \"GPU TEST: PASS\");"
-  "        const char *cache_test=getenv(\"KYOEI_CACHE_SELF_TEST\");\n        if(cache_test && !strcmp(cache_test,\"1\")) { extern void kyoei_gpu_cache_self_test(void); kyoei_gpu_cache_self_test(); }\n        gz_gpu_self_test(); gz_stop(0, \"GPU TEST: PASS\");")
-kyoei_replace_checked(KYOEI_LOADER
   "    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);"
   "    if (!no_gpu && !list_stubs && !getenv(\"GZ_READBACK_LINEAR\") && _putenv_s(\"GZ_READBACK_LINEAR\", \"1\")) fail(\"cannot configure linear image readback\");\n    if (!no_gpu) gz_gpu_start(gpu_sdk, list_stubs);")
 set(TLS_REJECTION "    if (main_tls[2]) fail(\"this eboot has static TLS; the Windows loader does not support it yet\");")
-set(KYOEI_COOPERATIVE_SELF_TEST [=[        const char *coop_test=getenv("KYOEI_COOPERATIVE_SELF_TEST");
-        if(coop_test && !strcmp(coop_test,"1")) { extern void kyoei_cooperative_readback_self_test(void); kyoei_cooperative_readback_self_test(); }
-        const char *cache_test=]=])
-kyoei_replace_checked(KYOEI_LOADER "        const char *cache_test=" "${KYOEI_COOPERATIVE_SELF_TEST}")
-kyoei_replace_checked(KYOEI_LOADER "        const char *coop_test="
-  "        const char *graphics_test=getenv(\"KYOEI_GRAPHICS_SELF_TEST\");\n        if(graphics_test && !strcmp(graphics_test,\"1\")) { extern void kyoei_graphics_self_test(void); kyoei_graphics_self_test(); }\n        const char *coop_test=")
 string(FIND "${KYOEI_LOADER}" "${TLS_REJECTION}" TLS_ANCHOR)
 if(TLS_ANCHOR EQUAL -1)
   message(FATAL_ERROR "Review TLS adapter: shared loader changed")
