@@ -1,10 +1,9 @@
 ﻿# Run only the prepared Kyoei, with separate writable data. No shadPS4 executable.
 param([string]$Work = '', [switch]$CheckOnly, [ValidateSet('ja','en','pt-BR')][string]$Language='ja',
-      [ValidateRange(640,8192)][int]$Width=1280,[ValidateRange(360,4320)][int]$Height=720,[switch]$Fullscreen,[switch]$InGameDialogs,[switch]$Diagnostics,[switch]$PerformanceStats,[switch]$FitHud,[switch]$BatchReadback,[switch]$OrbTrace,[switch]$OrbTraceNext,[switch]$OriginalHud)
+      [ValidateRange(640,8192)][int]$Width=1280,[ValidateRange(360,4320)][int]$Height=720,[switch]$Fullscreen,[switch]$InGameDialogs,[switch]$Diagnostics,[switch]$PerformanceStats,[switch]$FitHud,[switch]$OriginalHud)
 $ErrorActionPreference = 'Stop'
 $kyoeiRoot = Split-Path $PSScriptRoot
-$kyoeiExecutable=Join-Path "$kyoeiRoot\build" $(if ($OrbTraceNext) { 'kyoei-orb-trace-next.exe' } elseif ($OrbTrace) { 'kyoei-orb-trace.exe' } else { 'kyoei.exe' })
-if ($OrbTraceNext) { $kyoeiExecutable=Join-Path "$kyoeiRoot\build\orb-pending" 'kyoei-orb-trace-next.exe' }
+$kyoeiExecutable=Join-Path "$kyoeiRoot\build" 'kyoei.exe'
 $kyoeiProof = Get-Content -LiteralPath "$kyoeiRoot\docs\native-prepare.json" -Raw | ConvertFrom-Json
 if (-not $Work) { $Work = Split-Path $kyoeiProof.prepared_out }
 if ($kyoeiProof.title -ne 'CUSA03562' -or $kyoeiProof.version -ne '01.03') { throw 'Identidade inválida' }
@@ -16,7 +15,7 @@ foreach ($kyoeiRequired in @($kyoeiExecutable, "$Work\out\boot-linked.bin", "$Wo
 }
 if (-not $CheckOnly) {
     $kyoeiExisting = @(Get-CimInstance Win32_Process | Where-Object {
-        $_.Name -in @('kyoei.exe','kyoei-orb-trace.exe','kyoei-orb-trace-next.exe')
+        $_.Name -eq 'kyoei.exe'
     })
     if ($kyoeiExisting.Count) {
         throw 'J? existe uma partida do Kyoei aberta. Feche pelo pr?prio jogo antes de iniciar outra.'
@@ -24,14 +23,12 @@ if (-not $CheckOnly) {
 }
 $env:KYOEI_LANGUAGE=$Language
 $env:KYOEI_PIPELINE_CACHE_DIR=Join-Path $Work 'cache\vulkan'
-$env:KYOEI_RASTER_TRACE=if ($OrbTrace -or $OrbTraceNext) { '1' } else { '0' }
 if ($InGameDialogs -and $Language -ne 'en') { throw 'A prévia dos diálogos dentro do jogo está disponível em inglês.' }
 $env:KYOEI_IN_GAME_DIALOGS=if ($InGameDialogs) { '1' } else { '0' }
 if ($Diagnostics) { $env:KYOEI_HUD_TRACE='1'; $env:KYOEI_FRAME_STATS='1' }
 if ($PerformanceStats) { $env:KYOEI_FRAME_STATS='1'; $env:KYOEI_HUD_TRACE='0' }
 if ($Language -eq 'en' -and -not $OriginalHud) { $FitHud=$true }
 $env:KYOEI_HUD_FIT=if ($FitHud) { '1' } else { '0' }
-$env:KYOEI_BATCH_READBACK=if ($BatchReadback) { '1' } else { '0' }
 if ($FitHud) {
     if ($Language -ne 'en') { throw 'A prévia do ajuste da HUD está disponível em inglês.' }
     $kyoeiMetrics="$kyoeiRoot\build\hud-native-metrics-01.bin"
@@ -54,7 +51,7 @@ if (-not (Test-Path -LiteralPath $kyoeiPromptPack -PathType Leaf)) { throw 'Paco
 $kyoeiPromptStream=[IO.File]::OpenRead($kyoeiPromptPack)
 try {
     $kyoeiPromptMagic=New-Object byte[] 8
-    if ($kyoeiPromptStream.Read($kyoeiPromptMagic,0,8) -ne 8 -or [Text.Encoding]::ASCII.GetString($kyoeiPromptMagic) -notin @('KYPROMP2','KYPROMP3','KYPROMP4')) { throw 'Pacote de botoes antigo; reconstruir com tools/build_prompt_pack.py.' }
+    if ($kyoeiPromptStream.Read($kyoeiPromptMagic,0,8) -ne 8 -or [Text.Encoding]::ASCII.GetString($kyoeiPromptMagic) -notin @('KYPROMP2','KYPROMP3','KYPROMP4','KYPROMZ1')) { throw 'Pacote de botoes antigo; reconstruir com tools/build_prompt_pack.py.' }
 } finally { $kyoeiPromptStream.Dispose() }
 $env:KYOEI_PROMPT_PACK=$kyoeiPromptPack
 # Read-time UI corrections: HUD texts of the natural English translation (tools/build_ui_corrections.py).
@@ -69,7 +66,7 @@ $env:KYOEI_WINDOW_HEIGHT=[string]$Height
 $env:KYOEI_FULLSCREEN=if ($Fullscreen) { '1' } else { '0' }
 $env:KYOEI_WINDOW_ICON="$kyoeiRoot\build\launcher-assets\game.ico"
 if ($CheckOnly) {
-    Write-Output "Launcher OK; CUSA03562 01.03; idioma: $Language; saida: ${Width}x${Height}; fullscreen: $Fullscreen; dialogos no jogo: $InGameDialogs; diagnostico: $Diagnostics; ajuste HUD: $FitHud; readback agrupado: $BatchReadback; saves: $Work\user; nenhum jogo iniciado."
+    Write-Output "Launcher OK; CUSA03562 01.03; idioma: $Language; saida: ${Width}x${Height}; fullscreen: $Fullscreen; dialogos no jogo: $InGameDialogs; diagnostico: $Diagnostics; ajuste HUD: $FitHud; saves: $Work\user; nenhum jogo iniciado."
     exit 0
 }
 if (-not $env:GZ_PRESENT_MODE) { $env:GZ_PRESENT_MODE = 'Fifo' }
