@@ -910,3 +910,35 @@ para atribuir toda a queda ao timer. **Não aprovado como melhoria de FPS**; ada
 do CMake normal, fontes/artefato/probe preservados. A precisão do teste nativo não se
 traduziu em ganho comprovado nesta cena. Executável/PDB de referência restaurados e hash
 conferido. Próximo ABBA: prepared-pool, mesma rota corrigida.
+
+ABBA pool `232359`: 37,77 / 43,81 / 47,57 / 33,85 FPS, agregados 35,70 → 45,62
+(+27,77%), todas em segundo plano 29/29, handles não nulos e estilo constante. CPU total no
+giro 74,8 / 69,1 / 58,4 / 75,2%: **não atribuir ainda o ganho inteiro ao pool**. Repetição
+invertida pool/base/base/pool `234049` iniciada às 23:40, com CPU dos aplicativos registrada
+separadamente. Nenhum protótipo ativo na produção durante a confirmação.
+
+Probe nativo com PreparedDraw real (1.016 bytes), três submissões retidas, mil alocações por
+bloco ABBA: 2.048 desenhos, original 1,065/1,105 ms contra pool 0,039/0,036 ms; ciclos da
+própria thread 2,75–2,85 milhões contra 91,7–100,9 mil. Evidência da redução do custo de
+alocação/inicialização; não é benchmark de FPS. Fontes/log/JSON `prepared-pool-probe.*`.
+
+### 27/10/2026 — primeira redução de custo mantida
+
+Confirmação invertida `234049`, pool/base/base/pool: 41,38 / 37,69 / 42,61 / 42,19 FPS.
+Agregados normalizados base → pool: **40,00 → 41,78 (+4,45%)**. Todas em segundo plano
+29/29, handles não nulos, estilo constante. Compilações aguardadas entre rodadas; nenhuma
+durante coleta. qBittorrent 0,280 / 0,229 / 0,227 / 0,142 núcleo, demais aplicativos
+acompanhados abaixo de 0,01; jogo 6,34 / 6,29 / 6,05 / 5,96 núcleos. Host 70,8 / 69,2 /
+62,1 / 63,0%. Variação impede prometer +4,45% estáveis; os +27,77% do grupo anterior têm
+carga menor nas candidatas e não devem ser atribuídos exclusivamente ao código.
+
+Pool mantido pela redução direta de alocação/inicialização (1,085 → 0,037 ms para 2.048
+PreparedDraw reais), testes de posse/concorrência, verificação visual e agregados favoráveis
+em ambos os grupos. 29 alvos/31 chamadas passam; verificador no jogo sem divergências.
+Recompilação atual: SHA256 `8e75be8d084f3c84157593bd5cdf1b8936b800bcad589cfadb8ea3ab4ffdd34f`;
+arquivo completo idêntico ao artefato testado depois de normalizar apenas timestamps
+COFF/debug e GUID/age PDB (zero bytes restantes diferentes). Fences/GpuIdle e o tipo/layout
+da Submission permanecem iguais. O novo padrão validado é `prepared-pool-rebuilt`.
+
+**60 FPS estáveis no giro ainda não alcançados.** Próxima candidata: cópias de constantes
+agrupadas, acrescentadas separadamente sobre esta base.

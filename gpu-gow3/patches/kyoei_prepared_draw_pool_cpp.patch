@@ -1,0 +1,19 @@
+Kyoei: avoid allocating and zeroing full preparation arrays on every submission.
+<<<<<<<
+#include "video_core/renderer_vulkan/vk_draw_prep.h"
+=======
+#include "video_core/renderer_vulkan/vk_draw_prep.h"
+#include "kyoei_prepared_draw_pool.h"
+>>>>>>>
+<<<<<<<
+    auto submission = std::make_shared<Submission>();
+=======
+    auto submission = std::make_unique<Submission>();
+>>>>>>>
+<<<<<<<
+    submission->draws = std::make_unique<PreparedDraw[]>(submission->num_draws);
+    return submission;
+=======
+    static KyoeiPreparedDrawPool<PreparedDraw> pool;
+    return pool.MakeSubmission(std::move(submission));
+>>>>>>>
