@@ -942,3 +942,104 @@ da Submission permanecem iguais. O novo padrão validado é `prepared-pool-rebui
 
 **60 FPS estáveis no giro ainda não alcançados.** Próxima candidata: cópias de constantes
 agrupadas, acrescentadas separadamente sobre esta base.
+
+Correção de metadados: as rotas com minimização/estilo usadas nos grupos recentes tinham
+cliente **1920×1050**, embora criação/ambiente pedissem 1080. A/B usavam o mesmo tamanho;
+os números relativos permanecem comparações desse tamanho, mas não devem ser apresentados
+como saída 1080p exata. A imagem normal do pool tinha sido verificada em 1080, e sua redução
+de alocação é independente da saída. Probe SDL reproduziu o ajuste automático pelo
+SetWindowPos comum e confirmou 1920×1080 com SWP_NOSENDCHANGING. Rota nova
+`route-noactivate-exact1080.ps1` aplica tamanho antes do aquecimento, registra cada consulta
+e o medidor rejeita tamanhos diferentes de 1920×1080.
+
+### 27/10/2026 — candidata de cópias agrupadas
+
+`constant-batch` acrescenta ao pool validado uma trava de mapeamento por grupo de cópias
+e combina a limitação do intervalo com a leitura. Preserva fallbacks, ordem das bindings,
+checagens de escritas GPU e aposentadoria do anel. Endereço com overflow não entra na
+otimização. SHA256 `a8b1c727d33f8f901b71b15910c031cd62c83008f442d7cb0f28d11101cbce9d`;
+30 alvos/32 chamadas passam, incluindo remapeamento concorrente e fontes nativas/mistas,
+inválidas e sem acesso. Dois testes do jogo encerram com 0 e verificador sem divergências;
+comparação após R sem defeito novo evidente. Ambos ainda com saída 1050, não usar seus FPS.
+
+Probe real, 16 buffers/grupo: guest 512 B ~1,23 → 0,51 µs, guest 2 KiB ~3,29 → 1,62 µs,
+guest 8 KiB ~8,25 → 7,39 µs; nativo ~1.500 → 760 µs, misto ~760 → 385 µs. Confirma custo
+menor na API, não ganho no jogo. ABBA `002311` iniciado às 00:23 com rota de tamanho exato;
+coleta aguardando compilações e execuções externas do Godzilla, sem alterar o outro projeto.
+
+Outra correção de protocolo: a rota removia o gatilho do giro antes dos dois segundos finais
+e da captura. O L enviado depois já não move a câmera no pad do Kyoei. As três últimas
+linhas **podiam incluir trecho parado**; os números anteriores são estimativas desse
+procedimento e não provam giro puro. A adoção do pool se sustenta na redução direta de
+alocação, posse/testes e imagem; ganho de FPS exato no giro ainda precisa desta confirmação.
+
+`route-pure-turn-1080.ps1` conserva o gatilho até o processo encerrar e exige cinco janelas
+após ativá-lo: margem de duas janelas e três completas de giro. O medidor valida esse
+requisito e todas as dimensões físicas 1920×1080. Grupo `010202` iniciado em 01:02, A1 pool
+42,19 FPS, 36/36 em segundo plano; restante pendente. Godzilla pode ser fechado conforme
+autorização explícita posterior de Davy; qualquer sobreposição ainda invalida a rodada.
+
+Variante separada `constant-batch-native`, SHA256
+`1b8a1b73f79613a6b8b0b9830d3ed416f2bab6c7291bbc1174bc755ed502351b`: consulta a descrição da
+região nativa uma vez e a reutiliza só dentro da chamada, sem cache dos dados ou entre
+quadros. Testes de fronteiras/proteção e todos os 30 alvos/32 chamadas passam. Probe nativo
+separado cai de ~1.500 para 48–57 µs por grupo de 16 fontes na mesma região; misto ~750 para
+47–56 µs. É custo de API; jogo/imagem/ABBA dessa variante ainda pendentes.
+
+### 27/10/2026 — confirmação após reiniciar o PC
+
+O grupo puro `010202` havia terminado antes do desligamento: pool 42,19 / batch 43,81 /
+batch 42,35 / pool 42,27 FPS. Todas as rodadas em segundo plano e 1920×1080; diferença
+pequena, ainda sem aprovação de FPS.
+
+Variante nativa, grupo `134434`: **47,79 / 47,16 / 47,68 / 46,55 FPS**. Agregados
+pool → candidata: **47,16 → 47,42 (+0,55%)**. Zero compilações de shaders nos intervalos
+medidos, 2.044–2.058 desenhos por quadro, máximos 49,26–50,92 ms. Handles não nulos,
+WS_EX_NOACTIVATE e 1920×1080 conferidos; foco integralmente em segundo plano nas quatro.
+Compilações externas interromperam B2/A2; essas tentativas foram descartadas e repetidas,
+sem usar seus FPS. Nenhuma compilação concorrente nas quatro rodadas aceitas.
+
+Carga acompanhada sem fechar os aplicativos: Wallpaper Engine ~0,044–0,080 núcleo e
+qBittorrent ~0,096–0,170 núcleo no giro. Host ~48–52%, GPU 1860–1875 MHz e 76–79 °C.
+Resultados e contexto privados: `result-codex-constant-batch-native-guard-134434-a1-r1.json`
+e `conditions-...json`. A diferença de 0,55% fica dentro da variação das referências;
+**nenhum ganho de fluidez comprovado**, inclusive nos máximos de tempo de quadro. A redução
+do probe isolado não deve ser apresentada como ganho no jogo.
+
+Verificação da variante nativa `codex-constant-native-verify-resume-1341`: saída 0 e
+PIPE_VERIFY=16 sem divergências. PrintWindow retornou cliente preto tanto nessa variante
+quanto na referência (`codex-pool-capture-control-1342`); essas capturas não comprovam
+correção visual. Foto nativa e novo perfil da CPU em andamento antes da próxima decisão.
+
+Fotos nativas F12 da candidata e da referência (`...native-photo-1407` e
+`...pool-turn-profile-1411`) comparadas: sem defeito novo evidente; filme, pose e texto
+variam. A cópia agrupada saiu do CMake normal. Recompilação da base, 29 alvos/31 chamadas
+passam; arquivo completo equivalente ao pool validado após normalizar só metadados de
+link/PDB (`pool-after-batch-retired-equivalence.json`, zero bytes restantes diferentes).
+
+### 27/10/2026 — eliminar cópia implícita dos atributos de vértice
+
+Perfil normal `codex-pool-normal-turn-profile-1420`, sem PIPE_VERIFY, três threads e giro
+mantido durante a amostragem: 9.339 amostras/thread. A conversão
+`optional<const FetchShaderData>` → `optional<FetchShaderData>` aparece em 1,9% das amostras
+da DrawRec. GetFetchShader já devolve referência constante à primeira forma, mas
+GetDrawOffsets recebia a segunda e copiava o vetor de atributos para ler dois offsets.
+
+`kyoei_draw_offsets_reference_cpp.patch` faz apenas o parâmetro de GetDrawOffsets
+corresponder ao tipo do getter. Os cálculos e a vida dos dados continuam iguais; a lista é
+imutável e pertence à pipeline que já está em uso pelo draw. Probe com as funções
+original/adaptada e os tipos reais Regs/Info/FetchShaderData: **12.000 resultados idênticos,
+10.268 → 0 alocações**, cobrindo optional/vetor vazios e preenchidos, offsets e UserData
+com/sem snapshot. Isso comprova remoção de trabalho, **não ganho de FPS**.
+
+Candidata `draw-offsets-reference`, SHA256
+`d74ad4c329af46a1ae73d163b9ce1f38f26e2e17a8c99d63e382e5d7cbc66b15`:
+29 alvos/31 chamadas passam. O jogo carregou a cena e girou a câmera com PIPE_VERIFY=16,
+sem divergências registradas; foi fechado a pedido, saída 0, antes da captura final.
+Protocolo completo de imagem/FPS dessa candidata não concluído.
+
+Davy pediu parar as execuções em segundo plano e entregar o executável para teste manual.
+Runtime da portátil pessoal atualizado com essa compilação; launcher --check passou sem
+abrir o jogo. Áudio normal, saves, configurações e tradução preservados. Comparação de FPS
+e confirmação visual final ficam para o teste manual. Não fechar Godzilla nem reiniciar
+testes em segundo plano: autorização anterior de fechamento foi revogada em 27/10.

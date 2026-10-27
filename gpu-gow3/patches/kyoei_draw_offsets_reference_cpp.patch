@@ -1,0 +1,8 @@
+GetDrawOffsets only reads fetch metadata owned by the live graphics pipeline.
+Match GetFetchShader's optional<const FetchShaderData> so a draw does not convert
+the optional and allocate/copy its vertex-attribute vector just to read two offsets.
+<<<<<<<
+    const std::optional<Shader::Gcn::FetchShaderData>& fetch_shader) {
+=======
+    const std::optional<const Shader::Gcn::FetchShaderData>& fetch_shader) {
+>>>>>>>
