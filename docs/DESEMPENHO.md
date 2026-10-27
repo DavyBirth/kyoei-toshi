@@ -834,3 +834,79 @@ cópia agrupada de constantes. Ambos inativos, ainda sem compilação/testes/ABB
 Controle prep0 no mesmo executável: 36,08 / 34,51 / 27,90 FPS, última referência interrompida
 a pedido de Davy para dar aula. Grupo incompleto, sem ganho aprovado. Evidência privada
 `guarded-abba-completed-185434-partial.json`. Testes pausados; referência restaurada.
+
+### 26/10/2026 — reutilização de arrays de preparação (21:41)
+
+Protótipo isolado: `kyoei_prepared_draw_pool_cpp.patch`, helper com oito entradas e 16 MiB
+para arrays livres. Não modifica layout/tipo dos campos de Submission. Seu último release
+devolve o array; cada aquisição repõe Pending, e os leitores só usam payload após Ready.
+Workers sobrescrevem o payload publicado. Evita alocação e inicialização completa a cada
+envio. Limite refere-se ao cache livre, além dos arrays ainda em uso.
+
+29 alvos/31 chamadas passam, incluindo oito mil handoffs concorrentes, último dono,
+overflow, limite e submissão sobrevivendo à destruição do pool. Executável `prepared-pool`
+SHA256 `9c0ee2b154409e0c87af88f7d56fef35f80b95365e0b841f92d0e3676d7fea82`.
+Jogo/verificador `codex-prepared-pool-verify-2146`: saída 0, sem divergências; imagens após R
+sem defeito novo evidente. ABBA normal contra baseline-clean em andamento, sem ganho adotado.
+
+Grupo `215019` completo: 36,44 / 32,93 / 41,21 / 35,81 FPS, agregado +1,34%. **Não aprovado**;
+foco inconsistente (perdas 28/28, 29/29, 0/29 e 9/28) e grande dispersão. Não é comparação
+causal suficiente. CPU do host também elevada; não atribuir toda a queda a um aplicativo.
+Pool retirado do CMake normal; fontes/testes e artefato preservados.
+
+### 26/10/2026 — precisão do timer de apresentação
+
+`Common::AccurateSleep` cria timer comum a cada espera. Adaptador isolado troca apenas sua
+criação por timer de alta resolução com reset manual e fallback original, mantendo espera,
+interrupção APC, cálculo do restante e fechamento do handle. Suporte desde Windows 10 1803,
+conforme [CreateWaitableTimerExW](https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-createwaitabletimerexw).
+Não altera configuração global de timers nem antecipa sinalizações do jogo.
+
+Teste nativo com as próprias funções extraídas, em janela invisível, 64 amostras por duração
+e variante em ordem ABBA, sem timeBeginPeriod:
+
+| Pedido (ms) | Média original (ms) | Média alta resolução (ms) |
+| --- | --- | --- |
+| 1 | 15,31 | 1,60 |
+| 4 | 15,56 | 4,38 |
+| 8 | 15,43 | 8,36 |
+| 16 | 28,13 | 16,32 |
+
+PASS: prazo zero, APC interruptível/não interruptível, reset manual e nenhum handle vazado.
+Esses dados medem espera nativa, não FPS. Probe/log em `timer-precision-probe.*`. Build e
+28 alvos/30 chamadas passam; SHA256
+`1ce7a68f27646fb83aa1d29d0e308fcf90bb58633d31b6f712356809369711ba`.
+Jogo `codex-accurate-timer-verify-2217`: saída 0, verificador sem divergências, captura sem
+defeito novo evidente. ABBA contra baseline-clean iniciado em 22:25, progresso transmitido
+sem novas consultas de terminal. Comparar foco e carga junto dos FPS; adoção pendente.
+
+Grupo `222557` interrompido, 41,59 / 45,66 / 40,45 FPS, sem quarta referência. A1 sempre
+em segundo plano (29/29), B1/B2 com foco (0/29): **não prova ganho do timer**.
+Rota privada `route-background.ps1` preserva save, resolução, entradas e tempos, removendo
+a solicitação de foco, usando SW_SHOWNOACTIVATE e hints SDL de ativação desligados só nos
+testes. Novo ABBA iniciado às 22:41; exigir foco perdido em todas as verificações nas quatro
+rodadas. Relatório privado agora marca explicitamente comparações de foco misturado como
+inválidas. Não comparar diretamente seu agregado com grupos anteriores de foco variável.
+
+Grupo `224141` também interrompido: 42,77 / 46,05 / 44,80 FPS, foco 0/29, 0/29 e 29/29.
+As dicas SDL não impediram a ativação inicial. Substituído por `route-noactivate.ps1`, com
+WS_EX_NOACTIVATE aplicado somente à janela de teste, minimização/restauração antes do
+carregamento/aquecimento e registro de handles reais em cada consulta. ABBA `225419`
+iniciado às 22:54; A1 41,89 FPS, segundo plano 29/29, nenhum handle nulo. Restante pendente.
+
+Grupo `225419` também parcial, sem conclusão: 41,89 / 46,25 / 41,94 FPS, B2 com foco misturado
+(11/29), A2 encerrada antes de medir. A tentativa de WS_EX_NOACTIVATE ainda era ineficaz:
+PowerShell trata IntPtr.Zero como verdadeiro; a checagem tentava configurar handle zero.
+`route-noactivate-v2.ps1` exige handle diferente de zero, confere o estilo aplicado e registra
+o estilo/handles em cada amostra. Teste mínimo confirma o problema de conversão. Grupo
+`230754` iniciado às 23:07, estilo 0x08000100 confirmado em janela real antes de carregar.
+SHA256 da rota `7feb7f9cde137652387f8f5a78d04658e4796de7dffc50c0562d7d0398bcd785`.
+
+ABBA `230754` completo: 48,11 / 42,44 / 39,78 / 38,23 FPS; agregados 42,60 → 41,06
+(−3,61%). Quatro rodadas com foco perdido 29/29, handles não nulos, WS_EX_NOACTIVATE
+constante, zero compilações na coleta. CPU do host no giro 57,6 / 62,4 / 67,7 / 75,1%;
+GPU 1860 MHz, 77–79 °C. A referência caiu 20,5% entre as pontas, portanto não é suficiente
+para atribuir toda a queda ao timer. **Não aprovado como melhoria de FPS**; adaptação saiu
+do CMake normal, fontes/artefato/probe preservados. A precisão do teste nativo não se
+traduziu em ganho comprovado nesta cena. Executável/PDB de referência restaurados e hash
+conferido. Próximo ABBA: prepared-pool, mesma rota corrigida.
