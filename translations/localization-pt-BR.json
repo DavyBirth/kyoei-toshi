@@ -16873,6 +16873,908 @@
    ]
   },
   {
+   "path": "common/lua/stage_208_news_text.luc",
+   "source_sha256": "8e4e33b0da797a9cb165e930ed36e6b44db1f729115c232dc5926f348f4597b5",
+   "entries": [
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "d336a2ef0e6667d8f8d2b0287d5f2dd4d2f6d19189e92b9d2ac589a471b77570",
+     "pt-BR": "\"Um Baita Incômodo\": Mais Uma Criatura Gigante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "e37cbaa633dd5f9cb13764b74589dcd89abcbc16482bc32a5f0312decd5cb859",
+     "pt-BR": "Mais duas criaturas gigantes apareceram perto da Estação Hinageshidai.\n\nAparentemente hostis uma à outra, as duas se encararam, causando destruição e, de vez em quando, disparando raios pela boca.\nCom aqueles corpos enormes, as ruas afundavam a cada passo, e os prédios ao redor ficaram com janelas estilhaçadas e paredes rachadas.\nMuitos prédios também foram destruídos total ou parcialmente pelas caudas e pelos raios.\n\nAinda não se sabe por que elas resolveram se enfrentar logo no meio da cidade. Da nossa parte, só podemos dizer: vão brigar numa ilha deserta ou em algum canto remoto do oceano.\nSe fossem hostis à humanidade, seria uma batalha. Mas elas não parecem mirar nas pessoas de propósito. Duas criaturas gigantes simplesmente brigando é só um incômodo. E, diante de um estrago desses, queremos gritar bem alto: é um baita incômodo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "7feb255769a92cb0e52804ad5a93f22efd25740ca9430ae6fa55df5cbb488b25",
+     "pt-BR": "Os Dinossauros Voltaram?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "48674f1abb8649e955287d23e995ba48916867c18b9dd9dc98f82e375827e366",
+     "pt-BR": "Apareceu uma criatura que não faria feio nas enciclopédias de dinossauros que eu lia quando criança.\nTalvez a melhor descrição seja um réptil robusto que anda sobre duas patas. O que parecem ser barbatanas dorsais às vezes brilham, mas muitos seres na Terra têm partes do corpo luminosas. O que a diferencia é o tamanho imenso e o raio que dispara pela boca.\nO poder desse raio é fora do comum: os prédios atingidos ficaram num estado lamentável.\n\nSeria essa criatura descendente dos dinossauros, que julgávamos extintos? As imagens estão sendo analisadas, e traremos novidades assim que surgirem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "c22c6f912ff3b4e470e8efc45401e2ffdfa02b4c37eb3fbdc275f29a453e0efa",
+     "pt-BR": "Espantoso! O \"Monstro Dourado\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "ecdc581f31f6aabb02e54f279be6d4ac46fa27d105e4d92c53274e619669e547",
+     "pt-BR": "Um corpo dourado gigantesco, três pescoços e cabeças, e asas. Como devemos chamar essa criatura?\n\nParece um monstro saído da mitologia. Muita gente diria que mito é só mito, mas há quem acredite que os mitos nasceram de algo real. Seria absurdo demais supor que essa criatura existe em algum lugar da Terra desde tempos antigos e simplesmente nunca foi descoberta?\n\nNós, humanos, nos gabamos do quanto avançamos, mas não podemos esquecer que novas espécies ainda são descobertas todos os dias.\nA civilização humana certamente progrediu, mas isso não nos torna onipotentes.\n\nNunca vou esquecer que, ao ver essa criatura voar para longe, senti mais assombro diante de sua majestade do que medo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "34dc9775ae6ee0ec60fc4008631978003516f6dcb16ae8a82089a7c09f4ae9aa",
+     "pt-BR": "Estação Hinageshidai: Uma Decisão Corajosa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "507c69c9cdba7d41f654752a65709f0e62b4630f5395d0a2a95264d21599ee26",
+     "pt-BR": "\"Os trens ainda estavam rodando, e havia gente procurando um lugar para fugir. Nessas condições, fechar a estação nem passou pela minha cabeça\", disse o chefe da Estação Hinageshidai em entrevista coletiva.\n\nA cauda longa e grossa de uma criatura gigante estava estirada bem em frente à estação, enquanto sua dona lutava com outra criatura gigante ali do lado. Mesmo assim, a Estação Hinageshidai manteve as portas abertas e continuou funcionando.\n\nNum momento raro para uma coletiva, a sala inteira aplaudiu quando o chefe da estação terminou de falar.\nUma crise de verdade põe à prova a nossa dignidade. Este parece um exemplo perfeito.\n\nAinda assim, será que estou pensando demais ao me perguntar por que o chefe da estação suava de forma tão anormal?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "38ad363f5f07c1a3b65606291ccb8798b98162a7e06fa11df93e849c7145e2d9",
+     "pt-BR": "Preocupação com a Queda na Percepção de Perigo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "0f6a6265698e22c032102557c3932789ae2f4df4b6d822ed9e71a00a606df2d5",
+     "pt-BR": "Existe uma palavra para quem se junta para assistir a confusões: curioso.\nSeja um incêndio, uma briga ou a cena de um crime, a curiosidade vence o risco e atrai essas pessoas.\nMas vi um rapaz filmando uma criatura gigante com o celular, apesar do perigo óbvio para a própria vida. Isso já é demais.\n\nEle não é um jornalista arriscando a vida para mostrar a verdade, nem alguém com um corpo capaz de resistir a uma criatura gigante.\nFalta a ele, claramente, noção do perigo. Não sabemos se esse rapaz está entre eles, mas acredita-se que 21 pessoas morreram distraídas filmando durante esta última aparição das criaturas gigantes. Todas tinham pouco mais de 20 anos.\n\nTalvez seja precipitado culpar a juventude, mas as estatísticas também mostram que a percepção de perigo cai ano após ano. Isso é muito preocupante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "9814b3bc9c4db45312a72baea3a0f1e952994559c11123f425a0cce6ffd02664",
+     "pt-BR": "Adeus ao \"Viaduto de Mãos Dadas\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "67e1593330f0d6dde8b0986dfe92695140e2897b3f55e955d6a752a97af7f465",
+     "pt-BR": "O viaduto da Rua Shirotsumekusa, carinhosamente conhecido como Viaduto de Mãos Dadas, foi destruído.\nAcredita-se que a criatura gigante dourada seja a responsável, e os danos seriam irreparáveis.\n\nO viaduto tem uma longa história, que remonta à época em que a Rua Shirotsumekusa ainda era um rio que cortava a cidade. Naquele tempo, os povoados das margens norte e sul viviam em conflito e tinham cortado qualquer contato.\nUm dia, uma moça do povoado do norte e um rapaz do povoado do sul se apaixonaram. Como era de se esperar, não deu certo, e os dois se jogaram no rio.\nO pai da moça, líder do povoado do norte, ficou tomado de remorso. Foi sozinho negociar com o povoado do sul e percorreu os dois lados convencendo as pessoas a acabar com a rixa em troca da própria vida.\nPor volta dessa época, começaram os planos de aterrar o rio. Para que norte e sul continuassem se visitando com facilidade, o líder do norte gastou sua fortuna pessoal para construir este viaduto.\n\nDepois de ver o viaduto pronto, ele tirou a própria vida, sem ouvir quem tentou impedi-lo.\nComovidas com sua determinação, as pessoas passaram a conviver cada vez mais. Com o tempo, ele ficou conhecido como o Viaduto de Mãos Dadas, unindo as mãos do norte e do sul.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k141",
+     "source_text_sha256": "80624e68fb83d923ec1e3aade39bc9c8e25a303d6f2c689cbec5e1152ce6f745",
+     "pt-BR": "Moto Suspeita É Avistada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "be2eb6360c4166568efac550b90f6f95b6f62d8267be727065866d9c0e9b7c72",
+     "pt-BR": "Numa cidade em que as pessoas tentavam desesperadamente fugir das misteriosas criaturas gigantes, duas pessoas numa moto foram vistas agindo de forma diferente de todo mundo.\nElas pareciam ir claramente na direção contrária.\n\"Saqueadores\" foi a palavra que me veio na hora, e tirei uma foto por instinto. Infelizmente, há muita gente que se aproveita desse caos, sem a menor vergonha, para cometer crimes.\nNão estou dizendo que os dois desta foto sejam assim. Mas, como já presenciei cenas desse tipo muitas vezes, não consegui ignorar o comportamento deles.\n\nQuem são esses jovens, e o que pretendem fazer? Vou continuar investigando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k143",
+     "source_text_sha256": "0ea23fc76c528b055e7185b30369c352562c0dd76b0f622d36e153023a6c85f8",
+     "pt-BR": "Cidade Fantasma? A Realidade Surpreendente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "75867824d361f9ee9d1c7acf246c34d50aeaff93db1353bd459f468ea04d2e23",
+     "pt-BR": "Não se via uma única pessoa, mesmo estando no meio da área de escritórios de uma cidade moderna. Era uma verdadeira cidade fantasma.\nMas você reparou? Esta foto esconde algo espantoso.\n\nMesmo com duas criaturas gigantes causando destruição na região, muita gente continuava trabalhando.\nOlhe a foto. Há várias janelas acesas em cada prédio. A princípio, imaginei que todos tinham fugido sem tempo de apagar as luzes, mas, olhando melhor, dava para ver silhuetas se mexendo.\n\nUm funcionário de uma empresa vizinha, a Empresa A, que consegui entrevistar ali mesmo, me disse: \"Eu sei que é perigoso, mas quase nenhum chefe ou colega meu foi pra casa...\" Isso é dedicação e lealdade, ou uma tendência nacional de seguir a manada? Queremos saber sua opinião.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k145",
+     "source_text_sha256": "2f47eace14f902b5b0e345e2ec43bcf13779a83fa069db8d36d93f69cad6cc5f",
+     "pt-BR": "Moto Roubada É Encontrada, mas em Estado Lastimável",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "38a292dfb021de5e2fce596e3c44c8d2133d7e24af0f6048a534b3dc93321ab7",
+     "pt-BR": "Uma moto roubada na Ponte Sky Garden foi encontrada numa rua perto da Estação Hinageshidai.\n\nEla estava desmontada quando foi encontrada, e a investigação considera a possibilidade de ter sido obra de um brincalhão.\nCriaturas gigantes foram vistas perto do local, e a polícia diz estar \"investigando com afinco\", inclusive a possibilidade de elas serem as responsáveis.\n\nO dono, Shizuo Sato (nome fictício), deu entrevista com cara de desânimo: \"Ainda faltam dois anos de prestação...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "0429f1fe75c72fea88f97069d0b1f3de2176b13ec99797b7acd60b38dd9bc2f3",
+     "pt-BR": "A \"Terra Sagrada dos Palitos\" Vai Renascer?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "024613e1a412c0544841f8cdbd4d827f3c915a792ab5fef13fb064ea00d08709",
+     "pt-BR": "A sede da Johma, fabricante de palitos de dente conhecida pelos entendidos, ficou meio destruída pela cauda de uma criatura gigante.\nPor meio destruída, entenda-se que metade do prédio continua de pé. Ele certamente não tem condições de funcionar.\n\nO prédio também abrigava \"Palitos: Tudo o Que Há para Saber\", uma exposição de palitos de todas as épocas e cantos do mundo, e o Teatro Tsumayo, onde a ídolo dos palitos Tsumayo-J se apresentava todos os dias. O lugar era considerado sagrado por fãs que somariam dez milhões no Japão e dois bilhões no mundo todo.\n\nCom as atividades paradas, quase todas as peças preciosas perdidas e nenhum teatro para os shows, mensagens de apoio e tristeza chegaram do mundo inteiro.\nUma vaquinha criada pelos fãs já passou de quatro bilhões de ienes, então o renascimento desse lugar sagrado talvez não demore.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "82297cf2eed35f1271822ff8c7d5b769fdb6d54d3b2ad8dc8cd5179fa47e8b4a",
+     "pt-BR": "Os Raios Estranhos Também São \"Dourados\"?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "9531fb183fd80f8f5c0baa0f1a01040913975b1658ae68cfb18da8bc5f7e1a21",
+     "pt-BR": "Os raios estranhos disparados pelas três bocas do enorme monstro dourado na área de escritórios eram da mesma cor dourada do corpo dele.\nMuitas testemunhas disseram que, apesar do poder de destruição terrível, aquela luz dourada brilhante parecia quase divina.\nDesde a antiguidade, a humanidade venera o ouro e a cor dourada. Seria porque eles simbolizam o sol?\nHoje em dia, o ouro também representa riqueza. Na verdade, com imagens se espalhando pela internet, cada vez mais gente estaria usando fotos desses raios como papel de parede do celular para atrair sorte com dinheiro. Isso é falta de noção do perigo, ou devemos aplaudir essa resiliência?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "e9775302728e65f72d001546a22997f519d83c702545a862e2c3014a4c8d85db",
+     "pt-BR": "Cicatrizes Profundas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "48a5e8fafa0edd4aab01f8fd1ffe3441821af2e76e4602baabc02d87027140e3",
+     "pt-BR": "Prédios desabados e ruas destruídas foram encontrados por toda a área onde as duas criaturas gigantes parecidas com dinossauros apareceram.\nEsta foto mostra um desses cruzamentos. O encontro de grandes avenidas foi escavado, com o asfalto ao redor erguido como se fosse uma parede.\nNaturalmente, as redes de serviços que passam por baixo também foram cortadas. A recuperação deve exigir não só tempo, mas também gastos enormes.\nOs escritórios vizinhos também estão inutilizáveis, o que causa prejuízos graves às empresas.\nAlgumas procuram escritórios provisórios, mas muitas nem isso conseguem e não têm outra saída a não ser pedir falência.\nAs cicatrizes deixadas por essas criaturas gigantes são mais profundas e maiores do que esta foto consegue mostrar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "0e7f9ed3f3e7dc4e34ca3146a6bf0f91240bc531c0a4ebcf9963fce4c11920ac",
+     "pt-BR": "Uma Demonstração de Habilidade",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "93bfff9823b370bd128badb6fa3ae899f75c35f6b2a54a8dd72662de935d33e7",
+     "pt-BR": "Quando um raio da criatura dourada explodiu um caminhão-tanque, consegui fotografar uma cena extraordinária.\nO carro branco no ar foi arremessado pela explosão. Dá para ver a moto deitada de lado logo abaixo?\nEla não tinha caído. Estava deslizando de lado para passar por baixo do carro voando.\nEu já tinha visto isso em filmes, mas nunca imaginei presenciar com meus próprios olhos.\nDepois de desviar do carro, o piloto levantou a moto com maestria e passou ao lado do caminhão em chamas como se nada tivesse acontecido.\nO piloto parecia jovem. Seria um profissional, ou um milagre nascido da emergência?\nDe qualquer forma, foi um momento que provou que isso pode ser feito sem truques de câmera nem computação gráfica.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "3945148d05ff01b9d9e0d8dc201eba86900feec3cb2aa01f959dae893af1097d",
+     "pt-BR": "Convicção Misteriosa? Passando entre os Pés de um Monstro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "8080e0570e55b196df684d37865c9e4e14c83a770c592fb46e8224d5d1c9a380",
+     "pt-BR": "Fotografei duas motos correndo entre os pés de uma criatura gigante, cujo pé sozinho bastava para bloquear duas ou três faixas.\nSeriam os pilotos encarregados de alguma missão importante? Ou simplesmente não estavam pensando?\nPassou pela minha cabeça que talvez quisessem morrer, mas os jovens pareceram passar entre os pés do monstro com perfeição.\nJá se sabe que essas motos são as mesmas vistas agindo de forma suspeita em vários outros lugares.\nTalvez esses jovens não sejam humanos, mas criaturas parecidas com gente que controlam os seres gigantes.\nE talvez segui-los revele o mistério por trás das aparições das criaturas gigantes, e até a chave para expulsá-las.\nVou continuar investigando. Aguardem novas notícias.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "03ade2b902cdb8dc062d90beb5c1e515022b683b43213c00d11e7c705cee036d",
+     "pt-BR": "Desgraça Pouca É Bobagem: Nada Engraçado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "3fd96be8c8a1076b828d25bcd8d48e43c020783a4713ab449d5153a5009d7c31",
+     "pt-BR": "Este carro, amassado e totalmente queimado, estava estacionado logo atrás de um caminhão-tanque quando o caminhão explodiu com o raio estranho de uma criatura gigante, e foi pego pela explosão.\nO dono, Shigehisa Kano (28 anos, nome fictício), tinha ido buscar a namorada naquele dia, no aniversário de um ano de namoro.\nEle estacionou em frente ao prédio onde fica o escritório dela, mas, quando entrou, ela estava com outro homem e disse que Kano era um perseguidor. Como o outro homem tinha ligações com a Polícia Metropolitana, Kano foi levado na hora para uma delegacia próxima.\nA polícia se recusou a ouvir os protestos de Kano de que não era perseguidor, e ele só foi liberado depois de assinar um compromisso de não se aproximar mais dela.\nQuando Kano voltou, confuso e exausto, o carro estava num estado deplorável, dezenas de metros longe de onde ele tinha deixado.\n\"...Será que eu... fiz alguma coisa errada...?\" Não encontramos palavras para Kano enquanto ele murmurava isso.\n\nSegundo alguns relatos colhidos na nossa reportagem, ela teria deixado escapar: \"Não dá pra tirar mais dinheiro dele, então preciso achar o próximo.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "98630a9c2c0ec30f7488c4d4d5bcc0f11173cceae47300ef1fa5388619fdf3bd",
+     "pt-BR": "Sério? O Efeito Surpreendente das Plantas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "911de41563bb8ec63be7e29669b99abbe81030dd1cf97fda98c85296c5f9bd99",
+     "pt-BR": "Chegou até nós uma informação difícil de acreditar, e quero compartilhá-la.\nSe você olhou a planta desta foto e se perguntou por que ninguém a levantou, pensou o mesmo que eu.\nNa verdade, ela não caiu por causa de um terremoto ou acidente. Foi deitada de propósito.\nSegundo uma pesquisa, uma planta deitada de lado produz dez vezes mais \"shinotonia\", uma substância relaxante, e a prática estaria se espalhando aos poucos pelos escritórios.\nEntrevistas em escritórios que adotaram a ideia revelaram efeitos consideráveis: \"No começo pareceu estranho e duvidei que funcionasse, mas nosso desempenho subiu 10%\" e \"As expressões das pessoas ficaram mais suaves, e a comunicação no escritório melhorou.\"\nA instituição responsável pela pesquisa explicou: \"Assim como as pessoas relaxam quando se deitam, descobrimos que as plantas também relaxam mais deitadas, o que estimula a produção de shinotonia.\" Já comecei a testar no meu escritório e espero contar os resultados na próxima.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "2c739e3d5ecec69b606c2be245a66aadfe3823a1e1a961311d00cf1f0529493d",
+     "pt-BR": "Um Prédio Comercial Suspeito",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "3ed6cebafd2cde44ada5998909f072fba0aa38401fb00f02e16278ce65a97593",
+     "pt-BR": "Trazemos mais uma atualização sobre o Edifício Yukiyanagi, a poucos minutos a pé da Estação Hinageshidai, que já abordamos várias vezes.\nComo já noticiamos, ele abriga muitas empresas jovens de TI e é popular entre os jovens pela imagem aparentemente alegre e moderna.\nMas, mais uma vez, descobrimos movimentações suspeitas. Quando duas criaturas gigantes misteriosas apareceram e se enfrentaram bem em frente ao prédio, várias pessoas foram vistas entrando e saindo durante o confronto.\nElas não estavam fugindo por medo. Passaram de propósito entre os pés das criaturas para entrar e, um tempo depois, saíram.\nTambém soubemos que uma dessas figuras suspeitas carregava uma caixa de aparência duvidosa.\nHá quem diga que foram buscar documentos importantes ou que só estavam saqueando durante o desastre. Eu discordo.\nJá sei que várias empresas do prédio têm parceiros de negócios cuja identidade continua teimosamente obscura.\nVou continuar investigando o caso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "b4a133f57add8a0e5efe49f0c6e31c3ba8b094b757aa9cd97ac7b680ef586365",
+     "pt-BR": "A Estação de Todos, Parte 24",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "41e6779b84e50e7a67ce5e2c5e5eb68d11019ddcd4cc4503790c7f132b376390",
+     "pt-BR": "Desta vez, vamos conhecer a Estação Hinageshidai.\nHoje, mais de 100 mil passageiros usam a estação por dia. Mas, quando foi inaugurada, era uma paradinha tranquila no meio do campo, cercada de plantações.\nNa verdade, não havia plano nenhum de construir uma estação aqui. Pouca gente sabe que bastou uma palavra de um grande fazendeiro da região para que se decidisse, às pressas, criar uma.\nA estação ocupa o espaço embaixo dos trilhos elevados, em vez de um prédio separado ao lado, por causa de um esforço desesperado para ficar pronta antes da abertura da ferrovia.\nComprar as plantações bem ao lado seria uma opção, mas o tempo de obra não ia dar, e por isso, de última hora, ficou assim.\nA estação pode ter nascido de um capricho bem egoísta, mas ninguém imaginaria que a região se urbanizaria tão rápido e a transformaria numa estação importante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "af59e3f0c7d7617dfcca74a4958647c8b604e988ce30c6760ed8b832af9702c2",
+     "pt-BR": "Empresas Onde Gostaríamos de Trabalhar, Parte 11",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "d80f1f0eaee9428271da17cc78d43121bc034eaef6effea9d9b330ae1a7a4acc",
+     "pt-BR": "Nesta 11ª edição, apresentamos o Escritório de Design Kezurokka.\nA Kezurokka é um coletivo de designers especializado em publicidade e web design. Alguns membros também programam e compõem música, o que permite à empresa cuidar de projetos inteiros sozinha. Os pedidos de grandes empresas não param de chegar.\nToda a equipe, incluindo a presidente, é formada por mulheres. A empresa também oferece amplo apoio com creche e trabalho em casa.\nFundada há apenas dois anos, ela já ficou pequena para o escritório atual e está construindo sede própria.\nMas, em vez de contratar muita gente de imediato, a prioridade é criar um ambiente que facilite o trabalho da equipe, com creche, serviços médicos, supermercado e outras lojas dentro do prédio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "665fbb93d199e06335155f60b2b50592571ba96fb5c90821e906094697031509",
+     "pt-BR": "Lojinhas da Estação: Luz e Sombra",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "340c3ee8ae7a6b7e9cf6c54672488e4d7ab8b5cf0c4eec8826198e2e6c197cfb",
+     "pt-BR": "Conversei com uma mulher que não fugiu e manteve a lojinha da estação aberta como sempre, enquanto criaturas gigantes causavam destruição ali do lado.\n\"Parece que esta é a única loja ainda aberta...\" Algo parecia preso na garganta dela, então insisti.\nA resposta foi desanimadora: \"O pessoal lá de cima mandou não fechar. Disseram que ia virar uma história bonita e fazer as ações subirem.\" Ela continuou: \"Dizem que me demitem se eu fechar. Que vão me pôr numa lista negra pra eu não arrumar outro emprego... Claro que a minha vida importa, então pretendo correr se a coisa ficar feia de verdade.\"\nDito isso, ela sorriu como se tivesse tirado um peso das costas. E acrescentou: \"Agora que falei, vou ser demitida. Mas me sinto melhor. Coloca na sua matéria. É a verdade.\"\nEsta matéria pode custar o emprego dela. Mas, como quem a publica, também quero ajudá-la. Junto com o conteúdo do pen drive que ela me entregou no fim, pretendo expor o lado obscuro da empresa na próxima reportagem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "1f0b2fb718b5eb54411d7d257fea4a6a4d92d9898759ee4a4a8aa90e0d6970f4",
+     "pt-BR": "Os Sete Mistérios da Estação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "59be74bacdd8f26cada0638e5f579b805cef6fcf3e2e9962a2690285ada7ca5c",
+     "pt-BR": "No topo da lista dos sete mistérios das estações estão, sem dúvida, os banheiros da Estação Hinageshidai.\nA qualquer hora do dia, eles estão sempre \"em limpeza\" e não podem ser usados.\nE isso vale tanto para o masculino quanto para o feminino.\nSempre que perguntamos à operadora, ela insiste: \"Nossos relatórios de inspeção confirmam que as instalações estão disponíveis para uso normal.\"\nOs funcionários da estação só deram respostas evasivas, então praticamente obriguei um deles a ir comigo ver de perto.\nUm homem vestido de faxineiro estava na entrada e disse que a limpeza estava em andamento. Teimosa, esperei duas horas, mas nunca terminava. Quando perguntei de novo ao mesmo faxineiro, ele disse que um cano quebrado impedia o uso dos banheiros naquele dia. Toda visita na minha semana de investigação foi assim, e nunca consegui usá-los.\nDepois, numa visita posterior, vi o tal faxineiro trabalhando na sala dos funcionários, usando o uniforme da estação.\nPor que a Estação Hinageshidai se recusa tanto a liberar os banheiros? Por que manter a aparência de que eles funcionam normalmente, em vez de simplesmente dizer que estão em obra?\nE por que a operadora insiste que não há problema nenhum? As perguntas sem resposta só se acumulam.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "b8feb3c82642954e8bbfaeb044c29f55114e68844b6aef7093e4c60d59ede11a",
+     "pt-BR": "Conheça os Funcionários da Estação, Parte 72",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "b5052b295be295ed1c762a9cc6675e099b33a3f21db7513660400010edc23692",
+     "pt-BR": "Desta vez, conversamos com Tatsuya Konoe (28 anos), que trabalha na tão comentada Estação Hinageshidai.\nEntrevistador (E): \"Sr. Konoe, há quantos anos o senhor é funcionário da estação?\"\nKonoe (K): \"Pouco mais de um ano.\"\nE: \"E o que fazia antes?\"\nK: \"Abri uma empresa de internet quando estava na faculdade e, depois de formado, continuei tocando a empresa.\"\nE: \"Então ela deixou de dar certo?\"\nK: \"Não, as vendas cresciam sem parar.\"\nE: \"Então por que virar funcionário de estação? Era seu sonho de criança?\"\nK: \"Ganhei mais dinheiro do que conseguiria gastar mesmo vadiando até os 100 anos, aí fiquei entediado. Então fiz um programa com um algoritmo simples que mostra uma profissão aleatória, rodei, deu funcionário de estação, e consegui a vaga por meio de um conhecido.\"\nE: \"Hã, então o senhor não tem um apego especial pela profissão?\"\nK: \"Dá pra dizer que tenho apego no sentido de ser divertido. Quando vejo gente indo e vindo desesperada todo dia por um salário miserável ou uma mesadinha, sinto pena, mas também acho engraçado, não acha?\"\n\nContinua na próxima edição.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "7aa2e9fda932c7900e26e3791583244d09cef333bc9b69d0b025cf35eaef255c",
+     "pt-BR": "Desmascarada! A Verdadeira Face de uma Ativista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "ae9c69e5b5acf7e0ed9cc2d4e37d28c6f247fce925005cd0073896aaf0b32c7b",
+     "pt-BR": "Chegou uma informação surpreendente sobre Katsuko Mitarai (38 anos), ativista humanitária que aparece muito na TV defendendo as condições de vida e os direitos humanos de diversas pessoas consideradas vulneráveis.\nEsta foto foi tirada dentro da Estação Hinageshidai. Ela mostra claramente Mitarai pressionando um funcionário da estação.\nPor incrível que pareça, Mitarai exigia que o funcionário fechasse as portas da estação. Isso mesmo com duas criaturas gigantes por perto e muita gente ainda tentando fugir. Segundo a pessoa que tirou a foto, Mitarai insistia, emburrada, que as portas fossem fechadas, tudo para que nada de mal acontecesse a ela. Ela até deu a desculpa de que isso protegeria quem já tinha se abrigado ali, mas, objetivamente, parecia preocupada apenas em salvar a própria pele.\nDizem que as pessoas mostram quem realmente são numa crise. Será esta a verdadeira Mitarai?\nSó eu, pensando nisso, de repente passei a achar as atividades dela suspeitas?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "f9de9d0ae111b7c31ceb276b6d64415f298a9bc9891bb5965dae8f6398397490",
+     "pt-BR": "O Trabalho Acima da Vida?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "6fcb82547bb1455c6bcf8c54f061426c4dd1e5657ebc2c8d55fab414f6928cb9",
+     "pt-BR": "Dentro de um prédio bem ao lado de onde as criaturas gigantes apareceram, havia gente ainda afogada em trabalho.\nEnquanto uma criatura gigante batia no prédio, as janelas se estilhaçavam, as paredes rachavam e os papéis do escritório voavam para todo lado. Mesmo assim, eles continuavam trabalhando com calma, como se nada estivesse acontecendo. A cena era ao mesmo tempo sublime e assustadora.\nQuando tentei visitar o escritório depois, o prédio estava interditado por risco de desabamento.\nTambém não consegui falar com a direção da empresa, e até hoje não sei se aquelas pessoas escaparam em segurança.\nQuando visitei o prédio, achei ter ouvido, bem de leve, o som de teclados trazido pelo vento de um andar de cima. Só posso rezar para que tenha sido imaginação minha.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "3102f0bb41e97e206bf93f36f91bf2c0e406616415e5fb26dda868a3793add25",
+     "pt-BR": "Mesa Funcional Jobu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "e3330c1d374b1bf5118813d729bbd2a421d5363bb6d9bcc090463387843b1ac4",
+     "pt-BR": "As mesas de escritório evoluíram ainda mais.\nConheça a mesa funcional Jobu. Feita do material ultrarresistente Ekipotan, ela aguenta impactos de até um milhão de toneladas.\nEscondido debaixo dela, você estará protegido mesmo que o teto desabe.\nE não é só isso. Em caso de um dos atentados a bomba que andam tão frequentes, basta se abrigar atrás dela.\n\nHá, porém, um defeito: ela pesa uma tonelada. Num prédio firme, isso não é problema, mas quem for usá-la num prédio velho e malconservado deve tomar cuidado para ela não atravessar o piso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "1ba7e2fa7f47821d927e1a5b891b6432fdb8e67e14201d3e1664c7dc01e30a77",
+     "pt-BR": "Mesa Funcional Mamoru",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "48b51ef4eec0b99ea5360d24c99c94555771822ae8efae64702aec04c8a31bb4",
+     "pt-BR": "Desta vez, apresentamos a Mamoru, da popular linha de mesas funcionais.\nEste modelo se transforma num traje de proteção que cobre o corpo inteiro.\nEmbora seja menos resistente que a mesa funcional Jobu, dizem que ela é tão durável quanto os coletes à prova de balas atuais.\nAté a gaveta embutida vira capacete, garantindo proteção para o corpo todo.\n\nEla traz muita segurança quando um desastre obriga você a atravessar uma área perigosa.\nMas o processo de transformação é complicado, então recomendamos muito treinar com frequência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "c201ecbb0c740de2cbd612d4683ef646adec849586c59cea4b02daa39745dcd6",
+     "pt-BR": "Mesa Funcional Karukaru",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "99687bcfc871e0420a5ac872e754262524f7fbefb611ed18ca8d0bf6ff265603",
+     "pt-BR": "Uma boa notícia para empresas que mudam as mesas de lugar o tempo todo, agora que estruturas mais flexíveis estão se espalhando.\nA mesa funcional Karukaru é feita de uma fibra especial, a Tetofanu, e é oca por dentro, por isso pesa apenas 100 gramas. A pressão do ar interno é controlada em cada canto por um computador embutido, então não há risco de ela se deformar como um balão, mesmo com as mãos ou objetos pesados em cima.\nE, como dá para esvaziá-la, você pode levar uma mesa inteira no bolso da camisa.\n\nVocê pode achar que algo tão leve ficaria deslizando e seria difícil de usar, mas ela suga o ar por baixo dos pés, então gruda até em carpete e funciona igualzinho a uma mesa comum.\n\nSó um detalhe: lembre-se de que ela gasta energia elétrica.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "f00933d00e66e4a7945f9c979eb50e9b428e34d6165c67aad957a697f119dc2c",
+     "pt-BR": "Mesa Funcional Sui",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "b5db0aa587158d293719a2cb29101e3d5307bc4f0d99f11cdb4717f6e3b90ee3",
+     "pt-BR": "A mesa funcional Sui foi criada para atender a quem queria uma mesa que deslizasse fácil pelo escritório.\nCom um toque num botão, rodinhas esféricas saem dos pés. Conecte-a à sua cadeira com as peças incluídas e você se move com uma facilidade impressionante.\nPor ter sido feita de propósito sem motor, ela ganhou elogios por ajudar as pessoas a se exercitarem mais e tem ótimos resultados para quem quer emagrecer.\n\nA mesa também vem com tomadas de fábrica. Ligue o carregador incluído numa tomada do escritório e ele alimenta sem fio a bateria da mesa, permitindo que você se mova com o computador ligado em cima dela.\n\nO problema é que esse sistema sem fio é tão potente que também puxa energia, sem permissão, de carregadores instalados em escritórios vizinhos.\nTem gente que nem instala carregador no próprio escritório de propósito e já foi pega roubando energia.\nUm recurso de identificação provavelmente resolveria o problema, mas, por algum motivo, as especificações continuam iguais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "b58f71fdc42b560bcbdfbcf057ff09738c729de5509dbb2958f29ca80ca0e518",
+     "pt-BR": "Um Fax Misterioso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "bfebfd23ced6c5c165d9026b0f846c836eb265a4a362e0e15db2e4f92b439ea0",
+     "pt-BR": "Um escritório teria recebido um fax misterioso tarde da noite.\nNele estava escrito \"A T R Á S\" com letras que pareciam feitas com um dedo molhado em algum líquido.\nOutro fax chegou no mesmo horário no dia seguinte. A mensagem era igual, mas, pelo jeito, tinha sido escrita de novo, já que as letras eram um pouco diferentes.\nEsses faxes misteriosos continuaram chegando por duas semanas.\nSem poder mais ignorar, o escritório procurou a polícia, que não levou o caso a sério. Sem alternativa, contrataram um detetive para descobrir o remetente.\nO número foi identificado logo, mas não era usado havia décadas, e o antigo dono já tinha morrido. O detetive também encontrou o lugar onde ficava a casa do antigo dono, mas era uma casa abandonada.\n\nTambém não havia ligação nenhuma entre os funcionários do escritório e o antigo dono ou seus parentes.\nOs faxes continuaram chegando todo dia enquanto o detetive investigava, mesmo depois que o escritório trocou de número.\nQuando aquele fax continuou chegando mesmo com o aparelho desligado da tomada, ninguém conseguiu mais acreditar que fosse obra de uma pessoa comum, viva.\n\nPor que ele era enviado, por quem, como e com qual objetivo?\n\"Resolvi o mistério. É...\" O relatório do detetive por telefone parou aí, e desde então ele está desaparecido.\nVários outros detetives foram contratados depois, mas todos sumiram bem quando pareciam chegar à resposta. A história se espalhou, e parece que nenhum detetive aceita mais o caso.\n\nNo escritório, o fax continua chegando todo dia, no mesmo horário.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "7af06af84b1c528b37894bcc09845620eb50cfb2085f07af479c6db327107ec3",
+     "pt-BR": "O Papel Ainda Resiste",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "0ca7dc96d9c2d0aef2d30d407d9e9c8192a19b93b63fb76a2ae9339451b59a07",
+     "pt-BR": "Pilhas de documentos arquivados com todo o cuidado lotam as prateleiras do escritório. É uma cena conhecida para quem trabalha, principalmente para quem tem emprego de escritório.\nMesmo com a popularização dos computadores e tantos anos depois de \"sem papel\" virar moda, as coisas continuam assim.\n\nHoje, até documentos que exigem assinatura podem ser resolvidos com mesas digitalizadoras e aparelhos parecidos. Por que ainda não conseguimos largar o papel?\nUma teoria compara isso ao desejo de possuir coisas.\nTer algo físico, o papel, em vez de algo eletrônico, traz uma sensação de segurança.\nPessoas de gerações que não cresceram com computadores ficam especialmente inseguras com a ideia desconhecida da digitalização. O papel, que elas podem ver e tocar, as deixa tranquilas.\n\nAcredito que existem documentos em papel que merecem ser preservados, inclusive por motivos sentimentais.\nAinda assim, não consigo deixar de achar que sobra papel desnecessário demais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "856cbb59e7854e2d81343fba3073643e6d76c56be67bde041e18195f4ca7a709",
+     "pt-BR": "O Que Há de Novo nas Estantes de Escritório",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "ef7226092de51be2d80400f6eb334451af56427db32cfa2000fd543e03022f88",
+     "pt-BR": "Estantes são comuns em escritórios, mas hoje quero apresentar uma equipada com o que há de mais moderno.\nPrimeiro, o espaço para pendurar casacos vira uma cápsula de abrigo em emergências.\nEntre nele e aperte o botão no fundo: uma porta desce e isola você do lado de fora.\nEla é à prova d'água, então a água não entra. Vários aparelhos ficam embutidos na estrutura, e um deles purifica o ar de fora e o manda para dentro. Por incrível que pareça, ela gera ar até cercada de água do mar.\nClaro que também tem um vaso sanitário simples e ar-condicionado para o cheiro não ficar acumulado.\nUm monitor mostra os arredores pelas câmeras e sensores da estante, além de imagens em alta resolução de um satélite exclusivo.\nComo o satélite acompanha sua situação, uma equipe de resgate especializada corre até você se, por exemplo, você ficar soterrado nos escombros ou debaixo d'água.\n\nSó posso me maravilhar com o quanto a tecnologia avançou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "1535dcb5b01612ddc4c498d1e7c9e40302be8b8eaeb22c7271eda3133cf16084",
+     "pt-BR": "Seu Bebedouro É Seguro?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k192",
+     "source_text_sha256": "68165ba8c307b671800b687e53e8c9a7b640fe1f1793d5db9749923daf482f36",
+     "pt-BR": "Bebedouros oferecem água limpa sempre que você quiser. Hoje eles estão em muitos escritórios e casas.\nMas essa água é segura mesmo?\nUma empresa foi investigada na semana passada. A notícia passou quase despercebida, ofuscada por um escândalo político na mesma época, mas essa fornecedora enchia galões com água da torneira e vendia como \"água pura\".\nPior: ela adicionava hipoclorito de cálcio, um desinfetante, por precaução, e depois misturava um composto chamado Monefurio para disfarçar o cheiro.\n\nE não parou por aí. Os galões eram recipientes velhos e desgastados que outras fornecedoras tinham descartado, recolhidos sem permissão e reaproveitados.\n\nE a água da torneira vinha de lugares públicos, como parques, no meio da madrugada. É de deixar qualquer um sem palavras.\n\nA empresa que fornece seu bebedouro é confiável?\nRecomendo conferir a lista de empresas com segurança confirmada no site da Agência de Defesa do Consumidor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "3929ca00920643738d596b55f40c604db398e0479c97348cd651996b11bcd5e1",
+     "pt-BR": "O Tentador Botão Vermelho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "9386c2a9b338b6fdf2ab1dab81541878400c73c797906a40769c883eead9d3fc",
+     "pt-BR": "O botão vermelho em cima do hidrante. Todo mundo sabe que ele dispara um alarme de emergência quando apertado.\nMesmo assim, quantos de nós não sentimos vontade de apertá-lo quando o vemos? Claro, apertar sem emergência nenhuma só causa transtorno. Mesmo adultos que sabem disso podem sentir o impulso de repente quando batem o olho nele.\nUma pesquisa teria ligado isso ao estresse. Quanto mais estressada a pessoa, mais fácil ela sente vontade de apertar. Ela quer o alívio de fazer algo proibido, ou de ver os outros entrarem em pânico.\nPor outro lado, há uma lenda urbana de que o botão emite ondas de rádio feitas para chamar a atenção e despertar curiosidade.\nA ideia é tão absurda que ninguém leva a sério, e desmontar o aparelho não revelou nada do tipo. O fabricante e o vendedor, claro, também negam.\nMesmo assim, algo me incomoda. Visitando uma empresa que fabrica hidrantes, dei uma espiada, por acaso, num depósito com unidades prontas e achei ter visto algo parecido com um altar. A porta do depósito foi fechada logo, mas o funcionário que me acompanhava pareceu ficar tenso por um instante.\nVou continuar investigando. Aguardem novas notícias.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "1faf0efb6d8e97e8f31de9220b1e1a29fadafe0d3e5129065d489a012166fbac",
+     "pt-BR": "A Encrenca de Não Arrumar as Coisas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "a72cfead1ee5bf2c803a8e4f746962016c8d2cbe87b8c0855976453ddf83e3c8",
+     "pt-BR": "Estas caixas de papelão estão empilhadas num corredor de escritório.\nElas estariam cheias de documentos e ficaram assim porque não há onde guardá-las.\nVer uma cena dessas me entristece muito, porque ela reduz bastante as chances desses funcionários sobreviverem a um desastre.\n\nNas minhas reportagens, já confirmei vários casos em que pilhas de documentos impediram pessoas de chegar à escada de emergência, ou em que caixas caindo esmagaram gente até a morte.\n\nNão precisa arrumar só para ficar bonito. Arrume para ajudar a si mesmo a sobreviver.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "99e3c949930b5e5f1f0a4288124697622d09f85a7008a7297d0598587ea3c67f",
+     "pt-BR": "Era Para Salvar Vidas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "fe117d8ac335b2f6b706480134574e4b0ac1725688664721bf4155b753081bf1",
+     "pt-BR": "Aconteceu um crime cruel envolvendo um DEA, o desfibrilador.\nUm jovem que passava usou um DEA num idoso que caiu com insuficiência respiratória, mas, infelizmente, o homem não resistiu.\nUma pessoa comum não responde criminalmente só porque usou um DEA numa emergência e não conseguiu salvar alguém.\nEntão qual era o problema?\nNa verdade, foi um crime planejado pelo jovem.\nDe olho no patrimônio considerável do idoso desconhecido, o criminoso começou trocando cumprimentos em parques como se fosse por acaso e, aos poucos, ganhou a confiança dele, como se fosse um neto de verdade.\nSem família, o idoso acreditou nas mentiras, adotou o jovem e deixou tudo arranjado para que ele recebesse um seguro alto se algo lhe acontecesse.\nO criminoso então foi enfraquecendo o idoso aos poucos, misturando remédios no chá e em outras bebidas.\nFoi isso que o fez cair na rua.\nO mais assustador é que o criminoso parece ter mexido no DEA na hora de usá-lo.\n\nPelas circunstâncias da morte, não houve investigação especial, e o plano parecia ter dado certo.\nComo ele foi descoberto?\nA verdade é revelada em \"Coletânea de Mistérios Milagrosos: Sentimentos Modernos\", já à venda e fazendo sucesso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "eac11453e9cb6487a5a8f0aaf361d2e9f76730a0f850d296730b458e0ecc41ca",
+     "pt-BR": "Achei! O Truque Escondido da Máquina de Bilhetes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "fc36328a4cc999bcd8cbb9bf60c4784e91837daa9c5caa35a913a0280612042a",
+     "pt-BR": "Você sabia que uma máquina de bilhetes comum, de estação, esconde um truque único?\nEscolha certos botões numa ordem e num ritmo específicos, e ela solta um bilhete especial.\n\nO bilhete especial não serve para viajar, mas, se você entregá-lo a um funcionário da estação, recebe algo em troca.\n\nInfelizmente, não posso revelar aqui exatamente como fazer o truque, nem o que você ganha.\nMas eu consegui mesmo o bilhete especial, e o que recebi em troca deixou minha vida bem mais rica.\nSe você conseguir esse bilhete especial, não há dúvida de que ele vai trazer felicidade a qualquer um.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "2517599f4929ed061fdc2da5f0717fa8ad09937774b42ec54a3c366cf7813171",
+     "pt-BR": "O Que Havia no Hidrante de uma Escola",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "79d045564853a827bc8db5b2dbd458fe2ebe40172c1f8395db7c6902099d7150",
+     "pt-BR": "Um caso ocorreu numa escola primária perto da Estação Hinageshidai no dia seguinte ao fim da confusão das criaturas gigantes.\nUm socorrista que verificava os danos encontrou maços de dinheiro espalhados num corredor da escola. Pelo jeito, os tremores do dia anterior tinham aberto a caixa de um hidrante, e o dinheiro de dentro se espalhou.\nO diretor chegou logo depois do socorrista e admitiu que ele mesmo tinha escondido o dinheiro.\nEle tentou chegar à escola no dia da confusão, mas as ruas bloqueadas o atrasaram até de manhã.\nGrandes quantias de dinheiro também foram encontradas em outros hidrantes.\nO dinheiro era propina acumulada por indicações que garantiam vaga em escolas de ensino fundamental de prestígio.\nEle costumava guardá-lo num cofre em casa, mas o levou às pressas para a escola ao saber que uma investigação estava para começar. A confusão das criaturas gigantes estourou naquele mesmo dia.\nO crime não compensa. A polícia diz que também vai tentar identificar quem pagou as propinas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "d70c047bc477b118c9d7413d688232064cc0ccfe2ff24f48cbfc18377de811cf",
+     "pt-BR": "As Lendas Urbanas da Estação Hinageshidai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "f5b43dfdf8a20ef3754710a20960d3366e59c82be543cb5b8689eda719ba9ad6",
+     "pt-BR": "Os guarda-volumes da Estação Hinageshidai levam a uma instalação secreta subterrânea.\nVocê já ouviu esse boato?\nDizem que, se você abrir os guarda-volumes numa certa ordem e disser certas palavras diante de um armário específico, surge uma passagem atrás deles que leva ao subsolo.\nSeria uma instalação para certos figurões se abrigarem numa emergência.\n\nQuando perguntamos à empresa que opera a estação, ela respondeu que isso não existe e, educadamente, nos mostrou as plantas.\n\nMas eu vi. No meio da confusão das criaturas gigantes, vi o deputado estadual Kamozo Gokita se esgueirando para trás dos guarda-volumes e, quando cheguei perto, havia mesmo uma passagem onde cabia uma pessoa.\nTentei entrar, mas um homem de preto apareceu de repente na minha frente e, sentindo o perigo, fugi às pressas.\n\nNa verdade, enquanto digito esta matéria, ouço alguém do lado de fora do escritório tentando entrar.\nSe eu conseguir escapar, vou continuar a reportagem e trazer a verdade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "f664c8bc08d4ca664858ecfedd5447e0ccee29c361a13435f94cf40fa1a8c89b",
+     "pt-BR": "O Segredo da Lixeira",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "10c2b414578f57f741e3eed51194b5edf076321f2d8c963e908e93c3ab43fdd8",
+     "pt-BR": "A Estação Hinageshidai tem equipamentos de última geração que, à primeira vista, parecem comuns.\nEsta lixeira é um exemplo.\nNa verdade, ela tritura e digere sozinha o lixo de dentro. Talvez \"digerir\" não seja o termo técnico correto, mas, de qualquer forma, se você deixar quieto, o lixo some sem você perceber.\n\nSe tiver oportunidade, observe a lixeira por um tempo. Você deve conseguir ver o lixo diminuindo aos poucos bem diante dos seus olhos.\n\nO aparelho seria um protótipo criado por um instituto de pesquisa e instalado nesta estação para coletar dados.\nNaturalmente, ele também conta com várias medidas contra roubo.\nA pesquisa é revolucionária e parece ter envolvimento do governo. Se der certo, pode ajudar a acabar com as montanhas de lixo do mundo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "42bf59c04fe73b4334079f240aa74150c86c976f3f80997db18883aad68e7d3f",
+     "pt-BR": "Uma Peça Primorosa: Avaliada em 300 Milhões de Ienes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "06c3d637a1fcddd30a979468c33d22347f85c049382739271a5caa91153e071d",
+     "pt-BR": "Você sabia que a porta da sala dos funcionários da Estação Hinageshidai foi feita por Toshiya, terceiro filho do grande mestre Shunzo Sanuki?\nÉ a primeira porta que Toshiya fez na vida, quando ainda estava começando. Toshiya não é um projetista completo como o pai, Shunzo Sanuki, mas é muito respeitado como escultor de objetos. Hoje ele trabalha só como escultor, mas, como se destaca em muitas coisas, assim como o pai, muita gente espera que um dia ele siga o mesmo caminho.\n\nAquela porta, feita enquanto Toshiya ajudava no trabalho do pai, numa época em que ainda não tinha encontrado seu próprio rumo, hoje está avaliada em 300 milhões de ienes.\nSua raridade vem do fato de ser a única peça de arquitetura que ele já fez, antes ou depois.\n\nFilho de peixe, peixinho é?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "9044ae04ae5f71aacd7d755828de41bd02b3b871d418adaa7fc4bfb5fa5dab19",
+     "pt-BR": "Espírito Jornalístico, ou Só Imprudência?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "9ca920e4efc8f9d064da2cd7f1bd3cfd274c56ea5f5526506f6a7c93c6ae8e67",
+     "pt-BR": "Um homem foi visto fotografando uma criatura gigante de pertinho.\nEle teria subido num carro abandonado e filmado concentrado enquanto a enorme cauda da criatura passava bem por cima dele.\n\nDescobrimos que ele era fotógrafo freelancer, mas, mesmo considerando a profissão, é preciso questionar uma atitude tão perigosa.\nQuando consegui falar com ele depois, fiz essa pergunta.\n\"Tem coisas que só eu posso fazer. É só isso.\" Com essas palavras, ele seguiu para a próxima pauta.\nFotógrafos e jornalistas parecem ter uma determinação maior do que eu imaginava.\nAinda assim, acho que também é preciso evitar o perigo quando a situação pede.\nDepois que se perde a vida, não há mais nada a fazer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "7ee6c67da0e87e32151f553de6d87d34b16274b40cc68438931fb66df59250f0",
+     "pt-BR": "Tragédia! Uma Mãe Sem Rumo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "1c92182bf61c96dffd6ea9a32023198f2c400b593a9ef7a88515507194130ddc",
+     "pt-BR": "A mulher estava atônita perto das catracas da Estação Hinageshidai, cercada de latas de suco espalhadas aos seus pés.\nEnquanto criaturas gigantes causavam destruição, ela foi de loja em loja até finalmente conseguir comprar o suco. Então um jovem que entrava correndo na estação esbarrou nela, espalhando as latas pelo chão e derramando todo o conteúdo.\n\nEla mora sozinha com o filho pequeno, que estava de cama com febre.\nO filho queria um suco da moda, então ela vagou pelas ruas à noite, por uma cidade onde criaturas gigantes estavam à solta, procurando por ele. Finalmente o encontrou perto da Estação Hinageshidai e comprou todo o estoque. Estava voltando para casa quando o esbarrão estragou tudo.\n\nNão dá para culpar o jovem que esbarrou nela. Ele devia estar desesperado para fugir da área claramente perigosa em volta da Estação Hinageshidai.\nEla mesma disse que não o culpava. Mas acrescentou: \"Não sei como vou encarar meu filho\" e \"Não posso voltar pra casa assim\". Com essas palavras, ela sumiu pela cidade onde as criaturas gigantes causavam destruição.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "9372a5e1a356689418729f72130aa80d60bc7b6727ef0f5dd9979a3bd1bcd540",
+     "pt-BR": "Cenas da Estação: Na Porta do Banheiro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "bcfec89bf2b42cb56eb753ddbdee157eb8b7d62f8297ebba75bb85611b98f936",
+     "pt-BR": "Um homem se remexe sem parar na porta de um banheiro público com a placa \"Em limpeza\".\nMuita gente já passou por isso: você quase nunca usa, mas de repente precisa de um banheiro, e ele está sendo limpo.\nVocê se pergunta por que tinha que ser logo agora. Ir até outro banheiro público seria perigoso, então você se convence de que a limpeza vai acabar logo e simplesmente fica esperando.\nAs estatísticas indicam que quem faz isso tem grandes chances de acabar procurando outro banheiro de qualquer jeito.\nIsso porque limpar um banheiro dá muito mais trabalho e leva muito mais tempo do que se imagina.\nPensando nisso, é mais sensato procurar outro lugar assim que você descobre que o banheiro está em limpeza.\nHoje em dia, há aplicativos que mostram banheiros públicos disponíveis perto de você. Recomendo experimentar um.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "68689f1e8f5c675d3d89b2a4879e1109a1b48a652380d4a4b8a0af6f3f429f3c",
+     "pt-BR": "Paixão Escondida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "e38221376a86ac41b6823a0491e7a8e284d9e8f3e64e89b5b873a6cef67323a7",
+     "pt-BR": "Quase todos eles são inexpressivos.\nNão bajulam os clientes, nem dão a entender, com ar de superioridade, que só vão comprar algo porque você está em apuros.\nEstão sempre serenos.\nNão quiseram me dar detalhes, mas, pelo jeito, a empresa grava essa mentalidade neles durante o treinamento.\nHá até uma lenda urbana de que eles são clones, já que todos os funcionários parecem idênticos em tudo, não só nas roupas. Isso também seria resultado do treinamento.\nE dá para ver a paixão escondida nos olhos deles. Eles brilham com a convicção de que deixar os clientes felizes comprando suas coisas é a maior alegria deles.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "aeeded5b22a5891a42dce1f5e5eb3e7c26f9b036d7c951fa450d1dcb95049d13",
+     "pt-BR": "Explorando Elevadores, Parte 2038",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "2ffaaadd136ecddd12c48e69d0532c2d71865064f1251077189586d3aa0bdd6b",
+     "pt-BR": "Desta vez, nós, da \"Sociedade dos Admiradores de Elevadores\", visitamos o elevador do Edifício Yukiyanagi.\nEste elevador não foi feito por uma empresa comum, mas projetado especialmente por ninguém menos que Shunzo Sanuki.\nSanuki já estava aposentado, mas, por ser grande amigo do dono do prédio, projetou esta obra-prima.\n\nComo você talvez já saiba, a palavra \"concessão\" não existe para Sanuki. Por isso, os operários teriam sido obrigados a refazer o trabalho várias vezes. Mas o incrível de Sanuki é que a história não parou aí: os que tiveram que refazer o trabalho melhoraram muito a partir dali e hoje são estrelas e consultores técnicos de grandes construtoras, e todos dizem: \"Aprender com o Sanuki naquela época foi o que deu início a tudo.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "4279c6cb7baa20afbee1538b6d109ef858f616507ada1a95217a0bf0497da1ba",
+     "pt-BR": "Passeio Alegrinho: Edição Escada de Emergência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "5fdceaab86aa2caa1b5ece2d19fffa37bd01ea4cb5099156f2a63561047e50f1",
+     "pt-BR": "Nossa querida série \"Passeio Alegrinho\", escrita sob a inspiração de umas biritas, chegou à sua 10.482ª edição.\n\nDesta vez, vamos falar das escadas de emergência.\nQuando você está alegrinho, encostar a bochecha num degrau é uma delícia de geladinho.\nElas também são ideais para se agachar quietinho quando você está pra baixo.\nSe a escada de emergência for externa, e não cercada por paredes, ela pode até virar cozinha para assar peixe seco durante a hora extra da madrugada.\n\nAtenção: principalmente no exterior, as portas das escadas de emergência às vezes não abrem pelo lado da escada, exceto no térreo, por segurança.\nCuidado para não entrar sem querer na escada de um arranha-céu e acabar obrigado a descer um número absurdo de andares.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "39d23d631d8d7a3cf4cfcaa963e82d21d1373151d070a0c3fa8c92ac3dac8e51",
+     "pt-BR": "Batidas na Calada da Noite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "eb1bccb49e38591024b951f6984314064ab5504074788a7db367aa811b9c3c6c",
+     "pt-BR": "Tarde da noite, o som de um teclado ecoa num escritório escuro.\nUm homem trabalha sozinho.\nEle abriu a empresa e hoje toca tudo sozinho. Como sempre, digita sem parar, desta vez para cumprir um prazo na manhã seguinte.\nPelo jeito, essa situação é quase constante. Ele quase não volta ao apartamento, e toma banho e lava roupa em lugares próximos.\nEle diz que gosta do trabalho, mas será que condições assim deveriam passar sem questionamento?\nSei que poder fazer o quanto quiser o trabalho que ama pode parecer invejável para muita gente. Ainda assim, não consigo deixar de pensar se isso é saudável para um ser vivo, para um ser humano.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "f5a53685b491f22b859a1c1bb2d0400369d5789309699276f8fe6d68dd63c601",
+     "pt-BR": "\"Rápido!\" Gente Correndo para a Estação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "561bbd015fca555ee64c9d4dcb48731989f77e385664a1ccd411a2fb6243d422",
+     "pt-BR": "Esta foto mostra pessoas correndo para a Estação Hinageshidai, cada uma desesperada para chegar primeiro, enquanto raios das criaturas gigantes atingem o chão de vez em quando.\n\nEntrevistas posteriores revelaram que elas perderam a hora de fugir, ficaram escondidas nos escritórios por um tempo e finalmente criaram coragem para correr.\n\nMuita gente vê a humanidade como a rainha absoluta de todos os ecossistemas, mas isso mostra o quanto essa ideia está errada. As criaturas gigantes não são a única ameaça: somos igualmente impotentes diante de qualquer desastre natural.\nTemos só duas escolhas: fugir, ou nos esconder e nos proteger.\nDiante desta confusão, talvez a humanidade devesse repensar qual é o seu lugar no mundo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "f681095d9f240f6da5efe6f9238edbe1cd31b3940fa0f61b90fe3cc632dbc2f0",
+     "pt-BR": "Uma Pessoa Estranha num Escritório à Noite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "dfc7af202f950e63119cda1ace1f6589a97dce45521f0affb5d8c37dd5b058ec",
+     "pt-BR": "Uma mulher está agachada num escritório escuro.\nQuando alguém fala com ela, ela resmunga alguma coisa e se afasta, ainda agachada.\nParece que exigências impossíveis no trabalho fizeram o estresse dela explodir desse jeito.\nHavia outros funcionários por perto, mas ninguém tentou acalmá-la ou consolá-la. Nenhum deles tinha energia sobrando.\n\nDeveria ser uma cena muito triste.\nMas, por acaso, descobri depois que essa mulher era uma funcionária difícil, que se agachava em protesto pela menor coisa.\nEla vivia esquecendo de avisar as coisas ou largava tarefas porque não sabia como continuar. Quando alguém apontava isso, ela fazia a mesma coisa.\nNão consegui esconder o espanto com um comportamento tão infantil quanto o de uma criança fazendo birra numa loja de brinquedos.\n\nE o mais assustador é que o número de adultos que agem assim estaria crescendo rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "77b9dc6d2a1bf99a21f3b023e2d27e90fe75889d8c89d88b65466c99567107cd",
+     "pt-BR": "Falta de Noção do Perigo, ou Calma Total?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "80e5dd3ca46f570b502a876f05993d43fef16ee11e49833561ae4a655d6887ee",
+     "pt-BR": "Um homem na Estação Hinageshidai jogava no celular, tranquilo e concentrado.\nCom criaturas gigantes causando destruição ali perto e todo mundo em volta apavorado ou fugindo, a calma dele, como se estivesse tudo normal, me chamou a atenção.\n\nCurioso, fui conversar com ele. Ele parecia raciocinar de forma muito lógica e entendia perfeitamente que a situação era crítica.\nFiquei impressionado por ele conseguir manter tanta calma mesmo sabendo disso.\nCurioso sobre a profissão dele, perguntei o que fazia da vida. Ele só sorriu e não respondeu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "6e93dc099c49c6882f76a81f1c5872dd6321aec235b403f1bb770caf3aa42cd6",
+     "pt-BR": "\"Pra Onde a Gente Foge...?\" Pessoas Fogem em Pânico",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "3f3ab9783891cb5c013d48be5b3e37cf9b753121a5e67de91f289dca86637000",
+     "pt-BR": "Pouca gente percebe que sair de um carro parado para ver o que está acontecendo durante um incidente repentino também pode ser perigoso.\nEm rodovias e ruas comuns, enquanto houver carros e motos andando, ficar distraído no meio da pista é correr o risco de ser atingido por quem vem atrás.\n\nÉ compreensível entrar em pânico numa situação que a maioria das pessoas nunca vai viver.\nMas é justamente nessas horas que os cuidados do dia a dia ajudam a evitar um acidente inesperado.\n\nNa prática, muitas vezes só percebemos isso quando acontece com a gente. Espero que esta matéria sirva de lição e ajude o máximo de pessoas possível.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "8e0044c7b125cc8be561964fab03a6ab45de38fe91bfb84d7862a59486d7e114",
+     "pt-BR": "Prédios Desabam, Pessoas Hesitam",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "09bb7cbca9f6d49b16307e171dbe6b20bcee3046b8d16691fcd52e6fa8913b37",
+     "pt-BR": "Pessoas fogem tentando escapar dos escombros de prédios desabando.\nAssim como em desastres como terremotos, é importante ficar no lugar mais protegido possível de um desabamento.\nNuma avenida larga como esta, o canteiro central é um exemplo. Lá também não há perigo de ser atingido por carros vindo atrás.\n\nÉ importante entender que todo tipo de objeto pode virar uma ameaça mortal e pensar nessas situações com antecedência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "8e8b4c2c48529dc49ab12207b8fe903fe37e83ed8497c870a82efa0ce5f9f9b4",
+     "pt-BR": "A Mulher Que Espera",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k234",
+     "source_text_sha256": "2ec82e4b2e36aa2e604fd3832432f4caf85a74b10d782c8091624551911705a0",
+     "pt-BR": "No meio de todo esse caos, uma mulher ficou dentro da estação em vez de fugir.\nEla esperava o homem com quem namorava havia uns três anos.\nSem conseguir falar com ele por causa da confusão, ela também tinha perdido um dos brincos que ganhou dele no primeiro encontro\ne deixado cair o relógio de casal que os dois tinham comprado juntos.\nApesar de um mau presságio atrás do outro, ela simplesmente esperou.\nTalvez não quisesse mostrar o quanto era dedicada. Ela fingia irritação de propósito e reclamava dos defeitos do namorado.\nTremendo de medo, mesmo assim continuou esperando, firme.\nA expressão rápida no rosto dela quando o namorado finalmente chegou à estação disse mais do que qualquer palavra.\nEscondendo essa expressão na hora, ela xingou o namorado enquanto os dois deixavam juntos a zona de perigo.\n\nCom tantas notícias tristes nestes incidentes, quero agradecer a esse casal por nos dar uma cena tão comovente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "2fa3ef3b19e91a8cbc3809ef5741905f6ad674954fd079bdda10de66551f2618",
+     "pt-BR": "Os Sete Mistérios do Edifício Yukiyanagi: 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "6219c543ac0a4bf0f2e1977e874f564b8b2c965fc25fa6e3ce44bf092e2a5b41",
+     "pt-BR": "Os Degraus Que Mudam no Edifício Yukiyanagi\n\nHá uma escada no Edifício Yukiyanagi cujo número de degraus muda.\nA escada de emergência entre o terceiro e o quarto andar teria doze degraus em alguns momentos e onze em outros.\nNão é boato nem lenda urbana: existem dados reais de verificação.\n\nComo muitos leitores, eu duvidei e fui investigar pessoalmente.\nO resultado confirmou que é verdade.\n\nNão é ilusão de ótica nem truque. O número de degraus da mesmíssima escada muda de verdade.\nQuando há menos degraus, cada um fica um pouco mais alto e mais fundo, mantendo a escada inteira, sem interrupção.\n\nO mecanismo continua desconhecido, mas as estatísticas indicam que o momento das mudanças tem relação com as marés.\nTraremos novidades assim que surgirem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "42f09ab4912aed83d5afabb14812b5ae9f24b8b8cf52753ca5b136111cfa2227",
+     "pt-BR": "Os Sete Mistérios do Edifício Yukiyanagi: 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "106e39aa1f5bc9a4508f6b0dc869c2e2cfde956c596b1a7db33402bf31005ac5",
+     "pt-BR": "O Andar Misterioso do Edifício Yukiyanagi\n\nComo em alguns outros prédios, o Edifício Yukiyanagi não tem \"quarto andar\".\nO quarto andar de verdade é chamado de quinto.\nO elevador também não tem botão para o quarto andar.\n\nMesmo assim, de vez em quando há relatos de um botão do quarto andar aparecendo entre os botões do elevador.\nMas quem contou disse que ficou com medo demais para apertá-lo.\n\nNa verdade, há informações de que uma pessoa que trabalha neste prédio desaparece de repente a cada cinco anos.\nTalvez ela só tenha largado uma das empresas do prédio sem avisar ninguém.\nAinda assim, não dá para descartar que tenha desaparecido depois de apertar o botão do quarto andar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "6901dc4a4281ad70e271bf01547a233524bfe13fd09aed770d1d9a88b14535d6",
+     "pt-BR": "Os Sete Mistérios do Edifício Yukiyanagi: 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "2cb184c8867b009cd5d9642396b7905da915a7a79b70ab23e45806eda086e2ea",
+     "pt-BR": "O Santuário no Terraço do Edifício Yukiyanagi\n\nHá um pequeno santuário no terraço do Edifício Yukiyanagi.\nMuito tempo atrás, o terreno do prédio era ocupado pela casa de um comerciante.\n\nO comerciante era bom de negócio e negociava com gente da alta classe, incluindo famílias de samurais e senhores feudais.\nMas isso trouxe desgraça.\n\nUm senhor feudal de posição muito alta se interessou pela filha do comerciante.\nEle a sequestrou à força para sua mansão e matou o comerciante e a esposa, disfarçando as mortes como obra de bandidos para esconder o que fez.\n\nQuando o senhor caminhava tranquilo até o quarto onde tinha trancado a moça, pretendendo fazer com ela o que quisesse, o comerciante, que deveria estar morto, de repente bloqueou seu caminho, coberto de sangue.\nMesmo atacado por vários vassalos, o comerciante nem se abalou e mordeu a garganta do senhor, matando-o.\n\nCom várias espadas e lanças atravessando o corpo e uma mão e uma perna arrancadas, o comerciante ainda assim encontrou a filha e voltou para casa de cabeça erguida.\nAssim que chegou em casa, ele desabou.\nDizem que, mesmo assassinado, o amor pela filha manteve o corpo dele de pé, e sua pura determinação a salvou.\n\nDepois, a filha seguiu a vida religiosa. Comovidas com a devoção do pai, as pessoas construíram um santuário no terreno onde ficava a casa vazia.\nAo longo dos anos, houve várias tentativas de remover o santuário, mas cada uma trouxe uma série de mortes misteriosas. Mesmo depois da construção do prédio, o santuário continuou no terraço.\n\nE, de vez em quando, dizem que uma figura que seria o comerciante aparece nos escritórios lá dentro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "da792ce68210810322586acee47576633d52cebc34e2f1f38254e8afab8ca644",
+     "pt-BR": "Os Sete Mistérios do Edifício Yukiyanagi: 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k242",
+     "source_text_sha256": "a31c1b557e29d47fae248da3f89f710d07f88c85f405eaa06a86f1b403a5ce79",
+     "pt-BR": "As Vozes Misteriosas do Edifício Yukiyanagi\n\nA história a seguir é contada aos sussurros sobre o Edifício Yukiyanagi.\nQuando alguém trabalha sozinho tarde da noite, dizem que dá para ouvir as vozes de uma multidão vindas do nada.\n\nIsso acontece sempre que a pessoa é a última do andar, não importa qual seja.\nMas, assim que ela percebe as vozes e olha em volta, o som para, e volta quando ela retoma o trabalho. Ninguém se machuca nem sofre nenhuma desgraça, mas é uma história arrepiante mesmo assim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "1966ba75a236ccfda18e69dc1fbad0c3a50bd040fad1bb3a6f7dd755528b09b7",
+     "pt-BR": "Os Sete Mistérios do Edifício Yukiyanagi: 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k244",
+     "source_text_sha256": "8699b3812b469de1c45a6db84734f3f32c6531943221225f4cb2f4c84fb2e889",
+     "pt-BR": "A Sombra Que Vaga pelo Edifício Yukiyanagi\n\nHá algum tempo, existem muitos relatos de algo parecido com uma sombra atravessando de vez em quando os corredores do Edifício Yukiyanagi.\nA sombra chegou a ser registrada pelas câmeras de segurança, o que de repente deu credibilidade aos boatos. Alguns pesquisadores teriam se oferecido para investigar.\n\nAs primeiras teorias diziam que era o rancor de um funcionário morto por excesso de trabalho em algum andar, ou a sombra do comerciante que morou ali, descrito no Mistério 3. Pelo jeito, nenhuma das duas explicações está certa.\n\nNão parece haver relatos de desgraças com quem a vê, mas não saber o que ela é deixa tudo muito arrepiante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "1fbe4acc17cec9a57cfea56cf824f7539657158591e800cc0b21d5ca40b7ec9e",
+     "pt-BR": "Os Sete Mistérios do Edifício Yukiyanagi: 6",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k246",
+     "source_text_sha256": "b3f2311033bc0f3a2328503cae39e9ad0f5c22470c3e88b67e09fff587d85533",
+     "pt-BR": "O Piso Que Brilha no Edifício Yukiyanagi\n\nVocê sabia que uma parte do corredor do terceiro andar do Edifício Yukiyanagi se acende uma vez a cada alguns anos?\nVários pontos do piso de lajotas brilham, e pisar neles mudaria a cor da luz.\n\nUma teoria diz que pisar nas lajotas acesas numa certa ordem traz sorte.\nPelo jeito, o único funcionário que pisou nelas na ordem certa, uns quinze anos atrás, ganhou o primeiro prêmio da loteria várias vezes seguidas e hoje é riquíssimo.\nMas ninguém identificou esse sortudo, então não se sabe quanto da história é verdade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "9660aed77324d4644af74b3f85c6e18f3d0dfac83942cb8ccbd56b86ba60b00a",
+     "pt-BR": "Os Sete Mistérios do Edifício Yukiyanagi: 7",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k248",
+     "source_text_sha256": "fc49ade4047ed9a1826e1793a10ef65fcbb8ff4cba41c1a218766e14d63fc48a",
+     "pt-BR": "As Letras Que Aparecem nas Janelas do Edifício Yukiyanagi\n\nAlgo parecido com letras apareceria, de tempos em tempos, nas janelas do sexto andar do Edifício Yukiyanagi.\nElas não são visíveis de dentro do prédio, só de fora.\n\nAs janelas não foram adulteradas e são limpas com frequência, então a causa é totalmente desconhecida.\nAs letras também parecem escritas em letra cursiva, mas ninguém conseguiu decifrá-las, e a mensagem continua um mistério.\n\nSerá que o próprio prédio quer comunicar algo ao mundo lá fora? Traremos a verdade assim que a descobrirmos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "77727cf69a3254f4cddccba8ec8c21970d41d80103a335a6a9a23ec85d5c8582",
+     "pt-BR": "Toro Também É Visto Perto da Estação Hinageshidai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "c7188fc25941b2833c9bc10eb81713c98c84e69045474a6d67c67001f61b227e",
+     "pt-BR": "Toro, conhecido de \"Doko Demo Issyo\", teria sido visto perto da Estação Hinageshidai.\nSegundo testemunhas, ele parecia preocupado com alguma coisa.\nNão se sabe se estava confuso com a confusão atual, como todo mundo, ou se havia outro motivo.\nTambém não dá para descartar que Toro tenha ligação com a confusão e estivesse preocupado porque as coisas não saíram como ele esperava.\n\nComo também houve relatos de Toro conversando sobre algo com um jovem dentro de um veículo abandonado na rua,\npretendo continuar a reportagem para identificar esse jovem e revelar a verdade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k251",
+     "source_text_sha256": "f31f8869ff660b4967dea794f023148ce70d8f7f014e38d3b1c5bc3d1038584f",
+     "pt-BR": "＜\"A Saga da Última Espada\" Chega a Todos os Países＞",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "734e8acd8500be50e83b19a05c34ca0ced84942145c2930bdaf209dca04b4d11",
+     "pt-BR": "\"A Saga da Última Espada\", romance amado por todas as nações e povos, agora está à venda em todos os países-membros das Nações Unidas. A famosa frase \"Honerarino Funarama\" será lida no mundo inteiro.\nEm cada idioma, não só tradutores profissionais, mas também muitos fãs fervorosos se ofereceram para traduzir, permitindo que sua história grandiosa e emocionante atravessasse a barreira da língua e chegasse ao coração das pessoas.\nA maioria dos líderes mundiais também adora o romance, e acredita-se que os muitos pedidos ao autor e à editora para \"vender no nosso país também\" foram um fator importante para essa conquista.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k253",
+     "source_text_sha256": "661281abc979519d12caa2c434ca572bb731f17ee79500d55a4787f7ba9711e6",
+     "pt-BR": "Hyacinth Soft, Empresa de Software de Miyato, Vai à Falência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "a374951f7c047038e8aabadd4a77c034fb713a1e8138ba525d09a600a1f9d0f6",
+     "pt-BR": "Veio à tona que a Hyacinth Soft, empresa de software da Cidade de Miyato, vai à falência. Os resultados vinham piorando muito nos últimos anos, e a direção tinha sumido. Um novo representante assumiu recentemente e tentou reerguer a empresa, mas agora a falência foi decidida.\nO representante, Asano, disse: \"Eu queria avançar com firmeza, aos poucos, mesmo com trabalhos pequenos. Mas não consegui mudar de verdade a situação da empresa. É de partir o coração.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k255",
+     "source_text_sha256": "c4bc98192303ff63767ca71c7d17a219aff93fd1e431684be87a824dcd7837ad",
+     "pt-BR": "Hyacinth Soft, de Miyato, Chama a Atenção com App Próprio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k256",
+     "source_text_sha256": "3e00183a333ab5def7dc176124dc5fb8ebec59a1505ae62dcd37c3a673f677d0",
+     "pt-BR": "Um aplicativo para celular criado pela Hyacinth Soft, empresa de software da Cidade de Miyato, está chamando a atenção.\nO app ensina aritmética, matemática e confeitaria como se fosse um jogo. Asano, representante da empresa, disse: \"Ouvi dizer que confeitaria exige cálculos precisos de quantidades e conhecimento de reações químicas. A ideia inicial foi que seria divertido aprender essas coisas juntas.\"\nA versão beta divulgada recentemente, uma versão de teste ainda em desenvolvimento, foi bem recebida. Os usuários elogiaram: \"Agora entendi o teorema de Pitágoras\" e \"Fiz bombas de creme direitinho pela primeira vez\".",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_203_npc.luc",
    "source_sha256": "e680bf1eb77e98d15458a226ab8bd34eb1864fe3071973b0491bad0d02331baa",
    "entries": [
