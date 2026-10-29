@@ -64,7 +64,8 @@ def apply(path, lines):
         if key not in entries:
             raise ValueError(f'{path.name}: unknown id {key}')
         e = entries[key]
-        text = text.replace('\\n', '\n')
+        if '\n' in e['original'] or '\\n' not in e['original']:
+            text = text.replace('\\n', '\n')  # CSV sources keep a literal \n
         if text:
             if sorted(TOKENS.findall(text)) != sorted(TOKENS.findall(e['original'])):
                 raise ValueError(f'{path.name} {key}: control tokens differ: {text!r}')
