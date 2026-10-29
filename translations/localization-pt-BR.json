@@ -1925,6 +1925,145 @@
    ]
   },
   {
+   "path": "common/lua/stage_chr_test_npc.luc",
+   "source_sha256": "229cc701ccfffde497c8c74f054536a5e3c3047ad8bb32b649898e9a227cb4d3",
+   "entries": [
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "70afd542e2c2c8672d3746eb82b91cc3a2d9000c421aa6583fbd3da91e1eed0f",
+     "pt-BR": "Chefe da vila",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "01b616363e7139e62cce932430f8e871e3687d633dd46c89dc5a8be8d02ee34e",
+     "pt-BR": "Aqui é a vila de Sarufutsu...",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k19",
+     "source_text_sha256": "ff524ddfb2f7798fc00c5b435a1e740a8092ad161b0f38c054eccb22565ffab9",
+     "pt-BR": "Primeiro chefe da vila",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "3b76ec82c8b57afbbdd9647465e57ab934182d0cc0cc554ca84c5501db311125",
+     "pt-BR": "Aqui é a vila de Sarufutsu...",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k21",
+     "source_text_sha256": "1c15885491624873dff15d8e27ef7cbdbae212c281a4578ccd022d0d315ff93d",
+     "pt-BR": "Ex-chefe da vila",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "3698fb626f50b3f6159edfc67df83b9f2f876bf9bf1f18bba004c418875cc024",
+     "pt-BR": "Aqui é a vila de Sarufutsu, sô...",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k23",
+     "source_text_sha256": "fdc9ec441792be22a78bd60ee0bd91faab59cc8a4b56a7f45964723634b7bfe9",
+     "pt-BR": "Chefe sombra da vila",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "629f686a9f6ffd9b96ef0ef776205e246bf1d10e1f24c30e181752688f2742d1",
+     "pt-BR": "Aqui é a vila de Sarufutsu... Hehe",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k25",
+     "source_text_sha256": "5c6058acd2dff491526b411640a0f87e119a28b84686a658c88f26d94cb5dc2d",
+     "pt-BR": "Verdadeiro chefe da vila",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "625dcefb0ad90f48d08cce63b5179853ec4b068dab3c3d493d1033cf7ef65921",
+     "pt-BR": "Aqui é a vila de Sarufutsu?",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k27",
+     "source_text_sha256": "e582a9912394a90f43509ce7c8fd2e984cc5ebcba62c9a8e10c9d37395c80a04",
+     "pt-BR": "Homem preso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "bee1d5ca039427cf15de9fc52385f89b44525d00100b46ad219478e5f2410527",
+     "pt-BR": "Me leva nas costas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "21cf92a41a7479e74b2779cb8879596d0e07f27a9e802ec567a1fe951192c6ff",
+     "pt-BR": "Não posso fazer isso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k31",
+     "source_text_sha256": "92767b16344fd1e20a376cd03efa03325546e5a614826a17a6a0d37e3ca2c341",
+     "pt-BR": "Recusar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "f0a6fbdbbef90a594b89b7e31e0912ba77cd0c8e390d6692d3622b0ec07eed0f",
+     "pt-BR": "1.000.000 de ienes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k33",
+     "source_text_sha256": "6fe4ecd65f198619cfb1a4759b428623f437e177d4a2889535b99209ec8943cc",
+     "pt-BR": "Por favor!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "dc5020f96a1dea15aa8b5d99bf12c05e3ce29d3d345e32fc450a59a3a1e8f3ef",
+     "pt-BR": "Andando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "785b65759020de1902fb6e90e801aeeb03b3a721722258b7eb0c1067a137054f",
+     "pt-BR": "Ativar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "ef339ab863417825f5965d3faf474aeb1b5257c273b50f85622317c0ca39109c",
+     "pt-BR": "Correndo",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_208_news_data.luc",
    "source_sha256": "6aedd88a5807efe628f8855d4af958d2b770a1c26f9a0ec4db0426550d25f6d3",
    "entries": [
@@ -14869,6 +15008,110 @@
    ]
   },
   {
+   "path": "common/csv/store_text_data.csh",
+   "source_sha256": "20d642bd0a491d1e3d693ec30cdcf222a323f6143f5a296f761e4edbca7f7d5d",
+   "entries": [
+    {
+     "id": "r0/c0",
+     "source_text_sha256": "32c1cf664367bc6976bb133b2feaf6cc68bc6186fccd5a31c009de314833590d",
+     "pt-BR": "Loja",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r1/c0",
+     "source_text_sha256": "3df886ac9b5af16f47b1a36e7b34d41d7bf9242eb1824cb0dee793f250180a21",
+     "pt-BR": "Loja 0000",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r2/c0",
+     "source_text_sha256": "e93f8ebb1930126794622143984f48ff7f39dd527302e433b3734eee83dbe28f",
+     "pt-BR": "Clover Filial Aokiba-cho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r3/c0",
+     "source_text_sha256": "5011b358869493b694bcba98e1f595db4665116043f4259aa66187ceb32d540c",
+     "pt-BR": "Fã da Honoka Futaba",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r4/c0",
+     "source_text_sha256": "5cd678e107e81e1dd166c552ac597dd3e9995c9f5fcee220e4fc9ed5c31a4118",
+     "pt-BR": "Homem do 8º andar do escritório",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r5/c0",
+     "source_text_sha256": "81f238a8ab0becd73384ddf1d2a83d67517dc9e6b5fb04f066245a411a517603",
+     "pt-BR": "Homem do 8º andar do escritório",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r6/c0",
+     "source_text_sha256": "32a859bca35784e893221cdf73fd5f1a2d638076938899be14a0625ac40306ac",
+     "pt-BR": "Homem calmo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r7/c0",
+     "source_text_sha256": "aae4d9142347140d26e57300d10dd1198bc3530236bc2c343b8e4a55e36e16b7",
+     "pt-BR": "Banca da Estação Hinageshidai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r8/c0",
+     "source_text_sha256": "dcae3b1f36738f09092151db71d195fe76180825ea47fee742db834d8e4ed10d",
+     "pt-BR": "Café Iberis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r9/c0",
+     "source_text_sha256": "e6e5b140861b550896c3e298f5fe021aa6093a900a7328bba497c1a50f751318",
+     "pt-BR": "Banca do 1º andar do mirante da Torre Miyato Sky",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r10/c0",
+     "source_text_sha256": "e3557b947e89b19f6bd7f4298bb2667931b5ba14aa1f9cdabaf133e8e8265ab5",
+     "pt-BR": "Clover Filial Sumire Nordeste",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r11/c0",
+     "source_text_sha256": "ccfb0b465e24fb6a74e834f3ca37728432395f6c56d21a491269c17f15635555",
+     "pt-BR": "Compra: escolha os itens para vender",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r12/c0",
+     "source_text_sha256": "f3d13327987ffef13779a8e16e7fc5c825c26626bccf700f293039c0b3fe6212",
+     "pt-BR": "Clover Filial Hananira-cho Oeste",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r13/c0",
+     "source_text_sha256": "22efd18b20d152c10d9b5259b848411a5d2da67f4ea0f81fefde6fe2f7be3be5",
+     "pt-BR": "As Dádivas Abençoadas do Salvador",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_204_npc.luc",
    "source_sha256": "7958565a5b7402d9543acef591288de1ba58f20dca03a399f29b6f6794e16131",
    "entries": [
@@ -22194,6 +22437,1153 @@
      "id": "p0/k7",
      "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
      "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/SpeakerTable.luc",
+   "source_sha256": "ecce9eef350997de9e3d338df230cb08361924b845259731f64853a36dcfed30",
+   "entries": [
+    {
+     "id": "p0/k1",
+     "source_text_sha256": "89d2bc46f65047bc3bfd7e2d0c0cb9ca05ad57f963f33a61498358a7567c0cd8",
+     "pt-BR": "Sobrenome do protagonista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "dcfd047fe98f696bc01438524a150f23f0d5d13c259f7c8e0bc571b36409a034",
+     "pt-BR": "Nome do protagonista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k6",
+     "source_text_sha256": "178427a00dff8181409de09c498e2696ec07acd6e6a9b533281664d88c0f789d",
+     "pt-BR": "Nome completo do protagonista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k8",
+     "source_text_sha256": "e7af2143a0c7bef219217277b8fc205cfcea12c8d728c73bf42b3b928c5ef8a9",
+     "pt-BR": "Sobrenome da heroína",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k10",
+     "source_text_sha256": "8ae7535ae33ca48fed1a23c7941d57d8d0e4260c36f016b4719b003feda0fb6f",
+     "pt-BR": "Nome da heroína",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k12",
+     "source_text_sha256": "0303493d9afbf4aea4663bc371de59ac4f7120beee76dc157404d87e3464d072",
+     "pt-BR": "Nome completo da heroína",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "bbf67044e474881f67f19f3eb721fae1b00617e20b613933d44e1c0dd5f49fe2",
+     "pt-BR": "Homem na rua 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k15",
+     "source_text_sha256": "bb1278630c46b33097acd355b5561a589127dbad74ae650645fefd4de9965a52",
+     "pt-BR": "Soseki Natsume",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "1b4f8e4a0395b5f2b75865aa46f3dd201e4132109cfa91aa5857ca57d44adcd5",
+     "pt-BR": "Homem na rua 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "95b25bc405dc930352bacea5a0012cc5407ec31c9bebafa04b0c5d0be08685b9",
+     "pt-BR": "Inazo Nitobe",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k19",
+     "source_text_sha256": "0995199cbbe181545f6b199c97cb9265359f9b071656a47bc6d00fc62c1abd00",
+     "pt-BR": "Homem na rua 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "12393b35253afc8264946a059151e7f530ff28323b53cfcdbf390d3a508af792",
+     "pt-BR": "Yukichi Fukuzawa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "a08c99a06947379dc0965fb217234c4cb6a68f793c9ab5466ed8cd12f0b256aa",
+     "pt-BR": "Mulher 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k23",
+     "source_text_sha256": "870c836f968382cacc67c53f1f11aaa29c3eeb5a78372a94d22b45ad2aa2e49a",
+     "pt-BR": "Ichiyo Higuchi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k25",
+     "source_text_sha256": "fed94c53030a94df27ff0957400de508c5f857b49151b3adb12ad443b359980f",
+     "pt-BR": "Mulher 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "1896ae36c247ba532d3796ceff3526dd2c6f514f365932117e4b93876be99c8e",
+     "pt-BR": "Murasaki Shikibu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "7fa28ff975fbaa71f82d0bd7c3c79e6920d96a81cd864e40b5e0ca84a8502c7c",
+     "pt-BR": "Protagonista masculino de teste",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k29",
+     "source_text_sha256": "0315cc2a91621a5ddaab401a58c031fe7e7aea7a6650762a48126bed642146d0",
+     "pt-BR": "Protagonista masculino",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "2969d002edc38c341865e3fd6886b84fe72ca0e951a1572e97a5c22f7c843b11",
+     "pt-BR": "Protagonista feminina de teste",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k31",
+     "source_text_sha256": "5199c766906cd1177d8521b3488c923d9ca81e8cc38238a6cf3782493077128f",
+     "pt-BR": "Protagonista feminina",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "0d4b0b2f11fd4bb88c5e2d44859350ba9571600271613934a5b64e6292505512",
+     "pt-BR": "Lembrança do protagonista de teste",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k33",
+     "source_text_sha256": "34c8b74a824fcb5448aed5a48a11beeec9d02cc9fb4b058421f188da74b5009d",
+     "pt-BR": "Voz interior do protagonista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "9862254e6b068e84a835ef38ce0d3b2c40f8f46cd6fa925949dd1c7daaf63085",
+     "pt-BR": "Heroína de teste",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k35",
+     "source_text_sha256": "f3a77f534e5ea8abb6c959949f6024b02352b90d0f71748eaa98dffd30134bab",
+     "pt-BR": "Heroína",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "7da940f7777e74bc02c962a23805d2437d8c9ee21a6eacb052877e0637d124cc",
+     "pt-BR": "Maquinista do metrô B",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k37",
+     "source_text_sha256": "af677d967579e6bc3e9a29c7095b13e2d7d8d732ca4d6cc7abb8aa16cdd40aa6",
+     "pt-BR": "Maquinista do metrô",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "61dea97062519b075d195b50fe0c5f906a7ef3f4fa4f5077a7e3806eb04e0ffa",
+     "pt-BR": "Mulher tirando fotos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k39",
+     "source_text_sha256": "0515657587cf9f54ba0df5fbabdd8f44957df13a7c070c9766c3bcb7debae937",
+     "pt-BR": "Risa Kashiwagi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "5486132825ee5b63089cb40b2fda4ae06332b299ab053f2490a90dc09545a0e9",
+     "pt-BR": "Miho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k41",
+     "source_text_sha256": "e816598e9cd9092836a576443c1a1f34018338c08ca93c03924249a444174cfb",
+     "pt-BR": "Atendente da loja de conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "2904d296249b27f560e4f320b9fb6c7fed2a8da3ed115ae8ac7bdadcacd1515d",
+     "pt-BR": "Protagonista masculino＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k43",
+     "source_text_sha256": "5da2dd936cd10e66918dfd89db98d0ebbf80e78db079594f080332ac652e5e37",
+     "pt-BR": "Protagonista feminina＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "b9e4efa1d7f4d107f9037e9f76726332bc6dbb91ad3d9123d686d305f770e09f",
+     "pt-BR": "Gerente da loja de conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k45",
+     "source_text_sha256": "1334bdad7bc2754ef471b55c41cd2dc446dd04b61416c29fcc0eceb5a9bba203",
+     "pt-BR": "Policial feminina",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "2c025b4c395b82ceb1677252c90ea43521008107b1970e3229c53b4169ca0ac1",
+     "pt-BR": "Policial masculino",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k47",
+     "source_text_sha256": "5ef03aefd8b1e7b1c95ea7bbd89f1d8cc040caa10ffdf4463e79871c473645f3",
+     "pt-BR": "Senhora da floricultura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "4b2686b6e0049a01651dfdb01dad41bb8e1607bd9d45ddcfb9d614f1c380f68a",
+     "pt-BR": "Chefe de seção",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k49",
+     "source_text_sha256": "40b2ed4c26255cddc5c45816d571e1a9561d04eb79222d53f758f1c51021442b",
+     "pt-BR": "Funcionário Kinoshita",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "320388b4279ef1b5055f5e40eb019ad9f1ef20492d4b77357f4d30a93ec5bb4f",
+     "pt-BR": "Ichijo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k51",
+     "source_text_sha256": "03433ff305f49eb0ad07a2da098dcb31ff4cb081f44f701d941bb6fe85b0a723",
+     "pt-BR": "Sakurako",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "846a4fc6b12b460e942a983bb6de0ae2f6e603ed0c69a6b790008a7740ffcfb7",
+     "pt-BR": "Heroína＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k53",
+     "source_text_sha256": "648d5ae295e302d88f234c923e3c2ce0308dd41bf97d38fdf6ceee0dbe7b8f45",
+     "pt-BR": "Otsuka＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "e8de13397ce15d867bc5d8c24b6eba7080c1794e3aaf29269547d1887dbbd378",
+     "pt-BR": "Muto＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k55",
+     "source_text_sha256": "da17d3a514c516e945be5de53aad310f915493519bb14b1134af5afe978b30a8",
+     "pt-BR": "Shibata＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "912d20e5dd5c509b8592d4a2acdfa9308cfad8cf4cf98c3514f07215c319c591",
+     "pt-BR": "Miho＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k57",
+     "source_text_sha256": "74dd0235a225fe528a9a7f076e197b70cb8e28bbe66d92769e347fa9f8988ee4",
+     "pt-BR": "Dono da barraca de curry",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "aa4569847a65ab9c394cd805cf8ce25c13245b8a86a043336b4921f99afd8d84",
+     "pt-BR": "Cliente A",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "85fc0b5263c4a68ee30ca45eeb148c0d0c92a3e630c307f9bf51330346642506",
+     "pt-BR": "Pai＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "ac27610de4a4a7ab943723c8d90f9abf4fc06be8c52ac28dae160ebb6c809f82",
+     "pt-BR": "Passageiro A",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k61",
+     "source_text_sha256": "0dbaff75897bad137567c0fd22ca3749a5761b45fecba7c7388ce3140b650ec9",
+     "pt-BR": "Passageiro B",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "0af5165b24e702cb3e38a66b5a4b9a0e30ee3102a802d7fdc837a93e90ac4fa3",
+     "pt-BR": "Passageiro C",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k63",
+     "source_text_sha256": "2afdb9f333e6626a31d21971ed1eebfc675bbf3e47fa75528ef6c290efd8c587",
+     "pt-BR": "Passageira A",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "84bc66b8e0cf915c4ed74f82ccc6336017b621fbfecba11dac46889c8b5a93d4",
+     "pt-BR": "Passageira B",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k65",
+     "source_text_sha256": "af0b7b0e23ce51df0868100743982056598ebc503aad780af5250a0bf8bffb08",
+     "pt-BR": "Policial de choque B＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "02babce6e6fa646c4ff4c9c3f83f47ba6cb1c9061575bb6dead012cc54bcc08a",
+     "pt-BR": "Policial de choque C＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "9d3a22140e6ee3ed2922d79a400795f218562930ab83bd94232027689500ace8",
+     "pt-BR": "Pesquisadora-chefe＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "badde3c415905736df446e6db60885d5af9d08ad20b452bfa9f4db3f7fde201c",
+     "pt-BR": "Pesquisador B＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "4669950275f0f8268605bda929bc95064c45c4324387068b736e61feb755956e",
+     "pt-BR": "Moça A",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "fe8eb81fda2f59825ba540e946e94d616e774e63f208253efc07879b25a25722",
+     "pt-BR": "Moça B",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "25a6d72cc958c0ffff42c27820126ebb274e48dc500d1013d865c22f7d04158a",
+     "pt-BR": "Risa＿２",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "aca24065fa339cbf3befbedbf076f8f209cf4f93d02790ad4999237bb09446fb",
+     "pt-BR": "Equipe do show",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "e98775264354e7be16a268147319be09789749fb3a347d779cdbb5aab76ccb41",
+     "pt-BR": "Locutora",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "5d59d24d96d87c65a3c15cffedeaf8d77fc8f00d39166d8029c5953f7d9b988c",
+     "pt-BR": "Risa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "c157d50efe0bd504d21bf7c95a5f6438c2009190a09ceb83e1504219744b8c29",
+     "pt-BR": "Yuki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "d7b4e07398915af11f750c68c5a74186d4e08b87097f91a569a19c1a0669dee6",
+     "pt-BR": "Protagonista masculino＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "a372faee0427847f7a4663fdbc4429356833b094e0793369877fb3d92a42c63d",
+     "pt-BR": "Protagonista feminina＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "66448833ed4d6ad1ebaae525075032cc25aabb07dbfa114430e66d2a3e5389dc",
+     "pt-BR": "Muto＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "c347dca9d094d103e4bb9306d603f79a5f38b85735d9f45f20bd5ab9febde338",
+     "pt-BR": "Passageiro A＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "bd25767086898826aeb140f3357f687ba3b0e6673698bb60b562387e9d6e47b0",
+     "pt-BR": "Passageira A＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "8a3852896ede73e605adb76db393110bc091e9f2649e952eef5150a8e96f35d8",
+     "pt-BR": "Maquinista do metrô A＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "feb96e0f2493b597d8e358b1f358d729dd8c73628ffc8021c8a36b24796b6d22",
+     "pt-BR": "Maquinista do metrô B＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "04e7e4b0c0a58a8dd187ccbb77c2a6deacc3d6b2a8dbe2e4ba8b1ed06991a50d",
+     "pt-BR": "Dono da barraca de curry＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "5957113004e3ec1d68271041a36303b601790534ea5facb4280c9b119bf535e9",
+     "pt-BR": "Heroína＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "51c2960c16a2012c3bb89438162e5d4e5c56d643e5c29224bdebd77dd6422032",
+     "pt-BR": "Cliente A＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "6c51d2ba1d36a7a9abd694b90665885c60097462cc27eaa74f4c7837c3ba0a50",
+     "pt-BR": "Miho＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "9ffcdfc233a7f0408495f6745412b2ea4c7f5fb7d7fb3684e0c528c70555d765",
+     "pt-BR": "Homem e mulher gritando＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "e33403d786ba4af0af91984a7451e02486c311f2aa3341b36a8adf266b51e124",
+     "pt-BR": "Motorista＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "2460bd5edf95e1fdbc87c1d80377f444bc8f007237da3f48b41ad2d0338821aa",
+     "pt-BR": "Chefe de seção＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "f5177124a567e317bd10f446d545a2e95f6d3bd427e4928c4fe013cc77acb3f9",
+     "pt-BR": "Kinoshita＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "5c39d4ac1960309e729d170518f2f491a8a9e40b951cf823c9f4500bf009314b",
+     "pt-BR": "Otsuka＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "07d5abee493d5b8b2258479873751b8e2b59ac29e540cf14fe7be5d80f790a57",
+     "pt-BR": "Risa＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "a3599f3abb11617e9259f949546a1629783579d58486f929fa93258d4bc5c755",
+     "pt-BR": "Locutora＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "cafb69a7bb95ff4c0dd058354815e804310ccd8727b2837f8c09bd54aa1f5b4a",
+     "pt-BR": "Naoki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "0c840d380dda5b3c532cb8067a46b62dd83e467bbf6384506980ceb5bafc2bf0",
+     "pt-BR": "Kumi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "81fd25879657ca3706958c5cb3cf66ecdd080d1cf0c23d54fb0343f1ea04f707",
+     "pt-BR": "Naoki＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "21a799e20bcb03bc99f9cbfe94582b4f44ec136962e334bed634f1fa96981d82",
+     "pt-BR": "Pesquisadora-chefe＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "70a0f75d9eadbb055930717d2b1bd11560ca7cd6a00d16cb87b33807a3002b1b",
+     "pt-BR": "Pesquisador B＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "10c87f6e726ee333dc9785d241518ec137b8cf0f2686b5882a8cf8799da18034",
+     "pt-BR": "Kumi＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "88d878de0832aebba7bc9c8ac9046b4c666932cafbf773df826aa5a7b6d14104",
+     "pt-BR": "Asano＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "d2306c4fa18677df451438fe7a01bdec1de94244604b99bef2286b856600124d",
+     "pt-BR": "Apresentadora de telejornal＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "301791c8178c286e394a262c1faac0483f3d565a8aa3bff295c3fc34255ed500",
+     "pt-BR": "Ichijo＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "86ce80ca4df818284467847dddb5d2a14d23aa43b654b1bcf1b7b92ea4769f66",
+     "pt-BR": "Sakurako＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "016f19eff0d61778a72448f83d786ce8011dcf6125022eff18c59523817ecf17",
+     "pt-BR": "Rapaz A＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "13386a3e5bdf8af0392ba9ae504f41a1778c1165a5c48113f4454a190be7195e",
+     "pt-BR": "Rapaz B＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "9ff683a3c645a2db9cc0a45d42d13972abc0860c2c38d8f5443a30eedbf00299",
+     "pt-BR": "Capitão＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k107",
+     "source_text_sha256": "f9641ddf61f512a2520939c987983e4891d4d05011be79cbb6c50ffe195b7948",
+     "pt-BR": "Imediato＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "8f27ad8df61c6d395ea3d58bafdaaaebef183766e621f04e953be04032ac335b",
+     "pt-BR": "Policial feminina＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "3e279aa869fc918cbbb6394670d959d757cdda22a3a01fc882987b964e58fa50",
+     "pt-BR": "Dra. Fukazawa＿４",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "093cf852cc10f157d4bc2db9171c1d07ae574a11c63521c7058f632a179cf65c",
+     "pt-BR": "Executivo B＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k111",
+     "source_text_sha256": "babcee142332cb987afdc596df0a9492b1aea6512f0fa64f6af5160115b5b915",
+     "pt-BR": "Executivo A＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "833c365637f70a52d5931056b029e7bc060a7e3c90539df27a4d41d969626f0b",
+     "pt-BR": "Bombeiro＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "298701c4e6f21c172c6379fbcbb1b0015e7465d05f3620138e926998b1bbc9a8",
+     "pt-BR": "Editor＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "7238aa6f891ff54d85ef86fd91ea4db7e20d60c773aea306c9459cef1ffdee50",
+     "pt-BR": "Editora-chefe＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k115",
+     "source_text_sha256": "616e0a89f56e03185b1c99bbba8efa0db1c31075500b88cd96d90dd2bf61bdb7",
+     "pt-BR": "Otsuka＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k117",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k119",
+     "source_text_sha256": "fbf730da4ae66a427180bdd393017aa02387a797db44bb353c3c0455adde8bd3",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "611da61705768c5a90c275d0be6f535685e14a9f6eb8a96264b64cda7be8728a",
+     "pt-BR": "Muto＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "f3b16825fe7a5b064179f536edfb70f8e3e2a01ff55138d97f16a85f87bbbdce",
+     "pt-BR": "Policial de choque Aoki＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "6c419f2c4ccce9ad1cf8f6230cf6be6572ee694a9584e750899f1caf9922f91e",
+     "pt-BR": "Fujiwara＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "49fc6be787e890a6882d35b7bbe0e3e359011729f2187f5a723193f857d3f547",
+     "pt-BR": "Miho＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "18f2fefe2542df06294158e886171c973c18593d073f206202b9061939b8139e",
+     "pt-BR": "Pai da Miho＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "b2ce060bec7147eddf851a39360a7e18f20b7487d93bc204d68f00e48dfbe0f7",
+     "pt-BR": "Vice-diretor Sasaki＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "231206e67cbfb8cb84a09dba04054605b1d817e933a2eccf44ccbdb95e6e3757",
+     "pt-BR": "Asano＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "d42b589c6f91248663e3255a851c0ffddbdbed2a36dca95b505327af73af868f",
+     "pt-BR": "Equipe do show＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "555a5ce4195a856ebe20accef5184dbeac73106c0851d0fd02e6b848f3e3ca47",
+     "pt-BR": "Cliente A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "147f783469038c9642d6b1c95aec5a6665e2eab3b519e6553a9e55858586ab0b",
+     "pt-BR": "Passageiro A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "5f41a45d2b2840f43710007dd5c069b8a7d3c3c3cada4b4a8356e65368143673",
+     "pt-BR": "Passageiro B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "460d779e151902e32157a1d2cd4825e37f1378fab6174450ab79c55ac71b920a",
+     "pt-BR": "Executivo de elite A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "a68ad608677b1a8d05e0f2fa7f06cbe90b7a3a82dc43d0f34cc6fb3855455812",
+     "pt-BR": "Executivo de elite B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "ea7cfb64ddfebdbc90511eaf526deb0434fed83ef65e6596f59b717aaaca08d4",
+     "pt-BR": "Assistente do médico＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "bea98d2a10901398c2550f3147b5a92e592cd5556e34b2528a8f8e18e2684ad8",
+     "pt-BR": "Hirai＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "654c076aff2ef48780c8542fa9ac7676f263e020f64b490e8791c1ea58652a32",
+     "pt-BR": "Fukazawa＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "88e8c9a7e8dbb2917d6beaf066356820fb2e74dbc425c44c9d70af8b06c03549",
+     "pt-BR": "Ikeuchi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "426206ab206a7bb5dd035657678fff06736242102ca28663081ab20b6c3d8287",
+     "pt-BR": "Ichijo＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "04e10ab3a3bdc653aca3c0867ab731e18bcaa035b139085d4e641d62326d4979",
+     "pt-BR": "Iwabuchi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "f2fc08ba3d49b8095ef8c684a0cdadd78fa0b90940a10e47126383c2ebe489c2",
+     "pt-BR": "Kaga＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k141",
+     "source_text_sha256": "52faed25664567524a45bde70f89b078ee9f32c5e3f563097215e7aaf5a65fd1",
+     "pt-BR": "Katagiri＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "1432d1fa56dc734bbd974b4a5dc4f499273dd2c67fc0fe803807b1112a1ae99b",
+     "pt-BR": "Pesquisador B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k143",
+     "source_text_sha256": "799eaf9b283fc3b1d5f15edc124934cbb23de1e45d1cad93e352326067e1db09",
+     "pt-BR": "Pesquisador C＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "25ebcb0ba6a8df01c318b35fd17b25d2f5db87db881a04858a3ead0abd63a00b",
+     "pt-BR": "Policial de choque B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k145",
+     "source_text_sha256": "ffd7dda4307ba96f90ececf7b8294ac07d6c4752fc87ae22951adc1a5a9bbc9d",
+     "pt-BR": "Policial de choque C＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "a9f8956ba98b2d81c045edcd8636d24eccc51a7995f2c1ed0e78e9171857fc94",
+     "pt-BR": "Kinoshita＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "49d3222332312bdbea6300619ebe7c1d4e6bb090cc3d7a677359a150db07afcd",
+     "pt-BR": "Kiyoshi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "4c0968f979143a5b87233c3e97ea199045335392f8d94d39c40b114cc5bd7914",
+     "pt-BR": "Kobayashi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "789d110685e8970b71446198cc40d12c0e6fe08fb7ea2c8330a934ada264720c",
+     "pt-BR": "Kumi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "a845f460d088f5ce20b7bb7df65e6ae1e49e97f85c408c04500107b60abd9ba3",
+     "pt-BR": "Kuribayashi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "a728a43fea76cce4b9cb2ae5f31d627da61a4012007a23eeb83d49d5f145e88e",
+     "pt-BR": "Mukojima＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "66039200e1397c82e58767707fbad79b95aba8beeb1948dbd05bd38c61ef126b",
+     "pt-BR": "Naoki＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "6117d01a84a0831fd8f81d752482a188a4f62272df5f8557874d7eea714f6bb3",
+     "pt-BR": "Norio Nakagawa＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "78ec48e0a42f0ac1aad7a9954aaf28c1621d296ab9e7724e05769d9cbb672202",
+     "pt-BR": "Executivo assustado＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "cd94cc6b6d01cd70ef99d95dd602d2e4c5175edfcd2936e70639f0c824ed83d7",
+     "pt-BR": "Pesquisador assustado＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "2de64cb857acba9212c251e9129f3cf5b3afd4b891697af682c707be0a52296f",
+     "pt-BR": "Oda＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "2ab43caf1546b6a558f21387730b6f38b34347d3a2ed50d37e368c150d142dad",
+     "pt-BR": "Sakurako＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "858e0c3b248677ffbf3de368db30bb44ab280a2f86de9e268f440723f5447db8",
+     "pt-BR": "Sawada＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "16ddc216375ca7d78338b199a5fbca6a5b7def9e948bd2e08832ae45bcbb9eef",
+     "pt-BR": "Tripulante＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "46013a9730791c9d87942b12a9b90a3edb04491f92e3b1fc33960156dada65a1",
+     "pt-BR": "Suzumura＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "1502f5cce22e0b701b19f30746d0dfb2ced33c73ce9971d97bbcf7b7292ae97a",
+     "pt-BR": "Maquinista do metrô A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "30e7cdc3538f1887af431618c59e74ca647107f60fec5c6971c763b877efe039",
+     "pt-BR": "Maquinista do metrô B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "373d7396200a179b6afeaca9888699cb863a838aa0b1bcf8e280bf5beb6729c4",
+     "pt-BR": "Executivo jovem＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "69be9c7da2cc2befd9671eb19c2f24cd41935c2fcbf56e996ccf5295ab3ac34b",
+     "pt-BR": "Moça A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "f5dc5651b2e14cc6e6ba983eb9365e68b0ecf8733f8fd32a9d5415f8ce214b58",
+     "pt-BR": "Moça B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "f8eb4abce39f8fd07bf3909c91e97266aaf31e1aae5cb8fe9b5c72948df4aeb4",
+     "pt-BR": "Jovem 1＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "03a0352eb0864ffa817bf607c3f854be8a061ea30d97154e39114e6131b2d0aa",
+     "pt-BR": "Jovem 2＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "7d27fe3faf218558e3af8754ff95a6c5ccc9b7505de28f03783a8f8023a616ef",
+     "pt-BR": "Yanai＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "0bc467324cc4476ea8716a90a47004f6024f8b2a08dddb9ce62dfd9e29c2d8be",
+     "pt-BR": "Apresentadora de telejornal＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "60ebc87e7c912cbbb408d5384c6c6b291a2392326b28e73f7c6b2e17e9d6ea9b",
+     "pt-BR": "Passageira B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "4c0a951310cae7ffe8a5403cff4c4de44a654517ebd77d795089fb9f3a984006",
+     "pt-BR": "Passageiro C＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "59ad3139626113cec6cfad1773ab2508191c067599cbf41d40f6857e00c9efd4",
+     "pt-BR": "Rapaz A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "39f7d68fc54c8bdf3cb4cf9d901446ac2b1304194a6abf57af5b7e116d82e683",
+     "pt-BR": "Rapaz B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "96a34ff8a2683c6dcc0f45bf769ebed94d57e05c9e78cd451743e1e6b745a60f",
+     "pt-BR": "Passageira A＿０",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -36410,6 +37800,26 @@
    ]
   },
   {
+   "path": "common/lua/stage_chr_test.luc",
+   "source_sha256": "b7b0e80c364bfd7bc5139c39e030a2df8959018026338c810b3be320c6007700",
+   "entries": [
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "d932308a775d5b8400923ec030ea3248df257ae1ce9f868004ce34bfc9dddd30",
+     "pt-BR": "Repetir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k111",
+     "source_text_sha256": "785b65759020de1902fb6e90e801aeeb03b3a721722258b7eb0c1067a137054f",
+     "pt-BR": "Ativar",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_203_npc.luc",
    "source_sha256": "e680bf1eb77e98d15458a226ab8bd34eb1864fe3071973b0491bad0d02331baa",
    "entries": [
@@ -39926,6 +41336,228 @@
      "source_text_sha256": "d6c6dbaf25d5d45fad2e17b9eb68027711e7492a905ebbfd1e287873ff71a42d",
      "pt-BR": "Se eu tivesse a senha...",
      "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/intermission_result_data.luc",
+   "source_sha256": "9cbfcc123adb7a33140ad4956d9d9574289239662d5e4a2935dd61f5fa70f3a2",
+   "entries": [
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "5e4198d1e82f55eee6d1ac69f88b6fa745692b4f5a93ce54ecc2ac7f991ac6b9",
+     "pt-BR": "Uma Sombra Gigante Aparece na Cidade à Noite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "ea298186c7802ba6c0bd5daa6809ab93afcf7351f1848b524a4d78fce518c720",
+     "pt-BR": "Uma Sombra se Mexendo no Subsolo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "e20fd9b085f80f02f4605359102b608b26fcdec4a462529a09c921e8cecdb50e",
+     "pt-BR": "Uma Sombra Gigante Pairando sobre a Ponte",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "8fdda62400a0f263edd000d28e8d24cfaa9ac0dee56b4dc070ea612350aaffbc",
+     "pt-BR": "Uma Sombra Que Entra Escondida e Rouba",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "8f7abd764d0f0046e3d724444b8072e734d7495c85ebd998f21d25bd0e51011b",
+     "pt-BR": "Uma Sombra Nascida de Impulsos Incontroláveis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "0889e573c0b4a599e3e8d512a0eb5a307254d76940cc9208347cd4a649be32b1",
+     "pt-BR": "O Mar à Noite, o Som das Ondas e uma Sombra",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "e62c3da5b574b18401efc2de096e405814da20c681e9bea60f3fd3da41fe33b1",
+     "pt-BR": "Sombras Presas numa Luta Feroz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "c340875888bfd1172154780a30901f99b761b930f6e7d8921cbb5f672f8116e0",
+     "pt-BR": "Uma Sombra Dourada Sinistra",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "4367514a783b740ce84ba7580736b4bbcddce1c2d29576d1c2b262f0fcbdec39",
+     "pt-BR": "Convicções em Conflito, Sombras em Choque",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "6fb91ecdc523fabc0f1dfa7debc388240af077671eb88897c1b2c0503c8220f7",
+     "pt-BR": "Fase 10-1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "6e35a803c2687de931610608038ed4558f10ef4f6226b3b8f8e567963c825f3d",
+     "pt-BR": "Chega uma Sombra de Apetite Voraz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "2093a469fa1ac61791c1e53e41c08f99c27309aa783e67c41f505436db86a58e",
+     "pt-BR": "Fase 10-2A",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "e131187a761bd0f51047659cb59994d70e483eb74741025a28ac8cf18a5f48f6",
+     "pt-BR": "Uma Sombra Voando Alto no Céu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "c79f8177005f6ff4cea7a23959e70663c7f6dee612521887c3356832705fdf5a",
+     "pt-BR": "Fase 10-2B",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "e215cf2f6890cdf40969abfd1ee931e785020540eb5b88f8cf693b00447222f6",
+     "pt-BR": "Uma Sombra Que Entra na Mente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "0bd6ea6b620296c76ee4d9feeb3fed7ea1aa59a21d81a76e90feead63d51252c",
+     "pt-BR": "Uma Sombra de Repente Bem do Seu Lado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "caf4274cdc6f6aa795a684d8a07e0fdbdce543c2bfdcc78c63a29ea6251d78b3",
+     "pt-BR": "Uma Sombra Que Corta Qualquer Coisa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "2f23be3b8da065b4a41ad16b571f3fe2593a25998a039f05ad161b972f4b32fe",
+     "pt-BR": "Uma Sombra Que Se Aproxima Sem Parar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "21c2b7a3b5fafbdc88e6ca4634478e4fe1a0af9da98e6cb929ee8c49d69c3010",
+     "pt-BR": "Uma Sombra Esmagadora Que Pisoteia Tudo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "46f6e244ba4e23a4fb3d5e58524b8effdfd603230deb669a2560d5389e16781b",
+     "pt-BR": "Uma Grande Sombra Vindo Direto até Você",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "35139f2c91929317573a1c78c3c0f2f95e2cb4f5752115202da0f0be54413770",
+     "pt-BR": "Uma Sombra Gigante Descendo do Céu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "c26e2a77372e0aae4157fd55af2b0bcd51be12aa3fa217a6a739e077825989af",
+     "pt-BR": "Uma Cidade Afundando nas Sombras Gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_gui_test.luc",
+   "source_sha256": "e91effa1842689f2711217902d31a4b15f13615722c8208432534d104af91658",
+   "entries": [
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "a68509213410dd88a9db15ffbfc8a366dcf712741666bbc1e941f51683666635",
+     "pt-BR": "Vidro quebrado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p18/k22",
+     "source_text_sha256": "0995199cbbe181545f6b199c97cb9265359f9b071656a47bc6d00fc62c1abd00",
+     "pt-BR": "Homem na rua 3",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p122/k2",
+     "source_text_sha256": "0995199cbbe181545f6b199c97cb9265359f9b071656a47bc6d00fc62c1abd00",
+     "pt-BR": "Homem na rua 3",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p122/k3",
+     "source_text_sha256": "9f3e20b86720d58802cfb1058727ef4c2adfc70970494e9a256157ff4d64dfa4",
+     "pt-BR": "Mensagem jogável de cima",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p122/k5",
+     "source_text_sha256": "4b15d9642b753a89db0a4d6751f21b3cbd642e85f34b426769e6e382bc6b4548",
+     "pt-BR": "Homem na rua 111",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p122/k6",
+     "source_text_sha256": "b4ea9829436aa67a39ead26f03cd1cde59056968817c7832bfc650158985acaa",
+     "pt-BR": "Mensagem jogável de baixo",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p142/k2",
+     "source_text_sha256": "0995199cbbe181545f6b199c97cb9265359f9b071656a47bc6d00fc62c1abd00",
+     "pt-BR": "Homem na rua 3",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p142/k3",
+     "source_text_sha256": "9f3e20b86720d58802cfb1058727ef4c2adfc70970494e9a256157ff4d64dfa4",
+     "pt-BR": "Mensagem jogável de cima",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
      "editorial_status": "pending"
     }
    ]
@@ -47613,6 +49245,19 @@
    ]
   },
   {
+   "path": "common/lua/stage_chr_test_item.luc",
+   "source_sha256": "b03451b263ee30a6f24f6581f98b9dd5d794899db278892dc0862d42f8f114b5",
+   "entries": [
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_215_npc.luc",
    "source_sha256": "dcdead2d5604f56f0ec3d4a675ab992fa978d1fd4d98d0b5375a471b312bb93e",
    "entries": [
@@ -47750,6 +49395,33 @@
      "source_text_sha256": "87799dd51f12943579df0e6ace9b677a8305bbb46257e34e3261f4ae0bd16fdf",
      "pt-BR": "Esquece isso, só corre! \nMe segue!",
      "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_chr_test_check.luc",
+   "source_sha256": "8269f91ace7c82f64dd427c5d7cc7a84362650753d6788d97c228117db4c2b20",
+   "entries": [
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "fda24d6b0dcc804cdd9b76999706011d021e821ba07fbfb2110dfffa4386d58d",
+     "pt-BR": "Olhe para cima ↑",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k13",
+     "source_text_sha256": "cfd4df717fd6aa8213b21fcbe968a36ae710c5194cc6b293cb2c052013920911",
+     "pt-BR": "Olhe para baixo ↓",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "45e30f6a121bd70f074dc1a3e93a2a4879aa630e519516454ea827fe575b14d5",
+     "pt-BR": "※Bem feito",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
      "editorial_status": "pending"
     }
    ]
@@ -49568,6 +51240,19 @@
      "id": "p0/k303",
      "source_text_sha256": "450bc989e2a5e0f62b20ec5f1df7e7565488cef8f6e4cb9a0130ace5316ca6d6",
      "pt-BR": "Encontramos o Mukojima, que estava escondido com medo na loja de conveniência.\nUm e-mail do Otsuka diz que a W&P ainda está por aí.\nNos despedimos da editora-chefe Hirai e dos outros e seguimos para a Cidade de Mizuna.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/libadv.luc",
+   "source_sha256": "0cb30d27ef9ac3eeaf418bf545c3ca94eea2c6e21815fe16f1e1a2bc49e1a4c3",
+   "entries": [
+    {
+     "id": "p0/p128/k19",
+     "source_text_sha256": "f3a77f534e5ea8abb6c959949f6024b02352b90d0f71748eaa98dffd30134bab",
+     "pt-BR": "Heroína",
      "notes": "",
      "editorial_status": "pending"
     }
