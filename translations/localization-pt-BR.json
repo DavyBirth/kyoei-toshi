@@ -18,6 +18,488 @@
    ]
   },
   {
+   "path": "common/lua/stage_210_3_news_text.luc",
+   "source_sha256": "492540a524b928b7863ed9ea0a383b887612b0d538bac0b0389928602cf2cbe5",
+   "entries": [
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "db3533b5b5182c1098e4e52319d94cf7c803272117441a58f5616ed1c99751dc",
+     "pt-BR": "Sozinho na Escuridão",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "53a409f17fd1b01c9eac4d78bf584dc3654fa1b1717b85a8bb47161ce9fb2f26",
+     "pt-BR": "Que horas eram hoje...?\nDepois de abandonar a Yuki, eu estava na escuridão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "191ef60b8a69d3c21368431ffe9506d8bafd9f84f3e9c1f928f695ab06f7c8a2",
+     "pt-BR": "Reencontro com a Yuki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "8e2760c8c9fb1e012812b3a38904c58e90e2abd5f8f5fb09bb4d956443acc491",
+     "pt-BR": "Que horas eram hoje...?\nDepois de abandonar a Yuki, quanto tempo fiquei na escuridão?\nPareceram horas, dezenas de horas, e ao mesmo tempo só alguns segundos.\nAchei que nunca mais ia vê-la, mas lá estava ela, bem na minha frente!\nNão entendi o que tinha acontecido, mas nada disso importava.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k107",
+     "source_text_sha256": "e6b5b5b14b01f27a577abe0404857f5db2d8e6baf90a0e731d2d94a63a211708",
+     "pt-BR": "Que horas eram hoje...?\nDepois de abandonar a Yuki, eu estava na escuridão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "937215205a3a0eed6d6ce161a5bf13f34ee564f33f1c96a4513f94d13f97aff4",
+     "pt-BR": "Que horas eram hoje...?\nDepois de abandonar a Yuki, quanto tempo fiquei na escuridão?\nPareceram horas, talvez dezenas de horas, e ao mesmo tempo só alguns segundos.\nAchei que nunca mais ia vê-la, mas ela apareceu diante dos meus olhos!\nNão sabia o que tinha acontecido, mas nada disso importava.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "0e89250df8af59094470f8ec2d1080f51960abeffbd1890ed5cac95495008ddc",
+     "pt-BR": "\"Eu Devia Ter Ido Ajudar\": Bombeiro Lamenta",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "295e4fef0b9529410eeef0cc7b00fa1edf9b8a98a5d2d5476a803b39c001c334",
+     "pt-BR": "Os incidentes com criaturas gigantes que atingem a Cidade de Miyato feriram muitos moradores, destruíram prédios e ruas e deixaram cicatrizes profundas. Eles também lançaram várias sombras sobre os sobreviventes.\nO Sr. Nito, bombeiro do Quartel do Bairro Sakura, na Cidade de Miyato, disse: \"Eu estava resgatando pessoas de prédios desabados. Mas as criaturas gigantes disparam raios de repente, então fui mais cauteloso do que precisava e não consegui agir como queria. Por isso, houve gente que não conseguimos resgatar a tempo. Olhando pra trás, acho que devia ter ido ajudar. Se eu tivesse um pouco mais de calma e coragem...\"\nOs resgates desesperados continuam por toda a Cidade de Miyato, mas ainda falta gente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k111",
+     "source_text_sha256": "985f82ba6f7f0230c9b3b52b620f26dfb805c90d129886969ec1c27ce864bea8",
+     "pt-BR": "\"Mas Eu Não Queria Que Aquele Monstro Voador Me Pegasse\": Irmão Mais Novo É Atacado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "9547559757f6214522989f3c79fa916c66862face782b2169bb1ef08c2cc0153",
+     "pt-BR": "Os incidentes com criaturas gigantes que atingem a Cidade de Miyato feriram muitos moradores, destruíram prédios e ruas e deixaram cicatrizes profundas. Eles também lançaram várias sombras sobre os sobreviventes.\nO Sr. Nakahara (nome fictício), universitário que mora perto da Avenida Suzuran, na Cidade de Miyato, viu o irmão mais novo ser atacado pelo bando de monstros voadores que apareceu naquele dia.\n\"Meu irmão está no fundamental. Vimos chamas subindo lá pros lados da avenida e fomos ver. Ele correu na frente e, na hora que chegou na avenida, um monstro desceu do céu e esmagou ele.\"\nO monstro teria se aproximado de Nakahara segurando o irmão nas garras.\n\"Pensei que tinha que salvar ele, mas eu não queria que aquele monstro me pegasse. Corri sem olhar pra trás, me enfiei num beco estreito e fiquei agachado lá o tempo todo.\"\nNakahara não está sozinho; muita gente na Cidade de Miyato ficou com cicatrizes emocionais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "2358544b79a04d9ff73424bfc71e327a0974b10167a4c07b945a7e86569769e7",
+     "pt-BR": "\"Então Pra Que Me Salvaram?\" Celebridade Sofre Críticas por Comentário",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "eb236661c220883bcb6665cec461b267a1259e19fdb6d8299c9f5bae81860f68",
+     "pt-BR": "Um post nas redes sociais do apresentador de TV Hiroo Akino, que fugiu da criatura gigante que apareceu hoje no Bairro Sakura, na Cidade de Miyato, gerou críticas. Akino depois publicou um pedido de desculpas e apagou o post original.\nQuando a criatura gigante apareceu, Akino estava com vários funcionários da agência dele, que o protegeram enquanto ele fugia para uma distância segura. Lá, ele percebeu que um dos funcionários tinha ficado para trás e postou sobre isso. As críticas foram sobre a resposta dele a um leitor que escreveu \"Vamos voltar e ajudar!\": \"Não posso voltar pra um lugar perigoso agora. Além disso, aí eles teriam me salvado à toa.\"\nAkino depois pediu desculpas, postando: \"Fiquei abalado por um medo enorme e fiz um post inadequado. Me desculpem\", e apagou o original.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k115",
+     "source_text_sha256": "a6c12421e2e84544bdd5e3ebc97766e69cf5583e0dded67317d9f54cc4d5266b",
+     "pt-BR": "\"Se Eu Tivesse Visto o Monstro Antes\": Motorista de Ônibus Lamenta",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "00a13e6898225407db201b58d66fa3ad4a2a744e8bbf4c335a95680779127c7d",
+     "pt-BR": "Hoje, um bando de monstros voadores que apareceu na Avenida Suzuran, na Cidade de Miyato, atacou muita gente.\nNo meio disso, a Miyato Bus usou às pressas seus ônibus para retirar moradores, e muita gente conseguiu escapar graças a isso.\nPorém, o ônibus que sairia por último foi atacado pelos monstros. O motorista, Sr. Hamajima (nome fictício), sobreviveu por milagre.\n\"Eu vigiava os monstros e tentava pôr o máximo de moradores a bordo. Mas no fim um monstro derrubou o ônibus, e muita gente foi atacada. Se eu tivesse visto o monstro chegando antes...\"\nHamajima diz que ainda não consegue tirar da cabeça os gritos dos monstros voadores atacando o ônibus.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k117",
+     "source_text_sha256": "fb76e85cd442f950afa378361d13831b15dc13cc37824d973568538d364539b3",
+     "pt-BR": "\"Não Tinha Mais Nada a Fazer\": Comentário de Vereador Gera Críticas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "c5984a59016494e951d4368b3fe555bab3e8a254faa358d42c160bc13185c2b2",
+     "pt-BR": "Depois do incidente com a criatura gigante de hoje no Bairro Sakura, na Cidade de Miyato, o vereador Seizo Koma comentou: \"Naquela situação, não tinha jeito\", provocando críticas de cidadãos, que chamaram a fala de \"irresponsável quando tanta gente foi atingida\".\nKoma depois publicou um comentário no site dele: \"Peço desculpas por uma fala que causou mal-entendido. Não quis fazer pouco das vítimas.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k119",
+     "source_text_sha256": "1629163f2ba805a511ac8d0d5bc23227bdfbd16ac2123babc5a35550132d5d73",
+     "pt-BR": "\"Não É Responsabilidade Minha\": Organizador de Evento Some",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "bbc11dbc0a3739b1b5c11a22e7992862d9da43021f33a6721c1302fc8e861271",
+     "pt-BR": "Um talk show com uma apresentadora de TV famosa estava marcado para hoje numa sala de um prédio no centro da Cidade de Miyato, mas um ataque de raio de calor de uma criatura gigante atingiu o prédio em cheio, matando 10 pessoas e ferindo 47.\nO organizador do evento foi embora dizendo \"Não é responsabilidade minha\", e o paradeiro dele é desconhecido.\nO prédio era uma livraria no Bairro Sakura, na Cidade de Miyato, onde cerca de 100 pessoas tinham se reunido para um talk show comemorando o lançamento de um livro da apresentadora Miyuko Takagi.\nA polícia está apurando se houve problemas para garantir rotas de fuga no evento.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "9ff107c6dd1cb65518e37cf4a0e1abd91bd615f367f74b8e0968918f551baf38",
+     "pt-BR": "\"Vejo Ela como Amiga\": Ator Mitsuya Mizusaki Comenta Boatos de Romance com a Dubladora Chinami Fuyuhara",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "dcc430b36afd48379e48313972401a6ff5fa22fa79f63d70d4ad51a936e1b33d",
+     "pt-BR": "Depois que uma revista de fofoca publicou fotos da dubladora Chinami Fuyuhara saindo do apartamento do famoso ator Mitsuya Mizusaki, Mizusaki divulgou um comentário pela agência.\n\n--------------------\nPeço sinceras desculpas por causar alvoroço com um assunto pessoal.\nConheci Chinami Fuyuhara quando fiz uma participação no filme animado \"Sugochikku Mirorin: A Excursão Eterna\", e ela me deu todo tipo de conselho sobre dublagem. Ela é uma das minhas amigas próximas, com quem fico totalmente à vontade. Não há nenhuma verdade no que a revista escreveu.\nMais uma vez, peço desculpas a todos os meus fãs e envolvidos pelo transtorno.\n--------------------\n\nEm resposta, a agência de Chinami Fuyuhara comentou: \"Entendemos que eles são bons amigos.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "716a8ef8ae442a5215f95589c061bda6b1d2f7e6660a672c089d4f48b7e86fe5",
+     "pt-BR": "\"Vejo Ela como Minha Namorada\": Ator Mitsuya Mizusaki Comenta Boatos de Romance com a Atriz Yuka Seno",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "9db4277abb3b518a60d499f17446d9c08b43ab34dbabfca4a2cd5983329daba8",
+     "pt-BR": "Depois que uma revista de fofoca publicou fotos da atriz Yuka Seno saindo do apartamento do famoso ator Mitsuya Mizusaki, Mizusaki divulgou um comentário pela agência.\n\n--------------------\nPeço sinceras desculpas por causar alvoroço com um assunto pessoal.\nYuka Seno e eu ficamos próximos desde que atuamos juntos na novela \"Policial Milk-Shake 2\", que eu protagonizei. Gosto muito dela e a vejo como minha namorada.\nParte do que a revista escreveu é exagero, mas a maior parte é verdade. Porém, ainda não temos planos de casar.\nEspero que todos nos acompanhem com carinho daqui pra frente.\n--------------------\n\nEm resposta, a agência de Yuka Seno comentou: \"Entendemos que eles são bons amigos.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "c91a5055d62a1adcaba1f0cfe588d25b0b8f687c4706b846f3cc25ba821ee667",
+     "pt-BR": "\"Vejo Ela como Família\": Ator Mitsuya Mizusaki Comenta Boatos de Romance com a Apresentadora Miyuko Takagi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "234cbc1c9c99011cc85c09cf5a05f16b2244f261d024c2cad03a7b8319345aa5",
+     "pt-BR": "Depois que uma revista de fofoca publicou fotos da apresentadora Miyuko Takagi saindo do apartamento do famoso ator Mitsuya Mizusaki, Mizusaki divulgou um comentário pela agência.\n\n--------------------\nPeço sinceras desculpas por causar alvoroço com um assunto pessoal.\nMiyuko Takagi e eu somos amigos de infância, nossas famílias eram vizinhas, e passávamos o tempo todo juntos quando crianças. Paramos de nos ver quando ela se mudou no ensino médio, mas recentemente participamos juntos, por acaso, do programa \"Grande Transmissão Zukkoke Ponkotsu!\" e voltamos a nos falar. Não tenho sentimentos românticos por ela; pra mim, ela continua sendo como família. Não há nenhuma verdade no que a revista escreveu.\nMais uma vez, peço desculpas a todos os meus fãs e envolvidos pelo transtorno.\n--------------------\n\nEm resposta, a agência de Miyuko Takagi comentou: \"Deixamos a vida pessoal dela a cargo dela.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "5ec403edaaf3193e96e572682f1b5aceb4a82ea3f7591f61670a6077eedfb5b2",
+     "pt-BR": "\"Vejo Ela como Parceira\": Ator Mitsuya Mizusaki Comenta Boatos de Romance com a Roteirista Shigeko Ryuzoji",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "c0af876b1f8181966a653f3dbb705846325246f4af86fdc21e52534df8c3aef1",
+     "pt-BR": "Depois que uma revista de fofoca publicou fotos da roteirista Shigeko Ryuzoji saindo do apartamento do famoso ator Mitsuya Mizusaki, Mizusaki divulgou um comentário pela agência.\n\n--------------------\nPeço sinceras desculpas por causar alvoroço com um assunto pessoal.\nTrabalhei com Shigeko Ryuzoji pela primeira vez no filme \"Kunio, o Vampiro Sem-Teto: O Contrato da Família de Kunio\", e desde então ela é como uma parceira com quem posso falar o que penso à vontade. Não tenho sentimentos românticos, e não há nenhuma verdade no que a revista escreveu.\nMais uma vez, peço desculpas a todos os meus fãs e envolvidos pelo transtorno.\n--------------------\n\nEm resposta, Shigeko Ryuzoji comentou: \"Fico lisonjeada de ter meu nome ligado a um homem tão bonito. Adoraria que os repórteres da revista escrevessem algo ainda mais criativo (rs).\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "4bbffedc1064c0d52da153893891f59bb9d9ff5d2d7bf40a274473c04e1a9810",
+     "pt-BR": "\"Ela Provavelmente Me Vê como um Cara Útil\": Ator Mitsuya Mizusaki Comenta Boatos de Romance com a Modelo Rina Kizawa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "8877a487e13c011a853617ba55b5cf0958580253c96d568cc4d4b20b20336bb0",
+     "pt-BR": "Depois que uma revista de fofoca publicou fotos da modelo Rina Kizawa saindo do apartamento do famoso ator Mitsuya Mizusaki, Mizusaki divulgou um comentário pela agência.\n\n--------------------\nPeço sinceras desculpas por causar alvoroço com um assunto pessoal.\nConheci Rina Kizawa por meio de um amigo, e já jantamos juntos, mas não há verdade no que a revista escreveu.\nAlém dos jantares, já a levei e busquei no trabalho, carreguei as sacolas de compras dela, reservei hotéis para as férias dela e passeei com o bichinho dela, mas não acho que ela tenha sentimentos românticos por mim. Ela provavelmente me vê como um cara útil.\nMais uma vez, peço desculpas a todos os meus fãs e envolvidos pelo transtorno.\n--------------------\n\nEm resposta, a agência de Rina Kizawa comentou: \"Entendemos que eles são bons amigos.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "64327f3d77a1611d7aa3b37f8d84f51e485f7efb89a9b2a0aaa9c134d9542675",
+     "pt-BR": "\"Ela Provavelmente Nem Pensa em Mim\": Ator Mitsuya Mizusaki Comenta Boatos de Romance com a Artista Charlène Kondo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "3028710467e086d5c9c6c506820c96da549b4fc6a03f5168acf7641a81a1b4e1",
+     "pt-BR": "Depois que uma revista de fofoca publicou fotos da artista Charlène Kondo saindo do apartamento do famoso ator Mitsuya Mizusaki, Mizusaki divulgou um comentário pela agência.\n\n--------------------\nPeço sinceras desculpas por causar alvoroço com um assunto pessoal.\nCharlène Kondo é uma artista que atua no mundo todo. Apesar de termos a mesma idade, eu a admiro desde que era estudante de artes. Nos conhecemos quando ela participou como convidada do meu programa de rádio \"Pôr do Sol do Sol de Mitsuya Mizusaki\". Um romance estaria muito acima de mim, e ela provavelmente nem pensa em mim.\nMais uma vez, peço desculpas a todos os meus fãs e envolvidos pelo transtorno.\n--------------------\n\nEm resposta, Charlène Kondo comentou por meio de um representante: \"Eu gosto bastante dele, sabia?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "36e53fb3031c65d77ba99389e427b0fe61450e9efea8d604443d27e046c5bae0",
+     "pt-BR": "\"Aqueceu Meu Coração\", Diz o Artista de Rua Watanabe",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "c25409dbd092745236c287ebe845752f4c340564dcc6e9c8b9f5299e46d9fc21",
+     "pt-BR": "Depois do incidente das sombras gigantes que atingiu a Cidade de Miyato hoje, muitos moradores passam uma noite aflita nos abrigos.\nEntre eles, o artista de rua Watanabe estaria aliviando o clima com mágicas simples e pantomima.\n\"No começo, fiquei quieto, achando que as pessoas podiam ficar bravas comigo por me apresentar numa emergência. Mas, quando mostrei uma mágica pra uma criancinha pra consolar, juntou gente sem eu perceber...\"\nOs desabrigados teriam agradecido ao artista, dizendo que aquilo aqueceu o coração deles.\nWatanabe disse: \"Fico feliz que minhas habilidades possam ser úteis.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "cb1d3505d6e0e5789320a06717ba68c40de4a721c2ed5675ef6ac6a1a1f352f9",
+     "pt-BR": "\"É Inspirador\": Cresce o Apoio a Garoto Que Dá a Volta ao Mundo de Bicicleta",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "c0a398200bc9e995a91ff20b4435b58f18c1d816a35b270ee71f6285ffe5336d",
+     "pt-BR": "Ontem, Jimmy Amber (14 anos), que tenta dar a volta ao mundo de bicicleta, visitou a Prefeitura da Cidade de Miyato.\nO desafio de Jimmy virou assunto no mundo todo, e o apoio a ele se espalha por onde ele passa.\nUm membro da \"Torcida do Jimmy\" da Cidade de Miyato disse: \"A dedicação dele sempre me dá coragem. Fiquei muito feliz de conhecê-lo pessoalmente e entregar comida e mantimentos.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "196d934951b7c2f01418da4bb6c78f56a698535202d529ffed3cc9da7eb00574",
+     "pt-BR": "\"Que Coisinha Preciosa\": Filhote de Coala Espia da Bolsa no Zoológico da Cidade de Miyato",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "2f947fb3bc3c1c9c4f571a1d83cffaed19d4b19339c8d281b5268a082c0b1367",
+     "pt-BR": "Um filhote de coala nascido no Zoológico da Cidade de Miyato colocou a cabeça para fora da bolsa da mãe. Assim como os cangurus, os coalas são marsupiais, e os filhotes passam de seis a sete meses se desenvolvendo dentro da bolsa.\nUma fã fervorosa de coalas da Cidade de Miyato falou empolgada: \"Coalas são preciosos demais. Venho ao zoológico todo dia desde que o filhote nasceu. Estou muito feliz de finalmente ver o rostinho dele. Acho que vou dormir bem hoje.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "1507e04ca82d39419f996d87da30d0c711fcecf237d7f4f6107002382f24edec",
+     "pt-BR": "\"Queria Poder Tocar\": Exposição Mundial do Ouro no Museu da Cidade de Miyato",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "6e94a86a7b04c58b403ca71127e0a92b169fd3729a53148c3b2acf9265934e0f",
+     "pt-BR": "A \"Exposição Mundial do Ouro\" está acontecendo no Museu da Cidade de Miyato, no bairro Sumire.\nEstão expostas peças de ouro do mundo todo. A atração principal é o \"Gato Dourado\", uma escultura de ouro puro tão caprichada que pode ser confundida com um gato de verdade. O Museu Mundial do Ouro nunca tinha deixado a peça sair do acervo. Os visitantes comentaram: \"O pelo parece de um gato de verdade. Queria poder tocar. Quero levar pra casa!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k141",
+     "source_text_sha256": "867fbf2bf02323cdae55ce86cac5824933c807562c5071096e9d3ad9213f55ef",
+     "pt-BR": "\"Um Absurdo Total\": Furtos Disparam em Meio à Emergência na Cidade de Miyato",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "5adbd71e85ad85b45bfe8b7bca0a4e0142d6846855c42f7532e20d6864abcc13",
+     "pt-BR": "O caos causado pelas criaturas gigantes que apareceram hoje na Cidade de Miyato trouxe uma onda de furtos de dinheiro e objetos de valor.\nO bairro Sakura, onde o primeiro alienígena gigante apareceu, foi especialmente atingido. A polícia recebeu 20 registros de furto.\nUm homem com escritório no bairro Sakura teve furtada uma pintura de cerca de 10 milhões de ienes enquanto estava temporariamente fora.\n\"Numa hora dessas, com um desastre sem precedentes acontecendo, a gente devia estar se ajudando. Roubar das pessoas agora é um absurdo total. Espero que peguem quem fez isso\", disse ele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k143",
+     "source_text_sha256": "34eaad9e77f3c7ce9d87f9b392a9c05f8428e070cd6c17a1a39b107bf67bb49e",
+     "pt-BR": "\"Estamos em Alerta Máximo\": Desabrigados Temem a Volta Repentina das Sombras Gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "ee91dda74d627c5556693cb05613a11e6c8ed330b0f0bb2e781b9bd270d0e6ef",
+     "pt-BR": "Muitos moradores da Cidade de Miyato passam uma noite aflita nos abrigos depois dos incidentes das sombras gigantes de hoje.\nAs criaturas gigantes já sumiram de algumas áreas, mas, como apareceram sem aviso, os moradores dizem estar \"em alerta máximo caso elas voltem de repente\". Outros encaram com mais resignação: \"Se não dá pra saber quando elas vão aparecer, não adianta se preocupar.\" O clima nos abrigos continua tenso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k145",
+     "source_text_sha256": "7a9413a041242b136f3acbd9c03f65c1b516e2f29846c60f659561d9b13c4de3",
+     "pt-BR": "【TV】 \"Conversas da Meia-Noite\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "1d9f882a5bfdecc488bf72c3a3a47e4895667b479bb1bcb85c12a55cb78ad373",
+     "pt-BR": "A próxima edição de \"Diálogo: Meia-Noite\" recebe o ator Mitsuya Mizusaki e o escritor Maku Kumazawa, com o tema \"Ainda Quero Ir Junto\". Mizusaki vai até contar a história do alienígena que diz ter encontrado no ensino fundamental!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "a15f9003ceeecca993c4052edb4c447b00decbc6010e3948e42375f0b18fe3ed",
+     "pt-BR": "【Mangá】 \"Minha Namorada do RPG de Mesa\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "47f5188bb3b13b9189b59d9c67999cda5b2fef580d39f01dccca3291387985c8",
+     "pt-BR": "Na Weekly GZ da semana que vem, o mangá de enorme sucesso \"Namorada do RPG de Mesa\" traz o reencontro com Ryuji, que viajava separado dos outros. \"Fico nervoso sozinho e não tenho mais pra onde ir\", diz ele. Mas o verdadeiro motivo da volta é...!?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "6b9edfba5049ec51c2393bc38685bc843577cd0d25b5a4b88ae3b5b264e3bf3d",
+     "pt-BR": "【Filme】 \"Parceria Improvável em Netuno\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "0f3edc91cc3a5705f5e56b135ed9c4903acabad64e0d34620c2005b9ee690015",
+     "pt-BR": "A epopeia de ficção científica \"Parceria Improvável em Netuno\" finalmente estreia neste fim de semana.\n＜Sinopse＞\nJin e Aneru, amigos de infância agora em lados opostos, são perseguidos por um inimigo em comum e acabam no mesmo navio de guerra nos mares de Netuno. Cada um pensa \"Não confio nele, mas é melhor observar mais um pouco\" enquanto começam a questionar um mundo em que amigos de infância precisam lutar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "ba35876f0f51154152bb7848f0507f979d4ad9bb6e9c4597aaa58cf590cb3164",
+     "pt-BR": "【Romance】 \"O Círculo Mágico da Loja de Conveniência\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "99702a1743b1095ec535f425cb3e99729c0a93a9ff5103a37858d274127deac1",
+     "pt-BR": "【Romance】O novo livro de Morio Shiba, cuja obra anterior, \"A Reflexologia dos Pés de Klein\", vendeu um milhão de cópias, \"O Círculo Mágico da Loja de Conveniência\", será publicado.\nDepois que o protagonista Shota invoca sem querer um demônio maligno, sua instrução vaga, \"Tanto faz, mas, se você insiste\", deixa o demônio confuso, e ele acaba ajudando o povo da cidade...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "93cbfa40c9cee9eea9468e23645843a7fcf5cc691a52f5c4bbe5f5f86199136f",
+     "pt-BR": "【Lançamento】 \"Quero Pedir Desculpa\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "d53a02c7919fc0b6a10e9f43e7e1cc61b129d6c5b7b5aca41bbcad77f4a6bd99",
+     "pt-BR": "O novo livro do repórter em ascensão Kanji Sankai.\nUma coletânea de entrevistas que reúne histórias de pessoas de todo tipo que \"só querem pedir desculpa\".\nCom histórias variadas, de assassinos a um aluno do primário que brigou com um amigo, é um livro que desperta todo tipo de emoção.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "495f8248c66a60ad8e23e8af81fd8f20fdb0f9f5d64bbb8929bd261e5cc3e11b",
+     "pt-BR": "Nova Música de Aya Suzumura, \"Quero Te Cumprimentar como Sempre e Pedir Desculpa\", Faz Enorme Sucesso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "0264ca89290327a2f4099b469b0d40a4bfed026c3734dabee4555553ad94ae0b",
+     "pt-BR": "As vendas em CD da nova música da promissora cantora e compositora Aya Suzumura, \"Quero Te Cumprimentar como Sempre e Pedir Desculpa\", chegaram a 500 mil.\nA música fala do conflito e da reconciliação depois de uma briga boba com um amigo próximo, tocando pessoas de várias gerações.\nA novela \"Pneuzinho da Juventude\", que a usa como tema, também continua com ótima audiência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "894cc93cfa09f985451b7fbd115e74b17fb3c55925811cf6c2d0770fd988f5cc",
+     "pt-BR": "Nova Música de Aya Suzumura, \"Quero Pegar Sua Mão e Comemorar Nosso Reencontro\", Faz Enorme Sucesso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "4e585893de4f46c0268dfbd44df1b109330437e1552883b7321d9393265bab62",
+     "pt-BR": "As vendas em CD da nova música da promissora cantora e compositora Aya Suzumura, \"Quero Pegar Sua Mão e Comemorar Nosso Reencontro\", chegaram a 500 mil.\nA música fala de amigos que se afastaram, se reencontram por acaso e renovam a amizade, tocando pessoas de várias gerações.\nA série de super-heróis com efeitos especiais \"Esquadrão Não Identificado Yuman\", que a usa como tema, também continua com ótima audiência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "31726cb1503e7304a47b36077c55b8604256ff37b265c846da840bfb057a3dc9",
+     "pt-BR": "Nova Música de Aya Suzumura, \"Vou Ficar Tão Feliz Que Não Vou Conseguir Parar de Chorar\", Faz Enorme Sucesso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "35abf78aabbff33f810fcb764c432c87c7cdb9726f0a07adf85b2da63c785839",
+     "pt-BR": "As vendas em CD da nova música da cantora e compositora em ascensão Aya Suzumura, \"Vou Ficar Tão Feliz Que Não Vou Conseguir Parar de Chorar\", teriam chegado a 500 mil.\nA música fala da luta interior de uma mulher tentando confessar um amor não correspondido e tocou ouvintes de várias gerações.\nA novela \"Amor de Xícara\", que a usa como música-tema, também continua com ótima audiência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "b5995763c0d977aed12fc43550770c6d2ef6705f6a79b76ec8939e2537b9c2b7",
+     "pt-BR": "Nova Música de Aya Suzumura, \"Vou Te Abraçar e Nunca Mais Soltar\", Faz Enorme Sucesso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "54b34934145014f1d0c95a19a18e455109e2c6eaf2d3794484faa16a13757e2d",
+     "pt-BR": "As vendas em CD da nova música da promissora cantora e compositora Aya Suzumura, \"Vou Te Abraçar e Nunca Mais Soltar\", chegaram a 500 mil.\nA música expressa sentimentos sinceros por alguém amado, tocando pessoas de várias gerações.\nO filme \"Terra do Amor\", que a usa como tema, também é um grande sucesso de bilheteria.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "fe37a2dd59e357c3e0f27ab0f87da7da2273fbaf91bfc3f1cc06143c0ced721c",
+     "pt-BR": "Nova Música de Aya Suzumura, \"Quero Me Ajoelhar e Pedir Perdão\", Faz Enorme Sucesso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "79568c20a61bd9cf952c760ca408cedc3a94c1fab4160e356f40f3cc6952422a",
+     "pt-BR": "As vendas em CD da nova música da promissora cantora e compositora Aya Suzumura, \"Quero Me Ajoelhar e Pedir Perdão\", chegaram a 500 mil cópias.\nA música fala de pedir desculpa depois de esquecer, sem querer, o aniversário do parceiro, e tocou várias gerações.\nO anime \"Mari Hiraaya Não Te Perdoa Nem de Joelhos\", que usa a música como tema, também continua com ótima audiência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "16856004d8f24307e65b460b70bf6e94f39d89e3ce3fe5c877d2cc122b412030",
+     "pt-BR": "Nova Música de Aya Suzumura, \"Vou Te Abraçar com Força e Te Beijar Sem Parar\", Faz Enorme Sucesso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "326779ce8a610db210142e60d90df888e6a08a9d9432c5c68fd8771e76cf60f8",
+     "pt-BR": "As vendas em CD da nova música da promissora cantora e compositora Aya Suzumura, \"Vou Te Abraçar com Força e Te Beijar Sem Parar\", chegaram a 500 mil.\nA música acompanha um adolescente que amadurece numa jornada por um mundo devastado enquanto procura a garota que admira, que foi sequestrada. Ela toca pessoas de várias gerações.\nFeita como tema do anime \"Marus, o Colecionador de Faixas\", a música acompanha uma série que também continua com ótima audiência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "d1eaed153978109207e678a59de01bedf8eddc007f5c40c6b08758011cf021df",
+     "pt-BR": "Lançada Versão em Rap de \"Céu para Nós Dois\", de Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "5cd42800e6217e981874b50da71a0fbff55ec2e419ff67791ddc8812800c6bf1",
+     "pt-BR": "Foi lançada uma versão em rap de \"Céu para Nós Dois\", da cantora e compositora Mai Iida.\nO arranjo amplia o universo da música.\n\n\"Céu para Nós Dois\" está disponível na Granzella Music, em http://granzellamusic.jp/.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "1c9ebb222fa5b04c52959f3b47be37935e99006617f2d69570d1c522ec92429d",
+     "pt-BR": "Linha \"Ministro do Karaage\" Chega Perto de 100 Bilhões de Unidades Vendidas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "7844e46e318422c6f0c7224dea1f13a62be54aa16075007cde93ffc084f8d6af",
+     "pt-BR": "A rede de lojas de conveniência Clover, que atua principalmente na Cidade de Miyato, anunciou na sua conta oficial nas redes sociais que as vendas acumuladas da popular linha \"Ministro do Karaage\" devem chegar em breve a 100 bilhões de unidades.\nO Ministro do Karaage é um dos produtos mais vendidos da Clover, conhecido pela grande variedade de sabores.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/TextData.luc",
    "source_sha256": "03dd74bbcdc66bd2818be8922e501715038e5c2645429a098e0a9bf4c02f2de9",
    "entries": [
@@ -136,6 +618,26 @@
      "id": "p0/k6",
      "source_text_sha256": "190f17e00fe7661ac493a6743956c76ff9d84d51e9600c7471e453076c003eab",
      "pt-BR": "【Vídeo】Monstro gigante derruba Gyaos com facilidade",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_210_3_npc.luc",
+   "source_sha256": "b1c9a9fae01d277e83c99699d07fcbaec3a1f1261bd474110d7ce7195de1ce4b",
+   "entries": [
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "5957113004e3ec1d68271041a36303b601790534ea5facb4280c9b119bf535e9",
+     "pt-BR": "Heroína＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -21650,6 +22152,922 @@
    ]
   },
   {
+   "path": "common/lua/Text_Stage_210_3.luc",
+   "source_sha256": "1c3e9ed7336488e9eed7d6af8656355b1d2659f08b5f5292034e95880efa9579",
+   "entries": [
+    {
+     "id": "p0/k10",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "83017950e58bfb6f2a36486c275421b8120cead0ea0665068262cf6d33a9a3b0",
+     "pt-BR": "Ah...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k13",
+     "source_text_sha256": "b86c66c1e4d9dd8ee69ea12a391559caa2b54752ad2bfa1a01c9a85909b7545a",
+     "pt-BR": "O que eu fiz...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k15",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "5f136088d15788e68f68a6dc48355d4c212d5590e4bbb424f73882bd48d13e4c",
+     "pt-BR": "O que eu fiz...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k19",
+     "source_text_sha256": "5b48d149a84f4bf9a2e8f363931f226f8f48f60e0ab652615408e1d786131f32",
+     "pt-BR": "Lá atrás, a Yuki me empurrou\npra me salvar. E mesmo assim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k21",
+     "source_text_sha256": "16177b0cd9f453ecd664ffaa8a222947454313685e7eebc6962706c42787c563",
+     "pt-BR": "Ela estava tentando me salvar...\ne eu deixei ela pra trás...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k23",
+     "source_text_sha256": "e0514beda0c441a661294d784107a3cf575f1063374c406cfa7ae9c298eda33f",
+     "pt-BR": "Lá atrás, a Yuki me empurrou\npra me salvar... E mesmo assim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k25",
+     "source_text_sha256": "b838986b6ff611721a300703f4c8d87c42bef21bbd9e3f032dffe4f354587d09",
+     "pt-BR": "Ela estava tentando me salvar...\ne eu deixei ela pra trás...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "66ef65d8dd170999583304e3ce031a21f5b6b3f591b8d8be5304c893cfa053ae",
+     "pt-BR": "Eu devia ter ido salvar a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "48bc13f28e0da6ddf0ea62a65864a3566ac84c55a2dea72497691528e794ce56",
+     "pt-BR": "Mas, mesmo assim, eu não queria que aquele monstro voador me pegasse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "9af4cdfeb8d08c6ddfde88badd757218e28b14e500a08e7c73fc36b24a2933cc",
+     "pt-BR": "Se eu fosse pego, a Yuki teria me salvado à toa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "ea8033b272fc6141d6f50637e446001118d25d3a40ccf0e1147b7f44cc9686be",
+     "pt-BR": "Se eu tivesse visto o monstro antes, a Yuki estaria bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "3bcd0bce9865076272b146b313c992c8589ddf6ea3f514f446e609eca843df05",
+     "pt-BR": "Não tinha nada que eu pudesse fazer. Qualquer um faria o mesmo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "bfd1c0fd7d6ea5e068d00f6a68bb4b63cbe300171129549d5d93778e30cfeef2",
+     "pt-BR": "A Yuki fez isso porque quis. Não é culpa minha.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "1c76de58292ccb197c4cc74cb8ed75b5e48d7d85890124cf857d4f8473e7835c",
+     "pt-BR": "Eu devia ter ido salvar a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "97a2f4c5b056f69e8fb6e5af64543507eb93d947f84e05a64eefb0da67e48d05",
+     "pt-BR": "Mas, mesmo assim, eu não queria que aquele monstro voador me pegasse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "e770a65a89b5f6e779f641616231fa6dc6d62c3184e9120ec9603107fcbc7897",
+     "pt-BR": "Se eu fosse pega, a Yuki teria me salvado à toa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "a3243032bfb959c865afa1e106b0bd3258c644e845c4074d39e460ab562ff69c",
+     "pt-BR": "Se eu tivesse visto o monstro antes, a Yuki estaria bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "36472a94d3663fdd0fa13434f77cb365f1970312e22372f25a2e4cf0242b76c9",
+     "pt-BR": "Não tinha nada que eu pudesse fazer. Qualquer uma faria o mesmo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "88ffd779e59fa51b5454d158e914cb73befb6b66a51b726be538212a89bb7b71",
+     "pt-BR": "A Yuki fez isso porque quis. Não é culpa minha.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "1d0a622e03085c111ccfcb442af472c23feea66e6240379e1988e25f3f51e2e3",
+     "pt-BR": "Mas, mesmo assim,\neu não queria que aquele monstro voador me pegasse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "1e88a0caa88025adea604764407ae05930f1409c6b1206b210d5b75852a3b92c",
+     "pt-BR": "Mas, mesmo assim,\neu não queria que aquele monstro voador me pegasse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "87d9e1cd92bd4ec47e7ca2ea4bf13268cfa435247a636c2a507114171c17ae3b",
+     "pt-BR": "Se eu fosse pego ali, a Yuki teria arriscado a vida\npra me salvar à toa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "181a5d585badc8f39a29dede4523f38802bf5aa7625bbbd0e21c476341e212b0",
+     "pt-BR": "Se eu fosse pega ali, a Yuki teria arriscado a vida\npra me salvar à toa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "5a23d750939b201b7b04f992e0c8f09eace7eb4e862f3c278490ff65f2546849",
+     "pt-BR": "A Yuki fez isso porque quis. Não é culpa minha.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "bce3e0a8ed0662de6084511a12ac3a4ac86252b0dee4d24295fea60b633e4da1",
+     "pt-BR": "Ah, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "3c68d87f68378db96af094fe29df652d09734edf5e6042adeb7c02d02b3cee0f",
+     "pt-BR": "A Yuki me salvou...\nO que será que ela pensa de mim...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "99886636dfe52572a0cac826f949136561871da8d5897a827bff31627545faef",
+     "pt-BR": "A Yuki me salvou...\nO que será que ela pensa de mim...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "0c3d406b2819a3271c5e52506e465dcc1b31afda15def026bbf63274661566aa",
+     "pt-BR": "Ela provavelmente me vê como amigo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "b6388273441cd2869043d197ac3984584ba499a38c67601b9e86b2147b6db189",
+     "pt-BR": "Ela provavelmente me vê como namorado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "74f439fa911b5e97fa34960024e490b5dd0d5a609a92483d3251d0aea2044c84",
+     "pt-BR": "Ela provavelmente me vê como família.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "69a051146097900aa6c503338d7bb10ec34a4ee92511c6cf0c94fc408a8e2560",
+     "pt-BR": "Ela provavelmente me vê como parceiro de crime.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "6b400674e20cb6bf366ed98a2eb51969f45ed5cd028507448c5d04e4bdb81db2",
+     "pt-BR": "Ela provavelmente só me vê como um cara útil pra ter por perto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "3538bc78bb5bca133c3e52a9932a5f17820669ff5d3647bbea95e737b1656e4b",
+     "pt-BR": "Ela provavelmente nem pensa em mim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "6aabdb16c1f5698885314a9d25504e80ed44707c16e40d9ae314cf70e0270f91",
+     "pt-BR": "Ela provavelmente me vê como amiga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "5da2c27c1a36671ac2ad4933bd50711fc3474c50f355c84244f891159c80cdfa",
+     "pt-BR": "Ela provavelmente me vê como namorada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "a0a6b683543de0006211eef1595ddeca0eeeafff4fa90cc7bec178f22e998712",
+     "pt-BR": "Ela provavelmente me vê como família.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "1b7e34466f64d6b155d0aebfa761f522b5d2c76b2eccc904f198fa7eba7a8028",
+     "pt-BR": "Ela provavelmente me vê como parceira de crime.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "e269dfb292def86e77d76a4d60400752b07b2d42e05d0d6b4e41d4d2d27283f8",
+     "pt-BR": "Ela provavelmente só me vê como alguém pra usar quando convém.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "ef7f6bc5189a8096443f6cef326a5cafbad18319f9b8850f004ded433dd3b447",
+     "pt-BR": "Ela provavelmente nem pensa em mim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "b38b07fe2da02ac6d7a562deb0654b7f06c412ea31ec0fd6f9a4eeafb3b43fd0",
+     "pt-BR": "Ela provavelmente me vê como amigo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "ddb6b74740ebeba41adcff8c9381c5cdaad3c1d9f1ba41bca9cd3d42c2b2335e",
+     "pt-BR": "Ela provavelmente me vê como amiga...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "94475c398a8d74be06ccc2af4ac06941e76d34f21193b0a9ee044bdb4ce440b8",
+     "pt-BR": "E mesmo assim...\neu praticamente abandonei minha amiga...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "f3ac6b50d956ef19e720a73fbf2d42d5f57d2a0a6dc02357731859f20acc4fe4",
+     "pt-BR": "E mesmo assim...\neu praticamente abandonei minha amiga...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "8091222f6a29cc6c1633f7389294726a1cb79e64eedc81aa73ac340d08a00539",
+     "pt-BR": "Ela provavelmente me vê como namorado...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "88296b9296b957fac2d04c8e9cb428924605910346c3d1158f1314f5008cfa58",
+     "pt-BR": "Ela provavelmente me vê como namorada...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "4b79d78c553e0f4fb4bfd2742ff6369ce36f5c35df8b59ef5949fd3078f7e98d",
+     "pt-BR": "E mesmo assim...\neu praticamente abandonei ela...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k115",
+     "source_text_sha256": "4f8ffd7fb7472e3fa5b93c91160aa6ff4fc8c25ebfa215b9be6899c6fd53431f",
+     "pt-BR": "Ela provavelmente me vê como família...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k117",
+     "source_text_sha256": "8aaaae3fbdd6a8755cd4319e0e66b8cb1036e8775d3b15d39e460738513a7eeb",
+     "pt-BR": "Ela provavelmente me vê como família...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k119",
+     "source_text_sha256": "a3d88a80b9bd318799c2871bf7e9c047bd67645a10b4a065a17dc5ff87de1f2b",
+     "pt-BR": "Ela se abriu tanto comigo!\nE eu praticamente abandonei ela...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "dcf19080eb4760491aa1816ec9c57b16f5d263696759217f5a7bbc26c0286c38",
+     "pt-BR": "Ela provavelmente me vê como parceiro de crime...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "5bad1ab998cfb7154e0c1e321e70085b05b93e767b75dbd89ed5b89168f4effa",
+     "pt-BR": "Ela provavelmente me vê como parceira de crime...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "f5c98c5c8139e806b935ea3f2db8fad29d5e58183cda6943e11524400f5e71e2",
+     "pt-BR": "Ela confiava tanto em mim!\nE eu praticamente abandonei ela...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "d65eac28e080e1a7ad7a2dfc646230540ab88e10c3fbb5380270d3a0bc158554",
+     "pt-BR": "Ela confiava tanto em mim!\nE eu praticamente abandonei ela...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "4f4596cf4910aa1208156ded910e0a616422c8e67e725b93f623e4a1b5996b24",
+     "pt-BR": "Ela provavelmente só me vê como um cara útil pra ter por perto...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "c888b86b65f8fc093ea33f67273fceb35c01a1627eda974eddab5861276d5b5d",
+     "pt-BR": "Ela provavelmente só me vê como alguém pra usar quando convém...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "f1556a548ce179a6b851408d8fcf1c1ef5ed6af6d4a1e28b72c8a19d1163d359",
+     "pt-BR": "Mas, mesmo assim,\ncomo pude abandonar ela depois que ela me salvou?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "dfe2942c0b48b4edc31479f81144f1ebcd90566b87e4871d827fa3c4ef49b3e9",
+     "pt-BR": "Mas, mesmo assim,\ncomo pude abandonar ela depois que ela me salvou?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "63f35af57599bce4670482ae28b66f510b7fc531d4f08f1ad1b5d571f435ecab",
+     "pt-BR": "Ela provavelmente nem pensa em mim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "9f91600b4e99364fbf42db7a4416770ca0fae282c98b947913b9876fbb69a998",
+     "pt-BR": "Ela provavelmente nem pensa em mim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "fe6f0918d2f8fbe6986532d67e95aac4221f2276142c3e49f80a4e6508582bd4",
+     "pt-BR": "Sou praticamente um estranho pra ela, e mesmo assim ela foi\nbondosa o bastante pra me salvar. E eu praticamente abandonei ela!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "846d830455623e39cbbbb4874ae29949cb3cf8c8c9cacb024d43bf8ed334e822",
+     "pt-BR": "Sou praticamente uma estranha pra ela, e mesmo assim ela foi\nbondosa o bastante pra me salvar. E eu praticamente abandonei ela!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "72f17d0574ab67b28bfee5dc1d52fecdff0114a62fc53f997cbb158477f1d899",
+     "pt-BR": "...Então, o que eu sinto agora?\nPra mim, a Yuki é...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "dc3f3a483b89e7f5e5b30c6390fa25a924283ba01ff174b54174a9b51a91b984",
+     "pt-BR": "...Então, o que eu sinto agora?\nPra mim, a Yuki é...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "8e930b2aadf72294b043e026e6250a595b07f6aee8dd5b871f290751ccc559f5",
+     "pt-BR": "Alguém que me faz sorrir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "5544782c9bda1d58a75349b4722af0ca3365749c5e5932653536b97b6f432252",
+     "pt-BR": "Alguém que me dá coragem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "5c5af6ec801cc591e35ee134c1de90508fe1902d0626a2206052b14e1d3c2b41",
+     "pt-BR": "Alguém que eu adoro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "5fc7cefa0f9408d877bd0b32c34c64a3852d8be0074f13c1fb25bf1fb8cded69",
+     "pt-BR": "Alguém em quem eu adoraria encostar, se pudesse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "c209b899a8bdcaddf9369787816c5f4049fa0df6a724a7b5454773dfd80a0a34",
+     "pt-BR": "Alguém que me tira do sério.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "4a00a3a3029e106816af7f9e11988a746cb8e6bfacd278358db5cb9fd2e79c61",
+     "pt-BR": "Alguém em quem eu não confio nem um pouco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "75f400e0fa3426c6c39c685598a24767f6a8faa60a7e4019063100bf1213ea59",
+     "pt-BR": "Alguém que me faz sorrir...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "b682fd83d0ca742866fef558dd03e5be687055c874bc01faeb72e5e684ff916a",
+     "pt-BR": "Alguém que me dá coragem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "180f1e080b2474d4e99b1b8a1b9bceb034a721199404d8678904ca8fbf98e94e",
+     "pt-BR": "Alguém que eu adoro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "15c2db2989a86eb1077f3fd317a0cf24fca7b5765f3e27f533616a372e615e08",
+     "pt-BR": "Alguém em quem eu adoraria encostar, se pudesse...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "40f4507894314d2d3b99450f947c60504cad03210741ef702997f133c484d604",
+     "pt-BR": "Alguém que me tira do sério...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "329ed37cecf12cfc209e712c9895dc1e62649df3b31cf81d4632c524eb9a66ce",
+     "pt-BR": "Alguém em quem eu não confio nem um pouco...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "4399ef5a5d575401044fe872b193493ed74440f87fcca897552a577ba5c3d339",
+     "pt-BR": "E mesmo assim, eu...!\nNão consegui salvar ela!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "684aa3537d3b4f77053f9f231235e163d7da5a4df5b6ce257e1c8232542a172b",
+     "pt-BR": "E mesmo assim, eu...!\nNão consegui salvar ela!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "309180e5ea56af8e5ff1b56c57011f4e2f3ef518bf7fdd6623f6228d876b7b44",
+     "pt-BR": "E mesmo assim, eu...!\nNão tive coragem de salvar ela!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "956a8709be6870c0152441b5cc6b511b5cb0fc63a8328325e2a4929fbd9af478",
+     "pt-BR": "E mesmo assim, eu...!\nNão tive coragem de salvar ela!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "b6900a09748856cd6cde9b29e18bebf257b2e7064f5aa753b48629687f111d2e",
+     "pt-BR": "E mesmo assim, eu...!\nNão consegui salvar a garota que eu adoro!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "1866d5b711b00d4bf3285275c6fc5b0d7dd1e6233fecad42ccdf724e4317b8a6",
+     "pt-BR": "E mesmo assim, eu...!\nNão consegui salvar a garota que eu adoro!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "d0996cede6fe6dd6ba822de356a390a8f8f546c39624b3b4b067cb159ca31d3d",
+     "pt-BR": "E mesmo assim, eu...!\nAgora nunca vou poder encostar nela!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "2f1ea7ba06c42d99d6c0335f8c7b9935e1d44e05297ddc6ecd722fe468d2ff4e",
+     "pt-BR": "E mesmo assim, eu...!\nAgora nunca vou poder encostar nela!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "a4c4dfaa9acdd9f7d6f8e8b4c3d510dca88ada088d03aa4d65586b908123d342",
+     "pt-BR": "...Peraí. Então eu não salvei ela. Por que me culpar\npor isso? Ela me tirava do sério mesmo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "34afa2d42e9fcf3a7c91abd35d370750ef666320a6b833a145e69cdf663e9fe2",
+     "pt-BR": "...Peraí. Então eu não salvei ela. Por que me culpar\npor isso? Ela me tirava do sério mesmo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "f383410bded1f75b44d71687e7c43aa6c2679456f7eee645c45361e902267dfe",
+     "pt-BR": "...É isso. Eu não confiava nela. Então, se for pra sentir algo,\nnão devia ser alívio por ela ter sumido?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "22f320950e8acd44e9699b68fa3ab2fc00159ed35cc4fbc2b72e6b5b90f4d60c",
+     "pt-BR": "...É isso. Eu não confiava nela. Então, se for pra sentir algo,\nnão devia ser alívio por ela ter sumido?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "0a072f9b1fa00d08c444a460ef2f48e8ee23d654b28d586a642bc0174d1bf642",
+     "pt-BR": "...Mas e agora?\nO que eu devo fazer...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "31f0d3a8d4545bffa80778f793e57e7e7c8a95a1f0c89aa1eb18c2de56b8880b",
+     "pt-BR": "...Mas e agora?\nO que eu devo fazer...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "69dba898c4d6880e0a70e7aca5b69e6850926d6b36e1cfd4495a76f8f62b5d93",
+     "pt-BR": "No fim das contas, quero ir com a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "19613360fcac45a26aa1fff26557fdc80ca35b92fc2d121c7d6087a384fbd40d",
+     "pt-BR": "Tenho medo sozinho e não tenho pra onde ir, então quero ir com a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "178284149e5649c8097ac188215a4fb5b92bafeb475bc7a7ef0aada3a206a5d1",
+     "pt-BR": "Não confio na Yuki, mas vou com ela e fico de olho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "9da19f45e3b2a05a616110c5602e91ebdef75844a4dbd6d1d0a71e7623d389e7",
+     "pt-BR": "Tanto faz, mas, se ela insistir, vou com a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "725bf3130acf0dda420dfb48c6a032ea011978477f49fed91aeb591eeb068ad6",
+     "pt-BR": "Quero pedir desculpa pra Yuki e depois ir com ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "f177671e1561c38352fc0483bccfa5c590884434ba6b28eef0aace82b690b329",
+     "pt-BR": "No fim das contas, quero ir com a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "8fd6e717210bf67d8e43bbce28279c4ac8bfe8477f6a77a3bf8d68ab4cd6b6dd",
+     "pt-BR": "Tenho medo sozinha e não tenho pra onde ir, então quero ir com a Yuki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "e03c293364ce0c6d64f5c0cf8dacae3551f6ee0d25980b6f396d6e0ad853a759",
+     "pt-BR": "Não confio na Yuki, mas vou com ela e fico de olho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "97431fbe7a3cdd1648724a206580eaefb76be9f1da24658031b5164e74c5eee1",
+     "pt-BR": "Tanto faz, mas, se ela insistir, vou com a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "73c8936ddba30f440f15437e38093429b221acb22e2092e3e5d5482d58a2ef8d",
+     "pt-BR": "Quero pedir desculpa pra Yuki e depois ir com ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k234",
+     "source_text_sha256": "f5f14189bef066405de299d9064f8b1df5a12dfa393e076d95591d9b0ff49da1",
+     "pt-BR": "No fim das contas, quero ir com a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "76b954484dd4df6acb169b845d3c3a3910c795928d0b720566a0ab07856cc5a4",
+     "pt-BR": "Tenho medo sozinho e não tenho pra onde ir,\nentão quero ir com a Yuki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "1ccb78bff18e01e79ae08a0788a16f3c11764983cc493276e66039f4b3c251fd",
+     "pt-BR": "Tenho medo sozinha e não tenho pra onde ir,\nentão quero ir com a Yuki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "ce2f5703eebe8f980400b3c2307e6ceda9467fc3ef8205e07f9e47deffc0583f",
+     "pt-BR": "Não confio na Yuki,\nmas devia ir com ela e ficar de olho...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "0e40e7b954b3083f7e94944056bf1861e93066b3ea708a6af0df0c762570acea",
+     "pt-BR": "Não confio na Yuki,\nmas tenho que ir com ela e ficar de olho...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "29ecc52b6491c3327a841164dfbd70d3c36b529afccea2ab1e84c3cf3b2dd9e2",
+     "pt-BR": "Tanto faz, mas, se ela insistir,\nacho que vou com a Yuki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "67c18c9094933fbcf1f9d117dfc947630943fcf8a5abbaa1bd2d060b9172d504",
+     "pt-BR": "Tanto faz, mas, se ela insistir,\nacho que vou com a Yuki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "108c23a50f05181b23d674ee21ba618f4a52508a43217898e34cd2da0dc541d5",
+     "pt-BR": "Quero pedir desculpa pra Yuki...\nE depois ir com ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k251",
+     "source_text_sha256": "94673a45cae2be1f5cdbb71d377e9c84f9a76c18d627b8515c07e390d2ca3d84",
+     "pt-BR": "Quero pedir desculpa pra Yuki...\nE depois ir com ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k253",
+     "source_text_sha256": "60d7b6681464e2789a180988ff5fe9af6c4feec0d507f4bb762f46c4936a82be",
+     "pt-BR": "Se ela aparecesse bem na minha frente agora...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k256",
+     "source_text_sha256": "f8df9576276beae4b008e2c4139a024f46da0c8d16490348396fd312ed0b7891",
+     "pt-BR": "Eu diria \"Oi\" como sempre, e depois pediria desculpa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k258",
+     "source_text_sha256": "6f9d7199b92558bc15e319b48f9a94dd612353f26242222d3eebb3c2dea975f0",
+     "pt-BR": "Eu pegaria as mãos dela e ficaria tão feliz por termos nos achado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k260",
+     "source_text_sha256": "ee6bfc72710d9363cee23e63daaa65c74fa102e4b201978646a03b3a6a8e4aaf",
+     "pt-BR": "Eu ficaria tão feliz que não ia conseguir parar de chorar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "3712b44e03eb6268757849f68f4e45d5d2319cefa4071093480bfec96b07a07e",
+     "pt-BR": "Eu abraçaria ela forte e diria: \"Nunca mais vou te soltar.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "252511ee4ca86362774d026051d9a600daa2ae3fb2ce3231c2af3bbdebc76412",
+     "pt-BR": "Eu me ajoelharia e imploraria perdão por ter deixado ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "e6d4dfe9808cdc2ec204fb0808aac8df73bd9176ff517faab5b67f783fb34e19",
+     "pt-BR": "Eu daria um abraço apertado nela e beijaria ela sem parar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k271",
+     "source_text_sha256": "10db70536d3b937c1c93bf815791841b3b49d795b29841748471b778f0d7d44f",
+     "pt-BR": "Eu abraçaria ela forte e diria: \"Nunca mais vou te soltar.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k274",
+     "source_text_sha256": "14f3e2d9836d8918fdf2936c34597ee307bd1b1fe28c4d69e915da99c998e579",
+     "pt-BR": "Eu daria um abraço apertado nela e beijaria ela sem parar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k276",
+     "source_text_sha256": "bde9eba9c37ac4240fe9cf6fd1555569d85b77072ebac7f4ea9ad30fcbb4bd46",
+     "pt-BR": "Oi.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k279",
+     "source_text_sha256": "bb4e9db516cad2922571b0e5034646eaae6cf5565c2d630ca8facf3427810b83",
+     "pt-BR": "Desculpa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k281",
+     "source_text_sha256": "de8c57eb96d931514a91696760a3786e62dd550e496fa1b41f85ba85417d7f5b",
+     "pt-BR": "Desculpa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k283",
+     "source_text_sha256": "47259794a009bcf38ab99ceb309f802458fe0ead172fb8d9e7bbfb22c804c8e3",
+     "pt-BR": "Que alívio...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k286",
+     "source_text_sha256": "70d99c44189560a8710e4ef5d18e77622f93ca75180bc38e418d4133b204a930",
+     "pt-BR": "...Que alívio...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k289",
+     "source_text_sha256": "dd3e6d40d0448b3203ed164487ba09761180e45391c29c1891114304c3b3d3e8",
+     "pt-BR": "...Nunca mais vou te soltar...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k292",
+     "source_text_sha256": "df517080c362fc46a4ef413f760313f4d2122e23b994a6a2fe8ee0e00773f89a",
+     "pt-BR": "Ai...! D-Desculpa...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k297",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k308",
+     "source_text_sha256": "a3b902800b8fd5808f2af1890fc0d3a602b8a37070396c7cdb6037d4f5331b47",
+     "pt-BR": "Obrigada. Então vamos juntos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k311",
+     "source_text_sha256": "088462f65b7e8bc00db9fd7d87cf33cea200daceb9094dea9dc851b2a1851090",
+     "pt-BR": "Sistema",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k312",
+     "source_text_sha256": "cf93184de6af8cef4d6fda594e0285589907f8a200e60a2d50c23f82f5284ffe",
+     "pt-BR": "＜Aqui toca uma música-tema＞",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/Text_Stage_208.luc",
    "source_sha256": "952fa3013f36035ee9f4940bb4d60f4b8ffa2e8c524d38b6121777f5583689e8",
    "entries": [
@@ -38388,6 +39806,19 @@
      "id": "p0/k2174",
      "source_text_sha256": "5c819c19e81a1c1ad7013d9bf9fec0e4c937af5abc1be9e0cc80187033278281",
      "pt-BR": "Valeu, miau!",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_210_3_item.luc",
+   "source_sha256": "3e91ca1317874d8b22b846d08b46d05851da1c9dfd1deab67f25c5199d277efc",
+   "entries": [
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
      "notes": "",
      "editorial_status": "pending"
     }
