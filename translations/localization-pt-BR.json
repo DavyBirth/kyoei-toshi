@@ -415,6 +415,1349 @@
    ]
   },
   {
+   "path": "common/lua/map_goal_text.luc",
+   "source_sha256": "8f8363d7d20f0e9c769ca83f3ee3e6ef307242b17e2ca46bdac77c694a3e1d5e",
+   "entries": [
+    {
+     "id": "p0/k3",
+     "source_text_sha256": "bbf67044e474881f67f19f3eb721fae1b00617e20b613933d44e1c0dd5f49fe2",
+     "pt-BR": "Homem na rua 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "22a96b98591a11b6216557492f3bd390a35e1c075d3b26a4a77c65c403c97a14",
+     "pt-BR": "Destino 000",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k10",
+     "source_text_sha256": "b0464c099ec8a582772e1d57c6d3457d71d28adafa8543a1362d96981be472f6",
+     "pt-BR": "Destino 001",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k13",
+     "source_text_sha256": "fcb2e15ec456c489cbed35397cd34677ca6e06b1588ef71312f165a3e32c0dda",
+     "pt-BR": "Avenida Principal",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "d15bbb2516a1113e437416ab893236488c8eab93f900010b73ac840261dbbf41",
+     "pt-BR": "Loja de Conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "06697c99c2ad880f829ea1265986f72196d07c03f34a88b5cd90026241bd6aac",
+     "pt-BR": "Posto Policial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "e25a28978415bb601d32fc35c69042d728d594d501637492c24c3ade7cb8e8d2",
+     "pt-BR": "Floricultura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "4c293a35afbdb7e8bdc62425c157d0f832c9b167035bd5b5b0cafaed44a92407",
+     "pt-BR": "Local Avistado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "540dde2080b18f0ca029f2d0564ad589ec8434ccd50c7614c92e4c4643676b3b",
+     "pt-BR": "Prédio Onde Nos Abrigamos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "6c16f478b15859af560e224d45d35ec0970c83f9734160d1d2f9217b7a5236f4",
+     "pt-BR": "Não dá para descer ao andar de baixo. Por enquanto, tente ir mais para dentro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "14166c13e813783658e4e3d62254e0e14fb064d8dda388a7842b26cd99a23c1c",
+     "pt-BR": "Ir ao parque onde vou encontrar uma moça.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "c00cdb4ea320b9d908b3abec57a87f0e95be6d87cdf17abb42338611b31d7988",
+     "pt-BR": "Ir ao parque onde vou encontrar uma amiga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "4ee314c199c76a8b7ad4458fbc15fda384902617a1853dac2bacef6b4ecf0308",
+     "pt-BR": "Ir ao parque onde vou encontrar alguém importante pra mim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "642260cc0cbfc6de54af9919afc6196f48e09543e82d7de7f1fb409671601886",
+     "pt-BR": "Ir ao parque onde vou encontrar minha namorada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "f0c07d143acb37068f50402e1fbaaf90204e62eca5805dd63e7d73bd9b5ca987",
+     "pt-BR": "Saída do Trem",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "2f8c1c2a67f90cbfe6e18b93d84cf898f9b00b7bf6b40a50192061f3ed3ef95f",
+     "pt-BR": "Plataforma da Estação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "02685fade32b78f298b8e6e4330ff0f8e274bf3e38638454f6c47110b0643a93",
+     "pt-BR": "Rumo às Catracas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "334cf9335c4c251ab6f7d2dbb31d81af16eecea63eaffb085de04be58bdf3267",
+     "pt-BR": "Rumo à Saída para a Superfície",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "e3aa480be6fe1b5d06945cd35c00c0a3fcb4896f548680725b8d9978dac379fe",
+     "pt-BR": "Vagão Tombado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "96dd83a71b1f8d38bcc032e338ce3fcd30533ce6c9d875212331657722a541dd",
+     "pt-BR": "Trem em Que Eu Estava",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "a1a997603bc59e120b5906dbb15fa877e6ebded9643bb5e30ac11b532cb2987b",
+     "pt-BR": "Sala do Chefe da Estação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "8544ed1121e9d512cf257199d11b7c9a26dd0ce64b3d9df3c1783dd382dd8026",
+     "pt-BR": "Banheiro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "b95e7672e01d7420349705b77d60e44c7f1255b626326be62d516d697a943820",
+     "pt-BR": "Catracas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "41c463b6f9e462179c34044262c3847f0247e51187fe93f86d3a79ab05a6c8b7",
+     "pt-BR": "Hamburgueria",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "c14321c1c2b4e9fab96ce52e220d733fc5bba726906af44837852cce3943117d",
+     "pt-BR": "Joalheria",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "c2af0ff7166ad8c97ef6f4827d69d0bbf232b89dddf6ac5d1455a6440662ac07",
+     "pt-BR": "Café",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "e3eaf51285cbe19c5f1ef84c11ee73051b0d3d53023e636fb5ee0b1abd89cf11",
+     "pt-BR": "Saída da Estação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "5177bd156e344c04b370316fa9cffc23d09dd64e05fd5437668de4bbcdc10a87",
+     "pt-BR": "Primeiro, preciso sair do trem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "497c40bea72b19a7405e93ee6dbe7cfb12f6e6947361238ac8f9f38fd3aa9d5c",
+     "pt-BR": "Seguir para a estação pela escuridão...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "cbcf8e40ff50844b7625b4047d765cea972c57e330453297c505037b3841b8d2",
+     "pt-BR": "Atravessar a plataforma, achar a escada e seguir para as catracas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "2245bc8fbd2abd9c53e2de27b3c20d9b599bdc7aeba6b1e3f9b9b1a0daccfbcb",
+     "pt-BR": "Achar a saída para a superfície.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "c9747ffe605757a4f3f7493e5867e92ae51a94dd8a09ae19be8ae122901cc089",
+     "pt-BR": "Juntar informações sobre o código da porta nos fundos do café.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "59846e7cff5cd2cf300fb0dd985753630cdf30fb8131f1787757bae35798c1a9",
+     "pt-BR": "Subir para a superfície.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "8a9cfcc72ab670db064b4ce0e353ed593e06594aa4741f97586390a8cc50f788",
+     "pt-BR": "Sair desta área caótica.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "1b8123663a719656dbd35bf54371caa4f0738a96a7af03ff7be7ad0004f1db90",
+     "pt-BR": "Hospital Onde Está o Pai da Miho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "ccf2a56ae7212290b79123d3e9e2ac3811395045a0063331673e8e8d923fdf12",
+     "pt-BR": "Barraca de Curry",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "6e1bcb189ffc929c097ea06233416847bd7132e752c037fd5d10b866d4195a71",
+     "pt-BR": "Caminhão-Tanque em Chamas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "7e012c1202a1d1654cfb7ae7b71eb6809de4170d0695474b3c0197065d596b08",
+     "pt-BR": "Levar a Miho ao hospital onde está o pai dela. Pelo jeito, fica a leste do cruzamento com a loja de conveniência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "b925cea5cc7a1833de435e61ea472f7a370e8375b10e7d8b29cf6aa7cd7e2077",
+     "pt-BR": "Sala de Observação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "13f28b5893825ff66f889ef788ef3f8494362e6632cc548a29d88c8a041c2872",
+     "pt-BR": "Sala com Aquecedor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "4716aef03f0b51da6e983e4c7840c50d5eb7965d30e080a7ee9f887bddcbd678",
+     "pt-BR": "Imediato Oda na Popa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "4eb4064a623a849a3238a2802a6aedb9e4e3af21097a97ea220cdaac05d7864a",
+     "pt-BR": "Bote Salva-Vidas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "c0c71a0c3ab5cf72a2536ad1ecbf5a8e41deac7dcf2fb6a31d815aa773032a5d",
+     "pt-BR": "Imediato Oda",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "ed651024c41317ef578e95723c37ce76051f1020a246643d7c2b72d460dc6b09",
+     "pt-BR": "Dra. Fukazawa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "47e77698f678fc8b0559d0da87e260ae8113dd1263b8d69821d7c31b72c5586c",
+     "pt-BR": "Ir à sala de observação, onde está o capitão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "0a1b16eda1dd658f25024820635771ee6b61b2bbf5706ba57beb14c5d995984b",
+     "pt-BR": "Ir à sala com aquecedor para secar as roupas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "99e7481d84b99ffa094297cbbc7a2f5ab50496ffda6c3a4eb26963eb89555c9d",
+     "pt-BR": "Parece que tenho um tempo livre. Vamos explorar o navio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "55a70c0a7f3919c99ce8477af91c3fae4497dd170c9ce20dbed1b64486fae80f",
+     "pt-BR": "A sombra no fundo do mar parece ter sumido. Chamar o imediato Oda na popa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "a914d0fc48bf6834be534e57c517e85804070436456674949d56d0bcf3d046de",
+     "pt-BR": "Corra para o bote salva-vidas!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "f81150f26654ff42806cd50a1ee44c414864c294f07961087ff396db6cc4af6f",
+     "pt-BR": "Próxima Estação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "584c730cdb992bda324cdb380b22c7b4de2936767c8392457138ff9d6a42c5fd",
+     "pt-BR": "Vagão Onde Eu Estava Antes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "535c2764c6ec4687b326e443b949b7cf09b33117985bbe4e9aff44463b41dd7e",
+     "pt-BR": "Ponte Ferroviária",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "b7cd82d9353b70018b26c6121cad1312229086aaaaa21e2c3ec2ca15ab937024",
+     "pt-BR": "Onde Levei a Pedrada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "ca38478aec7693feb1722bd085975c9467821b91151b12d8dcf0fa1fdda2bde2",
+     "pt-BR": "Cuidado para não escorregar do vagão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "6e862a58c296cea08cdf48204f22729c8082d9498bf525b3f4a6ef38e2c0deb5",
+     "pt-BR": "Seguir para a próxima estação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "6cff081695c679f7599a7815f894232ea43fbd5ee6e0f095cd53ba4d5ff191be",
+     "pt-BR": "2º Andar: Sala do Servidor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "1dfff186d11d6db6829d7c8e167ba91bf617c454d28eb3583dd727b244b028cd",
+     "pt-BR": "2º Andar: Depósito",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "069db7372c2e776cc48f6d826b54e4368cddc3085e25712346a693fb79d0e0a8",
+     "pt-BR": "1º Andar: Sala do Armário da Pesquisadora-Chefe Sawada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "2fa2cd4801d4584dd3dc1893b8cc4a99361baa71e5789c3c53a6f470e4e1ad41",
+     "pt-BR": "1º Andar: Laboratório Onde Está o Vice-Diretor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "cd6472692f9641d0ca0052f976244d7e6dcd9b2708b8d33146ea7ab230564f6b",
+     "pt-BR": "Saguão de Entrada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "eea6a9577799c64261e42392c0cf4e7fee08a983d221a7a88b1472a522ac1062",
+     "pt-BR": "Sala do Servidor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "488d4dcc5d0a59eb417f8fb2f2f9c659192716581b320f6847c63ec176f3eb48",
+     "pt-BR": "Depósito",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "19fc15480a0f4b7658351ff2a15af9c3d94ddb0d8070654cd85b56697b341e20",
+     "pt-BR": "Armário da Pesquisadora-Chefe Sawada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "db72b163e70c8fd4ac7410edd4df52453586cddb525d9055b85ec027d16c3233",
+     "pt-BR": "Laboratório",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "3b4e5f80fbdf22d5d38e753b584b282577682c934d2687e6b9b9261c0dd829ff",
+     "pt-BR": "Ver o que está acontecendo dentro do instituto de pesquisa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "8f731cbbfe4b4102956a4e27105f619e90c0c116f9fc8e42cf4d69f37cedd2ee",
+     "pt-BR": "Ir à sala do servidor no segundo andar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "45887b9e3f6bf64f1774eb96abf37481deed62f08766f23e99cf18e1c2e78e88",
+     "pt-BR": "Encontrar os pesquisadores escondidos no depósito do segundo andar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "2937b129abdbe68db0c17a9f8d28c120f6c40180a34c3c4bd285ca6a6cec9676",
+     "pt-BR": "Pegar o cartão de acesso do laboratório no armário da pesquisadora-chefe Sawada, no primeiro andar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "9d0bd644e8ffd6b96a96cd9fbd8b0233930b015c061f81984c58b72484ed1aaa",
+     "pt-BR": "Ir ao laboratório do primeiro andar, onde está o vice-diretor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "8d1d92b28b01722edcfb2bb64e4a2744ece60ca4393dfc9fb0c0246a0b1c622d",
+     "pt-BR": "Só corra! Para o saguão de entrada!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "06b8ec81d137508b030ad1b95b3d8a0763e6a65a346e2c8f4103bf351356da39",
+     "pt-BR": "Rádio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "5785b32f4b4bcecc5db51206091efd9ab3d25ac6e8744ac19767a07de62c6067",
+     "pt-BR": "Onde Está a Risa Kashiwagi Ferida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "0bdfeb379ac0cc63ce9c6ec417bdf4eb4305011b19c4593cc26909380b3052c9",
+     "pt-BR": "Rumo à Cidade de Mizuna",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "d0e678af426984734c899716bc2e56f9d6a45f20db4df3d831d7dfd3e07e1dde",
+     "pt-BR": "Parque Aonde Chegamos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "f66ee62956bc012f9f51ad28870f18ba3a7fe0c8bbf8e3e39a7276c2c30cccb1",
+     "pt-BR": "Agência de Viagens",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "12c163515defe5a227b54f05d291b0f9f0c3c5cf825059a20fd3ae1054f49603",
+     "pt-BR": "Prédio com Gente Presa Dentro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "cd5f79c0b022d8e297e0398cd45929b6eb8069d8a9bbd9c8955172b91b751e66",
+     "pt-BR": "Ponto de Encontro com a Risa Kashiwagi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "2c3ac5188fdc12e9893117fc48d60fbcc027c0bf03a44162b3554cf56942c386",
+     "pt-BR": "Dar uma olhada na rádio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "f9054a0b73d7bc8c2183d8c46f87c8676d98ba7dfef55e137e11bcd2eb7479b4",
+     "pt-BR": "Ir resgatar a Risa Kashiwagi.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "41a51a92e24c21ccb50f60d402471497ba14a5bda6f6f751024791e212142782",
+     "pt-BR": "Seguir para a Cidade de Mizuna, como o Otsuka sugeriu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "a807959a54451088b62d7b2d81bef8aa230357e540c2ddb165745222a7c19986",
+     "pt-BR": "Porta Para Fora da Sala",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "8e76dc3d24cb0add41db162c666cda8169b27a48256d11181f222f64a46f8a41",
+     "pt-BR": "Saída do Escritório da W&P",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "75126883269651b824b5bb68793a9b110ef3322c0f49ebdd98a55b8043c1f2ea",
+     "pt-BR": "Yuki, Amarrada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "dc6eaf912b3728bdb63bc6b4b3a579ee5cb04d7095f4ca5a7029a024dbd0aeb5",
+     "pt-BR": "Armário Trancado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "37d1cef1d1805e4d359adfc9c10895709fd488ce2edb9b80f94aad5e33cf3a05",
+     "pt-BR": "Armário Trancado com Senha",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "b17796299d392d30f1efe4357f82312280862d9271e403b42140ebdad19902a8",
+     "pt-BR": "Não dá para fugir amarrado. Tem algum jeito de afrouxar estas cordas...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "e2ef664ee5a866ce47ddf89ead64d7fd0ba6bb757ad95cc1e21c389095589f86",
+     "pt-BR": "Estou ouvindo um barulho de chacoalhar. De onde vem...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "6387b3ed723d9da9a65d1a3d7a926fa6a5f2b834137a6130e2d57f3b26c75712",
+     "pt-BR": "Consegui chegar à sala ao lado. Talvez tenha algo aqui pra cortar as cordas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "347836522194adee7924558b8101906b654d407c3ab0eac777835ccbd7fb16c4",
+     "pt-BR": "Cortei as cordas com a tesoura. Hora de ajudar a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "347544b75088b566472b88936f43860182ae7e6a4eea1654b4c0a9f3da09b750",
+     "pt-BR": "Desamarrei a Yuki também. Temos que sair daqui, rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "35a260764ab3e13508cc4e9596ec56ad2a89d3aed8e93b04930595f499d06515",
+     "pt-BR": "Um homem perigoso está nos perseguindo, e uma arma gigantesca lá fora vem na direção deste prédio. Temos que fugir!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "c2351a047ac6f37907b850d36971ab62ec933f6ca4aa1c3c20ff307506d9f6f8",
+     "pt-BR": "Direção Para Onde Ir Agora",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "e0df12da35f97cd95e63496c0accade4b04a38e4530fa98620cda4350d38765b",
+     "pt-BR": "Direção da Fuga",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "f6eafd9e512908d58a47bf5d5c51e04ab7ed935fecfa31cf12f1a62ce84054eb",
+     "pt-BR": "Loja de Conveniência Onde Secamos as Roupas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "637ab96b7db782fc4c0927999b465249d0a990e4d6707a18ba94dd0bdd241338",
+     "pt-BR": "Reencontro com o Policial de Choque",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "6b76f32ca8dca36a50e39bc2bc7c1538de78ebabe008afa22727963d3c0cd8c1",
+     "pt-BR": "Seguir para o oeste, onde a Yuki estaria presa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "a567a4cb9c9ad7890f8706d60c07cc2c375007c2d379bb13f5aa6393a0f00b74",
+     "pt-BR": "Só corra para o oeste!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "6568b31e41ca35914c7e20f4b9ea813578084ee8cf59f3049ce4643062bfbaac",
+     "pt-BR": "Resgatar a Yuki da W&P. Pelo jeito, ela está presa no prédio do cruzamento a oeste.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "a4eebfcfccaa6e495b1741d4de074054720f8948b89d383629cd470b639cfa9c",
+     "pt-BR": "Ir ao helicóptero de resgate no terraço.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "3718b66b74de3f1d5c7f9318548019b09c78614f0ddaf0b1819283ffbf68d00c",
+     "pt-BR": "Prédio Onde a Yuki Está Presa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "3afa3c056a6c373fe154e928a2f8621d6e20ff8cefc9c895ea1d664291232a17",
+     "pt-BR": "Helicóptero de Resgate",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "2ca139ec50073e211a24769f4d5bfd528ca30206cac6681ae71553a4c43caf27",
+     "pt-BR": "Onde Larguei a Moto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "efaa97992850272d8bd23e62795b026495dff3ceba003f8ea99ada2ab38424ef",
+     "pt-BR": "Onde Deixei o Cavalo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "679898e99b765537e893a709682dc76a328a1f6d2e57d7e37f7ff95de8b38fc6",
+     "pt-BR": "Parque Azami Oeste",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "fc5584d81c1307584b3b4f5fa572e159c0a994fae3cada0c26ffa9bebeaa8a84",
+     "pt-BR": "Duas Pessoas Que Conhecemos no Prédio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "0a734027a4236683e566db05707ae58b2a13435b3254304e2104a0443f439dd0",
+     "pt-BR": "Dentro do prédio (não definido)",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "c6ab0f59a7e2a58d60f34551d30ab747e882851c77b502ac73304d1155caffc2",
+     "pt-BR": "Policial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "874b10bbe1ea09ff2ce3e44d0135c929e8f4a1f5edf497b6d99f668c3e6ae624",
+     "pt-BR": "Outro Lado da Ponte",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "01feadca1af93e47c20c755de7c6e0e79a19f25f9bf30198c027cd2eef288e91",
+     "pt-BR": "Restaurante da Ponte",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "9d636260e6d418a3fe8ff072483aa4c106afcab8b001fec9fa07f903a69ccbc0",
+     "pt-BR": "Restaurante da Ponte Destruído",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k257",
+     "source_text_sha256": "a4524c0137f8aaa141429bd46907823fe05ebd14da5472fb7d484e58a9a6555f",
+     "pt-BR": "Restaurante da Ponte Desabado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k259",
+     "source_text_sha256": "72e009acdd7d8da97aa1f75c050df39f684a3aff49a12c78b95a999e1f62ff4f",
+     "pt-BR": "Dirigir até achar um lugar para parar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k261",
+     "source_text_sha256": "d1db65c5d11484a0e01ff79328ee5712d820607ebe1a260f7b4abe7d7fb27e61",
+     "pt-BR": "Temos que fugir!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k263",
+     "source_text_sha256": "eeca95783e0e027ee7cee603205a7511baf9d7df43f520ee2563929d772b1631",
+     "pt-BR": "Seguir para o leste e procurar um lugar seguro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k265",
+     "source_text_sha256": "f4b83cc635aa2ae7ccc874d3c4415c21432d8cd658f7e3b8722baa33203bfc5e",
+     "pt-BR": "Ir ao nível de baixo da ponte.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k267",
+     "source_text_sha256": "1469bfda1a75ad9643e270bf94b08fde2223cd3d16faa24a4a3c4ab51db9698e",
+     "pt-BR": "Seguir para o leste, rumo ao outro lado da ponte.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k269",
+     "source_text_sha256": "e236d840e4a26ffa409e07f5ea4fcc3e0e730c8b643c98f84f1282562664da75",
+     "pt-BR": "Prédio Para Onde a Kashiwagi Está Indo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k271",
+     "source_text_sha256": "0db7f3a96c4ada77ab15fe6e9cff2d4a36b78b9bd1ed1a78502634219ef28fee",
+     "pt-BR": "Escada de Emergência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k273",
+     "source_text_sha256": "899838ec62bc501e8395d625e43138431bb1b62bb6ca3803a32f31d2d93b91c6",
+     "pt-BR": "Estação Hinageshidai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k275",
+     "source_text_sha256": "6d93a6372417f4b4a935a185f5111b618158176ebbdb8ee8c98f916ecef30943",
+     "pt-BR": "Seguir a Risa Kashiwagi.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k277",
+     "source_text_sha256": "d05954f3d7ff271b24dc568a1821e176aef3771d87121303d46db1997cfbcf15",
+     "pt-BR": "Descer para encontrar a Risa Kashiwagi.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k279",
+     "source_text_sha256": "0f304b58c22a8b3360e0bb3ebd3563acab2eb7c15e1ab8637b3ea773ab33b253",
+     "pt-BR": "Ir à Estação Hinageshidai.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k281",
+     "source_text_sha256": "4361d313c45cba6d7dbd5edfef0e02a023a3dc1007ea2d4d89bf5cebcdeac330",
+     "pt-BR": "Homem Filmando Concentrado: Koji Jinnai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k284",
+     "source_text_sha256": "2ca83caca4aaf2f3d231c3fa0babdd638e2611600cbb6c928c2bb6885a117c00",
+     "pt-BR": "Homem Que Parece Esperar Alguém",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k286",
+     "source_text_sha256": "63fc55d5cc0d55ec7c2a2738145e70f16068751281c231025d38ed0b311db4a3",
+     "pt-BR": "Área no Alto da Escada do Andar do Mirante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k288",
+     "source_text_sha256": "b47390ac87c3cce6c4c29512611461a995ca42f5e60665f5d04f9fdf444764a4",
+     "pt-BR": "Elevador",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k290",
+     "source_text_sha256": "b0be6afe8f100b523dfe454315fdbec3751e5eb10e6620317c8287cb41a5e20c",
+     "pt-BR": "Escada da Passarela",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k292",
+     "source_text_sha256": "f98c750b7a2f0a5dd0c6a9250f4c8281a04a9f365a34d4fc189d78dd26ab9b87",
+     "pt-BR": "Escada Que Desce",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k295",
+     "source_text_sha256": "a79a7e30f1e118a78389bfcc31024124513e14f6e53cf65a8ab4854311145788",
+     "pt-BR": "Escada para o 19º Andar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k297",
+     "source_text_sha256": "2ab2f5a8acdcdd089ca1189646b7ccd6a350fc83903bdf0d2af894ba01b96f39",
+     "pt-BR": "Lado Oeste do 19º Andar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k299",
+     "source_text_sha256": "ec1b94c25dea812c66f561d4ceef017ae72507190f6cf09eaaa44cbe39f341a2",
+     "pt-BR": "Sala com Extintor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k301",
+     "source_text_sha256": "dcae3b1f36738f09092151db71d195fe76180825ea47fee742db834d8e4ed10d",
+     "pt-BR": "Café Iberis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k303",
+     "source_text_sha256": "4cc1ebf405b61edbdad8b402a4729cceb46ca4e62dd9ae6d55443514ad9f8cfc",
+     "pt-BR": "Escritório da Construtora Kunshiran",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k305",
+     "source_text_sha256": "91c7b911e12af39e2821697d962cdcd95fa56a4bce57a5c1194f60ab532e0251",
+     "pt-BR": "Explorar o andar. A pessoa que chamou a Kashiwagi já está aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k307",
+     "source_text_sha256": "57d759bf10bde5e0b330c2f01a03c077945926a08d97b642857418ce814aa6fe",
+     "pt-BR": "Corra para o elevador! O Otsuka está segurando eles.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k309",
+     "source_text_sha256": "9831c183ed19890c084448bae2ec6ce4e8e932265789bf0428d99206e13612ec",
+     "pt-BR": "Estou preso num elevador depois de uma queda de energia. Tem algo que eu possa fazer?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k311",
+     "source_text_sha256": "466f3b8dc2de38c50847802f0b2b25731c70fcbf2dd803207410e71234f814f5",
+     "pt-BR": "Seguir para a escada que desce. Vou ter que atravessar a passarela para chegar lá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k313",
+     "source_text_sha256": "f9f557d5205c02d2e10e0fb6f8f200351aaedb1942bbb9a0933f1c2e75c5f2cc",
+     "pt-BR": "Temos que sair do prédio. Siga os outros!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k315",
+     "source_text_sha256": "3c1f48957ab6297d3cce9c470c3a3819f80f81e73e7015682f96c563251ba9bd",
+     "pt-BR": "Ir ao lado oeste do 19º andar. A Seção 2 de Veículos Especiais veio nos resgatar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k317",
+     "source_text_sha256": "e95fda6076fe7675b4066b701ccdd212b908a08d9a984271cdc4ecc198580557",
+     "pt-BR": "Achar um extintor. Parece haver um numa sala na parte nordeste do 19º andar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k320",
+     "source_text_sha256": "87dfad30709e1f8ec1043be39546e665359a9a6d3b87d68a25563978b99d103c",
+     "pt-BR": "Edifício Yamabuki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k322",
+     "source_text_sha256": "55c452869b82b0775f89f96966da695246cad5a91336a406475483929aa33572",
+     "pt-BR": "Leiteria Mizuna",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k324",
+     "source_text_sha256": "a42018b88c5372f999eb69ca4b0c1f42d96487c7ddd42216b27fbe5a68e3c150",
+     "pt-BR": "Bifurcação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k326",
+     "source_text_sha256": "4e04a3c23c62a095989be75800e815764e731b7497e377eceebf3347485d2e8f",
+     "pt-BR": "Seguindo o conselho do Otsuka, encontrar alguém que pode nos proteger da W&P. Pelo jeito, essa pessoa está no terraço do Edifício Yamabuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k328",
+     "source_text_sha256": "d458bbe127da02adc3994683f8745ff94b8afa470102a3ef230d003798b87917",
+     "pt-BR": "Entrada do Depósito",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k330",
+     "source_text_sha256": "4cb8d0a4b18b10c8f46b1f1efaad93406364331e7e4d320241a331daa7a06a21",
+     "pt-BR": "Entrada do Depósito Norte",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k333",
+     "source_text_sha256": "18fd998a98018af857e5f103760b9b3d6ff60c1586db5085eacd53fb5a026935",
+     "pt-BR": "Passagem Elevada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k336",
+     "source_text_sha256": "288c9b78afd47803987648f338c41a5cb6244d2814da58e6a1ded2abf30f3ec8",
+     "pt-BR": "Rápido, esconda-se no depósito!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k338",
+     "source_text_sha256": "6fcb6a6fd225279e773624dd11d52be23a2209a8851347e1ee8fb90b06d043f1",
+     "pt-BR": "Saia do depósito sem ser visto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k340",
+     "source_text_sha256": "808150b393c1a47f7690902dd4e62497ee0090e0def3891ea6badc69682ed1b8",
+     "pt-BR": "Achar uma saída deste porto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k342",
+     "source_text_sha256": "dd584940bc701dc77200cb30dc790400a6d8480251958ebf5db2324031b77e3b",
+     "pt-BR": "Parece que dá para avançar atravessando a passagem de cima.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k344",
+     "source_text_sha256": "bcbf0f236c2e8d9215215d17580a52a8418782f1e938caa3fd6170378bb9f4ad",
+     "pt-BR": "Estaremos seguros se encontrarmos a Kashiwagi! Temos que nos apressar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k346",
+     "source_text_sha256": "5ea5dbfa09a2a3f9189dd5773609184e45ba62bad863456157862d695a5e3632",
+     "pt-BR": "Depósito da Ponta Sul",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k348",
+     "source_text_sha256": "cc8e4c715d593c6c0a1a399a4524a544b4b1493fd97f0c282e4c0b913c2666b2",
+     "pt-BR": "Depósito Norte",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k350",
+     "source_text_sha256": "84599b9065a46f5c658ca4402c993694cf1c62c625da717e87d4caf7a0e688d5",
+     "pt-BR": "Contêiner Bloqueando a Rua",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k352",
+     "source_text_sha256": "15a45a6c8c52aaf406c0ffa5b77412aa118daee8b9143b10752131f08aa65138",
+     "pt-BR": "Onde o Contêiner Foi Tirado do Caminho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k354",
+     "source_text_sha256": "0d63a8435d12e74b2f2a65b4f812230c351aa328b244a6ad50448918f7ffebd7",
+     "pt-BR": "Uma bomba foi plantada aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k357",
+     "source_text_sha256": "16dce4b4debc2b188989164d774d1465d52f2a01e04026b72edf04b82439620b",
+     "pt-BR": "Porta da Escada Externa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k359",
+     "source_text_sha256": "316e2142e848d2af9f073363ebfc5a205dd0bd941269e8123ac770dd2b58e637",
+     "pt-BR": "Escada de Mão",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k361",
+     "source_text_sha256": "5df22e775f61245d9c2c7eef3abca7249ff124c5c6bd2189b19d015d1e63b0e7",
+     "pt-BR": "Descer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k363",
+     "source_text_sha256": "4529404bd42eb724da110c870505d3914c2d6300f42cd116e4f1093cced1985b",
+     "pt-BR": "Reencontro com a Yuki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k365",
+     "source_text_sha256": "44ec5ddfce336444ce0f950629b3780de9306d058d15076c9ba4f0cf53e81613",
+     "pt-BR": "Escada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k367",
+     "source_text_sha256": "28dc324a144b5bd44b02d495e7dcb3f105bb0da5c78bffc0b4202e5ae5d45474",
+     "pt-BR": "Mirante 1º Andar: Banheiro Masculino",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k369",
+     "source_text_sha256": "429251dab2edd95c286e306caadcaeb42b3c6c50f3612615335ccc4c4e94a843",
+     "pt-BR": "Mirante 1º Andar: Banheiro Feminino",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k371",
+     "source_text_sha256": "d2a4cd43da7361fe13d325e102c2a494d616a6e288abcc84784ca362a153ff8b",
+     "pt-BR": "Mirante 1º Andar: Depósito",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k373",
+     "source_text_sha256": "66344c36175f5aea39cbfae9b241e793937f12019f3c16ed796cf57b3eccf129",
+     "pt-BR": "O helicóptero caiu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k375",
+     "source_text_sha256": "edaab4006941c25018b030a37c55941a1119f866d12be97e22dca0672967ea79",
+     "pt-BR": "Porta da Passarela de Manutenção",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k378",
+     "source_text_sha256": "01902a53f066edc78cc5ec83c325e549b5c7e0abb74354b7f0f6ad7f012283ef",
+     "pt-BR": "Tenho que achar a Yuki!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k380",
+     "source_text_sha256": "d778ba2e07f0d7eaddeb2a291695b22f0e7c1c9bcf48dc0d871b327f190a86fb",
+     "pt-BR": "Preciso achar um jeito de descer!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k382",
+     "source_text_sha256": "be124ff50ceb79fd01aa70ac0d182afe48bff95f182b7b011bea73bdd820880f",
+     "pt-BR": "Aqui parece seguro, mas devo descer mais logo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k384",
+     "source_text_sha256": "1b98094e50d97858b977124125367f8c80ac83c94757c2fe114af29c9c1f98c0",
+     "pt-BR": "Preciso dar um jeito na tranca da escada de emergência!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k386",
+     "source_text_sha256": "2358244eb615818f26ce675537d98592b9430e64ad94673789cf3a1a3bbd0331",
+     "pt-BR": "Preciso descer correndo a escada de emergência e sair!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k388",
+     "source_text_sha256": "2c4c1299412d02bc3cedc0a81f0de48292a46166ead98dbd726f8d59e1908192",
+     "pt-BR": "Vamos encontrar a Yuki primeiro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k390",
+     "source_text_sha256": "ccf108415a8ac8fa0ad2fc0b85c0e9adfb189cfc3787cf272c13750f7125befd",
+     "pt-BR": "Falta pouco pro térreo! Continue!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k393",
+     "source_text_sha256": "ee7715bb90e13ecff611a53badb2309b2574e640cf55b7b0109790f4682b3799",
+     "pt-BR": "Prédio da Editora Ebine",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k396",
+     "source_text_sha256": "643746fb8c18d5718b423200ccc84add1c7f75a418164e88380e736a43913f5a",
+     "pt-BR": "Loja de Conveniência do Encontro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k398",
+     "source_text_sha256": "0e0b77dcbd33cb740eb1870d49bbfc755550515fb2251f1a3065ff4176910a04",
+     "pt-BR": "Rumo à Cidade de Mizuna",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k400",
+     "source_text_sha256": "de83395d1bfc5ed3d304224d6845ce4139839660154901233e1026f91c633b7c",
+     "pt-BR": "Ir ao prédio da Editora Ebine, onde está a conhecida do Otsuka.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k402",
+     "source_text_sha256": "e0a8d672380e4c6010be232b9a76d67c5c89b144dab6fb0e3167178d7be2e1bf",
+     "pt-BR": "Procurar a conhecida do Otsuka em algum lugar do prédio da editora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k404",
+     "source_text_sha256": "1e85e3dc76951e00222a78332fd030fa8e465d9a0cd4fe1d8b36ab4e48646587",
+     "pt-BR": "Falar com a editora-chefe na redação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k406",
+     "source_text_sha256": "f0e0c45b3331517f26fb08b21641e67621c6eadbbc407cae130b6ae5d326e899",
+     "pt-BR": "Começou um incêndio! Corra para a escada que desce ao primeiro andar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k408",
+     "source_text_sha256": "54749591ca0d7c853d48afb65ff4c75195772f9a1426e13d920e405bac3efa87",
+     "pt-BR": "O prédio da editora está pegando fogo! Saia!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k410",
+     "source_text_sha256": "680a49cbe01b4575bf175c0616b7c82580e44f6405bb7fe2c5d3c7772d5353f8",
+     "pt-BR": "Ir à loja de conveniência encontrar o editor Mukojima.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k412",
+     "source_text_sha256": "d5c009e64b663f5bd2024d34433d0a7a2b97deef56909a7ba24df0b55150b405",
+     "pt-BR": "Saia da loja de conveniência e siga para o sul, rumo à Cidade de Mizuna!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k414",
+     "source_text_sha256": "898b1702e11f4f6f4a48efc45bbf6236e20a568be12c0cce40ac0f9ff1af51af",
+     "pt-BR": "Editor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k416",
+     "source_text_sha256": "f8828d97816c12d5677557547d71bcd16a6c6ff01c433451092a53c9033a9e39",
+     "pt-BR": "Editora-chefe",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k418",
+     "source_text_sha256": "8d3f52716c7b0d7c9828f38fdcd7fa454af8686bbd11610be0a8f86400fbbb05",
+     "pt-BR": "Sala de Consulta",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k420",
+     "source_text_sha256": "fe19040b412c3e552dfb1e1e491065c4b029e7c4cbfded6713dac06e0c4db074",
+     "pt-BR": "Editor Mukojima",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k424",
+     "source_text_sha256": "8bc293bce38f17dc0aadd711ac147f5fffcf4df01300b08c0aee0da6b1e67543",
+     "pt-BR": "Ponto de Ônibus",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k426",
+     "source_text_sha256": "b8a14e4ce69e6bd919cac24f9421e05b45e919ac5299477d86e51591eaec7397",
+     "pt-BR": "Um homem foi levado aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k428",
+     "source_text_sha256": "d2dd44213a01fb3dbb7ca00fcbfdc3a46dcf20b414ce0eef647156a1cbbb4a28",
+     "pt-BR": "O ponto de ônibus é a nossa saída! Rápido!",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_210_3_news_text.luc",
    "source_sha256": "492540a524b928b7863ed9ea0a383b887612b0d538bac0b0389928602cf2cbe5",
    "entries": [
