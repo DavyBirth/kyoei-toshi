@@ -4910,6 +4910,194 @@
    ]
   },
   {
+   "path": "common/lua/stage_209_news_text.luc",
+   "source_sha256": "785081ced153477bb96f83176c59fdef7aaf9876b06130e7000eff6315c1ada8",
+   "entries": [
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "b6642a5c15dced9ddac89c1ee745bf71cb3855f3a468c4496738c42a43b46d64",
+     "pt-BR": "Trem É Erguido por Gigante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "2d9d7980c6d7ec76b1c22c0eb49e88b835895155c093fece7caacd7cdd051cfa",
+     "pt-BR": "Tarde da noite de hoje, um gigante misterioso ergueu um trem que tinha saído da Estação Hinageshidai, na Linha Tozai da Ferrovia Elétrica de Miyato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k61",
+     "source_text_sha256": "449603f1ccc636bb2730113f383d79a3af3d2a228a2ab18e457f0ae022f4e26b",
+     "pt-BR": "Passageiros Deixam Trem Parado a Pé",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "5eda55cbd835cffde18702514330c031e67dee3dd518984892bef6f81a1f03d6",
+     "pt-BR": "Tarde da noite de hoje, um trem da Linha Tozai da Ferrovia de Miyato que tinha saído da Estação Tsutsujisawa parou por causa de uma batalha entre gigantes. Os passageiros caminharam pelos trilhos elevados até a Estação Hinageshidai.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k63",
+     "source_text_sha256": "3c817e5315461a9d662cbff878f02bc714b30ac875c713ec0fe6ec0dec1fbd21",
+     "pt-BR": "Gigante de Luz Salva Passageiros",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "060dedaf101680591c684b96c8ab75680b0c65ae068c5e66a1224c238b7f0ef3",
+     "pt-BR": "Sobre o incidente desta noite, em que um gigante misterioso ergueu um trem que saía da Estação Hinageshidai, na Linha Tozai da Ferrovia Elétrica de Miyato, veio à tona que o gigante de luz tomou o trem do gigante misterioso e o colocou no chão em segurança.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k65",
+     "source_text_sha256": "401adb3a0f70fd89ea7079ad807cd0d83fa6fceaccb40a4540ad34eac6e3271f",
+     "pt-BR": "Dois Gigantes Mudam de Forma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "c9271eabb0ec0723ea4c2724ccf5743c71e98920f9f8b52fde5634835190aba7",
+     "pt-BR": "Moradores relatam que, durante uma batalha entre dois gigantes nesta noite, o Gigante de Luz ficou todo azul. Testemunhas também confirmaram que, quando o Gigante de Luz mudou de cor, o gigante misterioso se transformou numa forma com apêndices parecidos com asas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "fc142700ad26ba1fbb040410707381bf1a71f1d8d1689f30bbfe4c4f9130d846",
+     "pt-BR": "Dois Gigantes se Enfrentam no Céu da Cidade",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "cd5d7f3e4897178a140c3cb6be5e0e65ccb0d5424b8e117973ff0c5ae4ae2c29",
+     "pt-BR": "Os dois gigantes que apareceram nesta noite levantaram voo e continuaram lutando no céu. Os choques entre eles soltavam chuvas de faíscas. Um morador que viu o espetáculo por acaso disse: \"Achei que eram fogos de artifício.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "4efff404b0dfa9c20e8c1eb5c056f724770b3a331dc6ebb65b1b56d167d8cfb6",
+     "pt-BR": "Dois Feridos por Pedradas; Polícia Pode Investigar Agressão",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "7e351717e084a2dd93d52aae6f69189553af7605bb98788bf904b0daf32b0dd9",
+     "pt-BR": "A polícia diz que passageiros presos numa ponte ferroviária depois que um gigante ergueu o trem podem ter atirado pedras em dois outros passageiros, acusando-os de \"atrair o gigante misterioso\". O caso veio à tona quando um passageiro que não participou contou à polícia. Porém, as duas vítimas estão desaparecidas, assim como a maioria dos suspeitos de atirar pedras, após o desabamento da ponte. Por isso, os investigadores ainda não conseguiram esclarecer o que aconteceu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "1e3768cd4726d2061f42ff08cab32e4d0b574aa2c393b2cf120afd50bcd75016",
+     "pt-BR": "Ponte Ferroviária Desaba; Trens Devem Ficar Suspensos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "27eae94ff57c8eb538a5e54e56480dc142cf2fdf4854b7e1a71a8e80ba14700b",
+     "pt-BR": "Como a ponte ferroviária do Rio Hanamomo, na Linha Tozai da Ferrovia de Miyato, foi destruída, a circulação entre as estações Hinageshidai e Tsutsujisawa deve ficar suspensa por vários meses.\nRespondendo à imprensa, o presidente da ferrovia, Tetsuro Densha, declarou: \"Faremos todo o possível para restabelecer o serviço o quanto antes.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "8c5e616b43f85218420e8cfbf6da5ddaf441844d8acd858a7f24cf1dbc3ba9b7",
+     "pt-BR": "Gigante de Luz Dá um Mortal para Trás Espetacular",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "cdfa7b0fae943c92bde6ac3857aa7e43b92c9fe1afda344db247eda174b99ed1",
+     "pt-BR": "O Gigante de Luz, que apareceu nesta noite, deu um mortal para trás espetacular, aparentemente para abrir distância do gigante misterioso. Há quem suponha que ele saltou por cima da ponte ferroviária para não danificá-la. Isso reforçou a ideia de que o Gigante de Luz talvez não seja hostil à humanidade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "c21342e910386bb7672ab17070c8912404d7d6119925e2b0df1f1aa3ca1d28f9",
+     "pt-BR": "Aviso aos Passageiros Atrasa na Estação Tsutsujisawa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "d6525bf652e4671bf696b5b2cf3a1890ea05cd37517376fb99d5c48f43ed3cb4",
+     "pt-BR": "Na Estação Tsutsujisawa, da Linha Tozai da Ferrovia de Miyato, o aviso de que o último trem tinha sido cancelado atrasou, e passageiros na plataforma foram vistos protestando com fúria contra os funcionários.\nEm resposta, o presidente da ferrovia, Tetsuro Densha, anunciou pelo departamento de comunicação da empresa a intenção de \"fazer todo o possível para dar os avisos o mais rápido possível daqui em diante\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "f1e331e0a06a5e4dd244c2c9544ac6040b97e31ee2e67ec9254040a9aaa7c82f",
+     "pt-BR": "Gigantes São Vistos Voando Baixo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "357ddf2cbe0a2a2ae0350d0865dd0bc6aa281203e9fbdf72ca046328f47a5836",
+     "pt-BR": "Perto da ponte ferroviária do Rio Hanamomo, na Linha Tozai da Ferrovia de Miyato, dois gigantes foram vistos voando baixo.\nOs gigantes teriam voado logo acima dos trilhos elevados, desviando dos prédios com habilidade.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "2d3d452915ed551e79ab55467e9bd2c4f10d55652a7ffd7fad47fd6a80f20633",
+     "pt-BR": "Maquinista Abandona o Posto?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "474daa97e5c29eef4524898fa9447cf53e04060f6204a0be17af32843e992789",
+     "pt-BR": "Informações de passageiros revelaram que um maquinista da Linha Tozai da Ferrovia de Miyato, pego no meio da batalha dos gigantes, parou o trem para manter os passageiros em segurança, mas, depois de protestos furiosos, ficou emburrado e se deitou nos trilhos.\nEm resposta, o presidente da ferrovia, Tetsuro Densha, disse à imprensa: \"É um absurdo um maquinista deixar de conduzir os passageiros em segurança e ficar emburrado deitado nos trilhos. Faremos todo o possível para que isso nunca mais aconteça.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "3ab9ae8859657bd096ab8c9c752aeb6d325724fcc9480896a0961c1e45c34149",
+     "pt-BR": "Alunos da Região Soltam Filhotes de Ayu no Rio Hanamomo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "82cd8caa06b5a4c03d1ad88c1539b817cf10d2d3d6bd5d6a5de44885dca81654",
+     "pt-BR": "No dia 29 do mês passado, alunos de ensino fundamental da região soltaram filhotes de ayu, um peixe de água doce, no Rio Hanamomo, que corta a cidade. A soltura acontece há 12 anos e virou tradição anual. Em entrevista, o presidente do grêmio estudantil da Escola Hanamomo, Kaicho Seto (14 anos), disse sorrindo: \"Pude sentir de perto a força da vida. Estou ansioso para ver os ayus crescidos.\" Seto vai embarcar no dia 15 deste mês para um intercâmbio de um ano nos Estados Unidos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "b1e2af7bdc5772f4e92005caff99134de701b327dcd1644f82cd09cd0d5acc78",
+     "pt-BR": "Milagre! Uma \"Mancha no Chão\" Salvou Sua Vida?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "edee3b14469993f60594d163e551467c975f4b560ff4173189c25e840d63e719",
+     "pt-BR": "O vigia Kei Bin'in (58 anos), que fazia ronda, acaba de ser resgatado em segurança de um prédio parcialmente danificado pela batida de um gigante voador.\nNa hora, Bin'in fazia a ronda sozinho no último andar, e, pelo jeito, não havia mais ninguém no prédio.\nBin'in diz: \"Fui salvo porque tinha uma mancha teimosa no chão do escritório.\"\nBin'in é conhecido por adorar limpeza e, naquele dia, enquanto esfregava uma mancha que encontrou na ronda, a parede à sua frente desabou de repente. Felizmente, Bin'in não se feriu e agora presta depoimento à polícia para explicar em detalhes o que aconteceu.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_204_item.luc",
    "source_sha256": "5ab397e57bcb12bc03666e6a70bcd1e8c7d584b5f06702fcd0980392874a5c12",
    "entries": [
@@ -7273,6 +7461,75 @@
      "id": "p0/k6",
      "source_text_sha256": "0b1704ee698215088df4fbd9e4051884d93e5fb615cc85e602823987683ae4e7",
      "pt-BR": "【Vídeo】Alienígena gigante aparece na cidade à noite",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_209_npc.luc",
+   "source_sha256": "9bc0d1a75cd016e7ee093033ac7c54d402045d9264b3add31958e1e3a31a9d0f",
+   "entries": [
+    {
+     "id": "p0/k623",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k625",
+     "source_text_sha256": "147f783469038c9642d6b1c95aec5a6665e2eab3b519e6553a9e55858586ab0b",
+     "pt-BR": "Passageiro A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k626",
+     "source_text_sha256": "5f41a45d2b2840f43710007dd5c069b8a7d3c3c3cada4b4a8356e65368143673",
+     "pt-BR": "Passageiro B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k627",
+     "source_text_sha256": "4c0a951310cae7ffe8a5403cff4c4de44a654517ebd77d795089fb9f3a984006",
+     "pt-BR": "Passageiro C＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k628",
+     "source_text_sha256": "96a34ff8a2683c6dcc0f45bf769ebed94d57e05c9e78cd451743e1e6b745a60f",
+     "pt-BR": "Passageira A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k629",
+     "source_text_sha256": "60ebc87e7c912cbbb408d5384c6c6b291a2392326b28e73f7c6b2e17e9d6ea9b",
+     "pt-BR": "Passageira B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k630",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k632",
+     "source_text_sha256": "36ee424f78fc720b15f2d6353e7763f800ff6bef61ab4bbdf938889c2343211e",
+     "pt-BR": "Passageiros",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k633",
+     "source_text_sha256": "a020c504f313c51dbb16ab406ac5fbe6b30e790417cfe9a991ba418c76732e30",
+     "pt-BR": "Aviso a bordo",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -17769,6 +18026,19 @@
      "id": "p0/k256",
      "source_text_sha256": "3e00183a333ab5def7dc176124dc5fb8ebec59a1505ae62dcd37c3a673f677d0",
      "pt-BR": "Um aplicativo para celular criado pela Hyacinth Soft, empresa de software da Cidade de Miyato, está chamando a atenção.\nO app ensina aritmética, matemática e confeitaria como se fosse um jogo. Asano, representante da empresa, disse: \"Ouvi dizer que confeitaria exige cálculos precisos de quantidades e conhecimento de reações químicas. A ideia inicial foi que seria divertido aprender essas coisas juntas.\"\nA versão beta divulgada recentemente, uma versão de teste ainda em desenvolvimento, foi bem recebida. Os usuários elogiaram: \"Agora entendi o teorema de Pitágoras\" e \"Fiz bombas de creme direitinho pela primeira vez\".",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_209_item.luc",
+   "source_sha256": "263b03fb2ae49366444e2a729318a159402087eb30f0a8302df3a2c09a2719df",
+   "entries": [
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -35038,6 +35308,754 @@
      "id": "p0/k37",
      "source_text_sha256": "ea9e0cc6253dfb0275e3aae1b2304abf1fcba8ada16161dc0e2e27a61a0eee99",
      "pt-BR": "Moto",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/Text_Stage_209.luc",
+   "source_sha256": "41ade45c2c29bad9b125a846627dcfb1ff534c7cb90c04a13c6a81f0545adf8d",
+   "entries": [
+    {
+     "id": "p0/k3",
+     "source_text_sha256": "fe65050b6cf95368d85f30fd366c092a15824886d51defd754887d1e968f7491",
+     "pt-BR": "...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "cac05ddb50604638589d1b5af47d96747471fed3a97aa52a252e88ce1ada9712",
+     "pt-BR": "Executivo que esqueceu o guarda-chuva",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "634c5adf40f4e5fa6986380463bde259477239c91285330e380adb12675698f5",
+     "pt-BR": "Devia ter acreditado na previsão do tempo e trazido o guarda-chuva.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "d4ad97f2d3512a1f9d2645037fa96074c160857ab29665ab519dbe8f083626be",
+     "pt-BR": "Que barulheira é essa...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "1152e859e6fd123c563987dedb04ae392f0674a1dc74d3c67afaac9d7f2533f2",
+     "pt-BR": "(Um poste ao lado do trem de onde desci...\n É o que leva energia para os trens.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "bfd3627658d542f343c9aec5dd88b23749163982140be780e4b6d85f39e81043",
+     "pt-BR": "(Um poste ao lado do trem que levou uma pedrada...\n É o que leva energia para os trens.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "29b71900b86371100479ed9a3e6a2d9253d28c88e15fa541b73045a4dbc2776f",
+     "pt-BR": "Homem irritado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k27",
+     "source_text_sha256": "1e70ddeda50236e7bbaf3ec15b18829d74448630a7c5232a65dca96e3df0f704",
+     "pt-BR": "A estação tem que ser por aqui!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k29",
+     "source_text_sha256": "41a58406e636fdff1628d710ea9ba3aa845a5bfbbee989e80bb370bb9a0529f8",
+     "pt-BR": "Mulher desconfiada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "6ed6b73fbc2e01b46f4654c014e9d7045ce4469c193b6ff2c3eb0064ab78ac94",
+     "pt-BR": "Você está com aqueles gigantes, não está?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "876efa439439ab9da0412bda63f5bedfb52df5a8ba249fb39ca2ad3c36839efc",
+     "pt-BR": "Homem implicante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k33",
+     "source_text_sha256": "f248b063c4526c5ef8d8fa5411942c42307d02b3b876d46979ea7f3756c51103",
+     "pt-BR": "Saia do nosso caminho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k35",
+     "source_text_sha256": "78b2c34e53ef1bef9f84bc86e67f7eb9a15f0aff33f426045915f69d97be1cc3",
+     "pt-BR": "Mulher acusadora",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "8d1602a17675217c940d407567dcd3b0401d5a4705b6d6605353979b79cbcdd1",
+     "pt-BR": "Andar com vocês é pedir pra se dar mal.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "9b99572c37d74a1282e191fd88f54727fd48e3ba44716f6fc10ec08115c93804",
+     "pt-BR": "Homem atrasado para o jantar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k39",
+     "source_text_sha256": "7f7a330de64e956f42926c0bf870c2e2bf9fb683dd9eacbfbc41cc6d742cca26",
+     "pt-BR": "Por culpa de vocês, vou perder um jantar importantíssimo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k41",
+     "source_text_sha256": "2e784020c23f8be49609fae082e011be40f904f7ed4964bc18780c7c87c3a7fe",
+     "pt-BR": "Homem que vai na frente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "867595f5ac15ec206d013af1d7996d4b95a09b6a3dc6d7065ac8955c7e73e50f",
+     "pt-BR": "Vamos só chegar na próxima estação!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "95d35f0736d75365feab35833b73541ffec83d07f1065c4c982080e814b9abf1",
+     "pt-BR": "Passageiro E",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k45",
+     "source_text_sha256": "30061159c92a8f6d5dbc5c71b1f180915f446607f062dadb9665ccf3016c240f",
+     "pt-BR": "Que absurdo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k47",
+     "source_text_sha256": "6d159b538d472b817db5ca7649e049617e00fe4569690acd73945e274bf4bc1e",
+     "pt-BR": "Passageiro F",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "bdf791a318b66c7ab3d3a3f3744a23ea7fad2e8b71a4556787d9ffe332d8b3cb",
+     "pt-BR": "Vocês também estão com aqueles gigantes, não estão?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "0ce52394a4d348e96360677eb483c0f9b5a69e572eb8a4c3d28b1d989d266e66",
+     "pt-BR": "Passageira C",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k51",
+     "source_text_sha256": "1d0a8148e77b8345c219ec1ce054176724cb065f42830df8da29d3fe64cfcefe",
+     "pt-BR": "Vou me atrasar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k53",
+     "source_text_sha256": "b7988eb4bbe72d5de7370f9d4aed7a6f063f455b115264c59754beb4e9ecb08d",
+     "pt-BR": "Passageiro G",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "ec18467e49c7befcabbf091a486def65d54c556bf6309213149288b40f8fcbf5",
+     "pt-BR": "Nem pensar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "7be2ff9eb6d0db296fec97361822ad27303439279d4071b6dd63804fb9829a82",
+     "pt-BR": "Mulher exausta",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k57",
+     "source_text_sha256": "273bda7932c501bf072e22aad511f963b389a982b324a234e244540a1367380d",
+     "pt-BR": "Conseguimos... Não dou mais nem um passo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "3a8865c8e1b9ef457f2d705e7b45ff3aaf811554f48941fd85bd21ff64e02cca",
+     "pt-BR": "Rapaz com as mãos na cabeça",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "fe761823e6b986ce3d9c05c2a7dc79242643aabcdb17d265c545daf3664e5b7b",
+     "pt-BR": "Aaaaaai...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "48722d41f621289888cdcb56dd0f7fd96838019502d8eb61c1e6ea9cb345747f",
+     "pt-BR": "Mulher exausta na cadeira",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k63",
+     "source_text_sha256": "1371a16c8f5ef746cbeadcb4b2fa44021cfc70c2666241c4f298f188132a87bb",
+     "pt-BR": "Ugh... Me deixa descansar um pouco...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k65",
+     "source_text_sha256": "f526a6ffdbba1d45181a7d3a03f7224471c3a7cde84404ab55fc38eba15804c3",
+     "pt-BR": "Homem sentado no chão",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "1a1d44148dfee170a879ed4ba1025b4885b1dee8133d1895720eca5c0f9c3b18",
+     "pt-BR": "Não consigo entender nada disso.\nNão fala comigo agora...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "927cd18a007c1d8da713b1a9d216837839b293a5b93d2f0ea11216fa14140c06",
+     "pt-BR": "Maquinista caído",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "d62a80229e2730d66c53b53ca4616c05f24470631a2aa9aea78f8d29778559d3",
+     "pt-BR": "Cansei de tudo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "2a55a5c1c42c6be0c88da68dde62465a398f4008d1c9d6371ebb45bb2d8ee68b",
+     "pt-BR": "Cansei desses passageiros egoístas!\nNão é culpa minha o trem ter parado...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "6c30aa1088f554af407769ef651d135ab647905c4d9e9ce51da1a58d2ca28c8c",
+     "pt-BR": "\"Você está bem?\" (só por educação)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "fff31522244c9edae2f4b6b45f722b30fc79881d56752db909728d8752a98ddb",
+     "pt-BR": "\"Não devia falar assim dos passageiros.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "663a8e64db4b545050c521cc2b39cf41d6a27a8048ef0f77c5889d9e26846687",
+     "pt-BR": "\"Você tem razão, aquele pessoal foi horrível!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "159d4c22043f2431136d1a9ee15face675950199f865cc78e61f012a8b345372",
+     "pt-BR": "Tô bem. Só quero ficar assim um pouco.\nMe deixa em paz.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "e81e90718cebb921e7ef4894b75f19cbcbc77f05da44c49516da4cc02323f480",
+     "pt-BR": "Você não ia entender.\nMe deixa em paz.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "03baf43d4657ec859d053c3a97c8152f7a14c12037bb022834a4816ee9f9e9d7",
+     "pt-BR": "Né?! Né?!\nBom saber que pelo menos um passageiro entende. Já me sinto melhor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "98100a907945fa29bb147c820121c899ac4989511df3770cba8226b984442475",
+     "pt-BR": "Enfim, vou descansar aqui um pouco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "7b54bd8d66d28e0cc5850ffcda89c9e44af92844d28ddc32b7d3ca711231aa56",
+     "pt-BR": "Mulher desiludida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "a8a1d7017a3375788afacf9a18c0d2f16f37ac9aa082a536bb236d74ca94820e",
+     "pt-BR": "Talvez fosse melhor tudo quebrar de vez...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "93002dd1bc26f392ceb751b5c3bb538b6a5488282a998aa425e299cf5e6f8264",
+     "pt-BR": "Aquele homem... Nunca vou perdoar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "36ee424f78fc720b15f2d6353e7763f800ff6bef61ab4bbdf938889c2343211e",
+     "pt-BR": "Passageiros",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "fc2de6f9dbafba5dcdb09495ae8008b2a4bb811d8c3154044a7cd1b33e895bb7",
+     "pt-BR": "Será que a Risa está bem...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "dd3bb92664613ad7db9c2caed390a8ac00badc19ed4b7419e46905dc34d5e7b0",
+     "pt-BR": "A Risa se esforçou tanto. Deve ser algo muito importante.\nA gente tem que entregar isso por ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "0189e3bc344850e6c5b67b35d6ba0d4a2be606878904c5d57f48adb96b41fbd3",
+     "pt-BR": "Se me lembro bem... ela queria que entregássemos ao\nvice-diretor do Instituto de Pesquisa de Raios Cósmicos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "d24f7bf3b196d00eea661e89761e6f143b752844b35af9eb05cdb90236a09026",
+     "pt-BR": "Se me lembro bem... ela queria que entregássemos ao\nvice-diretor do Instituto de Pesquisa de Raios Cósmicos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "a020c504f313c51dbb16ab406ac5fbe6b30e790417cfe9a991ba418c76732e30",
+     "pt-BR": "Aviso a bordo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "4e6b1a57a0f2ad0446a428c3efcdf724d4ddb0862f1c7fecf998ff270e8805b2",
+     "pt-BR": "《 Um objeto voador acabou de passar perto deste trem. 》\n《 Seguiremos devagar até confirmarmos a segurança. 》",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k117",
+     "source_text_sha256": "5c4c89271b4b5e0b79cd2dde6052a9ab607ee0442fe245c5a40c0b91b6d71a69",
+     "pt-BR": "Por aqui não tem como voltar...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k119",
+     "source_text_sha256": "2cdede2d3f27ab1db00f4529348274b0fccc0d9786473c2149d401aac1f0bd23",
+     "pt-BR": "E o pacote da Risa...?\nUfa. Parece que está inteiro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "49d0b4180f762f455d9421d56b06360df6426b26713a7a70554de5171735f64c",
+     "pt-BR": "Bom, vamos andando até a próxima estação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "1c0023eaa9af0b95481b72af27bf61b98e718f8b6a7966c2be2a2def83824353",
+     "pt-BR": "E o pacote da Risa...?\nParece tudo certo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "01ffe4911239c0e671d91da90b1d508b9a6fcd9b487f5d43dd92a7a40d8f610e",
+     "pt-BR": "O Instituto de Pesquisa de Raios Cósmicos ainda está longe... e o trem parou.\nVamos descer pra rua aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "061e126ab08b2529c34e9cc34dd2419ffa0eb7441f9780f4a77781b5b7b871de",
+     "pt-BR": "E o pacote da Risa...? Hã?\nSerá que bateu em alguma coisa? Tomara que esteja bem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "925c5b1b606e675989bdb362227bfb4aaab5e9069a7dcea43559ee6c7041fad7",
+     "pt-BR": "Vamos entregar isso de algum jeito. A gente deve isso à Risa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "8fa346a06aec1b038f28e51d1daf5b712d155c75dd302dd9a6725e31ec6da056",
+     "pt-BR": "O vice-diretor do Instituto de Pesquisa de Raios Cósmicos está esperando. Vamos logo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "ad4cf48dc3dd35ed5f6d9edd1b2569f67f11a328d8ce5d1a7664d781e6de94b3",
+     "pt-BR": "Pelo Asano, da empresa de software, também. Vamos entregar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "c2489d43368dc162b21b4f6066af22a3d4f172ae53a9bfd89a1e58782766fe92",
+     "pt-BR": "Não tenho nada melhor pra fazer mesmo. Vamos entregar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "937ce28d62394afa224b52ec82d29b692d01e87fd1c364449d153d6b2c642cf8",
+     "pt-BR": "Isso, vamos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "0593fadf9578f7d125ea1873aa40bd96cf69e68a1fa50417ec2888965e8d89d6",
+     "pt-BR": "O vice-diretor do Instituto de Pesquisa de Raios Cósmicos está esperando. Vamos logo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "5f5830f717386dbc7b072839327797aa95b076d53d339be0bd9d2345655e3521",
+     "pt-BR": "C-Certo. A gente só precisa entregar isso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "147f783469038c9642d6b1c95aec5a6665e2eab3b519e6553a9e55858586ab0b",
+     "pt-BR": "Passageiro A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "22a0a10c12942e79f59aa31ba706df923dbcce43ef56d408c64d4af378a20e9b",
+     "pt-BR": "Inacreditável!\nPor que isso tinha que acontecer comigo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "5f41a45d2b2840f43710007dd5c069b8a7d3c3c3cada4b4a8356e65368143673",
+     "pt-BR": "Passageiro B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "d750f84e90a10fcba0819ed74e810c9866a3d7576b8639bdf3785776a88df8fc",
+     "pt-BR": "E que história é essa desses gigantes?!\nAparecem do nada e destroem a nossa cidade!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "4c0a951310cae7ffe8a5403cff4c4de44a654517ebd77d795089fb9f3a984006",
+     "pt-BR": "Passageiro C＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "8d627b3fde0f249a0f3ba7bfc55367c2891fbacd2c56064dabff4bce090a5d0a",
+     "pt-BR": "Tenho um jantar de negócios importante! Não vou deixar\numa bagunça ridícula dessas estragar minha grande chance!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "dc7850abf2db0024300e248c15c4d815c9a0876707844c2753c2ced6f6b4d32c",
+     "pt-BR": "Ei, eu vi esse aí sair do trem\nque aquele gigante estava levantando...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "b5e9fc13d368166e3a38e9ed86df3d61ca00ffaa5f60ee917f77db14e8f5cfc2",
+     "pt-BR": "O quê...? É mesmo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "96a34ff8a2683c6dcc0f45bf769ebed94d57e05c9e78cd451743e1e6b745a60f",
+     "pt-BR": "Passageira A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "8b75bdd10266c1a24e3d060c5cbbc0a5f4dc1fe764e04bf7747949f119c13757",
+     "pt-BR": "Ei, você! Não vai me dizer\nque está com aquele gigante?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "1fae1d386e56ca912af6c5545ce4dcdd777d639b193fc7151093027a66abf9ba",
+     "pt-BR": "Sim, eu estava naquele trem, mas não estou com eles!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "8b0cf0f137913180ad45b5996eeee0d6f58dd9639bfc5b636c0a3f3541083bc5",
+     "pt-BR": "\"Isso mesmo! Eu chamei esses gigantes com os meus poderes!\" (assumir)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "513212f198b78509a132a6880d15ba1892a83790efd2470ff5db09794ac421e2",
+     "pt-BR": "\"Isso mesmo! Eu chamei esses gigantes com os meus poderes!\" (assumir)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "4182e37c0592a3358426991201b92ce9210cbed719188410fd7abeca1a1d2c94",
+     "pt-BR": "É mesmo? Então por que aqueles gigantes\nestavam disputando o vagão em que você estava?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "60ebc87e7c912cbbb408d5384c6c6b291a2392326b28e73f7c6b2e17e9d6ea9b",
+     "pt-BR": "Passageira B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "f3588ecc02fa2b3b10b6fe7bf65a5b7898dcd6f9027e8a5b8401dda25e2a2eff",
+     "pt-BR": "Hã... Eu estava no mesmo vagão.\nAquele gigante estava encarando essa pessoa pela janela...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "97690d760d8e15894cc0261a53b43e50ae82d8de78ce2a81a110be6136158130",
+     "pt-BR": "O quê?! Eu sabia!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "2d1750ec491b4f432ecabccf7afb8f6543cbe74f6d010ab96b10f336470204c4",
+     "pt-BR": "Isso mesmo! Eu chamei esses gigantes com os meus poderes!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "ea3318ec12434b254f7ec3208a5ca3e6761659e21f1907688e2a68e9dcf1e8b3",
+     "pt-BR": "Isso mesmo! Eu chamei esses gigantes com os meus poderes!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "63b3710ba3151fbd9f8cbdae2d3e0443454f9c99afdfad92b946549383750ff0",
+     "pt-BR": "O-O quê?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "446a240252bf01906f354365ca7abf4b685658ed9f1b1782e5b1ce3cf60e1ee9",
+     "pt-BR": "Então é culpa sua\ntanta gente ter sido arrastada pra isso?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "32e0b9d344b59c1342279be695a1c219488038acd12f894029afda4b3b125036",
+     "pt-BR": "Está brilhando...!\nEs-Esse aí não é normal!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "b787c7a2cd959cf10bac2f76c330082241c25a81c4cd2803719f6acc547043bf",
+     "pt-BR": "Eu sabia! Você está com os gigantes!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "0db151d21c65ed08e830cc3ba727b52e6576fe6d57104784be63422b8c6af087",
+     "pt-BR": "P-Parem, por favor!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "55ad90adaf6eac0aa723b771fab79d7e918f66b66a11ae25a38afa23ff4b6a81",
+     "pt-BR": "\"Parem! Deixem ela em paz!\" (proteger a Yuki)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "c523106244df2daad20fa2627580a95acc5fabdde5811c1d27db94dca254bfbd",
+     "pt-BR": "(Usar seus poderes para dar uma lição neles)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "0f2ad7c3472f96ddca43c75944551dd58bad180a05a7159ded9ae68a57cd5883",
+     "pt-BR": "(Se esconder atrás da Yuki e esperar passar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "16ab26241421069ff9fbf15cd7a35b29ba4f43ee5df9e162551b51237d621cdf",
+     "pt-BR": "\"Parem! Deixem ela em paz!\" (proteger a Yuki)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "1e5055f66d81407f2a7867c9e5e43b8b704f72c774d14fb2b677d1f793601852",
+     "pt-BR": "Parem! Ela não tem nada a ver com isso!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "901994429ab29feb2248ffda18405f0524a6482fccaa99a0009e7cf8d3feafd9",
+     "pt-BR": "Parem! Ela não tem nada a ver com isso!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "10832bbf4c207b9bda61ab3e7e3a9227e64c5427bf04d36a7a02880c113f4e13",
+     "pt-BR": "Ei! Se ficarmos perto dessa gente, vamos ser arrastados de novo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "5d473e127727748cadee2628cc7176fb479d1685a2d2110906babf13e8d77b40",
+     "pt-BR": "É! Vamos sair daqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "6c15cb7ff98a1b14a3626d643345706cc6ba2bad2f0b638537da344baa11a547",
+     "pt-BR": "E-Ei! Se ficarmos perto dessa gente,\nvamos ser arrastados de novo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "b6f82d20b85dd53bc1de441055580edc7e3dc1d140b2aa1531ed1ec60ed0f009",
+     "pt-BR": "É! Vamos sair daqui!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "d1ef4ccef6c1668c609359161d5fb7166efeb468f45a17eb73f25a946422f7e9",
+     "pt-BR": "Hunf! Se ficarmos perto dessa gente,\nvamos ser arrastados de novo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "8f4c3afcb554a0618775179bb04714539d6740070d2b34fe97b489382853fb38",
+     "pt-BR": "Que alívio... Você está bem.",
      "notes": "",
      "editorial_status": "pending"
     }
