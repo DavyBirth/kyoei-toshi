@@ -35925,6 +35925,1461 @@
    ]
   },
   {
+   "path": "common/lua/Text_Stage_215.luc",
+   "source_sha256": "063da08a76a3abae15ddb198b0594957c8aa6811419b4eab0d4a8142cee59ff7",
+   "entries": [
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "0f9485c48f08ef1fac746c949d98433bf57a3d2268e1ccac150aaf6716b975d1",
+     "pt-BR": "(Entrar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k9",
+     "source_text_sha256": "a7b8f4b31985e053fbce3cf2a73410d8407ce4239409f3049f687d8a9c14fe41",
+     "pt-BR": "Sair",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "c1ee2c0cd4e9e38c42d6133c938fa606cd39807eb350cf6f9631e92dfb384e25",
+     "pt-BR": "(Olhar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k13",
+     "source_text_sha256": "ae2f81219d6e307c267b5a92e5668083a6e97bd248bd67b86b74358d189a6f6d",
+     "pt-BR": "(Espiar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k15",
+     "source_text_sha256": "a3cebeb581885bb8fd3b24e6675f4903fc6af298f55ecb8f225020529a524de9",
+     "pt-BR": "(Olhar no espelho)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "ced972c22ac8fd2d8725c8046fec27a5fda85ab575556ee4e5de593d21f8126c",
+     "pt-BR": "(Abrir)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "2b8c941e80e66c0c781e3e5a2f92ad439f612f16f3502423a9dcd9df29ecc715",
+     "pt-BR": "Uma estufa de frango frito.\nMas está vazia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "3025ce63906ebee4672ec85e0898cb9deacf8f0653a5202cb01db5c5678b0331",
+     "pt-BR": "Um freezer de sorvete.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "44dc29622c0132defbde285da3b59a3617c3c7780696534e455ebd4460625226",
+     "pt-BR": "Tem um espelho na penumbra...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "b6630495b42f536a65ca1a2c7c8ec7a17f22bc61d652119eedaf5627035a5a8c",
+     "pt-BR": "Usar o banheiro?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k29",
+     "source_text_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "pt-BR": "Sim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k31",
+     "source_text_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "pt-BR": "Não",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "178427a00dff8181409de09c498e2696ec07acd6e6a9b533281664d88c0f789d",
+     "pt-BR": "Nome completo do protagonista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k37",
+     "source_text_sha256": "2ee2e197cc559b1c847ed648622b23e363311a1f751e71a988cbe65ecd23cd5e",
+     "pt-BR": "Ufa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k41",
+     "source_text_sha256": "4a9ebb67e9cda52bb0472cbf6a85737760f2435c63b2b5c6f22fa961568d5f39",
+     "pt-BR": "Um armário. Não abre.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k43",
+     "source_text_sha256": "a54f969da1e1fa1e3ff0e97b73543f7bca449eae5c78bb46db41617170e72a33",
+     "pt-BR": "Um computador.\nEstá desligado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k45",
+     "source_text_sha256": "87728a688a8f80eec63fa6b1b89f18165acba4d66b77e62e51745c39a2cd76c1",
+     "pt-BR": "Uma lixeira.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k47",
+     "source_text_sha256": "0bfe8a909202c3b1f86b813451db43e89c51be0000e6e56509cf496fa19dcf13",
+     "pt-BR": "Mulher escondida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "ae36af92d454a3034b3d24ebe49e5310f5bd8bb16d0122a542c14dda98fc82cf",
+     "pt-BR": "Por favor... fique longe.\nSó me deixa em paz... por favor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "76158adb73dcae22a62ff26b575defcd57fd08a500d7cf7f949f35f936f9f794",
+     "pt-BR": "(Perguntar com gentileza o que houve)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "ce6ad5d8f1d05151e35b6a5b94206c7baebbc08311882fc7ad1547d15a4d9a47",
+     "pt-BR": "(Perguntar com curiosidade o que houve)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "f9e8cd3f94812121a115fa0e3d9f799000307eb36a11fba098c68d1e9f0489bc",
+     "pt-BR": "(Ir embora em silêncio)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "a050f47481af124c0ebc6f0c3d218972a55033249a95153aba010b067d55eadd",
+     "pt-BR": "Eu não matei meu irmão!\nEu juro que não!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "a7dee765f005a5f2a45867aa9935bbc63a34cc6b62b133b9f059120e553d6d61",
+     "pt-BR": "\"Tem uma ordem de evacuação lá fora. Se vai fugir, vá agora.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "7bb86c38894625c162bc396da2a00203eb0daa8048c7d82ebadf4cfb0d6e7104",
+     "pt-BR": "\"Está cheio de polícia lá fora. É melhor ficar aqui.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "2f4a1f58abc454591804e24f793f7b1caf5380b1479f49c923dfce0c8d6385de",
+     "pt-BR": "\"Hm? Você matou seu irmão?\" (pedir dinheiro pelo silêncio)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "5b9aa1a75b7c9e6df4af51d5fc289006ed7e15f12d3513a24cccaea808ded410",
+     "pt-BR": "(Fingir que não ouviu nada e sair)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "1208302eb5e39f68d65398e10c3956e16c930a8010f6a72038a947d8a2d99225",
+     "pt-BR": "\"Quê? Você matou seu irmão?\" (pedir dinheiro pelo silêncio)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "b74ff933cd2031af81a7ae3174c9b804cee8717f9cf5459244e489713a99b35e",
+     "pt-BR": "Sério...? ...Obrigada.\nVou quando me acalmar um pouco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "99da6e77474246e07fb781bb808e9ac2edbbc15b4a4b2277f10fb5d74a9f34ef",
+     "pt-BR": "Vou quando me acalmar um pouco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "77ba0e5694b1a43eab43d29212fb6ea70989ae7d762b457d4e76e605dcb50ff8",
+     "pt-BR": "Sério...? ...Obrigada.\nPor favor, não conte pra ninguém que estou aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "7c59287e9342ab5cc691d4525828eb6d1a64c0fe6715e3e8959b9dae616503b9",
+     "pt-BR": "Por favor, não conte pra ninguém que estou aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "8be32c12430b82e9c35939664881f80aa75d592eda4f3cbd8643c719b5144a65",
+     "pt-BR": "Quê?! Dinheiro pelo silêncio?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "e97a81ea6fe3345a115eb7d2151560bdec1cdbcc567264f2fb100891be8e3a67",
+     "pt-BR": "Eu não tenho dinheiro!\nPor favor, só leva isto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "8dff8a40bcaa9eefdbd56f7c0ecf17ceda210b7c135101f3040cf068e1e13f95",
+     "pt-BR": "Você conseguiu 6 ovos cozidos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "f56ce325db480f1c03e3ebf50023227b93fd0b1573c93b2e8bc7c06e82611b1e",
+     "pt-BR": "Por favor, me deixa em paz com isso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "521ef557c24576fca0310fcd73cc79d01b0d032765e6eec1425dfdfa6f4e9a13",
+     "pt-BR": "Não tenho mais dinheiro nem ovos.\nPor favor, me deixa ir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "eb393b64fbb707a045c3728516a624ed495104bbeb6e7cc497256a7d54e669ce",
+     "pt-BR": "Yuki... Pra onde levaram você...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "b0fa1d643057efdfea5d2a4311ea1c8e77fab947d05ee8bd7d66a52ebfa9859a",
+     "pt-BR": "\"Por que eu sou tão inútil?!\" (socar o chão)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "deab45adee84e1a55a9ee763afd014b144e20f0bf56fbeedd844dd4844df2f65",
+     "pt-BR": "Estou tão cansado... Não quero me mexer...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "17678c8424d92ffc696c3cebd50a80094aa879df9dceebee6c5a0d9d55c1680a",
+     "pt-BR": "Yuki... Pra onde levaram você...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "8287b30bc99b303574fb3a3b0ef2cdb84023a87c697b3b24e836c36eb401e0b6",
+     "pt-BR": "\"Por que eu sou tão inútil?!\" (bater no chão)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "9408ef9846480d869cfdd4358e73c334beeb28571d735724a180b8ac8422f525",
+     "pt-BR": "Estou tão cansada... Não quero me mexer...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "cbe33f80737437ecde0e0d1924eb75713e63a12c6315f9a01513eec6a39dc002",
+     "pt-BR": "Yuki... Pra onde levaram você...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k107",
+     "source_text_sha256": "2fe39c9a8e6135344a5a753300650700f806eddef5bc578a08cac7f3ecc92771",
+     "pt-BR": "Por que eu sou tão inútil?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "6f00acdf3147ae9f515bb76437c28a0fff958ae4baa1c55af07b38c1952e332e",
+     "pt-BR": "Por que eu sou tão inútil?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "2cf4a3ea683ac6d6424ef2833c72e2038cbb5a78c91dba1f63db4b0300362af0",
+     "pt-BR": "Você está bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "9f003dc03c1fa6310e0c078e5b538327f79c6870f1f17258401c8bce0b627afe",
+     "pt-BR": "Todo mundo por aqui já foi evacuado.\nO que você está fazendo aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "1dfba72c376d76b26209859d6c1c91f588a4e25a26df0dccbaf256f2e792faee",
+     "pt-BR": "\"Estou procurando a Yuki. A W&P levou ela.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "7167b235eca324708ff6fc594e42422de84320e909c320308ee78375d0e2222f",
+     "pt-BR": "\"Não sei. Quando vi, estava aqui.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "2a9b0072ad041e02d02264eea634d23880f2f93595c021a2ab26c23dd1d27c27",
+     "pt-BR": "\"Achei que, se viesse aqui, ia te encontrar, Risa...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "67a02016d2f5d8d030fb3f8436d283373b7385d769c0db54af6f940471fd8bb0",
+     "pt-BR": "\"Estou procurando a Yuki. A W&P levou ela.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "dd08f88179d3267d61690b393a6f99cae7dc1531d227c513fb38b530795855aa",
+     "pt-BR": "\"Não sei bem... Quando vi, estava aqui.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "7a3f08ff004b697c65783b320dc8b0578472f3201fba0178b4b25d31a08520ac",
+     "pt-BR": "Imaginei. Deixa comigo.\nJá sei onde a Yuki está.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "201e96917d76094aecd08cfabafd4df116455285a90d687711b34071c63c6a70",
+     "pt-BR": "Não sei... Quando vi, estava aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "2bef7c1d509063ec47f6aca796edec93a0cd789b88414febc011b89e2b6b3f45",
+     "pt-BR": "Acorda!\nVocê não estava procurando a Yuki?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "56b44e227f83cad0653ad9a9b5f52da4f2a1212cfca6d3958b7fa5b880661e71",
+     "pt-BR": "Deixa comigo. Já sei onde a Yuki está.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "542e8bf29e8fb0c3be1f51d23c8e1ffbd5e8068276a7c4a5534b6ab09f5b34b1",
+     "pt-BR": "Heh, que fofo... Não, peraí!\nNão é isso! Você está procurando a Yuki, né?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k145",
+     "source_text_sha256": "ec609354bbf7216e58a93760b047632d66cacc5b240bf0be248bedb7ec10bd49",
+     "pt-BR": "A área toda está isolada. Ninguém pode entrar.\nMe segue.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "25ebcb0ba6a8df01c318b35fd17b25d2f5db87db881a04858a3ead0abd63a00b",
+     "pt-BR": "Policial de choque B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "8f47a341cd2b78747b2ceb56d091cdca7a6c86dab23b4410cb71356d4166af3a",
+     "pt-BR": "Evacuação da Área A concluída!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "ffd7dda4307ba96f90ececf7b8294ac07d6c4752fc87ae22951adc1a5a9bbc9d",
+     "pt-BR": "Policial de choque C＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "b2f5a03ca70e6bb1e963dcabe9618d123c208ad6575234819327d4f50bf1a5f0",
+     "pt-BR": "Parece que as Forças de Autodefesa também estão se retirando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "f3b16825fe7a5b064179f536edfb70f8e3e2a01ff55138d97f16a85f87bbbdce",
+     "pt-BR": "Policial de choque Aoki＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "57977ff4e9e5856d07078fea907c88c6e4d7db102e52a6cf3f931c20d80ec805",
+     "pt-BR": "Entendido. Ei!\nNós também vamos nos retirar! Todo mundo pra dentro!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "2e0d65e3c2b8b83135a9fc2a1827735c8baa08425d1a2266cbbd07ca0b6559c2",
+     "pt-BR": "Vocês dois! Tem uma ordem de evacuação!\nÉ perigoso aqui. Saiam já!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "51f4236e5ba12a618ba5f4a0a00476039fbc618c094f3f9120627e5e29f3ade4",
+     "pt-BR": "(Hm? Este policial de choque...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "c88e07c2282cc0f291a61beeafc5291d0e0fb53e5c7fc15ba4c4c0a1442b24d4",
+     "pt-BR": "(Hã? Este policial de choque...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "b3f79b611cb0170f110326f4d5cb9ba1aa77e58709f9f17f642b857ba2c7e3c9",
+     "pt-BR": "\"Você ajudou a gente a fugir naquele carro... Obrigado!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "065e3fd36a2ec06ab26332c121e350f4bf65acaa26834c20973edd0943e35c1e",
+     "pt-BR": "\"Aquele monstro não te pegou...? Você está bem!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "e5849920540d5378b36a2d5329343e3013bfa992a0a1f8a381edf009c0233652",
+     "pt-BR": "\"Achei que aquele pé gigante tinha te esmagado... Você está bem!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "1ae36e48c8dd576b1f00d8d77e6c4ba78abaca56655ca38ec9c5818486354c81",
+     "pt-BR": "(Não, deixa pra lá. Não conheço nenhum policial de choque.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "e89990902d93cf5fa723a36c1a797d1441bb247d72a356a99933ccccb3fd245f",
+     "pt-BR": "(Não, deixa pra lá. Não conheço nenhum policial de choque.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "3605bf6b823a2d2d6de686e9673856f578163e935427ce54a89a0b66a8589295",
+     "pt-BR": "Você ajudou a gente a fugir naquele carro...\nObrigado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "cb94a4f1f592eb58876920ea5d1692be6e7a88f7ed2f873ee6e80694189fdd06",
+     "pt-BR": "Ah, é você!\n...Desta vez está com outra mulher...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "5c9a55267b61d9693f7e9150a7cd4ed3f87b0fc2ecf66a59a4e2ac4d3805df43",
+     "pt-BR": "É complicado... Enfim,\no que diabos está acontecendo aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "adb75acb83a42550654b3ab9a263f48b715c8cdd071aa60d65762666780a772f",
+     "pt-BR": "Ah, é você!\nUm colega me ajudou a escapar naquela hora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "e99cca2e46a05276827fd389e88ef031be0633445d18a59bb5ac7ba90174a133",
+     "pt-BR": "Com licença.\nO que diabos está acontecendo aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "4dbc7737849657e8d262f3285e48bd1e1df5f808149b39c596ec87ab32bd1a26",
+     "pt-BR": "Ah, é você! Naquela hora,\ndei sorte e não fui pisado. Desculpe a preocupação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "c620470af4d5c17a9bef074477c835de9df6e0399ad7e81be6941d8220cebe48",
+     "pt-BR": "Hã...? Você é quem fugiu naquele carro...!\nO que aconteceu com a moça que estava com você?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "d9337cf23ab11443492c57507c7c31f9b3db518f63cdaa1352a38a90a16f5444",
+     "pt-BR": "Não sei os detalhes, mas aquela planta estranha\nem cima do prédio... Dizem que vai explodir, e feio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "1b1aeb38befcf7bebb5442d2fa11112d1e7f739b50ad503b34fd320dc8505168",
+     "pt-BR": "Todos os moradores já foram evacuados,\nentão agora mandaram a gente sair também.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "5d5235bac1824eda95ccb84a315afa8f60bbf8a37d66183f7728ba8fc14e3f69",
+     "pt-BR": "Dizem que, quando explodir, vai varrer esta área inteira.\nEstamos quase sem tempo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "948f44b5a03c2e26ea7b2a17ada1186910014d28e0e163cf54ba2ac42ad3b51e",
+     "pt-BR": "Todas as outras ruas estão fechadas. Peguem um daqueles\nveículos e saiam daqui, seguindo esta rua para o oeste!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "d987508233b0f414acbd6b734bbd0d6556cd4fa6535986131117c7b5521be328",
+     "pt-BR": "\"Temos que ir agora. Vamos de moto!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "ae97986f1d8648701aa2f715f32952832740057ad2f1a5e6eea0cd6a767e6733",
+     "pt-BR": "\"Temos que nos apressar! Vamos de cavalo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "1ca60a3854668cb69df90a739d3c50dfb9d1701581a58180732c04b40d4762e7",
+     "pt-BR": "\"Se vou junto com a Risa... tem que ser de moto!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "898254865e0f07a3354f014fe3fbf46c7dc018523ca8e167e1b88bc39e67dec4",
+     "pt-BR": "\"Se vou junto com a Risa... tem que ser de cavalo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "f583099307ef88026cf608eedf8539676a25a04d9f6ed01c0d12ff6300b91344",
+     "pt-BR": "Vai me deixar pilotar a moto?! Você tem coragem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "c6892cb2b7dbd6d2a3830922b7e2ef7b7e203e1d2db195d517a0a10cc4bb6558",
+     "pt-BR": "Vai me deixar montar o cavalo?! Você tem coragem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "f015a766405ac21a587ca66eda891ac6f6c2a8e23f69981400564ccbd2bbf236",
+     "pt-BR": "\"Temos que ir agora! Vamos de moto!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "dc830d1bc907291d88f5e24c172262773566060459087ccbed9399453f5917ea",
+     "pt-BR": "\"Temos que nos apressar! Vamos de cavalo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "12f5e0145d67594c254d57140c9928f01ac29f02aa32a0dbe4c5c0bd746de356",
+     "pt-BR": "\"Se vou junto com a Risa... tem que ser de moto!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "a486fad0be4d9e5ce1a1d9d53ae865a02db508b9f35acbf09fe7cc730c551d36",
+     "pt-BR": "\"Se vou junto com a Risa... tem que ser de cavalo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "d55955579c0e1c5b9a8c1f58af14ce228c3b3da2d7509b84bdeb4e2f103a0763",
+     "pt-BR": "Vai me deixar pilotar a moto?! Você tem coragem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "6724d61afada5e95d3a6cdcc19be1f5f9c25e4cab64f09f0fa0289263e495d06",
+     "pt-BR": "Vai me deixar montar o cavalo?! Você tem coragem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "62d5bf8408c47c2b12e4880b2841ddc2eefc74304132465ced7ffec9244fff66",
+     "pt-BR": "É, vamos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "a916f12199221d33fdd35cbe33e86e03af10f2ec77aace3c383336d742d67d92",
+     "pt-BR": "...Não entendi por quê, mas vamos logo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k246",
+     "source_text_sha256": "15ab214e812511bc2e55ba6d032df1722dd9a9139f58b383e2281700270191d4",
+     "pt-BR": "Gostei. Vamos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k256",
+     "source_text_sha256": "542da5e3e023ab7e23481bdbbb941afb14765d6f1789655768958df4f060a9d5",
+     "pt-BR": "Vire à direita naquele semáforo e você chega à Estação Azami 1-chome.\nA estação de metrô onde a gente se conheceu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k258",
+     "source_text_sha256": "3b193484ba23328de82f8feeafb83b711934cbf251f9726d05750ba2d77b5bb5",
+     "pt-BR": "A Yuki está na cidade uma estação depois dali.\nOs trens pararam, então vamos ter que andar um pouco...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k260",
+     "source_text_sha256": "aebc41b87079b06d5a0d2e11ca6e65415450b0c2cba5975d1a426633c1f37d16",
+     "pt-BR": "Você está encharcado. Vai pegar um resfriado assim.\nVamos secar suas roupas naquela loja de conveniência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "aa87e186ffa5d6d9830d22623a1363dc3c0b559c65758a58884de99a535a21e7",
+     "pt-BR": "\"Que importa se estou molhado? Temos que salvar a Yuki!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "8417d4b72a6a9a52790d49fd302e1be605e3f9f2797c1e3f73c8499153628469",
+     "pt-BR": "\"Eu queria me secar, mas será que a Yuki vai ficar bem...?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "20d322f43955aec984c3f2b055dc2a096124424e3e1b5563ea570eee96ccfde4",
+     "pt-BR": "\"É verdade. Não vou conseguir salvar a Yuki se não estiver bem.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k268",
+     "source_text_sha256": "e7be49d7e2448eaa86441e65e38113ebaf0b8994dd3fcda4b99e8ae1198792c2",
+     "pt-BR": "\"Agora sim! Eu estava louco pra me secar também!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k270",
+     "source_text_sha256": "531e69dc7e191311a6597d6004b2d475f2b0507f23cf8eb1fe42c067b076c835",
+     "pt-BR": "\"Que importa se estou molhada? Temos que salvar a Yuki!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k272",
+     "source_text_sha256": "3d6d8df2099d3c491de5311b3be3ec658998e862a9b1c507af4eb836af4dcd7b",
+     "pt-BR": "\"Eu queria me secar, mas será que a Yuki vai ficar bem...?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k274",
+     "source_text_sha256": "9634ebbafdfb4c4baf6f62ca57edf3aa5a53a7be44940ce5a2b6cbd4ca392a10",
+     "pt-BR": "\"É verdade. Não vou conseguir salvar a Yuki se não estiver bem.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k276",
+     "source_text_sha256": "067e8f1d8d7898b2cfdfee646afe610f80f4640908c23584ca91daa2c85063b8",
+     "pt-BR": "\"Ooh, sim! Eu estava louca pra me secar também~!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k278",
+     "source_text_sha256": "db5ec950834ecc14c8948850c3a07ec998376f10bee05ec22830d65e7a6d7df1",
+     "pt-BR": "Que importa se estou molhado?\nTemos que salvar a Yuki!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k280",
+     "source_text_sha256": "e55bd00dbe78de004f7c18f00ab265155b763bba3f4627b479ebab9a54876da5",
+     "pt-BR": "Que importa se estou molhada?\nTemos que salvar a Yuki!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k282",
+     "source_text_sha256": "68c1be002a9aa7f86a49905d95071a728122c4d38d8a3775801432ab369d1444",
+     "pt-BR": "A Yuki é a isca deles pra te atrair,\nentão ela não deve correr perigo agora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k284",
+     "source_text_sha256": "63040edb86706c4b2ddae1a97939acc042345b79f7d61b8619f979ea9ef9c393",
+     "pt-BR": "Além disso, se você não estiver bem,\nnão vai conseguir fugir mesmo se resgatar ela, né?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k286",
+     "source_text_sha256": "f9012a3f42b5ad97890d8b5dc8a98b1d6e994f1051f4f09e01cae984e73c5b01",
+     "pt-BR": "Então, desta vez, me escuta.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k291",
+     "source_text_sha256": "bf947efac3779f378116d6e742ea3766e7016a897f317b713d5b5cbcfd67b9b3",
+     "pt-BR": "Então, agora, você devia se recuperar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k293",
+     "source_text_sha256": "a29806acc1c6f745c89deab9c6acf9db0efee75d6848fe847901f576b006132f",
+     "pt-BR": "É verdade. Se eu não estiver bem,\nnão vou conseguir salvar a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k295",
+     "source_text_sha256": "6fdc893c09f64831302dac0bead7a682635de7b555235b7e164c714825ef7587",
+     "pt-BR": "É verdade. Se eu não estiver bem,\nnão vou conseguir salvar a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k297",
+     "source_text_sha256": "08094ec9956dd4f321a60dcbca4b18bbe8e93923daefbbac1574354aff4fb718",
+     "pt-BR": "Isso. E não acho que a Yuki\nesteja em perigo ainda.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k299",
+     "source_text_sha256": "2ebd1f9e969ddacbe9d11440c8fa09c59e5a74faf681b4c7a0804762a40bcd83",
+     "pt-BR": "A Yuki é a isca deles pra te atrair.\nPor enquanto, vamos te deixar bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k301",
+     "source_text_sha256": "324a20c18057dba80da66a2acda6a49b18e336cb7cc7effffe1aa85448c035d3",
+     "pt-BR": "Agora sim!\nEu estava louco pra me secar também!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k303",
+     "source_text_sha256": "b249172ceacf51350f11bcab545668a76a6ea8d8e7cf9b1f77c0754bebfcea9b",
+     "pt-BR": "Ooh, sim!\nEu estava louca pra me secar também~!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k305",
+     "source_text_sha256": "4663b32b005109b40e3d161bead7da0b90cde3b2e2ab1499bbfa03e68ee8e359",
+     "pt-BR": "A-Ah. Que bom, então.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k307",
+     "source_text_sha256": "59945b3d88dfe35e82489447b000b18618033e4e30eb50bad1ab139974a64ec6",
+     "pt-BR": "Não se preocupe com a Yuki.\nNão acho que ela esteja em perigo ainda.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k310",
+     "source_text_sha256": "e78839ed0ed44b4321486e25e42e5b3a437fc96290ca5c7afc45963f47acc6f6",
+     "pt-BR": "A Risa e eu entramos na loja de conveniência.\nNão tem ninguém. Talvez os funcionários também tenham sido evacuados.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k312",
+     "source_text_sha256": "951bd2196eac3a3a591ef8316a0c78c2fea195eec1e02a9b84f9603352143b12",
+     "pt-BR": "Achamos um aquecedor nos fundos\ne usamos pra nos esquentar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k314",
+     "source_text_sha256": "6801828882c6cac79688f83f3a26ae9b8f6dc78cc83a32553e10959f27a19c51",
+     "pt-BR": "A Risa e eu entramos na loja de conveniência.\nNão tem ninguém. Parece que os funcionários também foram evacuados.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k317",
+     "source_text_sha256": "e45fdc2a0ddbfe9b0db0df65d0972f6dd6cc78c0ad8dd61f0ce0f36b04ad28d8",
+     "pt-BR": "Ei, por que não tira essa roupa molhada?\nSeca mais rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k319",
+     "source_text_sha256": "bc411ad8a38116841315298eded016733d4cd9e5f6f30e1fb72dd9ce95f46d0d",
+     "pt-BR": "(Com vergonha de tirar a roupa na frente da Risa. Secar vestido)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k321",
+     "source_text_sha256": "0a5e5ea4a8458aba821fb084a5fe3b91d926165e0dc410408342f143b8e36677",
+     "pt-BR": "(Tirar a roupa e secar rápido para ir salvar a Yuki)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k323",
+     "source_text_sha256": "96c9deb8914eab13aef6b38d3da441ff11db498e182fd6edc065ccecb33cbe4b",
+     "pt-BR": "(Esquecer o resgate. Tirar a roupa para a Risa ver quem você é de verdade)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k326",
+     "source_text_sha256": "16e1b2de9c992bfdd0d15665b74161472e8aadf2244a88940f0b274799a5f629",
+     "pt-BR": "(Tirar a roupa e secar rápido para ir salvar a Yuki)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k329",
+     "source_text_sha256": "e5ac4092bcb17c08825f4e765480568112646536b94fedde51e695b3a9c4f81e",
+     "pt-BR": "Não, tudo bem. É constrangedor...\nVou me secar vestido mesmo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k332",
+     "source_text_sha256": "9aa4ea8f989c78ae695707e2645dc55d67ebce5d1d3c3f4669ff958714bb6d14",
+     "pt-BR": "Sério? Não precisa ter vergonha...\nBom, vamos nos esquentar, de qualquer jeito.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k334",
+     "source_text_sha256": "f1645b40e5288e0b47d7cfa6fa6316bdc725b8b3254c5bfaa7e9e9194e847260",
+     "pt-BR": "É. Então...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k336",
+     "source_text_sha256": "4347a845766030dba8d1b16769dbb9fe64b3e0b74ceda026175c5cf5d1ae0985",
+     "pt-BR": "É. Então, com licença...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k338",
+     "source_text_sha256": "7f0a3d3ed5ab45d18c1bed035c4c2b661a0166d10f8fb065c4bba602ff7a4b8e",
+     "pt-BR": "Vamos, vamos te secar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k340",
+     "source_text_sha256": "54c17db1587c6873b574233ccb9baa237afa6c321a363db4d5c8befd381b5fcb",
+     "pt-BR": "T-Tem certeza?\nEntão, Risa, olha bem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k342",
+     "source_text_sha256": "ce30c1bb6e2f10308c332b1e482e786242db27fd74d28328abc8ea9fd9a1c0ba",
+     "pt-BR": "T-Tem certeza?\nEntão, Risa, olha bem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k344",
+     "source_text_sha256": "5d2c37f731dfbd9c20a6adca91ac3921e4eacc5dc5cd7111716c0da9c7f6f4b5",
+     "pt-BR": "Hã? Ah, tá.\nEnfim, vamos secar essa roupa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k346",
+     "source_text_sha256": "90ee56b0459dff99af76169a837e83ab649c198cc0619001b6f56694e3d7008e",
+     "pt-BR": "E-Ei!\nPelo menos se cobre com uma toalha!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k348",
+     "source_text_sha256": "1b18b5d99d793b9eed0a68393a010f9fadde8bbc7c078561707d426edd3c0ea8",
+     "pt-BR": "Ah, aliás, o Otsuka pegou pesado com você.\nQue azar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k350",
+     "source_text_sha256": "3f4c6f5e658d554689053dc1e9cf0c3db64dc7b3bd855de13fd90455d4be86b5",
+     "pt-BR": "O que será que ele está fazendo agora?\nConhecendo ele, está se virando de algum jeito.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k352",
+     "source_text_sha256": "1c130b72a20cc5d735013b6dced12d82b3c2c99cb8e2e0d2c4ef67e71e9eba10",
+     "pt-BR": "Ah, é, ele tem influência com o alto escalão da polícia.\nConsegue até pegar carona em helicópteros da polícia até cenas de crime...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k354",
+     "source_text_sha256": "f4e51b08de172362dcacf2225277605f20079438d7741468b420e52f75b1ea5f",
+     "pt-BR": "Ele desenterra podres de grandes empresas e autoridades e chantageia...\nTalvez tenha alguma coisa contra os chefões.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k356",
+     "source_text_sha256": "343cd8cf3ea59d5accdb6451f69af0c61bbe25b65afad4d3e64ceaf3f03359d9",
+     "pt-BR": "Mas... aquele homem já foi um famoso jornalista de guerra.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k358",
+     "source_text_sha256": "7b5313247e791d3b9f42a2a8536bf4c3b7546980c5525d9014e121db62c8fdab",
+     "pt-BR": "Ele é egoísta e ganancioso agora, mas...\ndeve ter visto muita coisa naquelas zonas de guerra.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k360",
+     "source_text_sha256": "6fb5d8ad29f67e42a8964c3a245f5819696db8438e96dc0422b49a94c5528b3c",
+     "pt-BR": "\"O que aconteceu com o Otsuka na zona de guerra?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k362",
+     "source_text_sha256": "4558ee266b5fdc0daa4c364bc183532ca81c6bdb6ef450f2860885cbc8df36ab",
+     "pt-BR": "(Imaginar o que o Otsuka viu na zona de guerra e chorar de horror)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k364",
+     "source_text_sha256": "f2d753e559e53ae336b96cf99dfb4f06c49eced18664d8c06a8086a4b30427fa",
+     "pt-BR": "(Sem interesse. Cochilar um pouco)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k366",
+     "source_text_sha256": "bd32f5f6302e8926d4b742f9f1f0263b93177e471da474f9a5a0f5e9ff96912c",
+     "pt-BR": "O que aconteceu com o Otsuka na zona de guerra?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k369",
+     "source_text_sha256": "e84ef60f42477b1292fec3d7fefa49705cb141a2e4256276bfb95f1754178d9d",
+     "pt-BR": "Também não sei os detalhes.\nEle não fala sobre isso...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k371",
+     "source_text_sha256": "5b963b7911a6b75e9e3e97e03b7f6abb73d12fb2a8aa84ee10e5530487cde152",
+     "pt-BR": "Também não sei o que o Otsuka viu por lá.\nEle não fala sobre isso...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k373",
+     "source_text_sha256": "4f7e57a9f367ec194d9c62eae6b35f511c038b98b0fa455ef13ccfbcc67cb42e",
+     "pt-BR": "...Você está chorando?\nVocê é um doce.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k376",
+     "source_text_sha256": "1105ac50505086e8c8e00c66f6d4ae1800d0f48f8756d59cb5fa59dd70a708c9",
+     "pt-BR": "Você estava dormindo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k378",
+     "source_text_sha256": "c61b1d2922bdc52d8b86ee64e7537f0486d927cf30b8b14d5f276c2cf401a209",
+     "pt-BR": "História bem chata, né?\nTudo bem. Dorme um pouco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k381",
+     "source_text_sha256": "2c6f33aa3c0188758e4a67dc5796abbdec7d4ae5587f4423fc50bef80bd7c795",
+     "pt-BR": "(Mesmo assim, por que a Risa\nestá se esforçando tanto pra me ajudar...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k383",
+     "source_text_sha256": "613d5cc68383f2136055e510d5d85db2c56a09da828176c79f70dfa6a5d6a026",
+     "pt-BR": "(Mesmo assim, por que a Risa\nestá se esforçando tanto pra me ajudar...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k385",
+     "source_text_sha256": "4077c5a6b37e053c0aee3067556aa199a1996278deb5d5290bfe0e4af66a0b24",
+     "pt-BR": "(Ela deve ser gentil e boazinha com todo mundo...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k387",
+     "source_text_sha256": "5cb0fb05977539fa6022678846bf9647f7729bfa6a23545fd22b633509ab6909",
+     "pt-BR": "(Será que pareço tão patético que ela tem que me ajudar...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k389",
+     "source_text_sha256": "f115787bf93e08da46eedc60c1b3cc1a4d62803a2303e2b749a8a86d75ca92d6",
+     "pt-BR": "(Será que a Risa tem algum motivo pra se importar comigo...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k391",
+     "source_text_sha256": "bcee98d72a21f5575d7e173f8394693812a7f38b0c76ae817e521374fd786974",
+     "pt-BR": "(Será que ela está me bajulando pra ter uma exclusiva sobre meus \"poderes\"...?!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k393",
+     "source_text_sha256": "569dfbe3653dcadd95febc969e744e44977aff6c6dc14b6fa6b40016bc86e88e",
+     "pt-BR": "(Eu sabia! A Risa está caidinha por mim!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k396",
+     "source_text_sha256": "78c91c832f353e1456df7cbd56f89ee33cd46c20d810962d1260a20e6236cb54",
+     "pt-BR": "(Será que pareço tão patética que ela tem que me ajudar...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k398",
+     "source_text_sha256": "c841c98f4ad293d3be92d7ffbb15c691aa4cd22892c1e3e0fd7ef67c9db72940",
+     "pt-BR": "(Será que a Risa tem algum motivo pra se importar comigo...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k400",
+     "source_text_sha256": "a36bad522f51f06f3082f4079c17c6cf753f51709b2472f34711c07a6cf77fcd",
+     "pt-BR": "(Será que ela está me bajulando pra ter uma exclusiva sobre meus \"poderes\"...?!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k402",
+     "source_text_sha256": "0dc31cc90e7b9c0893be528ebb4a849e87c1f17a9870e2b8e8c5a05e3fb654bf",
+     "pt-BR": "(Eu sabia! A Risa está caidinha por mim...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k404",
+     "source_text_sha256": "36faf36ac229abcda2a01d23ee9a9b13201548c20e337dbb8768b8e0ef6026c9",
+     "pt-BR": "(Ela deve ser gentil\ne boazinha com todo mundo...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k407",
+     "source_text_sha256": "a998dfedde27161ed621b2f1539b74619e6d7185255b1ac5920e51ded3b014a5",
+     "pt-BR": "Hm? Que foi? Aconteceu alguma coisa?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k409",
+     "source_text_sha256": "e41d5be06eecc16968659b5102fa698adda9f1192f72bd66341bf2d8b56daedc",
+     "pt-BR": "(Será que pareço tão patético\nque ela tem que me ajudar...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k411",
+     "source_text_sha256": "525c0cfdc12d6fa552cdc2c5a450c4748b7b98bce17c7f62b2405e8034d86d0f",
+     "pt-BR": "(Será que pareço tão patética\nque ela tem que me ajudar...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k413",
+     "source_text_sha256": "259bf298b305a2daa6a9b5381c335d5599f01983f36fd581cab1b9079b479023",
+     "pt-BR": "Você está bem? Ainda está cansado, né...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k415",
+     "source_text_sha256": "c72fbf6bf1630fb3f497f06cc9af725fff5f0324afc27874334fbbdf461eda20",
+     "pt-BR": "(Será que a Risa tem algum motivo\npra se importar comigo...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k417",
+     "source_text_sha256": "23182084fd4c91b30e40752932060b7e68a5e940b01d64d7b81d7c6126a8f0ac",
+     "pt-BR": "(Será que a Risa tem algum motivo\npra se importar comigo...?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k419",
+     "source_text_sha256": "601732b5af9fe6b397a43dfd46fa4c72e93b8b80859bf2ac008f17ab0b13a6cd",
+     "pt-BR": "Hm? Que foi?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k421",
+     "source_text_sha256": "e41da2718b0c5c758c2525be0bc911654d945b103f485eda68589523e637471e",
+     "pt-BR": "(Será que ela está me bajulando pra ter\numa exclusiva sobre meus \"poderes\"...?!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k423",
+     "source_text_sha256": "65c5c872ab06209d219dee8436513b24c7258643cc9286ce916104f8ce085e12",
+     "pt-BR": "(Será que ela está me bajulando pra ter\numa exclusiva sobre meus \"poderes\"...?!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k425",
+     "source_text_sha256": "963d57a41874faaf89fd15167eae41538f77b91dca3e56597ae6b728d93d3830",
+     "pt-BR": "Q-Que foi? Por que essa cara assustadora...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k429",
+     "source_text_sha256": "1a3cfbbbcfc62092dffdbe3702b56e736639388fdd4a87ea52d5d1a70afaa55c",
+     "pt-BR": "Você está bem? Seu rosto está todo vermelho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k431",
+     "source_text_sha256": "2bb419534286ba83e99c1b6fe06f29544596ba7d0e7747258ab855c51a1e7e9e",
+     "pt-BR": "Você me lembra um pouco meu irmão mais novo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k433",
+     "source_text_sha256": "d30922b5e477e1f50bc88146d4383346089b7b16a6373a9e37e451fe62b7daae",
+     "pt-BR": "Você me lembra um pouco meu irmão mais novo.\nDesculpa, eu sei que você é menina.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k435",
+     "source_text_sha256": "0decb48b1a911301fbb3343dd67377839180d67695e0bdce471357ca842ce521",
+     "pt-BR": "No ensino médio, morei no exterior por causa do trabalho do meu pai.\nNós quatro: meus pais, meu irmão e eu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k437",
+     "source_text_sha256": "d9f72481008a27aa454a30ad6c70771a5d46b907a43251af0cc0c02c05298fba",
+     "pt-BR": "Se meu irmão estivesse vivo, teria mais ou menos a sua idade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k439",
+     "source_text_sha256": "b4454d4c5fd8c74a510ea239d47056882aaa016f7e17b2af33539debada6f381",
+     "pt-BR": "A língua e os costumes lá eram totalmente diferentes.\nEle falava muito pior que eu, mas mesmo assim conversava com todo mundo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k441",
+     "source_text_sha256": "3e8f1155b569849fabe3e905c01e99e42819966b31f279e4518771b78271c793",
+     "pt-BR": "Ele tinha muitos amigos, ajudava na vizinhança,\ne os adultos confiavam nele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k443",
+     "source_text_sha256": "4bda33a215202e30eabeb9c06667feb7750d0a58e4c60e1780f1b3e51ebebc43",
+     "pt-BR": "Então, um dia, a cidade foi arrastada para um conflito. As tropas de lá\nexpulsaram um grupo armado, mas a cidade ficou destruída.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k445",
+     "source_text_sha256": "e34f6b54df979d975ae41d586f277a8dc39bfdd1b063eb65fd34b98fbd83afa0",
+     "pt-BR": "...Muita gente morreu... No dia seguinte, correu um boato\nde que alguém tinha visto meu irmão guiando o grupo armado pra dentro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k447",
+     "source_text_sha256": "4e5d9b61b575bc7106cb3887dc803af85197a43c034b6d3b04e52c8c9194cce0",
+     "pt-BR": "Claro que ele nunca faria isso. E ele nem falava bem\no bastante pra guiar ninguém... Mas as pessoas estavam com tanta raiva...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k449",
+     "source_text_sha256": "3d3a928e0ac02352ff641bd1d84b6d609a3b18ab03201f64a025da583cc31e65",
+     "pt-BR": "Soube que os amigos dele e as pessoas próximas o defenderam,\nmas, quando cheguei lá... o povo da cidade já tinha...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k451",
+     "source_text_sha256": "ad44d6239d3ab7bc103c9b4f1720b388aa58e1cc3cd084b71327c3a772139fb7",
+     "pt-BR": "Se eu estivesse lá, talvez pudesse provar que ele era inocente.\nNunca deixei de me arrepender.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k453",
+     "source_text_sha256": "a48ba54413f85be927a9e6884b34a577ad3ff0544dbb111a94e67118621dceed",
+     "pt-BR": "...Partiu meu coração. Não só ele ter morrido,\nmas o coração das pessoas estar tão cheio de raiva e ódio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k455",
+     "source_text_sha256": "3be0919267377f96c2bb6ac698ea0aedc15eddba18989d365ac25e023b8f3138",
+     "pt-BR": "Queria que o mundo não tivesse mais guerras,\nmas não consigo mudar isso sozinha...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k457",
+     "source_text_sha256": "8b431735bdad3c0b2b41e08badc57f9abfeefaf4eca8567e67c3bcbe48146815",
+     "pt-BR": "Então, pelo menos, quero ser forte e salvar as vidas que eu puder.\nÉ isso que eu sinto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k459",
+     "source_text_sha256": "fb20d6d64af832d9ad9d7a5e3ff78a3d944e349e6636a5987b078731bd213854",
+     "pt-BR": "...Seus poderes podem ser o motivo\nde a cidade estar assim, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k461",
+     "source_text_sha256": "189b39ffa760e40aedcf3f5b2e4c61b8f941e1808d3363e1dbb77a23c2311583",
+     "pt-BR": "Se você não tivesse esses poderes,\ntambém não teria precisado sofrer assim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k463",
+     "source_text_sha256": "2be5ed5ccd00b112bdcd27e61f7a433852d71439067f203b3768d5387477f642",
+     "pt-BR": "Vamos indo.\nA Yuki está esperando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k465",
+     "source_text_sha256": "b8a2d1bc7cf7bf4d9ebdfd20bbdbd361f799bab591705d55e5808043a1d25de8",
+     "pt-BR": "...Parece que a chuva parou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k467",
+     "source_text_sha256": "599185f244054e9daf3f2af624562e9e3234393e7fd4e74434b593124c7e5065",
+     "pt-BR": "Vamos. Por aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k469",
+     "source_text_sha256": "f1a1248be28a1b47dcb229504cf35d095016b2ba6f53d02e1c9b19e99813d50e",
+     "pt-BR": "Não é por aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k471",
+     "source_text_sha256": "cb8ca492c0e4749d81bad4af7c4354c48dbf121a2214eb12e9b17fbd344dc1d1",
+     "pt-BR": "Não é por aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k473",
+     "source_text_sha256": "86f547446f53d9337a27fc07427ba592e51e66a52470211674ba7f5699ef151c",
+     "pt-BR": "Salvar o jogo?\n(Não há mais pontos de salvamento até o fim desta fase.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k475",
+     "source_text_sha256": "6ce09ac47eebe9fc430a7bb19803925e604b989d7a10087a8f24da2777573c40",
+     "pt-BR": "Salvar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k477",
+     "source_text_sha256": "94b008cad6490fa905d2fce42f0056bb761fd53201987b60ecd7afef53526553",
+     "pt-BR": "Não salvar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k479",
+     "source_text_sha256": "66be85e71a3b51f947c449f5482541836f82d5c30c893752794fdd86e7de4870",
+     "pt-BR": "Continuar sem salvar?",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_201_npc.luc",
    "source_sha256": "eecaaeab481f18fb20203290bab56298f318c0abacdce01e2ba165da86a0387d",
    "entries": [
@@ -36035,6 +37490,257 @@
    ]
   },
   {
+   "path": "common/lua/stage_215_news_text.luc",
+   "source_sha256": "b3ed3bdd498d456cb04335cc6341ac4b6204ecd10787355cc7b6813242f8afc7",
+   "entries": [
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "98096c9cd6c894a8ebf0b37b261595118471e7415c9bc874f30f1de76b72e8f0",
+     "pt-BR": "Flor da Planta Gigante Explode!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "45171df78ed7dadc2501d223170ce8b47ef8a6bf71a11db3b6629afac44199f2",
+     "pt-BR": "Antes do amanhecer de hoje, a flor da planta gigante que tinha tomado conta da Loja de Departamentos Akashia, no cruzamento de Umegaya, explodiu. A área em volta foi tomada por um clarão ofuscante, e a cidade teria sido totalmente destruída.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "d1841c8715f047ff1e9da2a032d6ffbfcb6b7bea043e676269c917ecd2ba7eb4",
+     "pt-BR": "Criatura Gigante Anda pela Cidade",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "c13eb0483293d81dc4ac92d2e7c4e431e4d6fef45ab10c82578c4b1295488b92",
+     "pt-BR": "Imagens publicadas na internet antes do amanhecer de hoje mostram uma criatura gigante andando pela avenida principal, a Rua Ayame. Ela teria seguido em direção à planta enorme na Loja de Departamentos Akashia.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "56cb16c92875a7aed15f837f4c052767d5d02207bc50c56a2ba695f5e914ec9b",
+     "pt-BR": "Raízes da Planta Gigante Sobem à Superfície!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "6c23bffa1cdf72bd5d8575befb2035a90917f252a855338494d969e4d5d559bb",
+     "pt-BR": "Antes do amanhecer de hoje, as raízes de uma planta gigantesca subiram e romperam o chão.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "ad8dababd43087d7629a11f129eb380470327d9b53d1e6e1401b8c2db7460e4c",
+     "pt-BR": "Ordem de Evacuação em Volta da Estação Azami 1-chome",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "83778a61009bfdc7833fd2066b43d3ef38b1ca6db5e3f198fe7c9bfc777260a1",
+     "pt-BR": "Antes do amanhecer de hoje, foi dada uma ordem de evacuação para a área em volta da Estação Azami 1-chome.\nCriaturas que apareciam perto da estação desde a noite anterior tinham devastado o bairro. Porém, relatos de que a planta enorme presa à Loja de Departamentos Akashia ia explodir levaram as Forças de Autodefesa a ordenar a evacuação.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "96cfccdbfdc2ac5e38593192f055fa917c3137273a0ec669721f437192203351",
+     "pt-BR": "Chuva Forte Aumenta Durante a Noite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "e4b011081a7b25500174f6ae9f9a15776a88302d002121ff7a23bc76d4dbb78e",
+     "pt-BR": "A chuva que caía tarde da noite ficou mais forte antes do amanhecer de hoje.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "205af9ff811236b35ecc58dcc2314b398385933f70d3f8e9cc0bef19cb7ca132",
+     "pt-BR": "Policial de Choque Reencontra Desabrigado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "bc7ddfdf068b20b225a90dd9c00857b19e483174d8f27352ea89c336376bd542",
+     "pt-BR": "Um policial de choque reencontrou um desabrigado antes do amanhecer de hoje. Mal tinham começado a comemorar a sobrevivência um do outro quando entraram num veículo para fugir da planta gigantesca o mais rápido possível.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "944e6e91cb1db598e2fccf798d2aef1bc92a52740f9ae21458444977b4abb581",
+     "pt-BR": "Parque Querido É Destruído",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "67a6afcdc199ffc8e94f199d50b2eb7773b8626a7e7db08645ce9c5b77815ba0",
+     "pt-BR": "O Parque Umegaya, arrasado pela explosão da planta gigante.\nNa internet, as pessoas lamentam o fim do parque. Ele foi proposto em 1966 pelo prefeito da época, para que os cidadãos não perdessem um lugar de paz em meio ao crescimento da cidade. A Câmara Municipal da época aprovou por unanimidade.\nAmado por muito tempo como lugar de descanso dos cidadãos, o fim dele chocou os moradores.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "a88a34910ad3f4ed2e2f3f06a18c515618ebc68ae19d30c5be1ee39559bbdbe3",
+     "pt-BR": "Mais um Saque? Mercadorias Somem de Loja de Conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "63f5a6deaa6ad703f4eb448f1056ad345d06db0383f7ea43953d6f03d1235c19",
+     "pt-BR": "Descobriu-se que uma loja de conveniência dentro da zona de evacuação foi furtada. A polícia acredita que alguém entrou depois que os funcionários começaram a sair e investiga o caso.\n\nO estranho é que um aquecedor foi encontrado na frente do caixa, aparentemente usado.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "f12f08f13d6e8a4705e832906a5c7d360191928ad40b58e51c66f62d6cf2a165",
+     "pt-BR": "Cavalo Foge do Hipódromo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "5fdd1b34627d0778343c33dc4a404df840a87d45a30ee22c6e0d4cf939661477",
+     "pt-BR": "Soubemos que um cavalo fugiu de um hipódromo a dez quilômetros da Loja de Departamentos Akashia no dia anterior à ordem de evacuação por causa da planta enorme. O paradeiro dele continua desconhecido, e a polícia busca informações.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "488b493f894a8b1b0eac08edcf518acd4a1f40f522a99c8de415a2c6c4bf4c00",
+     "pt-BR": "Criatura Gigante É Vista Voando! Testemunha Descreve a Cena",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "d814e84687a3a0b2a99252407874e45e87c68ba71da403b43bd2240ac22f6684",
+     "pt-BR": "Segundo um policial de choque que orientava a evacuação, a criatura enorme apareceu de repente vindo do alto. Ela parecia voar usando jatos que saíam das partes onde os braços e as pernas ficavam recolhidos.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "218bdef8ba10c4788d45262d4bcf5079634ac5a73112a21e92d2c62cd17ccbd1",
+     "pt-BR": "Suspeita de Assassinato Procurada Pode Ter Fugido para Área Evacuada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "af6c281c35a645e93cb3128887001585e06cd8cd9ee78aad757b620d9322b69e",
+     "pt-BR": "Chegaram informações de que Yuko Saeki, procurada por suspeita de matar o irmão, pode ter fugido para a área em volta da Estação Azami 1-chome, onde havia ordem de evacuação.\nA área foi reduzida a ruínas pela explosão da planta gigante, e não se sabe se Saeki está viva.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "ca944f767ddbba00f678531b5668d5f45194d4d9e70206391288c39a181d2125",
+     "pt-BR": "Governo Divulga Estimativa de Danos dos Desastres Recentes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "3643171c3b2168b3f60837ec3a3c2a200abcee067887dce27cff0bbda4ba5353",
+     "pt-BR": "O governo estima que as perdas econômicas da série de anomalias em volta da Cidade de Miyato passam de onze trilhões de ienes. Com os incidentes ainda acontecendo, as perdas podem crescer.\nO dinheiro da reconstrução deve vir de cortes de gastos e aumento de impostos, mas parlamentares influentes do partido do governo também sugeriram considerar títulos de reconstrução.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "f43603987328471802991290a17e77af51b0088909e6faa804df9d2d4f261e66",
+     "pt-BR": "Vários Monstros Saem do Subsolo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "3a3f6ece5ceef1e7b4b06ac2cc45ae7c3a1359547fbd62f6f2be97c19a516fd5",
+     "pt-BR": "Quando a evacuação da área da Estação Azami 1-chome estava quase concluída, imagens registraram vários monstros saindo do subsolo e atacando veículos que tentavam fugir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "94fed40c5f63e2da51801fb8097d49a891525b9b0d7812b026942de1f2d1c71f",
+     "pt-BR": "Loja de Departamentos Akashia Some: Fim de Noventa Anos de História",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "c58ef7a0a0e01cfca920c18d0d5f511b169a0adba7cc7e2fe09d11a2330d1796",
+     "pt-BR": "Antes do amanhecer de hoje, a planta presa à Loja de Departamentos Akashia explodiu, causando danos imensos em volta.\nNo centro da explosão, a loja sumiu sem deixar vestígio, encerrando sua longa história.\nAntes da guerra, ela abriu como uma loja particular chamada Acacia-do, que teria ganhado fama entre os moradores por vender produtos bons a preços baixos.\nEla cresceu durante o boom econômico do pós-guerra e continuou funcionando com o objetivo de melhorar a qualidade de vida da região.\nAo saber da destruição, os moradores disseram: \"É muito triste. Esperamos que não desistam e reconstruam.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "83f86316bbffd9984a0db5d265cd7a63c67ccd6be6098b59146a2610e9bbda82",
+     "pt-BR": "Fuga por um Triz com as Chamas Logo Atrás",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "ad3f6aa9b4f94e8668a846c8bdb1412c3be1fbc6cd1c2b1367af19a8f91d09d8",
+     "pt-BR": "Antes do amanhecer de hoje, nosso repórter registrou veículos da polícia de choque e civis, que começaram a fugir pouco antes de a flor da planta gigante na Loja de Departamentos Akashia, no cruzamento de Umegaya, explodir, fugindo a toda velocidade da explosão que avançava.\nOs dois civis estavam numa moto, e o repórter conta que precisou de todas as forças só para acompanhar a pé.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "b8c5ddfc542509a30006fba99fee669a3a3b662e4f88609ef935d90664eb10b4",
+     "pt-BR": "Transportadora Encara o Desafio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "0796e65084db164b925eddf4ee09ae8eeb88ff5dd321d2da73a5e270b3860e49",
+     "pt-BR": "Há quem enfrente de frente as anomalias que atingem a Província de Miyato. A Transportadora Trickster, que existe desde antes da guerra, vive pelo lema \"Contra Fogo e Água\" e se dedica a entregar todos os pacotes, por mais difícil que seja.\nUm dos entregadores, Tsuro Haita, vem desviando de ataques de pequenas criaturas que saem do chão para entregar pacotes nas portas em volta da Estação Azami, arrasada no primeiro dia dos incidentes. Ele declarou: \"Monstros? A gente nunca parou de entregar nem quando caíam bombas. Pode vir!\"\nDiante de uma crise sem precedentes, a determinação deles de cumprir o dever sem ligar para o perigo merece admiração.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "b46c6c6f78005c794e214ccc3ec9439a750b26b80664ec4853b151d1ddf8f1ab",
+     "pt-BR": "Resgate Desesperado na Chuva",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "fbc0d943f14810c765c6943a7fb116c7b7de611ec88be3bb2b368f4829613bf1",
+     "pt-BR": "Durante a evacuação em volta da Estação Azami 1-chome antes do amanhecer de hoje, policiais de choque ficaram até o último momento guiando as pessoas para um lugar seguro. Espiando através da chuva, eles gritavam até ficar roucos orientando os desabrigados. Então um policial encontrou uma mulher imóvel num carro, de cabeça baixa.\n\nO veículo dela estava muito danificado, com arranhões que pareciam feitos por criaturas misteriosas e marcas de batidas. Ele parecia ter finalmente parado depois de bater em outro carro. Desacordada pelo impacto, ela aparentemente não ouviu as instruções de evacuação e ficou para trás.\n\nO policial tentou abrir uma porta, mas as várias batidas tinham entortado todas, que não se mexiam. Nem batendo na janela e chamando ele conseguiu acordá-la. Quando começava a se desesperar, viu algo parecido com um pé de cabra ali perto e conseguiu forçar a porta. A posição em que ela estava desacordada a impedia de respirar. Se fosse encontrada ou resgatada um pouco mais tarde, a vida dela teria corrido perigo.\n\nDepois de recobrar a consciência no hospital, ela disse, tímida: \"Acordei num lugar desconhecido, com um homem que eu não conhecia olhando pra mim. Aquilo me surpreendeu, mas o mais surpreendente foi que ele começou a chorar de repente quando me viu acordar. Foi ele que me salvou, né? Me deixou meio sem graça, mas estou aqui por causa dele. Quero fazer tudo o que puder para retribuir. Se possível, sempre ao lado dele.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "f788676352f5e780628840ba3a02b736c3635ad188623def87439eed520d19a8",
+     "pt-BR": "Antes do amanhecer de hoje, nosso repórter registrou veículos da polícia de choque e civis, que começaram a fugir pouco antes de a flor da planta gigante na Loja de Departamentos Akashia, no cruzamento de Umegaya, explodir, fugindo a toda velocidade da explosão que avançava.\nOs dois civis estavam a cavalo, e o repórter conta que precisou de todas as forças só para acompanhar a pé.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_215_news_data.luc",
    "source_sha256": "853139a418ab578771dcf1bb97f3b3dbe946a3df0aa4b7ddcbee8ba1c9cf8e2d",
    "entries": [
@@ -36069,6 +37775,47 @@
      "id": "p0/k6",
      "source_text_sha256": "76eb4544b1f71b5fe514da7baf641226bf7f7c8a4a334711db025c5cf8b74f2a",
      "pt-BR": "【Vídeo】Alienígena gigante negro libera uma onda de choque",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_215_npc.luc",
+   "source_sha256": "dcdead2d5604f56f0ec3d4a675ab992fa978d1fd4d98d0b5375a471b312bb93e",
+   "entries": [
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "f3b16825fe7a5b064179f536edfb70f8e3e2a01ff55138d97f16a85f87bbbdce",
+     "pt-BR": "Policial de choque Aoki＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "25ebcb0ba6a8df01c318b35fd17b25d2f5db87db881a04858a3ead0abd63a00b",
+     "pt-BR": "Policial de choque B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "ffd7dda4307ba96f90ececf7b8294ac07d6c4752fc87ae22951adc1a5a9bbc9d",
+     "pt-BR": "Policial de choque C＿０",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -52506,6 +54253,19 @@
   {
    "path": "common/lua/stage_210_3_item.luc",
    "source_sha256": "3e91ca1317874d8b22b846d08b46d05851da1c9dfd1deab67f25c5199d277efc",
+   "entries": [
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_215_item.luc",
+   "source_sha256": "6d284b0aba2d141e920dc89133e086d3cbb25145a509647cbd7d31cb8f5a0846",
    "entries": [
     {
      "id": "p0/k7",
