@@ -207,7 +207,7 @@ void kyoei_hud_trace_configure(void *image,uint64_t size) {
     const char *enabled=getenv("KYOEI_HUD_TRACE");
     trace_enabled=enabled && !strcmp(enabled,"1");
     const char *fit=getenv("KYOEI_HUD_FIT"),*language=getenv("KYOEI_LANGUAGE");
-    int want_fit=fit && !strcmp(fit,"1") && language && !strcmp(language,"en");
+    int want_fit=fit && !strcmp(fit,"1") && language && (!strcmp(language,"en") || !strcmp(language,"pt-BR"));
     if (!trace_enabled && !want_fit) return;
     const size_t entry=0xa6d9a0,length=0x1da;
     if (!image || size<entry+length) { gz_log("Kyoei HUD trace: image too small; skipped"); return; }

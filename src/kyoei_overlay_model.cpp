@@ -284,8 +284,9 @@ extern "C" int kyoei_overlay_begin_name(const wchar_t *title,const uint16_t *tex
     std::scoped_lock lock{mutex};
     if (!available_locked() || !kyoei_name_begin(&name,text,length,limit)) return 0;
     const char *language=std::getenv("KYOEI_LANGUAGE");
-    if (limit==4 && language && !std::strcmp(language,"en")) kyoei_name_show_roman(&name);
-    if(limit==4 && language && !std::strcmp(language,"en") && kyoei_pc_names_enabled()) {
+    const bool latin=language && (!std::strcmp(language,"en") || !std::strcmp(language,"pt-BR"));
+    if (limit==4 && latin) kyoei_name_show_roman(&name);
+    if(limit==4 && latin && kyoei_pc_names_enabled()) {
         uint16_t expanded[25];
         if(kyoei_pc_name_lookup(text,length,expanded)) {
             size_t n=0;while(expanded[n])++n;

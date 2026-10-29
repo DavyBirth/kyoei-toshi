@@ -12,6 +12,8 @@ using System.Globalization;
 class PortableLauncher : Form {
     readonly string root=AppDomain.CurrentDomain.BaseDirectory;
     readonly ComboBox language=new ComboBox(),resolution=new ComboBox();
+    // Portuguese is listed only once its translation is installed.
+    string[] languageCodes={"en","ja"};
     readonly CheckBox fullscreen=new CheckBox();
     readonly Button play=new Button();
     readonly Label status=new Label();
@@ -67,7 +69,9 @@ class PortableLauncher : Form {
         AddText("CITY SHROUDED\nIN SHADOW",493,108,440,85,27,Color.WhiteSmoke);
         AddText("SURVIVE THE IMPOSSIBLE",496,207,430,22,10,Color.FromArgb(222,110,116));
         AddText("LANGUAGE",496,255,180,22,9,Color.Silver);
-        Setup(language,496,282,430,new string[]{"English","日本語 · Original"});
+        bool portuguese=File.Exists(Path.Combine(root,"languages","pt-BR","translation.kydelta"));
+        if(portuguese)languageCodes=new string[]{"en","ja","pt-BR"};
+        Setup(language,496,282,430,portuguese?new string[]{"English","日本語 · Original","Português (Brasil) · prévia"}:new string[]{"English","日本語 · Original"});
         AddText("DISPLAY",496,330,180,22,9,Color.Silver);
         Setup(resolution,496,356,220,new string[]{"1280 × 720","1600 × 900","1920 × 1080","2560 × 1440","3840 × 2160"});
         fullscreen.SetBounds(735,356,200,28);fullscreen.Text="Fullscreen";fullscreen.ForeColor=Color.Silver;Controls.Add(fullscreen);
@@ -105,7 +109,7 @@ class PortableLauncher : Form {
     }
     void LoadSettings() {
         try { var lines=File.ReadAllLines(Path.Combine(root,"data","settings.txt"));
-            language.SelectedIndex=lines[0]=="ja"?1:0;
+            language.SelectedIndex=Math.Max(0,Array.IndexOf(languageCodes,lines[0]));
             int i;if(int.TryParse(lines[1],out i)&&i>=0&&i<resolution.Items.Count)resolution.SelectedIndex=i;
             fullscreen.Checked=lines[2]=="1";
             decimal sensitivity;if(lines.Length>3&&decimal.TryParse(lines[3],NumberStyles.Number,CultureInfo.InvariantCulture,out sensitivity))mouseSensitivity=Math.Max(.2m,Math.Min(5m,sensitivity));
@@ -121,7 +125,7 @@ class PortableLauncher : Form {
     }
     void SaveSettings() {
         Directory.CreateDirectory(Path.Combine(root,"data"));
-        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{language.SelectedIndex==0?"en":"ja",resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),promptMode=="keyboard"?"keyboard-fixed":promptMode,photoHudPreview?"1":"0",
+        File.WriteAllLines(Path.Combine(root,"data","settings.txt"),new string[]{languageCodes[language.SelectedIndex],resolution.SelectedIndex.ToString(),fullscreen.Checked?"1":"0",mouseSensitivity.ToString(CultureInfo.InvariantCulture),promptMode=="keyboard"?"keyboard-fixed":promptMode,photoHudPreview?"1":"0",
             anisotropy.ToString(CultureInfo.InvariantCulture),sharpening.ToString(CultureInfo.InvariantCulture),fsr1?"1":"0"});
     }
     // The GPU core's settings file: only the options this launcher offers.
@@ -199,7 +203,9 @@ class PortableLauncher : Form {
             Directory.CreateDirectory(Path.Combine(root,"data","user"));Directory.CreateDirectory(Path.Combine(root,"data","logs"));
             try {profileLock=new FileStream(Path.Combine(root,"data","session.lock"),FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.None);}
             catch(IOException){throw new IOException("The game is already running from this folder.");}
-            string lang=language.SelectedIndex==0?"en":"ja";
+            string lang=languageCodes[language.SelectedIndex];
+            // pt-BR reuses the English executable strings and button art until its own exist.
+            bool latin=lang!="ja";string shared=latin?"en":"ja";
             SaveSettings();
             var start=new ProcessStartInfo(Path.Combine(root,"runtime","kyoei.exe"),"\"runtime/out\" --app0 \"game\" --user \"data/user\" --log \"data/logs/session.log\"");
             start.WorkingDirectory=root;start.UseShellExecute=false;start.CreateNoWindow=true;start.RedirectStandardOutput=true;start.RedirectStandardError=true;
@@ -220,21 +226,21 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_PHOTO_PHONE"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_SAVE_MARK"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_DOF"]=photoHudPreview?"1":"0";
-            start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",lang,"prompts.kypack");
+            start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",shared,"prompts.kypack");
             foreach(var variable in new[]{"KYOEI_ARCHIVE_DELTA","KYOEI_EBOOT_TEXT","KYOEI_TRANSLATION_ARCHIVE"})start.EnvironmentVariables.Remove(variable);
             // translation.kydelta: whole translation over the disc archive; older installs keep the 6 GB copy.
             bool wholeDelta=File.Exists(Path.Combine(root,"languages",lang,"translation.kydelta"));
-            if(lang=="en")start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,wholeDelta?"translation.kydelta":"ui-corrections.kydelta");
-            if(lang=="en")start.EnvironmentVariables["KYOEI_EBOOT_TEXT"]=Path.Combine("languages",lang,"eboot-text.kytext");
+            if(latin)start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,wholeDelta?"translation.kydelta":"ui-corrections.kydelta");
+            if(latin)start.EnvironmentVariables["KYOEI_EBOOT_TEXT"]=Path.Combine("languages",shared,"eboot-text.kytext");
             start.EnvironmentVariables["KYOEI_UI_ART"]="assets/ui-art.kyart";
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
             WriteGraphics();start.EnvironmentVariables["GOW3_CONFIG"]=Path.Combine(root,"data","graphics.ini");
             start.EnvironmentVariables["GZ_LANGUAGE"]=lang=="ja"?"0":"1";
             if(lang=="en"&&!wholeDelta)start.EnvironmentVariables["KYOEI_TRANSLATION_ARCHIVE"]="languages/en/common.psarc";
-            start.EnvironmentVariables["KYOEI_HUD_FIT"]=lang=="en"?"1":"0";
+            start.EnvironmentVariables["KYOEI_HUD_FIT"]=latin?"1":"0";
             start.EnvironmentVariables["KYOEI_HUD_METRICS"]="assets/hud-metrics.bin";
             start.EnvironmentVariables["KYOEI_GUI_FONT_DIR"]="assets/fonts";
-            start.EnvironmentVariables["KYOEI_IN_GAME_DIALOGS"]=lang=="en"?"1":"0";
+            start.EnvironmentVariables["KYOEI_IN_GAME_DIALOGS"]=latin?"1":"0";
             start.EnvironmentVariables["GZ_SYSTEM_FONT"]="assets/fonts/NotoSans-Regular.ttf";
             start.EnvironmentVariables["GZ_SYSTEM_FONT_JP"]="assets/fonts/NotoSansCJK-Regular.ttc";
             start.EnvironmentVariables["KYOEI_WINDOW_ICON"]="assets/game.ico";

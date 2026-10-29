@@ -121,6 +121,14 @@ def main():
     subprocess.run([str(sys.executable),str(ROOT/'tools/build_translation_delta.py'),str(out/'game/DAT/common.psarc'),
                     str(english),str(delta),'--overlay',str(overlay)],check=True)
     for obsolete in ('common.psarc','ui-corrections.kydelta'):(out/'languages/en'/obsolete).unlink(missing_ok=True)
+    # Partial pt-BR preview (English fallback) when one has been built.
+    portuguese=publication['languages'].get('pt-BR')
+    if portuguese and Path(portuguese['archive']).exists():
+        overlay=ROOT/'build/ui-corrections-pt-BR.kydelta';overlay.unlink(missing_ok=True)
+        subprocess.run([str(sys.executable),str(ROOT/'tools/build_ui_corrections.py'),portuguese['archive'],str(overlay)],check=True)
+        delta=out/'languages/pt-BR/translation.kydelta';delta.parent.mkdir(parents=True,exist_ok=True);delta.unlink(missing_ok=True)
+        subprocess.run([str(sys.executable),str(ROOT/'tools/build_translation_delta.py'),str(out/'game/DAT/common.psarc'),
+                        portuguese['archive'],str(delta),'--overlay',str(overlay)],check=True)
     for language,base in (('en',english),('ja',out/'game/DAT/common.psarc')):
         subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/build_prompt_pack.py'),
                         str(base),str(out/'languages'/language/'prompts.kypack')]+(['--diagrams'] if language=='en' else []),check=True)

@@ -42,7 +42,7 @@ static void kyoei_eboot_text(void *image, uint64_t size) {
 }
 void kyoei_ui_text_configure(void *image, uint64_t size) {
     const char *language=getenv("KYOEI_LANGUAGE");
-    if (!language || strcmp(language,"en")) return;
+    if (!language || (strcmp(language,"en") && strcmp(language,"pt-BR"))) return;
     kyoei_eboot_text(image,size);
     static const struct { size_t at; const char *before,*after; } labels[]={
         {0x10c3b0c,"\xe8\xbf\x94\xe4\xbf\xa1\xe9\x81\xb8\xe6\x8a\x9e","Reply"},

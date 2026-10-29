@@ -1,0 +1,5181 @@
+{
+ "format": "kyoei-translation-draft-v1",
+ "title": "CUSA03562",
+ "version": "01.03",
+ "language": "pt-BR",
+ "resources": [
+  {
+   "path": "common/lua/TextData.luc",
+   "source_sha256": "03dd74bbcdc66bd2818be8922e501715038e5c2645429a098e0a9bf4c02f2de9",
+   "entries": [
+    {
+     "id": "p0/k3",
+     "source_text_sha256": "dcfd047fe98f696bc01438524a150f23f0d5d13c259f7c8e0bc571b36409a034",
+     "pt-BR": "Nome do protagonista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "bbf67044e474881f67f19f3eb721fae1b00617e20b613933d44e1c0dd5f49fe2",
+     "pt-BR": "Homem 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "31b8653a867f6ca58e38e2370445d38b18f7e0f5db6479eebdfed9d0c8694ee8",
+     "pt-BR": "Mulher 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "479eb76698f5b762b6f559cdfbc02e0d0660704fb8375b614f174620520f13c2",
+     "pt-BR": "Chega! Vou pra casa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "0995199cbbe181545f6b199c97cb9265359f9b071656a47bc6d00fc62c1abd00",
+     "pt-BR": "Homem 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k21",
+     "source_text_sha256": "4250cbb46ebb761ed06943675d927a841aeb594ca2df619ae63cbcdf7bbfef75",
+     "pt-BR": "Perdoe-os, em consideração a este velho, sim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "a08c99a06947379dc0965fb217234c4cb6a68f793c9ab5466ed8cd12f0b256aa",
+     "pt-BR": "Mulher 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "fed94c53030a94df27ff0957400de508c5f857b49151b3adb12ad443b359980f",
+     "pt-BR": "Mulher 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "1b4f8e4a0395b5f2b75865aa46f3dd201e4132109cfa91aa5857ca57d44adcd5",
+     "pt-BR": "Homem 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "8f5e7cf86672fa076460d4e321d765c1466bcfa21f1681db6b0a623f6c60cc1f",
+     "pt-BR": "Espera um pouco!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k39",
+     "source_text_sha256": "776b333dbcbc2bd5f22264d7a11f0a3811b50fb152e0d79bb63a7b3ead5db6e8",
+     "pt-BR": "(Naquele momento, eu...) ",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k41",
+     "source_text_sha256": "a943b5e88da4876006f3e923f39f49e58c1fd9a25fab9dd954d9a7201a811664",
+     "pt-BR": "(Acender um cigarro)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k43",
+     "source_text_sha256": "0b60db95118a76ec45ea8089d079d714d7879dfed21531850286d92daa0b8e88",
+     "pt-BR": "(Fingir que não percebeu)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k45",
+     "source_text_sha256": "4a65147514a27a22a93ee1268d6707667321cdd18e03379dc13ac817c0b1fe16",
+     "pt-BR": "(Abraçar sem dizer nada)",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/Text_Stage_201.luc",
+   "source_sha256": "b01c5dcab8dc0d54a7e8db5c7d4dd19c81de92876173bcfeb14bf55e1d3b48f0",
+   "entries": [
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "000eee5a7a7a433eda2692d528d740893520e6fbc905ecee2c18996963daea07",
+     "pt-BR": "Beleza, vamos lá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "cac05ddb50604638589d1b5af47d96747471fed3a97aa52a252e88ce1ada9712",
+     "pt-BR": "Executivo sem guarda-chuva",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "634c5adf40f4e5fa6986380463bde259477239c91285330e380adb12675698f5",
+     "pt-BR": "Devia ter acreditado na previsão do tempo e trazido um guarda-chuva.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "d4ad97f2d3512a1f9d2645037fa96074c160857ab29665ab519dbe8f083626be",
+     "pt-BR": "Que barulheira é essa...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "be0581bf55e52766163234d304e8e15540709ebb3988aaa9ecae1a10779a6c90",
+     "pt-BR": "Mulher preocupada com o tempo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "7f699cbf4d477888ff396c8f82f473dfa1504edf1cbeedd67b13a2dc345193bf",
+     "pt-BR": "Que chuva, hein. Faz dias que não para.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "5170ce12e90eb8791f01636da15b6267450ac5c9adbfbb848a3879a78b7b8706",
+     "pt-BR": "Ué? O que tá acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "e5955631ab734c74119c3d4142e82ca2553876f63839bdcf43abf08398a5c8f8",
+     "pt-BR": "Mulher com frio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "a6258ae436f126477a3dc57a81e38e9c59d8e2bec2316375e09bb62c28f9e6bc",
+     "pt-BR": "Era pra ser primavera, e tá um gelo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "09650b9f5345e035f0af813f6edc9984095a177a96553efeba38eccbff966cf0",
+     "pt-BR": "Parece que veio do cruzamento... O que será que houve lá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "2363fbb76d9cebc03f938076958f33872a827a0e8d0620b42e34a5e57408770e",
+     "pt-BR": "Homem irritado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "9a0b6da9225edcb344516e430765ad08a2289bdaf458a9e010f3af55dd28707f",
+     "pt-BR": "Não fala comigo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "ad537af9ac03871e70f1b25845940aa79ecf1f8f4bc8339b9c4e864b5d40679c",
+     "pt-BR": "Eu só tô de saco cheio, tá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "8b709fd50f907ef653575125d03b875f4ec8d7f2e6effa7c528b67b9e42b5cac",
+     "pt-BR": "\"Desculpa!\" (Pedir desculpas sem pensar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "6c780ff31caa536a92ad0d2eb5857fcb3c59a7ee026d86db06a2b9d37ab1bb63",
+     "pt-BR": "\"Tá de saco cheio de quê?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "bdf43fbda501eea6629647290d43de2e73e72a08de43962118d9fcbfd06ab085",
+     "pt-BR": "\"Não precisava me empurrar com tanta força!\" (Ficar irritado)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "810091224e39c90f210fe72cb689ad937b62c70c64eff2312d93fd2734011afb",
+     "pt-BR": "(Ir embora sem dizer nada)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "a1b574d7bb71513dfd74b040330b1f824b4f84cbc85856f0a39a5ec229f6bddd",
+     "pt-BR": "Tsc!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "d9263635a7f95bbd4ac75182b7a45e04ed42af40ae02d877a33e4c89b2868d8e",
+     "pt-BR": "De saco cheio de quê, você pergunta?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "aa43f8d0cc24d27437b5d77ba3b5d3d3854c0ce19efb95190644aaa69ab99f61",
+     "pt-BR": "De tudo ser tão tranquilo!\nTodo mundo reclama, mas no fim aceita tudo do mesmo jeito.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "626f6b2015108bca0b8eee83f8013bc9692ef48691683b1e6fe5fb0df82eb479",
+     "pt-BR": "Nada é ruim o bastante pra mudar alguma coisa.\nEsse mundo chato me irrita. Queria que tudo explodisse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "c487ac7f081461df01e37b6eed5f924c8fd31b55e3e4b4842f49ca05164d32f0",
+     "pt-BR": "Entendeu? Agora me deixa em paz!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "a7bb73d296d2b44b7073ae74b2d91471264f6171c29eda0b79498f6ceeb8f613",
+     "pt-BR": "Achei que ouvi um estrondo,\nmas agora eu não tô ouvindo nada.\nEntão me deixa em paz.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "3c4536579cf2f8593289bd17b87b827d6bde168813e51dd84765d583f59f7cfc",
+     "pt-BR": "Homem encurralado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "84184ddf7fc55abfe981b6d646cb2993cdb5ef6323e8ffed3d4ef1be39fffeed",
+     "pt-BR": "Não aguento mais... Só queria confessar tudo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "46c2ef58259061c0be83fe56241a2d379732aa0e44e7f0bd0a8d23eaf9de12e4",
+     "pt-BR": "Parece que alguma coisa estourou lá perto do cruzamento...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "1209abb802038d41df5ea864d497383b159ab317b73c29c31dfeee6f4fbb385d",
+     "pt-BR": "Mulher que acusa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k255",
+     "source_text_sha256": "06de8d1a290d50821a8c3334d8db272b5b1016b0b423654c1ff92cfc81782220",
+     "pt-BR": "Anda, admite logo!\nVocê tava se encontrando com ela de novo, né?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k257",
+     "source_text_sha256": "5a2e9c0070f334f43118c3ab3f939a2df36a9bb35b5d1f00caec66a26e4d22f0",
+     "pt-BR": "Quê? O que tá acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k259",
+     "source_text_sha256": "c81174b7cab4eaf379e5f7c7084bf878d7d4c9d67b2f157d00063f72b4efcc59",
+     "pt-BR": "Homem se protegendo da chuva",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k260",
+     "source_text_sha256": "3a4ca88c0f542f50afb009db638c692496a96f102fce8a437665c08f92525ae7",
+     "pt-BR": "Essa chuva não para...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "1a3e6d61132e707cc458102f97233f342c93cfbfa2fbcbd8a49d59f7597dfec1",
+     "pt-BR": "Aaaaah...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "95d0fd5e409d0c71e2767218cc1fc82488b3e01f1aad40f1dcad50c40a84da26",
+     "pt-BR": "Atendente do balcão",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k265",
+     "source_text_sha256": "91427722fc2ad15951bb6ce3a8b2fa8cd65e0ab72a52210dbcaf167554258425",
+     "pt-BR": "Seja bem-vindo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k267",
+     "source_text_sha256": "571c03e12ea28d7f19699ba082411c2e7245770cedef506ab15693a10ded2845",
+     "pt-BR": "...Ué? Que barulho todo é esse lá fora...?\nAh! Seja bem-vindo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k269",
+     "source_text_sha256": "b77269d9f4f20b8f51add0d5661a75828bcc8783e02bd237cff3767f850c8ca3",
+     "pt-BR": "Que tal um karaage? Acabou de sair!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k271",
+     "source_text_sha256": "b2a244d00b657e767fef774dd87f5ef4cf989e9989e9a11d8dc527decaeaa966",
+     "pt-BR": "Um, por favor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k273",
+     "source_text_sha256": "c208260774d2143e88c1025a9cb6ba23e881772895b2178b9935bf6e543b9a5c",
+     "pt-BR": "Não, obrigado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k275",
+     "source_text_sha256": "e7e8266a78304c6acc523897738228ba5aeafedf9dbc31f8042cd8b7897ef1e8",
+     "pt-BR": "Obrigada!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k280",
+     "source_text_sha256": "b9d31d3a0a457321d8c10b36165f105c3e45f0c4621ce2fa4f94bbfd09384969",
+     "pt-BR": "Se der fome, é só me chamar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k282",
+     "source_text_sha256": "c5f1ff11b8d22f2cb2afa884899e92572180dce510a6a6493c3122d2e440abe2",
+     "pt-BR": "Desculpe, clientes não podem entrar aqui!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k284",
+     "source_text_sha256": "699aaff3e36419eeed5c7cda84f96a332d5bc959b1ae7c1cc1cecb8d2d593a29",
+     "pt-BR": "Atendente Iwabuchi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k285",
+     "source_text_sha256": "54b64ac00e9b37bc604c615f2048f8b939842136281e941bdc367e6ba56288c9",
+     "pt-BR": "Se você encontrar o Morimoto,\nlembra ele dos ingressos do meu programa de rádio, tá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k287",
+     "source_text_sha256": "68c0085b300c473df9be11817c1ec1a8507a4ae1b0a7c3068b86d3e52c92ea9d",
+     "pt-BR": "Atendente repondo as prateleiras",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k288",
+     "source_text_sha256": "26e7dfc2d77a65fa03b8b1ae01708f1241757e3679c67717439679b1aa6c8a43",
+     "pt-BR": "A gelatina de figo já acabou.\nPreciso fazer o pedido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k290",
+     "source_text_sha256": "4546617132807f10d11036c26ab728a7eb544ad8d3f66a6eb78a1a2a37ebd0a4",
+     "pt-BR": "É impressão minha...?\nParece que tá acontecendo alguma coisa lá fora...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k292",
+     "source_text_sha256": "c0817c2f46978957c5e73ff4af2e178008dc6d692b6204241e8a5a14cc6f029a",
+     "pt-BR": "Mulher obcecada por moda",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k293",
+     "source_text_sha256": "d8d8e71595aa591404c817a8bea789931b9c534a5b10a792429f8a12869b0c72",
+     "pt-BR": "Hum, essa combinação também fica boa.\nEntendi...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k295",
+     "source_text_sha256": "00d6210edb9c64180b76c08a546f6570c844acf399969b4134ad19ed4d759f99",
+     "pt-BR": "Que barulhão é esse lá fora...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k297",
+     "source_text_sha256": "cab625dd7f1802f85596ec74e8b25aa1312f88870bfb808e1f6e144d2cebe77d",
+     "pt-BR": "Homem folheando revistas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k298",
+     "source_text_sha256": "0a9a7ef7db2b7da3b4a1f3daa6055584caa5e2a743ec3b8fe55aa77a25113e44",
+     "pt-BR": "A idol Honoka Futaba finalmente...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k300",
+     "source_text_sha256": "ad1d5ffd57e9cdd40dc0c4030895eae4bbb88551303e9506b42ea830f56d15a1",
+     "pt-BR": "\"Não me interessa.\" (Ir embora)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k302",
+     "source_text_sha256": "fca296c3365453c1ee2adb33f0c5e3086b4e824b6a5b06f90ba2e1f88ed5afd1",
+     "pt-BR": "\"A Honoka finalmente o quê?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k304",
+     "source_text_sha256": "8d779db40e5f12e3bf73bbcc3a12dee5feec5d194ad86ee723db656ef39c4feb",
+     "pt-BR": "Opa! Você também é fã da Honoka!\nEla finalmente...! Ah, espera, já sei!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k306",
+     "source_text_sha256": "6771a9d89f4aac23dc9e4bc6ec355ae8d01b43819547c90cd87477c7176284bb",
+     "pt-BR": "Tenho uma coisa perfeita pra um fã da Honoka como você.\nUma foto exclusiva dela. Vai querer?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k308",
+     "source_text_sha256": "ccff02404d1f0c0ad32b509395f6f5e0560d678f7e1db1be9ea96d7656bedd0e",
+     "pt-BR": "Deixa pra lá",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k310",
+     "source_text_sha256": "56e64484b2a24a6f8ca90d2617504b9723ee8709ba620832ac3f925d879d9409",
+     "pt-BR": "Comprar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k312",
+     "source_text_sha256": "6dabd8f08ba95e8a2444690ca28ac275b3deb36ad1203124aa274b3e57f6a484",
+     "pt-BR": "Você que sabe. Nessa ela tá mostrando bastante coisa...\nBom, se mudar de ideia, me chama.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k314",
+     "source_text_sha256": "cda211c023af758ba761159b860d668235cacec1e8b7a2e96ffd78e8fc8ea5c1",
+     "pt-BR": "Você pagou 3.000 ienes e conseguiu\numa \"Foto exclusiva da Honoka Futaba\"!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k316",
+     "source_text_sha256": "b0466aaa8dc8f44b8c62b11da07d0c040abbb1cf600016e09f0f0a07944a6189",
+     "pt-BR": "Bom negócio!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k318",
+     "source_text_sha256": "9107bd1a70166a40cdc69fa3465afaec684e3f8fd4b51b5390dd2ac593b26772",
+     "pt-BR": "Quando chegarem fotos novas, eu te aviso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k320",
+     "source_text_sha256": "19b614cacc884142b342a0d9486d27d6f8070fbdc3d61f4bbb686fcd672e1533",
+     "pt-BR": "Executivo gastando à vontade",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k321",
+     "source_text_sha256": "59a66d6178c135365daa943c1412f647e5cba98a3ed7bb0d409afd69cb60973a",
+     "pt-BR": "Opa! Chegaram umas novas!\nPosso comprar todas as caixas, né?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k323",
+     "source_text_sha256": "a57df5eb0db68cd6d52c5b309bfc4a3bd2f540d534d0254c6041bc0ca857633e",
+     "pt-BR": "Vou levar tudo, mas...\n...Que barulheira é essa lá fora?\nAcho melhor pagar logo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k325",
+     "source_text_sha256": "aaee688022b190afb90da369bab60b1b7b14c98f40c44809bba1bd938f7abcd1",
+     "pt-BR": "Homem escolhendo um bentô",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k326",
+     "source_text_sha256": "06cd2fcaa4f8d444acc8e3642e4c725ae4311e2a43fa3ba9254b4ef728760a94",
+     "pt-BR": "Nossa! O Bentô Cerejeira em Flor e o Combo Tulipa!\nTem os dois! Ai, qual eu levo...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k328",
+     "source_text_sha256": "c88e9f314704f30c0e1aa739e5b031ad799f82a26c1657ab30d2a94f4182498a",
+     "pt-BR": "Que barulho todo é esse lá fora...?\nNão quero me meter em confusão nenhuma...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k330",
+     "source_text_sha256": "1b2cac1932adfe22ea5bceee8d463e0734137155084ebdf57101d13752dbd1f5",
+     "pt-BR": "Mulher no terminal de informações",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k331",
+     "source_text_sha256": "bc81d57aa18952b3b9ca454e95fe9a21571cdc30917bd5380a94456462414e28",
+     "pt-BR": "Vim comprar ingresso de show...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k333",
+     "source_text_sha256": "6c506d920b7644ac3052f78e96aa270b6b0903222131fc4c3ad01d3b3991e198",
+     "pt-BR": "Vim comprar ingresso de show...\n...Hm, que confusão é essa lá fora?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k335",
+     "source_text_sha256": "7084684f35a295a1cd2f9dd1316804c6fa834876801c94b16aaa9a49e5fdffc1",
+     "pt-BR": "Funcionário no depósito da loja",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k336",
+     "source_text_sha256": "8d156c1a21d723a6b98450e66c33f7510557c611073ecdcd0b0125535fce5ec7",
+     "pt-BR": "Desculpe, aqui é só para funcionários.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k338",
+     "source_text_sha256": "76d64b6e5de0515732357edf4b8be1ea1e4f1d386bd2574e11dddedc959e78ed",
+     "pt-BR": "Tem frango frito e salsicha na estufa.\nA linha \"Ministro do Karaage\"... O frango vem em vários sabores.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k340",
+     "source_text_sha256": "45a390cebb0d4aabf0142c6105ce017bbd1596cc2e766a93700919837da4956d",
+     "pt-BR": "(Comer alguma coisa pode reduzir por um tempo o gasto de energia,\nentre outros efeitos.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k342",
+     "source_text_sha256": "ae0aba3194ea41bce31a0dd9c765242f8e415cac712c28fecce191b2e9f9b587",
+     "pt-BR": "Tá cheio de sorvete, picolé e sanduíche de sorvete.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k344",
+     "source_text_sha256": "9c48e226f3e58d709fc4c5dfb9b2847b8d7b8ed0764f1a289f867d69c96c8f7a",
+     "pt-BR": "É, sorvete não vai aguentar\naté o ponto de encontro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k346",
+     "source_text_sha256": "2fc8b9e6e4022bebb805c677b752a0fbe46b8144fa9afeef98a0596f791b14ad",
+     "pt-BR": "Está bem limpo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k348",
+     "source_text_sha256": "b6630495b42f536a65ca1a2c7c8ec7a17f22bc61d652119eedaf5627035a5a8c",
+     "pt-BR": "Usar o banheiro?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k350",
+     "source_text_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "pt-BR": "Sim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k352",
+     "source_text_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "pt-BR": "Não",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k357",
+     "source_text_sha256": "2ee2e197cc559b1c847ed648622b23e363311a1f751e71a988cbe65ecd23cd5e",
+     "pt-BR": "Ufa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k359",
+     "source_text_sha256": "bd853b78072efbd5134ffc891abb5634df5efefbf9c0ff432015f32e3ccb7a23",
+     "pt-BR": "Fique parado e aperte [i4], depois ande para se mover\nagachado.\nAperte [i4] ou [i2] de novo para se levantar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k361",
+     "source_text_sha256": "d91f776043fe5f8d2c4d3af7152f722f83dfd231498f3c50545c4923023197c1",
+     "pt-BR": "Um armário.\nO que será que tem aqui dentro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k363",
+     "source_text_sha256": "d93d6d161f6ec200d88a32405ab72c0f477ea5fa9ada9c2a13e685e09a4fa4e0",
+     "pt-BR": "Abrir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k365",
+     "source_text_sha256": "75f584fc827c627f18ed5da234df9e64dc4839a6baa834647f347d3fd3b7c2d5",
+     "pt-BR": "Ir embora",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k367",
+     "source_text_sha256": "30a0caeab9c7399ae2fd108a0cf4f2a58e01d63bd448cf80dc0224964f6dd712",
+     "pt-BR": "Você abriu o armário...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k369",
+     "source_text_sha256": "6471cdbb28b18ee92aadf7fa813b28c4b8af45a3e75b43bd48bd899607dd9e59",
+     "pt-BR": "Você conseguiu [#ff44ff44]\"Ministro do Karaage, sabor morango\"[/#]!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k371",
+     "source_text_sha256": "4995d5e5d93a23015db35cf2efa060e93a5cb250caa8afed7e4baa6669813ec7",
+     "pt-BR": "Você também conseguiu o romance de sucesso\n[#ff44ff44]\"A Saga da Última Espada: Capítulo do Passado\"[/#]!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k373",
+     "source_text_sha256": "4d095a3f8cb8abaca25c9528f67532a5ac1b7678dddc7073faae7b9f7ca927c8",
+     "pt-BR": "Tem um armário.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k375",
+     "source_text_sha256": "90f3dc2e4266bd1b9afd748096df54f138e90e9e944431bb33bb8b49c61adc65",
+     "pt-BR": "Tem um computador aqui.\nParece que está em modo de espera..................",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k377",
+     "source_text_sha256": "dc7f165f492c1eead38ee4255d142d16616c6e3c8828d8358d8d2bad4dc745b1",
+     "pt-BR": "Rapaz vendo TV",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k378",
+     "source_text_sha256": "3dee8d57eca1c10f82b674e5e5cec5467e6692c77b4cd6600f12d0cc9bd02987",
+     "pt-BR": "Nossa, como a imagem dessa TV é nítida...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k380",
+     "source_text_sha256": "827c430e90b68499e0ee238c0eb427357e94222a1baee71ef02e65d4f466fc9a",
+     "pt-BR": "Rapaz que estava vendo TV",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k381",
+     "source_text_sha256": "4de924e8956f630833a859a22de908e06b4c41b730e14aa7a7d910155fbecb22",
+     "pt-BR": "Quê? Tem um carro pegando fogo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k383",
+     "source_text_sha256": "fdc5ab1dde28ad2c25c862a9b662773baecee15a729f786106930139e24ae3ca",
+     "pt-BR": "Mulher com guarda-chuva",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k384",
+     "source_text_sha256": "a1b97396870159b97ca2563ad8e27b11180fe3b9f472f7979a01b8eb73d08cc4",
+     "pt-BR": "Que estrondo foi esse? O que aconteceu?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k386",
+     "source_text_sha256": "ae8473d1fab568fa543e46c065b4b2590ed899b1b64c8e15ced3c10018c08460",
+     "pt-BR": "Mulher encolhida debaixo do guarda-chuva",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k387",
+     "source_text_sha256": "4df46569b8f39039d41f69ac3c9eea5fed0363753eee9b57f209afa66640e12a",
+     "pt-BR": "Aaaaaaai! *tremendo*...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k389",
+     "source_text_sha256": "79e95cd6147fe9dc5ac46bbfc24c7b6399f286290132fddaaff13de7e6a55e6b",
+     "pt-BR": "Homem dividindo o guarda-chuva",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k390",
+     "source_text_sha256": "df44f4a63c5713a6e7809f4b9b36163842c9de950d65657a9b3c0a46e6414af0",
+     "pt-BR": "O que será que aconteceu?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k392",
+     "source_text_sha256": "c289b20d6c199316144f381e47d2a1cbbe0a449b26be683c523e30bb91fa82b0",
+     "pt-BR": "Homem protegendo alguém",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k393",
+     "source_text_sha256": "ce443d345fd636d3682730d8ff8ed43d9e9445ded81a685ad549e4de36427cea",
+     "pt-BR": "Calma! Eu tô aqui. Vai ficar tudo bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k395",
+     "source_text_sha256": "dd8911893d61875cd481155241d805dffb3d0a86c8072c6901531a4e6219ccb6",
+     "pt-BR": "Homem paralisado de medo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k396",
+     "source_text_sha256": "6c967522012923980b72391e42ae763e2291c578659115ec09b3149d0020ca53",
+     "pt-BR": "A-a-a-aaaaaaah...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k398",
+     "source_text_sha256": "5b0abf1fd3a8284f01755b65daf7e800cd6398444c416045b07dee588ec73e25",
+     "pt-BR": "Mulher apavorada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k399",
+     "source_text_sha256": "d1114407c0207f0befc813a30028049a33bca9d60edc576f64c52d00bf8fe7f8",
+     "pt-BR": "Aaaaaaaah...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k401",
+     "source_text_sha256": "9805177c6f4ae2b9ed038bd74c26a8ac20b83f5a7147fb8d81ebc212d2055610",
+     "pt-BR": "Policial saindo às pressas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k402",
+     "source_text_sha256": "6d93c9a39db99f65b86f88a96118cf988bfd8f02ef7ad8e2536957ca5da7ddf8",
+     "pt-BR": "Que diabos está acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k404",
+     "source_text_sha256": "8551f4ae3ee73bbd141c4eb35fc6f174da6f46d8db621303e299176e21c7c087",
+     "pt-BR": "Policial! Bom trabalho aí fora!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k406",
+     "source_text_sha256": "5245f3d780e72a75b55a2fe7eda390acaeb85a09ac240b2d84881cf6dc226bb5",
+     "pt-BR": "Policial simpático demais",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k407",
+     "source_text_sha256": "f77ad20f22b817089b1b2c0133c1f969863dd429f267048cdafaa72b7007da50",
+     "pt-BR": "Ei... Por acaso você...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k409",
+     "source_text_sha256": "883c8a36f2df4995b4a0243659fcb6046e85beaadf06577e940ae071dd4cde93",
+     "pt-BR": "...curte cosplay?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k411",
+     "source_text_sha256": "b767aa049bc4252e98c3a5a306e0d8f740b298e322eae1f1baa446f65e72f3f7",
+     "pt-BR": "Eu sempre percebo.\nNada mal. Nada mal mesmo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k413",
+     "source_text_sha256": "a6b46d584bf056459ce341824c00a79536aa143df7a40dccf6a0bbb96cf07ce1",
+     "pt-BR": "Considere-se um de nós!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k414",
+     "source_text_sha256": "fec892294d09a67cf062793277718c93f4aeb1ac16aeea4f3e3494b50c006ce4",
+     "pt-BR": "Quanto mais roupas você experimentar,\nmais seu nível de cosplay sobe. Vamos nos esforçar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k416",
+     "source_text_sha256": "092c195dda64a18b41b60214f121338614d246df49b389fd57be1eda89c5c156",
+     "pt-BR": "Policial do clube de cosplay",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k418",
+     "source_text_sha256": "be3b8b28e806b29be96d203d6d5a304d88598403c73a8369299413c3f77da9de",
+     "pt-BR": "Policial saindo às pressas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k419",
+     "source_text_sha256": "708fc13efa060aa63813aca5fdb1ac0d90ac1fdf055a0678541d38507d8fb715",
+     "pt-BR": "O-o que é aquilo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k421",
+     "source_text_sha256": "b434f4afebe86e48231e3b4c5b9954fbe3aca772169d4a6cdcf7eca48a6a84b8",
+     "pt-BR": "Policial! Bom trabalho aí fora!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k423",
+     "source_text_sha256": "a543082b9756d78b748f54623a053b6f6d37896e33209e446cd73e365a6e267b",
+     "pt-BR": "Policial guiando a evacuação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k424",
+     "source_text_sha256": "3714e1bdd1adfbe59a9bf4a9ef4e70a49a7399c723ca9039e61da6a0d4376ceb",
+     "pt-BR": "Não desista!\nSe você não desistir, vai sair dessa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k426",
+     "source_text_sha256": "a7dd8dfb7fec41aa8737a1a54a8a83fee607be0608549f859a81cbbf118c596a",
+     "pt-BR": "Policial! Bom trabalho aí fora!\nVou continuar levando as pessoas para um lugar seguro!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k428",
+     "source_text_sha256": "79e0bafb2d5fdbb0155f3226d024d308659070b9f779a96d5fc7ff34a8fec9ee",
+     "pt-BR": "Não desista!\nSe meu uniforme te der um motivo pra viver, pode ficar com ele!\nSó não desista!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k430",
+     "source_text_sha256": "bb0e9a044ce49bffc534bef8c3272016ef3540b3f2420e3b7ae8ec98433df910",
+     "pt-BR": "Não desista!\nRoubar o uniforme dos outros é errado, mas primeiro vamos sobreviver!\nAconteça o que acontecer, não desista!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k432",
+     "source_text_sha256": "704ff6acac771f8a44dec0ce3e44b8f288c8c0c346c89518997a6fc6718f8eb8",
+     "pt-BR": "Por aí é perigoso!\nVolte, por favor!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k434",
+     "source_text_sha256": "c43c49cf51fbb647a95e77abaa6c7cbea61cc187b82a92b1415665f427b17ffe",
+     "pt-BR": "Homem com jeito de detetive, esperando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k435",
+     "source_text_sha256": "720da808d790a354f4dc182585f97de1bae1d70a6deac709af952eef9783071d",
+     "pt-BR": "Eu queria descobrir algo sobre a mulher que matou o irmão...\nQue barulheira é essa lá fora?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k437",
+     "source_text_sha256": "97764fe8e72c85eed07c2e3cbe468ccb38e8f00154917fe7670dfeccda42cb38",
+     "pt-BR": "Ah, então tem mais um policial aqui.\nÓtimo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k439",
+     "source_text_sha256": "45c86eec43c1c5ea9983612299600595183a757c2f7512daee9a06502cc07504",
+     "pt-BR": "Sou Akimoto, da Polícia de Nirasawa.\nTenho algumas perguntas sobre a mulher que matou o irmão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k441",
+     "source_text_sha256": "1578dd12c8996737730c4132468ca7ae0283e212cd7a5653d89240f9a6fb9e20",
+     "pt-BR": "\"Ah, claro, o caso do irmão.\" (Entrar no jogo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k443",
+     "source_text_sha256": "6a524fc6e6092e9d7d5ff6b09df98e8dee3c9c027f6b93f5e2cd7cd0345843ec",
+     "pt-BR": "\"Hã, na verdade eu não sou policial.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k445",
+     "source_text_sha256": "fe05ba8cd190a6ead817cb5a7fd89cc35fab80b3c123ba39adefa546d1265e81",
+     "pt-BR": "Detetive Akimoto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k446",
+     "source_text_sha256": "0dccad68e6822a091cb0c29741b15cb96cc3521876f532327e1a0f673fc5c428",
+     "pt-BR": "Recebemos uma dica de que Saeki, que fugiu da custódia,\nestá escondida em algum lugar desta área.\nVocê ficou sabendo de alguma novidade?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k448",
+     "source_text_sha256": "2e02f80d41f1e47529d4fff1510e81010ee75e9193f8077e1ca831253dae62a9",
+     "pt-BR": "\"Sim, viram um homem algemado.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k450",
+     "source_text_sha256": "612734e6036cdac0a80758ff22696060c094661444d77ab16d0202a49efb4fd6",
+     "pt-BR": "\"Sim, viram uma mulher algemada.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k452",
+     "source_text_sha256": "8ae13cbff4a3a98e0216f0dfd8a39a24c82e4b448102e458eeb64de2dbcbbffb",
+     "pt-BR": "\"Como alguém foge da cadeia?!\nO que vocês estão fazendo?!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k454",
+     "source_text_sha256": "509395345b8b6cdefe4c8ad2e02e3f64bb1e874cc67c0aeef0b1ff1bd46df68d",
+     "pt-BR": "Um homem? Então não é a Saeki que eu procuro.\nDesculpe o incômodo. Vou verificar outra área.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k456",
+     "source_text_sha256": "6e07079d09682251b74f2f8f3ed30460529342e450e4259c6bb265d89be13189",
+     "pt-BR": "Sério?! Então ela ESTÁ por aqui.\nCerto, vou continuar investigando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k458",
+     "source_text_sha256": "75fd1fe747dab7c29edcf6a12cf66b4a087976a21a49ad721543a1bbdc6e95f5",
+     "pt-BR": "É, a gente pisou feio na bola nessa...\nBom, parece que você não sabe de nada. Vou verificar outra área.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k460",
+     "source_text_sha256": "1512087f794796cbf24a28e9d2f86e6147edbff4fa931038737ceda99554dc2f",
+     "pt-BR": "Entendo. Que roupa mais confusa pra se usar...\nFazer o quê. Acho que vou esperar aqui até o policial voltar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k462",
+     "source_text_sha256": "f4287ee124771a28be3c6c7e9374e5b7af9460b42ff25bd17b3aa10e6fda2521",
+     "pt-BR": "Então não é a Saeki que eu procuro.\nDesculpe o incômodo. Vou verificar outra área.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k464",
+     "source_text_sha256": "ffbe4820eaeed3e57a5effb07f2dd6b9e5d0fc3237ba3b8f768492552e4f8c25",
+     "pt-BR": "Então ela ESTÁ por aqui.\nCerto, vou continuar investigando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k466",
+     "source_text_sha256": "5a2eff1e03a6737e808ba22bfe674f0333ed8c73ec84e1c5c777eddbfe2963ec",
+     "pt-BR": "Bom, parece que você não sabe de nada. Vou verificar outra área.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k468",
+     "source_text_sha256": "ed7f29ef4da3991312de9125ae9d4ea024f49ffeacf8897d9edd29edb234feb5",
+     "pt-BR": "Você abriu o guarda-roupa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k470",
+     "source_text_sha256": "fa7d61f4ce088e9ca025e89dc9685d97c91657c5689803cb6eb7ec7a3799f754",
+     "pt-BR": "Não tem mais nada aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k472",
+     "source_text_sha256": "0ee24208ecd66d477eed66396d6ff0d0f6b82a50d4f441adfc62191f57a8e281",
+     "pt-BR": "Uau! Você encontrou um uniforme de policial feminina!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k474",
+     "source_text_sha256": "f31a6dac14c0c23f8e8799da6c599ded8aedfa75d12f7a4de69cfadcbc8a587d",
+     "pt-BR": "Uau! Você encontrou um uniforme de policial masculino!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k476",
+     "source_text_sha256": "5810cbebaecf52b5ffcd01fc1135cd7ab4b6d83ab228f716839737722092e248",
+     "pt-BR": "Pegar com toda a calma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k478",
+     "source_text_sha256": "7763c7db869af1137bfa33543e6c4f3594463e25f1837c4850efdce924f2d444",
+     "pt-BR": "Olhar em volta e então pegar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k480",
+     "source_text_sha256": "816062dc71a0344a7e6d56d11358314d55e1d9efbc7c1f98d562ffb0380f5ad0",
+     "pt-BR": "*Gulp*... pegar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k483",
+     "source_text_sha256": "ca2fc0b3dfcffc019bf13bbb55fe050182e280eafb27475238414683cd0a82c0",
+     "pt-BR": "Conseguiu um uniforme de policial feminina!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k485",
+     "source_text_sha256": "98215c3e42de0d94b1d055a50cfa11405790726c140e8311f0c42f0189b70277",
+     "pt-BR": "Conseguiu um uniforme de policial masculino!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k487",
+     "source_text_sha256": "b5ba41fda8bde02c11444d717ba07b16738736e56b18d88811d5b3037209eb88",
+     "pt-BR": "Você devolveu discretamente o uniforme de policial feminina.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k489",
+     "source_text_sha256": "ccdae9e03cec8b28e7a7b16f96ac390b70a767ecb66913367a1114c161e5d4d9",
+     "pt-BR": "Você devolveu discretamente o uniforme de policial masculino.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k491",
+     "source_text_sha256": "e8b355b8eb145ae48903c65436f86e2ca18cab630c0b962f0d83c9dac78a5c80",
+     "pt-BR": "Vestir o uniforme agora?\n(Troque de roupa quando quiser apertando [i18]\ne indo à tela \"ITEM\".)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k493",
+     "source_text_sha256": "7fa6fcc24bd9d2bb7f41fab75014f46903304c4973518866e0502bfafc3c3c30",
+     "pt-BR": "Vestir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k496",
+     "source_text_sha256": "7c9ce88ab2739e4679467dc502b859c1a06f3968401ec85c863b1b8134ac1626",
+     "pt-BR": "Roupa trocada!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k498",
+     "source_text_sha256": "bfde552b06ae94314fb4f1c1b67c7e4b381109d6880829342165655cd8049836",
+     "pt-BR": "Você olhou o quadro de avisos da polícia.\nHá vários cartazes de procurados...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k500",
+     "source_text_sha256": "6b06305260edfdfb3dd5a98f1aecd036384621cdfed952c96b5690174e9e5010",
+     "pt-BR": "• Satoshi Bakuhatsu: violação das normas penais de controle de explosivos\n• Toru Sakinomiya: fraude, jogo de azar habitual\n• Yuko Saeki: homicídio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k502",
+     "source_text_sha256": "9d52db48dce527bae6e80e9326647b711f02d27aa4db4d6fd4d9dabd74e03ca1",
+     "pt-BR": "Um cartaz de procurado.\n• Minoru Damasuyama: falsificação de documento\nparticular com carimbo, fraude",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k504",
+     "source_text_sha256": "e5e50a5562266e812b592c64c011e620f43e8631a27e9750ce3ca4f8175bd0b2",
+     "pt-BR": "Um armário dentro do posto policial.\nNão abre de jeito nenhum...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k506",
+     "source_text_sha256": "3308e2d3ac2de7f45bc06a368ea5ea15f6e9e79df3f78ad1c8614fae1b9f8f64",
+     "pt-BR": "Esta porta...\nAposto que dá pra derrubar com uma investida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k508",
+     "source_text_sha256": "36db8a1bb266e83cdc3cd23f05af4cf7072681a4da96d08d341b12ac5ee78166",
+     "pt-BR": "Controles: Investida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k509",
+     "source_text_sha256": "824a0c6dd30784794b681b7c380df42dc1093b0333c9cf3c5099b1b6be976ec6",
+     "pt-BR": "Corra ([i14]+[i12]) contra objetos quebráveis para destruí-los.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k511",
+     "source_text_sha256": "e56474bebe1b2231b446b95c54933505738d707fea9609485146fcff72abdb11",
+     "pt-BR": "Uma porta.\nEstá trancada por dentro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k513",
+     "source_text_sha256": "249c602a441c7876f12a556bdd53d2e4a028e5f0b0b8590dff3adbc3a4c369c4",
+     "pt-BR": "Tem uma viatura estacionada aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k515",
+     "source_text_sha256": "2bc6fc568948b7df637feaabad0bcd0994f3a61a2cb172606df3f2ddcfe59df8",
+     "pt-BR": "Viaturas são muito maneiras...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k517",
+     "source_text_sha256": "278e72940e9ea1a01be84cd0226937dee5c30c29b59b12e84eb90dfe1b7d1989",
+     "pt-BR": "Cara, eu queria dirigir um carro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k519",
+     "source_text_sha256": "9cbc0773ff3fe204c53aff03df7ba37130bfa50b35956af8bc95efd63724832b",
+     "pt-BR": "Na verdade, eu queria mesmo era voar de moto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k521",
+     "source_text_sha256": "a778267c32c8b96ab76696f92ad881b6ca5a3f70df0e4eed90ed14335942ed5c",
+     "pt-BR": "Sinceramente? Empilhadeira é o que há!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k523",
+     "source_text_sha256": "470bedc105788a69e244cc82c62eb1d307fa474f0c924b1c62e2dba2ba522998",
+     "pt-BR": "Não, um cavalo! Quero galopar entre o vento e as explosões!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k525",
+     "source_text_sha256": "a8a2890aa4552830918235adbd0191d4f095da7e09e863ae31592cf23850b627",
+     "pt-BR": "Ah, não ligo muito pra veículos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k527",
+     "source_text_sha256": "16ee12e59ea181a678bfe7c78bf6d7ae0a59a53e97a5b0e8ecfc1cfae76a0f84",
+     "pt-BR": "Você pensou de novo em como viaturas são maneiras.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k529",
+     "source_text_sha256": "96cf0563b6015c033944425d86b211f896ec2d409012120ab3f2372da096c32a",
+     "pt-BR": "Você pensou de novo no quanto queria dirigir um carro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k531",
+     "source_text_sha256": "c4d31584d43e14642650b2c61a1c3e099ff8829aa8a373b21c09c0c2f8b70d00",
+     "pt-BR": "Você concluiu que queria mesmo era voar de moto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k533",
+     "source_text_sha256": "9d5bb5f913a73d1d21730fb64742fec21e3be43d17995882d4f008f62132cea0",
+     "pt-BR": "Você sentiu, do fundo da alma, que empilhadeira é o que há!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k535",
+     "source_text_sha256": "6b64d0bb6fcbcaa5a0e3ee10974c65d9e2e345e36ba42c008fd0aa971e429852",
+     "pt-BR": "Não, um cavalo! Você sonhou em galopar entre o vento e as explosões!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k537",
+     "source_text_sha256": "11e5d4963f322b71a8d2c4f73c76dd2bc4f24e486d5fea0c5e6eadc5d27a3833",
+     "pt-BR": "As ervilhas-tortas estão maduras e no ponto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k539",
+     "source_text_sha256": "315e82198ebc3f2302bf3ad5c4211a8b6e7884add5e82baaa80b250e032495b4",
+     "pt-BR": "Pegar umas ervilhas-tortas escondido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k542",
+     "source_text_sha256": "4424d98793b2df0ae66d1ec6571bbd64d6ed6d3d3b7cbee593d86d9b617ea6ad",
+     "pt-BR": "Há ervilhas-tortas crescendo aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k544",
+     "source_text_sha256": "9c38235d7eea484160477ffe73c61f4edb037aeacaeedb59291182963766be6d",
+     "pt-BR": "Há cebolinhas plantadas aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k546",
+     "source_text_sha256": "7d0d0206101ccd7367d0e7915c778110132614de5474f56cd34070d5b5a0763b",
+     "pt-BR": "Pegar umas cebolinhas escondido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k550",
+     "source_text_sha256": "bebde02a41599fff979bbbd1b1d6f53db58adbdfceabb7c06c7b9677692a4778",
+     "pt-BR": "Espinafre.\nBem verdinho e viçoso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k552",
+     "source_text_sha256": "8d43131fbd2b60bb1d68eed68c9efce7c14e77e82453d97aaf313397e983aebe",
+     "pt-BR": "Pegar um pouco de espinafre escondido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k555",
+     "source_text_sha256": "52cafd21ef2c722f75efea8d79a511746a33a3584ccc95e3cd44bb7f49cc15d3",
+     "pt-BR": "Espinafre.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k557",
+     "source_text_sha256": "fc2039ee5ef43727a2b931145b789344bb0c183857848f228e5888970eff1432",
+     "pt-BR": "Tomates-cereja.\nNo ponto certinho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k559",
+     "source_text_sha256": "341453ffd44c56ba5608e10cd1890828d6ad7f36e90ca6d9227740fa8e168154",
+     "pt-BR": "Pegar uns tomates-cereja escondido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k562",
+     "source_text_sha256": "10a1b5a72dd4d5d8f0d1b1c66c23d2705c2b47c5996f70452243751175f35ccd",
+     "pt-BR": "Tomates-cereja.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k564",
+     "source_text_sha256": "82b289bae99f0ed70b29923f51211549efb0b0987a50cb783ccb69f9df2f516b",
+     "pt-BR": "Uma máquina de bebidas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k566",
+     "source_text_sha256": "32f6d2f3416b619289087b8cca9d9c2633215b3008dc2325cdfe87a1c7467e94",
+     "pt-BR": "A placa de um prédio...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k568",
+     "source_text_sha256": "0b65c6d73dab496096bdb214cda77a251c10fb0efe6e0afd645ba6b45b5d83e8",
+     "pt-BR": "Mulher de saco cheio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k569",
+     "source_text_sha256": "8ff6be075a1af3c44f512951194e7574ebc5716e12978f25e9b174aba1cf0bbc",
+     "pt-BR": "...faz horas que estou ouvindo a história mais inútil do mundo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k571",
+     "source_text_sha256": "f59b853817aac0377686d2d8bbdf440c100edf1c081ce88219a435af85bfb8e2",
+     "pt-BR": "Está pegando fogo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k573",
+     "source_text_sha256": "3da6ed6d96effccf81090ad7c4146df48ad893f02f1b9c9d5b90fb096cdcd290",
+     "pt-BR": "Mulher que adora fofoca",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k574",
+     "source_text_sha256": "8ec46121f82d0eac226fe8524a79709af96f95da044d36f0667e4b2147a4f28d",
+     "pt-BR": "Aí, sabe, a Takako fica toda Harumichi pra cá, Harumichi pra lá...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k576",
+     "source_text_sha256": "e877152945074ab04b7422723ec606f501aca0d66ca221f461e7fa8899037036",
+     "pt-BR": "O que é aquilo? O que está acontecendo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k578",
+     "source_text_sha256": "9d1eb8a9f134a834538de0966ce8aab66e2e3d984ea7c281298426a183a2f112",
+     "pt-BR": "Rapaz esperando alguém",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k579",
+     "source_text_sha256": "849aef8b61ed74765368fbf126fef4b397f3744b5d46e770be6c133e6452d43a",
+     "pt-BR": "Ela está atrasada. Cadê ela...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k581",
+     "source_text_sha256": "b63183198bc1c5556b3e672e2b8dc0fac4a8d75347a2272bdeff34fc31f0e9ea",
+     "pt-BR": "U-uau... Espero que ela esteja bem!!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k583",
+     "source_text_sha256": "b03b0694007d5fb1113ecc598c513c4a3ea6c922c84629bd8a48b342409e7271",
+     "pt-BR": "Homem que acabou de conhecer alguém",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k584",
+     "source_text_sha256": "fc3de895f0df921dc82fb344702baad92e2ec4c259ddd3ea194e191fc69b3296",
+     "pt-BR": "Conhecer alguém como você...\nQue dia maravilhoso!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k586",
+     "source_text_sha256": "d88a889f284bf9ffe388ea840287fd1e6442795c140172933d4d7605356d4431",
+     "pt-BR": "Ai, não, isso é ruim!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k588",
+     "source_text_sha256": "60b1e7a1b05dbfc6b74ab85509d54b12121ab80f2c1e26f48e9a11f34e365fdc",
+     "pt-BR": "Mulher que acabou de conhecer alguém",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k589",
+     "source_text_sha256": "05746b71d67a441e4ddf8e21ba2063e3c25bf9087987283c81f36e2c608f438f",
+     "pt-BR": "Você só pode ser minha alma gêmea!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k591",
+     "source_text_sha256": "641d9acbffc7641cbece3bbdc305ce71103353f990db76bd2d3940cc92bfda38",
+     "pt-BR": "O que está acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k593",
+     "source_text_sha256": "6a3314ea8fe1979c4aa6848f124bd75a36a924345b0062d3291fb3249c515656",
+     "pt-BR": "Homem ficando alegrinho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k594",
+     "source_text_sha256": "efeeb6a1a48f6cb899a369a8fd8517c17441946c9c9a1663ef4d1a366786cf72",
+     "pt-BR": "Uma chuvinha nunca me incomodou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k596",
+     "source_text_sha256": "c7906b501fe4c7b003a483623fc09c7e0efd5bbe430fbbe9e42f4845ed09ae5b",
+     "pt-BR": "Homem que estava ficando alegrinho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k597",
+     "source_text_sha256": "d2f880d686beccd1533286ada00e3441b26d7f33a188b320ea0684756af8dc6e",
+     "pt-BR": "O-o que está acontecendo aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k599",
+     "source_text_sha256": "6c9d3eea640e516e4cdf31b2d23b027e8745b481026dde7826638cb9fa86e3f0",
+     "pt-BR": "Homem alegrinho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k600",
+     "source_text_sha256": "f8ebacf4438848c8e6fc92b6c72fafde73ec7702ca52f4eaf9b66788728bff63",
+     "pt-BR": "Ufaaaa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k602",
+     "source_text_sha256": "84753e6fd55463000841b836aaf86a38248d1e247a494be375af09067992c082",
+     "pt-BR": "Homem que ficou sóbrio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k603",
+     "source_text_sha256": "4cf4aa01d217eb3247f3538aafc493d40fb94ae717b803b94a31c45b4c1f3c9e",
+     "pt-BR": "Isso é uma loucura!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k605",
+     "source_text_sha256": "cbe0be0faf9c162ac7c9d98563c75642361f8e9582efb7ba4974355c01db5a41",
+     "pt-BR": "Mulher hesitando na faixa de pedestres",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k606",
+     "source_text_sha256": "074c6b93e101cb757ce6df0d64331af792b7ca8537936169a7c0251b5a2d6df3",
+     "pt-BR": "Será que eu atravesso? Ou melhor não...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k608",
+     "source_text_sha256": "d91b0852be846ce086ebae0a46d0160683b905a7ba1c57ceac8d397140e940e3",
+     "pt-BR": "Você ouviu alguma coisa?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k610",
+     "source_text_sha256": "3952061330cda73034b8b0a66a9910ae6da57015f8f1cc70212c8dcde5bc49e6",
+     "pt-BR": "Homem hesitando na frente do posto policial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k611",
+     "source_text_sha256": "fa53a70ec9d7b264d481496239bec5a5bf94d3edcebe533897f2155eccd60476",
+     "pt-BR": "Será que eu confesso de uma vez...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k613",
+     "source_text_sha256": "842c306f6db6a220c7899d70b42312025d8b40565ec6fdd65437d163559f6b8f",
+     "pt-BR": "Buáááá... Nunca mais faço nada de errado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k615",
+     "source_text_sha256": "524bd5b0b3d1292cd2f68646cadf26d071c1f2211685660d82a0a87b352d79ad",
+     "pt-BR": "Funcionária de escritório transtornada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k616",
+     "source_text_sha256": "650088c6fb39d74d4bf6408f84d03db469919068fc818c13d7262853ccbd887e",
+     "pt-BR": "O que houve?! O que está acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k618",
+     "source_text_sha256": "30997d004e186d65343bdfd7c6645b4cc3697292ac9d65d1d200d0a04de5a878",
+     "pt-BR": "Mulher confusa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k619",
+     "source_text_sha256": "3f963bb71ad0519f7f32d0032082942f6c00dda4a048d41f5ec3de8463b55f3d",
+     "pt-BR": "Fogo! Está pegando fogo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k621",
+     "source_text_sha256": "2ab92aec873e02af445ed926a930f56655a76be567cc0378cb8eb10ca7776d71",
+     "pt-BR": "Homem empolgado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k622",
+     "source_text_sha256": "74733a01515179834f54d0a11a26cecde99fbef2ea7026cafa95e6ec6ca8f08a",
+     "pt-BR": "U-uau! Olha o tamanho daquilo! Inacreditável!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k624",
+     "source_text_sha256": "700c7b326f4e922da402875d2e29fa66083bc54cd8440538013a2ae5e4b86ea7",
+     "pt-BR": "Mulher fascinada por coisas gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k625",
+     "source_text_sha256": "fe96f022977d4280b04ac75e583cea88fa84984e7cfd5d66f6c51902058c5951",
+     "pt-BR": "Incrível!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k627",
+     "source_text_sha256": "147d3309b43d7d6db179c0172cba47426a0ebdcbc045820bf9798b886ddff48a",
+     "pt-BR": "Homem apavorado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k628",
+     "source_text_sha256": "6e86a166913161cf87a9102fbacd3c2bdf7db13d9a762805c4fadfb3aec0d0da",
+     "pt-BR": "Não! Por favor, faça isso parar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k630",
+     "source_text_sha256": "2986e783346f34c5ae5797049192974c4244ff32a0aad67e1229040ed94a585c",
+     "pt-BR": "Homem andando apressado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k631",
+     "source_text_sha256": "78124f972b4b4e7519ddf664104cc59e8b1431ded7332b51dc5d1d22c14a2985",
+     "pt-BR": "Hm? Posso ajudar?\nSe não, vou seguindo meu caminho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k633",
+     "source_text_sha256": "6c9ab15128d44668d01bf5d99296f618b2c4bf2c1e97ffcd20ebae0fb0799d17",
+     "pt-BR": "Mulher andando decidida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k634",
+     "source_text_sha256": "76ca595e74de436c101fced847d9a7092fa500c44921ed54989f74333725571d",
+     "pt-BR": "Desculpe, estou com pressa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k636",
+     "source_text_sha256": "409d24b19cdd6143f71ae57dd5e26850c5833c85ceb849cb1457ba560d42d1b6",
+     "pt-BR": "Mulher andando de nariz empinado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k637",
+     "source_text_sha256": "de8c57eb96d931514a91696760a3786e62dd550e496fa1b41f85ba85417d7f5b",
+     "pt-BR": "Com licença.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k639",
+     "source_text_sha256": "d5512cb6adb81066f134511ea112140c30b5f292dbd30025054bb67bd6f456c0",
+     "pt-BR": "Homem com jeito desajeitado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k640",
+     "source_text_sha256": "5f00f19c321f63b68131b1a4867d4af9a6868dd09ae684465e4793914456a2f2",
+     "pt-BR": "Nada nunca dá certo pra mim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k642",
+     "source_text_sha256": "e25a28978415bb601d32fc35c69042d728d594d501637492c24c3ade7cb8e8d2",
+     "pt-BR": "Floricultura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k643",
+     "source_text_sha256": "156e1e1b63bfed74531340f30508d4fd65cce2ab633f6f5b0338c5b30520fcb0",
+     "pt-BR": "Hã? O que está acontecendo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k645",
+     "source_text_sha256": "9eab35ab7f4a08f2114194a267265937474229309b6a334d5b8a4380a6198c63",
+     "pt-BR": "Tome cuidado, querida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k647",
+     "source_text_sha256": "218bb7ca35b44d6c572d454d1291e7b1e14069091180e1291a668376d3d2b091",
+     "pt-BR": "Não! Minha loja!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k649",
+     "source_text_sha256": "606957162056f51309e815e1e6ae668a475e7d3362a19ac09c2d74e97b462087",
+     "pt-BR": "Ai, minhas pobres flores!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k651",
+     "source_text_sha256": "c1e127a8a50a91af37ee0e71b9817efe8a4fb7693b2f8b5fd37ba9090b46038b",
+     "pt-BR": "Voz interior",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k652",
+     "source_text_sha256": "f1ef81d8236371c4d0f6b2c88b1366619367732552a62a77f15d554a50464437",
+     "pt-BR": "(As flores foram completamente pisoteadas.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k654",
+     "source_text_sha256": "d31f619e57348ed761eda3a2c94f828900247413a924e1ac527b2c98f51d3d4a",
+     "pt-BR": "Não há o que fazer. Sair em silêncio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k656",
+     "source_text_sha256": "864d366e8ee35496c42152a283d89291946189c97c8cedd53aebb09094aeac8e",
+     "pt-BR": "\"Aguente firme.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k658",
+     "source_text_sha256": "b099ca29aee8e5b7c61487149e05fdbf218b23d18121c438417ba8150f5007fa",
+     "pt-BR": "Gastar todo o seu dinheiro numa única flor pisoteada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k660",
+     "source_text_sha256": "f32e419d50a48755ffa3e9e2c8e7cda4ea7aa706e0c6b33bb2c474b1192e8cb1",
+     "pt-BR": "\"Bem feito!\" (Sorrir com desdém)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k662",
+     "source_text_sha256": "e1e6849163103eefcb63df371cce1c860e307327b05c3367b10d3c627894f890",
+     "pt-BR": "(Não há o que eu possa fazer.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k664",
+     "source_text_sha256": "16140def874dc433f8481577e677a80f14e200691bcc69da25a97083647720c2",
+     "pt-BR": "Protagonista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k665",
+     "source_text_sha256": "0ba41cda06fb385f2d509993140838a3aebfa6c8fa3206967d0372c1e392b551",
+     "pt-BR": "Aguente firme.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k667",
+     "source_text_sha256": "881e721b9e8503ac723f80b6b4bea4703a85d15b3b8c217cd68e2e798395cdc3",
+     "pt-BR": "...Obrigada. Mas... mas minhas flores...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k669",
+     "source_text_sha256": "287d8598b53f8cc783e4974f6f47deaeca187ec70942b2c40d7def80a286b57d",
+     "pt-BR": "Vou levar uma daquelas flores lilás, por favor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k671",
+     "source_text_sha256": "699117312124177c24c92df3121e098171b6f6c9b07aef048072b0ea742a756f",
+     "pt-BR": "Hã? Você vai mesmo comprar esta flor,\ntoda pisada e suja desse jeito?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k673",
+     "source_text_sha256": "d144412a02b728609622fa3031a2ec4ebf52384a3cecbc5827536546c6df481b",
+     "pt-BR": "Você entregou todo o dinheiro que tinha!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k676",
+     "source_text_sha256": "18fbb1bc057fa9e699ba1b1b6f47486e5aed2e332a2f3ccce378e176d51880d2",
+     "pt-BR": "Bem feito!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k678",
+     "source_text_sha256": "524b3afec7b3e33ecb63bd83a5dfbee7cfcb27ca59ba43145232068d7c28e0f0",
+     "pt-BR": "Uuuuuugh...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k680",
+     "source_text_sha256": "d02709bd688a081d6a90ffe84e5cebfb2cd57a4d8e050039a49def6bec1d6ae4",
+     "pt-BR": "Nunca vou esquecer você. Muito obrigada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k683",
+     "source_text_sha256": "635a1058518ab29bc56b1d20d92bf84be9818ab925f4d02b3dd7615da4b7ebc6",
+     "pt-BR": "Quando eu reabrir a loja, venha comprar flores, tá?\nVou estar esperando!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k686",
+     "source_text_sha256": "7efcf7d0d1bc4a5c68bd70cd56bd5db5608f5f91aadcb8e81cc82b874169d7b7",
+     "pt-BR": "Curioso 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k689",
+     "source_text_sha256": "8a7a4ecc4ef3de434c802a1a162337188144c23ec8092be3e0c36a93a290c21c",
+     "pt-BR": "Curioso 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k691",
+     "source_text_sha256": "4b61c9fe20c08b3dc73a858562c6a9b56b8a12357dc100bd9aee981be942d5d6",
+     "pt-BR": "Curioso 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k693",
+     "source_text_sha256": "25681c831605733fbaa6d648245ade30132c94370ca72962601fd7c7e3148017",
+     "pt-BR": "Curioso 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k695",
+     "source_text_sha256": "5b280e13f665ffafdfcc0aa84346ea798b445bd0eb38b23abd63e420c32a268a",
+     "pt-BR": "Curioso 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k697",
+     "source_text_sha256": "f4bc30b5a976b8480631342cdc3e85c52709d7dd44567e868c6b4df6abe64c0d",
+     "pt-BR": "Homem de preto 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k699",
+     "source_text_sha256": "4a4d30412eb1a3161aaec9956976d96cab61d2e53f322f97b6b728e9e186f805",
+     "pt-BR": "Homem de preto 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k701",
+     "source_text_sha256": "1ec05bf42a5541ad9e48025c228ccbfa4ac4f02fbb4935f1b3da20714a31588f",
+     "pt-BR": "Executivo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k704",
+     "source_text_sha256": "dd89c67712c452d51b27a72c23a7fa3bb185d661a7346c37797364c9fd0e47e5",
+     "pt-BR": "M-mas o quê?! O que é...?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k706",
+     "source_text_sha256": "fbf730da4ae66a427180bdd393017aa02387a797db44bb353c3c0455adde8bd3",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k708",
+     "source_text_sha256": "611da61705768c5a90c275d0be6f535685e14a9f6eb8a96264b64cda7be8728a",
+     "pt-BR": "Muto＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k710",
+     "source_text_sha256": "da289ade92968c58bda93e43847afd23e0b1ce1d02328d7be6bc2c9246bc797e",
+     "pt-BR": "Olhar para a maleta metálica sobre a mesa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k712",
+     "source_text_sha256": "1e72a9c1ce9efadc17b97e84d8bfba963469169dc544c4dcc97da678b906b640",
+     "pt-BR": "Olhar para o cara de óculos com cara de frio lá no fundo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k714",
+     "source_text_sha256": "be0687e3b112bd926df28d31142451428338b89ef7545872ddb410122b467079",
+     "pt-BR": "Olhar para o cara alto e assustador",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k716",
+     "source_text_sha256": "89fc918ce0dd5edcd8cfd5c9b1c631189326c13ed4ca402e1750581790e10e1d",
+     "pt-BR": "Tentar pegar as notas voando pelo ar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k718",
+     "source_text_sha256": "a1fbf27aad926fe856130f29e87c1fe6f54a6d1059fa70a85f2e36dca416313d",
+     "pt-BR": "...Hm?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k720",
+     "source_text_sha256": "8c2a127016977327bbf7a742e886b65bbaa303fda132cabbae7346916a4722a9",
+     "pt-BR": "Droga...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k722",
+     "source_text_sha256": "e713f66c25067c04875d3dde421601622a841069772f4b6afbe810251e641ddd",
+     "pt-BR": "Merda! Fomos vistos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k724",
+     "source_text_sha256": "77922a9f0ae783ba35d30d0e18d6188f5ff149ad7cc8280f40982201f5d613ca",
+     "pt-BR": "Eu cuido disso!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k726",
+     "source_text_sha256": "d310042a39fc879a4d62412fa9da74f3a71de68edb1e9b6233b9ecfaf7bb2afd",
+     "pt-BR": "Mas que... O que é aquilo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k728",
+     "source_text_sha256": "a5e318c5e4885591e55ddc10dec680c1d5ca008f67c4730a693e493ac9891e7e",
+     "pt-BR": "Muto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k730",
+     "source_text_sha256": "72052c333eb601cdca60ca1ed663b3bf8dec3cf4e39fe2c6bd83c423402f8fb4",
+     "pt-BR": "S-só corre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k732",
+     "source_text_sha256": "5b79f6f90ed70e45df367299d05ea6e2e50fc7ef15296318275a7a22cab7a202",
+     "pt-BR": "Esses caras são suspeitos demais... Corre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k734",
+     "source_text_sha256": "73729cd27568509f3a92cf196946e86b52a0e3f068336ca182ca1291d4a89297",
+     "pt-BR": "Eles não parecem nada amigáveis... Corre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k736",
+     "source_text_sha256": "7aeb3a8d7ad67c38d7bb24f1a917e760c3a5b01b39007f1fbdcf53f21ad09bde",
+     "pt-BR": "Ser pego seria muito ruim. Corre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k739",
+     "source_text_sha256": "86ee8210e602044607c448ade6a3a92eff2821cd85748f7fd739a7f498ba9ec1",
+     "pt-BR": "Esses caras são suspeitos demais... Corre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k741",
+     "source_text_sha256": "21c224ea9c26f1defa181828bbabd8ed5aa11db877c587dbf72e5a20ed78f86f",
+     "pt-BR": "Eles não parecem nada amigáveis... Corre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k743",
+     "source_text_sha256": "0686ddfbe6bfc20e975899f92dc24835896220c9a7b8516fcab178bd7f00e031",
+     "pt-BR": "Ser pega seria muito ruim... Corre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k745",
+     "source_text_sha256": "f5d2c980e4494dc1c3c075d23f23e27d167cc8629cceb5a2bbd7cae9a8ab9b2f",
+     "pt-BR": "...Corre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k748",
+     "source_text_sha256": "9235b0ca2d3a7d6d2d284131663958c9fbc7625daebb8ea3bc8eb7f165ca52cd",
+     "pt-BR": "Conseguiu [#ff44ff44]【10.000 ienes】[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k750",
+     "source_text_sha256": "fc67be92075152053d13a828f86f1864e52ec6a8c68e50ef7361e9f12b58ea57",
+     "pt-BR": "Mulher observando tudo com calma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k751",
+     "source_text_sha256": "e8be713f503e1b19b067c9383bc50e4be2d813c9572cae6caa6abb5e5d5def1f",
+     "pt-BR": "Está destruindo a cidade...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k753",
+     "source_text_sha256": "522850bc60541ed0758ce8c8944210d6b31531ad02d27ce6ad50a4da35c8fd28",
+     "pt-BR": "Mulher em pânico",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k754",
+     "source_text_sha256": "bd13c10f15cc0a275637408b46e5b7ba81c6b502eda9c2d2f7fd2b82bc6b290d",
+     "pt-BR": "Pra onde eu vou pra ficar em segurança?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k756",
+     "source_text_sha256": "662a5eb53ba3500d00ef5b10d06a85192c491eb461b5f088f7a4815943da9daa",
+     "pt-BR": "Homem desesperado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k757",
+     "source_text_sha256": "a34a1cf99f4761ca4901e98133a1e0138a235db620f158eaa6321bc7a2025a73",
+     "pt-BR": "Não tem jeito... Estamos perdidos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k759",
+     "source_text_sha256": "ad3aaeaca1ea8edbbb1ae78745c4f55508e30f24da3a1c110a557fdd7b9ab481",
+     "pt-BR": "Homem pensativo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k760",
+     "source_text_sha256": "983d0f2c0b7b9af65e026d0de773d2d290f5769b62e3863020c67047d7def9ad",
+     "pt-BR": "Será que é seguro mesmo ficar aqui?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k762",
+     "source_text_sha256": "96d2c308673038a08bd5abb3db489ed83818410b68818d66b70c0ff1790b64df",
+     "pt-BR": "Homem preso no canteiro central",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k763",
+     "source_text_sha256": "e9e354cc3f3bc81e548c93c9e97cb5c99afbc22a6682afceb8b5cb6f731cbc4d",
+     "pt-BR": "Não consigo! Por favor, alguém me ajude!\nEstou com medo demais pra me mexer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k765",
+     "source_text_sha256": "0f0dabd24440a0c3afc55ce0120abab80d59187ab2942bb8169b7a7e414fa6df",
+     "pt-BR": "Me carregue nas costas pra fora daqui!\nEu pago!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k767",
+     "source_text_sha256": "c8c0c5de9e0dc1790f33c761e25ef7b0634a84c77972f74551be2200d1736750",
+     "pt-BR": "\"Desculpe, agora eu realmente não posso.\" (Recusar educadamente)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k769",
+     "source_text_sha256": "d0b7f081161f75f9231cf7290dd54b9890587d86a5024f569b265556e762f2f1",
+     "pt-BR": "\"Nem pensar que eu vou te carregar!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k771",
+     "source_text_sha256": "2cd09222cbb7a0b8e9323e2eee1bc91856548f1537dd1c9abd75cd126c27f660",
+     "pt-BR": "\"Eu te carrego por um milhão de ienes!\" (Avançado: deixa você mais lento)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k773",
+     "source_text_sha256": "9b6b7e9e49334fb74c1360e84942c4c2c87843106dc6f93961a29d902c754ed4",
+     "pt-BR": "Uuuugh...\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k775",
+     "source_text_sha256": "6fe4ecd65f198619cfb1a4759b428623f437e177d4a2889535b99209ec8943cc",
+     "pt-BR": "Por favor!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k779",
+     "source_text_sha256": "75ee1053041ba06a48f3dd3561e84ab72a0b4c193c3c27ef17bfd189243f9b59",
+     "pt-BR": "Mulher paralisada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k780",
+     "source_text_sha256": "94588d51b19e2cee70531b7e75498f4f2bcb9caa5fe9850bd2d2f90afa845e02",
+     "pt-BR": "O-o-o que É aquilo...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k782",
+     "source_text_sha256": "0dfb9608ca7179dc1a321e9a72fc18b4d6d1283b5211efec1c5169e21043e32b",
+     "pt-BR": "Mulher abalada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k783",
+     "source_text_sha256": "dd0118a4c22b575403e6ff5c433bb5fe6ec78b60f497519b14cba4dfa753a9cf",
+     "pt-BR": "Ugh... uuugh... Como pode uma coisa daquelas estar na cidade...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k785",
+     "source_text_sha256": "4a723cf245691887a683c982602cb45b5718af670cefc40e2c056173bd974b08",
+     "pt-BR": "Homem filmando sem parar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k786",
+     "source_text_sha256": "5f03b8a2762c1442de1fe2a9f12df6e79772aed12ef5e37fa3cc9446635f4cbe",
+     "pt-BR": "Isso é inacreditável demais!\nPrimeira página, com certeza!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k788",
+     "source_text_sha256": "a00a82fb229fabfacf2376048b4f66a53b5e86d412f6907b9128ca302eae895a",
+     "pt-BR": "Redator web Otsuka",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k789",
+     "source_text_sha256": "7107744c3449c2a108dbcf914e05f41fc71d392ca002d823c8037d354b9285aa",
+     "pt-BR": "Daqui de cima é ainda mais insano!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k791",
+     "source_text_sha256": "1c5d43501e8d7bdfd96acbf327299fb59aba914090ddea09c859c84653ade50a",
+     "pt-BR": "Homem que jogou a toalha",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k792",
+     "source_text_sha256": "769fd8721a2cb836be97b49570a342e4d3be4eee2ff8cc40f30b2bcbfd5c7af8",
+     "pt-BR": "Acabou. O mundo está acabando.\nVou vender minhas coisas e torrar a grana!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k794",
+     "source_text_sha256": "be132454276dab9a4ac7ab26ac56b065828df4fb80342594de021662945940ef",
+     "pt-BR": "Ei, quer comprar umas roupas?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k796",
+     "source_text_sha256": "97fce72aa7d96b21f4beeb4e88b4242b9468dd91b8c3add9ee113caaa6d33846",
+     "pt-BR": "Dar uma olhada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k799",
+     "source_text_sha256": "8baf7591188e705d063bb4c26068be39a6c71a78aa81c8c08f811acb7eaa4d23",
+     "pt-BR": "Valeu. Aqui, dá uma olhada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k801",
+     "source_text_sha256": "2650b24bbbaeef52cd402a698f193e461a0c8acab9c75ea384e13fb4e3d0ff9a",
+     "pt-BR": "Valeu pela compra!\nHora de sair em grande estilo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k803",
+     "source_text_sha256": "640daeb667575dfe6af679d5b519e77c11ab1b3e33c1b91d05dc45cc8e5b9707",
+     "pt-BR": "Valeu pela compra!\nE não pergunte por que eu tinha roupa de mulher, tá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k805",
+     "source_text_sha256": "2231370cbd148dbc22a5518ccb3910d43d09bdfc91d3fb0734d1106ca3f22067",
+     "pt-BR": "Tá bom. Pense com calma e me avise se quiser alguma coisa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k807",
+     "source_text_sha256": "6eb16e3232a0484b05fefab8a7119d6898d4eb83b98c733c103279dc9aa70846",
+     "pt-BR": "Tá bom. Que pena.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k809",
+     "source_text_sha256": "add4e170f764392c17f40e7eb48d878fdb8bea5e473c3ad2efda837b26151adf",
+     "pt-BR": "Já vendi tudo.\nHora de sair em grande estilo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k811",
+     "source_text_sha256": "ecdcd460c58a9e01e2c88212cf92f6784e303f79cdc5ef0800f0b8a759671b8d",
+     "pt-BR": "Funcionário de escritório em pânico",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k812",
+     "source_text_sha256": "ed946e183dc372e03fd19c538221ecb1a247e0b89d73994819d076aa9cd85eb0",
+     "pt-BR": "A porta não abre!\n(Você vai precisar derrubar esta porta com uma investida.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k814",
+     "source_text_sha256": "ad4658ecf75f765cfde8ac1a3c7ed9c3ed6fc8eb5f10cc2e7d5dae177c2c846b",
+     "pt-BR": "A porta não abre!\n(Corra ([i14]+[i12]) contra objetos quebráveis para destruí-los.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k816",
+     "source_text_sha256": "a6b78fcc133e8cd72ab41d8dd3690bed2608269b359e55450ac9a8455757b037",
+     "pt-BR": "Ouvi vozes lá dentro. Será que estão bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k818",
+     "source_text_sha256": "f22567e667191476b1994bb0abd415ca1309a68e4cad12114a9a913a3c6ff2b2",
+     "pt-BR": "Uau, que incrível! Você derrubou a porta direto...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k820",
+     "source_text_sha256": "20db5b8dde2580d86e06d39c065f0b9e230eff4cef172e37abd6346fd778bdff",
+     "pt-BR": "Funcionário olhando pela janela",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k821",
+     "source_text_sha256": "29b4a8ef4e97f253148d1fc161f4161e0b454c13b283ab38196f9231a5bb8fcc",
+     "pt-BR": "Que diabos é aquilo...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k823",
+     "source_text_sha256": "566b63acbfdc46900288c2e9627032a8d74bbc8d8776a52b64660f420904368f",
+     "pt-BR": "Kinoshita, a mulher de olhar vazio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k824",
+     "source_text_sha256": "2a2ad19e4401218b1b8ad93c7b6074873440617561904b6eb076848448562c34",
+     "pt-BR": "Você... Você deve ser alguém muito especial...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k826",
+     "source_text_sha256": "65160fb5f541b1b9c034cbc52a244bd5e162d798024cb6f0471e468cf5e69095",
+     "pt-BR": "Chefe de seção atordoado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k827",
+     "source_text_sha256": "21a81346ce9754fafe0b228f9b650859ed5e6b4a8af75f8c1ce4614825523daa",
+     "pt-BR": "Que força... Com uma força dessas,\ntalvez a gente consiga até pular daqui!\nNão... Aí já é pedir demais...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k829",
+     "source_text_sha256": "89b0ef9c9f33eb4d9b10044c5b4052822cab0617d48e0df3d339edbaa9eaa554",
+     "pt-BR": "Toro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k830",
+     "source_text_sha256": "087b5f652e9d50af162d936fc59acc2b2d9516b1ddf4b9b0876fd180f54188a8",
+     "pt-BR": "Ei, ei, Kuro,\nquem sabe essa pessoa pode ajudar a gente, miau?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k832",
+     "source_text_sha256": "5d3c528dcc04011a5d2182117ef788b7034651a91312853384acfa2f0171b220",
+     "pt-BR": "Kuro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k833",
+     "source_text_sha256": "07cf257c7332c5fdb616bffaa4fdd4e4cffeee0282461f35a3e7bbdc8459fa1a",
+     "pt-BR": "É, com certeza.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k835",
+     "source_text_sha256": "16d847574ab100291d801092b137467bb5390b5930895143338e4be1619a05c5",
+     "pt-BR": "Ooh, parece que essa pessoa tem o que é preciso, miau.\nEu escolho você, miau!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k837",
+     "source_text_sha256": "4878fa8decff2814c29550cae90c9033a45e8aa19ea1435e8ce92c7126417e7a",
+     "pt-BR": "Resumindo, a gente está fazendo um jogo chamado\n\"Cidade Absolutamente Segura 2: Boa Noite\n(Título Provisório)\", miau.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k839",
+     "source_text_sha256": "2b3e89b2b36e67b3251c15c8e813c24b20ebd1676c599703a3b8d188c32b4d9e",
+     "pt-BR": "Mas agora a gente empacou e não sabe o que fazer, miau.\nSe não for incômodo, você ajuda a gente, miau?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k841",
+     "source_text_sha256": "98aeb07b1c6f5ea509c12d3005eb97b550dac7e98b2d6a00f4cf25e95ff4cda7",
+     "pt-BR": "\"Claro! Eu ajudo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k843",
+     "source_text_sha256": "9d63f836130c9ba9e9d9c279eed5336e08c871d3eb977e9f61f38923b93d5213",
+     "pt-BR": "\"Uau! Esse gato FALA?!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k845",
+     "source_text_sha256": "fadb6ea4d58080c8b8122d89ab0e9c48b888fc640334fac02cc08fcc3e41ebb3",
+     "pt-BR": "\"Eu ajudo... se tiver algum equipamento bom pra mim.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k847",
+     "source_text_sha256": "3816b1208ca4167ff09a5bcb35166ba0d296ff7f9165048cc2779c941ca2a8c8",
+     "pt-BR": "\"Estou ocupado. Procurem outra pessoa.\" (Com estilo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k849",
+     "source_text_sha256": "d4f3aa48eecbe2687c8314f57c634c5c425066a4ec78b48f0d8bfeb5c43b5691",
+     "pt-BR": "\"Claro! Eu ajudo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k851",
+     "source_text_sha256": "e54459cfaa8dd0689360388f1b2477c7651f3d8105b92c0d02396c2c853b4fed",
+     "pt-BR": "\"Uau! Esse gato FALA?!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k853",
+     "source_text_sha256": "22416ca3534dc870c03a753ea695b48618f6a65ec5a062d5e4ed5a08a8217f2f",
+     "pt-BR": "\"Eu ajudo... se tiver algum equipamento bom pra mim.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k855",
+     "source_text_sha256": "ef40ce8b49bda4ee1ee902048067a2b2b65dc5ae4e7c6d405ce17975042f307c",
+     "pt-BR": "\"Estou ocupada. Procurem outra pessoa.\" (Com estilo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k857",
+     "source_text_sha256": "44039080e74f2145d0754fb2887308320baef503be4a2641607826693901946e",
+     "pt-BR": "Eba! Obrigada, miau!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k859",
+     "source_text_sha256": "f58374244a98287df7dafc8cbec803cbc3520874270dd2960387fbc5427fc95f",
+     "pt-BR": "Valeu mesmo, miau.\nEu sabia que tinha olho bom pra gente, miau.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k861",
+     "source_text_sha256": "9c688f06ea707bd60a20ebfc3ea38f81ebc9cab8ea50a3a0f68611a1c29c1977",
+     "pt-BR": "A Toro está estudando um montão de palavras humanas\npra virar humana, miau.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k863",
+     "source_text_sha256": "6bad578cfcb869a0142bc65dd7fc5cbffbcf87ad26524a064520b5e2bcf14f3e",
+     "pt-BR": "A Toro fica feliz que você tenha curiosidade sobre a gente, miau!\nEntão, você vai ajudar, miau?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k865",
+     "source_text_sha256": "c1b1278cd15741919d46b1905746099439f0620bdee32be4917e2edc93e78d92",
+     "pt-BR": "Deixa comigo, miau.\nVou te dar umas coisas do meu estoque secreto, miau.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k867",
+     "source_text_sha256": "581eadb8774acb204ef14962687a01ca2244ec23afbf606a2f77b5f469232bb9",
+     "pt-BR": "Tem certeza, miau?\nNão quer participar do evento especial de colaboração, miau?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k869",
+     "source_text_sha256": "564893246f565d5354534a27c89f7665d7cd208cc50173118fd4fe670804f9db",
+     "pt-BR": "Ei, ei, Kuro, o que é um \"evento especial de colaboração\"?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k871",
+     "source_text_sha256": "0ea8364ed3a0468cf99b91619fd1799ecb2bb713d5c7ad4b7e4f1644a2b9e943",
+     "pt-BR": "É coisa de adulto, Toro. Você não precisa saber, miau.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k873",
+     "source_text_sha256": "71f5c35998bba3b01b5d6b3a48bbdeb814ccd04d62d227a63f8a3a109f90de37",
+     "pt-BR": "\"Espera, não! Eu ajudo! Eu queria ajudar desde o começo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k875",
+     "source_text_sha256": "522dfc1c8b3824b75ad3b3e19039ff0fc194ba544f16fd99c2d766dbd9ffc9b7",
+     "pt-BR": "\"Não sei por quê, mas... agora meio que quero ajudar.\" (Envergonhado)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k877",
+     "source_text_sha256": "06a4f51f12ffa303e354efdd8b1e8a80bb52ee5c1cd4f76e9f7b9652ed5997ae",
+     "pt-BR": "\"Argh, tá bom. Eu ajudo!\" (Resmungando)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k879",
+     "source_text_sha256": "bee4f14c30b30b2ab23279d25f73a78ef55454f81e32acc373115309a04fe762",
+     "pt-BR": "\"Espera, não! Eu ajudo! Eu queria ajudar desde o começo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k881",
+     "source_text_sha256": "93a368d2b00854957cb8369727e1cc843c05c4fd854b1bb96202b441ca596f9c",
+     "pt-BR": "\"Não sei por quê, mas... agora meio que quero ajudar.\" (Envergonhada)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k883",
+     "source_text_sha256": "a58fed55fd1fb7ce3e0b1d0b76b943ed79e77e610f061573d30ee089a6d5fbfb",
+     "pt-BR": "\"Argh, tá bom. Eu ajudo!\" (Resmungando)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k885",
+     "source_text_sha256": "74ce3a1a4a67fcbd0605f049613d42d5cb7a6c7d0c1c0b4cb349dd252b389c15",
+     "pt-BR": "Ebaaa! Vamos dar o nosso melhor juntos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k887",
+     "source_text_sha256": "c1964b0dd67417ea6600760e8f1ca812c0a2d84a449f12816baccd67dbc7b9b8",
+     "pt-BR": "Provavelmente vai ter muita, muita coisa difícil pela frente,\nmas vamos dar o nosso melhor juntos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k889",
+     "source_text_sha256": "64290f866eb3fa687dc9899e8458331df5859f354e7628183b5cf54e2fe318c1",
+     "pt-BR": "Quando esse jogo ficar pronto...\nvou me declarar pra garota de quem eu gosto, miau!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k891",
+     "source_text_sha256": "ab5faa144b76a1a3e192217bc1eb835edb7d900d00d01d9cbb0ea84cffe3b698",
+     "pt-BR": "Conto com você, miau!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k893",
+     "source_text_sha256": "fb86a9099c1d4e72baa4def4b0c05cc9f6f5e1c21c05d9e2f26bf22d680817a6",
+     "pt-BR": "Conto com você, miau!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k895",
+     "source_text_sha256": "fbfc442e36c59d7a55b82f59c42cda09f5c3e118b0d7350418b4c38ce858b831",
+     "pt-BR": "Aonde a gente for, a Toro e o Kuro vão perguntar\nà equipe de \"Cidade Absolutamente Segura 2\"\no que eles precisam e te contar, miau!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k897",
+     "source_text_sha256": "0941b84389696a848f3e9320b31bdca5b4dd32f13b6216341aa5335ac81a2d17",
+     "pt-BR": "Conto com você!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k899",
+     "source_text_sha256": "b2cbb9a42961eaee2f8a870be32126de45c7c9ca15ef7a8233ed8d4503dbc6ba",
+     "pt-BR": "Homem em pânico",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k900",
+     "source_text_sha256": "45dbb2f0f8336192a5becef837ac509eb2f575e7112db59999f491739ec0a2a3",
+     "pt-BR": "Mas o quê?!\nU-u-um prédio simplesmente desabou!\nNossa, que pavor...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k902",
+     "source_text_sha256": "0bfe8a909202c3b1f86b813451db43e89c51be0000e6e56509cf496fa19dcf13",
+     "pt-BR": "Mulher escondida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k903",
+     "source_text_sha256": "420155ba23f7e2b9722b5816cce3431aa1ed245966a98b6f902f1a714dd40ab8",
+     "pt-BR": "Por favor... fique longe.\nSó me deixe em paz.\n...Por favor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k905",
+     "source_text_sha256": "616e0a89f56e03185b1c99bbba8efa0db1c31075500b88cd96d90dd2bf61bdb7",
+     "pt-BR": "Otsuka＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k912",
+     "source_text_sha256": "7b10c8e466fd98adcae9184641bf59d8c11a78589c3ef8f3e9dcd1cba8a89fce",
+     "pt-BR": "O-o que É aquilo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k914",
+     "source_text_sha256": "243cebca7f4bbaf188e3f76a4f5b266843516edc95e46e6c3225640a8d372e26",
+     "pt-BR": "Caramba, isso é inacreditável! Furo garantido!\nE eu filmei aquilo mudando de forma no meio, nítido!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k916",
+     "source_text_sha256": "78ec48e0a42f0ac1aad7a9954aaf28c1621d296ab9e7724e05769d9cbb672202",
+     "pt-BR": "Executivo assustado＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k917",
+     "source_text_sha256": "85540bafc2e2d3841f97b3ef654b5d58a88795be4c4e45ad651a2e28e2a9a019",
+     "pt-BR": "Parece que não vamos sair por aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k920",
+     "source_text_sha256": "38ad0e76e4fd857eb1b00fc1df3a193d11bbcbc63b7c6c8d0f226738efb511b2",
+     "pt-BR": "A fumaça está entrando!\nNão dá pra ficar aqui! *cof*",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k922",
+     "source_text_sha256": "373d7396200a179b6afeaca9888699cb863a838aa0b1bcf8e280bf5beb6729c4",
+     "pt-BR": "Executivo jovem＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k923",
+     "source_text_sha256": "82c2236cb5b0afa3a94cf817f21a59c4a310fde26771d06f9caad0bf77d6aba6",
+     "pt-BR": "Parece que a luz acabou.\nO elevador parou!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k925",
+     "source_text_sha256": "0e421299ee5e38d4627c000856c4f879f2d9532752c85649a03ad41457bea4e4",
+     "pt-BR": "\"Aqui não é seguro. Vamos subir pela escada.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k927",
+     "source_text_sha256": "0e8906908d77627900bdc0f57630b2cee6c2ccbb475b591be0b9d8ec35079bc1",
+     "pt-BR": "Subir escondido pela escada sozinho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k933",
+     "source_text_sha256": "03547a09c7071e47fea4b6fd83f9ee1a301fe18b288fcabbdf1f82db59c79639",
+     "pt-BR": "Aqui não é seguro. Vamos subir pela escada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k936",
+     "source_text_sha256": "4d34c16301e6a659af4f43f63f4b479f5d0aaced07ed9fe8d237bc83af8c8555",
+     "pt-BR": "Não dá pra ficar aqui!\nVamos subir!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k938",
+     "source_text_sha256": "c2783411ad1d93a7d97cf21aa97fc3dd42279bfc0206c4f450ebca42db2ae66d",
+     "pt-BR": "Isso! Vamos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k942",
+     "source_text_sha256": "4e75d9ccd79c8c7777a8f84d8b93e7475abc21dc22ff1b53b29b027af3abcb68",
+     "pt-BR": "Diga aí, me pareceu que aquela coisa enorme estava atrás de você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k944",
+     "source_text_sha256": "09f75af8dd3ef4d26370f2875575f786bfd369b81df065c10915dc3e69bc5ea9",
+     "pt-BR": "Você fez alguma coisa pra irritar aquilo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k946",
+     "source_text_sha256": "db8f38b55ed557959b0a236fff7e1ba85725a10785e9c7b472736a8e5146bcff",
+     "pt-BR": "\"Por que aquilo estaria atrás de mim?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k948",
+     "source_text_sha256": "d278ac5c2bf7c3e3d630af978609aba9702609015749cc9e9d4e61a6a5b0c542",
+     "pt-BR": "\"Eu não fiz nada com aquilo.\" (Irritado)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k950",
+     "source_text_sha256": "58968fa4137c1fd63d2e90c26cba6bb6333ed451445c90d2a4779e6ca053becc",
+     "pt-BR": "Explicar que só veio parar aqui por causa do rumo dos acontecimentos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k952",
+     "source_text_sha256": "42521f297533ac25be0cd49989f53a8ccc90c699c09b22b4dcacebbd80fa50b1",
+     "pt-BR": "Perguntar por que pareceu que o gigante estava mirando em você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k956",
+     "source_text_sha256": "fc572d5fa630a682f7ce0d34ebdb38b099a8c8530496cfea8db1e996a0a61cef",
+     "pt-BR": "Por que pareceu que aquilo estava mirando em mim?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k958",
+     "source_text_sha256": "ec30e2156738690e520058ab695977c298aca14c14f25fd5db3074fde911cbbe",
+     "pt-BR": "Por que pareceu que aquilo estava atrás de mim?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k960",
+     "source_text_sha256": "46221cda434cbbb049371dc6f2eac32c1771c1655d652478b087d8071d29a7e6",
+     "pt-BR": "Do viaduto até a entrada deste prédio,\nparecia que aquilo estava atacando você especificamente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k962",
+     "source_text_sha256": "9005d320806e245a2191c0d10865d0c30bfd067cc7c114d434c43a0bb4c233fc",
+     "pt-BR": "Acho que eu não fiz nada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k965",
+     "source_text_sha256": "59f1d1314e5beafe2ac9da2edb620a662b659d82393bbc43c5e72e9dd4c6962e",
+     "pt-BR": "Será? Do viaduto até este prédio,\nparecia que aquela coisa estava te atacando de propósito.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k967",
+     "source_text_sha256": "77355741c2ca3462278b2ee7f4b883faeacc865cbe82b20ecc7bb4e1cdeae3f5",
+     "pt-BR": "Eu só vim parar aqui por causa do rumo das coisas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k970",
+     "source_text_sha256": "6e14b03ef18351f6da0ecd59b2e177ea5917dbc6f1b44cb7278eb93bb61a69d1",
+     "pt-BR": "Rumo das coisas?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k972",
+     "source_text_sha256": "d9d9685b5202132264dd613253e74607bdbae5291b6f06f931e4570e0cd27c2b",
+     "pt-BR": "Não entendi direito, mas do viaduto até este prédio,\nparecia que aquela coisa estava mirando os ataques em você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k974",
+     "source_text_sha256": "0f9f752e6d30f44d91086ac37bf37b00889628fc001537be3a879634bb46a0cc",
+     "pt-BR": "Se for verdade, é perigoso ficarmos juntos aqui.\nTambém vou subir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k976",
+     "source_text_sha256": "71dc0a2213c012ca1cf1a705c46d5c05aa6fdf8a1dad295bfb4b3a100145ebd5",
+     "pt-BR": "Espera... Se eu ficar com você,\nposso conseguir um furo exclusivo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k978",
+     "source_text_sha256": "21c7db7e52d601d0449a45211039ac312746282ee202b09bc62514ed39e8bed1",
+     "pt-BR": "Sou o Otsuka. Escrevo matérias para sites de notícias.\nPrazer!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k980",
+     "source_text_sha256": "f150fd26248daa31f27539ff5794a3cc96ffa926b454c05df96cf603812fe530",
+     "pt-BR": "Isso é...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k983",
+     "source_text_sha256": "5a726fa9584cc7ac436744c244c1ba03faf187148a3a1b096198f3f111b8c4f0",
+     "pt-BR": "Murmurar, maravilhado: \"Incrível! Que espetáculo...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k985",
+     "source_text_sha256": "49a3f57a94f5293baa7fd539c0f32ead7bf195cd308513162ba2ae4411036d75",
+     "pt-BR": "Ficar em dúvida: qual dos dois gigantes\nparecidos é o bom e qual é o mau?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k987",
+     "source_text_sha256": "39a08c56ade3e2fcc82eab099650bf2179eb98bb70018d2d4eaacd6d83253d0b",
+     "pt-BR": "Torcer pelos dois: \"Aguentem firme! Nenhum de vocês pode perder!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k989",
+     "source_text_sha256": "bee9cb9a9a207f3a9d30d75b4f2bde67f5ce01c9a25b5f070dd436e3325ebbe6",
+     "pt-BR": "Tirar uma foto de lembrança com os gigantes ao fundo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k991",
+     "source_text_sha256": "9afdce0af7fd90b7b68ee824042e61d47f371cb3487522b6179ac20d0f3354f9",
+     "pt-BR": "Murmurar, maravilhada: \"Incrível! Que espetáculo...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k993",
+     "source_text_sha256": "e6ecb1b784c018777a7a01bf6b0a2eb2e7634db5f76fced2e0b43deb0d6818b6",
+     "pt-BR": "Ficar em dúvida: qual dos dois gigantes\nparecidos é o bom e qual é o mau?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k997",
+     "source_text_sha256": "9b7720f9756af338c23c02880e990665383545cda5ed0b1c98bcbff2c3666636",
+     "pt-BR": "Incrível! Que espetáculo...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k999",
+     "source_text_sha256": "abf7486c09bde31e051a28373f2b2dbc6c408e51a1a62663cb5d42361b238f29",
+     "pt-BR": "Incrível! Que espetáculo...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1001",
+     "source_text_sha256": "31ed86378734c8889c7b6b21f3780092f928a51ab3a6ea6efb87edc43b0e41a7",
+     "pt-BR": "Eles são parecidos! Qual é o bom e qual é o mau?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1003",
+     "source_text_sha256": "74ea7b2d22759fbc14b77a5a62b5ef3261b80809742c3d461967bbeb070ca1db",
+     "pt-BR": "Eles são parecidos! Qual é o bom e qual é o mau?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1005",
+     "source_text_sha256": "395b0805bbab12587670d35f49f6ce0bb251e1292071f48b3c7ccd15b195fef6",
+     "pt-BR": "Vamos lá! Nenhum de vocês pode perder!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1008",
+     "source_text_sha256": "8d68bb3831cec3c78e424acedd8d418aeed71d625809b22a282d805c0f484236",
+     "pt-BR": "Diga xis!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1011",
+     "source_text_sha256": "86b5034c75305dd805de14d215a759309f72531b711ac4a7421fc1cc3cc07b7c",
+     "pt-BR": "Ah, não.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1016",
+     "source_text_sha256": "97190b8d76a92ac4c950873751b67cd4540db3d66d9627f5cd798adf2e8386f3",
+     "pt-BR": "Moça com guarda-chuva 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1017",
+     "source_text_sha256": "ed29ab19323e83198a579c424b90a8d1322e2c07f929e6c4889b22b4eb86bbb6",
+     "pt-BR": "Ele está completamente obcecado por aquela idol...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1022",
+     "source_text_sha256": "185f257dbdb73e8d4b4eb5652504f27d8d51a6e34a986b408a517559d140dcf1",
+     "pt-BR": "Moça com guarda-chuva 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1024",
+     "source_text_sha256": "e12645b10862032d1aaeb5cea82d4bc7b612540250f8a0fe1daf28987b43ec60",
+     "pt-BR": "Homem andando cabisbaixo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1029",
+     "source_text_sha256": "9f7399971b4d1d0d887d77433f444b8a730d3891ea7c1f5ef7c06c9649920457",
+     "pt-BR": "Atendente da loja de conveniência (mulher)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1031",
+     "source_text_sha256": "85313bf8a58fa92ebe1ad7ce140443a0a1307d6725b7ae6a5d16b4b1eaf1ad71",
+     "pt-BR": "Atendente da loja de conveniência (homem)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1034",
+     "source_text_sha256": "e7a1975d9819b5f0dc36b0eecf432005dfa78377bd66f884e55deea8656193c5",
+     "pt-BR": "Uau! Essa idol finalmente...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1040",
+     "source_text_sha256": "8adba6d716aef58de21e641403acb622066fa401da09fff894c02db0bbdc462c",
+     "pt-BR": "Mulher com guarda-chuva",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1045",
+     "source_text_sha256": "104f09f3033f49dcb0c8b1dd46336933955d5e9bf05b6e954d77bc7676b26993",
+     "pt-BR": "Policial saindo às pressas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1046",
+     "source_text_sha256": "51bf6343bcc9259771a6e397e035ecc8933aad52427b948ef2af9db895079772",
+     "pt-BR": "Ouvi alguma coisa sendo quebrada...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1049",
+     "source_text_sha256": "5f1a6ed68ab004f339c48dee4e4dd08c9278503ed90a8c9f86b1e88161540792",
+     "pt-BR": "O que aconteceu?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1052",
+     "source_text_sha256": "0befca5142350cb696a1a05835cf0e9fdef5c2c7576a4aa91cf54f166e86c316",
+     "pt-BR": "Policial saindo às pressas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1053",
+     "source_text_sha256": "46403ac2f3ef38493ab97c8839d5d17d2934cdbf4d769be3eb830e7949df05ed",
+     "pt-BR": "Mas o que está acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1055",
+     "source_text_sha256": "fb2f77fac9f715fe59b66bba1d01c51b682d52fec93dc3b8664202ee58597a6a",
+     "pt-BR": "Policial guiando a evacuação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1056",
+     "source_text_sha256": "2c3a3d96bb65897ffc793cfc5bfd76f3858978abdbd441278519ad46c1623f47",
+     "pt-BR": "Por favor, evacuem!!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1063",
+     "source_text_sha256": "ad8139405fc3808853357a9de1c72cd820dbbcdc76d640bf80b6e45905ab8a49",
+     "pt-BR": "Homem fumando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1065",
+     "source_text_sha256": "09c0a58d0daf677b8192cbcba2da83968a73431b4c77984074056eed86ce9913",
+     "pt-BR": "Homem curtindo um cigarro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1071",
+     "source_text_sha256": "3ad2c15c0d695adf322fa997c05d25c0f1e28e086eefc131418f2e00d3b93d72",
+     "pt-BR": "Mulher estilosa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1073",
+     "source_text_sha256": "2466c97b1539b2da085759daa4cc29a210f44a167c94033e1053533754bb57ba",
+     "pt-BR": "Homem que levou um bolo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1077",
+     "source_text_sha256": "741157c4f3f97667b59514b9e35287e93c9e3715d7997698cc3b83d734b2aaa7",
+     "pt-BR": "Pedestre do outro lado 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1079",
+     "source_text_sha256": "ca7c88cbe55eed12a8be16f5d4f859a038c51c8672a715c2edf565d2916fda26",
+     "pt-BR": "Pedestre do outro lado 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1081",
+     "source_text_sha256": "527e0fc7943823760af0f7d21c733e5cd72b57f7ec0475bd531ae8d63429fae6",
+     "pt-BR": "Pedestre do outro lado 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1083",
+     "source_text_sha256": "46b5839fc8929dd67822d6698954f3680a516e5b9a9c249a506e21f38dc42e09",
+     "pt-BR": "Pedestre do outro lado 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1112",
+     "source_text_sha256": "d5377db5103de57bf7b5632beef0056c8f06a804a1374889aba2efe9ba7a4cf7",
+     "pt-BR": "Homem de terno",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1114",
+     "source_text_sha256": "2405e74c4b87fabae23a38725e738af9be56467dfead84dc15b98657c0aa65f4",
+     "pt-BR": "Homem descendo da passarela",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1116",
+     "source_text_sha256": "e008438796a9f0533981bbd22008cf474a67f6bc8cff2fba6864625f94d3ddea",
+     "pt-BR": "Mulher descendo da passarela",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1118",
+     "source_text_sha256": "26ad3e55a42679604f89cebab4dc3f68465ef8702775dcf958ee4b939ceff559",
+     "pt-BR": "Curioso na passarela 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1120",
+     "source_text_sha256": "7af00b659412c15dfb4aa9a351099a8abf644a596a62a8d148261fbe1c7ff7c4",
+     "pt-BR": "Curioso na passarela 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1122",
+     "source_text_sha256": "c6ce00551abe361740505f4e22e980921758aaec59e0a0d4cf9ba3e1f4bdc1ec",
+     "pt-BR": "Curioso na passarela 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1124",
+     "source_text_sha256": "90ae977ce31b5643a20f43037259c4fd8dbd8d25d729093ef8f4251c445455b5",
+     "pt-BR": "Não! Por favor!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1136",
+     "source_text_sha256": "b8c822e85674f4abdc8ed295530c326f3c69754f4f82291d35aad2329db97992",
+     "pt-BR": "Funcionária na frente do prédio comercial 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1138",
+     "source_text_sha256": "4bbd35e2a6de50017943966d5e8ef40be5788cd6b49461bdc05f35e91828f3f9",
+     "pt-BR": "Funcionária na frente do prédio comercial 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1140",
+     "source_text_sha256": "78e91f5973cffaa7fbb2f9ab086e988c5e76e42b80c707edbd4fb957c1d6fcf8",
+     "pt-BR": "Redator fotografando algo enorme",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1141",
+     "source_text_sha256": "3688824183c198afd54910023084cec1369e2c085ea98a71eacfc37f41e727fe",
+     "pt-BR": "Isso é incrível! Primeira página, com certeza!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1144",
+     "source_text_sha256": "75aa5245d4397d4a090ae73923d603aa1d5b1254c115c3cfda0ceeb3e9ba9d17",
+     "pt-BR": "Compra e venda de usados",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1145",
+     "source_text_sha256": "a8d38c94279643db93091ef7d2663a5a0a8aaeb78506fada6aed96b8a7252810",
+     "pt-BR": "Se precisa de dinheiro, venha por aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1147",
+     "source_text_sha256": "f3047d1c2793d43ae364f99701587f51a54e4ad3f301591eaa7524034d638a8e",
+     "pt-BR": "Aaaaaaaah!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1149",
+     "source_text_sha256": "c4df5c0aa2356a0a8ae5f6d1d0942f10db05ec83d48c8236e59a9fa806a5f8eb",
+     "pt-BR": "A porta não abre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1152",
+     "source_text_sha256": "6a7ffd13b8ffd8d65c191997b7341efd732b82ae6fd6288e12a39ea2378e9ac7",
+     "pt-BR": "Mulher",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1154",
+     "source_text_sha256": "2fda6b57c855f91e96046ee82ae284d1c96a96d9092d7f5adae4cf91822268bc",
+     "pt-BR": "Homem",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1156",
+     "source_text_sha256": "6785f1e3a17bde9bc9f6b7a02a7eb197ef38e49f97b2398e14df952296875fe9",
+     "pt-BR": "Rapaz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1158",
+     "source_text_sha256": "57d6ec178118657d0f11612ae62fb8abe332bec54abc937dd931fc875aee8b88",
+     "pt-BR": "Moça",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1160",
+     "source_text_sha256": "956a6bc7d60814add9762598d3083d4b45d754aa2f0e2ec4d7970081dbfa7757",
+     "pt-BR": "Executivo jovem",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1162",
+     "source_text_sha256": "fead3e2bc103b033c3df3b8dfd2e80e33f88e762cb78b0e8678e22d45a11afee",
+     "pt-BR": "Mulher elegante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1164",
+     "source_text_sha256": "cb09980296ca6deb86c399ff5d3afd9b1dc53d0538324b240a20a6c6d2c5cd47",
+     "pt-BR": "Homem cansado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1166",
+     "source_text_sha256": "e87b7b0ad70007d7f40dc4c380b2209defd2460f9d71563e5403895458ce6a94",
+     "pt-BR": "Funcionária voltando do trabalho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1168",
+     "source_text_sha256": "ee5fbd6a3b3a64954737bb2e3ffdb90e0933f20d770a9ebca24c69a128871795",
+     "pt-BR": "Homem metido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1170",
+     "source_text_sha256": "955dc6bd3f5dd00ba04a60eae73e4b0c348fa2540f9fe0d971096f0d756588c8",
+     "pt-BR": "Funcionária atrevida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1173",
+     "source_text_sha256": "9377510d75c5f91e25b226957a434fc72c6991a197c7b7f906942ee5c732eb11",
+     "pt-BR": "Mulher da cidade grande",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1175",
+     "source_text_sha256": "c86a590c3c26555f6e16dd886175695661162ff997b39087d1334c6ec36620cc",
+     "pt-BR": "Executivo esperto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1177",
+     "source_text_sha256": "7243b65768f6ecf4c52410b6f94394ec42bf897ce265ed2cd8672d75f7a55991",
+     "pt-BR": "Executivo confiante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1179",
+     "source_text_sha256": "692e1b8a6434637545de6a92f4cb61ddb25b532c01ed2ae78ee5356791c597c1",
+     "pt-BR": "Mulher determinada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1181",
+     "source_text_sha256": "d36a9ba3af25e25bdc68e62131497d51c7397e37bc7c9ba9c2306db0993fbdaf",
+     "pt-BR": "Homem leviano",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1183",
+     "source_text_sha256": "8cd2e6ac2f4eb8a96c25ba39c7b1822e7ea4d6f7ec88d53c9ea12e74127c9806",
+     "pt-BR": "Mulher espantada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1185",
+     "source_text_sha256": "152d22ebf4e0ab9f3f966b9d1447bee287b418a75e7a2455f2a417c81fac2bf6",
+     "pt-BR": "Homem surpreso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1187",
+     "source_text_sha256": "aa4f5493925fbcce24190bcf6688f0ad67746a61d11a01d2758098dfa8748667",
+     "pt-BR": "Homem transtornado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1189",
+     "source_text_sha256": "231967027b9588b6d1f6d4417e2b6713a44d4e871e0ac4103fcd5cd86106e50d",
+     "pt-BR": "Jovem decidido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1191",
+     "source_text_sha256": "6b780becf6c4db609bddd9fd1bc23d72be2963fee0597464971d3f4962ff85c4",
+     "pt-BR": "Homem secretamente medroso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1196",
+     "source_text_sha256": "58b94c6ce5cf812031792d6ab30e39f354f86f2241cc36036867231a57cf3555",
+     "pt-BR": "Mulher bonita",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1198",
+     "source_text_sha256": "ab7fb402aee4317ad40978ab6fec96a78d468b4c809e525bd651fad8f5237a82",
+     "pt-BR": "Mulher mais bonita ainda",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1200",
+     "source_text_sha256": "5912113a1e3efb7d1108a8a53086737283e51c4455814751be6e15f84134e2cf",
+     "pt-BR": "Que horror...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1202",
+     "source_text_sha256": "9b4c60a75eaff258d10d7d928d7726f1118c837c2ea954e605d1c70be15adb49",
+     "pt-BR": "Que horror...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1206",
+     "source_text_sha256": "cb15dc19750495ec5f155bda867c8e3448d30df5016ae045405f05d31a43a200",
+     "pt-BR": "Olhar de novo, impressionado com o tamanho daquilo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1208",
+     "source_text_sha256": "50580375810c96a0b0be3f3033e3f24452060b362ffa9a442dcf4d41ef196d68",
+     "pt-BR": "Sentir o perigo e sair dali com cuidado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1210",
+     "source_text_sha256": "45e66f2135fd6ac345a71d6980d74b04db5f16c3037940272f33f056642a9c60",
+     "pt-BR": "Achar que parece bem amigável e acenar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1212",
+     "source_text_sha256": "0f5f6226efeb06d88bcf2cb221d22ef5a03075149187d84b7c71961fc7579cae",
+     "pt-BR": "Olhar de novo, impressionada com o tamanho daquilo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1214",
+     "source_text_sha256": "f30676a94a2013d61ea8117b08bf59784a0df828884977de5ae4f93dbbce1aeb",
+     "pt-BR": "Sentir o perigo e sair dali com cuidado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1216",
+     "source_text_sha256": "02f7c90e796bf58b545ce9a2be39e543f575fef5a4dc03bfdd850398542718e6",
+     "pt-BR": "Achar que parece bem amigável e acenar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1218",
+     "source_text_sha256": "24ee5f6854ec18ff7d588ee050d79454a45882997bdcc93bf3c563b390c43d4f",
+     "pt-BR": "Uau... De perto é enorme mesmo...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1220",
+     "source_text_sha256": "314d3e12da6e94c4bdfd8a51560a106b1bb033b5fb0ebaed4d1b61a5cba3d021",
+     "pt-BR": "Uau... De perto é enorme mesmo...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1222",
+     "source_text_sha256": "d0a9aaa9a76f6ab96193308e956406e4fbdafd6cb9b0c427ebee3b41429bbdb7",
+     "pt-BR": "Alguma coisa aqui parece perigosa...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1224",
+     "source_text_sha256": "bf8fcdb542d0e5945d9b6780b7a996d699f5c13987fdacae1e802106b8554824",
+     "pt-BR": "Alguma coisa aqui parece perigosa...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1226",
+     "source_text_sha256": "0a14eecf276e688dabf9e8ec0ecd92f8dc413454af7fc939acc96ac20a1933bd",
+     "pt-BR": "É, parece totalmente amigável. Ooooi!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1228",
+     "source_text_sha256": "660981298e6f25d2ee715e3e3684086cd409bb9228811139f9183da5f6ea24dc",
+     "pt-BR": "É, parece totalmente amigável. Ooooi!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1230",
+     "source_text_sha256": "9dc16c243d7aac343a361012ac869ef133397e927654bf52fafc5a0e77852f06",
+     "pt-BR": "Já quis ver o que tem atrás do balcão?\nAgachado, talvez você consiga passar por espaços assim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1232",
+     "source_text_sha256": "91c62696cd49556c6fcfd01403f4144b8d5d0d3e3ac4ec11628dd49b6f4a52a9",
+     "pt-BR": "Parado, aperte [i4]+[i14] para se mover agachado.\nAperte [i4] ou [i2] de novo para se levantar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1234",
+     "source_text_sha256": "d5f087c96ba3b60887f8da678c20a84fccd19df8436bd8b6cc255f576a17c74e",
+     "pt-BR": "Talvez você já tenha notado: incline [i14] um pouco para andar,\nou mais para correr.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1236",
+     "source_text_sha256": "0902868f0b3f408031939f72cf7526d46cf4dc977ed8147363a2112682fd0278",
+     "pt-BR": "Precisa sair daqui rápido...?\nSegure [i12] enquanto se move para disparar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1238",
+     "source_text_sha256": "e1a82e256833c62082bb51b467dd75483d685c52aea15cb4d0495c29bb5cbdfc",
+     "pt-BR": "Disparar gasta energia. Se a energia chegar a zero, você fica exausto.\nFique de olho nela durante a fuga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1240",
+     "source_text_sha256": "03671a61e0a4939cf3d455f8f25b43989ff792cc4e99817d3203545aeeec77b9",
+     "pt-BR": "Você pode comprar coisas nas lojas.\nPasse em uma sempre que encontrar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1242",
+     "source_text_sha256": "6ee023d20fad82591bd9a933c29e1c8b4c753ec34f984417ca755060a622b881",
+     "pt-BR": "Você conseguiu uma roupa nova!\nTrocar de roupa muda o visual e renova o ânimo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1244",
+     "source_text_sha256": "eee066f3b259b0229a0e0fdcb16696e6cf442d8c35bab5e48b8915b2bb03febd",
+     "pt-BR": "Sem provador por perto? Não se preocupe!\nAperte [i18] para abrir a tela \"ITEM\", que serve de guarda-roupa e provador.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1246",
+     "source_text_sha256": "4ffed808dfad90584880924d1c9fae64a87e509db5028b14a9ba5785c78cb872",
+     "pt-BR": "As roupas fazem mais do que mudar o visual!\nAlgumas aumentam sua vida ou energia máxima.\nEncontre uma que você adore.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1248",
+     "source_text_sha256": "43f207fb6db5c454259757e91e74041cbff011ef95971022810082f72e27953b",
+     "pt-BR": "Não tem saída... Você está encurralado!\nQuando se vir numa situação desesperadora...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1250",
+     "source_text_sha256": "a92aba0ffa4eb085e0b2fd3f33fc9954b604a634ad8fb9b44d403271911c60a7",
+     "pt-BR": "Aperte [i4] quando o símbolo ! aparecer\ne talvez você escape do perigo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1252",
+     "source_text_sha256": "385e0d22a39186401c55237ff1e68e4a0d7442c421750e847fee6506a091e2fe",
+     "pt-BR": "Quer ver melhor uma sombra gigante, mas ela não cabe na tela?\nEntão experimente isto...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1254",
+     "source_text_sha256": "87af9a2922db15eaa08b29c2e5a6d16f693589c73491d9096246f8831de7301e",
+     "pt-BR": "Use a Câmera da Sombra Gigante para enquadrar o gigante inteiro.\nAperte [i13] para alternar entre ela e a câmera normal.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1256",
+     "source_text_sha256": "961ce8818450c742d7d01ae2a058f0fc3dc8f52fcfea7f83ad8459c5bb7e19e5",
+     "pt-BR": "Aperte [i13] de novo para voltar à câmera normal.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1258",
+     "source_text_sha256": "bd154a0302f8e42441f1791e99f9828543e0ffd6e11c950556732379dfcf87c7",
+     "pt-BR": "Pensando bem, você acabou de receber um e-mail no celular.\nQuem estaria mandando mensagem numa hora dessas?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1260",
+     "source_text_sha256": "fab6230b51071442ef58aa607fb50a1e602f52644fd3b0f131eedaa5bf496d26",
+     "pt-BR": "Aperte [i3] para ver o novo e-mail na hora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1262",
+     "source_text_sha256": "49484acb566a3926c636de90c349c247a917efd54585d36344d4d13e0bd5a87b",
+     "pt-BR": "Você também pode apertar [i18] e escolher o celular na tela \"ITEM\"\npara reler qualquer e-mail recebido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1264",
+     "source_text_sha256": "e38dcefb67681cecce21a51ecba48bf15e34f21902417044c8b4e2a9918ffd40",
+     "pt-BR": "As Moedas da Sombra Gigante espalhadas pela cidade valem muito.\nNão precisa entregá-las à polícia: pegue todas que achar.\nTroque as moedas por penteados e fantasias.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1266",
+     "source_text_sha256": "6034debfb271812ef55ba1ace1f3fda948852ae06d7c9df119637af2bb57d50c",
+     "pt-BR": "As moedas têm três cores diferentes,\ne cada cor vale uma quantidade diferente de moedas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1268",
+     "source_text_sha256": "2cfd1ef9327478337fdb2b83c26d296e499825c7d11324d354d2f7819c7bc665",
+     "pt-BR": "Às vezes você só precisa de um descanso.\nExamine este símbolo para salvar o jogo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1270",
+     "source_text_sha256": "562e016a5c2584cf5c43dc334a8e4a0da1e405f132712620a8ae364bcd381417",
+     "pt-BR": "Ele também recupera totalmente sua vida e energia,\nentão pare sempre que encontrar um.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1272",
+     "source_text_sha256": "ac473bc1fb8ab4d685a8d52cb7b55f860c7c2964a2878c4e173f6e1016c4089c",
+     "pt-BR": "Curioso para saber o que há atrás de uma porta que não abre?\nUm impacto forte o bastante pode derrubá-la.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1274",
+     "source_text_sha256": "f4acde9e4bd596ec3388db2c6dca39b8275d7417362e3e87832d97f9ad816eaa",
+     "pt-BR": "Ganhe velocidade disparando (mova-se segurando [i12]).",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1276",
+     "source_text_sha256": "6f6155831e29f8f3c18fa8d30301bf58888885f6c6a176b0bbac6c15672a7fe2",
+     "pt-BR": "Talvez dê para quebrar outras coisas além de portas com uma investida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1278",
+     "source_text_sha256": "5e0ff2a5c11578b03ef72af88f51a273fe893d663ac5bfca298b70e4e432eb36",
+     "pt-BR": "Se quiser mudar o visual, procure um espelho.\nLá você pode trocar de penteado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1280",
+     "source_text_sha256": "04e10ab3a3bdc653aca3c0867ab731e18bcaa035b139085d4e641d62326d4979",
+     "pt-BR": "Iwabuchi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1281",
+     "source_text_sha256": "940fae40d05f474006ae96eedae7a17dc31997b629f23dcda214a7d545b0ab71",
+     "pt-BR": "Aff, Morimoto, o que você está fazendo...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1283",
+     "source_text_sha256": "3df598c4deacf8499d01c614c29ed8f06081410ac0986e5e258a9e89b1c4461c",
+     "pt-BR": "Já é hora da troca de turno, e eu não posso ir pra casa...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1285",
+     "source_text_sha256": "55dff65b531ba535cc2bac70ed749b6b3e75ae86bf449ec5d6e2c7c7db347f6a",
+     "pt-BR": "E-espera... Por que você está aí atrás...?\nAh... Você me ouviu falando sozinha...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1287",
+     "source_text_sha256": "d7c4c085762fa2b9cd23c22eea02fa5b53db3086b4a5494d43ce1f58dbb3ba14",
+     "pt-BR": "Aconteceu alguma coisa com o Morimoto?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1289",
+     "source_text_sha256": "b639da918df897972661dd5317e1f336e3839e2a3db3b99e42fbe2b078f06d5d",
+     "pt-BR": "Você tem planos depois do turno?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1291",
+     "source_text_sha256": "4717f0712bb5458b97d289620f33a47f26b89773b1bd61a591ff807c57c82d1a",
+     "pt-BR": "(Fingindo conhecê-lo) Então o Morimoto aprontou de novo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1295",
+     "source_text_sha256": "3df17f32899bcd711e87ff0aaa63d7f77c3436699e3818b152da7cdf92842244",
+     "pt-BR": "(Fingindo conhecê-lo) Não me diga que o Morimoto aprontou de novo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1299",
+     "source_text_sha256": "7cf833ca37c04b2c36a213b8f23903cdaffd5761d03d78d5e25ebddd48f2e4d1",
+     "pt-BR": "Ah, hum... Meu turno já acabou,\nmas o Morimoto, que entra agora, não apareceu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1301",
+     "source_text_sha256": "0cd8e6df46dbb7cd946456d4bf60b4849aae18fc8082b3f2a1b1b07713671684",
+     "pt-BR": "E não é só isso. Depois do trabalho,\neu ia assistir a um programa de rádio ao vivo de madrugada...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1303",
+     "source_text_sha256": "d8e1db6cb02f7bbdabbd55c0362aa87479f48e52150cafc8d1906070c5c0b09d",
+     "pt-BR": "Ele prometeu me dar os ingressos.\nAi... O que ele está fazendo...?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1307",
+     "source_text_sha256": "ffc19b02534aaec5be34491345d7bf087c2f8a46f2a65d05863b78618160ba86",
+     "pt-BR": "Ah, sim. Depois do trabalho,\neu ia assistir a um programa de rádio ao vivo de madrugada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1309",
+     "source_text_sha256": "c4792c67d90443d093c2283c05dae6917244ebda48265a4d9b72c2f8ceab67ac",
+     "pt-BR": "E ele prometeu me dar os ingressos\nquando chegasse para o próximo turno.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1311",
+     "source_text_sha256": "675a2818043a279d5fc881c9e0b8c18ba10df3cdbf7e2d44dcf6f11b0cf2813e",
+     "pt-BR": "Mas já é hora da troca e ele ainda não chegou!\nSinceramente... O que ele está fazendo...?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1313",
+     "source_text_sha256": "6550f31164a85fde2c624512308b894f84ddeee2fd02ec288c24852e07836ef8",
+     "pt-BR": "Então o Morimoto aprontou de novo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1315",
+     "source_text_sha256": "ae739e765e72bbc59cd76518a3ca413d5714252053654285aed4b24422a1e618",
+     "pt-BR": "Não me diga que o Morimoto aprontou de novo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1317",
+     "source_text_sha256": "a3fd117502be6869c1418c57cd8ef10f14d08c3b444b114a21653166e559c2ac",
+     "pt-BR": "Hã?! Você conhece o Morimoto?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1319",
+     "source_text_sha256": "36202bc50f19e2cdd5dbe56508572cda5cbcfe17a73f32600285e9a03f524a36",
+     "pt-BR": "Pois é. Ele se atrasou de novo.\nA troca de turno foi faz tempo...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1321",
+     "source_text_sha256": "c5e68521b5e675fda7c25c7ecae69f1ea63eae4f8cee4b0692f8ff82b320aeeb",
+     "pt-BR": "E eu ia assistir a um programa de rádio ao vivo de madrugada\ndepois do trabalho, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1323",
+     "source_text_sha256": "f99b6949fdd49aabec664a36275dbe17e8307423bb7c527ae363a04474202b7f",
+     "pt-BR": "Ele prometeu me dar os ingressos!\nSinceramente! Ele é sempre assim...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1325",
+     "source_text_sha256": "b9e4efa1d7f4d107f9037e9f76726332bc6dbb91ad3d9123d686d305f770e09f",
+     "pt-BR": "Gerente da loja de conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1326",
+     "source_text_sha256": "884815bc09a871ca3ae1c4682376beac5019a0d0dcf59884980d7a42dba9a1d7",
+     "pt-BR": "Iwabuchi! Parece que o Morimoto ainda não chegou, então, desculpe,\nmas você pode ficar só mais uma hora?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1328",
+     "source_text_sha256": "23737cfa87e7db59d1e41d115fa534bf7be18eb4d23e7616ece12108de010632",
+     "pt-BR": "Ah, tá bom! Pode deixar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1330",
+     "source_text_sha256": "6378db3afa1f709f3aee0ba0b8c35ecc6b9c4acc66947b3c15b45ca2af5e6126",
+     "pt-BR": "Hmm... Já decidi! Mesmo sem ingresso,\nvou tentar ir até a rádio assim mesmo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1332",
+     "source_text_sha256": "aa1a847a7f7ae6589bee3250ce8826591069e49382be7a903289989ec68b9789",
+     "pt-BR": "Hum, desculpe pedir uma coisa\ntão estranha a um cliente, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1334",
+     "source_text_sha256": "62887e63c1f7d7167814ab96bc6c3b4bd5c52c90bee0083f05fa025693ec061a",
+     "pt-BR": "Se por acaso você encontrar o [#ff88ff88]Morimoto[/#] por aí... Sei que é difícil,\nmas se conseguir pegar os [#ff88ff88]ingressos[/#] com ele...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1336",
+     "source_text_sha256": "dc17ee959e81c245fead258a8800985fa895e44346f9c5ede206efda99d1e37a",
+     "pt-BR": "Você poderia levá-los até a [#ff44ff44]Rádio RSG[/#]? Hoje à noite vai ter\num programa lá chamado \"Midnight Sky Garden\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1338",
+     "source_text_sha256": "5dd0dd5c8540f42de2aef8be7f13b6f1dfb74ebaf488e4d41ef50d83bdbd992d",
+     "pt-BR": "São dois ingressos!\nEu te dou um deles, então, por favor!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1340",
+     "source_text_sha256": "83837cf731bbdf1080578085a22eac0010b93be0105fded2ba62b882196e0c9b",
+     "pt-BR": "Tá bom. Se eu encontrar o Morimoto, pego os ingressos e levo pra você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1342",
+     "source_text_sha256": "7a77f4c856bcd49ebc573c2fe15ab52006e7a14ea8ee8a59c1b88fca5c18b80e",
+     "pt-BR": "Não estou muito a fim, mas vou se eu passar por lá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1344",
+     "source_text_sha256": "a5da6e29570ec901875b93d2c47647dcac041071036fca15fab5fb4227bc205b",
+     "pt-BR": "Claro. Se eu encontrar o Morimoto, pego os ingressos e levo pra você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1346",
+     "source_text_sha256": "cb90ffd25f615fd79ab5348ce4b2f1944b30f0adbde999c646288f9d9de827d4",
+     "pt-BR": "Não estou muito a fim, mas vou se eu passar por lá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1350",
+     "source_text_sha256": "15bac7d47b06ff8a7714b23234306bf040f2c2ee6ac8cbb68436b831164fc577",
+     "pt-BR": "Sim! Muito obrigada!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1354",
+     "source_text_sha256": "3b92c6d39f7e4ee1e9a9600600e26f1f2aa662d6f9cd08a7857c6a74f1670d64",
+     "pt-BR": "Desculpe o incômodo. Conto com você...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1356",
+     "source_text_sha256": "4c0968f979143a5b87233c3e97ea199045335392f8d94d39c40b114cc5bd7914",
+     "pt-BR": "Kobayashi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1357",
+     "source_text_sha256": "26581b6005b7ed623deb7e5b9bb9903e52617e6426e4b5ced959fe408fc350cc",
+     "pt-BR": "Ai, não... Minha loja...!\nPreciso juntar as flores...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1359",
+     "source_text_sha256": "b84203083cc270221a459210424686d39915c77a278147160428096be258673a",
+     "pt-BR": "Kenta... Me desculpe...\nEu só queria que pelo menos você fosse feliz...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1361",
+     "source_text_sha256": "1c8910366e08dbdd7479c495bf777a66b2dfc1788059292ee6b83fb3b0b3d749",
+     "pt-BR": "A mamãe... não aguenta mais...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1363",
+     "source_text_sha256": "e551967dc47163a17e0e4ffcef093e19dde077a0673a3cee857d9002b540b15a",
+     "pt-BR": "Consolar: \"Você está bem? Por favor, tente ser forte.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1365",
+     "source_text_sha256": "28b3f9fa17b2ed8ca9d010d22d87b58de95f4adb8ac9398bca05f8f78f02b16f",
+     "pt-BR": "Sair em silêncio, pensando que não há o que fazer nessa situação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1367",
+     "source_text_sha256": "cf81ce0f977e6c6d95f197cf83ba6969b3451b1dd0316c616d6b274cae79b5e9",
+     "pt-BR": "Gastar todo o dinheiro que tenho numa única flor pisoteada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1369",
+     "source_text_sha256": "f33e2b10999fc342c9752c7b4827a61814c1e49d7034491f575eed8dc8ec8ffc",
+     "pt-BR": "Rir por dentro: \"Ha! Bem feito!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1372",
+     "source_text_sha256": "86975d54dfeb3ac1a80ff9e36774dd46c6386549168e78b59463497ea26c0b18",
+     "pt-BR": "Sair em silêncio, pensando que não há o que fazer nessa situação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1375",
+     "source_text_sha256": "0374bdd1ae615ffe3172a3d076ae48278437e28fcc22ee0a3c85cab2ec9bfb06",
+     "pt-BR": "Rir por dentro: \"Hehe... Bem feito!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1377",
+     "source_text_sha256": "032e80f4519d927f7deba98f599b94b249ba7601560aafcb72dcb1e695213a50",
+     "pt-BR": "Você está bem? Por favor, tente ser forte.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1380",
+     "source_text_sha256": "21fdb2e88625119a1268abb4b47e760ff20e34593750c930ecb486a9bbf1b723",
+     "pt-BR": "S-sim... Obrigada...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1382",
+     "source_text_sha256": "68a1b70209265e828f297d0e595c73a6d42eea99466795e956a701b8f0645e80",
+     "pt-BR": "(Não há o que fazer nessa situação...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1384",
+     "source_text_sha256": "086c57499a030ace1e4054367926010301c621efd9b0af2e6e44078d141deb17",
+     "pt-BR": "(Não há o que fazer nessa situação...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1386",
+     "source_text_sha256": "a856d2780f91409e9ef67636fb76e79b69bfa4e05ff0aa5326207aaa23b7a380",
+     "pt-BR": "Com licença. Pode me vender aquela flor lilás?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1389",
+     "source_text_sha256": "c1cc46b3e7fb799dd2a6af9a6c69891fa5c285344cd3dffb0cd446551fb7ecf6",
+     "pt-BR": "O quê...?! Você vai comprar estas flores\npisoteadas e esmagadas...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1391",
+     "source_text_sha256": "088462f65b7e8bc00db9fd7d87cf33cea200daceb9094dea9dc851b2a1851090",
+     "pt-BR": "Sistema",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1392",
+     "source_text_sha256": "a2e4714879df75c68f37a4979088fc808a458c2dd31efff8fb90e4b7da2fc238",
+     "pt-BR": "Conseguiu [#ff44ff44]【Uma Flor Pisoteada】[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1394",
+     "source_text_sha256": "69ff1e392c3586aeb4c4528696c5fe4283a177b61e4205dd6d3dbe60702099e4",
+     "pt-BR": "Entregou [#ff44ff44]【Todo o Seu Dinheiro】[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1396",
+     "source_text_sha256": "4bb00149b1763d582aff545f3ccfb3622a07fe49cb4e461dae7fcd7cda61b433",
+     "pt-BR": "Obrigada! Nunca vou esquecer você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1398",
+     "source_text_sha256": "fbecf549ed71d3180dc781823de22f03b65b26162566619d827df8777b6d4222",
+     "pt-BR": "Ha! Bem feito!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1400",
+     "source_text_sha256": "8370a5403b24729dbbc5b05030ee092fb4fe23c5d9f6c713b6e6f34c0d8b2e9d",
+     "pt-BR": "Hehe... Bem feito!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1402",
+     "source_text_sha256": "071ed5804cf6364ef2fdd99c13cfd5741392cc2467cb42cdc56c9da7559a7fc9",
+     "pt-BR": "Ugh, uuuuuuuugh...! Kentaaa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1404",
+     "source_text_sha256": "1ef563df8e3775efe68e247389e8e52601e5bfccb44fe1099aac49b0d6d8be13",
+     "pt-BR": "Mesmo depois que seu pai foi embora,\neu queria que você, pelo menos você, tivesse uma vida feliz...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1406",
+     "source_text_sha256": "e445c9d2c31e23f2c0372c8fad17d6c64a494495d7f75e99f7eba016bbd0ba1d",
+     "pt-BR": "...Queria que você terminasse os estudos direitinho e fosse feliz...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1408",
+     "source_text_sha256": "596b96ff58acffd059528ceb75eeb15338cafa6f9b2c322f83876f6f8633b2a4",
+     "pt-BR": "Mas se a minha loja acabou assim,\nentão... nem isso eu consigo mais...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1410",
+     "source_text_sha256": "a952f1f11ff5fd2750929da8aa60767ec28b4ecd42477c99fa0d2eb27c8762c7",
+     "pt-BR": "Me perdoe, Kentaaaaa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1412",
+     "source_text_sha256": "60fb95ce5601d17c0357df506342281a8d36994b6435837ea40b2ac2404f1a93",
+     "pt-BR": "Eu tenho um filho único chamado Kenta...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1414",
+     "source_text_sha256": "3b6333ea06e2452a759367ca754654e1d16a2770ea18cb3b64179092eb699c9d",
+     "pt-BR": "Os negócios do meu marido faliram, ele nos deixou cheios de dívidas\ne depois sumiu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1416",
+     "source_text_sha256": "9e3b00a1f921e27d4ee4a706ff2e4fd54616ff894537dc47cd0080da8ae20a59",
+     "pt-BR": "Eu só queria que pelo menos o Kenta nunca passasse necessidade\ne se formasse numa boa escola...\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1418",
+     "source_text_sha256": "5e3bb0c7b95b6aa111641c589305b318d32bec034a48e61f01d30e9d03cbb87d",
+     "pt-BR": "Eu vendo flores aqui\npara ganhar um dinheirinho a mais e ajudar nas contas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1420",
+     "source_text_sha256": "c5204903c37c0fc16320d4f5a75b939c56a10d0f010f357eef1d96aaaadfcf82",
+     "pt-BR": "Segurar a mão dela, olhar nos olhos e dar ânimo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1422",
+     "source_text_sha256": "02d66610558d3ec9823ca2eac6c61d6e01689b92cd454c477e85818c6f392cf4",
+     "pt-BR": "Ficar sem graça com a história pesada\ne ir embora discretamente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1424",
+     "source_text_sha256": "82490dd8eb0de64aa6a70e0be99b06f394ee89e20c66a39269f3acea26bc8e0b",
+     "pt-BR": "Perder o interesse, achando a história comum,\npisotear as flores e ir embora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1426",
+     "source_text_sha256": "0984bc6c1e97acd78b1ee9651b360834c1f497b158421b6db824e2a47d59cf3b",
+     "pt-BR": "Sua história me comoveu muito!\nEu também quero ajudar você!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1428",
+     "source_text_sha256": "c7df02e42be655edabd72d1632fed1ab18df7a6bf525c79446f21b3b6e42c0b1",
+     "pt-BR": "Sua história me comoveu muito!\nEu também quero ajudar você!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1430",
+     "source_text_sha256": "4f6db03730e5afe73a0b7cf2bbcba2b6d53daea553f7bce01eec28b6e80599e9",
+     "pt-BR": "O-obrigada...\nQuando eu reabrir a loja, venha comprar flores, por favor...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1432",
+     "source_text_sha256": "564fc7109bc100b604870de1f90d1798180d86d3f9e49364e34446b822331a3c",
+     "pt-BR": "A-ah, entendi... Que situação difícil...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1435",
+     "source_text_sha256": "2329206fadf03841479117bca3a89b81d985c27c05a0248076b1546efa75a29e",
+     "pt-BR": "Não... Obrigada\npor ouvir minha história.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1437",
+     "source_text_sha256": "0fda4f3fd0e1b738c6a20005a615a4f81d169a52a0b1cc0867e4ef6fa6086c41",
+     "pt-BR": "Imagina. Aguente firme.\nBom, eu já vou indo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1439",
+     "source_text_sha256": "0049039f6055e8a1611388980e0d0ead3d6013b2de78c62495569a4d60db54d4",
+     "pt-BR": "Imagina. Aguente firme.\nBom, eu já vou indo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1441",
+     "source_text_sha256": "b19d9630b8860eb3e1e8a2b781447836108bc59da7cfdc96943cbfd237b7957b",
+     "pt-BR": "Hum. Essa é uma história que a gente ouve toda hora...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1443",
+     "source_text_sha256": "a1890c98e98f06ff90f22f3fa1b3ca6e1f816db1b9f0a7162be421a95fa1665f",
+     "pt-BR": "Hum. Essa é uma história que a gente ouve toda hora...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1445",
+     "source_text_sha256": "88e8c9a7e8dbb2917d6beaf066356820fb2e74dbc425c44c9d70af8b06c03549",
+     "pt-BR": "Ikeuchi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1446",
+     "source_text_sha256": "9c6e53c07f03af19f84656d3d115f9004637b032a8fdda3640d007894b9b6a94",
+     "pt-BR": "Aaaaaah!\nO-o que é aquele braço enorme?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1448",
+     "source_text_sha256": "4e63d7e987edc639bef51a0f6b3768f25824861d719b7ac21b1883c2b9334f7a",
+     "pt-BR": "N-não! E-eu não quero morrer!\nKinoshita! M-me ajuda!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1450",
+     "source_text_sha256": "a9f8956ba98b2d81c045edcd8636d24eccc51a7995f2c1ed0e78e9171857fc94",
+     "pt-BR": "Kinoshita＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1451",
+     "source_text_sha256": "9ef2d02a4542052903c9782c0f4074f60a308b71b895ffab5544d976b72b9969",
+     "pt-BR": "Chefe! Vive se achando o tal,\nmas olha só como você é patético!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1453",
+     "source_text_sha256": "ae053f8330d51c83faf80c0b384a64b952308c2de6e250500569ad41938b4382",
+     "pt-BR": "Ikeuchi e Kinoshita",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1454",
+     "source_text_sha256": "06737683f206385f2c13d9fa29ce246340e86f82fa6a921f367b4472b4cbb374",
+     "pt-BR": "Aaaaaaaaaah!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1456",
+     "source_text_sha256": "4069ccb5f44702951227db1707f5d682d1d926a2020945987780b8e02971e27d",
+     "pt-BR": "O quê?! Aquele braço recuou...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1458",
+     "source_text_sha256": "2163770aaeb9004ee4f15bbfd59ba17f40dba419374d7aaa4fe791008ef2b4c0",
+     "pt-BR": "Quem... é você...?\nE essa luz...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1460",
+     "source_text_sha256": "381fdcd0bd0f29e45c8c765ca0fc9ed6aae055ccea51c887075f1040f0b73a2c",
+     "pt-BR": "Ficar confuso: \"Que luz é essa...? Meu poder...?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1462",
+     "source_text_sha256": "4f6569bef492b8cc3a078ed90a7698278f42d81c5b948f5108ed9423383a6cdf",
+     "pt-BR": "Entrar em pânico: \"Q-que luz é essa?! O que está acontecendo?!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1464",
+     "source_text_sha256": "d4d892e598b121b1bc1df7543cd964d17bdca92747929fe59a43b171b975cdc7",
+     "pt-BR": "Sentir a alma pegar fogo: \"Estou sentindo!\nUm novo poder despertando dentro de mim!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1466",
+     "source_text_sha256": "2d06df989367df0d2c08817b20c7a817f597e48de0e023060e2d8b981335d328",
+     "pt-BR": "Vibrar: \"Raaaaah! Estou transbordando de poder!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1468",
+     "source_text_sha256": "ebf3c30485f0653e0da007286c9e61a974f26d203cc3aa64016cf03b1948e852",
+     "pt-BR": "Ficar confusa: \"Que luz é essa...? É o meu poder...?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1470",
+     "source_text_sha256": "42e565de061b12d9c850d96c978b3e32ebac5aed88cbef1492b3626c72d862c4",
+     "pt-BR": "Entrar em pânico: \"Q-que luz é essa?! O que está acontecendo?!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1472",
+     "source_text_sha256": "13cf706f7f9216e652cf4d239e82f0697e3288949e59f3f725c753c6c57f5365",
+     "pt-BR": "Sentir a alma pegar fogo: \"Estou sentindo!\nUm novo poder despertando dentro de mim!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1474",
+     "source_text_sha256": "b61b5d56247cc54a248632c0aa84ebcf5408358d1cfb697cb771f043c38b3c95",
+     "pt-BR": "Vibrar: \"Nnngh! Sinto meu poder jorrando!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1476",
+     "source_text_sha256": "543bc1119b4f68af7181d45ad152c74b5453b6d153d56e440b1578c4c3c80054",
+     "pt-BR": "Que luz é essa...? Meu poder...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1478",
+     "source_text_sha256": "412c8031f14559c9f553d1aea34514809bbbfc0df51cac0c7d70a070cb7eaf80",
+     "pt-BR": "Que luz é essa...? É o meu poder...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1480",
+     "source_text_sha256": "0750be97a5ef899b4841566a825a422892fcd399b6756f4fa90e06422c0c62fe",
+     "pt-BR": "Q-que luz é essa?! O que está acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1482",
+     "source_text_sha256": "3c7bae880e0d5ba32202b8208b1d0d11208165cd2feef604af5263dce4b77a91",
+     "pt-BR": "Q-que luz é essa?! O que está acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1484",
+     "source_text_sha256": "e05770d4261bd5f1230a120fb74f5316c34b3014fc5201fad1944a0cef41f288",
+     "pt-BR": "Estou sentindo! Um novo poder despertando dentro de mim!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1486",
+     "source_text_sha256": "09a963b1847a4b4dd676d9a51873d655d9b7fdc22bdff469f93639ac813c4264",
+     "pt-BR": "Estou sentindo! Um novo poder está despertando dentro de mim!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1488",
+     "source_text_sha256": "ecb8f3b018619f7f246d44c0a90396608a8125596e24fcaf28100cc407554e34",
+     "pt-BR": "UOOOOOH! Meu poder está transbordando!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1490",
+     "source_text_sha256": "07494be9b342a14087343909672f54862cb6aa5ae2f85ce89f991d988bc8fdce",
+     "pt-BR": "Aaaah! Meu poder está explodindo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1492",
+     "source_text_sha256": "3f6041d32684fdaa8f4887b66154da8608be51a34653a921c4cbae951762fd22",
+     "pt-BR": "(<P_FNAME> <P_LNAME>\nalcançou [#ffd085ff]Luz Misteriosa Roxa Nível 3[/#]!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1494",
+     "source_text_sha256": "4a6603ca82c56d4d2eda7b29d11dbe8cd4884b2eddcf6f8b33f8e0325eac5ef0",
+     "pt-BR": "Aquele braço gigante se acalmou!\nEntão era mesmo o seu poder!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1496",
+     "source_text_sha256": "0beb97ecec12b4aec723831fd1d47472791d314374e99da9963672700d193bdb",
+     "pt-BR": "Incrível! Que poder impressionante!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1498",
+     "source_text_sha256": "56d8fd01a3a1706da952b34b2de51cc02c52fb573c133a18315f3169f524f09d",
+     "pt-BR": "Que segurança você passa!\nNada a ver com aquele chefe, que só fala e se acha importante!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1500",
+     "source_text_sha256": "5efd93d059f2a7001627305057fb958af53585c68c899173244c5caeece96d17",
+     "pt-BR": "E-ei! É isso que você pensa de mim?!\nV-vamos sair daqui enquanto dá!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1502",
+     "source_text_sha256": "a845f460d088f5ce20b7bb7df65e6ae1e49e97f85c408c04500107b60abd9ba3",
+     "pt-BR": "Kuribayashi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1503",
+     "source_text_sha256": "955e7cdac8787ad164bc94b5cf4b0f2097774d80388da635dacfca5f73658a09",
+     "pt-BR": "E-ei, espera! Que roupa é essa?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1505",
+     "source_text_sha256": "5843972f51c630670ec620e53375fade1b346a6b57ee15ebeb6b0db20d59da18",
+     "pt-BR": "E esse não é o meu uniforme?!\nOnde você conseguiu isso?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1507",
+     "source_text_sha256": "7d27fe3faf218558e3af8754ff95a6c5ccc9b7505de28f03783a8f8023a616ef",
+     "pt-BR": "Yanai＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1508",
+     "source_text_sha256": "f9a2374fc9afef1fad46cd72d971644006c5abcfb6a869cd15c3760296232417",
+     "pt-BR": "Kuribayashi, algum problema?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1510",
+     "source_text_sha256": "92f43e2d6b96464f53f1909c9bf646697e459acb8b0db1cbbbf43c094b5e7653",
+     "pt-BR": "Sargento Yanai, o uniforme que essa pessoa está usando\né meu! Ele sumiu faz um tempinho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1512",
+     "source_text_sha256": "0cb9a1dd476ed4cf0d35df9ef9257f9dd0a2b610eb106102e3a1ecb028c65511",
+     "pt-BR": "Ei! Onde você achou esse uniforme?\nVocê roubou?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1514",
+     "source_text_sha256": "77ffc69cf3079113a0d2fbff9101bbc3e699103c08f6c1ae04e71444ac5c91ec",
+     "pt-BR": "Eu não roubei! Peguei emprestado do guarda-roupa\ndo quarto de plantão do posto policial!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1516",
+     "source_text_sha256": "d188447c8d06961be011b5b93c871a5828926a3b7502d3b43c8b85fabec26843",
+     "pt-BR": "Desculpe! Achei no guarda-roupa do plantão\ndo posto policial e acabei... Já devolvo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1518",
+     "source_text_sha256": "b165d66b405006265aba50449d894c10ca5b5d823d48ddb913cbd977c75a84c3",
+     "pt-BR": "Eu não roubei! Peguei emprestado do guarda-roupa\ndo quarto de plantão do posto policial!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1520",
+     "source_text_sha256": "ba7463b7bf0e8e3078e83486a4c65f2edfad351c927a3081cf2243a684c92cf8",
+     "pt-BR": "Desculpe! Achei no guarda-roupa do plantão\ndo posto policial e acabei... Já devolvo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1522",
+     "source_text_sha256": "007a7d5cf1dec923e881a0e156cd18275fa5fd395fd8e921a28d10b82b3615b9",
+     "pt-BR": "No guarda-roupa do quarto de plantão...?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1524",
+     "source_text_sha256": "6260cab6d9d1e3ae1ea211b88f94e297c4248573e52b97486f62d05e861a2219",
+     "pt-BR": "Sargento Yanai, aquele guarda-roupa é seu, não é?\nO que significa isso...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1526",
+     "source_text_sha256": "ce99cceb385a0ab3100ff89b9d9ad44161e4b9713d9e0644bc5eef7fb1912493",
+     "pt-BR": "O quê...?! N-não, isso é...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1528",
+     "source_text_sha256": "017a33e0d58295d19f37c029fd96dfac59b61c457a201f73d921c128c549f106",
+     "pt-BR": "Ai, não...! Não dá tempo pra isso!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1530",
+     "source_text_sha256": "566b8c3833126d695dfa0ed69b40a2d665f88996316a8ffcc3a4d77ffc1d3a2a",
+     "pt-BR": "Vou ajudar a evacuar os moradores!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1532",
+     "source_text_sha256": "00c31cdfad70b048d120eb23cc0c4da713565d82757dca741522eb452ed82b0b",
+     "pt-BR": "C-certo! Entendido!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1534",
+     "source_text_sha256": "df415389f1d3053712593eb8f65647e7c73ca92aea5ff31ba1f5d749764c0ccc",
+     "pt-BR": "Ah! Bem,\nobrigado pelo seu trabalho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1536",
+     "source_text_sha256": "95b914b88de62a35d926f9bc3346fa73aed7c7a019f9c06bb57ee6427b94312e",
+     "pt-BR": "Hã...? Esse é um uniforme masculino de verdade.\nOnde você conseguiu isso?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1539",
+     "source_text_sha256": "1cca49b085252cb7007080a682405554f879b2ad44c8824165e9f8b182d677fd",
+     "pt-BR": "Sargento Yanai, essa mulher está usando um uniforme de policial masculino!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1542",
+     "source_text_sha256": "f9baf1c395aa86e673292f0c533558cfdfc13b5f0087b80ccb999c9159c5919a",
+     "pt-BR": "Eu não roubei! Peguei emprestado do guarda-roupa\ndo quarto de plantão do posto policial!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1544",
+     "source_text_sha256": "c369d530ebe1dfaaf96fac3dd13de59e08f50857da893abd269454b50f182b6d",
+     "pt-BR": "Desculpe! Achei no guarda-roupa do plantão\ndo posto policial e acabei... Já devolvo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1549",
+     "source_text_sha256": "f09a76507411638eba5bdf0f5235b19691fb05ee42da63f0e5ecb499eeba569d",
+     "pt-BR": "Entendo... Parece que você é do tipo que não resiste\na pegar um uniforme sempre que vê um...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1551",
+     "source_text_sha256": "9201d3356f508fa904d5ff163fa9fdbe6c103f6ca2cf407990392260f629e76e",
+     "pt-BR": "Sargento Yanai, por que o senhor está tão impressionado?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1556",
+     "source_text_sha256": "a823412c1fd7a79eb38d5ee79928b6bc99c40ed213383f3845fdd971dbcb75d1",
+     "pt-BR": "Pessoal! Se protejam atrás dos prédios!\nPor favor, evacuem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1558",
+     "source_text_sha256": "afa343f26ce58e6d2ddbd674e869559480cb98ba9badb0e293b389eb921f87d3",
+     "pt-BR": "Você aí, com cara de quem está voltando do trabalho! Rápido!\nAinda não tem incêndio do outro lado da rua!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1560",
+     "source_text_sha256": "f38b2674a4e831911da32a16cb668c7d7ef7f7dc669b070d976c6086748f17ad",
+     "pt-BR": "Você aí, com cara de estudante! Rápido!\nAinda não tem incêndio do outro lado da rua!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1562",
+     "source_text_sha256": "c15f33033ba208a6f2ee19cbd7973a053c9d6422203a1e7bde7677b3cb008e21",
+     "pt-BR": "Você aí, todo empolgado! Rápido!\nAinda não tem incêndio do outro lado da rua!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1564",
+     "source_text_sha256": "13bcb517bb2a185a96ad08373df8c7d02b3f300bbc8cde2157895d70edf378a3",
+     "pt-BR": "Você aí, com cara de quem não decide nada sozinho! Rápido!\nAinda não tem incêndio do outro lado da rua!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1566",
+     "source_text_sha256": "c5e76834a32684c1801505a03294ad8b89840eea82277c871c07cebe51e4140d",
+     "pt-BR": "Você aí! Rápido, você também!\nAinda não tem incêndio do outro lado da rua!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1569",
+     "source_text_sha256": "da2fdc4820019f0ce7a91d4d1509a7f2853525ed22153cc659c395e2e678c7fd",
+     "pt-BR": "Eu não vou desistir de jeito nenhum! Vamos sair dessa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1571",
+     "source_text_sha256": "1789f32cafb9e009efe6f256020eefdd876e8d382ebfe612e77c4db66fdf1b0d",
+     "pt-BR": "O que foi aquilo...?!\nMelhor ver o noticiário.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1573",
+     "source_text_sha256": "d99bd46ec1a12c15714d19df1d970ac901597ebdf1c1465e7d4f25fda9295425",
+     "pt-BR": "O que foi aquilo...?!\nSerá que está no noticiário...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1575",
+     "source_text_sha256": "7febb508a2d850cb46555202feb542af72a28060e569d4e137eac9976c9a7d97",
+     "pt-BR": "Por favor, me ajude!",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/option_menu_text.luc",
+   "source_sha256": "7f5a1c39290029b22a373421a80b8fd2051d98b918895fd4d7f83c6fa3baece8",
+   "entries": [
+    {
+     "id": "p0/k3",
+     "source_text_sha256": "bbf67044e474881f67f19f3eb721fae1b00617e20b613933d44e1c0dd5f49fe2",
+     "pt-BR": "Homem 1",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_201_npc.luc",
+   "source_sha256": "eecaaeab481f18fb20203290bab56298f318c0abacdce01e2ba165da86a0387d",
+   "entries": [
+    {
+     "id": "p0/k1612",
+     "source_text_sha256": "04e10ab3a3bdc653aca3c0867ab731e18bcaa035b139085d4e641d62326d4979",
+     "pt-BR": "Iwabuchi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1613",
+     "source_text_sha256": "b9e4efa1d7f4d107f9037e9f76726332bc6dbb91ad3d9123d686d305f770e09f",
+     "pt-BR": "Gerente da loja de conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1615",
+     "source_text_sha256": "a845f460d088f5ce20b7bb7df65e6ae1e49e97f85c408c04500107b60abd9ba3",
+     "pt-BR": "Kuribayashi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1616",
+     "source_text_sha256": "7d27fe3faf218558e3af8754ff95a6c5ccc9b7505de28f03783a8f8023a616ef",
+     "pt-BR": "Yanai＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1617",
+     "source_text_sha256": "1ec05bf42a5541ad9e48025c228ccbfa4ac4f02fbb4935f1b3da20714a31588f",
+     "pt-BR": "Executivo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1618",
+     "source_text_sha256": "4c0968f979143a5b87233c3e97ea199045335392f8d94d39c40b114cc5bd7914",
+     "pt-BR": "Kobayashi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1619",
+     "source_text_sha256": "616e0a89f56e03185b1c99bbba8efa0db1c31075500b88cd96d90dd2bf61bdb7",
+     "pt-BR": "Otsuka＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1622",
+     "source_text_sha256": "78ec48e0a42f0ac1aad7a9954aaf28c1621d296ab9e7724e05769d9cbb672202",
+     "pt-BR": "Executivo assustado＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1623",
+     "source_text_sha256": "373d7396200a179b6afeaca9888699cb863a838aa0b1bcf8e280bf5beb6729c4",
+     "pt-BR": "Executivo jovem＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1624",
+     "source_text_sha256": "a9f8956ba98b2d81c045edcd8636d24eccc51a7995f2c1ed0e78e9171857fc94",
+     "pt-BR": "Kinoshita＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1625",
+     "source_text_sha256": "88e8c9a7e8dbb2917d6beaf066356820fb2e74dbc425c44c9d70af8b06c03549",
+     "pt-BR": "Ikeuchi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1626",
+     "source_text_sha256": "fbf730da4ae66a427180bdd393017aa02387a797db44bb353c3c0455adde8bd3",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1627",
+     "source_text_sha256": "611da61705768c5a90c275d0be6f535685e14a9f6eb8a96264b64cda7be8728a",
+     "pt-BR": "Muto＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/hud_data.luc",
+   "source_sha256": "8500c9ddb1872f485a22c43011fe264e4e645195231e1015d56a1eab6445dd66",
+   "entries": [
+    {
+     "id": "p0/k25",
+     "source_text_sha256": "d6078c947ce35966f3bcda01ef24a1c1c96675199a16bd3c8360fe89144df56d",
+     "pt-BR": "Consertar a roupa que você está usando?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k27",
+     "source_text_sha256": "c282ff45d3fad1199bc543ee2bbbcf0c916c872edde862fec0d5de026536786f",
+     "pt-BR": "Posso consertar?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "5b92397068212b027f63256f916c37f53618f513ad30a2341632e791de14ca98",
+     "pt-BR": "St10-1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "b8943f6a8954ee661f75d6778f811c364c0d299e90252382f2dd8cb228d538de",
+     "pt-BR": "St10-2A",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "4aa8b38613938a46d85d48e59d2d39af174c2318da1c4099e6fcbbdb72248646",
+     "pt-BR": "St10-2B",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/Text_Common.luc",
+   "source_sha256": "81adefb65c80f744d618c49c069601085976effa5fdf648fe4b50f968c93e8b1",
+   "entries": [
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "4dd5997d6b4fad51c5989f109d839da7b7bf912ba5027e9bf3eb7ab04f673464",
+     "pt-BR": "Não há onde descer aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k9",
+     "source_text_sha256": "e88eb1be824d34e79d8b238d316bc88b784ee00212ff0d36280332bb4dd08bdc",
+     "pt-BR": "A palavra digitada não pode ser usada.\nDigite outra palavra.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k12",
+     "source_text_sha256": "1b6a9754bebee2548feea71e8c73b34fd5a02563abc4080d6702e216a44ed2da",
+     "pt-BR": "O Céu de Nós Dois",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "2fdf345b1099257951562f0b6a617a1da241d8219ce27619e007db840a9df3ea",
+     "pt-BR": "As palavras que você me deu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "ef7b864b7056f3852faf64edc3e38e7b75c3e4f73bfe458980df06049484ef03",
+     "pt-BR": "Atravessam meu peito com ternura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "53c5f7a892a6087ca116a430f69b84ba8cdd794895294b302c475f9deb062ef6",
+     "pt-BR": "Todas as palavras que eu quis dizer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "26b466e706b082b5876ca6cfa0b60b3b1de2d69c8f3e1be3c2e594e4d47b481b",
+     "pt-BR": "Eu engoli até a última",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "404cd1b9dc0ad0d43a551c0246e1f441706718241e6a682394075f710488ea26",
+     "pt-BR": "Nesta rua sem postes de luz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "b8dda757312d7ee9ec90e14a5bb20240b14a46b66a3e23d32f30243339a761de",
+     "pt-BR": "Procurei sua mão no escuro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "357b46daff5579add45c87bcd1de5c65207efe1b79c5731ee1f7ad9a0f86b763",
+     "pt-BR": "Aquela mão pequena e trêmula",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "b28debfa006287c7408aca71923c94d466c95f10fb503b2f88d41cf7f19a484d",
+     "pt-BR": "E a segurei com força",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "d6e2787f672670d6f493fb9cb79103d7f87aefd5061cb789b81ddec788a4fac1",
+     "pt-BR": "Todos esses sentimentos que não levavam a nada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "7e26399b4c4f1cbf98a7b40f8af74a5d66d3d4c8a6c18bf6370d3316e7c62747",
+     "pt-BR": "Minha fraqueza e meus medos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "26ba557a74189dd7b094f475a5adc69c2d4e2b808fb31c9caff335097b626e3c",
+     "pt-BR": "Vou carregar tudo comigo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "45c978901bb61b6d0154e949e67158fb34152f501a43549e50914882a35757a7",
+     "pt-BR": "Estendo as mãos para o céu alto, para nuvens quase ao alcance",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "e8345e7cc232f4de76d4fb62133eb50c1d8b6fe545e8d9ce3cf51bf1225bebc2",
+     "pt-BR": "Até esta chuva que não para",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "dd32a33ecc9d1db254512e052d944421f0a4c84df32b1920c0b3ae0d54f3764d",
+     "pt-BR": "Um dia vou enxugar, junto com as lágrimas do seu rosto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "49d08ed74ec47907c3f489e60bffdd7aa9892cc6303dbf020a7f959714c5b5da",
+     "pt-BR": "Que você pode se apoiar em mim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "ed73a1bbe6b56272902e02f4bddde4e3ce5202388d242be12ae0c0f565bae13e",
+     "pt-BR": "Que de agora em diante eu vou te proteger",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "40fd90a3e94fa9621361589ca5a2a86474d33c81dbe4333e2bc7b74d9abfe6ba",
+     "pt-BR": "Vou ficar forte o bastante para dizer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "7aad7aa5eac996d13cd1b7c04a92aaf8732b68c0fef3f673cd52bc3ef938774e",
+     "pt-BR": "Nós dois caminhamos sem destino",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "788839c2d4c33c77bd8526ca7d725b27ef2556112a85bb17ea4d9430064db90b",
+     "pt-BR": "O que vamos encontrar mais adiante?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "edf6c967ff9dc5ab0cd676797fa577effc7a36a938c50f987564042703812ad4",
+     "pt-BR": "A paisagem refletida nos seus olhos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "e13f51e9c2d3f493451ce87f1f9b929ee09acab88029af43b3abcf1c156c5ca6",
+     "pt-BR": "De que cor é esse mundo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "09113b88aa250a55802ccce84a1d25e79004cf3f2a4eb1ef3c58767aa6e08c85",
+     "pt-BR": "Mesmo que o futuro que encontrarmos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "3d09bf2d5dafb77026fd99f0c43305de4e3b827d5fc0dece2b9416b8505a81ec",
+     "pt-BR": "Ameace nos esmagar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "433f09e7c2ce9fe52530905e1f93163a2a890389de1adbb49ab395af0ada8175",
+     "pt-BR": "Podemos ser fortes - eu sei que sim, juntos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k63",
+     "source_text_sha256": "bf1167766c8aea5f8f537d5c7c7514d2f43ea898db60be0e3a13b56357be7ddd",
+     "pt-BR": "Com certeza esta chuva logo vai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k65",
+     "source_text_sha256": "87662dd2e78b66a13373f0536c5b1c55000c3ef62c43d4eb2c17352670d238e1",
+     "pt-BR": "Estendo as mãos até o seu rosto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "309539c84fda64bafbff4820c2d0db4f4decec0c2a3b90427f96b3f3932a0c0c",
+     "pt-BR": "E sinto seu calor na ponta dos dedos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "7eb1195866dcf654b39bf4ba79d7c44fb2dd1e677b160caa513594052836824f",
+     "pt-BR": "Que está tudo bem você ficar aqui",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "2eb78d58e99fed84854be47a38abf8aa77d4e9c8f6b796e7ab8cb08383916ade",
+     "pt-BR": "Que o seu lugar é aqui do meu lado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "e03729e1f7dfe33a0a1dbe5641c76a3e7f4c1c5161c5a977f661d3c4b8ea71b5",
+     "pt-BR": "Fiquei forte o bastante para dizer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "ef622501f5942f95c412e4cf480592aad77987f26cca23a74bfa371d05143827",
+     "pt-BR": "Falar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "162459c6ef3e30dfd972e096ea987b0eeb5ecaa7b17edd181a4003f4f547e970",
+     "pt-BR": "Examinar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "14932e362bc3f744d26b48802bbf74b956d315c36c7465701d3010ae317438e7",
+     "pt-BR": "★Salvar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "ae03f92cb0413686bec86494d1dcd3499b0ffb1422a9852f0a431f545bbbc2c0",
+     "pt-BR": "Pegar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "597a80237c94958ee72b3fd641207796a27d401e9ac7b70d6db132e09d63976a",
+     "pt-BR": "Itens",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/csv/operation_text.csh",
+   "source_sha256": "2852e65e79fa8b792f1466be90f622e564705c70cf95431f0e04c00151693ead",
+   "entries": [
+    {
+     "id": "r0/c1",
+     "source_text_sha256": "4a16b6ad0680402592309b0872f5b16661303dfefd91960486e91b74c7416622",
+     "pt-BR": "Confirmar[i1]　Cancelar[i2]",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r0/c2",
+     "source_text_sha256": "4a16b6ad0680402592309b0872f5b16661303dfefd91960486e91b74c7416622",
+     "pt-BR": "Confirmar[i1]　Cancelar[i2]",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  }
+ ]
+}

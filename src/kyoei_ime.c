@@ -122,6 +122,9 @@ static ABI int32_t ime_init(const ImeParam *p, const void *extended) {
         if (language && !strcmp(language,"en")) {
             if (!wcscmp(title,L"「姓」を入力してください")) wcscpy(title,L"Enter your last name");
             else if (!wcscmp(title,L"「名」を入力してください")) wcscpy(title,L"Enter your first name");
+        } else if (language && !strcmp(language,"pt-BR")) {
+            if (!wcscmp(title,L"「姓」を入力してください")) wcscpy(title,L"Digite seu sobrenome");
+            else if (!wcscmp(title,L"「名」を入力してください")) wcscpy(title,L"Digite seu nome");
         }
     }
     done = 0; end_status = 2; InterlockedExchange(&abort_requested, 0);

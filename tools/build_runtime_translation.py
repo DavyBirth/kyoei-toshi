@@ -101,9 +101,11 @@ def main():
     source=Path(inventory['source'])/'DAT/common.psarc'
     expected=next(r['sha256'] for r in inventory['files'] if r['path']=='DAT/common.psarc')
     output.mkdir(parents=True);languages={}
-    if args.textures_en and 'en' in compiled:
-        for path in sorted(args.textures_en.rglob('*.tex')):
-            compiled['en'][path.relative_to(args.textures_en).as_posix()]=path.read_bytes()
+    if args.textures_en:
+        # pt-BR reuses the English art until its own textures exist.
+        for language in compiled:
+            for path in sorted(args.textures_en.rglob('*.tex')):
+                compiled[language][path.relative_to(args.textures_en).as_posix()]=path.read_bytes()
     for language,replacements in compiled.items():
         target=output/language/'common.psarc';print(f'Building private preview: {language}',flush=True)
         proof=patch(source,target,replacements,expected)

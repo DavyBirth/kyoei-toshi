@@ -5196,3 +5196,10 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 
 ### 29/10/2026 — updater dos amigos (jogo + tradução)
 - Gerado `build/Kyoei-Update-Jogo-e-Traducao-20261029.zip` (SHA256 `162179dc…`) a partir da portátil pessoal: runtime `713331fb…`, launcher e tradução de 26/10. Gerador ganhou `--translation-update` para aceitar quem aplicou a tradução de 24/10 (runtime `50af4ebb…`, antes recusado). test_translation_update PASS Windows/Linux. Jogo não aberto.
+
+### 29/10/2026 — piloto pt-BR jogável
+- Fonte principal (utf8all) tem todos os acentos; a do intermission (utf8all_IM) não tem ÀÁÉÓÚàáâãçéêíóôõú• (M3 pendente para essa tela).
+- Traduzidos os 733 textos da primeira fase (Text_Stage_201 inteiro, NPCs, Text_Common, TextData, hud_data, operation_text), no estilo natural do inglês. Rascunho `translations/localization-pt-BR-pilot.json`, revisão humana pendente. Largura estática: as 25 linhas mais largas que o p99 do inglês (1358) foram encurtadas/quebradas; nenhuma restante acima disso.
+- `tools/merge_language_fallback.py`: textos sem pt-BR usam o inglês aprovado. Prévia `runtime-preview-pt-01` (13.269 textos, 168 texturas inglesas reaproveitadas) e `languages/pt-BR/translation.kydelta` na portátil. Prévia antiga runtime-preview-02 (6 GB) apagada.
+- Runtime: pt-BR liga os mesmos recursos do inglês (ajuste do HUD, nomes latinos, textos do executável em inglês, títulos do teclado de nome em português). Launcher mostra "Português (Brasil) · prévia" só se o delta existir; usa botões/textos do executável em inglês. build_portable gera o delta pt-BR quando há prévia.
+- Testes names/ime_overlay/overlay/text_wrap/hud_trace PASS; pc_names falha igual sem as mudanças (pré-existente). Launcher --check 0. Jogo não aberto: Davy testa.

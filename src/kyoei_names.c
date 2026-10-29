@@ -50,7 +50,7 @@ static ABI int32_t convert_name(uint64_t *written,char *output,uint64_t capacity
 }
 void kyoei_names_configure(void *image,uint64_t bytes,uintptr_t expected_converter) {
     const char *language=getenv("KYOEI_LANGUAGE");
-    if(!language || strcmp(language,"en"))return;
+    if(!language || (strcmp(language,"en") && strcmp(language,"pt-BR")))return;
     unsigned char *base=image;
     const unsigned char thunk[]={0xff,0x25,0x62,0x97,0x62,0x00};
     const unsigned char field_load[]={0x48,0x8d,0x0d,0xff,0x09,0xdf,0x00};
