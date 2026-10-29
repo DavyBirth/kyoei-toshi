@@ -5,6 +5,19 @@
  "language": "pt-BR",
  "resources": [
   {
+   "path": "common/lua/stage_204_check_old.luc",
+   "source_sha256": "97df51c77dd0b07c60fc00b32a7672304bfa9b804eb0520441ede6501acb0674",
+   "entries": [
+    {
+     "id": "p0/p3/k42",
+     "source_text_sha256": "517e76c0e08ec05137b80605edb5beb9aff917fcae17b9b25f3e8e65434d137f",
+     "pt-BR": "Conseguiu um extintor.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/TextData.luc",
    "source_sha256": "03dd74bbcdc66bd2818be8922e501715038e5c2645429a098e0a9bf4c02f2de9",
    "entries": [
@@ -4863,6 +4876,109 @@
    ]
   },
   {
+   "path": "common/lua/stage_204_item.luc",
+   "source_sha256": "5ab397e57bcb12bc03666e6a70bcd1e8c7d584b5f06702fcd0980392874a5c12",
+   "entries": [
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_204_npc.luc",
+   "source_sha256": "7958565a5b7402d9543acef591288de1ba58f20dca03a399f29b6f6794e16131",
+   "entries": [
+    {
+     "id": "p0/k667",
+     "source_text_sha256": "5486132825ee5b63089cb40b2fda4ae06332b299ab053f2490a90dc09545a0e9",
+     "pt-BR": "Miho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1009",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1011",
+     "source_text_sha256": "460d779e151902e32157a1d2cd4825e37f1378fab6174450ab79c55ac71b920a",
+     "pt-BR": "Executivo de elite A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1012",
+     "source_text_sha256": "a68ad608677b1a8d05e0f2fa7f06cbe90b7a3a82dc43d0f34cc6fb3855455812",
+     "pt-BR": "Executivo de elite B＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1013",
+     "source_text_sha256": "6117d01a84a0831fd8f81d752482a188a4f62272df5f8557874d7eea714f6bb3",
+     "pt-BR": "Norio Nakagawa＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1014",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1016",
+     "source_text_sha256": "616e0a89f56e03185b1c99bbba8efa0db1c31075500b88cd96d90dd2bf61bdb7",
+     "pt-BR": "Otsuka＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1017",
+     "source_text_sha256": "49fc6be787e890a6882d35b7bbe0e3e359011729f2187f5a723193f857d3f547",
+     "pt-BR": "Miho＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1018",
+     "source_text_sha256": "6c419f2c4ccce9ad1cf8f6230cf6be6572ee694a9584e750899f1caf9922f91e",
+     "pt-BR": "Fujiwara＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1019",
+     "source_text_sha256": "fbf730da4ae66a427180bdd393017aa02387a797db44bb353c3c0455adde8bd3",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1020",
+     "source_text_sha256": "611da61705768c5a90c275d0be6f535685e14a9f6eb8a96264b64cda7be8728a",
+     "pt-BR": "Muto＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k1021",
+     "source_text_sha256": "3e465520f18334c048c8629fb0d9730ec555ac43f3e8888ccb5d50e44a900129",
+     "pt-BR": "Bombeiro",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_203_news_data.luc",
    "source_sha256": "bc9a817a84afd60da469a379147468f2239448a067698c7f7df4c06623335332",
    "entries": [
@@ -4877,6 +4993,19 @@
      "id": "p0/k6",
      "source_text_sha256": "1d7092c85800ff182e7ce57b3cf5b45c18f40c4ce315e960c7237775675b1fd6",
      "pt-BR": "【Vídeo】Estranha criatura voadora dispara sobre uma ponte",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_204_demo.luc",
+   "source_sha256": "e34cf34c8a8b21cda0e29e9dd3928e7403d5cd995a66f6196bae7677df046a75",
+   "entries": [
+    {
+     "id": "p0/p29/k111",
+     "source_text_sha256": "517e76c0e08ec05137b80605edb5beb9aff917fcae17b9b25f3e8e65434d137f",
+     "pt-BR": "Conseguiu um extintor.",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -9631,6 +9760,61 @@
    ]
   },
   {
+   "path": "common/lua/stage_204_check.luc",
+   "source_sha256": "8a4b39cc3d61431eac1e1a1bedfb7ba916b2457e9c74578891d6dac4bcb0b76f",
+   "entries": [
+    {
+     "id": "p0/p5/k113",
+     "source_text_sha256": "517e76c0e08ec05137b80605edb5beb9aff917fcae17b9b25f3e8e65434d137f",
+     "pt-BR": "Conseguiu um extintor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p5/k165",
+     "source_text_sha256": "62f04278136bc13150f8b2e68f594895e636a49b088604c5ea3a2194ac81060f",
+     "pt-BR": "Conseguiu um cofrinho de porco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p5/k171",
+     "source_text_sha256": "95ca8fccc7a85c5339cb6075ecab729bb89f58a5c8d630e4552278bbf2e70c0a",
+     "pt-BR": "Conseguiu um vestido chinês.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p5/k173",
+     "source_text_sha256": "dc4f53f94894cd1bf3cf81beddc4e0a28722b44fc9fe27fb52c93470427a2111",
+     "pt-BR": "Conseguiu Ministro do Karaage Vermelho Superapimentado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p52/k3",
+     "source_text_sha256": "64ba266fe5de3df1a35d1a6c2e2f8d059e74cb62450dddae5a351db99f636494",
+     "pt-BR": "Tem uma lanterna no chão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p52/k4",
+     "source_text_sha256": "30f06db674de1541a77a25003b926dcab269af69bb9a8e3d6422eee240102ecc",
+     "pt-BR": "Conseguiu uma lanterna.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p79/k162",
+     "source_text_sha256": "a0d8d3feabbdf67e178ea12492420ee4d6b5e96b640b06e1203e5d5598f31a9a",
+     "pt-BR": "Escolha do cofre",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_212_news_data.luc",
    "source_sha256": "5ae586b065c1751c90d2313297bec2adfd60744d45252e610615206393c284bd",
    "entries": [
@@ -9801,6 +9985,40 @@
    ]
   },
   {
+   "path": "common/lua/stage_204.luc",
+   "source_sha256": "bceed06e84ec7e33b941bb163cf422175785913a05e7ac7d53b9bc8d1ece1e75",
+   "entries": [
+    {
+     "id": "p0/p241/k21",
+     "source_text_sha256": "f76fe3c9cca65bb132fd3b28054c18951a3017df674c268c401be0146f348fb9",
+     "pt-BR": "Voz de homem em pânico",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p241/k22",
+     "source_text_sha256": "0ec3a41c6c1458e3e23a1ab65909699c3105fa1b168f9c3cdeb63c115ff85943",
+     "pt-BR": "Ai, não!\nMinha lanterna!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p241/k24",
+     "source_text_sha256": "395a4e2990b9bd91366716828c7e17738279bbcfe8d798a0fe5c29eda335124f",
+     "pt-BR": "Voz de homem calmo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p241/k25",
+     "source_text_sha256": "87799dd51f12943579df0e6ace9b677a8305bbb46257e34e3261f4ae0bd16fdf",
+     "pt-BR": "Esquece isso, só corre! \nMe segue!",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_203.luc",
    "source_sha256": "0ea6ac72143efddf68c0a44810cea14b0d4e7a50233159268856555af393b78e",
    "entries": [
@@ -9808,6 +10026,887 @@
      "id": "p0/p126/p1/p0/k1",
      "source_text_sha256": "a5bc39d6a236b4c65ec040704cfebeb2787dabb1ad5048be0cf8f1ed145d3c3c",
      "pt-BR": "Mothra",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_204_news_text.luc",
+   "source_sha256": "7381fb977b640ed21542e498875b08a1410a10a59a94a6bce31454c9527c4a90",
+   "entries": [
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "966a4a5bf33e134e4de86ac73cd3e12ed7179ad74f16d3e6a91188297d4a02b3",
+     "pt-BR": "Segunda Seção de Veículos Especiais destrói a Torre Iberis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "8d22185c40762042ade70c93a9713895f74d244efd0391017e6d61f8e77bd69c",
+     "pt-BR": "Um incêndio atingiu a Torre Iberis, no bairro de Sakura, em Miyato, província de Miyato, por volta das 21h de hoje. Labors do 2º Pelotão do Departamento de Segurança da Polícia Metropolitana de Tóquio resgataram pessoas presas lá dentro.\nO apoio à unidade de Labors teria crescido entre quem antes desconfiava dela. Porém, imagens mostram os Labors arrombando a parede externa do prédio para entrar, e as opiniões se dividem sobre se isso era necessário.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "94ffc95b125cf192e836857ad1b90cf2c4aea065d93d9f6a42e03c6e75efecbc",
+     "pt-BR": "Escombros caem durante operação da Segunda Seção de Veículos Especiais",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "0cc9bc014349bddddf20b0cc5337d9968ddbe1c823a4be82ea656bf0c02c3cd4",
+     "pt-BR": "Labors do 2º Pelotão do Departamento de Segurança da Polícia Metropolitana de Tóquio foram enviados para ajudar no resgate do incêndio da Torre Iberis, no bairro de Sakura, em Miyato, província de Miyato.\nA unidade foi levada ao terraço de helicóptero e fez os resgates usando cabos. Porém, possivelmente por um erro de operação, um Labor danificou o prédio, fazendo escombros caírem no chão.\nFelizmente ninguém se feriu, mas moradores próximos manifestaram preocupação com a unidade de Labors.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "a7e0830a746bfe5c2c2e51bc1c847abb897329cccd16d295d020cd0bb20c4b23",
+     "pt-BR": "Labor da polícia resgata menina",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "9c0e6e89d5cf4cbf5b4023a589a77e9b9b0d6177650148fd028473ab789ab636",
+     "pt-BR": "Nosso helicóptero de reportagem flagrou um Labor da Polícia Metropolitana descendo ao chão com uma menina nos braços.\nEsse Labor é o \"AV-98 Ingram\", do 2º Pelotão da Segunda Seção de Veículos Especiais, Divisão de Segurança da Polícia Metropolitana. Ele teria sido enviado para o resgate por ser mais ágil e capaz de movimentos mais precisos que o Labor dos Bombeiros, o \"CRL-98 Pyrobuster\".\nA julgar pelo sorriso da menina, a missão pode ser considerada um grande sucesso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "7def0b12e07174fc3817f1360e725a67ae3ee972aab60f66a1fd51c388213581",
+     "pt-BR": "Labor dos Bombeiros fica entalado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "cb0d5047ea38fb29cab4f5fe783933a9ac116a38cfbc849b439e7097613cffa3",
+     "pt-BR": "Durante o incêndio da Torre Iberis, um Labor dos Bombeiros ficou entalado num corredor.\nUma foto obtida com exclusividade confirma que ele de fato ficou preso. Será que o operador não percebeu antes de tentar passar? Outros Labors dos Bombeiros o resgataram, e ele não teria sofrido nenhum problema mecânico.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "9d288fa7fe190f9e8e439d6072486bb0c2b8177f0aad0aadf6f4e2183dc1b678",
+     "pt-BR": "Labor dos Bombeiros tem papel decisivo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "a1ea75906ef2ae189e76790825ab709b2a7716aaaa870f569e7244e90505b8ee",
+     "pt-BR": "\"Um Labor dos Bombeiros me salvou!\" Ao entrevistar pessoas pegas no incêndio do prédio, ouvimos isso várias vezes.\nO senhor Sakurada, da Construtora Kunshiran, que diz estar vivo graças a um Labor dos Bombeiros, ia para a saída de emergência quando o teto desabou de repente e as chamas bloquearam seu caminho.\nQuando ele pensou \"Acabou...\", um Labor dos Bombeiros surgiu do átrio no centro da Torre Iberis e começou a jogar água, e depois que o fogo se apagou, ficou de olho nele até que passasse em segurança.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "48522ee6fc7e6db54fd55b0e99062fe1d2d90357e6247533695f3042ed0d0fed",
+     "pt-BR": "Destroços de Labor são encontrados",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "30ea364b6c8940fa321b92bd40cbb31fa25e18e471ad70c67fc262166e284aa5",
+     "pt-BR": "Os destroços de um Labor de origem desconhecida, o \"TYPE-5Q/2C Graubear\", foram encontrados nas ruínas do incêndio da Torre Iberis.\nO piloto não foi encontrado e, a julgar pelos danos, o Labor parece ter caído pelo átrio no centro do prédio.\nNinguém ligado à torre soube dar informações, e acredita-se que ele tenha entrado de fora. Sua ligação com o incêndio é desconhecida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "9eb1eea132c9a9a6d65a8f1bc5c2eda28d719802cddccade533683912bd7df27",
+     "pt-BR": "Labor azul causa destruição dentro de prédio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "83082c1e5defc79dfe635211abef7e6746f42da2647b24025da34713f6ff62ff",
+     "pt-BR": "\"Um Labor azul estava explodindo o prédio.\" O senhor Terayama, que fazia um serviço de ar-condicionado na Torre Iberis, conta que ouviu o alarme de incêndio e estava evacuando quando uma parede desabou de repente e um Labor azul apareceu.\nO Labor azul causou destruição pelo andar e depois seguiu para o andar de baixo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "d2f0248b8c8d59c57a106fabf7b7661bed250181ccd0f6982b34c4b36886927f",
+     "pt-BR": "Labor azul é levado de helicóptero ao terraço!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "3031bdfac9613ecaa22c7e5c3c07c6518f4dc780707c3d82e68b660e1d758a0a",
+     "pt-BR": "Por volta das 21h de hoje, o senhor Komori, que apreciava a vista noturna no mirante da Torre Iberis, ouviu o barulho de um helicóptero.\nOlhando em volta, ele conta que viu um Labor azul sendo levado ao terraço. Teria ligação com o incêndio do prédio?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "b215b12d06e9082c7e116efdb19a2bdddf00331c554600f72be2926556e345b8",
+     "pt-BR": "Construtora Kunshiran é atacada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "38885e9827186822b736e182d209af5e0a62be3da491e03969657ca664e2d441",
+     "pt-BR": "Por volta das 21h30 de hoje, a sede da Construtora Kunshiran foi atacada por um Labor azul, e seu cofre foi roubado.\nSegundo comunicado do setor de RP da Construtora Kunshiran, o ataque resultou no roubo do cofre e na perda de documentos importantes, mas não houve impacto externo, como vazamento de dados pessoais ou corporativos.\nA origem do Labor azul é desconhecida, mas a Construtora Kunshiran vinha enfrentando protestos ferozes do grupo ambientalista NKX, que podiam ser vistos como uma declaração de intenções, e a Polícia da Província de Miyato, acreditando no envolvimento do grupo, indicou que pretende interrogar seu líder, Kiyoharu Futamura.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "8cd9d15c4b169e5fda4666574e5b4a28e4f32b775b35561962d22cea85ad2ffb",
+     "pt-BR": "Consciência sobre segurança é questionada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "da96f683359f70c64ba5f7ef9b84fb781535eb6534d0e3805e79fbc1b60a3866",
+     "pt-BR": "A grande operadora de celulares Lightning Connect virou notícia recentemente por um enorme vazamento de dados de clientes. Pelo jeito, tudo começou quando um invasor deduziu uma senha a partir de palavras ditas ao celular por um vendedor no elevador de outra empresa, e depois invadiu o sistema.\nDiscutir um projeto num elevador dividido com funcionários de outras empresas e pessoas comuns, achando que ninguém vai entender, é imperdoável. Nesta sociedade de alta tecnologia, nunca se sabe o que pode causar um vazamento de informações.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "7a69eb097de66b1d38f5a075b3bc99d9fbb53152eb95ee6d3f48c7a385a0916f",
+     "pt-BR": "Edição sumida do Semanário da Sombra Gigante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "98b6efa9a8e1f202fc7b75dc30105f9d68f68693ccce64be0495c98eecdb83ff",
+     "pt-BR": "Há relatos de um homem fazendo escândalo por causa do incêndio da Torre Iberis, gritando para que devolvessem seu exemplar do Semanário da Sombra Gigante.\nO homem é um executivo da Construtora Kunshiran. Um cofre carbonizado foi encontrado nos restos do incêndio, e ele estaria exigindo a edição do Semanário da Sombra Gigante que estava lá dentro.\nA Polícia da Província de Miyato deve interrogar o executivo como pessoa de interesse no incêndio. A revista em si não foi encontrada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "e76959f14d184134fa1bcdb820c09825c000e62a7d1ae87a5fe22127935cb59b",
+     "pt-BR": "Projeto de urbanização da orla é retomado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "26f70d44901d7daaf759937b860929077af6e6944cef3ded1e88cbc5729d8030",
+     "pt-BR": "Foi aprovada a retomada do aterro costeiro do projeto de urbanização da orla em Miyato, província de Miyato, que estava parado desde um acidente no fim do mês passado.\nQuando o aterro começar, as últimas praias da província de Miyato vão finalmente desaparecer.\nAs obras começam no dia doze do mês que vem. A área continua aberta ao público até o fim deste mês. Quem quiser dar uma última olhada nas praias da província tem até as 15h do último dia do mês.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "3932121aa4dd0ac7a73f377e167d8591d9639df5827138cc3f61a8471545bab3",
+     "pt-BR": "Presidente da Construtora Kunshiran está desaparecido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "9234311b465008febbe592e03608e3991d04b16bbf3e380a978edd2437b0b319",
+     "pt-BR": "O presidente Busujima, da Construtora Kunshiran, está desaparecido desde o incêndio de hoje na Torre Iberis.\nSegundo a Polícia da Província de Miyato, ele foi visto várias vezes fugindo pelos escritórios. Acreditando que ele foi pego pelo incêndio, a polícia tenta descobrir se ele está bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "3df8e1a814570e7ce40652d23f531a05279424480517812f4fe0d39c07c64e90",
+     "pt-BR": "Construtora mantém silêncio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "29a0ffdcb86b046c359e7dbfc96049cd34a216851af96b46ed63c8e651df563e",
+     "pt-BR": "Caderneta da Construtora Kunshiran é roubada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k192",
+     "source_text_sha256": "4a4e0f2871d0216fb403dde4926fe026d796f5cecbe395c1cbefe34f36045c19",
+     "pt-BR": "Um incêndio atingiu a Torre Iberis por volta das 21h de hoje. Ao mesmo tempo, um Labor atacou os escritórios da Construtora Kunshiran no 20º andar e roubou um cofre.\nDepois do incidente, os destroços do que parecia ser o Labor invasor e o cofre roubado foram encontrados no saguão do térreo. A caderneta bancária da Construtora Kunshiran tinha sumido do cofre.\nA conta movimenta o capital de giro da empresa. A Polícia da Província de Miyato investiga a hipótese de que o piloto do Labor levou a caderneta e fugiu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "078349c2a77672a83855ed45995c8faceb57c1594285428e2e22c4a7f703be87",
+     "pt-BR": "Carimbo da Construtora Kunshiran é roubado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "c7bce0a3f8a75765bcdde24e9b35b23797598acb022b8f61ea13cef18a5b101d",
+     "pt-BR": "Um incêndio atingiu a Torre Iberis por volta das 21h de hoje. Ao mesmo tempo, um Labor atacou os escritórios da Construtora Kunshiran no 20º andar e roubou um cofre.\nDepois do incidente, os destroços do que parecia ser o Labor invasor e o cofre roubado foram encontrados no saguão do térreo. O carimbo da Construtora Kunshiran tinha sumido do cofre.\nPorém, a caderneta bancária guardada junto teria ficado para trás. Por que o criminoso levou só o carimbo continua um mistério.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "d18dab7ccb45f1f4ca5178db2d038db8028392c3e606fdeae78ed95deab32232",
+     "pt-BR": "Descuido leva ao roubo de caderneta e carimbo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "282b488ae6a48372ae5de0ec2427fc8737d1f5010ac0a1dba2e80688422d6ffa",
+     "pt-BR": "Um incêndio atingiu a Torre Iberis por volta das 21h de hoje. Ao mesmo tempo, um Labor atacou os escritórios da Construtora Kunshiran no 20º andar e roubou um cofre.\nDepois do incidente, os destroços do que parecia ser o Labor invasor e o cofre roubado foram encontrados no saguão do térreo. Tanto um carimbo quanto uma caderneta bancária tinham sumido do cofre.\nSegundo os investigadores, a caderneta e o carimbo são usados para o capital de giro da Construtora Kunshiran. A Polícia da Província de Miyato investiga a hipótese de que o piloto do Labor os levou e fugiu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "5d60f9633f0fd1a6f48ec74114de23ba280610d4aabae4df0c0b577f08cc2ecc",
+     "pt-BR": "Homem de moicano causa tumulto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "489f0372bad5e3f1c99cdb36f68ff6690b893c85b27e0504405268f25abf05ba",
+     "pt-BR": "Por volta das 21h de hoje, um homem de moicano perseguiu um casal aos gritos no andar do mirante da Torre Iberis, que depois pegou fogo.\nO incêndio começou antes de a Polícia da Província de Miyato chegar em resposta à denúncia. O caso continua sob investigação, e não havia informações concretas.\nTestemunhas descreveram o perseguidor como \"um homem alto, moreno, de terno e moicano\". A ligação com o incêndio é desconhecida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "e286efbb1cd14fffa38d46ffc090fd2c68baf46e5cf76b7b4c10f1b2a167a6fc",
+     "pt-BR": "Homem armado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "d43100b14efb0c5c3629df3070187812551e150877ee992e3e4f71a05184d4c9",
+     "pt-BR": "Por volta das 21h30 de hoje, houve uma denúncia de duas pessoas armadas com pistolas num andar de escritórios da Torre Iberis.\nAntes disso, \"um homem alto, moreno, de terno e moicano\" tinha perseguido um casal no andar do mirante. A Polícia da Província de Miyato investiga a hipótese de ser a mesma pessoa.\nT, autor da denúncia, disse: \"Eles entraram de repente na sala gritando e pareciam procurar alguém. Não deu pra ver direito como era o cabelo.\" A ligação com o incêndio é desconhecida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "390fc9a9f13a0f5fde1c18e5742b4ef1442342be5f5895bbd677620671560a7d",
+     "pt-BR": "Miados ecoam pelo arranha-céu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "d4ffa4faf4430970bf0dc949e678953ada113f8150050debba294a6d59545406",
+     "pt-BR": "T, sobrevivente do incêndio da Torre Iberis, conta que ouviu um gato no escritório do vigésimo andar durante o incêndio.\nSegundo T, os únicos animais criados ali são hamsters, então o mais provável é que um gato de rua tenha entrado.\n\"Tinha uma voz fofa, mas não consegui achá-lo quando procurei. Ele provavelmente não sobreviveu àquela fumaça. Me sinto péssimo\", lamenta T.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "bfc8bc0f59ca447b7de4fe10e440eed54ef9853706b9c082c6491444424e0b05",
+     "pt-BR": "Latidos ecoam pelo arranha-céu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "4339f578dd02f624880ff469cb59f08d63af8aab618468bf4ff820112c428c61",
+     "pt-BR": "T, sobrevivente do incêndio da Torre Iberis, conta que ouviu um cachorro no escritório do vigésimo andar durante o incêndio.\nSegundo T, os únicos animais criados ali são hamsters, então o mais provável é que um cachorro de rua tenha entrado.\n\"Tinha uma voz animada, mas não consegui achá-lo quando procurei. Ele provavelmente não sobreviveu àquela fumaça. Me sinto péssimo\", lamenta T.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "e4c89a3a3c1ecd5b69d76aa66ffdf11783f619614785e325b6f8be9af01aa1ef",
+     "pt-BR": "Canto de galo ecoa pelo arranha-céu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "96c06714db95295dddf31fbcb2d5e0f627e3b20fd2ecf9eaf9acaa2675043f4c",
+     "pt-BR": "T, sobrevivente do incêndio da Torre Iberis, conta que ouviu uma galinha no escritório do vigésimo andar durante o incêndio.\nSegundo T, os únicos animais criados ali são hamsters, então o mais provável é que uma galinha solta tenha entrado.\n\"Tinha uma voz saudável, mas não consegui achá-la quando procurei. Ela provavelmente não sobreviveu àquela fumaça. Me sinto péssimo\", lamenta T.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "fd2c39e61c32e1340a8b2f309e8a4ce85572a88da61d43c00333cf99721e3802",
+     "pt-BR": "Canto de rouxinol ecoa pelo arranha-céu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "9a6aaaed742f5b282f25990c6f0dcb786b1889297b48fde0f87bf0a79559b9af",
+     "pt-BR": "T, sobrevivente do incêndio da Torre Iberis, conta que ouviu um rouxinol no escritório do vigésimo andar durante o incêndio.\nSegundo T, os únicos animais criados ali são hamsters, então o mais provável é que um rouxinol selvagem tenha entrado.\n\"Tinha uma voz linda, mas não consegui achá-lo quando procurei. Ele provavelmente fugiu por uma janela. Foi uma experiência estranha\", diz T.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "aca4b117315cdb3afe6c2544e487be3dd9425eed813854b3e1d0636af76d56c5",
+     "pt-BR": "Lobo é avistado em arranha-céu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "782847d9f1339f9f7cc4466b2329eec5ef7fcc89e3c9b831192e81dedb2e9a3c",
+     "pt-BR": "T, sobrevivente do incêndio da Torre Iberis, conta que ouviu um lobo no escritório do vigésimo andar durante o incêndio.\nSegundo T, não há lobos no escritório. Especialistas sugerem que poderia ser um Lobo-de-Prédio-Hitomitai, espécie supostamente extinta que só vive em arranha-céus, o que despertou bastante interesse.\n\"Era um uivo muito característico, mas não consegui achá-lo quando procurei. Ele provavelmente não sobreviveu àquela fumaça. Me sinto péssimo\", lamenta T.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "adaafdc9c6f7358acee77c74794822ab7416ce38f8178471e9642b8d45429f62",
+     "pt-BR": "\"Vou continuar deixando passar\": Muto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "16fa7981261074980d6c5756b5e99d1e80f3ef2017e467558135cb7e372f8bbc",
+     "pt-BR": "Foi anunciado o Prêmio Arrancada MiyaSpo!, que homenageia o defensor mais impressionante da primeira semana da temporada, e o vencedor é o terceira-base Muto (27), dos Kunshiran Elephants.\nNa 9ª entrada do jogo de 2 de abril contra os Giraffes, Muto deixou passar uma bola rasteira que daria a vitória ao adversário se fosse válida, e ela saiu pela linha de falta; depois, ele bateu um home run de duas corridas na 10ª entrada da prorrogação e levou o time à vitória.\nNo dia seguinte, rebateu 4 em 4 com 6 corridas impulsionadas, levando os Elephants à liderança.\nNa entrevista pós-jogo, ao saber do prêmio, disse: \"É a primeira vez, então estou muito feliz. Vou continuar deixando passar as bolas difíceis\", arrancando risadas ao brincar com sua defesa instável.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "9aa3f2be6b4223bdb11f7c0490ed1a5c53c97d11eaae31892b1784e3aa1b083a",
+     "pt-BR": "Cigarra precoce pode ter batido recorde",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "a8ee69bc8c59c45a4694df2e9e9cee115d089b2a0b4050da87f83b109ddeeef0",
+     "pt-BR": "T, sobrevivente do incêndio da Torre Iberis, conta que ouviu uma cigarra tsukutsukuboshi no escritório do vigésimo andar durante o incêndio.\nSegundo T, não há insetos ali. Especialistas dizem que junho é o mais cedo que essas cigarras são ouvidas na província de Miyato, o que faria deste o primeiro registro em abril e põe a história em dúvida.\n\"Não tem erro. Era uma tsukutsukuboshi. Procurei na hora, mas ela parou de cantar e não consegui achá-la. Ela provavelmente não sobreviveu àquela fumaça. Me sinto péssimo\", lamenta T.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "bb57bfb5d04911a4c1f5bf1bad1ee6a05911abe16dd1d50c654076f37644babb",
+     "pt-BR": "Chaleira de última geração: \"Dragon Pot\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "b789a9fe1125bf1ce30ee3811d48ba26f141b57f10c5ae7e49072484fa023fa0",
+     "pt-BR": "Desta vez, apresentamos a Dragon Pot, uma chaleira de última geração da tradicional fabricante de utensílios de cozinha profissionais Munemune!\nFeita inteiramente de cerâmica fina, a chaleira tem por dentro o exclusivo Revestimento Dragão, com patente pendente. Ferve rápido e esfria devagar, como o temperamento de um animal selvagem.\nE prepare-se: por ser de cerâmica, ela vai ao micro-ondas! E, claro, também pode ir à lava-louças.\nAbra a alça, e o que você encontra? Uma conexão elétrica! Sim, esta chaleira também ferve água na tomada, como uma chaleira elétrica. E o preço? Impressionantes 19.800 ienes com impostos! Não perca esta oportunidade!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "41807ae5a84796eb3c16dad1deebcf66dee01fd2ddf0ce2ecc0466f350c9f804",
+     "pt-BR": "Tempo de gravação da secretária eletrônica",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "7326aa0b0df83a73d85ec768100ce49b1030ee6ec1f2131f59da59ed60bb6d8c",
+     "pt-BR": "Quase ninguém fala disso, mas você sabe quanto tempo uma secretária eletrônica grava? Vinte segundos? Trinta? Seria mais ou menos o necessário para deixar um recado. Mas o Mossy, o mais novo telefone fixo da líder do setor Irodori Elétrica, oferece impressionantes cinco segundos! Não é meio pouco? Resolvemos perguntar por quê.\nNós: \"Olá. Por que o Mossy grava só cinco segundos?\"\nIrodori: \"Bom, quando calculamos a média dos recados gravados em todos os telefones fixos que vendemos, deu 2,5 segundos. Achamos que o dobro bastaria, então fizemos cinco.\"\nNós: \"O quê!? 2,5 segundos? Dá pra dizer nem alô nesse tempo?\"\nIrodori: \"Nossa própria pesquisa confirmou a média de 2,5 segundos. Por privacidade, medimos só a duração, não o conteúdo.\"\nNós: \"I-isso não inclui as ligações em que a pessoa desligou sem deixar recado...?\"\nContinua na próxima edição.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "ba1b58a731c264b84525a17db25fc1e5262d383ca9d617a8650e806cdddcea15",
+     "pt-BR": "Camaleão-Hércules-Espiral é descoberto?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "8504d213ef303b2f671bdbd6cdb5d723f6d621b0a38273900d8de379b827ad87",
+     "pt-BR": "T, sobrevivente do incêndio da Torre Iberis, conta que ouviu um Camaleão-Hércules-Espiral no escritório do vigésimo andar durante o incêndio.\nSegundo T, os únicos animais criados ali são hamsters, então o mais provável é que um Camaleão-Hércules-Espiral selvagem tenha entrado.\n\"Era bem baixinho, mas com certeza era um Camaleão-Hércules-Espiral. Procurei por um tempo, mas não achei, talvez por estar camuflado. Ele provavelmente não sobreviveu àquela fumaça. Me sinto péssimo\", lamenta T.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "5f4fb925cd4d3dd94adc1931d498d5bc52d89f99a2442e54cb56292b5536e6c9",
+     "pt-BR": "Não use elevadores em emergências, mesmo que estejam funcionando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "d83952db188c97f5b5438f7aca4633ae2494204a9502b0e2731d5dcc18651427",
+     "pt-BR": "\"Não use elevadores numa emergência, mesmo que estejam funcionando\", diz U, do departamento de relações públicas da Irodori Elétrica.\n\"Um desastre pode deformar o equipamento ou causar defeitos. Além de parar, o elevador pode provocar um acidente inesperado, como um choque elétrico.\"\nNo dia vinte e dois do mês passado, quando um terremoto de intensidade sísmica 4 atingiu a costa da província de Miyato, um homem do bairro de Sakura ficou preso no elevador que usou para evacuar.\nTome cuidado para não usar elevadores numa emergência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "2928e32dbac63c9fae9159afe06840a6ed40465d87b297cb1615ad10bd05fdd5",
+     "pt-BR": "Uma voz vinda do elevador",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "fa5650b94d098fc724c8513bb2abe6024766888d34a671f90a1df0aa5d70b1ac",
+     "pt-BR": "K, que escapou em segurança do incêndio da Torre Iberis, diz estar com a consciência pesada.\n\"Enquanto evacuava, ouvi uma voz dentro de um elevador. Alguém podia estar preso. Na hora eu estava em pânico demais pra pensar nisso, mas com certeza era a voz de uma pessoa! Tinha alguém preso ali!\"\nAté agora, nenhuma vítima do incêndio foi anunciada. Espero que quem estava preso esteja bem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "f9e10b148c75748f468dc355092172964636f5f51d742bac17ccbe553bdfc2b4",
+     "pt-BR": "Imagens misteriosas de câmera de segurança 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "cb334fe7258dc5dd3fe16fc211d79f4f6537755a0f971644a4b7198e7b18189c",
+     "pt-BR": "Uma câmera de segurança dentro de um elevador da Torre Iberis guardou imagens do incêndio.\nConsultando os funcionários do prédio, não encontramos ninguém que reconhecesse as duas pessoas mostradas, o que sugere que eram visitantes.\nEste elevador foi especialmente afetado pelo incêndio, e não há confirmação de que as duas pessoas estejam bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "9ea59e673432c9e75ab1d7974a4158e0bd0b02145453178b104dff888d2f517e",
+     "pt-BR": "Imagens misteriosas de câmera de segurança 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "782324949ed9e0882470594f845eee520357800a1c5f0160864fc1bafa48178f",
+     "pt-BR": "Imagens misteriosas de câmera de segurança 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "0e139c82c4480108849b3fe0da67dea4f993ca57614e411777647387a885b02b",
+     "pt-BR": "Uma câmera de segurança dentro de um elevador da Torre Iberis guardou imagens do incêndio.\nConsultando os funcionários do prédio, não encontramos ninguém que reconhecesse as duas pessoas mostradas, o que sugere que eram visitantes.\nA mão erguida da pessoa em primeiro plano parece brilhar, o que levou a suspeitas de que essa pessoa causou o incêndio. Este elevador foi especialmente afetado pelo incêndio, e não há confirmação de que as duas pessoas estejam bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "915e4acbe6d052315fb7b38b48dbdefd65f62d8f37cd21ec21ee23826f640190",
+     "pt-BR": "NKX protesta furiosamente contra projeto de urbanização da orla",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "9658ae2fe52be7f8c3c2826ba683470d5992f4449a1cfb6273b58cc98478673e",
+     "pt-BR": "O grupo ambientalista NKX está protestando furiosamente contra a urbanização da orla feita pela Construtora Kunshiran.\nO plano prevê aterrar parte da orla da província de Miyato para construir um mercado e prédios residenciais. As obras começaram no início do ano, mas estão suspensas desde um acidente no mês passado.\nA NKX fez declarações que quase soam como ameaça: \"Aterrar esta praia histórica é um absurdo. Se esse plano for imposto, vamos impedi-lo por qualquer meio necessário.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "c462ae26b0c907bb5b1f44469019c94ecd12790309bf50415b14ddc683656170",
+     "pt-BR": "Líder da NKX está desaparecido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "17ef2a9126372f43ef24c6270ec7ef418186d3e837ebe94724b1e9dd29ea8714",
+     "pt-BR": "O líder do grupo ambientalista NKX está desaparecido. Nossa equipe vem tentando contato com o grupo há horas sobre o incêndio da Torre Iberis e o ataque à Construtora Kunshiran, mas a resposta é que nada pode ser dito na ausência do líder. Pessoas ligadas à Construtora Kunshiran especulam que o líder do grupo pilotava o Labor azul que invadiu a torre.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k234",
+     "source_text_sha256": "297dbbb5cc2c62de4118fd150877bb9a4bcc82df581cb402443324c95236510d",
+     "pt-BR": "Trio suspeito é visto antes do incêndio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "947b72d338dbecd8831b06d6d1a146f321cf4d378e457848fce2f1ec317d5cf4",
+     "pt-BR": "Um grupo suspeito de três pessoas foi visto no mirante da Torre Iberis pouco antes do incêndio.\nSegundo a testemunha B, duas pessoas interrogavam em detalhes um homem de jaqueta de couro, que parecia exigir algo em troca.\nAcreditando que algum tipo de acordo estava sendo feito, a polícia da província procura as duas pessoas e o homem de jaqueta de couro como testemunhas importantes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "3dba413ef0f9403dfe482ffcf5a80274585728f76ef4821876e0cb0d569a4393",
+     "pt-BR": "Um grupo suspeito de três pessoas foi visto no mirante da Torre Iberis pouco antes do incêndio.\nSegundo a testemunha B, duas pessoas pediam algo a um homem de jaqueta de couro, que parecia exigir algo em troca.\nAcreditando que algum tipo de acordo estava sendo feito, a polícia da província procura as duas pessoas e o homem de jaqueta de couro como testemunhas importantes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "f53d439a643d4e903e2380ef4d857144a3c6e5e892587dcc819e203e8da44442",
+     "pt-BR": "Um grupo suspeito de três pessoas foi visto no mirante da Torre Iberis pouco antes do incêndio.\nSegundo a testemunha B, duas pessoas que falavam com um homem de jaqueta de couro pareciam ter visto algo aterrorizante, enquanto o homem parecia exigir algo em troca.\nAcreditando que algum tipo de acordo estava sendo feito, a polícia da província procura as duas pessoas e o homem de jaqueta de couro como testemunhas importantes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "d04beb0e892b01c4fb8575c85805cdbb643422840b27596ecbe9b0438e7cbeea",
+     "pt-BR": "Três pessoas são vistas falando com um Labor azul",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "6b5a64d527976eaec09b10aef020ec8f25c2807519157efb71dbbdb13824f058",
+     "pt-BR": "Depoimentos revelaram que o Labor que invadiu a Torre Iberis e roubou um cofre do escritório da Construtora Kunshiran se encontrou com um grupo de três pessoas no 20º andar.\nUma das três pessoas estaria usando um paletó xadrez. Um grupo suspeito de três pessoas também foi visto no andar do mirante antes do incêndio. A polícia acredita que seja o mesmo grupo e está investigando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "f5b5f799786378047b57df8e3cb8e27d62a66218425505996eaa4b8bedea8553",
+     "pt-BR": "Incêndio na Torre Iberis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "73978a1eb8149dcc6e67e33aca8cae1b9dfb2dcdf3080595957675846f44c9f3",
+     "pt-BR": "Antes do amanhecer de hoje, um incêndio atingiu a Torre Iberis, no bairro de Sakura, em Miyato, província de Miyato. Do décimo quarto ao vigésimo quinto andar foram danificados, e acredita-se que o fogo começou nos escritórios do vigésimo andar.\nA Polícia da Província de Miyato não encontrou material inflamável, mas sinais de força extrema perto do foco sugerem algo como um explosivo.\nSegundo funcionários do prédio, várias pessoas tinham visto um homem sem vínculo com a empresa andando pelo vigésimo andar nos últimos dias. Os investigadores continuam trabalhando com a hipótese de que ele plantou explosivos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k242",
+     "source_text_sha256": "d5214ff76c9cea63858f61d1ec66b4e9ff0a8dff09797f52aef0d9bd7a655ec0",
+     "pt-BR": "Sanduíche Torre Iberis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "f3e3fb4198e57d4a5f89dd0d7d6abb12477178f0cec4e0e43f76abf73794f294",
+     "pt-BR": "Nós, do Esquadrão Bom Apetite, ouvimos rumores de que os sanduíches vendidos no Café Iberis, no mirante da Torre Iberis, fazem enorme sucesso e esgotam rápido todos os dias, então fomos investigar!\n\nO campeão de popularidade é o \"Sanduíche Torre Iberis\"! Entre pães macios e elásticos como marshmallow vem... um mochi frito!?\nEste mochi, comido com molho tártaro feito de verduras frescas e ovos caipiras, não é um mochi qualquer!\nEste mochi (será que é mochi mesmo...?), sovado com arroz glutinoso, milho, feijão azuki e abóbora, tem molho branco cremoso por dentro!\nDizem que depois ele é empanado e frito. A quantidade de carboidrato por porção equivale a impressionantes três bolinhos de arroz! (122 gramas!)\nEntramos na fila logo depois da abertura para comprar um e demos uma mordida na hora, e é delicioso!\nSe quiser um, talvez encontre esgotado se não chegar antes de abrir. O Café Iberis abre às 11h, aliás.\nOs excelentes \"Sanduíche de Presunto e Ovo\" e \"Sanduíche de Bife Wagyu\" também são de outro mundo, então experimente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k244",
+     "source_text_sha256": "06dabc12ee63b0cc9811ef0b6f4b58e1b317506943f90a4ef1a7ad577942b827",
+     "pt-BR": "Hamster Pippi é resgatado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "053d91e02c0865a03525c0b8c42e6da4cb8cc1d1c2dbd75883c8ec8f35dc1381",
+     "pt-BR": "O hamster Pippi, criado num escritório da Torre Iberis, sobreviveu ao incêndio.\nPippi ficava numa gaiola no fundo da última gaveta de uma mesa num escritório no canto sudeste do 19º andar da torre e, embora o fogo tivesse chegado à sala, havia sinais de uso de extintor, então alguém por acaso apagou o fogo ao redor da mesa onde Pippi estava.\nT, dono de Pippi, disse: \"Quero agradecer de algum jeito. Sou muito, muito grato a quem salvou o Pippi, que eu abandonei.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k246",
+     "source_text_sha256": "e1fef74e02e1d03e8def6f0740725e0d3e74ee6126bacf2d079cb50457fa2620",
+     "pt-BR": "Surge ladrão de lanche noturno",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "7ea96959e514f19552dbee86902bf8e4f92e41251d3c589c0bb865358db73c09",
+     "pt-BR": "Você conhece a expressão \"ladrão de incêndio\"? É quem rouba em meio ao caos de um incêndio ou situação parecida, e houve exatamente um caso assim no incêndio da Torre Iberis.\nS, que trabalha no 19º andar da Torre Iberis, não conseguiria terminar o trabalho naquele dia e, conformado em virar a noite, comprou um Bentô Cerejeiras em Flor na loja de conveniência Clover ali perto.\nAí o incêndio começou, e S deixou o bentô e evacuou. Quando S voltou ao escritório depois que o fogo foi apagado, o bentô que estava na mesa tinha sumido.\nS diz: \"Se estavam morrendo de fome no meio de um incêndio, não posso culpar, mas queria que pelo menos tivessem deixado o dinheiro.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k248",
+     "source_text_sha256": "b522a979ebdc2e77fc00f1af5a7611ce33512b42e5e5a58517092962d18f5015",
+     "pt-BR": "Vestido chinês é roubado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "fc202b340c2d242f38e1086b0e3125c5b7a318206b6caf966de94c2ba359b8cb",
+     "pt-BR": "Hoje cedo, um vestido chinês vermelho e leve foi roubado do escritório da Construtora Kunshiran no 19º andar da Torre Iberis.\nO vestido é um lançamento da Nanyakanya. A Polícia da Província de Miyato investiga o roubo e tenta localizá-lo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "5c16c47848ddc2da66c8dd153eda3727281acbe4bace440567cb97e35403c649",
+     "pt-BR": "A moda de fazer tudo sozinho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k251",
+     "source_text_sha256": "07a23b09545dd933def905a6192c0c925db48537d256a1b6f4a6d6e374bfd38c",
+     "pt-BR": "Enquanto cada vez mais jovens dizem que \"nunca namoraram\" ou \"não têm vontade de casar\", a Torre Iberis, famosa pela vista noturna, estava de novo cheia de casais hoje.\nCinemas, parques de diversão e mirantes são clássicos de encontro, mas muita gente sente que são \"difíceis de ir sozinho\".\nPerguntados por quê, muitos dão respostas de mania de perseguição extrema, como \"Se eu estiver sozinho, os casais vão me achar um 'solitário fracassado'\", mas esta redatora entende muito bem a sensação de se sentir pequena. Ainda assim, desde o começo do ano, cada vez mais pessoas ativas vão sozinhas a todo tipo de lugar, diz a especialista em fazer tudo sozinha, senhora T (24 anos de carreira solo), que não só vai ao karaokê e ao churrasco japonês sozinha, como até ao cinema e ao parque de diversões.\n\"Se você se preocupar com quem está em volta, não faz nada do que gosta. Pensar demais faz mal. Você deve curtir sua vida do seu jeito.\"\nA senhora T tem razão. Talvez fazer as coisas sozinho não seja motivo de preocupação, afinal?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "130a54b395d07525e9fc4e8680cb02b436cd9504c45d9ef2b41471714771709f",
+     "pt-BR": "O lugar perfeito para pedir em casamento?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k253",
+     "source_text_sha256": "9d7871a842912acfbaf0de1d0e1f453d65c561dcbd13439c4f6dcd357fbea1a3",
+     "pt-BR": "A primavera é a estação do amor. Talvez muitos de vocês estejam pensando em pedir alguém em casamento?\nNa nossa pesquisa do mês passado, o lugar preferido para pedir em casamento na província de Miyato foi a Torre Iberis!\nVeja os motivos de quem votou nela!\n\n\"Quero ser pedida em casamento olhando uma vista noturna linda\" (senhora A, funcionária de escritório)\n\"É tão fora do comum que eu diria sim na hora\" (senhora M, professora)\n\"O jantar é caro, então eu não teria vergonha de contar pra ninguém\" (senhora P, ajuda em casa)\n\"Os banheiros são limpos\" (senhor I, setor de alimentação)\n\nAjudou?\nHomens que pretendem dar o grande passo nesta primavera, anotem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "71e34cf6bea193b0156f8e79d448217b1839d22daf704a1de2ca630c3b4908a5",
+     "pt-BR": "Homem corajoso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k255",
+     "source_text_sha256": "07c6db5ca6825b1cd3c78840b7c03b51e2cc566f2e70c7994e438b67d855cbd7",
+     "pt-BR": "Talvez as emergências revelem a verdadeira natureza das pessoas.\nO senhor H, da Construtora Kunshiran, virou herói depois do incêndio recente. Trabalhando num escritório do 22º andar, ele abriu uma janela assim que o alarme tocou e incentivou todos em volta a evacuar.\nO senhor Y, que escapou com ele, disse: \"O H normalmente é quieto, e o trabalho dele é um pouco abaixo da média, mas ele parecia outra pessoa. Sem ele, todo mundo teria entrado em pânico. Vai saber o que teria acontecido? Ele tinha voz alta, instruções claras e passava segurança, então todos o seguiram. Eu queria um chefe como ele.\"\nH já tinha ido para casa e não pôde ser entrevistado, mas pelo que ouvimos, ele foi sem dúvida um dos heróis do dia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k256",
+     "source_text_sha256": "3c5ea5798d19e536a2639b01501d065701fdfe4f7ca279221084a3ced974cd93",
+     "pt-BR": "Homem suspeito de jaleco no local do incêndio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k257",
+     "source_text_sha256": "83e4c0ad8ced1195e1ed0902805830ed59ee88845a03440acaa23510c0f5a8c4",
+     "pt-BR": "Há uma série de relatos de testemunhas sobre um homem de jaleco no local do incêndio.\nO homem de jaleco andava pelo 20º andar, indiferente ao fogo, murmurando alguma coisa.\nNão havia nenhum homem de jaleco entre os resgatados, e a polícia está investigando os restos do incêndio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k258",
+     "source_text_sha256": "4377ba24c1355093310f5e5722700af62b6840469000d614e794f36628c3ea62",
+     "pt-BR": "Cheiro de batata-doce assada?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k259",
+     "source_text_sha256": "e007c41251d0a94fa5ca5bcddc4247145dd05248e4dfff4891feba2c1b2b126c",
+     "pt-BR": "Dizem que a Torre Iberis está com um cheiro maravilhoso.\nNa hora do incêndio, a doceria Ibe Gelato, no 2º andar da Torre Iberis, preparava um lançamento, o Sanduíche de Batata-Doce, que estrearia amanhã.\nEles cozinhavam no vapor uma quantidade enorme de batata-doce quando o alarme de incêndio tocou. Um funcionário evacuou por engano com o fogo ainda ligado, mas, em vez de virarem carvão, as batatas ficaram perfeitamente assadas, e a rua em frente está tomada por um delicioso cheiro de batata-doce assada.\nSem saber o que fazer com tanta batata-doce assada, a Ibe Gelato estaria distribuindo as batatas para os curiosos reunidos perto do incêndio.\nA Ibe Gelato não foi afetada pelo fogo e vai reabrir assim que puder. Mal podemos esperar por esse sanduíche de batata-doce.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k260",
+     "source_text_sha256": "b43cbbcbaaa0df19f4697e2df80ca3082b48b16bcf4e7fa5c8cd9a574a7d9b81",
+     "pt-BR": "Voluntários são impedidos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k261",
+     "source_text_sha256": "2ff4d580e0583f56e25088d6c79d19858c2f899b7f62dd17316f86188e5446f6",
+     "pt-BR": "Uma ação voluntária foi interrompida. Por volta das 21h30 de hoje, diante do incêndio da Torre Iberis, no bairro de Sakura, em Miyato, província de Miyato, Soji Kawaji, dono da casa de banho pública Shime no Yu ali perto, propôs combater o fogo usando a água quente da casa de banho.\nO senhor T, dono da loja de materiais em frente à Shime no Yu, também colaborou e doou uma grande quantidade de baldes, e cerca de 30 jovens da vizinhança começaram uma corrente de baldes para passar a água quente.\nA corrente seguia uma regra: 20 pessoas carregavam a água por cerca de 15 m cada até a entrada do prédio, e os 10 restantes esperavam na entrada, cada um partindo para combater o fogo ao receber um balde, mas 10 minutos depois do início os Bombeiros chegaram, avisaram que era perigoso, e a ação voluntária foi encerrada.\nK, estudante da Universidade de Miyato que liderava a fila, disse:\n\"Pensando que podíamos salvar alguém, entrei sem nem pensar. Peguei a parte de dentro do prédio sem muita reflexão, mas o fogo estava acima do 14º andar, então a distância que só nós 10 da frente tínhamos que cobrir não acabava nunca. Os baldes eram muito pesados, mas achei que a vida das pessoas pesa mais e, já que tinha aceitado, quis dar o meu melhor.\"\nCom a permissão do senhor T, todos teriam levado seus baldes para casa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "4819788fa1f60b838894f188a95e1617bbb003d4e45b3f82774cd80eee7a9dd7",
+     "pt-BR": "Fãs de idol não se abalam com incêndio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k263",
+     "source_text_sha256": "2f9541fd9d293da7ac27a02b5bb0d169b47fa79319bb32eb9f77bd557915237a",
+     "pt-BR": "A partir das 20h de hoje, um evento de aperto de mão da unidade de idols underground \"Mo-Mo-Mo Dynamite\" (Momomo) aconteceu no salão de eventos do 12º andar da Torre Iberis.\nA Momomo é famosa por shows eletrizantes com faíscas e explosões, e era de se esperar que um evento de aperto de mão fosse tranquilo... mas aí o prédio pegou fogo!\nOs funcionários guiaram a evacuação, mas os fãs se recusavam, dizendo coisas como \"Faz parte do show, a gente não se assusta só porque o prédio treme\", o que dificultou a evacuação.\nMas até a Momomo se assustou com o alarme de incêndio, e quando as próprias integrantes guiaram a evacuação, os fãs obedeceram direitinho.\nA Reversible Records, gravadora da Momomo, anunciou que não tem absolutamente nada a ver com o incêndio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "9a7d079e67144bdd7fae5e5cd1ef259f6f7feb79675c683591437db66710785f",
+     "pt-BR": "A torre escorregadia",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k265",
+     "source_text_sha256": "9a5453f805e78ffcc4af26284d54eec273d4594e3c43b3304657bb346222f43c",
+     "pt-BR": "O piso do mirante da Torre Iberis é querido pelo brilho bonito, mas outro dia alguém finalmente escorregou e caiu.\nAlguns visitantes dizem: \"Fica especialmente escorregadio em dia de chuva, então por que não fechar quando chove?\", enquanto o dono do Café Iberis discorda: \"Se não pudermos abrir em dia de chuva, o negócio não sobrevive. Antes disso, é só acarpetar tudo.\"\nO que a Torre Iberis vai fazer agora?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "3ea5f022612a38517dac5764c9ee9b57e216c7facc7c0a203fb379260fc06103",
+     "pt-BR": "A tristeza de um jovem cujo serviço de casa é péssimo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k267",
+     "source_text_sha256": "45ede50e27221ead9bdcbf58c40a3d92f28d0cc2786f8c202fbd3c4e5145b07f",
+     "pt-BR": "Há um ditado japonês que lista as quatro coisas mais assustadoras: terremoto, trovão, incêndio e pai. Mas um jovem resgatado do incêndio da Torre Iberis discorda.\n\"Apagão é pior que trovão. Incêndio é ruim, mas o serviço de casa lá em casa é ainda pior. Minha vida toda é ruim. Incêndio e trovão não importam se não te atingem. Terremoto e pai sempre dão medo.\"\nDepois perguntamos se poderíamos fazer uma matéria na casa dele, mas ele recusou. Que pena.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k268",
+     "source_text_sha256": "ea31a882603bb57a4433964cfe9b359a7d5d0d1508be0b309465240562a5b872",
+     "pt-BR": "Binóculos à noite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k269",
+     "source_text_sha256": "27baa7eaff21a3e94c7f279b36ee2e7601f6a51dc8bb93cda7b512e2a1280e35",
+     "pt-BR": "Binóculos à noite até deixam você ver longe, mas está tudo escuro em volta, então não são muito práticos.\nOutro dia, porém, houve um caso em que binóculos noturnos foram os protagonistas.\nPor volta das 22h do dia 24 do mês passado, durante um assalto a uma loja de conveniência Clover no bairro de Sakura, em Miyato, província de Miyato, alguém que por acaso viu tudo pelos binóculos da Torre Iberis ligou para a polícia, a Polícia da Província de Miyato correu para o local e o caso foi resolvido sem feridos.\nNaquele dia, a senhora N-kawa (28 anos) tinha terminado com o namorado de cinco anos e, sem rumo, subiu ao mirante da Torre Iberis.\n\"Eu estava olhando pelos binóculos pensando que valho tanto quanto binóculos à noite, quando vi alguém de capacete com uma faca entrando na loja. Liguei sem pensar. E pensar que isso resolveu o caso na hora... Talvez eu ainda valha alguma coisa.\"\nA heroica senhora N-kawa agora estaria procurando um namorado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k270",
+     "source_text_sha256": "b8bd0acabc4b59fcb7a9834cbe99b888f39c1418557f190ddd02d28bbeeb6446",
+     "pt-BR": "A dieta da Torre Iberis?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k271",
+     "source_text_sha256": "36aabc3dc2c377b13d22aeb6e69a7362329ddd52c2cad85644b7d000a0cf353c",
+     "pt-BR": "A dieta da Torre Iberis virou febre.\nNo lado sul da Torre Iberis, no bairro de Sakura, em Miyato, oposto à entrada, há escadas nos cantos leste e oeste, que permitem andar em círculos entre o 1º e o 2º andar sem parar.\nQuem percebeu isso e batizou o percurso de Caminho Amane foi o superconsultor de dietas, senhor Amaneden.\nO senhor Amaneden diz: \"Caminhar faz muito bem à saúde, mas lá fora tem carros e semáforos. Já a esteira fica chata. No Caminho Amane, a paisagem muda e você não precisa parar. Bem quando bate o tédio, aparece uma escada. Mesmo se cansar, voltar pra casa não é problema. Tem até relógio. E agora tem parceiros de dieta, então dá pra manter o ritmo.\"\nDe fato, o lado sul tem pouco movimento, então parece dar pra se exercitar sem incomodar ninguém.\nQuando fomos conferir, as pessoas marchavam como um exército, ou melhor, como uma fábrica.\nSe ficou interessado, que tal visitar a Torre Iberis?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k272",
+     "source_text_sha256": "64165ec99029ec959180cecd4f946d1c2cc655d228d71334d364d1a5eb0d9947",
+     "pt-BR": "Um encontro digno de cinema",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k273",
+     "source_text_sha256": "3874dcfcc8142bd0ab802bb591d162a0cc824039d0ac6caae6abc25d2c32f78f",
+     "pt-BR": "Queremos apresentar a vista noturna do mirante da Torre Iberis, um dos arranha-céus mais altos do país.\nO mirante é todo de vidro em 360 graus, permitindo ver a paisagem noturna do bairro de Sakura de todos os ângulos.\nBinóculos de alta qualidade estão instalados em todas as direções, então dá pra admirar paisagens distantes sem nunca se entediar.\nO interior do andar também é refinado, e você e seu par certamente vão se encantar com este espaço de brilho suave.\nNão deixe de fazer uma visita na sua próxima folga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k274",
+     "source_text_sha256": "c7e528c73eea219295629c568cbfa879db54571f4df4c4094900487b151cd3b3",
+     "pt-BR": "Pai desolado: \"Nunca imaginei que isso fosse acontecer\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k275",
+     "source_text_sha256": "e1e6bd95985bae2877d0d6610328400957e39989b02150502ceb3646eb3e2f65",
+     "pt-BR": "Muitas das pessoas resgatadas do incêndio da Torre Iberis eram visitantes. Norio Nakagawa (55) é uma delas.\nA filha de Norio, Sakurako Nakagawa, e o noivo tinham dito que queriam pedir formalmente sua bênção para o casamento, e ele os esperava no Café Iberis, no último andar da Torre Iberis.\nComo os dois não apareceram, Norio tentou contato sem sucesso, e foi aí que soube pelo celular que a Ponte Sky Garden, por onde Sakurako e o noivo passariam, tinha desabado.\n\"Eu fui contra o casamento uma vez. Perdi minha esposa quando a Sakurako ainda era pequena... Na verdade, eu pretendia dar minha bênção hoje... Nunca imaginei que isso fosse acontecer...\"\nAté agora, o nome de Sakurako não está entre os sobreviventes do desabamento da Ponte Sky Garden.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k276",
+     "source_text_sha256": "3a23cb22c3a6f3df24d75bf929531b5e0295241f00ff3a74ccfd5911a8b15e10",
+     "pt-BR": "Q-chan Sem Freio: Edição do Homem Suspeito",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k277",
+     "source_text_sha256": "9e9e3d6f758884a2545415ea4588a402803b0f5a43adf6cbfb1e1d3316bf2002",
+     "pt-BR": "Então, esta semana, a Q-chan saiu atrás de algo que valesse uma matéria e foi ao mirante da Torre Iberis.\nCheio de jovens voltando do trabalho e casais em encontros, parecia o lugar perfeito pra ouvir histórias interessantes!\nOu era o que eu pensava ao chegar toda feliz, mas depois a torre pegou fogo... e a equipe inteira saiu correndo. Mas antes disso, fiz questão de falar com alguém interessante!\nAtrás da escada do mirante, vi um homem agachado falando escondido ao telefone! Era suspeito ao extremo, tão suspeito que ninguém chegava perto. Então fomos nós mesmos entrevistá-lo.\n\nRepórter Q: \"Hum... desculpe incomodar.\"\nHomem: \"O... o que foi? Desculpe, estou no telefone agora...\"\nRepórter Q: \"Sou a Q e publico matérias num site de notícias.\"\nHomem: \"Não, estou no telefone. Me dá um tempo.\"\nRepórter Q: \"Falar escondido ao telefone atrás da escada pareceu suspei... digo, interessante. Por favor, me conte mais.\"\nHomem: \"Ei, isso é insistente demais. Quem diabos é você?\"\nRepórter Q: \"É uma ligação de trabalho?\"\nHomem: \"Isso mesmo. Temos uma operação importante chegando.\"\nRepórter Q: \"Entendi, então é confidencial.\"\nHomem: \"Hã? Ah, sim, isso, é confidencial. Desculpe, mas, por favor, vá pra outro lugar.\"\nRepórter Q: \"Ah, entendi. Com licença. Aliás, acho que 'um homem que fica falando ao telefone atrás da escada' é interessante. Posso escrever uma matéria sobre isso?\"\nHomem: \"U-uma matéria?!\"\nRepórter Q: \"Sim. Pra começar, não ouvi nada sobre seu trabalho, e vou manter tudo em segredo. Deixa eu tirar uma foto rapidinho! Diga xis!\"\n\n...E assim, o homem continuou suspeito ao MÁXIMO até o fim, e não consegui nenhum detalhe, mas que é sugestivo, é. Estou sentindo cheiro de coisa estranha. Fiquei curiosa. Até amanhã! (Texto do blog semanal Q-chan Sem Freio)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k278",
+     "source_text_sha256": "a5cd96ed5c128be0c8cd6649cb0af23788412d211d83e54b43721ac7cb845729",
+     "pt-BR": "Seminário de educação alimentar para trabalhadores",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k279",
+     "source_text_sha256": "c92ddd60235b287ec24d93ce76ba6112afb83266278fcf94aaab13b94ceee2fa",
+     "pt-BR": "No dia 3 deste mês, o Seminário de Educação Alimentar para Trabalhadores da província de Miyato aconteceu na Torre Iberis.\nNo mês passado, o Centro de Saúde e Bem-Estar da província de Miyato conduziu uma pesquisa com 250 pessoas que trabalham na Torre Iberis sobre o que comem no almoço,\ne descobriu que cerca de 82%, ou 204 pessoas, almoçam nos restaurantes da Torre Iberis três ou mais vezes por semana.\n\"A vantagem de almoçar fora é conseguir comida quente e gostosa com facilidade, mas comer fora com frequência pode aumentar o consumo de gordura e desequilibrar a nutrição\", diz a senhora Nashimura, nutricionista do Centro de Saúde e Bem-Estar.\nA senhora Nashimura apresentou os nutrientes que costumam faltar em cada tipo de comida de restaurante, recomendou ingredientes para compensar e deu dicas de cuidados ao comer fora.\n\"Espero que, entendendo bem os nutrientes, todos possam curtir comer fora e continuar saudáveis.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k280",
+     "source_text_sha256": "145f5b8fdf26f9def98ba6b7f0bb334b065d8579c633434f206f47c791f02790",
+     "pt-BR": "Evento de colheita no Jardim Iberis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k281",
+     "source_text_sha256": "89ad9e8a85fdbce59c4d703522d8ef71cdbc215cc432b4b1c2dc65f927dde68b",
+     "pt-BR": "No dia 24 do mês que vem, haverá um evento de colheita de verduras orgânicas no Jardim Iberis, no terraço da Torre Iberis, no bairro de Sakura, em Miyato.\nComo parte de uma campanha de áreas verdes, a Torre Iberis cultiva no terraço verduras e frutas como morango, tomate-cereja e ervilha, e faz um evento na época da colheita.\nA participação é por reserva, e as inscrições terminam amanhã.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k282",
+     "source_text_sha256": "36d529bc0b92484159de75c629b71e70744abefa3815602e335a3859b4fc6389",
+     "pt-BR": "Concurso de fotos Ibe-Vista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k284",
+     "source_text_sha256": "afdef88141603054b954854f38e66322d7e437b76d12a85113572f78b76f1c43",
+     "pt-BR": "Peregrinações aos lugares sagrados do sucesso \"A Saga da Última Espada\" disparam",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k285",
+     "source_text_sha256": "64e6d8227f9e13862f4bc3c1608c847eee5e4bd31d5f3c9d6b333e61913bf3bd",
+     "pt-BR": "\"A Saga da Última Espada\", o romance aclamado que conquistou o mundo, estaria levando um número cada vez maior de fãs a visitar os cenários reais da história, nas chamadas peregrinações da Última Espada.\nO volume 3 se passava numa floresta remota que normalmente recebia poucos visitantes. Depois do lançamento, as visitas de fãs foram aumentando, e hoje a floresta receberia até dez mil fãs por dia. A região tem recebido os visitantes de braços abertos como parte de seus esforços de revitalização, chegando a desenvolver a \"carne da casa\" que aparece na história.\nA popularidade aparentemente imparável de \"A Saga da Última Espada\" parece ir muito além dos livros, contribuindo muito para as economias locais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k286",
+     "source_text_sha256": "909d6a77c33fa5a5a257c73fc8de354021cd494319c75ae41f6bae8e9529ec27",
+     "pt-BR": "Bairro de Sakura, em Miyato, atingido por eventos estranhos: preços de imóveis despencam?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k287",
+     "source_text_sha256": "db5a19e70e47639918a8d5e0cef482326888ddf89d2ce6208abec47080c063e5",
+     "pt-BR": "Depois do incidente de hoje com criaturas gigantes no bairro de Sakura, em Miyato, os preços dos imóveis da região parecem estar despencando.\nO centro do bairro de Sakura, que sofreu danos pesados, tem prédios e ruas muito danificados, sem previsão de restauração, então os proprietários estariam correndo para vender.\nSegundo um corretor do bairro de Sakura, alguns imóveis caíram para cerca de um sexto do preço.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k288",
+     "source_text_sha256": "949899a12c07a8cbbcbee732ef0679b9bc03d9c565a0629d6b13b8afaa9b23d8",
+     "pt-BR": "Bairro de Sakura, em Miyato, atingido por eventos estranhos: preços de imóveis disparam?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k289",
+     "source_text_sha256": "51cc5cba420fa32b57f9837ed14657c648c607a6c5372909173230c475e73029",
+     "pt-BR": "Os preços dos imóveis parecem estar subindo no bairro de Sakura, em Miyato, onde criaturas gigantes apareceram esta noite.\nO bairro sofreu danos extensos, ainda sem previsão clara de recuperação. Porém, empresas estariam comprando imóveis apostando na alta dos preços durante a futura reconstrução e reurbanização.\nSegundo um corretor do bairro de Sakura, alguns imóveis subiram cerca de 160 por cento.",
      "notes": "",
      "editorial_status": "pending"
     }
