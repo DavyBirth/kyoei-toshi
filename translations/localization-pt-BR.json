@@ -9088,6 +9088,19 @@
    ]
   },
   {
+   "path": "common/lua/stage_217_item.luc",
+   "source_sha256": "14aaa293c30a5b93847866c1af205d88b6b73c07b5d9abb69439082d544ef0be",
+   "entries": [
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_207.luc",
    "source_sha256": "ec6e1eadd107ebb53857c0a84eb49c37b1560aa853b168751cb9f827e9aa5221",
    "entries": [
@@ -14839,6 +14852,19 @@
   {
    "path": "common/lua/stage_210_2_item.luc",
    "source_sha256": "046bfdc7f52c39dcf5c4389607584f0ae9fef15e0422dacd6580871aeca9e334",
+   "entries": [
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_216_item.luc",
+   "source_sha256": "e587322f125a03548bfd5c3128fb7e29e8893bd8ee2753bcd09f7255850872ee",
    "entries": [
     {
      "id": "p0/k7",
@@ -28505,6 +28531,250 @@
    ]
   },
   {
+   "path": "common/lua/stage_216_news_text.luc",
+   "source_sha256": "230e8a23dcdc5a3e0d07e574d33fe838e13db272e41c6b16ed32e8f278597db6",
+   "entries": [
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "49f3046dabce3f4a53c4e5adeda70f6678045a5ea8ef05d9c1b1238dfd6500bd",
+     "pt-BR": "Arma Humanoide Gigante Segura um Anjo(?) Enorme Que Desce do Céu",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "16b91435bb2069c14888d8d2c02565f66ef47ee18db8e85e608223ee361a4642",
+     "pt-BR": "Antes do amanhecer de hoje, uma forma de vida misteriosa e extraordinariamente gigantesca apareceu sobre a Cidade de Mizuna, na Província de Miyato, descendo devagar. Moradores viram uma arma humanoide gigante chegar ao ponto previsto de pouso e, pelo jeito, tentar impedir a queda.\nO governo também anunciou que, assim como a forma de vida misteriosa que apareceu na Cidade de Miyato, esta vai se chamar \"Anjo\".\n\nA Cidade de Mizuna é vizinha da Cidade de Miyato, onde criaturas gigantes vêm aparecendo desde ontem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "cb77b4f575d29de47f7ede4f38db41eafcb32d099003a9a7acb45726ff5dd089",
+     "pt-BR": "Pés Gigantes Fazem Rua Desabar na Cidade de Mizuna",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "3e315302007f03a08154dbd4397e67a50348f17976639c315ad898e1a33c0797",
+     "pt-BR": "Antes do amanhecer de hoje, uma arma humanoide gigante foi vista correndo em alta velocidade pelo centro da Cidade de Mizuna, na Província de Miyato.\nOs danos incluem o desabamento de parte da rua no Centro Comercial de Mizuna.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "87899a3f8c05bf1cd6fe758e765fe7969727a82dfbff77908429b767eec24bed",
+     "pt-BR": "Moradores Brigam por Lixo Colocado à Noite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "df0a152965fb50101995f5b00add42267d4b10aa15c3b9f2de32d000bbf1fa3a",
+     "pt-BR": "Na Cidade de Mizuna, na Província de Miyato, o lixo deve ser deixado nos pontos de coleta até as 8h do dia da coleta. Mas alguns moradores colocam na noite anterior, o que gerou uma disputa.\nQuem é contra o lixo à noite reclama que os pontos de coleta ficam sujos e que corvos e outros animais espalham o lixo. Entre quem é a favor estão pessoas cuja rotina dificulta deixar o lixo até as 8h.\nEm resposta, a Cidade de Mizuna comentou: \"Instalamos redes contra corvos e outras medidas, mas elas não são perfeitas. Gostaríamos de encontrar algum jeito de resolver isso.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "c9600adf257efda7c232e60280e0649082dd07ef9af94c2b136e0c61c564605e",
+     "pt-BR": "＜Foto＞ Três Armas Humanoides Gigantes Repelem um Anjo Enorme",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "928e71d281c1c54cfaea8b0854261f0cc5494f177a19dd3c573d3139dbd2b679",
+     "pt-BR": "Antes do amanhecer de hoje, três armas humanoides gigantes foram vistas sendo enviadas contra o enorme Anjo que apareceu sobre a Cidade de Mizuna, na Província de Miyato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "6ecfb72aa5d99754e74214bc52454b33099fa32133c6b49f3f7e113da208f586",
+     "pt-BR": "Carro Desgovernado É Visto no Centro Comercial Antes do Amanhecer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "e23517be3f6ec86137a7308638da128943de9e62bf8431866c993ab2bf6ab307",
+     "pt-BR": "Antes do amanhecer de hoje, a polícia recebeu um chamado sobre um carro preto tentando atropelar alguém na Cidade de Mizuna, na Província de Miyato.\nO carro já teria ido embora quando os policiais chegaram ao local.\n\nO veículo era um sedã preto de luxo, que teria perseguido um jovem sem parar.\nA pessoa perseguida não parecia ser do bairro.\nA polícia procura tanto o veículo quanto o jovem perseguido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "2a32709a01ed4e5bbc5cc22f1b8bfa4f2ccba2dc3a0fdbdd3a5d00b4a65d8c22",
+     "pt-BR": "Ventos Violentos Localizados na Cidade de Mizuna",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "652c59916bcab8b3baaa306136cf53969f27806f28d3e3ce5dd6fbef8ce69a18",
+     "pt-BR": "Antes do amanhecer de hoje, ventos violentos localizados foram registrados na Cidade de Mizuna, na Província de Miyato. Moradores contam que ventos fortíssimos sopraram de repente do sudoeste, a ponto de fazer latas vazias, vasos e até pneus de carro voarem. Um morador foi atingido por um pneu rolando, se feriu e foi levado ao hospital.\nA Agência Meteorológica do Japão diz que ventos fortes repentinos podem acontecer na primavera, mas os da Cidade de Mizuna foram um fenômeno com poucos precedentes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "2546db387dc6af2c704ada6935285f23b56e8a1d607a3a61e0333cb21b35a686",
+     "pt-BR": "Máquinas de Venda São Destruídas pela Cidade de Mizuna",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "f95321ea4e251dfefd1bb9282c3c5a190d3a32e0d47dffd87e7621d522de19c4",
+     "pt-BR": "Antes do amanhecer de hoje, chegou um aviso de que cinco máquinas de venda tinham sido destruídas no Centro Comercial de Mizuna, na Cidade de Mizuna, Província de Miyato.\nUm morador que fazia uma caminhada de madrugada as encontrou e ligou para o 110.\nA polícia investiga o caso como tentativa de furto do dinheiro de dentro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "d7da0c6e93ded7bc54f57380a0f7c6ada0c8789922a9293288999a4974faef56",
+     "pt-BR": "Centro Comercial Debate Horário Estendido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "9f7a48f0fde611594fed74e89d1a3fb7b8ff2d2783438cc668940977526ed0c1",
+     "pt-BR": "Ontem, representantes do Centro Comercial de Mizuna e moradores se reuniram no centro comunitário da Cidade de Mizuna para discutir o horário das lojas.\nOs moradores querem horário estendido e se revoltaram porque a maioria das lojas fecha às 18h: \"Seis é cedo demais. Deviam ficar abertas pelo menos até as seis e meia.\" O centro comercial explicou por que não podia concordar: \"Se não fecharmos às seis, não chegamos a tempo de ver os jogos de beisebol da noite.\" A conversa terminou num impasse, mas os representantes das lojas também mostraram flexibilidade: \"Gostaríamos de reconsiderar a partir de novembro.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "f741df4a19b4af4a0dca09e85a9b538d149301a5a13257d63526c134523c8d71",
+     "pt-BR": "Anomalia na Cidade de Mizuna: Paredes Sobem do Chão",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "81841ed342f702101ca75114d0028641e7d8908e319f43cab21c1efadc46179c",
+     "pt-BR": "Na Cidade de Mizuna, onde um Anjo gigante apareceu, paredes enormes subiram do chão na área urbana. Dezenas de paredes se ergueram, formando uma rampa enorme. Casas próximas desabaram com a subida das paredes, entre outros danos.\nOs moradores em volta das paredes estariam formando uma associação de vítimas para protestar junto ao governo e às autoridades locais. Até agora, o governo não falou nada sobre as paredes.\n\nAs paredes subiram enquanto uma arma humanoide gigante se aproximava do Anjo gigante que tinha aparecido no céu. O jornalista militar Sr. Misatoya, especialista em armas, disse: \"Não sei os detalhes, mas talvez fosse uma instalação que transformava a rampa enorme numa pista para a arma humanoide não perder velocidade na corrida.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "e195af060edc234ef815cca52e59785402e647eef3369c320485d6361c7f100b",
+     "pt-BR": "Brincos Roubados Eram uma Lembrança Querida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "1d1d1439ac39569246602ab829dae4583498b4ba4ee407950def316c663dac4d",
+     "pt-BR": "Antes do amanhecer de hoje, um invasor entrou numa leiteria do centro comercial de Mizuna, na Cidade de Mizuna, e roubou brincos de cerca de 6 milhões de ienes.\nOs brincos roubados eram do Sr. e da Sra. Horiuchi, donos da leiteria, e eram uma lembrança de família.\nAs entregas de leite tinham atrasado naquele dia por causa do incidente das criaturas gigantes que começou no dia anterior, e acredita-se que o invasor entrou enquanto os Horiuchi estavam fora da loja.\nA polícia acredita que o crime foi cometido por um conhecido que sabia que os Horiuchi tinham brincos caros e está interrogando pessoas da região.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "21d2e0ac6c9fdb624b6ce90f01a6809d4b5dfbbe9e39eb429a42ac0048f6f379",
+     "pt-BR": "Coluna: Nunca Desistir É uma Fonte de Força",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "cad82188ed3b9054b46bf504ed054e9a4b33c1debdce686961b7e2e4849367a1",
+     "pt-BR": "【Coluna de Risa Kashiwagi: Aguente as Coisas Estranhas e Não Desista de Acabar com os Conflitos】\nAgora mesmo, neste país, e em volta da Cidade de Miyato, onde moro, a vida das pessoas está ameaçada pelas sombras gigantes.\nE, olhando para fora, conflitos e lutas continuam. Se desistirmos diante das ameaças, ou desistirmos de que um dia virá um mundo sem conflitos e lutas, perderemos de vista a direção em que viver.\n\nAcredito que cada pessoa manter o que acha certo é a fonte da força para sobreviver a essas coisas estranhas e livrar o mundo dos conflitos e das lutas.\nEm alguns casos, seu julgamento, ou o que você está tentando fazer, pode ser criticado. Mesmo assim, acredito que tentar sempre escolher, entre as muitas opções, o que você realmente acha certo, o que você realmente quer escolher, vai criar um mundo onde todos possam viver felizes.\n\nNa minha próxima coluna, pretendo escrever sobre o que estou pensando agora e o que estou tentando fazer. (Por: jornalista Risa Kashiwagi)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "dbfa6fb977003c6ed27ed3676c59d46dfbd2352f080e752fa33f449b8ec57a92",
+     "pt-BR": "Três Armas Humanoides Gigantes Unem Forças para Derrotar Anjo Enorme",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "48351f18322f9a92002e58db12402d68d0e30a6cd6bd0cfa791901077a60a169",
+     "pt-BR": "O enorme Anjo que apareceu sobre a Cidade de Mizuna antes do amanhecer de hoje foi derrotado por três armas humanoides gigantes que correram até o local.\nAcredita-se que o Anjo tenha descido devagar do espaço. No começo esférico, ele acabou se abrindo até um tamanho que cobria toda a área da Cidade de Mizuna.\nUma arma humanoide correu até o ponto previsto de pouso e o segurou para impedir a queda, enquanto outras duas apareceram e, pelo jeito, atacaram o enorme Anjo.\nAcredita-se que a arma humanoide roxa que segurava o Anjo seja do mesmo tipo vista na Cidade de Miyato. As armas vermelha e amarela que apareceram depois teriam cabeças de formatos diferentes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "0b3a17bd52984231c1d9c0ca628f3374c2429a487e3e55ef7943da4e1059d801",
+     "pt-BR": "\"Minha Cômoda!\" Morador Furioso com Carro Desgovernado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "10334fd0645e292c84fb7c6c5b7b9d92c1f69394c182abe4f161afbbf9bbef3b",
+     "pt-BR": "Como noticiamos, antes do amanhecer de hoje um carro desgovernado tentou atropelar cidadãos na Cidade de Mizuna.\nMas, por incrível que pareça, esse carro não só tentou atropelar pessoas, como também destruiu uma \"cômoda\" deixada na rua.\nA dona da cômoda, Su Tan (85 anos), está furiosa: \"Tem coisa estranha acontecendo em todo lugar, então eu ia pôr minhas economias, comida e roupas na cômoda da minha casa e me abrigar na casa de um parente. Aquele carro desgovernado estragou tudo.\" A polícia investiga o caso como dano ao patrimônio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "70ea5e09187bd64292700de6a0e50b49706c697640824fca8d90ea286e1bcb77",
+     "pt-BR": "Obra do Esgoto no Centro Comercial Vai Levar Mais Tempo do Que o Previsto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "175eb7f1215bb76d8606535b459d1eea18dcad5d92b232e9f76011ddd8eabcda",
+     "pt-BR": "A obra do esgoto no Centro Comercial de Mizuna, na Cidade de Mizuna, será prorrogada por causa da arma humanoide gigante que apareceu antes do amanhecer de hoje.\nSegundo a seção de esgoto da Secretaria de Água e Esgoto da cidade, foram encontrados novos danos em parte da rede. O trecho danificado não tinha problemas de resistência na última inspeção, mas acredita-se que tenha sido quebrado pelo impacto da arma humanoide gigante correndo pelo centro comercial antes do amanhecer de hoje.\nA obra estava prevista para terminar no dia treze deste mês. Agora deve continuar até o fim do mês que vem, incluindo inspeções para achar outros danos.\n\nNuma coletiva, o chefe da secretaria de esgoto da Cidade de Mizuna se curvou e disse: \"Pedimos desculpas pelo transtorno contínuo aos moradores. Vamos agir com cuidado para não deixar nada passar, trabalhando por um ambiente melhor para todos, e pedimos sua compreensão.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "94648e3cc22947ad259ea362a7eb6d02a1cbc33e225fb43f5eb01d7f7850516e",
+     "pt-BR": "Lixo Volumoso Largado na Rua Bloqueia o Trânsito",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "4b2dc71d04e747b7e13523fe51126b262194f754a33031ace5c1ff71de87ce68",
+     "pt-BR": "Nos últimos anos, a Cidade de Mizuna tem tido dificuldade para lidar com cada vez mais lixo.\nAlgumas áreas produziram quantidades enormes nos últimos anos, aumentando o trabalho das empresas de coleta. Lixo volumoso, como cômodas e guarda-roupas, avança muito pela rua, atrapalhando bastante o trânsito.\nNum caso relacionado, quando o enorme Anjo apareceu sobre a Cidade de Mizuna antes do amanhecer de hoje, um sedã preto foi visto dirigindo de forma perigosa por cima de cômodas e caixotes de madeira deixados na rua, destruindo tudo.\nUm morador disse: \"Como morador, tenho vergonha. O comportamento das pessoas é um problema, mas as regras de descarte de lixo também são.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "b4c882c21c76580879ea20ff3367620b41e3e5711f8b8d8c2c047e0a10672fb5",
+     "pt-BR": "Falta de Luz no Centro Comercial Depois de Postes Danificados",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "369f298b5961f670027f361a02d7ac5ba5af0e1455dfbce1c47101312c220acf",
+     "pt-BR": "Faltou luz em parte do Centro Comercial de Mizuna, na Cidade de Mizuna, aparentemente por causa de um poste danificado. A recuperação ainda está em andamento em algumas áreas.\nLascas de tinta preta de carro foram encontradas no poste danificado. A polícia procura o sedã preto que dirigia de forma imprudente na hora em que a luz acabou.\n\nUma arma humanoide gigante passou pelo centro comercial naquele dia, e no começo se achou que o impacto dela tinha danificado o poste. Mas a falta de luz começou antes de ela passar, o que levou a uma nova investigação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "dc07bc8ea03496abc4868b82cf68b990e4d7edc990f65025c9222bf0862d1d0e",
+     "pt-BR": "【Gentileza dos Dias de Hoje】 Brincos Queridos São Devolvidos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "0e04efc7b07fc9ae4b81f4a3e79661e5234e07f12573f7a51e4628d917edce2e",
+     "pt-BR": "Antes do amanhecer de hoje, um jovem apareceu numa leiteria do centro comercial de Mizuna, na Cidade de Mizuna, e entregou brincos ao Sr. e à Sra. Horiuchi, donos da loja.\nOs brincos que o jovem deu ao casal eram uma lembrança da mãe do Sr. Horiuchi, que faleceu há quatro anos.\nOs brincos caros, de cerca de 6 milhões de ienes, tinham caído na frente da loja, onde o jovem os achou e levou ao casal.\nAs entregas de leite tinham atrasado naquele dia por causa do incidente das criaturas gigantes que começou no dia anterior, e, enquanto os Horiuchi estavam fora da loja, o jovem entregou os brincos e foi embora sem dizer o nome.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_209_item.luc",
    "source_sha256": "263b03fb2ae49366444e2a729318a159402087eb30f0a8302df3a2c09a2719df",
    "entries": [
@@ -28594,6 +28864,40 @@
      "id": "p0/k6",
      "source_text_sha256": "df29c5dd05002bc79763e6133e1403f20e7be73ef4804cd72e40b487819a4c50",
      "pt-BR": "【Vídeo】Gigante vermelho luta até a morte contra monstro vermelho",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_216_npc.luc",
+   "source_sha256": "f38bb12d73737b8000c8d0189c632f8741f3d823ad4dbefbb8bb36dc13ca68ae",
+   "entries": [
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "6c419f2c4ccce9ad1cf8f6230cf6be6572ee694a9584e750899f1caf9922f91e",
+     "pt-BR": "Fujiwara＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "fbf730da4ae66a427180bdd393017aa02387a797db44bb353c3c0455adde8bd3",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "611da61705768c5a90c275d0be6f535685e14a9f6eb8a96264b64cda7be8728a",
+     "pt-BR": "Muto＿０",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -32900,6 +33204,817 @@
      "id": "p0/p79/k162",
      "source_text_sha256": "a0d8d3feabbdf67e178ea12492420ee4d6b5e96b640b06e1203e5d5598f31a9a",
      "pt-BR": "Escolha do cofre",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/Text_Stage_216.luc",
+   "source_sha256": "5a841ee447ca8cc328a0432aeccc8f3b3a973f8e5a5ef8617633313ec9b3ad73",
+   "entries": [
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "a108bc1903b5c0586e697989d70117f0b5998ea4500a15b4068ff2e5593ecc75",
+     "pt-BR": "(Olhar o céu da sacada)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k9",
+     "source_text_sha256": "10238f52102fdd5cf5c02a2012f4a58420f4ca25a1ce1a3c4ad9f7f5e64b3ba8",
+     "pt-BR": "(Chamar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "e7b2555e5a7b8336385a30637851017011d2dac6638d298ccd33e3dade5893f7",
+     "pt-BR": "(Falar com eles)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "b1fa3b1bd45f0c7e8ad0b9aa78c7a6bd30cb7258f5cfbb2194dc10654d126904",
+     "pt-BR": "(Ouvir o que têm a dizer)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "6d9d9012d5b9a0ffde04f55452bddc1e9bad4dbb55fb905026667102aa62b5bd",
+     "pt-BR": "Homem caminhando à noite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "ea9ca202249b204e55820809c4ad6e05691eee97dc89237ab36b49f925656b83",
+     "pt-BR": "Parece que a coisa está feia em cidades de todo canto.\nVocês dois, tomem cuidado, tá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "10115f525cfd2f08be9b45cbb2d9990b787d038daaaa50f8f78b741b3c65a8aa",
+     "pt-BR": "Homem esperando o leite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k21",
+     "source_text_sha256": "caadf863420cd0c8dbe281afda8b266680ae39ee5e8b61e4295a7c7ea245db38",
+     "pt-BR": "Eu precisava mesmo sair pras entregas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k23",
+     "source_text_sha256": "1de63539f642f2ae771a9216f6dae6582da5d2018aee718ad47903438a6ca013",
+     "pt-BR": "Mulher esperando o leite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "0079ebc69a32f07677fbebbd20066771b673f6ccad8c1cf4d5de11e1c44b2873",
+     "pt-BR": "O leite ainda não chegou...\nQue chatice...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "23af686be4e27404d603d603e693b4776981b391e3488362f5560f0054393195",
+     "pt-BR": "(Os brincos que o homem do armário me deu\nsão desta senhora...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "da31b65e0073bef98ef137ceb5205eeded09cdfc2de9d5960b8056e9f641f749",
+     "pt-BR": "(Os brincos que o homem do armário me deu\nsão desta senhora...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k31",
+     "source_text_sha256": "9c4fc3f1c95ce0dc082a042a5d9f1065c3b4a54e8e692916e8840e935fd479dc",
+     "pt-BR": "(Esperar pra ver. Ficar com os brincos por enquanto)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k33",
+     "source_text_sha256": "0d844cdb46d29381a9678c64214449b00977842780c78c498358a9a78b61e34d",
+     "pt-BR": "(Devolver, dizendo que achou lá fora)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k35",
+     "source_text_sha256": "dfa42ada1976283ffde43a75d69430ce704c0522b01c97d351b35e25aba4f731",
+     "pt-BR": "Está demorando demais...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k37",
+     "source_text_sha256": "c665a780b2821a69b21e9cd8311063c967adaa664f4054a0ad29510d8454f03a",
+     "pt-BR": "(Devolveu os [#ff44ff44]brincos de lembrança[/#] à senhora.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k39",
+     "source_text_sha256": "3e76609c7c6866834271c208fbb74d42e9ad1aa0ca84369c8c686990185ea363",
+     "pt-BR": "Quê?! Estavam largados na frente da loja?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k41",
+     "source_text_sha256": "08b3be13711859784e0adccdbaaa27b17dc2154b5a2a769d93b4e4623419cf83",
+     "pt-BR": "Que bom que você achou. Minha sogra\nme deu pouco antes de falecer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k43",
+     "source_text_sha256": "f0b98113e7aeecc26e2aa2362d08a6bfca973a6e10784ac54e40f088bbf0274f",
+     "pt-BR": "Eu nunca ia me perdoar se tivesse perdido.\nTenho que agradecer por ter achado.\nPor favor, aceite isto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k45",
+     "source_text_sha256": "6a3acf2ba8e393b05a4bc7849ac6b7e67ac7a0cf317e43714fabcdb581bbc8e6",
+     "pt-BR": "Muito obrigada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k47",
+     "source_text_sha256": "80de66d579ae753c3c774f63bb63c58af31fd944e0826af90776faa2850c632a",
+     "pt-BR": "Muito obrigada por achar\nos brincos de lembrança.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k49",
+     "source_text_sha256": "6ebac68d000a14fff50bf3ce0b5e7b94c47ff0c3a89bca1d9696379c00dda6dd",
+     "pt-BR": "Homem escondido no armário",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "f34159414e74049370fe46afca3ff12ee455f7675b8c472d43d34b37e1b0b1d0",
+     "pt-BR": "Entrei escondido sem problema, mas o dono não sai\npra entrega de leite, então não consigo fugir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "27333bf7a3b3e45e7b7e89b7d16e98404ab915a6ea56a517a6f800ed774c4b3d",
+     "pt-BR": "Roubei os [#ff44ff44]brincos de lembrança[/#] que este casal adora,\nmas, quando perceberem, vão procurar aqui também...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "1ef4a29b69cc0a6a4d6ee0881ee6221adac7df4d84193f4cc0c4f6c16862a3f8",
+     "pt-BR": "\"Roubar é errado. Você devia devolver.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "cfa3cf5d4f38cb42eaf8d735cde01f0d7f263567f7af9e3a4a94097d74cd7c8c",
+     "pt-BR": "\"Eu devolvo escondido pra você.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "73f45067557422b2388dc87e4e733303f678987d0c477c8ca87b05211b8d9451",
+     "pt-BR": "(Isso parece encrenca. Sair sem dizer nada)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "661fccba225b68d802b0ce3edea3cb025e246601557fae2e1dca7185849466d3",
+     "pt-BR": "\"Roubar é errado. Você devia devolver.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "10fc4184c47f9ea736dba7cd20beadb6c922acd55f8346c083e41913f8e055f4",
+     "pt-BR": "\"Eu devolvo escondido pra você.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k65",
+     "source_text_sha256": "b6698ba900881e71d6d93ec4fc575eddc09d0815ed290cf202e7d8eb788968dd",
+     "pt-BR": "É, eu sei, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "5933b37affdb6f3c22c161ca53a0da802fafecb58bb7e8e562add3f4c4e2f55e",
+     "pt-BR": "Ah! Sério?!\nSe você devolver, vai salvar minha vida!\nSinceramente, eu estava me sentindo mal.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "986a20026d9da3aaed88c1df7532a6d560f2843376fb05af98444dc7fcb9a6b3",
+     "pt-BR": "Aqui estão os [#ff44ff44]brincos de lembrança[/#]!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "aa33507b45241f6e606f1297e0384d46537cc1ea7d57354e1708eef644d3b8a0",
+     "pt-BR": "Conto com você.\nDevolva pra esposa do leiteiro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "982092f89795ebf78887acef98a13dd8216cc39944fe109812b880dfbf52cd79",
+     "pt-BR": "Se você vai devolver, fico tranquilo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "4626c87d385b31e0d31c0e4eb56c767968c7aef7ed63bfb6b6d47891aabbd995",
+     "pt-BR": "Uma máquina de venda.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "1040f6e8221be83f11a57762f14b895b2ee47fb372dd9886b8da5f05faaa089c",
+     "pt-BR": "Tem uma esfera enorme flutuando no céu...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "255c9cb67ace868f2ec689b4f98023275e7669602b2bb33fc2d4f7a5f2ebdddb",
+     "pt-BR": "Um anel gigante de luz se espalha pelo céu...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "98ae86b354d28e2696a7fffad88848cbe6ae15831131457850922f8b6e8c38e4",
+     "pt-BR": "Um ar-condicionado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "869f75bcb51f29fb9072fb6f799fec8e23654d55e12d87a67166c25b654e2f13",
+     "pt-BR": "Não dá tempo de voltar.\nTenho que chegar ao Edifício Yamabuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "1da24c95766fee52f9456408319b76c62c3b33f6dbf7f810d231a8c98aeaef12",
+     "pt-BR": "Este não é o caminho para o Edifício Yamabuki.\nTenho que chegar lá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "1896a9c2c531b416e20dd3fb4048d92b2452fb904b0dd53c35d3873027cbb9a6",
+     "pt-BR": "O Edifício Yamabuki que o Otsuka falou\nfica logo ali.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "c4958a493c5084291db2b874541f65a31dcf30c67bafc2e0b54fa9eb5c246cce",
+     "pt-BR": "Deve ser depois da bifurcação ali na frente, à direita,\nna esquina do cruzamento.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "3b9ab570429b4bb200a4961e4f8ef415c4857d9cb135d9ae01ed1fa96664d69f",
+     "pt-BR": "Ele está esperando no terraço, né? Vamos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "6c419f2c4ccce9ad1cf8f6230cf6be6572ee694a9584e750899f1caf9922f91e",
+     "pt-BR": "Fujiwara＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "f4ed1b986da5e1660f5d6bd8d3f302c90c2476ef9a78d65c8c69e6b9fbd6e69f",
+     "pt-BR": "Então vocês vieram. Soube que estavam sendo perseguidos,\nmas vocês trouxeram eles direto até mim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "fbf730da4ae66a427180bdd393017aa02387a797db44bb353c3c0455adde8bd3",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "c0bc96701f3315602ac5f06c23103592d52660dc9552d0767e42ff30839b0918",
+     "pt-BR": "Ora, se não é o Fujiwara.\nO que te traz aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "756572885ede704d84aac3131c76cd78dd3c6023c0570c4a5683e3ae267b8aba",
+     "pt-BR": "É parte de uma investigação. Parece que ele sabe de algo\nque pode me ajudar a pegar vocês, da W&P Consultoria.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "b8839ebaab38ccf3a7f464520644189c6ae473caf60aa33874d53ca89460c146",
+     "pt-BR": "É parte de uma investigação. Parece que ela sabe de algo\nque pode me ajudar a pegar vocês, da W&P Consultoria.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "d5fa82fd6d091195d82a384f5575b1599713af22e64a88661a00eba4b7efb4ef",
+     "pt-BR": "(Investigação...? Ele é policial? Eu jurava que...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "24dcfa49655ca4f7674684c021b12e98c12a75d456c0147ffeb154663f498b7c",
+     "pt-BR": "(Investigação...? Ele é policial? Eu jurava que...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k111",
+     "source_text_sha256": "2c6da8130e9fdacebdc63500f9860c2965b7631412708fe11c2d11c89f93983e",
+     "pt-BR": "\"Eu jurava que ele era algum tipo de criminoso...!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "510182bc994e50b136fb3cc0b9eb737a8f9a35641c4f326c0917397caa0e585c",
+     "pt-BR": "\"Eu jurava que ele era um guarda-costas casca-grossa...!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k115",
+     "source_text_sha256": "903a93fa08b48760c228c83a2d0daf79ed82e6a3531199b71fae75fb71d60ae5",
+     "pt-BR": "\"Eu jurava que ele trabalhava pros rivais da W&P...!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k117",
+     "source_text_sha256": "b515dea9ff2a623960c509449e95cb2ee424e461886d6237e9fb400ce02ab0b3",
+     "pt-BR": "\"Eu jurava que ele era simplesmente aterrorizante...!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k119",
+     "source_text_sha256": "c06adf2033df4fe78dd4cf0b43ee5f0aba78729fde93dd90aaa0704642c1a53e",
+     "pt-BR": "\"Eu sempre soube que ele era policial!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "29d9bbd7a27655496c3cbecfe235fe4ebd8fb5ce810ac69a7629b97b6b610d66",
+     "pt-BR": "\"Eu jurava que ele era algum tipo de criminoso...!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "1ae7abd73309eebbb60092177a8e59f9838229d039f899f59ce892cba84e0eb3",
+     "pt-BR": "\"Eu jurava que ele era um guarda-costas casca-grossa...!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "4b9cb1786e22199ee518edad3090f8e776a5b8781651a292ff294238dbba7584",
+     "pt-BR": "\"Eu jurava que ele trabalhava pros rivais da W&P...!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "ece23110abc73f889b9ef2ca56abcad80027190f2048e223ec3f27bc2eaac409",
+     "pt-BR": "\"Eu jurava que ele era simplesmente aterrorizante...!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "ef787492b7a266cb031d5aa22506c7cf9e2c340ec657848577f257474567d9ce",
+     "pt-BR": "\"Eu sempre soube que ele era policial!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "6b9c91021c7caa723abc2d028e6b5a5dd8948bc9a888b6635eb8028bbea7aff7",
+     "pt-BR": "(Eu jurava que ele era algum tipo de criminoso...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "83d2310faf71be829c4d620cf34e41e73fb6ec561e854666883f8c9f84f6aaf0",
+     "pt-BR": "(Eu jurava que ele era algum tipo de criminoso...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "f5e6cb2f62ce15f3747bcadfc3ea1ef592b50a57fc749d4671e559fccc50fc31",
+     "pt-BR": "(Eu jurava que ele era um guarda-costas casca-grossa...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "e7359510ae6aaf0f5439ecc92fce6729d6728e56cd4d7dcb8aa3b12395a92988",
+     "pt-BR": "(Eu jurava que ele era um guarda-costas casca-grossa...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "0d8c78e6ad97f9c786b2f1235c1597f52addbb17c3e5c5eee6f16936002ac98a",
+     "pt-BR": "(Eu jurava que ele trabalhava\npros rivais da W&P...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "f3a01bd9428ec1fddd448dd67ff8a53b3d4f65e3f530b0928d4a67729c97cd5b",
+     "pt-BR": "(Eu jurava que ele trabalhava\npros rivais da W&P...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "c263351cde98a7895514d8d58ba763cf65ab742e9d1086a34f460a967b36b5b5",
+     "pt-BR": "(Eu jurava que ele era\nsimplesmente aterrorizante...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "ef3e60e6f47ef4dc2265bfaa04e83c7aee6b84f32c2e7339f9370174754629ea",
+     "pt-BR": "(Eu jurava que ele era\nsimplesmente aterrorizante...!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "8e7b7b7ed909475d539963423bb09ffc573b594addc72d64e2815e4d7be4a225",
+     "pt-BR": "(Eu sempre soube que ele era policial!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "965590716cd4305c52e4195fa4e666af46cd5e247a56c2b57016fa10acbe38e5",
+     "pt-BR": "(Eu sempre soube que ele era policial!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "5b19db0346894c4e22d31818376307a12ad9d7dd52d6bdcce4d3224840c1f099",
+     "pt-BR": "Pelo que ouvi, vocês querem usar\no poder deste rapaz para atrair esses desastres.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "08420749b15e5177a91daf5ef75b027b3355daa4a0097d2f8f5445b16c3d108f",
+     "pt-BR": "Pelo que ouvi, vocês querem usar\no poder desta moça para atrair esses desastres.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "674975523a79bde2e32b29bccc4d392f5e64965f58900b7d348534cefdb152f0",
+     "pt-BR": "Fez a lição de casa. E daí?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "44469e68a225470e108369296657c6bdbfb842e77ad01e4b785b30757099da26",
+     "pt-BR": "O verdadeiro negócio da sua empresa é intermediar armas, né?\nIsso não é o golpe de sempre de vocês, é?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "18e2028df09e53db1c4ab7f9e0af774b6d9347685b2e7ca4c8aa2b51ab369624",
+     "pt-BR": "Por que correr um risco desses?\nO que a Kamio, presidente da W&P Consultoria, quer de verdade?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "dd1d91d1c2d2080845e2781ffb43eac96f88ecfc2034e920957aa19596dcc2c9",
+     "pt-BR": "E o que quem banca vocês, a americana M Corp.,\nquer de verdade?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "08ad20a85cfc901745cfc220d10de1e21d9fdfd2577a5b2085b24fc5ce670f6e",
+     "pt-BR": "Heh... Hahahaha...!\nAh, me desculpe.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "9c50d48c81ca1b3adf2eec4fd152cab5730b15b2eb8ed22e9a70bd17e8a329be",
+     "pt-BR": "Então por que não pergunta você mesmo à Kamio?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "f278c130cf24c509d34a9a48e9b05372d0c3d8265ac1cf2fbed4e4fdf6ddd078",
+     "pt-BR": "Mas ela não conta a verdade\nnem pra mim, que sou diretor executivo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "cbc356db2306e0a2519cffa504cd1fb832562b186ee014e351cb7fb10572ed9a",
+     "pt-BR": "Você também vai ser arrastado. Fica aí!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "8214362c4508c4a4d8d7f23898fcc7a9fa3ce81ed58dad9163cc3b90adecadec",
+     "pt-BR": "Não se preocupe. Ela está segura.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "a1135c2ae94aff5803cd899e60b06d9da9777be429606ff9de13881f31ebe4e2",
+     "pt-BR": "É você que queremos, e só você.\nColabore com a gente, e soltamos ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "25d83b422be1c1911e07630d0b988d0c5e1d0c331795e4df5f8a12dcbab6dce3",
+     "pt-BR": "Venha negociar sozinho.\nÉ difícil conversar com esse Fujiwara por perto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "9ba1223c4e3cc0eb470d5ca21d419f9856e0357439fbb7f6efa1b199b83f92d6",
+     "pt-BR": "Levaram ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "9544e4b14630abe6bbb42dafca0e04c8b7e296c34ea676123b9d555b1b5cd071",
+     "pt-BR": "Vocês dois se conhecem há muito tempo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "e59bb5ea88dce9fc48aa57db8a6931a9d70a5bdf41e48886c4538578061995e8",
+     "pt-BR": "\"Sim, somos amigos desde criança.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "9c040ed13241c7ac9752c944b87f0a18f8e64468a992f0e4a6bca0af3e2aa7a9",
+     "pt-BR": "\"Sim, nos conhecemos há três anos.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "aa023b8f16a262fd74918b06ddfed19b9d7266c38322a2b2dc1e66eb59d48ea5",
+     "pt-BR": "\"Não, só uns três meses.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "d2774cbc33ae43d56e6ea539cdf8ceb72c88a3cabbfa330d8673216e955cc5c5",
+     "pt-BR": "\"Hum... Acho que a gente se conheceu ontem...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "28165021f0f9bffd5f8d4e7a7ec39d9dfff632a6a07e8f2fdeacd8247d231742",
+     "pt-BR": "...Entendo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "4fbfd5b0418299769d78131481376c0ebf57f62f2830a3a134f33c98468255df",
+     "pt-BR": "...É mesmo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "0140d7af410ad6c68b1509900468e4dfe348c0527ebbcfdf224ca865343236d7",
+     "pt-BR": "Se é você que eles querem,\nela deve ficar bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "eebc1bb096fe843f9be38d1a1602b388667002ae2cbf1946d4cf4798ca3eab8a",
+     "pt-BR": "Desculpe não ter feito mais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "0a6da19efd8ed003550db7614cc0832aa1f6c54fbbdea97d651b606e376d586b",
+     "pt-BR": "Por aqui!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "3e86456a564a0415235bc01db2b03cfaeb361f37326a4b1b0a46c09b96b4937f",
+     "pt-BR": "...Ouço a respiração da Yuki bem no meu ouvido...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "c1fefb447352d415263a20fa02fcb003d995bee248bcabc688584fd27352b977",
+     "pt-BR": "...Ouço a respiração da Yuki bem no meu ouvido...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "07c5c406182e9718ef5ce88126634b37022104ec954e93acdc53e13c56f8101d",
+     "pt-BR": "\"Vamos, vamos pro terraço.\" (sussurrar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "4602be5574ba7e284df1163f1a48eba993e7eb97cb164935cdcb26d8df00e296",
+     "pt-BR": "(Sussurrar no ouvido dela que você a ama)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "dc44cf181939b70378e73e0fb34a1e08bae8b2cf7b7373a2ea4f2c2bb9924b70",
+     "pt-BR": "\"Não chora. Eu estou bem.\" (sussurrar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "b76f4f6d11ed9ec0aee8a262a305b3cf0453dcfcea1ebceef2021d6b35d341f3",
+     "pt-BR": "\"Por que você está chorando?\" (sussurrar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "075c84d824fede9e7a2f634f7454bbc6c52a3a074259d55d241b8071c8ff6faa",
+     "pt-BR": "(Entregar a Yuki a eles sem dizer nada e ir para o terraço)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "03f49430bf1d8bf414b960bc2eba5e910826b9cec55c28fe36db7d64b7171aa7",
+     "pt-BR": "\"Não chora. Eu estou bem.\" (sussurrar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "851d91b5f8c126868344627597ef0eb2a542ee819e13e26ab58ceb8e1692bd5e",
+     "pt-BR": "Vamos, vamos pro terraço.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "57580005a89853dd8e22c984d25de89f3d3c06e453f129d22a7cc8e949358f64",
+     "pt-BR": "Yuki... Eu te amo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "f33ea58ab27f4c76b050d5071d698d105b2d2658ae5d9029a013c0401af8b2d6",
+     "pt-BR": "Eu te amo... Yuki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "7061383e8199deceec7f5a67a969c756c226d00f831788add92e78998158263d",
+     "pt-BR": "Não chora. Eu estou bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k242",
+     "source_text_sha256": "6aea2a0a16a3cebdaafa441b4484b9aafa7bc2fc094108b063d9626facef98c1",
+     "pt-BR": "Não chora. Eu estou bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k244",
+     "source_text_sha256": "8ba8b193b9282b28dc6e2a446662032e6f018cc11403c1c8f762f6ef1cae5551",
+     "pt-BR": "Por que você está chorando?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "8aac3a308ee5e8fedc221a9c64887458e864faf665e2d65010a0e06bcfb84ebb",
+     "pt-BR": "E-Ei!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "14cbb8fb3e619269971e9beb32d3751f197b4a9d4679076db3ce77e27c3972f3",
+     "pt-BR": "Desculpa... Me vieram todo tipo de lembrança...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k251",
+     "source_text_sha256": "88dff50301844db0ff5225164bb37b4b0b83b04cb86b3f6d283519b17487460e",
+     "pt-BR": "Promete que não vai me esquecer...",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -58530,6 +59645,166 @@
      "id": "p0/k450",
      "source_text_sha256": "555a5ce4195a856ebe20accef5184dbeac73106c0851d0fd02e6b848f3e3ca47",
      "pt-BR": "Cliente A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_217_news_text.luc",
+   "source_sha256": "8c7c9602b3267d23b276f6939dcc49b0405603d698bada10ee5c362e4fabcb5d",
+   "entries": [
+    {
+     "id": "p0/k55",
+     "source_text_sha256": "fe10ce1345dc7361a4b505fcfc53a97a76d391bde1ce9f6366eec0889c882e83",
+     "pt-BR": "Alienígenas Gigantes Aparecem?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "79ed3ad3c47c0ccf268ba2f25368afc7ffd4d5bbc4513149d5d116c14b072b4c",
+     "pt-BR": "Pouco depois das 18h de 3 de abril, dois alienígenas gigantes de uns 40 metros apareceram perto do cruzamento de Marugame, na Rodovia Nacional 3, em Minami-Shinjuku 9-chome, no Bairro de Shinjuku, e começaram a lutar. Os dois gigantes lutaram com armas de luz e artes marciais.\n\nSegundo o Sr. Tomisaka, morador da Cidade de Tama que viu a luta de perto, os dois eram muito parecidos quando apareceram, mas, depois que um deles caiu sentado sobre um viaduto, a aparência dele mudou.\n\nO gigante brilhante cuja aparência não mudou teria uma parte do centro do peito piscando, e então subiu ao céu e foi embora voando em alta velocidade.\nDepois, o que ficou destruiu a cidade, aparentemente ferindo várias centenas de pessoas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k57",
+     "source_text_sha256": "8c7f705c3880c2e59ecf942bcff4e9e717df9baad739ce7a2671b4920b639fbd",
+     "pt-BR": "O Gigante de Luz Recebe o Nome de Ultraman",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "ff0345edf5b1467358bfceb8cff3c30c3bce48f76bdd526fcfff06510c2a3d1a",
+     "pt-BR": "O ministro-chefe do Gabinete S anunciou que o \"gigante de luz\", que deteve o alienígena gigante que destruía a cidade, vai se chamar Ultraman.\nAcredita-se que o Ultraman tenha uns 40 metros de altura e pese cerca de 35 mil toneladas. A velocidade de voo dele chegaria a Mach 5. Algumas testemunhas dizem que ele cresceu até o tamanho gigante antes de aparecer, mas os detalhes continuam incertos.\n\nAs pessoas que viram vídeos publicados por testemunhas deixaram muitos comentários elogiando o esforço dele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "a533ef956ac78996466658e7208baaa8529560eda8a675544ba5e346ff77d4e2",
+     "pt-BR": "Alien Zarab Estava se Passando pelo Gigante de Luz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "3ebdcd5dc22c15e643cd8cee4164bb7c592edbbd706d20b0171aa7910f8371f2",
+     "pt-BR": "O alienígena gigante que se disfarçou de gigante de luz e destruiu a cidade se apresentou como Alien Zarab e declarou que veio do planeta Zarab para a Terra para estabelecer relações de amizade com a Terra.\nEstima-se que ele tenha uns 40 metros de altura e pese cerca de 20 mil toneladas.\nO Alien Zarab apareceu primeiro no Bairro de Shinjuku quase idêntico ao gigante de luz (Ultraman) e continuou destruindo prédios e carros próximos com uma arma chamada \"Energy Vulcan\", disparada das pontas dos dedos.\nO Ultraman o obrigou a revelar a verdadeira forma, mostrando que o agressor era o Alien Zarab.\n\nAinda há vários mistérios, como por que o Alien Zarab, que veio construir relações de amizade, destruiu a cidade.\nO Sr. Watanabe (nome fictício), funcionário de escritório que vem da Cidade de Kawasaki para trabalhar na região, disse com raiva: \"Eu confiava no Alien Zarab, então estou muito decepcionado. Por que ele se disfarçou de Ultraman e destruiu a cidade? Se o objetivo era acabar com a reputação do Ultraman, é imperdoável.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k61",
+     "source_text_sha256": "090a5d4708d0bdff7b9596f4f3e2a7294746de0e403a7cc7c66455d1e7207187",
+     "pt-BR": "Posto Policial É Arrombado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "8b59865eaacec29861c6109a1e2ab4ad81d0a24137e9cfb8b4690b7840ebe813",
+     "pt-BR": "Um ladrão invadiu o posto policial de Tonchigi, em Minami-Shinjuku, e roubou uma farda de policial feminina. Segundo a polícia, o arrombamento aconteceu enquanto os policiais orientavam a evacuação quando os alienígenas gigantes apareceram na cidade.\nO culpado quebrou a porta da sala de atendimento e roubou a farda de um armário na sala de descanso. A polícia trata o caso como furto e busca informações de testemunhas.\n\nO sargento Horiuchi, que estava no posto na hora, disse exaltado: \"Não percebi a porta sendo quebrada. Isso deve ser obra de alienígenas. Por que alienígenas roubariam a farda de policial feminina da policial Ishida? É um absurdo!\"\n\nO item roubado é uma farda de policial feminina tamanho M. Segundo a dona, a policial Ishida, ela era novinha, da semana passada.\nAo ladrão, a policial Ishida disse: \"Perder uma farda de policial feminina dá todo tipo de problema, então, por favor, devolva. Se devolver, eu te dou outra fantasia particular em troca.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k63",
+     "source_text_sha256": "775800f6d0a587532af0195fc94c42c9577eb8b7e535e5df5b9881453173a651",
+     "pt-BR": "Notas Voam pelo Cruzamento",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "4aaeb6019194754ed48f4c2e0ac90e145fa2de0b363c0d6edafb1faab9f3ef6d",
+     "pt-BR": "A polícia anunciou que pedestres encontraram centenas de notas de alto valor voando perto do cruzamento de Marugame, na Rodovia Nacional 3, em Minami-Shinjuku 9-chome, no Bairro de Shinjuku, e as entregaram como achados e perdidos.\n\nO local é onde os alienígenas gigantes lutavam na hora, e acredita-se que as notas tenham saído de um prédio depois que os alienígenas o destruíram.\n\nAté agora, ninguém apareceu como dono. O fato de ninguém se apresentar mesmo com tanto dinheiro espalhado alimentou especulações de que talvez seja dinheiro que não pode aparecer em público.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k65",
+     "source_text_sha256": "042048439e43f537fd7a2787badc809b0d04868f674797affd0d805e75527512",
+     "pt-BR": "Loja de Conveniência Registra Disparada nas Vendas de Frango Frito",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "a1a68d719029acd45a88c1da795cb7676bfd56a9e1224b4837747bd2198ef340",
+     "pt-BR": "A grande rede de lojas de conveniência Green Green anunciou que as vendas de frango frito no trimestre de março chegaram a 160% do ano anterior.\n\nO frango frito da empresa vem numa grande variedade de sabores, como shoyu, leite e morango, além de versões tipo sobremesa, o que o torna popular também entre as mulheres. A empresa quer continuar oferecendo frangos fritos inovadores que incorporem a opinião dos clientes.\n\nEntre os fãs, muitas postagens especulam sobre a próxima linha de frango frito da empresa, como \"O próximo é sabor atum marinado\" e \"Tem que ser sobremesa. Se for, frango frito de tiramisu é bem provável\", despertando expectativas estranhas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "75c9c862a28a772f23d6945b85554027d92bda006395de0487698479c90bcd2e",
+     "pt-BR": "Motorista de Ônibus Esperto Salva Todos os Passageiros",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "3ff69b169fe18a4da271f69c34b24b8e8e22fec413b8f123428e8413c4ca7437",
+     "pt-BR": "Por volta das 18h de 3 de abril, um ônibus da G-Z Transit que quase foi pego na luta entre alienígenas gigantes em Minami-Shinjuku conseguiu retirar todos os passageiros em segurança graças à rapidez do motorista Yoichi Tawarada.\n\nO passageiro Sr. Fujita, morador de Maihama, disse: \"A gente quase foi pisado por um pé gigante, mas o motorista controlou o ônibus com habilidade e saímos em segurança. E o motorista ficou no ônibus orientando todo mundo até todos saírem. Ele salvou nossas vidas.\"\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "920f9a26370f05c17bbfe5712378cec540181946c57e21ba280ef2657c0f0693",
+     "pt-BR": "Uma Mão Gigante Entra num Prédio de Shinjuku!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "56eceeb0f22e098e72908351c29baf857d49565e6a5990b81b2a888c0be9d1ee",
+     "pt-BR": "O Edifício GZOE, em Minami-Shinjuku 8-chome, foi destruído por um alienígena gigante. O alienígena teria enfiado uma mão enorme dentro do prédio e deixado o escritório um caos com um poder parecido com telecinese.\n\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "310116a236ac92630a456128e6c430b2f91a948f93a0a0fcab8cb4624a123690",
+     "pt-BR": "Banca de Flores de Rua É Destruída",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "d7f6f090ffb32882a24b6c41549d16b5cafdbbf7c0931e6bf08016d751677a14",
+     "pt-BR": "Motoko Tomii, do Bairro de Shinjuku, que vendia flores na rua, teve a banca destruída pela multidão que fugia em pânico do ataque do alienígena gigante.\nA banca da Sra. Tomii era muito elogiada pelos clientes pelo carinho com as flores e vivia cheia de gente comprando flores na volta do trabalho.\n\nVendo a banca que ela cuidou por trinta anos ser esmagada diante dos olhos, a Sra. Tomii ficou tão chocada que se agachou e não conseguiu se mexer.\n\nO Sr. Sasaki, cliente fiel que mora em Kamata e viu a cena por acaso, disse, esfregando o cotovelo e o ombro direitos: \"As pessoas fugindo batiam na banca da Sra. Tomii uma atrás da outra. A banca aguentou as duas primeiras vezes, mas, quando levou a terceira batida, foi totalmente esmagada. Elas batiam com bastante força, então não tinha como a banca aguentar. É uma pena mesmo.\"\n\nEsperamos que a Sra. Tomii se recupere e reabra a floricultura.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "b5163b23ed920670f5732d7baa76e19ebad4043d9b90828d69b2402d237050f8",
+     "pt-BR": "Guarda-Chuvas Transparentes Viram Moda Entre Jovens Mulheres",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "44afe52a62cec773c78608063659ca21671548687a967f8a0f3a5fca79c53040",
+     "pt-BR": "Guarda-chuvas transparentes estão em alta entre mulheres de 20 e poucos anos, principalmente nas grandes cidades. Antes, eram vistos como coisa barata, mas neste ano grandes lojas de departamentos e marcas de roupa lançaram um atrás do outro guarda-chuvas transparentes de grife e assinados por estilistas, com variações em vários níveis de transparência, conquistando as clientes.\n\nAkiko Watanuki, funcionária de uma trading que mora em Tóquio, disse: \"Adoro a transparência total dos guarda-chuvas transparentes. Em dia de chuva, quando vejo a chuva escorrendo pelo guarda-chuva, a tristeza passa e me sinto renovada! Tenho uns 20 guarda-chuvas transparentes com transparências diferentes. Escolho qual levar conforme o humor do dia.\"\n\nA febre dos guarda-chuvas transparentes deve continuar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "a6af6120e5c3fd643d0445b089f24a65017784209128671d887cd073ee545104",
+     "pt-BR": "Policiais Plantam Legumes em Terreno do Governo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "c580dfbfff56f8a564d67d8ea036bccbbc03d008622b6a13a77c64931cd1d3ad",
+     "pt-BR": "Uma investigação da Agência Nacional de Polícia revelou que o sargento Horiuchi e a policial Ishida, do posto de Tonchigi, ligado à delegacia de Minami-Shinjuku, cultivavam legumes para consumo próprio num terreno do governo atrás do posto.\nHoriuchi e Ishida teriam plantado legumes de que gostavam, como ervilha-torta e tomate-cereja, e os serviam nas próprias refeições quase toda noite. Há quem ache que eles até usavam adubo, querendo aumentar a colheita a sério.\n\nInterrogado, o sargento Horiuchi teria dito: \"Eu só queria muito mais um prato no jantar. No começo, comecei sem compromisso, achando que só cebolinha bastava. Aos poucos foi crescendo, e me empolguei com legumes da estação, como espinafre e ervilha-torta. Depois que comecei a plantar tomate-cereja, não consegui mais parar. Peço sinceras desculpas aos cidadãos e aos colegas.\"\n\nLevando o caso a sério, a Agência Nacional de Polícia pretende apertar o controle, incluindo nas normas de trabalho a proibição de hortas atrás dos postos policiais. O sargento Horiuchi teve corte de salário por três meses, e a policial Ishida, por um mês.",
      "notes": "",
      "editorial_status": "pending"
     }
