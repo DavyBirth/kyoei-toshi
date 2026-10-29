@@ -52892,6 +52892,908 @@
    ]
   },
   {
+   "path": "common/lua/stage_214_news_text.luc",
+   "source_sha256": "84f45e7cdb233e09e12067e8305ed26bb25c146cbcf427d70a39b705c765e36c",
+   "entries": [
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "c7dfcb865fbf31c1f20a9422013ca26be76df7b99ce5d2a7a76f07b197b672b2",
+     "pt-BR": "Quatro Alienígenas Gigantes se Enfrentam",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "d807634093afe8d2cc1cd6e2f9305ad29668286db91ffc8af48352018c8a67e4",
+     "pt-BR": "Nesta noite, quatro alienígenas gigantes apareceram numa rua de Hananira-cho, na Cidade de Miyato. Depois de brigarem por um tempo, eles sumiram. A briga fez oito prédios próximos desabarem. Segundo a polícia, 12 moradores atingidos ficaram feridos, alguns com gravidade, e 1 está desaparecido, e os números devem subir.\nOs alienígenas gigantes apareceram primeiro em três e brigaram em volta de Hananira-cho, depois voltaram a lutar em quatro, com a chegada de mais um. Houve uma batalha feroz com raios de calor voando para todo lado, causando grandes danos aos prédios em volta.\nAcredita-se que um dos alienígenas gigantes seja o mesmo alienígena gigante prateado que apareceu no Bairro Sakura ontem à noite.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "14774b7891550ca8085c46bc2b748825edf43ebcb66ac7d74cd5e51c98efc172",
+     "pt-BR": "Rua Afunda Depois de Batalha de Alienígenas Gigantes; Sem Previsão de Conserto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "af13043c9bae17c73e0ce0385c478e90185a2b60f024e7985a626c2338404755",
+     "pt-BR": "Nesta noite, a briga entre alienígenas gigantes em Hananira-cho causou grandes afundamentos nas ruas em volta. Em algumas ruas, os buracos passam de 8 m de profundidade, e elas estão interditadas.\nAlém dos afundamentos, as ruas em volta do local estão totalmente bloqueadas por escombros dos prédios destruídos na briga e por carros danificados, então nem os veículos de obra conseguem passar, e por enquanto não há previsão de recuperação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "2ef13d949b0b01f50fdf36b5fc18a7f3f70aa81ee01081a8527341eb44dc4cdd",
+     "pt-BR": "Incêndio em Prédio de Editora em Hananira-cho: Culpa dos Alienígenas Gigantes?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "dd1e0eace990066006255600db125c289dacabea332f18dcc3652d005bffd720",
+     "pt-BR": "Um incêndio começou no prédio da Editora Ebine, em Hananira-cho, na Cidade de Miyato. Ele parece ter sido apagado. Ninguém se feriu.\nAcredita-se que o fogo começou no Editorial 2, no 6º andar da Editora Ebine. Uma batalha feroz de alienígenas gigantes acontecia ali perto, e acredita-se que o prédio tenha sido atingido pelos efeitos dela, mas, segundo os bombeiros que foram ao local, também há quem ache que \"pode ter sido causado por um cigarro descartado sem cuidado\", e a causa será esclarecida com mais investigação.\nA Editora Ebine publica a popular revista de informação \"Semanário da Sombra Gigante\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "f423ed413ebe8acbd4765b6b78f78497c75c9100ebacc1ed253042de0843dcaf",
+     "pt-BR": "Cheiro Estranho É Relatado em Loja de Conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "2a0d7bf6e2886dbc3ee32eeb2bda22664d2ba987d3462d1d23928a330425552c",
+     "pt-BR": "Houve um susto com um cheiro estranho na \"Loja de Conveniência Clover Hananira-cho Oeste\", em Hananira-cho, na Cidade de Miyato. Segundo um atendente, um fedor de esgoto tomou conta da loja. O atendente também disse: \"Pensando agora, o cheiro pode ter começado mais ou menos quando um grupo de três entrou, um deles carregando uma mulher nas costas. Estava um caos, então não lembro direito.\"\nA Clover Hananira-cho Oeste fechou pelo resto do dia para limpeza.\nUma batalha entre alienígenas gigantes acontecia ali perto na hora, e acredita-se que haja relação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "5c21acc348568a7751fd490b1ec2350435f042ced367de8a2b6584eb4bef589d",
+     "pt-BR": "Rajadas Fortíssimas de Alienígena Gigante Fazem Carros Voarem",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "89c318c19f9272cb5dca9b12d33d602ee994f2d126b736e81806cdc7f96f6236",
+     "pt-BR": "Durante a batalha entre quatro alienígenas gigantes em Hananira-cho, na Cidade de Miyato, surgiu um vento fortíssimo. O vento veio com uma rajada do alienígena preto entre os quatro, estourando os vidros dos prédios próximos e arrastando carros abandonados e outros objetos.\nUma das vítimas, o Sr. A (homem de 30 e poucos anos), disse: \"Meu carro zero, entregue semana passada, foi arrastado pelo vento. Ainda faltam 36 prestações, e estou preocupado se o seguro vai cobrir.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "eed09ddf7cba2d0180008a2bb1bb7bce0edf1d25625b37bf6290bb8b47ef9a29",
+     "pt-BR": "Divulgados os Números Sorteados da Loteria Jumbo Jumbo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "c644fd73c812be1099985502fe47407f5923466d26478384d0ee2fc52e7a410a",
+     "pt-BR": "Foram divulgados os números sorteados da 578ª Loteria Jumbo Jumbo anual.\n1º Prêmio: 600 milhões de ienes\n　Número: 123450\nPrêmios dos Números Vizinhos: 200 milhões de ienes\n　Número: 123449\n　Número: 123451",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "1c6e970daf2da63e3175fe62fc8d35527ce4ab0b5f83bbbf141a1b29555b3b1e",
+     "pt-BR": "Alienígena Gigante Bate no Prédio da Redação do Semanário da Sombra Gigante!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "7993b5da89b6e3c3017ad47aef50a59ff5697f65c171281d316469cf43bf017a",
+     "pt-BR": "Esta foto foi tirada no terraço da nossa empresa, a Editora Ebine. Nesta noite, três alienígenas apareceram de repente em frente ao nosso prédio e começaram a lutar. Uma repórter que estava na redação subiu ao terraço, onde raios de calor voavam para todo lado, e fez esta foto arriscando a vida. Os detalhes sairão na nossa \"Edição Extra Especial do Semanário da Sombra Gigante: O Incidente das Criaturas Gigantes da Cidade de Miyato\".\n(Seiko Hirai)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "7cf82a7afd86341069808746b5b98de03235390dffcbbd33a8784aa7dede000e",
+     "pt-BR": "Estilo das Ruas - Masculino 01",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "cf3f31454aaf25d7db133e9ab9abafd504b3af57801749a61e2e2f40c71ee80c",
+     "pt-BR": "Hoje, mostramos o visual de um homem que visitou nossa redação por acaso!\nUm alienígena gigante apareceu naquele dia e causou um caos, mas este visual descolado passa a firmeza de quem passou por tudo!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "a01b2b7af4bbac0c80c4a161fd699a74db3e90b5d062ec86ca1cb6a930174e6b",
+     "pt-BR": "Estilo das Ruas - Feminino 01",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "b8a3b0335c98957d9ad74cd0716d1367764cbc2cee4bc740aae8706a1834139d",
+     "pt-BR": "Hoje, mostramos o visual de uma mulher que visitou nossa redação por acaso!\nUm alienígena gigante apareceu naquele dia e causou um caos, mas este visual fofo passa a ousadia de quem passou por tudo!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "407c8ead5993fe4e8c66dd6b54fd528f43eb6f36e51fd0c4703685563f926bf5",
+     "pt-BR": "Mulher Encontrada Escondida nos Escombros do Esgoto Foge Após o Resgate",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "b14e0020292c78bb2998b2aafc21af8e59c551ca5049e736f65e3ea6732a7eb9",
+     "pt-BR": "Uma mulher foi encontrada nos escombros do esgoto que desabou em Hananira-cho, na Cidade de Miyato. Ela teria encarado os bombeiros que foram resgatá-la e dito: \"Eu não estava nos escombros por acidente. Eu me enterrei nos escombros.\" Ela sumiu logo depois do resgate, e um homem que a viu num abrigo provisório disse: \"O olhar dela não era normal. Dava arrepio. Desviei os olhos por um momento, e ela já tinha sumido.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "a7659e618682223236c357285d65bf3decc91eda2e2932355a24b16cfaa91c33",
+     "pt-BR": "Tesouro Enterrado em Hananira-cho? Pote Antigo É Achado no Subsolo do Esgoto Desabado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "59c94f869d33b0481286e2c31e20275307c1aca4244e0cb1be9a8dd3f369d5ef",
+     "pt-BR": "Removendo entulho do chão que afundou em Hananira-cho, na Cidade de Miyato, operários acharam um pote cheio de moedas de ouro koban. Pelas características, estima-se que as moedas sejam do início da era moderna. O pote tinha 108 koban, e, segundo o Sr. Yasuda, que tem uma loja de moedas antigas na Cidade de Mizuna, \"elas valem no mínimo alguns milhões de ienes. Considerando o valor histórico, valem ainda mais.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "c8a3e2f53949871c9e957e394b9a3fab2c5c6558e7db91c3f1798e970852d4f9",
+     "pt-BR": "Fêmur Humano É Achado no Local do Esgoto Desabado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "07e69e417481fafb8629d6f7eaca335c454ba98196b8bd861059624caec01fcc",
+     "pt-BR": "Removendo entulho do chão que afundou em Hananira-cho, na Cidade de Miyato, acharam um osso que seria um fêmur humano. O osso parece ter ficado enterrado por muito tempo, e a polícia faz uma análise detalhada. Ele foi achado embaixo de uma avenida asfaltada, e a polícia diz: \"Consideramos a possibilidade de ter sido enterrado durante a construção da rua ou misturado à terra da obra.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "9218f6742876b8a5c13ecc71481c3a5bb197b00f5da5b5a491d0bce0205bdd56",
+     "pt-BR": "Fóssil de Dinossauro É Achado no Local do Esgoto Desabado?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "ee21025502bc5cd7ac8b625be5639e1b4731873816b11523dfc4ec1869391692",
+     "pt-BR": "No fundo do chão que afundou em Hananira-cho, na Cidade de Miyato, foi achado um fóssil que seria do parassaurolofo, um dinossauro do Cretáceo.\nO fóssil é de uma cabeça e, pela crista característica, estima-se que seja de um parente do parassaurolofo.\nAo saber da notícia, o Sr. Onda, presidente da Associação Comercial de Hananira-cho, disse: \"Já chega de criaturas gigantes, mas dinossauros são muito bem-vindos. Daqui em diante, queremos nos promover como 'Hananira, a Cidade dos Dinossauros'.\"\n【Parassaurolofo】\nUm dinossauro herbívoro que viveu no Cretáceo Superior da era Mesozoica (de 82 a 66 milhões de anos atrás), com 8 a 10 m de comprimento e 4 a 6 t. Conhecido pela crista longa que vai do focinho até a parte de trás da cabeça.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "d54258c7c814a4bcc9e577f3fe58a5038056ab33eec8461880bd8d927fd7df3a",
+     "pt-BR": "Alienígenas Gigantes Confiam Uns nos Outros?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "309c74dc141216183ce3913a337f0fc230fbddbb401e50931a651a81bb9b6efc",
+     "pt-BR": "Durante a batalha entre alienígenas gigantes em Hananira-cho, na Cidade de Miyato, o alienígena gigante prateado foi visto parecendo encorajar o alienígena gigante azul.\nIsso aconteceu quando o alienígena gigante azul foi encurralado pelos ataques do alienígena preto; o prateado foi visto dando tapinhas no ombro do azul, danificado e de joelho, como se o encorajasse.\nA Sra. K (26 anos), que viu a cena enquanto fugia dos pés dos dois gigantes, disse: \"Parecia mesmo que ele estava encorajando o outro. Pensando assim, o alienígena gigante prateado tinha um ar muito nobre.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "bc2c082507ca39f42e19a43a2b1fbec92dfdebee20aeab5978cebab463baaeba",
+     "pt-BR": "Alienígena Gigante É Flagrado Disparando Raio de Calor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k192",
+     "source_text_sha256": "be725a34a3dbb8237cb7e9badd0e14cf3c38bbfe2f262a0bb170e96c96a748a0",
+     "pt-BR": "O momento em que os alienígenas gigantes que apareceram em Hananira-cho, na Cidade de Miyato, dispararam raios de calor foi registrado.\nNas imagens, dá para ver os raios disparados por três alienígenas gigantes, cada um com cor e tamanho diferentes.\nO professor adjunto N, da Universidade S, especialista em astrofísica, disse: \"Há criaturas na Terra com partes do corpo que brilham, mas é impressionante que eles produzam energia luminosa forte o bastante para servir de ataque. Não há dúvida de que são seres completamente diferentes de nós, criaturas da Terra.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "a77541e01a6030c2ed01b07f637d5598efc88a4d5e909b04c94eeefc6dd36fc0",
+     "pt-BR": "Calígrafa de Vanguarda Risa Katsuragi É Resgatada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "28fd72840b9a27f5f7ebbca28b7bf18bc6240db659d7677208a2ab63ed975713",
+     "pt-BR": "Risa Katsuragi, famosa como calígrafa de vanguarda, foi resgatada do elevador de um prédio onde estava presa, anunciou a agência dela.\nKatsuragi tinha ido a um salão de eventos em Hananira-cho, na Cidade de Miyato, para uma exposição de caligrafia quando quatro alienígenas gigantes apareceram. Ela entrou num elevador para fugir, mas o impacto dos rugidos cortou a energia do elevador, deixando-a presa.\nKatsuragi foi resgatada uma hora depois, sem ferimentos graves, mas está exausta e recebe tratamento num hospital. O organizador anunciou que a exposição será adiada até ela se recuperar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "acf8d6d9d3a7a2dcaaf244d553545d4942ee2d0848bca3c7bcd7e3037f2ac952",
+     "pt-BR": "Vovó Salva o Dia: Risako Kusunoki, da Cidade de Mizuna",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "b885724fb6df685ce03e33f8ea8bf66c3903879c1ebcd05f2ac2218e309d74c4",
+     "pt-BR": "Risako Kusunoki (77 anos), da Cidade de Mizuna, virou notícia por convencer um homem que vinha furtando várias vezes em meio ao caos dos incidentes dos alienígenas gigantes a se entregar num posto policial.\nVoltando para casa tarde da noite de uma loja de conveniência próxima, Kusunoki viu um homem tentando entrar pela janela do primeiro andar de um prédio. Depois de uma encarada, ela fez ele contar os problemas que o levaram a roubar e deu conselhos de vida. O homem se convenceu, foi com ela até um posto policial próximo e foi preso.\nKusunoki disse: \"Fiquei com medo, mas pensei no meu filho, que mora longe, e não consegui simplesmente largá-lo. Espero que ele mude de vida.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "be99e3891697fe820bd8dc83226d17ab057b6472eee117432b2766e6c9584e1e",
+     "pt-BR": "Festival de Cinema Via Láctea: Prêmio de Melhor Atriz Vai para Risa Kashiwagi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "949b4ffb6d0af86258aee718891cb5357e02ab94fa7883776afdfee9de2fc54b",
+     "pt-BR": "O \"Festival de Cinema Via Láctea\", um dos 100 festivais de cinema do mundo, foi realizado no País F, e o prêmio de Melhor Atriz foi para Risa Kashiwagi.\nO filme \"Terra Devastada do Wi-Fi do Gato de Rua\", estrelado por Risa Kashiwagi, também levou Melhor Roteiro, e o diretor William Tsuruta disse: \"É uma grande honra deixar nosso nome na história do cinema assim. Este filme não teria sido concluído sem a Risa. Sou grato.\"\nNuma entrevista depois do prêmio, Risa Kashiwagi mencionou os incidentes com criaturas gigantes na Cidade de Miyato: \"Gostaria de doar o prêmio em dinheiro. Torço por uma recuperação rápida.\"\n(A imagem é uma cena de \"Terra Devastada do Wi-Fi do Gato de Rua\".)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "1d01c36f790f42bd5fb3f46eed189c98ea3cacc152f43ac99b216d1f8e7dbe89",
+     "pt-BR": "Explosão em Cruzamento de Hananira-cho: Veículo Chutado por Alienígena Gigante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "3f0ce6f1acce8084f0768073661dd9490171d0fb8d4643c4f6f40d2146f8e6af",
+     "pt-BR": "Veículos abandonados nas ruas em volta de Hananira-cho, na Cidade de Miyato, pegaram fogo por causa dos alienígenas gigantes que apareceram ali.\nEnquanto os alienígenas lutavam nas ruas, veículos esmagados pegaram fogo e explodiram, e o fogo se espalhou para os veículos próximos, virando um grande incêndio.\nAlém disso, o alienígena gigante preto chutou um caminhão grande, que caiu sobre um caminhão-tanque, incendiando a gasolina e causando uma explosão enorme. As chamas ainda sobem numa grande área do cruzamento de Hananira-cho Oeste.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "5f8fb5a1a188a4233430e9b6bebdfcc580c7a7e8808fbfcd4a22820852af1d0f",
+     "pt-BR": "Ações Nacionais Caem Quase em Peso com Medo das Criaturas Gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "8216f6790bfeea0bb641e90460579ba47c04cd704a00a77f1a1298c6b4a2aae2",
+     "pt-BR": "Com as notícias da destruição da Cidade de Miyato por criaturas gigantes desde ontem à noite, as ações nacionais caíram em peso. Algumas ações, como as ligadas a medicina, construção e defesa, subiram na expectativa de grandes operações de resgate e reconstrução.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "557d2cd084d3271764a103e45ea0f10f0fd4b211ed65ea960afc98b7028156c7",
+     "pt-BR": "Gabinete Faz Reunião de Emergência e Considera Negociar com os Alienígenas Gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "5b3e7e39b5cc9a067865136399499cbec432fbf3c0434764ff042991165e02be",
+     "pt-BR": "Diante da série de incidentes com alienígenas gigantes, houve uma reunião de emergência na residência oficial do primeiro-ministro. A reunião teria discutido como abordar negociações com os alienígenas gigantes.\nNuma coletiva, o ministro-chefe do Gabinete disse: \"As criaturas gigantes aparecem e somem de forma imprevisível. Por enquanto, elas só aparecem em volta da Cidade de Miyato, mas há risco de os danos se espalharem para outras regiões. Há limites para repeli-las com os meios de defesa do nosso país. A reunião concordou que devemos reduzir os danos por meio de conversas com os alienígenas.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "af9b78260350cf8d9802133e0b957767bfe38dde3020e1493d8662a0e3d0dc4e",
+     "pt-BR": "Enxurrada de Pedidos de Informação sobre Familiares na Cidade",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "e916b40a3631088d50028bf56a947d403cf5904a19140040a7c159738831adf0",
+     "pt-BR": "Em meio aos incidentes das criaturas gigantes na Cidade de Miyato, pedidos de informação sobre a segurança de familiares que moram na cidade inundaram um site especial do governo, que ficou dificílimo de acessar.\nMasako Umeda, cujo filho trabalha numa loja de conveniência em Hananira-cho, na Cidade de Miyato, disse: \"Não consigo falar com meu filho, estou preocupada. Só quero que ele esteja bem.\"\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "292008e29a7cff2bec2d0950dd28a6dd3137540dfa893d1e05b333fff275b52b",
+     "pt-BR": "Editora Ebine Recebe Nova Direção e Busca a Recuperação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "fb7f5b7ae2e089d3bb4cb41522a19bf54725cf03186e3b8ad77c8175c4096851",
+     "pt-BR": "A Editora Ebine, com sede em Hananira-cho, na Cidade de Miyato, teve o prédio muito danificado pelo alienígena gigante que apareceu ali hoje. Em meio a isso, ela recebeu um novo dono e busca se recuperar. O funcionário Mukojima disse: \"Boa parte do telhado desabou, e não sabemos onde estão nossos outros colegas. Sinceramente, achei que era o fim. Mas o novo dono disse que quer reerguer a Editora Ebine. Pretendo fazer tudo o que puder para corresponder a isso.\"\nMas a Editora Ebine tem pela frente um caminho dificílimo. Não só o prédio, mas também as ruas em volta estão muito danificados, o que torna impossível trabalhar normalmente. Parece questionável se ela precisa continuar presa a este prédio. Os próximos passos vão chamar atenção.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "d32ac7335b7855aea1b2cd66aa08a40a108600d9c78a3004cb39ff724f78e253",
+     "pt-BR": "Nova Moda do Café: o \"Café Regional\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "65ae54795f29faaa989b5094579a6255969ff04d3fad45602f0daf0cef69a9e5",
+     "pt-BR": "Uma nova febre parece estar surgindo no mundo do café: o \"café regional\". O sabor do café muda com a torra, a moagem e o preparo, e começam a aparecer produtos inspirados nos métodos de cafeterias tradicionais e populares de cada região. Kenzo Aiuchi, presidente do Clube do Café da Cidade de Miyato, disse: \"Fico feliz que as pessoas possam provar com facilidade um café feito com capricho. Espero que isso seja uma porta de entrada para as pessoas visitarem as cafeterias de verdade. Meu sonho pessoal é que, com mais fãs de café, abram cada vez mais cafeterias e a cidade inteira fique com cheiro de café.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "e9c3492e80d85da7c9da935bc433d109a590bc6429b0b020374df9f4b011ce8b",
+     "pt-BR": "Linha \"Ministro do Karaage\", Sucesso da Loja de Conveniência Clover, Chega a 100 Bilhões de Unidades Vendidas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "b12a2ad3f50bcbd78638714efa628c5674035c7369faac95a9d046d25b8026e0",
+     "pt-BR": "A Clover Ltda., que opera lojas de conveniência principalmente na Cidade de Miyato, anunciou antes do amanhecer de hoje que a linha \"Ministro do Karaage\" chegou a 100 bilhões de unidades vendidas.\nO Ministro do Karaage é um produto popular da Clover, conhecido pela linha com uma grande variedade de sabores.\nA conta oficial de comunicação da empresa nas redes sociais postou: \"Graças ao apoio de tantos clientes, chegamos ao resultado maravilhoso de 100 bilhões de unidades. Agora, vamos rumo a 1 trilhão!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "5c770100b81a60866f3325f7c85afb5d64ebe575226a9d34c55afd036695472e",
+     "pt-BR": "Homem de Sunga É Visto em Loja de Conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "190b04cd3a8c4af1bebbacd5169d73a56bf1f2c5645ac661119f05b376d99930",
+     "pt-BR": "Veio à tona que um homem de sunga entrou numa loja de conveniência em Hananira-cho, na Cidade de Miyato. Quando os policiais da Cidade de Miyato chamados ao local chegaram, o homem tinha sumido.\nAlienígenas gigantes tinham aparecido ali perto mais ou menos na hora em que o homem de sunga foi visto, e um policial da Cidade de Miyato disse: \"Talvez ele tenha aproveitado o caos para realizar uma antiga vontade de andar pela cidade de sunga.\"\nA menos que a roupa de banho seja sensual demais, isso não seria crime.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "2d4542bd2a8ddc0f9956e666333d9bc0472c4ddd8cc189eae987c537e35651db",
+     "pt-BR": "Mulher de Biquíni É Vista em Loja de Conveniência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "235ce0c9d9581a42b9b45af77cd2ddae150ebb2354dc22984feaa67e949b77ca",
+     "pt-BR": "Veio à tona que uma mulher de biquíni entrou numa loja de conveniência em Hananira-cho, na Cidade de Miyato. Quando os policiais da Cidade de Miyato chamados ao local chegaram, a mulher tinha sumido.\nAlienígenas gigantes tinham aparecido ali perto mais ou menos na hora em que a mulher de biquíni foi vista, e um policial da Cidade de Miyato disse: \"Talvez ela tenha aproveitado o caos para realizar uma antiga vontade de andar pela cidade de biquíni.\"\nA menos que a roupa de banho seja sensual demais, isso não seria crime.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "3f74599632f2d56e0fac8afa762964e39d67270de5ba90590fa5ffcf46ba5308",
+     "pt-BR": "Eventos pelo País São Cancelados Amanhã Após Incidentes com Alienígenas Gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "7ba9f41696bf81cf9d714bb1e4655352ff83a671161995fdbbdd211e1b499f99",
+     "pt-BR": "Diante da série de aparições de criaturas gigantes na Cidade de Miyato, eventos e shows marcados pelo país estão sendo cancelados um atrás do outro.\nO popular grupo de ídolos \"Homeostasis\", no meio de uma turnê nacional, tinha show marcado no Estádio Aosagi amanhã, mas anunciou no site oficial: \"Vamos adiar pensando na segurança do público.\"\nO líder do grupo, Shota Hino, postou nas redes sociais: \"Sobre o cancelamento do show de amanhã: conversamos com muita gente e tomamos a decisão que achamos melhor. Pedimos desculpas a todos os fãs que estavam esperando, mas, por favor, coloquem a segurança em primeiro lugar agora.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "53dbdc6fc447a75fd4deddf95c6123f393c2c14947a97d958aeacbdf182ab15c",
+     "pt-BR": "Episódio 27 do Anime \"Sugochikku Mirorin\" É Adiado Após Incidentes com Criaturas Gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "1c5160139bd7702aedc216b0d87e425f158d331bc7506fc5daf3bc097f11643d",
+     "pt-BR": "A emissora anunciou que o episódio 27 do popular anime \"Sugochikku Mirorin\" foi adiado por causa do aparecimento de alienígenas gigantes.\nO episódio 27 tem uma cena em que uma Mirorin gigante tenta fazer sorvete com um caminhão betoneira, e a exibição foi adiada porque poderia lembrar os espectadores dos incidentes com criaturas gigantes na Cidade de Miyato. Na semana que vem, o horário terá um programa substituto, e na outra irá ao ar o episódio 28. Ainda não se sabe se o episódio 27 será exibido no futuro.\n\"Sugochikku Mirorin\" é um anime sobre o dia a dia da garota mágica Mirorin, popular entre crianças e adultos. Esta é a 15ª temporada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "67d2ac2d8b8e0cb6fbff14646aaad56e5b88284c24a6ac95e3fb078dd9a1a895",
+     "pt-BR": "Jogos de Beisebol Profissional Suspensos por Tempo Indeterminado Após Incidentes com Alienígenas Gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "8519a427bee8400610c9f2edeac5a56b3401725c61cad8e8ec8f49b08c09dc21",
+     "pt-BR": "Depois dos incidentes com criaturas gigantes na Cidade de Miyato, a entidade organizadora do beisebol profissional anunciou que os jogos serão cancelados por enquanto. Ela diz que o aparecimento das criaturas gigantes é imprevisível e não dá para garantir a segurança do público e da equipe. Os cancelamentos vão continuar até que se considere seguro realizar jogos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "9739670e6873be23bda5fc021ae0ae68670e56afcd32b532359c2da30490a2ec",
+     "pt-BR": "Desaparecidos Depois de Serem Arrastados por Rajadas de Alienígena Gigante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "d3268157176cf746799332f1d907545f0e7e6a1c76ea4903cb5ff15779d1b6c9",
+     "pt-BR": "Algumas pessoas foram arrastadas pelo vento fortíssimo soltado pelo alienígena gigante preto que apareceu em Hananira-cho, na Cidade de Miyato, e pelo menos quatro estão desaparecidas. A polícia busca informações de testemunhas.\nO Sr. A, autônomo que quase foi arrastado pelo vento, disse: \"Como eu estava escondido atrás de alguma coisa, escapei do vento em cheio. Vi gente sendo levada como folhas secas. Foi aterrorizante.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "d4af8f0b2e4ccd46c67e2dcf62afa8926d56d03bd303b956b9c058dacb9b43fa",
+     "pt-BR": "Estilo das Ruas - Masculino 02",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "ade78ac4225c03a550be76ae74ff1ce90eed91903002c30661e06963070f8689",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nCosplay é o hobby dele, e esta é a sua farda de policial feminina favorita!\nEle me deixou olhar de perto, e era tão bem-feita que achei que podia ser de verdade♪\nEle vestiu aquela saia lindamente. Ficou ótimo♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "50eb9911084258106a56ecb215129bb91554cf5ba36d397f1b0a77af069f599b",
+     "pt-BR": "Estilo das Ruas - Masculino 03",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "87e9464e21cf31a954f6283344c2ddfb3563f30371d3bcdf908e1e43b00381a5",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nCosplay é o hobby dele, e esta é a sua farda de policial favorita!\nEle me deixou olhar de perto, e era tão bem-feita que achei que podia ser de verdade♪\nEle vestiu muito bem e ficou lindamente elegante♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "31196d61724fca7475bb926d7c6c3866cfe8aa316e5559b749d3f0fdef1ef4a0",
+     "pt-BR": "Estilo das Ruas - Masculino 04",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "5520c42fc4f5113d5f2c8b6d68b38868de459df6fd4d800fdd9326cac3ef38ad",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nCosplay é o hobby dele, e esta é a roupa de proteção de bombeiro que ele conseguiu recentemente!\nEle me deixou olhar de perto, e ela com certeza parecia aguentar um foguinho♪\nSe eu o visse num incêndio, acho que ele pareceria muito confiável♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "1546d32c17b12508c7d3c513b6534e6d2ca5ef479336645b8adb55d5f8e01dc3",
+     "pt-BR": "Estilo das Ruas - Masculino 05",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "66261d2420ee7f76439b4f1f981c2f88f97f9fa227ad6a74a17a2bb4ec9d750f",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nCosplay é o hobby dele, e este é o uniforme de maquinista que ele conseguiu recentemente!\nComo fã de trens, fiquei empolgado! Os sons dos trens da Ferrovia Elétrica de Miyato partindo e correndo tocaram na hora na minha cabeça e me deram um ânimo. Haha!\nObrigado♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "bfee1daad59272179f0c7f0e6e86c8c75d7a9e9a220523f13db7cc211d458312",
+     "pt-BR": "Estilo das Ruas - Masculino 06",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k234",
+     "source_text_sha256": "6d7131a7fe7ff120bed20c00f97de7f793c0e3271b653ea9dd556e5b9cb4e1fa",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nCosplay é o hobby dele, e este é o uniforme de funcionário da GZ Burger!\nEu também sou muito fã da GZ Burger desde os tempos de estudante!\nAcho que vou comer de novo um Mega Hambúrguer de Abacate com Porco Assado e Cebola Tripla qualquer dia♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "e0fea3e85447e08ba60ed751ae949679cfe293d849015cccf64f9ee056538952",
+     "pt-BR": "Estilo das Ruas - Masculino 07",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "54a2b6d018c8803de30ef2355ff0297a7bd51678ed3af1755940e7f2491b526c",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nCosplay é o hobby dele, e naquele dia ele escolheu seu uniforme escolar de gola alta favorito♪\nAcho que ele tem um charme especial quando usado depois dos tempos de escola♪\nAliás, eu usei blazer no fundamental e no ensino médio, então sempre quis secretamente um uniforme de gola alta. Talvez eu experimente um qualquer dia. Haha!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "028f36c49b02eb43fbb797f52e59e17b9c756477eacd47532127d206727f6a6b",
+     "pt-BR": "Estilo das Ruas ~Masculino 08~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "11142d242bafa1d9265a65b8bec74d84640647c9cc43af89e141f4c79b34d7de",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nCosplay é o hobby dele, e naquele dia ele saiu com seu melhor uniforme escolar estilo marinheiro♪\nCaiu perfeitamente nele, e ele usou a saia com tanta confiança. Ficou maravilhoso!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "d81af14727b08992b38b84188b286003b1c3e4fb06a45a8d925c3507de926181",
+     "pt-BR": "Estilo das Ruas ~Masculino 09~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "dc1eea3b6d683a44a74535cc2326d7ec5e23f9413ae520d4b6e687e04fc0541b",
+     "pt-BR": "Este é o visual de um rapaz que visitou nossa redação por acaso♪\nCosplay é o hobby dele, e hoje ele saiu de jaleco. Intelectual, descolado e maravilhoso♪\nUma observação pessoal: sempre que vejo um homem de jaleco, lembro do Sr. Henmi, meu professor de química do ensino médio (rs).\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "e110f68ba25b05b19307e07d4c00033734b392451abb15b89a7d503f57512bf2",
+     "pt-BR": "Estilo das Ruas ~Masculino 10~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k242",
+     "source_text_sha256": "b4d4e6ec1e49f56a6a9b47680e49c70f873d2413c5b304dda3636ae06080f2b9",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nNa parte de cima, uma jaqueta souvenir verde bordada com um tigre. Calça jeans preta e botas dão um acabamento afiado à parte de baixo, criando uma silhueta maravilhosa♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "c5467f63dac01e068ff784a78f94d412fbece1d34ef6f20d9f1742f845877ce5",
+     "pt-BR": "Estilo das Ruas ~Masculino 11~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k244",
+     "source_text_sha256": "769133633e59b4dd4031aee649e9717d5559bfef9c0b4bfadaaa2fcd6f0677b0",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nSerá que ele tinha acabado de sair do turno? Estava com o uniforme da loja de conveniência Clover.\nEu também trabalhei meio período na Clover quando era estudante. O Ministro do Karaage sabor Sukiyaki de Carne, edição limitada daquela época, é meu favorito de todos os tempos♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "d78ea0af83b4f4c10734ab42d1faa96d9804be4a6cc58e59fd036e14eeca3b73",
+     "pt-BR": "Estilo das Ruas ~Masculino 12~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k246",
+     "source_text_sha256": "c0196aa38b90eb0bf3b09262fdfac182416945a50a0e6ecea67220d3e5cc59a0",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nModa caubói autêntica!\nAcho que o lenço vermelho no pescoço dá um toque certeiro♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "efe12dde59b9c8de5f96815c93b74558141edb855c068dda0563bb2f624a8101",
+     "pt-BR": "Estilo das Ruas ~Masculino 13~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k248",
+     "source_text_sha256": "01a7bde18d702d8f2592c102c0ece8a037d9058c52aaf0d319d83f6d232f2820",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nEle disse que este qipao feminino foi uma aquisição recente♪\nPelo jeito, usá-lo o deixou ainda mais apaixonado por cosplay!\nUm visual para lembrar♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "45927137ecb056c9b7fc916f957f710d081b519e33ab95de16a0183bf2a9cef5",
+     "pt-BR": "Estilo das Ruas ~Masculino 14~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "c3df376ec2680a855412bdf30f5c39413d7a902c3f60bf37814512386e8578d0",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nPor incrível que pareça, ele está passeando pela cidade com um visual de praia cheio de clima de resort!\nPor um momento, me perguntei se tinham aberto uma piscina bem do lado da redação sem eu perceber!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k251",
+     "source_text_sha256": "6e04881f24147dcb4656c2e67894f52a2d21def3b98bcb7d3e11b804d8268601",
+     "pt-BR": "Estilo das Ruas ~Masculino 15~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "6a3a90c91609b02a15ba0de0d39129631331d6154fe8b7a5739bad0ab58613c0",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nEle apareceu fazendo cosplay de membro das Forças Terrestres de Autodefesa♪\nEle me deixou olhar de perto, e as roupas eram tão resistentes quanto as de verdade!\nFicou elegante e combinou com ele♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k253",
+     "source_text_sha256": "406ddcabecaa7773b0de038cc28269930e7e24f267a072b4f5f95b25367d1a9c",
+     "pt-BR": "Este é o visual de um homem que visitou nossa redação por acaso♪\nMais ousada que as roupas é aquela máscara de dominatrix♪\nUm alienígena gigante apareceu naquele dia e causou um caos, mas este visual excêntrico estava à altura!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "5380a4a148543f52ee4a15437ee94f52d1dc903ec25d7237efd176373c83aa9f",
+     "pt-BR": "Estilo das Ruas ~Feminino 02~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k255",
+     "source_text_sha256": "c13bcabc7f069800c9f0027037f67f51bf65a6a97f0e1ce34af13afdcda0be90",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nCosplay é o hobby dela, e esta é a sua farda de policial masculina favorita!\nEla me deixou olhar de perto, e era tão bem-feita que achei que podia ser de verdade♪\nEla vestiu a calça masculina lindamente e ficou muito elegante♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k256",
+     "source_text_sha256": "9b556c3d8e53a5402fd36352bc1efba9c92301d613b877839085bcf280079831",
+     "pt-BR": "Estilo das Ruas ~Feminino 03~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k257",
+     "source_text_sha256": "ad9558d7a1d034579b9272a3799e0461de65bcd12cc36eb18599f0ae6edcaaf4",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nCosplay é o hobby dela, e esta é a sua farda de policial feminina favorita!\nEla me deixou olhar de perto, e era tão bem-feita que achei que podia ser de verdade♪\nEla ficou tão elegante e tão parecida com uma policial de verdade que fiquei nervoso. Haha!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k258",
+     "source_text_sha256": "3bf39233e6924ce4294f63ae82b9af020912dc224819aadbe1bbfe9547d74a2a",
+     "pt-BR": "Estilo das Ruas ~Feminino 04~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k259",
+     "source_text_sha256": "aaea804a4a59790a2723b448cb531dc5e286c281c2b6475f82536b4eb77b4f2d",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nCosplay é o hobby dela, e esta é a roupa de proteção de bombeiro que ela conseguiu recentemente!\nEla me deixou olhar de perto, e ela com certeza parecia aguentar um foguinho♪\nEla ficou forte e maravilhosa♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k260",
+     "source_text_sha256": "cba4a8e1f9065aec7a4dbdc3b68938a55e0504c4172e8accd9ad6e31b6815456",
+     "pt-BR": "Estilo das Ruas ~Feminino 05~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k261",
+     "source_text_sha256": "0999dc78ab8acfb056f10b4d9f551586febb02db403a961523238450ecc6a057",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nCosplay é o hobby dela, e este é o uniforme de maquinista que ela conseguiu recentemente!\nComo fã de trens, fiquei empolgado! Os sons dos trens da Ferrovia Elétrica de Miyato partindo e correndo tocaram na hora na minha cabeça e me deram um ânimo. Haha!\nFicou muito fofo nela♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "7ff5e9291cbf0321c708696b17cbfeccf74c6a60486ee38fac1d61a70039301c",
+     "pt-BR": "Estilo das Ruas ~Feminino 06~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k263",
+     "source_text_sha256": "c8a7127fc8a8a0e3af9fc4e768214d1a41d76b64e9142f32740e5696f4fe1799",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nCosplay é o hobby dela, e este é o uniforme de funcionária da GZ Burger!\nNa verdade, alguém de quem eu gostava no ensino médio trabalhava na GZ Burger. Me trouxe lembranças daquela época. Haha!\nAcho que vou comer um Hambúrguer de Peixe Frito com Legumes de um Dia Inteiro qualquer dia♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "d717987df1666d20212dacc117e577b5adc4debc32afcf81a96fc443c66637d2",
+     "pt-BR": "Estilo das Ruas ~Feminino 07~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k265",
+     "source_text_sha256": "1406a40ac6a19e73a1ed65cbcdd4d9b4d4ad812e958604e5f32eaef382b173c8",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nCosplay é o hobby dela, e naquele dia ela escolheu seu uniforme escolar de gola alta favorito♪\nAcho que ela fica muito fofa naquele uniforme um pouco largo♪\nAliás, eu usei blazer no fundamental e no ensino médio, então sempre quis secretamente um uniforme de gola alta. Talvez eu experimente um qualquer dia. Haha!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "9f74ef744ace7ae463974fb54c5e65e7c23621e62de0e6c6a205f6629f123c5f",
+     "pt-BR": "Estilo das Ruas ~Feminino 08~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k267",
+     "source_text_sha256": "bd0793ba0aead072186310e3ca09114571a0406352e48a4087816a4e9d167648",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nCosplay é o hobby dela, e naquele dia ela saiu com seu melhor uniforme escolar estilo marinheiro♪\nAs meninas das minhas escolas do fundamental e do médio usavam blazer, então uniforme de marinheiro é uma novidade pra mim. Haha! Mas ver uma mulher adulta usando me deu uma nostalgia, ou algo igualmente estranho♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k268",
+     "source_text_sha256": "4febd7009581217008348476873fd53210c422b4c0175a9dfd97fe1380eda5bf",
+     "pt-BR": "Estilo das Ruas ~Feminino 09~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k269",
+     "source_text_sha256": "f0ee30823c9159796399ece09d3cf102b2e349729d1ef7bdc27fbc483c410938",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nCosplay é o hobby dela, e naquele dia ela saiu de jaleco. Ela está maravilhosa, como uma médica confiante♪\nMe lembrou da enfermeira da escola cuidando de mim depois que levei uma bolada forte na cara jogando handebol na educação física. Haha!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k270",
+     "source_text_sha256": "a3162ef7898e7ac7f30142f00af0af1fd0be11216e93194e0139481a27664c42",
+     "pt-BR": "Estilo das Ruas ~Feminino 10~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k271",
+     "source_text_sha256": "c7fe8ce590d57fd2903e70d685ff530c32e53a10342724c3cca5f665dad658d5",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nNa parte de cima, uma jaqueta souvenir vermelha bordada com um tigre. Com uma minissaia jeans preta, fica descolado e fofo♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k272",
+     "source_text_sha256": "903ae1e0a28b891652810836e34580003a0ff893c5f89e60fd1ce671b2b47709",
+     "pt-BR": "Estilo das Ruas ~Feminino 11~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k273",
+     "source_text_sha256": "60273608c33d56ba2a152d5475c3e64a0a8ab32f06a5637b4b256de003dca269",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nSerá que ela tinha acabado de sair do turno? Estava com o uniforme da loja de conveniência Clover.\nEu também trabalhei meio período na Clover quando era estudante. O Ministro do Karaage sabor Aura, edição limitada daquela época, é o que eu menos gostei na vida. Haha!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k274",
+     "source_text_sha256": "18d5676c27721fad6566841eaaacd94b7f601c3fc522e883f2a2e0b5d7272a5b",
+     "pt-BR": "Estilo das Ruas ~Feminino 12~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k275",
+     "source_text_sha256": "dde8db48a805bfcfae8e618dc9b94512f29fad67dbbf0a80a830ad0b32d2040f",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nModa cowgirl autêntica! Ela está muito fofa♪\nO lenço vermelho no pescoço dá um toque ótimo♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k276",
+     "source_text_sha256": "5f299edfb25b85b570498f9e529ad15d6148a75374896be62a8061b41e607269",
+     "pt-BR": "Estilo das Ruas ~Feminino 13~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k277",
+     "source_text_sha256": "5dfcb47cb55a567977f7400524c60f6ea1a71da5bf97e4268234c65add391ee6",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nEla disse que este qipao foi uma aquisição recente♪\nPelo jeito, ela ficou um pouco sem graça da primeira vez que usou, mas agora parece totalmente natural♪\nFica muito sensual nela!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k278",
+     "source_text_sha256": "032a3766c18ef9e74c5b43866b4dde6c2e74bbb702ef605e6e1927ed2041b82b",
+     "pt-BR": "Estilo das Ruas ~Feminino 14~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k279",
+     "source_text_sha256": "184b50b5cb07f7ea9325abf9a746559328baad4a1f6de9e9d6c3054e07368760",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nPor incrível que pareça, ela está passeando pela cidade com um visual de praia cheio de clima de resort!\nA pele saudável dela está radiante!\nPor um momento, me perguntei se tinham aberto uma piscina bem do lado da redação sem eu perceber!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k280",
+     "source_text_sha256": "030be16c6a7250b2ff99438369822115a9fcabf1a5c48dbf63a363089c5b5a31",
+     "pt-BR": "Estilo das Ruas ~Feminino 15~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k281",
+     "source_text_sha256": "e7111be37ed3a9619f64bde3f41c9e093f45a70f8e6bfd8683febfc2be91ce68",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nEla apareceu fazendo cosplay de membro das Forças Terrestres de Autodefesa♪\nEla me deixou olhar de perto, e as roupas eram tão resistentes quanto as de verdade!\nFicou elegante e maravilhosa♪\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k282",
+     "source_text_sha256": "1c205b005867e67e74cbe368af8476be711155873db6641858eb2cc3f32afe3b",
+     "pt-BR": "Este é o visual de uma mulher que visitou nossa redação por acaso♪\nMais provocante que as roupas é aquela máscara de dominatrix♪\nUm alienígena gigante apareceu naquele dia e causou um caos, mas este visual excêntrico estava à altura!\n(Teru Mukojima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k283",
+     "source_text_sha256": "0390e83990f344a48fd61ff3bcc88709aa571f807a1eac73a5fccc62071f67b7",
+     "pt-BR": "Romance de Enorme Sucesso \"A Saga da Última Espada\" Faz Venda Beneficente pelos Incidentes da Cidade de Miyato",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k284",
+     "source_text_sha256": "3aec7328c25bf55a1c54c3e047f0080d5cc56e9178e31c3aa3f79bd62163c9b2",
+     "pt-BR": "O. R. James, autor do romance de enorme sucesso \"A Saga da Última Espada\", anunciou no site oficial uma venda beneficente para ajudar a Cidade de Miyato, onde apareceram criaturas gigantes.\nA venda inclui a série \"A Saga da Última Espada\" numa edição especial. Os compradores podem escolher livremente o valor, a partir de 1.000 ienes. James disse: \"Até balinhas viram uma grande força quando muitas se juntam. Por favor, empreste um pouco da sua força à Cidade de Miyato.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k285",
+     "source_text_sha256": "c27170489bc70bdc7adc8271ccca2834823be2364aba6c0df92d2e2784599114",
+     "pt-BR": "Ristorante Miyato, da Cidade de Miyato, Fecha as Portas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k286",
+     "source_text_sha256": "b5932f5c373d07988ba27e0b1e79c7f4b998c4c62434873e375ceb33da8ca85b",
+     "pt-BR": "Veio à tona que o \"Ristorante Miyato\", com restaurante principal no Bairro Yotsuba, na Cidade de Miyato, vai fechar. O restaurante é um popular francês de alto padrão da Cidade de Miyato que tinha se expandido para o exterior, mas a direção mudou recentemente, e ele pretende reabrir como uma nova casa, com outra proposta.\nSegundo David, que seria o chef principal do novo restaurante, \"aproveitando nosso excelente conhecimento e experiência em cozinha francesa, estamos planejando um restaurante só para sócios que vai encantar os gourmets, combinando-a com udon, kishimen e tigelas de arroz\".\nO restaurante principal ficará fechado por um tempo. O prédio será reformado, e as filiais do exterior serão encerradas. A data de abertura do novo restaurante ainda não foi definida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k287",
+     "source_text_sha256": "3d44861684a5d2a3921f5f78c927b9766b8f09ef5467dacc9d3dcce0e2d089ca",
+     "pt-BR": "Ristorante Miyato, da Cidade de Miyato, Vai Bem no Exterior",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k288",
+     "source_text_sha256": "be08f03b35955fb6decf0042069f4aaf87aa44d87ae3627c59c4608600178f61",
+     "pt-BR": "Veio à tona que as filiais no exterior do \"Ristorante Miyato\", com restaurante principal no Bairro Yotsuba, na Cidade de Miyato, vão bem e devem atingir a meta anual de vendas de 500 milhões de ienes. O restaurante é popular como francês de alto padrão.\nHá muito tempo ele investe na expansão internacional, com mais de 10 restaurantes na América do Norte, na Europa, na Ásia e em outros lugares. Uma pessoa do setor disse: \"A comida é deliciosa, claro, mas o atendimento combina com a cultura de cada país. Ele também investe em intercâmbio cultural; pelo jeito, dá pra jantar ouvindo apresentações de instrumentos de outros países ou de rakugo.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k289",
+     "source_text_sha256": "77733c52d0410be51a72734ff641a558dd78f78cbd5d0b961e5337eeb4c1d3aa",
+     "pt-BR": "Editora Ebine Vende Empresa, Terreno e Prédio; Semanário da Sombra Gigante Chega ao Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k290",
+     "source_text_sha256": "088dcd47b3557d6f27c841e8f97bc6875561736c2732c43cffb362a2bff52766",
+     "pt-BR": "A Editora Ebine, que publica o Semanário da Sombra Gigante, anunciou que vai vender toda a empresa, o terreno e o prédio. A edição desta semana será a última da revista. A principal causa seriam os grandes danos causados pelo alienígena gigante que apareceu hoje em Hananira-cho, onde fica o prédio.\nO funcionário Mukojima disse: \"O telhado está muito danificado, e nossos outros colegas estão desaparecidos. Eu não achava que dava pra continuar. Quando soube que a revista ia acabar, pensei: era o que eu temia. Não faço ideia do que fazer a partir de amanhã.\"\nA Editora Ebine tinha trocado de dono pouco antes disso. A venda teria rendido a esse dono pelo menos dois bilhões de ienes.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_210_2_npc.luc",
    "source_sha256": "d76485e5095ea07bab40918a65c9c971aafc12d3cdb6fc25f6d85f99a95ed27c",
    "entries": [
