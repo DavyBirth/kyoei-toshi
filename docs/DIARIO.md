@@ -5189,3 +5189,10 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Runtime da portátil pessoal atualizado com essa compilação usando `tools/update_portable_runtime.py`; executável para abrir: `build/City-Shrouded-in-Shadow-Portable/City Shrouded in Shadow.exe`. Launcher --check retornou 0 sem abrir o jogo. Saves, configurações, tradução e áudio do uso normal preservados. Davy fará o teste manual; não abrir o jogo para ele nesta entrega. Referência anterior do pool segue preservada nos artefatos privados para comparação/retorno, sem sobrescrever saves.
 - Runtime da portátil após a limpeza habitual de metadados PE: SHA256 `713331fb8f60ba19821dd34ddf0daf9810483599eb5a55049437f96aa8ee3e66`, registrado no manifesto da portátil. Não confundir com o hash do executável de desenvolvimento acima.
 - Observadores de hardware e de cota encerrados ao terminar esta entrega manual. A regra anterior de reserva de 10% não foi revogada para trabalho futuro; não houve desligamento nesta entrega.
+
+### 27/10/2026 — balanço solicitado por Davy
+- Davy perguntou se houve progresso nos últimos dias. Balanço: a correção de 25/10 recuperou a regressão (~33 → 57–59 FPS parado nos testes registrados). Em 26–27/10 ficaram a reutilização de PreparedDraw e a eliminação da cópia implícita de FetchShaderData; reduções de trabalho comprovadas, mas sem novo ganho significativo de FPS demonstrado no giro. Experimentos descartados e correções dos próprios protocolos consumiram parte relevante do tempo. Não apresentar atividade de diagnóstico como solução dos 60 FPS.
+- Apenas consulta do histórico e registro; nenhum jogo ou monitor reiniciado.
+
+### 29/10/2026 — updater dos amigos (jogo + tradução)
+- Gerado `build/Kyoei-Update-Jogo-e-Traducao-20261029.zip` (SHA256 `162179dc…`) a partir da portátil pessoal: runtime `713331fb…`, launcher e tradução de 26/10. Gerador ganhou `--translation-update` para aceitar quem aplicou a tradução de 24/10 (runtime `50af4ebb…`, antes recusado). test_translation_update PASS Windows/Linux. Jogo não aberto.

@@ -13,7 +13,7 @@ import zipfile
 
 from build_portable import ROOT, digest, personal_text_hits
 
-RELEASE = 'translation-en17-delta-20261024'
+RELEASE = 'translation-en17-delta-20261029'
 DISC_ARCHIVE_BYTES = 6346525059
 FILES = (
     'runtime/kyoei.exe',
@@ -28,7 +28,7 @@ FILES = (
 REMOVE = ('languages/en/common.psarc', 'languages/en/ui-corrections.kydelta')
 PREFIX = 'Atualizacao-Traducao/'
 
-README = '''Tradução inglesa natural (en-17) — atualização pequena, 24/10/2026
+README = '''Tradução inglesa natural (en-17) — atualização pequena, 29/10/2026
 
 A tradução agora é um arquivo pequeno lido por cima do jogo original.
 Este pacote troca o runtime, o launcher e os arquivos da tradução e EXCLUI
@@ -56,6 +56,8 @@ def main():
     parser.add_argument('--portable', type=Path, default=ROOT/'build/City-Shrouded-in-Shadow-Portable')
     parser.add_argument('--runtime-update', type=Path, action='append', required=True,
                         help='Distributed runtime update ZIP whose runtime and accepted runtimes are accepted')
+    parser.add_argument('--translation-update', type=Path, action='append', default=[],
+                        help='Distributed translation update ZIP whose runtime is also accepted')
     parser.add_argument('--out', type=Path, required=True)
     args = parser.parse_args()
     output = args.out.resolve()
@@ -69,6 +71,13 @@ def main():
         if (update['title'], update['version']) != ('CUSA03562', '01.03'):
             raise ValueError('Runtime update for another game')
         accepted += [h for h in (update['sha256'], *update['accepted_sha256']) if h not in accepted]
+    for path in args.translation_update:
+        with zipfile.ZipFile(path) as archive:
+            update = json.loads(archive.read(PREFIX+'translation-update.json'))
+        if (update['title'], update['version']) != ('CUSA03562', '01.03'):
+            raise ValueError('Translation update for another game')
+        runtime = next(row['sha256'] for row in update['files'] if row['path'] == 'runtime/kyoei.exe')
+        accepted += [h for h in (runtime, *update['accepted_runtime_sha256']) if h not in accepted]
     if (source/'game/DAT/common.psarc').stat().st_size != DISC_ARCHIVE_BYTES:
         raise ValueError('Portable disc archive differs from the original')
     rows = []

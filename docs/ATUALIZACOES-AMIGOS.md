@@ -225,3 +225,14 @@ do amigo continua dependendo do teste dele; não há ganho de FPS validado.
 ```powershell
 python tools/build_runtime_update.py --baseline build/City-Shrouded-in-Shadow-Friends-Test --out build/Novo-Update-Linux-Wine.zip --linux-wine
 ```
+
+## 29/10/2026: jogo + tradução num pacote só
+
+`build/Kyoei-Update-Jogo-e-Traducao-20261029.zip`, 26.516.617 bytes, SHA256
+`162179dce25037d2cfe6bf0aad96faba484005a853ba012cb9ae3f3fa33515b2`.
+Runtime `713331fb…` (reuso de PreparedDraw + sem cópia de FetchShaderData),
+launcher e tradução en-17 de 26/10. Aceita instalações com o update GoW3 de
+24/10, o de 18/10 ou a tradução de 24/10 (oito runtimes aceitos). Mesmo modo
+de uso: extrair na pasta do jogo e rodar `Atualizacao-Traducao/Aplicar traducao.cmd`
+(Linux: `sh Atualizacao-Traducao/Aplicar-no-Linux.sh`). test_translation_update
+PASS Windows/Linux. Sem promessa de 60 FPS; tradução ainda em revisão.
