@@ -80131,6 +80131,1027 @@
    ]
   },
   {
+   "path": "common/csv/reading_material.csh",
+   "source_sha256": "1b9ed830b5435611e69d1f78474859544992df35340fc3029b6c5c70cade3661",
+   "entries": [
+    {
+     "id": "r2/c3",
+     "source_text_sha256": "919d686424f70a36c47e4411aa6cf8e3064010dfc9eecbb35d3213d8be873367",
+     "pt-BR": "Peridoto\\nJade\\nEsmeralda\\nRubi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r3/c3",
+     "source_text_sha256": "79b015ab809cfc3938871077e6b97847594e906f03c54d5121f7a82f2951e93e",
+     "pt-BR": "Janeiro: Granada\\nFevereiro: Ametista\\nMarço: Água-marinha, coral\\nAbril: Diamante\\nMaio: Esmeralda, jade\\nJunho: Pérola",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r3/c4",
+     "source_text_sha256": "fbf646b552a428b18549bce7a215f64c0ee5378a8b2e385505b1d0d23dfb2ca8",
+     "pt-BR": "Julho: Rubi\\nAgosto: Peridoto, sardônica\\nSetembro: Safira\\nOutubro: Opala, turmalina\\nNovembro: Topázio, citrino\\nDezembro: Turquesa, lápis-lazúli",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r4/c3",
+     "source_text_sha256": "26ed6ecf37989fbc8e70a15dfeb0fab37988ae6be48b4d241907f604aff20865",
+     "pt-BR": "W&P Consultoria Ltda.\\n\\n~Perfil da Empresa~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r4/c4",
+     "source_text_sha256": "a62353b59701377370eac855c90328c5a556fe21b4fb0985e5925be1ffc5df26",
+     "pt-BR": "A W&P Consultoria ajuda clientes\\nde países e facções do mundo todo a alcançar paz e segurança\\napresentando a eles vários canais de venda de armas e conectando-os\\na empresas com tecnologia de desenvolvimento de armas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r4/c5",
+     "source_text_sha256": "d01878e3930fd0bd4425700a0ddf1c43fbf493b5522180733f30cc5f01f054fe",
+     "pt-BR": "~Informações da Empresa~\\n\\nO W&P do nosso nome\\nsignifica \"Weapon & Peace\" (Arma e Paz),\\nrepresentando nossa determinação de resolver os problemas das armas e da paz.\\n\\nFuncionários: 45\\nCapital: 4,3 bilhões de ienes\\nPresidente: Reiko Kamio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r5/c3",
+     "source_text_sha256": "6614cbdc3559d8beeca79f760c1d807ceef114237cc072534adece18610b69f6",
+     "pt-BR": "　　　　　　　　　　　　Cheque\\nPraça de pagamento: Bairro Sakura, Cidade de Miyato, Província de Miyato\\nBanco de Miyato, Agência Yotsuba\\nValor: 80.000.000 de ienes\\nPague-se ao portador a quantia acima em troca deste cheque.\\n\\nSem protesto\\nData de emissão: XX/XX/20XX\\nLocal de emissão: Província de Miyato\\n\\nEmitente\\nW&P Consultoria Ltda.\\nPresidente: Reiko Kamio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r6/c3",
+     "source_text_sha256": "6e40ea199ad8fcc7a1886e6b0542ba03d980947ed010e4c82c77fc87814817ff",
+     "pt-BR": "Contrato de Parceria Comercial para a Geração de Coisas Estranhas\\n\\nA W&P Consultoria Ltda. (doravante \"Parte A\") e <P_FNAME> <P_LNAME> (doravante \"Parte B\") concordaram em gerar coisas estranhas e desenvolver negócios em conjunto.\\nPor meio deste, firmam o seguinte contrato.\\n\\nArtigo 1 (Objetivo)\\n1. O objetivo deste contrato é estabelecer uma relação comercial baseada na confiança mútua entre a Parte A e a Parte B, buscando benefício e crescimento mútuos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r6/c4",
+     "source_text_sha256": "bfcfe9ec40aa08a75628330a5ae3b54408e698bcffbe9079ad7f6fb559e94ce9",
+     "pt-BR": "Artigo 2 (Escopo e Divisão do Trabalho)\\n1. O escopo e a divisão do trabalho entre a Parte A e a Parte B serão os seguintes.\\n(Parte A)\\n　1) Promoção de vendas\\n　2) Vendas a potenciais clientes\\n　3) Coleta e fornecimento de informações sobre regiões onde as coisas estranhas serão geradas\\n　4) Transporte e proteção da Parte B\\n\\n(Parte B)\\n　1) Geração de coisas estranhas nas regiões designadas\\n　2) Resolução das coisas estranhas geradas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r6/c5",
+     "source_text_sha256": "a00781c49442ad0e462327b21262be80db71a381c7bdd0becf6a3ec17f35fb53",
+     "pt-BR": "Artigo 3 (Distribuição de Lucros etc.)\\n　A distribuição de lucros e outros assuntos deste contrato serão os seguintes,\\n　e a Parte A pagará à Parte B como segue.\\n　a) Remuneração\\n　　Serão pagos 5.000 ienes por hora pelo tempo dedicado à geração de coisas estranhas (incluindo o tempo de transporte)\\n\\n　b) Forma de pagamento\\n　　A Parte A pagará a remuneração por transferência bancária para uma conta indicada pela Parte B.\\n\\n　c) Prazo de pagamento\\n　　O pagamento vence no último dia de cada mês. Se esse dia for feriado bancário, será o próximo dia útil.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r7/c3",
+     "source_text_sha256": "fb35ebaba5114b3a5929557b5257d42f536bf634fef843b52dfc6590a2b1961a",
+     "pt-BR": "(Há um número de sete dígitos escrito aqui...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r8/c3",
+     "source_text_sha256": "32c838a389aeb69d4c910445b838456ebdb79182ca3114ee61785d660250e103",
+     "pt-BR": "À Dra. Fukazawa,\\n\\nPerdoe esta carta repentina.\\nHá algo que eu preciso muito te dizer hoje.\\nSei que devia dizer pessoalmente,\\nmas achei que, cara a cara, ficaria nervoso demais\\npara dizer o que quero,\\nentão decidi te escrever uma carta.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r8/c4",
+     "source_text_sha256": "efb803f761337431564c61c3c4d48aa59c944dd94011b2b5114780fccea1a664",
+     "pt-BR": "Obrigado por todo o seu esforço de cada dia.\\nFaltam só algumas horas para chegarmos à terra.\\nFoi pouco tempo, mas gostei de trabalhar com você.\\nAdmiro profundamente o jeito como você encara o trabalho, Dra. Fukazawa.\\n\\nQuando penso que isto pode ser uma despedida, me sinto muito sozinho.\\n\\nSe eu pudesse, gostaria de continuar te ajudando, Dra. Fukazawa,\\nde ser seu apoio,\\nde estar sempre ao seu lado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r8/c5",
+     "source_text_sha256": "5ef345650786ec308567ffc6645ad8b259d05cb14eb8ddf02af7bb168bed3605",
+     "pt-BR": "Dizer algo assim tão de repente pode ter te incomodado.\\nPor mais egoísta que seja, eu queria dizer o que sinto de verdade.\\n\\nDesculpe muito te incomodar enquanto trabalha.\\nPor favor, cuide-se.\\n\\n　　　　　　　　　　　Tetsuya Oda",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r9/c3",
+     "source_text_sha256": "b07daed184ebc0dc32488de604cf6125d3cf4a43a88c0873cbb036dfd3d1881d",
+     "pt-BR": "Ao Sr. Oda,\\n\\n\\nObrigada pela sua carta.\\nFoi tão de repente que fiquei muito surpresa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r9/c4",
+     "source_text_sha256": "4eb625f86aa75309fe289f76b5def0ee719e8457ecb7c757209a4af43f752f8a",
+     "pt-BR": "Seus sentimentos me deixam muito feliz, Sr. Oda.\\n\\nTambém há algo que eu quero confessar.\\n\\nEstarei esperando na proa amanhã de manhã.\\nPor favor, me dê um tempinho para conversarmos, só nós dois.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r9/c5",
+     "source_text_sha256": "accd005690e769775228b736b8258bd5a346e92008c01c4c1fccdf7d5a62ee90",
+     "pt-BR": "O vento noturno no mar ainda é frio, não é?\\nPor favor, cuide da sua saúde também, Sr. Oda.\\n\\nBom,\\nboa noite.\\n\\n　　　　　　　　　　Hitomi Fukazawa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r11/c3",
+     "source_text_sha256": "91b06e1aea5f60588f436a53590eb23d1a02ed64786359ac2fe3bc4a86097fb9",
+     "pt-BR": "Cidade Absolutamente Segura\\n\\nAventura de Ação e Sobrevivência\\nGranzellla Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r11/c4",
+     "source_text_sha256": "3a0581a896865384aba0030a27c86b5598bb78c272575c7d0fdff45fc523baa7",
+     "pt-BR": "＜História＞\\nO repórter novato Masashi Shindo chegou ao seu novo posto, a Cidade Segura!\\nA caminho do jornal onde trabalha, foi de trem e chegou em segurança, sem nenhum incidente!\\nFoi apresentado aos colegas veteranos gentis e chegou ao fim do expediente sem nada de especial acontecer!\\nNa volta para o alojamento da empresa, passou num izakaya e comeu um peixe local delicioso!\\nDe volta ao alojamento, tomou um banho para aliviar o cansaço e dormiu como uma pedra!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r12/c3",
+     "source_text_sha256": "63b49acc94468cf32b1bc07ceb9dfd203f5937f06c44a60ebe5bf7eca4cfb12e",
+     "pt-BR": "Carteirinha de Sócio do Clube de Cosplay",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r12/c4",
+     "source_text_sha256": "b94529103358db825d2b139761229515d7421d826072b26f5f95bcb17d2ccf4a",
+     "pt-BR": "＜Regras dos Sócios＞\\n• Amar todas as formas de cosplay\\n• Explorar sempre as possibilidades do cosplay\\n• Espalhar a alegria do cosplay entre quem divide a sua paixão",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r13/c3",
+     "source_text_sha256": "c11db41afaa03333e3e8ab1817aa5689feb79448712291757e25bd4afd291148",
+     "pt-BR": "Convite para o Show da Madrugada da Aya Suzumura\\n@Jardim do Céu da Meia-Noite\\n\\n• Data/Hora: XX/XX/20XX, 2h\\n• Local: Bairro Sumire 1-8, Cidade de Miyato\\n　　　　　Sala de Shows do 8º Andar da Radio Sky Garden\\n• Organização: Radio Sky Garden\\n• Patrocínio: Granzella Music http://granzellamusic.jp/",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r14/c3",
+     "source_text_sha256": "f2c4030d8e30dae9034386842d84b6ca4fcc43803b8334b3fc0a6a7163d91642",
+     "pt-BR": "Minha Série BL\\n\"Hard Boys Z\" Volume 4\\n~Surpresa! Um Pessegueiro e um Clima de Sansho!?~\\n\\n\\nHistória e Arte: Motoko Egoma\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r14/c4",
+     "source_text_sha256": "2ecaed6e40790350430e69bc678f763ec3b48005321dc27ee02e231ddfa7fecf",
+     "pt-BR": "＜Até Agora＞\\nHikosawa, ás do clube de polo aquático da Escola Nanahata, reencontra Ushida, seu melhor amigo do fundamental. Mas Ushida\\nvirou líder da gangue de delinquentes \"Altair\", deixando Hikosawa, com o torneio estadual pela frente, um pouco confuso.\\n\\nNa noite de um festival de verão a que vão juntos, membros da Altair apanham de um certo garoto\\ne vêm chorando até Ushida. Ushida desafia o garoto para vingá-los, mas é derrotado facilmente.\\nEsse garoto era Oribe, líder da gangue de delinquentes \"Vega\".\\n\\nDesde o momento em que viu Oribe, Hikosawa foi tomado por um sentimento indescritível...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r22/c3",
+     "source_text_sha256": "d4911985962247dbe5a0344013967f7e85d0c6a0cbd0ac73ac9e7755fc11ab05",
+     "pt-BR": "Horário de Funcionamento\\nMirante Principal (aberto o ano todo)　Escada Direta (aberta sáb., dom. e feriados)\\nHorário　09:00-22:00　 Horário　10:00-16:00\\nEntrada　Adultos 800 ienes　Crianças 400 ienes　Até 5 anos grátis\\nIluminação　Do pôr do sol às 22:00",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r23/c3",
+     "source_text_sha256": "a6f7ed0b7514662813542604c7252c790e4f8359e948efe171d325f256a78c79",
+     "pt-BR": "Crachá de Funcionário\\nNº 140520\\nMasato Shibasaki\\nEmitido em XX/XX/20XX\\n\\nMiyato Sky Tower Ltda.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r26/c3",
+     "source_text_sha256": "f8741cb58b4b679a3518943277414d45be059156cfb0e1e1941015eaa2685dc2",
+     "pt-BR": "Semanário da Sombra Gigante, Edição 1517\\n\\n　　　　　~ Índice ~\\n1. Clarões Roxos no Céu!\\n2. O Tão Falado Edifício Torre Iberis: Lugares Populares para Comer\\n3. Entrevista: Jornalista Risa Kashiwagi\\n4. As Ligações Suspeitas Entre Oficiais da Defesa e uma Certa Organização\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r26/c4",
+     "source_text_sha256": "6d989853e2bf1780b20edb8fb577b5c08e01646a66fa3b144ac79102f579e03b",
+     "pt-BR": "＜1. Clarões Roxos no Céu!＞\\nMuitos de vocês provavelmente viram clarões roxos no céu nos últimos dias.\\nEsses clarões foram vistos no mundo todo, principalmente no Hemisfério Norte, e astrônomos e\\ninstituições de pesquisa espacial e meteorológica de vários países estão investigando, mas a natureza deles ainda não foi revelada.\\nNossa redação entrevistou o vice-diretor Sasaki, do Instituto Nacional de Pesquisa de Raios Cósmicos, sobre os clarões.\\n(O Instituto Nacional de Pesquisa de Raios Cósmicos é uma organização que estuda as várias radiações de alta energia\\nque viajam pelo espaço.)\\n\\nRepórter: O que são esses clarões roxos?\\nVice-diretor: Ainda não sabemos. Podem ser um tipo de fenômeno meteorológico, mas têm pouco em comum\\n　　　　com os vários fenômenos meteorológicos observados até hoje, então o instituto duvida dessa teoria.\\n　　　　Talvez sejam algum outro fenômeno luminoso desconhecido. (Continua na próxima página)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r26/c5",
+     "source_text_sha256": "21dea396ec26fa7f0db2a161ec828c20f9dab10be9e696ed50c94e94f706e25e",
+     "pt-BR": "＜1. Clarões Roxos no Céu!＞\\n(Continuação da página anterior)\\nRepórter: Que efeitos os clarões têm no corpo humano?\\nVice-diretor: Até agora, não houve relato de ninguém com problemas físicos ou mentais por exposição à luz roxa.\\n　　　　Os níveis de radiação também estão normais. Porém, como eles piscam em roxo de repente,\\n　　　　parece que houve casos de pessoas que se assustaram ou se distraíram e sofreram acidentes.\\n\\nRepórter: Como vocês vão lidar com os clarões daqui em diante?\\nVice-diretor: O instituto vai continuar investigando os clarões.\\n　　　　Esperamos avançar na investigação o mais rápido possível.\\n\\nA natureza dos clarões roxos é desconhecida, mas, por enquanto, parece que se preocupar demais com eles e se distrair\\né o maior perigo. Novas informações são muito aguardadas.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r26/c6",
+     "source_text_sha256": "48a7072358af4b04c705bb5db4a202df45ea4199b1f0a1ce8329a89180961e96",
+     "pt-BR": "＜2. O Tão Falado Edifício Torre Iberis: Lugares Populares para Comer＞\\nO \"Edifício Torre Iberis\", um arranha-céu construído na orla de frente para a Ponte Sky Garden,\\né um lugar popular com vista panorâmica da Cidade de Miyato a partir da sala do mirante.\\nDo 2º subsolo ao 15º andar fica a área de compras, do 16º ao 26º a área de escritórios,\\ne do 27º ao 48º a área do hotel.\\nA parte mais popular da torre agora são os andares de gastronomia, no 14º e no 15º,\\ncom todo tipo de restaurante. Restaurantes famosos do país inteiro abriram aqui, o que torna difícil escolher,\\nmas desta vez apresentamos a \"Pizzeria Bellano\", a mais popular entre mulheres de 20 e poucos anos.\\n\\nAs pizzas assadas por um pizzaiolo que treinou na própria Nápoles têm um equilíbrio perfeito de sal e tostado na massa\\ne são deliciosas. Nossa recomendação é a Margherita com muçarela de búfala de verdade.\\nNão deixe de provar com o vinho recomendado da casa.\\nTambém faz sucesso o desafio do cardápio, a \"Pizza Mil-Folhas Montanha Galáctica\", com todos os sabores do cardápio empilhados como um mil-folhas,\\npesando 2 kg no total.\\nTermine em 30 minutos e a refeição sai de graça!\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r26/c7",
+     "source_text_sha256": "22ae160a887161fd635e06125cc712ead39b470536f6e9ad956f57ee9b429b07",
+     "pt-BR": "＜3. Entrevista: \"Meu Diário\"＞ Risa Kashiwagi (Jornalista)\\nNesta edição de \"Meu Diário\", conversamos com a jornalista Risa Kashiwagi.\\n\\nRepórter: Você é conhecida por suas reportagens marcantes sobre a psicologia comportamental dos jovens e o jeito como eles\\n　　　　se expressam na vida social, e atua em várias mídias.\\n　　　　Você também é boa nos esportes, fala sete idiomas e dizem que cozinha em nível profissional.\\n　　　　Como surge alguém tão talentosa como você?\\n　　　　Primeiro, posso perguntar o que te levou a ser jornalista?\\nRisa Kashiwagi (Kashiwagi): No ensino médio, por causa do trabalho dos meus pais, tive a chance de morar no exterior.\\n　　　　Foi quando aprendi que existiam mundos com línguas e costumes completamente diferentes.\\n　　　　Depois disso, comecei a me interessar pela cultura e pelos costumes do meu próprio país também.\\n　　　　Acho que isso me levou ao meu trabalho atual. (Continua na próxima página)\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r26/c8",
+     "source_text_sha256": "ca864cfe7136232ed51c163aca1202c6819cb0c72bac2990265dfe6f9c43e2b0",
+     "pt-BR": "＜3. Entrevista: \"Meu Diário\"＞ Risa Kashiwagi (Jornalista)\\n(Continuação da página anterior)\\nRepórter: Você começou a trabalhar como jornalista logo depois de entrar na faculdade, não foi?\\nKashiwagi: Naquela época, já era normal pessoas comuns divulgarem informações na internet.\\n　　　　Mas acho que tive sorte de tanta gente reconhecer o meu trabalho.\\nRepórter: Que atividades você tem planejadas daqui pra frente?\\nKashiwagi: Tenho feito muita reportagem no Japão ultimamente, mas quero arranjar tempo de algum jeito\\n　　　　para fazer reportagens no exterior. E também queria ir nadar neste verão.\\n　　　　Ah, e mais uma coisa\\nRepórter: O que é?\\nKashiwagi: Minha comida não é de nível profissional. É só normal (risos).\\nRepórter: Perdão (risos). Obrigado pelo seu tempo hoje.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r26/c9",
+     "source_text_sha256": "a2afe8ecb69a772bf883b2985f92cc63c96dfb8c35732d03b829873cb80be2b4",
+     "pt-BR": "＜4. As Ligações Suspeitas Entre Oficiais e uma Certa Organização＞\\nNossa redação descobriu um lugar que um oficial de certo ministério vem frequentando nos últimos anos.\\nÉ o Edifício Fortune Center, no Bairro Yotsuba, na Cidade de Miyato. O oficial visitou várias vezes este prédio,\\nque abriga escritórios de várias empresas. Quando confirmamos por telefone com cada ministério,\\nnos disseram: \"Isso não aconteceu.\" Eles não estão escondendo;\\nprovavelmente não sabem mesmo. O oficial deve estar escondendo o cargo e visitando\\nem segredo.\\nTemos outra informação: que um oficial da Defesa favoreceu uma certa Empresa A\\nem compras de equipamentos e licitações (favoreceu, aqui, significa que o oficial recebeu dinheiro por fora\\ne vazou informações das licitações). Porém, a Empresa A não tem escritório no Edifício Fortune\\nCenter. Nossa suspeita é que algo que liga o oficial da Defesa à Empresa A\\nesteja neste Edifício Fortune Center.\\nO caso ainda está sendo investigado. Traremos notícias assim que tivermos informações sólidas.\\nAguardem. (Editora-chefe: Hirai)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r27/c3",
+     "source_text_sha256": "b2aa52119f80c80f157266cc561f1faf10af51acacc57426ce64eae4533ae3ec",
+     "pt-BR": "Última edição da revista de moda feminina \"Autoconsciência\"\\n\\nUm Toque de Charme: Visuais Ativos!\\n\\n• Uma linha completa\\n• Prontos para todo tipo de situação\\n• Saia com algo um pouco diferente do normal!\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r27/c4",
+     "source_text_sha256": "b60dc8216c25ff9689547cdf98bc15e5496daed25ab1a88c7a00632d935cb488",
+     "pt-BR": "O tempo ficou ameno, e é a estação de curtir a moda à vontade.\\nDesta vez também, apresentamos visuais recomendados pela nossa redação.\\n\\n【Resistente e Confiável! Visual com Jardineira】\\nA jardineira era originalmente uma roupa de trabalho que protegia a parte de cima da sujeira.\\nFeita de jeans, ela é superresistente! Não rasga à toa♪\\nQuando quiser se mexer à vontade, recomendamos a jardineira.\\nVocê pode rolar o quanto quiser!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r27/c5",
+     "source_text_sha256": "8bcbd76a1e4a108bde09bdada4756bbfd9b34e28490c0adcaafce8bb2f9149f1",
+     "pt-BR": "【Clássico e Ativo! Visual Cowgirl】\\nQue tal um visual de cowgirl autêntico?\\nÉ um visual atraente que combina o charme clássico das botas e cintos de couro com uma silhueta fofa e moderna.\\nCombine com um chapéu de caubói para deixar o clima ainda mais forte!\\nTem dois tipos, saia e calça, então escolha conforme a situação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r27/c6",
+     "source_text_sha256": "a0390aae729c9d2c4a811c2a154d413d310b87481e24713d39d69474b835959a",
+     "pt-BR": "【Formal de Vez em Quando... Vestido de Festa】\\nSe cansou da moda casual, que tal sair pela cidade, com ousadia, de roupa de gala?\\nOs vestidos de festa, surpreendentemente, têm tecidos e costuras resistentes, então não rasgam feio.\\nSe você puser um vestido, a cidade inteira com certeza vai ficar mais glamorosa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r28/c3",
+     "source_text_sha256": "3fc0529825051adad81d19e458fe539248c781f22c5f10b7cd45fb33cd349f24",
+     "pt-BR": "Última edição da revista de moda masculina \"Narcist\"\\n\\nEspecial Roupas de Sobrevivência de Primavera!\\n\\n• Visuais que continuam atraentes mesmo rasgados\\n• Chuva de primavera não é problema\\n• Mais cores, entrega mais rápida\\n\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r28/c4",
+     "source_text_sha256": "fe52cf7126b3f848d21d8fa55e4f26187d776b16d8d95672643a1f3febe9b2ff",
+     "pt-BR": "O sol esquentou sem você perceber e, com a brisa ainda fresca, é a estação em que dá vontade de se mexer.\\nAqui estão alguns visuais que unem função e estilo pessoal.\\n\\n【Visual Preppy com Cardigã】\\nNesta estação, recomendamos um visual preppy de estudante.\\nEle vai te dar uma imagem esperta, um pouco de aluno exemplar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r28/c5",
+     "source_text_sha256": "b7379d9a93a65f4f56c5af898d0c1bbf465874d361ce5269dd865641a8789d9e",
+     "pt-BR": "【Descolado... Visual com Jaqueta Souvenir】\\nA jaqueta souvenir evoluiu de um jeito único. O tigre nas costas levanta o astral.\\nJeans preto e botas robustas deixam tudo ainda mais descolado.\\nDivirta-se combinando com o penteado, óculos de sol, relógio e mais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r28/c6",
+     "source_text_sha256": "8ac82ae548695710815d017100f3d4e71de49d91653bb4b0fdffbdd73cee4bf7",
+     "pt-BR": "【Libertador! Roupa de Banho】\\nQuando sair para se divertir, a regra é se vestir para se divertir.\\nVocê vai se sentir livre, e a energia vai lá em cima!\\nCom sunga e uma camiseta de proteção com capuz, talvez dê até para usar todo dia?\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r29/c3",
+     "source_text_sha256": "490ba876016d8292cba3cd03cb2373f29a0ecc6626409e128bcfb5b485390902",
+     "pt-BR": "Edição de Emergência! Miyato Esportes, Página 1\\n\\n＜Cidades Destruídas: Sombras Gigantes Aparecem!＞\\nPouco depois das 18h de hoje, dois alienígenas gigantes apareceram no cruzamento de Sakuramachi, no Bairro Sakura, na Cidade de Miyato.\\nOs dois alienígenas gigantes são enormes, com cerca de 40 m de altura, e dispararam raios de calor e lutaram corpo a corpo,\\ndestruindo prédios e carros próximos.\\nQuando as coisas estranhas começaram, muitos funcionários de escritório e estudantes voltando para casa passavam pela área,\\ne as pessoas fugiram em pânico do acontecimento repentino, criando uma cena de pandemônio total.\\n\\nAlém do Bairro Sakura, criaturas gigantes apareceram em vários pontos da Cidade de Miyato, e uma resposta rápida do governo é aguardada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r29/c4",
+     "source_text_sha256": "3532b1b7edc193e593751f170f6aed850f50259821b2855ea09bba1fb12fb72d",
+     "pt-BR": "Miyato Esportes, Página 2\\n\\n＜Futebol＞\\nFC Saigawa　1-0　FC Utatsuyama\\nAos 10 minutos, um clarão roxo iluminou o céu e, enquanto os jogadores estavam distraídos,\\nTsumura, do FC Saigawa, roubou a bola e abriu o placar. Depois disso, o FC Utatsuyama desperdiçou várias\\nchances, e o FC Saigawa segurou a vitória.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r29/c5",
+     "source_text_sha256": "34ee96bce5ca28173bb25976a3b6532825acd3e33b1a42be3c0acf4f8af129fb",
+     "pt-BR": "Miyato Esportes, Página 3\\n\\n＜Em Breve nos Cinemas＞\\n\"Silêncio Desacorrentado\"\\nA continuação do filme de ação e espionagem sobre Gerald, agente de uma organização de espionagem supranacional.\\nO destaque é a ação silenciosa de Gerald derrubando inimigos de mãos vazias sem fazer barulho, e as cenas\\nem que ele derruba 50 soldados inimigos no começo, 100 no meio e 200 no clímax\\nsão de tirar o fôlego.\\nTambém tem as cenas de Gerald viajando em trens locais e curtindo comida de izakaya, que fizeram sucesso\\nno filme anterior, \"Silêncio Turbinado\", o que torna o filme uma obra que faz pensar:\\n\"Cinema é divertido!\" (Yuko: crítica de cinema)\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r29/c6",
+     "source_text_sha256": "de75d0453c676580d430f1505fa685cdcece38af0e8015167aa5b86f0b753356",
+     "pt-BR": "Miyato Esportes, Página 4\\n\\n＜Gastronomia＞\\n　Teppan Aokiba, Bairro Sakura, Cidade de Miyato\\nQuando se fala da comida da Cidade de Miyato, é o \"okonomiyaki de Miyato\".\\nO \"Teppan Aokiba\", no Bairro Sakura, é famoso como o berço do okonomiyaki de Miyato.\\nO okonomiyaki de Miyato foi criado originalmente para os pescadores que voltavam ao porto de manhã\\ne se destaca pelo tempero forte, pela massa grossa e pelo recheio farto.\\nO prato mais popular da casa é o \"Ovo Mole, Porco Assado Duplo e Muita Cebolinha\", que dizem\\nfazer sucesso principalmente entre estudantes. O molho agridoce e picante, a massa macia e o recheio farto\\nse combinam, então você vai querer mais arroz e cerveja! (Sugai)\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r30/c3",
+     "source_text_sha256": "aee8c93dfc42aef8d276a80d56b675b962f6c64dc410b791f1aa10617b65c45c",
+     "pt-BR": "Revista de ciência \"Petit Scientist\"\\n\\nEspecial: O Mecanismo do Gigantismo nas Criaturas do Fundo do Mar\\n　　　　　　　　　　Professora Hitomi Fukazawa, Universidade de Miyato\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r30/c4",
+     "source_text_sha256": "62014aec6fbb2ed0bd7c85c6ceb2660a1e9deb63d7cd0a1e3dde58514a383c2b",
+     "pt-BR": "【O Mecanismo do Gigantismo nas Criaturas do Fundo do Mar】\\n　　　　　　　　　　　　　Professora Hitomi Fukazawa, Universidade de Miyato\\n\\nDizem que \"o fundo do mar está mais longe que o espaço sideral\". Mesmo com os equipamentos de pesquisa mais modernos, o estudo dele\\nainda está no começo, e muita coisa é desconhecida. Aqui, quero apresentar um dos meus temas\\nde pesquisa: \"o gigantismo nas criaturas do fundo do mar\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r30/c5",
+     "source_text_sha256": "9edc4f12b51c42ab17ceab6a87bd414d59124b99f29800bc1db0b1d422e4f8ff",
+     "pt-BR": "A lula-gigante, vista com mais frequência ultimamente, o caranguejo-aranha-japonês, o maior artrópode do mundo,\\ne o peixe-remo, que pode chegar a 10 m de comprimento, são todos criaturas que vivem no chamado \"fundo do mar\",\\na 200 m de profundidade ou mais. E não só esses três: muitas criaturas que vivem no fundo do mar são grandes\\ncomparadas às que vivem em águas rasas (a zona superficial).\\nO fundo do mar é diferente da zona superficial no ambiente: a luz do sol não chega e a pressão da água é alta,\\ne as criaturas que vivem lá desenvolveram formas incomuns. Acredita-se que o gigantismo seja um dos jeitos\\nde sobreviver.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r30/c6",
+     "source_text_sha256": "9b4891d46ac5d20709b1090cb4bd6560e9ffbf4fd5e9f09698fddfbe5d9014a2",
+     "pt-BR": "Há várias teorias sobre por que as criaturas do fundo do mar ficam grandes, mas\\n　1. Ficar grande as torna menos propensas a serem comidas por predadores\\n　2. Um corpo grande guarda mais nutrientes, facilitando a sobrevivência no fundo do mar, onde as presas são escassas\\n　3. Na água, elas sofrem menos com a gravidade, então o corpo é mais fácil de sustentar mesmo grande\\nestão entre os motivos considerados.\\nClaro, muito do fundo do mar é desconhecido, então esses motivos não são a história toda.\\nNão seria surpresa se houvesse criaturas do fundo do mar com tamanho e ecologia além da nossa imaginação.\\n(É para encontrar criaturas assim que nós, pesquisadores, continuamos nosso trabalho.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r30/c7",
+     "source_text_sha256": "47c7486114de7d05ba058410b9ead45bbd33d5f9b7588ea6d32fe8f5a0a54772",
+     "pt-BR": "Perfil da Autora\\nHitomi Fukazawa\\n\\n20XX　Formou-se na Faculdade de Biologia da Universidade Sainen\\n20XX　Pesquisadora de Biologia Marinha, Universidade H, EUA\\n20XX　Doutora em Biologia (Biologia Marinha), Universidade H\\n20XX　Professora da Faculdade de Biologia, Universidade de Miyato",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r31/c3",
+     "source_text_sha256": "643254b5d54e10326d9df2415baa15e6f7e69499269bc0bb1892473eebd646cb",
+     "pt-BR": "(...Há números rabiscados por um pesquisador escritos aqui.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r32/c3",
+     "source_text_sha256": "029917e66e9a1a4627e78ec8fb8d152cb4808bbbde9f58ab8c11d969eefff3cf",
+     "pt-BR": "Cosplay Times Vol. 1\\n~ Especial Fardas de Policial ~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r32/c4",
+     "source_text_sha256": "5a2a0bebacf25a9c88e514f5403e6f8ca7e75dd1599d3089d22745f1532fb11e",
+     "pt-BR": "Especial【Os Policiais Que Admiramos!】\\n\\nO policial confiável que todo mundo admirava quando criança...\\n\\nDá para dizer que a vontade de fazer cosplay de farda de policial é de\\ntodo mundo, igualmente. Um policial que eu conheço\\naté diz:\\n\"Virei policial porque queria vestir aquela farda.\"\\nUma roupa com charme suficiente para mudar o rumo da vida de alguém:\\nisso é a farda de policial.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r32/c5",
+     "source_text_sha256": "ec7a06fe1615f58800bd70d3d31773dfe08580043c46b996deb8516da2dc9dc3",
+     "pt-BR": "As fardas de policial têm muitas formas.\\nHá fardas masculinas e femininas, diferenças por estação, como as de verão,\\ne diferenças por função, como a polícia de choque e os motociclistas.\\nSegundo o Livro Branco do Cosplay, a mais popular de todas as fardas de policial\\né, como esperado, a farda padrão de primavera e outono.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r32/c6",
+     "source_text_sha256": "63da65d7bff670aeb47c85fe667e851e703e4a5a63ce5e330cc636d0a9af2616",
+     "pt-BR": "Minha recomendação pessoal: homens, experimentem a farda de policial feminina,\\ne mulheres, experimentem a farda de policial masculina.\\nCada um vai ter sua opinião, mas tenho certeza de que isso vai\\nabrir novas possibilidades para você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r33/c3",
+     "source_text_sha256": "4ffd8599cb565a4c6cd7d0056b1106a1ee440f313937ebbb69b29fc5aae1510b",
+     "pt-BR": "Cosplay Times Vol. 2\\n~ Especial Uniformes de Fast-Food ~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r33/c4",
+     "source_text_sha256": "22b8fe10352cbea1f2c97954b9dbdb044f4dad8416a71d30effbbb8f227a414c",
+     "pt-BR": "Especial【Bem-Vindos! Atendentes de Fast-Food!】\\n\\nQuando você era estudante, não lembra de se sentir acalmado ou com o coração acelerado\\npelo sorriso fresco de um atendente de fast-food?\\nUm conhecido meu até diz: \"Eu queria ver aquele uniforme e aquele sorriso, então\\ncontinuei indo ao restaurante até zerar o cardápio secreto inteiro.\"\\n\\nO especial desta edição é o cosplay do dia a dia mais popular: os atendentes de fast-food!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r33/c5",
+     "source_text_sha256": "f18a8f98db95b44519da7c8f6d5447840b362d9f4074b8fa00c36cb5207f4b4e",
+     "pt-BR": "O charme do uniforme de fast-food está no quanto ele alcança bem várias qualidades, como\\n\"simpatia\", \"limpeza\", \"modéstia\" e \"estilo\". Além disso, os uniformes usados de verdade nos restaurantes\\nse destacam não só no design, mas também na função, como\\nser \"fácil de vestir e tirar\", \"resistente a manchas\" e \"durável\",\\ne outro ponto importante é que eles são feitos para te animar, tipo\\n\"Hora de trabalhar!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r33/c6",
+     "source_text_sha256": "b74f4bc9a84f2c971e8dc9cc5367ee7e0b8198ef6676bb9a3f757a76095531a2",
+     "pt-BR": "Que tal ousar fazer cosplay de atendente de fast-food justamente quando estiver meio pra baixo?\\n\\nA roupa alegre e positiva vai levantar seu astral,\\ne talvez você se pegue abrindo um sorriso lindo...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r34/c3",
+     "source_text_sha256": "5df9964749c9f1f64d4203f2be80acb51e028bf85201acaafe5d15078ee77ea2",
+     "pt-BR": "\"Cosplay Times Vol. 3\"\\n~ Edição Especial Roupas de Bombeiro ~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r34/c4",
+     "source_text_sha256": "d200bcd0f81d1ffe858c621a5c80f3290de48e0b307d0917301195feb65c0f42",
+     "pt-BR": "Especial【Com Fogo nos Olhos! Os Bombeiros!】\\n\\nHeróis que entram em ação no meio das chamas para salvar pessoas...!\\n\\nSão os bombeiros. Junto com os policiais, são populares como a roupa\\ndo herói do dia a dia.\\nUm conhecido meu até diz:\\n\"Eu queria vestir aquela roupa, então tentei virar bombeiro,\\nmas eu não tinha altura suficiente...\"\\nNo cosplay, não tem altura mínima!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r34/c5",
+     "source_text_sha256": "977c374708ef819181a8c5a11d682902690bf9ab47c7e208249e7e013f90f875",
+     "pt-BR": "A roupa clássica de bombeiro usada no combate a incêndios se chama \"roupa de aproximação\",\\ne é feita de material resistente ao calor.\\nCom o capacete, as botas, as luvas, o equipamento de respiração e tudo mais,\\nela pesa quase 10 kg.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r34/c6",
+     "source_text_sha256": "b03ee9660112b220d9d1e9694067a6ea4948ab426d4fc45157849cc8e471b3f6",
+     "pt-BR": "Quando você veste a roupa de aproximação, a resistência dela faz você se sentir\\nmuito mais forte. E ela dá um pouco mais de\\ntranquilidade, então talvez você tenha vontade de ajudar as pessoas.\\n\\nMas, embora a roupa resista ao calor, isso não quer dizer que você deve\\npular no fogo! (rs)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r35/c3",
+     "source_text_sha256": "3ea74863f371279b9cb1c84337d442985cfafa2722e7cf2c463ea8269561e3d2",
+     "pt-BR": "Para o Papai\\n\\n　　　　　　　　　　　　　　　　　Da Madoka",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r35/c4",
+     "source_text_sha256": "2afc7b491c89bb67b9253c3fec4f67a009ccf000c0c8bd6fbb557c684a3048da",
+     "pt-BR": "Papai,\\n\\nDesculpa por ter me casado com o Tomoatsu contra a sua vontade.\\nDepois que a mamãe morreu, quando eu estava no segundo ano do fundamental II, você me criou sozinho.\\nMesmo dirigindo ônibus todo dia, você foi à minha formatura e à cerimônia de entrada no ensino médio.\\n\\nFaz cinco anos que me casei, e meu filho Kenta já tem 4 anos.\\nNo próximo domingo, vou levar o Kenta pra te ver.\\n\\nTalvez você ainda esteja bravo,\\nmas, por favor, pegue seu neto Kenta no colo.\\n\\n　　　　　　　　　　　　　　　　　　Sua filha, Madoka\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r36/c3",
+     "source_text_sha256": "47e1b64e8e62720cb943cd1877e29f3593ad85e19925509d6164a7b9570f02e9",
+     "pt-BR": "Morimoto,\\n\\nAqui é a Iwabuchi.\\nAinda não posso sair da loja, então pedi a este cliente\\npra buscar os ingressos pra mim.\\nPor favor, entregue os ingressos da transmissão ao vivo do rádio a quem te trouxer este bilhete.\\n\\nPor causa do seu atraso, fiquei presa no trabalho uma hora a mais!\\nTrate de me compensar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r37/c3",
+     "source_text_sha256": "2fc0446a3ee256b90157c91c3a94d5d11e66f2641aed6cf607dca71d5fc3ac57",
+     "pt-BR": "ULTRASSECRETO\\n[ MATERIAL CONFIDENCIAL ]\\n\\nRelatório sobre o Desenvolvimento do Terreno à Beira-Mar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r37/c4",
+     "source_text_sha256": "ad6eb6f2c7a1eb43ab6941b97e33e1f63316deab85268d85035cc958939497d9",
+     "pt-BR": "                    Desenvolvimento de Terreno na Orla da Cidade A, Gerente de Desenvolvimento Hebisaki\\n\\nPresidente Busujima,\\nSobre o desenvolvimento do terreno perto da Praia B, na Cidade A, informo sobre as substâncias químicas\\nacima do limite que foram detectadas no aterro.\\n\\nSeguindo novas orientações do Professor D, da Universidade C, e do Sr. E, da empresa de levantamento,\\nfizemos 12 levantamentos no total e conseguimos obter valores num nível aceitável.\\nAcreditamos que esses valores não terão impacto no ecossistema nem na paisagem da Praia B,\\nou, no máximo, um impacto mínimo.\\n\\nEste levantamento não vai afetar o cronograma do empreendimento.\\nTambém pagaremos honorários de consultoria ao Professor D e ao Sr. E pela colaboração.\\nÉ isso.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r38/c3",
+     "source_text_sha256": "49e2411d586ccbb2c84da0924228d89d3452e272b0b7e3bfb316b7d48cc20d2b",
+     "pt-BR": "Jumbo Jumbo\\nLoteria Nacional dos Governos Locais\\n\\nSorteio Nº 578\\n Grupo 56　123451\\n\\nData do sorteio　　7 de abril de 201X\\nPrazo de pagamento　De 12 de abril de 201X\\n　　  　　　Até 11 de abril de 201X",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r38/c4",
+     "source_text_sha256": "ddca1fde189a1b8c46f65a60dddfa2da1dee109de04a5218d41d06cc2b692aff",
+     "pt-BR": "578ª Loteria Nacional dos Governos Locais Jumbo Jumbo\\n\\nOs prêmios abaixo são definidos por sorteio.\\n1º Prêmio　　　　　　　600.000.000 ienes.................. 3 bilhetes\\nVizinhos do 1º　　　200.000.000 ienes.................. 6 bilhetes\\n2º Prêmio　　　　　　　 60.000.000 ienes.................. 6 bilhetes\\n3º Prêmio　　　　　　　 30.000.000 ienes..................30 bilhetes\\n :                              :\\n7º Prêmio　　　　　　　        300 ienes...... 1000000 bilhetes\\n\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r39/c3",
+     "source_text_sha256": "e0823bd4a019aa861cc7240d159003207f3005d00ea876e77be028e4524a31e3",
+     "pt-BR": "Jumbo Jumbo\\nLoteria Nacional dos Governos Locais\\n\\nSorteio Nº 578\\n Grupo 56　123452\\n\\nData do sorteio　　7 de abril de 201X\\nPrazo de pagamento　De 12 de abril de 201X\\n　　  　　　Até 11 de abril de 201X",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r39/c4",
+     "source_text_sha256": "ddca1fde189a1b8c46f65a60dddfa2da1dee109de04a5218d41d06cc2b692aff",
+     "pt-BR": "578ª Loteria Nacional dos Governos Locais Jumbo Jumbo\\n\\nOs prêmios abaixo são definidos por sorteio.\\n1º Prêmio　　　　　　　600.000.000 ienes.................. 3 bilhetes\\nVizinhos do 1º　　　200.000.000 ienes.................. 6 bilhetes\\n2º Prêmio　　　　　　　 60.000.000 ienes.................. 6 bilhetes\\n3º Prêmio　　　　　　　 30.000.000 ienes..................30 bilhetes\\n :                              :\\n7º Prêmio　　　　　　　        300 ienes...... 1000000 bilhetes\\n\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r40/c3",
+     "source_text_sha256": "0dbf457dce11c34cb72ffa6c009b590d98fd646ac838474a3aeee3dfb235cbe4",
+     "pt-BR": "Jumbo Jumbo\\nLoteria Nacional dos Governos Locais\\n\\nSorteio Nº 578\\n Grupo 56　123453\\n\\nData do sorteio　　7 de abril de 201X\\nPrazo de pagamento　De 12 de abril de 201X\\n　　  　　　Até 11 de abril de 201X",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r40/c4",
+     "source_text_sha256": "ddca1fde189a1b8c46f65a60dddfa2da1dee109de04a5218d41d06cc2b692aff",
+     "pt-BR": "578ª Loteria Nacional dos Governos Locais Jumbo Jumbo\\n\\nOs prêmios abaixo são definidos por sorteio.\\n1º Prêmio　　　　　　　600.000.000 ienes.................. 3 bilhetes\\nVizinhos do 1º　　　200.000.000 ienes.................. 6 bilhetes\\n2º Prêmio　　　　　　　 60.000.000 ienes.................. 6 bilhetes\\n3º Prêmio　　　　　　　 30.000.000 ienes..................30 bilhetes\\n :                              :\\n7º Prêmio　　　　　　　        300 ienes...... 1000000 bilhetes\\n\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r41/c3",
+     "source_text_sha256": "69d33f3ed8b6735ca1eb15588af53a34b0beec07830d80a17ae4556a53d105a2",
+     "pt-BR": "Construtora Kunshiran\\n\\n　　　　　　Caderneta de Conta Corrente\\n\\n                　　　　　　　　　　Banco de Miyato\\n　　　　　　　　　　　　　　　　　　Agência Sakura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r41/c4",
+     "source_text_sha256": "16793cb70f1a44981fdb0bb3e173228f42b34b088706642847c85e96fdeae70a",
+     "pt-BR": "Data　　Operação　　　　Saque　　　　Depósito　　　　　Saldo\\n2-15　Conta nova　　　　　　　　　　　　　　　　　　　　　　　　　1392000000\\n2-15　Genbu Komuten　12000000　　　　　　　　　　1380000000\\n2-16　Natsuyama Kaihatsu　　　　　　　　　　30000000　1410000000\\n2-16　Saque　　　　　　　　5000000　　　　　　　　　　1405000000\\n2-16　Shinoda Tochi　　　　　　　　　　　　　50000000　1455000000\\n2-17　Cidade de Miyato　　　　　　　　　　　　　200000000　1655000000\\n2-17　Cidade de Mizuna　　　　　　　　　　　　　200000000　1855000000\\n2-17　Anzen Kensetsu　50000000　　　　　　　　　　1805000000\\n2-20　Saque　　　　　　150000000　　　　　　　　　　1655000000",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r41/c5",
+     "source_text_sha256": "87c75efdf067b9fcd4e5f5b3e1ab8d5419460af4a2e7a9af3e72021db06bd8c4",
+     "pt-BR": "Data　　Operação　　　　Saque　　　　Depósito　　　　　Saldo\\n2-25　Saque　　　　　　150000000　　　　　　　　　　1505000000\\n2-25　Delta Denki　　　10000000　　　　　　　　　　1495000000\\n2-25　Água de Miyato　　　　1421000　　　　　　　　　　1493579000\\n2-25　Chuo Denki　　　　　　2051630　　　　　　　　　　1491527370\\n2-25　Provedor　　　　　　108000　　　　　　　　　　1491419370\\n2-25　Shizuma Energy　　　　509370　　　　　　　　　　1490910000\\n2-25　Mizuna Concreto　　10000000　　　　　　　　　　1480910000\\n2-26　Saque　　　　　　120000000　　　　　　　　　　1360910000\\n2-28　Wangan Kaihatsu　　　　　　　　　　104700000　1465610000",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c3",
+     "source_text_sha256": "0d988f799da34a905edc8334fd5bef301f7ca8e4e242229e4c76fce999807b05",
+     "pt-BR": "Esta noite, a Floresta de Cedros de Horuho está inquieta.\\nDe pé num penhasco de onde se via a trilha dos animais que corria pela encosta, Naran tocou a adaga na cintura.\\nTocar essa lâmina, lembrança do pai, sempre parecia devolver a ele a coragem e a calma.\\nEle firmou os pés e pôs uma flecha no arco com mãos experientes.\\n\\nTinha sido chamado tão de repente que esqueceu a capa.\\nAs flores de kiranaria iam desabrochar logo, mas as noites ainda eram frias.\\nDava para ver chamas subindo do povoado do sul. Naran franziu as sobrancelhas ainda jovens.\\nA vanguarda de Ophir, sem dúvida. Pensou em Mars, com quem brincava muito na infância.\\nMars devia estar morando naquele povoado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c4",
+     "source_text_sha256": "99f857c2633a66b97cb46bc71dd0dfdd1b289134285262a7865c66e72fd3ad2b",
+     "pt-BR": "Mas ele não conseguia lembrar direito o rosto dele.\\nCom sangue élfico nas veias, Naran vivia muito mais que os aldeões.\\nSe Mars estivesse vivo, já teria uns 150 anos.\\n\\nAchando-se frio, ele ainda assim sentia que precisava atrasar \"eles\"\\nde chegar à vila, nem que fosse um pouco.\\nA Elena estava na vila.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c5",
+     "source_text_sha256": "286938cdce46b3483a0806f15e6841e8397a2e8b6176ea05baf3b77c2e19e658",
+     "pt-BR": "As orelhas um pouco pontudas de Naran tremeram. Do fundo da trilha lá embaixo vinha a presença de muita gente.\\nNão gente, exatamente. Monstros controlados por Ophir, o feiticeiro da \"Sétima Torre\".\\n\\nGrandes porcos de armadura andavam barulhentos sobre duas patas.\\nParecia uma tropa de uns dez orcs.\\nCada um com uma arma diferente, eles se empurravam pela trilha.\\nDe perto, fediam horrivelmente. Naran fez careta só de lembrar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c6",
+     "source_text_sha256": "31367b758c8cdfb1f586b53a7ff681daadb2a45be32d7341071c3443fca70f8a",
+     "pt-BR": "\"Poucos demais... Fazer o quê.\"\\n\\nMurmurando isso, Naran puxou o arco e soltou uma flecha numa direção que parecia errada.\\nA flecha voou leve pelo ar, ganhou um brilho e cravou numa rocha que saía do penhasco.\\nUma flecha mágica.\\nQuando a flecha soltou uma luz fraca, a rocha rachou e choveu sobre os porcos na trilha.\\nQuando a nuvem de poeira estrondosa baixou, a trilha ficou em silêncio.\\nA tropa de orcs parecia ter sido varrida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c7",
+     "source_text_sha256": "e045df9d45ece88a99089b8e8edcb5439ca8c4ca237b853d4a2fb6e2ea9385cd",
+     "pt-BR": "\"Sobram duas. Nem de longe o bastante.\"\\n\\nNaran pôs o arco nas costas e correu para a vila.\\nNo caminho, Keen, que também tinha saído para interceptá-los, se juntou a ele.\\n\\n\"Naran, o povoado do sul foi esmagado! O que eles querem? Comida, afinal?\"\\n\"Vai saber, mas duvido que seja comida.\"\\n\"Tesouro?\"\\n\"Não há tesouro na vila. Não que eu saiba, pelo menos.\"\\n\"Quê, e você ainda se diz elfo?\"\\n\"Mesmo na minha idade, há mais coisas que não sei do que coisas que sei.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c8",
+     "source_text_sha256": "16c55191222e53ff7f08814402ba79efe581004edbb9212c097f7142464d6f44",
+     "pt-BR": "Naran sabia que Ophir estava atrás da \"Pedra Verde do Sábio\".\\nA vila tinha uma espécie de lenda sobre ela, mas tinha virado quase um conto de fadas, e ninguém sabia onde estava.\\nNaran tinha vindo a esta vila com o pai em busca da pedra verde, e por duas gerações eles a procuraram enquanto serviam como uma espécie de guarda-costas da vila.\\nEle tinha uma ideia de onde ela estava, mas não tinha certeza.\\n\\nMas, para Naran agora, a vida com os aldeões importava mais que a pedra verde.\\n\\n\"Elena...\"\\n\\nQuando murmurou isso e olhou de lado, assustado, Keen estava sorrindo.\\nUm rapaz honesto e esperto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c9",
+     "source_text_sha256": "a014c36519872152b759cf08205e94793bfcc8b47d2b89d4df4ab21515a8a0f0",
+     "pt-BR": "Chegaram à vila. Os orcs ainda não tinham vindo.\\nNaran correu para o poço na beira da vila, onde suspeitava que a pedra verde estivesse escondida.\\nNão havia sinal de que tivesse sido mexido. Mas, quando Ophir viesse, ela logo seria achada.\\nAntes disso...\\n\\nNaquele momento, uma espada atravessou o peito de Naran. Keen o tinha esfaqueado pelas costas.\\n\\n\"Obrigado por me mostrar o caminho. Então era aqui que estava.\"\\n\\nA silhueta de Keen ficou borrada e virou a figura de um feiticeiro de meia-idade. Ophir.\\nNaran desabou ali mesmo. O sangue jorrava do peito. Na visão que se apagava, Ophir lançava um feitiço de detecção.\\nAcabou. A Pedra Verde do Sábio...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c10",
+     "source_text_sha256": "a41ee9ead33299efee811be9249c6e9c9adb9b804003d03e9e8754d8b62af980",
+     "pt-BR": "Nesse instante, alguém sacudiu Naran com força.\\nRecobrando um fio de consciência, ele abriu com dificuldade as pálpebras pesadas. Era Keen.\\n\\n\"Naran! Você está bem?! Não acredito que te pegaram!\"\\n\"Não precisa mais se preocupar. Estou acabado.\"\\n\"Vou te tratar agora mesmo!\"\\n\"Bom, faça como quiser. Mais importante...\"\\n\\nNaran entregou a adaga da cintura a Keen.\\n\"Desculpe, mas deixo o resto com você.\"\\nDito isso, Naran olhou para o céu e deu o último suspiro em silêncio.\\n\\n\"A Saga da Última Espada, Vol. 1: Capítulo do Passado\" - Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r43/c3",
+     "source_text_sha256": "dca0bdd838b5f60c23d5835d2cbbef1d0807407f194f347264ac89ba908f3534",
+     "pt-BR": "Desde então, ele tinha fugido para salvar a vida e agora estava na escuridão total.\\nPelo vazio escuro como breu, o cavalo branco de sete cabeças que o levava seguia em frente.\\nA luz que seu corpo branco soltava era engolida pela escuridão profunda, e ninguém a via.\\n\\nO cruzador espacial de casco branco Uchchaihshravas viajava pela escuridão total havia duas semanas inteiras, no tempo da Terra.\\nAs janelas da sala de comando, no nível do meio da ponte, eram paredes negras, como se as persianas de defesa estivessem fechadas.\\n\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r43/c4",
+     "source_text_sha256": "1b16a4ae3affe38cfd7b0c5adae0a9a24e2e2165f2ce05bbbad458eca71618e3",
+     "pt-BR": "Ele... o vice-almirante Momihog, protagonista desta história, é um militar pouco confiável conhecido como \"o Almirante da Tortura\".\\nOlhando as janelas que não mudavam, Momihog relembrou a batalha travada duas semanas antes na fortaleza espacial da órbita de Plutão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r43/c5",
+     "source_text_sha256": "4e8931afa205a31a583aab3eb27011ec70b58e14c91a059dff26c497103c2511",
+     "pt-BR": "Depois de um ano e meio de combates em grande escala no Sistema Solar, o Exército Reformista Granzella foi obrigado a encolher suas linhas de frente diante do poder esmagador do Exército Unificado da Terra e se entrincheirou na fortaleza espacial de Plutão, mas até ela caiu duas semanas atrás.\\n\\nA Guarnição da Base de Plutão, liderada pelo vice-almirante Momihog, enfiou o máximo de soldados que pôde em algumas naves e, de algum jeito, conseguiu fugir para o espaço exterior usando a catapulta de canhão elétrico instalada na fortaleza espacial.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r43/c6",
+     "source_text_sha256": "6226cac27e2616563adf2ad2448726ae0e1faec1bc6d71c0febd9526d00e12d4",
+     "pt-BR": "Momihog pensava. Num jeito de retomar o Sistema Solar com essas poucas naves.\\nUm confronto direto com o Exército Unificado da Terra seria inútil. Faltavam muito naves e os caças dimensionais que elas levavam.\\nSem conseguir decidir, ele espetou o garfo num bolo chiffon meio comido e enfiou na boca, e bem nesse momento sua ajudante, a major Miyoko G. Lazarov, falou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r43/c7",
+     "source_text_sha256": "46a7fe87980d39677415e8bccf846c08d014a37d02025c9f44d6e01aa6ccd54b",
+     "pt-BR": "\"Almirante Momihog, várias silhuetas de naves às três horas! Não estão transmitindo sinal de identificação aliado!\"\\nA sala de comando virou um tumulto.\\n(Será que chegaram antes de nós...?)\\nMomihog afrouxou a gola do uniforme\\ne olhou para a tela grande pendurada no teto da sala de comando.\\n\\nA tela mostrava o espaço a estibordo.\\nDava para ver partículas de luz brotando na escuridão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r43/c8",
+     "source_text_sha256": "961afbd9f7fe7d1e04fa54000b1334a5ab31cb09a42098ac57fb26788fe8749e",
+     "pt-BR": "A luz que brotava na escuridão se espalhou para a esquerda e para a direita num instante, se posicionando como se quisesse cercar\\nas naves de Momihog.\\n\\nNum subespaço escuro como breu, deslocado 0,5 dimensão do espaço normal,\\no cruzador espacial de casco branco Uchchaihshravas entrou em posição de combate.\\n\\n\"A Saga da Última Espada, Vol. 2: O Capítulo do Breu\" - Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c3",
+     "source_text_sha256": "d4b17638067828213b7fe91e6ae56ab4097615c64f675ac71a591441eabce812",
+     "pt-BR": "Muita coisa tinha acontecido desde então, e Keen andava havia três dias e três noites. Mas, por mais que andasse, não achava cidade nem vila, e por fim a comida e a água acabaram.\\n\\nKeen foi tomado por uma fome feroz e chegou a quase desistir, achando que talvez fosse o fim.\\nMesmo assim, depois de andar mais um pouco, achou um velho enrolado em trapos parado na estrada como um fantasma.\\nQuando Keen perguntou se havia alguma cidade ou vila por perto, o velho apontou fraco para o fundo da floresta\\ne murmurou: \"Uma vila...\"\\nKeen agradeceu com a cabeça e entrou na floresta.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c4",
+     "source_text_sha256": "736b588c4349688538b6da3fcd9e6f55321d874085fbe9c297ea8ff43426759e",
+     "pt-BR": "A floresta era fechada de árvores e mato que bloqueavam o caminho de Keen. Será que havia mesmo uma vila num lugar desses?\\nKeen ficou cada vez mais inquieto.\\nMesmo assim, de algum jeito continuou e, quando já estava totalmente escuro, achou um grande lago no fundo da floresta.\\nA luz da lua caía no lago e ondulava na superfície, e ele ficou um tempo olhando a lua no lago. Algo parecia boiar ali, mas a fome o trouxe de volta, e ele olhou em volta, apressado.\\nMas, por mais que procurasse, não achava a vila.\\n\\nSerá que tinha se perdido, ou o velho o enganou? A fome estava chegando ao limite,\\nmas ele não tinha escolha a não ser voltar dali.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c5",
+     "source_text_sha256": "072b1f339f7e447ed91f545df4fc5930d18fa36c443f5e7b289dd5bb48e8ed46",
+     "pt-BR": "Foi pouco depois de ele sair do lago.\\nDe algum lugar veio um cheiro de sopa ou de alguma outra comida.\\nEntão havia mesmo uma vila por ali?\\nEle seguiu o cheiro e, por algum motivo, se viu de volta ao lago.\\n\\nMas ali estava uma vila que não existia um momento antes.\\nEle se perguntou se via uma ilusão, mas havia mesmo uma vilazinha, com umas cinco casas de vários tamanhos enfileiradas, achatadas como cogumelos, com chaminés.\\nParecia estranho, mas, acima de tudo, ele estava aliviado por estar salvo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c6",
+     "source_text_sha256": "6bf61277c61e6ce09803dd02f72c8263f880cb6f8857baa267742bc7dd4788eb",
+     "pt-BR": "Luz saía pelas janelas das casas, mas não dava para ver direito o que havia dentro.\\nDe qualquer forma, para pedir um pouco de comida, ele foi até a entrada da casa maior.\\n\\nChamou bem alto para ver se havia alguém, mas ninguém respondeu. Quando bateu, a porta se abriu rangendo,\\ne o cheiro de comida saiu lá de dentro.\\n\\nSe sentiu um pouco culpado, mas Keen decidiu entrar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c7",
+     "source_text_sha256": "1e9c7247c71bad8dcbf2590f4456c300ad4f86a6e9b50dded6c2bdd72fe0cfad",
+     "pt-BR": "Mesmo depois de entrar, gritou para ver se havia alguém, mas de novo ninguém respondeu.\\nO mais estranho era que, embora a casa estivesse cheia do cheiro de comida, por dentro estava completamente vazia.\\nEle andou por ali um tempo, mas parecia ser um único cômodo, sem escada nem nada.\\nOlhando com atenção, viu algo caído no canto do cômodo.\\n\\nKeen pegou.\\nEra, sem dúvida, um osso humano.\\nE, no momento seguinte, a casa começou a tremer com violência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c8",
+     "source_text_sha256": "a0757d1b02a9e95955f6edc3e3865ec9e2dbcdaa6cdca33c5aae5510ebc2b340",
+     "pt-BR": "Sentindo o perigo, ele se virou, mas a porta tinha sumido sem ele perceber.\\nA casa tremia com violência, e ele até a sentia se mover de lado.\\n\\nQuase caindo, cravou a espada na parede para sair.\\n\\nA sensação da espada entrando era estranha.\\nA parede tinha uma elasticidade esquisita, mais macia do que parecia, e do lugar do golpe escorreu um líquido grosso, vermelho-escuro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c9",
+     "source_text_sha256": "20a828526045c378a8b1087234f76cce27fb13664bfcf358bb1d4fc8a15d9540",
+     "pt-BR": "Esta casa era uma criatura viva.\\nEla imitava uma casa e atraía presas com cheiros para comê-las.\\nEra esse tipo de criatura.\\n\\nKeen continuou cravando a espada na parede.\\nEntão abriu-se um buraco, e desta vez jorrou água limpa.\\nO cômodo enchia de água rápido, então ele alargou o buraco à força e saiu.\\n\\nLá fora era debaixo d'água. Parecia que ele estava no lago.\\nA criatura afundou até o fundo do lago.\\nMas, quando ele forçou a vista, as outras casas boiavam, balançando, sob a superfície do lago.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c10",
+     "source_text_sha256": "16e6804c079679bdcc682ce8f30c3835a2b12dacc964b0fd0b5bb9b77dd9ec99",
+     "pt-BR": "Quando Keen subiu na margem, a vila tinha sumido por completo. O que eram chaminés despontava na superfície do lago. Será que elas respiravam por ali?\\n\\nKeen voltou correndo até o velho.\\nMas só havia trapos e ossos ali.\\nPor capricho, ele encaixou neles o osso que tinha pegado na casa, e o tamanho combinou perfeitamente.\\n\\nTinha sido uma experiência estranha, mas a fome de Keen estava chegando ao limite.\\nQuando ele mordeu devagar um pedaço da carne da casa que tinha cortado, um gosto igualzinho ao de sopa encheu a boca.\\nCom uma estranha sensação de satisfação, Keen seguiu viagem mais uma vez.\\n\\n\"A Saga da Última Espada, Vol. 3: Capítulo da Fome\" - Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c3",
+     "source_text_sha256": "18e2c71ee645262dff926bb162f430b2bef011723c1ddcd9c9f44306322ad38f",
+     "pt-BR": "Depois disso, Keen chegou a uma cidade portuária.\\nEra para descansar o corpo, gasto por uma longa viagem.\\nPara Keen, que só tinha feito lutar, o tempo na cidade portuária foi um breve momento de paz.\\n\\nMas Keen tinha mais um motivo para visitar a cidade.\\nVencer o torneio da arena da cidade e conseguir o escudo precioso da família real, dado ao guerreiro reconhecido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c4",
+     "source_text_sha256": "7812e5c9060273c357228b2b96d2b9599f8c0e10a9a3c2cf4aaa053652cdf62e",
+     "pt-BR": "Ter o escudo precioso da família real também é prova de ser o mais forte, então guerreiros poderosos do mundo todo\\nse reúnem na arena.\\n\\nPara Keen, que queria conhecer a própria força e lutar contra adversários fortes, a arena era um palco dos sonhos.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c5",
+     "source_text_sha256": "925f36ea2f1e602dedf4ad989c8e1704acd51cd6f860cd658bba96dfb5925866",
+     "pt-BR": "No dia seguinte, a batalha na arena finalmente começou.\\n\\nAs regras eram de torneio mano a mano, e qualquer arma ou armadura era permitida.\\nAlém de humanos, muitas raças participavam, incluindo trolls, centauros e povos-pássaro.\\nTodo tipo de guerreiro poderoso tinha se reunido, de quem lutava com esgrima e armas, como Keen, a quem usava magia.\\n\\nCom o sangue fervendo diante de tantos inimigos poderosos, Keen empunhou sua amada espada flamejante \"Ragun Raaze\" e subiu ao palco da batalha.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c6",
+     "source_text_sha256": "ddb2eceacd76f10914d44c3af9c25d346c8c41a83b63b09a21f0ecf36aeaa840",
+     "pt-BR": "Keen derrotou um adversário poderoso atrás do outro na primeira e na segunda rodada, avançando no torneio.\\n\\nOs movimentos da ponta em chamas da espada flamejante \"Ragun Raaze\" não podiam ser lidos por lutadores comuns.\\nIsso mesmo, a espada flamejante também tinha superado uma série de dificuldades ao lado de Keen para chegar até ali.\\nA espada flamejante respondia à paixão ardente de Keen, que tinha aguentado tanto por tanto tempo.\\n\\nQuero ficar mais forte.\\nNinguém conseguia parar Keen, que buscava poder com esse desejo no coração.\\nVendo a sequência esmagadora de vitórias do espadachim das chamas, nenhum espectador duvidava que Keen ia vencer.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c7",
+     "source_text_sha256": "f608249b440f8ba5a827d931e145a1654b4963aef6c3a31b577efa8536b5c162",
+     "pt-BR": "O banquete de batalhas finalmente chegava à última luta.\\nKeen tinha enfim chegado à final.\\nO adversário na final era um garoto um pouco menor que Keen,\\nmas Keen se assustou ao ver a espada carmesim que o garoto segurava.\\n\\nIsso mesmo, era a espada flamejante \"Ragun Raaze\", que dizem ser concedida pelo deus do fogo a quem tem determinação ardente.\\nEra exatamente a mesma espada que Keen segurava.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c8",
+     "source_text_sha256": "3909536495cd1764c9f43bea88f7ce3e3e39a48a05061a0bbb4fbf7ac12610d6",
+     "pt-BR": "A batalha final entre os dois espadachins das chamas começou.\\nEnquanto Keen não conseguia esconder a surpresa com um adversário que empunhava a mesma espada flamejante, o garoto mostrava um sorriso de certa forma feliz.\\n\\nNo meio da luta, uma certa pessoa veio de repente à mente de Keen.\\nUm garoto, buscando força, segurando uma espada carmesim...\\n\\nIsso mesmo, a verdadeira identidade dele era o irmão mais novo de Keen, perdido havia muito tempo.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c9",
+     "source_text_sha256": "e5f07e2f77f57b5f1128a71e069ccafc4a22a6dabdcd7f39b52b7ac3856e0b99",
+     "pt-BR": "Keen sempre disse a si mesmo que tinha perdido o irmão por ter sido impotente.\\nO irmão, por sua vez, acreditava ter causado dor ao irmão mais velho por lhe faltar força.\\n\\nFoi justamente por terem perdido a família amada que os dois passaram a buscar poder.\\nIsso mesmo, para não acrescentar mais elos à corrente da tristeza.\\n\\nE, mais uma vez, esse sentimento uniu os dois irmãos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c10",
+     "source_text_sha256": "2faabe25f76661cafc6dd6f51363efdb48e1052afefcb2b5c2b642515c43fb2a",
+     "pt-BR": "Uma noite tinha se passado desde a batalha final ardente.\\nNa batalha em que os dois deram tudo, as duas espadas flamejantes caíram num longo sono.\\nTalvez por terem visto os irmãos ficarem fortes de verdade,\\nas espadas tinham ganhado uma quietude serena, como se estivessem aliviadas.\\n\\nCom a paixão ardente do irmão gravada no coração, Keen seguiu viagem mais uma vez.\\nPara, da próxima vez, conseguir a prova de ser o mais forte.\\n\\n\"A Saga da Última Espada, Vol. 4: Capítulo das Chamas Carmesins\" - Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c3",
+     "source_text_sha256": "5f126acee969167e75416d3f6b63352b1801459a4dbb9efddeeb06868f7ced3b",
+     "pt-BR": "Depois disso, Keen decidiu seguir para a vila de uma tribo que tinha cuidado dele no passado.\\nAlguns dias se passaram e, enquanto ele andava por uma trilha nas Montanhas Safiria, de repente ouviu música, como se tocada em lindas cordas, vinda do fundo do mato ao lado da trilha.\\n\\nMovido pela curiosidade, Keen se embrenhou no mato.\\nDepois dele havia um penhasco de rocha nua com um buraquinho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c4",
+     "source_text_sha256": "748fb1adf7de719826e5b82e49a0262ed82cfc611ff08fc59edcfd7b21480ee8",
+     "pt-BR": "Quando Keen espiou o buraquinho, ele estava cheio de névoa por dentro,\\ne não dava para saber o que havia ali, mas a música vinha sem dúvida do fundo do buraco.\\n\\nNo momento em que ele aproximou o rosto para ver melhor,\\ntudo ficou preto, e Keen perdeu a consciência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c5",
+     "source_text_sha256": "aa167a1dcbdf214607b31beb70e19a756cd57ce100415ba66f74d1a037ca7455",
+     "pt-BR": "Quando acordou, Keen estava mergulhado em algo parecido com um caldeirão grande, cheio de um líquido verde-azulado.\\nUm fogo ardia embaixo do caldeirão, e o vapor do líquido verde-azulado aquecido ardia forte nos olhos e no nariz.\\n\\nQuando Keen tentou sair do caldeirão às pressas,\\nfoi segurado por uma criatura que nunca tinha visto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c6",
+     "source_text_sha256": "1c41d872a95a53af28085471cdc3bf2b36fdda1655ddf5a4e70f7acb537f221c",
+     "pt-BR": "A criatura tinha cerca de um metro e, à primeira vista, parecia humana,\\nmas o rosto tinha só um olho e, embaixo, algo parecido com uma boca.\\nEstava nua, a não ser por uma pele amarrada na cintura como uma saia de palha.\\n\\nNão parecia muito musculosa, mas devia ser bem forte,\\npois só aquela criatura bastava para impedir Keen de se mexer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c7",
+     "source_text_sha256": "6f8c26a53ccb80c2416b47c67506c3be9a29b98d1137c31c47313c5e0523eaca",
+     "pt-BR": "Quando Keen olhou em volta de novo, parecia ser um povoado.\\nVárias construções em forma de cúpula tinham uma textura lisa e escorregadia, diferente de tudo que ele já tinha visto.\\n\\nE, em volta do caldeirão onde Keen estava, dezenas de criaturas que pareciam ser da mesma espécie da que o segurava\\no encaravam.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c8",
+     "source_text_sha256": "5256c3efa7517ceda7d991d1cadb58b27e1550af1efadd4b41bc4f8946a91917",
+     "pt-BR": "Percebendo que Keen tinha acordado, as criaturas de um olho só começaram a fazer movimentos de dança, soltando\\npalavras como \"Gué-gué\", todas ao mesmo tempo.\\n\\nOs ouvidos dele começaram a zumbir e, bem quando a consciência começava a sumir de novo, ele viu de leve uma grande sombra vindo do fundo do povoado, fazendo o chão tremer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c9",
+     "source_text_sha256": "1f4ddc1050c0635dad6755520702e9de25a91a048e8f59ad6c0cfe9141c00887",
+     "pt-BR": "Com o pouco de consciência que restava, Keen sentiu ser erguido, com caldeirão e tudo,\\ne ouviu o som de algo sendo engolido.\\n\\nUma voz ecoou na cabeça do Keen desacordado.\\n\"Honerarino Funarama\"\\n\\nJunto com essa voz, ele ouviu de novo a música de antes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c10",
+     "source_text_sha256": "76888de8fa8ab82886d8811a34bec00e40c87bd22488997e49d4e8b43d78cc62",
+     "pt-BR": "Quando acordou, Keen estava em frente ao buraco em que tinha espiado no começo.\\nOlhando de novo, o buraco era fechado a poucos centímetros da entrada.\\nA música não se ouvia mais.\\nNo peito da camisa havia uma folha de pergaminho escrita em letras que ele nunca tinha visto.\\nEntão, depois de ficar um tempo olhando para o nada,\\nKeen voltou à viagem.\\n\\n\"A Saga da Última Espada, Vol. 5: Capítulo do Sono\" - Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c3",
+     "source_text_sha256": "c9923aa7070155a8b3a91a5483e59ee3dba507cbb73a26048a30d7f793b69f40",
+     "pt-BR": "Depois de escapar do ninho do basilisco, Keen percebeu que tinha escurecido.\\nQuando perguntou a uma erva michioshie, ela disse que havia uma vila chamada Note ali perto.\\nKeen foi para lá procurar onde passar a noite.\\n\\nDepois de um tempo, uma vasta extensão negra se abriu diante dele. O mar. Nesse instante,\\n\\n\"Alguém! Socorro!\"\\n\\nO grito de uma moça ecoou junto com um grande barulho de água. Keen correu na direção da voz, acendeu uma tocha, olhou em volta e viu uma figura entre as ondas.\\nKeen mergulhou no mar, puxou a moça de volta para a praia, juntou madeira trazida pelo mar em volta e fez uma fogueira.\\nQuando Keen deu tapinhas no rosto dela, a moça abriu os olhos. O longo cabelo preto brilhava lindamente à luz do fogo. Os traços não eram refinados, mas ela era uma pessoa linda, que lembrava uma flor surpreendentemente bela. Keen sentiu o coração bater mais forte.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c4",
+     "source_text_sha256": "258416e39725455c2a4ce5ae51158f96c0d856841f2b289cf561d6912ddd58ba",
+     "pt-BR": "O nome dela era Isabella.\\nEra filha de um pescador da Vila Note e tinha caído no mar enquanto pegava mariscos nas pedras na maré baixa.\\nKeen carregou nas costas Isabella, fraca por quase ter se afogado, até a Vila Note.\\n\\nQuando chegaram à casa de Isabella, os pais idosos dela saíram. Chocada ao ver Isabella, a mãe cuidou dela e a levou para um quarto nos fundos.\\nO pai disse que queria agradecer a Keen, então Keen pediu para passar a noite, e o pai aceitou com gosto, dizendo que isso não era nada.\\n\\nNa manhã seguinte, Keen acordou sentindo gente do lado de fora da casa. Olhando pela janela, viu rapazes reunidos, cada um com flores ou comida na mão. Bateram na porta, e o pai de Isabella entrou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c5",
+     "source_text_sha256": "1aa1a47d8aa1a673cf7571b17152cb0557ab9376352680ad01eeced1357f2606",
+     "pt-BR": "\"Acordou? Espero que a cama não tenha sido muito desconfortável.\"\\n\"De jeito nenhum, obrigado. Aliás, quem são aqueles homens?\"\\n\"Vieram visitar minha filha.\"\\n\\nParecia que a beleza de Isabella era especial até nesta vila.\\n\\n\"Como está sua filha?\"\\n\"Parece que já está fora de perigo. Graças a você, que acendeu uma fogueira na hora para aquecê-la.\"\\n\\nDepois disso, Keen foi servido de um café da manhã com um peixe grelhado no sal chamado himiburi. Era um peixe gordo e muito gostoso, mas Keen pensava em Isabella e mal sentia o gosto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c6",
+     "source_text_sha256": "df82900c4f981f48a06bf26325a7f4b2c680734a6f202eeeafbef5bf6dbc3062",
+     "pt-BR": "Na manhã seguinte, Isabella estava totalmente recuperada. Ela tinha um jeito gentil e alegre, e era fácil entender por que os homens da vila estavam todos apaixonados por ela.\\nKeen era um deles, e ficou por vários dias. Tendo viajado por muito tempo, Keen tinha muito conhecimento e experiência, e, para pessoas que só conheciam a vila, ele era uma presença muito confiável.\\nCerta vez, ele até expulsou com o arco um troll que apareceu na estrada, e os aldeões passaram a olhar Keen com respeito.\\nKeen se sentia em casa, mas lembrou a si mesmo que precisava procurar a Pedra Verde do Sábio e decidiu deixar a vila. Os aldeões insistiram muito para ele ficar, mas Keen recusou com firmeza e decidiu partir na manhã seguinte.\\nNaquela noite, houve uma festa de despedida para Keen. No auge da festa, Isabella, que veio servir uma bebida a ele, sussurrou em segredo no ouvido de Keen.\\n\\n\"Vou estar esperando naquela praia. Deixa eu te agradecer direito.\"\\n\\nKeen saiu da festa disfarçando a calma e foi para a praia onde tinha conhecido Isabella.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c7",
+     "source_text_sha256": "fe0d67a9e97bd31f6dae07fdc5ea1f00a4032e982dfd68eef4c1d22aaeb11116",
+     "pt-BR": "Keen chegou à praia à noite. Havia lua cheia, e a praia que se estendia pela baía entre as montanhas estava banhada de luar.\\nIsabella estava no lugar onde Keen a tinha resgatado. Segurando uma lamparina, ela acenou de leve quando o viu.\\n\\nOs dois sentaram num tronco trazido pelo mar e conversaram sobre nada em especial. O vento noturno do mar ainda era um pouco frio, e eles se aconchegaram.\\n\\nNesse momento, um barulho alto veio da direção da vila.\\nVirando-se assustado, ele viu uma figura gigante lá longe, no salão comunitário da vila. Um corpo bem mais alto que um prédio de dois andares: um troll.\\n\\nKeen voltou correndo ao quarto e pegou o arco e as flechas. Se aquele troll estava aparecendo no meio da vila, não havia o que fazer a não ser se livrar dele. Keen escreveu várias cartas com escrita mágica, amarrou nas flechas e seguiu para a praça da vila.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c8",
+     "source_text_sha256": "46564d67c1ca42ac206af3aa7b1205109b2724ff412d75039236164d49e7d5c1",
+     "pt-BR": "O troll arrancava o telhado de uma casa. Trolls também atacam pessoas, mas dizem que têm mania de juntar tesouros. Era difícil acreditar que houvesse tesouro naquela vila de pescadores, mas ele podia ter farejado algumas moedas de cobre. Os aldeões, com medo, olhavam de longe.\\n\\nKeen olhou para o céu noturno. A lua descia para o oeste.\\nEle tocou a adaga na cintura, respirou fundo, sacou-a e chamou o troll.\\n\\n\"Quer tesouro? Está aqui!\"\\n\\nKeen fez a lâmina brilhar ao luar para chamar a atenção do troll. O troll se virou devagar, a viu e veio na direção dele com passos largos.\\nErguendo a adaga, Keen começou a atrair o troll para a beira da vila.\\n\\nNa beira da vila, Keen pôs no arco uma flecha com carta e a disparou na perna do troll.\\nQuando a flecha acertou a canela, o feitiço da carta se ativou, e cipós se enrolaram na perna do troll.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c9",
+     "source_text_sha256": "789b563a45cd0b45c1068ead26a2fd405edda84c0d86506f812c1f9408b2594e",
+     "pt-BR": "Os cipós engrossavam diante dos olhos, e o troll, com as pernas presas, caiu para a frente. Keen continuou atirando flechas nas mãos e no queixo do troll, prendendo-os nos cipós do mesmo jeito.\\nOs aldeões que olhavam de longe comemoraram.\\n\\n\"C-Conseguimos!\"\\n\"Ainda não! Não venham pra cá!\"\\n\\nO troll rugiu enquanto começava a arrancar os cipós. Com uma energia que parecia sem fim, ele se debatia, tirando os cipós aos pouquinhos.\\nKeen recuou para manter distância. O troll rasgou os cipós e se levantou. Keen ergueu a adaga e atraiu o troll da beira da vila até as pedras da praia.\\n\"Tenho que ganhar tempo até o nascer do sol...!\"\\nDizem que os trolls viram pedra quando tocados pela luz do sol. Keen pretendia segurar o troll ali até o sol da manhã nascer e transformá-lo em pedra.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c10",
+     "source_text_sha256": "4a191028334100c60fe680f06a2dd63d504aed966b9099ac52f5602a615704d0",
+     "pt-BR": "O céu tinha começado a clarear. Restavam poucas flechas.\\nO troll estava estirado nas pedras da praia, enrolado em cipós grossos. Ainda se debatia com uma força tremenda, mas também parecia um pouco cansado. Os olhos do troll acharam algo. Isabella estava no campo de visão dele. O troll devia estar com fome. Começou a se debater mais forte que nunca.\\n\"Isabella! Corre!\"\\nNo momento em que ele gritou, os cipós que prendiam o troll arrebentaram. Com uma agilidade inesperada, o troll correu na direção de Isabella. Keen atirou uma flecha aos pés de Isabella. Cipós grossos envolveram Isabella. Depois ele atirou uma flecha na perna do troll, e o corpo gigante tombou na praia. Na areia, as raízes dos cipós não seguravam bem. Ele soltou a perna na hora. Mas Isabella estava coberta de cipós, e o troll perdeu de vista a refeição.\\n\"Por aqui!\"\\nKeen ergueu a adaga de novo e atraiu o troll. Com a fome alimentando a fúria, o troll avançou furioso para agarrar Keen. Keen o levou até as pedras e disparou a última flecha.\\n\\n\"A Saga da Última Espada, Vol. 6: Capítulo do Romance\" - Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c3",
+     "source_text_sha256": "02b8cc3b34505ac83755c04c32bf09adf1c97712d0e36935c03b403646075c17",
+     "pt-BR": "Keen vagava sem rumo, sozinho, por uma terra desconhecida.\\nNão conseguia esconder a surpresa com as estruturas enormes enfileiradas e a quantidade de gente indo e vindo.\\n\\n\"Será alguma cidade-fortaleza...? É um mundo completamente diferente de onde eu estava.\"\\n\\nPensando nisso, ele lembrou o que o tinha trazido até ali.\\nSeria por causa da espada mágica que ele segurava agora...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c4",
+     "source_text_sha256": "68affc7ab2102474ba946a77277d1834d42e0028cb70bd03dddf55fabbae7a73",
+     "pt-BR": "A Espada Mágica Sekishotuke\\n\\nA lâmina não é muito longa, mas é de um carmesim vivo e solta uma luz ofuscante no escuro.\\nEssa luz encanta quem a vê, permitindo a quem a empunha controlá-los à vontade.\\nA lenda diz que ela já parou na hora o ataque de um javali gigante feito todo de ferro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c5",
+     "source_text_sha256": "25ccd837811cf6fd89045bf7cbe7b046506d97f5a3d9de45916106359e8e0548",
+     "pt-BR": "Keen estava aliviado por ter a espada mágica nas mãos.\\nA jornada para encontrá-la tinha sido duríssima. Caminhos traiçoeiros e monstros poderosos.\\nEle quase tinha perdido a vida muitas vezes, e não conseguia largar fácil a espada mágica que finalmente tinha achado.\\nMesmo em outro mundo, ter essa espada mágica o deixava um pouco calmo.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c6",
+     "source_text_sha256": "bf9c400b2672d9f498ef94486598708ab6d7e8526e37204855b97e2e5572fd23",
+     "pt-BR": "Mesmo assim, não era como se a situação fosse melhorar.\\nBem quando ele se acostumava com as pessoas olhando estranho para ele, um homem falou com ele.\\n\\n\"Ei, você. Você não é deste mundo, é?\"\\n\\nEra um homem forte, com um capacete amarelo na cabeça.\\nQuando Keen perguntou como ele sabia, o homem disse:\\n\\n\"Porque eu também não sou deste mundo.\"\\n\\nO nome do homem era Eisuka.\\nSegundo ele mesmo, tinha sido um feiticeiro bem habilidoso.\\nKeen ficou surpreso por haver mais alguém na mesma situação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c7",
+     "source_text_sha256": "dbd3af9a37dd9576fa88fa0b0da6dfa329346f1f72d0d5f5cb73d2033b114bf8",
+     "pt-BR": "Segundo Eisuka, há vários espaços instáveis no mundo,\\nque às vezes se ligam a mundos completamente diferentes.\\nO lugar onde a espada mágica estava guardada era um deles.\\nQuando Keen pegou a espada mágica, ele deve ter se ligado a este mundo, e Keen foi transportado para cá.\\n\\nHavia algo que Keen queria perguntar desde que conheceu Eisuka.\\nPerguntar talvez fizesse todo o seu sofrimento até ali virar nada,\\nmas ele não conseguiu deixar de perguntar.\\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c8",
+     "source_text_sha256": "e70c92d50b42f9c8f6be83e0317f8fe10f230adfc1b0f2fadba497c6b635d425",
+     "pt-BR": "Keen perguntou. Sobre a coisa pendurada na cintura de Eisuka, exatamente igual à espada mágica.\\nPelo jeito, a espada mágica vinha originalmente deste mundo.\\n\\n\"Olha só.\"\\n\\nA pedido de Eisuka, ele olhou em volta.\\nHavia vários homens segurando a mesma coisa que a espada mágica.\\nNeste mundo, a espada mágica não tem nada de raro e não mostra poder lendário nenhum.\\nEla só vira espada mágica quando usada no mundo de onde Keen veio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c9",
+     "source_text_sha256": "dba3fbbb848e423af1543321973a9114331746e49a6bcc44a36d2f38b9f15042",
+     "pt-BR": "Ele ficou um pouco decepcionado por a espada mágica ser tão comum, mas, no mundo dele, ela continuava sendo uma espada mágica.\\nTalvez percebendo isso, Eisuka disse a Keen:\\n\\n\"Vou te ensinar como voltar ao mundo de onde viemos.\\nTente este procedimento num certo lugar.\"\\n\\nOs dois foram até esse lugar.\\nNo caminho, quando Keen perguntou a Eisuka se ele não ia voltar ao mundo dele, Eisuka respondeu:\\n\\n\"Eu gosto deste mundo, sabe. Não pretendo voltar tão cedo.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c10",
+     "source_text_sha256": "303aa7ac3284c6378e54eb059d8e5ec3644b8b633b088ad8b21b1082823118f8",
+     "pt-BR": "Quando chegaram em frente ao lugar, Keen agradeceu a Eisuka e os dois se separaram.\\n\\nO interior do lugar era dividido em várias cabines privativas, cada uma com um jarro de água.\\nComo tinham dito, Keen entrou na cabine do fundo e empurrou rapidamente três vezes a alavanca ao lado do jarro.\\nEntão a água do jarro começou a girar e a brilhar em branco.\\nAcreditando que podia voltar ao seu mundo, Keen pulou no redemoinho brilhante.\\n\\n\"A Saga da Última Espada, Vol. 7: Capítulo da Espada Amaldiçoada\" - Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c3",
+     "source_text_sha256": "084d7f99cf3529dd9af050efc67c776444e9ee3146ff74e5a3d5cc69c4592007",
+     "pt-BR": "Mesmo depois de se separar de Eisuka, Marlo continuou andando.\\nPor cidades desconhecidas, por montanhas, atravessando rios, olhando para o céu, rumo ao lugar onde o sol nasce.\\nSentia que viajava havia muito tempo, mas quando essa viagem tinha começado?\\nNão conseguia lembrar, mas Marlo andou também hoje.\\n\\nUm dia, Marlo chegou a uma terra devastada onde não crescia uma única árvore nem folha de grama.\\nEmbora não conseguisse lembrar desde quando viajava, ele se lembrou vagamente\\nde que, muito, muito tempo atrás, tinha chegado a uma terra devastada como aquela.\\nQuando tinha sido, ele ainda não conseguia lembrar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c4",
+     "source_text_sha256": "df765c4242faa28f3af2afc570f16a1b88c91b70bce8bf6ac65b11def02f73f8",
+     "pt-BR": "Naquela época, Marlo não viajava sozinho. Havia muita gente em volta dele.\\nMorando numa cidade grande de um país pequeno, ele parecia ter sido próximo de uma certa garota.\\nEle e ela, que se viam quase todo dia, não eram namorados.\\nEram melhores amigos unidos por um laço forte; não, companheiros de armas.\\n\\nIsso mesmo, Marlo tinha participado de uma guerra... ao que parece.\\n\\nAo que parece, porque, estranhamente, ele mesmo não conseguia lembrar direito.\\nMas ele e sua companheira, aquela garota, com certeza tinham lutado numa terra devastada como aquela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c5",
+     "source_text_sha256": "dba2a8966a7b58c695d4b34032da5888e0bd36ae6d48e37ba43a55acb3b2b32f",
+     "pt-BR": "Eles faziam parte de um exército revolucionário, ou seja, eram rebeldes contra o próprio país. Não lutavam pela paz. Muito pelo contrário.\\nEste mundo, tão pacífico agora, vivia então uma era de reinos em guerra, e todo país fazia guerra com gosto para expandir o território. No meio dessa era, o governante do país deles detestava conflitos.\\nO rei, que tinha perdido os pais na guerra ainda jovem, teria ficado covarde por causa dessa experiência. Só pensava em proteger o pequeno país com o mínimo de sacrifício.\\n\\nAgora era uma era tão pacífica que dava para viajar sozinho à vontade, então Marlo ainda não conseguia lembrar a fundo, mas, pelo jeito, tinha sido assim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c6",
+     "source_text_sha256": "b1b8180d9222638c429d330826069dcdbbcef5e6b8f5aca28dcdb12c2d210a25",
+     "pt-BR": "\"Quero deixar nosso país maior.\"\\n\\nDisse a garota, um dia.\\n\\n\"Hoje ele é minúsculo, mas quero deixá-lo grande o bastante para ninguém poder nos olhar de cima.\"\\n\\nNos olhos da garota teimosa e moleca, parecia morar uma determinação firme.\\n\\nOs pais dela também tinham perdido a vida na guerra.\\nTinham sido mortos por soldados inimigos que invadiram a cidade, ridicularizados sem piedade como gente de um país fraco.\\n\\nMarlo concordou com ela.\\nTalvez fosse compaixão, mas ele queria deixar o país maior e diminuir o número de pessoas que sofriam uma tristeza como a dela... ao que parece.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c7",
+     "source_text_sha256": "b77544bd4931f29d16dec1b7d95be7808e4fb461a71a8a4033f74e2ac09ce3a1",
+     "pt-BR": "Dentro do país, eles lutaram contra o governante da própria terra. Cruzaram espadas com os soldados do rei.\\nO país, enfraquecido pela guerra civil que dividia suas forças, virou presa das nações poderosas em volta e foi perdendo cada vez mais território. Mesmo sabendo disso, eles acreditavam que o único jeito de mover o coração do rei fraco era mostrar a força da vontade do povo. A luta dentro do país nunca parou.\\n\\nUm dia, houve uma batalha numa terra devastada.\\nEle percebeu que a garota que brandia a espada ao seu lado tinha sumido.\\nMesmo depois que a luta acalmou, ela não aparecia, e Marlo foi procurá-la.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c8",
+     "source_text_sha256": "ed8792589e1fb29e40a5d17b56ea2b0481da2b33490e35aa3fba0dab5e2dfbb6",
+     "pt-BR": "Ela estava agachada atrás de uma rocha.\\n\\n\"Uuu...\"\\nPreocupado, ele olhou o rosto dela e, para sua surpresa, ela estava chorando.\\n\"O que houve?!\"\\nMarlo segurou os ombros finos dela, a sacudiu e perguntou. Então ela disse, com a voz molhada de lágrimas:\\n\"A gente estava errado...\"\\n\\nEla tinha sido gravemente ferida na batalha e se escondido atrás daquela rocha.\\nE então, logo quem, o rei apareceu. Ela tentou erguer a espada, mas parecia ter deixado cair sua amada espada ao sair do campo de batalha, e a bainha na cintura estava vazia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c9",
+     "source_text_sha256": "ac2ced449493531024398b154c6afc515d99782dc73baf4aa6c6d377cae2d870",
+     "pt-BR": "\\nO rei não a feriu nem a culpou; apenas sentou em silêncio ao lado dela e tratou seus ferimentos. E disse o seguinte:\\n\\nNão quero fazer uma guerra assim.\\nQuanto maior o país fica, mais coisas escapam aos olhos do rei. Ele não consegue mais desejar a felicidade de todo o seu povo. Um rei assim já não é rei. Não quero virar um rei assim.\\nSó penso que, se todos neste pequeno país que eu amo puderem viver sorrindo, isso basta.\\n\\nEssas palavras a fizeram perceber que tinha deixado de lado o que realmente importava. E, bem quando ela ia pedir desculpas ao rei, atrás dele estavam seus companheiros do exército revolucionário...\\n\\nAo lado da garota em lágrimas jazia um corpo sem cabeça.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c10",
+     "source_text_sha256": "8bf6bb6ad1e17c8e297daee25cd1331791e465d4abd0cb93eb361cd2f79b73eb",
+     "pt-BR": "Marlo tinha arrancado essa lembrança do fundo do fundo da mente, mas percebeu que ela não parecia ser dele. Ele vinha de uma vila pacífica do interior e nunca tinha vivido uma guerra. Levava uma espada para se defender, por via das dúvidas, mas preferia magia.\\n\\nMesmo assim, essa lembrança tinha, sem dúvida, uma presença viva. Havia muitas coisas estranhas nela. A lembrança da garota polindo o corpo dele, a sensação de ser brandido pela garota, no sentido físico, a sensação de rasgar pele humana, e assim por diante...\\n\"...Ah, entendi. Estas são as suas lembranças.\"\\nDizendo isso, Marlo tocou de leve a velha espada na própria cintura.\\nA prateada, que ressoava com a vontade da garota que tinha sido sua dona, e que ainda pensa nela.\\n\\nE assim, ele e sua lâmina continuam a viagem.\\nMesmo sem lembrar desde quando viajam, nem por quê.\\n\\n\"A Saga da Última Espada, Vol. 8: Capítulo das Lembranças\" - Fim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r50/c3",
+     "source_text_sha256": "0830fcf2e7914d5d198cbb87a3a73d77bf95bf50318e92c09ecce329d87af4e5",
+     "pt-BR": "Desde então, Keen tinha embarcado no dirigível Eye Bird e estava sentado sozinho junto à janela de uma cabine, olhando para fora.\\nLá fora, o céu estava azul e limpo, e soprava uma brisa agradável.\\n\"Moço.\"\\nVirando-se com o chamado repentino, ele viu uma menina de chapéu fofo e vestido sorrindo e estendendo a mão para Keen.\\n\"Toma, isto é pra você.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r50/c4",
+     "source_text_sha256": "f6a000fc2c68c03575fc739e28a6200abed07400f74649c74e3c76b320c77eab",
+     "pt-BR": "\"Hehe, não precisa se assustar tanto.\"\\nEle devia ter parecido bem espantado, porque a menina riu dele.\\nNa mão da menina havia uma bala.\\nEle não gostava de doce, mas não havia por que recusar a gentileza dela.\\n\"Obrigado.\"\\nQuando Keen pegou, a menina deu um sorriso radiante e saiu da cabine para o convés.\\nAinda faltava um pouco para chegarem ao destino.\\nKeen pôs a bala no bolso e decidiu ir para o convés também.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r50/c5",
+     "source_text_sha256": "92efcc8d76a5d40256cfc3eee72b1ab67b91addedf3c42f7ef9f5b4c05e1e534",
+     "pt-BR": "No convés, os passageiros passavam o tempo como queriam.\\nOlhando em volta, ele viu a menina de antes conversando animada com um senhor.\\nEla não tem nada de tímida, pensou ele, andando pelo convés, quando viu uma moça agarrada ao parapeito como se fosse desabar a qualquer momento.\\n\"Haah......\"\\n\"O-O que houve?\"\\nEle não resistiu e falou com ela.\\n\"Não... hum... é constrangedor, mas estou com uma fome terrível...\"\\nDava para ouvir um barulhinho lamentável.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r50/c6",
+     "source_text_sha256": "bcc4af4321e7a68d63658acc0681c4424d21ea75e67d22aa18df66e28cec9fd4",
+     "pt-BR": "\"Não como nada desde ontem...\\nAchei que pelo menos venderiam comida a bordo, então embarquei,\\nmas me disseram que não tem nada disso...\"\\n\"Entendo... mas eu também não tenho comida...\"\\n\\nEle lembrou que tinha acabado de ganhar uma bala.\\n\\n\"Ah, é, foi um presente, mas, se uma bala servir, pode ficar.\"\\n\"S-Sério?! Muito obrigada...!\"\\n\\nNesse momento, a menina de antes chegou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r50/c7",
+     "source_text_sha256": "f5b73721594e23ad76be1e21ee2f1a1d939f695faa2bdbeb3d74e022ba93f94b",
+     "pt-BR": "\"Moça, isto é pra você.\"\\nComo antes, a menina sorria e estendia uma bala para a moça.\\n\"Hã? Ah, o-obrigada...\"\\nQuando a moça pegou a bala, a menina deu o mesmo sorriso radiante e foi embora.\\n\"Então vou aceitar, agradecida, a gentileza de vocês dois...\"\\nPondo uma bala na boca com cara de felicidade, a moça perguntou a Keen:\\n\"Aquela menina parecia ter uns 10 anos. Você acha que ela está sozinha?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r50/c8",
+     "source_text_sha256": "d5fc56225ce8085fd14b8b3ad59af58281043df260c1af7e54fb678516d6189c",
+     "pt-BR": "\"Gwaaaaaah!\"\\nDe repente, um homem gritou. Era menos um grito do que um gemido de agonia.\\nKeen se virou na direção do som e viu um senhor desabando, segurando o peito.\\n\"Ugh... Aaaah...\"\\nOutra voz, bem perto.\\nA moça com quem ele tinha acabado de conversar desabou.\\nEm volta, as pessoas caíam uma atrás da outra. O que estava acontecendo?",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/Text_Stage_209.luc",
    "source_sha256": "41ade45c2c29bad9b125a846627dcfb1ff534c7cb90c04a13c6a81f0545adf8d",
    "entries": [
