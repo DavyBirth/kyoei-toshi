@@ -28600,6 +28600,40 @@
    ]
   },
   {
+   "path": "common/lua/stage_214_npc.luc",
+   "source_sha256": "70e6ad64590702e5e78224abfc49ac3ddd3ad54d65bef81bfb8e9f54110c373a",
+   "entries": [
+    {
+     "id": "p0/k331",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k333",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k335",
+     "source_text_sha256": "bea98d2a10901398c2550f3147b5a92e592cd5556e34b2528a8f8e18e2684ad8",
+     "pt-BR": "Hirai＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k336",
+     "source_text_sha256": "a728a43fea76cce4b9cb2ae5f31d627da61a4012007a23eeb83d49d5f145e88e",
+     "pt-BR": "Mukojima＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_211_npc.luc",
    "source_sha256": "e61de0a6ca399428c3d66724dde8b6f026e6661d74f3b4d85aa06f1ef0794443",
    "entries": [
@@ -32892,6 +32926,2931 @@
    ]
   },
   {
+   "path": "common/lua/Text_Stage_214.luc",
+   "source_sha256": "1c38b8cbc9ac444aee482fc8828950650057a5d772e555696bbf97d077586d63",
+   "entries": [
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "e7b2555e5a7b8336385a30637851017011d2dac6638d298ccd33e3dade5893f7",
+     "pt-BR": "(Falar com eles)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k9",
+     "source_text_sha256": "e7149c5f18cb82406c5751b16f5e86dcb43e1ac6e93846ed5b704e9eec7ddc5c",
+     "pt-BR": "(Fingir que não viu)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "7deeded64bda2fcc9a662a31a253178e6f076939cabed8636f52525d08919882",
+     "pt-BR": "(Comprar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k13",
+     "source_text_sha256": "539ae2edec508c325b1ba99754043c5c745902c585e6428718bbbddaddc78ba4",
+     "pt-BR": "(Olhar a placa)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k15",
+     "source_text_sha256": "0cd86dd959266d197bb1d28e28cb6b0b06af811d36bffa59fc8242c86bbd691f",
+     "pt-BR": "(Ver a porta de enrolar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "b0d45b5d5b413fb6e9543f3f06f1ee752e9d6be0a526d2e252044361839cdcd4",
+     "pt-BR": "(Ver as estantes de arquivos)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k19",
+     "source_text_sha256": "24d64fe3ec918718dca737c27f3c0c67b288cdc90453782d3374e6818318a20a",
+     "pt-BR": "(Ir pela escada)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k21",
+     "source_text_sha256": "a5e93daa117a15c42803370d82558ec66dd994b1ca9927cdd038e31eeee8a43b",
+     "pt-BR": "(Ver o buraco)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k23",
+     "source_text_sha256": "2b6b142fbe040739955765aae9d2f171d89f6c267a431fc29871d2b6a81dab58",
+     "pt-BR": "(Olhar escada acima)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k25",
+     "source_text_sha256": "31ca82b71e1f195affae8cea0be526f3040433856bdcc2de4ef0b8a4eeadc810",
+     "pt-BR": "(Testar o botão)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k27",
+     "source_text_sha256": "02a620f68018dc5ce512dda57464e4ae24fd0492bfa3124ae9342b6ee1ed14b1",
+     "pt-BR": "(Criar coragem e sair)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k29",
+     "source_text_sha256": "a74aa0a43a03cc90ab0288c4a874ae060c16c8612c6cafc66c30433f2e0bf3ea",
+     "pt-BR": "(Dar uma olhada)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k31",
+     "source_text_sha256": "94a51e73bade3f85be81c5199646645d3ddfada5de2b519d5c6c77145d10a656",
+     "pt-BR": "(Escutar de canto)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k33",
+     "source_text_sha256": "e3c88f1d39994e56ffcb0c8c2638f8c345f38b7d9b8a94b21c38bee37aabbe46",
+     "pt-BR": "(Pedir informação)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k35",
+     "source_text_sha256": "f3153c803ac94fee2c47fb8ba51a3aed264cc3081a86c107d4f96755ba385007",
+     "pt-BR": "(Olhar no espelho)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k37",
+     "source_text_sha256": "ced972c22ac8fd2d8725c8046fec27a5fda85ab575556ee4e5de593d21f8126c",
+     "pt-BR": "(Abrir)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k39",
+     "source_text_sha256": "60b50c801457609a39ef5de24c0b030ff1dc67283d7c8c60424fd78cd1d6bc73",
+     "pt-BR": "(Algo chama sua atenção)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k41",
+     "source_text_sha256": "162459c6ef3e30dfd972e096ea987b0eeb5ecaa7b17edd181a4003f4f547e970",
+     "pt-BR": "(Ver)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k43",
+     "source_text_sha256": "c116a26608bb482223697f00185992ca242aab38e3efaf7739a67186f20454e9",
+     "pt-BR": "(Tentar voltar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "67d0c47bd68ac19016a73eac62eb7146f017ef9972f3148e2fce469e8b82fb88",
+     "pt-BR": "Em desenvolvimento",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k47",
+     "source_text_sha256": "fe65050b6cf95368d85f30fd366c092a15824886d51defd754887d1e968f7491",
+     "pt-BR": "...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "8390d1809eb86361fbd84ef2b3f11ae6cc822858ace5bb67accf58bc57387afc",
+     "pt-BR": "Yuki Kono",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k51",
+     "source_text_sha256": "ba4ef888e2440a09f6eb0833084ec194e3fe1f5de2840f1d2f7a973613428cb2",
+     "pt-BR": "Hananira-cho não é por aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k53",
+     "source_text_sha256": "0a90abb1dbd673073e89005dca0fb4dcc021c35785a4f4d68ab40cd5e4fa6b38",
+     "pt-BR": "Vamos procurar o prédio da [#ff88ff88]Editora Ebine[/#],\nonde está o amigo do Otsuka.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k55",
+     "source_text_sha256": "e8cfc770e34f4ad5d4acfd18b0cbed054748a7492f6be771a39be64dda696ef4",
+     "pt-BR": "Editora-chefe Hirai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "d6b867539e7c216f8f91b0b08fd5bb4ca1ca1ca2dbeeb6b2a00a5246fe26dd94",
+     "pt-BR": "Um dos nossos editores deve estar nesta loja de conveniência.\nVamos encontrar com ele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "d4834f74432e21e8fd6760fbb961b4c8cb84d72e5119a619948ab1779ce55353",
+     "pt-BR": "Vamos nos abrigar ali!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "9a61a18c61f27b23d1155dae73e4ddb700936207d10ba9db3705cbfd8636ea92",
+     "pt-BR": "Acho que é hora de encerrar a reportagem aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "aaea6680799bdd4bf91ee781343d0dbe399fc54dc8ebe0da5772eeb5ebd9507b",
+     "pt-BR": "É perigoso aqui. Vamos continuar andando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "804adb3230600e46c5208406db68b3b8dc84bf6f2daafd43549e1fab4f835707",
+     "pt-BR": "A [#ff88ff88]Cidade de Mizuna[/#] não fica longe daqui.\nSaia da loja e [#ff88ff88]vire para o sul no cruzamento[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "3a181c0c98b5fe94729d68c2648bcff6d7c7ce18704c860a7b772f1142fef054",
+     "pt-BR": "Fiquem abaixados pra não respirar a fumaça.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "33dae137537b412903c86a9dc5f7489b171b6d9457167268679128abc9472d93",
+     "pt-BR": "Você está acabado. Bebe isso e aguenta firme!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "fc076d6b0f03fa80780b4c040eb52d727b9146bb731dec9237e8e6394c25e4e7",
+     "pt-BR": "Ela me fez beber um energético suspeito.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "9b40d11b6afb664ec8bfd7a8c8b8f1c09986903da617dffeeab5215cfc9c7413",
+     "pt-BR": "Vamos descer pela escada e sair do prédio!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "0f877a3729e93d426551817cf56c4fb7f18fa858c61e6b6d74bcd254f414105c",
+     "pt-BR": "É aquela loja de conveniência!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "a56275c7c6cb45878d534061ab89dc56b14120633637b5d1cb50f377789bc1dd",
+     "pt-BR": "Editor assustado: Mukojima",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "7ca8380dbe20d6567e06f3a0904bcbbfda54c419deec3a29ad6160c05240a949",
+     "pt-BR": "Cadê a [#ff88ff88]editora-chefe[/#]...?\nEste lugar também vai ser destruído...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "93f1120670be585059a83efa5288160b80a7a63838d0ad405c3ac84c789ab702",
+     "pt-BR": "Você... Você veio atrás da editora-chefe?\nChegou na hora certa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "20140f92cdb02690ec05c6c1ae9a9d9cd2e7f6ebc294e286ed2a1231b4042b77",
+     "pt-BR": "Ela saiu pra [#ff88ff88]tirar fotos pra uma matéria[/#] numa hora dessas!\nAcho que está em algum lugar deste prédio...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "ea34949a09cbef1f4db6e31222cfc4b18226bd41289d8e26d125782aa98c2555",
+     "pt-BR": "Por favor! Pode ir procurar ela?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "2333733056dc491fe3b258f6fe83f7aebceb91925103a86ad4a573d37dcadb7c",
+     "pt-BR": "Editor: Mukojima",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "4e2ed66140ce7fc49745b9c5acd11d527795b02afb98793f4224a99321b47b0b",
+     "pt-BR": "\"Deixa a editora-chefe comigo!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "e980cd0fc92e164571553bdc5bc3735c33df96e1d0c35ccede8c49866160c86f",
+     "pt-BR": "Ah! E-Ei, tem um minutinho?\nPosso tirar sua foto?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "972317124ca30d07453006b7be291884aeb0126469b3f106af78ef81222bf39c",
+     "pt-BR": "Eu cuido da seção \"Estilo das Ruas\"\nno Semanário da Sombra Gigante.\nJá que você está aqui, deixa eu te colocar nela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "00964860a672706eeb63033dd22f7cb4bfd4c318e4b26046b02dbba4b7cb6ba3",
+     "pt-BR": "Tiraram uma foto da sua roupa atual.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "d47f64dce6749d2d7b973c71eb5e6e0002cd613435da6d8a9df0b230b0194f3e",
+     "pt-BR": "Valeu! Agora talvez eu consiga cumprir o prazo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "1c9783520ad9d64359472577170da879da07f7f7d3f217988ee7632c7d5608e3",
+     "pt-BR": "Aaaai!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "65587a4684d6763448d3ea9ec485fa68088f4dd5aab2361cb6ab66799057556e",
+     "pt-BR": "Ah... Chefe...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "122097d761bf9916a809aafb5346f2de72fc3dec21fcf31ea4c942909072c114",
+     "pt-BR": "C-Chefe!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "adf44619efcb3f7e52f37a477afad5713f67b857533c54fec73ba34192a7b6ba",
+     "pt-BR": "Atendente de cara fechada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "dd92bc4cac9079946dc7e8ea6cec984ec90330e6c21fc9b8bb0f3770beab4d2e",
+     "pt-BR": "Ugh...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "a205f2c243f99b38d9216a963df4ecff17dfbb2be7ba23d596f24c8b3ec6606e",
+     "pt-BR": "Que cheiro é esse...?!\nParece esgoto...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "4a1d5899dcd0a34d9ee0cb92fb1d4bd1c1ffb7ff2a04e23c099f1f532c3ff062",
+     "pt-BR": "Desculpe por isso. Bem-vindo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "74db213e6b5a5f91c17e43e0cce213f69339609e227c6df99f8891c0db2bd434",
+     "pt-BR": "Obrigado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "60742117e692e18a0552ce2b3fc72e6c0b8f358455fe38baa5d1eaa8c95d8e8d",
+     "pt-BR": "Ah... Saí do interior pra fazer sucesso na cidade grande...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "81eeddeebd0530d173eaa59c03a0762c7845adc22d46c81d6ac96a69fca29948",
+     "pt-BR": "Mas só trabalho de meio período, dia após dia...\nO que estou fazendo da vida...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "c70ace8678f8efa85ab51a2ae34602bd280058d3e66de31148c3693216bb88e2",
+     "pt-BR": "E agora estou preso num desastre desses...\nMinha mãe deve estar morrendo de preocupação...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "82f6abb4f8a304485d7e6208937f5ce95f823f3e3bd310da47f9dce693ce3f01",
+     "pt-BR": "Com licença! Não pode andar pela loja\nde roupa de banho no meio da madrugada!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "c512021e200afdd67523b1fdd5ba7fd39f14d3e474a08c43faf7884cdf7b2233",
+     "pt-BR": "Atendente de cara fechada resmungando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "ea9497c573995e048d768b0c17818b26c9059818d669d2287cd908cf412ad2c8",
+     "pt-BR": "Temos vendido muito café ultimamente...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "d1ce8b20cd461a88731b0d7b4387e5d4ead6fae9b29c45d4c42722d0e2e2862f",
+     "pt-BR": "Será o começo de uma nova febre do café...?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "75cef524e9abaeec3b9322a5aa9256448fbc164078c660205c605035dbe81ae2",
+     "pt-BR": "Rapaz tremendo diante de uma revista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "308afb4004e653a425ec6430670f35cba75925b32f6897ed6c095de81da41a1b",
+     "pt-BR": "Alienígenas gigantes aqui também...!\nVi no noticiário, mas nunca achei que iam aparecer bem na minha frente...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "45b77f45372ad2c2650342466c6d577aed4940b6c66562d732bf658e798efbd3",
+     "pt-BR": "Não posso ficar aqui pra sempre...\nTenho que achar uma brecha e sair daqui...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "2ceeb83b35b07ae12cb37022555d2a14758222b616f365ef331612b3776e7571",
+     "pt-BR": "Sair vestido assim...\nVocê também deve ter saído correndo em pânico...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "2ee164cac8ee768ef78cda7881603c003575629b6f9dce2906d08a7144cd88e1",
+     "pt-BR": "Jornalista freelancer Koji Jinnai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "a42bec133dd25753a3eb41320a90e323a130b1e025b78f9dd728ad23bf2438c0",
+     "pt-BR": "Ei, a gente se encontrou de novo.\nVocê também se abrigou aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "19171e3aa4f2992f8a745438befaac860a05eaeca8901e73d3d69b87c600ddaa",
+     "pt-BR": "Eles estão destruindo tudo como bem entendem...\nEste lugar não vai ficar seguro por muito tempo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "b77479bfd3a280f23fd435ddcd9bb35b53bfca14c33e263d5b95baefdc64b747",
+     "pt-BR": "Já estive em todo tipo de cena,\nmas nunca vi um desastre desses.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "15303fd42f2d9990b82d6e63e0b502217912ef5c39addd495704f1cce101e9b6",
+     "pt-BR": "Mulher com ar sinistro: Sachi Takebe",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "b4936978b150d0efc4a43fc0676affb9a6f9659e4b424b57c92b2926498d7236",
+     "pt-BR": "...Nos encontramos de novo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "a76c2e702d8093af28751aea8a15fea9aaf0e7ecbd74722bdc6c82aa4abbc50d",
+     "pt-BR": "Hehehehehehehehe...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "14fb79c84a4e3f9aa1347d1502ba9c3dbcb84296a2de426b6f235f999135145b",
+     "pt-BR": "Homem agitado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k145",
+     "source_text_sha256": "4f4af42fb8f5ac21a28b6d88b403bbb228cdb58b3f81718cdbfe6c262c908697",
+     "pt-BR": "Ei, você ouviu?!\nOuvi dizer que um arranha-céu foi destruído na cidade vizinha!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "adcea2d3e238a578fc9d561b505280ef1daa2d3124cec9305f8e9a44a3d385f3",
+     "pt-BR": "Vi no noticiário. Se uma coisa daquele tamanho sair destruindo, acabou!\nNum mundo assim, nem tenho mais vontade de tocar meu negócio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "6197d1bb0acbdf0fcea888bcb31f5de90004c5f1212e24931d00f93e518c54b2",
+     "pt-BR": "Escute, você! Que tal comprar meu restaurante?\nSe chama \"Ristorante Miyato\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "b087a8b14b3c7152bf4b2562b8b0cb6f58cef1c702367a47f77aa6adcb7457bb",
+     "pt-BR": "É um restaurante francês bem famoso aqui.\nTambém temos algumas filiais no exterior. Estão incluídas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "aac1e5f2fbd26625027ee80acebf578291033fdc656bc127f5545d5974f843aa",
+     "pt-BR": "Pra você, agora... Que tal um bilhão de ienes?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "4df486d8c0a5eccfb84f606ce3ecd7b82015624280b579c9ec6953eb1d4640d0",
+     "pt-BR": "(Comprar o chique restaurante francês \"Ristorante Miyato\" por 1 bilhão de ienes)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "b7240a1e6b44975ed3ec781762a12fddf52c4bfa3ddc54c996c6e29606b86a2f",
+     "pt-BR": "\"Dá pra baixar mais?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "ccff02404d1f0c0ad32b509395f6f5e0560d678f7e1db1be9ea96d7656bedd0e",
+     "pt-BR": "\"Vou passar.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "57661681ba545a891bb5efb7796124ee6e7cc3a3c97af1e6eae3c03b5c37ddc9",
+     "pt-BR": "Ah! Sério? Obrigado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "16516d86a68aa459ae839b998fd2f1e565d2d14fc4046e8b9ca919a0fd2badcf",
+     "pt-BR": "Você entregou 【1 bilhão de ienes】.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "7146479bd720a4f34cdad2d805b8d37c5c129dfefbdb1fa618736fd7629a381a",
+     "pt-BR": "Conseguiu a 【Escritura do Ristorante Miyato】.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "d2ec467c9c6d3288031b0aefe7cb9e7f9d569e11e54cd9d7068805046593dfb5",
+     "pt-BR": "Parabéns! Você é o dono do Ristorante Miyato.\nTemos muitos chefs talentosos,\nentão o céu é o limite.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "d985fb4bb9caf55775f5deb0b9e84ef52b49d74c2e19e06b2bdb7eed7d06c2fb",
+     "pt-BR": "Então, que tipo de lugar você quer que o Ristorante Miyato seja?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "a5576ba544e0738a6a1a21cfecb0e95d0fe303e2487472440dbb719530ef78fc",
+     "pt-BR": "\"Quero focar nas filiais do exterior.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "41d922db5de4bcbcb9aabc20a24ad85139c66c2fa2ee6170baa7d10ee7a55491",
+     "pt-BR": "\"Vou cortar funcionários e fazer um lugar pequeno, de elite, superchique.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "dad444419835911bf0331eed29743602ce72668ec13054e0ead445d4967ba64d",
+     "pt-BR": "Entendo. Fico feliz que você continue\no que eu estava tentando fazer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "ec490d9184e1c084a57fa6669c904d7bf21feb963418f7a0f2bc4a626964dd4a",
+     "pt-BR": "Entendo. Também é um bom caminho.\nVou torcer por você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "58b57f13b7013d6b55571710aef15368dde6f31c4664b8e07391176301fdc813",
+     "pt-BR": "Não gostou do preço?\nDeixa eu ver...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "47c3601e0b05f6b7c0c488e7e05a6ffc8c270db001a34690a1e88708200232a7",
+     "pt-BR": "Ah! Você tem um \"Figo-da-Índia 'Mel Dourado'\"!\nÉ o meu favorito de todos os tempos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "d4625f0b414fbd7f76a02a8267f1858b1bc384251f3517155812b18676398e61",
+     "pt-BR": "Me dá isso! Aí eu te\nvendo por 500 milhões de ienes!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "bfe619b64c8fe446410c1323773b9a36a40619c9c4e3b72c0880a732a5f584ad",
+     "pt-BR": "(Trocar o \"Figo-da-Índia 'Mel Dourado'\" e pagar 500 milhões de ienes)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "6399ddb0f6aab8670dc77b0b1a7de53a38be731d936afe6ed2ad8d48c9d764ec",
+     "pt-BR": "\"Pensando bem, vou passar.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "2520251adafd2c0286d794b0a0eec15dc81352a7ac8a112c5b8473bb08adfbbd",
+     "pt-BR": "Obrigado! Não acredito que estou segurando\num \"Figo-da-Índia 'Mel Dourado'\" de novo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k192",
+     "source_text_sha256": "22070e3e94788740c582482ac77e87050cc359b49b4ab9773c94d413e5b728cc",
+     "pt-BR": "Entregou o 【Figo-da-Índia \"Mel Dourado\"】.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "075d9c52bb4d24568bb026d4c242be2a93e5635b579388e3312bb6985691a002",
+     "pt-BR": "Você entregou 【500 milhões de ienes】.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "6f7efa4ba37aa362006a23915c435bfa9d599150571539435e88bf7f2b525ab1",
+     "pt-BR": "Tudo bem. Venha falar comigo se mudar de ideia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "0a2b13bcc38dfd1b6ccb526b50f4cea39fc18cfda64dffd1f6e6d269fea788f7",
+     "pt-BR": "Hmm... Não, desculpe.\nNão posso baixar de um bilhão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "f76cb0687539b1c319ba876b6ae6f9c6c0c3b2fb4a2bf413a355a061cc991677",
+     "pt-BR": "Obrigado. Cuide bem do Ristorante Miyato!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "10801ad58485466ed7f909257b59339eb0d4b69b7dc4849d00e8b7381d7b7533",
+     "pt-BR": "Você aí! Pensou em comprar meu restaurante?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "d8c0c2babb854746fde9f3223b3f6ae2e017904510feba7bba00e3360a007cda",
+     "pt-BR": "Ah...? Parece que está sem dinheiro...\nÉ uma compra grande. Desculpe me precipitar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "e8cfebefac88ce6ada0929b220c6513a64bdff3e86b99ce0df780295045ea4c1",
+     "pt-BR": "É uma compra grande. Desculpe me precipitar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "c79977242d5e63eb5094a612b6df0dc275f5bb0795e3b78a58c5a87cf45a0625",
+     "pt-BR": "Rapaz passando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "9327bde66ee75219d5284b4471614a4ca24961ad8835a3191bdd60b2d794240d",
+     "pt-BR": "Aqui é Hananira-cho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "0a1e8755cb0a5835b16c8636482325e79cbdbba18987ac62d353648805ca1455",
+     "pt-BR": "\"Sabe onde fica o prédio da Editora Ebine?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "35959056be20346d1dd2cab028f5969a2659278183bda6f51279208eb54c60a5",
+     "pt-BR": "Editora Ebine? Ah, isso me lembra alguma coisa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "6250ecd025b86c8c8a0df917f6ae35dc21bda2ccc58579940177cc2c631534b2",
+     "pt-BR": "Acho que, se você for até a avenida e olhar pra esquerda ou pra direita,\ntem uma placa \"Editora\" lá no alto ou embaixo em algum lugar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "21258cd11d1ce58485d4565cc60a422776bd881f080fa5eaf8c6b1fe121b63c0",
+     "pt-BR": "Senhor abalado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "b960b1e0a9c653a2e6cb651c1a5e9a625cb2575e76b0d17c1a08bfeb3b05f650",
+     "pt-BR": "Ah, então os alienígenas gigantes finalmente\napareceram nesta cidade também...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "b240dd93daa782d7b75bbb84cb71d743af565421ed451b9fc00b0982fec520ff",
+     "pt-BR": "Ai... Todos os imóveis que lutei tanto pra conseguir...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "ee89d533b529e40c7a018867c4f212a9f440b30af220659578360d1069c50103",
+     "pt-BR": "Hmm...! Eu poderia confiar isso a você.\nMeu faro experiente diz que sim!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "df18a650ae82340a8916527a35df2515eedd5954106c441a6a56ca09ba564db1",
+     "pt-BR": "Escute! Que tal comprar de mim a Editora Ebine e o prédio dela?\nPra você, agora, uma pechincha: 1,5 bilhão de ienes!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "e1a5629acd31990460a39bbc429552b5d98581f23484eceea6aa4eaf0cca90b6",
+     "pt-BR": "(Comprar a Editora Ebine por 1,5 bilhão de ienes!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "e42913b07edae77e58c93fd8539b2381d046e1aec9d4e6175c628354a5038517",
+     "pt-BR": "\"Aceita 100 milhões?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "9c2a4a01e03a714d0f8d123f92bd2540253f8e58d805685b79a34af2797d8a8b",
+     "pt-BR": "Ah! Obrigado! Os alienígenas gigantes devem ter quebrado\num pouco, mas depois de consertar, deve funcionar direitinho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "efc40cf591a74af822c03015712eadd6b56e34aa77d9eff27c7ea65177805615",
+     "pt-BR": "Você entregou 【1,5 bilhão de ienes】.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "a107eaa047fe3abf04cc1f8e2f07953c7f7365b3a17ee2093da9e0d143b69dbd",
+     "pt-BR": "Você entregou 【1.499.990.000 ienes】.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "95e05113dcc5c5df6431e3fb57def6d6b91254eb94d4d60f0510b0b5121719d4",
+     "pt-BR": "Você conseguiu a 【Escritura do Prédio da Editora Ebine】.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "97d39e3b9d7ba85f03c12b886e6b417837616ac5d7ab9387a1420f4355a4e029",
+     "pt-BR": "E ainda te dou isto de brinde.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "4c5cfb0263fd4df7a23571b4e0082268b6e452359013b2684d9decfbffafc851",
+     "pt-BR": "Obrigado! Que bom que te conheci!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "a5541958531f34b5930450c23cc114a24178bfdac40996cea572a9c04d5b3269",
+     "pt-BR": "...O prédio está danificado, mas a Editora Ebine tem história.\nPublica o Semanário da Sombra Gigante há mais de 30 anos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "a9d69fd67692c1fb251b69e7c88303363932988ff809dd0013fe90b969e02f0e",
+     "pt-BR": "Então, o que você pretende fazer\ncom a Editora Ebine?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "4f5e5306168f5d341a6bd63251a39e8b3e2f05b582e667a8e8cba8a004292a1d",
+     "pt-BR": "\"Reformar o prédio e reerguer a Editora Ebine.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "3939ad4780f2658139c596aab1db27aaca358ad34f7f3ee2db3f7fca780f1b7b",
+     "pt-BR": "\"Vou vender tudo: o terreno, o prédio, a empresa.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k251",
+     "source_text_sha256": "75d2db950d38292621c87a1febfbd0dfd2519d913132dd75e8cf782ad1aa0793",
+     "pt-BR": "Obrigado. Como antigo dono, eu ficaria muito feliz\nde ver a história do Semanário da Sombra Gigante continuar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k253",
+     "source_text_sha256": "687e17ecb4cfbe8b941cbd294aa29cba74923f2b2ac62db0acf9c2cfe765fe84",
+     "pt-BR": "Quê...?! Sei que o futuro é incerto\ncom esses alienígenas gigantes, mas mesmo assim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k255",
+     "source_text_sha256": "d087c5e96f24eb3598f531523868525d2b5415a1674de3ba0a5eef78df01266c",
+     "pt-BR": "...Não, você é o dono. A decisão é sua.\nEsse também é um jeito de aproveitar a Editora Ebine.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k257",
+     "source_text_sha256": "57c051a7cae11c285fdcf8b10c3fcca5b2b9a7100fb4d9f4c3228b755d210309",
+     "pt-BR": "Oho, então essa é sua jogada! E que oferta ousada!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k259",
+     "source_text_sha256": "1214004ee5b8bfc41492b9bd043b1a88a5f7b65e3a4ccb69865e6dc8753fdc94",
+     "pt-BR": "Gostei de você! Pra você, baixo pra 1.499.990.000 ienes!\nQue tal?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k261",
+     "source_text_sha256": "d47c13c123105a391b329bad30b7e5859c7cfc2cf60fdf29955ed93505830811",
+     "pt-BR": "(Comprar o prédio da Editora Ebine por 1.499.990.000 ienes!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "1ed662e739fa550b8e1c3547edbab14aa28d0ca429c4d58dbe0a44e3acb67c85",
+     "pt-BR": "Tudo bem. Pena, mas é muito dinheiro.\nNão se deve comprar por impulso. Esqueça que perguntei.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "608b1065e01f58f1435b7dc8e301f9e62587cf37cf9f009c333e33cbaa40dcf9",
+     "pt-BR": "Desculpe, mas esqueça o que eu disse antes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k268",
+     "source_text_sha256": "d8d5adb5886adea4baa2ad7f375d62d601b30119b30901e56784cbcc6107dd1e",
+     "pt-BR": "Noshiro, editor da Editora Ebine, tremendo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k269",
+     "source_text_sha256": "4a70125b7653a5d2695060fcdf689468eb7086f9cdc81f469a7b9e5729a317b0",
+     "pt-BR": "T-Três alienígenas gigantes...!\nNosso escritório já era, e esta cidade também...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k271",
+     "source_text_sha256": "abe9811033a184d2615335d3b1b6058b3d6620a657b04871dcdc00e5cd2aea6a",
+     "pt-BR": "Hehehe...\nM-Mas pelo menos isso quer dizer chega de prazos...!\nHeheheheheheh...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k273",
+     "source_text_sha256": "c510f441dd1fce1f48cba04a421d187d1b832a0c996e8194334abacc0b06f85d",
+     "pt-BR": "(Perguntar onde fica o Editorial 2, onde está a editora-chefe)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k275",
+     "source_text_sha256": "e22b0e74be5e68d88c4a4362c4c8cff1d612115c54930a55025dd066fbe956c9",
+     "pt-BR": "(Deixá-lo em paz)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k277",
+     "source_text_sha256": "ecf72a90da3c2b87e046a22928c9c08e55b5f09638bb3c8331c81cba0d353b05",
+     "pt-BR": "O Editorial 2 fica no sexto andar...\nHeheheheheheh...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k279",
+     "source_text_sha256": "9898e0fe0cd45bde1df42f6f6bd65bb431eb4fee57b40667582479f7177114d4",
+     "pt-BR": "Ajudar os outros numa hora dessas?\nQue otário! Heheheh...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k281",
+     "source_text_sha256": "f6f3a10be5ad2932dfd20423968cc8b71c92bd8baa5768ee2e19d51859f9651d",
+     "pt-BR": "Acabou tudo...! Pra mim, pra você, pra todo mundo...!\nHeheheheh...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k283",
+     "source_text_sha256": "73af0d8aafe932e27754939dc1c8b1893dc71bf16fe58841e598741d262e6a74",
+     "pt-BR": "Noshiro, editor da Editora Ebine, transtornado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k284",
+     "source_text_sha256": "2739510383dc39ca8f8e59980e095dfec85a83b143935e01ac29790b8ff26f91",
+     "pt-BR": "Hyahahahaha! Acabou tudo!\nTudo vai sumir, e finalmente vou ser livre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k286",
+     "source_text_sha256": "871f41c75b31f419f9db53f53b7f24c84f0e6e48fe446af4ae6b0cbbfb8fc2e6",
+     "pt-BR": "Noshiro, editor da Editora Ebine, completamente exausto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k287",
+     "source_text_sha256": "24f38e94f585110f2d2e0967147168aa15112cc91ede0c46d359b668f7049677",
+     "pt-BR": "Droga... No fim, tive medo de morrer\ne corri até aqui embaixo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k289",
+     "source_text_sha256": "9b15535000e862ba189ae47a2a337ee94f82d43d1f95b4a77960f2c3ef50ad39",
+     "pt-BR": "...Eu nunca quis ser editor.\nEu queria ser romancista...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k291",
+     "source_text_sha256": "24f0d153ceba95bf2c05f4adf3995b53be27dab3029878018940a077e3239427",
+     "pt-BR": "Mas casei e tive um filho. Não dava pra só correr atrás de sonhos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k293",
+     "source_text_sha256": "9995a0d2a48d5e31569641c8fd1dacee07957106a71cb1503abb198be90da0f9",
+     "pt-BR": "...Não, isso é só desculpa pra não ter tentado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k295",
+     "source_text_sha256": "9e80311faa73b72236c696b041b91ecf4ac11f086dff0e18b043b8942b296619",
+     "pt-BR": "Quando virei editor e vi como os profissionais de verdade trabalham,\npercebi o quanto eu era mole.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k297",
+     "source_text_sha256": "50261ec8a08b8f34e1547d441f8e5aa663b86e3873557cf3c45c8f0898530bca",
+     "pt-BR": "E editar também é um trabalho difícil.\nEu me agarrava como podia, sobrevivendo por um fio todo dia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k299",
+     "source_text_sha256": "f6fca43d64cc504d026f018ee5109ed1bdeab2a56e2510a4840591e08d2c3f99",
+     "pt-BR": "Mas isso acaba hoje. Num mundo com alienígenas gigantes daqueles,\nninguém vai ter a vida de antes de volta.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k301",
+     "source_text_sha256": "7f0013bdc3315375d04757023d1b943cfa713047c263f6ca6965129701219388",
+     "pt-BR": "Só me deixa em paz.\nAcho que vou dormir aqui mesmo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k303",
+     "source_text_sha256": "13a89c769f707500e1f70a88853adfe9105600bbbd2a1163c4d3083e2c0b5e70",
+     "pt-BR": "\"Não desista! Viva e realize seu sonho de ser romancista!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k305",
+     "source_text_sha256": "667324a4ba4f182a40b48e51c55296bb94adf3546c2cb8607add33399b49d4fc",
+     "pt-BR": "\"Não desista! Pense na sua família!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k308",
+     "source_text_sha256": "b648bb102c5bcc6f62bbb50f8c1cd8c33f40ddf35c16cb8fb155f8e6f71db156",
+     "pt-BR": "Não desista! Viva e realize seu sonho de ser romancista!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k310",
+     "source_text_sha256": "8a2987b71901c06455aed60cc0ca791afebcc636ca7194a5139c3db015432c64",
+     "pt-BR": "Heh... O que você está dizendo, numa hora dessas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k312",
+     "source_text_sha256": "7879810a70003b933500e0a38432a3b579845aaa572c4db340aa0cb0af966a79",
+     "pt-BR": "...Bom, eu já tinha desistido de viver mesmo.\nEm vez de desperdiçar, talvez eu lute uma última vez...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k314",
+     "source_text_sha256": "e22a1411c6674518064c2f474384a6f26fbdde98827a2681e7de29b320cc99b0",
+     "pt-BR": "Valeu. Sinto que alguma coisa se encaixou.\nVou sair daqui vivo! Você também, hein!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k316",
+     "source_text_sha256": "9bd8bc6947718fc098fce0e02ad621e0d8c397ecc6c4e30edf09e11593bf67fb",
+     "pt-BR": "Não desista! Pense na sua família!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k318",
+     "source_text_sha256": "cbb984f461febba277242910613fd4ce71e6170c921212a14fdaabb32a2539fe",
+     "pt-BR": "É mesmo... Tomoko... Chiemi...\nSerá que minha esposa e minha filha estão bem...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k320",
+     "source_text_sha256": "e1ec7d40120c93a6850c30cba11bbc29be2938638df90ac679963fa01a6973b3",
+     "pt-BR": "Não posso ficar parado. Tenho que ir pra casa...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k322",
+     "source_text_sha256": "dbad8d9cba7159998b762a0503554b47f4765ae3a72598a23feeda0cb68ec4c3",
+     "pt-BR": "Obrigado. Vou pra casa.\nDaqui em diante, vou continuar vivo pela minha família!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k324",
+     "source_text_sha256": "053ed4b4a52e3d25b936f4aaa66c2f7beffa1e24274ffa1e8158f345d17892bd",
+     "pt-BR": "Chega de correr atrás de prazo.\nQue alívio. Heheheh...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k326",
+     "source_text_sha256": "e9517c39687c40f0aa47764983ced5d5524543eec7d2b94285f6efbb9ab92624",
+     "pt-BR": "O elevador parece não estar funcionando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k328",
+     "source_text_sha256": "747e4a15aa7d1c01cd8b180e43ef64ada4a8a1dbf6c46c0f78663a70111fee0b",
+     "pt-BR": "O elevador parece não estar funcionando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k330",
+     "source_text_sha256": "3969ffefd8f784af57ca2caa0a7eb53aa342b90d4638f081b645497ad971cfa5",
+     "pt-BR": "Escada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k332",
+     "source_text_sha256": "96a47f2c424497da047443ee808dac4a7c7d56f41b9bbf3c71998d069ec3c3ad",
+     "pt-BR": "(Ir para \"6º andar: Editorial 2\")",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k334",
+     "source_text_sha256": "bd9084b49742b0cd39257f1bcba82b245abcb01b6afd3cdce2230d8f18268618",
+     "pt-BR": "(Ir para \"2º andar: Vendas\")",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k336",
+     "source_text_sha256": "d8e688f45f1208b498146289212c7af33ccac80f46aff692ebb158a6318cef8b",
+     "pt-BR": "(Subir ao terraço para tomar um ar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k338",
+     "source_text_sha256": "39c2c3742ea18bae7283dd2d2c0ad1d4225f592ae2bc48f1ad9ce3341fbd75b9",
+     "pt-BR": "(Ficar mais um pouco neste andar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k340",
+     "source_text_sha256": "2b1d40cd3709e58f2a74e08f70b15b8b784f50187bd4e0c3850a575742f14968",
+     "pt-BR": "(Voltar à redação)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k342",
+     "source_text_sha256": "306886c70d413004d0143c3dec3b064233cd39afad59fdee9c6da998020eb5ee",
+     "pt-BR": "Devemos achar a editora-chefe na redação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k344",
+     "source_text_sha256": "c3b2cf1e67fa370df12117700433b48742fc2ed9fbad72b73fb5fcb6f133ec96",
+     "pt-BR": "A editora-chefe não estaria na redação, em vez do andar de vendas?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k346",
+     "source_text_sha256": "f898657e32937300af89811cca91d87eadbaf5092dd6d7d3d898643df3d4a985",
+     "pt-BR": "Vamos logo pra redação!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k348",
+     "source_text_sha256": "726ae7eba16a081ef16893fcad24557922e26e75fd705ad5b074dbcb6071ef7d",
+     "pt-BR": "Entendo que você queira tomar um ar,\nmas vamos achar a editora-chefe primeiro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k350",
+     "source_text_sha256": "42030e33236a11afe1a2a1b4546cd43b571cf3b6322510792e35afb785ff678a",
+     "pt-BR": "Voltar é perigoso demais. Vamos sair.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k352",
+     "source_text_sha256": "14c42ae6e14e47c43e809147f4f91a2d735fd467618d07418a99e9768c6abf72",
+     "pt-BR": "Voltar é perigoso demais. Temos que sair...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k354",
+     "source_text_sha256": "24a15eff298248c60087fbd01b1672a4abe5509a3968985965593171e9716227",
+     "pt-BR": "A porta de enrolar está fechada.\nParece trancada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k356",
+     "source_text_sha256": "fea32405f706a15e0f0ca35b688dbed65ced2cdcfb4f03d1f74b7c8b80bac1a0",
+     "pt-BR": "A porta de enrolar está fechada.\nParece trancada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k358",
+     "source_text_sha256": "14694030f09723dff34e45c06a03a6d2990dd0d2a4fa7a3ac8735d76b7ab45e6",
+     "pt-BR": "Estou com a chave da porta de enrolar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k360",
+     "source_text_sha256": "4146582b807373e2328ea0820161ccda1539b871151b3999f6e5d4a17c3bf67b",
+     "pt-BR": "Vamos, vamos continuar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k362",
+     "source_text_sha256": "98cb0adba4cccaf3b83d460a2d80da6c80fa89ad0b9aa55299fb3f8d7ff8a661",
+     "pt-BR": "O fogo vai chegar aqui logo. Vamos sair do prédio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k364",
+     "source_text_sha256": "7505192e333a074e350ff7815833623a5de2be499f0cccf5efaa6a1448b52755",
+     "pt-BR": "Tem outra saída no lado oeste.\nVamos sair por lá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k366",
+     "source_text_sha256": "ec55bdd612db2d8f69fdcf4730035aec1567e329f200c59ae82aa65b9e954a3f",
+     "pt-BR": "Vamos pra redação por enquanto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k369",
+     "source_text_sha256": "4a787ce0cdcb92d812904a932d008945460d6eb8d851c245983cefdd1b06a827",
+     "pt-BR": "(Subir ao terraço para procurar a editora-chefe)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k373",
+     "source_text_sha256": "b7f2a7aeb45194e095d124e8d3902be98fe79152900de41fcef893c992165c9d",
+     "pt-BR": "(Descer ao térreo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k376",
+     "source_text_sha256": "b3799e37f94b3d4f03a5d0f0add34da0108cf7e289a1e952d99f7d3025782911",
+     "pt-BR": "Tem uma escada logo à frente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k378",
+     "source_text_sha256": "2f3ef0314661bd57ded19cdcfa004cc2632b9632313d976e5fa17b0fb98fd093",
+     "pt-BR": "(Ir para o andar da redação)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k380",
+     "source_text_sha256": "1c76e1c85419e936dd14f139e6fb051c079b1878cf2439ed1651618de54c8ecd",
+     "pt-BR": "(Ficar mais um pouco no terraço)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k382",
+     "source_text_sha256": "9e086696dc43acbc4e10df3bd353d7861aa7db213509c6178e6b72d1cf8e4ada",
+     "pt-BR": "Vamos procurar a editora-chefe!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k384",
+     "source_text_sha256": "b484041edd967f304c851afd1fd977c4782e60be11e097f775e94c5dca5280ba",
+     "pt-BR": "Esta porta não abre.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k386",
+     "source_text_sha256": "9084d20e4902c1ec2fca27b9759d0496a93a2c5b60ca2320787aa73a5bc70135",
+     "pt-BR": "Sair?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k388",
+     "source_text_sha256": "46ef592fd4479b41352b14212b07ecae48dd8013398cf90cca5514d1ff3b3d7d",
+     "pt-BR": "Sair!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k390",
+     "source_text_sha256": "fd03091430a273ff376d26ea7058a1b0b5f5be931045c966c509fbb3130c3bef",
+     "pt-BR": "Ficar aqui por enquanto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k392",
+     "source_text_sha256": "cf2f6e651604553f6409f9712a919899cced500fb9be11b13fa5a73f888071e9",
+     "pt-BR": "Vamos ter que passar correndo bem no meio deles!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k394",
+     "source_text_sha256": "7dc908f080ebd730710979fbea1e45c4b7ad39c7638686220b1e3e677a935528",
+     "pt-BR": "Parece que dá pra subir até a rua por aqui.\nSubir a escada de mão?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k396",
+     "source_text_sha256": "466dee6e727eadce7715310176585f630896feae59fb6d70719d6d692a2c6be6",
+     "pt-BR": "(Subir a escada de mão)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k398",
+     "source_text_sha256": "5ec0635242dceea3319f83e5f29ab6bad5e4951da8b5d17aa513066c8ed7faf1",
+     "pt-BR": "(Ficar aqui por enquanto)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k400",
+     "source_text_sha256": "1db929971d39e45b04d2b299c9c8b9d5c7a11fcb1452b36a4ac568d95f5dca68",
+     "pt-BR": "Um [#ff88ff88]hidrante[/#]...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k402",
+     "source_text_sha256": "695eb13d50d78088e0f5fefbfdf4f223c462d350f045d940e7089139894d0307",
+     "pt-BR": "(Relembrar histórias de hidrantes e salvar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k404",
+     "source_text_sha256": "860b3a40faad02141afa3169e8e60d5b31c749c2e5e367d91c4e1afa21164978",
+     "pt-BR": "(Ir embora)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k406",
+     "source_text_sha256": "42456ffe2785a566f067d691532e5aa8d38ed0e327eb35e1235f6494fab7ea98",
+     "pt-BR": "Uma fileira de revistas antigas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k408",
+     "source_text_sha256": "8deff5e44ba0295b28b3280808aa5e944f88a8c5bf8d7a20e6f929373c8bdf73",
+     "pt-BR": "(Folhear revistas antigas, relembrar e salvar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k410",
+     "source_text_sha256": "449c44910897f7f29958a9fbd5ec459af5be22005acb20abc1fd9ff2bb7f3e64",
+     "pt-BR": "(Devolver a revista e ir embora)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k412",
+     "source_text_sha256": "a35847a1e57a6214781e5604a73bbdeaef1ba036649910041ead3bb90a4c7087",
+     "pt-BR": "Um vaso de planta...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k414",
+     "source_text_sha256": "862f88c41b2fb80b892df4edd23915d1006746688b56216c0e71bf7420078b05",
+     "pt-BR": "(Refletir sobre a fotossíntese e salvar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k417",
+     "source_text_sha256": "79e508b3a6585aecd1946b2a50a35eac31d79c6d8b0ef085b143bc0f0e3b54cb",
+     "pt-BR": "Um terminal de ingressos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k419",
+     "source_text_sha256": "b4367a45f75a5975e9ea3c0772c635e1a1ee5d5ca0b6aa5c709227e77768be0f",
+     "pt-BR": "(Relembrar histórias de terminais de ingressos e salvar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k422",
+     "source_text_sha256": "f32ab15b86efec5d5be4d637d7ef6fc7c041c46b3e500bf06380124cb996adb6",
+     "pt-BR": "Tem um livro na estante que dá pra pegar: \"A Saga da Última Espada: Capítulo do Céu Aberto\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k424",
+     "source_text_sha256": "b78747abfe840903f66aaeb69a7be467604596a51f148b3ccaeac2ba39eb1ad0",
+     "pt-BR": "(Pegar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k426",
+     "source_text_sha256": "7b5a3ad874fd2884e4e7ea2b11649feedb492ab7c080dbd2ff35c11aed8dbd94",
+     "pt-BR": "(Devolver à estante)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k428",
+     "source_text_sha256": "caee37be917ad077d30758a8bdde757ea6275d7adbc7cbe64fb1588a2021d7b6",
+     "pt-BR": "Você conseguiu 【A Saga da Última Espada: Capítulo do Céu Aberto】!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k430",
+     "source_text_sha256": "dd117fd1421bffd59221db16cc42734adbbaea88881ca4c5b5f446598992452e",
+     "pt-BR": "Nada mais me interessa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k432",
+     "source_text_sha256": "d36ea891e79124d70c5679e64e56046c9bd1e436e6f045fd4007272f0fb9dd9f",
+     "pt-BR": "Edições antigas do Semanário da Sombra Gigante enchem a estante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k434",
+     "source_text_sha256": "7839ef9398c0e91a0b1f2326efae102ee0519ed4b7448dee6469b4d542c1b84c",
+     "pt-BR": "(Ler)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k436",
+     "source_text_sha256": "7c5fc83fc3d01e3e8bac9a00f45b9ba69305b028a44798f4ee38a9182c51d821",
+     "pt-BR": "(Devolver o livro)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k438",
+     "source_text_sha256": "a88a2ac6b2d6c1e248401a6b5a8b025af2ad8d15c635648240b624a44c89cebc",
+     "pt-BR": "\"Em 9 de outubro, a pedido do País B, o País A enviou\ntropas terrestres para tomar a base do Grupo Rebelde C...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k440",
+     "source_text_sha256": "77f0b583c266a1bafbfc20c7353f250c87b16bc589cfb95f4b165f2298551299",
+     "pt-BR": "\"15 de outubro. Entrei numa cidade retomada de C com as tropas do País A.\nOs guerrilheiros de C ainda estavam nas ruas...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k442",
+     "source_text_sha256": "fd4c2f897a5f3c0d036f678068686867c5a96dd4b0b27d989f11e5072855c4fc",
+     "pt-BR": "...Uma reportagem vívida de uma zona de guerra.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k444",
+     "source_text_sha256": "3c81871acfae1ae16395c5064c66fe6247e3e02bd85b3ae890731b3309c5e821",
+     "pt-BR": "Parece que esta matéria foi escrita por um repórter chamado Otsuka.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k446",
+     "source_text_sha256": "76f4360005b3e04ce13a9228fd21416f220a58f1d91a97240e45d3cd8ac9a68a",
+     "pt-BR": "Uma pasta com pesquisas de leitores.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k449",
+     "source_text_sha256": "5cc00edcc7007accbd91d9c788c0b76346ca30347170226964c7974485528452",
+     "pt-BR": "(Devolver a pasta)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k451",
+     "source_text_sha256": "7073259dc96419967a2e2913d67193da3131de4de919f903b1051430c0a0d266",
+     "pt-BR": "\"A matéria da Risa Kashiwagi desta semana foi ótima.\nEla investiga a fundo e explica tudo com clareza.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k453",
+     "source_text_sha256": "c36dd8f4bf1f87d37ed871d4b5b1cdb552f94c734c3fd9fe3e00e5d64f1232c6",
+     "pt-BR": "\"Sou fã da Risa Kashiwagi. Acompanho ela desde que\nficou conhecida como jornalista estudante.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k455",
+     "source_text_sha256": "df4479299d2741a997f8aae9d787b7f017112bed847b94abe16ec5baff5f5f9f",
+     "pt-BR": "\"Sinto falta das matérias da Kashiwagi no Semanário da Sombra Gigante. Ela ainda escreve para outras revistas, mas quero ela de volta no Semanário da Sombra Gigante.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k457",
+     "source_text_sha256": "b64ca5f3ea0badc17dfb547f4c41aa43b77a565e3d89fb5487b79f499b3da2ef",
+     "pt-BR": "Uma pasta com todo tipo de pesquisa reunida para matérias.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k459",
+     "source_text_sha256": "56ec63617e5ef02c3c584808e39431da598d86e51b1952b58cf8b143bab80c46",
+     "pt-BR": "(Ler sobre a Cidade de Miyato)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k461",
+     "source_text_sha256": "75b01b5c46caa6e8175e9f0ac5ff432428358e2f4a57c307bec767003ce417c8",
+     "pt-BR": "(Ler a pesquisa sobre os clarões roxos)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k463",
+     "source_text_sha256": "a8c26e90ddcfbd4010b9b4fcb1361f4e8276d070f1c3b39231ae34c47ddea08c",
+     "pt-BR": "Ver as informações sobre a Ponte Sky Garden.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k465",
+     "source_text_sha256": "bcf245ea69d8d1b8b5b0715d43a042bc3c55f80245c2298b1e429967506112a3",
+     "pt-BR": "Ver as informações sobre a Torre Iberis.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k467",
+     "source_text_sha256": "9ab05e6907fbf3a1c8a4a18b5500967ea79caa66efbbc9a174f99e27216dfa87",
+     "pt-BR": "Ver as informações sobre a Torre Miyato Sky.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k469",
+     "source_text_sha256": "681c1547b39920d1b9c4ae86eb4200f606237ea688b72895d40dc9219c556465",
+     "pt-BR": "Ver as informações sobre a W&P Consultoria.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k471",
+     "source_text_sha256": "644e779b043fe2aaeafae41c792bee73e0a841eac5b9c50405233494ddc9e4d0",
+     "pt-BR": "Ver as informações sobre a Radio Sky Garden.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k474",
+     "source_text_sha256": "f22a931d2733b391e313a7bbc78a11d6c346683256769db0e0d9bd48f7071fd4",
+     "pt-BR": "＜Cidade de Miyato＞\nA Cidade de Miyato é a capital da Província de Miyato e uma cidade designada pelo governo.\nTem 13 bairros e uma população total de 2,13 milhões.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k476",
+     "source_text_sha256": "1bbf766073a57e03aed87ba6a7b6911a9cbe2d4e0fc2120ce26b42c6404cc5c2",
+     "pt-BR": "A indústria pesada prospera na região da Baía de Miyato, de frente para o Oceano Pacífico, e o comércio\nprospera nas planícies em volta do Bairro Sakura, o movimentado centro da cidade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k478",
+     "source_text_sha256": "8889eeba5db95ab320f3d122494ece0ebfcd8e2adbf76b6f797d9823ee67a7a9",
+     "pt-BR": "Dois sistemas ferroviários funcionam na cidade: a Ferrovia Elétrica de Miyato e o Metro Rail, o metrô.\nA cidade também tem uma ampla rede de avenidas largas, o que facilita andar de carro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k480",
+     "source_text_sha256": "3a67adbc12d3a6e4677f9c5e04dfe22c4619ac7ae0606b5d98f6176349dd67df",
+     "pt-BR": "O \"okonomiyaki de Miyato\" é uma famosa especialidade local.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k482",
+     "source_text_sha256": "96f9d63cc18268799de1fb27f4dd5ea97f1e7a7bc85f717d041ad321cfd24930",
+     "pt-BR": "＜Clarões Roxos＞\nNos últimos dias, clarões roxos têm sido vistos com frequência nos céus do mundo todo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k484",
+     "source_text_sha256": "b56434afeacb802e567d8b0682ad074add1c777f88ec0d1945ada65c2fb1e2d2",
+     "pt-BR": "Relâmpagos, bolas de fogo e meteoros iluminam o céu,\nmas esses clarões roxos não são como nenhum deles.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k486",
+     "source_text_sha256": "632ede06019e27bd1834f374c9cb99119adc815e0d465c18b7dead5754ab61f7",
+     "pt-BR": "【Características Principais】\n1) Parte do céu brilha em roxo\n2) Vem com algo parecido com relâmpagos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k488",
+     "source_text_sha256": "dd491a5bff3dcdb716975e52e2310b7ddb39bd927fa80f4abaaffe5ab6dd5163",
+     "pt-BR": "3) Já foi visto em céu limpo, sem nuvens\n4) Cada clarão dura uns 7 segundos\n5) Nunca é visto em dois lugares ao mesmo tempo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k490",
+     "source_text_sha256": "7bbe816fb53d4e13729228c6e84484f06f8601dd08d836d74f6ac1f260e8d12c",
+     "pt-BR": "Até agora, não houve relato de danos causados\npor esses clarões roxos. Há pesquisas em andamento no Instituto de Pesquisa de Raios Cósmicos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k492",
+     "source_text_sha256": "023f5bcc987c57ca1a0fcf90dc7ef72a2d761f0ac83aaca456265cfa73163d2f",
+     "pt-BR": "＜Ponte Sky Garden＞\nUma ponte enorme sobre a Baía de Miyato, com 11 km de extensão. Além de carros\ne da ferrovia Garden Liner, ela também tem espaço para bicicletas e pedestres.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k494",
+     "source_text_sha256": "8ad0251bd0e1ba1d0fa3a29502aaeebc5b5d8f8d959b169ae953268de4468a51",
+     "pt-BR": "Levou 8 anos e 2 meses para ser construída, a um custo total de 1,0564 trilhão de ienes. Foi construída pela Construtora Kunshiran, sediada na Cidade de Miyato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k496",
+     "source_text_sha256": "c39ee6d35bdc7e8a5fae4e4494e60afa2dfa1e65bba229b5bed2950f9514bf2a",
+     "pt-BR": "No meio da ponte há dois restaurantes: o italiano \"Ristorante\nMiyato Bay Area\", no sentido de ida, e o asiático \"Udan Lazat\", no de volta.\nO nasi goreng do Udan Lazat é incrível.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k498",
+     "source_text_sha256": "cff557a0716ed726b967d12631864d73e7de3fc752ef1191d13cc45d0c9359fc",
+     "pt-BR": "＜Torre Iberis＞\nUm arranha-céu de 50 andares e 231 metros, construído na orla da Cidade de Miyato.\nNos últimos anos, virou um dos cartões-postais da cidade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k500",
+     "source_text_sha256": "7cd89e59516441cf2e98b466fc6fa7be142ff32cd0e2ac360db058fbd7669aa7",
+     "pt-BR": "Do 2º subsolo ao 15º andar há lojas, do 16º ao 26º escritórios,\ndo 27º ao 48º um hotel, e o último andar é um mirante.\nA cada 20 andares há um \"andar de treliça\" para segurança contra terremotos e incêndios.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k502",
+     "source_text_sha256": "d2b5f5f1213b6859f2e575d8b7ed605ba9fbfb85a5c12e402e7afb6c42341166",
+     "pt-BR": "A Construtora Kunshiran, que construiu o Edifício Torre Iberis, é alvo do grupo ambientalista NKX. O líder do NKX, Kiyoharu Futamura, é um radical conhecido, e há boatos de um grande protesto em breve.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k504",
+     "source_text_sha256": "aa1496b508fbb6be56cd90e479704842e3fecd31bc838d0137b6c1f428a4a6b2",
+     "pt-BR": "＜Torre Miyato Sky＞\nUma torre de transmissão de 190 metros no centro da Cidade de Miyato. Comemorou 50 anos no ano passado.\nÉ uma das construções mais marcantes da cidade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k506",
+     "source_text_sha256": "1aaf5f36e1f29cd47f9f5de2495a746db7597e15f95e0bf2eeef64b16a5188b8",
+     "pt-BR": "Esperava-se que a inauguração da Torre Iberis reduzisse o número de visitantes,\nmas ela continua uma atração turística popular e consagrada da Cidade de Miyato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k508",
+     "source_text_sha256": "071fd070eb495272a56321d1f26b37e0df47291c4ebeb1b9823a1bd4dab0abb6",
+     "pt-BR": "＜W&P Consultoria＞\nA W&P Consultoria Ltda., conhecida como WP,\né uma empresa que lida com informações sobre armas, com sede no Edifício Fortune Center, na Cidade de Miyato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k510",
+     "source_text_sha256": "cc15adae07088afea42527309688ed46f8953cfa5888c5ad6c372b8c98d1eec2",
+     "pt-BR": "Negocia com países e facções do mundo todo e tem um histórico impressionante.\nHá quem diga que ela controla o comércio de armas do mundo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k512",
+     "source_text_sha256": "a4d3685acbe8f76205ce91c0924c5cc3af576f6c41d272638235eaac8fb58a06",
+     "pt-BR": "Por fora, é uma empresa legítima, mas rumores sombrios a acompanham. Além de informações sobre armas,\nela intermediaria subornos e daria fim a quem atrapalha.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k514",
+     "source_text_sha256": "56c613b474e4021ac9a434fbf0239ee71b0367775f2a6c3753a630888252c5f8",
+     "pt-BR": "A atual presidente, Reiko Kamio, teria sido escolhida a dedo\npela americana M Corp., que banca a W&P.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k516",
+     "source_text_sha256": "db5e6d0196e2705c967f493446119996b1d131de2dd502659bc172c405a7296e",
+     "pt-BR": "＜Radio Sky Garden＞\nUma rádio AM da Cidade de Miyato. Seu principal programa, \"Jardim do Céu da Meia-Noite\nda Aya Suzumura\", é transmitido ao vivo para todo o país a partir da Cidade de Miyato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k518",
+     "source_text_sha256": "9a0b1084352c61453d3946482384dd18105454baca1994088227fadacaf0ba19",
+     "pt-BR": "A empresa se chamava \"Rádio Miyato\", mas, no aniversário de 40 anos,\nmudou o nome para \"Radio Sky Garden (RSG)\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k520",
+     "source_text_sha256": "e9d8028d424d2b997632032456647e25110df3b803ced404c313e4f995c09c4b",
+     "pt-BR": "Curiosidade: Aya Suzumura é da Cidade de Mizuna, vizinha de Miyato,\ne se formou na Escola de Cantores de Miyato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k522",
+     "source_text_sha256": "5bd8619a5088882a733bf9b969ef6e3b20088171e055d4d98e68bf91af9c904b",
+     "pt-BR": "Parece a mesa da editora-chefe.\nO cinzeiro está transbordando de bitucas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k524",
+     "source_text_sha256": "93071fb04e15950740381ece8816c2da54e287d223bd8e1a88833f3fbe1796af",
+     "pt-BR": "Parece a mesa da editora-chefe.\nO cinzeiro está transbordando de bitucas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k526",
+     "source_text_sha256": "b8ee2309d7830bdd19f86c2ec987cdfcb2985d239b2029f8b3b15569dd3f5bc6",
+     "pt-BR": "Está bloqueado por escombros.\nNão tem saída por aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k528",
+     "source_text_sha256": "688070676aad480ddb4fbaa2cdda8c9f9916d3f7f93515e32965e31ca25bb1b7",
+     "pt-BR": "Está bloqueado por escombros.\nNão tem saída por aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k530",
+     "source_text_sha256": "303f8e67fc8c1d2b82f73de35b2f9be4066ac2b5498685c3626d75d82d5efe4a",
+     "pt-BR": "O esgoto desabou. Não dá pra seguir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k532",
+     "source_text_sha256": "15a79b0016a32797c52cd70ae09f6cf493355f161b06265c63945a95adf470ea",
+     "pt-BR": "Já olhei aqui. Nada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k534",
+     "source_text_sha256": "510f1b051ee5aabe2834f97ddab1e6e63f399fae83ab9e738805fa629a82d444",
+     "pt-BR": "Já olhei aqui duas vezes. Nada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k536",
+     "source_text_sha256": "e86413385beb1226c02f6561107e7a1ad0aaf52bf8094796e92d50174eb5fb8c",
+     "pt-BR": "Já olhei aqui três vezes. Nada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k538",
+     "source_text_sha256": "e599eb3d6d260eb7ffe75025a74447514a3306a79039ebae356ac893432654e8",
+     "pt-BR": "Já olhei aqui quatro vezes. Nada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k540",
+     "source_text_sha256": "37992d813adee2712545ea702fac21ba75329dc8913c15c63d8bd6f7a401afb0",
+     "pt-BR": "Não sobrou nada aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k542",
+     "source_text_sha256": "c7ca4a2716e0c3ac79d562a380a9c32b7d879fca99f78637072719dce5757740",
+     "pt-BR": "(Olhar mais de perto)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k544",
+     "source_text_sha256": "c01034f6e849b2efa8a0fe092e275c47b92c9327f30f8254545ba67db28ba25a",
+     "pt-BR": "(Procurar mais um pouco)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k546",
+     "source_text_sha256": "790af98a49656bd0084dafef83c97dbdec90032a3475a618542ea914274ac02d",
+     "pt-BR": "(Cavar um pouco mais fundo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k548",
+     "source_text_sha256": "333700067883f81d98ee421517394d7dc434b17e0dd52eacc3789ba4ba7535fd",
+     "pt-BR": "(Tirar os pedaços grandes de escombro)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k550",
+     "source_text_sha256": "09ba0cfb3d0459366c80c385aff0c507d796eb8d05554d6cedcf8ddbfe1dc061",
+     "pt-BR": "(Cavar um pouco a terra)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k552",
+     "source_text_sha256": "4017d6e2031098133b17b18037330bf811ede684b7373ab0f044445e72b3bd22",
+     "pt-BR": "(Ir embora)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k554",
+     "source_text_sha256": "62ac22795e84a4975be4251de3c8c6e6e26898457d6ea6a312495a86f0ba6293",
+     "pt-BR": "Só terra e escombros. Nada útil.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k556",
+     "source_text_sha256": "f9d3f389cb00c70cea87f6fb6ebf6a8b318390e1423f0e1943d7b50664e460c4",
+     "pt-BR": "...Uau!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k558",
+     "source_text_sha256": "f0621ef3753d6004a830e9b544cf907a03386e3c855f88ddf7543f7950ece9c4",
+     "pt-BR": "Você achou um pote de tesouro enterrado!\nEstá cheio de moedas de ouro antigas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k560",
+     "source_text_sha256": "26cba16a2a14f9538b8257b6f149f00c9ebcf85a8d4f46b2a34df4f011dabfa0",
+     "pt-BR": "(Pegar tudo enquanto a editora-chefe não olha)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k562",
+     "source_text_sha256": "aa49b103219bfc9befad0da7b78cccfbf42824a90cffa271e5b24d0b5bb35a2f",
+     "pt-BR": "(Pegar uma moeda de lembrança enquanto ela não olha)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k564",
+     "source_text_sha256": "d210b2f24a167f397d54033b10ae517ebe609205908ffd0bfeb3cce2dd036b16",
+     "pt-BR": "(Isto é um artefato precioso. Deixar como está)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k566",
+     "source_text_sha256": "e1a15d2fb7a59eb681abc324d96ef5da6e00312d07a7a6177bda1a2dfae8d56f",
+     "pt-BR": "Você pegou escondido 8,96 milhões de ienes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k568",
+     "source_text_sha256": "4d4622668f4461552861720465c71b3d200aa93d40fb9248ca8be90aa4c4f3fe",
+     "pt-BR": "Você pegou escondido 80 mil ienes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k571",
+     "source_text_sha256": "d43d2386e6ebec0c9455a7a3861f457dd4a9b48228a03b51f53ee0ae9cf9c3bf",
+     "pt-BR": "Isto é um artefato precioso. Vamos deixar como está.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k573",
+     "source_text_sha256": "2e0c613f27ed70b099cf06b695417d09bff0309d799709de26f1d1c30ef8ccd7",
+     "pt-BR": "Que achado! Depois escrevo sobre isso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k575",
+     "source_text_sha256": "18112a1800edff6066b66a7eed71d81b71541df9ed7b09b8cb1ecbb3472d8f83",
+     "pt-BR": "Você achou o que parece ser um fêmur humano!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k577",
+     "source_text_sha256": "15f0f3fd36f834cbaed38f8ee41cebb227303e393bac62b16f8d5e0d1344c37d",
+     "pt-BR": "Sinto cheiro de crime! Depois escrevo sobre isso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k579",
+     "source_text_sha256": "73de3e333637b7c52efce795383cd5d96c43bb8e6d9573342cef5086e166a247",
+     "pt-BR": "O que é isso...? Uma pedra de formato estranho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k581",
+     "source_text_sha256": "8996072ff240ebe7d96679527d91a1cab229e5c877e0adf93d7d1b81bb41882f",
+     "pt-BR": "Ei! Isso não é um crânio fóssil de\num parassaurolofo, um dinossauro do Cretáceo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k583",
+     "source_text_sha256": "99d52beea00bf48013c315702b5a2447b10b6f91da6621c0e07a7c6d59250705",
+     "pt-BR": "Que achado! Depois escrevo sobre isso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k585",
+     "source_text_sha256": "ca2409c4f1e066cf67f3524d8294ae72a6fcd0263d37fca07757e983b0a536cc",
+     "pt-BR": "...Sinto algo assustador me observando...\nVem destes escombros.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k587",
+     "source_text_sha256": "285d37b142c82a4d348c309b5ff86e9af458554c98b04c5bff37a32f99c89883",
+     "pt-BR": "Olhar debaixo dos escombros?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k589",
+     "source_text_sha256": "f30f728ea2decc44b723ae835d1b0cb212d2f4a30c3e34f572a6beb0b0d3ad4b",
+     "pt-BR": "(A curiosidade mórbida vence. Olhar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k591",
+     "source_text_sha256": "e6bf7551504df16cac900e6a265913b59dd85e4b9a8e5da7520fa87319ee35ab",
+     "pt-BR": "(Assustador demais. Fingir que não percebeu)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k593",
+     "source_text_sha256": "22e0e98827c982acb27b2c8b4131748e85bbc67037ec2510ed8c2143103aac83",
+     "pt-BR": "Você tirou os escombros, nervoso...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k597",
+     "source_text_sha256": "780b092e12c465fb7e88cd468ab757b99ed7f95b95c7b5d95f549a0f99034542",
+     "pt-BR": "...Tem um túnel.\nDá pra entrar agachado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k599",
+     "source_text_sha256": "20e25d6810b66b719abc7fcf77250f5de860cb013028555bb446e042e78d0cf5",
+     "pt-BR": "(Entrar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k602",
+     "source_text_sha256": "9d3fd431123c551356b91e3545a2755b35a1819e5e96fe81e71a56213d410625",
+     "pt-BR": "...É impressão minha ou meu reflexo parece cansado?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k605",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k606",
+     "source_text_sha256": "f2ecc2df775b5e2368effbad186da040c54c6c5ed6e92922e42d7e305bf5a32b",
+     "pt-BR": "Depois da destruição causada pelo Kiryu Tipo 3, o prédio\nonde ficava o escritório deles desabou. A W&P foi varrida do mapa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k608",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k610",
+     "source_text_sha256": "aa8f1a945d5420f4aa7867ba8ac37abd4f7c3b2b25b7421a1eb35044f5287979",
+     "pt-BR": "O Shibata e o Muto provavelmente não vão mais atrás da gente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k612",
+     "source_text_sha256": "570bba5171208d64d85d0fd01ecd3da766662f4e76f71ad32eabff55a7f5e875",
+     "pt-BR": "Acho que o Shibata e o Muto não vão mais atrás da gente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k616",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k618",
+     "source_text_sha256": "077d2960da5411f7deb05929a6ac95e9744f9cbfa07dda760bf26c0ad31af898",
+     "pt-BR": "E agora?\nNão precisamos mais ir pra Cidade de Mizuna como o Otsuka disse...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k620",
+     "source_text_sha256": "38737c4447f9c0ff24640e51b9eed703ac06e8a57e1fb02fc30c7fc160043814",
+     "pt-BR": "Do Otsuka?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k622",
+     "source_text_sha256": "b133813639acf28c668eaa1c7ef6a674a26cbb4699db1c38e68566267eead306",
+     "pt-BR": "E-mail do Otsuka, lido pelo protagonista masculino",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k623",
+     "source_text_sha256": "041dde4d139bddf5358e524a837a6251dcb4dc61e0ca368d9b6d4f55add1ceb2",
+     "pt-BR": "Parece que apareceu outro grandão desde então. Vocês estão bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k625",
+     "source_text_sha256": "762e5ede7d01c36ca6a41a71b3d997c53499d8aa20ba7ab8568184b9fac4b147",
+     "pt-BR": "E-mail do Otsuka, lido pela protagonista feminina",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k627",
+     "source_text_sha256": "93bf96a12000883acef3c5f1030035392105333d1e8af7b4f8bad4e9c2c670d2",
+     "pt-BR": "Vocês devem estar a caminho da Cidade de Mizuna, mas preciso de um favor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k630",
+     "source_text_sha256": "02a52d22028dd81733e66cccacfbda25270848df7352401abb742fe64229357e",
+     "pt-BR": "Tem um lugar chamado Hananira-cho perto da Cidade de Mizuna.\nUma velha amiga minha, editora-chefe, está lá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k633",
+     "source_text_sha256": "2767fd77d4e885db7cf995a05378c610a23b40ed67ab22d8863519d3f6983c5e",
+     "pt-BR": "Pelo jeito, ela machucou a perna e não consegue sair.\nVocês podem passar lá e ajudar?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k636",
+     "source_text_sha256": "cc865fa6b99ae434fd43ab2a5e4c5903208faa960a36bf23e8bb831baf57976d",
+     "pt-BR": "Ela deve estar no Editorial 2 do prédio da Editora Ebine.\nConto com vocês.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k639",
+     "source_text_sha256": "fcadbce63bb2cbd16cc6d2eb99648f27c6b58c3a7bc28a261aac40009ca1566c",
+     "pt-BR": "Ah, aqui é Hananira-cho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k641",
+     "source_text_sha256": "3cb8cc87ea91f70ffd877b288d0efe6ecc20bd9794832d9af462e5f1105d49b3",
+     "pt-BR": "Já estamos pertinho mesmo. Vamos ajudar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k643",
+     "source_text_sha256": "f46b428f865b7630bbe4f71acb3e5cb7701aca7502be6661bad35e155d266b1b",
+     "pt-BR": "Vamos ajudar a editora-chefe e perguntar sobre o passado do Otsuka!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k645",
+     "source_text_sha256": "9d087cca84cc61c35a738bd376692fe531cd9b491ec237e710de2a5109f13b58",
+     "pt-BR": "\"Editora-chefe, é... Deve ser uma velha ranzinza... Fazer o quê, vamos ajudar.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k647",
+     "source_text_sha256": "827a9fb2c60f6a3c68858aa5e40795b66de1436e77bfdfe786b01baf8f69a263",
+     "pt-BR": "Já estamos pertinho mesmo. Vamos ajudar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k649",
+     "source_text_sha256": "7b1c1439c933215ea2e4f8ef49a09982108ae25462d5599168de438a36afc3c5",
+     "pt-BR": "Vamos ajudar a editora-chefe e perguntar sobre o passado do Otsuka!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k651",
+     "source_text_sha256": "d212479b640dd0b8ecba2b10d4a9b04390a92466f56520e2c7babe17f09da83f",
+     "pt-BR": "\"Editora-chefe, é... Deve ser supercabeça-dura... Fazer o quê, vamos ajudar.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k655",
+     "source_text_sha256": "9b8e37259ce15d077e22d04901693c13230e4094b7d412aea5722da040ae8442",
+     "pt-BR": "Claro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k659",
+     "source_text_sha256": "8059f43b69df9852539afc1f29b566b7f4c42992bf4394d66df37c2398729087",
+     "pt-BR": "É.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k661",
+     "source_text_sha256": "580a48d22a0fe97bcbb40c9350c8917ab2fcb3e637ae49d052ac94ccd55aa553",
+     "pt-BR": "Editora-chefe, é? Deve ser uma velha ranzinza...\nFazer o quê, vamos ajudar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k663",
+     "source_text_sha256": "12581482521a060f930c298ae9dc67723e02a920588d3e7f2ec247d145deae83",
+     "pt-BR": "Editora-chefe, é? Deve ser supercabeça-dura~\nFazer o quê, vamos ajudar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k665",
+     "source_text_sha256": "a7de3ba6226e0601b322ef5f5103ed6968c8e99931ffd647b69d10bb3d360e45",
+     "pt-BR": "C-Claro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k668",
+     "source_text_sha256": "b77b76ca70992305534e2ff569c5981fb59717278b0e4fbae98cef03269d3712",
+     "pt-BR": "《Para o Otsuka:\nO prédio da W&P desabou. Parece que a organização foi varrida do mapa.》",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k671",
+     "source_text_sha256": "711c1e427f75187c85e8614826cdbd88defafa5f5c464364c48eafca81895b40",
+     "pt-BR": "《Então não precisamos mais ir pra Cidade de Mizuna, mas\ncalhou de estarmos em Hananira-cho, então vamos ajudá-la.》",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k674",
+     "source_text_sha256": "0652ec15f1117a6bb4d86c82fb57f671db0a8e2c3662268d0d4aee1df28c7567",
+     "pt-BR": "Ela está no prédio da Editora Ebine, né?\nOnde será que fica...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k676",
+     "source_text_sha256": "4bfc48a77291ee72af0571a34e387bf6a9c972b568328cfffab8eba200cfb428",
+     "pt-BR": "Você está bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k678",
+     "source_text_sha256": "bea98d2a10901398c2550f3147b5a92e592cd5556e34b2528a8f8e18e2684ad8",
+     "pt-BR": "Hirai＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k679",
+     "source_text_sha256": "f523db09b0afd19a6626b326b2cba833d3af8337f2084d36ebb2b51d0c664ad2",
+     "pt-BR": "Ah, estou bem, estou bem. Consegui uma foto ótima.\nUm close do gigante batendo no prédio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k681",
+     "source_text_sha256": "d2978d17c78d15ac4d9013a648c849179f0a8ba78eca10d13e882a43225e38f0",
+     "pt-BR": "Hum... vocês dois\nsão a ajuda que o Otsuka mandou?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k683",
+     "source_text_sha256": "006fa5349a663cb9c3bef338e593dbcfb06346ca1b4adb5df7ddee9a4cb8d504",
+     "pt-BR": "\"Sim. Você é a velha amiga do Otsuka, a editora-chefe?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k685",
+     "source_text_sha256": "909dc103a26be6dcbfcb013cca22610156ff74413b7e3f91f26cabc18fdaf92c",
+     "pt-BR": "\"Sim, mas o que você está fazendo?! Temos que sair daqui!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k687",
+     "source_text_sha256": "03f4fa8502b7345d60d40086769cf64d86b11beef920ba94eefd43382a0918f2",
+     "pt-BR": "Isso! Você é a velha amiga do Otsuka, a editora-chefe?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k690",
+     "source_text_sha256": "817079d556ad382ff387022f35fd82622873ae32cbfcb942a6d624f4ed0b2116",
+     "pt-BR": "Sim, sou a Hirai, editora-chefe do Semanário da Sombra Gigante.\nObrigada por virem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k692",
+     "source_text_sha256": "e4a938f143a0553fdba1b4a9d8e062874c2e217daf89139842b7b926b3d70d8d",
+     "pt-BR": "Espera. Só deixa eu enviar esta matéria.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k694",
+     "source_text_sha256": "5854e88cf79ab2a8830b360a83ac060544ba6be1865865311feb0376b8d87af2",
+     "pt-BR": "Sim, mas o que você está fazendo?!\nTemos que sair daqui!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k698",
+     "source_text_sha256": "0ac6265ada9e3df10265e799f06a14cb56d28bf2bb820801268dd6c97fc0e16b",
+     "pt-BR": "Sou a Hirai, editora-chefe do Semanário da Sombra Gigante.\nObrigada por virem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k700",
+     "source_text_sha256": "b7e7a580d537763524250ab321f6e55d5d3498676167303abf282d50cb59ee1c",
+     "pt-BR": "Estou correndo pra lá e pra cá cobrindo as sombras gigantes desde ontem,\ne machuquei a perna...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k702",
+     "source_text_sha256": "a34e806d729b08f33f246d7dac75166edbca1a1ada38f0d34ebb4341a6d5cded",
+     "pt-BR": "Com todo esse caos, não consigo falar com a maior parte da equipe.\nEu precisava de ajuda pra sair.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k704",
+     "source_text_sha256": "c5367aaab69685d982b3462d47a7fe18b3d203dc1373c7d22344ef5d4245daed",
+     "pt-BR": "Mas nunca achei que uma sombra gigante ia aparecer bem aqui na frente.\nEntão pensei em tirar umas fotos e enviar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k706",
+     "source_text_sha256": "03e70e586b72fa75b3a4510573dc76addb4b264e529794d96bb22b38a6d9b2ab",
+     "pt-BR": "Hm? Hã?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k708",
+     "source_text_sha256": "235e3353ce57bf2861514ddcb87f1b5177d64c1fcd1a1d55bdad2c292cafdb34",
+     "pt-BR": "Ugh, não dá. A matéria não envia. Parece que aquelas\ncoisas destruindo a cidade derrubaram a rede.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k710",
+     "source_text_sha256": "142a36e13c3e003fe30ad5e4b3a3fde95bf3b09dbe5719672f865b8460e0415e",
+     "pt-BR": "Ah, obrigada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k712",
+     "source_text_sha256": "0fc4a0b0fc200e0e6b61e58a1c27630b1ff0d83eaf70c03ac6966c8573e72bb5",
+     "pt-BR": "Hora de ir. Vamos sair daqui.\nVou arrumar minhas coisas, então venham até a redação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k714",
+     "source_text_sha256": "6b4f31169ce5a2349ca6714373e672a76e655093ae20d35db2bf70df95798d9a",
+     "pt-BR": "Desculpem a demora.\nSó conferindo se não esqueci nada...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k716",
+     "source_text_sha256": "192186485ce1886f00891882cc1198d601bb2fd671d015481fa4bdc5aaa6de3e",
+     "pt-BR": "Ah, é, a sala do arquivo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k718",
+     "source_text_sha256": "8a57ddfa796654e39610a0c18d1dc55aa7c17c24f68a2862df1c1081808b02dc",
+     "pt-BR": "Ah, aqui está.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k720",
+     "source_text_sha256": "0467e68ca8bc82ced992ec26f2bcc7490c79b0ef8074fc213ea1ae3ac8d9256f",
+     "pt-BR": "O primeiro Semanário da Sombra Gigante em que trabalhei, 16 anos atrás.\nTem uma reportagem de guerra do Otsuka, que começou no mesmo ano que eu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k722",
+     "source_text_sha256": "3a0f44eff0d6f89e91f7fcfa07644c056221fd70350defb108adcb590bde7743",
+     "pt-BR": "\"Peraí, o Otsuka era correspondente de guerra?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k724",
+     "source_text_sha256": "388b4ba2502d6f1a9ca3acbabd90e2c72c07a0896ebcbe8db7f84195d720a2f5",
+     "pt-BR": "\"Como o Otsuka era quando começou?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k726",
+     "source_text_sha256": "7e62980d99834cbbe0a6de67a4a4254931223b27e9dfbe620f642b85b4f78cfc",
+     "pt-BR": "\"De onde você e o Otsuka se conhecem?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k728",
+     "source_text_sha256": "1c2411b7da037a1c49ff58f2186c97301a96e092d6107208bcb01bf99e49ef99",
+     "pt-BR": "\"É perigoso aqui. Temos que ir, agora.\" (dizer o óbvio)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k730",
+     "source_text_sha256": "97956b416352b972315bce1154229afb28321ddb7b0a35f901232cc7a9e18884",
+     "pt-BR": "Peraí, o Otsuka era correspondente de guerra?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k733",
+     "source_text_sha256": "4d859a70e0d59cbff5a9d26e4534e226982a30a84b39723c01356930d25ebdfc",
+     "pt-BR": "Ah, desculpa. O Otsuka me fez prometer\nnão falar dos velhos tempos. Pergunte a ele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k740",
+     "source_text_sha256": "7ba0b000743b4770cef57d24b14d1069b13b932c8d6f2d7895bfb5f2174e4465",
+     "pt-BR": "Trabalhamos juntos. Ah, é, o Otsuka me fez prometer\nnão falar dos velhos tempos. Pergunte a ele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k742",
+     "source_text_sha256": "512c9ed95832565d623ee93b2e41dfbb72524eec4a0b7f3e055e0a8bd06cf31e",
+     "pt-BR": "É perigoso aqui. Temos que ir, agora!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k745",
+     "source_text_sha256": "7a16180702507f2f4bbe816a39b92954561213eea897b762c11145922c3bbd6b",
+     "pt-BR": "É. Nossa, que saudade. O Otsuka, naquela época...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k747",
+     "source_text_sha256": "c9657751fefea8867369ef0abc5e6278888d7f61010dc0a9f5837f6a28719be5",
+     "pt-BR": "Ah, é, não posso falar dos velhos tempos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k749",
+     "source_text_sha256": "5ebd8738820cbce9f867ca56aa87e01195cd84b3685596480bb3351849b50d23",
+     "pt-BR": "Bom, o Otsuka parece estar trabalhando bastante ultimamente.\nTalvez os jovens talentos tenham acendido um fogo nele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k751",
+     "source_text_sha256": "8341b422f9413210a1b320d9a4f8655f33e181afbc793eae0830ab2bf0e3ba67",
+     "pt-BR": "Sabe aquela estrela em ascensão...\nComo é o nome dela? Risa alguma coisa...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k753",
+     "source_text_sha256": "1c664dbb02c171221e3156342a0f2a05be6438712825ae98adb935cd2ce29318",
+     "pt-BR": "\"Risa Kashiwagi\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k755",
+     "source_text_sha256": "d4e326871f3936d6e6b89680821bb728e99539854dcdcb2dfafbe9d4d879ac68",
+     "pt-BR": "Risa Katsuragi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k757",
+     "source_text_sha256": "2c412ae7649fcb60a81f9553cf3e7655bade46a3815d7d8c91b1e40fc6016553",
+     "pt-BR": "Risa Kusunoki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k759",
+     "source_text_sha256": "e3b159bd3576f99d9603d7a008ee844be696f1bb1e4949b3fc36fa3e5c1add24",
+     "pt-BR": "\"Risa Kashiwaaagi\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k761",
+     "source_text_sha256": "c17d89b9077558001785cfa3316a9067ed495081e3714611640266573809f97e",
+     "pt-BR": "Você quer dizer Risa Kashiwagi?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k764",
+     "source_text_sha256": "0d0908cdd38a722c056b70fa768a511ec352321fedc5236af9a6fa51712d0925",
+     "pt-BR": "Isso, isso, ela mesma! Risa Kashiwagi!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k766",
+     "source_text_sha256": "825131ccb828cddf1ad817734d1738399b58b1b5b5c0c380bb897e50afd68496",
+     "pt-BR": "Você quer dizer Risa Katsuragi?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k769",
+     "source_text_sha256": "3777943cfd2f84616696d82c35cacaa7f2ed0918fe9ff87c9ebe6009a978c2ed",
+     "pt-BR": "Não... hum...\nAh, é, Risa Kashiwagi!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k771",
+     "source_text_sha256": "9e3647d4a70be2aa154d82fb483ea8a18406d15ad5912da08ec1546de4b91958",
+     "pt-BR": "Você quer dizer Risa Kusunoki?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k775",
+     "source_text_sha256": "db6051f197e760a9936f265de249228e969217c49e6d90e7445bd2d86ff912ba",
+     "pt-BR": "Você quer dizer Risa Kashiwaaagi?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k779",
+     "source_text_sha256": "41825b05b8d0095674af1eb4dba3823f09493f1f0a0114705dbfbbf60ff95731",
+     "pt-BR": "Ela já era uma freelancer de peso na faculdade. Queria\ntrabalhar com o Otsuka, então os dois formaram uma dupla por um tempo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k781",
+     "source_text_sha256": "30a1146e1f4588d2fe5f3d8689e0d0e9cc7f306d7c9b1c6f9194e750d4a7d17d",
+     "pt-BR": "Mas o Otsuka só fazia o que queria,\nentão a Risa se cansou dele e a dupla se desfez.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k783",
+     "source_text_sha256": "40c71805546049df10828a4b9eb0081ad2c2610ad2cf486b22d90a3c7c4f88b0",
+     "pt-BR": "O Otsuka era terrível naquela época... Bom, eu sou uma hiena\nda mesma matilha, então não posso falar nada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k785",
+     "source_text_sha256": "927f5a664be76d39a3d6708664e29d7794781d4bbca26f492ae192f5a26c843a",
+     "pt-BR": "Depois disso, o nome da Risa Kashiwagi só cresceu,\ne o Otsuka ficou comendo poeira.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k787",
+     "source_text_sha256": "566e7edf05b60f4ee232e6f5b902ccb6af7ac2fdbd9b955343a3319524fe6b7e",
+     "pt-BR": "Hm?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k789",
+     "source_text_sha256": "169aeeccb9b02e8cdcf42063f08586f50f82a3d4e792e104405e5c0417451f46",
+     "pt-BR": "Ngh...! Esquece as coisas.\nVamos sair daqui. Cuidado com a fumaça!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k791",
+     "source_text_sha256": "769da96acac21e2490c18530cf4a335a321d3985b47d74084d26774dc9f3148f",
+     "pt-BR": "! Aqui tem sinal.\nDeixa eu fazer uma ligação rápida também.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k793",
+     "source_text_sha256": "d8c046f794f1488a7fd409d82472784896a01fa03218cbca149366ee282e2d4c",
+     "pt-BR": "Alô?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k796",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k797",
+     "source_text_sha256": "1510718dd3fd00ff1741452380001bba3296e8a48ad3261598180881cd4719dc",
+     "pt-BR": "Vocês estão bem? Onde estão agora?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k799",
+     "source_text_sha256": "898e9dcb4afb59a95a7421aa6f91a233682df7fbda134bce1e1c46ca1a657bd3",
+     "pt-BR": "Contei à Risa que a W&P foi varrida do mapa e que\nviemos resgatar a editora-chefe a pedido do Otsuka.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k802",
+     "source_text_sha256": "5a128f7b1e3c8ca3737b5cc170f1341ce164634bd9c2603f0b772974f8fb4c4a",
+     "pt-BR": "...Entendo. A editora-chefe falou alguma coisa de mim?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k804",
+     "source_text_sha256": "5df2068bc6bc1d18dce801ea75de5d4316aecf8bdf1cecc6ecc6be7c23620b3e",
+     "pt-BR": "\"Soubemos que você e o Otsuka trabalharam juntos\ne se separaram depois de uma briga.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k806",
+     "source_text_sha256": "102d3fd3d9c9717cafe5b02fef9a9fc9ea0b41bdfa748240d0f112bf2387da98",
+     "pt-BR": "Ah, então tudo bem.\nBom, cuidem-se. Eu entro em contato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k808",
+     "source_text_sha256": "018d17b35dbe2ea4b9d122be125a8cd33b65cd4ea2dbffe0dd5dcfb6dcc04248",
+     "pt-BR": "Tá. Então nos vemos na loja de conveniência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k810",
+     "source_text_sha256": "2840ebd0607f678db518916afb2049c1f6cdb13ca49c44dca931b2ffba432cf7",
+     "pt-BR": "Parece que o Mukojima, da minha equipe, se abrigou numa loja aqui perto.\nVamos encontrar com ele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k812",
+     "source_text_sha256": "45d007b90b6f7c015b8f6e6c4542d4ad24d0c00a24e031e03b414068f5bb84e4",
+     "pt-BR": "Os de fora... parece que se afastaram um pouco.\nSe vamos, a hora é agora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k814",
+     "source_text_sha256": "b6853e7d35651170ce26e154992ee103a17eb73e5d669920ccc0e7e25bb1d4f4",
+     "pt-BR": "A loja de conveniência que queremos fica a oeste, descendo a rua.\nVamos logo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k816",
+     "source_text_sha256": "6ffe6838beb98d2573a8e01415607ca673054b8070faca1f16e52a0b6bd22295",
+     "pt-BR": "Mukojima!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k818",
+     "source_text_sha256": "a728a43fea76cce4b9cb2ae5f31d627da61a4012007a23eeb83d49d5f145e88e",
+     "pt-BR": "Mukojima＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k819",
+     "source_text_sha256": "456a33c2cea6da845b643615b9b9498b83b3afae5071b7f9e348d1364c775f06",
+     "pt-BR": "Ah! Chefe! Desculpa ter fugido sem você...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k821",
+     "source_text_sha256": "9e895fb1f7365a8c3fabb78e363581005bdde5505b9f54a48349781b871516e0",
+     "pt-BR": "Não tinha jeito, com a situação daquele jeito. Mas fico feliz que você está bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k823",
+     "source_text_sha256": "4ffe8ea01ebb15e0ceb326bd8319f16644fe9a9ac18d5295539d29428913b4c8",
+     "pt-BR": "Parece que um gigante apareceu lá em Hananira-cho.\nA editora-chefe está bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k826",
+     "source_text_sha256": "554e804b3d1baf6c178146a941a727dac7db8c84e69c83a2d806b3ff594b2afc",
+     "pt-BR": "Resposta, lida pelo protagonista masculino",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k827",
+     "source_text_sha256": "7e39082677ab4ad7116edfdc89f60ff8595fc3ef410f419e36b276453ba64693",
+     "pt-BR": "\"Ela está bem. Estamos abrigados numa loja de conveniência aqui perto.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k829",
+     "source_text_sha256": "5a25637359f7b78f59b74dac7637cd2b1574c805b42f08409fd25c5e3444ccc5",
+     "pt-BR": "Resposta, lida pela protagonista feminina",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k831",
+     "source_text_sha256": "36d5b92c2dcf8ce040b531a5848da378061f8dec6633adb6fdb1718c6f2e4f76",
+     "pt-BR": "Que bom. Ah, é, o e-mail que vocês mandaram antes\ndizia que a W&P tinha sido varrida do mapa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k834",
+     "source_text_sha256": "60153e6dd31b471a69ef4bd5d03f72eddba5a79734a4cf079b1b0f89fdcf64b7",
+     "pt-BR": "Eles não foram varridos coisa nenhuma. Acabei de topar com\naquele tal de Muto. Eles ainda querem pegar você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k837",
+     "source_text_sha256": "b178afeea89ef1cdc67e3030662e7b8cb0b4e6cc89a5be4b211ede90e58755dd",
+     "pt-BR": "\"Quê?! A W&P não acabou?! O que a gente faz?!\" (entrar em pânico)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k839",
+     "source_text_sha256": "f791c21f7bfdfbdda42be90ccbf6ae7f5e0025f8223ddc1b8e101ef2af5ade19",
+     "pt-BR": "\"Aquele Muto! Da próxima vez que eu vir ele, ele está morto!\" (bancar o durão)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k841",
+     "source_text_sha256": "beaa4e6310306b8680d7d72034b53917cf6363a3e6c839aa28ec0c7e9e6dfc19",
+     "pt-BR": "I-Isso é ruim! Vou pra Cidade de Mizuna agora mesmo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k843",
+     "source_text_sha256": "3f1f3183f63330b8f4ba62ea50027f4c7928cfabfe5ffaf33b9a746fd6b0225d",
+     "pt-BR": "\"Quê?! A W&P não acabou?! O que a gente faz?!\" (entrar em pânico)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k846",
+     "source_text_sha256": "f970e7371242c7452914127f8f8baf0eb41ccbfbfc279881839c28d87159474b",
+     "pt-BR": "I-Isso é ruim! Vou pra Cidade de Mizuna agora mesmo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k848",
+     "source_text_sha256": "937ae0223ac1fd53b730af02637beda1566ea62640dcef6657d1f65c3f5f16cd",
+     "pt-BR": "Quê?! A W&P não acabou?!\nO que a gente faz?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k850",
+     "source_text_sha256": "bb5b546d2f2d834e439eb8bbe66cf3e806ab51ccbeffe2f5637b85abe586133b",
+     "pt-BR": "Quê?! A W&P não acabou?!\nO que a gente faz~?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k852",
+     "source_text_sha256": "de3d39c555c1e66389f7311de162b2eef877787b78fb98e196f88f44f383103d",
+     "pt-BR": "Aquele Muto! Da próxima vez que eu vir ele, ele está morto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k854",
+     "source_text_sha256": "95b1b102822c9ead77cc4e6453108276ea1862f33165fbf474508a360d5ff655",
+     "pt-BR": "Aquele Muto! Da próxima vez que eu vir ele, ele está morto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k856",
+     "source_text_sha256": "7abb6f2fc47dcca164fbe1ac66ad4fe906d71e9a4ed66bab8b780e22ca765076",
+     "pt-BR": "I-Isso é ruim! Vou pra Cidade de Mizuna agora mesmo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k858",
+     "source_text_sha256": "0813cfbb2276f013b3b742cebe35e3d4527eef77f079d4b7fbd502e192590218",
+     "pt-BR": "I-Isso é ruim! Vou pra Cidade de Mizuna agora mesmo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k860",
+     "source_text_sha256": "6b00149acde0b35cae5f605ad38665ad3e1b4e75f68b65b68f6395d4a9b35e5b",
+     "pt-BR": "Não subestimem a W&P.\nVão logo falar com o homem do Edifício Yamabuki, na Cidade de Mizuna.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k863",
+     "source_text_sha256": "2af34c52f6c67a29f1be0adb18cc63329144092bf9427b11c11d6ecaee9bdaea",
+     "pt-BR": "A W&P ainda está atrás de nós...\nTemos que chegar ao Edifício Yamabuki, na Cidade de Mizuna...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k865",
+     "source_text_sha256": "21eadf6659eb8a899690e5cd38346cb392e7f38cd7d2df92963137723c299901",
+     "pt-BR": "Obrigada por tudo. A partir daqui, a gente se vira.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k867",
+     "source_text_sha256": "ec6521c27209154f6864dbc4357f48e128bb347466336d04fe9570fe7485c2df",
+     "pt-BR": "A Cidade de Mizuna não fica longe daqui.\nSaiam da loja e virem para o sul no cruzamento.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k869",
+     "source_text_sha256": "15c2dc2c3dcd1f05266fd3ddd53693c9d8dc2e6107d30db3380cb347288912f2",
+     "pt-BR": "Sua perna está bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k871",
+     "source_text_sha256": "d2f5d4bfb7f1ba20e0a19cee4a2be7c91c49f313628d0de9152eb3885fee2083",
+     "pt-BR": "S-Sim! Eu cuido da editora-chefe!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k873",
+     "source_text_sha256": "f96cdf4f340c3b7be9278f7bfc52f2c4fccf0f19755064854d49d0c4cb27c619",
+     "pt-BR": "Cuidem-se. Vamos nos ver de novo um dia.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_207_item.luc",
    "source_sha256": "80ffeb63f382bb2bf8266e4afcb46b5a10de3dbf8ed41acca00b771f3295994c",
    "entries": [
@@ -33057,6 +36016,19 @@
      "id": "p0/k1627",
      "source_text_sha256": "611da61705768c5a90c275d0be6f535685e14a9f6eb8a96264b64cda7be8728a",
      "pt-BR": "Muto＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_214_item.luc",
+   "source_sha256": "3ff526a14abefd3e70ad4fbbd3ccdd9a1d86b3b23d169a7399a07b2ad0a06f94",
+   "entries": [
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
      "notes": "",
      "editorial_status": "pending"
     }
