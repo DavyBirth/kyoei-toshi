@@ -13,7 +13,7 @@ REPO = Path(__file__).resolve().parents[1]
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('draft', type=Path, help='Partial language draft (e.g. localization-pt-BR-pilot.json)')
+    parser.add_argument('draft', type=Path, help='Partial language draft (e.g. localization-pt-BR.json)')
     parser.add_argument('out', type=Path)
     parser.add_argument('--language', default='pt-BR')
     args = parser.parse_args()

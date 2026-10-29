@@ -21,7 +21,7 @@
 - **M1, arquivos:** extrair os .psarc (formato conhecido) e catalogar o que há dentro: textos, fontes, imagens, sons, vídeos, scripts.
 - **M2, textos:** achar onde ficam todos os textos (diálogos, menus, legendas, itens), escrever um extrator e um reinseridor, e provar a ida e volta: extrair, reinserir sem mudanças e o jogo continuar idêntico no shadPS4.
 - **M3, fontes:** garantir que a fonte do jogo tenha os caracteres do inglês e do português (acentos, ç, ã, õ). Se não tiver, adicionar.
-- **M4, tradução:** planilha ou arquivos por cena com japonês, inglês e português lado a lado. A IA pode fazer o primeiro rascunho, mas tudo passa por revisão humana. Glossário fixo para nomes de monstros, heróis e lugares.
+- **M4, tradução:** planilha ou arquivos por cena com japonês, inglês e português lado a lado. A IA pode fazer o primeiro rascunho, mas tudo passa por revisão humana. Atualizado por Davy em 29/10/2026: no pt-BR o agente traduz **e revisa** tudo; Davy testa no jogo. Glossário fixo para nomes de monstros, heróis e lugares.
 - **M5, patch:** um aplicador que pega o dump do usuário e gera a versão traduzida, para usar no shadPS4 (e no port, depois).
 - **M6 em diante, port para PC:** adaptar o carregador e o runtime do projeto do Godzilla, com a escolha de idioma no próprio port.
 
