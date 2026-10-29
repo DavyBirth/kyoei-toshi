@@ -33,8 +33,14 @@ def main():
                 if own and own.get('source_text_sha256') != entry.get('source_text_sha256'):
                     raise ValueError('Source text differs: ' + resource['path'] + ' ' + entry['id'])
                 target['entries'].append(row)
-    if partial:
-        raise ValueError(f'{len(partial)} entries have no English counterpart')
+    # Entries the English drafts never covered still ship in this language.
+    sources = {r['path']: r['source_sha256']
+               for r in json.loads(args.draft.read_text(encoding='utf-8'))['resources']}
+    for (path, _), own in partial.items():
+        target = resources.setdefault(path, dict(path=path, source_sha256=sources[path], entries=[]))
+        if target['source_sha256'] != sources[path]:
+            raise ValueError('Resource revision differs: ' + path)
+        target['entries'].append(dict(own, **{args.language: native_english(own[args.language])}))
     draft = dict(format='kyoei-translation-draft-v1', title='CUSA03562', version='01.03',
                  language=args.language, resources=list(resources.values()))
     args.out.write_text(json.dumps(draft, ensure_ascii=False) + '\n', encoding='utf-8')
