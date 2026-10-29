@@ -58731,6 +58731,642 @@
    ]
   },
   {
+   "path": "common/lua/item_ad_text.luc",
+   "source_sha256": "52218d6ce96f98bc4d08b94b7ab652ecab1fe97c69526c857fc32f7eec3a27d0",
+   "entries": [
+    {
+     "id": "p0/k2",
+     "source_text_sha256": "0b0a0d58fee40f278ee0bee1a5bfeae2f2d7fa2590a75077501172a37759c49b",
+     "pt-BR": "O sabor original do Ministro do Karaage!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k3",
+     "source_text_sha256": "f93b13e3ec254327e8e9029fe4bd691d1b5ab63c4874fd3c62e266aa8aa72c8f",
+     "pt-BR": "Quando a linha Ministro do Karaage foi lançada, havia só dois sabores. Hoje, oferecemos uma grande variedade que nossos clientes adoram. Tudo começou com este Sabor Original. Uma marinada com caldo de frango, caldo de kombu e nossa mistura secreta de temperos realça todo o sabor da carne, criando um gosto suave e, ao mesmo tempo, muito saboroso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "97e944e4dd6b0a99eeebfb3eb67e728e11f1bcfffec028bc213756170c95b3f7",
+     "pt-BR": "~Ministro do Karaage (Sabor Original)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k6",
+     "source_text_sha256": "44aae5d04933436af95b4e8020eb0e44b385b5400b08288e0de9c82419208f59",
+     "pt-BR": "O toque picante perfeito! Ministro do Karaage Sabor Pimenta!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "ba83c29c5cecf8f0ee4201651a1397884da712df9bf45bac5d59aeaec2c3539b",
+     "pt-BR": "Um Ministro do Karaage de enorme sucesso que combina com perfeição a sobrecoxa suculenta com a ardência marcante da pimenta em pó.\nMisturada à marinada e à cobertura, nossa pimenta em pó caprichada combina pimentas vermelhas importadas da origem com vários temperos, num método de mistura exclusivo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k8",
+     "source_text_sha256": "7d423d16128440e17edb87ef1fa92ae1b431e612d6bea6da809df73258cd5a0b",
+     "pt-BR": "~Ministro do Karaage (Sabor Pimenta)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k10",
+     "source_text_sha256": "733cca259349f1e7337c06a663a743c36b9d0e6b27a0ed76f04cdf6317c75bf2",
+     "pt-BR": "100 milhões feitos por ano! Nosso clássico Sabor Shoyu!\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "9653b564d6a1b1dcbb796b3a8b234b44c70582da8365bd6a4b623eb6dbf6663e",
+     "pt-BR": "O clássico indiscutível, campeão de vendas desde o lançamento do Ministro do Karaage. O tempero é aperfeiçoado um pouco a cada ano, evoluindo sempre para ficar mais seguro e mais gostoso.\nTemperado com shoyu de fermentação natural feito de soja japonesa orgânica, tem um sabor duradouro adorado por todo tipo de cliente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k12",
+     "source_text_sha256": "d509ae8936bc6f90d1188a870b8cfa68576729ffcde8b8c18aedcb4ea2ed5877",
+     "pt-BR": "~Ministro do Karaage (Sabor Shoyu)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "ace3ed68226cce68f15b307b93ba65c523fe4eb1becec42d6f7017c73eaf3d4e",
+     "pt-BR": "Suave e cremoso! Ministro do Karaage Sabor Leite!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k15",
+     "source_text_sha256": "6d9d79d85c36c520179a9e3c3899e2c2ed8615124b90cc344a3983495d92b5fd",
+     "pt-BR": "Este Ministro do Karaage é feito com uma marinada de leite de sabor e qualidade excepcionais, de fazendas parceiras de todo o Japão.\nO leite dá cremosidade e profundidade, permitindo usar menos sal do que nos outros sabores do Ministro do Karaage.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "6a95c99f390f63615d6124c757b7a0dec2831f522496acc4ffd7c1c2b7364ffb",
+     "pt-BR": "~Ministro do Karaage (Sabor Leite)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "bcbe4830f6c7257c1c98ea013bf134c8f0b9da812a0a884ff81fba7d2b360e1a",
+     "pt-BR": "Especial de primavera! Ministro do Karaage de Morango!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k19",
+     "source_text_sha256": "9390e60327f97bb2ec00297a3a42704f31d477ade3268cce21abd0878cde2c63",
+     "pt-BR": "A primavera é a época do morango. E agora conseguimos criar um Ministro do Karaage com ele!\nPolpa de morango amassada grosseiramente é misturada, unindo o sabor do frango à doçura e à acidez do morango para um gosto refrescante de primavera. Acrescente o Sal de Gergelim com Morango disponível no balcão para ainda mais sabor de morango!\nO companheiro perfeito para um passeio de primavera!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "f8317ed7d17fc1d50049571f50d91017297af4ca19ff148c564d1b09342a8995",
+     "pt-BR": "~Ministro do Karaage (Sabor Morango)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "808a9dd87d42458c45374d23f92c97fddf0f7bda2af6961fcf2812361e1759da",
+     "pt-BR": "O sabor das suas lembranças mais queridas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k23",
+     "source_text_sha256": "c4d063912aaf7dff83bf0cb698fd8f41ab97e2589ffe6b33b94ef2c765b98325",
+     "pt-BR": "Lembranças lindas com você.\nMomentos maravilhosos, dolorosos e felizes.\nMas até as lembranças mais vivas e queridas\num dia vão se apagar e, por fim, ser esquecidas.\nO futuro que precisa chegar vai transformar essas lembranças.\nMesmo assim, quero guardar este momento no coração pelo maior tempo possível.\n\nDeixando suas lembranças um pouquinho mais fortes:\nMinistro do Karaage Sabor Lembranças Especiais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "0b299b8e0fb22bda4435ca98a93f35de643b11868ff146c5b4fa9cf6571327a0",
+     "pt-BR": "~Ministro do Karaage (Sabor Lembranças Especiais)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "81d3820418ec5fc715e4f0cdf8daa0151371dc8000df479f7b43e582759ea99e",
+     "pt-BR": "Correntes em redemoinho, um gosto salgado e agridoce.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k27",
+     "source_text_sha256": "c2adb136c3d595d7cd4341b0791dba8c9922d156553d8d45403748d3e36125c3",
+     "pt-BR": "Sempre pensei em você.\nNos conhecemos por acaso.\nEm algum momento, você ficou tão importante pra mim.\nMas eu me frustrava por não conseguir dizer.\nEu te queria, e doía. Eu me sentia patético.\nQuando o dia da despedida foi chegando,\nfinalmente consegui te entregar minha carta.\nFiquei tão feliz ao receber sua resposta.\nAgora sou feliz de verdade.\nMal posso esperar para nos encontrarmos de novo.\nAs correntes que nos uniram: Ministro do Karaage Sabor Redemoinho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "30bf4081a296ac5ebea4b7f811785c741961174297cc7dc31a4f1fce310ee1d8",
+     "pt-BR": "~Ministro do Karaage (Sabor Redemoinho)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "5deee18af9af0dc5555d05e7dddf41483796182f1533ba9f6a044faa8b2e54a0",
+     "pt-BR": "Um sabor que é melhor guardar em segredo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k31",
+     "source_text_sha256": "2e59a09b9478dba6fc015a0153fe6c7b10e55f2c7b48ab15f0bee6af1bfde56c",
+     "pt-BR": "Algo que você nunca contou a mais ninguém.\nE agora contou só pra mim.\nPor favor, que fique entre nós.\n\nA emoção de dividir um segredo:\num sabor adulto, um pouquinho ousado.\nMinistro do Karaage Sabor Secreto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "6996d905efed1b237b4f107ac87f3bc22eb2a33490b5c2f2e954dce9eb2fed64",
+     "pt-BR": "~Ministro do Karaage (Sabor Secreto)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "73227017bea5deb6d573ed5b90994d2ef7f7411b191f45b1bc07b145229d15a9",
+     "pt-BR": "O gosto do outono o ano todo! Sabor Sanma!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k35",
+     "source_text_sha256": "04cdcdb43bc1f0d3801dfc05cefa4ae622e9a96e64ea6aed1229927412d8f0a1",
+     "pt-BR": "Você quer aproveitar o sanma, o gosto do outono, o ano todo...\nPara atender a esse desejo, chega o tão esperado Ministro do Karaage Sabor Sanma!\nSanma grelhado só com sal é desfiado e misturado, e um caldo fervido com a espinha vai na marinada.\nUm luxo que usa um sanma inteiro em cada pedaço.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "f2d23cf0a4fcf7bb467c1ea04cdf52eb0e0547f395f4f71eaba995d86e76bb2a",
+     "pt-BR": "~Ministro do Karaage (Sabor Sanma)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "227c153f95e56a8d86793934e55e831958ffe4494a83727065dd43308569a65d",
+     "pt-BR": "Ele voltou! Sabor Ave Lendária!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k39",
+     "source_text_sha256": "03f407acca155c5f96e41b5c515b2ff4246505047ecf2af3c40024fa0ee8ce15",
+     "pt-BR": "O Ministro do Karaage feito com aquela galinha caipira lendária, a \"Galinha Sem Nome\", volta por tempo limitado neste ano!\nCriada forte, solta pelos campos, a sobrecoxa dela é uma delícia!\nA carne firme tem uma mordida macia e elástica. A cada mastigada, o sabor profundo e rústico cresce e enche a boca.\n\n※Quantidade limitada. Pode esgotar em algumas lojas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "47d75551359fa2485174a629ea6e1fb60ac65d6e338f2bc01e59f387d65af2b6",
+     "pt-BR": "~Ministro do Karaage (Sabor Ave Lendária)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "1cfef15d84ef67970cb16ebf7fd1872c8f6ec5c9508da151e811e2f745937c55",
+     "pt-BR": "O mais picante do universo! Sabor Vermelho Ardente!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k43",
+     "source_text_sha256": "c2c38039b916cace625d0984abb15241d5d0374b648183e3b0ca9bff805ca50b",
+     "pt-BR": "Andrômeda: a pimenta escaldante que dizem ser a mais picante do universo.\nNesta primavera finalmente chega o Ministro do Karaage Sabor Vermelho Ardente, feito com essa pimenta.\nEle tem cerca de 120 vezes a ardência do Ministro do Karaage Sabor Pimenta, segundo nossa própria comparação.\nUma mordida faz o suor cair como uma cachoeira, uma cena que dizem lembrar a Via Láctea brilhando no céu noturno...\nVocê aguenta essa ardência?\n\n※Crianças pequenas, gestantes, idosos e pessoas sensíveis a comida apimentada devem tomar cuidado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "6fc1d2b7861f6e7b64cf5d33fc8c00feaf40ad57f9544570bf8303738eecc961",
+     "pt-BR": "~Ministro do Karaage (Sabor Vermelho Ardente)~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "069178612fd3a7e69d81c798dc2ce63e341beadc4752bf1ee6aa7c8b9ae5cdbd",
+     "pt-BR": "O Bizarro Jogo Cult Cidade Absolutamente Segura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k47",
+     "source_text_sha256": "3d31d0f76d8a7b85d94dc0c57f4aa23ca2dc945f1609534dd8e21a8cc57e7ca6",
+     "pt-BR": "Opiniões divididas até no popular site de jogos \"Game Seaside Loop Line\"! Uma aventura de ação e sobrevivência fora do comum!\n\n＜História＞\nO repórter novato Masashi Shindo chegou ao seu novo posto, a Cidade Segura!\nA caminho do jornal onde trabalha, foi de trem e chegou em segurança, sem nenhum incidente!\nFoi apresentado aos colegas veteranos gentis e chegou ao fim do expediente sem nada de especial acontecer!\nNa volta para o alojamento da empresa, passou num izakaya e comeu um peixe local delicioso!\nDe volta ao alojamento, tomou um banho para aliviar o cansaço e dormiu como uma pedra!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "6f219a4f205bb905cc382a5fb220118566385a76e4eb6313c418176b597de5c8",
+     "pt-BR": "~Cidade Absolutamente Segura~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "69914961d90a9fdc63e924f40ae9efbc3d5358b2e2fe742790a2532b99f6f37b",
+     "pt-BR": "Vai Trocar o Extintor? Escolha um Modelo Pressurizado Confiável!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k51",
+     "source_text_sha256": "25d7d8b5198c6c1cfcaf9f945ded76370fe2aefe892dc7fd694e054fa2a95464",
+     "pt-BR": "O extintor da sua casa ainda está dentro da validade?\nUsar um extintor vencido é perigosíssimo e pode causar um acidente inesperado.\nEm especial, um extintor de cartucho que se rompe pode causar um acidente grave.\nUm extintor pressurizado evita acidentes por ruptura e tem uma alavanca fácil de apertar, permitindo que até pessoas com pouca força o usem com confiança.\nNa hora de trocar, recomendamos um extintor pressurizado!\n※Mesmo os extintores pressurizados devem ser trocados logo depois de vencer a validade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "8530e726cd174a2b17bbecd473ef3ab60c7e1b30fe967a0e980afb3af56b1a5c",
+     "pt-BR": "~Extintor~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "5ced0a978679725dde7f35f1e9669cecd093539d85a31db129fa8f480d2da908",
+     "pt-BR": "Raríssimo! Ingressos para o Programa de Rádio da Aya Suzumura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k55",
+     "source_text_sha256": "4ca45b8acffedfbb383b2f5180366e26067a40dc930a6c5c511b796dc487dd3a",
+     "pt-BR": "Aya Suzumura, a talentosa jovem cantora e compositora que surgiu como um cometa. Este ingresso dá acesso à transmissão ao vivo aberta ao público do programa de rádio dela, \"Jardim do Céu da Meia-Noite da Aya Suzumura\".\nAlém de uma breve apresentação de piano da Aya Suzumura, você pode curtir os quadros populares do programa, \"Suzumura Ittosai Corta Seus Problemas\" e \"A Gastronomia Inovadora da Aya\"!\n*Como é um programa da madrugada, menores de idade não podem participar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "8983b7d5bfb4192fa566570e77cbbda81425cfc30e3f87f31800e70b2b8a8d08",
+     "pt-BR": "~Ingresso da Plateia do Jardim do Céu da Meia-Noite~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "687de156c8c1a9250f313e9abcd6234bdc77ea85dedfb0b5324a1232f2f1435e",
+     "pt-BR": "Uma Série de Sucesso! Duas Almas Unidas pelo Destino!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "743406eba5e16d7276e958b2a855068de57e034cfb7bd5b5067f8409f798e796",
+     "pt-BR": "A obra anterior, \"Hard Boys WS\", vendeu inéditas 500 mil cópias para o gênero. Desta vez, o cenário é o clube de natação da Escola Nanahata! Desenrola-se o drama juvenil do ás Hikosawa, de seu parceiro de travessuras Ushida e do rival de Ushida, Oribe. A cena em que Ushida confessa seus sentimentos secretos por Hikosawa vai te levar às lágrimas.\nNa segunda metade, levando os sentimentos de Ushida, que virou uma estrela no céu, Hikosawa e Oribe carregam cada um sua determinação rumo ao campeonato nacional do ensino médio. Não perca Keisuke, personagem da obra anterior, barrando o caminho deles como um jogador ciborgue de polo aquático!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "925d6b4fb4df5d53d23072f0925d35d5488e0ca54dfb96a65b97f8c01a12c7c2",
+     "pt-BR": "~Hard Boys Z~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k62",
+     "source_text_sha256": "30dd56ca88a280c8370f4f04523e6480941f6fb119f43f1d8241b4abc1dee679",
+     "pt-BR": "O combo clássico de sanduíches!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k63",
+     "source_text_sha256": "abcd14d7846d62e94b842aae0e24598c039394dea6597aacbdf75ae4e5483d04",
+     "pt-BR": "Um kit com um sanduíche de presunto e alface e um de salada de ovo.\nO de presunto e alface combina presunto curado por um ano, de porcos criados com cuidado, com alface fresca e crocante cultivada com menos agrotóxicos.\nO de salada de ovo vem bem recheado com uma salada cremosa feita de ovos cozidos de galinhas saudáveis.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "79e966ad5ba88f0a92629b9624be52d93a9f0526944fe0fe120df40bf215cd1f",
+     "pt-BR": "~Sanduíches de Presunto e Ovo~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "cf6c974d5addb641998fabe18540adcd37976ebe13bd9e32d13ffce687c79fa0",
+     "pt-BR": "Dura oito horas! Fácil de aplicar sozinho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "87f9e7cf6cbb98c8d6c75c4d685aea3e68ba23951e2b79e3a0001775e0ff7844",
+     "pt-BR": "Koshinicool é um adesivo refrescante, analgésico e anti-inflamatório. Pode ser usado para mais do que dor nas costas.\nFino, leve e duradouro! Um adesivo funciona por oito horas. Nossa tecnologia exclusiva também permite aumentar a duração sobrepondo adesivos: dois duram 64 horas, e três duram 512 horas.\nEle também tem uma folha-guia que permite aplicá-lo nas costas com uma mão, sozinho. Use quando quiser, sem precisar pedir ajuda a ninguém.\nAgora com um adesivo extra na nossa promoção especial!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "3e09abee077c0d75ceeb5d5c24738b8610a454b5a2ead1891881340b0de96ba4",
+     "pt-BR": "~Koshinicool~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "8686039f13a218335fb2e9f24e3318f9db27702d2fc12522523008d780a49ee2",
+     "pt-BR": "Um cofrinho que soa tão bem quanto parece.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "69fbd4d91d4da848ca66f571c56d31b20b538048f7f7b1331005c28ea921f19f",
+     "pt-BR": "Um cofrinho de cerâmica que guarda cerca de 50 mil ienes em moedas de 500 ienes.\nCom atenção especial ao som das moedas caindo dentro, usamos argila feita de terra selecionada a dedo. Equipamentos criados com nossa tecnologia exclusiva cuidam de tudo, da sova à queima final, conseguindo um acabamento que parece feito à mão por um artesão.\nA linha também inclui o Cofrinho Grande, que guarda 600 mil ienes!\nPor tempo limitado, compre um e ganhe um ingresso para visitar a fábrica!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "e291de18aeaf079ba08f5c09097fc57081366aeacb8db8d5624e0ec219e2d5d0",
+     "pt-BR": "~Cofrinho~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "8aa79a63c266c36bb8aeeacbcdbdac02b0d4d706c620b5aed54984fc82694085",
+     "pt-BR": "Suco de laranja refrescante com 20% de suco da fruta!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "15d9596128df503748a7b46b03db4f85da630ee511337449046e9aee67daa4e3",
+     "pt-BR": "Suco feito com suco de laranja da Califórnia de alta qualidade.\nNosso Suco de Laranja completou cinquenta anos!\nEle tem um apoio enorme desde o lançamento e hoje é considerado um suco de laranja clássico. Vamos continuar fazendo produtos que nossos clientes possam beber com tranquilidade.\n\nPara clientes comerciais, oferecemos não só latas de 350 ml, mas também barris de 18 litros e tanques de 2.000 litros.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "4db56fbc57339549d30132377ea8497efde2dffed808c2b65417b9090cc22acf",
+     "pt-BR": "~Suco de Laranja~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "79ef4e58886e519eb7bfde67e90d8d10315467847355718f7c4a7f77b92793d0",
+     "pt-BR": "【Estilo Clássico】 Conjunto de Terno",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "b7bd66dcd065046cde4476300eed626dd9c35d41f0e96676ad2de2861ab503ee",
+     "pt-BR": "Um conjunto de estilo clássico com paletó de abotoamento simples e dois botões e calça sem pregas.\nA silhueta equilibrada passa a impressão certa em qualquer ocasião. O acabamento caprichado vai até os detalhes, incluindo o forro e os bolsos.\nCom duas calças incluídas, é muito econômico e ajuda você a se manter sempre bem no verão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "37f7bef46de1455d9603e2e3b2e9b82e3356ebbceb71742634209583ad682d82",
+     "pt-BR": "~Terno Executivo~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "0037f2ba9704e8b7396018671c0552055b28394b057f9cf801f92fce0abd1b71",
+     "pt-BR": "Fique Deslumbrante! Conjunto de Terninho de Escritório",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "efe0b0035ca7256e90061a64f59c4efffd2ffa92e230dd0d7d5af4d3fee4fcb2",
+     "pt-BR": "Uma saia lápis e um blazer de um botão feitos de tecido com toque luxuoso.\nO blazer pensa até no uso do teclado, com aberturas nos punhos!\nAs linhas limpas e marcadas da saia valorizam o visual. O tecido com elastano permite se mexer com facilidade e vestir com conforto!\nLavável na máquina em casa, é ideal para manter o guarda-roupa do dia a dia sempre impecável!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "21d5343758b25d97b261d6018ea7fd4f465186af3d09653335bea4edf7e34e74",
+     "pt-BR": "~Terninho de Escritório~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "2f9f9d6f05a52858bac0ef818996c7c59d281907952136c36bc603ce24e32053",
+     "pt-BR": "【Coleção Primavera】 Cardigã",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "7596708ac1a97b5297b920613a5c1805eeb4d2048d7f240147214ce2759aafdf",
+     "pt-BR": "Um conjunto masculino de cardigã e calça chino com silhueta clássica.\nO cardigã é feito de material resistente e confortável e pode ser lavado na máquina em casa.\nA calça chino um pouco mais justa usa tecido com elastano, sendo confortável e versátil.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "1d6356e0ae76e8e2125e917cdc8001543c7cc0ae7bebcf385e059df9ad3b2964",
+     "pt-BR": "~Cardigã~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "4d67415df9753302e5d597ff5b88b6cc6eed91459863ddeb5730e885c036b499",
+     "pt-BR": "【Coleção Primavera】 Cardigã Longo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "f09449593522c0de191c17a56a237bbb311104ab79a52aaf563dc8a2dca51566",
+     "pt-BR": "Um conjunto de cardigã longo e pantacourt curta, perfeito para a primavera.\nO cardigã de tricô deixa você confortável nos dias um pouco frios, com pontos variados para um design que nunca cansa.\nA silhueta e o tecido macios da pantacourt a tornam confortável e fácil de combinar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "9c2a8921e27e1e55f1b9a3662e14749c76b941cfff7b6fa51bfd852f660211de",
+     "pt-BR": "~Cardigã Longo~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "c53d7ad2d9a45c8a0731f647eb4231b26328e9e6d8ee701cd51b7997c22e46a1",
+     "pt-BR": "【Ótima Mobilidade!】 Visual com Moletom com Capuz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "68026413de1ed9ec09f95a3fe67877b41ca9794c8f2295f5ce0246c4df21060f",
+     "pt-BR": "Um conjunto com jaqueta verde com capuz e calça cargo. A camada externa leve corta muito bem o vento e é ótima para o dia a dia. A calça cargo larga é leve, mas resistente, perfeita para dias ativos ao ar livre.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "6329a70018051018dcafea25f874991cd87c936f3dcabe6e9c034d8ad5dd5b87",
+     "pt-BR": "~Moletom com Capuz~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "e737b4e244dab4a2bfbd8a12550f28a40b7d61c83b0a06acde8d8c71e7261dba",
+     "pt-BR": "【Coleção Primavera】 Moletom com Capuz e Minissaia",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "957146495e17510147ac6bbe0e760f9085f7858ee5307f9e9eda9e099501c471",
+     "pt-BR": "Um conjunto com moletom azul de primavera e saia curta listrada. O moletom é macio, elástico e confortabilíssimo. A minissaia valoriza as pernas, e o tecido maleável facilita se mexer. Um visual que dá vontade de sair!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "355d17d7b4dd4fed2422cc206c339927e7944acf5bc0cdd31241bc684538db53",
+     "pt-BR": "【Fácil de Combinar!】 Camisa de Flanela",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "462d2002e85ff4bd1fce523579f8a5853919cbdf10047f9d516f9496fd785b68",
+     "pt-BR": "Um conjunto combinando camisa de flanela e jeans.\nA camisa de flanela de algodão lavado tem um toque gostoso e um conforto excepcional, e combina com todo tipo de calça e saia.\nO jeans tem design básico em material macio e confortável, com acabamento lavado para dar personalidade.\nNossa liquidação de agradecimento aos clientes está levando os preços ao limite! Aproveite para experimentar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "323e238a69a50bd2b433fda5c6b3697f969356f31ee6be8518ebe7ccfeb94a64",
+     "pt-BR": "~Camisa de Flanela e Jeans~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "586e485301b09258229836bb742e338a868434f0dfc869194bd1f5223f95c48a",
+     "pt-BR": "【Queima de Estoque】 Visual com Blusa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "76f56918691f89aedfbcdc1f4d65e9ce255a977ae887b19b80f1e5b0690a81ff",
+     "pt-BR": "Uma blusa feminina de manga comprida combinada com jeans.\nCriada para clientes que dizem \"não quero chamar atenção\", \"quero uma escolha segura\" ou \"quero algo casual\".\nA blusa é um modelo branco de manga comprida conhecido, 100% poliéster. O jeans é azul, de corte reto comum, prático para o dia a dia.\nCom grande desconto para abrir espaço para o estoque novo. Aproveite para comprar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k107",
+     "source_text_sha256": "10837c13b9206e8941d21ee640c249547dd2e91207cbe9635bd179cdf4f77ed1",
+     "pt-BR": "~Blusa e Jeans~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "7e9e88572ab6e44f013ba3e804ea1c605d0e599c37e517c804565937eb5240b3",
+     "pt-BR": "Chame a atenção com um estilo punk ousado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "b8ef5caba6c34d22269609d5c7efb6ffc7cc0f5fabd81915cfc219f598dc4ce5",
+     "pt-BR": "Uma camisa social branca de colarinho combinada com uma calça xadrez ousada, com abas e cintos. Três cintos marcantes chamam a atenção! Abra os zíperes da barra para criar um estilo boca de sino e uma silhueta de pernas mais longas!\nUm conjunto de estilo punk recomendado para quem busca um visual descolado que quebra padrões.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "3f18c516d21846eac8f559bbbdcf372f75c521bd356693dde7f58fc728037501",
+     "pt-BR": "【Couro】 Conjunto de Visual Punk!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "95e6dc3b3b88efbcabe0619a530402c6b7fbd5518e37172d2732d250e0783fd0",
+     "pt-BR": "Uma jaqueta de couro, uma regata e um short, combinados num visual um pouco provocante, transbordando o charme do couro!\nA silhueta atraente da jaqueta dá feminilidade, mantendo a textura resistente do couro de alta qualidade!\nTire as alças da regata, e ela vira um top tomara que caia!\nUse junto ou separado. Curta um visual PUNK!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "1f198036760692ee74e7c1f23f8e3900cdb308f8550a1c79dc27f054fd745bd0",
+     "pt-BR": "Como novo! Farda de policial masculina autêntica!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k117",
+     "source_text_sha256": "a756806e578f76c713a45b5af3943dff67557da96097c927b6f2857c7ef1b749",
+     "pt-BR": "Uma farda de policial masculina completa e autêntica, obtida por nossos canais especiais.\nO tecido e as costuras são excepcionalmente resistentes e funcionais, feitos para aguentar o trabalho puxado da polícia. Acreditamos que você vai se impressionar com a qualidade da peça de verdade.\nFaz sucesso não só entre fãs de cosplay, mas também entre quem estuda design de roupas.\nSó a peça em estoque está disponível, sem previsão de reposição. Peça logo!\n※Apenas para uso pessoal como hobby.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "107e449eaa2e4ed80a05f4ef869e7edb5f22e92b77241db8718153d45e3441b4",
+     "pt-BR": "~Farda de Policial Masculina~",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "6433d95449891ec71592359b5b04fa2864acfc43cfafb212ccd555575b8fa2fd",
+     "pt-BR": "【Autêntica】 Farda de Policial Feminina em Ótimo Estado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "2061227eb2f521f464ef41549bfbdcff3bfb8ba250f4ccb7761d03a74e44c56e",
+     "pt-BR": "Uma farda de policial feminina completa e autêntica, obtida por nossos canais especiais.\nAlgumas partes do tecido têm um leve desgaste, mas quase não aparece, e a farda está praticamente nova. Ao fazer o pedido, diga se quer que ela seja lavada antes da entrega.\nFaz sucesso não só entre fãs de cosplay, mas também entre colecionadores de uniformes.\nSó a peça em estoque está disponível, sem previsão de reposição. Peça logo!\n※Apenas para uso pessoal como hobby.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "3f2b259bc28e661b92ddf47e5af1b31e428440f41ca3cb25fa89d0167717b22f",
+     "pt-BR": "~Farda de Policial Feminina~",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_210_3_news_data.luc",
    "source_sha256": "62968e721dd7873e9bed652db24c0d697d2e2b970e957399b39d1140fd64f247",
    "entries": [
