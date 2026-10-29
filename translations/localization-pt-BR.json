@@ -4889,6 +4889,61 @@
    ]
   },
   {
+   "path": "common/lua/stage_207.luc",
+   "source_sha256": "ec6e1eadd107ebb53857c0a84eb49c37b1560aa853b168751cb9f827e9aa5221",
+   "entries": [
+    {
+     "id": "p0/p88/k8",
+     "source_text_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "pt-BR": "Sim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p88/k12",
+     "source_text_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "pt-BR": "Não",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p89/k8",
+     "source_text_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "pt-BR": "Sim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p89/k12",
+     "source_text_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "pt-BR": "Não",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p90/k4",
+     "source_text_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "pt-BR": "Sim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p90/k8",
+     "source_text_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "pt-BR": "Não",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/p107/k6",
+     "source_text_sha256": "d5ae97689c03d6d6166702aa8fff0bed49bd5a9dfbfe1a4336a0b1ade147940c",
+     "pt-BR": "Devolver o contêiner e a empilhadeira às posições originais?",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_205_item.luc",
    "source_sha256": "5a34c2fc8073630e766386bd3d010d3c59a73341f441b7a63d868e76ae8e0a71",
    "entries": [
@@ -4896,6 +4951,1608 @@
      "id": "p0/k7",
      "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
      "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/Text_Stage_207.luc",
+   "source_sha256": "603aa30eb7daf17377811f372335f25a2e3b36002105db33c2a40f5148780969",
+   "entries": [
+    {
+     "id": "p0/k3",
+     "source_text_sha256": "fe65050b6cf95368d85f30fd366c092a15824886d51defd754887d1e968f7491",
+     "pt-BR": "...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "df49c82ec6e94af54746a2e6a9d87c707e37751d6918361ec044fa814554bcb0",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "Texto interno de teste; não traduzir",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "9d79ecf85918dd78df52aef5c02460437447d39965a499cf43f7363f25f4d35c",
+     "pt-BR": "Operário cochilando no serviço",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k25",
+     "source_text_sha256": "d7c78c391371e083debe19f3d3ac85f10df208ef72289d9d4656843ddb0de67b",
+     "pt-BR": "...Zzz... Mmh... Zzz...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "eec36c3fe00b58f27993685971a308f2387c135636ffea909832feb4f2e32524",
+     "pt-BR": "Ele está apagado...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "f0d0be108d0cca951dd971e25c5de6b34cb8084fa38eb06fcfe5161b4c517e0d",
+     "pt-BR": "Mexer nos bolsos dele?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k33",
+     "source_text_sha256": "b6e41825068646344edd19dd81d8f2c4fd7b04ed75d9506c3a5e85b11d4ba8bf",
+     "pt-BR": "Olhar o bolso da camisa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k35",
+     "source_text_sha256": "3067c120ae976db746db9d0291fa5a1cb05ab5f24774cf32565fca9b17c5941c",
+     "pt-BR": "Olhar o bolso esquerdo da calça",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k37",
+     "source_text_sha256": "30d1c1f800e90b20d74aff80c1cea680a13824d2f0e975e409ce4a78d21f97af",
+     "pt-BR": "Moto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k39",
+     "source_text_sha256": "ccff02404d1f0c0ad32b509395f6f5e0560d678f7e1db1be9ea96d7656bedd0e",
+     "pt-BR": "Deixar ele em paz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k41",
+     "source_text_sha256": "8fc67b7c1565260c390dacd0854896bcb074b4dadc5dfd44921b500e4a2051ec",
+     "pt-BR": "Ugh... Só lixo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k43",
+     "source_text_sha256": "c32b49be6416427d9850c6e66313d390f29414e85d3b729779f156c491b00439",
+     "pt-BR": "Operário no telefone",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "312fab263155e67bf1549af2f9145c70dd34db334cd77020d73ea91997e32da8",
+     "pt-BR": "Juro que é verdade!\nTinha um Labor preto que eu nunca vi, bem na minha frente!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "3803214a4309ac7d25ff464f0ccb2fda22a6f5e04ee46f3c2fcfd30a5c89675d",
+     "pt-BR": "Os Labors da polícia também chegaram, então talvez eu apareça na TV.\nGrava o noticiário pra mim, tá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "5c77f489aa720bddf4d3d504b84223757cd974220db09674b6d48145b960079c",
+     "pt-BR": "Operário nervoso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k49",
+     "source_text_sha256": "1cb9ec459499bd886694de49ccf43189c854f7b6974299322cfffbc0d1e4650d",
+     "pt-BR": "Aquele Labor preto acabou de sair voando.\nParecia que estava escondido aqui. Será que a gente vai ficar bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k51",
+     "source_text_sha256": "d53edf4ea14175311de55d5349586529ed9982a9c42735f11b3f8f90968a49a9",
+     "pt-BR": "E vi uns caras suspeitos entrando no armazém agora há pouco.\nTalvez eu deva ir pra casa antes de me meter em encrenca...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k53",
+     "source_text_sha256": "eaca6720da83e79353ccce0394339bca6aec71603a05689f78e3c975bd01e5bd",
+     "pt-BR": "Operário confuso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "c968f3915a358eb631d21c5aaee630ba47a833e99f0fe1a7a8376febad846dab",
+     "pt-BR": "Faz tempo que eu digo que os caras que alugam este armazém são suspeitos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k56",
+     "source_text_sha256": "2e41af32567f839d9da3c0d5f1f3a1d6d5df896bacfcbd8e8e17e6488dfe1002",
+     "pt-BR": "A gente ganha mais do que em qualquer outro lugar.\nVocê não imaginou que isso vinha junto?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "29e6e60303b3ff2792a93d7461f3ff0c1eadfeb085fe806d8bfc6cc239eb5709",
+     "pt-BR": "Operário cansado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "c9103700a7678f56277ec2b64f083abb0d845d0e48f30d7bba7d2b25c1f80288",
+     "pt-BR": "Que barulheira é essa...?\nNão me importa o que está acontecendo, só quero dormir...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k61",
+     "source_text_sha256": "011527e294dbdf4c336a56ae3da762c4cbbcd7582f9d8c2d689cde5fe6d18321",
+     "pt-BR": "Me jogaram no turno da noite do nada, e eu quase não dormi...\nAinda tive que cancelar um encontro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k63",
+     "source_text_sha256": "0d1b1d54ce72cbc9566e6acf93d034ea888438e967caa449568dc18dca1eb65b",
+     "pt-BR": "Estou morto.\nPode me deixar em paz?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k65",
+     "source_text_sha256": "28ca456f6a923604086af05b58a6f123eb8dd6a364af06ac30fb8ee8050d6b9e",
+     "pt-BR": "(Será que pergunto da [#ff44ff44]chave da empilhadeira[/#]?)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "063000ee92926cab9425435d90326bb9d41c8360b65f44ee1cb3812b5cbfa81c",
+     "pt-BR": "Perguntar casualmente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "fc1b23cf512a8a6a9cab3c6ace465212ef6b44df3198be00ffe85fdcf2eae8cd",
+     "pt-BR": "A [#ff44ff44]chave da empilhadeira[/#]?\nNão faço ideia.\nO responsável já foi pra casa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k72",
+     "source_text_sha256": "3bab0e39e1045f43c840ed65277cc5b85ac39dabd6f597921c589cb3c6ac19dc",
+     "pt-BR": "Ah, é, ele é doido por veículos.\nHoje ele até matou serviço pra aprender a pilotar o [#ff44ff44]barco[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "bff4e9875d074bbd3fee2e4835c26f1730deb1cd1950035b8afd70ba42ca61bf",
+     "pt-BR": "Agora me deixa em paz.\nEstou morto...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "1b402afdd7f50b5e4099127f508152a179aac20f1a0588b34ade6d2994e55c3d",
+     "pt-BR": "Homem que parece ser dos locatários do armazém",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "82baaa981e93cdd0a24996bd9e5ccb37adb1b5713402fa637940c7107edb2663",
+     "pt-BR": "O Griffon apareceu!\nMandem o resto dos Abrahams!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "73d4ca6d4f629a91aebcb9b910cd879da36ab0cbb86b6c129f92559976821d08",
+     "pt-BR": "A ordem é explodir este armazém também.\nQualquer coisa pra manter a polícia ocupada.\nAndem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "8ac06f44501e55657809f5cbe008425c3afa05ea5151958cf3b024be7cc9abdc",
+     "pt-BR": "Ainda não acharam o Griffon?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "baa79deebe4e141d98e29978707246ec4fd0a912c7350e29d3d78b448ff2dbbe",
+     "pt-BR": "(Hm? Dá pra ouvir vozes do outro lado da porta de enrolar...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "eb125d840b96cc18dfe4a5250f26474067610ed714a4757a0625e0a436d02723",
+     "pt-BR": "Ele tem que estar em algum lugar deste porto.\nSe escapar agora, estamos ferrados.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "bdd6d7de5bbb403e98dad12274956dbca3ac5e23694b5dab3c3eb51292434a05",
+     "pt-BR": "Ninguém avisou que achou ainda.\nÉ um Labor preto, bem marcante. Devia ser fácil de ver.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "de7b223241482d01a427dfc90f51329ec0ac1ad1eca45295f554715c883518e4",
+     "pt-BR": "Escutar escondido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "e7b2555e5a7b8336385a30637851017011d2dac6638d298ccd33e3dade5893f7",
+     "pt-BR": "Puxar conversa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "c43d6155ed4b510e81721cc212d7a88195ef3fc42c67095aab9584ddade2e9fa",
+     "pt-BR": "Observar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "af7ba197a48600c810560a371ee6cfb97e603d9c8266f121b5a8d63dada4578d",
+     "pt-BR": "Escutar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "28e498504d4de85be548d04880e588797c2f4f5ac716a2c03eacd223f5e7e769",
+     "pt-BR": "Puxar conversa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "db58b696f2884f3ee58153e2e946d2020a7ade2c8dfe6ee73e85b7e41b9c915e",
+     "pt-BR": "Olhar com atenção",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "ced972c22ac8fd2d8725c8046fec27a5fda85ab575556ee4e5de593d21f8126c",
+     "pt-BR": "Abrir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "46c08c8a43323f8b16c3f41d4d145298bc8e763b0ab5ce3942675286ce74a961",
+     "pt-BR": "Espiar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k107",
+     "source_text_sha256": "b68f51280ce7e9dc216d2173621d21870248a2b4ed95fbad998882e8ec310609",
+     "pt-BR": "Subir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "f79e924f15a77cb3e3e0c9647bc8dcc87cd73c441a8b7b977550d4aded4f2c09",
+     "pt-BR": "Descer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k111",
+     "source_text_sha256": "75aaf0b0ed815636a4c864909b220ffd4d7fcfe6fbb0fbcb0c953cc84cc4e24e",
+     "pt-BR": "Entrar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "80c415e70d1711bb1f60d3625ae3521db0d5a49e9feccc82e6ddd49b0e7013d0",
+     "pt-BR": "Apreciar a vista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k115",
+     "source_text_sha256": "01fed72fd0cf3e764c76ac0e1b3f38b3648f5f7abed2c2834dbf37b3898943d3",
+     "pt-BR": "Você não tem a [#ff44ff44]chave da empilhadeira[/#], então não dá pra ligar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k117",
+     "source_text_sha256": "6ab97750a222a949ca7a8337a6c02f1bdd05a1210761c87a1f70aa6523e368b2",
+     "pt-BR": "A chave tem que estar em algum lugar deste armazém. Vamos procurar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k119",
+     "source_text_sha256": "6bbdb62540ca0e376342076ecde98da109f00f25382c0548157a8bc821f4df09",
+     "pt-BR": "Não preciso mais dirigir a empilhadeira...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "cee0e3c6b8fbf8fae023e5dc656923b64f79b1a916435fc9188353ac1fa458ce",
+     "pt-BR": "Não preciso mais dirigir a empilhadeira...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "91d4c1d8758002a34bba8632d99cd961b4d6493b2a4981f09271158dd50facf0",
+     "pt-BR": "Descer da empilhadeira vai devolver a empilhadeira\ne o contêiner às posições iniciais.\nTudo bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "8f90d85ec13a0b1b12d81203f2f3262ca156028a94aeaf91ae52fcd5a9de4170",
+     "pt-BR": "Sim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "48ef2b674823d03d45863e46e4706682f9588ef1d13921134ae3a8508483ffb5",
+     "pt-BR": "Não",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "100ddd6054f49624223a040f17d1d7b36ca595a3d665e3f914f77b76d648ef9e",
+     "pt-BR": "Isto vai devolver a empilhadeira e o contêiner às posições iniciais.\nTudo bem?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "c8f424bdbe4ba964e75a1b42517d6c5b10810ae62354c8321af08b1b0b2a229c",
+     "pt-BR": "Você encontrou umas roupas de trabalho num armário!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "07b7d604cd033cbaae50c678009cb2c2b9c6747291b364c9320781e0515f3e9e",
+     "pt-BR": "Estão imundas e fedendo a suor...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "ce9d0b3c956c34122b60de2aed6a3fc5551d78d46593d158cc8224c92c10135d",
+     "pt-BR": "Você as devolveu discretamente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "5d844ff068c33f74fd7765cd96ddf01cb0c2ec4b5fc33eb60e4184fb038fe145",
+     "pt-BR": "Tem alguma coisa escrita no quadro branco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "dc3838d9fb6536af0bc89f70fc890fa7892cd7361f1a0a739bd43160286245a0",
+     "pt-BR": "\"Temos recebido mais reclamações ultimamente sobre operários com mau cheiro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "053a2a39d5c68649a6e82515526d7181ca807b1bc1ca7dc466b2d06bd6488675",
+     "pt-BR": "Acreditamos que seja porque as pessoas deixam as roupas de trabalho\nnos armários sem lavar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "152c29fee4e83816b5857381f7a022b2951396f5f28d4e78f7b6ff523e8804b0",
+     "pt-BR": "Todos, por favor, lavem suas roupas de trabalho com frequência!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "412298914c7c2eb3bc2f06662ecc8886cbdb05d5005fba7f6d34ae5205c3cd9f",
+     "pt-BR": "A cabine de comando.\nTem medidores por todo lado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "e1be26f53469f725ff5e6ab842d5ab0114b122be4d9e611fa55f57a3e606bfff",
+     "pt-BR": "A cabine de comando.\nPensando bem, aquele cara disse\nque o operador da empilhadeira ficava por aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "075c5ee3ec78ad2a436c2d53da8b770c8170948ea3a5792eae9833a780c4cf65",
+     "pt-BR": "Olhar em volta do timão, bem na frente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "1f8bcab18db2caef7e636979d712998a21c417ffb53b1699b44f60a258fca14a",
+     "pt-BR": "Olhar os medidores à esquerda. Cheiro doce",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "2463202a730de8a69f88a658cce3d882a2721c0215e0fc6c1bccae918e115d52",
+     "pt-BR": "Olhar os monitores à direita. Parece não ter nada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "f7fe02718357ff8c48e69c0e7aa2ffe3ad8bf525974d56f7feae0182b47b8134",
+     "pt-BR": "Olhar o chão. Cheiro meio ruim",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "15065faee4216e16de056cbe0c7e62eff13e4fc9871911acef1ed970fe30c087",
+     "pt-BR": "Só voltar lá pra fora",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "f2a4b14393832eb07bd54af9eef4fc10c726b92627a17bd1f1e205494b39dbee",
+     "pt-BR": "A [#ff44ff44]Chave da Empilhadeira[/#] estava ao lado do timão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "801228cbfa10c3e6495cde0088ddccf907b0da2483079f774649db9a6c4f6f08",
+     "pt-BR": "Conseguiu a [#ff44ff44]Chave da Empilhadeira[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "5b5fadf612c9489115a90598094c00d5b954edc83773eec988c91b11230e7b1d",
+     "pt-BR": "Está grudento, como se alguém tivesse derramado suco...\nHm? Parece ter uma lata que nem foi aberta.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "0bd26782764173cd22972776726a4931905a74e11571191f3fb50737a86265c4",
+     "pt-BR": "É, não tem nada aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "f7c20d86e239a22bab70cfcc54175a34d5bbccf68b00a947e4fcd30eaa8663f3",
+     "pt-BR": "Tem bitucas de cigarro por todo o chão...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "a4753e1d40d1d12938110d3d1e12411ff33f8ba3e91fbb057e3c144ffddc687a",
+     "pt-BR": "Conseguiu uma Lata de Suco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "05299b554f50840e56943f3609363181d8279c63b625e8801b71946415e4c769",
+     "pt-BR": "E agora?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "9987e877b85818b2b7f4a3d8f41a6004f91a38b169faeec23a6929ce8dfc8b11",
+     "pt-BR": "A cabine de comando.\nTem medidores por todo lado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "5d59fb392797e0d3acf4f44a30fab4423904b04eae8745407dbe63bd9b191905",
+     "pt-BR": "A cabine de comando.\nPensando bem, aquele cara disse\nque o operador da empilhadeira ficava por aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "2409d7a5cd9f0f80ccf04297763ad70cfed449a58725a871102fe7f6076e08e3",
+     "pt-BR": "Está grudento, como se alguém tivesse derramado suco...\nHm? Parece ter uma lata que nem foi aberta.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "2e223745bff787f4d2b04419a4a33f3bda65ae7c9eb46f7aa28d4caf69f3f571",
+     "pt-BR": "Tem um contêiner no caminho.\nSe eu conseguisse movê-lo, dava pra passar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "c0730f511fb43b9f800363e5d4a41b13e2094bc16808e21a657ab25f186a3f8f",
+     "pt-BR": "Tem um contêiner no caminho.\nSe eu conseguisse movê-lo, dava pra passar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "19cd8020503282c06a689d6cf2e7a68511589e1569ecfb8ec3345f423c337390",
+     "pt-BR": "Só água escura como breu.\nNadar parece má ideia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "a1aae718da0c9ce448977b32cefcb31374d8df05be5f766ab1bbef8b3d4d8f05",
+     "pt-BR": "Só água escura como breu.\nNadar parece má ideia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "30d484e1e7ab6fd629b517df0608bacb413c6364b41e9132ef76b05974c31d94",
+     "pt-BR": "Uma boia salva-vidas para emergências.\nNão serve pra nada agora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "e51549e9aa3f86036f1de0791847a3dc16b69a6071430ccd2d61017a05a83876",
+     "pt-BR": "Uma boia salva-vidas para emergências.\nNão serve pra nada agora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "6329976319b378cc1ea690f9c82bec66435e1a62a7d00284ec010f6091ebfaea",
+     "pt-BR": "Este Abraham não vai a lugar nenhum.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "296b9f7a989793d0e91e9e273ac8f5a3563d8d2cf440f252ca99ac7884a85842",
+     "pt-BR": "Este Abraham não vai a lugar nenhum.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "08193d40f41575ebae37de61f9e16f8fe4a72c370b204fce6952f090c6a7a146",
+     "pt-BR": "(Parece que aquele Labor preto de antes está lutando...\n Vamos sair do porto antes de ficarmos no meio disso.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "aafcbdb096bb0d302133eec41713ad9f5def6586431b077a0dba7a0ca79c78a7",
+     "pt-BR": "(Parece que aquele Labor preto de antes está lutando...\n Precisamos sair do porto antes de ficarmos no meio disso.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "a90886b8ebba1e5fcbc8b9687607044ec1369dbfac28311061b0aa9258ca89b1",
+     "pt-BR": "Você ficou olhando o balde, perdido em pensamentos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "4030d68f71e6479c057bb77617cff147ea95cab530f31ff4b9f737d30e1b313d",
+     "pt-BR": "Parece um escritório.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "c0343645ef89b984c2173b948fd880c457bf9ff5bd889b7de1d775b6ce7a3824",
+     "pt-BR": "Parece um escritório.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "65df7946d9c5d58ed5370fa037cd5fcb0d4a6dd2851cafcca2722ae38c042f88",
+     "pt-BR": "Um poste de iluminação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "3c89e5faa8e4b40c3dbb6caaee46a919ba67b02c3342b1c8a18ed20362286319",
+     "pt-BR": "Um poste de iluminação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "ed1d97d8e04b2b4a0efd31fba23448c049622adb5007a6e9c37e2ac0c99a99b5",
+     "pt-BR": "A passarela acaba aqui.\nPreciso achar um jeito de atravessar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "214e45c9770eb6da3a6fde58b88ee55ddad56f7f27a295ad1b0bce6cd87230d5",
+     "pt-BR": "A passarela acaba aqui...\nPreciso achar um jeito de atravessar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "7fd6119fd91160d1b143da40a70af334f3ac2fd0aa52063bf97a5e69ace1ce70",
+     "pt-BR": "Subir a escada?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "7b699821a8ea955b3bd1fb9ac69b07a45403c4b86ac41553ce50eaf52949ab65",
+     "pt-BR": "Descer a escada?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "0303493d9afbf4aea4663bc371de59ac4f7120beee76dc157404d87e3464d072",
+     "pt-BR": "Nome completo da heroína",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "a69820f68918ab2eab3c668abf065963319f6de6abad77552cfe32b7372ff2d0",
+     "pt-BR": "Agora dá pra passar lá por cima.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "3f20816ab610e703edf91ec99e4d776e56395a179a64931d36e338ebc60be4ef",
+     "pt-BR": "Passar embaixo dos pés do Labor é perigoso demais!\nVamos achar outro caminho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "3421aec00b82bd35c546aae8fd3d105d4259c00f28afe87297affb6eb661790c",
+     "pt-BR": "Ali não tem saída.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k246",
+     "source_text_sha256": "5fe7bc7123c746ce11fea604b8605a7ad41186b1ab6acc83ba42115cbf354e02",
+     "pt-BR": "Este Labor...\nParece que ainda funciona...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k248",
+     "source_text_sha256": "7e0d238eead8146ec9d9f485bad6fc5527110fc6be3813ed9186acff8c237278",
+     "pt-BR": "Usar a experiência do trabalho temporário e pilotar você mesmo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "843ed8cbccdde2e5da9c6372b04d25eb69b511efbc19a78e46afb603c51ce030",
+     "pt-BR": "Deixar a Yuki pilotar. Parece que ela já fez isso antes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "b8ae39687e9084abcdfda3999c1bf00660b8cef596b45be66c14629d8eb64d89",
+     "pt-BR": "Melhor não pegar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "a5b1f61e76293b5a2755dc107063ed8d4398a637eb9dd5c3113eedb8246c33d9",
+     "pt-BR": "Certo! Vamos atravessar com isto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k256",
+     "source_text_sha256": "7ee6593a12f863fba5af7b4a2a7ec9489dd4710b44af1d032c5906ad865a9156",
+     "pt-BR": "Conto com você!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k258",
+     "source_text_sha256": "ca751033d6e987b995af61f73a257991730d14bffc532293ff193be8cbf8e361",
+     "pt-BR": "Hã? Ah, t-tá...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k260",
+     "source_text_sha256": "fb72bf03b443c05949fe624c2e91d968475670f6a2b21ed64b4845d01627baa1",
+     "pt-BR": "É outro modelo, mas pilotei um pouco\nquando trabalhei numa obra.\nEu me viro!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "19ee5ad19a6638b4e42c2ef27803e12fa02d2029cbf3b32eab5c42f0d0f65c3a",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "ddf8394a454df3969357fc9de98978aa4abdfe5038df4f36f84ebc9475360cd4",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "ed1c170b07a6f351263e7208dade2b260b9e25049b896064d9f82fc8fd7101e4",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k268",
+     "source_text_sha256": "016e6049a624e651260628aad4779f1efc1657454345dd3a607f461e3ce26d51",
+     "pt-BR": "Kiyoshi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k270",
+     "source_text_sha256": "55f907c3e0f7ee4b1c3f7ef70a0b55a68d3e94ba323965ec798dfeac37477bfa",
+     "pt-BR": "Yuki! Você é nossa única esperança!\nVocê consegue! Sei que consegue! Né?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k272",
+     "source_text_sha256": "592a4ed405f2e83f83ec60949ff366e5442b4033ae9baf02be7dfa4a3d7a5096",
+     "pt-BR": "Este Labor...\nParece que ainda funciona...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k275",
+     "source_text_sha256": "677a7c74c462f357f53e2fb0a93807c42cc3a4b16b98dda93e24c0c36f322c8d",
+     "pt-BR": "Deixar a Yuki pilotar. Parece que ela já fez isso antes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k278",
+     "source_text_sha256": "95ccdf8225f75e7a0acf5cdf0ad112f3f9207769639309b83a125963b86a2b8f",
+     "pt-BR": "Certo! Vamos atravessar com isto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k280",
+     "source_text_sha256": "89e80adad68baf659f69e354ce7851f5708a5527d3520b14a2a164557cab188d",
+     "pt-BR": "Conto com você!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k283",
+     "source_text_sha256": "51966bb18b2ee3782f97902d7f2d2a9eccf29198ca4fa7187d8e4ba4cb63848a",
+     "pt-BR": "É outro modelo, mas pilotei um pouco\nquando trabalhei numa obra.\nEu me viro!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k285",
+     "source_text_sha256": "4fe76798e5f128fdf30d2090475958c5b8a8eb54e084176a036cff50278a434b",
+     "pt-BR": "Você não disse que pilotava\num Labor de obra no seu trabalho temporário?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k287",
+     "source_text_sha256": "c5921f9a31c866957c62578e2828e0bba4706269a4733ac438bb5fb8a8078c29",
+     "pt-BR": "Você nunca pilotou um, mas não dá pra hesitar. Pilotar você mesma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k289",
+     "source_text_sha256": "c199f21232f1c7613c3cb6099e61f5f517cd90f8d98dfbf88ed739316ac37aa1",
+     "pt-BR": "Nunca pilotei um, mas é nossa única chance!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k291",
+     "source_text_sha256": "ea29fbed8513a278a2a90be905949769a29d0fa82dfd02be00cf771efdb66a61",
+     "pt-BR": "Apostar no talento natural da Yuki e deixá-la pilotar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k293",
+     "source_text_sha256": "3e288c230e6cef3556d492033247563592a84ae73847a288b636767727390ddf",
+     "pt-BR": "Yuki! Você é nossa única esperança!\nVocê consegue! Sei que consegue! Né?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k295",
+     "source_text_sha256": "4c1a9d13b0d784fdefa826e448a33798988cc03fc14ff963cb8b424f74bb749d",
+     "pt-BR": "Não devo atrapalhar o resgate.\nVamos achar outra saída.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k297",
+     "source_text_sha256": "e5023b13ab81535fce5b41d2d18f068a5a6b8b58c5079439af077f99b9dbcb83",
+     "pt-BR": "Não devo atrapalhar o resgate.\nPreciso achar outra saída.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k299",
+     "source_text_sha256": "f93aed1f43b5a1460999fabdb890d09f7f22686dc320864003c7911b491afd28",
+     "pt-BR": "Vamos deixar o contêiner, tá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k301",
+     "source_text_sha256": "e3726fa6f8fc071b64deff93a1d78a1d70e4731b41dcd2faa6c0c4ed0ff89142",
+     "pt-BR": "Deixar, como ela disse",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k303",
+     "source_text_sha256": "c367c7a22cfff4d95bd488cb59454e08e347051d3e34a64a716721512844aff7",
+     "pt-BR": "Deve ter um motivo. Deixar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k305",
+     "source_text_sha256": "66889862cd5ed8ab6f048c9339efc68f9af2b2bf3549c208937cdcc9f2c2a05e",
+     "pt-BR": "Você adoraria levar, mas tudo bem. Deixar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k307",
+     "source_text_sha256": "78114162f30fe73c98c3e869a58c721f27dfb09a9b3c5fc61eccaad7b3c0dbca",
+     "pt-BR": "Melhor parar de dirigir feito maluco...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k310",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k311",
+     "source_text_sha256": "6b26b30ca8fa42e92d65b87e4c9c92339476ec3be96bddd9466267101d687234",
+     "pt-BR": "(Nosso bote finalmente avistou luzes na costa,\ne chegamos a um porto que nunca tínhamos visto...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k313",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k314",
+     "source_text_sha256": "2a723d9c41633f6e7d81bac490aed9908ceee705570d2a8b9a059e856efef4fe",
+     "pt-BR": "(Nosso bote finalmente avistou luzes na costa,\ne chegamos a um porto que nunca tínhamos visto...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k317",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k318",
+     "source_text_sha256": "005982bb78259c75ed78438b6e6cd9f0279044ad10f9bd8b28b692d07fa76751",
+     "pt-BR": "Aqueles caras de novo...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k320",
+     "source_text_sha256": "111a7deac0a82cbcb463b91c1c17b57598a8965f376c6f27697464400ce85da8",
+     "pt-BR": "\"Eles vieram me matar de novo?!\" (Com raiva)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k322",
+     "source_text_sha256": "acedec73881e794cee2f47a3c9f8c19ec4ff6f00e884a80b3b5f853ea8142bd6",
+     "pt-BR": "\"Como eles sabiam que eu estava aqui?!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k324",
+     "source_text_sha256": "2357b1bc4b2722688ab3d48cd70e100f31fe4eca5a56e0a1ada7faa880014823",
+     "pt-BR": "\"Buáá! Uma arma!\" (Desabar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k326",
+     "source_text_sha256": "da8ce014b8c2124b383cd35d9b05e3a16c62b1f3b6a9713798f7e4f6f1573ec7",
+     "pt-BR": "\"P-p-precisamos nos esconder!\" (Em pânico)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k328",
+     "source_text_sha256": "11849c95810895602abeddeb6293e770bc89dde9290a6df288ad83b0fb9ce416",
+     "pt-BR": "\"Eles vieram me matar de novo?!\" (Com raiva)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k330",
+     "source_text_sha256": "fb5945fa2ad0d9aff84cf593a6e566b3c54858a151d0af4f3e8d90734dd3a747",
+     "pt-BR": "\"Como eles sabiam que eu estava aqui?!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k332",
+     "source_text_sha256": "1a07c16e3f27c42d2f2ec2d3f6c84bf4af06965f4632c8fe2f441592a2adca79",
+     "pt-BR": "\"Buáá! U-uma arma!\" (Desabar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k335",
+     "source_text_sha256": "8dc5f11d93f7159f9438699778d70e289ec3675cdcf349afa44716501a85666b",
+     "pt-BR": "Eles vieram me matar de novo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k337",
+     "source_text_sha256": "284edc6516c8529bbf6d45814422dc3a0c9262937f7d783514881b915b9ec77d",
+     "pt-BR": "Eles vieram me matar de novo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k339",
+     "source_text_sha256": "518e19b2f609bedae945b42423071e1791259868d0db7915dbc092aade3efb79",
+     "pt-BR": "Vamos nos esconder em algum lugar...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k341",
+     "source_text_sha256": "1702f4edfc78ff9d3139cbc0795db74cbc7d251e52d219e34ecea410f61b50b2",
+     "pt-BR": "Como eles sabiam que eu estava aqui?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k343",
+     "source_text_sha256": "2aab175f162d8bc1030381b8db34ee86d3111f2cf3b029abbcab1718f7423c3f",
+     "pt-BR": "Como eles sabiam que eu estava aqui?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k345",
+     "source_text_sha256": "d123bbfa387e11ecc58d179d5e272181fdfcd76840b00fa77a6934abd703e738",
+     "pt-BR": "Não sei... mas precisamos nos esconder, agora...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k347",
+     "source_text_sha256": "bc211ba90efed7dda3daa7a44e7deadfb5074f93024b9f319927b16b201710eb",
+     "pt-BR": "Buáá! U-uma arma!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k350",
+     "source_text_sha256": "4bfb9d83a6e0de616e52811f5688ce9830ac3572f3459feaf686d779c45f1ed5",
+     "pt-BR": "Se controla!\nPrecisamos nos esconder, agora!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k352",
+     "source_text_sha256": "32d03260c50fac38b8a2c96f76c52dfc7fa07848eb7c4c5b823d230258c296e8",
+     "pt-BR": "P-p-precisamos nos esconder!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k355",
+     "source_text_sha256": "5d7c3a956faae5d5380252a73504a3c53226b7234e6e50007e3b10a8b72711e7",
+     "pt-BR": "Hã? Esconder onde?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k357",
+     "source_text_sha256": "611da61705768c5a90c275d0be6f535685e14a9f6eb8a96264b64cda7be8728a",
+     "pt-BR": "Muto＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k358",
+     "source_text_sha256": "c644227b2dd1c8c6b6823dcd2f07d7da91a1e9cae1dee9f041723b84d926fa90",
+     "pt-BR": "Ei, vocês! Não adianta se esconder!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k360",
+     "source_text_sha256": "fbf730da4ae66a427180bdd393017aa02387a797db44bb353c3c0455adde8bd3",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k361",
+     "source_text_sha256": "548de2d90c725f3c37e9dd38b03731de38a58d1bfae3b5471d278b8255b4b02d",
+     "pt-BR": "Ei! Kiyoshi! Está me ouvindo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k363",
+     "source_text_sha256": "49d3222332312bdbea6300619ebe7c1d4e6bb090cc3d7a677359a150db07afcd",
+     "pt-BR": "Kiyoshi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k364",
+     "source_text_sha256": "0bafb534ab9ced1a0bdf998baa1443996c15b6d8ad8521360fd3404434f8a042",
+     "pt-BR": "Shibata! Deixa este lado comigo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k366",
+     "source_text_sha256": "1c2512189a41629509fcddaec2020cc7a583285071407d7f9a002b3cc8936b1f",
+     "pt-BR": "Muto! Kiyoshi!\nAssim que acharem, acabem com eles. Não vacilem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k368",
+     "source_text_sha256": "9fe99c10719ec9ea603de6e52869b9ca963bfb649982b64a762e5502ad2eb786",
+     "pt-BR": "Muto e Kiyoshi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k369",
+     "source_text_sha256": "59c55d4b878df63d50ff372587f8319ae3821c1cf3fe8c6bce31cf184b4a7c34",
+     "pt-BR": "Sim, senhor!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k371",
+     "source_text_sha256": "e7477aa2a0ef0ee7992e5a1bff963d24de0b65c7d7c2cf6258f65db5006ed0e0",
+     "pt-BR": "Eles viram o negócio acontecer.\nSe a gente não der um jeito neles, é o nosso pescoço que está em jogo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k373",
+     "source_text_sha256": "46df7c46c9916c9ec7a341c8ed885bf87d2b0e7941dc9ab976c69531485e7249",
+     "pt-BR": "...Muto, cala a boca.\nNunca se sabe quem está ouvindo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k375",
+     "source_text_sha256": "d8f110afb56435ac12db97be6e5baaa20853b26b71263a9e82e09a45b3717e72",
+     "pt-BR": "D-desculpa, Shibata...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k377",
+     "source_text_sha256": "686b04e0a96d4078e21d736c2da1212ad66aa068b871fe8a47371a7fe3e2d0e6",
+     "pt-BR": "Você procura dentro do armazém.\nEu vigio lá fora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k380",
+     "source_text_sha256": "02e4c78c6dac3d2ac4002c182441119a225599dc8816f2da60636d0276eeab16",
+     "pt-BR": "Se eles nos acharem, estamos mortos...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k382",
+     "source_text_sha256": "7d0fc1a9b9f10b5ed0eb8d6941267c3e458fcb3ebedaeeb936379d66c579d616",
+     "pt-BR": "Parece que tem mais um deles na saída do outro lado...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k384",
+     "source_text_sha256": "130cc201e81148bb124f7a8063fd2d9c17e6481d9905637f1365885a6b326aae",
+     "pt-BR": "Se sairmos pela frente, eles vão nos ver...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k386",
+     "source_text_sha256": "a262c74a681960a73b8e4f0a8bac371f00774e8a46e0d8d1052eba91e345f7b3",
+     "pt-BR": "Será que dá pra chegar até a saída do outro lado sem sermos vistos...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k388",
+     "source_text_sha256": "2bc41940cc12032174e5465d7d33c8e1f8111c9e545332aac46506d12f89e33b",
+     "pt-BR": "Se eles nos acharem, estamos mortas...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k390",
+     "source_text_sha256": "39fec5a3ef26a74afe7cbf440e5281b93f464c00c2db7f0d71d906fbbdfe6b5a",
+     "pt-BR": "Parece que tem mais um deles na saída do outro lado...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k392",
+     "source_text_sha256": "35520abfbd3519c1cec4281e4dca3bfdc35dda6808cb83c728ef07be05a1cd57",
+     "pt-BR": "Se sairmos pela frente, eles vão nos ver.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k395",
+     "source_text_sha256": "e91e817bca400e52b8fee6603ba6fad6bdcd6e069a13ed503a775b4eeebbc4bf",
+     "pt-BR": "Se eles nos acharem, estamos mortos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k398",
+     "source_text_sha256": "1771dcbb09089d1851bb3bfa7c34ff6ffa4cac0ecd9a70724714f2357dd227d7",
+     "pt-BR": "Precisamos ficar escondidos e chegar àquela saída de algum jeito...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k402",
+     "source_text_sha256": "8223d61a09a32b21ef27917a2cea68264d137a3f61d14a2f7eb9196b185c4884",
+     "pt-BR": "Eles também estão vigiando a entrada da frente.\nPrecisamos chegar à saída do outro lado sem sermos vistos...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k406",
+     "source_text_sha256": "2b72c480117a225b2408553dab346c634b1bb1854e19941936406f6350f559fe",
+     "pt-BR": "Certo. Precisamos ficar escondidas\ne chegar àquela saída de algum jeito...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k408",
+     "source_text_sha256": "56cff6c67e12da13e0dc8c3a3ebb974671a056d6b85ecdf00cbdd2fe2a5125d2",
+     "pt-BR": "Será que dá pra chegar até a saída do outro lado\nsem sermos vistas...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k411",
+     "source_text_sha256": "cad939137b7c7186694d76b9e00e0c4ba1ba4ffa61446abeb15193fe0b01e580",
+     "pt-BR": "Parece que tem mais um deles na saída do outro lado.\nVamos tomar cuidado...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k413",
+     "source_text_sha256": "81b9aaf3e7acf08fe196b188a5227552630d9194adfb36c13cc22e475a55afb5",
+     "pt-BR": "Kiyoshi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k414",
+     "source_text_sha256": "d7d6b49f2273bc0faed7c4ebf0d7b3f0e667755a7ded7d9ec4fddd9550306f38",
+     "pt-BR": "Estão ali! Eles estão fora do armazém!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k416",
+     "source_text_sha256": "4815351de6c483b44855d56ff405a84bb59177b187697f4d9ea31da8bc4674cf",
+     "pt-BR": "É um Labor da Segunda Seção de Veículos Especiais! O que ele está fazendo aqui...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k418",
+     "source_text_sha256": "00bffa72f121f3aba86ac24309d3cf75a12fd9e582217788df0342f0a9b6be83",
+     "pt-BR": "Pega eles, Muto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k420",
+     "source_text_sha256": "3a30835a43d40f891d51d8bcb123d0a8357cf9f7e21dc4e76e2e6eaca10f45e0",
+     "pt-BR": "Ah, é a Risa...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k422",
+     "source_text_sha256": "d8c046f794f1488a7fd409d82472784896a01fa03218cbca149366ee282e2d4c",
+     "pt-BR": "Alô?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k425",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k426",
+     "source_text_sha256": "90f10c17f6cc590108ec3e252a4360e08c593f68d98018c9e724bad4257c76c8",
+     "pt-BR": "Ah, você está bem! Daí onde você está,\ndá pra ver os Labors lutando?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k428",
+     "source_text_sha256": "63841a4dc4a57c3062631d227df55d99986941a2891f759ebee5bbb889dca56b",
+     "pt-BR": "Sim, dá pra ver.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k431",
+     "source_text_sha256": "ffc445c2b71b4820c66b71885eb555607940f331224350f512455c74097b62f4",
+     "pt-BR": "Estou no guindaste grande logo depois dali.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k433",
+     "source_text_sha256": "63a97dd668358982f5de5aa48e41a7077531ccd309457d48a91cbfdfa0748129",
+     "pt-BR": "Temos uma saída pronta. Você vai ter que passar\nno meio daquela briga de Labors, mas aguenta firme e vem pra cá!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k435",
+     "source_text_sha256": "7dc8347bf4cdfe5dc9ac4972f2a09299aed72c014005a09154c25984cf1fb286",
+     "pt-BR": "Obrigado! Vou chegar ao guindaste grande, prometo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k437",
+     "source_text_sha256": "e178bc38ce49c205cdf6b157f4b42c7f48fa55c1f3f75d1e7540cba49e782759",
+     "pt-BR": "Obrigado! Vou chegar até você, custe o que custar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k439",
+     "source_text_sha256": "437f10f9c8c78f2e61d2772243c2ec1d20e43a5fa8967da30b67a59c8a1ba4ae",
+     "pt-BR": "Entendido. Quando eu chegar, você vai ter que fazer aquilo pra mim!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k441",
+     "source_text_sha256": "8e9618586e26c6ccb7c5a4d72a29bf07393bb768ce062ed834f56ac864ab0827",
+     "pt-BR": "Não estou muito a fim, mas acho que não tenho escolha. Estou indo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k443",
+     "source_text_sha256": "544fb00f412db4f93438cc435ac694ac792ffcac9f3d1c6f5551ed566010f14c",
+     "pt-BR": "Obrigada! Vou chegar ao guindaste grande, prometo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k446",
+     "source_text_sha256": "8154d0c807203fddb5fddfc7cdb2434bf26412a89dae8996001ad1a265dc6cb2",
+     "pt-BR": "Entendido. Quando eu chegar, você vai ter que fazer aquilo pra mim, tá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k449",
+     "source_text_sha256": "fcbd85f36f1aa5556b6746068fce1fcb868de111ffa83defc4c4166ff9386631",
+     "pt-BR": "Obrigado!\nVou chegar ao guindaste grande, prometo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k452",
+     "source_text_sha256": "d156cf40afdb3229247b2100bef1b66b8a53068d3abaa841a12d3f5df2288573",
+     "pt-BR": "Tome cuidado. E se apresse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k454",
+     "source_text_sha256": "f0123794946b7def128165ef58b78ce9a8b033a6ead6566e30169f9413a238f5",
+     "pt-BR": "Obrigado!\nVou chegar até você, custe o que custar!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k457",
+     "source_text_sha256": "6357d57b77fd8c13d2f916d6a4835304033f25696e721a827dbbb1be10e4d3d4",
+     "pt-BR": "Hehe. Que fofo.\nVou estar esperando, então se apresse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k459",
+     "source_text_sha256": "be526f807983cce2ac35174af8670461ae316efe0450eb521a7aae7745dbd845",
+     "pt-BR": "Entendido.\nQuando eu chegar, você vai ter que fazer aquilo pra mim!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k461",
+     "source_text_sha256": "17dc23cfbdd481baca0d32287e38cc541dfdc1094872a0ef0f17a8925d811719",
+     "pt-BR": "Entendido.\nQuando eu chegar, você vai ter que fazer aquilo pra mim, tá?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k463",
+     "source_text_sha256": "51df084a86e9da78ae0c04a4c81f02af03681fe820f26857bdb8170d310f296d",
+     "pt-BR": "Hã? Aquilo? O que é aquilo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k465",
+     "source_text_sha256": "b24d03320cb271f222d64759d0f8f06db1a3f8e1ff4c6d7eb2b80aec689ff373",
+     "pt-BR": "Não faço ideia do que você quer dizer, mas tudo bem.\nSó chega aqui, rápido!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k467",
+     "source_text_sha256": "80428b7142cca0637e0e862f1c64155bc8b6430c04d5da87100269db88ef718d",
+     "pt-BR": "Não estou muito a fim,\nmas acho que não tenho escolha. Estou indo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k470",
+     "source_text_sha256": "74e30f6cd507a1b754584d036f79f408639dae6942aa4d538b804a3d3119f6fd",
+     "pt-BR": "Não é hora de ficar de corpo mole!\nSó vem pra cá, agora!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k472",
+     "source_text_sha256": "49e9c8081ff5398ce198f859c28c7006285a506c33b3ce58239dad682ac36737",
+     "pt-BR": "Aqui! Rápido!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k474",
+     "source_text_sha256": "d6a8307ad7f2a7a747df19a78c72246ae3d314c87aa583c7593e80d1ee64b59b",
+     "pt-BR": "É a Risa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k476",
+     "source_text_sha256": "852cfb44a2f4c6e3b94a31e8c3c52d3ad95f4401ddf0882ddcd353d2efc93b13",
+     "pt-BR": "Rápido! Sobe nisso e me segue!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k478",
+     "source_text_sha256": "9c3006a5b840bf742ac4c2ca4acbc1dd2305cb7101460628f1968d8b34fb9dea",
+     "pt-BR": "Uma moto! Dá pra sair daqui com isto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k480",
+     "source_text_sha256": "0139aac986cd140fda08445fa2e718d524fc0066ba53a0dd79278afc5b8be3ba",
+     "pt-BR": "Como a Kashiwagi sabia onde a gente estava?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k482",
+     "source_text_sha256": "42f15052aa7cf5bc81ed267f635b80d39ac197c7316d9abda3433af8196a1803",
+     "pt-BR": "Ficar um instante encantado com como a Kashiwagi é incrível",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k484",
+     "source_text_sha256": "69397f97d6e7e535659c15db334133e5e31691212b347a0e86e795ac5109b321",
+     "pt-BR": "\"Me dar uma moto? Você tem coragem!\" (Subir)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k487",
+     "source_text_sha256": "09aedb213ef47fd8676ab0a66698a92d2e359b1e0b2eebc56da96d46d1ca1a54",
+     "pt-BR": "Como a Kashiwagi sabia onde a gente estava?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k489",
+     "source_text_sha256": "3a2990526637d38b8509f212dce183c0e6e9b79fec8c97750b27bebc851c3155",
+     "pt-BR": "Ficar um instante encantada com como a Kashiwagi é incrível",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k491",
+     "source_text_sha256": "968a0e8dc99a7f510d3f51fcfaf6d00dcc8d4416187a0cda166b04dc4a869bca",
+     "pt-BR": "\"Me dar uma moto? Você tem coragem!\" (Subir)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k493",
+     "source_text_sha256": "893d305dd23ff30a8a6a2313f601cb0a5b718fdfa9c6f710defa1a1900b3a867",
+     "pt-BR": "Uma moto! Dá pra sair daqui com isto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k496",
+     "source_text_sha256": "13e02dcca23b651ed49e1b98ce5c6b59ba25669f848242e43848de98622ee11c",
+     "pt-BR": "Como essa tal de Kashiwagi\nsabia onde a gente estava?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k498",
+     "source_text_sha256": "260a21ff2e46b6dc5464cd4c966888a093d874754af82427427f230578cb6fb2",
+     "pt-BR": "Como essa tal de Kashiwagi\nsabia onde a gente estava...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k500",
+     "source_text_sha256": "3c86ba0caa1aea58ff4233870c63ae99301e6391c8ffdc22c9a8cb6faef961c3",
+     "pt-BR": "A Kashiwagi é incrível...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k502",
+     "source_text_sha256": "8668457270db9f6ec5718176e7cd422cbe380d3735aacc0e27424b7563e461c4",
+     "pt-BR": "A Kashiwagi é incrível...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k504",
+     "source_text_sha256": "c2d660d1942ae102e2f2ee7a2e385e91e936963f076d63719ea9e4de37838547",
+     "pt-BR": "Né?! Ela é incrível!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k506",
+     "source_text_sha256": "42d4397c64de8fe330d813be0c1119573f4cdd05908cd20cad4f0d316febc634",
+     "pt-BR": "Me dar uma moto? Você tem coragem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k508",
+     "source_text_sha256": "d93846f3f25623d57f48d6db316523090e425e5e09228f52ec9ada9a9925960b",
+     "pt-BR": "Me dar uma moto? Você tem coragem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k510",
+     "source_text_sha256": "b6498864a0076f695c356b208af4877d2c7430ee36df7fafd33dbb70431bb3ff",
+     "pt-BR": "Conto com você...",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -15264,6 +16921,852 @@
    ]
   },
   {
+   "path": "common/lua/stage_207_news_text.luc",
+   "source_sha256": "b166e7e26d027e05565c50b8f37ac41dab5400edff541ba581800ed744820667",
+   "entries": [
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "effb4958cbfe8fb8f88d602d6d0b1e2c8515b97ef59d02d694fa5d146c29babc",
+     "pt-BR": "O charme das empilhadeiras",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "524cfffdb0eb5f0d84fffcfaf9e95794df5d31a125437407bc5160822cdedc25",
+     "pt-BR": "Você conhece as empilhadeiras?\nNesta matéria, vamos explorar o charme dessas máquinas, tão importantes em portos e armazéns.\nAo contrário dos carros comuns, as empilhadeiras viram com as rodas traseiras, o que as torna muito mais ágeis em espaços apertados.\nOs garfos montados na frente também levantam cargas como contêineres.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "cd124c44be77b3ab99a800bc14a2ec135f2a57c0821a397de2954237b3150cc1",
+     "pt-BR": "Labor não identificado enfrenta Abraham",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "db6e97cb49061af5a74d8f961bb18933cd6129cd5834c6261f3d473126ff2d7f",
+     "pt-BR": "Moradores próximos vêm mandando relato atrás de relato de que Labors estão travando uma luta feroz no Cais de Asaseo hoje.\nA Polícia Metropolitana anunciou que, enquanto identifica a origem e a identidade desses Labors, enviou com urgência Labors da polícia e agiu para controlar a situação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "e95cd56bbfaf664de8a5043529aeabe7eb830bc824924669e743a06c61c6c56d",
+     "pt-BR": "Marcas de bala encontradas em armazém da Omoto Comercial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "9e32841266447e1973ba94f2dcb6126470e7d2cd6498596353fdee8de5408de8",
+     "pt-BR": "Soubemos que várias marcas de bala foram encontradas dentro de um armazém da Omoto Comercial na cidade.\nA Polícia Metropolitana de Tóquio anunciou que vai investigar como as armas foram obtidas, relatos de pessoas suspeitas e qualquer ligação com o Labor não identificado que apareceu no mesmo dia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "d21ba0f19e38b3f4f97bb2b307b33d94a484d37928ececaeb10129e7c39160e4",
+     "pt-BR": "Explosão em armazém: um Labor estaria envolvido?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "26bf0b8e1a031dfad1a00e52bccaba1b911f024480ec0ef161db6a9943967901",
+     "pt-BR": "Parte de um armazém da cidade explodiu tarde da noite de hoje, causando danos devastadores nos arredores.\nA explosão destruiu completamente, pelo fogo, um dos armazéns da Omoto Comercial.\nA causa ainda é desconhecida, mas relatos de um Labor suspeito e não identificado no mesmo lugar e horário levaram a especulações sobre seu envolvimento.\nAs autoridades dizem que estão investigando, inclusive se os eventos estão ligados.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "4d16b070fccea476eec14b019d44eaa817bff8b4a73f6226ec5631157fd5cdb3",
+     "pt-BR": "Labor não identificado aparece",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "b584040fc56d702d6cc38396fa13fb945935104414751088928e4d3af6963363",
+     "pt-BR": "Há relatos de que um Labor não identificado apareceu no Cais de Asaseo, na capital, na madrugada de hoje.\nSegundo o policial da Polícia Metropolitana que o viu enquanto pilotava um Ingram, nem o modelo nem a origem são conhecidos.\nA polícia está investigando, inclusive como ele foi adquirido e quem o desenvolveu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "eabb9abe7905621f00cb3501708b6071fee017d5249ee7b045feec811c95b9bc",
+     "pt-BR": "Ingram faz trapalhada de novo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "81a87bfba5a6e6a44247dd44bdb4b77956b3a72c6f8a192c109ec188ae682747",
+     "pt-BR": "O Ingram, enviado após relatos de um Labor preto não identificado no Cais de Asaseo, mais uma vez causou danos desnecessários ao redor.\nE mais: não estava em combate. Ele simplesmente tropeçou ao se mover e esbarrou na parede de um armazém como se estivesse se apoiando.\nEm meio a vozes na cidade dizendo que o piloto devia voltar para o curso de iniciante, a polícia continua sem comentar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "b0f1ff2b289545ec7c137d29973cdc314541d32dfc02684343c859cdfa409497",
+     "pt-BR": "Jovens trabalhadores exaustos, condições de trabalho inalteradas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "0bcc886192864ab133ee5063b7f807c25b34d3a59fdf7c66598389e5d706fc5f",
+     "pt-BR": "Fotografamos um jovem sentado, totalmente exausto, no porto tarde da noite.\nSegundo nossa apuração, era um dia de folga compensatória depois de três dias quase seguidos no trabalho.\nMas uma ligação repentina da empresa cancelou o descanso, deixando-o no estado que se vê aqui.\n\nFolga é um direito do trabalhador e, salvo circunstâncias extraordinárias, ele deveria poder recusar. A realidade não é tão simples.\nRecusar pode levar a uma avaliação ruim ou até a um salário-base menor.\n\nA empresa que emprega esse jovem está sob fiscalização, e suas condições reais devem vir à tona em breve.\nEntendo a direção dizer que a falta de pessoal às vezes não deixa muita escolha.\nMas é preciso lembrar que condições tão absurdas acabam piorando a falta de pessoal.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "391f06a306455ae3a090ff06fe5782dee8ef83750cd97af8b460c01e1261620e",
+     "pt-BR": "Pessoa suspeita no armazém?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "d75666f59d9a80a68ee3c45e0a761e044707355572387fa01d6ce4fda4a4d425",
+     "pt-BR": "Imagens de segurança de um armazém da Omoto Comercial mostram um jovem que parece não ter vínculo com a empresa. A polícia estaria tentando identificá-lo.\n\nAs imagens também mostram movimentos que sugerem que ele vasculhava armários e os bolsos de funcionários dormindo. As autoridades decidiram divulgá-las por acreditar que a pessoa pode ser responsável pelo recente aumento de furtos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "1994233b2f8deaf9d0fcba2553553d6b5d98524532a68e3856ded29b05c70018",
+     "pt-BR": "A noção de perigo caiu tanto assim?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "dc82c473b3b28a8f275a4a4e6d866d1e40b835de63f524acf7439265d0fb99e8",
+     "pt-BR": "Obtivemos imagens de um jovem assistindo a Labors lutarem de dentro de um armazém.\nEle está longe de ser o único. Vemos com frequência jovens assistindo ao perigo com a tranquilidade de quem está no cinema, ou gravando no celular, mesmo correndo risco.\n\nPesquisas sugerem que isso acontece quando as pessoas crescem sem experiências dolorosas próprias.\nPor exemplo, quão perto dá pra chegar de uma fogueira para se aquecer com conforto? É preciso tomar cuidado com as chamas que mudam de repente com o vento? Isso se aprende sentando perto de uma fogueira e vivendo a experiência. É mais que conhecimento abstrato.\nE entender as chamas de uma fogueira vira, naturalmente, conhecimento prático ao lidar com um fogão a gás ou fósforos em casa.\n\nTalvez esses jovens não consigam imaginar como é perigoso até um breve contato com um Labor em movimento, ou quão longe os destroços podem voar numa batalha entre eles.\nPara alguns, quando entenderem, vão enfrentar uma ameaça grave e irreversível à própria vida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "4c7852703c2a82ed78b3dd37b0c5004de9828ffc62d4139d292443523ae5eaa6",
+     "pt-BR": "Civil nos controles? Mulher no ombro de um Abraham",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "6c998034c8baf4dfb4eb1b4c5ee61ec021bf6d2a5e46eedac81f69b6a1711851",
+     "pt-BR": "Vi algo incrível durante a batalha entre Labors no Cais de Asaseo.\nQuando o Labor preto derrotou vários Abrahams e um deles se levantou de novo, uma mulher foi vista pilotando o Abraham.\nAntes disso, também houve relatos de testemunhas de que o jovem que subiu nele não era da empresa, e cresce a hipótese de que sejam civis.\n\nVou continuar apurando e trago novidades assim que houver.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k141",
+     "source_text_sha256": "9bf202ca800f2a1ae1e14891a20a7c602954f792cfcf491a8decf9faa292c581",
+     "pt-BR": "Civil nos controles? Jovem no ombro de um Abraham",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "86a1e9a4114a1a91148da29e6a12f2094fde62a2d238214c7a86017234849d3c",
+     "pt-BR": "Vi algo incrível durante a batalha entre Labors no Cais de Asaseo.\nQuando o Labor preto derrotou vários Abrahams e um deles se levantou de novo, um jovem foi visto pilotando o Abraham.\nAntes disso, também houve relatos de testemunhas de que a mulher que subiu nele não era da empresa, e cresce a hipótese de que sejam civis.\n\nA mulher que subiu nele também parece ter bastante habilidade de pilotagem, o que sugere um treinamento considerável.\n\nVou continuar apurando e trago novidades assim que houver.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k143",
+     "source_text_sha256": "60d5774206aa051131ce0d2ee86fabffbcb6839841227172dd0b0bc97c0460a3",
+     "pt-BR": "A vontade de aparecer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "97f1a431bfb418cd66e12f069abe6a6baa0c82d88019139f713bbded149eec65",
+     "pt-BR": "Uma cena no Cais de Asaseo, onde o Labor preto apareceu.\nO operário da foto ligou para casa apesar da hora e pediu para a família gravar o noticiário.\nO raciocínio dele era que, quando os helicópteros de reportagem transmitissem ao vivo por causa do Labor preto, se ele aparecesse na tela poderia se gabar para todo mundo.\nEsse fenômeno de causar problemas aos outros para \"se exibir\" aumenta a cada ano, e os casos que viram incidentes estão disparando.\nSó nos resta torcer para que o caso desse operário não chegue a tanto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k145",
+     "source_text_sha256": "4437d702982c6f324253f61a750089c6237afd1994def96a1cab33f77f39ee9e",
+     "pt-BR": "Os sonhos de um homem do mar enchem a cabine",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "7b715a44cf20f0e01f80989543cfa4612286e4c8fb46e88e63bf53f9da7c9dd3",
+     "pt-BR": "Conseguimos entrar na cabine do barco de pesca de Yahei Shinozaki, homem do mar conhecido entre os entendidos.\nAssim que entrei, o ar estava carregado de uma paixão que até um leigo como eu podia sentir.\nShinozaki começou a pescar aos 16 anos e dedicou a vida ao mar, passando a maior parte dela na água.\nMuitos de seus grandes feitos são conhecidos do público, mas alguns nunca foram contados por serem tão inusitados.\nPara esses, aguarde \"A Alma de Yahei\", que será publicado em breve.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "291033c3d1b94b587657c70889675e675b5929a8d20313abd4d41ac3110d2c63",
+     "pt-BR": "Um entusiasta? O mistério da empilhadeira",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "d319bd8bbab93235b7c498e9ea20c349634f4ff70c17eba810945ea9258f786e",
+     "pt-BR": "Veio à tona que uma pessoa com interesse anormal por empilhadeiras visitou o Cais de Asaseo.\nEssa pessoa estava obcecada em dirigir uma empilhadeira de qualquer jeito, e acabou dirigindo uma sem permissão.\nPorém, a empilhadeira foi abandonada num armazém próximo sem nenhum dano, então o dono comentou que, por enquanto, não pretende registrar como furto.\nSerá obra de um entusiasta que de repente teve vontade de dirigir uma empilhadeira no meio da noite?\nSe o mistério for resolvido, traremos uma continuação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "c453ca88092116a4ef455159bf64a06e71f562cbd74b2191d91c15807ae026d7",
+     "pt-BR": "Se uma empresa explora ou não depende do trabalhador?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "f0cc8b88c7e01796a8bdb17070961f51a501021b742ac6407f6c9e38cbc3e22c",
+     "pt-BR": "Tarde da noite no cais, Hajime Kariya fazia uma pausa.\nEle trabalha numa empresa que as pessoas chamam de exploradora. Já tinha recusado nossas entrevistas várias vezes, mas desta vez finalmente se abriu.\nEle diz que não acha seu empregador explorador de jeito nenhum.\nÉ verdade que suas horas extras passam do limite legal e seus turnos são muito irregulares.\nMas, como ele diz:\n\"A empresa me disse exatamente como era antes de eu aceitar. Em troca, meu salário-base é maior e toda hora extra é paga. Eles cumpriram a palavra, então, pra mim, está tudo bem.\"\n\nEle tem dois filhos, ainda no ensino fundamental, e quer economizar o máximo possível para a educação deles até a faculdade e para cursos que ajudem no futuro. A saúde frágil da esposa foi outro motivo para escolher esse emprego.\n\nNuma época de desigualdade de renda cada vez maior, ele decidiu que não podia contar com o sucesso numa carreira de escritório, e achou que um emprego comum não bastaria para sustentar a família.\nCom o que ganha agora, ele espera juntar o suficiente para se aposentar cedo e viver com conforto com a esposa quando os filhos estiverem encaminhados, então diz que até gosta do trabalho.\n\nDito isso, ele voltou ao trabalho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "a61ded7b4e3aae72876b81636e8cd28affb9e77ba3f63c674512df55a192933e",
+     "pt-BR": "Trabalhador faz denúncia?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "336f2f717818560a6ad5c52bc1e3ae0a0b8a7a5353885584ebeb2a4d62d58cf9",
+     "pt-BR": "Uma entrevista com Toshiya Okinaga, que trabalha no Cais de Asaseo, revelou fatos chocantes.\n\nEle diz que sua empresa comercializa amplamente produtos ilegais, como armas e drogas.\nUsando seu know-how de transportadora, ela teria lucros enormes através de todo tipo de brecha e contato.\n\nNo começo, esta redação também não acreditou, mas depois de ver cargas que realmente continham esses produtos, não havia como negar.\n\nQuando descobriu, ele diz, ficou dividido, mas, cegado pelo salário alto, fingiu não saber.\nCinco anos depois, ele ganha dezenas de milhões de ienes por ano, mas decidiu que não pode mais viver assim.\nA culpa por ajudar em crimes nunca o abandona, e ultimamente ele diz que nem sente mais o gosto da comida.\nAcima de tudo, quanto mais a empresa o valoriza, mais tempo ela toma dele, e ele quase nem consegue ver a família.\n\n\"Nunca foi pelo dinheiro. Se eu tiver tempo com minha família, um salário mínimo basta.\"\nDito isso, o senhor Okinaga baixou os olhos e soltou um longo e profundo suspiro.\n\nAs informações desta entrevista foram repassadas à polícia, e uma investigação já está em andamento.\nTraremos atualizações exclusivas conforme a história avançar.\n\nUm mês depois da entrevista, esta redação encontrou o senhor Okinaga por acaso na rua. Ele tinha saído da empresa\ne parecia leve e renovado, como se um peso tivesse saído de seus ombros.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "1fbfce6dbb040af3ed25a1208ea7c4f49ca2f45822d4eec4a4947422314f232d",
+     "pt-BR": "Empresas de segurança e Labors",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "3316470a44cb7c291632c333fe88875cdc706f6244ba264d06e6243041a698da",
+     "pt-BR": "Estas imagens mostram um Abraham de prontidão dentro de um armazém.\nMuitas empresas de segurança têm vários Labors como este.\nHá problemas, porém.\nUma grande empresa de segurança tem recursos de sobra para ter muitos Labors de última geração.\nAs médias e pequenas não têm a mesma sorte.\nNuma empresa de segurança regional que visitei, havia um único Labor, muito velho.\nSinceramente, não tinha boa manutenção e parecia pouco mais que enfeite.\n(Como quase não há Labors civis naquela região, talvez a necessidade seja menor.)\n\nA vida não ficaria mais segura se as centenas de bilhões de ienes que o governo desperdiça todo ano fossem usadas para emprestar Labors regularmente a empresas de segurança de todo o país?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "df094811d501ab19cb68c489f8ab53b1296bfffa434fc35a035999713e80aa92",
+     "pt-BR": "Um novo modelo de negócio: compradores de usados",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "f6106e0539a44059896bf44b820152b65f029f4909ebf8c3caabe5d2b093be51",
+     "pt-BR": "Surgiu um novo modelo de negócio no ramo de compra de usados.\nEm vez de lojas, funcionários vestidos todos iguais ficam em todo tipo de lugar, prontos para comprar quase qualquer coisa na hora.\nInfelizmente, a gestão do dinheiro pago aos clientes e o armazenamento e manuseio dos itens comprados são segredos comerciais, então não consegui saber mais. Mesmo assim, a ideia com certeza pareceu nova.\n\nOs funcionários, reconhecíveis à primeira vista, chamam atenção só por estarem ali. Redes sociais já até compilam suas localizações, aumentando rapidamente a fama.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "94f4116c00702d6574cfba15112924bbe93f48e20ecd3a9ff9e349c6bba815a7",
+     "pt-BR": "Contêineres: possibilidades para todos os usos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "f01cda814b837958a8b31c58f9d27fb2298394d4c73ba91835b7f18beaebbab6",
+     "pt-BR": "Os contêineres estão por toda parte: nos portos, em trens de carga correndo ao lado das estradas e nos aeroportos.\nMuitos leitores também já devem ter visto alguns enferrujados, abandonados tristemente em ferros-velhos.\n\nNaturalmente, os contêineres juntam a carga e a protegem de danos. Mas você sabia que eles vêm sendo usados cada vez mais para outros fins?\nPor exemplo, um contêiner grande pode ser colocado no jardim e parcialmente reformado como escritório separado, ou um contêiner refrigerado pode virar depósito de alimentos.\nE as possibilidades continuam crescendo.\nHá quem tenha instalado rodas e motor num contêiner para poder evacuar com ele inteiro. Outros instalaram geradores de oxigênio e energia independente, permitindo que uma família de quatro pessoas passe um mês lá dentro durante uma enchente.\nAs formas e estruturas simples permitem todo tipo de modificação.\nNum caso especialmente inusitado, alguém empilhou contêineres, instalou escadas por dentro e criou um prédio de aluguel de sete andares.\nNão sei como isso aconteceu, mas o prédio foi aprovado oficialmente, e interessados em alugar não param de aparecer.\n\nQue tal explorar você mesmo as possibilidades dos contêineres?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "67a10bbfc0c5633f3016283d53ed8b1e3040a265638771337329dae4e69c773a",
+     "pt-BR": "Os mistérios do mar ainda têm profundezas insondáveis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "6958f2b7c01ba763c84dcbf281eb23aa90540af2e70052358291d20b5db8f4f9",
+     "pt-BR": "Quantas pessoas já olharam para um mar sem luzes da cidade nem luar?\nSem luz nenhuma, naturalmente, tudo à frente é escuro como breu. Só se ouvem as ondas. Vivi isso numa certa praia, e a escuridão parecia pronta para me engolir. Mesmo sabendo que o chão era de areia em leve declive, tive medo de avançar e tocar as ondas.\n\nComo mostra a descoberta contínua de novas espécies de peixes, boa parte do mar continua além da compreensão humana. A tecnologia pode até revelar o formato do fundo do mar por radar, mas a verdade é que ainda não sabemos o que há lá.\n\nCerca de dois anos atrás, um submarino de última geração de certo país desapareceu durante operações em águas profundas. No início, suspeitou-se de um acidente ou do envolvimento de outro país, mas oito meses depois ele foi encontrado no fundo do mar do outro lado do planeta, coberto de arranhões em espiral e sem a tripulação.\nNo começo, pensou-se que os arranhões vieram do atrito forte ao tentar se soltar de algo como um cabo enrolado nele e preso nas rochas. Mas algo parecido com escamas foi encontrado cravado nos arranhões.\nSe uma criatura desconhecida das profundezas o atacou continua sem resposta.\n\nPara a humanidade, o mar ainda tem profundezas que não conseguimos sondar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "2bf1b41b966896b60a6576d0a5ef4dc7e9981fa39e21b6f71880baa73bfefc0e",
+     "pt-BR": "Item essencial no mar: a boia salva-vidas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "223a505ad17c8cacb2fa460e91cae8daab9df625ea00fa784970c6448655a007",
+     "pt-BR": "As boias salva-vidas encontradas nos navios são, naturalmente, equipamento obrigatório.\nElas salvam vidas justamente no momento em que mais se precisa.\n\nTambém vêm sendo cada vez mais disponibilizadas em piscinas de escolas e praias.\nAlguém pode pensar que, numa piscina, bastaria nadar até a pessoa para ajudar. Mas quem está se afogando pode agarrar ou se debater desesperadamente, colocando o socorrista em grande risco, especialmente quem não tem o treinamento e a experiência de um salva-vidas.\nA boia permite o resgate reduzindo o risco de criar mais vítimas.\n\nClaro, fazer um curso de salvamento e aprender a lançar uma boia pode ajudar você a salvar alguém quando o inesperado acontecer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "675a810d1990d1cbe6431ec3c5501615474750056b1e0e9f9289f46f149e20bf",
+     "pt-BR": "Explorando armazéns, parte 20114",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "65775c439ef2d82b0ef651f9acc827a5069a32dad165f268eab67d9b0e1f8086",
+     "pt-BR": "A série de visitas a armazéns desta redação, que ama armazéns mais que tudo. Desta vez, consegui visitar um armazém no Cais de Asaseo.\nAlguns dias depois da visita, aconteceu aquela confusão, e fiquei chocada ao saber que todo tipo de produto ilegal estava guardado nesses armazéns.\nIsso porque a pessoa que me mostrou o lugar naquele dia foi muito gentil, e não senti nenhum clima de submundo no armazém.\nTalvez esse tipo de carga só não ficasse no armazém que me mostraram.\n\nOs armazéns em si não têm culpa. Quero continuar visitando armazéns.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "f0e37d3e9260775c696697d1dc41ba755f5dd6295ed7d251f48bdad35ee580f2",
+     "pt-BR": "Afinal, não era o preço do excesso de trabalho...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "f23023937dffe674748aadb0c6b1154c1bc3199c011c239d6b5f42704e5ef5b1",
+     "pt-BR": "Um operário dormindo debruçado numa mesa da sala de controle de um armazém do Cais de Asaseo.\nNo começo, achei que fosse cansaço por horas extras abusivas e o entrevistei, só para descobrir que não era nada disso.\nEle nunca fez hora extra; só estava com sono por jogar videogame em casa o tempo todo, e fazia corpo mole cochilando onde ninguém via.\n\nEle entrou na empresa dos pais por indicação e, por isso, os superiores têm dificuldade em chamar sua atenção.\nCom essa confusão, veio à tona que a empresa também estava envolvida em irregularidades.\nOs funcionários se dispersaram, e ele não é exceção.\nSerá que ele vai conseguir sobreviver na sociedade sem o apoio dos pais? Aguarde nossa continuação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "1b568879da0a3803b2aa9e9e2f49489bd48ddd0acc694b10b8e1b92b95b06e15",
+     "pt-BR": "Cais de Asaseo em chamas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "238e53c2782233a76b0de7218293eda2f8128963138516f10a8d43750163912f",
+     "pt-BR": "No caso da explosão e incêndio do armazém no Cais de Asaseo, obtivemos imagens que mostram o que parece ser a bomba que provocou a explosão.\n\nDizia-se que a explosão do armazém foi resultado da batalha entre Labors, mas parece que não foi bem assim: ele foi destruído de propósito.\nPor que, por quem e com que objetivo ainda não se sabe.\nPretendo continuar investigando esse mistério.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "46f2af475b633fd40cf4b3d513434947afe96efc39cf45c2186d641b7e806262",
+     "pt-BR": "Labor preto acaba rapidinho com os Abrahams",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "e5a81921983963327becf55889ddb40a506b0872cf54b1ae1aa07dbcc22541d9",
+     "pt-BR": "Um Abraham está entalado num armazém, sem conseguir se mexer. Pelo jeito, ele tentou conter o Labor preto e acabou arremessado.\nOutros Abrahams teriam sido jogados no mar.\n\nO operador ter escapado só com ferimentos leves foi realmente um pequeno alívio em meio à desgraça.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "f6243013b3816112daf6182cac0a4f9236e8f5bb68acdda63cffb25f0c4ac239",
+     "pt-BR": "Útil em desastres? O versátil balde",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "51736e909160da0b5cc5a93f1942292651e0ab6e4d23ff20670a2f17f6dd9128",
+     "pt-BR": "Os baldes são maravilhosamente versáteis.\nAlém do uso original de carregar água, você já deve tê-los visto servindo de cinzeiro em áreas de fumantes ao ar livre, ou os menores como vasos de plantinhas.\n\nColoque roupas ou algo parecido dentro como acolchoamento e vista um, e ele vira um capacete improvisado. É mais fraco que um capacete de verdade, mas mesmo assim pode proteger a cabeça de vidro caindo e pequenos pedaços de concreto num desastre.\nClaro, é só um substituto de emergência. Ainda assim, espero que os leitores percebam que a criatividade pode tornar objetos do dia a dia úteis quando necessário.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "44334314376a369c3136ad3fdadd0da5122a5a2fe013d7c51d5f7aa56f75df25",
+     "pt-BR": "Barco roubado é encontrado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "f314398a1c918e0c9cd3350c122312af5c1d726313d77323dd2d813d0f003eff",
+     "pt-BR": "Descobriu-se que um barco dado como roubado foi abandonado no Cais de Asaseo.\nComo o dono do barco foi ameaçado com o que parecia uma arma e o barco foi levado por dois homens, a polícia considerou provável que fosse crime, e uma busca rápida levou à sua descoberta.\n\nHá também depoimentos de que os homens que levaram o barco dispararam tiros perto do cais onde o abandonaram, e a polícia agora tenta descobrir seu paradeiro e identidade.\nTraremos notícias assim que houver novidades.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "0226f6516ccbbfc152a07299ea5a6d34f74b938d4b0470984b9435c996022f1d",
+     "pt-BR": "O imenso poder da natureza",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "ad1bb7535679ae2c7d390b449d1e7c3f7a7eb2e7253c5dacb339ce0a3cce7e9b",
+     "pt-BR": "As marés sobem e descem por causa da posição e da atração gravitacional da Lua, como a maioria dos leitores deve saber.\nÉ difícil não se maravilhar com a gravidade quando a atração de uma Lua a 384.400 quilômetros pode nos afetar.\n\nMas você sabia que surgiu recentemente outra teoria?\nEla afirma que a região perto do centro da Terra é oca, com duas aberturas em algum lugar que abrem e fecham. O ar passando por elas faria a própria Terra inchar e encolher.\nAs supostas aberturas já teriam sido identificadas e estariam sendo investigadas.\n\nParece bem duvidoso, mas você acreditaria?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "b584766851f930281a8a529f41d52ca6c08eced5c9300ef0ef79668d3f5ee7e8",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "73db0a7ddc15bb4258b2193bca90f5f7558c9de266232a959a4e612c88227027",
+     "pt-BR": "Nesta série, apresentamos as 10 maiores notícias do último ano fiscal da Omoto Comercial, famosa por ter muitos armazéns no Cais de Asaseo e cuidar da distribuição de todo tipo de produto. Parte 1: \"Aumento dos armazéns no Cais de Asaseo.\"\n\nA Omoto Comercial comprou 10 novos armazéns no Cais de Asaseo e agora ocupa cerca de 80% dos armazéns do cais.\nIsso permite cuidar de ainda mais distribuição.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "944eeb08cd2c9bf3f90124d0208c8ad279d1f32fb47ce3644138cd9432f38a53",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "d0c19ac97621c8e7f4961c11ff07dd1523ba58dc3f392196c4121ac711fc6371",
+     "pt-BR": "Nesta série, apresentamos as 10 maiores notícias do último ano fiscal da Omoto Comercial, famosa por ter muitos armazéns no Cais de Asaseo e cuidar da distribuição de todo tipo de produto. Parte 2: \"Lançamento das vendas pela TV.\"\n\nA Omoto Comercial finalmente lançou vendas pela TV 24 horas como emissora, com seu próprio canal dedicado em rede nacional.\nEla chama atenção por trazer atores e atrizes famosos de primeira linha, escolhidos conforme o horário e os produtos.\nAlém disso, todo dia um de seus produtos é oferecido pelo preço baixíssimo de 1.000 ienes, sem pensar no lucro, e a audiência está disparando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "85300039ce4d3c3a98f55bb94aa36c34061c758541f10c8998c86cbf65e0ba30",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "e41b822a1e50dd01c660e97fc6b8c71a2336e9ec8cc618f3100ce7da014968b5",
+     "pt-BR": "Nesta série, apresentamos as 10 maiores notícias do último ano fiscal da Omoto Comercial, famosa por ter muitos armazéns no Cais de Asaseo e cuidar da distribuição de todo tipo de produto. Parte 3: \"Armazéns garantidos em todos os países.\"\n\nComo empresa de logística, a Omoto Comercial agora tem armazéns próprios em todos os países do mundo.\nMuitas empresas têm armazéns nos chamados países principais, mas esta é a primeira a instalar, comprar e manter armazéns em todos os países, independentemente do tamanho ou do grau de desenvolvimento.\n\nPerguntado se há mesmo alguma vantagem nisso, o presidente da Omoto Comercial respondeu com um sorriso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "4261cecb7775e6cf083233d2e5babff722714b1430d2ee0a63056706452b131f",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "784ddca2bc66e709bd5723f9e3fb702824836bfe91a016fe3ca62dc7a59a7b20",
+     "pt-BR": "Nesta série, apresentamos as 10 maiores notícias do último ano fiscal da Omoto Comercial, famosa por ter muitos armazéns no Cais de Asaseo e cuidar da distribuição de todo tipo de produto. Parte 4: \"Armazém via satélite começa a operar.\"\n\nO armazém via satélite, que pode receber cargas e até contêineres inteiros levados do chão até um satélite parecido com uma estação espacial, finalmente começou a operar.\nA Omoto Comercial realizou, com sua riqueza de pessoal e recursos, um projeto que normalmente seria feito em nível nacional.\nO custo de lançamento dos contêineres ainda é alto, mas, como não exige terreno no chão e transporta produtos sem meios comuns como navios ou caminhões, é um negócio muito promissor para o futuro.\nBases de lançamento dedicadas já foram construídas perto dos armazéns da empresa pelo mundo, e os pedidos estariam aumentando sem parar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "5d4acc094efa437eb0004b3bea933f67bfdbcc7880cc48c7204745924f7c4aaf",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "0c105ce37f5950378ae3f2a0694936a2c653e24611bf652ca9542bd176a216d8",
+     "pt-BR": "Nesta série, apresentamos as 10 maiores notícias do último ano fiscal da Omoto Comercial, famosa por ter muitos armazéns no Cais de Asaseo e cuidar da distribuição de todo tipo de produto. Parte 5: \"Funcionários passam de 100 milhões.\"\n\nOs funcionários efetivos da Omoto Comercial finalmente passaram de 100 milhões.\nContando os de meio período, o número passa de 250 milhões. A Omoto Comercial agora é bem-vinda em todos os países por dar trabalho a tanta gente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "dfd1a7f99aa8cda86b9e97f6debce9c37e4dd090f2cac6c3857acf6cf1b17542",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 6",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "b7ab0418ee0d90a27b418b289ac2e15ac24034938a642bea0698b54b7308b049",
+     "pt-BR": "Nesta série, apresentamos as 10 maiores notícias do último ano fiscal da Omoto Comercial, famosa por ter muitos armazéns no Cais de Asaseo e cuidar da distribuição de todo tipo de produto. Parte 6: \"Líderes mundiais visitam a sede.\"\n\nDe setembro a novembro do último ano fiscal, primeiros-ministros das chamadas grandes potências visitaram a sede da Omoto Comercial para conversar com seu presidente.\nO conteúdo das conversas é ultrassecreto, mas virou de fato uma \"peregrinação à Omoto\" mundial.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "25a87965aa5f29640468ef26e70135663aa3a9e6d12f1cc6e014c47950b1e498",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 7",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "0389f8a7fa22729267b74389a2213f64ea5568309220ecf422d7c91b2e54c29b",
+     "pt-BR": "Nesta série, relembramos as dez maiores notícias do ano passado da Omoto Comercial, empresa conhecida por ter inúmeros armazéns no Cais de Asaseo e distribuir todo tipo de produto. Nossa sétima parte é \"Supercaminhões solares entram em operação.\"\n\nA Omoto Comercial começou a operar caminhões grandes movidos inteiramente por sua tecnologia solar própria. Os painéis solares montados em cima dos contêineres usam tecnologia exclusiva e são impressionantemente capazes: mesmo com pouca luz, como em tempo nublado ou chuvoso, um minuto de carga gera energia suficiente para rodar 10.000 quilômetros.\n\nA Omoto Comercial também pretende usar essa tecnologia para entrar no ramo de energia elétrica. Há quem diga que isso pode levar todas as companhias de energia existentes à falência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "d421971dfe7bc28414a49df69373385e2bff7955b118d1546e5499eb8434e2cb",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 8",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k192",
+     "source_text_sha256": "7ddf0f2a1830fe53c4540ef2e881529ca6a0eb2292801ce46cd6d1f7c787a4f0",
+     "pt-BR": "Nesta série, relembramos as dez maiores notícias do ano passado da Omoto Comercial, empresa conhecida por ter inúmeros armazéns no Cais de Asaseo e distribuir todo tipo de produto. Nossa oitava parte é \"Cem novos petroleiros gigantes entram em operação.\"\n\nA Omoto Comercial acrescentou 100 grandes petroleiros exclusivos para sua própria distribuição e os colocou em operação.\nDesenvolvidos pela própria Omoto Comercial, os navios oferecem amplo espaço de carga e alojamentos confortáveis para as tripulações. Marinheiros experientes de outras empresas estariam trocando de emprego um atrás do outro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "17c63db31187037fa98c8e7bc2fba8adf0ab7464388aa441bec6f9ebe6c88129",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 9",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "7666219217d802e16a5dd5ffa11fe55d37d82a981dcba81968a71059c9654131",
+     "pt-BR": "Nesta série, relembramos as dez maiores notícias do ano passado da Omoto Comercial, empresa conhecida por ter inúmeros armazéns no Cais de Asaseo e distribuir todo tipo de produto. Nossa nona parte é \"Lançado serviço de entrega por teletransporte.\"\n\nDepois de anos de pesquisa e desenvolvimento, a Omoto Comercial finalmente tornou prático para o dia a dia um aparelho que teletransporta encomendas.\nSe se popularizar, essa tecnologia revolucionária vai permitir que pacotes cheguem ao outro lado do mundo em poucos minutos, sem serem levados por veículos como hoje.\nPor enquanto, porém, funciona só por linhas dedicadas, o que deixa o serviço caro.\nA empresa diz que será possível conectar por uma tomada comum em dois anos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "8ae68e82b4b3a0b901bd8d79892ab86e562a6baed6bd14c0c0cb12b94f253e51",
+     "pt-BR": "Omoto Comercial: as dez maiores notícias, parte 10",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "9d7884b9416b4f6786284776bd5910e17234b12d70b59cd365373633afdc171b",
+     "pt-BR": "Nesta série, apresentamos as 10 maiores notícias do último ano fiscal da Omoto Comercial, famosa por ter muitos armazéns no Cais de Asaseo e cuidar da distribuição de todo tipo de produto. Parte 10: \"Cerejeira da sede completa 1.000 anos.\"\n\nNo terreno da sede da Omoto Comercial há uma cerejeira plantada pelo fundador da empresa, que finalmente completou 1.000 anos. Isso também significa que a Omoto Comercial comemorou seu milésimo aniversário.\nMesmo sendo uma empresa com uma história tão longa, seu presidente diz: \"Nossa meta é o décimo milênio.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "3d508d18849af488be2cbd79ab3018dd2db03c4a9aacfd40b1743b31248cd1ac",
+     "pt-BR": "História do Cais de Asaseo 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "0fa39757aaab235ecd0f2f580e0447e748d362099352551422897d2339b6a7c8",
+     "pt-BR": "Cerca de 700 anos atrás, o Cais de Asaseo era mar.\nA rigor, era um trecho de águas rasas, e registros mostram que catar mariscos era popular ali.\nIsso foi na época em que vilarejos de poucas casas se espalhavam aqui e ali.\n\nDevia ser uma vista magnífica, inimaginável no cenário de concreto de hoje.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "af2c32c49031d86d4c7c5b4fde8d86379207da4bbd4411b196fd0a8fa4e4a138",
+     "pt-BR": "História do Cais de Asaseo 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "1c7d47cc134b26394fbb39d21af64adfc27b07c08d55bb2e09970d96546be784",
+     "pt-BR": "Cerca de 500 anos atrás, metade das águas rasas já tinha sido aterrada, e foi construída uma cidade parecida com um povoado de estrada.\nNessa época, as pessoas daqui ainda viajavam principalmente por terra.\nPorém, nas águas rasas restantes, algumas lojas monopolizavam cada uma sua área pagando um imposto específico, e coletavam e vendiam mariscos e outras pescas dali.\nAlgumas até cobravam das pessoas comuns uma taxa para catar mariscos durante a temporada de feriados.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "8a35a5d2c0a5e20f56301dda07724de03b010de1cb7d6723af186540b490854c",
+     "pt-BR": "História do Cais de Asaseo 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "bb616d5d643c91542d4a7febe824ae4f31503be0416281a65516c542fba5dc19",
+     "pt-BR": "Cerca de 300 anos atrás, no Cais de Asaseo, as águas rasas foram completamente aterradas, e a costa foi transformada num atracadouro de estruturas de madeira.\nIsso pode ser considerado a origem do cais atual.\nIsso melhorou drasticamente a distribuição pelas rotas marítimas, e as cidades ao redor prosperaram.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "21c96bb850099f31f75b1ba5d5fdfb333f6c59e1d976e18379810da9a06fb8d9",
+     "pt-BR": "História do Cais de Asaseo 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "40ddc22aa6387de9733cf8fd0e372f989fb70e69043edec5ef4e8d222b5280e6",
+     "pt-BR": "Cerca de 150 anos atrás, os atracadouros e depósitos de carga foram ampliados, tornando-o um dos três maiores atracadouros do país na época.\nComo ponto-chave das rotas marítimas, a cidade se desenvolveu ainda mais.\n\nAs terras agrícolas ao redor também viraram casas, lojas e hospedarias.\nE assim, ela se transformou rapidamente de cidade agrícola em cidade comercial.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "6684abe9d169f294c49e7d9249694214b0feb5f000bbedaa5f14b2c1cc0cf5c1",
+     "pt-BR": "História do Cais de Asaseo 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "da16e20aef30336e0c777a526d4b1048516f6552628152116ff71d1b0ca2147b",
+     "pt-BR": "Durante a guerra, quando tudo já estava bem modernizado, havia também um estaleiro, onde alguns encouraçados gigantes foram construídos.\nAo redor havia alojamentos e casas de diversão para quem trabalhava no estaleiro, e o dinheiro gasto pelos trabalhadores vindos do interior deixou a cidade ainda mais próspera.\n\nDepois da guerra, o estaleiro foi fechado, e onde ele ficava surgiram novos atracadouros e um bairro de armazéns, mais ou menos como o Cais de Asaseo de hoje.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "bd5efc0981cca68a04fd76e3a4335b636aa7d49364f42215375a7e72427fefc7",
+     "pt-BR": "Tipos de armazém, parte 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "d29b3987b03c575b6981dc1d5ef5de1ffaed0efe1bdee9a3128c6717128ff388",
+     "pt-BR": "Você sabia que estão sendo desenvolvidos e vendidos armazéns com funções além de simplesmente guardar carga?\nDesta vez, apresentamos um armazém que também serve de abrigo nuclear. Nem dez impactos diretos seguidos de mísseis nucleares conseguem destruí-lo ou contaminá-lo. Equipamentos especiais de purificação e ar-condicionado mantêm o ar limpo lá dentro, enquanto o sistema Ultra Super Solar da Omoto Comercial fornece energia, tornando-o praticamente uma máquina de moto-perpétuo.\n\nInfelizmente, você precisa levar sua própria comida, mas com tanto espaço, cultivar verduras dentro do armazém pode ser uma opção.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "ef0f9d662e8a192e2193e4852e1e56574478224d1b9f76dd32da86bc0faeb193",
+     "pt-BR": "Tipos de armazém, parte 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "5ad483c2c93295368362bd846cdc40d0abf0cd2b8174a0cf806ced05fe089751",
+     "pt-BR": "Você sabia que existem armazéns que se movem sobre esteiras?\nEles permitem mover a carga junto com o armazém inteiro.\n\nEles já são usados num certo país onde a maior parte do território virou deserto. A cena de armazéns refrigerados e de congelados atravessando o deserto como as caravanas de antigamente é realmente impressionante.\nCada vez mais cais estariam adotando-os também, porque mover o armazém inteiro durante um desastre pode evitar mais danos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "649b6e2f0c9dac4b5a02e0e724fd877472c36de1ac4e07e8952889e83e1679af",
+     "pt-BR": "Tipos de armazém, parte 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "1c1c87e73113d96a3ffd1c4881079cc179cc92e2bd9892f1bb788c503764a5b6",
+     "pt-BR": "Acredite se quiser, existem armazéns que voam com propulsão a jato.\nEles não precisam de pista, já que se movem como aeronaves de voo vertical.\nOutra característica é que o sistema Ultra Super Solar da Omoto Comercial os alimenta, acabando com a preocupação com combustível.\n\nCom o próprio armazém servindo de transporte, armazéns inteiros agora podem ser despachados.\n\nEles também oferecem um método revolucionário de evacuação em terremotos e outros desastres: recuar para o céu, que não é afetado. Por isso, órgãos públicos, além de empresas, começaram a adotá-los.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "9763c0ad306e5fb97a9d775ef11eeaddae3f4ece3fe265f1d6a5dae06409191f",
+     "pt-BR": "Tipos de armazém, parte 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "7ab8f6ef2af209a6ed5a5633c842a9db02fcf6bda723b8bcd93d1cfd82b421d2",
+     "pt-BR": "Alguns armazéns podem virar navios.\n\nEquipados com propulsão, eles levam a carga para o mar e a transportam como um armazém inteiro, sem precisar passar nada para um navio.\nMuitos de vocês já devem ter visto o comercial recente em que vários armazéns se alinham no meio do Pacífico para formar o logotipo da empresa. É este o produto mostrado ali.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "095aa860a7e0997a135bf4a5315fa317c94fc04d1cc5378befe3609921983a02",
+     "pt-BR": "Tipos de armazém, parte 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "cffcc8cfba696f3c5f9438f05e22b40e64fbe35b47ca59448c88c2c465a305ff",
+     "pt-BR": "Existe um armazém equipado com todas as funções.\nEle pode servir de abrigo nuclear, andar sobre esteiras, voar a jato e até virar navio.\nO preço está numa escala totalmente diferente dos outros, mas é, por assim dizer, o armazém definitivo.\n\nVocê pode pensar que ele poderia ser usado para fins militares, mas parece que o presidente da empresa, amante da paz, proíbe isso terminantemente.\nVocê se lembra do incidente de uns seis meses atrás, quando certo país governado por um tirano foi reduzido a terra arrasada da noite para o dia?\nBoatos que circulam com ar de credibilidade dizem que isso aconteceu porque comprar um desses armazéns em segredo e tentar usá-lo indevidamente despertou a ira do presidente.\nClaro, todos os civis não envolvidos foram levados antes para outros países. Que atitude admirável.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "b2e6615a0729eb2a173d59af01e20db86b926c86aab5a84b695f985c7ea41bf7",
+     "pt-BR": "Os sete mistérios do porto, parte 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "9cb56a90ea9b46116807e5355a9a2cdc14be6857add5158fe98d82fe627bfce0",
+     "pt-BR": "O conteúdo dos armazéns que sumiu da noite para o dia\n\nA longa história do Cais de Asaseo guarda todo tipo de acontecimento misterioso.\nCerca de 70 anos atrás, a carga guardada nos armazéns do cais sumiu da noite para o dia.\nOs trabalhadores que possuíam e administravam cada armazém tinham conferido o estoque antes de ir para casa,\nentão não é que a carga nunca tenha estado lá.\n\nHavia seguranças fazendo ronda à noite naquela época também, e eles dizem que não viram ninguém levando nada.\nA carga dos armazéns do cais pesava, no mínimo, várias centenas de toneladas.\nQuem levou tanta carga sem ninguém perceber, e como?\nA verdade continua desconhecida até hoje.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "d03d199e3703edaaed3adbd2d95042916cc82e2f866d73f9a43fc300ffe9913c",
+     "pt-BR": "Os sete mistérios do porto, parte 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "8a3bcadfa65e7909fcebe9b2734f38deac4ad335440f6c81e2202c205d02d870",
+     "pt-BR": "O bairro de armazéns sem saída\n\nO Cais de Asaseo é repleto de armazéns.\nDizem que, depois de entrar no bairro de armazéns, às vezes ele não acaba nunca, por mais que se ande, e não dá para sair.\nRegistros também mostram vários casos de trabalhadores que entraram no bairro de armazéns e nunca voltaram.\nAlguns dizem que talvez eles só tenham saído do cais por outro caminho e ido para outro lugar,\nmas talvez ainda estejam vagando pelo bairro de armazéns até hoje.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "ffeac1c4967205e1f52f51e6d60f44e4785552d3d1870e8e0aa8d5af8ae62b18",
+     "pt-BR": "Os sete mistérios do porto, parte 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "267bc7142fd284befc68988a00b152c904747533d183666c19000a978a4e3ff7",
+     "pt-BR": "Risadas de crianças ouvidas no cais tarde da noite\n\nDizem que no Cais de Asaseo, da primavera ao começo do verão, dá para ouvir vozes animadas de crianças tarde da noite.\nOuvir as vozes não traz azar nenhum, mas as pessoas acham sinistro, então as rondas noturnas nessa época pagam mais.\n\nHá informações de que, muito tempo atrás, a região era de águas rasas onde catar mariscos era popular.\nTalvez as vozes felizes das crianças daquela época estejam sendo ouvidas através dos tempos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "f2d4e5654871a29e0ea1f3257d1976349057d9d6accf0e90d4f74106fd66d913",
+     "pt-BR": "Os sete mistérios do porto, parte 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "69551ca51a15ecf237835eefe590d5470835aeec02dd4c24b2021e4d262c1938",
+     "pt-BR": "O misterioso funcionário senhor Yamazaki\n\nEntre as pessoas que trabalham no Cais de Asaseo, há um funcionário bem conhecido chamado senhor Yamazaki.\nEsse senhor Yamazaki, na verdade, não pertence a nenhuma empresa ligada ao cais, e há dúvidas até se ele é humano.\n\nIsso porque, embora pareça ter uns quarenta e poucos anos, sua existência é confirmada há mais de 200 anos.\n\nO senhor Yamazaki entende de todo tipo de assunto e, sempre que alguém no cais está em apuros, aparece casualmente e dá conselhos precisos, então quem trabalha no cais gosta muito dele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "a20b82faa00de2116e79803fe74c12cd5df22d8428f8ab402447a4ab40dd4d42",
+     "pt-BR": "Os sete mistérios do porto, parte 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "6016b604535d7cfdbe37875d6d163e93099b4d7424392b1d593aaaf09eb6afa3",
+     "pt-BR": "A gata tricolor que vive para sempre no cais\n\nNo Cais de Asaseo existe uma gata tricolor que mora lá desde não se sabe quando.\nEla tem uma mancha característica nas costas, e parece estar zanzando por ali há uns 100 anos.\n\nEla não costuma ser vista, mas de vez em quando aparece, senta com as patas dobradas por um tempo e vai embora de novo.\nO importante é que, dizem, a desgraça sempre atinge as empresas e pessoas ligadas ao lugar onde a gata parou e sentou, logo no dia seguinte.\n\nNo dia seguinte a ela ser vista tomando sol no alto da estrutura de um guindaste de pórtico, esse guindaste desabou, caiu sobre um petroleiro próximo e causou um incêndio enorme.\nOutra vez, ela foi vista deitada num certo armazém, e no dia seguinte a sede da empresa dona do armazém pegou fogo num incêndio suspeito.\n\nQuem trabalha no cais acredita que a gata não traz azar, mas vem avisar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "b0c0c0307e9c3242a91421a757743c9eee5b45b7f778d1b6d3905a46ac543634",
+     "pt-BR": "Os sete mistérios do porto, parte 6",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "b690d85a19e21d7bf258d6bfd8f85bd7b0929e6b058040581504f769c1768e8d",
+     "pt-BR": "O canto do cais onde ninguém consegue entrar\n\nDizem que o Cais de Asaseo tem uma área impossível de alcançar.\nNo mapa, parece ser um dos armazéns, mas não importa o caminho que se pegue, não se chega lá.\n\nAlguém teria feito imagens aéreas para conferir, e nelas o armazém aparecia mesmo, igualzinho ao mapa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "c0ffb6feab69e1d8aa0cae20f71182f0890b18d2519fc1ad5713c88cec0b47a0",
+     "pt-BR": "Os sete mistérios do porto, parte 7",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "edc6907b9225e57d086b20f9e2988ecda949e5594db3679f572a65d3a9e8647b",
+     "pt-BR": "A estátua que faz ronda à noite\n\nUma estátua de bronze de certo senhor ficava no Cais de Asaseo.\nEra a estátua de Tokuzo Yano, figura ilustre da região, erguida em reconhecimento a suas doações generosas e seus esforços para atrair parceiros comerciais quando o Cais de Asaseo foi modernizado.\n\nHá quem diga ter visto a estátua de Yano fazendo ronda pelo cais tarde da noite.\nTalvez os sentimentos do homem, que amou este cais a vida inteira, ainda permanecessem na estátua.\n\nHoje a estátua fica no museu da cidade. Em honra a suas conquistas, a cidade pretende mantê-la em bom estado e quer que ela seja declarada tesouro nacional.\nAté agora, parece não haver relatos da estátua fazendo ronda pelo museu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "d958d070d265c007ea5598214cad3e4dd66e28d031c03bdce391107bbaeaa978",
+     "pt-BR": "O que dá pra encontrar no porto? Parte 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "7c0e0466dfce4da5db35929b4765ee929c5a1b6d4318d4e99d4fc13afa7cd4c2",
+     "pt-BR": "Uma coisa que se vê muito nos cais é um negócio grande com formato de girafa.\nIsso se chama \"guindaste de pórtico\".\n\nQuem trabalha no cais usa esses guindastes para colocar contêineres nos navios e, ao contrário, levantar os contêineres que estão nos navios.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "06a3a680378a6898d7ee037532563e5e43f35b0f8a73906f7418f233c1b55143",
+     "pt-BR": "O que dá pra encontrar no porto? Parte 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k234",
+     "source_text_sha256": "d3eadb064b2e000cc2689519c89d6b9ea9eb8d66369dec361f1f0cef87cb5558",
+     "pt-BR": "O Cais de Asaseo tem muitos armazéns.\nEles guardam as cargas trazidas pelos navios grandes, e as cargas que vão embarcar quando o próximo navio chegar.\n\nTambém há muitos tipos de armazém: alguns deixam as coisas geladas como a geladeira da sua casa, e outros deixam congeladas, duras como pedra, como um freezer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "515613a84f99a90e9afeb1e6dcbb71865e87714e7037c83903efc80e4209d57a",
+     "pt-BR": "O que dá pra encontrar no porto? Parte 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "13a9ed2445810a5fd1a632fab6121e0dbf832aa04724b28ecd7ddfec0a00bf36",
+     "pt-BR": "As caixas de cores diferentes empilhadas por todo o Cais de Asaseo se chamam \"contêineres\".\n\nAs pessoas colocam todo tipo de carga dentro desses contêineres e os levam em navios grandes.\nÉ igualzinho a quando você guarda seus brinquedos numa caixa para levá-los.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "314ac6765766bb00f4cebac105188383a7026be1e782df33e91a985b52a811be",
+     "pt-BR": "O que dá pra encontrar no porto? Parte 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "1fd85301eae55aed542670be1fe9460db9a0457bac95537efa44c1b95bbe38fc",
+     "pt-BR": "Onde os navios param no cais, há muitas coisas enfileiradas que parecem um dedo indicador grosso e dobrado. Elas se chamam \"cabeços\".\nAmarrando esses cabeços ao navio com uma corda beeem grossa, o navio fica parado sem sair do lugar sozinho.\n\nO tamanho e o formato podem mudar de cais para cais ou de porto para porto, então dê uma olhada quando for lá com sua mãe e seu pai.\nMas tome muito cuidado para não cair no mar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "0d47a25ea49b19e30528bb0752a6447636002d4444134eac827fe1704b278a4b",
+     "pt-BR": "O que dá pra encontrar no porto? Parte 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "e9ab2f76a39b285d3ff2963a01424e29a6544b092772ad494adbbefcc6b96e01",
+     "pt-BR": "Olhando o mar do cais, dá para ver umas coisas triangulares balançando na água.\nElas se chamam \"boias luminosas\", e são sinais para os navios não se perderem.\n\nElas acendem à noite, mas não tem tomada nenhuma por perto.\nEntão, como elas fazem eletricidade? Balançando pra lá e pra cá nas ondas.\n\nTambém vendem modelos pequenos, então compre um e experimente.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_204_check.luc",
    "source_sha256": "8a4b39cc3d61431eac1e1a1bedfb7ba916b2457e9c74578891d6dac4bcb0b76f",
    "entries": [
@@ -15333,6 +17836,19 @@
      "id": "p0/k6",
      "source_text_sha256": "c56a6b91f3a7b1fd9a946ee945b15eaf0ad51a4704132d6dcb7f064f18f49f7e",
      "pt-BR": "【Vídeo】Máquina de guerra humanoide enfrenta um Anjo",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_207_item.luc",
+   "source_sha256": "80ffeb63f382bb2bf8266e4afcb46b5a10de3dbf8ed41acca00b771f3295994c",
+   "entries": [
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -15483,6 +17999,47 @@
      "id": "p0/k6",
      "source_text_sha256": "76eb4544b1f71b5fe514da7baf641226bf7f7c8a4a334711db025c5cf8b74f2a",
      "pt-BR": "【Vídeo】Alienígena gigante negro libera uma onda de choque",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_207_npc.luc",
+   "source_sha256": "92d8a6939dce1e736df99027f62399cbc05c1d1c801e6f572e3fd0bcdc1e19ad",
+   "entries": [
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "7138c167f856eaa9ddd6395f33e6e395d5d7fed0efb963adc55b13b19561a9b1",
+     "pt-BR": "Kashiwagi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "fbf730da4ae66a427180bdd393017aa02387a797db44bb353c3c0455adde8bd3",
+     "pt-BR": "Shibata＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k267",
+     "source_text_sha256": "611da61705768c5a90c275d0be6f535685e14a9f6eb8a96264b64cda7be8728a",
+     "pt-BR": "Muto＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k268",
+     "source_text_sha256": "49d3222332312bdbea6300619ebe7c1d4e6bb090cc3d7a677359a150db07afcd",
+     "pt-BR": "Kiyoshi＿０",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -29140,6 +31697,19 @@
      "id": "p0/k450",
      "source_text_sha256": "555a5ce4195a856ebe20accef5184dbeac73106c0851d0fd02e6b848f3e3ca47",
      "pt-BR": "Cliente A＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_207_check.luc",
+   "source_sha256": "904fd839add6e805bff0f3fa2e37b0a6e65a855163148c3ebf8ae65ea5a1a053",
+   "entries": [
+    {
+     "id": "p0/k37",
+     "source_text_sha256": "ea9e0cc6253dfb0275e3aae1b2304abf1fcba8ada16161dc0e2e27a61a0eee99",
+     "pt-BR": "Moto",
      "notes": "",
      "editorial_status": "pending"
     }
