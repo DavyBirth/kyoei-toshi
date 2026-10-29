@@ -63889,6 +63889,852 @@
    ]
   },
   {
+   "path": "common/lua/stage_203_news_text.luc",
+   "source_sha256": "6f501775275c2f4988ca0e54b26314482c4f6f5e3ca5374fe09c679eb75d2564",
+   "entries": [
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "c7f0448123111f187df892403d3887964ca3aa48de265d464a96e3ebd490d8cf",
+     "pt-BR": "Duas Criaturas Voadoras Misteriosas Aparecem",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "0744aaa5613312d1a154f29e47bd76a1f99953f38694af687e1501400510215c",
+     "pt-BR": "Duas criaturas voadoras de formato estranho apareceram de repente sobre a Ponte Sky Garden. Isso mesmo, duas.\nA aparência delas é diferente, o que sugere que não são da mesma espécie.\n\nAs duas voavam sobre a Ponte Sky Garden, uma atrás da outra, quase como se brincassem.\nLogo depois, raios dispararam, destruindo um atrás do outro os carros que atravessavam a ponte.\nOs raios eram fortes o bastante para perfurar a própria ponte. Como se apressasse o desabamento, o vento do bater de asas das duas criaturas entortou a ponte inteira num nível inacreditável.\n\nUm tempo depois de a ponte desabar, as duas criaturas sumiram de repente.\nPor que atacaram a ponte? Seria um aviso à humanidade?\nOu seriam como crianças empolgadas quebrando coisas sem maldade? Sem nada além de mistérios e danos imensos, o que podemos fazer?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "6c4b0e612ec3e8f4fc1762d6b3007e95bc36ad000d3abd7a10bda62ab6b3794e",
+     "pt-BR": "Uma Mariposa com Evolução Anormal?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "dff66bd62f75758fa416036465425f32a0b21762df5d82981a9fd3e8a0cacde8",
+     "pt-BR": "Uma das criaturas voadoras que apareceram sobre a Ponte Sky Garden.\nÀ primeira vista, parece uma mariposa que cresceu até ficar gigante. Seria uma mutação?\nMas o Dr. Shionogi, especialista em pesquisa animal, discorda: \"Mutações podem deixar coisas maiores, mas entre os lepidópteros só há registros confirmados de até 32 centímetros. E, mesmo que uma criatura da Terra ficasse gigante por mutação, no tamanho visto desta vez seria impossível voar com essa estrutura corporal. Por enquanto, só posso dizer que não é uma criatura desta Terra.\"\n\nParte do que seria tecido dessa criatura voadora foi encontrada no mar, e um projeto especial para estudá-lo vai começar. O doutor está ansioso para participar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "fb4fbf7a03703d1a73425742bc829ac866bf4fa2748c4da6abf4e8558e0653f7",
+     "pt-BR": "\"É uma Fera Demoníaca!\" Espectadores Inundam os Comentários",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "6a6d3b5005418855cbb04f426bc2cec0cbe20b4b8f6306011eaeb92eb674fb30",
+     "pt-BR": "\"É um demônio.\" \"Olhe por onde olhar, aquilo é um demônio.\" Comentários assim não param de chegar no nosso vídeo de notícias.\nO assunto é uma das duas misteriosas criaturas voadoras gigantes que apareceram sobre a Ponte Sky Garden.\nAo contrário da outra, esta passa uma impressão claramente brutal.\nAinda assim, como acontece com a gente, uma aparência assustadora não diz se algo é mau.\nÉ verdade que essa criatura voadora gigante atacou a ponte e os veículos sem parar. Mas também temos que aceitar que não dá para descartar algum motivo para as ações dela.\n\nAnimais selvagens expulsos de seus habitats muitas vezes causam problemas quando entram em áreas humanas procurando comida. E se nós, sem saber, fizemos algo parecido?\nNão deveríamos levar a sério nossa tendência a achar que o ser humano está acima de tudo e investigar a causa?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "1a2a787cb094f6b1461188bd7e0702a59f842e53ed1dd43071092993cc442d35",
+     "pt-BR": "Ponte Sky Garden, Parte 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "15bb8fa5f1d1c83429a90fea78f20847f228a071b06b9e5695718fa56534810b",
+     "pt-BR": "Os leitores mais jovens talvez não saibam que a atual Ponte Sky Garden é a segunda com esse nome.\nProjetada e construída na época do crescimento econômico acelerado como infraestrutura avançada da civilização moderna, a primeira tinha só pista para carros e calçadas.\nMesmo assim, era uma ligação utilíssima entre as cidades na época.\n\nEntão, no inverno em que se completavam exatos vinte anos da inauguração, um avião de passageiros que precisou fazer um pouso forçado na água depois que os motores pararam bateu na ponte.\nLeitores com mais de quarenta anos talvez se lembrem das transmissões especiais que duraram dias.\n\nCom as contas públicas apertadas, a construção de uma nova ponte devia levar muitos anos, e as cidades em volta se sentiam condenadas à decadência.\nFoi quando o inverno acabava e o cheiro da primavera começava a surgir que apareceu um homem oferecendo uma quantia enorme da própria fortuna. (Continua.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "a0976f300b9c8ace66becde35b6b32a28a3556725518d7d69a920e039c9d1206",
+     "pt-BR": "Um Estrondo Ensurdecedor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "1df41850c98270dc4895abbd0b3051e9861c826503575b66564c90b2aa3027b3",
+     "pt-BR": "Eu não acreditava no que via. Não, eu não queria acreditar.\n\nFoi o que senti ao ver a Ponte Sky Garden, um ponto vital de transporte que renasceu depois daquele acidente terrível, afundando no mar.\nAinda considerada uma das melhores do mundo, uma ponte que poderia ser chamada de \"a mais forte do mundo\" desabou com uma facilidade espantosa, deixando só restos dos pilares.\nO som de massas enormes de ferro raspando, rangendo e se torcendo, diferente de tudo o que eu já tinha ouvido, parecia a Ponte Sky Garden gritando.\n\nMas eu acredito. Um dia, uma nova Ponte Sky Garden com certeza será construída, levando de novo os sorrisos das pessoas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "de876df6bc54e54347a9ad81d732c3cb6cce481e7da1d671e70986b8093c1b88",
+     "pt-BR": "\"Direção Imprudente\" Põe Outros em Perigo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "6a62b67a6740350581185868b4abfbf3a2e4c337a036e84bcf4a119ba5881046",
+     "pt-BR": "Mais ou menos quando as misteriosas criaturas voadoras gigantes apareceram, um veículo foi visto correndo pela Ponte Sky Garden batendo em outros carros.\nTalvez os ocupantes estivessem com medo das criaturas gigantes e quisessem fugir, mas esse comportamento só pode ser chamado de totalmente egoísta.\nAlém disso, a placa nas imagens revelou que o veículo era roubado.\nSe alguém roubou o carro de outra pessoa, tirou outros veículos do caminho à força e pôs os outros em perigo só para se salvar, só posso considerá-lo uma pessoa escandalosamente vergonhosa.\n\nO veículo foi encontrado no fundo do mar depois que a Ponte Sky Garden desabou, mas os ocupantes não foram achados. A polícia investiga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "d74a69a5b3bcefc7c469829bf85d89c88ad3e5439b13b140ae529308f289f38c",
+     "pt-BR": "\"Por Quê?\" Encontro Secreto Entre Figuras Improváveis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "59d44e2bd8a2135f624e219de6910bed64de51dbf6460c5c4439401f0464a7a1",
+     "pt-BR": "Enquanto cobria a destruição da Ponte Sky Garden, nosso helicóptero de imprensa registrou por acaso algo extraordinário.\n\nDá para ver três homens parados na pista enquanto veículos queimam com força e trechos da pista desabam em volta.\nNossa apuração independente indica que os dois juntos à direita são um executivo e seu subordinado de uma organização cercada de todo tipo de boato sinistro.\n\nPor incrível que pareça, o homem de frente para eles é o Sr. F, que pertence a uma organização que deveria estar em conflito com a deles.\nSeria só um encontro por acaso? Talvez, mas não consigo deixar de achar que seria conveniente demais.\n\nSuspeito de algum tipo de conversa secreta.\nAfinal, o Sr. F também é cercado de todo tipo de boato sinistro.\nEstou investigando o caso. Aguardem novas notícias.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "d49cf46db28112d83362c9915508e71a629ea21525453618cc8804b8841a61de",
+     "pt-BR": "\"Recuperação Quase Impossível\": Garden Liner",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "d2596cbd99d2edcd5404950612e8612edd1340268e580c733cdedae6450bcaa4",
+     "pt-BR": "Conseguimos imagens de um vagão do Garden Liner logo depois do acidente, filmadas no celular por Shizuo Sato (nome fictício), que sobreviveu por milagre ao desabamento da Ponte Sky Garden.\n\nDá para ver que o vagão saiu totalmente dos trilhos e não tem como rodar.\nVárias pessoas também aparecem nas imagens, mas, infelizmente, ainda não há notícias de que tenham sobrevivido.\n\nO desabamento da Ponte Sky Garden teve um impacto praticamente fatal na operação do Garden Liner.\nKatsuzo Hinokaji (62 anos), presidente da GR, que opera o Garden Liner, disse com a voz arrastada e a expressão abatida: \"Sem a ponte, a recuperação é impossível agora.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "0aaa8f5a924ded086cdc290413897414e3f65fa29b1b36ac81f03ee775414459",
+     "pt-BR": "\"Ah! É Essa Cara!\" Foragido É Avistado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "d6de5f5a07ff2689b78629a01d0e0c6b5eaaa82210538a2acfe6e49d335c6f34",
+     "pt-BR": "Uma descoberta espantosa veio das imagens de Shizuo Sato (nome fictício), que sobreviveu por milagre.\nElas mostravam o autor do assassinato em massa no Parque Azami Oeste, uns dois meses atrás.\n\n\"Ah! É essa cara!\", gritou de repente um dos policiais que examinavam as imagens do celular, entregues para entender a situação na ponte. O policial Akira Fukiishi (28 anos) diz que seu esforço valeu a pena: ele tinha salvado a foto do procurado no próprio celular e olhava para ela de manhã e à noite para gravá-la na memória.\n\nInfelizmente, a sobrevivência do suspeito não foi confirmada desde o desabamento da ponte. Esperamos sinceramente que chegue o dia em que o esforço do policial seja recompensado com uma \"prisão\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "bfa0c79e47b8b1ef099ac4230a18fec6b79902a56bce0f185201c2ca9e5c6860",
+     "pt-BR": "\"Pegar Emprestado\" numa Emergência: Pode ou Não Pode?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "1ff6fd1df85794c914f6f6e87a17d11c25d9f136f41a6f99170928ac1deebe04",
+     "pt-BR": "Veio à tona que uma moto de Shizuo Sato (nome fictício), que sobreviveu por milagre ao desabamento da Ponte Sky Garden, foi roubada.\n\nNa hora, Sato (nome fictício) estava de moto na ponte quando viu o ataque das criaturas gigantes e, enquanto estava preso ali, o estresse lhe deu dor de barriga. Ele andou até um lugar onde não incomodaria ninguém, fez suas necessidades e, quando voltou, a moto tinha sumido sem deixar rastro.\n\nSegundo pessoas que estavam por perto, um casal jovem pulou na moto antes que alguém pudesse impedir e seguiu para o leste.\nPara começar, é bom senso não dirigir carros e afins numa emergência. Além disso, não dá para deixar de questionar a ética de usar as coisas dos outros sem permissão, mesmo para salvar a própria vida.\n\nDito isso, ao publicar esta matéria, ouvimos muita gente dizer coisas como \"Se não sabiam quem era o dono, nem tinham como avisar, né?\" e \"Entendo pensar primeiro em si quando a vida está em perigo.\"\nEsse debate promete durar muito.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k141",
+     "source_text_sha256": "f7a3271582b67b75af34a91dcd85dbb42681897c9ec3622c573773761c7dcc5f",
+     "pt-BR": "Por Que Brigar de Carro Durante uma Emergência?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "717945945b962409650ee555b951a362b19cb1b533ad5fb45ba9fdce62f56d3f",
+     "pt-BR": "Nosso helicóptero registrou dois carros correndo pela Ponte Sky Garden, onde tinham aparecido as misteriosas criaturas voadoras gigantes, batendo um no outro.\nNão conseguimos observá-los por muito tempo, mas o carro preto parecia perseguir o azul sem parar. O carro azul continuou correndo mesmo muito danificado, e depois o vimos abandonado.\nO que diabos aconteceu entre os ocupantes desses dois veículos? Foi rancor pessoal, ou algo que surgiu do nada nessas circunstâncias extraordinárias? Sem saber quem eram os ocupantes, não temos como saber. Mas ver esse conflito humano feio enquanto todos na ponte corriam perigo de vida me fez pensar se as ações das misteriosas criaturas voadoras não seriam mera maldade, e sim um \"abate e expurgo da humanidade\". Será que só eu senti uma tristeza profunda?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k143",
+     "source_text_sha256": "980d4c2be87aaa3d21465fd59dbe93d1b2b2e9ba5efd4e81b46740ab0de5a5b7",
+     "pt-BR": "O Futuro Que Queriam Dividir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "ab45113c0786a703d04af981a8dd5e2fdd578b2502461ecb9629a34fefe0a5b2",
+     "pt-BR": "Uma foto tirada na Ponte Sky Garden desabando me apertou o coração. Segundo quem a tirou, as duas pessoas da foto estavam noivas e, naquele dia, iam conhecer os pais da moça.\nInfelizmente, a sobrevivência delas não foi confirmada desde que a Ponte Sky Garden desabou, e o fotógrafo não perguntou os nomes.\nAlgumas pessoas, como o fotógrafo, sobreviveram por milagre. Espero sinceramente que esses dois estejam vivos e possam começar juntos a vida de casados como tinham planejado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k145",
+     "source_text_sha256": "41eed1eecb3e47b82a56df3479d6fc8703a2905906501a05e5ac90dcdb31a7b4",
+     "pt-BR": "Tragédia na Ponte",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "c18f38c57c165fc143ce5c88ff8c50fe5b3d0d4d82b268b53d45114b6309517f",
+     "pt-BR": "\"Horrível.\" Foi a única palavra que me veio ao ver estas imagens.\nElas não mostram uma zona de guerra num país distante. Mostram a nossa conhecida Ponte Sky Garden.\nTodos os carros da ponte estão em chamas, numa fileira sem fim.\nDaqui a alguns meses, estas imagens podem ficar enterradas na enorme massa de dados da internet. Mesmo assim, tenho que lutar para que esta tragédia não seja esquecida. É o que devo fazer como jornalista.\nHoje, não temos como evitar uma tragédia dessas. Mas até uma única imagem como esta pode dar uma pista para uma solução. Para que um dia tenhamos meios de responder se algo parecido acontecer de novo, cada um de nós precisa fazer o que pode. Não seria essa a chave para a sobrevivência da humanidade?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "708adb0b596ad1f0909415665c32cc7da641d109fbf32877874c2e0a2da8ea46",
+     "pt-BR": "Poder de Destruição Sem Medida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "8bf5748f9caee396c26f612ecbd4d4cba62ffa811a6d2eca48e86d65103835b8",
+     "pt-BR": "Conseguimos registrar os raios misteriosos disparados pelas criaturas voadoras gigantes.\nDá para vê-los claramente atingindo a ponte como relâmpagos de outra cor. Ainda não sabemos se esses raios estranhos são feitos das mesmas coisas que entendemos como \"raios\". Mas especialistas dizem que, supondo que sejam produzidos de forma parecida, a ciência atual não conseguiria um poder de destruição desses. Nenhum material da Terra conseguiria formar um cano de arma capaz de aguentar essa potência.\nIsso também não significaria que nenhum material ou equipamento que existe hoje na Terra consegue bloquear esses raios estranhos?\nA análise e a investigação das imagens, incluindo material cedido pela nossa empresa, estão em andamento. Desejo ardentemente que esse projeto de análise dê certo, para que a humanidade possa enfrentar as sombras gigantes que podem aparecer de novo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "c482b3f476ea302e34768eefac0f6944600c1e6392e87b25eda4569bb68f5628",
+     "pt-BR": "Uma Discussão Lamentável",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "89044f46af73ade624d7f454d89b14312a2b4d2d123c13a3e100f69cb0b21408",
+     "pt-BR": "Enquanto cobríamos o desabamento da Ponte Sky Garden, usamos um microfone direcional para captar uma conversa entre duas mulheres presas na ponte. Fiquei chocado.\nEm vez de lidar com o perigo em que estavam, elas só culpavam uma à outra por terem se metido nisso. Já faz muitos anos que se diz que a percepção de perigo das pessoas caiu, mas, sinceramente, nunca imaginei que alguém pudesse ser tão ruim assim. Nas minhas reportagens anteriores, quem parecia sem noção era uma pequena minoria. Mesmo assim, ouvindo com atenção, dava para ver que as palavras não refletiam o que sentiam: escondiam o constrangimento ou bancavam os corajosos, mas na verdade tinham noção e pensavam bem nas coisas.\nTalvez minhas reportagens tenham sido falhas. Ou talvez eu tenha achado a única dupla assim no país inteiro.\nDe qualquer forma, pessoas assim existem: pessoas que não reconhecem o perigo e culpam os outros por tudo.\nDe certo modo, talvez as duas sejam felizes. Elas provavelmente nunca se sentem culpadas por nada.\nMas nunca devemos seguir o exemplo delas. Isso seria deixar de ser \"humano\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "d2f34cb329ec6c0710c2a07ef540edea39e724dfb26826f2bea42eb7e7a00190",
+     "pt-BR": "O Celular Acima da Vida?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "f5b11fe6d6df967d356b2b005678827957eff6cfd49e53b3f5441fe731f96a78",
+     "pt-BR": "Nossa apuração revelou que Kanae Shimizu (20 anos, nome fictício), que foi jogada no mar no desabamento da Ponte Sky Garden, mas foi resgatada, fez algo espantoso quando recobrou a consciência.\nEla desmaiou ao ser jogada no mar e foi tirada até a margem próxima. Os pais conseguiram chegar correndo bem nessa hora e comemoraram que a única filha querida tinha sobrevivido. Enrolada num cobertor, ela acordou nos braços dos pais e ficou um tempo olhando de um rosto para o outro. A memória dela parecia ter apagado mais ou menos a partir da queda da ponte e, quando os pais explicaram o que tinha acontecido, ela assentiu várias vezes, como se lembrasse. Bem quando parecia que \"tudo está bem quando acaba bem\", ela começou a procurar o celular nos bolsos e em volta, ignorando os pais atônitos e os socorristas em volta. \"Meu celular, meu celular sumiu.\" Os pais tentaram acalmá-la enquanto ela procurava desesperada, dizendo \"É só comprar outro\", mas, por algum motivo, ela estava obcecada pelo celular que tinha, e no fim chegou a tentar mergulhar no mar.\nGraças à rapidez dos socorristas, conseguiram impedi-la de pular, mas ela continuaria obcecada por aquele celular no hospital para onde foi levada. Nem os pais sabem por quê. Este repórter agora está muito curioso e espera trazer novidades mais tarde.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "732e96028fdf773a0565b5abd53745f970aac455b35cdf7a9fa7b630afe4fa6b",
+     "pt-BR": "O Ônibus Que Salvou uma Vida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "4c94176af619348b4f327f5197ec4658ef5bc80e301688a67a59751b8f0e9ea2",
+     "pt-BR": "Shizuo Sato (nome fictício), que tirou muitas fotos valiosas na Ponte Sky Garden desabando, teria escapado da morte por pouco graças a um ônibus que estava por perto quando ela desabou.\nSato pulou na hora para dentro do ônibus, sentou num banco, assumiu a posição de impacto, como num pouso de emergência, e segurou o cano do banco da frente.\nO ônibus caiu no mar junto com pedaços de aço e concreto que antes eram a ponte. Debaixo d'água, um pedaço de aço e concreto atrás do outro caía, e o ônibus ficou todo amassado. Protegido pela armadura de aço do ônibus, Sato conseguiu sobreviver até as coisas em volta se acalmarem.\nE teve mais sorte. Sato tinha uma garrafa plástica de 2 litros, mas já tinha bebido tudo e ela estava vazia.\nIsso teria permitido que ele sobrevivesse debaixo d'água por mais tempo que o normal.\nQuem diria que o hábito de não jogar lixo no chão ia ser útil num lugar desses?\n\nPara não haver mal-entendido: ficar dentro de um veículo nem sempre é o certo. Há muitos riscos, como não conseguir sair por causa da pressão da água se ele estiver fechado, ou ficar preso lá dentro sem conseguir se mexer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "13f7836a5c6c3f456ef86169b30202e2f00196f48269fc9b90efa7771846384e",
+     "pt-BR": "Furo sobre os Ladrões da Moto?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "d18e290529cbc0dd029cc779c34ab5b2c8508a74a0903485e911e0b7e85cdda1",
+     "pt-BR": "Pouco antes do último grande desabamento da Ponte Sky Garden, nosso helicóptero de imprensa registrou imagens curiosas.\nElas mostram o momento em que duas pessoas numa moto dão um salto gigante digno de filme. Por um momento pareceu uma fuga espetacular da ponte desabando, mas a moto parecia conhecida.\nSegundo nossa análise interna das imagens, a moto em que os dois estão é do mesmo modelo e cor da que foi dada como roubada.\nSe for isso, estas não seriam imagens dos ladrões?\nComo foram feitas com zoom extremo, identificar os rostos é muito difícil, mas estamos entregando as imagens à polícia e continuando por conta própria a análise. Aguardem novidades.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "350066d11e57b9de75a0822fadef683cd947b5fbeb1f3abc6b02a133d3940e9d",
+     "pt-BR": "Garden Liner, Parte 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "9d72b5d33d6d8ab9c6cd516b956c3b840a43cccda31ec68b96b596c41edf37ea",
+     "pt-BR": "Novas Iniciativas\n\nNesta terceira parte, quero falar do Garden Liner de hoje e do futuro próximo.\nO Garden Liner, que se orgulha do transporte de massa de passageiros e cargas mais avançado do mundo, começou a trabalhar em novos serviços de trem. Seus horários podem ser descritos como precisos ao minuto, ou até ao segundo, e ele tem um histórico excelente de pontualidade e segurança. Com base nisso, novos trens já estão em serviço. Para oferecer uma viagem mais elegante, cada vagão leva só dez passageiros, todos em cabines privativas. Por cerca do dobro da tarifa normal, ele é barato pelo conforto que oferece e virou um enorme sucesso entre funcionários de escritório cansados da lotação do horário de pico. As passagens já estão esgotadas para os próximos cinco anos, e algumas estariam sendo revendidas na internet por preços altos.\nA GR, que opera o Garden Liner, já estaria se mexendo para aumentar a frequência desses serviços, com trens em intervalos menores. Mesmo assim, a procura deve continuar maior que a oferta.\n\nO Garden Liner também pretende lançar em breve mais trens novos. Na próxima, espero falar deles com mais detalhes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "8caf2a6906910af9e353c1e2f388e147291a690e3227746f2c669cf35d0a8f2f",
+     "pt-BR": "Telefones de Emergência Que Nunca Funcionaram",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "0dec1027c9bc0d3c23c010a028650bd3b4bf5c65fd64388143f8dad8179b7b81",
+     "pt-BR": "Enquanto as misteriosas criaturas voadoras gigantes destruíam a Ponte Sky Garden, os telefones de emergência instalados por toda a ponte não completavam a ligação e não podiam ser usados.\n\nA explicação mais aceita é que a destruição da ponte cortou os cabos. Mas nossa apuração independente indica cada vez mais que os telefones nunca funcionaram direito.\nOs registros de uso mostram que, embora as pessoas tentassem usar os telefones de emergência da ponte desde a instalação, nenhuma ligação jamais foi completada. A cada incidente, havia uma inspeção e um registro de que o serviço tinha sido restabelecido, mas as dúvidas continuam.\nTodas as inspeções foram feitas pela Empresa T, que também tinha instalado os telefones. Documentos obtidos de forma independente mostram que ela não comprou o equipamento necessário na instalação, para cortar custos. Ou seja, instalou telefones que nunca foram ligados e depois cobrou dizendo falsamente que o serviço tinha sido restabelecido.\nSegundo K, ex-funcionário da Empresa T, o presidente uma vez se gabou num bar: \"Todo mundo tem celular mesmo. Ninguém usa telefone de emergência.\" \"Mesmo que achem um problema, fica sobre o mar. Joga a culpa na maresia ou algo assim e eles nunca vão saber. Melhor ainda, o conserto é lucro puro.\"\nSe isso for verdade, quantas vidas foram perdidas à toa? Pretendemos continuar investigando a Empresa T.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "68d669bf9417e00407983e2f1d137934b68b8abaa7f47950aa226984e0ddf6ad",
+     "pt-BR": "O Último Ato de Determinação de um Cinegrafista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "062d9e449f87e097a07c015275c52c4958311bb6209cbcc3dd9c4fb5382ff490",
+     "pt-BR": "Estas são as últimas imagens de uma câmera recuperada dentro do nosso helicóptero de imprensa, que bateu numa misteriosa criatura voadora gigante e afundou no mar.\nA posição em relação à ponte sugere que ele afundou logo depois.\nO fato de a criatura voadora aparecer só no cantinho do enquadramento mostra mais do que tudo a determinação do cinegrafista.\nO paradeiro do cinegrafista continua desconhecido. Eu o conheço há muitos anos. Ele é alguém que avança de cabeça para cima do assunto, arriscando literalmente a vida pela imagem. Mesmo naquela hora, acredito que ele estava concentrado em fazer só mais uma imagem de mais ângulos e distâncias, em vez de pensar no que acontecia com o helicóptero ou no que ia acontecer com ele.\n\nAlguns podem desprezar esse comportamento como teimosia boba. Mas não há dúvida de que pessoas como ele estão entre as mais confiáveis.\nTenho orgulho de trazer esta matéria junto com as imagens dele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "2538943d459d8236cccae2f8fe28b68d80acdac65b4d0beba7b658eec7c0f443",
+     "pt-BR": "A Ameaça das Rajadas Repentinas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "d597aaca5417e02e82ec2a1ae9f204bae24d9706f1dc4587a024f35a4c1fb7f5",
+     "pt-BR": "Registramos uma criatura voadora gigante passando bem na frente de pessoas que fugiam pela ponte.\nAs asas enormes dela geravam rajadas fortes o bastante para quase derrubar adultos.\nO fato de só passar por perto já pôr as pessoas em perigo me encheu de um medo enorme, além de uma sensação indescritível de assombro.\nDesde a antiguidade, as pessoas temem e ao mesmo tempo veneram coisas que não conseguem entender nem controlar, e vivem com humildade.\nTalvez este ataque das criaturas gigantes quisesse lembrar a humanidade desses sentimentos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "651c2f139b78cb38440be64991213c1d9ed3675a5160af9417926f6b38ae0475",
+     "pt-BR": "Um Contra-Ataque? Escamas Brilhantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "72739f1a11090af38a8c4304c8eb1beee95079b450b0253a1b125a2f2628d37e",
+     "pt-BR": "A criatura voadora parecida com uma mariposa enorme parecia, no começo, perseguida pela outra criatura voadora gigante. Mas depois a vimos espalhar algo parecido com escamas brilhantes das asas sobre a outra criatura, de cima.\nA criatura que recebia aquilo parecia fugir aflita, gritando de dor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "d1758b2bd96f6ed31fb25b532e70281963a38b2c7985f4444cdb538e8cbf1cbb",
+     "pt-BR": "Restaurante da Ponte Cai no Mar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "20761dc1cca40135c005e5b0c75208bdc2b366dd0210d208923a9dcc603ca1bc",
+     "pt-BR": "Registramos o momento em que o restaurante do lado norte da ponte, já meio destruído pelos raios de uma criatura voadora gigante, desabou no mar.\nO restaurante era muito popular entre casais e famoso pela vista tranquila da linda cidade à noite. As reservas para a véspera de Natal estavam fechadas para os próximos dez anos.\nA comida também era de primeira. Ainda não consigo esquecer o quanto fiquei impressionado quando comi lá numa reportagem, três anos atrás.\nFelizmente, os clientes e funcionários já teriam escapado naquele dia. Espero sinceramente que o restaurante seja reconstruído e reaberto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "e9025eb9bafa390147df619f54fdb89ee17fe84c94039da1dfcb447806b9067c",
+     "pt-BR": "Adeus a um Restaurante Cheio de Lembranças da Juventude",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "5fb46eca4aea2bd4e9c6138931ccdcb0bfcb9d5f268e43c0af5f56ac0cde0592",
+     "pt-BR": "Soubemos que o restaurante do lado sul da Ponte Sky Garden desabou.\nAo contrário do vizinho do norte, voltado para adultos, ele era um lugar descontraído e muito popular entre um público um pouco mais jovem.\nMesmo assim, não era nada barato. Ainda me lembro bem de economizar desesperado o dinheiro do bico no ensino médio para ir lá com a garota mais velha que eu namorava.\n\nUm grande motivo da popularidade era o boato de que casais que tinham o primeiro encontro ali ficavam juntos.\nDe fato, as estatísticas mostrariam que nada menos que 99% desses casais duraram mais de cinco anos.\n\nInfelizmente, eu faço parte do 1% restante. Mesmo assim, me entristece perder o lugar ligado a essas lembranças agridoces.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "1e28966663452a0be5c15debc168dbde1314583b4861a6dfe573d4d59885a826",
+     "pt-BR": "Escândalo Revelado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "db5b8a2832a0e9fca4c3c31207a6e12ad316c89ecd96258fee171ffcfff22c45",
+     "pt-BR": "Soubemos que OH, ator no auge da popularidade, ficou preso na Ponte Sky Garden enquanto as criaturas voadoras gigantes a destruíam.\nEle estaria com SY, uma atriz tão popular quanto ele.\nOs dois foram pegos pelo desastre voltando para a casa de OH depois de um encontro secreto.\nO relacionamento, revelado de um jeito tão inesperado, dividiu os fãs.\nNaturalmente, alguns os defendem e outros desaprovam. OH também tinha boatos de namoro com outra atriz, KF, o que gerou rumores de que ele estaria saindo com as duas.\nQuanto a SY, a imagem inocente dela nunca tinha dado sinal de um homem na vida dela, o que tornou a revelação especialmente chocante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "ffc782be5badc0b006c087dccff4709e7060b9a540b738af7be166e3e6b9ac3d",
+     "pt-BR": "Nada Parecida com Quem Era",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "f8cfa5238a24d563d8c071569664688e1c02f947caa817725745c599f07460f5",
+     "pt-BR": "A apuração sobre o círculo da atriz SY, depois que veio à tona o encontro secreto com o ator OH, revelou que as mudanças tinham começado vários meses antes.\nSY é a mais velha de quatro irmãs criadas só pela mãe. Apesar da saúde frágil, a mãe criou as quatro filhas, e SY estava só no quarto ano quando isso começou.\nO pai levou outra mulher para casa e se divorciou da mãe, praticamente expulsando ela e as meninas.\nExperiências assim deixaram SY muito desconfiada dos homens, e ela entrou no mundo artístico sem nunca ter namorado.\nA dedicação total dela à atuação, tanto para retribuir um pouco à mãe quanto para dar uma boa educação às irmãs mais novas, tinha uma pureza que lhe rendeu muitos fãs.\n\nRecentemente, porém, parece ter surgido uma briga entre as irmãs. Ela teria começado quando as irmãs mais novas sacaram sem permissão o dinheiro de SY, administrado pela mãe. Elas não só saíam para a balada noite após noite, como faziam viagens sem fim ao exterior com dezenas de amigos.\nElas também teriam usado a fama de SY para comprar apartamentos caros e casas de veraneio com SY como fiadora.\n\nCom elas gastando ainda mais que as centenas de milhões de ienes que ela ganhava, a briga era inevitável.\nHoje ela moraria com a mãe e cortou contato com as irmãs.\n\nPelo jeito, foi o ator OH quem acalmou o coração aflito dela.\nTalvez ela esteja agora deixando de ser \"uma mulher dedicada que trabalha sem parar pela família\" para virar \"uma mulher livre que busca a própria felicidade\".\nSeja o que for que se diga de irmãs que não entendem o amor da mais velha, espero que ela e a mãe encontrem a felicidade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "0a3134756a172aa7561db454d7b92bea00d5951a3a929179f7929331ffca7020",
+     "pt-BR": "Esteja Preparado para uma Emergência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "82089c5e1410ea807dd4fe64516c512ae82624ed63aea99c503e8691d16369d8",
+     "pt-BR": "Este é um triângulo de sinalização.\nSuspeito que muitos motoristas não andam com um.\n\nQuando precisam parar na pista, os motoristas devem avisar os veículos de trás do perigo colocando o triângulo de alguns metros a algumas dezenas de metros atrás do carro.\n\nDepois que um grande acidente acontece, é tarde demais. Dito de outro jeito, um cuidado pequeno pode evitar o perigo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "bb76faa8520e7d8802404908c1f699320050725d41463d9d0faa003031d9f546",
+     "pt-BR": "Sem Conseguir Agir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "00172a8c12d3622c3486d24f70d95f1102edeaf28fcda75b70f58b847091407e",
+     "pt-BR": "Relatos de testemunhas revelaram que uma mulher olhava fixamente para o restaurante do norte.\nEla saberia que, entrando nele, conseguiria chegar à pista de baixo.\nMas ela nunca entrou. Como o paradeiro dela continua desconhecido, não sabemos por quê.\nOutras pessoas disseram que o caminho até o restaurante estava livre. Por que ela não agiu?\n\nPelo jeito, as pessoas podem parecer calmas mesmo estando em pânico.\nTalvez ela também parecesse pensar com calma numa rota de fuga, enquanto, na verdade, os pensamentos tinham parado completamente.\n\nSó posso rezar para que ela esteja bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "65d14b6d51baed7d307f999b43ca03404a191c2771202963d4358cc3c06dd431",
+     "pt-BR": "O Fim de uma Escapadinha Proibida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "2cef3faf8905b9318fc6d7f159092a4b1adbfcb8c69778a37d5b79bf6845f14e",
+     "pt-BR": "Soubemos que uma mulher resgatada por milagre da Ponte Sky Garden estava, na verdade, voltando de uma viagem com o amante.\nO homem com quem ela tinha um caso estava entre os outros sobreviventes, e veio à tona que a amiga com quem ela supostamente tinha viajado não foi.\nPelo jeito, cansada do marido, que parecia pouco confiável, ela investiu num subordinado com jeito de durão, começando o caso um ano atrás.\n\nO marido já se divorciou dela e começou uma vida nova com a filha.\nQuanto à mulher, a descoberta da relação inadequada com um subordinado também a obrigou a deixar a empresa.\nÉ um exemplo clássico de como um caso termina.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "ff38f391e97e9b54b944344e88c0edc81ddfc5f7b78791ed539df2a21a925256",
+     "pt-BR": "A Verdadeira Face Dele",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "77577b6b9efaae810c0ba8eab5ae1ddcbb2b87f73aa5b1564a6457332d47d374",
+     "pt-BR": "O subordinado que acompanhou a mulher na viagem do caso, descrita em outra matéria, estaria encolhido e tremendo na ponte.\nO homem supostamente durão se mostrou nada confiável.\n\nSegundo nossa apuração, ele parecia quieto e sem graça até o ensino médio. Mas conhecidos da faculdade em diante o descreveram como extrovertido, supreconfiante e confiável.\nUm caso clássico de quem se reinventa na faculdade.\nNum lugar onde ninguém conhecia o passado dele, ele pôs a cara mais corajosa que pôde e construiu um novo eu.\nMas talvez a natureza dele não tenha mudado tão fácil.\n\nUm caso é errado, mas ninguém pode negar a ele a própria natureza.\nHoje ele ganharia a vida como atendente de loja de conveniência numa cidade grande.\nEspero que ele encontre felicidade nessa vida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "c9158d0193ca839542fb2b9b5203a3aaa174626321f17a8a1afe2b470677bca9",
+     "pt-BR": "Nunca Mais Quero Ver Peixe",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "5d016d15dc14ef39d94592e914b56b710cbce726c8b3b957cd96516fbf132ae7",
+     "pt-BR": "As criaturas voadoras gigantes obrigaram o caminhão frigorífico que ele dirigia a parar de repente. As batidas dos veículos de trás espalharam peixes congelados do baú pela pista.\nCom o tempo, os peixes descongelaram sozinhos, e o cheiro em volta teria ficado cada vez mais forte.\n\nMesmo assim, ele teria feito tudo o que podia para limpar.\nMas então a ponte desabou, e ele caiu no mar junto com os peixes congelados.\n\nComo tinha entrado por acaso no baú do caminhão, ele ficou protegido das vigas e escombros que caíam e conseguiu esperar.\nMas, enquanto ficou lá dentro, o cheiro de peixe meio descongelado e dos cardumes do mar encheu o espaço com tanta força que ele achou que ia enlouquecer.\n\nDepois, ele mudou de emprego para uma empresa que entrega cargas comuns.\nEle diz que o cheiro de peixe ainda está grudado nele e que não consegue nem chegar perto da seção de peixes frescos do supermercado.\nÉ uma pena ele não poder comer peixe, mas há muitas outras comidas deliciosas.\nTendo ganhado uma segunda chance na vida, espero que ele aproveite com saúde.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "7c0d02e8f6a5d1daa5eaef461f1c31a537a9d75d5fa01d8fa13ffda7b12eb2ec",
+     "pt-BR": "Reportagem no Local: \"Os Que Ficaram para Trás, Parte 1\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "f393be727853ef17899df0c1e34e8a25b783749f6375be0a249c8da617c4884b",
+     "pt-BR": "Enquanto as criaturas voadoras gigantes causavam destruição na Ponte Sky Garden, entre as pessoas presas junto com este repórter havia uma enfermeira.\nEla disse que sempre leva material médico simples e fez tudo o que pôde para tratar as pessoas, como dar uma compressa a alguém que tinha machucado as costas.\nTendo vivido muitos desastres de perto, este repórter sabe bem que a verdadeira natureza de uma pessoa aparece numa emergência assim.\nDepois, a Ponte Sky Garden desabou e, infelizmente, essa mulher continua desaparecida.\nEspero sinceramente que ela tenha sobrevivido.\n(Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "759a3bac78fc0011a937786b964bc4099adb68e5cc567dbcb09c9690acf67660",
+     "pt-BR": "Reportagem no Local: \"Os Que Ficaram para Trás, Parte 2\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "1c682250ca919eafa83733701098a29969a9e3726faa7ce40e34ec05e3072ad9",
+     "pt-BR": "Uma mulher encolhida e tremendo enquanto criaturas voadoras gigantes voavam por cima.\nQuando falei com ela, ela repetia como um mantra: \"Só quero ir pra casa.\"\nÉ uma cena comum: como as pessoas agem diante de um terror contra o qual não podem fazer nada, num lugar sem saída.\nFelizmente, ela sobreviveu ao desabamento da ponte, embora tenha sofrido ferimentos, incluindo fraturas.\nA cena dela chorando nos braços dos pais no quarto do hospital também aqueceu o coração deste repórter. (Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "9af08efe62756f063fadbfcedee24b42123308b37599339fc19afeaa69a4e496",
+     "pt-BR": "Um Vendedor Exemplar?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "590b0c3f93ca4db76c9fff8c5465acd51a814cfb9a4564f4034a072ad7475aa5",
+     "pt-BR": "Com o trem destruído e a ponte desabada bloqueando o caminho, encontrei alguém tentando vender produtos para bater a meta de vendas.\n\nPessoas que ficam calmas numa emergência dessas são raras. Até este repórter, que já viveu muitos desastres, quase nunca encontrou uma.\nFiquei curioso e conversei com ele, e fez sentido. Não em desastres, mas ele tinha passado muitos anos trabalhando em países em conflito. Deve ser isso que lhe deu nervos de aço.\n\nInfelizmente, ele está desaparecido desde que a ponte desabou. Mesmo assim, não consigo me livrar da sensação de que ele está vivo em algum lugar.\n(Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "7462941afe9650d63968551a1b0bf9da9f64e7fc5b712b4c085291a75243ddf2",
+     "pt-BR": "Nunca Ignore Nem um Ferimento Leve",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k192",
+     "source_text_sha256": "285c21b7528b8f893cfd399faa2608ac2befc1d490998792cf5fd9c8f46930f4",
+     "pt-BR": "Na Ponte Sky Garden, com o desabamento chegando, algumas pessoas reclamavam de problemas físicos ou de mal-estar.\nO homem destas imagens teria machucado as costas quando foi jogado para fora do trem destruído.\nNo começo era só um leve incômodo, diz ele, mas a dor foi aumentando com o tempo.\n\nÉ muito perigoso deixar para lá porque \"é uma emergência\", \"é só um arranhão\" ou \"só dói um pouquinho\".\nSe você não estiver o tempo todo em movimento e tiver um pouco de tempo, e se tiver algum meio de tratar, nem que seja primeiros socorros, deve fazer isso.\n\nFelizmente, este homem conseguiu uma compressa e voltou a andar, ainda que devagar.\nSe um dia acontecer uma situação de \"e se\" com você, eu ficaria feliz se lembrasse desta matéria. (Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "a54bdc56402bdb7deecb9b3540b20ced4a36b3efa2b723945ed5e2726ce735c9",
+     "pt-BR": "\"Um Estorvo\": Mentir Durante uma Emergência",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "20cdfddeac46f48c5f65ad48775df6366e05e3ceb9b34d74e5b8b069a047d543",
+     "pt-BR": "Havia um homem que disse ter torcido o tornozelo e não conseguir se mexer.\nMas era mentira; pelo jeito, ele queria evitar ter que correr riscos e ir na frente tentando escapar.\nDesta vez não teve grandes consequências, mas mentiras assim muitas vezes causam muitos problemas para quem está em volta.\nIsso porque tiram remédios valiosos e o tempo de médicos e enfermeiros. Isso pode fazer quem realmente precisa de tratamento ficar sem.\n\nDepois, ele sobreviveu, mas teria quebrado as duas pernas no desabamento da ponte e na queda no mar. (Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "ac5964c7e931a3930e2aae69649d828e3fca50b8dac3e2ab73dbf66852a11380",
+     "pt-BR": "Reportagem no Local: \"Os Que Ficaram para Trás, Parte 3\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "f1a800115f51bbe1bf28b1b6d0c36b061841bcb1af3b0881e82847dd3c70678e",
+     "pt-BR": "Também é comum ver pessoas olhando em volta, desesperadas, sem saber o que está acontecendo nem o que fazer numa emergência repentina.\nA mente entra em pânico, e elas nem conseguem pensar em respirar fundo para se acalmar.\nNesses casos, é preciso cuidado, porque tentativas desajeitadas dos outros de acalmá-las podem deixá-las ainda mais nervosas. (Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "4fb275dcf789ec50aa2f68148f894952f9bccb7e3abd5c4dda64bb5b1eabcf37",
+     "pt-BR": "Uma Pessoa Lamentável",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "cc150882fca8aceb6da4bd50e712ac7d438fb5380810ea78617ac17c9bb6aa97",
+     "pt-BR": "Quando a Ponte Sky Garden estava perto de desabar, encontrei uma pessoa realmente decepcionante.\nO decepcionante foi o que ele resmungava sozinho, que não pude deixar de ouvir.\nPelo jeito, ele planejava fugir sozinho enquanto as criaturas voadoras gigantes estivessem ocupadas atacando outras pessoas.\nÉ natural que a própria segurança venha primeiro. Mas, mesmo assim, que tipo de pessoa faz planos contando com o sacrifício dos outros?\n\nEste repórter já encontrou, em outro desastre, uma pessoa que não hesitaria em matar outros para sobreviver.\nÉ realmente decepcionante.\n\nDesde que a ponte desabou, ele continua desaparecido. (Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "df9ffdd61a30c2356e2a3bee30558066d43f78c9b17acdda456cd6b399d5f25a",
+     "pt-BR": "Um Homem Perigoso - ou Outra Coisa?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "9f15bf59093e546ffcc792b403942c4a42e2f49450a016610382d50c777003ff",
+     "pt-BR": "Uma pessoa estranhamente calma, com uma mochila de emergência de onde saía algo parecido com um pé de cabra, foi vista na Ponte Sky Garden pouco antes do desabamento.\nApurações posteriores sugerem que é um jornalista que já sobreviveu a vários desastres como este.\n\nComo o objeto parecido com um pé de cabra também poderia servir de arma, as outras pessoas presas teriam, no começo, achado que ele era perigoso e mantido distância.\n\nDesta vez também, ele teria nadado sozinho até a margem depois que a ponte desabou e ido embora para lugar desconhecido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "697e25d6d3e12e776dbf70b179c96ced47a455a796e9aa273f20fd7a7bae496d",
+     "pt-BR": "Febre nas Redes: \"Compramos de Tudo\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "d1246f41abe2db3481851a9c2a2a52860f361ccdcd163ba41e732a78751fa4d1",
+     "pt-BR": "Os compradores de usados que vêm chamando a atenção foram vistos na Ponte Sky Garden quando o desabamento se aproximava.\n\nAs roupas chamativas e o modelo de negócio incomum, em que funcionários parados aqui e ali são as próprias lojas, chamaram atenção especial nas redes sociais.\n\nMuita gente disse que também queria um serviço de \"vendemos de tudo\". Infelizmente, não houve comentário.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "ea370b6c6bb05c47a3a77ed5813904662fb80aa48ba4f096d93fe075f352cdd9",
+     "pt-BR": "Flagrado: O Momento da Destruição",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "2b5fba44a5f26c51d26ea114006f6c91c6cd36d3b81100ca0c87a95ee5404d18",
+     "pt-BR": "Estas imagens mostram o momento em que a pista de cima foi destruída pelo raio de uma criatura voadora gigante, e os escombros desabaram na pista de baixo junto com os carros que estavam em cima.\nNa hora, o local estava em estado de emergência, com pessoas presas pelos escombros sem conseguir fugir, embora uma destruição parecida pudesse acontecer em qualquer ponto da ponte a qualquer momento.\n\nQuando a ponte for reconstruída, espero ver instalações como escadas que deixem as pessoas presas descerem até a água para fugir. Talvez da próxima vez não sejam criaturas gigantes, mas não dá para negar que uma situação parecida pode surgir num terremoto ou outro desastre. (Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "4a0618ce5b0bac7db9e2479313b286f07ed33c8612e730a7df03b0b724461065",
+     "pt-BR": "Carros Arremessados",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "ad980a27742983ac71e4302cb6a5ec6e0ac02c336e5086bc2920b1eda3e06fd4",
+     "pt-BR": "Carros na ponte são arremessados pelos raios de uma criatura voadora gigante.\nUma moto foi vista passando bem nesse momento, mas pelo jeito passou em segurança.\nSe foi por acaso ou porque o piloto era um dublê profissional ou algo assim, não se sabe,\nmas ela parece ter passado com habilidade por uma brecha embaixo de um carro voando.\n\nQuando algo extraordinário acontece, habilidades inesperadas podem ajudar a sobreviver.\nPretendemos começar em breve uma seção apresentando habilidades assim. Aguardem novidades.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "0d74464f9fbe48a14d722e4884de406bbb91cb445b00d13203a1bf7fca1a405f",
+     "pt-BR": "Um Piso Inclinado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "ef6a375b698b6cbe3fa9d31c8dc1d63de4c2ef60f1884d4f534e186e7396d1ad",
+     "pt-BR": "Antes de o restaurante da ponte desabar, consegui registrar a cena em que uma parte dele caiu.\nO piso inclinou, e cadeiras e mesas deslizaram pelo chão torto e caíram no mar.\nEssas cadeiras e mesas deslizando são um perigo e tanto.\n\nNa verdade, este repórter já passou por uma situação parecida.\nNaquela vez, consegui evitar cair no mar me pendurando na hora na beirada do piso.\nAchei que raramente veria uma cena dessas, mas pelo jeito não.\n\nSe um dia isso acontecer com você, não entre em pânico: fique de olho em onde estão as cadeiras e mesas deslizando\ne tente subir correndo até uma parte do piso que não esteja inclinada, para não ser atingido. (Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "95dc066099a30a164b146ec69842c5a4f806d01b3cafc4cc01f35658dc6ece29",
+     "pt-BR": "Batalha das Criaturas Voadoras Gigantes",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "bcc7b2ace9cfe093624d79395058225f3f445724f2c53695a5c013f586c6fd4b",
+     "pt-BR": "Isto registra o momento em que a criatura voadora gigante de trás passou perto do restaurante meio destruído da ponte, disparando raios na outra criatura voadora gigante.\n\nO princípio por trás desses raios continua sem explicação.\nRelatos não oficiais indicam que vários países começaram a pesquisar como reproduzi-los para uso militar.\n\nEu, por mim, não consigo deixar de achar que a humanidade estaria melhor se eles continuassem sem explicação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "aab1ec2bd0c4a61820e0faa23ac1099f0ff04f60fd8fef587a14af126bb005b4",
+     "pt-BR": "Figura Suspeita no Restaurante da Ponte Pouco Antes do Desabamento?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "b52fa21d1167bb4eb619ab67f9341f8bb965d520ad8efc7c8f9730856c1e7a3f",
+     "pt-BR": "Uma pessoa suspeita foi descoberta nas imagens do banheiro masculino do restaurante da ponte pouco antes do desabamento.\nIsso veio à tona porque as imagens da câmera de segurança eram enviadas por uma linha exclusiva para a sede da operadora do restaurante, deixando um registro mesmo depois de o restaurante cair.\n\nUsar o banheiro quando quase metade do prédio provavelmente já tinha desabado já é estranho. Além disso, a pessoa andava de um lado para o outro como se procurasse algo, então não dá para descartar envolvimento em algum crime.\nAinda assim, pelo lugar, motivos financeiros parecem improváveis. O que diabos ela estava tentando fazer?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "b0e7b35d694c4f5396eb6b833e22429a0b589504b6ed6702fae189bd9c4c4f31",
+     "pt-BR": "Um Homem Que Dedicou a Vida aos Vasos Sanitários: Parte 1 de 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "a0c28e158d43c8dfeda3b14c93d3da2af66243506db31a22bc847fb3adfda918",
+     "pt-BR": "Você conhece o nome Tatsujiro Koshiba?\nÉ o nome do fundador da COCYBA, fabricante e vendedora de louças sanitárias e de cozinha que hoje tem 99% do mercado no Japão e 70% no exterior.\n\nEle foi aprendiz do grande mestre Shunzo Sanuki.\nMas, enquanto Sanuki tinha forte inclinação a ser um artista que fazia cada peça uma por uma, Koshiba queria \"fazer coisas bonitas e úteis, mas baratas o bastante para muita gente usar\", e por isso se separou de Sanuki.\n\nEntão, com pouco dinheiro e um empréstimo dando a casa como garantia, ele fundou a \"Koshiba Ltda.\".\nEssa \"Koshiba Ltda.\" depois viraria a \"COCYBA\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "e5b280e9478e4dd5bb803dadc8875b2c0bce50374683c2bc8232cec19da61f0e",
+     "pt-BR": "Um Homem Que Dedicou a Vida aos Vasos Sanitários: Parte 2 de 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "124f4054b4d831a766d243aea36d809c033672c6dedc64d48b09073abd5aaa47",
+     "pt-BR": "Das coisas que tinha aprendido com Sanuki, Koshiba decidiu primeiro fabricar e vender vasos sanitários.\nNo estilo ocidental, raros na época.\nKoshiba pôs corpo e alma na criação do vaso original que serviria de molde e produziu vasos em série a partir dele.\n\nOs vasos de Koshiba, mais bem projetados e mais baratos que os do mercado até então, foram bem recebidos pelo público e logo se espalharam pelo país.\nMas o ânimo de Koshiba estaria no fundo do poço.\nMais ou menos quando a produção em série começou, Koshiba foi à casa do antigo mestre Sanuki para que ele visse o produto.\nAo ver o vaso, Sanuki ficou furioso e o espatifou numa pedra do jardim.\nMesmo que o original feito por Koshiba fosse uma obra-prima, a produção em série inevitavelmente cria diferenças entre as unidades.\nPara Sanuki, isso fazia de todos algo totalmente diferente, produtos já defeituosos e sem equilíbrio.\n\nEmbora o público o reconhecesse e as vendas não parassem de subir, as palavras de Sanuki atravessaram o coração de Koshiba.\nIsso porque Sanuki tinha percebido que ele estava abrindo mão da beleza da forma em nome da produção em série.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "be1229b5598d93fa91e4bc4e04ee4ff7040531c8d05afbc518ea0b297cfd1309",
+     "pt-BR": "O Secador de Mãos Evolui: Para Homens",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "2059f0f89a9594eeef4043e78c1d853c49de19048d449f97b8d22fac910242bc",
+     "pt-BR": "Secadores de mãos hoje são comuns em lugares públicos, escritórios e muitos outros lugares.\nMas você sabia que eles começaram uma nova fase de evolução?\n\nJá estão à venda modelos que não só secam as mãos lavadas, como também tiram a oleosidade do rosto.\nEles fazem muito sucesso entre funcionários de escritório cujo rosto fica oleoso no fim da tarde ou quando estão cansados.\n\nAlém disso, em vez de só secar a pele, eles também hidratam. Em vez de deixar a pele ressecada depois de tirar a oleosidade, eles a deixariam renovada, e foram muito bem recebidos.\nEles são especialmente populares entre vendedores que se encontram muito com gente de fora da empresa, e os pedidos de empresas estariam chovendo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "6034d72114d69d563170f4a40478b322d1a1ac60f39ca55a24b5fb7a57984eba",
+     "pt-BR": "Invasor Misterioso no Banheiro Feminino",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "8bcb5d0200e3502aa4680a61b118b4e34fa56ce8feaebcbcbc51bc5fb4486b1d",
+     "pt-BR": "Soubemos que um jovem entrou no banheiro feminino do restaurante da ponte mesmo com o desabamento iminente.\nO jeito como ele andava de um lado para o outro lá dentro deixa claro que não estava ali para o uso normal.\n\nPor que ele estava num lugar desses pouco antes do desabamento? Talvez fosse um cliente procurando desesperadamente algo importante que tinha deixado cair.\n\nComo também há a preocupação de um possível crime, a polícia investiga a identidade dele e pretende interrogá-lo. Aguardem novidades.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "51a7c6188da278f3f2cbabc7476f656f8f55770bb6375ffc4b4ae9f0d914398a",
+     "pt-BR": "Um Homem Que Dedicou a Vida aos Vasos Sanitários: Parte 3 de 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "4265e04b9dec6c4d51917d331665d48e512426694719c0efcfe0f4416f417b2d",
+     "pt-BR": "Depois disso, Koshiba construiu um centro de pesquisa e, junto com os funcionários, começou a trabalhar dia e noite para criar um sistema de produção em série que reproduzisse o original.\nCom o presidente enfurnado no laboratório, a empresa não tinha como funcionar. Nesse tempo, quem tocou a empresa como vice-presidente foi a esposa de Koshiba, Shizuka.\n\nMesmo numa época em que o domínio masculino era tido como natural, Shizuka mostrou uma liderança feroz e fez a empresa crescer ainda mais.\n\nE, depois de cinco anos enfurnado no laboratório, Koshiba finalmente conseguiu criar um sistema que produzia peças em série idênticas ao original.\nSanuki, ao ver essas peças, não disse nada, mas pelo jeito as aprovou; elas continuam instaladas no banheiro de Sanuki até hoje.\n\nCinco anos de pesquisa intensa e exaustiva cobraram seu preço no corpo dos funcionários, e metade dos que participaram morreu do que hoje chamaríamos de excesso de trabalho.\nMas eles tinham apoiado a visão de Koshiba em vida e contavam com orgulho à família e aos amigos que faziam aquilo por vontade própria; de fato, ninguém processou a empresa depois das mortes.\nE não só isso: eles não aceitaram nenhum dinheiro de indenização da empresa. Aceitar, diziam, iria contra o orgulho deles.\n\nKoshiba também faleceu dois dias depois de mostrar o produto a Sanuki.\nDizem que a expressão dele estava muito serena.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "d981e5edb30ed6f4c469c5dd5c18b624f2c420cde7551ea7a4cb33b763ba892d",
+     "pt-BR": "O Secador de Mãos Evolui: Para Mulheres",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "23f7e4de25f77a2ff79429e176250e6ebda94a463883174d00140f9e6b23b356",
+     "pt-BR": "Você sabia que existem secadores de mãos feitos para mulheres?\n\nPrimeiro, a função de secar as mãos vai além da secagem comum: uma névoa hidratante especial deixa as mãos macias.\nOs efeitos imediatos superariam muito os cremes para mãos vendidos por aí. Testes mostraram até que mulheres com mãos ásperas viram as rachaduras sumirem depois de só umas três utilizações.\n\nEles também têm uma função que tira a oleosidade do rosto sem tirar a maquiagem.\nPor incrível que pareça, uma função especial melhora a pele ao mesmo tempo, oferecendo também um tratamento de beleza facial.\n\nEles são comprados não só por empresas, mas também por muitas mulheres para usar em casa como aparelho de beleza. A procura foi tanta que as linhas de produção estão sendo ampliadas.\nModelos domésticos com uma função extra de cuidado com os pés também estão à venda e foram muito elogiados pelos efeitos nos pés inchados e na sensibilidade ao frio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "fcfe3c28ae7a6f617feabc34fc397d739cb7a5ca26246a9fec4d8300df549fe3",
+     "pt-BR": "Roubado? Não, Está Tudo Aqui",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "173ec085b8caa1f4aba3c5a0bd15ea957c898458e86403a88d49d9abef36394a",
+     "pt-BR": "Soubemos que alguém que não era funcionário estava perto do caixa pouco antes do desabamento.\nA falta de luz dificulta a visão, mas a pessoa parece estar roubando dinheiro dele.\n\nPorém, o caixa foi recuperado depois, e o dinheiro estava lá dentro, intacto. Nada foi roubado.\n\nEntão o que essa pessoa estava fazendo?\nTentou abrir o caixa e não conseguiu? Ou era uma fã obsessiva de caixas registradoras?\nA pessoa não foi identificada. Como não houve furto, a operadora do restaurante da ponte também diz que não vai registrar o caso na polícia,\nentão, infelizmente, parece que nunca vamos saber a verdade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "7cc0f45f4fe61de6e24dc94fef6f5009f7b39fc633023fc1d21de5e184688573",
+     "pt-BR": "\"Útil Até Numa Hora Dessas\": As Birutas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "095e380375f33acae721a0963ac2d6cab1b54eea9ab925517c09f6da43c5637c",
+     "pt-BR": "Quantas pessoas conseguem imaginar na hora uma \"biruta\" quando ouvem a palavra?\nA \"biruta\" é um pano em forma de tubo que se vê muito em estradas e aeroportos. Alguns talvez reconheçam se eu disser que é aquela de listras verdes e brancas, ou laranja e brancas.\nEla é instalada para mostrar mais ou menos a direção e a força do vento.\nQuem dirige o próprio carro talvez não preste muita atenção nela, mas ela é muito útil em lugares como estradas litorâneas, onde ventos fortes podem causar acidentes com facilidade.\nNesse tipo de tempo, as janelas costumam estar bem fechadas, o que dificulta entender a situação.\n\nAliás, ela já foi útil para este repórter num desastre.\nNaquela vez, tive que atravessar uma viga de aço onde paredes e pisos tinham desabado num terremoto, mas uma biruta por perto me mostrava quando as rajadas vinham,\ne assim consegui atravessar sem ser derrubado da viga por uma rajada.\nRecomendo criar o hábito de prestar atenção nas coisas em volta. (Por: Sudo)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "dc5a1b1534f1b1de30486c819a60ec579e1c893e62004eb0d91972b96402f0cc",
+     "pt-BR": "Pilares de Ponte Flutuantes?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "6433db91c8e376390f61aeca636017226b9b9b5628ae02ab0f36e74e070a3c50",
+     "pt-BR": "Há muitos boatos sobre a Ponte Sky Garden, mas desta vez examinamos a afirmação de que os pilares dela na verdade flutuam.\n\nNormalmente, os pilares de uma ponte ficam presos a fundações firmes construídas no fundo do mar.\nAté um leigo como eu consegue imaginar que, se não fosse assim, eles se deslocariam e a própria ponte não se sustentaria.\n\nPor isso, no começo me perguntei como um boato desses poderia surgir.\nMas, conforme a apuração avançou, ele começou a parecer não ser totalmente falso. Dito isso, não achei nenhuma prova clara.\nSempre que tento examinar os pilares, um barco da Guarda Costeira do Japão aparece do nada quando me aproximo e me manda embora.\n\nSe for verdade, pode ser uma patente que derruba tudo o que achávamos saber sobre construção de pontes.\nPretendo continuar investigando. Aguardem novidades.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "abe608c9086b695110c411dbb8404c50858a6e2e0f677374778247aa084d6ef9",
+     "pt-BR": "Atravesse Dez Vezes, Ida e Volta, e...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "ceb21e9db9355c7bf9093235632c0d1dee8384f035b697127b281fde0a85510e",
+     "pt-BR": "Atravesse Dez Vezes, Ida e Volta...\n\nVocê já ouviu o boato de que atravessar a Ponte Sky Garden dez vezes, ida e volta, realiza um desejo?\nTalvez seja a versão de ponte das cem visitas ao santuário.\n\nPelo jeito, os desejos realizados são diferentes nas calçadas norte e sul do nível de baixo.\nDez idas e voltas pela calçada norte realizariam desejos de amor, e pela sul, desejos de estudo e negócios.\n\nVocê não pode ser visto por ninguém no caminho, nem falar. Com carros passando o tempo todo, isso parece meio impossível...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "c4b000d44b1df0f060fe12e188e8ea0c3ed7632779ebc46a8696137e9fddc3a4",
+     "pt-BR": "Pule com um Desejo no Coração e...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k234",
+     "source_text_sha256": "7a0021d9ddbe78113b2e4eb73a563567749738eb210def7ea008d3260421596a",
+     "pt-BR": "Pule com um Desejo no Coração...\n\nA Ponte Sky Garden tem uma longa história, e já foi uma ponte de madeira.\nClaro, ela tinha outro nome na época.\nHá uma lenda sobre a ponte que vem daquele tempo.\n\nPouco depois de ela ser construída, quando a sociedade ainda era dividida por castas hereditárias, o plebeu amado pela filha de uma família samurai foi morto por um samurai sem senhor contratado pelos pais dela.\nDesesperada da vida, a filha se jogou por cima do parapeito. Então uma luz forte teria descido do céu e subido de volta junto com uma luz que apareceu na água.\nPelos boatos espalhados por quem viu, a história virou a crença de que pular da ponte unia você à pessoa amada.\n\nTanta gente começou a pular, e as mortes subiram tanto, que o xogunato teria posto oficiais de plantão na ponte para impedir.\n\nPouca gente repara, mas até hoje há pequenos santuários ao lado dos pilares nas duas pontas da Ponte Sky Garden, dedicados aos que morreram.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "cc2e88de4b7c8628c6f1e80b2cb7fdb1cd578688f0072af8600e86177b747e34",
+     "pt-BR": "Funciona Mesmo? Um Amuleto dos Namorados",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "c7b0694b60e91a7fdbe403db0b9cf3fef79a7a8ca1bf9f10024c878b995a4c5d",
+     "pt-BR": "Funciona Mesmo? Um Laço de Amor\n\nVocê sabia que há um ponto na calçada sul do nível de baixo da Ponte Sky Garden, a uns 120 metros da ponta oeste, onde o parapeito tem forma de anjo?\nNa verdade, ele foi deformado por acidente durante a obra. Como não havia problema de resistência nem de estrutura, ficou assim.\n\nMas a aparência de anjo deu origem a um boato: \"Amarre no parapeito ali perto um pano com o seu nome e o da pessoa amada, e vocês vão ficar juntos para sempre.\"\nPor mais que os panos fossem tirados, logo se acumulavam de novo. No fim, as autoridades da cidade cederam e passaram a administrar o lugar como ponto turístico.\nOs panos amarrados são tirados com frequência, e a área onde podem ser amarrados é demarcada.\n\nRecentemente, o lugar ficou famoso como parada de casais de outras províncias, então muitos de vocês talvez já conheçam.\nÉ curioso o que pode dar origem a um boato.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "e615b100a7bc83f6057ec3134600e129ba8fe6cb4556a4fbf31e8ca24bf59787",
+     "pt-BR": "Um Terceiro Nível Debaixo do Mar?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "66042ae3802a20c4b80712225ddab80604343ac417481182250cdcf2e8a6acde",
+     "pt-BR": "Um Terceiro Nível Debaixo do Mar?\n\nA Ponte Sky Garden costuma ser entendida como tendo dois níveis: um de cima, só para carros, e um de baixo, com calçadas, pistas e trilhos.\n\nMas você já ouviu o boato de que existe, na verdade, um terceiro nível?\nDizem que um elevador dentro de um pilar leva para baixo do fundo do mar, onde passagens ligam a outros pilares e à margem oposta.\nSeria exclusivo para pessoas importantes em emergências.\nQuando perguntei à administradora e a outros sobre isso, riram.\nDisseram que há mesmo escadas dentro dos pilares, mas só para administração e manutenção da ponte.\n\nMesmo assim, logo depois dessa entrevista, meu chefe mandou parar de investigar. Achando isso suspeito, e depois de pesar vários fatores, pretendo deixar o emprego e continuar atrás do assunto como jornalista freelancer. Aguardem novidades.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "4c17a93d6f97892fd1820857e99986223ea026c34bfd9188522df661898b9f6d",
+     "pt-BR": "Uma Barreira de Proteção Escondida?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "ee60d34ddfcbee342059e2939d531fd84f99dd8b1dfea296cab9591e224e6ec9",
+     "pt-BR": "Na Verdade, uma Barreira de Proteção?\n\nRecentemente, circulam boatos de que a Ponte Sky Garden é uma barreira de proteção. Eles começaram quando alguém apontou que, vista do mar, a forma dela lembra a representação de uma barreira usada numa certa crença para manter os maus espíritos longe.\n\nPesquisei essa crença por conta própria, e há mesmo algo parecido.\nMas era uma crença pequena desde o começo e, pelo jeito, não tem mais seguidores hoje.\nAs pessoas tendem a ligar até pequenos detalhes e dar a eles interpretações incomuns. Talvez tenha sido assim que esse boato surgiu.\nOu será que há \"algo\" acontecendo em segredo, em algum lugar bem mais fundo? Pretendo continuar investigando.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_207_check.luc",
    "source_sha256": "904fd839add6e805bff0f3fa2e37b0a6e65a855163148c3ebf8ae65ea5a1a053",
    "entries": [
