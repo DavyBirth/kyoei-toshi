@@ -7984,6 +7984,19 @@
    ]
   },
   {
+   "path": "common/lua/stage_210_2_item.luc",
+   "source_sha256": "046bfdc7f52c39dcf5c4389607584f0ae9fef15e0422dacd6580871aeca9e334",
+   "entries": [
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "cfe738c4ac9bb697dc27a71b228d63e8bd8403f551a90ebef04196206964a489",
+     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_201_news_data.luc",
    "source_sha256": "91deeb163180ad56a7ef7c432a72349601f357a3342e43d129469c5cca25d14a",
    "entries": [
@@ -7998,6 +8011,2133 @@
      "id": "p0/k6",
      "source_text_sha256": "0b1704ee698215088df4fbd9e4051884d93e5fb615cc85e602823987683ae4e7",
      "pt-BR": "【Vídeo】Alienígena gigante aparece na cidade à noite",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/Text_Stage_210_2.luc",
+   "source_sha256": "aea85d2f9baa389566b12f9064f3f40b673308d0d98af2bc70c024301d1047f3",
+   "entries": [
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "667ce6bd0f591c76c2208c444f2f21dee0bc21c52a697c6751f6524ab4b8b6ac",
+     "pt-BR": "Escada...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k9",
+     "source_text_sha256": "5926faa97c1379c6a53f08c29535f97932092df663a6ac7c4c39c3c33f89c21d",
+     "pt-BR": "Parece que dá pra contornar pelo outro lado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k12",
+     "source_text_sha256": "ae3ebc04fc4707b9504579d6477cf27072e30af011b18ecd149d5e04bf5c6bd8",
+     "pt-BR": "Parece que dá pra contornar pelo outro lado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "352afdd723e0ad274fc917f81aa50ab149ed44a39c767cabf3ba297d60de93d8",
+     "pt-BR": "Uma porta reforçada...\nParece trancada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "b74fa7abac6dc0111ce6981586fabf6fd19ba8dd7bbf942f71e69d3f6da91ff6",
+     "pt-BR": "Não tem como arrombar isso.\nPreciso de uma chave.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "bbe6cca86678730896d124f935a29e1fed740547d436fd0da4c7b14c117d60e6",
+     "pt-BR": "Abriu a porta da escada externa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "95e1dcbf9c5ac52df3530f11cdf2d91efec46d530c1dd1a3d7ed4219d5d3289e",
+     "pt-BR": "Uma porta reforçada...\nParece trancada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "5ad8ef59df40512d4f3afc3cb6de85f4266ce557a66b87b3ba232ac959813f4b",
+     "pt-BR": "Não tem como arrombar isso.\nVou precisar de uma chave.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k25",
+     "source_text_sha256": "71c7d5f26f45d2178375de547bfc5d9e7951d706cfcf47c9b6ea08a15c521ddd",
+     "pt-BR": "Um calendário de maio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k27",
+     "source_text_sha256": "b9750efe6688869f0f9c21272ed435b94c2da6db199aa3ce750c0f66a966a2bc",
+     "pt-BR": "O dia 8 de maio está circulado.\nSe não me engano, é Dia das Mães.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k29",
+     "source_text_sha256": "92948be8a2907671ef7758f36db8c9d1fb0dfe968f6f4fed11d79e7526aae74e",
+     "pt-BR": "Pegar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k31",
+     "source_text_sha256": "25dbeb3fb54db2cef4cef5436660e07a1720edfe6178501ec3aabe353c7a31fa",
+     "pt-BR": "Deixar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k33",
+     "source_text_sha256": "1eb8a9a14839db1b969b7987b4e6f8b5ea2cfabef0b3035504cfbe16c11cbdb4",
+     "pt-BR": "Um calendário de maio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k35",
+     "source_text_sha256": "41a773785f968717843e1c39df03fb28c4c50662e68a5d42745245139faff946",
+     "pt-BR": "O dia 8 de maio está circulado.\nSe não me engano, é Dia das Mães.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k37",
+     "source_text_sha256": "9a9d475d994152485a506073e3bef325350ecc781b5da4f7297582c33945243b",
+     "pt-BR": "Uma pilha de caixas de papelão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "dfe9dfd4b245fe39f251b857c87d89bae5d66c07df79cc2e388cd9ee433bc8a5",
+     "pt-BR": "A pia está bem limpinha.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "41f3846f61d05f9aceaf211188ee1e6519a8df493a5b5d4179c7e68098716d1d",
+     "pt-BR": "A água ainda funciona.\nDá pra lavar a chave aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "38f82eada04a9537b9f6e69f1cf5478f2e09414acfa927d1229ed4e490c6a54d",
+     "pt-BR": "(Lavar a chave)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "ec9f971155f1edefa557f1dd9b554d6593a04aeca3d33904f4e30b1f5e576e5c",
+     "pt-BR": "(Fazer outra coisa antes)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "667ff1602c738a364c3ae803c9395b6b4ea7b4f8728ec4d0598e8bf1af1246da",
+     "pt-BR": "Tirou a meleca da chave.\nConseguiu a [#ff44ff44]Chave da Escada Externa[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k51",
+     "source_text_sha256": "7560214a2430ddcc24838fbbd0006a6321ca7fc2e8e958d17deafa3670f5d638",
+     "pt-BR": "A água ainda funciona.\nDá pra lavar a chave aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k53",
+     "source_text_sha256": "fb07cf5b258c6f9b63e80d86008b8217b35633a2f17746e262bcc0db13d19a28",
+     "pt-BR": "Um espelho...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k55",
+     "source_text_sha256": "174fba44a9dceae4649d8471449a688f6ca88a64dc222cbbcb6392858072574b",
+     "pt-BR": "Um espelho...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k57",
+     "source_text_sha256": "ec16c996aacf92602ac2d34c4101e6ac0941ce379097fbe63201e8d1e2cd46e7",
+     "pt-BR": "Parece bem cuidado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "c6698488f63597d3ccefbfc57a5ab85003cc7f904f322916a5e256c6dffb7554",
+     "pt-BR": "Parece bem cuidado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k61",
+     "source_text_sha256": "d432da73dd72c4e09f5dbf92e899a4f63f4ef7c3a7439ee7d624208d4d5a73c4",
+     "pt-BR": "...Melhor não mexer nisso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "24d13d1f4fd75782bf69be0957e88109c7d4939726d5e303e58083c3efb982c8",
+     "pt-BR": "Parece um armário de funcionários.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "86ca952b356589c8cfd70c0b35f39e760dbd8eec68518f4e3eec2c23437ee235",
+     "pt-BR": "Abriu o armário.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "24d349bc07030a6a664559a6934607b238c317ddfc60e4519d1500d2afacf2ed",
+     "pt-BR": "Não sobrou nada que valha a pena aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "5040382c4e2f1315b9d289802a0faea9bf14746f2fd583ecf8382181e3a46945",
+     "pt-BR": "Parece um armário de funcionários.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "3693388e5febfc7c71cfa6a4ef1595f8d79932402ed10aab5858a221634a3280",
+     "pt-BR": "Não sobrou nada que valha a pena aqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "d148d023ed6926bd82e4b15202ff40abcb329d048dd82deb36be4c9b77f96ae7",
+     "pt-BR": "Uma caixa de mangueira de incêndio.\nNão preciso disso agora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "7523d17ecd90c13fb134682ea3a90b7625412ae7a3829ff7da5986513c80172e",
+     "pt-BR": "Aperto o botão do elevador, mas nada acontece.\nÉ, está morto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "e90a6983048bff156629264d8f4e5f38a337813dc19a12221857fb5c0dba749f",
+     "pt-BR": "Aperto o botão do elevador, mas nada acontece.\nÉ, está morto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "d2b5447a8c46cf11c5908a3ddc78d2af17c0705e765d84b9c16b4cf365d99ab0",
+     "pt-BR": "(Eca!\nQue gosma fedida é essa?\nMelhor me afastar antes que o cheiro grude em mim.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "f8b91a0e958754e4c99796337a00e0e4a873bf70ef0ff2a2663915931fd770b6",
+     "pt-BR": "(Não tem nada aí...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "b3de8d54e4133c52672acf4894c3efde53df52388335e42ef9aff0b0a63da746",
+     "pt-BR": "(Hm? Tem alguma coisa aí.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "446336ae5d055ebcfc92ea78385f7adc0f1f7c2def5ad2d9319ef99a895a8019",
+     "pt-BR": "Achou uma chave!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "5ea05ee3831e8c0a3beccfd7b152b403c61c5c34180e5819f26f6b8482d7e3e0",
+     "pt-BR": "A chave está nojenta demais...!\nVou ter que lavar em algum lugar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "48b09591a5cb06112c3600ac7bc65adac53bcb7eab750dd8992561d4fd95765a",
+     "pt-BR": "Achou uma lata de suco!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "de1dd15386ca65d56c24212ac0c309f88d71cdd236b530d34cc2e8a16a64696a",
+     "pt-BR": "(Argh!\nQue gosma fedida é essa?\nMelhor me afastar antes que o cheiro grude em mim.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "fcaabb4c16e900d70255267245dc439760847bb754a3778bf7d94119ed39fd8b",
+     "pt-BR": "(Não tem nada aí...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "ba1908efd5a8c84d03f17e38760a1e114a6f16991099f5252968eb89e24eed9f",
+     "pt-BR": "(Hm? Tem alguma coisa aí.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "b5dfb798b728b6960c6edc6612b4a66632ae49f4ca995847fd8fcd73e1d5f48c",
+     "pt-BR": "A chave está nojenta demais...!\nVou ter que achar um lugar pra lavar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "5094f89fe8f3e65658a994b457bd0618d95d27a07af781c15d1b93b11919cb19",
+     "pt-BR": "(Voltar só seria perigoso...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "f0c0ce2fd3de6c946c107fe61286bbd9531a34f889e7db4533d2e78500c0638a",
+     "pt-BR": "(Voltar só seria perigoso...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "34b982a3b225081f4c3a21c80123ffd01836c8026edff8d8fa4fcc090e84ba41",
+     "pt-BR": "(Parece que a cidade inteira virou um caos.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "b9283c4ce9a0cd594c99dd543aecbab50809a9fa0cc2b5ef7cf78fa910d62da9",
+     "pt-BR": "(Parece que a cidade inteira virou um caos.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "5b35e87d32c61ea89e1f55ba0b7a55eee67da910006935bfc83b5f3b274b2ad7",
+     "pt-BR": "(A porta do corredor de serviço está meio solta...\n Acho que dá pra arrombar com o ombro.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "0200feb3e2ff9347f653074d7385cdf03cdcf9ec5b0eddabbde2c3dbd330f7c8",
+     "pt-BR": "(A porta do corredor de serviço está meio solta...\n Talvez dê pra arrombar com o ombro.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "6922c02982e5a277f9ce299590ce65904af8a17b0e5e09f26f374dd7a9b89182",
+     "pt-BR": "A cidade inteira está pegando fogo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "6437f562d687dbfa29654743870ef4b712e11732f995696ab7d385a801527a3e",
+     "pt-BR": "A cidade inteira está pegando fogo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "9afcceb642bfa3dcb192c6d384d3f2f0a5ebfdfedccd56b3952027633b8d79bc",
+     "pt-BR": "Não dá tempo de voltar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "eb86479e33a6f7220c045290030f5ba83982fb94b56284e78a313d2ec54e133c",
+     "pt-BR": "Não dá tempo de voltar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "796e42dfcf78e310f92a33545cdd1f943954e0c46546ab4820284953f3e6a5b3",
+     "pt-BR": "Tem um balde largado aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "ca1557ff0502e60712bc3ba651cd09c3c35c54fc72db265d190a702d79f9ad17",
+     "pt-BR": "Tem um DEA aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "66f906b61076b33366dd3716c1926b07371f7cc5076a397c59b56be72ef1dd3a",
+     "pt-BR": "Outro balde aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "3fcd9e8e4242dded73caa865bb1254bcb719972e6b51f72183ba03ede46fd8d0",
+     "pt-BR": "Balde até aqui...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "e3a49ed4bdb45c80e4189158bae96b67e30f1b9770de8cc05b7f312f517939b6",
+     "pt-BR": "Tem um balde largado aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "5c297cbedb742ada550d9114e87ade0dd943b740004a4489fa8dcf7044e203ae",
+     "pt-BR": "Tem um DEA aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "7c2583e97ef15a73d6ab6f179ec40c57a14dac2be34e3f1443949e0ce40bb4c3",
+     "pt-BR": "Outro balde aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "1cafab6c74788545e0d96ec0b44395c49b16c1a438b12d2902f9845339726f3b",
+     "pt-BR": "(Voltar só seria perigoso...\nMelhor descer a escada rápido.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "e7e56cfc498d556411448032a544617b47308f81da1ec6b710a4b53b9928df64",
+     "pt-BR": "(Voltar só seria perigoso...\nMelhor descer a escada rápido.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "b23c6edf8092ed2c8dae1b15f20d5661a8427eabc2366131266b219d215e24f7",
+     "pt-BR": "A escada pra baixo desabou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "b4accab50ac46179c79dfea0ea1eb15ecefc5fe2b3addb53586902f09eb702e1",
+     "pt-BR": "Talvez dê pra sair por aquela escada de mão ali...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "5d33ba78862cb67d4f06128557e82eb6ee250b6c1bf8dcef1450bb1e38e38c18",
+     "pt-BR": "Primeiro, tenho que achar a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "6bdf0ab895546141fa5a8c23e0ca49c574c754e1ac0016501b11ba80f8519850",
+     "pt-BR": "A escada pra baixo desabou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "180615ab684cfb4d947121cfa5f8c66803404b87809637411b8c482a5f1e63ed",
+     "pt-BR": "Talvez dê pra sair por aquela escada de mão ali...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "f65a4f05915f6a7fdef4fb538081a29ba9988df3c62a92c62ac9d4fa8178c02f",
+     "pt-BR": "Primeiro, tenho que achar a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "41f73f88a42d0fdb2fb7d556aa9e849e573f053a5981ead8eba52cea11d1b979",
+     "pt-BR": "Os escombros da escada me separaram da Yuki...\nPelo jeito, cada um vai ter que descer por conta própria.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "58eb104c3dfdacb9a640ad7416ba26e4114b8db78f676e203a8a8679532d1a1b",
+     "pt-BR": "Os escombros da escada me separaram da Yuki...\nPelo jeito, cada uma vai ter que descer por conta própria.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "0303493d9afbf4aea4663bc371de59ac4f7120beee76dc157404d87e3464d072",
+     "pt-BR": "Nome completo da heroína",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "a2355213fb3ca75285d0f38c9db606c260abd4530da1653795aa805b82a92479",
+     "pt-BR": "Que bom que você está bem...\nVamos, rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "de7b223241482d01a427dfc90f51329ec0ac1ad1eca45295f554715c883518e4",
+     "pt-BR": "(Escutar escondido)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "e7b2555e5a7b8336385a30637851017011d2dac6638d298ccd33e3dade5893f7",
+     "pt-BR": "(Falar com eles)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "c43d6155ed4b510e81721cc212d7a88195ef3fc42c67095aab9584ddade2e9fa",
+     "pt-BR": "(Observar um pouco)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "af7ba197a48600c810560a371ee6cfb97e603d9c8266f121b5a8d63dada4578d",
+     "pt-BR": "(Prestar atenção)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "db58b696f2884f3ee58153e2e946d2020a7ade2c8dfe6ee73e85b7e41b9c915e",
+     "pt-BR": "(Olhar mais de perto)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "ced972c22ac8fd2d8725c8046fec27a5fda85ab575556ee4e5de593d21f8126c",
+     "pt-BR": "Abrir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "46c08c8a43323f8b16c3f41d4d145298bc8e763b0ab5ce3942675286ce74a961",
+     "pt-BR": "(Espiar lá dentro)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "3375adc9d4b067739e85210332ce1e30da3138275f900bac61a52a09b39f796d",
+     "pt-BR": "(Enfiar a mão e tatear)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "f79e924f15a77cb3e3e0c9647bc8dcc87cd73c441a8b7b977550d4aded4f2c09",
+     "pt-BR": "Descer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "12413235d333fe11016da623fa1f439425b42c22b0cb246387bb88ad546d0952",
+     "pt-BR": "Usar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "611153de8263d347941d0339601b53f15aa8433c1425bcadfa2ecea0f883f6ea",
+     "pt-BR": "(Testar o botão)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "201786976eb9c283078b6cdfd3e3199c8d67025098823e7e44fc6beae2996180",
+     "pt-BR": "A chave...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "8618b53cdcab076361500bed305fe47351909e558a9eb179fee6d7cb3fe4bdf7",
+     "pt-BR": "Aquele monstro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "955cfbad456aeec929c8890a416e23184bce1a9649e7dd81d088e3af54a4d850",
+     "pt-BR": "Esse vômito...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "0bfd961be8d32e244e38814ad4c30d88611220cc85c345a13d8cda9302b61540",
+     "pt-BR": "Homem cauteloso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "77f739bc5b205f76c6e9dbe7a7ba944be709b95ea6d1f9a7c0a2d5141bc6cb80",
+     "pt-BR": "Cuidado onde pisa.\nAqueles monstros voadores parecem reagir a barulho também.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "0a9f57dc10d3ffacf9b94dcebe8fe6fce7e26775fba95a62c6ef00cca6374dba",
+     "pt-BR": "Talvez dê pra usar isso pra atrair eles...\nNão, é perigoso demais...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "6c12200e5622cea291aa12f7fd27e2736078b2a449d7cdddf9c29eba41eae2ca",
+     "pt-BR": "Homem de vigia",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "6271d49008088e568c20b5e1347ffa8966ce80773852b4cf6c88958ac0b007c0",
+     "pt-BR": "Parece que eles não saem do próprio território.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "2e0925c7232e3a9af3984009a9a7b39a07a2d07e76c646e695e3bf08fdb404b1",
+     "pt-BR": "Mulher soluçando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "5c90c120a9dbda27ff792737f54c4a6608e7c33eb271c4570af0a6e3e48cfa65",
+     "pt-BR": "Não aguento mais! Se isso for um sonho, me acordem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "9c9028abea268e4e41dbaf0fb2d3fc3c8f3f3f001aaf909b91d74d0ae04c8b0f",
+     "pt-BR": "Homem atordoado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "fab11a73cc3a81d6a79a29eb24b5f0d6ca060a95507f1201e5583a71e1f9f03f",
+     "pt-BR": "Agorinha, bem na minha frente, uma pessoa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "427666d5b23df23ee1be04cdd86ccbf08ef55cf9fbbaaad57629aa4403c4c122",
+     "pt-BR": "Homem esgotado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "e1eea93d5533252ac6d643e1011502ba0be66608b2022c3be950be2754286bba",
+     "pt-BR": "Droga! Não vou ser comido...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "16547147d6d77a30082b667793261309a6aad1cb7fd10adef3b5a1362bb59b04",
+     "pt-BR": "Rapaz (provisório)",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "31bd6a6068f48afbb413b4348bf50f52423012ab56f6c5c12bc4f71f5abf4914",
+     "pt-BR": "Namorada (provisório)",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "7bab3c36d11f20a89093942ea32b5ba25d3fad6c138bd03b1bc5530e2efe51f1",
+     "pt-BR": "Homem cansado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "06598760a1bcbbf2afb16f9220fde234085467d1eba53c93ee1ca1be1d8c5a9e",
+     "pt-BR": "Achei que finalmente dava pra sair. Só pode ser brincadeira...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "f89554d2ff67ca72781a7b9dac93fd8ba5627d7b968d45ce9c16095a673392b9",
+     "pt-BR": "Se tivesse outro jeito de descer...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "ff8217fc1160111972b6a5b2fa61b1ff56f988cd7fe29da857a05faec9522206",
+     "pt-BR": "Ei, que diabo é isso?! O que está acontecendo?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "2ed99c463a5b2128eb3c93d0537128770256b341a244c8391322b64ee044efc0",
+     "pt-BR": "Atendente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "d82ca8c7c9090c14c143b8a69cc319503cfc42f4ab8b643778b8868843e40726",
+     "pt-BR": "Hã? Quer comprar alguma coisa?\nAgora só tenho isso, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "74db213e6b5a5f91c17e43e0cce213f69339609e227c6df99f8891c0db2bd434",
+     "pt-BR": "Obrigado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "ada6b9cfdf97e27bb54a0931e82e253dd6f9c14316e98201b5378ac3f6dd091c",
+     "pt-BR": "Mulher desconfiada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "4b7aa282f0e69c1535609a46a11c8eded43abc519532ca33aa29dde0d6f42b72",
+     "pt-BR": "Vai saber quando aquele monstro vai voltar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "d7da3ea72ae62f3b84854891c2f369a7b7df571ae0133ffa4928da73edcc03d2",
+     "pt-BR": "Dá pra ouvir rosnados lá de cima. Que medo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "3e0edbf29a396f4efd033bfd57f1eab86d60480dd7f8a4f1e1fa0c06d6349adc",
+     "pt-BR": "O que a gente faz...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "beeabdc24844b27a8d7a4d34d95d6d5217d1ee7d582414a7181919c5dbcb2450",
+     "pt-BR": "Homem preocupado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "32984414f8a58a6d03820eb3cbe5fcbc94f4dc7763edf37224ae639cb8095c5a",
+     "pt-BR": "Quero sair daqui, mas como...?\nA porta da escada está trancada...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "d5629fa30d44eb7f70abe7615277ea4bda7713b087a4a75d432083c8499341e1",
+     "pt-BR": "Alguém destranca isso logo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k242",
+     "source_text_sha256": "5a0342516a63b5a66c8e48571c4da71f124f15478e4bba826c763f340b565b1d",
+     "pt-BR": "E-Eu não acredito que ele atravessou o teto!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k244",
+     "source_text_sha256": "bd3e8593d1c4cb29ff09854223f6c93ad1a8812a7a705303328849e2d9f4bbc4",
+     "pt-BR": "Mulher abatida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "ddcf49255522dbf2f486fbaa286a1c2bd079d8c78048b5bf861042ec68a6f561",
+     "pt-BR": "Tomara que aqui seja seguro...\nEstou cansada demais pra me mexer...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "2cfa6946147ffffb149abe35348fb5a5ae8bef53355b3178fb623aac869a30c6",
+     "pt-BR": "Não consigo me mexer mesmo...\nAgora é contar com a sorte...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "c42f584ee1b562f2299c9e9e2be3e816a9a5478964f4abda15187cd34c6b1512",
+     "pt-BR": "Homem furioso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "1268a08aabe2da5d01bc5afc51ba9d75b3a201e7c82bb1b7e172142f84182fd3",
+     "pt-BR": "Droga, que diabo de monstro é aquele?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "e62bd2ad2ab27599a3d5d57da15162e0e7a4cef0d1f5248cb800955ae2e8a350",
+     "pt-BR": "Merda! Eu vou sair daqui, nem que ninguém mais saia...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "371c26a96dbcf88c9a0cb1535ff4970cf0b9aa48eff4c563d18205141a67b763",
+     "pt-BR": "Mulher acenando por ajuda",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k255",
+     "source_text_sha256": "78901c57685f0b9e564f6d6ee10579d7d3811a721d4836b3a73ce22e4ada97ac",
+     "pt-BR": "Já acenei e acenei, e ninguém vem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k257",
+     "source_text_sha256": "cd4974942f63560846053d39b1188fb4ecbc54f13e785c3f88ee86f9452f2e0b",
+     "pt-BR": "Será que não viram a gente...?\nOu... desistiram de nós...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k259",
+     "source_text_sha256": "d58538e5189e49e49dbec915b127b275f41045d5d2e41bbf71039d75bed01e67",
+     "pt-BR": "Não tem jeito...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k261",
+     "source_text_sha256": "1012a45de3dee025551c7395f4558303bf305939d4650ce615bc8e9b89873f95",
+     "pt-BR": "Mulher irritada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "9e1d835df07adc67a33a76332423af1fffa6fa7ee6bb7f27925ddc580f751eb9",
+     "pt-BR": "Aquele helicóptero só fica dando voltas...\nA gente está bem aqui...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "7b475a079806f6c9ef5a060adc37333f26e264d303b4d423279ab741cd668646",
+     "pt-BR": "Por que não vêm buscar a gente...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "963b5626939e0b5debb591694bf04261841795c06260ca18cd9de190bf6189d7",
+     "pt-BR": "Será que só resta desistir...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k268",
+     "source_text_sha256": "036ed0c3caa5ace52a742a4d7e3999295766ddedcc56194c49f682a94753f5a6",
+     "pt-BR": "Funcionário preso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k269",
+     "source_text_sha256": "62de923203a62de3bfa2b542cc5791b5588cefb294a25a84039b947bbbbd0f3e",
+     "pt-BR": "Meu colega trouxe a [#ff44ff44]Chave da Escada Externa[/#],\nmas aquele monstro comeu ele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k271",
+     "source_text_sha256": "1b932dc08a9a57c7391508a3914c7c879647a514c4be1a547b78f61b43c87232",
+     "pt-BR": "E a [#ff44ff44]Chave da Escada Externa[/#] foi junto...\nNão tem outra saída...\nJá não sei mais o que fazer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k273",
+     "source_text_sha256": "42883af6633cd2cbbc72e9f315f9a5d58173a3f52a88ec2019048e5050d22c5f",
+     "pt-BR": "Pensando bem, depois que o monstro comeu meu colega,\nele ficou um tempo curvado perto do hall dos elevadores.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k275",
+     "source_text_sha256": "d1d5982315b2e17d3e96116f6cdd63caf0a2b3e215ce5de80efb5eea90ecc873",
+     "pt-BR": "O que será que ele estava fazendo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k277",
+     "source_text_sha256": "3d6f99d64a6a3433f614ab57792bb4ab64f1221fecddfab0ce2c76edaa7750a2",
+     "pt-BR": "Homem com cara de professor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k278",
+     "source_text_sha256": "6dceacbe5a1c83e0ec18124832d347929bbde73da83da57994b87642755fc02f",
+     "pt-BR": "Vim aqui dar uma palestra num congresso de biologia,\ne agora isso...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k280",
+     "source_text_sha256": "da149d0679ee1a14e9f3bbf0b90ef39c5fd9bb8198761e52d0db397f2d9985f4",
+     "pt-BR": "Parece que aquela criatura regurgita\no que não consegue digerir.\nAs aves também fazem isso. Fascinante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k282",
+     "source_text_sha256": "3eead24ea5cb04267b990b589edf0776057c7fa6887333fcb4a550de31e0e90a",
+     "pt-BR": "Homem quase desistindo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k283",
+     "source_text_sha256": "10b43d29e99a528a41d82d492e5f5604ac570af0d6a17f8198bd6450b633ac0b",
+     "pt-BR": "Será que a gente vai conseguir...? Não, provavelmente não...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k285",
+     "source_text_sha256": "696a42cdc03abb73f85866b60cada911a9cac9b6c785b2c8a2cfcc4cd6109f16",
+     "pt-BR": "Pelo jeito, é o fim...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k287",
+     "source_text_sha256": "c960d724c45f0b89e1d41f4f724e6d99847c4be051066c732512bf543275b04a",
+     "pt-BR": "Mulher atordoada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k288",
+     "source_text_sha256": "d11e0e02427827814a1cf25c5ac94f830c73f19a28e3a205dbb927614b8a1126",
+     "pt-BR": "Então essa vista noturna com você é a última coisa que vou ver...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k290",
+     "source_text_sha256": "b1bf31ad54a0de9fa950c066aa646d1de753a42fd669318365356474bd229384",
+     "pt-BR": "Só queria mais um pouquinho de tempo com você e com essa vista...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k292",
+     "source_text_sha256": "a49250125cdc4e22123db37bc1d0cde4fca1766ea6f42293097555ef7222b515",
+     "pt-BR": "Homem olhando pela janela",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k293",
+     "source_text_sha256": "615d2352341500b71c92b562eca7d0cf8b23f56f25ec3aed092a0e608ec8f9b9",
+     "pt-BR": "Estando com você, não me arrependo de nada...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k295",
+     "source_text_sha256": "518e663b34b3fe5b24be663b737bf1eae9fb734381c454eabbc741ebc930d5c0",
+     "pt-BR": "Vou ficar com você pra sempre...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k297",
+     "source_text_sha256": "6de940c4c8ba40bd3a3a3bb18e3035598a057ebad53f46a4f5146f3d34f36216",
+     "pt-BR": "Homem lamentando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k298",
+     "source_text_sha256": "a568bbc28b71bc1c6ae911fb96338c274cdd9294c1f489d99783ca75fa908224",
+     "pt-BR": "Ah, como chegou a esse ponto...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k300",
+     "source_text_sha256": "494f6470d897c6f0b5df2124e591364104b60ebd699ab419ed04e09a274d7400",
+     "pt-BR": "Homem com cara de folgado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k301",
+     "source_text_sha256": "fe7cb9125f2d6f94752288a2b44bd9f3cf909042e1f663df41c81fc5ca9ff359",
+     "pt-BR": "Tinha que acontecer num dia de trabalho...\nPior dia da minha vida!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k303",
+     "source_text_sha256": "82d99285c5690ebcf8f6786321dac732b3113c206dcbc0b929db5d0a371d045c",
+     "pt-BR": "Devia ter faltado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k305",
+     "source_text_sha256": "f79aa5574350bb21f7208cc483408b10436f9f88bc041d6129b94a29231b08e2",
+     "pt-BR": "Mulher egoísta",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k306",
+     "source_text_sha256": "e4a626f010b46fb076a4d45e6fc70a6ff57d59afc24086bcfb57aa4a5a0fb382",
+     "pt-BR": "A culpa é sua, que quis ver a vista da torre!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k308",
+     "source_text_sha256": "e8b53f15209230453d1d403c35df0931a5ebd57e8e99bf67a2dcccab06f46f70",
+     "pt-BR": "Homem egoísta",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k309",
+     "source_text_sha256": "79ffa92b7d6beee4d5de87db42981bfca89fd831a55dbd9868218d8d6e0f81f5",
+     "pt-BR": "Você também topou, não foi?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k311",
+     "source_text_sha256": "07eda25111e6e4fda04a71f33d4bc2022ac5d78a2aa028c61a6e511b9b7f3458",
+     "pt-BR": "Mulher preocupada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k312",
+     "source_text_sha256": "ff29ec9e20ce5ab1704d7f2e9084fc2d00fe6826d0f2fa97ddf0a4ad8dcf812b",
+     "pt-BR": "Da última vez que viemos aqui,\nsubimos pela escada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k314",
+     "source_text_sha256": "8f68b2eb9eb3c6537ee2474c3d31179f83ca2431e1947baa05cd24749ccba451",
+     "pt-BR": "Queria avisar os outros também, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k316",
+     "source_text_sha256": "9b9ddddb893f07ec04e30206870199b1360487dd303364e57b4c7084f27cd6f6",
+     "pt-BR": "Se alguém fosse na frente...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k318",
+     "source_text_sha256": "bfad4b00f420a31b6f87e6fbb42715c1f7783252197ce7b1616f9ea83e145e96",
+     "pt-BR": "Ah, é. Toma, pode ficar com isso.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k320",
+     "source_text_sha256": "b8c119e6c3906641d57aff2ba933474a311665a738cba3f49ffcf80775b59c35",
+     "pt-BR": "Mulher preocupada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k321",
+     "source_text_sha256": "c0bd6f366f7375525411f7dd148ff4fbdd444aa1834b45eac819ca5ca9a693ac",
+     "pt-BR": "Aquela porta leva à escada pra baixo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k323",
+     "source_text_sha256": "e2467c7ce2e1a61188f2a06022b61d2e401263b9cdbfaca800962294cc89db69",
+     "pt-BR": "Mas está trancada. Talvez por ser tão tarde...\nO que a gente faz?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k325",
+     "source_text_sha256": "04ab4c9ee01baa93ec50b91726e207445b33c148ebc50103d81edfa5b74d18a8",
+     "pt-BR": "Não tem ninguém da equipe por aí...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k327",
+     "source_text_sha256": "757811b20366a7855f6f7cdeb5929b54b8595b246a68486b722e61ff2eebf4b5",
+     "pt-BR": "A porta está aberta, mas...\nSe algumas pessoas vissem primeiro se é seguro...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k329",
+     "source_text_sha256": "1577f96eab9e522e6f31db65ae26061439dbfbb6805a1b27a33770e13492bf67",
+     "pt-BR": "Que horror!\nVocê se machucou?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k331",
+     "source_text_sha256": "c77ff1a381eb7b3e783b4f8b6a745a786548c19d56e295fbdfae62a4cb4e0179",
+     "pt-BR": "Mulher conhecida: Kumi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k332",
+     "source_text_sha256": "dafaf806cbcf84f92b8c37a94fdf786d223526a6e4ee17571dfa3754234b2947",
+     "pt-BR": "Ai... Ah! É você!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k334",
+     "source_text_sha256": "efd60f9cc814c68c87b88a95aa57da1f5736b4dbe647c8c77b99ad30c0df1c91",
+     "pt-BR": "Kumi, a moça que procura o Naoki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k335",
+     "source_text_sha256": "309d4e0b5d4b0a3f7a74836aee99dd4edea66a95d12dfc8e1e4665dac6887b92",
+     "pt-BR": "P-Por favor! Encontre o Naoki!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k337",
+     "source_text_sha256": "17914a02d200cfd29b336c683266614111b32931db653ae2ac64f000dae913ed",
+     "pt-BR": "Eu vi um monstro voador pegar o Naoki\ne trazer ele pra cá!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k339",
+     "source_text_sha256": "8a7543bc08392a63ab95b2a6d8dc7c08986ef9a93ef4cde97d975ed831ad95f2",
+     "pt-BR": "Mas um monstro me pegou também, e machuquei a perna...\nPor favor! Encontre o Naoki pra mim!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k341",
+     "source_text_sha256": "df9da4ae8748531191182a33aff1491fedc023f502ddd59acd08b022b12a2b01",
+     "pt-BR": "Contar que encontrou o Naoki?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k344",
+     "source_text_sha256": "ba0e4935cadf32427f5a73196c5722f05f36a6f6438700fe78e758016349c1c3",
+     "pt-BR": "\"Encontrei o Naoki.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k346",
+     "source_text_sha256": "fa5e9683f9898ec6cf5b68ad457e409f0465f27b6f3b56a6171bf908951c6b1b",
+     "pt-BR": "\"Agora não.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k348",
+     "source_text_sha256": "4cac5f8dd122ae66dfef994fdbeb21f93e83c29d37a5b4903d1b81e18c9d9ddd",
+     "pt-BR": "S-Sério...?! Por favor!\nMe leva até o Naoki...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k350",
+     "source_text_sha256": "46c4d73abdd2f3223891fbca95bc6437d7805da1d1a6729b79543b82e42fd552",
+     "pt-BR": "Ah... Naoki... Onde você está...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k352",
+     "source_text_sha256": "8cc27fa6feec4abf5ae244188ef62fd4700c5dc649c755bae006067bc095eac3",
+     "pt-BR": "Carregar a Kumi nas costas?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k354",
+     "source_text_sha256": "949a634ee869047c7591508b77db24fbac84d82a59e68d6d206f826097765edf",
+     "pt-BR": "Vou levar a Kumi nas costas até o Naoki!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k357",
+     "source_text_sha256": "f0c2f5e6f6159ca9e8207b74191b9557322747063dc178e6c128d149ea7c2a2e",
+     "pt-BR": "Ai... O ferimento de quando o monstro me pegou...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k359",
+     "source_text_sha256": "63ec242d1e1ccf8a941b8f13e230bd668c91534266d50817cda10dc02c02725f",
+     "pt-BR": "Naoki... Não consigo... me mexer mais...\nPor favor... esteja bem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k361",
+     "source_text_sha256": "1f257b8f640c6cd7a6b0f6fdad46e99e8333f4824c0a9e621b881c244b204edd",
+     "pt-BR": "O ferimento da Kumi está piorando.\nMelhor não fazer ela se mexer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k363",
+     "source_text_sha256": "e3a11a6638683a35aaee7df8072312c63117f4c3b0a3b16dcb627cc6adf6edfb",
+     "pt-BR": "O ferimento da Kumi está piorando.\nMelhor não fazer ela se mexer...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k365",
+     "source_text_sha256": "6964da2501aeba33042f21afc5ded44b8aa38dff904ad5bf9459b6c0daad017b",
+     "pt-BR": "Rapaz muito ferido: Naoki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k366",
+     "source_text_sha256": "075ef9218926e8c9aee40fc6935fc1cee4302cc8ce19bede6d545e2ba56f8c31",
+     "pt-BR": "Ugh... Ngh...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k368",
+     "source_text_sha256": "e4252ee46b23c188d856659d54d73f74e7016dcda1ec06dfa911d1ff8c6827d4",
+     "pt-BR": "K-Kumi... Por favor, esteja bem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k372",
+     "source_text_sha256": "7ae04fb7fd9c3a4bd5f1fe8f5cb4ac053233184b088581a3424a417e8d99b421",
+     "pt-BR": "Kumi, ao lado do Naoki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k373",
+     "source_text_sha256": "85f90287b2955acb961674aa3984600ac6a13d8213c9102b1ce91bfd82dc359f",
+     "pt-BR": "Ah... Naoki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k375",
+     "source_text_sha256": "7fcc83e29d0d580b8b4af706d931011027cf5f9a0412cab275e3f2745520b89f",
+     "pt-BR": "D-Desculpa. O Naoki ainda...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k377",
+     "source_text_sha256": "9d28f879fc92b7be5a5d59e9dc1d40a36e9dbe9e4dec02db063e029e31befaf9",
+     "pt-BR": "Por favor! Me leva até o Naoki!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k380",
+     "source_text_sha256": "aac8a30b780a4bd614e944e67010c35206ad4cd8f6e10da9f4ca37aaddd16a7f",
+     "pt-BR": "Naoki... Descansa um pouco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k383",
+     "source_text_sha256": "8b46a21217a98b0cf6317c9de3b847b99d20426be5da840babb401612c144321",
+     "pt-BR": "Não se preocupem com a gente. Podem ir na frente e sair.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k385",
+     "source_text_sha256": "72ab1b022731a715fd362a23d0b5035fdd6795175d47e35c6c4828e8cd8a8d79",
+     "pt-BR": "K-Kumi...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k387",
+     "source_text_sha256": "ed67b2643c755564774275164a5cd250f865747e238a95de7f27275312fbf94a",
+     "pt-BR": "Ah, Naoki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k389",
+     "source_text_sha256": "da1271f2cc5d1cbd73684367a096594ef8ad3bb5ffbbd2d3e3ff06893168c298",
+     "pt-BR": "Mulher desanimada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k390",
+     "source_text_sha256": "c5973666f4f945201591c0796f9ecc071b602acaec0c07c2318643e5bf24674d",
+     "pt-BR": "Chegamos até aqui, mas acho que estamos perdidos...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k392",
+     "source_text_sha256": "059339b1e71be2c4c683330245921761c01b61495752b0358ef2ae0eece5742c",
+     "pt-BR": "Mulher cuidadosa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k393",
+     "source_text_sha256": "8e45990816376a2349c30ad9f0aae3bd788a7684b6455458f412f8f4109d0f0f",
+     "pt-BR": "Esta escada é totalmente aberta.\nSe a gente descer, tem que estar preparado pros monstros voadores verem a gente...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k395",
+     "source_text_sha256": "31a8f9f98f2b0d4357cfcc6088ef4eaef7fc756eb881711977f30b6fa470c749",
+     "pt-BR": "Homem medroso",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k396",
+     "source_text_sha256": "9a129d135d92850785774f74b04508055b02690ec57dba46f63e6794be458ddd",
+     "pt-BR": "Eles não vão entrar até aqui, né?\nSe eu ficar escondido aqui...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k398",
+     "source_text_sha256": "eb2c6e21ca68ba5867f1eba9a087d7fe1163d71b087982311faf894806e59b9d",
+     "pt-BR": "Homem irritado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k399",
+     "source_text_sha256": "2d61731070626ea970da84c9aff866c84ba21f516ae6a8c0e143a8b4b3cdcd56",
+     "pt-BR": "Aquelas coisas soltam raios que cortam qualquer coisa!\nVocê viu quando te levaram!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k401",
+     "source_text_sha256": "25b59090135190120b51facdfdcbc5da2eb0b00ba77fb22905a8c183ddc03c95",
+     "pt-BR": "Aquele raio parecia cortar qualquer coisa.\nSe virem a gente, estamos mortos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k411",
+     "source_text_sha256": "c38e1782d9d115cf658c8d8fa34f3458421b0481010b1f2826554763abd0d3e0",
+     "pt-BR": "Aquela porta...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k414",
+     "source_text_sha256": "4068425f75d19c669d7735118312c2bf7774bbc3f288154269944d0726a766e8",
+     "pt-BR": "Protagonista masculino＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k416",
+     "source_text_sha256": "250e70e93709c9b98c1bb3bf5d88aa32f26de19fee889534af504c138c0663ce",
+     "pt-BR": "Protagonista feminina＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k418",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k419",
+     "source_text_sha256": "a618747668231caef607b045e7a859e7d8ae362b59f4341f191e4de93cb73ba7",
+     "pt-BR": "Obrigada por vir me salvar.\nDesculpa por te colocar em tanto perigo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k421",
+     "source_text_sha256": "d5027c34a08ad7c86b9bc24137f0768bf3ba73942d53823d13789087d1ab5889",
+     "pt-BR": "\"Eu não podia deixar você morrer.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k423",
+     "source_text_sha256": "74b41ba2733bb83b3d354de2eb800b094d8e71b0ce7a49d6164cddc3785af7f2",
+     "pt-BR": "\"Sei lá por quê, só senti que tinha que te salvar.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k425",
+     "source_text_sha256": "091b6fc94b7339598ba1316a684ca3d6d75670ecfb35d15755ce17afb3aa2c24",
+     "pt-BR": "\"Eu não aguentaria te perder. Eu te amo.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k427",
+     "source_text_sha256": "53b34cef2b46b1feaf4ec9463d80a3c974fdf4ea8661c744e9bdc422c348aa0e",
+     "pt-BR": "\"Eu ajudaria qualquer um em apuros, não só você.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k429",
+     "source_text_sha256": "a97b4c68d1532d94a215514127db55cf8a6cde29744589be5b36a6a854ca0ce4",
+     "pt-BR": "\"Não foi bem de propósito. Só aconteceu.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k431",
+     "source_text_sha256": "89cef74215f79f00e7113fc6cb57f0495d35b921458bf33583fc34bc75f17d7f",
+     "pt-BR": "\"Você parecia adorar voar, então fui junto.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k433",
+     "source_text_sha256": "40b24a1eb9fed46bfbac3f292dc6949089b36b6928c60c831f62ca46a6e58e2f",
+     "pt-BR": "\"Eu não podia deixar você morrer.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k435",
+     "source_text_sha256": "26d1678e19fc353cc634d4a22bbc482d6e63e4918c414db26c7dfc4f5c7496cd",
+     "pt-BR": "\"Sei lá por quê, só senti que tinha que te salvar.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k437",
+     "source_text_sha256": "b6f2fe9d64604915fa63e1d3e03abd13b9001a87294ea81cd9c8dbc56bcb7fc6",
+     "pt-BR": "\"Eu não aguentaria te perder. Eu te amo.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k439",
+     "source_text_sha256": "02dd2df7841bfb7c43a9dc73a211e2d855748ac36262f325e9010b5826430a2d",
+     "pt-BR": "\"Eu ajudaria qualquer um em apuros, não só você.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k441",
+     "source_text_sha256": "f428e6e9cc475146b171d01065400bdcc2d04ec7cbf908f3294c4e3f31093eb3",
+     "pt-BR": "\"Não foi bem de propósito. Só aconteceu.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k443",
+     "source_text_sha256": "c3e4eef80f92bd2d5c90c3dee2b48773205465e8c30eacf5eb4816462911494e",
+     "pt-BR": "\"Você parecia adorar voar, então fui junto.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k447",
+     "source_text_sha256": "153b143cf2e535727ec8ec5fb109590d1a0c2f5644eec1f2058c0b558cf441f1",
+     "pt-BR": "Obrigada... Fico feliz.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k449",
+     "source_text_sha256": "02a5656e822e6d0190e47f61c0904e7b0e82a14349af12eb655c3d86f00ed949",
+     "pt-BR": "Sei lá por quê,\nsó senti que tinha que te salvar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k451",
+     "source_text_sha256": "dfc2bb3e4217a79cfa80e38a6e587e20df8592ab2a5ffde26c5a8ecdb05694b5",
+     "pt-BR": "Sei lá por quê,\nsó senti que tinha que te salvar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k453",
+     "source_text_sha256": "f387d410669bb547caf9b169dc224aed20ea913de2c079aa80b69f34dce65672",
+     "pt-BR": "Sério? Que estranho.\nMas obrigada por me salvar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k457",
+     "source_text_sha256": "288a788fb81903b88c67b9169c073db81ed1ae3aa2f9621506c3c09892819545",
+     "pt-BR": "...Obrigada. Que bom que você também está bem...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k459",
+     "source_text_sha256": "801d7992f93cd90494eb984aae0065a8eeda1f056568b9a649d800cb88f26b0e",
+     "pt-BR": "Eu ajudaria qualquer um em apuros,\nnão só você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k461",
+     "source_text_sha256": "eb75bfc691cb345d1cd9249151b1fc10e805142fb2e82d61dcca4b02734d2d66",
+     "pt-BR": "Eu ajudaria qualquer um em apuros,\nnão só você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k463",
+     "source_text_sha256": "f4a3d3eba22e9fa158e3a029570382590ce1f6adc8504be31199afa5676659d8",
+     "pt-BR": "C-Claro, faz sentido.\nObrigada por me salvar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k467",
+     "source_text_sha256": "f27979fa3961dfe58c6ff5618c3db47b493352f66b7ba74ea14d518b182f1e73",
+     "pt-BR": "Ah, é mesmo?\nHum, bom... muito obrigada por me salvar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k469",
+     "source_text_sha256": "4ef3ba803053de6289cf2526d6f12d98744892c7524f37c5ca6c025ee01612c7",
+     "pt-BR": "Na verdade, você parecia estar se divertindo voando,\nentão fui junto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k471",
+     "source_text_sha256": "3df43d27ff662e643d091fa57a86509bfdb5358efed2073f539844af1fd32908",
+     "pt-BR": "Na verdade, você parecia estar se divertindo voando,\nentão fui junto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k473",
+     "source_text_sha256": "65eeae68bdf4d4d7e3c7a5642a399a355871e6b5c3f6333482d71d301b35d400",
+     "pt-BR": "A-Ah...\nBom, que bom que você pôde voar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k475",
+     "source_text_sha256": "0f7fb19888aa3518c1410c293e060859f7274fc57a5e0f10234b24e6f06782f5",
+     "pt-BR": "Bom, vamos sair daqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k477",
+     "source_text_sha256": "8d93c90b4e9f32fec7b3efd06b9f468b57b60a35725952632a83f9776d2d7433",
+     "pt-BR": "Bom, vamos sair daqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k479",
+     "source_text_sha256": "3c839899605e63758aa2e03ea290b720234a6fcd5adeaddf5be59717545f67c7",
+     "pt-BR": "...Parece que dá pra descer por ali.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k483",
+     "source_text_sha256": "6da6f972c5c6b16a36777cc56822e126fd08049e9328e4c64012793256eb8b63",
+     "pt-BR": "(Dar um encontrão no filhote de monstro para salvar a Yuki!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k485",
+     "source_text_sha256": "aeb62c49135f635b2d1568b18d1eeef69dd46943e03f1cde9846113f2d596b56",
+     "pt-BR": "(Dar um encontrão no filhote de monstro para salvar a Yuki!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k487",
+     "source_text_sha256": "af5a0ea03b989b3942417ce4e65d0cda719126069b5d6a1b78ed6583d0f3eb55",
+     "pt-BR": "(Empurrar a Yuki para longe do filhote de monstro!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k489",
+     "source_text_sha256": "aaa9cd769c5410ee660543ed754ec499e5e76cffccc136aa335c03cc13a237ba",
+     "pt-BR": "(Empurrar a Yuki para longe do filhote de monstro!)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k492",
+     "source_text_sha256": "396534e15524bc104535131196066ef7cecc681a5ba1599c46639f4118b27b39",
+     "pt-BR": "Protagonista masculino e heroína",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k495",
+     "source_text_sha256": "faa60a98830aa096f1ca826cb1a55760cb857e8c00262607cee44bd6de31739c",
+     "pt-BR": "...Parece que ele não está mais seguindo a gente...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k497",
+     "source_text_sha256": "81c5bfb9bd280eb481815da9e908f2100d960f116dc3fb0d5ad84da43ab5ea03",
+     "pt-BR": "Você veio me salvar.\nFico tão feliz...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k499",
+     "source_text_sha256": "4963e42e0df3371e3a27a0c59b405a60da890e8404739bb33a50581546a6c7cc",
+     "pt-BR": "Mas desculpa por te colocar em tanto perigo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k509",
+     "source_text_sha256": "5196ab86c029b0838ee4b5e2a7af28b3e7048a02c63c793615b96ac30a99305b",
+     "pt-BR": "Eu não aguentaria te perder. Eu te amo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k528",
+     "source_text_sha256": "ee856a4e17e57fc7b6b47df2e9ca9c6e26776c526f82c0ecb94a99408021a45e",
+     "pt-BR": "Ah, é mesmo? Hum, bom...\nMuito obrigada por me salvar...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k533",
+     "source_text_sha256": "ef7d413d955c267e0543fb63000b7076aba8ac098f90686864932faa6f8d3234",
+     "pt-BR": "...Precisamos sair daqui, rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k535",
+     "source_text_sha256": "c4f135113172588ec4f6ac7cbacfbd7d5576d215834451df0652ca85b0c7b63b",
+     "pt-BR": "Não tem algum jeito de descer?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k540",
+     "source_text_sha256": "789d110685e8970b71446198cc40d12c0e6fe08fb7ea2c8330a934ada264720c",
+     "pt-BR": "Kumi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k541",
+     "source_text_sha256": "5b326766443c4b53e019cd48994922b449171a2755e14fc7c716a41d885b19b8",
+     "pt-BR": "Naoki!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k543",
+     "source_text_sha256": "66039200e1397c82e58767707fbad79b95aba8beeb1948dbd05bd38c61ef126b",
+     "pt-BR": "Naoki＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k544",
+     "source_text_sha256": "87a2280478305de58409ec25a16e6638592de65ef37f0b458c7485ea3b8204da",
+     "pt-BR": "Kumi...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k546",
+     "source_text_sha256": "b671b64aca26753946e9681df77b7f466ce1f21c4fcab0a26057378d520e7462",
+     "pt-BR": "Desculpa, Kumi... Te deixei sozinha...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k548",
+     "source_text_sha256": "5433bae476dff2b9fb4450cfa63510e7629da3e215c2a675824e2eb24a8bdf6f",
+     "pt-BR": "Não, quem tem que pedir desculpa sou eu.\nDesculpa por brigar por uma coisa tão boba...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k551",
+     "source_text_sha256": "d3a3d7ea51e8defcd01039c41897a01c31084c93e4ec638b155f4220a7fe965d",
+     "pt-BR": "Estou bem!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k553",
+     "source_text_sha256": "f150fd26248daa31f27539ff5794a3cc96ffa926b454c05df96cf603812fe530",
+     "pt-BR": "Isso é...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k555",
+     "source_text_sha256": "91a2b990b2968100e35573a4ba97aad77e965f376947f0a4844b9ecf9f58ed36",
+     "pt-BR": "Eu te amo... Kumi...\nVocê quer casar comigo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k557",
+     "source_text_sha256": "273d0bc96e3d901abf5ff29082251243d99d7518a74b72b8e65d3cba66155207",
+     "pt-BR": "...Quero.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k559",
+     "source_text_sha256": "5948b2da3bfc8338f6c4dfe6514e3fc54e0a900acbd082fabc818f850decb314",
+     "pt-BR": "...Já sei. Vamos fazer nosso casamento aqui, agora.\nHum...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k561",
+     "source_text_sha256": "f9be53b03d4220fbc5838116c9e684bd897e5b0c0a60bc14ffb75ea286e35228",
+     "pt-BR": "Com licença, vocês podem ser as testemunhas do nosso casamento?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k563",
+     "source_text_sha256": "57273a530208e5357beac3e0d8c223dc6b0e911f1807abfb06a14d119aed5682",
+     "pt-BR": "\"Claro, se vocês quiserem.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k565",
+     "source_text_sha256": "801a2c37938366cf108562b5926eb8ebbf0da46546da6650432143454428bb8b",
+     "pt-BR": "\"Hã?! O que uma testemunha faz?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k567",
+     "source_text_sha256": "acb897f99367a600e3a15582d0734f7269070c7d24011e58aae08d8711b74914",
+     "pt-BR": "\"A gente acabou de se conhecer! Não posso!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k569",
+     "source_text_sha256": "733428ca76dfb7babf9ad48a1671bd00e070ceeed5becdadd8262edbc8beb0f5",
+     "pt-BR": "\"Claro, se vocês quiserem.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k572",
+     "source_text_sha256": "b89bbb05b6a26d61b5d01d6ee5624134d1fd8e3549bec9826770e05565190c6d",
+     "pt-BR": "\"A gente acabou de se conhecer! Não posso!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k576",
+     "source_text_sha256": "2401cfeea2eb070fb7fab60e1ea9651e5d9c0a8626727715154a03ed0a48ecb5",
+     "pt-BR": "\"Hã?! O que uma testemunha faz?\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k579",
+     "source_text_sha256": "7e5eff460dcd072214e3d8cc914f7014f9ea20fa240c9fd0dfc1f6db2fd22eb6",
+     "pt-BR": "É só ficar do nosso lado e assistir.\nPor favor...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k585",
+     "source_text_sha256": "0c840d380dda5b3c532cb8067a46b62dd83e467bbf6384506980ceb5bafc2bf0",
+     "pt-BR": "Kumi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k586",
+     "source_text_sha256": "47b55d94dba98d43a28cbad0701a1b7c23a24441b68d7cf34077e585a5ff039e",
+     "pt-BR": "Ah! É você...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k588",
+     "source_text_sha256": "474b1c22e70887c2f8bf7166e0fff5c45911b55bff8c7641836883229b597635",
+     "pt-BR": "Kumi! Um monstro te trouxe pra cá também?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k590",
+     "source_text_sha256": "00657917dc5c3127ba9f8c4855987268008876918887022a02d858e09283bc39",
+     "pt-BR": "Sim. Eu estava procurando o Naoki e, de repente...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k592",
+     "source_text_sha256": "cafb69a7bb95ff4c0dd058354815e804310ccd8727b2837f8c09bd54aa1f5b4a",
+     "pt-BR": "Naoki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k593",
+     "source_text_sha256": "e6d0b0e2e95e38cd9f58b83f5cef10d4bb5d19ff93e14e6ab4249a302d043b7a",
+     "pt-BR": "Kumi...? É você, Kumi...?!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k596",
+     "source_text_sha256": "d4e5d7ad41a2bb39b5cdfb0e796cfc236179894b43cc0701dbde4bc780db759a",
+     "pt-BR": "Que alívio. Kumi, você está bem...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k598",
+     "source_text_sha256": "a7f4d00cf0646518d0d8799c0c346470ccd00d82497958d08cee2ad0f60a85da",
+     "pt-BR": "Você também, Naoki...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k600",
+     "source_text_sha256": "b2933ad5515f7f29d243bd9c4cff08c343d294474f61e2719df5b4f3747a5b8d",
+     "pt-BR": "Ah, Kumi, desculpa.\nEu tinha uma coisa pra te dar hoje, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k602",
+     "source_text_sha256": "53abe60251816e80b698c3f4a9b9bdd28c12260cba526ed32c4e0092fccf17d3",
+     "pt-BR": "Isso é...! Como você conseguiu isso?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k604",
+     "source_text_sha256": "7984fb4bf782da27007819881d088f69a43451c1e54a0e3353500fdd31cce4e7",
+     "pt-BR": "Essas pessoas trouxeram pra mim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k606",
+     "source_text_sha256": "2710397d95c25094f21072ceaef7e9a4208d73aab609ba82cb17a66ada3b957b",
+     "pt-BR": "Sério...?!\nAh, muito obrigado...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k608",
+     "source_text_sha256": "4c0959bb1a90512a92ebb0a9c56b4406d7df1ca749afeac1e37174a83915bbb0",
+     "pt-BR": "\"Não foi nada. Fico feliz que vocês dois estão bem.\" (parabenizar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k610",
+     "source_text_sha256": "e9e3e9d230c69973ca8ddd4ad67bb3af90810bcb0a94f138d641e41049198e00",
+     "pt-BR": "\"Só achei por aí e trouxe de volta.\" (fazer pouco caso)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k612",
+     "source_text_sha256": "529702fe4676f60143abfe386e7214b8afec60d8b10ec26d28dd43dee06ef36c",
+     "pt-BR": "\"Nossa, que sufoco! Então, quanto é a recompensa...?\" (pedir dinheiro)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k614",
+     "source_text_sha256": "d0cbbcf3bb3c6c1f553f049c2812035e39cf68006260272a1f5b51ed4365094c",
+     "pt-BR": "\"Não foi nada. Fico feliz que vocês dois estão bem.\" (parabenizar)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k616",
+     "source_text_sha256": "619fd834fa29fa528995a0ed35e310bf5ae7cf18cbf556e840e6b4f64f839bf2",
+     "pt-BR": "\"Só achei por aí e trouxe de volta.\" (fazer pouco caso)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k618",
+     "source_text_sha256": "640bb847bc23581ff4dca2ff7f4d43c7d98b19686718592a2748553edd2103d9",
+     "pt-BR": "\"Ufa, que sufoco! Agora, sobre a recompensa...\" (pedir dinheiro)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k620",
+     "source_text_sha256": "339cdb42bc5232fbf2e8ada1151ec8a4da659791fb6d33ee0ee761a8b5a0cf62",
+     "pt-BR": "Ah, não foi nada. Fico feliz que vocês dois estão bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k622",
+     "source_text_sha256": "31bc403a3d828aa68c536cb5638e1fa873b6bc7c428125e8d3e844a9f5e5d668",
+     "pt-BR": "Ah, não foi nada. Fico feliz que vocês dois estão bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k624",
+     "source_text_sha256": "a2687e3b6be884d3b754474236cdb6006e8394e8cd0ec22ea34f3f04003bd9ba",
+     "pt-BR": "Só achei por aí e trouxe de volta.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k626",
+     "source_text_sha256": "fe25e5ed6209e0bed1dd2cc1f77b5377f17651f85d588080007af21054c478e5",
+     "pt-BR": "Só achei por aí e trouxe de volta.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k628",
+     "source_text_sha256": "af758598ec1221412c15aceffa8427e44e2c1d7d891ec4e507c8715f82fa875d",
+     "pt-BR": "Não, sério! Muito obrigado...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k630",
+     "source_text_sha256": "b0900e93295cbe97476b827c1e562283d51a011910f5c12f28620b836f165f76",
+     "pt-BR": "Nossa, que sufoco!\nEntão, quanto é a recompensa...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k632",
+     "source_text_sha256": "dd8b53d684a9ec7bda8795a93939482f821f64698a80bbb92444989a514403ec",
+     "pt-BR": "Ufa, que sufoco!\nAgora, sobre a recompensa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k634",
+     "source_text_sha256": "0b193699dc521f460f2ca2aa5226ab7b5667b8fc425eebffe406f0d9cc361b9a",
+     "pt-BR": "E-Ei, qual é...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k636",
+     "source_text_sha256": "baf44c323eb598d5991712f53b697b7a5f536853769fd1d75c29de6172de980d",
+     "pt-BR": "Hã?! U-Uma recompensa?\nB-Bom, você tem razão. A gente devia te dar alguma coisa...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k638",
+     "source_text_sha256": "66f8520356bcdd76480f5de463346cde33eede2c8f9bedeeff8a80ef08e5878c",
+     "pt-BR": "...Desculpa. É tudo o que tenho aqui agora...\nMuito obrigado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k640",
+     "source_text_sha256": "088462f65b7e8bc00db9fd7d87cf33cea200daceb9094dea9dc851b2a1851090",
+     "pt-BR": "Sistema",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k641",
+     "source_text_sha256": "8121094eabe859ae5156f952b8a82fb8140fecf66a3f0af60f84f974841f5e97",
+     "pt-BR": "Conseguiu 【16.050 ienes】.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k643",
+     "source_text_sha256": "cd14dde5f55ef0afd55d5b2de2a5dbf71cb128f75b356668120988a5b2450d0d",
+     "pt-BR": "C-Certo! Kumi, vamos sair daqui!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k645",
+     "source_text_sha256": "7be9d0c5dcec773f5ff11b8247abf91c85161b716330fd9e0ee2b9bb01e03e63",
+     "pt-BR": "Espera. Naoki, aquele presente...\nO que você ia dizer quando me desse?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k647",
+     "source_text_sha256": "f56a5f928d2bb6b3916e270120a2dcc6699e083e033156fcbcfb82697279d505",
+     "pt-BR": "Hã? Ah, é, claro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k649",
+     "source_text_sha256": "a620ac97576013899147bb752c98c451d251f80758c2c45e7cd9011450e32be4",
+     "pt-BR": "Feliz aniversário, Kumi.\nE...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k651",
+     "source_text_sha256": "f9e6a22bd9bb741802e647b56b0e3f9a64c47f953f9c898814c1b292d2266765",
+     "pt-BR": "Quer casar comigo...? Ah, desculpa.\nEu tinha planejado tudo, mas esqueci...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k653",
+     "source_text_sha256": "81fd25879657ca3706958c5cb3cf66ecdd080d1cf0c23d54fb0343f1ea04f707",
+     "pt-BR": "Naoki＿３",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k654",
+     "source_text_sha256": "5c115200a1f64a53dbb0a3a1594a4adaa328f9bb19ceb2592ed66a8d0b52c512",
+     "pt-BR": "...Mas e agora?\nComo a gente sai daqui...?",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -17661,6 +19801,852 @@
      "id": "p0/k1684",
      "source_text_sha256": "2622904229ceec9bfd47e6ec54ecefd9a38f1ad5ced94b56303f86d0895091c5",
      "pt-BR": "Conseguiu a 【Foto do Imediato com a Doutora Fukazawa】.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_210_2_news_text.luc",
+   "source_sha256": "b3888d5ad7dab3bcfecbbcb58b427cc8aa668cc6aa75ad9458a9bdca71590cbe",
+   "entries": [
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "19926c809bb1cd460701e7e4e0415fc764e83cb4d71ebbac37fd476cace60555",
+     "pt-BR": "Ninho dos Monstros Voadores em Chamas: Torre Miyato Sky...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "e3fffbd334a7da3df621e16995c1fc0b7e8f890bf87a1d57c3ae3768474f9c57",
+     "pt-BR": "Um monstro gigante apareceu de repente perto da Torre Miyato Sky e a atacou com bolas de fogo.\nA torre tinha virado um ninho de Gyaos.\n\nO ataque incendiou o ninho e, pelo jeito, atingiu a maioria dos Gyaos.\nGrande parte da Torre Miyato Sky também desabou.\nHá pouca esperança de que as pessoas levadas pelos Gyaos tenham sobrevivido.\n\nO monstro gigante atirou várias vezes, sem distinção, nos Gyaos que fugiam e parece tê-los exterminado.\nAs bolas de fogo também causaram danos devastadores nos arredores.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "28806ef0c91a91882805e8b878659c72e36aba1101ea4b2d264571e4a873662e",
+     "pt-BR": "Monstro Gigante: Inimigo ou Aliado da Humanidade?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "86b93956f8d9b799dd75e11a52ad63c5d4b5044cf8834a654f17717a27b257d0",
+     "pt-BR": "Acredita-se que o monstro gigante que destruiu a Torre Miyato Sky tinha como alvo o ninho dos Gyaos.\n \nOs Gyaos tinham aparecido em bandos na Avenida Suzuran, deixando muitos feridos e desaparecidos.\n Ao mesmo tempo, especialistas sugeriram que o monstro gigante pode ser o mesmo indivíduo que apareceu no cruzamento de Umegaya.\n \n Diante disso, sobre o monstro gigante,\n \"Se ele mirava os monstros que atacavam pessoas, não seria uma criatura amigável aos humanos?\"\n é uma das opiniões levantadas.\n \n Por outro lado,\n \"Ele destruiu a Torre Miyato Sky e causou estragos em toda a volta. Mesmo que o monstro gigante tenha expulsado os monstros voadores, isso é imperdoável.\"\n é uma opinião negativa também levantada.\n \n O debate sobre se o monstro gigante é inimigo ou aliado da humanidade promete continuar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "4328e537d01ed112ce6bde5c2801374ab8640b8858b719269958f102eefb6ac2",
+     "pt-BR": "Governo Tinha Decidido Proteger os Monstros Voadores!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "f4cd037066e28fb2d750986f7f60613feb370045b0309329ee06140941126f6a",
+     "pt-BR": "Gyaos, os monstros voadores responsáveis por danos sem precedentes na Avenida Suzuran.\nVeio à tona que o governo já os tinha descoberto, mas tentou protegê-los como sobreviventes raros.\n\nDescobriu-se que os Gyaos que destruíram parte da Torre Miyato Sky e fizeram ninho lá já nascem maiores que um humano e crescem num ritmo anormal.\nEspecialistas dizem que um único Gyaos consegue botar ovos e se reproduzir sozinho.\n\nPor isso, a reação do governo ao crescimento explosivo deles chegou tarde demais, e muita gente perdeu a vida.\n\nVários comentários condenando o governo foram publicados na internet.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "2e69b8d8bc422060485f558c58fc5be45ddcb610795a313c8372e7055c6f9f36",
+     "pt-BR": "Desabamento da Torre Afeta Algumas Rádios",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "9a7d8e9adbcdee612891f4ab48899cc81a71e24b1ff02940f9e6596f8384930b",
+     "pt-BR": "O desabamento da Torre Miyato Sky deve afetar algumas transmissões de rádio.\n\nA maioria das emissoras de TV e rádio tinha mudado seus transmissores para uma nova torre recém-concluída, mantendo a Torre Miyato Sky como reserva, então suas transmissões não foram afetadas.\nMas algumas rádios não tinham se mudado e estão fora do ar no momento.\nNão haveria previsão de volta.\n\n[Rádios fora do ar no momento]\n• FM Urashimaso\n• Sakura FM",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "40d81841e5e5cb413481d07617807f87315ab198ab0520fb16d2c9c757a1df10",
+     "pt-BR": "Gyaos Fatia a Torre?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "21dd060318fc8ac61dda4e6f8550a0cf20b6bf32f86000c84941254d62392ee5",
+     "pt-BR": "Uma cena incomum teria sido vista na Torre Miyato Sky, que tinha virado ninho de Gyaos.\nUm Gyaos disparou um raio na escada que levava direto ao mirante, destruindo-a.\n\nPor que ele faria algo que poderia derrubar o próprio ninho junto com a torre?\nUm especialista sugeriu: \"Talvez ele tenha destruído a rota de fuga para a presa não escapar.\"\n\nO Gyaos ataca humanos e tem inteligência avançada e uma capacidade de reprodução impressionante.\nSão necessárias medidas urgentes, mas o governo demora a agir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "d7ba24d2ee0dc879496e05fbcd8423686a00ed5dcb0130ecfe204b3bb9a9855b",
+     "pt-BR": "Ovos de Gyaos São Encontrados",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "c4e260626d18b875d816edf38ed96c78d355b1901a9d8889309e1c2583bf1332",
+     "pt-BR": "Novas informações sobre os Gyaos revelam que ovos foram encontrados no ninho.\nSegundo especialistas, ele consegue botar ovos sem parceiro, e filhotes nascem desses ovos.\nÉ difícil de acreditar, mas assustador se for verdade. Um único sobrevivente poderia começar uma nova população.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "ad407542f578a30b6fb0de06d70669a77a18d5520cdb16b5fa7b69671e68f784",
+     "pt-BR": "Gyaos Dispara Raios Misteriosos!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "20bc4e48f2d9d8526ab92c1cc8e5a0d88aad4442407b8546ef9b4ce093ec030c",
+     "pt-BR": "Temos mais notícias sobre os Gyaos. Um indivíduo teria sido visto soltando raios pela boca. Esses raios cortariam tudo o que atingem.\n\nO governo anunciou que, como o ataque usa ultrassom, os raios vão se chamar \"Bisturi Ultrassônico\".\nEm resposta, a Associação Médica do Japão protestou, dizendo que o nome repete o de um instrumento cirúrgico.\n\nNão se sabe se só certos indivíduos conseguem soltá-los ou se todos têm essa capacidade. De qualquer forma, não há dúvida de que a ameaça dos Gyaos aumentou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "c2a2ed4524f87edf91cb1ebfc1375eb50af9f3735a5d3b45cc081f9304341206",
+     "pt-BR": "Descobertas Assustadoras Sobre os Monstros Voadores",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "18789336692f79bfc015f65234e9e47968489c46cc9f5eaac07d1c64eb342fb0",
+     "pt-BR": "À medida que aprendemos mais sobre os Gyaos, surgiu um fato realmente assustador.\nOs Gyaos estavam comendo uns aos outros em cima do ninho.\nEspecialistas suspeitam que eles conseguem se reproduzir e aumentar em número mesmo sem comida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "6112df94170e20ca8dd5343cb8694bab59258f3b548dfa3372091db7a8eca67a",
+     "pt-BR": "Especial Dia das Crianças",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "6c1c71ad39510fe469c96116dce67e97f8bc2b3c5086d9ec1d98fc3292b4cf0d",
+     "pt-BR": "O quanto você sabe sobre o Dia das Crianças?\nA lei define o Dia das Crianças assim:\n\n\"Respeitar a individualidade das crianças, promover sua felicidade e expressar gratidão às mães.\"\n\nIsso mesmo: o Dia das Crianças também é um dia para agradecer às mães.\nQue tal mostrar sua gratidão aos seus pais no Dia das Crianças, além do Dia das Mães?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "b4731a9ad6b5892e20e800385f54400e3407f23d89d7adeec688f8528518108f",
+     "pt-BR": "Segredos do Governo: Helicópteros de Imprensa Disfarçados?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "0ea24468dbe7f4661724201031c0f216204fddd17c577b52b0fa460b5a594188",
+     "pt-BR": "Helicópteros de imprensa sobrevoaram a Torre Miyato Sky depois que os Gyaos fizeram ninho lá.\nMinha investigação independente revelou que eram, na verdade, helicópteros do governo disfarçados de imprensa, com o objetivo de manter os Gyaos presos no ninho.\nPor que o disfarce? Suspeito que o governo queria proteger os Gyaos mesmo sabendo que eles caçavam humanos.\nPretendo continuar investigando essa suspeita.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k141",
+     "source_text_sha256": "4c28d2d024181d4a14dc65d787c5d9c009a96f126be3b48429da961ed88681d9",
+     "pt-BR": "Helicóptero Cai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "56c39e93df8367646c53c2f69c3831a8f6b5d77a18a5ad48d236b3507dd5fcae",
+     "pt-BR": "Um helicóptero de imprensa que cobria a Torre Miyato Sky caiu depois de ser atacado por Gyaos.\nTestemunhas dizem que ele se aproximava da torre quando caiu.\nSe for verdade, será que os Gyaos atacaram enquanto o helicóptero tentava resgatar pessoas levadas para o ninho?\nO piloto não teria autorização para se aproximar da torre.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k143",
+     "source_text_sha256": "dc11a7635236d3c3b603e8bd9d6ae80fa22bcfc7c53f36a8f13c5fc9300a998b",
+     "pt-BR": "Tudo \"Pelos Clientes\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "bb0e3462c448355acd9a07dc4543a432bfa144195ca5058d81f5f58063941b20",
+     "pt-BR": "Descobrimos que, entre as pessoas presas no primeiro andar depois que o segundo andar do mirante da Torre Miyato Sky foi destruído, uma vendedora continuava vendendo mercadorias.\n\nMesmo com Gyaos ferozes por perto, ela teria priorizado as vendas em vez da própria fuga.\nEla disse: \"Enquanto houver uma única pessoa querendo comprar, não posso sair daqui.\"\nNossa apuração indica que ela foi contratada na Torre Miyato Sky um ano atrás. Alguns meses antes disso, perto da formatura, ela tinha sido recusada por centenas de empresas. Então os pais dela morreram de repente, e a casa pegou fogo num incêndio suspeito.\nEmbora nem ela nem os pais tivessem culpa, ela se sentiu mal pelos vizinhos atingidos pelo fogo. Vendeu o terreno da casa, a última coisa que tinha, e pagou tudo a eles.\n\nTendo perdido tudo, menos a roupa do corpo, ela ficou sentada sozinha, atônita, num parque ao entardecer.\nAs lágrimas não vinham. Tantas desgraças tinham acontecido que ela não conseguia sentir nada.\n\nEntão um senhor que passava fazendo caminhada falou com ela por acaso. A luz voltou à vida dela.\nEle era o fundador e presidente do conselho da empresa que opera a Torre Miyato Sky.\n\nDepois de ouvir a história dela, o presidente teria arranjado um lugar para ela morar naquele mesmo dia e decidido contratá-la como vendedora na Torre Miyato Sky.\nEle disse que se identificou porque também perdeu os pais cedo e passou por muitas dificuldades.\n\nDesde então, ela trabalhava com dedicação total.\nEla valorizava estar viva e ter a felicidade de pensar no futuro.\nTalvez justamente por ser assim, sua preocupação com os outros fosse forte o bastante para continuar atendendo os clientes desafiando essa adversidade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k145",
+     "source_text_sha256": "e4fa6645f8dcc78af1abc66cfba8e4e9b5be574f7e5496505beb82125636ee51",
+     "pt-BR": "Um Casal",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "efc16c2970ea55187ac542ea50155a1ee7f442d4b6c85551ab140404b19842a5",
+     "pt-BR": "Enquanto Gyaos voavam lá em cima, um drama como o destas imagens acontecia no primeiro andar da Torre Miyato Sky.\nUm homem à beira da morte e uma mulher ferida estão abraçados. O paradeiro deles depois disso é desconhecido.\nMas um anel que a mulher usava foi encontrado naquele mirante do primeiro andar. Só eu acho isso preocupante?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "1253daafacbb3b03438c8a71f06166ae0e857d562cfcef0405ec90ab20bbe079",
+     "pt-BR": "Material Regurgitado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "78c557a4208366f8579682e7390cdcaac146174ad32f753a4a7f78e181e5603e",
+     "pt-BR": "Este é o material regurgitado pelos Gyaos.\nSegundo alguém que escapou do primeiro andar do mirante da Torre Miyato Sky, uma pessoa foi vista enfiando a mão nisso.\nNão se sabe por que ela fez isso.\nEstava procurando alguma coisa? Gostou da textura? Ou a situação esmagadora a deixou completamente desnorteada?\n\nEnquanto isso, uma empresa que reparou na viscosidade do material teria conseguido criar um material de absorção de impacto com componentes parecidos. Traremos mais detalhes quando surgirem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "86ee4902feb6ccd287a8a5f8768938c07ceae8953d25b82fc0ce021d23a35a89",
+     "pt-BR": "Por Que a Instalação de DEAs Precisa de Subsídios",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "9c80b9cb5866493c90aa9ee72978886f57069ebcc55a29bfd1351ba22ac592cd",
+     "pt-BR": "Você provavelmente já viu muitos DEAs, que hoje estão instalados em todo tipo de lugar.\nComo são oferecidos pelos estabelecimentos ou pelas administradoras, essas organizações naturalmente arcam com a compra e a manutenção.\nIsso tem pesado cada vez mais. Um conjunto como o da foto custa uns 300 mil ienes, a bateria dura uns quatro anos, e o DEA em si tem garantia de cinco anos, exigindo troca ou recompra a cada vez. Além disso, a bateria não foi feita para recarga e basicamente é descartada depois de um uso.\n\nOs DEAs salvam vidas em emergências e são importantíssimos. Deveriam estar em mais lugares. Mesmo assim, não consigo deixar de questionar por que isso fica só por conta da boa vontade privada.\nÉ justamente aí que o governo deveria liderar. Não precisa aumentar imposto. Só reduzir os salários anormalmente altos dos burocratas ao nível do setor privado bancaria 500 mil conjuntos de DEA. A densidade populacional importaria, mas uma conta simples já dá mais de 100 mil unidades para cada uma das 47 províncias. Mesmo para um leigo, isso não seria uma ajuda enorme?\n\nO governo quer proteger o povo ou os próprios burocratas? Eis a questão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "990fe32be4e015325600b36fd7283d1b5b73531a9a7fcee18dee1cea0a351a47",
+     "pt-BR": "A Mangueira de Incêndio Não Usada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "a681be2ed8d3adbd23db3aee5b1a10ff540cf5752a1a45ca8c89dd64c0c57233",
+     "pt-BR": "A mangueira de incêndio instalada no mirante da Torre Miyato Sky foi encontrada sem sinal de uso.\nComo não houve incêndio, isso é natural.\n\nMas há quem diga que usar o jato de alta pressão contra os Gyaos poderia ter aumentado as chances de sobrevivência.\nEu duvido. É verdade que já ouvi uma história, meio lenda urbana, de um jato desses derrubando um helicóptero, embora não um Gyaos. Mas o Gyaos é uma incógnita.\nÉ bem possível que isso só os deixasse com raiva e causasse um estrago ainda maior.\n\nOs tais comentaristas são ótimos em achar defeitos e fazer comentários negativos, mas nunca sentiram de verdade a situação na linha de frente. Como alguém colocado na mesma categoria ampla da imprensa, só posso lamentar que haja tanta gente assim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "77755b57e8d51d308337cbc47297d4915da64158958f18286e2e9e8abf7e681f",
+     "pt-BR": "Examinando o Material Regurgitado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "d002fbd67459b67fe928d23d7185817f81fd372779976aaaa5bf6f2819fc720a",
+     "pt-BR": "Veio à tona que o Dr. Yasuke Komada, autoridade em biologia, estava no mirante da Torre Miyato Sky.\nNo mirante, o doutor observou o vômito cuspido pelos Gyaos, percebeu que eles têm o hábito de regurgitar o que não conseguem digerir e diz que quer começar uma pesquisa com amostras do vômito depois de escapar.\n\nO doutor já desvendou os segredos de várias criaturas com sua determinação extravagante.\nO que mais o deixou famoso foi entrar numa baleia viva pela boca e fazer três dias de pesquisa de campo dentro do corpo dela, usando o estômago como base.\nClaro, ele cuidou da saúde da baleia, e confirmou-se que ela vivia feliz depois que ele saiu.\nNo começo, o meio acadêmico o desprezou, mas a pesquisa dentro da baleia depois levou a um remédio que cura completamente o câncer humano com 98% de sucesso, rendendo a ele elogios no mundo todo. A história dos figurões acadêmicos da época dando meia-volta e fazendo \"peregrinações até o doutor\" para pedir desculpas na casa dele foi muito noticiada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "45ea1d23a424e83f033b94d5264a0873da276122eb1b629836a906704e929be9",
+     "pt-BR": "Um Trauma Que Ainda Persiste",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k156",
+     "source_text_sha256": "1698c2d6a4c45c9c77ca3d7a98d70099831b9a812a37603c127395dce6c58611",
+     "pt-BR": "Kosuke Esaka (nome fictício), funcionário da Torre Miyato Sky, viu um colega ser comido por um Gyaos bem na frente dele.\nEsaka (nome fictício) conseguiu escapar por pouco, mas o choque psicológico foi tão grande que ele continua internado, sem conseguir levar uma vida normal.\n\nO colega era o irmão mais velho da noiva de Esaka (nome fictício), e os dois se conheciam havia uns cinco anos. Quem convivia com eles dizia que pareciam irmãos.\n\nA noiva de Esaka (nome fictício), enfrentando essa tragédia a apenas um mês do casamento, estaria cuidando dele com toda a dedicação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "95cbac71b5bd2d08f2b82d1e08db6878d42b074a05578ef3d4cd5c96f91cb032",
+     "pt-BR": "Um Elevador Que Traz Felicidade?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "62ce00bab402e40909b6182be0f7a34d92f62bcea1c388cd114bb45af8baa77f",
+     "pt-BR": "Você já ouviu o boato, muito comentado, de que o elevador da direita, de frente para a Torre Miyato Sky, traz felicidade?\nUma pessoa diz que se declarou nele e depois se casou. Outra perdeu tudo quando a empresa faliu, mas achou um bilhete de loteria nesse elevador. O dono nunca apareceu, e o bilhete ganhou impressionantes um bilhão de ienes.\n\nMas, investigando esses boatos, descobri algo suspeito.\nPelo jeito, um funcionário da torre começou a história para atrair clientes.\nEla parece ter se espalhado quando parte de quem andou no elevador por causa disso disse, por vaidade, que algo bom tinha acontecido.\nClaro, não quero negar totalmente os poderes misteriosos. Mas parece que a ideia não é fazer quem anda nele feliz: é fazer a Torre Miyato Sky feliz. (O número de visitantes mais que triplicou desde que o boato começou.)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "07460f8661ad34bd4ffd2e06930abe838b8d350fe9976b8a5f38895937b1fa96",
+     "pt-BR": "Um Elevador Que É uma Grande Aposta?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k160",
+     "source_text_sha256": "f633adddc9159497a8c5f8a9bd256c54e08084798a5adf4fe21a9b8453c01e87",
+     "pt-BR": "O elevador da esquerda, de frente para a Torre Miyato Sky, é chamado de \"Elevador da Grande Aposta\".\nQuando duas pessoas ou menos descem nele, um espírito sempre aparece, e elas chegam lá embaixo psicologicamente abaladas.\nO dano é grave, e pouquíssimos conseguem voltar à vida normal.\nPorém, mais ou menos uma em cada cinquenta encontra um espírito de expressão serena e depois tem uma vida próspera.\nEntre os que entrevistei, alguns simplesmente ganharam uma grande fortuna e hoje vivem bem. Outro desenvolveu de repente um paladar refinado, retomou a carreira de cozinheiro que tinha abandonado e hoje trabalha na linha de frente de um restaurante famoso no exterior.\n\nMesmo assim, como quase todos sofrem o que se poderia chamar de dano devastador, o elevador já foi fechado uma vez, e em outra época um funcionário exclusivo garantia que pelo menos três pessoas descessem juntas.\nMas muita gente ficou fascinada com a promessa de um futuro garantido se tudo desse certo. Hoje, duas pessoas ou menos podem andar nele se antes assinarem um termo assumindo a responsabilidade.\n\nPor que só na descida? Por que duas ou menos? Por que as autoridades não intervieram? Ainda há muitos mistérios. Há até relatos de que o atual primeiro-ministro andou nele antes de ficar conhecido. Traremos novidades.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "4ada0ce86cf6a58c06d15deeebd2ee05208d791defc79be31dc13611cd34c4d6",
+     "pt-BR": "Negócios Como Sempre, Até Aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "e98d3b2544cd8c7819a076ada7fc3cceac6a2af719ca2ac0444e69ed0c799aed",
+     "pt-BR": "Um comprador de usados foi visto aqui também, tranquilo, com a roupa de sempre.\nEle estava no primeiro andar da Torre Miyato Sky, que tinha virado ninho de Gyaos.\n\nSe ele fazia negócios apesar da crise ou por causa dela, não se sabe, mas pessoas teriam sido vistas falando com ele e fazendo trocas.\nÉ verdade que muitos caixas eletrônicos podem não funcionar numa situação dessas. Talvez nem haja energia. Será que estavam juntando dinheiro para comida e água, ou tentando garantir prioridade para chegar a um lugar seguro? Não sabemos.\n\nNão se sabe se esse comprador de usados voltou vivo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "b041519d0aeb2119778ceb4b8ce634938af0bd42f026c1fe35c8f1bbaab28fff",
+     "pt-BR": "Reflexões no Banheiro: Banheiro Masculino da Torre Miyato Sky",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "07057ddbf10fc7fdc7e49e51f0813780f801bf6376d4f0714e630b61aa66f3a7",
+     "pt-BR": "A Torre Miyato Sky foi projetada pelo grande mestre Shunzo Sanuki.\nSeus projetos, meticulosos até o último detalhe, chegam até o banheiro masculino do mirante.\nPor incrível que pareça, cada vaso sanitário dali foi feito à mão por ele. Os registros mostram que ele construiu um forno só para isso e preparou tudo sozinho, até a argila especial e o esmalte.\nEles eram tão bem-feitos que outros lugares imploraram por eles também, mas Sanuki recusou na hora, dizendo: \"Estes vasos foram feitos especificamente para este banheiro masculino e não servem para nenhum outro lugar\", então até hoje só podem ser vistos aqui.\nE, como foram avaliados em impressionantes 2 bilhões de ienes, a Torre Miyato Sky tentou proibir o uso, o que enfureceu Sanuki. Não se sabe bem como, mas no fim eles continuaram disponíveis para uso normal.\n\nA Torre mantém funcionários exclusivos de plantão para vigiá-los, e eles polem os vasos com cuidado quando ninguém está usando.\n\nComo Sanuki já faleceu e não restaram registros das fórmulas da argila nem do esmalte, o valor deles subiu ainda mais; há quem diga que hoje valem 6 bilhões de ienes.\n\nEsperamos sinceramente que chegue o dia em que possamos sentar de novo nesses vasos superultracaros, que também escaparam ilesos deste incidente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "389c6f311e8897c09433817df10bf348cd6c257cf99272f93793204d1440ee57",
+     "pt-BR": "Reflexões no Banheiro: Banheiro Feminino da Torre Miyato Sky",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "c87f1796eee4bcb25012e0c2e4f0a7619a18985a6a6e720108dc99310e3ac0cb",
+     "pt-BR": "Os vasos do banheiro feminino da Torre Miyato Sky são obra de Sayoko, esposa do grande mestre Shunzo Sanuki.\nSayoko, tão talentosa quanto o marido, fez os vasos como a única obra criada em dupla com ele, o que os torna raríssimos.\n(O marido, Sr. Sanuki, fez os vasos do banheiro masculino da Torre.)\nÀ primeira vista, eles parecem idênticos aos do Sr. Sanuki, mas tudo, da argila e do esmalte ao método de queima, é completamente diferente.\nQuando Sanuki disse depois numa entrevista: \"A Sayoko é a única pessoa que eu nunca consigo vencer\", a frase foi muito noticiada na época.\n\nShunzo Sanuki e Sayoko eram projetistas, mas disputavam o topo em tudo o que envolvia arquitetura. Até hoje, especialistas se perguntam como os dois ficaram tão versáteis.\n\nAliás, estes vasos estão avaliados em 10 bilhões de ienes. Em parte por causa da frase de Sanuki, eles valem mais que a obra do marido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "18d748551e34c54aceb2fefd3af923061bb0ed33d0f2c75435f1e03c93028d5b",
+     "pt-BR": "Saqueadores Aqui Também",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "2768fe27ac573496d16099c562addd010e5af96160a618b13e8c312e329f1f6d",
+     "pt-BR": "Alguém foi visto revirando os armários do depósito dos funcionários.\nSaquear em meio a uma tragédia é roubar as coisas dos outros aproveitando a confusão.\nNão houve incêndio aqui, mas aproveitar o caos de uma catástrofe para revirar as coisas dá no mesmo.\n\nTalvez a pessoa estivesse procurando algo necessário para sobreviver à emergência. Mas testemunhas dizem que o comportamento dela sugeria outra coisa. Desde que foi vista no mirante, ela andava de um lado para o outro sem parar, aparentemente só procurando coisas para levar.\n\nA pessoa não foi identificada, e também não se sabe se sobreviveu.\nSe ela saiu em segurança, eu gostaria de saber o que estava fazendo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "c01c55b56fa5b423e583bc8d204ae9bc7baffb610813cea5c4a081c35d9e4042",
+     "pt-BR": "A Torre Miyato Sky em Ruínas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "1deba7e37de0bd401bd75e47ac1078b5bceca3cec6b90b6ed85c62531f398207",
+     "pt-BR": "Conseguimos imagens do que era o mirante do segundo andar da Torre Miyato Sky.\nAntes cheio de famílias com crianças, e de casais à noite, hoje ele não lembra em nada o que era. Só restou uma cena assustadora de escombros espalhados.\n\nO segundo andar também tinha um lounge, um lugar tão famoso que revistas o recomendavam como ideal para pedir alguém em casamento.\nA popularidade tinha caído um pouco com a chegada de prédios mais altos e dos restaurantes da Ponte Sky Garden. Mas os visitantes tinham começado a voltar depois de uma reforma há uns cinco anos, o que torna tudo ainda mais lamentável.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "a367718f05f71668cd70c4a2f734ef72a6ebaa8f05aefc3a68bc1d7a77a4e13b",
+     "pt-BR": "Bastidores do Trabalho, Parte 126",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "62c13562f07b7aaed76c74b7903f004800dbd60e5a766e8c46aca2c13539e600",
+     "pt-BR": "Graças ao seu apoio, esta querida seção, que mostra trabalhos que raramente vemos, chegou à 126ª edição.\nDesta vez, mostramos o trabalho de manutenção da Torre Miyato Sky.\n\nA Torre Miyato Sky é repintada uma vez a cada quatro anos. Não é só para ficar bonita. Evitar a ferrugem e consertar partes enferrujadas também mantém a torre segura, além de bela.\nCada repintura leva um ano. Há andaimes, mas às vezes os operários ainda precisam andar por vigas de aço estreitas e pintar à mão, o que torna o trabalho perigosíssimo.\nAs pesquisas para automatizar o serviço avançam, mas os operários também pedem que parem, dizendo que não podem perder o emprego.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "9e6bbb1197f08cd632af2ccb58aa1675ae57d2f8e9bc077a0b4e5d77d83868ae",
+     "pt-BR": "O Fim do Mundo? Uma Cidade em Chamas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "d815291ec0238191fdf269d24e83aeec9c3860961a45847e914f9470d34a71a1",
+     "pt-BR": "Estas imagens mostram incêndios surgindo por toda a cidade.\nElas teriam sido gravadas na Torre Miyato Sky. Não se sabe por que alguém tentaria gravar algo assim com Gyaos voando em volta da torre.\nTalvez tenham sido feitas por acaso.\n\nA popularização dos smartphones certamente fez muito mais pessoas comuns registrarem acontecimentos como jornalistas. Mas olhar pela câmera do celular também parece deixar algumas pessoas menos conscientes de que o que veem é real, e muitas vezes elas não percebem o perigo por perto.\nEspero sinceramente que o maior número possível de pessoas entenda que, depois de perder a vida, é tarde demais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "f3a60861a7a2be68cdabab5a719e058c7cd5e0b07b4c67ad26fbb4a20c69eeb3",
+     "pt-BR": "Uma Corrida Desesperada pela Vida!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "3b26f989543281dc297d057c3523f287e65f27baa68ec26fab317cf867f8e0ae",
+     "pt-BR": "Estas imagens mostram um jovem descendo desesperado a escada de emergência da Torre Miyato Sky.\nUm Gyaos disparava raios atrás dele, destruindo a escada trecho por trecho.\n\nSerá que foi só capricho ele não mirar direto no jovem?\nMuitas criaturas na Terra atormentam a presa de um jeito que os humanos veem como brincadeira. Seria o mesmo comportamento?\n\nSeja qual for o motivo, o jovem parece ter escapado de algum jeito.\nTambém conseguimos imagens do que aconteceu depois, mas vamos mostrá-las outra hora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "abf14713378e2f7289fdbc1446d5dbb219ae077a14c99e3b6177383823c0e2be",
+     "pt-BR": "Uma Corda Bamba Desafiando a Morte!?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "9e6d03c04b0ea2e85131839a6ca16aab6e542cb8e61b4fc8d348bd1bf34129f9",
+     "pt-BR": "Nosso helicóptero de imprensa filmou um jovem andando por uma viga de aço estreita, sem cabo de segurança, com Gyaos por perto.\nVários Gyaos o cercavam e pareciam disputar a presa humana.\n\nA briga deles às vezes mandava rajadas de vento na direção do jovem, que cambaleou várias vezes e quase caiu.\nUma queda de uma viga a dezenas de metros do chão seria fatal.\nInfelizmente, nosso helicóptero não pôde se aproximar com medo de um ataque dos Gyaos. Só pudemos assistir.\n\nFelizmente, o jovem parece ter atravessado a viga em segurança, mas o perdemos de vista depois.\nEsperamos que ele tenha voltado vivo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "1adaad8a02315f62ec3df8454f461138614e47fb9e0b84f34bd41ece1cf35253",
+     "pt-BR": "\"Ainda Existe Bondade no Mundo\": Outro Gesto de Gentileza",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "f61ef435ccf2c4ceda0bd05e47e44872fac07b2aa6debb3738790e3bf4d540c9",
+     "pt-BR": "Nossa apuração revelou que alguém dividiu curativos com desconhecidos no mirante da Torre Miyato Sky depois que ela virou ninho de Gyaos.\n\nNuma situação extraordinária, em que você pode se ferir a qualquer momento, pensar nos outros e fazer o que pode para ajudar é um gesto nobre, fácil de descrever e difícil de praticar.\nNão devo ser o único a ficar comovido ao saber que pessoas assim foram vistas em vários lugares.\nQuanto mais gente assim existir, mais vezes conseguiremos nos reerguer.\nRenovei minha decisão de guardar isso comigo e me tornar alguém capaz de colocar isso em prática.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "43806d358e703636887f417f35f1b6539c5ce0d0517f1ca5f084ed114259768a",
+     "pt-BR": "Separada de Quem Ama...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "30fce20d0f9e68e31f7ef635734d5ad1a7d5edde0233328e3244b101dad58c92",
+     "pt-BR": "Encontrei uma mulher cujo companheiro desapareceu durante a confusão.\nHá muita gente como ela. Muitos foram separados não só de companheiros, mas também de filhos ou pais.\n\nInfelizmente, poucos conseguiriam se reencontrar em segurança.\nOs pertences deles costumam ser achados depois no vômito dos Gyaos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "643ec1ecc5b99a66d2422014fb0763452d10168b327cef42f36ce8112fdec8af",
+     "pt-BR": "O Amor Pode Manter Alguém Vivo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "c62acf29dd49e83a4198a5e233ffbf83e218d5cdf893aac6d74135ea59a0bc19",
+     "pt-BR": "Relatos de testemunhas revelaram a presença de um homem com ferimentos gravíssimos.\nMesmo para um leigo, os ferimentos pareciam impossíveis de sobreviver.\nMesmo assim, querendo ver a namorada de novo, ele lutava desesperadamente para continuar consciente.\nEle sangrava tanto que parecia que ia morrer a qualquer momento.\nTalvez o sentimento forte por ela o mantivesse vivo.\n\nNão se sabe o que aconteceu com ele depois.\nTorcendo para que ele tenha reencontrado a namorada em segurança, pretendo continuar investigando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "cf7993cbc107ca1f413b8a609360a9afa6c2fa1cfd06a51924401f47e85273f8",
+     "pt-BR": "Sem Coração? Cruel? O Helicóptero Que Não os Resgatou",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "1aeb488ee828bc69e61e01cfee55eae23d5dd4d4e09472b73f4dfb5571c7bd76",
+     "pt-BR": "Entrevistas com sobreviventes revelaram que muitas pessoas presas na Torre Miyato Sky pediram ajuda ao helicóptero de resgate que circulava por perto.\nMesmo roucas e com os braços tão cansados que mal conseguiam levantá-los, elas acenavam e gritavam por socorro.\n\nMas o helicóptero de resgate nunca começou o resgate.\nClaro, ele tentou várias vezes. Mas, com cuidado com os Gyaos, que voavam muito melhor que ele, não conseguiu se aproximar e acabou derrubado.\n\nOuvindo isso depois, dá para entender que não havia escolha. Mas, para quem estava no mirante, também é compreensível que ver a esperança piscando diante dos olhos as fizesse se sentir abandonadas.\nSegundo o governo, haverá discussões para que os próximos resgates também levem em conta esses efeitos emocionais.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "3f54ac5b2ef8010ec5190fd848f4e9611e3514a7a21aeb6b987bf6d0c7a58f1b",
+     "pt-BR": "O Que Causou Isso? Um Homem Transformado",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k188",
+     "source_text_sha256": "71351fa75f5a8797e0f1eb517e151ef4462625b3e00f2bba18336983989e167d",
+     "pt-BR": "Conseguimos imagens do mirante da Torre Miyato Sky durante o incidente.\n\nElas mostram um homem sentado, sem forças, abraçando os joelhos, talvez tendo desistido por não poder fazer nada.\nUm jovem também foi visto descendo desesperado a escada de emergência da torre, mas nem todos conseguem agir com tanta coragem.\n\nSem armas poderosas e cercados por Gyaos que nenhum humano poderia enfrentar, poucos acreditariam que iam sobreviver.\n\nFelizmente, este homem sobreviveu. Talvez a experiência tenha mostrado a ele o valor da vida: antes desmotivado no trabalho, hoje ele trabalha com tanto entusiasmo que o chefe e os colegas estão espantados.\nNunca se sabe o que vai mudar uma pessoa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "546f89fe8b2b71d8e7017434aee5f61c83cec69f475b08fbf530e93457b8ad8b",
+     "pt-BR": "Desespero Total: Presos no Mirante do Segundo Andar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "a9ab2f64ef69b4fa7cf22d6a1a8d8ff1554b184c2ae10d4c2d342086a2bad4a6",
+     "pt-BR": "Confirmou-se que havia pessoas presas no que antes era o segundo andar da Torre Miyato Sky.\nVários Gyaos as cercavam. Esperar para virar comida ou criar coragem para fugir e acabar visto e devorado talvez trouxesse riscos igualmente graves.\n\nInfelizmente, não conseguimos confirmar se o homem destas imagens sobreviveu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "87791b6689d092da28e06fdd31a3eb3fa1e649fa4a1a3aeffd5cd3573cdb1529",
+     "pt-BR": "Uma Vista Noturna a Dois",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k192",
+     "source_text_sha256": "6bdc31da6e28caec1c7c85258719af008bb1e1d877c4bfdd025955e41c184a16",
+     "pt-BR": "Um homem e uma mulher olham a paisagem noturna do mirante. Parece uma cena comum, mas não é.\nIsto foi filmado no primeiro andar do mirante enquanto os Gyaos ocupavam a Torre Miyato Sky.\nEnquanto a maioria tremia ou se escondia, os dois tinham se preparado e guardavam em silêncio na memória a vista que dividiam.\nEles não pareciam ter perdido a esperança de sobreviver. Pelo contrário, estavam decididos a aproveitar o tempo juntos em vez de desperdiçá-lo com medo.\nCada um é de um jeito. Mesmo numa crise, as prioridades mudam de pessoa para pessoa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k193",
+     "source_text_sha256": "671f82848095ceb9f80d0501dc46e4fbf45904fe6071a97ec25bba090db7a16d",
+     "pt-BR": "Namorados Que, Infelizmente, Culpam um ao Outro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "cd0b98772b6b07807e3970e379d14ddd4ba076c226a14163d7d56c422fe9e79a",
+     "pt-BR": "Entre os presos no mirante estava o casal destas imagens.\nPelo jeito, eles brigaram o tempo todo. É vergonhoso culpar a pessoa que você diz amar por ter vindo à Torre Miyato Sky e posto suas vidas em risco.\n\nQuando a porta da escada de emergência abriu, os dois correram para escapar antes do outro.\nTestemunhas dizem que o homem usou a mulher como escudo e se salvou. Infelizmente, ela foi levada de novo pelos Gyaos e continua desaparecida.\n\nProcessar o homem seria difícil. Mas, quando soube que ele começou a morar com outra mulher poucos dias depois de sobreviver, senti uma tristeza indescritível.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "7c80fd47927373cf40ab7807fa994b56da0add27ff9f267697c611ccb10c9ad7",
+     "pt-BR": "Uma Porta para a Sobrevivência, ou um Portão Trancado para o Inferno",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "a9646b1a9e64a69971438ddf519233a8a1b8dfb7f0c8d0ab4c3c2c008a8a473d",
+     "pt-BR": "Sabemos agora que a fuga do mirante da Torre Miyato Sky atrasou porque a chave da porta da escada de emergência sumiu temporariamente e demorou para ser achada.\n\nO funcionário que levava a chave tinha virado presa dos Gyaos. Não há por que culpá-lo por isso. Mas não deveria haver preparação justamente para essa possibilidade?\nA medida mais simples seria guardar uma chave reserva em outro lugar. A Torre Miyato Sky não tinha nenhuma, só uma única chave. Isso certamente vai levantar questões de responsabilidade.\n\nAlém disso, hoje sensores conseguem avaliar danos em prédios. Acredito que esse tipo de equipamento deveria ser instalado para destrancar portas automaticamente quando os danos na estrutura indicarem perigo para quem está preso lá dentro. Claro, também é preciso pensar em quedas de energia, com geração própria, como placas solares num circuito de emergência.\n\nNa prática, discussões assim costumam emperrar no \"isso custa dinheiro\". Mas, depois que vidas são perdidas, é tarde demais. Como nunca se sabe o que pode acontecer nem quando, acredito que fazer todo o possível para salvar vidas é essencial.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "4d0233e927128b25b859845ec3e3ea8ec1ed963d65a25bce1e7bc765cd7ff4cf",
+     "pt-BR": "Você Beberia?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "eabc1e2bd5c526e9faf3fac435adeee409da6cb101ea3221c187846599d2f8a6",
+     "pt-BR": "Uma lata de suco fechada teria sido encontrada no vômito dos Gyaos.\nTestemunhas dizem que o jovem que a pegou levou embora. Fica a dúvida se ele bebeu depois.\nEu, por mim, por mais bem fechada que estivesse ou por mais que eu lavasse a lata, nunca teria coragem de beber.\nPretendo continuar procurando o jovem que levou o suco e perguntar o que aconteceu de verdade. Aguardem novas notícias.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "d48e0202856ea5b513b6083f788d61474eb80567a28f60e486e62699023367a8",
+     "pt-BR": "Um Grito Ecoa pelo Mirante do Primeiro Andar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "1b38317047812e7d21db711fe5bc11a8c0d1f6e4ef5c03570a820e74daf002e8",
+     "pt-BR": "Quando os Gyaos entraram até no primeiro andar do mirante da Torre Miyato Sky, as pessoas teriam fugido gritando e berrando.\nFelizmente, a porta da escada de emergência abriu logo depois, o que parece ter reduzido ao mínimo as vítimas naquele andar.\n\nPara os Gyaos, humanos são só comida, alvos como os peixes perto da superfície são para um pássaro.\nEmbora conheçamos as cadeias alimentares, nós, humanos, costumamos nos ver como predadores e raramente sentimos o medo de virar presa. Estar nessa situação naturalmente causaria pânico.\n\nEspero sinceramente que nenhum novo predador apareça.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "0d76bc05a06f10f91bdb6cea61eeab33ea8e7a39af324f59e4a012f87ef8b3e7",
+     "pt-BR": "Flagrado: A Realidade no Mirante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k202",
+     "source_text_sha256": "f92b5f56afbeee4f3cd09fb48aeecf84e192859d726d5a0f33e268a027675292",
+     "pt-BR": "Conseguimos imagens de uma mulher sendo perseguida por Gyaos no que antes era o mirante do segundo andar da Torre Miyato Sky.\nFelizmente, ela parece ter escapado dessa vez, embora devesse estar mais morta do que viva.\nNão conseguimos confirmar se ela acabou voltando em segurança.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "97f926a596d147d9c8867c4992b40e98c925f6348e60146d5f884e4f5293199e",
+     "pt-BR": "Material Regurgitado: Conhecendo as Egagrópilas, Parte 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "0ee70371801d1ed2f1b2cce8e0dc10d135254a2ed37dbe83cf6685a091d7dc6f",
+     "pt-BR": "Descobriu-se que o Gyaos regurgita o que não consegue digerir, mas esse comportamento também é visto em aves.\nNas aves, isso inclui principalmente carapaças de insetos, ossos e penas.\n\nDizem que esse comportamento também ajuda a limpar órgãos digestivos como o esôfago.\nA maioria das pessoas nem pensa nisso, mas saber que até os pardais fazem isso talvez faça você prestar mais atenção nos pássaros a partir de amanhã.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "56c072f668a8e4c43a1ad03fe3de0dbdc2baebdcbce4b22dbb0a8c7a857854e6",
+     "pt-BR": "Material Regurgitado: Conhecendo as Egagrópilas, Parte 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "f08ee0ddaa30496a8060bf0a1c29d2aaaebdb12d9031d1fb41567be83bc05b60",
+     "pt-BR": "O material regurgitado pelas aves se chama egagrópila. As egagrópilas de aves que caçam ratos e animais parecidos têm pelos e ossos, então é preciso cuidado: elas também podem ter agentes de doenças desses animais.\nTer curiosidade é bom, mas é importante se aproximar delas entendendo bem esses perigos.\n\nAo recolhê-las, evite tocar com as mãos. Depois de recolher, é preciso esterilizá-las no micro-ondas ou num aparelho parecido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "2c1126bfbad15fd05f1d36c21a7cb298e22009a285fdf62b82ac612cb1055c7d",
+     "pt-BR": "Uma Cena Melancólica: \"Enquanto Isso, no Mirante\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "7621900c01e5b822cc6ea75bd598f4c109db4b8a6986b123eb313a1bb2f97a90",
+     "pt-BR": "Estas imagens mostram um jovem olhando para fora do mirante danificado.\nEstaria pensando na tragédia que poderia logo cair sobre ele, ou decidido a voltar em segurança ao chão? Não sabemos o que passava pela cabeça dele diante da cidade à noite.\nEle teria sido visto depois descendo a escada de emergência correndo, mas a sobrevivência dele não foi confirmada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "d04bbdd77029138d5aa43415397616de5eb032ee55ebd12580c53517994c25fc",
+     "pt-BR": "\"Vazamentos Também...\" Um Registro do Local",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "6cfe57bf11371b45c3d86aad4402152f66a17bc0cbbabb85ad22ea0fc1715398",
+     "pt-BR": "Estas imagens mostram o mirante do primeiro andar da Torre Miyato Sky quando era um ninho de Gyaos.\nSerá que a grande poça no chão foi causada por um cano quebrado?\nCom o mirante do segundo andar quase totalmente destruído, não seria surpresa ver uma inundação pior ou incêndios por curto-circuito. Para os sobreviventes, talvez isso tenha sido um pequeno alívio em meio ao desastre.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "ea60b838bc653e722aa911d170ef3bdd168581efb2e094322fae300885b1b76a",
+     "pt-BR": "Boatos da Torre Miyato Sky, Parte 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "38e7c00cc2128ffa82ba49a3af748e11a55257f975f03e5d8acaa5ae2701ca3e",
+     "pt-BR": "Você já ouviu o boato sobre o banheiro masculino do mirante do primeiro andar da Torre Miyato Sky?\nToda véspera de Natal, num certo horário, uma cabine fica ocupada. Bata na porta e o que parece ser a voz de um mesmo homem responde: \"S-Só mais um pouquinho...\"\nNo começo, ninguém ligava. Mas, depois de anos assim, funcionários desconfiados da administradora usaram uma escadinha naquele dia para olhar por cima da cabine e confirmaram que não havia ninguém lá dentro.\nPensaram numa pegadinha com um microfone escondido, mas, pelo jeito, não acharam nada, por mais que procurassem.\nInfelizmente, não posso revelar o horário. Também há um boato de que quem diz o horário exato desaparece misteriosamente.\nAcreditar ou não, fica a seu critério.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k213",
+     "source_text_sha256": "106423ab83b97ae391d8ea6b77b7295496351afb2ca17a0dabde00fb45c130cd",
+     "pt-BR": "Boatos da Torre Miyato Sky, Parte 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "64726c8b6a8e307e3aaf88c14149fe19068d667e9225d21c5b77e78425794c8c",
+     "pt-BR": "Há um boato assim sobre o banheiro feminino do mirante do primeiro andar da Torre Miyato Sky.\nNão parece haver época nem horário certo, mas, olhando no espelho, você pode de repente ver \"alguém\" parado atrás de você.\nA mulher que vê isso passaria a sentir sempre \"alguém\" a observando de algum lugar, até sofrer danos psicológicos.\n\nUma teoria diz que isso aparece para mulheres que vão num encontro com um homem de certa aparência, mas não há provas.\nSe for verdade, talvez \"alguém\" tenha uma obsessão forte por um homem dessa aparência e persiga a mulher, sem perdoá-la por ser namorada dele.\n\nNão se sabe se é um espírito.\nAcreditar ou não, fica a seu critério.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "f248c80562ad91fee214bfd71853a1eee118bf548075a22c626fe9d8f2436068",
+     "pt-BR": "Boatos da Torre Miyato Sky, Parte 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "88d85531a509b2fdc5a9ce2c88d826df5acfe5b417fb46e991761395abd47834",
+     "pt-BR": "Pouco conhecido pelo público, o mirante do primeiro andar da Torre Miyato Sky tem um depósito dos funcionários.\nComo guarda armários de funcionários e pequenos materiais, tem pouco a ver com os visitantes comuns.\nMas você sabia que há um boato estranho sobre ele?\n\nMuito raramente, uma colegial seria vista saindo de um armário desse depósito.\nVer a moça não traz nenhuma desgraça em especial, mas o caso é tão bizarro que muitas testemunhas se perguntam se tiveram uma alucinação.\n\nÉ uma alucinação nascida da fantasia, ou uma moça de verdade dentro de um armário por algum motivo?\nAcreditar ou não, fica a seu critério.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "d99b7a0b70f409a8f4d85f0e31ada79b0f0dadf229296593bdfed1e733c908b9",
+     "pt-BR": "Boatos da Torre Miyato Sky, Parte 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "590174b2ef1e7e4322371efe59e5e5bba93ea0b39c0044d537e979eb0cf2bb3b",
+     "pt-BR": "Muitos leitores provavelmente conhecem este boato sobre a Torre Miyato Sky.\nÉ uma espécie de superstição: \"Vá no terceiro encontro e vocês com certeza vão ficar juntos.\"\n\nApesar das suspeitas de que a administradora inventou isso para atrair visitantes, muitos casais parecem ter seguido o conselho e ficado juntos mesmo.\nPor outro lado, quem terminou raramente vai sair contando, então talvez isso só crie essa impressão.\nAcreditar ou não, fica a seu critério.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "e4d71b04207a3e00d57f2ab7ac0b8c178fb8668e9d41f486af7b1d239831b478",
+     "pt-BR": "Boatos da Torre Miyato Sky, Parte 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "4f3075349df89a5dc1699bd1e7adcfc154217f556b0fe877adc14a2e86420489",
+     "pt-BR": "Você sabia que a Torre Miyato Sky tem boatos sobre estudos, além de romance?\nUm deles diz que rezar pela aprovação no vestibular no mirante, de frente para o norte-noroeste, no dia 8 de janeiro, garante a aprovação.\nNão há estatísticas, mas, desde que o boato se espalhou, estudantes e pais rezando por sucesso fazem fila ali todo ano nesse dia.\n\nNo meu círculo, umas três pessoas fizeram essa \"peregrinação à Torre Miyato Sky\" nos últimos dois ou três anos. E, de fato, todas passaram na primeira opção.\nPor outro lado, outro boato diz que rezar para o sul-sudeste nesse dia traz desgraça, como reprovação ou recusa em vagas de emprego, para a pessoa em quem você pensa enquanto reza.\nAcreditar ou não, fica a seu critério.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "9b0fa3eea4e4382234d749aa413722571121a8ded235bddebfbfc5bb14e7ed2b",
+     "pt-BR": "Esta Terra, Antes e Agora, Parte 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k222",
+     "source_text_sha256": "4a553e826ceb598323ccee4d8accaf766b8f0406039466d841616fa1d525fc2b",
+     "pt-BR": "Quantas pessoas sabem que o terreno onde fica a Torre Miyato Sky já foi a propriedade do famoso empresário Heishiro Tadokoro?\n\nHeishiro Tadokoro abriu um negócio atrás do outro no caos do pós-guerra e fez um enorme sucesso em uma só geração.\nVários livros de negócios foram escritos sobre ele.\nNa época, ele morava num terreno 30 vezes maior que o da Torre Miyato Sky.\nMas o que tornava Heishiro Tadokoro notável era que ele não só ostentava o sucesso com um terreno enorme e uma casa luxuosa.\nEle construiu uma \"cidade\" inteira na propriedade e a ofereceu de graça a órfãos de guerra e a quem não tinha para onde ir.\nDava trabalho a quem queria e pagava salário para que essas pessoas pudessem ficar independentes.\nQuem passava a se sustentar até certo ponto, assim que conseguia pagar o próprio aluguel, ia morar logo fora da propriedade de Heishiro.\n\nQuando todos ficaram independentes, Heishiro doou todo o terreno ao país.\nO terreno então foi transformado nas ruas que conhecemos hoje.\nDizem que Heishiro depois foi viver recluso no fundo das montanhas em algum lugar, mas não se sabe se é verdade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "f14a3691f56f655ed29795593021bc648d14d945a58a8a15889c28d555b29ee5",
+     "pt-BR": "Esta Terra, Antes e Agora, Parte 2",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "b40945b993995fb484ede856601e880cc7b6bb4672d369b3896cec60bf19f6db",
+     "pt-BR": "Você sabe o que havia antes da guerra onde hoje fica a Torre Miyato Sky?\n\nEra uma época em que a cultura estrangeira começava a chegar às pessoas comuns, e pouca gente ainda usava roupas ocidentais.\nAqui ficava uma grande hospedaria.\nEra, claro, um prédio de madeira, mas, com cinco andares, podia ser chamado de arranha-céu para a época.\nO dono dessa hospedaria prosperou muito se metendo em todo tipo de falcatrua, usando a hospedaria como base.\n\nCom fortes ligações com a polícia e figurões do governo, ele escapava da punição pelos seus crimes.\nMas, quando a guerra começou, aquele prédio esplêndido virou um alvo chamativo.\nEm pouco tempo ele virou terra arrasada, e os documentos e provas que eram os pontos fracos desses figurões também viraram cinzas.\n\nNinguém estendeu a mão ao dono da hospedaria, que perdeu tudo; em vez disso, ele foi preso e executado por manter um negócio ilegal.\nDizem que foi para calá-lo antes que dissesse algo inconveniente.\n\nNinguém imaginaria que Heishiro Tadokoro, que estendia a mão às pessoas, viria a morar depois naquele mesmo terreno.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "ed4153f3f31342d7b987dac9bb197abedaeb55138a5ceec942c0dc0107256d4d",
+     "pt-BR": "Esta Terra, Antes e Agora, Parte 3",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "27e7e933b0c6b2cf558bbf7164a82c99c68298f5e3bf63a000bfb8cb9e177caa",
+     "pt-BR": "Pouca gente sabe que, uns quinhentos anos atrás, havia casas geminadas de aluguel onde hoje fica a Torre Miyato Sky.\n\nDocumentos indicam que o senhorio era um antepassado do homem que depois seria dono da hospedaria.\nMas, ao contrário do descendente, esse senhorio e sua família eram respeitados por tratar bem os inquilinos.\n\nCerta vez, ele teria protegido um inquilino acusado injustamente de um crime e brigado furiosamente com os oficiais.\nO senhorio, os inquilinos e moradores que o respeitavam se trancaram lá dentro para enfrentar os oficiais, enquanto outros moradores investigavam por conta própria e achavam o verdadeiro culpado. O senhorio escapou da punição.\n\nPor incrível que pareça, o magistrado da época ficou tão impressionado com o caráter dele que depois às vezes pedia conselhos e ajuda ao senhorio em casos difíceis.\nO mundo é cruel quando o descendente de alguém tão admirável vira um vilão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k227",
+     "source_text_sha256": "8cb7a758cc59c6af6ffd5de2dc6aa868e997d53cf86ae229854fe7e160286453",
+     "pt-BR": "Esta Terra, Antes e Agora, Parte 4",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "da34e41c1b8d95fc3a79f21762b4da14920e0aea2be975404e2dd0abd12fefab",
+     "pt-BR": "Uns mil e quinhentos anos atrás, o terreno da atual Torre Miyato Sky era uma feira.\n\nA maioria das bancas era só um pano estendido no chão debaixo de um telhado simples, enfileiradas como barracas de uma festa de hoje.\nEmbora já se fizessem moedas, elas não circulavam muito entre as pessoas comuns, que em geral trocavam arroz, tecido e coisas parecidas.\n\nTalvez por ser fácil de chegar, a feira prosperou e teria chegado a 954 bancas.\nPor incrível que pareça, tochas eram acesas aqui e ali à noite, permitindo algo como um comércio noturno.\n\nEm algum momento, casas de verdade começaram a substituir as bancas simples, e a feira foi virando aos poucos uma cidade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "0294f2e5812632185ae6e6cb6a048ddf2d2302233e3846d19a10ee065ad06c7b",
+     "pt-BR": "Esta Terra, Antes e Agora, Parte 5",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "cf39fb7af1aa0f461fcc2e27c1a26d65ab2195e4d682cb56aff79204beb56b9f",
+     "pt-BR": "Você sabia que, uns três mil anos atrás, havia um povoado onde hoje fica a Torre Miyato Sky?\nAs ruínas foram descobertas no subsolo durante a construção da torre, e houve até uma campanha temporária para mudar o local da obra.\n\nAs investigações indicam um povoado de trinta ou quarenta pessoas, cercado por cercas quase obsessivamente extensas. No centro havia uma torre de vigia alta demais para a época.\n\nSem sinais de contato com povoados próximos, ele parece ter sido isolado por algum motivo.\nTalvez a torre de vigia e as cercas firmes refletissem uma vida com medo de ataques de fora.\nOu talvez servisse como uma espécie de prisão.\nInfelizmente, a verdade continua desconhecida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "e5e9b702928e6d10dfcde1c470531806030d5cdaf1e8b92fef7a95da9e4db865",
+     "pt-BR": "Tendências das Torres de Transmissão: Projeção Mapeada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "fc43c169a96c122d48ea5116a36007d3c94a22f3fed9d71f4617a5f07b4aee14",
+     "pt-BR": "Torres de transmissão do país inteiro estão adotando vários métodos, porque o atrativo original, só ver a vista do alto, já não atrai visitantes suficientes.\n\nRecentemente, projeções mapeadas no piso e nas janelas dos mirantes à noite começaram a fazer sucesso.\nMudar os desenhos conforme a estação também ajudaria a trazer os visitantes de volta.\n\nAlgumas torres começaram até a projetar na parte de fora.\nComo a projeção mapeada não exige mudanças na torre, a facilidade em relação a métodos antigos, como trocar as luzes decorativas, pode ser outro motivo da popularidade.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "32a4980ff37edcf4eeef944ed4c3209faca00bdd982a9fdf32bae6d9671aea38",
+     "pt-BR": "Tendências das Torres de Transmissão: Decorações Que Se Mexem",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k234",
+     "source_text_sha256": "b6a28d019538a2d41c2172a5d91a1c9b8cbfdbf156886a01981881cc4baada05",
+     "pt-BR": "Algumas torres de transmissão usam decorações físicas de propósito para atrair visitantes.\n\nUma torre tem decorações em forma de moinhos de vento, cervos e outras coisas presas nela.\nElas não só acendem, como se mexem com vários mecanismos.\nO mais impressionante é que trocar as decorações conforme o horário, além da estação, permite agradar famílias, casais e outros visitantes.\nDuvido que se pague, mas, pelo jeito, há um patrocinador generoso envolvido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k235",
+     "source_text_sha256": "d128b58e97bc0ae12953fd4e5c36e48e936d97ba70a28446b3938682da9f81d2",
+     "pt-BR": "Tendências das Torres de Transmissão: Transformação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "5da62135c892a855b3710cbcf47914a2be59e52479589bfb059e635a34a9846c",
+     "pt-BR": "Você sabia que existem torres de transmissão que se transformam?\n\nPor incrível que pareça, uma delas muda entre cinco configurações conforme o horário e também muda de direção conforme a estação.\nQuando fui, vi a terceira e a quarta transformações. Sinceramente, fiquei impressionado que movimentos tão enormes fossem possíveis.\nA resistência e a estrutura superariam as normas exigidas, então não há problema. Mas foi tão longe que me perguntei se os robôs que se transformavam, que eu via quando criança, também poderiam ser construídos.\n\nAs transformações eram tão suaves que, mesmo no mirante, dificilmente alguém sentiria enjoo ou desconforto. Foi muito divertido.\nRecomendo visitar pelo menos uma vez.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "ebc7625933cb8182eeb39fc7b37fab9b2680977b6d0e781a4f26135eabe4a8dc",
+     "pt-BR": "Tendências das Torres de Transmissão: Raa-ko",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "545b2f680db0428a2fa1813cc4ab66ca013a9e0190698fa222c2961c9d40a6f3",
+     "pt-BR": "Há uma torre de transmissão com um mascote enorme agarrado nela.\nRaa-ko, o mascote fofo local da torre, fica pendurado na estrutura.\nEle é tão grande que, mesmo de longe, dá para ver que tem \"alguma coisa\" presa na torre.\n\nPor incrível que pareça, Raa-ko sobe e desce a torre.\nEle faz o trajeto de hora em hora e, quando chega ao topo, um som anuncia a hora.\n\nMascote fofo ou não, o rosto enorme visto do mirante faria algumas crianças chorarem de medo.\nEu, por mim, fiquei admirado com a tecnologia: os trajetos no horário certinho e quase nenhum barulho de motor enquanto ele se move.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "df314a53afc741a01b90a6b480bb08f80b593a6b6040db31e2ce29414adff6bf",
+     "pt-BR": "Tendências das Torres de Transmissão: Crescimento",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "76eeb031b948dae1aef30f8c3ef6072434f96bfff2ea10a7a53acc4644d72fcf",
+     "pt-BR": "Você sabia que existe uma torre de transmissão que cresce?\n\nEla fica um pouco mais alta todo ano.\nClaro, ela não cresce naturalmente como bambu.\nEm resumo, todo ano ela é reconstruída numa velocidade inacreditável para ficar mais alta.\n\nE, conforme a torre cresce, ela precisa de mais terreno. Por isso os imóveis em volta estão sendo comprados um por um.\nHoje com mais de 530 metros, essa torre de transmissão pretenderia continuar crescendo.\nTalvez um dia a gente olhe a Terra de um mirante além da estratosfera.",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -35547,6 +38533,33 @@
      "id": "p0/k6",
      "source_text_sha256": "62da96b832348d395851b33a087611ea983e8355781920a15ff55ab6ba0adecc",
      "pt-BR": "【Vídeo】Passos de máquina humanoide ecoam em meio a ventos fortes",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/lua/stage_210_2_npc.luc",
+   "source_sha256": "d76485e5095ea07bab40918a65c9c971aafc12d3cdb6fc25f6d85f99a95ed27c",
+   "entries": [
+    {
+     "id": "p0/k612",
+     "source_text_sha256": "66039200e1397c82e58767707fbad79b95aba8beeb1948dbd05bd38c61ef126b",
+     "pt-BR": "Naoki＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k613",
+     "source_text_sha256": "789d110685e8970b71446198cc40d12c0e6fe08fb7ea2c8330a934ada264720c",
+     "pt-BR": "Kumi＿０",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k614",
+     "source_text_sha256": "f0a2c07118e29643e3e25e6e9fbe7dc46f1498c2989292379dbacaa79800e0fa",
+     "pt-BR": "Heroína＿０",
      "notes": "",
      "editorial_status": "pending"
     }
