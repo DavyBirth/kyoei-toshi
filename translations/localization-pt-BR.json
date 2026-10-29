@@ -45985,6 +45985,1825 @@
    ]
   },
   {
+   "path": "common/lua/mission_text.luc",
+   "source_sha256": "2aee79fe9a3c37c9672cc108ecc31d2e65d74f3d138592269420b8c674a88800",
+   "entries": [
+    {
+     "id": "p0/k2",
+     "source_text_sha256": "76a0ed6c6b7cd24621c260fe7f1430a35057a775b6732dd6c2f0c375fd1232c3",
+     "pt-BR": "Teste de missão",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k3",
+     "source_text_sha256": "8196536dd90154abde6a9d691be500f41a6e79fa09b063c33397898ca94ccd8e",
+     "pt-BR": "Local 6",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "dcbb26fe6b841fab7afe531b3e1d6edc097cc30ecb9506c1722c294e0fcd3fe9",
+     "pt-BR": "Descrição 6",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k5",
+     "source_text_sha256": "66380cd1dec7b27c2b20ffeda73236e309ef21353b878b27e44b865c08c400c5",
+     "pt-BR": "Texto de progresso 1",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k6",
+     "source_text_sha256": "cec88dbf9db87e06323d5d5b626b8aca90315f876c8133122b3eaf2512e51e27",
+     "pt-BR": "Texto de progresso 2",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k7",
+     "source_text_sha256": "189c34e2bcfef22320df6d2bddebebbb9c2a067cd3e36b2fed8e89d3b2d68849",
+     "pt-BR": "Texto de progresso 3",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k10",
+     "source_text_sha256": "475498a3c73fa7b5ec489c77071b742cd655ee919e388d7c2278f3091ddc1269",
+     "pt-BR": "Encontrar uma Amiga",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "8349ce19abb40fd44a6ee75cf6e9c825527035d976a0e6ea9c0137d11d5fff39",
+     "pt-BR": "Calçada Chuvosa ao Anoitecer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k12",
+     "source_text_sha256": "40b9272da95f83bd6c8f4715df52182b20ef76845d31c85770281849efdd1e03",
+     "pt-BR": "Combinei de encontrar uma amiga no parque. Numa noite chuvosa iluminada de vez em quando por clarões roxos, sigo para o parque.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k13",
+     "source_text_sha256": "230b582d3e6d548d6f664caaf3d05a7202c71ef16ed5177e4f996d7db3b1225d",
+     "pt-BR": "Estou indo pela chuva até o parque para encontrar minha amiga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "721ea5ae716ef51a93e759578e51f3fbb6740c5a2c9e3cba55419844000834b2",
+     "pt-BR": "Alienígenas gigantes apareceram e deixaram a cidade um caos. Ainda estou indo ao parque encontrar minha amiga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k15",
+     "source_text_sha256": "647da1f155c9c72e8d64b45acd401203a68707d66beafbe56656281ef72c4aa7",
+     "pt-BR": "Alienígenas gigantes deixaram a cidade um caos, e parece que vi uns homens suspeitos fazendo um negócio. Agora eles estão atrás de mim, mas ainda estou indo ao parque encontrar minha amiga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "00a50a9ad4be4d32a8d77a5db2081112da4afbb8b55bf352e4d4601a577387b8",
+     "pt-BR": "Alienígenas gigantes, um negócio suspeito que eu não devia ter visto, uma perseguição e uma descida escorregando do oitavo andar de um prédio... De algum jeito, ainda estou a caminho do parque para encontrar minha amiga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "36301d34ca089c3729bd772556cec89a7d6b85702f46d299c8696695d3bb9659",
+     "pt-BR": "Alienígenas gigantes, um negócio suspeito que eu não devia ter visto, uma perseguição e uma descida escorregando do oitavo andar de um prédio... Mas finalmente cheguei ao parque para encontrar minha amiga.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k19",
+     "source_text_sha256": "4ba45ef0aa5a757f584ff82e63ec11f4194ad1d7d1ec288052531fa1fd64b380",
+     "pt-BR": "Encontrar Alguém Especial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "d5e26853fa7bc58db882084c50debeab6e58f77c274d441f0c850f8d2f25a65e",
+     "pt-BR": "Combinei de encontrar alguém especial no parque. Numa noite chuvosa iluminada de vez em quando por clarões roxos, sigo para o parque.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k21",
+     "source_text_sha256": "230ff3b6d670f31733c84cbd69de6cd7b36e1884b5bfce0132ecb2701f8b67ac",
+     "pt-BR": "Estou indo pela chuva até o parque para encontrar alguém especial.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "afb267a0eff4c720d26a452a09b8afa49fe6572af6cb147b3c7b955ae6f7a50b",
+     "pt-BR": "Alienígenas gigantes, um negócio suspeito que eu não devia ter visto, uma perseguição e uma descida escorregando do oitavo andar de um prédio... Mas finalmente cheguei ao parque para encontrar alguém especial.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "c9cd4d8f49e8016a13cbcaaf90c54e98d23df8a6b1f48e890c1916bb10683b32",
+     "pt-BR": "Encontrar Meu Amor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k25",
+     "source_text_sha256": "65899bc8031a0199dbd2a4028a3db3e09e5e5a4e4122c58627a54741c128790a",
+     "pt-BR": "Combinei de encontrar meu amor no parque. Numa noite chuvosa iluminada de vez em quando por clarões roxos, sigo para o parque.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "11c379fc533edd317bbc67e1b781e35a4d0588e329cc43d8e800d026d36bf01e",
+     "pt-BR": "Estou indo pela chuva até o parque para encontrar meu amor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k27",
+     "source_text_sha256": "41389537707768597fda1d11bfc6be8b6e28b6ece482ebce305b95cd12be9ee1",
+     "pt-BR": "Alienígenas gigantes, um negócio suspeito que eu não devia ter visto, uma perseguição e uma descida escorregando do oitavo andar de um prédio... Mas finalmente cheguei ao parque para encontrar meu amor.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k29",
+     "source_text_sha256": "d7f878bdb3490ea63f0f50a276ae6ecf3ab63f0acdc1751964a19d192d151eee",
+     "pt-BR": "Encontrar Alguém Que Mal Conheço",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "3668a5b8c276dc95a8e362c463b51de6273e4180f0c6331671dea3fb75fa111e",
+     "pt-BR": "Combinei de encontrar alguém no parque, embora mal a conheça. Numa noite chuvosa iluminada de vez em quando por clarões roxos, sigo para o parque.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k31",
+     "source_text_sha256": "57cb5a4cf2752cfceceb2e9e7248fb1e9ac7a3c65b993c88ee627f84d495e519",
+     "pt-BR": "Estou indo pela chuva até o parque para encontrar alguém que mal conheço.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "377cdc3887e60d9462ea1bc8a024762191d7c4ed571abde759da62db5f3c8edc",
+     "pt-BR": "Alienígenas gigantes, um negócio suspeito que eu não devia ter visto, uma perseguição e uma descida escorregando do oitavo andar de um prédio... Mas finalmente cheguei ao parque para encontrar alguém que mal conheço.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "cb5e3dde9a0155cb877487fbbc0408b188878741ccb50969c0de3c20c11ba381",
+     "pt-BR": "Levar os Ingressos do Show ao Vivo até a Rádio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k35",
+     "source_text_sha256": "e7195b6bd593b56e7655f57483d8811f4795e9c7e2bed614d97a21649d92a35b",
+     "pt-BR": "Atrás do Balcão",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "491480c09e5dcd95b921f108e24c2b2e627cbabc3f7d1d140b61b66d1e301482",
+     "pt-BR": "A Iwabuchi, atendente da loja de conveniência, me pediu: se eu vir o Morimoto em algum lugar, pegar com ele os ingressos da transmissão ao vivo do programa de rádio e levar até a rádio. A rádio é a RSG, e o programa é \"Jardim do Céu da Meia-Noite\". Ela me dá um ingresso se eu entregar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k37",
+     "source_text_sha256": "a0ae5a028adaacfb4f764320da2eece0a326f73f09dd2f4569bcdfa7c8e21bf1",
+     "pt-BR": "Se eu vir o Morimoto, pegar os ingressos com ele",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "d3b619cd03a8d84d85e07b8f9771ce8f31673770d2d4fb4af5aa93fc83b81412",
+     "pt-BR": "Peguei os ingressos do show ao vivo com o Morimoto.\nTenho que levá-los até a Iwabuchi, na rádio RSG.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k39",
+     "source_text_sha256": "237d75fdcce213e4450239c2e1c40477d1a8d34abcfc0e148d7c359ea91838e1",
+     "pt-BR": "Entreguei os ingressos do show ao vivo à Iwabuchi.\nTambém pude ouvir o show, mas ele foi interrompido no meio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k41",
+     "source_text_sha256": "1a334df3007f125203a6131202470df1088f98a34f61ca83a7a8473bc57a9ce1",
+     "pt-BR": "Entrar para o Clube Secreto de Cosplay",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "966824f13cda7cdb45136a52595a2f236d549a1540de0fc11bea41a30724e1dc",
+     "pt-BR": "Em Frente ao Posto Policial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k43",
+     "source_text_sha256": "0c47679471dacd50d65494f2da7c0f9a920f9846b8b1d49775a7f1b5b1883ae6",
+     "pt-BR": "Um policial me parou enquanto eu usava uma farda que achei num armário do posto policial. Então um policial me convidou para entrar num clube de cosplay.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "a9d4bcc1018accc8b7e28bdc23f83cdd8f658f2b5d9ca8e4234352e5b1dec93b",
+     "pt-BR": "Ganhei uma carteirinha de sócio do cosplay. Pelo jeito, meu nível de cosplayer sobe quanto mais eu troco de fantasia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k46",
+     "source_text_sha256": "5ef03aefd8b1e7b1c95ea7bbd89f1d8cc040caa10ffdf4463e79871c473645f3",
+     "pt-BR": "A Senhora da Banca de Flores",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k47",
+     "source_text_sha256": "20a9a72232673e561030b9ecb4405d96b5742307c0c8569bc1e7f87d9f93be48",
+     "pt-BR": "Banca de Flores na Rua",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k48",
+     "source_text_sha256": "30bf7be0786eaf60b3235023cca8adbe1a05a454e752a49a8698f3e3f52e4371",
+     "pt-BR": "Texto de progresso 4",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k49",
+     "source_text_sha256": "96bed3cb281947e148fbee0a2151a4c00df9ae2133f186d3ac2fda0f62b3ca37",
+     "pt-BR": "Texto de progresso 5",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "24224070f136d00699f241b8f902afa1125d73b5210bca2f3bc4e1f0df4c1632",
+     "pt-BR": "Texto de progresso 6",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k51",
+     "source_text_sha256": "3c9a7665f1c82ee389cee387a63dcc62636d318b253a3ebcac150198b25940a6",
+     "pt-BR": "Texto de progresso 7",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k52",
+     "source_text_sha256": "9e7eac5482732ef5a2fd01b801d8151dd64d5be16e8b9463790e6edc1d064561",
+     "pt-BR": "Texto de progresso 8",
+     "notes": "Sem tradução em inglês (interno, não exibido ou nome real): mantido como no inglês.",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k54",
+     "source_text_sha256": "1334bdad7bc2754ef471b55c41cd2dc446dd04b61416c29fcc0eceb5a9bba203",
+     "pt-BR": "A Policial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k55",
+     "source_text_sha256": "c45f1b5ca217435f9aba8e26d130c3cc9de83033ebbf4ded5c7b20f16d5551cc",
+     "pt-BR": "O Canteiro Central",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k57",
+     "source_text_sha256": "93ec59ea840d081b9f3040b2c259dcdb4591ee25e455d12581650f00301b116e",
+     "pt-BR": "Os Homens de Preto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k58",
+     "source_text_sha256": "87e4716e1edd48554a4296cf89585b97fbc19966b8270ad9e8fc27085bacc7ac",
+     "pt-BR": "O Prédio do Dinheiro Voando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k60",
+     "source_text_sha256": "2f8e16293e2cd6ef8969fe54cedad5aad5e5c92c290105745a820a8f58b69c1a",
+     "pt-BR": "Um Homem Que Se Diz Escritor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k61",
+     "source_text_sha256": "d2ae8b824d277b5f2b0895cf9653744a8a1b4f426a8bd994914ffb9e0d90622c",
+     "pt-BR": "O Prédio Onde Entrei Correndo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k63",
+     "source_text_sha256": "77f53cab741aab382e69f3bf33f0e18f90c23fb77471d94388f6b7b3fbc7b689",
+     "pt-BR": "Um Poder Despertando?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "ad624e2753c6bc03c216d665612c6bb78bc67c53d7c0799896d70e5ad8bc0dd1",
+     "pt-BR": "8º Andar do Prédio Comercial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k66",
+     "source_text_sha256": "574fa86e47c9f184487555003201dea6194ada24b87f3bf725ebc522205e34d3",
+     "pt-BR": "Explorar a Torre Caída",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k67",
+     "source_text_sha256": "c0dca3f9c10673f1aeb6b455a46906dc59fdc0e81baa1f94d6d9e2dcfd666796",
+     "pt-BR": "Ninho dos Monstros Voadores",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k68",
+     "source_text_sha256": "dab91942866d139c7e62520ccbede10fc9276da25b5fb17eb407e4b543cb7981",
+     "pt-BR": "Segui a Yuki até o ninho dos monstros voadores. Os gritos deles ecoam por todo lado.\nTenho que achar a Yuki e sair deste ninho, rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k69",
+     "source_text_sha256": "294d5fb136d59b6562ad9a2cac9c45e0b5dc36472a109828e81980b92162f499",
+     "pt-BR": "Procurar a Yuki se escondendo dos monstros voadores.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k70",
+     "source_text_sha256": "daa23308b80da8c5d2fc65184505aafc4fc48ef89fd4d3d10727e080a276f375",
+     "pt-BR": "Reencontrei a Yuki. Vamos procurar juntos um jeito de descer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k71",
+     "source_text_sha256": "bda372ecd56bc98aec007d23c2b9ac6229b608af94bdda98b2b194d5411fa7fa",
+     "pt-BR": "Fugimos do ninho dos monstros voadores e chegamos ao primeiro andar do mirante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "a94dd1ab57a1b183ff7def2d55c193086dde94d0f3e9cce67da6e421e9a73148",
+     "pt-BR": "Porta da Escada Trancada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "915cce62ecbb0e6acb299a9890a61cc8246b3b989375efce64ec8a2b0a3e2a9b",
+     "pt-BR": "1º Andar do Mirante da Torre Sky",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "786d3428df2d0600fd7e3911519a6ee7f417eb355e5589d1170f5fe28a9a8910",
+     "pt-BR": "A escada parece ser o único jeito de descer do primeiro andar do mirante, mas uma porta trancada bloqueia o caminho. Ela é resistente demais para arrombar. Preciso achar a chave.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "9bdf91468e3c06350d192fac3d0d8fac7fe8ed30a01ab6a42484c1bf7a37a304",
+     "pt-BR": "Pelo jeito, um Gyaos comeu a chave da escada que desce até o chão, junto com o funcionário que estava com ela. Será que tem algum jeito de recuperá-la? Vou dar uma olhada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "1d7293c805a71494f78955e8e05e491757a7371a78ecbb81ca77a3c8165cc96d",
+     "pt-BR": "Pelo jeito, o Gyaos regurgita o que não consegue digerir. Se eu procurar no vômito dele, posso achar a chave.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "809ee6e1917ed731dfdcbed739bd5e537f4a78ba8014e26d259df128bdc71e5e",
+     "pt-BR": "Achei a chave, mas ela está coberta de uma gosma nojenta e fedida. Vou ter que lavá-la em algum lugar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "cb56d895f324ab46aefeca0b4777007d817d392974af4f4cfed94fc751379632",
+     "pt-BR": "Lavei a chave. Hora de correr até a porta da escada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "c48cc9c0162497773293345f26dadc033653fef60ec928fe33af61f22670538c",
+     "pt-BR": "Consegui abrir a porta.\nDaqui, só preciso continuar descendo até o chão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "f835b4432362125b6d87b6becd546b1c4283ea8aa0f9fb2121e980bb0423e976",
+     "pt-BR": "Uma Mensagem de Remetente Desconhecido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "60fa284c5b9c690ac0e4ec6d5b3e30641518cfa4865e61013e39984397ee6057",
+     "pt-BR": "Edifício Torre Iberis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "95a27575eb8a0c835c000c4b6cf4e5a456b22afc3a801da1088a3931580b53cc",
+     "pt-BR": "\"Estarei esperando na sala do mirante do Edifício Torre Iberis daqui a 30 minutos.\" Chegou uma mensagem de remetente desconhecido no celular que a Kashiwagi me emprestou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "729d8bc820e192a82fe91f2c39c503cc10153d7cf4f004e83cd9beeb45934a33",
+     "pt-BR": "Não sei quem está esperando, mas não tenho para onde ir, então vou ver. O remetente deve estar em algum lugar desta sala do mirante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "924fe66fcd992d86cbf0cb5d8a04a1ceb1617dbd12936fb6fc58d2870d3a731c",
+     "pt-BR": "O remetente era o Otsuka. Ele e a Kashiwagi pelo jeito se conhecem, mas ele não quis me contar de onde.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "02449e806dd417e0dad38b978b8b5688d684bc715fb2fed364dc6a8d525f0066",
+     "pt-BR": "Fugir do Ninho dos Monstros Voadores",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "032c1c747c76084b97e1634811c49185ed16dd9120019d189713e7c3bdf29e7a",
+     "pt-BR": "Escada de Saída da Torre Sky",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "5baf852dfd5de483e1fb2db9063b179fdb6adbd7293c2fa1f52498ff608fb80e",
+     "pt-BR": "De algum jeito chegamos à escada, mas ela é aberta para fora. É melhor tomarmos cuidado para não sermos atacados pelos monstros voadores.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "b795077e1d1eaa707f558f9f58363c56ae152eb448f5198f51d6642408629d2e",
+     "pt-BR": "Descer a escada em direção ao chão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "a5ddeb7ff63452f4a1513c98f3a5cc9174feac9090ab2eee28e28de057666468",
+     "pt-BR": "Um monstro voador apareceu na escada e disparou algum tipo de raio. Será que a escada aguenta?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "c9d236f48202a0c74f9a569e45a86a4b5591626b6b0fd84b33d1bb26007a5e66",
+     "pt-BR": "A escada foi destruída, e me separei da Yuki. Preciso achar outro jeito de descer.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "0059d643f98b25245615581bb24d9d1f667e44fe20dbe5dd7dfb1b7e57e977c2",
+     "pt-BR": "Arrombei uma porta e saí numa passarela de manutenção. Não tem parapeito, então um passo errado e eu caio. Tenho que continuar e encontrar a Yuki de novo!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "a72cabcf331f5d49d02dab513f37f300d51876ea90340f1f4ca846e9c76fd435",
+     "pt-BR": "Reencontrei a Yuki, mas a escada pra baixo\ncontinua quebrada.\nVou procurar uma escada de mão mais adiante na passarela de manutenção.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "51a5e9d8ffa58c7d8ed94af2be504ff2232b75f2b98e7c855b4b8f3688ee61b1",
+     "pt-BR": "Uma criatura gigante diferente apareceu e queimou o ninho dos monstros voadores. Quase fomos pegos, mas pelo menos os monstros voadores não podem mais nos perseguir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "97ab61a13acc497ec2dd267d08d0fdb491c615110a012447544d936426e453a0",
+     "pt-BR": "Fuja das Armas dos Perseguidores!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "6f9b352875ac730a757f0907e8dbab5f76aed52b5242ae1034a73a3272a4fe2a",
+     "pt-BR": "Uma Rua Tranquila",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "fc554a12c8c580dd0ab60093032b2f130865f489c58e8006569d5e3d065146ed",
+     "pt-BR": "Enquanto andávamos até o ponto de ônibus, os dois perseguidores apareceram de repente armados. Se chegarmos a uma rua movimentada, eles devem pensar duas vezes antes de atirar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "16a2253d425bc62ea82b7933ac065be9edc9802bad1526942c6b4255966d1d6f",
+     "pt-BR": "Ir para uma rua iluminada, de olho nas armas dos perseguidores.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "9caf6d2251dca1da9d7726af4bdff5cef1d67751ce875c2cd97e9de42262bd05",
+     "pt-BR": "Um monstro voador mergulhou do nada, agarrou um dos perseguidores e saiu voando. Estamos a salvo das armas, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "3d6fff83db849c22c4826c24272f55f6e4d9a0b0abeeb02d90f6729dfa126017",
+     "pt-BR": "Chegue ao Ponto de Ônibus!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "007d43e3f78a108e800a2225768dfec7fdfefd520be18429079d83856db61862",
+     "pt-BR": "Avenida Suzuran",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "09592aa5d2138df51d009ec3c41503e408463041320246646dedc09afd0a6e1d",
+     "pt-BR": "Um bando enorme de monstros voadores mergulhou e começou a destruir a cidade. Temos que chegar ao ponto de ônibus e sair daqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k107",
+     "source_text_sha256": "848f2b86dc2e6fc613173f5f83a37ac6da20ab6a5fdb2f535e9f757ebded319b",
+     "pt-BR": "Ir até o ponto de ônibus mais adiante na avenida, de olho nos monstros voadores. Cuidado com as sombras deles na rua.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "a469c6caa7dde35564b6fb0ea57cc1e8faad1aa1f0b2ce67db23b32d1212ccb1",
+     "pt-BR": "Monstros voadores pousaram na rua e causaram um engavetamento que bloqueou o cruzamento. Para fugir deles, temos que achar um prédio por onde dê para atravessar até o outro lado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "68b06f6dd7476e391af83d15f21d8c4da70199cbb7260ac60a3d79b7e2e96167",
+     "pt-BR": "Fugimos dos monstros voadores e nos abrigamos num prédio, mas aqui também não é seguro. Será que tem algum jeito de atravessar o cruzamento?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "9980a089698360f0d18f6640e5a042a4f0c2912c0f5d1a4111d53cc31004ab41",
+     "pt-BR": "O ponto de ônibus fica do outro lado da rua. Os monstros voadores no chão estão chegando perto. Temos que pegar aquele ônibus, rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k111",
+     "source_text_sha256": "d5fa921c335bfdef69e19c47301f7778899b4b5b036fade1b4c8d243e670c56e",
+     "pt-BR": "Entramos no ônibus, mas um monstro voador o virou, e outro levou a Yuki embora...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "79377adb06fa0fd40784308a6d542c9b158f3d3253317c00e1fd0fd4aad3733b",
+     "pt-BR": "Namorados Separados por uma Briga",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "3be5d0b78b2b9bd183ef4ee467de22caacc2f7ff5afa2385311c5560496bef38",
+     "pt-BR": "Fugindo dos monstros voadores, encontrei um rapaz muito machucado na traseira de um caminhão. Ele disse que um monstro apareceu logo depois que ele e a namorada se separaram numa briga, e ele a perdeu de vista. O nome dela, pelo jeito, é Kumi.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k115",
+     "source_text_sha256": "04cb28a72d018d2c0c78d069efc475dfc55d52319b5a41ecfbef88fd1832c77f",
+     "pt-BR": "O rapaz foi levado por um monstro voador bem quando desceu da caçamba do caminhão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "3d4074d26218d6257d7d8bfd763130f210ce299d8193a36a2e26f31671202d69",
+     "pt-BR": "Encontrei a Kumi, a namorada de quem o rapaz se separou. Ela estava muito arrependida da briga. O nome dele, pelo jeito, é Naoki. Depois disso, cada um seguiu seu caminho. Será que ela já o encontrou...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "ee8b3b12c0ab50884d0573bf034d3045cfbcced5588884877a993b8083715abc",
+     "pt-BR": "Namorados no Ninho dos Monstros",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k119",
+     "source_text_sha256": "d541e8d40df16de5fa818c24eafd028f5777ac72dd0e0e243ec1897fbb44fb70",
+     "pt-BR": "Encontrei a Kumi de novo.\nParece que ela está machucada e não consegue andar. Ela me pediu para achar o Naoki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "eace46ae5f25cd1c6bc16ae2394c9ed84c7851fa10489f1679de748b742e5917",
+     "pt-BR": "O Naoki estava muito ferido da última vez que o vi.\nSerá que ele está bem agora...?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "e596400c72618c693b6a389842e1dbcbc68976cec25ee36e2c8f2f4b406785e7",
+     "pt-BR": "Achei o Naoki. Ele está muito machucado, como antes.\nDevo contar à Kumi.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "bd2fcc70fe0293e1d7270b8cc236bbad3ce1006b1320319c8b7b09ceb1f71108",
+     "pt-BR": "Contei à Kumi sobre o Naoki.\nVou levá-la nas costas até ele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "0af851e2c942aafb01b6e5560c638f660ff1fb0149b73101719a906c4fddadb1",
+     "pt-BR": "Fui testemunha dos votos do Naoki e da Kumi.\nCom a mão tremendo, o Naoki pôs uma aliança no dedo da Kumi.\nParece que eles estão descansando agora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "7bae3ab34de160f3257096b5789ba1ec92b6e8d7ab5ff8900c134528bc5142f0",
+     "pt-BR": "Rumo à Orla",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "ba9231ece8837e92f918a811fbb05664c39a3312ad30578311fbe35edf656aa0",
+     "pt-BR": "Ponte Sky Garden",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "5d380c449096cc334be451b985befa8c6fd7ca3be84d65498ee32a297b5515c9",
+     "pt-BR": "Para fugir das criaturas bizarras que encontramos no subsolo, seguimos as orientações de um policial de choque e saímos de carro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "9bdce25d70a53824e099cf4196dbdba123cfc59aed311c907e41062ce49a0932",
+     "pt-BR": "Chegamos à Ponte Sky Garden. Agora devemos estar seguros.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "a80a2c8f79ab4a26a5e67c8fb83455cf7ad6328130df3ef5d1c36d9a02a5558d",
+     "pt-BR": "Os Homens do Carro Preto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "5230627e8b686a693ad12d7371a82584ed411652b7ecde365cce68c9ddff13de",
+     "pt-BR": "Quando chegamos à Ponte Sky Garden, um carro preto bateu na nossa traseira. Sentindo o perigo, tentamos fugir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "0ded25a6cac77245777d2ddd3b68ffb70507925ad2c029e2e88cf3dbccdac582",
+     "pt-BR": "O carro preto está batendo na gente de propósito. Temos que fugir dele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "f515745b2d0a30d318992d97b81afc13ac7d41466260b1c719ef46eba46622f6",
+     "pt-BR": "Dois homens de preto saíram do carro preto. Estão vindo na nossa direção. Temos que correr...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "97e022e4bc3c79def327534f759688b35a55594ff5f9b0566bc2d3b2f2ab6efa",
+     "pt-BR": "Um homem de cara assustadora apareceu e segurou os dois perseguidores, que ele parecia conhecer. Parece que estamos seguros por enquanto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "fa21a4182722eab8af69851df31de226545e25a9813936e87a34279279c63bfc",
+     "pt-BR": "Criaturas Gigantes em Voo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "9a59221d93d9191cd68bfe07d6222f842e32cc414efbf96c6c8fe9fd172cd6d9",
+     "pt-BR": "Enquanto o carro preto nos perseguia, uma criatura voadora gigante apareceu no céu.\nTemos que sair desta ponte rápido. Não tem onde se esconder.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "f3ce20175ce0ef30a695808c5e1ebc028d1d3287ae7b95e33c6eb4ef55a23425",
+     "pt-BR": "Duas criaturas gigantes apareceram no céu.\nOs raios da escura estão explodindo um carro atrás do outro. Temos que sair daqui!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "d221d8740b29a2f4c52c787c94646041a1750b61b18bcd200afb0e61020cd6ef",
+     "pt-BR": "Mesmo depois de sairmos do carro, os raios continuavam atingindo a ponte de vez em quando. Tentamos ir o mais longe possível.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "0c03f7466f6267f7340b460fcbceefab5925aead0ca7bf2bf51a337de8035729",
+     "pt-BR": "Entramos no restaurante do lado norte da ponte. O primeiro andar dele deve levar ao nível de baixo da ponte.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k141",
+     "source_text_sha256": "51bddff5c39e604b46aa74232911c559fab654c4a2c0d9c105b4cea3dada0be3",
+     "pt-BR": "Conseguimos, mas o nível de baixo também não parece seguro. Temos que achar um jeito de chegar ao outro lado da ponte...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "78c0351ee3d52d1f63702c41d9a3949aef3642916002b892b98ee489137d8eab",
+     "pt-BR": "Formou-se uma rampa até o nível de cima, mas ela é íngreme demais para subir a pé. Será que tem outro jeito de subir?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k143",
+     "source_text_sha256": "74d2b64f4528b09077d48cebbaa41784a9245e951fee8ca59e04feddf9669d1f",
+     "pt-BR": "Achamos uma moto. Dá para subir a rampa com ela e continuar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "85abfc80c9fc046baff2738f8020a5c5c70896423eac15d7604214d5d236fd39",
+     "pt-BR": "Atravessamos antes de a ponte desabar. Por um triz.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k146",
+     "source_text_sha256": "b7f1f1adf14674e13401ed85f6580df71dbd08009c3faf8aa0f016e9f9940313",
+     "pt-BR": "Estamos Todos Juntos Nessa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k147",
+     "source_text_sha256": "5936a3abb9f5df3ab45aeaf0eb84efb80ebd1ec2cb952fc266834326289e9b50",
+     "pt-BR": "Entre as pessoas presas no nível de baixo da ponte, havia um homem com as costas machucadas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k148",
+     "source_text_sha256": "15bf50b1cb9a88c22e96dfd9d67471f6060a5a0cced737e268db272ee5db927d",
+     "pt-BR": "Ele parece ter travado as costas quando levou um susto com o desabamento. Será que posso fazer alguma coisa?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "245106d6815b61c79976f167af9ae393af9a96cf922091f2949ef602c181553f",
+     "pt-BR": "Uma mulher no nível de baixo me deu um adesivo contra dor. Isso deve ajudar ele por enquanto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k150",
+     "source_text_sha256": "bb411d56860d10ff2d0611a49ff3c51b2332a5172fa4149344b1a952c4930571",
+     "pt-BR": "Dei o adesivo a ele, e ele colou na hora. Parece que está funcionando. Que bom que pude ajudar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k152",
+     "source_text_sha256": "1333845adaf60351a18421f5f85d27d8eef87203365dbeefe1a068ba5d5cd10c",
+     "pt-BR": "Um Casal Prestes a Se Casar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "b96ac3f877af51c2c22796d171486dbe598b0fb596df15d2af60286cfb1287e0",
+     "pt-BR": "Entre as pessoas que ficaram para trás, conheci um casal prestes a se casar: o desenvolvedor de jogos Kazuya Ichijo e Sakurako Nakagawa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k154",
+     "source_text_sha256": "b2843f392b9dd79f09c49afea6e7ca58c7657da0a0f72437828b13104f621462",
+     "pt-BR": "Os dois foram pegos por essa confusão a caminho de conhecer o pai da moça. Eles me pediram para entregar um jogo a ele se eu o encontrasse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "25f9395190f9a2b12963a0000cb6a2e7031b5139dad8268417dae7a4221501eb",
+     "pt-BR": "No Edifício Torre Iberis, conheci o Sr. Nakagawa, que esperava o Ichijo e a Sakurako. Quando contei que eles provavelmente tinham sido pegos no desabamento da ponte, ele ficou sem palavras.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "0272394ca1b2edfe1e8694e9e16075012f008d6f64dfefd8e43b868b125067fe",
+     "pt-BR": "Um Vendedor Exemplar?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k158",
+     "source_text_sha256": "755d4435279e432fc8d2b45d71a33e322fc5392578a644d1f11da5ec8eab9bcd",
+     "pt-BR": "Algumas das pessoas que ficaram para trás estão surpreendentemente calmas. Uma delas está até tentando vender coisas numa hora dessas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "2c185b6be8944e59a69861e4bf6433f818ce70ea6ea0c82e5d05e8428cb09901",
+     "pt-BR": "Ele me pediu para comprar karaage. Pelo jeito, ele tem uma meta de vendas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "e509b1be235345ecc883898eb02208db96bfa6fba6df73010bc7527b2b950aed",
+     "pt-BR": "Um Favor para a Risa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k162",
+     "source_text_sha256": "8b12f07b60051967c31fcfa137e50c15595b9d8d76bf1318292498fb68946193",
+     "pt-BR": "Rua Shirotsumekusa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "db22238f585662bb21b9eb5d387eb3282f9ca2e9ef46a09cc5215bb980e6e4c3",
+     "pt-BR": "Fugimos de moto e paramos num semáforo da Rua Shirotsumekusa. Então a Kashiwagi nos pediu para ir com ela a um lugar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k164",
+     "source_text_sha256": "257f7f41c1498cf13e55c3bb475cfb1dcc8756cf660b0a1fc1cfbbfd3899f90a",
+     "pt-BR": "A Kashiwagi nos pediu para ir com ela a um lugar. Decidimos ir, para retribuir a ajuda dela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "078eda8d4385e33c3066c7213221c7b02b52be6c7c4ce99b8c57d89b159199a7",
+     "pt-BR": "Um viaduto desabou de repente. Raios vindos de cima... apareceu outra criatura gigante? Temos que alcançar a Kashiwagi e sair daqui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k166",
+     "source_text_sha256": "b2f66523c9f1e2d3c83e1d13580df0ba8a53c2627c55e83c2a8bada3e45cd0eb",
+     "pt-BR": "Agora um raio explodiu um caminhão-tanque e fez os carros em volta voarem. Cadê a Kashiwagi?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "1044b757be47fdc8679a3084da15742708cffede53a498d6c62c56094d10638d",
+     "pt-BR": "Bem quando achamos que tínhamos passado com uma cegonha, agora temos que passar bem embaixo dos pés de uma criatura dourada gigante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k168",
+     "source_text_sha256": "6c662e9dbb3b6eb336adc7ab63db247cf22ac04b6180f6ef28af9e6b15264690",
+     "pt-BR": "Parece que chegamos aonde ela queria ir. Tomara que isso signifique que estamos liberados...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k170",
+     "source_text_sha256": "3cef9795d5a991c2e623dc9e53cec45077d3a6ca27b6dcd5ca31e0595560f0d4",
+     "pt-BR": "O Pacote Deixado com a Gente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "81bade782f67372dc8bc15536a876ca4682182ff4a570f7dcf7019efac4fe908",
+     "pt-BR": "Edifício Yukiyanagi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k172",
+     "source_text_sha256": "eaf960bae8c94fe7661816280f6effb50aa74dd5201ebbdf9514b1d83d1c6148",
+     "pt-BR": "Entramos num prédio e fomos apresentados a alguém que desenvolve software. O que vai acontecer agora?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "e9fc2fce37381a778558091bed62221b3fd3da0393e970638c4e9a8d1d1ffc74",
+     "pt-BR": "A Kashiwagi pegou um pacote. Por algum motivo, vamos com ela até o Instituto de Pesquisa de Raios Cósmicos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k174",
+     "source_text_sha256": "07492562a5b6c02a163ef8e86254534ede1810fc6d22bd7a31cc3a6464125a5d",
+     "pt-BR": "Quando saímos do prédio, uma criatura gigante tinha destruído a moto. Decidimos ir para a estação ao norte.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "f6a514a71e7451dfa644904e2ea21473e5d001b5c204db8078155a5816b2386b",
+     "pt-BR": "O ferimento da Kashiwagi a impediu de pegar o trem. Ela deixou com a gente a entrega do pacote ao Instituto de Pesquisa de Raios Cósmicos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k176",
+     "source_text_sha256": "e7726fdc46401de96b23b956560a3272ade3142000f762bfc7047caa5fdc22d9",
+     "pt-BR": "Chegamos ao Instituto de Pesquisa de Raios Cósmicos. Segundo a Kashiwagi, temos que entregar o software ao vice-diretor.\nMas tem algo errado lá dentro. Depois de um vai e vem, acabei sendo eu o mandado na frente para explorar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "0b9cc6d1a966e9fdb3a53f08a2a19cd8fbdb3418877d0a68182a85d7fb342a86",
+     "pt-BR": "Não sei em que sala está o vice-diretor, mas, se eu entrar na sala do\nservidor e reiniciar o servidor, consigo falar com ele pela rede\ndo instituto. Um pesquisador me deu um bilhete com o código da sala do servidor,\nmas então...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k178",
+     "source_text_sha256": "36d4b919be35f23d540f5c95dfc1dc710270f8f047d5f0f40db38cd4172794b4",
+     "pt-BR": "Liguei o servidor. Mandei uma mensagem para o instituto e recebi resposta de alguém chamado Sawada.\nTenho que ir ao depósito do segundo andar.\nSe eu bater \"toc, to-to-toc (espere um tempo) toc, toc, BAM!\", ela abre.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "37a6a60dae72002478f0f5410558aec2cafd368954e8a104e743963c0347bdcf",
+     "pt-BR": "O vice-diretor está no laboratório.\nA pesquisadora-chefe Sawada me deu a chave do armário dela. Tenho que pegar o cartão de acesso\ndo laboratório no armário dela, na sala atrás da recepção do primeiro andar.\nCom ele, entro no laboratório.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k180",
+     "source_text_sha256": "43d3f74a6a9150fb24fa75daeae89897ded0353279994502b07ca421f1a18209",
+     "pt-BR": "Entreguei ao vice-diretor o software que a Kashiwagi deixou com a gente. Mas então apareceu um alienígena misterioso, e o vice-diretor...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k182",
+     "source_text_sha256": "8235c64944ba4b04c5eb0aaad878af455c983e5de63de1b22463c6085da65b99",
+     "pt-BR": "Ajudando uma Mulher Azarada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "899838ec62bc501e8395d625e43138431bb1b62bb6ca3803a32f31d2d93b91c6",
+     "pt-BR": "Estação Hinageshidai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k184",
+     "source_text_sha256": "2fa94a8c9171bbefb6aec6518b206b85b89a08d44692e00811c5a6adfc4c37b8",
+     "pt-BR": "Do lado da banca da estação, conheci uma mulher farta do próprio azar. Será que posso ajudar?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "faf3ddecda64db9e53203e8edb682a7f7e96ee428c068135c35b6737216e4a52",
+     "pt-BR": "Ela diz que perdeu um dos brincos. Pelo jeito, ainda estava com ele quando chegou ao trabalho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k186",
+     "source_text_sha256": "f5843641b1ed6dde65097241d3c3bd88f627e39078b72d5f35d2ad5cd28cd1bb",
+     "pt-BR": "Parece que ela também deixou cair o relógio. Ela diz que estava com ele até descer de um táxi perto do cruzamento em frente à estação...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "241947d213ef6eac890fd54cffd5ec4441648aedf9ec7eb4eafac4ae8464cc1c",
+     "pt-BR": "Achei o relógio dela também. Tomara que a sorte dela mude agora, mas o resto é com ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "90a3acb709fc01d9d181e49fc401c7e34c97019ac592b307081ba65fe02845df",
+     "pt-BR": "Fuja dos Perseguidores!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k190",
+     "source_text_sha256": "25a0136e2e972bb6f5f49fb94b132456705ccba8fdb88dd5d530db1f640f03f7",
+     "pt-BR": "Enquanto conversávamos com o Otsuka, os dois perseguidores nos viram.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "5d06f3e96aed46aabbf2965dc3aacaaaaa8a783bd91044d92518823af50a585d",
+     "pt-BR": "Não dá pra saber o que acontece se nos pegarem. Temos que desviar deles e sair desta torre o mais rápido possível!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k192",
+     "source_text_sha256": "544191e542961a16d3f6c54a2138bb0cb997e9b6461033740ce4731b29e8f100",
+     "pt-BR": "Entramos no elevador e despistamos os perseguidores. Despistamos, mas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k194",
+     "source_text_sha256": "640e8f5b6b34e3676be4aa7268fdd9211d75d49b93707ba91037b559ef8331ed",
+     "pt-BR": "Fuja do Edifício Torre Iberis",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k195",
+     "source_text_sha256": "c0adbea32a813f8d986f543baacc8f646c5ae79d162eb1332d42ac2a6d01b3c5",
+     "pt-BR": "Começou um incêndio dentro da torre. Temos que sair deste prédio, rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k196",
+     "source_text_sha256": "fce55c31277bcb0b40b4cbd6852def816ad64c809a920276a039cc4ae7004e33",
+     "pt-BR": "Seguir as instruções do bombeiro e descer pela escada de emergência.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k197",
+     "source_text_sha256": "e2c3d1007d29802a9a2b0c8752fd21b89c3a1a2608b7395c1837bdb17a7b3c70",
+     "pt-BR": "Um Labor misterioso apareceu de repente, e acabamos num escritório em algum lugar do 20º andar. Temos que sair do escritório e achar um caminho até o chão.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k198",
+     "source_text_sha256": "a4a32ce3a98d2e5b48ed1a6adc6dd12ee515e6bca3a66af008efccfb152449ad",
+     "pt-BR": "Um incêndio grande bloqueia o caminho. Temos que apagá-lo de algum jeito. Não tem nada por aqui que dê pra usar...?\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k199",
+     "source_text_sha256": "96053e27d2a2ca9fab0ac7d205d92ceea516aabb562fcc64fc75a9ce94b95bc6",
+     "pt-BR": "Com a ajuda da menininha, consegui um extintor. Vou apagar o fogo no caminho e ir até a Seção 2 de Veículos Especiais, que está fazendo resgates.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k200",
+     "source_text_sha256": "3486f06a3c2fc77d5ba3a10ec1f26af928110df81fd5804d7e8f0185dee25fe3",
+     "pt-BR": "Um dos perseguidores voltou a nos seguir. Temos que chegar ao Ingram, rápido!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "0635331a6b5eaf472be3363487a234955cf1b0adad586a0ec237d933928da7fd",
+     "pt-BR": "O Ingram nos resgatou, e descemos da torre em segurança.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "2fc66628600ff402cba44f0a503ac36159a6d377fe07d685639cc92494349a92",
+     "pt-BR": "Fuja dos Depósitos do Porto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k204",
+     "source_text_sha256": "1151db5f85fbe8253b8851d6805571258cbaa8d4a839433ecf67e51da333fdf4",
+     "pt-BR": "O Porto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "4e7326d8525ad8141f7fb06cf4ddfe631ee0ff502311052596cb198878083260",
+     "pt-BR": "Saímos do bote salva-vidas e chegamos ao porto, mas os dois perseguidores nos alcançaram e nos viram de novo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k206",
+     "source_text_sha256": "125bae359e31adac59fcec0e8b8f7e57f917d9c41be5151878d9032c179a6130",
+     "pt-BR": "Temos que sair deste porto, rápido. Primeiro, vamos achar onde nos esconder.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k207",
+     "source_text_sha256": "8b22139cdf5338fc8317024b1b70825d92d751e73af5ba49173388733fde5423",
+     "pt-BR": "Entramos num depósito, mas eles vieram atrás. Eles estão armados, então não podem nos ver. Temos que sair deste depósito escondidos, sem sermos vistos.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k208",
+     "source_text_sha256": "ca1ee3d3e528102aa909986f385d25aff94db6e20b001dd140898374e6527865",
+     "pt-BR": "Logo depois de sair do depósito, demos de cara com um Ingram. O que eles estão fazendo aqui?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k209",
+     "source_text_sha256": "aeb63393bff275fd4ec2ad9c2ee37e759d9470a63a62fba8a0c154c55c314729",
+     "pt-BR": "O Labor preto que apareceu no navio decolou para o céu.\nTemos que sair deste porto sinistro, rápido...\nPor enquanto, vamos achar um caminho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k210",
+     "source_text_sha256": "d4f887e8fb370753ae6007f7df97c9c2261829c05f1009e58c4131fc10da6826",
+     "pt-BR": "Vimos aquele Labor preto lutando com outros Labors. A Kashiwagi tem uma moto esperando depois de onde eles lutam. Temos que chegar até ela, rápido.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k211",
+     "source_text_sha256": "f44366630eef1855e07f518c3d006aa0bef35a05d1afd2816b64a44851a108bf",
+     "pt-BR": "O depósito explodiu.\nTemos que sair deste porto o mais rápido possível.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k212",
+     "source_text_sha256": "27ec08d450be6ebc6ac1afa40d07865951775185c4c11ce0de21b3b6ac3aa680",
+     "pt-BR": "Chegamos até a Kashiwagi e fugimos do porto de moto.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k214",
+     "source_text_sha256": "2c1e3bd934b0f15c7235cdf184e8ef228dd2859f95cad5bf9526383d6f70e5fc",
+     "pt-BR": "Fuja do Escritório da W&P",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k215",
+     "source_text_sha256": "1b90d54812217d6e58f407c7c0cbec007db91747b08bdd5accc5560a34797a95",
+     "pt-BR": "Sala no Escritório da W&P",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k216",
+     "source_text_sha256": "557e2f854dbf3bf92ddf5ae6e00f6584057dcbf2dfc7f0dfde366c0373e89684",
+     "pt-BR": "Os dois perseguidores finalmente nos pegaram. Parece que eles trabalham para a W&P Consultoria, uma empresa que lida com informações sobre armas. Não dá pra saber o que vão nos obrigar a fazer se ficarmos aqui. Temos que fugir de algum jeito.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k217",
+     "source_text_sha256": "a7b75ea59ab6ee3d874c940188acb916c50d296a95f8f149fcb6d1024702face",
+     "pt-BR": "Primeiro, preciso dar um jeito nestas cordas. Tem alguma coisa com que eu possa cortá-las?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k218",
+     "source_text_sha256": "11c71d0cbf84e29c9b4ad01b422524440703bf199054614b7a70c17eb70a7caf",
+     "pt-BR": "Tirei as cordas e me soltei. Tenho que desamarrar a Yuki rápido para sairmos antes que os dois caras da W&P nos vejam.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k219",
+     "source_text_sha256": "2a7ff7075c201bceed389fe4b3e09f78e38d1aeb079e9c8483c2c9c148af694e",
+     "pt-BR": "Será que a batalha fora do prédio acabou...? A criatura gigante sumiu, e uma máquina enorme parece estar só parada na cidade... Vamos sair deste prédio enquanto dá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k220",
+     "source_text_sha256": "74879f478111539d92f4f91dca453e6aa6aa99579e18db94161bec0897ce395b",
+     "pt-BR": "A máquina enorme saiu de controle! Está vindo pra cá! Se não sairmos rápido, ela vai nos esmagar junto com o prédio...!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k221",
+     "source_text_sha256": "d770413f21c06a13d8df993e759bebdcd553ad8360060fbac432e4a9f73085eb",
+     "pt-BR": "Despistamos os perseguidores e fugimos do escritório da W&P.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k223",
+     "source_text_sha256": "92de108a46b44eed8723fa0a9bfd0d2816e94a776fa95af02af1431cf0f8a518",
+     "pt-BR": "A Organização dos Perseguidores",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k224",
+     "source_text_sha256": "701147d6430149b6e9a56aaa659def07ecda184ce64e62bc04f4c2a8a1f59c63",
+     "pt-BR": "Numa sala do escritório para onde nos levaram, eles contaram por que estavam nos perseguindo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k225",
+     "source_text_sha256": "efd763ac2e9d80de40913dbfad879f547051e37c91c7e4900b768d9b7037968a",
+     "pt-BR": "Pelo jeito, eles querem usar meu poder de causar desastres como arma.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k226",
+     "source_text_sha256": "285a37624694356a2caec0a5e5b3ad2df960bfac7ad8297c21f55202b7f3a3c7",
+     "pt-BR": "Consegui um folheto da empresa deles, a W&P Consultoria Ltda. Talvez valha a pena procurar mais informações na sala.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k228",
+     "source_text_sha256": "00f5eb842077820cf8ac37bcba272e514382c7bed7747189384dd70d86839eda",
+     "pt-BR": "O Caminho até a Superfície",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k229",
+     "source_text_sha256": "e0da4eb4da90a5173385947cbe629e36ed6461d553f1f82262879c8aa971c65f",
+     "pt-BR": "Dentro do Metrô",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k230",
+     "source_text_sha256": "0fd594b695f5d608094ab2259aa528b7169225bf1862f250496e10a498eeca39",
+     "pt-BR": "Encontrei a Yuki no parque, e pegamos o metrô para fugir. Mas o trem parou de repente e não se mexe. Parece que vamos ter que andar até a estação e subir para a rua.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k231",
+     "source_text_sha256": "76faea115653c108611399c70e4c99ee7f137fcf9da9918e6b941363c9b78a45",
+     "pt-BR": "Decidimos seguir para a estação pelo túnel escuro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k232",
+     "source_text_sha256": "acb5430c75c79b4fe64b953ff14e43078d96822600635a6f3ccc7fb7eb380490",
+     "pt-BR": "Algo desconhecido apareceu no escuro, e tivemos que desviar. Só precisamos continuar indo para a estação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k233",
+     "source_text_sha256": "154f7fd08f1e1eaa7ce4fccdccf0fe3b93bc612a719c6d77d23caf04a5e1ee49",
+     "pt-BR": "Nas catracas, conhecemos uma mulher chamada Risa Kashiwagi. Estamos procurando com ela um jeito de subir para a rua.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k234",
+     "source_text_sha256": "87daad2f6c95be3bc51241e52d3719805ff42008e71f9350f1177a2951443a5a",
+     "pt-BR": "Chegamos à rua! Mas as criaturas do subsolo também subiram...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k236",
+     "source_text_sha256": "19d66d8e3af7b756a345da8d8ff59a3c57bacf3f5d53d039dbe99e5105027cb3",
+     "pt-BR": "A Bordo do Navio de Pesquisa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k237",
+     "source_text_sha256": "5464541c84cb9242821825f1282737632463434e06b2fc778b447e9ff0099115",
+     "pt-BR": "No Mar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k238",
+     "source_text_sha256": "9ec85db16ad9a6119e23daf42beba4ad25d96a0da3a51c7cfc4720ce17b8df0a",
+     "pt-BR": "Quando dei por mim, a Yuki e eu estávamos, não sei como, à deriva no mar num barquinho. Um navio de pesquisa nos viu e nos puxou a bordo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k239",
+     "source_text_sha256": "a3f19ac26f5fd2b9b27e4ef34c3ec0d32c1b2c47b80bc5827e7e6dadbafb940c",
+     "pt-BR": "Decidimos ir agradecer ao capitão, na sala de observação, por nos salvar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k240",
+     "source_text_sha256": "7e1a6dea99c2ed84755c8753e5ddacdc00ddccbc4277fcf56cd652223c4abfc2",
+     "pt-BR": "O capitão sugeriu que secássemos as roupas no aquecedor. Pelo jeito, ele fica à esquerda quando se sai da sala de observação.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k241",
+     "source_text_sha256": "78c12bfe60779c594a2ca21a52ff4e22cd371b1a36fa186631f19d3ae94517d7",
+     "pt-BR": "A Yuki e eu secamos as roupas no aquecedor. Parece que ainda falta um tempo até chegarmos ao porto. Talvez devêssemos dar uma volta pelo navio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k242",
+     "source_text_sha256": "26fdb931690d89447516c2e43b68fd62aad9f3129b5556072e965fa8f58288d2",
+     "pt-BR": "Conversei com o capitão. Ele vai se aposentar depois desta viagem. Ele me deu um dos quepes dele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k243",
+     "source_text_sha256": "6cf9452c08d619d5cd2124b89fbcc5f5b6748e4637123520f54c3ea55ebac807",
+     "pt-BR": "Parece que perderam a pista da sombra no fundo do mar que a professora estudava.\nVou avisar o imediato, na popa, para ir à ponte de comando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k244",
+     "source_text_sha256": "66e039b9c6505e67382c63f5b3118befd76be840df228d1c3a9ccac1e11ec21d",
+     "pt-BR": "O mar inchou de repente, e um monstro gigante apareceu!\nRápido, para o bote salva-vidas!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k245",
+     "source_text_sha256": "e4277b55c45e42aa418ea4746bb21e27fa10c3eed83cfec178a002cc6c316749",
+     "pt-BR": "O navio de pesquisa afundou. Uma foto do imediato Oda junto com a Dra. Fukazawa boiava na água.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k247",
+     "source_text_sha256": "e2be20ad6344d566789da66b0240fabd4b6e02fe23a2c0e04e283034f8eb95c8",
+     "pt-BR": "Um Favor para o Imediato",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k248",
+     "source_text_sha256": "836d8653537081db3b214d9fa42daa590044c19a7306355bf3ea59c3a698e99e",
+     "pt-BR": "Navio de Pesquisa: Popa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k249",
+     "source_text_sha256": "0ad9c642a161b44f28bfaeaf651ee12d6e77500f8dd02ee3855f28dbc3cb57be",
+     "pt-BR": "O imediato Oda parece ter uma queda pela Dra. Fukazawa. Concordei em ajudá-lo com algo sobre ela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k250",
+     "source_text_sha256": "2b54791ed52f56bc0fc670b2eb2abbe51270d8797cb1ea5d57608408c6c34409",
+     "pt-BR": "O imediato Oda me pediu para descobrir o que a Dra. Fukazawa sente por ele. Pelo jeito, ela está perto do bote salva-vidas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k251",
+     "source_text_sha256": "97eabc91c914190f32236c48b9ec3c78642737c696a7ae7a10ee9da2d388408e",
+     "pt-BR": "A Dra. Fukazawa parece gostar do imediato Oda. Tenho que contar a ele.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k252",
+     "source_text_sha256": "a2e1c6c44299c8dbc2515735cb90d049f7f9019da1f5fe3b980f9a6b1d175802",
+     "pt-BR": "O imediato decidiu criar coragem e dar uma carta à Dra. Fukazawa. Sou eu que vou entregar. Aliás, a carta não está lacrada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k253",
+     "source_text_sha256": "ba277857bdb0bebc9e4db213c514e0c215d28db8b6352b689bae075ec20e196b",
+     "pt-BR": "A Dra. Fukazawa me deu a resposta.\nTenho que levá-la ao imediato Oda. Aliás, esta também não está lacrada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k254",
+     "source_text_sha256": "8f5fe3c6d5b9df154428146b79f9866505e7c30c78fda707a729399e7f853127",
+     "pt-BR": "Entreguei ao imediato Oda a resposta da Dra. Fukazawa. Eles vão se encontrar na proa amanhã de manhã, onde ela vai dizer o que sente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k256",
+     "source_text_sha256": "c3d7e4e332b5c02bb8867e2ae34410f4203a1600aa6c322989a83c2fc1abbae7",
+     "pt-BR": "Encontrar o Homem de Cara Assustadora",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k257",
+     "source_text_sha256": "d9807d9ef268891f4d830df4499ed41bc211bab98d7263ed5fde246dc3a2a5a0",
+     "pt-BR": "Um Parque à Noite",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k258",
+     "source_text_sha256": "9539b66a2f5ad4382d4cf0dfb42e61d4b812ba1047be4f64e370eda55262cd47",
+     "pt-BR": "O Otsuka, escritor da web, disse que conhece alguém que pode tirar a W&P do nosso pé. Estou indo ao terraço do Edifício Yamabuki, na Cidade de Mizuna, encontrar esse homem de cara assustadora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k259",
+     "source_text_sha256": "5816ed3c79649fe4f381a2ed13fc4a6bf4aadfd12530b9be0139b786d655ba57",
+     "pt-BR": "Por enquanto, seguir para a Cidade de Mizuna. Segundo a Kashiwagi, fica a mais de vinte ou trinta minutos daqui, a sudoeste.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k260",
+     "source_text_sha256": "c5923da76a6b141b2ee8bd310116569f01ea49f3eb94b82bf2c5205d5a7a027b",
+     "pt-BR": "Uma sombra gigante apareceu de repente durante o show ao vivo na rádio. A Kashiwagi ligou. Ela quer se encontrar com a gente, mas não consegue se mexer. Vou para o sul da rádio resgatar a Risa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k261",
+     "source_text_sha256": "25b05fad3140e4daf2320b9c12ea195581004ff1044e096b28b3f8eccad89a84",
+     "pt-BR": "Voltei até a Risa. Seguindo de novo para o Edifício Yamabuki, na Cidade de Mizuna.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k262",
+     "source_text_sha256": "ca4999e66b7b9b2ca1ce268fead109d7f4c75223340ac351846914f9b1c7cdf1",
+     "pt-BR": "Chegamos à Cidade de Mizuna. Agora só precisamos chegar ao Edifício Yamabuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k263",
+     "source_text_sha256": "b0f58a24607f713c139b03bdda4856d9214c665d3a050a664210eb278be26442",
+     "pt-BR": "Finalmente chegamos à Cidade de Mizuna, só para sermos perseguidos por um carro preto. Só nos resta correr para dentro do Edifício Yamabuki. Aquele homem de cara assustadora deve nos ajudar lá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k264",
+     "source_text_sha256": "08c8b541f09dd4e5c0a5a262ee4e16faedbb4ffe3763c64e00243407d7add1cb",
+     "pt-BR": "Encontramos o homem de cara assustadora. Mas então, logo agora, a W&P levou a Yuki. No terraço, depois que o vento parou, eu não conseguia me levantar. Só fiquei olhando o céu.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k266",
+     "source_text_sha256": "a536f1ba661a25e065cf489e2d49e5128928a755c88050804138b6beba7c1243",
+     "pt-BR": "Resgate a Yuki!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k267",
+     "source_text_sha256": "b19633f6596f97d50eed476843bcb9d23aeb9620df711aeb8c30db0edd85d284",
+     "pt-BR": "Uma Cidade Debaixo de Chuva Forte",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k268",
+     "source_text_sha256": "9f0669ac6ffcdd0646347665b31761725dcf9023d2e0dc534bd218403d5183db",
+     "pt-BR": "A W&P levou a Yuki. Sem saber o que fazer, vaguei pelas ruas até a Risa vir me dizer que tinha descoberto onde a Yuki estava. Vou com a Risa resgatá-la.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k269",
+     "source_text_sha256": "1b1e21b592de9453ed2739cf05499f4564748d8294076983a4522e4cc9e03cd8",
+     "pt-BR": "Está caindo um temporal, então estou dividindo o guarda-chuva da Risa enquanto seguimos até a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k270",
+     "source_text_sha256": "d200b988409f8c81f4a3064b9485408e1f67549bcc026d92003644cffd9bcd6a",
+     "pt-BR": "No caminho, secamos as roupas numa loja de conveniência vazia.\nOuvi todo tipo de história, sobre o falecido irmão da Risa, sobre os tempos de correspondente de guerra do Otsuka...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k271",
+     "source_text_sha256": "2d9b8a368f1bead4d0d429a338d32dd4500aed8bc352c2c0316ced3a439ead28",
+     "pt-BR": "Encontrei o policial de choque de quando fugimos de carro. A \"planta\" gigante deve explodir, então temos que sair da área agora mesmo. Hora de partir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k272",
+     "source_text_sha256": "51a436f33dfa6ac2ac1d9559cfec71e029310fadfb158c5ee3b98fb34ab38138",
+     "pt-BR": "Chegamos ao bairro onde está a Yuki. Pelo jeito, o prédio onde ela está presa fica a oeste pela avenida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k273",
+     "source_text_sha256": "e1368539078a95234d05d276787c119a4b5f54122ca2ed009012c7b3f70a96de",
+     "pt-BR": "Passamos pelo parque onde eu ia encontrar a Yuki.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k274",
+     "source_text_sha256": "254b312beaa70b2672bc7941358fa26bee5645b29b607b9e3a6ff39477d62184",
+     "pt-BR": "Recuperamos a Yuki da W&P. O Otsuka foi atingido pelas balas deles. Corremos para o helicóptero no terraço. Mas, quando chegamos lá em cima, a W&P veio com tudo atrás de nós. E, no centro de tudo, estava a Risa. Não, era a chefe da W&P, Reiko Kamio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k276",
+     "source_text_sha256": "7e1e1cf17224bf4ec7e9a34e4ec0a0f34eade324aeab53bca749bb9c05626442",
+     "pt-BR": "Uma Menininha Perdida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k277",
+     "source_text_sha256": "63fc68eeba57c2d3e6fe71caaede580d4f5558814b3fcbfb53a7a93f89b2aded",
+     "pt-BR": "Enquanto atravessávamos um prédio em chamas, achamos uma menininha sufocando com a fumaça. A Yuki e eu conversamos e decidimos levá-la com a gente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k278",
+     "source_text_sha256": "08f4eae3116260bb5603dd3a63915054f1a0a4322ee6450c2d3644ef7edb324a",
+     "pt-BR": "O nome da menina é Miho, e ela parece achar que a Yuki é a irmã mais velha dela. Vou carregar a Miho nas costas e tirar a gente do prédio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k279",
+     "source_text_sha256": "5984ea5ca77005f622c1afe14ca29383d9bb15dfe458395d602a47656eaed1da",
+     "pt-BR": "Chegamos ao bairro do hospital onde está o pai da menina. Vou carregá-la o resto do caminho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k280",
+     "source_text_sha256": "ecff5e56ca215d52f42149cc9cebfd931f1b2ad44a548ecbe82231588386859e",
+     "pt-BR": "Fomos à barraca de curry favorita da menina. Pelo jeito, a irmã dela comia muito. Graças a isso, estou empanturrado. Hora de ir ao hospital.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k281",
+     "source_text_sha256": "4836698292727e8f1d0f7f442c3ad8eaf9bc0e75d769dede3e026156fab873ef",
+     "pt-BR": "Enquanto eu andava com a Yuki, carregando a menina, um caminhão-tanque pegou fogo ali perto, deixando a Yuki presa nas chamas. A menina implorou para eu salvá-la. De algum jeito, passamos por isso. Agora, ao hospital.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k282",
+     "source_text_sha256": "60b9e99ed7ab7efb7c76353f066d7a1410ef947ebebbfbfde5692571f2fb49f4",
+     "pt-BR": "Levamos a menina até o pai dela. Pelo jeito, a irmã dela morreu num acidente de carro uma semana atrás. O pai tinha explicado várias vezes, mas ela não acreditava. Ele disse que a Yuki também se parecia com a irmã dela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k284",
+     "source_text_sha256": "120f2922667aacc4e1687f2c19d067ac0ca6ce480c74ca52ce4254edb58b8565",
+     "pt-BR": "Trabalhando até Tarde, com Perigo ou Não",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k285",
+     "source_text_sha256": "f14c0c922adf041aaa9222ea92d4554f1dcb4ce40fbc833d2cf582da8b433b25",
+     "pt-BR": "Nos fundos do escritório onde a Kashiwagi pegou o pacote, algumas pessoas ainda estavam trabalhando.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k286",
+     "source_text_sha256": "9b3b3797bdae8db127e09148d0d47768d842f0dd8ba87c51a01f6107b3f7c6ca",
+     "pt-BR": "Parece que estão sobrecarregados. Talvez eu possa ajudar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k287",
+     "source_text_sha256": "c85cf7dfc5df6caebcae7ff0b253a1c4fc521c03c77ee62655532ac948b5e8af",
+     "pt-BR": "Eles não sabem a senha, então não conseguem trabalhar. Pelo jeito, quem cuidava disso sentava muito perto da impressora multifuncional...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k288",
+     "source_text_sha256": "1ed5cf0567415ec8a868e12ad9903711ceaf0ea68acfa28c06e5c5c2fdd0e8ea",
+     "pt-BR": "Parece que a sequência que dei a eles era a senha certa.\nAcho que ajudei um pouco.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k290",
+     "source_text_sha256": "38cd151196b4b828df9e5cbf12f6ad92506832acbc1842eec1e0e1e2f21a3815",
+     "pt-BR": "Resgate a Editora-Chefe da Editora Ebine",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k291",
+     "source_text_sha256": "3805fc852550a7f581f29934df8d8706fc83c930367088901dafad232e8ea08e",
+     "pt-BR": "Hananira-cho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k292",
+     "source_text_sha256": "3445294839c7a132da5726ae0f0415bcd0ea3f40d819110952e6703b46600d1b",
+     "pt-BR": "Pelo jeito, uma editora-chefe que é velha amiga do Otsuka machucou a perna e não consegue sair. O Otsuka nos pediu para resgatá-la. Vamos para o Editorial 2 da Editora Ebine.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k293",
+     "source_text_sha256": "18d747586a062033a3b6653a5ae8157d9a23883746dbaeac1ea8cb1810349199",
+     "pt-BR": "Parece que aqui é Hananira-cho.\nVamos procurar o prédio da Editora Ebine.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k294",
+     "source_text_sha256": "f49c52c30cc63e1833f4eeb021d89ee1f57ee2ca08094b9942fc66a50aa0fe96",
+     "pt-BR": "Encontramos três alienígenas gigantes quando chegamos à avenida.\nTemos que passar pela batalha deles para chegar ao prédio da Editora Ebine.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k295",
+     "source_text_sha256": "6e2bc7cb6780cca43da0c1cd448b3490ddb3fe333df5d695dd7fd7cc60f64622",
+     "pt-BR": "Entramos no prédio da Editora Ebine. Vamos procurar a editora-chefe.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k296",
+     "source_text_sha256": "3d008d343aef6fdba9c742a2d143386df6f9aabb86cbe90cff569a86c8eceb68",
+     "pt-BR": "Encontramos a editora-chefe. Vamos arrumar as coisas dela e sair do prédio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k298",
+     "source_text_sha256": "ee7e629593f1f24a18b3870c9721bada0a7adea4d9889403c6ffcf78213deb9c",
+     "pt-BR": "Encontre o Editor Mukojima",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k299",
+     "source_text_sha256": "28ff01e12e28cda18c43c9bb08edf93a0df721d4033d0841229a8e2f64e82edb",
+     "pt-BR": "Temos que encontrar o Mukojima, que trabalha para a editora-chefe Hirai. Ele está numa loja de conveniência a oeste do prédio da Editora Ebine.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k300",
+     "source_text_sha256": "0e4262ca769cf9a232737656f593ee737ac33bc48b63cd82a3fe15e192148968",
+     "pt-BR": "Sair do prédio da Editora Ebine e seguir para o oeste.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k301",
+     "source_text_sha256": "b8411fd6944a9a660a68a3f93d566f7c96bb9b2cd8c80ab554be9706831a786a",
+     "pt-BR": "O chão afundou durante a batalha dos alienígenas gigantes, e fugimos para o esgoto. Vamos achar um jeito de subir para a rua.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k302",
+     "source_text_sha256": "c3aa05572ec3ee7887d1ab43a9cee9d3ad808c99c7a525b28de16137c63a8035",
+     "pt-BR": "Saímos do esgoto. A loja de conveniência onde vamos nos encontrar fica logo ali.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k303",
+     "source_text_sha256": "450bc989e2a5e0f62b20ec5f1df7e7565488cef8f6e4cb9a0130ace5316ca6d6",
+     "pt-BR": "Encontramos o Mukojima, que estava escondido com medo na loja de conveniência.\nUm e-mail do Otsuka diz que a W&P ainda está por aí.\nNos despedimos da editora-chefe Hirai e dos outros e seguimos para a Cidade de Mizuna.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_203.luc",
    "source_sha256": "0ea6ac72143efddf68c0a44810cea14b0d4e7a50233159268856555af393b78e",
    "entries": [
