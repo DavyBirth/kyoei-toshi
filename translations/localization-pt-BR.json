@@ -15528,6 +15528,376 @@
    ]
   },
   {
+   "path": "common/lua/stage_202_news_text.luc",
+   "source_sha256": "39048e20552ee003153ac5793b34c1cdb04f4eb0706b57d16e5589dffd5dc629",
+   "entries": [
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "4112cae1651167888a5a5ec522afce3eca7959b490a880953cef61b7860084f3",
+     "pt-BR": "Trem do Metrô Faz Parada de Emergência Repentina",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "e2485113d540451a71a09f112e454fbbbd2f82f091e2f7f97d72310dcb61ff15",
+     "pt-BR": "Por volta das 19h de hoje, um trem do metrô da Linha Yotsuba fez uma parada de emergência perto da Estação Azami 1-chome. Segundo a companhia municipal, o maquinista avisou que precisou parar porque uma forma suspeita estava atravessada no túnel. Depois de parar, o maquinista avisou que seguia para a Estação Azami 1-chome protegendo os passageiros, mas depois desapareceu.\nA polícia investiga uma possível ligação com as formas de vida misteriosas que vêm aparecendo na região.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "14ad237e3c757a30c5d03f61ba1947f73a48fe51b87a3f348810c34bef57880e",
+     "pt-BR": "Planta Gigante Misteriosa: Ligação com Criatura no Subsolo?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "afa4494e29ebe358dfe493ac4ff64db29d8743b7da5c2af5eb5199a966c5fb6b",
+     "pt-BR": "Pouco depois das 18h de hoje, uma planta gigante desconhecida, com cerca de cem metros de altura, apareceu na Loja de Departamentos Akashia, no Bairro Sakura. As autoridades investigam uma possível ligação com as criaturas parecidas com crustáceos que apareceram mais ou menos na mesma hora dentro da Estação Azami 1-chome, ali perto.\nComo a área já tinha sido isolada depois dos ataques de criaturas desconhecidas parecidas com crustáceos a pessoas na estação de metrô próxima, acredita-se que este incidente não tenha deixado feridos.\n\nTestemunhas dizem que rachaduras apareceram de repente no prédio da loja, e depois algo parecido com uma flor enorme rompeu o telhado. As autoridades estão interrogando a empresa responsável pela administração do prédio.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "5a8aa7cfc52450f90ae3ea2dedc15174ac1c1dd3765cb5ac3a25bcb6058e7d37",
+     "pt-BR": "Raízes Gigantes São Encontradas Dentro da Estação de Metrô",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "f49aa7722eda9eca7a20ba5b24128ac77425ce01532de347d03f7f03a3aca72d",
+     "pt-BR": "Em relação aos ataques de criaturas desconhecidas parecidas com crustáceos a pessoas na Estação Azami 1-chome do metrô municipal, um enorme organismo parecido com uma planta também foi encontrado dentro da estação.\nSegundo passageiros que escaparam, ele espalhou estruturas parecidas com raízes, de vários metros de espessura, por toda a estação e pelo shopping subterrâneo ao lado. Muita gente continua presa depois que essas estruturas bloquearam as rotas de fuga.\n\nAs autoridades investigam se esse organismo forma as raízes da planta enorme que rompeu o telhado da loja de departamentos próxima. Elas também anunciaram que as várias criaturas gigantes que aparecem na região vão se chamar, em conjunto, \"Legion\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "610cb4c619bcc84d8d63f2ab2d1db75dd9c51463db97c6514da78056f9c2b745",
+     "pt-BR": "Funcionário da Estação É Criticado por Não Proteger Passageiros",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "a44b43b2f27dc60fced3f196a1832cbcaa804ab478e1ab4d0c21d387afb64266",
+     "pt-BR": "Em relação ao incidente em que uma criatura desconhecida atacou pessoas na Estação Azami 1-chome do metrô municipal, a Polícia Metropolitana enviou à promotoria o caso do chefe da estação, Junichi Isono (58 anos), por suspeita de negligência profissional com resultado de morte, entre outras acusações, por ter fugido da estação sem tomar medidas adequadas de evacuação dos passageiros. Isono teria admitido as acusações em linhas gerais.\n\nIsono, o primeiro a fugir da estação, deixando dezenas de passageiros para trás, trocou de roupa durante a fuga e disse falsamente ser \"um cidadão comum\" quando foi resgatado. Ele foi duramente condenado na internet, no Japão e no exterior, como \"uma vergonha para os funcionários de estação\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "8ca577ae78e606e07ef3ffcc2cdbf5882b4683d93f2de66475ce9e0bccf8b5a6",
+     "pt-BR": "Passageiros Contam o Sufoco Durante o Ataque de Criaturas Misteriosas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "a8f0f7f2e12f5a99fba237495ffb7074bc4a1ef37f72629d298038317166b4c0",
+     "pt-BR": "Hoje, Ryohei Ogita (23 anos), funcionário de escritório no Bairro Sumire, ia encontrar Yukana Suga (26 anos), sua namorada do mesmo trabalho, na plataforma da Estação Azami 1-chome.\n\nPor volta das 19h, com o trem parado na Estação Azami 1-chome, a luz do vagão apagou de repente. Bem quando ele se perguntava o que estava acontecendo, viu a cabine do condutor ao lado suja de sangue.\nO corpo dele se mexeu antes de pensar. Ogita foi o primeiro a fugir do trem. Vários Legion pequenos já estavam na plataforma. Ele passou por eles por um triz, subiu correndo até as catracas e se escondeu no banheiro masculino.\n\nQuando se acalmou, Ogita não conseguia parar de se preocupar com Suga. Mas estava apavorado demais para se mexer. Então um rapaz desconhecido chegou e mostrou um anel, perguntando se ele o reconhecia. Era, sem dúvida, o anel que Ogita tinha dado a Suga. Disseram a ele que uma mulher escondida no banheiro feminino ao lado estava com o anel. Quando ele chamou o nome de Suga em voz alta, ela respondeu. Comemorando rápido o reencontro, os dois trabalharam juntos para fugir do shopping subterrâneo.\n\n\"Sem saber em que situação eu estava, o tempo que passei escondido sozinho pareceu muito longo\", diz Ogita. O que diabos está acontecendo na Cidade de Miyato agora? São necessárias uma investigação rápida e a divulgação das informações.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "a1f086ea575eb8e6ff46fc9ee209d3c602173e5ea5a175aced67824b8e673bb7",
+     "pt-BR": "Monstro Gigante Desce do Céu!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "f57e9f9cbb3e5ca189dd000c0fd1dd95e09391fd32d0dc7e03a8f29dc1251b32",
+     "pt-BR": "Por volta das 19h30 de hoje, muitas testemunhas relataram uma criatura gigante descendo do céu perto da Loja de Departamentos Akashia. Policiais de choque e bombeiros tinham sido enviados por causa da planta enorme, e a criatura chegou enquanto eles orientavam o trânsito.\nO governo a chamou de Gamera e manteve vigilância. Porém, depois de se aproximar da planta enorme na loja de departamentos, ela teria subido de novo ao céu e desaparecido.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "5757fba82d6332ff9c9bf2cf214306b3f1357c0c9989548601847f7a927a4e41",
+     "pt-BR": "Criaturas Desconhecidas Tomam Estação de Metrô!!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "b23bff7ebaefdb99aec03922fe5dbefd434a234ea57f9d2a0346745e58bdbb09",
+     "pt-BR": "Imagens feitas por volta das 19h de hoje mostram uma criatura grande, de até dois metros, andando dentro da Estação Azami 1-chome, da linha Yotsuba do metrô.\n\n\n\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k107",
+     "source_text_sha256": "7fe3a57eb95329dbc479cf5dd89af7e4c52570f1b96ac7dcc16464b4990d2462",
+     "pt-BR": "Policiais de Choque Enfrentam as Criaturas com Coragem",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "31f999dcc4f14d19c0c1cd0993160c1f1abfbda2da39436f0802da3dd101cacd",
+     "pt-BR": "Policiais de choque, bombeiros e policiais continuam trabalhando no local para evitar mais danos causados pelas criaturas desconhecidas e pela planta gigante. Policiais também foram vistos arriscando a vida para enfrentar as criaturas enquanto ajudavam civis a fugir.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "cb252445473a4adf8510507c2faa3accd9170f80a234c34179d77fb6718db6b1",
+     "pt-BR": "Joalheria É Saqueada em Meio ao Desastre",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "3fca4f93c1a46bec1aba6b1a86bcf7e44acd499361557b76b01877a68ac3cd3b",
+     "pt-BR": "O shopping subterrâneo sofreu danos graves com a série de plantas gigantes e criaturas desconhecidas, e furtos aproveitando a situação têm sido frequentes. Numa joalheria, em especial, rubis, safiras e outras pedras foram roubados, com prejuízo de 1 bilhão de ienes.\n\nEntre elas, a esmeralda gigante conhecida como \"Lágrima de Espirogira\" é uma pedra caríssima, que sozinha vale 400 milhões de ienes, e o dono da loja, Sr. Okamoto, lamenta: \"Eu só queria a Lágrima de Espirogira de volta, pelo menos.\"\nA polícia começou a interrogar pessoas para achar o autor do roubo da esmeralda gigante \"Lágrima de Espirogira\".\nComo uma mulher foi vista quebrando uma vitrine e revirando as pedras, a polícia a procura como pessoa de interesse.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k111",
+     "source_text_sha256": "12a6cced47cd8750bca6ab8b592de9b7ff6b01209aa46ef4abe11b8e6ae4ffdb",
+     "pt-BR": "Criaturas Misteriosas Reagem a Ondas Eletromagnéticas?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "83383aa7af5873244642187b3c23591600a947b252283c5b17af7dc3f7c44c31",
+     "pt-BR": "Testemunhas dizem que as criaturas desconhecidas perto da estação de metrô vêm atacando pessoas em reação a celulares e aparelhos parecidos. Alguns pesquisadores sugerem que as criaturas podem estar reagindo às ondas eletromagnéticas que esses aparelhos emitem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k113",
+     "source_text_sha256": "d503f4c36f8229d5354b9a1376059081119290bb43e91a6a6c0582ef4c991581",
+     "pt-BR": "Menina Procura um Hambúrguer\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "aaada1cb215d4712d80d815f500ff35f3212a5ccf5c9ff9830455aca13e2df32",
+     "pt-BR": "Uma menina procurando um hambúrguer teria sido vista no shopping subterrâneo ao lado da Estação Azami 1-chome, da linha Yotsuba do metrô, arrasado por criaturas desconhecidas.\nPelo jeito, ela tinha ido comer hambúrguer com a mãe, mas morreu num ataque de uma criatura desconhecida. A mãe conta que a menina adorava o pai, que já tinha morrido, e naquele dia tinha ido comer os hambúrgueres GZ favoritos dele.\nAo saber dos relatos sobre a filha perto da lanchonete, a mãe disse, em lágrimas, que a tristeza de nunca ter comido o hambúrguer deve mantê-la vagando por ali.\n\nOutras pessoas, porém, questionariam o relato da mãe. Dizem que a mãe da menina morreu poucos meses depois do pai. Quais relatos estão certos virou assunto de debate na internet.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k115",
+     "source_text_sha256": "adf1be40bf942588d8a07d9abaddeb9afcd5b82392c26b9a095bfde4acba34a9",
+     "pt-BR": "Área Arrasada por Ataques de Criaturas Desconhecidas!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "3264d0600eedbb8e3a2e7fd51f2046a1b0bf100103e5346eea065ff245cf9593",
+     "pt-BR": "A área em volta do cruzamento de Umegaya, no Bairro Sakura, foi arrasada por criaturas desconhecidas que subiram de dentro da Estação Azami 1-chome, da linha Yotsuba do metrô.\nBombeiros e policiais de choque tinham sido enviados à área para lidar com uma planta gigante que tinha tomado a Loja de Departamentos Akashia, mas foram atacados por enxames de criaturas misteriosas, aparentemente ferindo muitos cidadãos e agentes.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k117",
+     "source_text_sha256": "f560e189562c54742133874c6f298d83c8fe76989162ad981f6200eeab38d18e",
+     "pt-BR": "Jovem Repele Criatura Dentro da Estação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "556129570a031d8dc24ef7645f9af2a271c84ef1d99d283c73ef552ba1b367f2",
+     "pt-BR": "Um jovem foi visto repelindo uma criatura desconhecida dentro da estação.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k119",
+     "source_text_sha256": "fdcc404b4f6bd9e74e7bf050bbe36b2cbcafb76dad5c628a8b1c661ebc2d5ff2",
+     "pt-BR": "As Pessoas Resistem às Criaturas na Superfície Também",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "f5f4d058853e97652bce503a361a2e9db6bab090e88db98c85379e1908d00c40",
+     "pt-BR": "As pessoas também resistem às criaturas desconhecidas na superfície. O jovem desta foto também conseguiu expulsar uma.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k121",
+     "source_text_sha256": "e5a2031a7bd092090c0632d07d773eab5bcd9059d03d6fbbc8958b3261999e7d",
+     "pt-BR": "Laços Se Formam em Meio ao Caos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "f7f02dff8b5106a4e7b867b753f3f3323c0176557a3fed6e6f52a39d60d5a213",
+     "pt-BR": "A estação de metrô virou um caos depois que as criaturas desconhecidas apareceram. Até desconhecidos que tinham acabado de se conhecer foram vistos se ajudando para tentar sobreviver.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k123",
+     "source_text_sha256": "410731b4b8b2ba4d0d9675d6d70af30e3eb72d7874a001960114c9292645e186",
+     "pt-BR": "Um Smartphone Pode Ser a Chave?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "84ec9a3f9b2151539c18410e15ca520f4c199e7e199373ebcb952343d1020385",
+     "pt-BR": "Um jovem bloqueado por uma criatura desconhecida jogou um smartphone e conseguiu distraí-la.\nVários institutos de pesquisa levantaram a mesma teoria: uma reação a ondas eletromagnéticas explicaria o comportamento das criaturas.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k125",
+     "source_text_sha256": "f93e2b936a441fbc5c8c8b08ed31e9a167d2d40208553fa13a23a8a1602d590c",
+     "pt-BR": "Sobrevivendo ao Fingir Ser uma das Criaturas?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "ce4bfa97dd3a268a930277e911d10d59deee891550dccfc8452ace69a184b8ca",
+     "pt-BR": "No meio do caos, um jovem tentou sobreviver imitando as criaturas desconhecidas. Será que isso funciona mesmo?\n\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k127",
+     "source_text_sha256": "80f352ac7bf6580be7c8e59b518827833647fe9340707642d86264483afed3ae",
+     "pt-BR": "【DICAS】Experimente Trocar de Roupa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "48145e8db89ac900a97005a606a7f1fce5fb1c41e8727c32f54b261e7ac72568",
+     "pt-BR": "Se você conseguir uma roupa diferente da que está usando agora, experimente trocar.\nTrocar de roupa aumenta o máximo das barras de PV e ST.\n(Algumas, por outro lado, diminuem o máximo.)\nAcima de tudo, trocar de roupa muda o seu humor.\nSe você estiver numa situação difícil, trocar de roupa pode ajudar muito.\nIsso é tudo nesta edição das DICAS da Sombra Gigante. (Por: Satoko Midorikawa, redação das Notícias da Sombra Gigante)\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k129",
+     "source_text_sha256": "e13e865b8955e7ec03c2391cacded2be894dcdd805d6bd49ebf5d821f671dce4",
+     "pt-BR": "【DICAS】Sem Dinheiro? Fale com o Homem de Laranja",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "cf937f3657401c6072cd3f88c4f31405238d69a6cfbfe43b41f99614e57bcc65",
+     "pt-BR": "Se o dinheiro estiver acabando e você estiver ficando aflito,\nexperimente falar com o homem de macacão laranja.\nEle compra os itens que você está carregando.\nIsso é tudo nesta edição das DICAS da Sombra Gigante. (Por: Satoko Midorikawa, redação das Notícias da Sombra Gigante)\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k131",
+     "source_text_sha256": "32c1672aeb128b2a92402e3faf4ece1b005b250c418847d72c1c3e0c262e87d5",
+     "pt-BR": "Criaturas Desconhecidas Têm Carapaça à Base de Silício",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "7f11f08b368f64f649e0f40276b26f89484fc779c3be3f3b89ab4532aa0af0cc",
+     "pt-BR": "Descobriu-se que as criaturas desconhecidas que aparecem em volta da Estação Azami 1-chome, no Bairro Sakura, conhecidas como Legion, têm carapaças à base de silício e tecidos parecidos com semicondutores.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k133",
+     "source_text_sha256": "3b99c0dd0cca4a74fd8020ac6d71a0b62003a40727d4167479beb44eea3eaccc",
+     "pt-BR": "Ingressos de um Show da Madrugada São Confiados a Alguém",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "f5a55ee84714552c6d0481bd59966b9e8b75a33a3904cd26840ce64c7c06f3d4",
+     "pt-BR": "Dentro da Estação Azami 1-chome do metrô, no Bairro Sakura, um ataque de criaturas desconhecidas causou danos devastadores.\nNo meio disso, pessoas reunidas perto das catracas foram vistas se ajudando, aflitas, mas com esperança de escapar.\nO Sr. Morimoto, morador do bairro, foi pego pelas coisas estranhas a caminho do trabalho de meio período numa loja de conveniência em Aokiba-cho, mas confiou os ingressos do show ao vivo da madrugada, que eram de uma colega, a um jovem que ia para a rádio.\nMorimoto teria dito: \"Vou fazer o possível pra sair daqui e ir trabalhar. Mas, se eu levar os ingressos comigo, não vão chegar a tempo, então, torcendo pra minha colega estar indo pro local na rádio, confiei os ingressos a alguém que ia pra lá.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k135",
+     "source_text_sha256": "29786ab2fdf70df5794505fe5e154f28464ad169aa47e14ee2e7d22ac505e6c1",
+     "pt-BR": "Professora Presa nos Escombros É Resgatada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "4b22b3f679ec4b418371fee2bc63f122b9bee503f71c4a8e0e3563d06ef57051",
+     "pt-BR": "Natsumi Higa, professora de uma escola estadual de ensino médio no Bairro Sakura, teria sido resgatada por um jovem que passava quando ficou presa nos escombros dentro da Estação Azami 1-chome do metrô.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k137",
+     "source_text_sha256": "c4e55696ed84b537c05ea8fa29fab62edfcecba6cf7fd1fecbf5eebfab798693",
+     "pt-BR": "Café Histórico do Subsolo Fecha as Portas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "0ae63611024e84602a80995f9552c3e2eaaff5b7a59fa58d61d2a1f11cdb22e3",
+     "pt-BR": "O \"Café Puro Yamagobo\", no shopping subterrâneo da Estação Azami 1-chome, da linha Yotsuba do metrô, funcionava ali havia 40 anos, desde a inauguração do metrô, mas essas coisas estranhas encerraram sua história.\nO Sr. Okamoto, dono de uma joalheria e amigo de infância do dono do café, disse: \"O dono daqui estava sempre calmo, acontecesse o que acontecesse. Mesmo quando eu pus um cadeado de senha no café de brincadeira, ele não ficou bravo e só continuou polindo as xícaras em silêncio.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k139",
+     "source_text_sha256": "dcb29f746500e26c387c4ee26a58200db7e13c06e9965a93209dfdeafee005ba",
+     "pt-BR": "【 Coluna de Risa Kashiwagi: Grata pela Paz de Todo Dia 】",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "83ede944afd0ccb82b1321327ba011696a7c90eb6ff8cfdc3ffcf0ee3d580162",
+     "pt-BR": "Fui atacada por monstros na Estação Azami 1-chome do metrô. Tendo me arrumado mais do que o normal para sair, vi a estação ficar sem luz de repente e monstros saírem da escuridão para atacar as pessoas.\nVer a paisagem conhecida e o dia a dia comum destruídos de um jeito tão inesperado me chocou profundamente. Ainda não consegui organizar meus sentimentos.\nMais uma vez, sou grata por estar viva e grata pelos dias de paz que normalmente temos. Também rezo por quem morreu. (Por: jornalista Risa Kashiwagi)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k141",
+     "source_text_sha256": "6e9e227cdf9a35edd5283262441f55b2bf03893afa2f849725cb2c4bb0cf4bdb",
+     "pt-BR": "【DICAS】Troque as Moedas Que Você Coletar por Itens Neste Site",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k142",
+     "source_text_sha256": "7d43948e564bf1806896b6a63e4c855fb15e4f99b725c45e0773a3bdd6a82b6b",
+     "pt-BR": "Se encontrar moedas brilhando pelo caminho, não deixe de pegar.\nAs moedas coletadas podem ser trocadas por itens incríveis neste site das Notícias da Sombra Gigante.\nAperte o botão □ para abrir o menu de troca de itens.\nIsso é tudo nesta edição das DICAS da Sombra Gigante. (Por: Satoko Midorikawa, redação das Notícias da Sombra Gigante)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k143",
+     "source_text_sha256": "b009f7c7683d498f4a99570bbf1cec21c44300c58d01a3b060dbb8bfdff0215e",
+     "pt-BR": "Lançado o Esperado Volume Dois de \"A Saga da Última Espada\"!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k144",
+     "source_text_sha256": "1242a2e6fd0847296eb7363c36afed0144fc17d45d9e7c57e557a12757c0b806",
+     "pt-BR": "O segundo volume do romance épico de enorme sucesso \"A Saga da Última Espada\", \"O Capítulo do Breu\", foi lançado. Desta vez, o cenário muda completamente em relação ao primeiro volume, e a história mergulha, literalmente, na escuridão total.\nCom só dois volumes publicados, a série já mostra uma escala épica.\nO autor, O. R. James, disse: \"Planejei os dez volumes. Agora os personagens devem tecer a história sozinhos.\"\nAguardamos ansiosos o volume três em diante.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_210.luc",
    "source_sha256": "da2a70ef31cc24211945462027c29191ea30793d3b55c6b8bc0c31bcecba4ff2",
    "entries": [
