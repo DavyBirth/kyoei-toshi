@@ -5,6 +5,292 @@
  "language": "pt-BR",
  "resources": [
   {
+   "path": "common/lua/stage_218_news_text.luc",
+   "source_sha256": "f7a2bf10947a7a937a4749259375b6bc7d3b8952f015d13163abf12b138b0a35",
+   "entries": [
+    {
+     "id": "p0/k73",
+     "source_text_sha256": "f6d0977ea0cefc00a9c189d3b208614eabd60bce7bb6879305c704eb62d606b8",
+     "pt-BR": "Gigante Vermelho Derrota Monstro Vermelho!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k74",
+     "source_text_sha256": "6d16dbca0f76e35efda45cb672b405037e655fa053f6f530044b82e37c22bdac",
+     "pt-BR": "No começo desta manhã, testemunhas perto do cruzamento de Sakuramachi, no Bairro Sakura, viram um gigante vermelho derrotar um monstro vermelho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k75",
+     "source_text_sha256": "a778c17c5db1c3543fe11f980c57d955375901e5177199821718186cbf994114",
+     "pt-BR": "Floricultura Continua Aberta em Meio à Crise",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k76",
+     "source_text_sha256": "4bf56d552d1ac45fa0be2d0c0851393ef332155a8b684d3df9c8b64f2d7c20c0",
+     "pt-BR": "Você sabia que há uma mulher que manteve a floricultura funcionando durante essas coisas estranhas?\nTakako Kobayashi, que tem uma floricultura perto do cruzamento de Sakuramachi, no Bairro Sakura, teve a loja destruída não uma, mas duas vezes nesta série de coisas estranhas. Sem saber o que fazer, ela pensou em desistir de tudo, mas decidiu que não podia parar agora se quisesse criar o filho para ser um adulto de bem, e resolveu continuar com a floricultura.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k77",
+     "source_text_sha256": "10f5816d02437b388291de5312643d29f0d26fa78572ea0cce29745798566faf",
+     "pt-BR": "Jovem Misterioso É Visto com as Mãos Brilhando",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k78",
+     "source_text_sha256": "1ac342b13db5c8e217b8ac366082f7976c9f49687d5d4edff35945f33a90a1ae",
+     "pt-BR": "Um jovem misterioso foi visto com luz saindo das mãos. Testemunhas dizem que a pessoa usou a luz para curar feridos. Outras, porém, contam ter visto o mesmo poder sendo usado para ameaçar pessoas. Com mais relatos chegando, a verdade pode ficar clara.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k79",
+     "source_text_sha256": "063ea9c3ac9ccbd6cca207a01abd3c69ad3b4ae835b5089e8e2bcfdbfd08099e",
+     "pt-BR": "Policiais Lutam em Meio à Crise",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k80",
+     "source_text_sha256": "80b6e7676d80c43055f351eed19899a69bc0296c16540347e9e5a0ff21ad1100",
+     "pt-BR": "Em meio às coisas estranhas, a luta dos policiais continua. Naoko Kuribayashi, policial de patrulha do Bairro Sakura, é uma deles. Ela trabalhou desesperadamente orientando a evacuação, mas a sequência sem fim de situações inimagináveis a fez sentir na pele a própria impotência. Ela também estaria incomodada com o hobby de cosplay do chefe.\nEssas coisas estranhas destruíram num instante o dia a dia que tanta gente mantinha num equilíbrio delicado. Talvez ainda demore até as pessoas poderem olhar para trás e pensar no que aconteceu.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k81",
+     "source_text_sha256": "30984e543d59eef07c2498bfd749b8ee7915087843c94e444f031dd046e2eee6",
+     "pt-BR": "Clarões Param - A Crise Acabou?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k82",
+     "source_text_sha256": "659a1fc9d415b5ee886dda67c72a2948df1ab0628c02fdd2b417734f5d286ad1",
+     "pt-BR": "Às 7h de hoje, a Agência Meteorológica do Japão anunciou que os clarões vistos no céu nos últimos dias pararam. Segundo um vice-diretor do Instituto Nacional de Pesquisa de Raios Cósmicos, a matéria que vinha chegando do espaço não está mais sendo detectada. A causa da parada repentina continua desconhecida.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k83",
+     "source_text_sha256": "caa62660709dcf13303e2c2c110785cc50d10e8d1fed97e5c81d0f8f819ed31b",
+     "pt-BR": "Sociedade Moderna: Uma Geração de Jovens Exaustos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k84",
+     "source_text_sha256": "e0a1bcdd26b687cfcb298f640751d1229ca7cf7f72d71806012cfc3c787f54fd",
+     "pt-BR": "A crise recente deixou muita gente ferida e exausta. Além dos danos físicos, muitos sofreram traumas psicológicos graves, que alguns especialistas dizem ter sido especialmente fortes entre os mais jovens. Ainda não há números precisos, mas tratar esses efeitos psicológicos é uma prioridade urgente.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k85",
+     "source_text_sha256": "47ba9f1342f39831f729d78098b8b9bf377083b7abbb5f17325fddc744ff1e7b",
+     "pt-BR": "Uma Arma Gigante em Forma de Bumerangue!?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k86",
+     "source_text_sha256": "5deb0dfcc556a5e0ad610d22d004391e17f2b020d24be2aeea750690f04435a8",
+     "pt-BR": "O objeto preso à cabeça do gigante vermelho parece ter sido uma enorme arma em forma de bumerangue. O gigante lutou com ela na mão, mas a deixou cair no chão depois de ser atingido pelo ataque do monstro. Tamotsu Yamamoto, dono de uma loja, que diz ter medido a arma caída no chão, disse: \"A arma prateada tinha mais de sete metros.\"\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k87",
+     "source_text_sha256": "ac1b894f264472403925c28b6dea646c09013fd136ffe3d200cd393e90d2432f",
+     "pt-BR": "Falta de Água no Bairro Sakura? Adutoras Rompidas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k88",
+     "source_text_sha256": "543c0fe276a5d2e1c22bdebf375952c904ef963b6824968dc96ce687e3894183",
+     "pt-BR": "A destruição causada pelo monstro vermelho rompeu adutoras no Bairro Sakura, confirmaram as autoridades. Em algumas áreas, a água jorra acima do chão. As Forças de Autodefesa começaram a levar água para as áreas sem abastecimento. Por enquanto, não há previsão de volta do serviço.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k89",
+     "source_text_sha256": "2a2d102356def935a6b77d3ed6965a62fce71129fc4d3340a60efb8e85d0b9ad",
+     "pt-BR": "Loja de Departamentos Muito Atingida - Sem Previsão de Reabertura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k90",
+     "source_text_sha256": "e77482ee3a0dedf4b285d40324e606d18b12a4c083be32f1e48003ea29aa1503",
+     "pt-BR": "A batalha entre o gigante vermelho e o monstro vermelho também foi um golpe duro para uma loja de departamentos no Bairro Sakura. Além dos danos ao prédio, mercadorias foram destruídas, e o gerente, Fujio Fujiwara, diz que as perdas serão enormes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k91",
+     "source_text_sha256": "66dc641370dc55877dd2d196c9e58d6851d074e6602ffbea74d452cbf11039e6",
+     "pt-BR": "O Gigante Vermelho Não Conseguiu Disparar o Raio?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "2077cca214b48e75cc8dfeef3d1b60455c650530ea1e70691aa9baad30dc1dad",
+     "pt-BR": "Testemunhas da batalha da madrugada entre o gigante vermelho e o monstro vermelho dizem que o gigante levou a mão à testa, aparentemente tentando disparar um raio, mas nenhum raio saiu, deixando-o vulnerável a um contra-ataque. Estudiosos agora debatem por que a tentativa falhou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k93",
+     "source_text_sha256": "9b7008a85a34b51187694ccc47a4cb9562217ee9f7cdb32756c45926c49e1681",
+     "pt-BR": "Duas Pessoas Encontram Conforto uma na Outra em Meio à Crise",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k94",
+     "source_text_sha256": "1db65cd4086f2dc0ef8fbe19ae2b682a5d65d296930e03e833e0832b795cca08",
+     "pt-BR": "Esta série de coisas estranhas causou grandes danos no Bairro Sakura, na Cidade de Miyato. No meio de tudo, algumas pessoas passaram a noite dentro de um prédio danificado e atravessaram a crise. Takao Yonehara e Yuki Nagahama são duas delas, que ficaram juntas apesar do medo e viram a manhã chegar em segurança.\n\nP: Vocês não acharam que era o fim?\n\nYonehara: Eu acreditava que a gente ia ser salvo com certeza. Por isso continuei encorajando ela a nunca desistir.\nNagahama: Como ele estava comigo, em nenhum momento tive vontade de desistir. Eu estava decidida a sobreviver.\n\nTalvez não desistir seja a maior força para abrir caminho para o amanhã.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "40d8dcc6b0028a1dcb5ff56795f5c7641fc326882c2d8692454a46d2b490e6be",
+     "pt-BR": "Risa Kashiwagi É Presa!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k96",
+     "source_text_sha256": "f69abf1d2ad24b29036e89e064884dd7cfd42e3a921fe359dfd6999834989b70",
+     "pt-BR": "Risa Kashiwagi (nome verdadeiro: Reiko Kamio), que atuava como jornalista, foi presa por suspeita de tentativa de homicídio e sequestro.\nKashiwagi escrevia para revistas e sites e tinha forte apoio dos jovens.\nComo presidente da consultoria de armas W&P, ela recebeu investimentos da grande fabricante de armas americana M e, com negócios com órgãos de defesa, construiu em poucos anos uma empresa com vendas anuais de centenas de bilhões de ienes.\n\nEla trabalhava como jornalista sob o nome Risa Kashiwagi desde os tempos de estudante, e a prisão revelou que a chefe de uma das maiores consultorias de armas do Japão e a jornalista popular adorada pelos jovens eram a mesma pessoa. Seus jovens admiradores ficaram abalados.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "3b2abdf523190599c422aeb4f2fc6dd4671b7793ae26b188c9074b9cf339bd66",
+     "pt-BR": "Presidente da W&P, Reiko Kamio, Morre; W&P É Dissolvida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k98",
+     "source_text_sha256": "ef2ae236cd270470eb67174b02c19ac289539217420906819f5c86e307ff3569",
+     "pt-BR": "Reiko Kamio, presidente da consultoria de armas W&P, morreu. Com investimentos da grande fabricante de armas americana M, Kamio construiu em poucos anos uma empresa com vendas anuais de centenas de bilhões de ienes por meio de negócios com órgãos de defesa.\nComo Kamio e outros executivos da empresa morreram nessas coisas estranhas, a atenção se voltou para quem a sucederia. A empresa M, grande acionista, fez uma assembleia extraordinária e propôs encerrar o negócio, o que foi aprovado, e a dissolução da W&P foi decidida.\n\nKamio também trabalhava como jornalista sob o pseudônimo Risa Kashiwagi desde os tempos de estudante. Pelo jeito, só os executivos da W&P e da empresa americana M sabiam que Risa Kashiwagi e Reiko Kamio eram a mesma pessoa.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k99",
+     "source_text_sha256": "3a3f281c897674e31b0f287cc39208d495a14d9aa223a4b1e285b267c4ad867d",
+     "pt-BR": "Inspetor de Polícia É Demitido por Má Conduta",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k100",
+     "source_text_sha256": "a7ddbb20ffbbba713ce1a7078108b170ea7740a36b69faa0a52108be51e0fc04",
+     "pt-BR": "A Polícia Metropolitana de Tóquio anunciou a demissão disciplinar do inspetor Toru Fujiwara, 55 anos, chefe da Unidade 2 de Investigação de Crimes Inteligentes da Divisão de Investigação 2.\nO ex-inspetor já tinha sido criticado por investigações agressivas demais, com violência, e por decidir ignorar certos crimes graves mesmo quando os presenciava. Desta vez, depois de pilotar um helicóptero da corporação para uso pessoal, o pedido da comissão de fiscalização para dispensar o aviso prévio foi aprovado, e ele foi demitido na hora.\nFujiwara teria se recusado a falar com a imprensa em volta e ido embora com um sorriso desafiador.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "0e9eafe10adfd479206dc07692403120412d99c80cc38e1cfb81782776142a58",
+     "pt-BR": "Moradores Continuam Andando em Busca de Segurança",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k102",
+     "source_text_sha256": "d2a88f8eccdbbfc1eacc94f89e5f0dd5fca4b0d3888a3ede309c809f3d56b449",
+     "pt-BR": "Perto da Avenida Tsubaki, no Bairro Sakura, onde seres extraterrestres colossais se enfrentaram várias vezes, pessoas foram vistas andando sem parar, na esperança de achar um lugar mais seguro.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k103",
+     "source_text_sha256": "d4825fde9c23baa62ff1abe940a404087500d0474cb7769943155a86ae443408",
+     "pt-BR": "Mulher É Vista Rezando para um Monstro",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "2db7f23d5d9d0e29a5668a6105a62374ba59e5c0bf0aeef5b5daaa45cb7322f9",
+     "pt-BR": "Uma mulher foi vista rezando para um monstro perto do cruzamento de Sakuramachi, no Bairro Sakura.\nSegundo testemunhas, ela subiu numa passarela danificada e murmurou: \"Por favor, compre umas flores... Por favor.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k105",
+     "source_text_sha256": "5c63b21f924f4a7773a854ee31920e9fed73f8c62351f416734c33ad45303836",
+     "pt-BR": "Jovem Paga Três Milhões de Ienes por uma Única Flor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "79001f8833fcf3f3b8c46e18200674d3d190dba7132253fa3ec5cb2fdc4708d1",
+     "pt-BR": "Uma dica enviada a este site conta que um jovem deixou três milhões de ienes em pagamento por uma única flor de uma vendedora de rua perto do cruzamento de Sakuramachi, no Bairro Sakura.\nA vendedora estava arrasada depois que a loja dela foi destruída. O jovem entregou o dinheiro e foi embora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k107",
+     "source_text_sha256": "e866e4f00a966ebc98f6823513f035a20de908aaa298330b8019e63822886c67",
+     "pt-BR": "A Febre de \"A Saga da Última Espada\" Chega a Esse Ponto: Os 10 Volumes Vão ao Espaço numa Sonda Espacial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "80f08a847239a91fd6b44019a39ccefa798d336596efe3128a8c5bd07a7f864f",
+     "pt-BR": "A Federação Internacional de Desenvolvimento Espacial anunciou que os dez volumes de \"A Saga da Última Espada\" vão viajar a bordo da Saiken, uma sonda não tripulada de espaço profundo com lançamento previsto para por volta do próximo outono. A Saiken vai sair do Sistema Solar, fazendo observações ao passar por Marte, Júpiter, Saturno e Urano. A federação disse: \"Queremos que a vida extraterrestre descubra a história mais popular da Terra. Se eles conseguirem entender, o círculo de fãs da Última Espada pode se espalhar pelo universo.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k109",
+     "source_text_sha256": "9488ef4976af3e7cfe4f45073a51e56c2250750cea206fee19e060517b7536ad",
+     "pt-BR": "Resort de Praia de Luxo Sofre Inundação Misteriosa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "a9ddb2c620fd475dd9ee8eb3c70ec8c1e3bfc369d7c6c8bcb06fa937c4fa492b",
+     "pt-BR": "Veio à tona que o resort de praia de luxo no exterior \"Refúgio da Ilha do Sul\" corre risco de ficar submerso.\nQuando o gerente do resort foi até a praia de manhã, o nível do mar tinha subido mais de um metro, deixando a praia e os píeres baixos debaixo d'água. Isso causou uma onda de cancelamentos de hóspedes com reserva, um golpe duro para a empresa que o opera.\nEntre os investidores, se espalharam especulações de ligação com os incidentes das criaturas gigantes na Cidade de Miyato, além de boatos de que o resort vai ficar totalmente submerso, e o valor dele despencou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k111",
+     "source_text_sha256": "e962d4ae2a0e611a6e541b8c53d4c6c4aebe183d7a014076123d830cef05f9ed",
+     "pt-BR": "Resort de Praia de Luxo Recebe Seis Estrelas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "eb7abaf920c4c53666313a9fbb84885f3538f41603bca97fbb74ef7dc5859517",
+     "pt-BR": "Veio à tona que o resort de praia de luxo no exterior \"Refúgio da Ilha do Sul\" recebeu a maior nota da história, seis estrelas, da \"Monthly GZ Resort\", revista que avalia hospedagens do mundo todo.\nO resort foi fundado pelo Sr. Mikawa, da Cidade de Miyato, e é muito bem avaliado por hóspedes ricos de vários países (os direitos de administração foram depois passados a outra pessoa).\nO Sr. Dawson, investidor que se hospedou lá, disse: \"A praia linda é maravilhosa, claro, mas a atividade de escavar fósseis é demais. Nunca vou esquecer a emoção quando apareceu um fóssil enorme.\"\nO Sr. Mikawa foi pego pelos incidentes das criaturas gigantes que começaram ontem e está desaparecido.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_218_npc.luc",
    "source_sha256": "b71ff07bd6c19ef32afeeeed0d44bde75459f54788cecd4a237321a7b5acc546",
    "entries": [
