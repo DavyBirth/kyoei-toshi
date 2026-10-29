@@ -49614,6 +49614,1048 @@
    ]
   },
   {
+   "path": "common/csv/staffroll.csh",
+   "source_sha256": "751be64333402793813ee9f03ec8da9ef3dcd73b68dedc62ac484ded478bb338",
+   "entries": [
+    {
+     "id": "r3/c3",
+     "source_text_sha256": "007aa71e4524d4ff058dc424c9a32c774cbcc4335891c7b83216eb587c5712b7",
+     "pt-BR": "Ken Misaki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r4/c3",
+     "source_text_sha256": "be8ed4ab0fb460925fd07c604d86685dda1ec1e25089e6b60e0774d8b16d6197",
+     "pt-BR": "Takuya Sato",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r5/c3",
+     "source_text_sha256": "90b007057b9575681b2d50fc174adfbfab162d54fe847ee71c87b0c5238778c3",
+     "pt-BR": "Miharu Matsubara",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r6/c3",
+     "source_text_sha256": "f854e107bb0d19149cdecd284520a50ed74cd823f72b58fdd3769b2b05e88ba0",
+     "pt-BR": "Satomi Akesaka",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r7/c3",
+     "source_text_sha256": "df53329bdb48240ee69686cf0210142b02dec1855f5195c54513bbccae21c876",
+     "pt-BR": "Yuki Kono",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r8/c3",
+     "source_text_sha256": "5f0b3d0eeb08a06321ccf668e114dbfacfc12aead813c9068a49a37c4edd8f9f",
+     "pt-BR": "Reina Ueda",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r9/c3",
+     "source_text_sha256": "4336f0d0e50a89f6d7d3c31301233ffe30aa4b1a103cb1c2df2e2832ce1a551a",
+     "pt-BR": "Hideyasu Otsuka",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r10/c3",
+     "source_text_sha256": "af70f80aa5597cbc3671451939a1f072eefd21c052499fddc8fb290a5cb88b89",
+     "pt-BR": "Ryota Takeuchi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r11/c3",
+     "source_text_sha256": "1c664dbb02c171221e3156342a0f2a05be6438712825ae98adb935cd2ce29318",
+     "pt-BR": "Risa Kashiwagi",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r12/c3",
+     "source_text_sha256": "00359fdd6f734aac0653794775a6700915a3812959d91f31bf022683ee4902f1",
+     "pt-BR": "Yuko Kaida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r13/c3",
+     "source_text_sha256": "91227300d1851e124faacfe9ca077fe6e3aa8ec773fac95c808933ba2ecffa8c",
+     "pt-BR": "Ryoji Shibata",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r15/c3",
+     "source_text_sha256": "1366c0dbffa3a33d4d11df74f538216c15f6d9a4cd1892e0f9cd315722c9e134",
+     "pt-BR": "Katsuhiro Muto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r19/c3",
+     "source_text_sha256": "eef0330fdf91441a4c9aff88a5c5eefe319907a83643d25c3cf93906dd6065b8",
+     "pt-BR": "Toru Fujiwara",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r21/c3",
+     "source_text_sha256": "1deba372e41acd85890d5073d6fc658f4b7fff9f5ef99fa1de902513ec41ab6c",
+     "pt-BR": "Miho Yamamura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r23/c3",
+     "source_text_sha256": "9b8f97f998aee160f801d748aa4ebf912987b667583ff81c48f44e04d6f6e263",
+     "pt-BR": "Shinji Yamamura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r25/c3",
+     "source_text_sha256": "9cc5f090be40567208015209f0577479ac9ca91dbcca6e7829e95d4c4b9fb53b",
+     "pt-BR": "Mitsuo Katagiri",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r27/c3",
+     "source_text_sha256": "ea43eb42214bf1c922c7487ac8a6d42016bebfc36ca3ca49b966d78be9551789",
+     "pt-BR": "Tetsuya Oda",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r29/c3",
+     "source_text_sha256": "98f63b7ee77f6f8afecc68ce487bee77d487f149ce7de4cebaa23f4b80f2f7b6",
+     "pt-BR": "Hitomi Fukazawa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r31/c3",
+     "source_text_sha256": "7a00b24db2fb404180967e15a49e03eb0ef2498857b4e5cd7f2e12359fd478f8",
+     "pt-BR": "Kosuke Asano",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r33/c3",
+     "source_text_sha256": "f7688ca5e805ffab70e49fdecc36815fe0235c45002eac620405c7c8c4abfa27",
+     "pt-BR": "Mizuki Sawada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r35/c3",
+     "source_text_sha256": "8e0139be99bda92837d3a93105bb4dfa2c5bff497704586b595a6cdde590aac3",
+     "pt-BR": "Haruomi Sasaki",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r43/c3",
+     "source_text_sha256": "59c182ad40f2523b849cde79edefe0e07756357254349ef9c5d669734658196d",
+     "pt-BR": "Kazuya Ichijo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r53/c3",
+     "source_text_sha256": "4b285e47d0e664fcbac0ba0f54ed32ad278063d7e42c5ad03214412e2d646f85",
+     "pt-BR": "Aya Suzumura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r61/c3",
+     "source_text_sha256": "fc8ddad4da34f20a5212e4f7b481cb5373e20914476afe1d761a8c00c49f6b9e",
+     "pt-BR": "Hirai",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r111/c3",
+     "source_text_sha256": "2e45016e19f71bc6c2a22c0534f6083fc5f1843246dd8949f075db2ed7e05b6e",
+     "pt-BR": "Granzella Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r113/c3",
+     "source_text_sha256": "db7bf7cf879632bbbaedb3b9a05003c039eb2d93e00e8ab78915e945754043c3",
+     "pt-BR": "Granzella Game Factory Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r114/c3",
+     "source_text_sha256": "f79884800ae082f42a78f2778d2a7e979d6da01ae5fccb5d457481a4416b20da",
+     "pt-BR": "Granzella Online Entertainment Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r115/c3",
+     "source_text_sha256": "0a8fae98b04046de490a5279dd10d33f639153fa5398660099c6e835b04b737a",
+     "pt-BR": "Game Designer / Diretor Principal",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r117/c3",
+     "source_text_sha256": "18549bad178cf7b0de512411d9c8c6cfa03c2cfb2a684c67fb24fc04d048f1c8",
+     "pt-BR": "Diretor Técnico",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r119/c3",
+     "source_text_sha256": "ffac74cebc769b4595023b7dfa42e5d5a4ee223ee9f6f1d551c8fd9a45dcba85",
+     "pt-BR": "Diretor Assistente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r122/c3",
+     "source_text_sha256": "40e20fe4451148c71c1270409a4ca44611add38939487e9c6311d790ecba62af",
+     "pt-BR": "Programador Principal",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r124/c3",
+     "source_text_sha256": "2ff030afdf190cba2016fd7fc867616a7b0227cf93bd19ebe04b6a358feb3463",
+     "pt-BR": "Programador",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r128/c3",
+     "source_text_sha256": "c77a8942c42b66ea2210ae8dd204a091c5e60fea7c7fbe63fdb584b6f5bb45ff",
+     "pt-BR": "Artista Principal",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r132/c3",
+     "source_text_sha256": "adcb0fa2e25f510d9c06c88407f299b54167ff99197404ce4b0110658b133691",
+     "pt-BR": "Artista",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r150/c3",
+     "source_text_sha256": "f1cfb40d0b9823357a8b0626fe1a4368736d695be6680083b14a203db3943a0c",
+     "pt-BR": "Planejador Principal",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r152/c3",
+     "source_text_sha256": "431dddc6b8519c5906adf7057bf5a66f6124cd675fb57b2215e44bf2393adcda",
+     "pt-BR": "Planejador",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r169/c3",
+     "source_text_sha256": "68a2017a797924e307dab6f37f01f1ca5383bb0dfe302bac8cf342acc8d64aeb",
+     "pt-BR": "Animação das Cenas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r185/c3",
+     "source_text_sha256": "6a3066b25af922c0affa0f270adfbaae603b266925c15cf25085ea09abf84987",
+     "pt-BR": "Diretor de Som",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r187/c3",
+     "source_text_sha256": "9cef5a7054d84836243c3b9d14c37734927b4d7ed74c0b16b631882ab2b537de",
+     "pt-BR": "Diretor de Voz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r190/c3",
+     "source_text_sha256": "2a65ea599c3015e1232bef6479bb030b7819135f9af110e323d401857e6708ad",
+     "pt-BR": "Compositor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r193/c3",
+     "source_text_sha256": "5b4bd8fa892cfaf0887a465d56f51e887a29bbc903af7fd2656c7190a72c810d",
+     "pt-BR": "Assistente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r197/c3",
+     "source_text_sha256": "c676b072bbf95ab624a3082a7640cb23fd445c5a4dffc056596ccd7177e0e607",
+     "pt-BR": "Gerente de Projeto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r202/c3",
+     "source_text_sha256": "9d35f540c7e6dd22d5cea3c8138deb31e9f2289048b15179fb6a947f6afd5bd5",
+     "pt-BR": "Colaboração",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r204/c3",
+     "source_text_sha256": "c3bf182f337abd9f10aecd8a1b4e709541bff9e3aab3c59e9e23bcde826b3c89",
+     "pt-BR": "Atores de Captura de Movimento",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r212/c3",
+     "source_text_sha256": "618a42a1c4341b2a9a2d65fda4548fd94af6fa43f7eff2322168a4fdc6eaccaf",
+     "pt-BR": "\"Disaster Report / Raw Danger!\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r214/c3",
+     "source_text_sha256": "cf3fffb6ed0ca502a48e6e9ba260d422ee8c366c1536b3de8b7072127989cc3f",
+     "pt-BR": "Produção de Som",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r215/c3",
+     "source_text_sha256": "5c71f83aebf017934b53f0a14f741d57ebac2002af3145090708a770a31ed020",
+     "pt-BR": "Sprout Co., Ltd.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r216/c3",
+     "source_text_sha256": "6a3066b25af922c0affa0f270adfbaae603b266925c15cf25085ea09abf84987",
+     "pt-BR": "Diretor de Som",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r219/c3",
+     "source_text_sha256": "807d2d400c864d6f1a17c5cec3eeeae65a123a99d5c084cd542e45afbd01e5ae",
+     "pt-BR": "Designer de Som",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r222/c3",
+     "source_text_sha256": "eaeacfcb471388b99b82c8b62ebf0e32d6d064f435a68b72281487b6bb1e8842",
+     "pt-BR": "Produção de Áudio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r224/c3",
+     "source_text_sha256": "23f40dc70e38785de6cfdb7f280b12540c4ed23ac1621a4e20a58b9d82cf262d",
+     "pt-BR": "Supervisor de Som",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r226/c3",
+     "source_text_sha256": "c9f4c036568ff337b4e15f516f8c3077d1baf2b8560cae0d0c1f230c3083e3ba",
+     "pt-BR": "Engenheiro de Gravação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r228/c3",
+     "source_text_sha256": "7ebcec6d2d58d62e4bf4105d8a078261e3d2477375620b0d0e657c8938736be3",
+     "pt-BR": "Edição de Áudio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r234/c3",
+     "source_text_sha256": "f7ca14efd7e283954d4f9d1ae931837f99aeecc515886e8b9e9ba1411753c85f",
+     "pt-BR": "Estúdio de Gravação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r236/c3",
+     "source_text_sha256": "6b7c6ad654781f70558c5e105365222743926fde367f93c0b3a395cf81c05672",
+     "pt-BR": "Apoio ao Desenvolvimento",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r237/c3",
+     "source_text_sha256": "7a015632c643b62c59b17a28b98c26c0a8bbf91a52436c6f10434e0d6e34fe34",
+     "pt-BR": "B.B. Studio Co., Ltd.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r238/c3",
+     "source_text_sha256": "be684953a0c4a0a634d9b2f98ec113e2fd5ba4f75f52af48cf6c8fed024b1a59",
+     "pt-BR": "Colaboração em Modelagem 3D",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r248/c3",
+     "source_text_sha256": "bed6aa1e2145b55fc1151cd22ba0509c59e72ebeda4c35d4d812c7eb3e19bb0c",
+     "pt-BR": "Colaboração na Produção de Som",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r249/c3",
+     "source_text_sha256": "4ee2128591f69511563267e5d93fb153f591a9db87aff15fb9b9ab202600214a",
+     "pt-BR": "B.B. Studio Co., Ltd.\\nEquipe de Som",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r257/c3",
+     "source_text_sha256": "be684953a0c4a0a634d9b2f98ec113e2fd5ba4f75f52af48cf6c8fed024b1a59",
+     "pt-BR": "Colaboração em Modelagem 3D",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r261/c3",
+     "source_text_sha256": "fa30b80613cd8909ee2117cd39ba4f50af63bb5e257c96815c419d54ac73e081",
+     "pt-BR": "Design",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r262/c3",
+     "source_text_sha256": "2d493900076b8887ba8139503992ffe7daafe4781267ac2d612504d623dd3806",
+     "pt-BR": "Produção da Arte Principal",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r264/c3",
+     "source_text_sha256": "9661b540bb1ddbce4b3bd918cf4725b7a215259af2b14472216f808e1ddc1461",
+     "pt-BR": "Produtor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r266/c3",
+     "source_text_sha256": "35effdfd5af2647fec15d43c827b7abd0e5e98b4f00604ed0a6e281aaa157f1d",
+     "pt-BR": "Ilustrador",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r268/c3",
+     "source_text_sha256": "d671840f8ea4938b6213464a27111216dee47b29bfa26238c8f292b84c82a2b3",
+     "pt-BR": "Produção de Design",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r270/c3",
+     "source_text_sha256": "115c5c82fee4acd4a3dcac163216966f37cc07125c1f83eaf81b3be6bfae1e5b",
+     "pt-BR": "Diretor de Arte",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r272/c3",
+     "source_text_sha256": "d0077489a943e6d93d2ffea8cc9bde8192036f65390793d5574b7e9de5864581",
+     "pt-BR": "Designer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r274/c3",
+     "source_text_sha256": "b85a2feafc7d41ab4d23971fc70c7a09d7c6a1d743893ca62863c026bdf0f4e0",
+     "pt-BR": "Produção do Site Oficial",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r279/c3",
+     "source_text_sha256": "d9d10434a4ec50e31ea92562b6350cce3990420e3f2a051e5db1649c80276e8c",
+     "pt-BR": "Produção do Vídeo Promocional",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r281/c3",
+     "source_text_sha256": "b4597fd48691a0290a577d6889c6f25f17dbdb8b68bbdcd7f015c4e3e3240782",
+     "pt-BR": "Diretor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r283/c3",
+     "source_text_sha256": "ffac74cebc769b4595023b7dfa42e5d5a4ee223ee9f6f1d551c8fd9a45dcba85",
+     "pt-BR": "Diretor Assistente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r285/c3",
+     "source_text_sha256": "dcfa31e9006a1232b25296d5f5c6d1c1d8ad0bfc0420b694ae740f670c0f44f7",
+     "pt-BR": "Gerente de Produção",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r289/c3",
+     "source_text_sha256": "f07f2a95624b6917f8aaa1a7041cbaf1823ab77317a057feeaffeea124283ff9",
+     "pt-BR": "Colaboração na Divulgação",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r290/c3",
+     "source_text_sha256": "f7f6b989faecb96d8ab1ae444bc54c75c1b56773da14f5e820bf39ea287caab9",
+     "pt-BR": "ASATSU-DK Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r291/c3",
+     "source_text_sha256": "f810dd93e94ab5a71e16d057bf4e42c933e4ca286f1b81ed754ffddbb345d0b3",
+     "pt-BR": "Música-Tema",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r293/c3",
+     "source_text_sha256": "602c513e5ff73db8b79402e39dd40a93cbf814e3a52f1f2e7dbbd49dec139f49",
+     "pt-BR": "Voz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r294/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r295/c3",
+     "source_text_sha256": "1bf8258367c10128db0b54e7b04407967aa93b16c5de931ca9553e012e397e38",
+     "pt-BR": "Letra",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r297/c3",
+     "source_text_sha256": "633f6620b449db9d607ab2f51e969d5bc076d15b2a2f0b94e226040825459691",
+     "pt-BR": "Música",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r299/c3",
+     "source_text_sha256": "4020a95b8ce56b2423afbd9b132d02b18cb0e30ae14cf38dd5e924776abac20c",
+     "pt-BR": "Arranjo e Produção",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r305/c3",
+     "source_text_sha256": "de5b63cf53882e4d2e6f010fc6514407a09edeaa04c466f15e430a61cb10df6d",
+     "pt-BR": "Produção da Música-Tema",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r308/c3",
+     "source_text_sha256": "602c513e5ff73db8b79402e39dd40a93cbf814e3a52f1f2e7dbbd49dec139f49",
+     "pt-BR": "Voz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r309/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r310/c3",
+     "source_text_sha256": "1bf8258367c10128db0b54e7b04407967aa93b16c5de931ca9553e012e397e38",
+     "pt-BR": "Letra",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r311/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r312/c3",
+     "source_text_sha256": "633f6620b449db9d607ab2f51e969d5bc076d15b2a2f0b94e226040825459691",
+     "pt-BR": "Música",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r313/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r314/c3",
+     "source_text_sha256": "14e5098c6c2303400458b28dee1f5d9269dbe94c15d3ed48192ea57f9976fc93",
+     "pt-BR": "Arranjo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r317/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r321/c3",
+     "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+     "pt-BR": "Daikoku Azuma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r325/c3",
+     "source_text_sha256": "602c513e5ff73db8b79402e39dd40a93cbf814e3a52f1f2e7dbbd49dec139f49",
+     "pt-BR": "Voz",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r326/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r327/c3",
+     "source_text_sha256": "1bf8258367c10128db0b54e7b04407967aa93b16c5de931ca9553e012e397e38",
+     "pt-BR": "Letra",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r328/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r329/c3",
+     "source_text_sha256": "633f6620b449db9d607ab2f51e969d5bc076d15b2a2f0b94e226040825459691",
+     "pt-BR": "Música",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r330/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r331/c3",
+     "source_text_sha256": "14e5098c6c2303400458b28dee1f5d9269dbe94c15d3ed48192ea57f9976fc93",
+     "pt-BR": "Arranjo",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r332/c3",
+     "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+     "pt-BR": "Daikoku Azuma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r334/c3",
+     "source_text_sha256": "9859633e11072bd25ca4901bc03af99b92d9b0f36e7b44c4f34e61505e308d80",
+     "pt-BR": "Mai Iida",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r336/c3",
+     "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+     "pt-BR": "Daikoku Azuma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r343/c3",
+     "source_text_sha256": "68cb814f4469a136027234389618e98ea3665c1cac8f07b3d132126ffbe52926",
+     "pt-BR": "Produção da Música de Encerramento e das Músicas Incidentais",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r345/c3",
+     "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+     "pt-BR": "Daikoku Azuma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r347/c3",
+     "source_text_sha256": "f9fc83dc07e6d518a31f387f661966b93345cbe49ae688c02f23da5b5a59b0ac",
+     "pt-BR": "JVC Kenwood Creative Media Corp.\\nDaikanyama Studio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r350/c3",
+     "source_text_sha256": "a425c37f70ee5a14194754b4debdf47f725d95d22bbb5d02f405b82c68548c9d",
+     "pt-BR": "Daikoku Azuma",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r352/c3",
+     "source_text_sha256": "f9fc83dc07e6d518a31f387f661966b93345cbe49ae688c02f23da5b5a59b0ac",
+     "pt-BR": "JVC Kenwood Creative Media Corp.\\nDaikanyama Studio",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r359/c3",
+     "source_text_sha256": "d0bb9da5b7aca490fefcc4c7432b5d2499c5d9e5db15a969e472cd5b97895646",
+     "pt-BR": "Hiroshi Ebihara",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r360/c3",
+     "source_text_sha256": "295cfbfff49fb3e77c12b4ba08fd5afadf2849a05ea63fe5a4926055c07f636c",
+     "pt-BR": "Produção do Vídeo de Abertura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r362/c3",
+     "source_text_sha256": "f67f6012768d3745639fc53e6466adb6d7a53d5f23e5eed03c1c16fd3d8067ce",
+     "pt-BR": "Diretor da Abertura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r368/c3",
+     "source_text_sha256": "99e2b4991751e1b1d208a5591c74f27ad860a245806290e47d1419fffe153ef4",
+     "pt-BR": "Composição",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r370/c3",
+     "source_text_sha256": "6c6c46e46b9ff44cfb3be31f6cdb89bb8696b3c9c8667f410bc323a0d7a5c0fb",
+     "pt-BR": "Coordenação de Produção",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r372/c3",
+     "source_text_sha256": "84a86ce2ebdbc999bda49d2e6971471ebd01f063f6604e90b0b58afaf51b895b",
+     "pt-BR": "Supervisão e Colaboração",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r374/c3",
+     "source_text_sha256": "a3ce86b448f7e856ce4392fd95756646dbfbb6bd175a4cf2b6569d649beadc10",
+     "pt-BR": "Tsuburaya Productions Co., Ltd.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r375/c3",
+     "source_text_sha256": "4fb12a3533c3ff5b3f66a2a321935379659e2619fbd6e4d095026c7e98b9d6b0",
+     "pt-BR": "Toho Co., Ltd.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r377/c3",
+     "source_text_sha256": "8346fd662bd2eabaf0a0c8b963ac532167275afa2f0967a9ed92ea0951fd5371",
+     "pt-BR": "KADOKAWA CORPORATION",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r378/c3",
+     "source_text_sha256": "6b7c6ad654781f70558c5e105365222743926fde367f93c0b3a395cf81c05672",
+     "pt-BR": "Apoio ao Desenvolvimento",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r379/c3",
+     "source_text_sha256": "7a015632c643b62c59b17a28b98c26c0a8bbf91a52436c6f10434e0d6e34fe34",
+     "pt-BR": "B.B. Studio Co., Ltd.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r380/c3",
+     "source_text_sha256": "7c47734cfe8fc37551c232eb324c6e5d92079950407eb65f022127c3bcadbe67",
+     "pt-BR": "CRI Middleware Co., Ltd.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r381/c3",
+     "source_text_sha256": "327cca4873dd47d548abe48d579f8b713a86bfe95a317fb68943e96a60dcf7a4",
+     "pt-BR": "IGM Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r383/c3",
+     "source_text_sha256": "8652e196b3b5ac62fe775e46829de40aac80341d2ce0da6d22eb57c297810ae5",
+     "pt-BR": "Autodesk, Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r384/c3",
+     "source_text_sha256": "d67736563c0d9d700305ab8c4e643c032f346043c39214b1f23a3326f1e61e00",
+     "pt-BR": "Go Go Curry Group Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r387/c3",
+     "source_text_sha256": "abebb0b0b58f83beb7fd04931e2344586d39837dbe542be08ce7c15bc07b9534",
+     "pt-BR": "Sarugakucho Co., Ltd.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r393/c3",
+     "source_text_sha256": "04f9493f35e312cebd5cb84d69d32b46c496c45c53889358752e2ffd096ffa06",
+     "pt-BR": "Silicon Studio Corporation",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r394/c3",
+     "source_text_sha256": "089a6087d427ef1747e82ffa803f3f2e568ee30390d1e2ceb01ed938e1ea9687",
+     "pt-BR": "Engenheiro de Software",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r402/c3",
+     "source_text_sha256": "c676b072bbf95ab624a3082a7640cb23fd445c5a4dffc056596ccd7177e0e607",
+     "pt-BR": "Gerente de Projeto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r404/c3",
+     "source_text_sha256": "8c6bb3d23e19a70f36ad2206715062f349239fdb836ac7fce35c7d1d1f181bdf",
+     "pt-BR": "Vendas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r406/c3",
+     "source_text_sha256": "e40aef527493e31110cbd7c33f812c7b11d3b1d4c479c2c64bba14ec3b9ba4a6",
+     "pt-BR": "Sony Interactive Entertainment Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r407/c3",
+     "source_text_sha256": "cef4725035a92825d53482b1e4a6b368394062a71a691ef7060f83b2508734c3",
+     "pt-BR": "Produtor de \"Doko Demo Issyo\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r409/c3",
+     "source_text_sha256": "0297995c3acd2f1a81bd97a266cb4fcc6a4d7a5beafab310806f2f1c885116d0",
+     "pt-BR": "Gerente Sênior de Contas",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r411/c3",
+     "source_text_sha256": "ac765184c9a54397c50f6b9eaf8737f8744d615dc0e6de2c56d4afb58705db45",
+     "pt-BR": "\"Doko Demo Issyo\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r413/c3",
+     "source_text_sha256": "bed7d6c9bf9f16bea48b6f25cd473133d7d1c3a58631be1de38472951bb6ddc6",
+     "pt-BR": "BANDAI NAMCO Studios Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r417/c3",
+     "source_text_sha256": "94a5d207033eb94807087ddf6413181984f9c9abde87e5fde28d5951e4aecfa9",
+     "pt-BR": "Fontworks Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r418/c3",
+     "source_text_sha256": "0df38f9828b066317454ca70de99a3cae33bd13f502bf17be036a0b5e16545bc",
+     "pt-BR": "Morisawa Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r419/c3",
+     "source_text_sha256": "68ea8da21c3998eb8c9157681d68d71724d534591ea29726c1165dfad53eb4f7",
+     "pt-BR": "Apoio em Depuração",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r420/c3",
+     "source_text_sha256": "7946d4c15220f833a654a2b2974019a102b40c511ce949f6422a30efa2182626",
+     "pt-BR": "DIGITAL Hearts Co., Ltd.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r432/c3",
+     "source_text_sha256": "292b319ac2ae385ec3411ef42e694599629d873a3ea1d84b5964b0cc9e42039b",
+     "pt-BR": "BANDAI NAMCO Entertainment Inc.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r433/c3",
+     "source_text_sha256": "6f2531f5d662a182c080f0b46384d7e7522ef6b032b1d0bd77df42e0cb946ea0",
+     "pt-BR": "Controle de Qualidade",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r449/c3",
+     "source_text_sha256": "009b9710c8f3de70d88dd456399abec7f9a72b049ab7190f38c2070b3c7fa5f7",
+     "pt-BR": "Atendimento ao Cliente",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r453/c3",
+     "source_text_sha256": "ca91f0352ffc6222697d5f642beff74cf3a1a221b7ae049980591a3af437adfa",
+     "pt-BR": "Publicidade",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r456/c3",
+     "source_text_sha256": "ecd987dfa446384b8892b0bc0fb5409ef3af9722ab4d573ff1bba9d5fa80cbac",
+     "pt-BR": "Marketing",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r461/c3",
+     "source_text_sha256": "c5e729b911a242a33a674cc211941ac1c05eec4da6117445137c15bf534da538",
+     "pt-BR": "Apoio à Produção",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r465/c3",
+     "source_text_sha256": "d4389ace8320b824e3cdb6806369cd80755427230ac95b196edeedfaa8f45876",
+     "pt-BR": "Mídia",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r479/c3",
+     "source_text_sha256": "c6f52a8947789426dfd5171f6ccadaa57ad7147fd78caaf0ec1f6a261cf1c3c8",
+     "pt-BR": "Direitos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r482/c3",
+     "source_text_sha256": "213abe14bfcbc2be63df7736de6647a93b8a4cb8e480cdac92dfeff7ec349387",
+     "pt-BR": "E-commerce",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r487/c3",
+     "source_text_sha256": "5dad921034a95bdff7734aa5393e61c4ac15b4599ecd2bd208b3cb8dfaf46303",
+     "pt-BR": "Agradecimentos Especiais",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r498/c3",
+     "source_text_sha256": "9661b540bb1ddbce4b3bd918cf4725b7a215259af2b14472216f808e1ddc1461",
+     "pt-BR": "Produtor",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r500/c3",
+     "source_text_sha256": "f9b16869ca22e321598b1d45b5e33c4b8962bb6b862868df499bde62d8d72e8b",
+     "pt-BR": "Produtor-Chefe",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r503/c3",
+     "source_text_sha256": "42c57abf4c45459366ea0c57259d785051fdfc01371db649ee77d9bd3b657f65",
+     "pt-BR": "Produtor Geral",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r506/c3",
+     "source_text_sha256": "7c03f13d55579b9446cfc9ab37d29194bee98c329daf35774f7c8a1857b244fd",
+     "pt-BR": "Produtor Executivo",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/Text_EpilogueText.luc",
    "source_sha256": "c4b10551ce7c0a546089a37b2c2beb06ab8caaadc940fe28ae5275bdeaac3938",
    "entries": [
@@ -107604,6 +108646,537 @@
      "id": "p0/k231",
      "source_text_sha256": "8f4c3afcb554a0618775179bb04714539d6740070d2b34fe97b489382853fb38",
      "pt-BR": "Que alívio... Você está bem.",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
+   "path": "common/csv/staffroll_image.csh",
+   "source_sha256": "a604b3cc1a4fb1abc9d69a2d0f64e77d7a14f9c804a0486dc41afdce317457db",
+   "entries": [
+    {
+     "id": "r0/c7",
+     "source_text_sha256": "106479a87cb864f12fd50c5508809263cf54183bb25548c3d0d24b399fbdb2fc",
+     "pt-BR": "Agora eu preciso te dizer \"adeus\"...\\nNão. Preciso te pedir \"desculpas\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r1/c7",
+     "source_text_sha256": "78ff905be94beb270ebcfe9b228ae18fcf0962c34414521219071818b9652ff8",
+     "pt-BR": "Eu não sou Yuki Kono, uma habitante deste planeta.\\nUma consciência que vaga pelo espaço... É isso que eu sou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r2/c7",
+     "source_text_sha256": "910bc6c955aa5c08d081ad60cdba5c81a1e504e432098730bfa363331bd33b9f",
+     "pt-BR": "Viajei pelo espaço por muito tempo, mas uma sombra poderosa me perseguiu desde outro sistema estelar.\\nFerida, eu precisava descansar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r3/c7",
+     "source_text_sha256": "54d5ed18482e3ceb6b6198601f628c334d1431c6cc45be2e5428ed4ebdf9347f",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você voltando do trabalho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r4/c7",
+     "source_text_sha256": "841abe53b7f28f08102230764a20112d18415bab8b18e371f44e0351fe7f8699",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você voltando da escola depois de uma aula.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r5/c7",
+     "source_text_sha256": "da8b82c38195998ad1902e378b0132acf91c967644a681aaee8f2b00cab6fccb",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você indo para a cidade todo animado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r6/c7",
+     "source_text_sha256": "44ea2f4783d0149e89789b413a4babcca38a49ba3712c43807fdaa0a906df783",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você andando pela cidade sem rumo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r7/c7",
+     "source_text_sha256": "54d5ed18482e3ceb6b6198601f628c334d1431c6cc45be2e5428ed4ebdf9347f",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você voltando do trabalho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r8/c7",
+     "source_text_sha256": "841abe53b7f28f08102230764a20112d18415bab8b18e371f44e0351fe7f8699",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você voltando da escola depois de uma aula.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r9/c7",
+     "source_text_sha256": "da8b82c38195998ad1902e378b0132acf91c967644a681aaee8f2b00cab6fccb",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você indo para a cidade toda animada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r10/c7",
+     "source_text_sha256": "44ea2f4783d0149e89789b413a4babcca38a49ba3712c43807fdaa0a906df783",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você andando pela cidade sem rumo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r11/c7",
+     "source_text_sha256": "50a9b939973546b34d7b022bc5e935bc033990aa7bc330db945d92697cf44555",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você indo para a cidade animadíssimo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r12/c7",
+     "source_text_sha256": "50a9b939973546b34d7b022bc5e935bc033990aa7bc330db945d92697cf44555",
+     "pt-BR": "Então parei neste planeta\\ne encontrei você indo para a cidade animadíssima.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r13/c7",
+     "source_text_sha256": "b5d2b989fde7965bc32b28d47a7d67d929904e3ef43b96f8296ee953fe5304a8",
+     "pt-BR": "Eu precisava de alguém que me protegesse enquanto eu descansava.\\nPor isso confiei a você um \"poder\".",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r14/c7",
+     "source_text_sha256": "97d8583d6986b0f7d51956bcbbb146f551555c7714c498832572c886ad5396e6",
+     "pt-BR": "Não pude te dar poder suficiente para expulsar as sombras.\\nFoi tudo o que consegui.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r15/c7",
+     "source_text_sha256": "233ce8df517c2f2c509c2a1c83108768f89f7e98778775f32507974b72fbfea1",
+     "pt-BR": "Com base na consciência de alguém chamada Yuki Kono, peguei emprestada a forma dela\\ne alterei suas lembranças para virar alguém que você quisesse proteger.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r16/c7",
+     "source_text_sha256": "c72bb0b77bf86e2190c03bdbbe5d70c9117def4af03d80ab260458e75617ce95",
+     "pt-BR": "Com base na consciência de alguém chamada Yuki Kono, peguei emprestada a forma dela\\ne alterei suas lembranças, achando que tinha virado alguém que você quisesse proteger.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r17/c7",
+     "source_text_sha256": "93f32e4036902b57173937dd28e8ac79e599a3d11b91a2c8250228f023b4203b",
+     "pt-BR": "Depois, até recuperar minhas forças, me escondi na consciência de Yuki Kono\\ne tentei fugir das sombras.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r18/c7",
+     "source_text_sha256": "c3a3ba0731af3cfcdfce6b010c27477064d5b53141d80c23da953ad4bbee77c1",
+     "pt-BR": "A \"sombra\" quer usar o conhecimento e o poder que ganhei na minha longa jornada\\npara dominar o universo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r19/c7",
+     "source_text_sha256": "1d98f65fc469a6d7e3887a1c9424849cbe8d2ec816d7129307867b9824c08ede",
+     "pt-BR": "Não posso deixar que a sombra me capture.\\nMas, mesmo neste planeta, mais sombras continuaram aparecendo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r20/c7",
+     "source_text_sha256": "29f8c87815f6e1b034341cc44de352765631775415b7f3f87433419a0cb0a068",
+     "pt-BR": "Nesse tempo... Estar com você foi fascinante.\\nVocê sempre protegeu Yuki Kono com tanto cuidado.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r21/c7",
+     "source_text_sha256": "d7e6a67331826a0022a7c27c94b91d7569bfd1123202d6c6e37e2ccd017b6a97",
+     "pt-BR": "Nesse tempo... Estar com você foi fascinante.\\nAos poucos, você foi se sentindo atraído por Yuki Kono.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r22/c7",
+     "source_text_sha256": "6ac021aa06dffbf9796bbce67f7e40deffe50a11e87ac1466c343dbd6c6e71aa",
+     "pt-BR": "Nesse tempo... Estar com você foi fascinante.\\nYuki Kono te empolgou bastante, não foi?",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r23/c7",
+     "source_text_sha256": "0cafdfc406435056d193a1147fce28b696a550a8e6b4f0cdd4f3303c24d9655d",
+     "pt-BR": "Nunca imaginei que os habitantes deste planeta tentariam te matar,\\nmas...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r24/c7",
+     "source_text_sha256": "edb0ac51c0020e8d55617f03daeac3d367cd1b86caa4178b445cb6e0791e13bb",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar.\\nE sua imitação de gato foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r25/c7",
+     "source_text_sha256": "b47857aaee514ed8e7c70d0e116c81bbadd00c5479dbcdc36142cbe2c10138f8",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar.\\nE sua imitação de cachorro foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r26/c7",
+     "source_text_sha256": "970613e59cc862a5e087330fc9aa2d8bc854f394566abecb7fbd78f309f59050",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar.\\nE sua imitação de galinha foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r27/c7",
+     "source_text_sha256": "7bbebd7da765bf494d7796964e54afd1d6852685d297897a8b7a57d4814ce84c",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar.\\nE sua imitação de lobo foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r28/c7",
+     "source_text_sha256": "0b4795d6d4a042fed0140de147a4d7c8c5740464a0b410fb929005f86d21ef14",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar.\\nE sua imitação de locutora de alto-falante foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r29/c7",
+     "source_text_sha256": "d2d7a6a28fde12287196f501e71161cc29c37abed9ba8442a782b1f23af6e586",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar.\\nE sua imitação de rouxinol japonês foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r30/c7",
+     "source_text_sha256": "50f95fa35c4a1f14a98a57bc8fd3fefedf394a49b8574cca489ff4228e9737a1",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar. E sua imitação\\nde cigarra cantando foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r31/c7",
+     "source_text_sha256": "3bb68f7248f64e6621fb60261547cb139a30dcfc8ad9a6212d7fb4cd7d3931de",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar. E sua imitação\\nde chaleira fervendo foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r32/c7",
+     "source_text_sha256": "51afbdb8da8a51227008251d4fb5d1228537cb6026bdda5b7ac3057d847ba600",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar.\\nE sua imitação de secretária eletrônica foi excelente.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r33/c7",
+     "source_text_sha256": "93fdf2cd2e5126d501f1d7d97793404fd22e33bc506800e368f66a996552bc8c",
+     "pt-BR": "Fico feliz que, de algum jeito, conseguimos escapar. Mas lamento\\nnão ter ouvido sua imitação de camaleão bizarro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r34/c7",
+     "source_text_sha256": "1eeae522092648445e210a65bcd17885e81e4da2faaabd0aca26575cb660020e",
+     "pt-BR": "Pensando bem, também comemos uma comida enorme.\\nObrigada por comer a minha parte também.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r35/c7",
+     "source_text_sha256": "ba2ce3f60cbb43b43b32d6b16fa76bd3f4d1906a6cbf52ddc7b8fbec77b90276",
+     "pt-BR": "E depois você correu para as chamas sem ligar para o perigo\\npara me salvar. Eu pude mesmo contar com você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r36/c7",
+     "source_text_sha256": "e33f4b3b0d5c5bf688ab63e5fe662f8f8ecd5758b198904e207b2eae38a61b11",
+     "pt-BR": "E depois você usou seu poder para me resgatar\\ndas chamas. Eu pude mesmo contar com você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r37/c7",
+     "source_text_sha256": "2adec75efa1a44d2e8aba005408fa450009023eb2ec7a62ac73c55d4b9f25165",
+     "pt-BR": "E depois você ficou em pânico do outro lado das chamas.\\nNão passou muita confiança, mas deu para ver que você se importava comigo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r38/c7",
+     "source_text_sha256": "426a71cb22fb602a6fec7affbcb9fa222e30f88ddf98f55b2bcfa16a5f80769f",
+     "pt-BR": "E depois, quando vi você rindo feito louco do outro lado das chamas,\\nlembro de ter sentido uma ansiedade e uma irritação terríveis.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r39/c7",
+     "source_text_sha256": "fdffada765f2ac51d28ad0141df8c5f62498b38b2cd64526d85c65196e100570",
+     "pt-BR": "Quando reencontramos por acaso a família de Yuki Kono no hospital depois,\\nsenti as emoções dela transbordarem.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r40/c7",
+     "source_text_sha256": "cd5b2277deabefd0e2b7bea0c892a2ff762ebfecc6a0c8241fcb6ff6a95ce79a",
+     "pt-BR": "Com medo de que a sombra que me caçava pegasse a família dela no ataque,\\nme teletransportei para longe, para um barquinho no mar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r41/c7",
+     "source_text_sha256": "bba02ae9e3c4050fa80d32bbf912e302a8f3aebe9fe14573af607e8dbc4846dd",
+     "pt-BR": "Mas as sombras não pararam de me perseguir.\\nElas surgiram até das profundezas do mar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r42/c7",
+     "source_text_sha256": "afe629361a87d4ee67f7fa4fd2110b50c6a9f68a335a149aca28b391a3c3366e",
+     "pt-BR": "Então decidi esconder minha presença o máximo possível\\npara não ser encontrada pelas sombras.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r43/c7",
+     "source_text_sha256": "8cb3d1a4804c56eee0770e55790a823c0131298374f4e8995f7e27853b93130f",
+     "pt-BR": "Enquanto eu ficava escondida, deixei nossas ações\\na cargo da consciência de Yuki Kono.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r44/c7",
+     "source_text_sha256": "f9f00c6b2c618f509c360c63c404c108c92a11f00f450c0f077a74cdfd5ba038",
+     "pt-BR": "...Quando os habitantes deste planeta te atacaram,\\nYuki Kono tentou te proteger.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r45/c7",
+     "source_text_sha256": "8220dd56d738aad2a2fd1a78fb9b713595ca4e565840a9c1bb159230d44e288d",
+     "pt-BR": "...Quando você usou seu poder para intimidar os habitantes deste planeta,\\nYuki Kono estava tentando te proteger.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r46/c7",
+     "source_text_sha256": "4282f043991c5653cbc05af8ff9ffcfb5741d139c60f4d93b32d985b4aec06b8",
+     "pt-BR": "...Quando os habitantes deste planeta te atacaram,\\nYuki Kono tentou desesperadamente te proteger.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r47/c7",
+     "source_text_sha256": "83f6f51a6ece81c5d173844eb7b6f2c040f08a143655d90114447ee63fe040be",
+     "pt-BR": "Yuki começou a agir de jeitos que iam além do que eu esperava.\\nEra você quem devia proteger Yuki Kono.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r48/c7",
+     "source_text_sha256": "0f393ad542155918e436c1acac5d43eddb38e64ae2525edf51b474202431a933",
+     "pt-BR": "Mas ela passou a ver você como alguém que queria proteger,\\nmesmo à custa da própria vida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r49/c7",
+     "source_text_sha256": "9510fa313229f5417a4b0f76c0e70cf5bf43ed51c3f504da814c4466af498154",
+     "pt-BR": "Mas lembro do quanto me tranquilizava o laço de confiança\\nentre você e Yuki Kono, cuidando um do outro.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r50/c7",
+     "source_text_sha256": "1c582222bacbf6369c93f1f92129252fa3a34f7b072429fe2ad97a8c655516fd",
+     "pt-BR": "Você a abandonou apesar desses sentimentos,\\nmas fiquei aliviada ao saber depois que você queria pedir desculpas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r51/c7",
+     "source_text_sha256": "5cc327e231e9fbda6b64adf3947885b73e01ebe81c35e5c099cbf69df0f24308",
+     "pt-BR": "Você a abandonou apesar desses sentimentos,\\nmas fiquei aliviada ao descobrir o quanto você queria vê-la de novo.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r52/c7",
+     "source_text_sha256": "1f8f79b7b907e2340116c4752fafa92ac20f3957afad301ef1d313efe1dcef3b",
+     "pt-BR": "Você a abandonou apesar desses sentimentos,\\nmas fiquei aliviada ao saber que você sentia tanta falta dela que chorou.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r53/c7",
+     "source_text_sha256": "36241ebb1136618b9c31550e66ff2503e5166a212b685a1e1a0aa5aaff1655db",
+     "pt-BR": "Você a abandonou apesar desses sentimentos,\\nmas fiquei aliviada ao saber que você queria abraçá-la e nunca mais soltar.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r54/c7",
+     "source_text_sha256": "bf857cf00811fcd59902f452e37c801a2d1d6715b00883d69abca4c658658fe1",
+     "pt-BR": "Você a abandonou apesar desses sentimentos,\\nmas ver você se prostrar diante dela me deu mais pena que outra coisa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r55/c7",
+     "source_text_sha256": "3dc4ddd97653157d6000f8c0236455cff6645abfe6cbee5af5b3df181c3dd9e9",
+     "pt-BR": "Você a abandonou apesar desses sentimentos, mas, por algum motivo,\\nsua vontade intensa de beijá-la me convenceu naquela hora.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r56/c7",
+     "source_text_sha256": "7a20a5d3de11a8622480a3ff2c3f0e4deb227d40b5904febb89619e1cf5eeca8",
+     "pt-BR": "Quando você apontou para o escritor da web naquele instituto de pesquisa sinistro,\\nsenti que vi você de verdade, sem disfarce.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r57/c7",
+     "source_text_sha256": "529bff1a7d306a00c15911ef40dabe2c8108a15dddf026fb59858f1096b787af",
+     "pt-BR": "Quando você apontou para Yuki Kono naquele instituto de pesquisa sinistro,\\nela ficou muito triste.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r58/c7",
+     "source_text_sha256": "d19378ff5636ac6b682e471e15785d60b07dc3dc65f06f78eb1dcdb2706e9567",
+     "pt-BR": "Quando você apontou para si mesmo naquele instituto de pesquisa sinistro,\\nachei você confiável, mas também fiquei um pouco preocupada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r59/c7",
+     "source_text_sha256": "60ba0adbc2cbf4fd0b5a9fd8049a07bf1008e691492321e4c514dc8eb7fb4ff7",
+     "pt-BR": "...Até hoje, eu sempre viajei sozinha.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r60/c7",
+     "source_text_sha256": "be9061cac8a39147243a614356a0386b4db0b7ba9b3f4a238e3418e2e0ec32b6",
+     "pt-BR": "De todas as minhas jornadas, o tempo neste planeta foi especialmente fascinante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r61/c7",
+     "source_text_sha256": "e70d017f446761cfefd8d7f33f7458c27f3dc2579c0d443a9c8365075263a663",
+     "pt-BR": "A engenhosidade e a obsessão com que a W&P tentou usar aquele \"poder\"\\neram uma ameaça diferente das sombras que eu conhecia, algo totalmente novo...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r62/c7",
+     "source_text_sha256": "e4d800a489ddf82b45de9f2d56b9b0281bbab092ce0357afd2f5f9393a1488f6",
+     "pt-BR": "O jeito como você e Yuki Kono tentavam proteger um ao outro\\ntambém foi fascinante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r63/c7",
+     "source_text_sha256": "ee5de1a6ca078b96e34066333be5576ac93b3edb922b46cff3d57e05f79dda0f",
+     "pt-BR": "Foi fascinante ver como suas decisões, aparentemente improvisadas,\\nmuitas vezes davam certo no fim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r64/c7",
+     "source_text_sha256": "aa367317075e6344f5980a142e305f240a44629d081d144eca2266be60bb8115",
+     "pt-BR": "Quando você entregou Yuki à W&P para se salvar,\\nseus pensamentos em conflito também foram muito intrigantes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r65/c7",
+     "source_text_sha256": "c93ebf6d669a189bab0452a8085f58423ffd971c730ebaefeae6e1ae10996af3",
+     "pt-BR": "Passamos por esgotos e visitamos tantos lugares.\\nAgora lembro de tudo com carinho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r66/c7",
+     "source_text_sha256": "c2166117b1fe3e2e6c58776be2a7fcb6a749130b09144c10b6f83c4f8707ae20",
+     "pt-BR": "Embora o tempo que passamos juntos tenha sido curto,\\nele se tornou muito precioso para mim.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r67/c7",
+     "source_text_sha256": "91190488e55f0d37991b66831c7d265d86d760d72ac7a52268c67fe7909a445e",
+     "pt-BR": "Peço desculpas a Yuki Kono, cuja forma peguei emprestada,\\npor despertá-la do seu longo sono.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r68/c7",
+     "source_text_sha256": "eee9a04abb42c059e1ce4d112c699e6f1090a57ca7f24a33204edcfd39712bfb",
+     "pt-BR": "Sou grata pela sua dedicação.\\nGraças a você, consegui recuperar minhas forças.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r69/c7",
+     "source_text_sha256": "b6670981f0ecdfed7a42e8888844d908211736541d3336c011dfac02f65053a1",
+     "pt-BR": "Sua rapidez de raciocínio me salvou muitas vezes.\\nEu sabia que podia contar com você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r70/c7",
+     "source_text_sha256": "6608873d194879bed32e457480fbbe6122cc596caf350541fc03fa3506ca8867",
+     "pt-BR": "O progresso que você fez com seu \"poder\" foi notável.\\nEu sabia que podia contar com você.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r71/c7",
+     "source_text_sha256": "bcd97244eb612b36f07d9205622203514ac1f1c7171bb8b7020d419399b20e5d",
+     "pt-BR": "Suas ações inesperadas me surpreenderam várias vezes.\\nGostei muito delas.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r72/c7",
+     "source_text_sha256": "2307d9a09ae16ba8c2b57e1f2a46f35b75538c16b99da8d1a7d4eb1d7424c218",
+     "pt-BR": "Fico feliz que tenha sido você a me proteger.\\nFico feliz que tenha sido neste planeta que eu pousei.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r73/c7",
+     "source_text_sha256": "b24ee530a8986c1db0cdd8c99e17300634a425886be1c40e6ed8eedfd2afc285",
+     "pt-BR": "...Bom, está quase na hora de eu retomar minha jornada.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "r74/c7",
+     "source_text_sha256": "48423040f3d213cf1a3b23a09f0576104170037e830f30f214b89bf1c10a839a",
+     "pt-BR": "Produzido por Bandai Namco Entertainment Inc.",
      "notes": "",
      "editorial_status": "pending"
     }
