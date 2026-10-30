@@ -13,12 +13,13 @@ import zipfile
 
 from build_portable import ROOT, digest, personal_text_hits
 
-RELEASE = 'translation-en17-delta-20261029'
+RELEASE = 'translation-en17-ptbr-delta-20261029'
 DISC_ARCHIVE_BYTES = 6346525059
 FILES = (
     'runtime/kyoei.exe',
     'City Shrouded in Shadow.exe',
     'languages/en/translation.kydelta',
+    'languages/pt-BR/translation.kydelta',
     'languages/en/prompts.kypack',
     'languages/ja/prompts.kypack',
     'languages/en/eboot-text.kytext',
@@ -28,7 +29,7 @@ FILES = (
 REMOVE = ('languages/en/common.psarc', 'languages/en/ui-corrections.kydelta')
 PREFIX = 'Atualizacao-Traducao/'
 
-README = '''Tradução inglesa natural (en-17) — atualização pequena, 29/10/2026
+README = '''Tradução inglesa natural (en-17) e português do Brasil — atualização pequena, 29/10/2026
 
 A tradução agora é um arquivo pequeno lido por cima do jogo original.
 Este pacote troca o runtime, o launcher e os arquivos da tradução e EXCLUI
@@ -43,7 +44,8 @@ Já inclui o núcleo GoW3; serve para qualquer versão distribuída antes.
    Linux/Wine: num terminal na pasta do jogo, execute
    sh Atualizacao-Traducao/Aplicar-no-Linux.sh   (Python 3.11+, sem sudo)
 4. Abra pelo launcher habitual. O inglês deve aparecer com a revisão
-   natural, novos menus e dicas.
+   natural, novos menus e dicas. Para jogar em português, escolha
+   "Português (Brasil)" no idioma do launcher.
 
 Se algo falhar no meio, o aplicador desfaz e restaura os arquivos
 anteriores. Os arquivos pequenos substituídos ficam em data/update-backups.

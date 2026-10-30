@@ -1754,6 +1754,69 @@
      "pt-BR": "O ponto de ônibus é a nossa saída! Rápido!",
      "notes": "",
      "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k15",
+     "source_text_sha256": "29cbe6f3e0155e340d0d84b6be21836194da9c33eae3d6b6832a6856d14eafba",
+     "pt-BR": "Parque: Encontro com uma Moça",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k17",
+     "source_text_sha256": "22ccd3158e6c29972f7d672b5a0c6c4e1886abc2c2ca3cdb5b819df1ba509343",
+     "pt-BR": "Parque: Encontro com uma Amiga",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k19",
+     "source_text_sha256": "03ff57b7a78734db6c7090ddd1cd4ebfd75ae1c125c87693e02309bd5701e8e1",
+     "pt-BR": "Parque: Encontro com Alguém Importante",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k21",
+     "source_text_sha256": "4f1a330340dc63fc8459ceb1f11b434671af71b0b2e65ff00eecb5107052bf0e",
+     "pt-BR": "Parque: Encontro com Minha Namorada",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "d069020f8f4cdad6850db862cc3612a347deeec44f38fe801c3c0f07e577f46a",
+     "pt-BR": "Ir ao lugar onde vou encontrar uma moça. Primeiro, chegar à avenida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "6252a2f4d9ad299e2de72f0976ffa1bd818c4ef9e7efd2dbe99b0293ae9437bb",
+     "pt-BR": "Ir ao lugar onde vou encontrar uma amiga. Primeiro, chegar à avenida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "f1e5f6d7929e83637fad43c47e5dc1efa3a6ff3b9627c314433db1efd26ac005",
+     "pt-BR": "Ir ao lugar onde vou encontrar alguém importante pra mim. Primeiro, chegar à avenida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "7d6aae80af058648c43501a69e272aea3efb5bb6f9dc744ebd5a0ee798525919",
+     "pt-BR": "Ir ao lugar onde vou encontrar minha namorada. Primeiro, chegar à avenida.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k42",
+     "source_text_sha256": "f8d0cf09db333ab62224974f37473204329240181e551d5bec6c128a1bca497e",
+     "pt-BR": "Fugir da entrega suspeita de dinheiro, rápido.",
+     "notes": "",
+     "editorial_status": "pending"
     }
    ]
   },
@@ -11081,7 +11144,7 @@
     {
      "id": "p0/k11",
      "source_text_sha256": "df49c82ec6e94af54746a2e6a9d87c707e37751d6918361ec044fa814554bcb0",
-     "pt-BR": "Quase consigo pegar ???, mas não alcanço.",
+     "pt-BR": "(Teste)...1",
      "notes": "Texto interno de teste; não traduzir",
      "editorial_status": "pending"
     },
@@ -31957,6 +32020,496 @@
      "pt-BR": "Por favor, me ajude!",
      "notes": "",
      "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "9a2bcf855a91a2e0b32aa8321e1e91ebbb7a6bee9864bf08ff990468978f5cce",
+     "pt-BR": "Este não é o caminho pro lugar onde vou encontrar ela...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k9",
+     "source_text_sha256": "4385d0283a1f06db7f4a0cf101d7e3422e5033e25f76d70905947a7bee3c74ff",
+     "pt-BR": "Este não é o caminho pro lugar onde vou encontrar ela...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k11",
+     "source_text_sha256": "b1ddf0a2d8324948da901a24e719d6a1a565b19946acd4c5ac8bd2f6dd5e7697",
+     "pt-BR": "É perigoso demais descer ali...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k13",
+     "source_text_sha256": "3595f1f2b886bb8cb05d538e26a9bf258634c00749eccefcf2629a4d734c1eeb",
+     "pt-BR": "É perigoso demais descer ali...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "de7b223241482d01a427dfc90f51329ec0ac1ad1eca45295f554715c883518e4",
+     "pt-BR": "Escutar escondido",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "9384293b2c26f412077767c3099f347aad12e3492dbc68702e4ce866795e3a07",
+     "pt-BR": "Ouvir a conversa",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "10238f52102fdd5cf5c02a2012f4a58420f4ca25a1ce1a3c4ad9f7f5e64b3ba8",
+     "pt-BR": "Chamar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "2bbed3ce1cd23b3a5b2b44394995194d0f9895187b047376637f83e2bfe89e01",
+     "pt-BR": "Escutar de canto",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "e7b2555e5a7b8336385a30637851017011d2dac6638d298ccd33e3dade5893f7",
+     "pt-BR": "Conversar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "0f9485c48f08ef1fac746c949d98433bf57a3d2268e1ccac150aaf6716b975d1",
+     "pt-BR": "Entrar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "a7b8f4b31985e053fbce3cf2a73410d8407ce4239409f3049f687d8a9c14fe41",
+     "pt-BR": "Sair",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "ae2f81219d6e307c267b5a92e5668083a6e97bd248bd67b86b74358d189a6f6d",
+     "pt-BR": "Espiar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "a60298fe46ed2eb49e045c4aec15fde1f3cecad61413afa009cd33f4f319e5ce",
+     "pt-BR": "Encarar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "6e7ee9c703f8091339688cff01c5c8b07d8b6c62b19055e70507914819ad40b1",
+     "pt-BR": "Ver se está madura",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "ce8ce6cec830137e5cccbdf72cd9642ec86ccf5c3f41bc78cef14bd68cfa8560",
+     "pt-BR": "Abrir a cômoda",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k38",
+     "source_text_sha256": "a3cebeb581885bb8fd3b24e6675f4903fc6af298f55ecb8f225020529a524de9",
+     "pt-BR": "Olhar no espelho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k40",
+     "source_text_sha256": "c1ee2c0cd4e9e38c42d6133c938fa606cd39807eb350cf6f9631e92dfb384e25",
+     "pt-BR": "Olhar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k44",
+     "source_text_sha256": "70abbcadd6aa1af73a57759f46fbc0cc5b0eac9dc45197624738a09f22cd1322",
+     "pt-BR": "Ouvir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k50",
+     "source_text_sha256": "ef45183c1eac398a62cd7b00e3c9ab29e8c46950ff9d9f711028ad870c91487b",
+     "pt-BR": "Ouvir os resmungos",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k57",
+     "source_text_sha256": "d9291ccba400db30a740fa6a877a740f939f30503930152aeb24244597b680d2",
+     "pt-BR": "Ouvir",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k59",
+     "source_text_sha256": "e9da82c3959d39aff603535c186cfba5c1c5162e1fff0ca5e2a034e5058c30fc",
+     "pt-BR": "Observar",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k64",
+     "source_text_sha256": "b1fa3b1bd45f0c7e8ad0b9aa78c7a6bd30cb7258f5cfbb2194dc10654d126904",
+     "pt-BR": "Ouvir o que têm a dizer",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k92",
+     "source_text_sha256": "dad0775adb904b35e1579217be219feb608e93a0ea6c9b85d1ab9b48adf6980b",
+     "pt-BR": "(Está chovendo...)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k95",
+     "source_text_sha256": "9479ec6aad3368e93a44f7141659a96bd355a7c5d2edf35bf5c898f4de3fc9a0",
+     "pt-BR": "\"Sou homem.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k97",
+     "source_text_sha256": "b00510c950cbfaf33c3fee5314be082069ab0dfea7871a3f42e448566eb70e5c",
+     "pt-BR": "\"Sou mulher.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k101",
+     "source_text_sha256": "53ab6fdba8f398112a205ebc6b6c290e1be9e4bd9b9860748563ca9a4c89b062",
+     "pt-BR": "Então, aqui estou eu...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k104",
+     "source_text_sha256": "e8e5b0467f6fc3c9d7494f08b81a066c8e124255c8482098af6cf3701a246e94",
+     "pt-BR": "Então, aqui estou eu...",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k106",
+     "source_text_sha256": "a70396579647fad804cb9c729df44918437a63146ec93a40e80f1e57c69f860e",
+     "pt-BR": "Acabei de sair do trabalho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k108",
+     "source_text_sha256": "8df86ddab295976bd0b584efc14938556f7cb470ba5ab688fafc1d887814ccd7",
+     "pt-BR": "Acabei de sair da aula",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k110",
+     "source_text_sha256": "219a00cf5ed0a5c29a41067bcdef82973f4e240f8ffd776bc951ea5fbb785f9e",
+     "pt-BR": "Saí pra cidade, todo animado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k112",
+     "source_text_sha256": "a5ec45637a2be2996846c8b6a7547254e95e8b190ace9a3d21d5e781c64ea627",
+     "pt-BR": "Nem sei por que vim pra cá",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k114",
+     "source_text_sha256": "a18fa95c4c7674d97b602afa54c61fddd6c4676b9e2b04d85a0a9048ab326a53",
+     "pt-BR": "Saí pra cidade, SUPERanimado!!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k116",
+     "source_text_sha256": "2ecfd66113bc71888f0a5746412a58485fdb07c3b10dbd412a11f17650d48736",
+     "pt-BR": "Acabei de sair do trabalho",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k118",
+     "source_text_sha256": "0ec5756d530f0cebddde66e2ec171aa0be343a508176590f30b63568ffa15c09",
+     "pt-BR": "Acabei de sair da aula",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k120",
+     "source_text_sha256": "3e9a8d2545ff6dd514ad064664cd36951723d32c6a678097056b217b50f549ff",
+     "pt-BR": "Saí pra cidade, toda animada!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k122",
+     "source_text_sha256": "2093a36af7904e175d35b52ce66273e4c45db7202c5552ca1c8700e394716de2",
+     "pt-BR": "Nem sei por que vim pra cá",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k124",
+     "source_text_sha256": "2fc5aec900733214dae26999c2af8d86eba8b2bff5692d5f2ad1b4e1d56e6eee",
+     "pt-BR": "Saí pra cidade, SUPERanimada!!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k126",
+     "source_text_sha256": "9ca6820d233d91c4668b3f32ce3e01a47bd70c3efd148c072f400a0b4234def5",
+     "pt-BR": "Acabei de sair do trabalho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k128",
+     "source_text_sha256": "358fafe533692c9b78d873a531d0591a1c0056b1c3d01fd9a725be3f2f904d13",
+     "pt-BR": "Acabei de sair do trabalho.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k130",
+     "source_text_sha256": "7656751dde24607d81194c2c5af7554bb920ccc8923211745d2a919a75a20e02",
+     "pt-BR": "Acabei de sair da aula.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k132",
+     "source_text_sha256": "56c55a4869e0e708bd9fb3b839eeae82244bf56e4a2d036af63834ac2254dc5c",
+     "pt-BR": "Acabei de sair da aula.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k134",
+     "source_text_sha256": "77dcfebadb93d4e764244993fb51cbd283fd32bccb5c6097459335acb5b8feb6",
+     "pt-BR": "Acabei de sair pra cidade, e estou todo animado!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k136",
+     "source_text_sha256": "ff6955bfdf9b5ae5bf8288d048e50fa7179d947b4fb313f495d903a65676a2d2",
+     "pt-BR": "Acabei de sair pra cidade, e estou toda animada!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k138",
+     "source_text_sha256": "da74415f31c04adbb259ecbda598505518863b96a6d62d404976909a1526454a",
+     "pt-BR": "...Nem sei direito por que vim pra cá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k140",
+     "source_text_sha256": "5b40353f4036e4cde372cf47b2e37305635209ab78c21eb6fd878a25bf89dd47",
+     "pt-BR": "...Nem sei direito por que vim pra cá.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k149",
+     "source_text_sha256": "d9bef0f4e3de6a845889b3a7eb8e7bc5c3f2972189b6c0c9c6c42aa5a0e41e66",
+     "pt-BR": "Meu nome é...\n(Digite seu [#ff44ff44]sobrenome[/#] e seu [#ff44ff44]nome[/#].)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k151",
+     "source_text_sha256": "8553f4d12c93bedc88d2df97891c28a3e571861f7c0e3652151781b50be9c179",
+     "pt-BR": "Meu nome é...\n(Digite seu [#ff44ff44]sobrenome[/#] e seu [#ff44ff44]nome[/#].)",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k153",
+     "source_text_sha256": "7f985b9058ef5c83cfbcd3315ef615523a2f42904b56c67e692188e0c0efd580",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou um jovem funcionário de escritório.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k155",
+     "source_text_sha256": "b5e0cf16ba24d4ae9b8057ce84beb32c6e72774b139602825eed76699d3c8b92",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou uma jovem funcionária de escritório.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k157",
+     "source_text_sha256": "2b2499487a4a7d9874278ddc4149e60e28ec82ab26b0aa93889a1af724bc3058",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou estudante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k159",
+     "source_text_sha256": "52c35f0c8eab8243ba6e176eec3f436ec01a25b501c82de6fd5ec723deaacb6e",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou estudante.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k161",
+     "source_text_sha256": "03fedb5ed17a8ccd70a1bdb3f7d8c929484c4d02c18d80343771a58a9f17991d",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou jovem e cheio de energia!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k163",
+     "source_text_sha256": "8db47f8941a329659e1a73f1e82ca43bc7b20d62840b952e9141a65956164dad",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou jovem e cheia de energia!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k165",
+     "source_text_sha256": "076480a55bd37bdde4498b4e6934b6f757a1c91e46cd8aa5f655bb15a6310c48",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou jovem e meio que vou na onda.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k167",
+     "source_text_sha256": "8a014200ef41f3370db7fbe81cf68e539d811b0c43304e4e3abe5c1aa3251999",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou jovem e meio que vou na onda.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k169",
+     "source_text_sha256": "c837b6503651e9dba1d0e836365b69ea4177212f496430c980cb6f68bb6c198b",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou jovem e SUPERcheio de energia!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k171",
+     "source_text_sha256": "19463e6c9bd72a8e8d7d7f350db1f01281ad1bb43caec53f9aec24bf1bd1715d",
+     "pt-BR": "Meu nome é <P_FNAME> <P_LNAME>.\nSou jovem e SUPERcheia de energia!",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k173",
+     "source_text_sha256": "060ddc3622b808fd1c080f12ed9db5882fd01ec628f3c8bfc990e68ee834f432",
+     "pt-BR": "...Estou indo [#ff44ff44]encontrar uma moça[/#] no [#ff44ff44]nosso ponto de encontro[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k175",
+     "source_text_sha256": "caa0138db5aa08afb1d8b3a523312a07d71573c3cb013455129f06cf0b9d04b6",
+     "pt-BR": "...Estou indo [#ff44ff44]encontrar uma moça[/#] no [#ff44ff44]nosso ponto de encontro[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k177",
+     "source_text_sha256": "3d5ab712d24196c0beef5c635a376692dd5e7097b34449803d1e0619840f710b",
+     "pt-BR": "\"Ela é minha amiga.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k179",
+     "source_text_sha256": "bd652ae37fc91e5fd851e1da5d75b2eb1e1aa6c6f426d11eae68c6907cbba1e6",
+     "pt-BR": "\"Ela é muito importante pra mim.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k181",
+     "source_text_sha256": "b99ae69e4080acc4bced070923ba25f42345a817cc58c7268e2f98c46608c0da",
+     "pt-BR": "\"Ela é minha namorada.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k183",
+     "source_text_sha256": "38eda07e3bc67b8e5433f41f8ab2b035c2a440b460e46852c626763a568ec225",
+     "pt-BR": "\"...Nem conheço ela tão bem assim...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k185",
+     "source_text_sha256": "ed300b13bac376a92ec9d26488faa10aa7ec3449eba4ebac6d473426254b54f8",
+     "pt-BR": "\"Ela é minha amiga.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k187",
+     "source_text_sha256": "d9c0785a0352f39221e221eea61ef797abec33e0efe631fffbf53510a723fc44",
+     "pt-BR": "\"Ela é muito importante pra mim.\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k189",
+     "source_text_sha256": "80ef3a8b0ead253a4dad7a7dc8b6fe587f2eedd86a0770103d15c74195492a00",
+     "pt-BR": "\"Ela é minha namorada♪\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k191",
+     "source_text_sha256": "1f8461e5d03cfe1a97ff92d5defb4d3000c35d7de7d310f3db03efbc65633810",
+     "pt-BR": "\"...Nem conheço ela tão bem assim...\"",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k201",
+     "source_text_sha256": "6b1e5a50cb4ff68917184667d42d51a05621494612737180486c0ae6ce57b747",
+     "pt-BR": "Vamos nos encontrar [#ff44ff44]no parque à direita,\ndescendo aquela avenida[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k203",
+     "source_text_sha256": "a678a36253a3026aa2e324911b6095f81a2fba5e882ce87a31c236de9965f35d",
+     "pt-BR": "Acho que vamos nos encontrar [#ff44ff44]no parque à direita,\ndescendo aquela avenida[/#].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k205",
+     "source_text_sha256": "4eaa5a6d21b693a74f996d3cf8501f577f4eaf19f41c8ee3f6c9f7cd2ff8b4bd",
+     "pt-BR": "Muito bem, vamos.",
+     "notes": "",
+     "editorial_status": "pending"
     }
    ]
   },
@@ -47995,6 +48548,111 @@
      "id": "p0/k3",
      "source_text_sha256": "bbf67044e474881f67f19f3eb721fae1b00617e20b613933d44e1c0dd5f49fe2",
      "pt-BR": "Homem 1",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "84d5f963078fdc287d39c2423d5696619aa01019e5026151c2c2c9a2cdba223e",
+     "pt-BR": "Liga ou desliga a vibração do controle.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k10",
+     "source_text_sha256": "37e6bcedbc32e0f205b944e4bf94c71401c7be787ff4ab6748f6c9cfcfd21f0b",
+     "pt-BR": "Escolhe o controle vertical da câmera.\n- Normal: para cima olha para cima, para baixo olha para baixo.\n- Invertido: para cima olha para baixo, para baixo olha para cima.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k12",
+     "source_text_sha256": "c82978fa0ce5ddaf7e9ffde17187eeadf90feff39cfa494e67c6bb3f59488f59",
+     "pt-BR": "Escolhe o controle horizontal da câmera.\n- Normal: direita olha para a direita, esquerda olha para a esquerda.\n- Invertido: direita olha para a esquerda, esquerda olha para a direita.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k14",
+     "source_text_sha256": "851cd4228ace6d7669690aec05e926bb48b0863fa4e8629e0caafe8e2fc75b5d",
+     "pt-BR": "Liga ou desliga a voz do protagonista.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k16",
+     "source_text_sha256": "42f8209da8d4f88573dda36f1d93382ee2d7641161c20224f84e98ed40e1c1e0",
+     "pt-BR": "Liga ou desliga a voz dos outros personagens.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k18",
+     "source_text_sha256": "703378e3680aab2c6fb3fa375b88f70365e6e7e4e8968f5459466ed5d800604a",
+     "pt-BR": "Mostra ou esconde as barras de vida e de energia.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k20",
+     "source_text_sha256": "22608d8e1a481c01f85990df705f463e0798e45f73fd2b008244ed8cc5eb81e1",
+     "pt-BR": "Escolhe a visão da câmera.\nTambém dá para trocar durante o jogo com [i10]/[i11].",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k22",
+     "source_text_sha256": "a4c0fb91958e426705b3e76772b3ac91a382e948de6381791945d1f5bcbdf0ea",
+     "pt-BR": "Mostra ou esconde o mapa.\nTambém dá para alternar durante o jogo com o botão do touch pad.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k24",
+     "source_text_sha256": "071248fa187fd10a689b0b95299b4d88e8788dc69a845297773f182f0c58367f",
+     "pt-BR": "Escolhe o tamanho do guia de controles na tela.\nDetalhado mostra o diagrama completo; Simples mostra só os ícones.\n",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k26",
+     "source_text_sha256": "b5582d00d9ffef8552557aaf4704ec583518039e3147ba595755d64d27687929",
+     "pt-BR": "Ajusta o brilho da tela.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k28",
+     "source_text_sha256": "f3552f95c12d4eaff02d33423c5f3868f64bf9ef918def9027a80c4d885d914b",
+     "pt-BR": "Ajusta o volume das vozes.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k30",
+     "source_text_sha256": "dc44ae6c5b726351d21e440594fb0609ae3097f19ae40bec92d116807db0afd5",
+     "pt-BR": "Ajusta o volume da música.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k32",
+     "source_text_sha256": "a57ce9b37b84d7f9d413b6b4368c94a201452f2458bab54380b635cb1707ec4f",
+     "pt-BR": "Ajusta o volume dos efeitos sonoros.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k34",
+     "source_text_sha256": "abee47e41d6828cd2d3c81cccfd2fafe53517c6c2edd32e30a47d2380284ba25",
+     "pt-BR": "Liga ou desliga a rotação do mapa.",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k36",
+     "source_text_sha256": "7e57e3c69a90e7a268fe0c7b4c42d42b0e26ece8ae0c4dcfe6d580c76f5455cf",
+     "pt-BR": "Liga ou desliga as legendas das cenas.",
      "notes": "",
      "editorial_status": "pending"
     }
@@ -109177,26 +109835,6 @@
      "id": "r74/c7",
      "source_text_sha256": "48423040f3d213cf1a3b23a09f0576104170037e830f30f214b89bf1c10a839a",
      "pt-BR": "Produzido por Bandai Namco Entertainment Inc.",
-     "notes": "",
-     "editorial_status": "pending"
-    }
-   ]
-  },
-  {
-   "path": "common/lua/stage_205_news_data.luc",
-   "source_sha256": "026c8a85c3cde01579c6345bbf9182443cf55a93641b2ed850075d6d83cc9751",
-   "entries": [
-    {
-     "id": "p0/k4",
-     "source_text_sha256": "1d20267ab88f3a3bb35bf92b38c1e7641371c2bc480158ea530ad00f45b62427",
-     "pt-BR": "07/04/2017 21:07",
-     "notes": "",
-     "editorial_status": "pending"
-    },
-    {
-     "id": "p0/k6",
-     "source_text_sha256": "67371f4e4864cfdb61ae7494e5484ccc653b6bedfb1266dca5130a75269192a8",
-     "pt-BR": "【Vídeo】Anjo devasta a cidade à noite",
      "notes": "",
      "editorial_status": "pending"
     }
