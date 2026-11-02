@@ -5275,3 +5275,4 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Defeito achado nos dois idiomas: uma notícia (Toro e Kuro, estágio 212) mostrava o código japonês cru "＜主人公＞"; trocado por "A certain young person" / "Uma certa pessoa jovem".
 - Conferências: marcadores do jogo iguais aos de antes (os avisos restantes já existiam: nomes do protagonista); larguras dos carregamentos iguais (pt 2 títulos de 61 já existentes, en 0); testes de tradução, diagramas e preparo OK.
 - Deltas refeitos em build/rc2-work: en 13.269 e pt-BR 15.578 entradas, roundtrip verificado. Jogo não aberto.
+- Pedido de Davy: X/O muda só no japonês. Parâmetro 1000 do sistema agora devolve círculo (0) quando GZ_LANGUAGE=0 (japonês) e X (1) nos outros idiomas; adaptação no CMakeLists (cópia fixa do Godzilla intacta). Runtime recompilado e instalado; jogo não aberto.

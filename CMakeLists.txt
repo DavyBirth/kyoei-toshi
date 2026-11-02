@@ -246,6 +246,10 @@ kyoei_replace_checked(KYOEI_DIALOG_UI
   "L\"Aguarde...\" : L\"X / Enter: confirmar     Setas: escolher     Círculo / Esc: voltar\""
   "kyoei_system_text(KYOEI_TEXT_WAIT) : kyoei_system_text(KYOEI_TEXT_HINT)")
 set(KYOEI_DIALOG_UI "#include \"kyoei_system_text.h\"\n${KYOEI_DIALOG_UI}")
+# Japanese keeps the PS4 Japanese layout: circle confirms (0); other languages use cross (1).
+kyoei_replace_checked(KYOEI_SERVICES
+  "case 1000: *value = 1; break; /* enter button = cross */"
+  "case 1000: *value = language() == 0 ? 0 : 1; break; /* enter button: circle in Japanese */")
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" CONTENT "${KYOEI_SERVICES}" @ONLY)
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c" CONTENT "${KYOEI_DIALOG_UI}" @ONLY)
 list(APPEND CORE_FILES "${CMAKE_CURRENT_BINARY_DIR}/kyoei_services.c" "${CMAKE_CURRENT_BINARY_DIR}/kyoei_dialog_ui.c")
