@@ -14,7 +14,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from psarc import Psarc
 from tex_preview import preview
 
-FONT = Path('C:/Windows/Fonts/seguisb.ttf')  # closest shape match (fit against New Game)
+from localize_textures import FONT as FALLBACK_FONT
+FONT = Path('C:/Windows/Fonts/seguisb.ttf') if Path('C:/Windows/Fonts/seguisb.ttf').exists() else FALLBACK_FONT
 LABEL = 'Return to Desktop'
 STROKE = 2  # in 4x pixels: half a pixel heavier than Segoe UI Semibold
 

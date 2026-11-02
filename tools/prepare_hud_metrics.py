@@ -9,6 +9,21 @@ from check_game_font_tables import glyph_rows
 from text_tool import REPO
 
 
+def native_metrics(table_data):
+    tables=[]
+    for data in table_data:
+        glyphs=glyph_rows(data)[0]
+        nominal=glyphs['\u3042']['advance']
+        if not math.isfinite(nominal) or nominal<=0:raise ValueError('Invalid nominal advance')
+        for char in '\u2018\u2019\u201c\u201d\u2026\u266a':
+            if char not in glyphs or not math.isclose(glyphs[char]['advance']/nominal,1.0,abs_tol=1e-6):
+                raise ValueError('Verified full-width punctuation metrics changed')
+        tables.append([glyphs[chr(ch)]['advance']/nominal for ch in range(32,127)])
+    if len(tables)!=2:raise ValueError('Expected both native font tables')
+    advances=[max(pair) for pair in zip(*tables)]
+    if any(not math.isfinite(v) or v<=0 or v>4 for v in advances):raise ValueError('Invalid normalized native advances')
+    return b'KHF1'+struct.pack('<I95f',95,*advances)
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('output',type=Path)
@@ -24,18 +39,9 @@ def main():
         data=(Path(audit['source'])/name).read_bytes()
         if hashlib.sha256(data).hexdigest()!=records[name]['sha256']:
             raise ValueError('Native font table changed')
-        glyphs=glyph_rows(data)[0]
-        nominal=glyphs['\u3042']['advance']
-        if not math.isfinite(nominal) or nominal<=0: raise ValueError('Invalid nominal advance')
-        for char in '\u2018\u2019\u201c\u201d\u2026\u266a':
-            if char not in glyphs or not math.isclose(glyphs[char]['advance']/nominal,1.0,abs_tol=1e-6):
-                raise ValueError('Verified full-width punctuation metrics changed')
-        tables.append([glyphs[chr(ch)]['advance']/nominal for ch in range(32,127)])
-    advances=[max(pair) for pair in zip(*tables)]
-    if any(not math.isfinite(v) or v<=0 or v>4 for v in advances):
-        raise ValueError('Invalid normalized native advances')
+        tables.append(data)
     target.parent.mkdir(parents=True,exist_ok=True)
-    target.write_bytes(b'KHF1'+struct.pack('<I95f',95,*advances))
+    target.write_bytes(native_metrics(tables))
     print(f'Private native metrics: 95 ASCII glyphs, max of two fonts; {target}')
 
 

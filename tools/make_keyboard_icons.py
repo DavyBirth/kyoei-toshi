@@ -130,7 +130,9 @@ def marker(w, h, english):
     im.alpha_composite(cap, (0, 0))
     d = ImageDraw.Draw(im)
     text = 'Trocar alvo' if english=='pt-BR' else 'Switch target' if english else '対象切替'
-    font_path = FONT if english else REPO / 'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts/NotoSansCJK-Regular.ttc'
+    font_path = FONT if english else next((p for p in (
+        REPO/'assets/fonts/NotoSansCJK-Regular.ttc',
+        REPO/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts/NotoSansCJK-Regular.ttc') if p.exists()),FONT)
     box_w, box_h = (w - h - 4) * SCALE, int(h * SCALE * .5)
     font, _ = fit(d, text, font_path, box_w, box_h)
     d.text(((h + 4) * SCALE, h * SCALE / 2), text, font=font, fill=(235, 235, 235, 255), anchor='lm',

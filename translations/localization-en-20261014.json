@@ -40,7 +40,7 @@
         {
           "id": "r4/c5",
           "source_text_sha256": "cabfe519dcc837c60c4b2d9111543a132c7b8685f48d88a1ccb6955824664f6f",
-          "en": "Observation Deck, 1F\\nTalk to people and check out everything around you. It'll\\nhelp you escape, and you'll learn the layout along the\\nway.",
+          "en": "Observation Deck, 1F\\nTalk to people and check out everything around you. It'll\\nhelp you escape, and you'll\\nlearn the layout along the way.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r4/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -96,7 +96,7 @@
         {
           "id": "r12/c5",
           "source_text_sha256": "6f47cc51e5767c447e7a4e48fb954eda563b8f13c9d24a0e6d3b0a73198808cf",
-          "en": "Stuck?\\nTry talking to different people. They might point you to a\\nnew path.",
+          "en": "Stuck?\\nTry talking to different people.\\nThey might point you to a new path.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r12/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -110,7 +110,7 @@
         {
           "id": "r14/c5",
           "source_text_sha256": "74cbd7364af0f332e523e22d5ee8b8038f0ae027aeefe923dfed91fd3c82afe7",
-          "en": "On the Lower Level...\\nTake your time and look around. You might find a way\\nforward.",
+          "en": "On the Lower Level...\\nTake your time and look around.\\nYou might find a way forward.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r14/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -138,7 +138,7 @@
         {
           "id": "r18/c5",
           "source_text_sha256": "737fdb8efb936880242fa39199aa4bfa8fabfc5c6591c22d4c19e525faadbe6d",
-          "en": "Sprinting\\nHold [i12] while moving to sprint. Sprinting lets you run\\nfaster.",
+          "en": "Sprinting\\nHold [i12] while moving to sprint.\\nSprinting lets you run faster.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r18/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -208,7 +208,7 @@
         {
           "id": "r28/c5",
           "source_text_sha256": "cec9edea689bbc57cac1593c63d3c85a4675fc7a495e8881233297bff8b28351",
-          "en": "Fire!\\nStaying in a fire too long is dangerous. Hurry to the\\nstairs!",
+          "en": "Fire!\\nStaying in a fire too long is\\ndangerous. Hurry to the stairs!",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r28/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
@@ -5141,14 +5141,14 @@
         {
           "id": "r9/c3",
           "source_text_sha256": "356c19e00c342d67ad3585746d2744a3fb3e6318ca06fe59ef9e259396f7e9fe",
-          "en": "In the chaos of the giant alien's attack, I saw two\\nsuspicious men making a deal. Then they started\\nchasing me.",
+          "en": "In the chaos of the giant alien's attack, I saw two\\nsuspicious men making a deal.\\nThen they started chasing me.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r9/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r9/c4",
           "source_text_sha256": "d195a78a0ebf69120ddeb8625e6643c1b347f1bc355d5a7dde83f37f8916d9bb",
-          "en": "In the chaos of the giant alien's attack, I saw two\\nsuspicious men making a deal. Then they started\\nchasing me.",
+          "en": "In the chaos of the giant alien's attack, I saw two\\nsuspicious men making a deal.\\nThen they started chasing me.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r9/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5232,14 +5232,14 @@
         {
           "id": "r14/c3",
           "source_text_sha256": "5560b2aea3daabc9ab634cec69344006ec1f4b55bb050f04317fbe87fa4c130f",
-          "en": "The giant alien tore through streets and cars one after\\nanother. All I could do was run. The park where we'd\\nplanned to meet was close now. I just had to keep\\nrunning.",
+          "en": "The giant alien tore through streets and cars one after\\nanother. All I could do was run. The park where we'd\\nplanned to meet was close now.\\nI just had to keep running.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r14/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r14/c4",
           "source_text_sha256": "b0e76b57e41117de23413dfb3c016cc9ea4bb47923ae171311d48a8e8ba878b6",
-          "en": "The giant alien tore through streets and cars one after\\nanother. All I could do was run. The park where we'd\\nplanned to meet was close now. I just had to keep\\nrunning.",
+          "en": "The giant alien tore through streets and cars one after\\nanother. All I could do was run. The park where we'd\\nplanned to meet was close now.\\nI just had to keep running.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r14/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -5253,14 +5253,14 @@
         {
           "id": "r15/c3",
           "source_text_sha256": "8cda6cb9442a74b43305bf99a3ed9c2bb47b8ebe1ac0c858c9b9bdff3235bf47",
-          "en": "I found Yuki in the park, took her hand, and ran. I had\\nno idea where we were going. I just wanted to escape.\\nWe hurried down the stairs ahead. She followed without\\na word.",
+          "en": "I found Yuki in the park, took her hand, and ran. I had\\nno idea where we were going. I just wanted to escape.\\nWe hurried down the stairs ahead.\\nShe followed without a word.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r15/c3; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "r15/c4",
           "source_text_sha256": "aa39a39b514f79fb87ba70b16a88c091a6ca00c881a2e3921daf1e3693ee06ff",
-          "en": "I found Yuki in the park, took her hand, and ran. I had\\nno idea where we were going. I just wanted to escape.\\nWe hurried down the stairs ahead. She followed without\\na word.",
+          "en": "I found Yuki in the park, took her hand, and ran. I had\\nno idea where we were going. I just wanted to escape.\\nWe hurried down the stairs ahead.\\nShe followed without a word.",
           "notes": "English draft imported from audited private workspace, translate-en-0045.json:r15/c4; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },

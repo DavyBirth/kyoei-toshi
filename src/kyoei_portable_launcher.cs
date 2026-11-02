@@ -34,6 +34,9 @@ class PortableLauncher : Form {
             if(args.Length==1 && args[0]=="--check") {
                 try { app.Check(); return 0; } catch(Exception e) { Console.Error.WriteLine(e.Message);return 1; }
             }
+            if(args.Length==1 && args[0]=="--check-payload") {
+                try { app.CheckPayload(); return 0; } catch(Exception e) { Console.Error.WriteLine(e.Message);return 1; }
+            }
             if(args.Length==1 && args[0]=="--render-preview") {
                 app.ShowInTaskbar=false;app.Opacity=0;app.Show();Application.DoEvents();
                 using(var b=new Bitmap(app.Width,app.Height)) {app.DrawToBitmap(b,new Rectangle(0,0,b.Width,b.Height));b.Save(Path.Combine(app.root,"launcher-preview.png"));}
@@ -71,7 +74,7 @@ class PortableLauncher : Form {
         AddText("LANGUAGE",496,255,180,22,9,Color.Silver);
         bool portuguese=File.Exists(Path.Combine(root,"languages","pt-BR","translation.kydelta"));
         if(portuguese)languageCodes=new string[]{"en","ja","pt-BR"};
-        Setup(language,496,282,430,portuguese?new string[]{"English","日本語 · Original","Português (Brasil) · prévia"}:new string[]{"English","日本語 · Original"});
+        Setup(language,496,282,430,portuguese?new string[]{"English","日本語 · Original","Português (Brasil)"}:new string[]{"English","日本語 · Original"});
         AddText("DISPLAY",496,330,180,22,9,Color.Silver);
         Setup(resolution,496,356,220,new string[]{"1280 × 720","1600 × 900","1920 × 1080","2560 × 1440","3840 × 2160"});
         fullscreen.SetBounds(735,356,200,28);fullscreen.Text="Fullscreen";fullscreen.ForeColor=Color.Silver;Controls.Add(fullscreen);
@@ -81,13 +84,18 @@ class PortableLauncher : Form {
         var graphicsButton=new Button();graphicsButton.SetBounds(784,389,142,27);graphicsButton.Text="GRAPHICS";
         graphicsButton.FlatStyle=FlatStyle.Flat;graphicsButton.ForeColor=Color.WhiteSmoke;
         graphicsButton.Click+=delegate{using(var dialog=GraphicsDialog())dialog.ShowDialog(this);};Controls.Add(graphicsButton);
-        play.SetBounds(496,421,430,56);play.Text="START GAME";play.Font=new Font("Segoe UI",14,FontStyle.Bold);
+        play.SetBounds(496,421,430,56);play.Text=Local("START GAME","INICIAR JOGO");play.Font=new Font("Segoe UI",14,FontStyle.Bold);
         play.FlatStyle=FlatStyle.Flat;play.FlatAppearance.BorderSize=0;play.BackColor=Color.FromArgb(162,31,49);play.ForeColor=Color.White;
         play.Cursor=Cursors.Hand;play.Click+=delegate{Launch();};Controls.Add(play);
         status.SetBounds(496,493,430,58);status.ForeColor=Color.FromArgb(155,155,167);status.Font=new Font("Segoe UI",9);
-        status.Text="English localization · work in progress\nYour saves and settings stay in this folder.";Controls.Add(status);
+        status.Text=Local("Your saves and settings stay in this folder.","Seus saves e configurações ficam nesta pasta.");Controls.Add(status);
         LoadSettings();
-        FormClosing+=delegate(object sender,FormClosingEventArgs e){if(running){e.Cancel=true;WindowState=FormWindowState.Minimized;}};
+        if(!Prepared()) {
+            play.Text=Local("PREPARE YOUR GAME","PREPARAR SEU JOGO");
+            status.Text=Local("Choose your own game dump to get started.\nNo game files are included in this application.",
+                "Escolha a cópia do seu próprio jogo para começar.\nO aplicativo não inclui os arquivos do jogo.");
+        }
+        FormClosing+=delegate(object sender,FormClosingEventArgs e){if(running&&e.CloseReason!=CloseReason.WindowsShutDown){e.Cancel=true;WindowState=FormWindowState.Minimized;}};
     }
     protected override void OnPaint(PaintEventArgs e) {
         base.OnPaint(e);var g=e.Graphics;
@@ -106,6 +114,80 @@ class PortableLauncher : Form {
     void Check() {
         foreach(string name in new string[]{"runtime/kyoei.exe","runtime/out/boot-linked.bin","runtime/out/imports.tsv","runtime/out/deferred.tsv","runtime/out/tls-sites.tsv","game/eboot.bin","game/sce_sys/param.sfo","game/DAT/common.psarc","assets/fonts/NotoSans-Regular.ttf","assets/fonts/NotoSansCJK-Regular.ttc","assets/hud-metrics.bin"})
             if(!File.Exists(Path.Combine(root,name)))throw new IOException("Missing portable file: "+name);
+    }
+    bool PortugueseUi { get { return CultureInfo.CurrentUICulture.TwoLetterISOLanguageName=="pt"; } }
+    string Local(string en,string pt) { return PortugueseUi?pt:en; }
+    static string QuotedPath(string value) {
+        if(value.IndexOf('"')>=0)throw new IOException("Invalid folder name.");
+        int trailing=0;for(int i=value.Length-1;i>=0&&value[i]=='\\';--i)++trailing;
+        return "\""+value+new string('\\',trailing)+"\"";
+    }
+    string lastSetup;
+    bool Prepared() { try {Check();return true;} catch {return false;} }
+    void CheckPayload() {
+        foreach(string name in new[]{"runtime/kyoei.exe","support/python/python.exe","tools/bootstrap_portable.py",
+                "third_party/godzilla-core/scripts/prepare.py","third_party/godzilla-core/scripts/link_modules.py","third_party/godzilla-core/scripts/game_check.py",
+                "docs/release/supported-game.json","translations/localization-pt-BR.json",
+                "assets/fonts/NotoSans-Regular.ttf","assets/fonts/NotoSansCJK-Regular.ttc"})
+            if(!File.Exists(Path.Combine(root,name)))throw new IOException(Local("Application file missing: ","Arquivo do aplicativo ausente: ")+name);
+    }
+    void PrepareGame() {
+        if(running)return;
+        try {
+            CheckPayload();string game,firmware;
+            using(var picker=new FolderBrowserDialog()) {
+                picker.Description=Local("Select your own Kyoei Toshi dump (CUSA03562, version 01.03).",
+                    "Selecione o dump do seu Kyoei Toshi (CUSA03562, versão 01.03).");
+                picker.ShowNewFolderButton=false;
+                if(picker.ShowDialog(this)!=DialogResult.OK)return;game=picker.SelectedPath;
+                picker.Description=Local("Select the system modules extracted from your own PS4 (including libSceFont.sprx).",
+                    "Selecione os módulos extraídos do seu PS4 (incluindo libSceFont.sprx).");
+                if(picker.ShowDialog(this)!=DialogResult.OK)return;firmware=picker.SelectedPath;
+            }
+            Directory.CreateDirectory(Path.Combine(root,"data","logs"));
+            profileLock=new FileStream(Path.Combine(root,"data","session.lock"),FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.None);
+            running=true;play.Enabled=false;language.Enabled=false;resolution.Enabled=false;fullscreen.Enabled=false;
+            status.Text=Local("Preparing your game. Please wait...","Preparando seu jogo. Aguarde...");
+            var start=new ProcessStartInfo(Path.Combine(root,"support","python","python.exe"));
+            start.Arguments="-X utf8 -u tools/bootstrap_portable.py --game "+QuotedPath(game)+" --firmware "+QuotedPath(firmware);
+            start.WorkingDirectory=root;start.UseShellExecute=false;start.CreateNoWindow=true;
+            start.RedirectStandardOutput=true;start.RedirectStandardError=true;
+            start.StandardOutputEncoding=System.Text.Encoding.UTF8;start.StandardErrorEncoding=System.Text.Encoding.UTF8;
+            Task.Factory.StartNew(delegate {
+                int result=1;
+                try {
+                    using(var log=new StreamWriter(Path.Combine(root,"data","logs","setup.log"),false,System.Text.Encoding.UTF8))
+                    using(var process=new Process()) {
+                        object gate=new object();process.StartInfo=start;
+                        DataReceivedEventHandler receive=delegate(object sender,DataReceivedEventArgs e) {
+                            if(e.Data==null)return;lock(gate){log.WriteLine(e.Data);log.Flush();}
+                            if(e.Data.StartsWith("SETUP: ")&&!IsDisposed) {
+                                string[] parts=e.Data.Substring(7).Split(new[]{'|'},2);string message=PortugueseUi||parts.Length<2?parts[0]:parts[1];lastSetup=message;BeginInvoke((Action)delegate{status.Text=message;});
+                            }
+                        };
+                        process.OutputDataReceived+=receive;process.ErrorDataReceived+=receive;
+                        process.Start();process.BeginOutputReadLine();process.BeginErrorReadLine();process.WaitForExit();result=process.ExitCode;
+                    }
+                }catch(Exception error){try{File.AppendAllText(Path.Combine(root,"data","logs","setup.log"),error.ToString(),System.Text.Encoding.UTF8);}catch{}}
+                if(!IsDisposed)BeginInvoke((Action)delegate {
+                    if(profileLock!=null){profileLock.Dispose();profileLock=null;}
+                    running=false;play.Enabled=true;language.Enabled=true;resolution.Enabled=true;fullscreen.Enabled=true;
+                    if(result==0&&Prepared()) {
+                        if(artwork!=null){artwork.Dispose();artwork=null;}
+                        string art=Path.Combine(root,"assets","artwork.png");
+                        if(File.Exists(art))using(var image=Image.FromFile(art))artwork=new Bitmap(image);
+                        string icon=Path.Combine(root,"assets","game.ico");if(File.Exists(icon))Icon=new Icon(icon);
+                        languageCodes=new[]{"en","ja","pt-BR"};language.Items.Clear();
+                        language.Items.AddRange(new object[]{"English","日本語 · Original","Português (Brasil)"});
+                        language.SelectedIndex=PortugueseUi?2:0;LoadSettings();play.Text=Local("START GAME","INICIAR JOGO");
+                        status.Text=Local("Ready. Choose your language and start the game.","Pronto. Escolha o idioma e inicie o jogo.");Invalidate();
+                    } else {
+                        play.Text=Local("PREPARE YOUR GAME","PREPARAR SEU JOGO");
+                        status.Text=lastSetup!=null&&lastSetup.Contains(":")?lastSetup:Local("Preparation did not finish. See data/logs/setup.log.","O preparo não terminou. Veja data/logs/setup.log.");
+                    }
+                });
+            });
+        }catch(Exception e){if(profileLock!=null){profileLock.Dispose();profileLock=null;}MessageBox.Show(e.Message,Text,MessageBoxButtons.OK,MessageBoxIcon.Error);}
     }
     void LoadSettings() {
         try { var lines=File.ReadAllLines(Path.Combine(root,"data","settings.txt"));
@@ -198,6 +280,7 @@ class PortableLauncher : Form {
     }
     void Launch() {
         if(running)return;
+        if(!Prepared()){PrepareGame();return;}
         try {
             Check();
             Directory.CreateDirectory(Path.Combine(root,"data","user"));Directory.CreateDirectory(Path.Combine(root,"data","logs"));
@@ -251,7 +334,7 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["GZ_READBACK_LINEAR"]="1";start.EnvironmentVariables["GZ_PRESENT_MODE"]="Fifo";
             start.EnvironmentVariables["KYOEI_FRAME_STATS"]="1";
             start.EnvironmentVariables["KYOEI_PIPELINE_CACHE_DIR"]="data/cache/vulkan";
-            running=true;play.Enabled=false;language.Enabled=false;resolution.Enabled=false;fullscreen.Enabled=false;status.Text="Starting…";
+            running=true;play.Enabled=false;language.Enabled=false;resolution.Enabled=false;fullscreen.Enabled=false;status.Text=Local("Starting…","Iniciando…");
             Task.Factory.StartNew(delegate {
                 int result=1;
                 try {
@@ -263,7 +346,7 @@ class PortableLauncher : Form {
                 if(!IsDisposed)BeginInvoke((Action)delegate {
                     if(profileLock!=null){profileLock.Dispose();profileLock=null;}
                     running=false;play.Enabled=true;language.Enabled=true;resolution.Enabled=true;fullscreen.Enabled=true;
-                    status.Text=result==0?"Game closed.":"Game stopped. See data/logs/session.log.";
+                    status.Text=result==0?Local("Game closed.","Jogo fechado."):Local("Game stopped. See data/logs/session.log.","O jogo parou. Veja data/logs/session.log.");
                 });
             });
         }catch(Exception e){if(profileLock!=null){profileLock.Dispose();profileLock=null;}MessageBox.Show(e.Message,Text,MessageBoxButtons.OK,MessageBoxIcon.Error);}

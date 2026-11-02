@@ -91,6 +91,9 @@ static int check_fit_callback(void) {
         strcmp(actual->pointer,"Senhora da floricultura")) return 25;
     memcpy(&scale,node+0x80,4);float vertical;memcpy(&vertical,node+0x84,4);
     if (!(scale>0 && scale<1) || vertical!=1) return 26;
+    fake_assign(object+0x190,"Noshiro, editor da Editora Ebine, completamente exausto");
+    kyoei_hud_test_npc(fake_npc,&result,object);memcpy(&scale,node+0x80,4);
+    if (fabsf(scale-.6f)>.001f) return 29;
     fake_assign(object+0x190,"Yuki");kyoei_hud_test_npc(fake_npc,&result,object);
     memcpy(&scale,node+0x80,4);
     if (strcmp(actual->pointer,"Yuki") || scale!=1) return 27;

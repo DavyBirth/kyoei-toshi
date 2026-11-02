@@ -2814,6 +2814,26 @@
    ]
   },
   {
+   "path": "common/lua/stage_205_news_data.luc",
+   "source_sha256": "026c8a85c3cde01579c6345bbf9182443cf55a93641b2ed850075d6d83cc9751",
+   "entries": [
+    {
+     "id": "p0/k4",
+     "source_text_sha256": "1d20267ab88f3a3bb35bf92b38c1e7641371c2bc480158ea530ad00f45b62427",
+     "pt-BR": "07/04/2017 21:07",
+     "notes": "",
+     "editorial_status": "pending"
+    },
+    {
+     "id": "p0/k6",
+     "source_text_sha256": "67371f4e4864cfdb61ae7494e5484ccc653b6bedfb1266dca5130a75269192a8",
+     "pt-BR": "【Vídeo】Anjo devasta a cidade à noite",
+     "notes": "",
+     "editorial_status": "pending"
+    }
+   ]
+  },
+  {
    "path": "common/lua/stage_210_news_text.luc",
    "source_sha256": "1c575203f6420af477aae10e01c4dffd0fdba46d2940fd05c4ee1d6f99715c7d",
    "entries": [
@@ -4558,7 +4578,7 @@
     {
      "id": "p0/k192",
      "source_text_sha256": "a5ad435ebe24ca5d9583d570fa7092db08d17012f4b5e7c1da80b8bf60d7a1df",
-     "pt-BR": "Me senti mais corajoso",
+     "pt-BR": "Bateu uma coragem",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -4579,14 +4599,14 @@
     {
      "id": "p0/k198",
      "source_text_sha256": "6509c6120a22be1d4069d6b2e2cf62d09a08455d5aeb646031aa40221a21b2d6",
-     "pt-BR": "Fiquei muito irritado",
+     "pt-BR": "Bateu uma irritação",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k200",
      "source_text_sha256": "ac9b3f8b7639e543cc1087e0d931f70e5e3bbc8acb2f3f557449405d0781dee0",
-     "pt-BR": "Fiquei muito desconfiado",
+     "pt-BR": "Bateu uma desconfiança",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -4600,7 +4620,7 @@
     {
      "id": "p0/k211",
      "source_text_sha256": "ec8dea9b4cbc8b8401e6c717302f6ebd71ea9a57010b8448b95921dd4306134b",
-     "pt-BR": "(Me senti mais corajoso.)",
+     "pt-BR": "(Bateu uma coragem.)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -4621,14 +4641,14 @@
     {
      "id": "p0/k220",
      "source_text_sha256": "552384677ca3b70b0cf92b13ac87b2f69faaee6b77913fbb78741ceb0fb660bb",
-     "pt-BR": "(Fiquei muito irritado.)",
+     "pt-BR": "(Bateu uma irritação.)",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k223",
      "source_text_sha256": "d6e6b3d2175a3ee21354a8349f91c62b0d36ee23d1dd15834a81ddf5df89ffd1",
-     "pt-BR": "(Fiquei muito desconfiado.)",
+     "pt-BR": "(Bateu uma desconfiança.)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -8447,7 +8467,7 @@
     {
      "id": "p0/k18",
      "source_text_sha256": "2379a4dc1f2228042a38d9c5bda878c7756fb2e06b6fe77e08ba335560cfa8f1",
-     "pt-BR": "(Você está amarrado, mas consegue pegar mesmo assim)",
+     "pt-BR": "(Mesmo com as mãos amarradas, você consegue pegar)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -9098,7 +9118,7 @@
     {
      "id": "p0/k208",
      "source_text_sha256": "cbf4cd2dc54aaa4064c910fb410781cb49e6aef8dcdc7d2a76b1aacabaac73aa",
-     "pt-BR": "Estou amarrado e não alcanço a porta.",
+     "pt-BR": "Com as mãos amarradas, não alcanço a porta.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -9231,7 +9251,7 @@
     {
      "id": "p0/k248",
      "source_text_sha256": "9c0e996572149a2fd2ca76197469dcc910efd6f8dda3cfe20dd4b88ea60438fc",
-     "pt-BR": "Estou amarrado e não alcanço a gaveta.",
+     "pt-BR": "Com as mãos amarradas, não alcanço a gaveta.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -14111,7 +14131,7 @@
     {
      "id": "p0/k389",
      "source_text_sha256": "3a23cf511437798561bc631ea05944f805e937568c0cb47976a5bd8f882cb75b",
-     "pt-BR": "Ah... Então você está interessado?\nEntão... que tal isto?",
+     "pt-BR": "Ah... Então isso te interessa?\nEntão... que tal isto?",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -17845,7 +17865,7 @@
     {
      "id": "p0/k91",
      "source_text_sha256": "91427722fc2ad15951bb6ce3a8b2fa8cd65e0ab72a52210dbcaf167554258425",
-     "pt-BR": "Bem-vindo!",
+     "pt-BR": "Olá! Fique à vontade!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -18629,7 +18649,7 @@
     {
      "id": "p0/k291",
      "source_text_sha256": "fe44054196c4a26c19947fbfaee2cb497b3ec4f54ed2d7ca7e531412b7b1f1e1",
-     "pt-BR": "\"Eu também sou médico.\" (uma mentirinha)",
+     "pt-BR": "\"Eu também sou da área médica.\" (uma mentirinha)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -20980,14 +21000,14 @@
     {
      "id": "r0/c3",
      "source_text_sha256": "2ba788272a5dca97ad80487a6279de23f4fdf4ae1c3375a618a4134548c391fb",
-     "pt-BR": "Já passava das seis da tarde. A primavera tinha\\nchegado, mas a chuva continuava fria. Esqueci o\\nguarda-chuva e saí andando assim mesmo. Espere...\\nPara onde eu estava indo? Parei e olhei ao redor.",
+     "pt-BR": "Já passava das seis da tarde. A primavera tinha\\nchegado, mas a chuva continuava fria. Esqueci\\no guarda-chuva e saí andando assim mesmo. Espere...\\nPara onde eu estava indo? Parei e olhei ao redor.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r0/c4",
      "source_text_sha256": "dfda78ef89f73698887442fef07ebd437fd98a68166c2183b0b76e2d9245b220",
-     "pt-BR": "Já passava das seis da tarde. A primavera tinha\\nchegado, mas a chuva continuava fria. Esqueci o\\nguarda-chuva e saí andando assim mesmo. Espere...\\nPara onde eu estava indo? Parei e olhei ao redor.",
+     "pt-BR": "Já passava das seis da tarde. A primavera tinha\\nchegado, mas a chuva continuava fria. Esqueci\\no guarda-chuva e saí andando assim mesmo. Espere...\\nPara onde eu estava indo? Parei e olhei ao redor.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -21281,14 +21301,14 @@
     {
      "id": "r16/c3",
      "source_text_sha256": "37237485e56f585d578e49fd588188faee6444e52db6b2dbb435328c77d5fbb5",
-     "pt-BR": "No túnel do metrô, demos de cara com criaturas\\ndesconhecidas. Elas atacavam quem encontravam pelo\\ncaminho.",
+     "pt-BR": "No túnel do metrô, demos de cara com criaturas\\ndesconhecidas. Elas atacavam\\nquem encontravam pelo caminho.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r16/c4",
      "source_text_sha256": "37237485e56f585d578e49fd588188faee6444e52db6b2dbb435328c77d5fbb5",
-     "pt-BR": "No túnel do metrô, demos de cara com criaturas\\ndesconhecidas. Elas atacavam quem encontravam pelo\\ncaminho.",
+     "pt-BR": "No túnel do metrô, demos de cara com criaturas\\ndesconhecidas. Elas atacavam\\nquem encontravam pelo caminho.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -21386,14 +21406,14 @@
     {
      "id": "r21/c3",
      "source_text_sha256": "85fc377d7702bbe1041d8c3983a668b9f421cfcf33bc4d8f38bb032e1f906b93",
-     "pt-BR": "Pegamos uma moto emprestada para buscar ajuda para\\nquem ficou para trás. No caminho, enfrentamos\\ncriaturas voadoras gigantes e uma ponte prestes a\\ndesabar.",
+     "pt-BR": "Pegamos uma moto emprestada para buscar ajuda para\\nquem ficou para trás. No caminho, enfrentamos\\ncriaturas voadoras gigantes e\\numa ponte prestes a desabar.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r21/c4",
      "source_text_sha256": "85fc377d7702bbe1041d8c3983a668b9f421cfcf33bc4d8f38bb032e1f906b93",
-     "pt-BR": "Pegamos uma moto emprestada para buscar ajuda para\\nquem ficou para trás. No caminho, enfrentamos\\ncriaturas voadoras gigantes e uma ponte prestes a\\ndesabar.",
+     "pt-BR": "Pegamos uma moto emprestada para buscar ajuda para\\nquem ficou para trás. No caminho, enfrentamos\\ncriaturas voadoras gigantes e\\numa ponte prestes a desabar.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -21512,14 +21532,14 @@
     {
      "id": "r27/c3",
      "source_text_sha256": "15a261353107860e949cd63365be29d8ac854b6aa4e0fa4399eccef4c9bbfdce",
-     "pt-BR": "Os homens batiam de propósito no nosso carro. Para\\npiorar, os raios das criaturas voadoras incendiaram a\\nponte.",
+     "pt-BR": "Os homens batiam de propósito no nosso carro. Para\\npiorar, os raios das criaturas\\nvoadoras incendiaram a ponte.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r27/c4",
      "source_text_sha256": "15a261353107860e949cd63365be29d8ac854b6aa4e0fa4399eccef4c9bbfdce",
-     "pt-BR": "Os homens batiam de propósito no nosso carro. Para\\npiorar, os raios das criaturas voadoras incendiaram a\\nponte.",
+     "pt-BR": "Os homens batiam de propósito no nosso carro. Para\\npiorar, os raios das criaturas\\nvoadoras incendiaram a ponte.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -21575,14 +21595,14 @@
     {
      "id": "r30/c3",
      "source_text_sha256": "5fe632cdd58e07dfa63ead0b59b474f02d5be6b471d0abb82f905dd716b85a9d",
-     "pt-BR": "Disseram que havia um extintor na sala a nordeste.\\nPrecisávamos apagar o fogo depressa e seguir para\\noeste.",
+     "pt-BR": "Disseram que havia um extintor na sala a nordeste.\\nPrecisávamos apagar o fogo\\ndepressa e seguir para oeste.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r30/c4",
      "source_text_sha256": "5fe632cdd58e07dfa63ead0b59b474f02d5be6b471d0abb82f905dd716b85a9d",
-     "pt-BR": "Disseram que havia um extintor na sala a nordeste.\\nPrecisávamos apagar o fogo depressa e seguir para\\noeste.",
+     "pt-BR": "Disseram que havia um extintor na sala a nordeste.\\nPrecisávamos apagar o fogo\\ndepressa e seguir para oeste.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -21617,14 +21637,14 @@
     {
      "id": "r32/c3",
      "source_text_sha256": "3d86c4d4cd73483c190d2c52f538a7bbe847105adace12e29c129c303e9cb333",
-     "pt-BR": "O andar dos escritórios estava tomado pela fumaça.\\nTínhamos ficado para trás. Corremos para a escada de\\nemergência.",
+     "pt-BR": "O andar dos escritórios estava tomado pela fumaça.\\nTínhamos ficado para trás. Corremos\\npara a escada de emergência.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r32/c4",
      "source_text_sha256": "ea06a822ef7381f6ca369b2e66ccefcbcc3a06f30ab7d7f576ba494e24f9234f",
-     "pt-BR": "O andar dos escritórios estava tomado pela fumaça.\\nTínhamos ficado para trás. Corremos para a escada de\\nemergência.",
+     "pt-BR": "O andar dos escritórios estava tomado pela fumaça.\\nTínhamos ficado para trás. Corremos\\npara a escada de emergência.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -21680,14 +21700,14 @@
     {
      "id": "r35/c3",
      "source_text_sha256": "07cb6bcfe2b0b5e03df41f974fc308841b28da9281fbb488f157bf46c8ae1ab8",
-     "pt-BR": "Shibata e Muto apareceram na torre. Não podíamos\\ndeixar que nos pegassem. Precisávamos sair dali,\\ndepressa!",
+     "pt-BR": "Shibata e Muto apareceram na torre. Não podíamos\\ndeixar que nos pegassem.\\nPrecisávamos sair dali, depressa!",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r35/c4",
      "source_text_sha256": "07cb6bcfe2b0b5e03df41f974fc308841b28da9281fbb488f157bf46c8ae1ab8",
-     "pt-BR": "Shibata e Muto apareceram na torre. Não podíamos\\ndeixar que nos pegassem. Precisávamos sair dali,\\ndepressa!",
+     "pt-BR": "Shibata e Muto apareceram na torre. Não podíamos\\ndeixar que nos pegassem.\\nPrecisávamos sair dali, depressa!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -21722,14 +21742,14 @@
     {
      "id": "r37/c3",
      "source_text_sha256": "20710b644561add44b1cffb7f75076c985318b7c465a41be82fc3d053aa02ac2",
-     "pt-BR": "Um caminhão-tanque foi atingido, e o fogo se espalhou.\\nA Yuki ficou cercada pelas chamas. Miho estava\\ndesesperada. Conseguimos escapar e seguimos pela\\ncidade até o hospital onde o pai da menina estava\\ninternado.",
+     "pt-BR": "Um caminhão-tanque foi atingido, e o fogo se espalhou.\\nA Yuki ficou cercada pelas chamas. Miho estava\\ndesesperada. Conseguimos escapar e seguimos pela\\ncidade até o hospital onde o\\npai da menina estava internado.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r37/c4",
      "source_text_sha256": "ab01b23fc33bc024faf12a02df49df9f122a733df24f9c1804d3c580c3fa2d49",
-     "pt-BR": "Um caminhão-tanque foi atingido, e o fogo se espalhou.\\nA Yuki ficou cercada pelas chamas. Miho estava\\ndesesperada. Conseguimos escapar e seguimos pela\\ncidade até o hospital onde o pai da menina estava\\ninternado.",
+     "pt-BR": "Um caminhão-tanque foi atingido, e o fogo se espalhou.\\nA Yuki ficou cercada pelas chamas. Miho estava\\ndesesperada. Conseguimos escapar e seguimos pela\\ncidade até o hospital onde o\\npai da menina estava internado.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -21974,14 +21994,14 @@
     {
      "id": "r49/c3",
      "source_text_sha256": "f625bbbe128ef8349c933d4a32fb6b8bbb5b9e3bb86edaece933b83e76c764aa",
-     "pt-BR": "Um homem suspeito deixou uma bomba e foi embora.\\nUm estrondo sacudiu o depósito, que foi tomado pelas\\nchamas.",
+     "pt-BR": "Um homem suspeito deixou uma bomba e foi embora.\\nUm estrondo sacudiu o depósito,\\nque foi tomado pelas chamas.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r49/c4",
      "source_text_sha256": "f625bbbe128ef8349c933d4a32fb6b8bbb5b9e3bb86edaece933b83e76c764aa",
-     "pt-BR": "Um homem suspeito deixou uma bomba e foi embora.\\nUm estrondo sacudiu o depósito, que foi tomado pelas\\nchamas.",
+     "pt-BR": "Um homem suspeito deixou uma bomba e foi embora.\\nUm estrondo sacudiu o depósito,\\nque foi tomado pelas chamas.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22121,14 +22141,14 @@
     {
      "id": "r56/c3",
      "source_text_sha256": "3936a3c9a0a9d684eaaf3442952141a7614fa003638af83ceabdac6eb23414c6",
-     "pt-BR": "Acabamos aceitando entregar o pacote que o rapaz da\\nempresa de TI havia deixado conosco. Com os gritos\\nda criatura gigante ecoando lá fora, decidimos sair do\\nprédio.",
+     "pt-BR": "Acabamos aceitando entregar o pacote que o rapaz da\\nempresa de TI havia deixado conosco. Com os gritos\\nda criatura gigante ecoando lá\\nfora, decidimos sair do prédio.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r56/c4",
      "source_text_sha256": "ffa7f05a46c76e1e1ac45f998fc723599cf8c80b78bc8b8e65248423a228f857",
-     "pt-BR": "Acabamos aceitando entregar o pacote que o rapaz da\\nempresa de TI havia deixado conosco. Com os gritos\\nda criatura gigante ecoando lá fora, decidimos sair do\\nprédio.",
+     "pt-BR": "Acabamos aceitando entregar o pacote que o rapaz da\\nempresa de TI havia deixado conosco. Com os gritos\\nda criatura gigante ecoando lá\\nfora, decidimos sair do prédio.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22142,14 +22162,14 @@
     {
      "id": "r57/c3",
      "source_text_sha256": "581db8fc87efbf67ab3297c45615f7148bb4fadc96d0c4275ad19b7ab5fb0fe2",
-     "pt-BR": "Desviamos de árvores e escombros enquanto\\nseguíamos a moto de Risa. A lanterna traseira e as\\nconversas que chegavam pelo rádio nos guiavam pelo\\ncaminho.",
+     "pt-BR": "Desviamos de árvores e escombros enquanto\\nseguíamos a moto de Risa. A lanterna traseira e as\\nconversas que chegavam pelo\\nrádio nos guiavam pelo caminho.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r57/c4",
      "source_text_sha256": "581db8fc87efbf67ab3297c45615f7148bb4fadc96d0c4275ad19b7ab5fb0fe2",
-     "pt-BR": "Desviamos de árvores e escombros enquanto\\nseguíamos a moto de Risa. A lanterna traseira e as\\nconversas que chegavam pelo rádio nos guiavam pelo\\ncaminho.",
+     "pt-BR": "Desviamos de árvores e escombros enquanto\\nseguíamos a moto de Risa. A lanterna traseira e as\\nconversas que chegavam pelo\\nrádio nos guiavam pelo caminho.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22205,14 +22225,14 @@
     {
      "id": "r60/c3",
      "source_text_sha256": "283435e21458f1a82ac4b95586ca8918c7d0771883ff6f0d4c13a74824e7257a",
-     "pt-BR": "Os gigantes subiram aos céus. O gigante cinza bateu\\nnum prédio, destruindo os andares superiores. Os\\nescombros caíram sobre a linha elevada onde\\nestávamos!",
+     "pt-BR": "Os gigantes subiram aos céus. O gigante cinza bateu\\nnum prédio, destruindo os andares superiores. Os\\nescombros caíram sobre a\\nlinha elevada onde estávamos!",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r60/c4",
      "source_text_sha256": "5d88e859f22680a109f53f28cc18120678a0978af563e472e808914bc60be4bd",
-     "pt-BR": "Os gigantes subiram aos céus. O gigante cinza bateu\\nnum prédio, destruindo os andares superiores. Os\\nescombros caíram sobre a linha elevada onde\\nestávamos!",
+     "pt-BR": "Os gigantes subiram aos céus. O gigante cinza bateu\\nnum prédio, destruindo os andares superiores. Os\\nescombros caíram sobre a\\nlinha elevada onde estávamos!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22268,14 +22288,14 @@
     {
      "id": "r63/c3",
      "source_text_sha256": "01d819d524360290a1d328798896a1ce39a0b2344313286d351e9408fa11ea18",
-     "pt-BR": "O gigante de luz colocou o trem em segurança na linha\\nelevada. Vagões descarrilados bloqueavam o caminho\\nde volta. A Yuki e eu decidimos seguir até a próxima\\nestação.",
+     "pt-BR": "O gigante de luz colocou o trem em segurança na linha\\nelevada. Vagões descarrilados bloqueavam o caminho\\nde volta. A Yuki e eu decidimos\\nseguir até a próxima estação.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r63/c4",
      "source_text_sha256": "db80a6ebcce3b84d2df789fc41477d6232c3955f767ba2b982cb9547cd0b31ba",
-     "pt-BR": "O gigante de luz colocou o trem em segurança na linha\\nelevada. Vagões descarrilados bloqueavam o caminho\\nde volta. A Yuki e eu decidimos seguir até a próxima\\nestação.",
+     "pt-BR": "O gigante de luz colocou o trem em segurança na linha\\nelevada. Vagões descarrilados bloqueavam o caminho\\nde volta. A Yuki e eu decidimos\\nseguir até a próxima estação.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22352,14 +22372,14 @@
     {
      "id": "r67/c3",
      "source_text_sha256": "8998c1b006d7865c5354e8db88fc46a2d52720d316e1889b1f3f2c1355fbf9c5",
-     "pt-BR": "Escapamos do monstro voador e chegamos ao lado\\nleste do prédio. A saída ficava perto da escada rolante.\\nO monstro continuava atacando. Precisávamos nos\\napressar!",
+     "pt-BR": "Escapamos do monstro voador e chegamos ao lado\\nleste do prédio. A saída ficava perto da escada rolante.\\nO monstro continuava atacando.\\nPrecisávamos nos apressar!",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r67/c4",
      "source_text_sha256": "49c82cfd0045f7d96d3e3fce729f9a856fac198d51325b20a7ad7c5eabf98ad7",
-     "pt-BR": "Escapamos do monstro voador e chegamos ao lado\\nleste do prédio. A saída ficava perto da escada rolante.\\nO monstro continuava atacando. Precisávamos nos\\napressar!",
+     "pt-BR": "Escapamos do monstro voador e chegamos ao lado\\nleste do prédio. A saída ficava perto da escada rolante.\\nO monstro continuava atacando.\\nPrecisávamos nos apressar!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22394,14 +22414,14 @@
     {
      "id": "r69/c3",
      "source_text_sha256": "5aed0dd17c63f9a3dd1b124a47fd4f35113badafb587840d30bfc6b3909a94ca",
-     "pt-BR": "Um monstro voador pousou e bloqueou o cruzamento.\\nEntramos num prédio, mas ainda corríamos perigo.\\nComo chegaríamos ao cruzamento e ao ponto de\\nônibus?",
+     "pt-BR": "Um monstro voador pousou e bloqueou o cruzamento.\\nEntramos num prédio, mas ainda corríamos perigo.\\nComo chegaríamos ao cruzamento\\ne ao ponto de ônibus?",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r69/c4",
      "source_text_sha256": "5aed0dd17c63f9a3dd1b124a47fd4f35113badafb587840d30bfc6b3909a94ca",
-     "pt-BR": "Um monstro voador pousou e bloqueou o cruzamento.\\nEntramos num prédio, mas ainda corríamos perigo.\\nComo chegaríamos ao cruzamento e ao ponto de\\nônibus?",
+     "pt-BR": "Um monstro voador pousou e bloqueou o cruzamento.\\nEntramos num prédio, mas ainda corríamos perigo.\\nComo chegaríamos ao cruzamento\\ne ao ponto de ônibus?",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22436,14 +22456,14 @@
     {
      "id": "r71/c3",
      "source_text_sha256": "e7455cd2832f97e9ee2c53acdf202ed14624c24521c82b590722440d834b60fe",
-     "pt-BR": "Para atravessar a rua bloqueada pelos acidentes, subi\\nnum caminhão-tanque. Sem lugar para me esconder,\\nfiquei exposto aos ataques daquelas presas ferozes.",
+     "pt-BR": "Para atravessar a rua bloqueada pelos acidentes, subi\\nnum caminhão-tanque. Sem lugar para me esconder,\\nfiquei à mercê dos ataques daquelas presas ferozes.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r71/c4",
      "source_text_sha256": "bf38185b6b7b844befd8fd504c0b34200bd3805005c1dc55afcf157ba29b1df8",
-     "pt-BR": "Para atravessar a rua bloqueada pelos acidentes, subi\\nnum caminhão-tanque. Sem lugar para me esconder,\\nfiquei exposto aos ataques daquelas presas ferozes.",
+     "pt-BR": "Para atravessar a rua bloqueada pelos acidentes, subi\\nnum caminhão-tanque. Sem lugar para me esconder,\\nfiquei à mercê dos ataques daquelas presas ferozes.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22478,14 +22498,14 @@
     {
      "id": "r73/c3",
      "source_text_sha256": "51498ef678b40588cb3d9b5e318e7d49917eb5acb4f332d808622f990fcd80fe",
-     "pt-BR": "Os homens armados nos cercaram, mas um bando de\\nmonstros voadores apareceu e levou Muto. Antes que\\nsurgisse outra ameaça, corremos para o ponto de\\nônibus.",
+     "pt-BR": "Os homens armados nos cercaram, mas um bando de\\nmonstros voadores apareceu e levou Muto. Antes que\\nsurgisse outra ameaça, corremos\\npara o ponto de ônibus.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r73/c4",
      "source_text_sha256": "51498ef678b40588cb3d9b5e318e7d49917eb5acb4f332d808622f990fcd80fe",
-     "pt-BR": "Os homens armados nos cercaram, mas um bando de\\nmonstros voadores apareceu e levou Muto. Antes que\\nsurgisse outra ameaça, corremos para o ponto de\\nônibus.",
+     "pt-BR": "Os homens armados nos cercaram, mas um bando de\\nmonstros voadores apareceu e levou Muto. Antes que\\nsurgisse outra ameaça, corremos\\npara o ponto de ônibus.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22541,14 +22561,14 @@
     {
      "id": "r76/c3",
      "source_text_sha256": "41e94894b7f46a0ef1548b044f7ecf1890a5dbcabf032c229267e8cec4f06241",
-     "pt-BR": "Um monstro voador nos atacou. Desviei das garras e\\ndas mandíbulas. Não podia parar. Era desviar ou\\nmorrer...",
+     "pt-BR": "Um monstro voador nos atacou. Desviei das garras e\\ndas mandíbulas. Não podia\\nparar. Era desviar ou morrer...",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r76/c4",
      "source_text_sha256": "41e94894b7f46a0ef1548b044f7ecf1890a5dbcabf032c229267e8cec4f06241",
-     "pt-BR": "Um monstro voador nos atacou. Desviei das garras e\\ndas mandíbulas. Não podia parar. Era desviar ou\\nmorrer...",
+     "pt-BR": "Um monstro voador nos atacou. Desviei das garras e\\ndas mandíbulas. Não podia\\nparar. Era desviar ou morrer...",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22562,14 +22582,14 @@
     {
      "id": "r77/c3",
      "source_text_sha256": "9540addfa39faefcf46536176beb9edb6639b404375e53e26a09dc9d7a01492d",
-     "pt-BR": "Com os monstros voadores guinchando ao redor,\\navançamos devagar pelas vigas de aço. Era preciso\\nmanter a calma, ter coragem e confiar no próximo\\npasso...",
+     "pt-BR": "Com os monstros voadores guinchando ao redor,\\navançamos devagar pelas vigas de aço. Era preciso\\nmanter a calma, ter coragem\\ne confiar no próximo passo...",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r77/c4",
      "source_text_sha256": "9540addfa39faefcf46536176beb9edb6639b404375e53e26a09dc9d7a01492d",
-     "pt-BR": "Com os monstros voadores guinchando ao redor,\\navançamos devagar pelas vigas de aço. Era preciso\\nmanter a calma, ter coragem e confiar no próximo\\npasso...",
+     "pt-BR": "Com os monstros voadores guinchando ao redor,\\navançamos devagar pelas vigas de aço. Era preciso\\nmanter a calma, ter coragem\\ne confiar no próximo passo...",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22688,14 +22708,14 @@
     {
      "id": "r83/c3",
      "source_text_sha256": "c9a66ce4c2e872cc2e9a25141191126c1504418ee3b1c53fefe4e90f93c4a034",
-     "pt-BR": "Quando a ave monstruosa se foi, saí do ônibus\\nrastejando. Atordoado, sentei no chão e pensei nela,\\nque havia sido levada...\\nAh...",
+     "pt-BR": "Quando a ave monstruosa se foi, saí do ônibus\\nrastejando. Em choque, sentei no chão e pensei nela,\\nque havia sido levada...\\nAh...",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r83/c4",
      "source_text_sha256": "55abffc7c9c62619393bf96a2a43ba02826389a0c923e7c0aa52c4eccc4fc1e0",
-     "pt-BR": "Quando a ave monstruosa se foi, saí do ônibus\\nrastejando. Atordoado, sentei no chão e pensei nela,\\nque havia sido levada...\\nAh...",
+     "pt-BR": "Quando a ave monstruosa se foi, saí do ônibus\\nrastejando. Em choque, sentei no chão e pensei nela,\\nque havia sido levada...\\nAh...",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -22877,14 +22897,14 @@
     {
      "id": "r92/c3",
      "source_text_sha256": "a03040b2ca5cd7474d8ea9a7797a19bfc448625a9ba15c5798ccaf0171826adc",
-     "pt-BR": "A luta entre os gigantes fez um prédio desabar. Quase\\narrastado pelo vento que o gigante vermelho soprava,\\ncontinuei em frente para salvar Risa.",
+     "pt-BR": "A luta entre os gigantes fez um prédio desabar.\\nLutando contra o vento que o gigante vermelho soprava,\\ncontinuei em frente para salvar Risa.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r92/c4",
      "source_text_sha256": "a03040b2ca5cd7474d8ea9a7797a19bfc448625a9ba15c5798ccaf0171826adc",
-     "pt-BR": "A luta entre os gigantes fez um prédio desabar. Quase\\narrastado pelo vento que o gigante vermelho soprava,\\ncontinuei em frente para salvar Risa.",
+     "pt-BR": "A luta entre os gigantes fez um prédio desabar.\\nLutando contra o vento que o gigante vermelho soprava,\\ncontinuei em frente para salvar Risa.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -23108,14 +23128,14 @@
     {
      "id": "r103/c3",
      "source_text_sha256": "e35dd06c03c26de83a1a7193711b5c149530105a691d6aae0acd0c3e2f2c132c",
-     "pt-BR": "Algo me atingiu, e perdi a consciência. Lembro da venda\\nnos olhos e das mãos amarradas nas costas.\\nAinda atordoado, fui levado para dentro de um prédio.\\nEntão tiraram a venda...",
+     "pt-BR": "Algo me atingiu, e perdi a consciência. Lembro da venda\\nnos olhos e das mãos amarradas nas costas.\\nAinda sem entender nada, me levaram para dentro de um prédio.\\nEntão tiraram a venda...",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r103/c4",
      "source_text_sha256": "e35dd06c03c26de83a1a7193711b5c149530105a691d6aae0acd0c3e2f2c132c",
-     "pt-BR": "Algo me atingiu, e perdi a consciência. Lembro da venda\\nnos olhos e das mãos amarradas nas costas.\\nAinda atordoado, fui levado para dentro de um prédio.\\nEntão tiraram a venda...",
+     "pt-BR": "Algo me atingiu, e perdi a consciência. Lembro da venda\\nnos olhos e das mãos amarradas nas costas.\\nAinda sem entender nada, me levaram para dentro de um prédio.\\nEntão tiraram a venda...",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -23150,14 +23170,14 @@
     {
      "id": "r105/c3",
      "source_text_sha256": "f9627f8dbbaa54a29c4a56c1f73ba36948f8081c553b3757aec96c8a81c24840",
-     "pt-BR": "Otsuka nos pediu que resgatássemos uma velha amiga:\\numa editora-chefe que estava ferida. Procurávamos o\\nprédio da editora quando um alienígena gigante negro\\napareceu!",
+     "pt-BR": "Otsuka nos pediu que resgatássemos uma velha amiga:\\numa editora-chefe que estava ferida. Procurávamos o\\nprédio da editora quando um\\nalienígena gigante negro apareceu!",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r105/c4",
      "source_text_sha256": "f9627f8dbbaa54a29c4a56c1f73ba36948f8081c553b3757aec96c8a81c24840",
-     "pt-BR": "Otsuka nos pediu que resgatássemos uma velha amiga:\\numa editora-chefe que estava ferida. Procurávamos o\\nprédio da editora quando um alienígena gigante negro\\napareceu!",
+     "pt-BR": "Otsuka nos pediu que resgatássemos uma velha amiga:\\numa editora-chefe que estava ferida. Procurávamos o\\nprédio da editora quando um\\nalienígena gigante negro apareceu!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -23255,14 +23275,14 @@
     {
      "id": "r110/c3",
      "source_text_sha256": "0cca67754408ed20d01b7dde8d6ef178732a701fe0783510e23176822b72c2c8",
-     "pt-BR": "Nos despedimos da editora-chefe e partimos para\\nMizuna. Como estaria a luta entre os alienígenas\\ngigantes?",
+     "pt-BR": "Nos despedimos da editora-chefe e partimos para\\nMizuna. Como estaria a luta\\nentre os alienígenas gigantes?",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r110/c4",
      "source_text_sha256": "0cca67754408ed20d01b7dde8d6ef178732a701fe0783510e23176822b72c2c8",
-     "pt-BR": "Nos despedimos da editora-chefe e partimos para\\nMizuna. Como estaria a luta entre os alienígenas\\ngigantes?",
+     "pt-BR": "Nos despedimos da editora-chefe e partimos para\\nMizuna. Como estaria a luta\\nentre os alienígenas gigantes?",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -23423,14 +23443,14 @@
     {
      "id": "r118/c3",
      "source_text_sha256": "936cd3af7a9ce556e0ee6d668c2eb03ebe3d60316217f3e6e6417e3f5844f141",
-     "pt-BR": "Levaram a Yuki de mim. Atordoado, andei sem rumo.\\nAndei tanto que perdi a noção do tempo. Tinha medo\\nde parar, então continuei.\\nAh...",
+     "pt-BR": "Levaram a Yuki de mim. Em choque, andei sem rumo.\\nAndei tanto que perdi a noção do tempo. Tinha medo\\nde parar, então continuei.\\nAh...",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r118/c4",
      "source_text_sha256": "ce415ebc8c9772ad36362214ddeab868d127c650c72130c6e0ca8bc6df4fc3ae",
-     "pt-BR": "Levaram a Yuki de mim. Atordoado, andei sem rumo.\\nAndei tanto que perdi a noção do tempo. Tinha medo\\nde parar, então continuei.\\nAh...",
+     "pt-BR": "Levaram a Yuki de mim. Em choque, andei sem rumo.\\nAndei tanto que perdi a noção do tempo. Tinha medo\\nde parar, então continuei.\\nAh...",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -23507,14 +23527,14 @@
     {
      "id": "r122/c3",
      "source_text_sha256": "8d09838e3c3c5b9b125754fd3674d8e233bdbf68d5e73fd824d3675df74dd002",
-     "pt-BR": "Olhei para cima e vi um objeto estranho flutuando no\\ncéu.",
+     "pt-BR": "Olhei para cima e vi um objeto\\nestranho flutuando no céu.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r122/c4",
      "source_text_sha256": "8d09838e3c3c5b9b125754fd3674d8e233bdbf68d5e73fd824d3675df74dd002",
-     "pt-BR": "Olhei para cima e vi um objeto estranho flutuando no\\ncéu.",
+     "pt-BR": "Olhei para cima e vi um objeto\\nestranho flutuando no céu.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -23528,14 +23548,14 @@
     {
      "id": "r123/c3",
      "source_text_sha256": "1d833ac8af6c892389c1eb031f5196113f08ad83d32b114c80f13fbd78a51237",
-     "pt-BR": "A leiteria estava em apuros: o leite não tinha chegado.\\nSerá que os desastres também estavam atrapalhando as\\nentregas?",
+     "pt-BR": "A leiteria estava em apuros: o leite não tinha chegado.\\nSerá que os desastres também\\nestavam atrapalhando as entregas?",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r123/c4",
      "source_text_sha256": "1d833ac8af6c892389c1eb031f5196113f08ad83d32b114c80f13fbd78a51237",
-     "pt-BR": "A leiteria estava em apuros: o leite não tinha chegado.\\nSerá que os desastres também estavam atrapalhando as\\nentregas?",
+     "pt-BR": "A leiteria estava em apuros: o leite não tinha chegado.\\nSerá que os desastres também\\nestavam atrapalhando as entregas?",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -23801,14 +23821,14 @@
     {
      "id": "r136/c3",
      "source_text_sha256": "7da9d322dc8746764c980b94e3da2452afd92160421c4f42eef50700e7eaa973",
-     "pt-BR": "Com clarões e explosões às minhas costas, galopei\\npara onde a Yuki estava. Precisava chegar depressa.\\n\"Aguenta firme!\", eu repetia em pensamento para o\\ncavalo.",
+     "pt-BR": "Com clarões e explosões às minhas costas, galopei\\npara onde a Yuki estava. Precisava chegar depressa.\\n\"Aguenta firme!\", eu repetia\\nem pensamento para o cavalo.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r136/c4",
      "source_text_sha256": "fd7951df3693d1bc3aaf55f21b07745795aaf06e540d446ed3e7203db426d040",
-     "pt-BR": "Com clarões e explosões às minhas costas, galopei\\npara onde a Yuki estava. Precisava chegar depressa.\\n\"Aguenta firme!\", eu repetia em pensamento para o\\ncavalo.",
+     "pt-BR": "Com clarões e explosões às minhas costas, galopei\\npara onde a Yuki estava. Precisava chegar depressa.\\n\"Aguenta firme!\", eu repetia\\nem pensamento para o cavalo.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -27649,14 +27669,14 @@
     {
      "id": "p0/k265",
      "source_text_sha256": "91427722fc2ad15951bb6ce3a8b2fa8cd65e0ab72a52210dbcaf167554258425",
-     "pt-BR": "Seja bem-vindo!",
+     "pt-BR": "Olá! Fique à vontade!",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k267",
      "source_text_sha256": "571c03e12ea28d7f19699ba082411c2e7245770cedef506ab15693a10ded2845",
-     "pt-BR": "...Ué? Que barulho todo é esse lá fora...?\nAh! Seja bem-vindo!",
+     "pt-BR": "...Ué? Que barulho todo é esse lá fora...?\nAh! Olá, fique à vontade!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -27677,7 +27697,7 @@
     {
      "id": "p0/k273",
      "source_text_sha256": "c208260774d2143e88c1025a9cb6ba23e881772895b2178b9935bf6e543b9a5c",
-     "pt-BR": "Não, obrigado.",
+     "pt-BR": "Não, valeu.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -29091,7 +29111,7 @@
     {
      "id": "p0/k645",
      "source_text_sha256": "9eab35ab7f4a08f2114194a267265937474229309b6a334d5b8a4380a6198c63",
-     "pt-BR": "Tome cuidado, querida.",
+     "pt-BR": "Tome cuidado, viu?",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -30890,7 +30910,7 @@
     {
      "id": "p0/k1238",
      "source_text_sha256": "e1a82e256833c62082bb51b467dd75483d685c52aea15cb4d0495c29bb5cbdfc",
-     "pt-BR": "Disparar gasta energia. Se a energia chegar a zero, você fica exausto.\nFique de olho nela durante a fuga.",
+     "pt-BR": "Disparar gasta energia. Se a energia chegar a zero, você perde o fôlego.\nFique de olho nela durante a fuga.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -30925,7 +30945,7 @@
     {
      "id": "p0/k1248",
      "source_text_sha256": "43f207fb6db5c454259757e91e74041cbff011ef95971022810082f72e27953b",
-     "pt-BR": "Não tem saída... Você está encurralado!\nQuando se vir numa situação desesperadora...",
+     "pt-BR": "Não tem saída... Sem escapatória!\nQuando se vir numa situação desesperadora...",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -31975,14 +31995,14 @@
     {
      "id": "p0/k1562",
      "source_text_sha256": "c15f33033ba208a6f2ee19cbd7973a053c9d6422203a1e7bde7677b3cb008e21",
-     "pt-BR": "Você aí, todo empolgado! Rápido!\nAinda não tem incêndio do outro lado da rua!",
+     "pt-BR": "Você aí, cheio de empolgação! Rápido!\nAinda não tem incêndio do outro lado da rua!",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k1564",
      "source_text_sha256": "13bcb517bb2a185a96ad08373df8c7d02b3f300bbc8cde2157895d70edf378a3",
-     "pt-BR": "Você aí, com cara de quem não decide nada sozinho! Rápido!\nAinda não tem incêndio do outro lado da rua!",
+     "pt-BR": "Você aí, com cara de quem não decide nada por conta própria! Rápido!\nAinda não tem incêndio do outro lado da rua!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32561,14 +32581,14 @@
     {
      "id": "r3/c5",
      "source_text_sha256": "85e1e2b0dcfb991cf746b2b79467d769ceb5e5f7b2bb9fec11a5a2ef51f7de54",
-     "pt-BR": "Mantenha a calma\\nAntes de um ataque, olhe ao redor e planeje sua rota de\\nfuga. É mais fácil do que procurar uma saída no meio\\ndo perigo.",
+     "pt-BR": "Mantenha a calma\\nAntes de um ataque, olhe ao redor e planeje sua rota de\\nfuga. É mais fácil do que procurar\\numa saída no meio do perigo.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r4/c5",
      "source_text_sha256": "cabfe519dcc837c60c4b2d9111543a132c7b8685f48d88a1ccb6955824664f6f",
-     "pt-BR": "Mirante: primeiro andar\\nConverse com as pessoas e examine os arredores.\\nVocê pode descobrir uma saída e conhecer melhor o\\ncaminho.",
+     "pt-BR": "Mirante: primeiro andar\\nConverse com as pessoas e examine os arredores.\\nVocê pode descobrir uma saída\\ne conhecer melhor o caminho.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32610,7 +32630,7 @@
     {
      "id": "r10/c5",
      "source_text_sha256": "7a36b3dc734fe86a5a4e2c85d8089dd438295638ba584f58884bf6f4d12bf681",
-     "pt-BR": "Conversando com Yuki\\nQuando estiver em segurança, converse com a Yuki.\\nVocê pode descobrir um lado dela que ainda não\\nconhece.",
+     "pt-BR": "Conversando com Yuki\\nQuando estiver em segurança, converse com a Yuki.\\nVocê pode descobrir um lado\\ndela que ainda não conhece.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32659,7 +32679,7 @@
     {
      "id": "r17/c5",
      "source_text_sha256": "e602e31e45538ac3a5d7b6c67b087936727b9b6ac8c753f2cca4dee1defb243f",
-     "pt-BR": "Energia\\nA barra inferior no canto superior esquerdo mostra sua\\nenergia. Se ela acabar, você não poderá correr por um\\ntempo.",
+     "pt-BR": "Energia\\nA barra inferior no canto superior esquerdo mostra sua\\nenergia. Se ela acabar, você\\nnão poderá correr por um tempo.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32680,7 +32700,7 @@
     {
      "id": "r20/c5",
      "source_text_sha256": "a744089af00b9174989751a238600ffe7b21c8b03fe40a99dfacc0197b4d621d",
-     "pt-BR": "Esquiva de emergência\\nQuando aparecer um ! sobre a cabeça do personagem,\\naperte [i4]. Uma esquiva pode tirar você de uma\\nenrascada.",
+     "pt-BR": "Esquiva de emergência\\nQuando aparecer um ! sobre a cabeça do personagem,\\naperte [i4]. Uma esquiva pode\\ntirar você de uma enrascada.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32694,7 +32714,7 @@
     {
      "id": "r22/c5",
      "source_text_sha256": "dc8b5685262dde5a02a6b78e37ee564cab35aa200d7141035fea96c5f32a3e06",
-     "pt-BR": "Parece perigoso?\\nPerto de uma sombra gigante, tudo pode acontecer.\\nTome cuidado ao se aproximar de algo que pareça\\nperigoso.",
+     "pt-BR": "Parece perigoso?\\nPerto de uma sombra gigante, tudo pode acontecer.\\nTome cuidado ao se aproximar\\nde algo que pareça perigoso.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -36417,7 +36437,7 @@
     {
      "id": "p0/k1242",
      "source_text_sha256": "a5ad435ebe24ca5d9583d570fa7092db08d17012f4b5e7c1da80b8bf60d7a1df",
-     "pt-BR": "Me senti mais corajoso",
+     "pt-BR": "Bateu uma coragem",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -36438,14 +36458,14 @@
     {
      "id": "p0/k1248",
      "source_text_sha256": "6509c6120a22be1d4069d6b2e2cf62d09a08455d5aeb646031aa40221a21b2d6",
-     "pt-BR": "Fiquei muito irritado",
+     "pt-BR": "Bateu uma irritação",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k1250",
      "source_text_sha256": "ac9b3f8b7639e543cc1087e0d931f70e5e3bbc8acb2f3f557449405d0781dee0",
-     "pt-BR": "Fiquei muito desconfiado",
+     "pt-BR": "Bateu uma desconfiança",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -36473,7 +36493,7 @@
     {
      "id": "p0/k1265",
      "source_text_sha256": "ec8dea9b4cbc8b8401e6c717302f6ebd71ea9a57010b8448b95921dd4306134b",
-     "pt-BR": "(Me senti mais corajoso.)",
+     "pt-BR": "(Bateu uma coragem.)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -36494,14 +36514,14 @@
     {
      "id": "p0/k1274",
      "source_text_sha256": "552384677ca3b70b0cf92b13ac87b2f69faaee6b77913fbb78741ceb0fb660bb",
-     "pt-BR": "(Fiquei muito irritado.)",
+     "pt-BR": "(Bateu uma irritação.)",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k1277",
      "source_text_sha256": "d6e6b3d2175a3ee21354a8349f91c62b0d36ee23d1dd15834a81ddf5df89ffd1",
-     "pt-BR": "(Fiquei muito desconfiado.)",
+     "pt-BR": "(Bateu uma desconfiança.)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -36536,7 +36556,7 @@
     {
      "id": "p0/k1288",
      "source_text_sha256": "b674c26cfe25e9fa7825a019a9225a6bf66354cb07cfd95f8aba84581a45a446",
-     "pt-BR": "Capitão, nossas roupas secaram.\nMuito obrigado.",
+     "pt-BR": "Capitão, nossas roupas secaram.\nAgradeço muito.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -36662,7 +36682,7 @@
     {
      "id": "p0/k1329",
      "source_text_sha256": "744b29c6a32d1f6c229c018b103270d2c9b115d0761d9b25a2b057363a6ff17a",
-     "pt-BR": "Sim, obrigado.",
+     "pt-BR": "Sim, agradeço.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -45826,7 +45846,7 @@
     {
      "id": "p0/k68",
      "source_text_sha256": "33dae137537b412903c86a9dc5f7489b171b6d9457167268679128abc9472d93",
-     "pt-BR": "Você está acabado. Bebe isso e aguenta firme!",
+     "pt-BR": "Você está com uma cara péssima. Bebe isso e aguenta firme!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -45973,7 +45993,7 @@
     {
      "id": "p0/k108",
      "source_text_sha256": "4a1d5899dcd0a34d9ee0cb92fb1d4bd1c1ffb7ff2a04e23c099f1f532c3ff062",
-     "pt-BR": "Desculpe por isso. Bem-vindo.",
+     "pt-BR": "Desculpe por isso. Fique à vontade.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -49441,7 +49461,7 @@
     {
      "id": "p0/k260",
      "source_text_sha256": "aebc41b87079b06d5a0d2e11ca6e65415450b0c2cba5975d1a426633c1f37d16",
-     "pt-BR": "Você está encharcado. Vai pegar um resfriado assim.\nVamos secar suas roupas naquela loja de conveniência.",
+     "pt-BR": "Sua roupa está encharcada. Vai pegar um resfriado assim.\nVamos secar suas roupas naquela loja de conveniência.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -49931,7 +49951,7 @@
     {
      "id": "p0/k413",
      "source_text_sha256": "259bf298b305a2daa6a9b5381c335d5599f01983f36fd581cab1b9079b479023",
-     "pt-BR": "Você está bem? Ainda está cansado, né...",
+     "pt-BR": "Você está bem? Ainda está sem forças, né...",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -53498,7 +53518,7 @@
     {
      "id": "p0/k176",
      "source_text_sha256": "e7726fdc46401de96b23b956560a3272ade3142000f762bfc7047caa5fdc22d9",
-     "pt-BR": "Chegamos ao Instituto de Pesquisa de Raios Cósmicos. Segundo a Kashiwagi, temos que entregar o software ao vice-diretor.\nMas tem algo errado lá dentro. Depois de um vai e vem, acabei sendo eu o mandado na frente para explorar.",
+     "pt-BR": "Chegamos ao Instituto de Pesquisa de Raios Cósmicos. Segundo a Kashiwagi, temos que entregar o software ao vice-diretor.\nMas tem algo errado lá dentro. Depois de um vai e vem, acabou sobrando pra mim ir na frente explorar.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -54142,7 +54162,7 @@
     {
      "id": "p0/k280",
      "source_text_sha256": "ecff5e56ca215d52f42149cc9cebfd931f1b2ad44a548ecbe82231588386859e",
-     "pt-BR": "Fomos à barraca de curry favorita da menina. Pelo jeito, a irmã dela comia muito. Graças a isso, estou empanturrado. Hora de ir ao hospital.",
+     "pt-BR": "Fomos à barraca de curry favorita da menina. Pelo jeito, a irmã dela comia muito. Graças a isso, comi até não aguentar mais. Hora de ir ao hospital.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -81520,7 +81540,7 @@
     {
      "id": "p0/k141",
      "source_text_sha256": "c208260774d2143e88c1025a9cb6ba23e881772895b2178b9935bf6e543b9a5c",
-     "pt-BR": "Não, obrigado",
+     "pt-BR": "Não, valeu",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -89765,7 +89785,7 @@
     {
      "id": "p0/k13",
      "source_text_sha256": "91427722fc2ad15951bb6ce3a8b2fa8cd65e0ab72a52210dbcaf167554258425",
-     "pt-BR": "Seja bem-vindo!",
+     "pt-BR": "Olá! Fique à vontade!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -90066,7 +90086,7 @@
     {
      "id": "p0/k87",
      "source_text_sha256": "5af2e0ab35bca9e9b75ff5ca32476c69711e861d36616c11065d6da6ec76d932",
-     "pt-BR": "Bem-vindo ao mirante da Torre Iberis!",
+     "pt-BR": "Boas-vindas ao mirante da Torre Iberis!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -90444,14 +90464,14 @@
     {
      "id": "p0/k186",
      "source_text_sha256": "19c92473e1745a3a3199ea1a47918be6bbcde49cbd13ab3c1a8e09545a983ab7",
-     "pt-BR": "\"Sério? Muito obrigado!\"",
+     "pt-BR": "\"Sério? Valeu mesmo!\"",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k188",
      "source_text_sha256": "ee75a7075b75d03c05191828c1b0826e69b06291277dda0546b0f3b987ecd890",
-     "pt-BR": "\"Não, obrigado.\"",
+     "pt-BR": "\"Não, valeu.\"",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -92943,7 +92963,7 @@
     {
      "id": "p0/k906",
      "source_text_sha256": "ef2d38f74a397c930a7e73797c9f41e44150ffd6e05712f63b5d92cac6b4d6d9",
-     "pt-BR": "Você está faminto. Não resiste e pega",
+     "pt-BR": "A fome fala mais alto. Não resiste e pega",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -93062,7 +93082,7 @@
     {
      "id": "p0/k948",
      "source_text_sha256": "2490c527f85980c681420fea620b4bd50b91bb2352a0e0b5bf0d1c098a460418",
-     "pt-BR": "Você está curioso. Não resiste e pega",
+     "pt-BR": "A curiosidade fala mais alto. Não resiste e pega",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -93083,7 +93103,7 @@
     {
      "id": "p0/k955",
      "source_text_sha256": "0fc721920ce25701bac6d156c268b395600c501fe484761d624d42bc9f90fb39",
-     "pt-BR": "Você estava curioso, então não resistiu e pegou.",
+     "pt-BR": "A curiosidade falou mais alto, e você pegou.",
      "notes": "",
      "editorial_status": "pending"
     },

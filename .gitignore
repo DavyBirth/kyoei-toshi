@@ -1,4 +1,9 @@
-third_party/
+/third_party/*
+!/third_party/imgui/
+!/third_party/godzilla-core/
+/third_party/godzilla-core/*
+!/third_party/godzilla-core/LICENSE
+!/third_party/godzilla-core/scripts/
 build/
 work/
 *.psarc
@@ -11,3 +16,14 @@ __pycache__/
 /City Shrouded in Shadow.exe
 /photos/
 /user/
+/game/
+/runtime/
+/data/
+/manifest.json
+/assets/artwork.png
+/assets/game.ico
+/assets/ui-art.kyart
+/assets/title-exit*.kyart
+/languages/
+/setup-manifest.json
+/support/

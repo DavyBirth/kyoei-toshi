@@ -14,8 +14,10 @@ from tex_preview import unpack_tex, dds_bc
 
 REPO = Path(__file__).resolve().parents[1]
 _NOTO = 'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts/NotoSans-Regular.ttf'
-FONT = next((p for p in (REPO / _NOTO, Path('G:/kyoei-toshi') / _NOTO) if p.exists()), REPO / _NOTO)
-FONTS = {'sans': FONT, 'bold': Path('C:/Windows/Fonts/segoeuib.ttf'), 'serif': Path('C:/Windows/Fonts/cambriab.ttf')}
+FONT = next((p for p in (REPO / _NOTO,REPO/'assets/fonts/NotoSans-Regular.ttf') if p.exists()), REPO / _NOTO)
+FONTS = {'sans': FONT,
+         'bold': next((p for p in (Path('C:/Windows/Fonts/segoeuib.ttf'),FONT) if p.exists()),FONT),
+         'serif': next((p for p in (Path('C:/Windows/Fonts/cambriab.ttf'),FONT) if p.exists()),FONT)}
 
 
 def decode(data):

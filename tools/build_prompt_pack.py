@@ -69,7 +69,7 @@ def icon_page(original, cells, variant):
     return encode_tex(original, page, info)
 
 
-def build(base, output, diagrams=False,language='en'):
+def build(base, output, diagrams=False,language='en',legend_diagrams=False):
     keyboard = keyboard_icons(base,english='pt-BR' if language=='pt-BR' else language!='ja')
     with Psarc(base) as archive:
         names = {e.name: e for e in archive.entries[1:]}
@@ -98,7 +98,7 @@ def build(base, output, diagrams=False,language='en'):
             # Controls diagrams for each device (make_pad_diagrams), from the English base: the
             # PlayStation art stays the American English one already in the archive.
             from make_pad_diagrams import build_all
-            drawn = build_all(base, ('keyboard', 'xbox', 'nintendo'),language)
+            drawn = build_all(base, ('keyboard', 'xbox', 'nintendo'),language,leaders=not legend_diagrams)
             for name in drawn['xbox']:
                 original = b''.join(archive.chunks(names[name]))
                 info = decode(original)[0]
@@ -144,7 +144,8 @@ if __name__ == '__main__':
     p.add_argument('--diagrams', action='store_true', help='controls diagrams per device (English base)')
     p.add_argument('--language',choices=('en','pt-BR','ja'),default='en')
     p.add_argument('--delta',type=Path,help='Read a verified translation delta over the base archive')
+    p.add_argument('--legend-diagrams',action='store_true',help='Use named control legends without pointer lines')
     a = p.parse_args()
     from psarc import DeltaSource
     base=DeltaSource(a.base,a.delta.read_bytes()) if a.delta else a.base
-    build(base, a.output, a.diagrams,a.language)
+    build(base, a.output, a.diagrams,a.language,a.legend_diagrams)

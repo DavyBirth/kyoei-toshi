@@ -358,7 +358,7 @@ def audit(entries, drawing, buttons=None):
     covered = drawing_table(drawing)
     for i, e in enumerate(entries):
         for box in e['boxes']:
-            x0, y0, x1, y1 = int(box[0]) - 4, int(box[1]), int(box[2]) + 4, int(box[3])  # 4 px clear of the drawing
+            x0, y0, x1, y1 = int(box[0]) - 12, int(box[1]) - 4, int(box[2]) + 12, int(box[3]) + 4  # visibly clear of the drawing
             if y1 > 1075:
                 issues.append(f"text off the picture: {e['name']}")
             elif covered is not None and covered[y1, x1] - covered[y0, x1] - covered[y1, x0] + covered[y0, x0]:
@@ -455,7 +455,8 @@ def render(resource, regions, base, device, language='en', leaders=True):
             if action_text:action_text=portuguese_labels[action_text]
             portuguese={'Space':'Espaço','RMB':'Mouse direito','MMB':'Botão da roda',
                 'dpad':'Direcional' if device!='keyboard' else 'Setas',
-                'LS':'Analógico esq.','RS':'Analógico dir.','Mouse':'Mouse','WASD':'W A S D'}
+                'LS':'Analógico esq.','RS':'Analógico dir.','Mouse':'Mouse','WASD':'W A S D',
+                'Minus':'Botão −','Plus':'Botão +','View':'Botão Exibir'}
             def button_name(b):
                 if b in portuguese:return portuguese[b]
                 if device=='keyboard':return 'Tecla '+b
@@ -658,7 +659,8 @@ LIST_ICONS = {'cross': 'font/icon/IC_maru_1.tex', 'circle': 'font/icon/IC_batu_2
 
 
 def list_rows(regions):
-    return [r for r in regions if 'box' in r and r.get('text')]
+    # Language-only patches ("or" → "ou") sit inside a row's symbols, not rows of their own.
+    return [r for r in regions if 'box' in r and r.get('text') and 'language' not in r]
 
 
 def list_glyphs(image, row):
@@ -753,7 +755,7 @@ def render_list(resource, regions, base, templates, icons, keep=None):
     return out
 
 
-def build_all(archive_path, devices=('xbox', 'nintendo'), language='en'):
+def build_all(archive_path, devices=('xbox', 'nintendo'), language='en', leaders=True):
     """Every controls diagram of an English archive, per device: {device: {resource: image}}."""
     from psarc import Psarc
     from tex_preview import preview
@@ -791,7 +793,7 @@ def build_all(archive_path, devices=('xbox', 'nintendo'), language='en'):
                                                     {'plus', 'or'} if device == 'keyboard' else None)
                 continue
             for device in devices:
-                image = render(name, t['regions'], base, device,language)
+                image = render(name, t['regions'], base, device,language,leaders)
                 for issue in image.issues:
                     print(f'LAYOUT {device} {name}: {issue}')
                 out[device][name] = image

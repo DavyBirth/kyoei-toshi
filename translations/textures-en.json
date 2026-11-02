@@ -4853,6 +4853,79 @@
        863
       ]
      }
+    },
+    {
+     "paste": {
+      "res": "texture/2D/title_02.tex",
+      "from": [
+       1785,
+       951,
+       1905,
+       994
+      ],
+      "to": [
+       1641,
+       951
+      ]
+     },
+     "language": "pt-BR"
+    },
+    {
+     "paste": {
+      "res": "texture/2D/title_02.tex",
+      "from": [
+       1785,
+       951,
+       1825,
+       994
+      ],
+      "to": [
+       1755,
+       951
+      ]
+     },
+     "language": "pt-BR"
+    },
+    {
+     "paste": {
+      "res": "texture/2D/title_02.tex",
+      "from": [
+       1785,
+       951,
+       1913,
+       994
+      ],
+      "to": [
+       1470,
+       951
+      ]
+     },
+     "language": "pt-BR"
+    },
+    {
+     "box": [
+      1470,
+      951,
+      1598,
+      994
+     ],
+     "erase": "auto",
+     "text": "Press",
+     "size": 38,
+     "align": "right",
+     "text_box": [
+      1470,
+      955,
+      1594,
+      990
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR"
     }
    ],
    "american": true
@@ -5915,6 +5988,79 @@
        863
       ]
      }
+    },
+    {
+     "paste": {
+      "res": "texture/2D/title_01.tex",
+      "from": [
+       1785,
+       951,
+       1905,
+       994
+      ],
+      "to": [
+       1641,
+       951
+      ]
+     },
+     "language": "pt-BR"
+    },
+    {
+     "paste": {
+      "res": "texture/2D/title_01.tex",
+      "from": [
+       1785,
+       951,
+       1825,
+       994
+      ],
+      "to": [
+       1755,
+       951
+      ]
+     },
+     "language": "pt-BR"
+    },
+    {
+     "paste": {
+      "res": "texture/2D/title_01.tex",
+      "from": [
+       1785,
+       951,
+       1913,
+       994
+      ],
+      "to": [
+       1470,
+       951
+      ]
+     },
+     "language": "pt-BR"
+    },
+    {
+     "box": [
+      1470,
+      951,
+      1598,
+      994
+     ],
+     "erase": "auto",
+     "text": "Press",
+     "size": 38,
+     "align": "right",
+     "text_box": [
+      1470,
+      955,
+      1594,
+      990
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR"
     }
    ],
    "american": true
@@ -13553,6 +13699,40 @@
     },
     {
      "box": [
+      74,
+      572,
+      104,
+      607
+     ],
+     "erase": "clear",
+     "text": "or",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      74,
+      577,
+      104,
+      602
+     ],
+     "color": [
+      199,
+      196,
+      193,
+      255
+     ],
+     "shadow": true,
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ],
+     "language": "pt-BR"
+    },
+    {
+     "box": [
       149,
       572,
       255,
@@ -14082,6 +14262,40 @@
       0,
       170
      ]
+    },
+    {
+     "box": [
+      74,
+      572,
+      104,
+      607
+     ],
+     "erase": "clear",
+     "text": "or",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      74,
+      577,
+      104,
+      602
+     ],
+     "color": [
+      199,
+      196,
+      193,
+      255
+     ],
+     "shadow": true,
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ],
+     "language": "pt-BR"
     },
     {
      "box": [
@@ -14951,6 +15165,40 @@
     },
     {
      "box": [
+      74,
+      572,
+      104,
+      607
+     ],
+     "erase": "clear",
+     "text": "or",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      74,
+      577,
+      104,
+      602
+     ],
+     "color": [
+      199,
+      196,
+      193,
+      255
+     ],
+     "shadow": true,
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ],
+     "language": "pt-BR"
+    },
+    {
+     "box": [
       149,
       572,
       255,
@@ -15348,6 +15596,40 @@
       0,
       170
      ]
+    },
+    {
+     "box": [
+      74,
+      572,
+      104,
+      607
+     ],
+     "erase": "clear",
+     "text": "or",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      74,
+      577,
+      104,
+      602
+     ],
+     "color": [
+      199,
+      196,
+      193,
+      255
+     ],
+     "shadow": true,
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ],
+     "language": "pt-BR"
     },
     {
      "box": [
@@ -15814,6 +16096,40 @@
       0,
       170
      ]
+    },
+    {
+     "box": [
+      74,
+      535,
+      104,
+      570
+     ],
+     "erase": "clear",
+     "text": "or",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      74,
+      540,
+      104,
+      565
+     ],
+     "color": [
+      199,
+      196,
+      193,
+      255
+     ],
+     "shadow": true,
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ],
+     "language": "pt-BR"
     },
     {
      "box": [
@@ -16301,6 +16617,40 @@
     },
     {
      "box": [
+      74,
+      572,
+      104,
+      607
+     ],
+     "erase": "clear",
+     "text": "or",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      74,
+      577,
+      104,
+      602
+     ],
+     "color": [
+      199,
+      196,
+      193,
+      255
+     ],
+     "shadow": true,
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ],
+     "language": "pt-BR"
+    },
+    {
+     "box": [
       149,
       572,
       255,
@@ -16731,6 +17081,40 @@
       0,
       170
      ]
+    },
+    {
+     "box": [
+      74,
+      572,
+      104,
+      607
+     ],
+     "erase": "clear",
+     "text": "or",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      74,
+      577,
+      104,
+      602
+     ],
+     "color": [
+      199,
+      196,
+      193,
+      255
+     ],
+     "shadow": true,
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ],
+     "language": "pt-BR"
     },
     {
      "box": [

@@ -10,6 +10,7 @@
 #include <string.h>
 #include <limits.h>
 
+#define KYOEI_NPC_MIN_SCALE .6f
 typedef uintptr_t (ABI *GuestMarker)(void *, const void *);
 static GuestMarker original_marker;
 static GuestMarker original_npc_marker;
@@ -109,7 +110,10 @@ static ABI uintptr_t fit_npc_marker(void *result,const void *object) {
     float equivalent;
     if (bytes>115 || !readable(source,(size_t)bytes+1) || !readable(label,0x1a0) ||
         !kyoei_hud_measure(&fit_metrics,source,bytes,&equivalent)) return value;
+    // Below ~0.6 letters become unreadable slivers; a long name may then
+    // extend past the plate edges instead.
     float scale=equivalent>8.f?8.f/equivalent:1.f;
+    if (scale<KYOEI_NPC_MIN_SCALE) scale=KYOEI_NPC_MIN_SCALE;
     assign_text((char *)label+0x110,source);
     memcpy((char *)label+0x80,&scale,4);
     return value;

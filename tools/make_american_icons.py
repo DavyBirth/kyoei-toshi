@@ -52,8 +52,9 @@ def glyph(image, reference, circle=False, glow=False, blue=False):
     """Transplant the native glyph, preserving the opaque pin/button interior."""
     image = image.convert('RGBA')
     pixels = list(image.getdata())
+    # Only the face symbol's own hue: a green glow around the button is not the glyph.
     colored = [i for i, (r,g,b,a) in enumerate(pixels)
-               if a > 8 and max(r,g,b)-min(r,g,b) > 18]
+               if a > 8 and max(r,g,b)-min(r,g,b) > 18 and not (g > r+12 and g >= b)]
     if not colored:
         raise ValueError('Expected a colored face-button glyph')
     w,h = image.size
@@ -79,10 +80,11 @@ def glyph(image, reference, circle=False, glow=False, blue=False):
         color=Counter(pixels[i] for i in solid).most_common(1)[0][0]
         image=Image.new('RGBA',image.size)
     else:
-        # The original center is the real opaque backing, not transparent.
-        backing=image.getpixel((round(cx),round(cy)))
-        radius=size/2+2
-        ImageDraw.Draw(image).ellipse((cx-radius,cy-radius,cx+radius,cy+radius),fill=backing)
+        # Remove only the native symbol's pixels and let the surrounding button body,
+        # edge and glow flow back in (a flat disc left a hard cut-out edge).
+        holes={(i%w+dx,i//w+dy) for i in colored for dx in (-1,0,1) for dy in (-1,0,1)
+               if 0<=i%w+dx<w and 0<=i//w+dy<h}
+        image=refill(image,holes,(left-2,top-2,right+3,bottom+3))
         color=Counter(p for p in ref_pixels if p[3]>160 and chroma(p)>=peak-2).most_common(1)[0][0]
         size=round(size*.8) # Native cross is smaller than the circle.
     mask=mask.resize((size,size),Image.Resampling.LANCZOS)
