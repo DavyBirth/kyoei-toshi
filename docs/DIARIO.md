@@ -5267,3 +5267,11 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Preparo público: third_party/godzilla-core/scripts + LICENSE versionados (hashes iguais ao snapshot); bootstrap limpa build/setup-* em qualquer falha e desfaz a instalação parcial (teste novo); mensagens pt/en; .gitignore cobre languages/, setup-manifest.json, support/. Launcher: textos em pt, sem "prévia", erro do preparo visível, confere scripts do core.
 - X/O: hoje o X confirma em todos os idiomas, inclusive japonês (rt_services param 1000 fixo = cross; arte americana sempre). Não alterado: decisão de Davy e teste no jogo necessários.
 - Deltas RC2: en 8.323.252 bytes (13.269), pt-BR 8.355.696 bytes (15.578), roundtrip verificado. Jogo não aberto.
+
+### 02/11/2026 — releitura completa pt-BR e en (Claude)
+- Lidos todos os textos únicos dos dois idiomas, na ordem do jogo (falas, notícias, itens, missões, carregamentos, romances, créditos).
+- pt-BR: 198 correções (208 trechos no arquivo). Toro volta a ser macho, como no original e no inglês. Mais falas compartilhadas sem gênero ("Por vocês", "com as mãos amarradas", "O elevador parou comigo dentro", "achou que você era o pai ou a mãe dela"...). Nomes padronizados: "Jardim do Céu da Meia-Noite", "O Céu de Nós Dois", "Edifício Sukima Nº 2", "HP".
+- en: 48 correções. "For you ladies" → "For you two" (Otsuka), "Attaboy" neutro, "your girlfriend" → "Yuki" na fala da Risa, "young man" → "young person" na notícia do anel. Títulos "Street Style Snapshot" uniformes, maiúsculas em carregamentos, "Granzellla" → "Granzella", nomes de itens iguais aos da lista (Captain's Spare Cap, Red Pencil Tucked Stylishly Behind the Ear).
+- Defeito achado nos dois idiomas: uma notícia (Toro e Kuro, estágio 212) mostrava o código japonês cru "＜主人公＞"; trocado por "A certain young person" / "Uma certa pessoa jovem".
+- Conferências: marcadores do jogo iguais aos de antes (os avisos restantes já existiam: nomes do protagonista); larguras dos carregamentos iguais (pt 2 títulos de 61 já existentes, en 0); testes de tradução, diagramas e preparo OK.
+- Deltas refeitos em build/rc2-work: en 13.269 e pt-BR 15.578 entradas, roundtrip verificado. Jogo não aberto.
