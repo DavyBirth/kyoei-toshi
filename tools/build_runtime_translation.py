@@ -7,7 +7,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-from prepare_translation_catalog import TOKENS
+from prepare_translation_catalog import functional_tokens
 from psarc_patch import patch
 from text_tool import REPO,decode,export,insert,output_path
 from translation_names import validate_names
@@ -79,7 +79,8 @@ def main():
                 if language=='en' and isinstance(value,str):value=native_english(value)
                 if not isinstance(value,str) or '\0' in value or (not value and string['original'] and not entry.get('allow_empty')):
                     raise ValueError('Invalid/empty translation')
-                if sorted(TOKENS.findall(value))!=sorted(TOKENS.findall(string['original'])):raise ValueError('Control tokens differ')
+                if sorted(functional_tokens(value,name))!=sorted(functional_tokens(string['original'],name)):
+                    raise ValueError(f'Control tokens differ: {name} {string["id"]}')
                 validate_names(string['original'],value,language,glossary,entry.get('protected_literals',[]))
                 if entry.get('source_text_sha256') and entry['source_text_sha256']!=hashlib.sha256(string['original'].encode('utf8')).hexdigest():
                     raise ValueError('Original text hash differs')

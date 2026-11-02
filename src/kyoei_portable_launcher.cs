@@ -204,7 +204,7 @@ class PortableLauncher : Form {
             try {profileLock=new FileStream(Path.Combine(root,"data","session.lock"),FileMode.OpenOrCreate,FileAccess.ReadWrite,FileShare.None);}
             catch(IOException){throw new IOException("The game is already running from this folder.");}
             string lang=languageCodes[language.SelectedIndex];
-            // pt-BR reuses the English executable strings and button art until its own exist.
+            // Older partial installs can still fall back to the English packs.
             bool latin=lang!="ja";string shared=latin?"en":"ja";
             SaveSettings();
             var start=new ProcessStartInfo(Path.Combine(root,"runtime","kyoei.exe"),"\"runtime/out\" --app0 \"game\" --user \"data/user\" --log \"data/logs/session.log\"");
@@ -218,6 +218,8 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_NAME_STORE"]="data/user/character-names.bin";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT"]="1";
             start.EnvironmentVariables["KYOEI_TITLE_EXIT_ART"]="assets/title-exit.kyart";
+            if(File.Exists(Path.Combine(root,"languages",lang,"title-exit.kyart")))
+                start.EnvironmentVariables["KYOEI_TITLE_EXIT_ART"]=Path.Combine("languages",lang,"title-exit.kyart");
             // Automatic follows the last input and its PlayStation, Xbox or Nintendo art.
             start.EnvironmentVariables["KYOEI_PROMPT_MODE"]=promptMode=="xbox"||promptMode=="nintendo"?"controller":promptMode;
             start.EnvironmentVariables["KYOEI_CONTROLLER_STYLE"]=promptMode=="xbox"||promptMode=="nintendo"?promptMode:promptMode=="controller"?"playstation":"auto";
@@ -226,12 +228,12 @@ class PortableLauncher : Form {
             start.EnvironmentVariables["KYOEI_PHOTO_PHONE"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_SAVE_MARK"]=photoHudPreview?"1":"0";
             start.EnvironmentVariables["KYOEI_PHOTO_DOF"]=photoHudPreview?"1":"0";
-            start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",shared,"prompts.kypack");
+            start.EnvironmentVariables["KYOEI_PROMPT_PACK"]=Path.Combine("languages",File.Exists(Path.Combine(root,"languages",lang,"prompts.kypack"))?lang:shared,"prompts.kypack");
             foreach(var variable in new[]{"KYOEI_ARCHIVE_DELTA","KYOEI_EBOOT_TEXT","KYOEI_TRANSLATION_ARCHIVE"})start.EnvironmentVariables.Remove(variable);
             // translation.kydelta: whole translation over the disc archive; older installs keep the 6 GB copy.
             bool wholeDelta=File.Exists(Path.Combine(root,"languages",lang,"translation.kydelta"));
             if(latin)start.EnvironmentVariables["KYOEI_ARCHIVE_DELTA"]=Path.Combine("languages",lang,wholeDelta?"translation.kydelta":"ui-corrections.kydelta");
-            if(latin)start.EnvironmentVariables["KYOEI_EBOOT_TEXT"]=Path.Combine("languages",shared,"eboot-text.kytext");
+            if(latin)start.EnvironmentVariables["KYOEI_EBOOT_TEXT"]=Path.Combine("languages",File.Exists(Path.Combine(root,"languages",lang,"eboot-text.kytext"))?lang:shared,"eboot-text.kytext");
             start.EnvironmentVariables["KYOEI_UI_ART"]="assets/ui-art.kyart";
             start.EnvironmentVariables["GZ_USER_NAME"]="Player";
             WriteGraphics();start.EnvironmentVariables["GOW3_CONFIG"]=Path.Combine(root,"data","graphics.ini");

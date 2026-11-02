@@ -14,6 +14,13 @@ from text_tool import REPO, decode, export, output_path
 from text_formats import JAPANESE
 
 TOKENS=re.compile(r'%[-+0-9.*]*[sdfiu]|\{[^{}\n]+\}|<[^<>\n]+>|\[#[0-9a-fA-F]{8}\]|\[/#\]|\[[A-Za-z_0-9]+\]|\\[nrt]')
+
+def functional_tokens(text, resource):
+    """Loading prose may be reflowed; names/buttons/styles remain protected."""
+    tokens=TOKENS.findall(text)
+    if resource in ('common/csv/loading_image_and_text.csh','common/csv/LoadingTips.csh'):
+        tokens=[token for token in tokens if token!='\\n']
+    return tokens
 def classify(path,text):
     name=path.lower()
     if 'bannedwords' in name: return 'name_filter','excluded'

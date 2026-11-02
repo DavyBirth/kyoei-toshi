@@ -76,11 +76,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('archive', type=Path)
     parser.add_argument('output', type=Path, help='folder for title-exit.png and title-exit-f.png')
+    parser.add_argument('--language',choices=('en','pt-BR'),default='en')
     args = parser.parse_args()
     with Psarc(args.archive) as archive:
         params = fit(alpha(archive, 'texture/game_title/title_menu_newgame.tex'),
                      alpha(archive, 'texture/game_title/title_menu_newgame_f.tex'))
-    normal, focus = render(params)
+    normal, focus = render(params,'Sair do jogo' if args.language=='pt-BR' else LABEL)
     args.output.mkdir(parents=True, exist_ok=True)
     normal.save(args.output / 'title-exit.png'); focus.save(args.output / 'title-exit-f.png')
     # Runtime form for the overlay: b'KYART1' and two zero bytes, width, height (u32 LE), then

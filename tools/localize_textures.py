@@ -545,8 +545,11 @@ def main():
     ap.add_argument('labels', type=Path); ap.add_argument('output', type=Path)
     ap.add_argument('--source', type=Path, default=Path('G:/kyoei-toshi-work/m1/common'))
     ap.add_argument('--preview', type=Path)
+    ap.add_argument('--language',choices=('en','pt-BR'),default='en')
     a = ap.parse_args()
     table = json.loads(a.labels.read_text(encoding='utf8'))
+    from texture_language import localized_table
+    table=localized_table(table,a.language)
     previews = []
     for item in table['textures']:
         data = (a.source / item['resource']).read_bytes()

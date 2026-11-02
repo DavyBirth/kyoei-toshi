@@ -387,7 +387,24 @@ def audit(entries, drawing, buttons=None):
     return sorted(set(issues))
 
 
-def render(resource, regions, base, device):
+def improve_columns(columns,scores,solve):
+    """An accepted move transfers ownership; do not move that entry twice."""
+    for column in columns:
+        if not scores[id(column)]:continue
+        for entry in list(column['entries']):
+            for other in columns:
+                if other is column or other['below']!=column['below'] or not scores[id(column)]:continue
+                before=scores[id(column)]+scores[id(other)]
+                column['entries'].remove(entry);other['entries'].append(entry)
+                a_score,b_score=solve(column),solve(other)
+                if a_score+b_score<before:
+                    scores[id(column)],scores[id(other)]=a_score,b_score
+                    break
+                other['entries'].remove(entry);column['entries'].append(entry)
+                solve(column);solve(other)
+
+def render(resource, regions, base, device, language='en', leaders=True):
+    portuguese_labels=json.loads((REPO/'translations/texture-labels-pt-BR.json').read_text(encoding='utf8')) if language=='pt-BR' else None
     mapping = {'xbox': XBOX, 'nintendo': NINTENDO, 'keyboard': KEYBOARD}[device]
     pad = {'xbox': Xbox, 'nintendo': Nintendo, 'keyboard': Keyboard}[device]()
     size = base.size
@@ -432,14 +449,29 @@ def render(resource, regions, base, device):
             name = ' + '.join(NAMES[b] if b in NAMES else sticks[b] for b in buttons)
             if controls == ['L3']: name = 'Left Stick Button'
             if controls == ['R3']: name = 'Right Stick Button'
-        rows = (action['text'] or '').split('\n')
+        action_text=action['text'] or ''
+        display_rest=rest
+        if language=='pt-BR':
+            if action_text:action_text=portuguese_labels[action_text]
+            portuguese={'Space':'Espaço','RMB':'Mouse direito','MMB':'Botão da roda',
+                'dpad':'Direcional' if device!='keyboard' else 'Setas',
+                'LS':'Analógico esq.','RS':'Analógico dir.','Mouse':'Mouse','WASD':'W A S D'}
+            def button_name(b):
+                if b in portuguese:return portuguese[b]
+                if device=='keyboard':return 'Tecla '+b
+                return b if len(b)<=2 else 'Botão '+b
+            name=' + '.join(button_name(b) for b in buttons)
+            if device!='keyboard' and controls==['L3']:name='Apertar analógico esq.'
+            if device!='keyboard' and controls==['R3']:name='Apertar analógico dir.'
+            display_rest=rest.replace('Left / Right','← / →').replace('Down','baixo').replace('Up','cima')
+        rows = action_text.split('\n')
         kind = 'press' if controls in (['L3'], ['R3']) else 'move' if controls[-1] in ('lstick', 'rstick') else ''
         if controls == ['dpad']:
             kind = 'up' if 'Up' in rest else 'down' if 'Down' in rest else 'side' if 'Left' in rest else ''
         aim = buttons[0] if controls == ['touchpad', 'rstick'] else buttons[-1]
         if controls == ['touchpad', 'rstick']:
             kind = 'hold'
-        entries.append({'label': label, 'action': action, 'name': name + rest, 'rows': rows,
+        entries.append({'label': label, 'action': action, 'name': name + display_rest, 'rows': rows,
                         'target': pad.anchor(aim, kind), 'button': aim})
     def native_columns():
         """Labels sharing a left edge (within 50 px), above or below the body, as drawn natively."""
@@ -453,7 +485,7 @@ def render(resource, regions, base, device):
                 below, y0 = True, 836
                 e['native_y'] = y0
                 x0 = max(c['label']['box'][0] for c in entries if c['label']['box'][1] > 760)
-            if e['name'].startswith('D-Pad'):
+            if e['name'].startswith(('D-Pad','Direcional','Setas')):
                 x0 += 45  # its native place sits beside the PlayStation body: join the column above
             e['native_x'] = x0 if e.get('button') in pad.FROM_BELOW else e['label']['box'][0]
             for column in columns:
@@ -513,7 +545,9 @@ def render(resource, regions, base, device):
             under = e['y'] + 22
             tx, ty = e['target']
             left, right = min(tx, x0 - 6), max(tx, x0 + label_font.getlength(e['name']) + 12)
-            e['segments'] = [((left, under), (right, under)), ((tx, under), (tx, ty))]
+            # Keyboard labels already name the exact keys. Several actions
+            # share WASD: pointer lines between them only cross other labels.
+            e['segments'] = [] if device=='keyboard' or not leaders else [((left, under), (right, under)), ((tx, under), (tx, ty))]
             e['x0'] = x0
 
     def lay_out(columns):
@@ -542,7 +576,7 @@ def render(resource, regions, base, device):
                         yield tuple(order)
         def solve(column):
             native_top, best = native_tops[id(column)], None
-            tops = [native_top] if column['below'] else list(range(native_top, 23, -8)) or [24]
+            tops = list(range(native_top,native_top+65,8)) if column['below'] else list(range(native_top, 23, -8)) or [24]
             for gap in (14, 10, 6):
                 column['gap'] = gap
                 for top in tops:
@@ -563,21 +597,7 @@ def render(resource, regions, base, device):
             place(order, column)
             return best[0]
         scores = {id(c): solve(c) for c in columns}
-        for column in columns:
-            if not scores[id(column)]:
-                continue
-            for e in list(column['entries']):
-                for other in columns:
-                    if other is column or other['below'] != column['below'] or not scores[id(column)]:
-                        continue
-                    before = scores[id(column)] + scores[id(other)]
-                    column['entries'].remove(e); other['entries'].append(e)
-                    a_score, b_score = solve(column), solve(other)
-                    if a_score + b_score < before:
-                        scores[id(column)], scores[id(other)] = a_score, b_score
-                    else:
-                        other['entries'].remove(e); column['entries'].append(e)
-                        solve(column); solve(other)
+        improve_columns(columns,scores,solve)
         return len(audit(entries, drawing, pad.points))
 
     # The native places unless they leave problems and the other layout has fewer.
@@ -591,6 +611,16 @@ def render(resource, regions, base, device):
             for e, saved in zip(entries, native):
                 e.update(saved)
     e_issues = audit(entries, drawing, pad.points)
+    if e_issues:
+        # The key/button names make the legend self-contained. If the native
+        # pointer layout still crosses a label or another pointer, prefer a
+        # clean legend beside the drawing over ambiguous crossed leaders.
+        saved_segments=[e['segments'] for e in entries]
+        for e in entries:e['segments']=[]
+        legend_issues=audit(entries,drawing,pad.points)
+        if len(legend_issues)<len(e_issues):e_issues=legend_issues
+        else:
+            for e,segments in zip(entries,saved_segments):e['segments']=segments
     for e in entries:
         x0 = e['x0']; ax = x0 - 4; y = e['y']
         lines.text((x0 + 2, y + 1), e['name'], font=label_font, fill=(205, 205, 205, 255))
@@ -723,7 +753,7 @@ def render_list(resource, regions, base, templates, icons, keep=None):
     return out
 
 
-def build_all(archive_path, devices=('xbox', 'nintendo')):
+def build_all(archive_path, devices=('xbox', 'nintendo'), language='en'):
     """Every controls diagram of an English archive, per device: {device: {resource: image}}."""
     from psarc import Psarc
     from tex_preview import preview
@@ -761,7 +791,7 @@ def build_all(archive_path, devices=('xbox', 'nintendo')):
                                                     {'plus', 'or'} if device == 'keyboard' else None)
                 continue
             for device in devices:
-                image = render(name, t['regions'], base, device)
+                image = render(name, t['regions'], base, device,language)
                 for issue in image.issues:
                     print(f'LAYOUT {device} {name}: {issue}')
                 out[device][name] = image

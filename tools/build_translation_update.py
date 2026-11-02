@@ -4,7 +4,8 @@ The whole translation is one read-time delta over the disc archive
 (build_translation_delta.py), so the update only carries small files: the
 runtime that reads the delta, the launcher, the delta and the HUD/prompt
 files. The applicator deletes the old 6 GB English archive. Windows needs no
-Python; Linux/Wine uses Python 3.11+. Never packages game data or saves.
+Python; Linux/Wine uses Python 3.11+. No disc archive or save is packaged.
+Localized resource payloads are private derivatives, not a public release.
 """
 import argparse
 import json
@@ -13,7 +14,7 @@ import zipfile
 
 from build_portable import ROOT, digest, personal_text_hits
 
-RELEASE = 'translation-en17-ptbr-delta-20261029'
+RELEASE = 'localization-reviewed-20261102-rc1'
 DISC_ARCHIVE_BYTES = 6346525059
 FILES = (
     'runtime/kyoei.exe',
@@ -23,18 +24,22 @@ FILES = (
     'languages/en/prompts.kypack',
     'languages/ja/prompts.kypack',
     'languages/en/eboot-text.kytext',
+    'languages/pt-BR/eboot-text.kytext',
+    'languages/pt-BR/prompts.kypack',
+    'languages/pt-BR/title-exit.kyart',
     'assets/ui-art.kyart',
     'assets/title-exit.kyart',
 )
 REMOVE = ('languages/en/common.psarc', 'languages/en/ui-corrections.kydelta')
 PREFIX = 'Atualizacao-Traducao/'
 
-README = '''Tradução inglesa natural (en-17) e português do Brasil — atualização pequena, 29/10/2026
+README = '''City Shrouded in Shadow — tradução revisada, candidata à versão 1.0, 02/11/2026
 
 A tradução agora é um arquivo pequeno lido por cima do jogo original.
 Este pacote troca o runtime, o launcher e os arquivos da tradução e EXCLUI
 a tradução antiga de 6 GB (languages/en/common.psarc), liberando espaço.
-Não contém arquivos do jogo. Saves, configurações e game/ ficam intactos.
+Não inclui arquivos PSARC nem executáveis do PS4. Saves, configurações
+e game/ ficam intactos. Os recursos traduzidos são derivados privados.
 Já inclui o núcleo GoW3; serve para qualquer versão distribuída antes.
 
 1. Feche o jogo e o launcher.
@@ -43,13 +48,17 @@ Já inclui o núcleo GoW3; serve para qualquer versão distribuída antes.
    Não precisa instalar nada.
    Linux/Wine: num terminal na pasta do jogo, execute
    sh Atualizacao-Traducao/Aplicar-no-Linux.sh   (Python 3.11+, sem sudo)
-4. Abra pelo launcher habitual. O inglês deve aparecer com a revisão
-   natural, novos menus e dicas. Para jogar em português, escolha
+4. Abra pelo launcher habitual. As narrações do carregamento devem aparecer
+   com redação e quebras de linha revisadas. Para jogar em português, escolha
    "Português (Brasil)" no idioma do launcher.
 
 Se algo falhar no meio, o aplicador desfaz e restaura os arquivos
 anteriores. Os arquivos pequenos substituídos ficam em data/update-backups.
-A tradução ainda está em revisão; alguns textos podem seguir em japonês.
+Português: inclui imagens da interface, textos fixos, comandos por dispositivo
+e os caracteres que faltavam na fonte das telas de intervalo.
+Nomes longos de personagens devem aparecer completos na placa.
+Esta candidata ainda precisa de conferência visual manual. Não é a release 1.0.
+Pacote privado para instalações já preparadas; não é o ZIP público do GitHub.
 '''
 
 

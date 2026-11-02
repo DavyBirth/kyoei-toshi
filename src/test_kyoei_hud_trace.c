@@ -24,6 +24,7 @@ typedef uintptr_t (ABI *Marker)(void *,const void *);
 typedef void (ABI *Assign)(void *,const char *);
 void kyoei_hud_test_callbacks(Marker,Assign,const KyoeiHudMetrics *);
 ABI uintptr_t kyoei_hud_test_marker(void *,const void *);
+ABI uintptr_t kyoei_hud_test_npc(Marker,void *,const void *);
 typedef unsigned (ABI *Count)(const char *);
 unsigned kyoei_hud_test_map(Count,const char *);
 static ABI unsigned fake_count(const char *text) { return (unsigned)strlen(text); }
@@ -43,6 +44,9 @@ static ABI uintptr_t fake_original(void *unused,const void *source) {
     (void)unused;(void)source;
     fake_assign(node+0x110,"Listen to t...");++original_calls;
     return 0xc0de;
+}
+static ABI uintptr_t fake_npc(void *result,const void *source) {
+    (void)source;*(unsigned *)result=1;fake_assign(node+0x110,"Senhora...");return (uintptr_t)result;
 }
 static int check_fit_callback(void) {
     void *node_pointer=node,*plate_pointer=plate;
@@ -75,6 +79,21 @@ static int check_fit_callback(void) {
     if (kyoei_hud_test_map(fake_unicode_count,"\xc3\xa9")!=1) return 21;
     fake_assign(&source,curved);kyoei_hud_test_marker(object,&source);
     if (strcmp(actual->pointer,curved)) return 22;
+    const char *portuguese="Mo\xc3\xa7\x61 da floricultura";
+    fake_assign(&source,portuguese);assign_calls=0;
+    kyoei_hud_test_marker(object,&source);
+    if (assign_calls!=2 || strcmp(actual->pointer,portuguese)) return 24;
+    void *npc_label=node;memcpy(object+0x240,&npc_label,8);
+    fake_assign(object+0x190,"Senhora da floricultura");
+    float one=1;memcpy(node+0x80,&one,4);memcpy(node+0x84,&one,4);
+    unsigned result=0;
+    if (kyoei_hud_test_npc(fake_npc,&result,object)!=(uintptr_t)&result || result!=1 ||
+        strcmp(actual->pointer,"Senhora da floricultura")) return 25;
+    memcpy(&scale,node+0x80,4);float vertical;memcpy(&vertical,node+0x84,4);
+    if (!(scale>0 && scale<1) || vertical!=1) return 26;
+    fake_assign(object+0x190,"Yuki");kyoei_hud_test_npc(fake_npc,&result,object);
+    memcpy(&scale,node+0x80,4);
+    if (strcmp(actual->pointer,"Yuki") || scale!=1) return 27;
     KyoeiHudFit star;
     if (!kyoei_hud_fit(&metrics,"\xe2\x98\x85W",4,0,&star) ||
         fabsf(star.scale_x-(2*29.f/36.f+32.f/36.f))>.001f) return 23;
@@ -99,12 +118,12 @@ int main(int argc,char **argv) {
     _putenv_s("KYOEI_HUD_TRACE","1"); kyoei_hud_trace_configure(NULL,0);
     if (argc>=2) {
         FILE *source=fopen(argv[1],"rb");
-        const size_t entry=0xa6d9a0,length=0x1da,size=entry+length;
+        const size_t entry=0xa6d9a0,length=0x1da,size=0xaeab8c;
         unsigned char *image=VirtualAlloc(NULL,size,MEM_RESERVE|MEM_COMMIT,PAGE_READWRITE);
         if (!source || !image || fseek(source,(long)(entry+0x4000),SEEK_SET)) return 6;
         if (fread(image+entry,1,length,source)!=length) return 7;
-        const size_t blocks[][2]={{0x31e090,0xc2},{0x31cd90,0x4d},{0xa5bfe8,0x45},{0xa5f499,0x29}};
-        for (unsigned i=0;i<4;++i) {
+        const size_t blocks[][2]={{0x31e090,0xc2},{0x31cd90,0x4d},{0xa5bfe8,0x45},{0xa5f499,0x29},{0xaea710,0x47c}};
+        for (unsigned i=0;i<sizeof(blocks)/sizeof(blocks[0]);++i) {
             if (fseek(source,(long)(blocks[i][0]+0x4000),SEEK_SET) ||
                 fread(image+blocks[i][0],1,blocks[i][1],source)!=blocks[i][1]) return 18;
         }
@@ -122,6 +141,7 @@ int main(int argc,char **argv) {
         kyoei_hud_trace_configure(image,size);
         if (image[entry]!=0xe9 || image[entry+5]!=0x90) return 9;
         if (argc==3 && (image[0xa5bff0]!=0xe8 || !memcmp(map_before,image+0xa5bff0,5))) return 19;
+        if (argc==3 && (image[0xaea710]!=0xe9 || image[0xaea715]!=0x90)) return 28;
         // Only installation is tested. Never call any original game code.
         VirtualFree(image,0,MEM_RELEASE);
     }

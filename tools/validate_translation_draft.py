@@ -3,7 +3,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-from prepare_translation_catalog import TOKENS
+from prepare_translation_catalog import functional_tokens
 from text_tool import REPO,decode,export,insert,output_path
 from translation_names import validate_names
 def main():
@@ -31,7 +31,7 @@ def main():
             for string in document['strings']:
                 if string['id'] not in entries: continue
                 value=entries[string['id']][language]
-                if not isinstance(value,str) or '\0' in value or TOKENS.findall(value)!=TOKENS.findall(string['original']):
+                if not isinstance(value,str) or '\0' in value or functional_tokens(value,row['path'])!=functional_tokens(string['original'],row['path']):
                     raise ValueError('Invalid translated text/tokens')
                 if not value and string['original'] and not entries[string['id']].get('allow_empty'):
                     raise ValueError('Empty translation requires explicit editorial approval')

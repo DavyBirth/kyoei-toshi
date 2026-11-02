@@ -21,7 +21,11 @@ int main(void) {
     float measured=0;
     const char *punctuation="\xe2\x80\x98i\xe2\x80\x99\xe2\x80\x9c\xe2\x80\x9d\xe2\x80\xa6\xe2\x99\xaa";
     if (!kyoei_hud_measure(&metrics,punctuation,strlen(punctuation),&measured) || fabsf(measured-6.2f)>.001f) return 9;
-    const char *bad[]={"\xe2\x80","\xe2\x80\x80","\xc0\xaf","\xc3\xa9","a\xe2\x80\x99%"};
+    const char *accents="A\xc3\xa7\xc3\xa3o";
+    if (!kyoei_hud_measure(&metrics,accents,strlen(accents),&measured) || fabsf(measured-3.2f)>.001f) return 11;
+    if (!kyoei_hud_fit(&metrics,"Mo\xc3\xa7\x61 da floricultura",strlen("Mo\xc3\xa7\x61 da floricultura"),1,&mirror)) return 12;
+    if (!kyoei_hud_fit(&metrics,"1\xc2\xba andar",strlen("1\xc2\xba andar"),0,&wide)) return 13;
+    const char *bad[]={"\xe2\x80","\xe2\x80\x80","\xc0\xaf","\xc3","\xc3\x20","\xc3\x97","\xc3\xb7","a\xe2\x80\x99%"};
     for (unsigned i=0;i<sizeof(bad)/sizeof(bad[0]);++i)
         if (kyoei_hud_measure(&metrics,bad[i],strlen(bad[i]),&measured)) return 10;
     puts("HUD LAYOUT PASS: glyph widths, full long label, mirrored anchor, formatting fallback, finite metrics and bounded span");

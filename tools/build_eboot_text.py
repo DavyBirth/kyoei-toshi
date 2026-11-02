@@ -61,8 +61,11 @@ def main():
     ap.add_argument('table', type=Path); ap.add_argument('output', type=Path)
     ap.add_argument('--eboot', type=Path, required=True, help="the owner's eboot.bin")
     ap.add_argument('--elf', type=Path, required=True, help='the prepared eboot.elf (native-*/out)')
+    ap.add_argument('--language',choices=('en','pt-BR'),default='en')
     a = ap.parse_args()
-    entries = build(json.loads(a.table.read_text(encoding='utf8')), a.eboot.read_bytes(), a.elf.read_bytes())
+    from binary_language import localized_binary_table
+    table=localized_binary_table(a.language) if a.language=='pt-BR' else json.loads(a.table.read_text(encoding='utf8'))
+    entries = build(table, a.eboot.read_bytes(), a.elf.read_bytes())
     write(entries, a.output)
     print(json.dumps(dict(strings=len(entries), output=str(a.output))))
 

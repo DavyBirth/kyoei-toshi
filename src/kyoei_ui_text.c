@@ -52,6 +52,7 @@ void kyoei_ui_text_configure(void *image, uint64_t size) {
         {0x10c1701,"\xe5\x8d\x88\xe5\x89\x8d","AM"},
     };
     unsigned patched=0;
+    const char *portuguese[]={"Responder","Enviar","Responder","PM","AM"};
     for (unsigned i=0;i<sizeof(labels)/sizeof(*labels);++i) {
         size_t n=strlen(labels[i].before);
         if (!image || labels[i].at>=size || n+1>size-labels[i].at ||
@@ -59,7 +60,8 @@ void kyoei_ui_text_configure(void *image, uint64_t size) {
         DWORD old,ignored;
         char *text=(char*)image+labels[i].at;
         if (!VirtualProtect(text,n+1,PAGE_READWRITE,&old)) continue;
-        memset(text,0,n+1);memcpy(text,labels[i].after,strlen(labels[i].after));
+        const char *translated=!strcmp(language,"pt-BR")?portuguese[i]:labels[i].after;
+        memset(text,0,n+1);memcpy(text,translated,strlen(translated));
         if (!VirtualProtect(text,n+1,old,&ignored)) gz_stop(21,"STOP: cannot restore UI text protection");
         ++patched;
     }

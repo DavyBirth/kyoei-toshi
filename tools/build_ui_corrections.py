@@ -12,6 +12,8 @@ from english_typography import native_english
 from psarc import Psarc
 from psarc_delta import build, verify
 from text_tool import export, insert
+from localize_font import extend_intermission, PORTUGUESE_CHARACTERS
+from binary_language import localized_binary_table
 import apply_binary_text
 
 HUD_LABELS = {
@@ -73,13 +75,22 @@ def hud_labels(data):
     return result, changes
 
 
-def corrections(base):
-    manifest = json.loads(Path('docs/m4/runtime-preview.json').read_text(encoding='utf8'))
-    resources = {row['resource'].split('/',1)[1] for row in manifest['languages']['en']['resources']}
-    table = json.loads(Path('translations/binary-en.json').read_text(encoding='utf8'))
+def corrections(base, language='en', resources=None):
+    if resources is None:
+        manifest = json.loads(Path('docs/m4/runtime-preview.json').read_text(encoding='utf8'))
+        resources = {row['resource'].split('/',1)[1] for row in manifest['languages'][language]['resources']}
+    table = localized_binary_table(language)
     hud_texts = {r['path'].split('/', 1)[1]: r for r in table['files'] if r['kind'] == 'hud_text_property'}
     changed = {}; counts = {'punctuation_strings':0, 'hud_labels':0, 'hud_texts':0}
     with Psarc(base) as archive:
+        if language=='pt-BR':
+            draft=json.loads(Path('translations/localization-pt-BR.json').read_text(encoding='utf8'))
+            required={c for r in draft['resources'] for e in r['entries'] for c in e['pt-BR']
+                      if 0x80<=ord(c)<0x300 or c=='\u2022'}
+            required.update(PORTUGUESE_CHARACTERS)
+            by_name={e.name:e for e in archive.entries[1:]}
+            changed.update(extend_intermission(lambda name:b''.join(archive.chunks(by_name[name])),required))
+            counts['font_resources']=len(changed)
         for entry in archive.entries[1:]:
             name = entry.name
             if name in resources:
@@ -111,8 +122,9 @@ def corrections(base):
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('base', type=Path); p.add_argument('output', type=Path)
+    p.add_argument('--language',choices=('en','pt-BR'),default='en')
     a = p.parse_args()
-    changed, counts = corrections(a.base)
+    changed, counts = corrections(a.base,a.language)
     delta, number = build(a.base, changed); verify(a.base, delta, changed)
     a.output.parent.mkdir(parents=True,exist_ok=True); a.output.write_bytes(delta)
     print(json.dumps(dict(resources=number, bytes=len(delta), verified=True, **counts)))

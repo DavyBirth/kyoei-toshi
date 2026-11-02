@@ -10,8 +10,9 @@ repository holds only tools, the runtime, translations and documentation.
 
 - **PC port (Windows, Linux through Wine):** a loader for the game's PS4 executable, a runtime
   for the system libraries, and a Vulkan renderer (the GoW3 PC core, derived from shadPS4).
-- **English translation:** read at run time over the original archive (a small delta, no
-  modified copy of the 6 GB archive). Brazilian Portuguese is planned.
+- **English and Brazilian Portuguese:** read at run time over the original archive (a small
+  delta, no modified copy of the 6 GB archive). Portuguese includes localized interface
+  images, fixed menu strings and the missing intermission-font accents. Visual review is ongoing.
 - **PC features:** keyboard and mouse; PlayStation, Xbox and Nintendo controllers with their
   own button prompts and controls diagrams; touch pad gestures with alternatives for pads
   without one; photo mode; game-styled save/load/name screens; graphics options (anisotropic
@@ -19,6 +20,7 @@ repository holds only tools, the runtime, translations and documentation.
 
 Status: playable, experimental. The English text is under review. The frame rate is limited
 by the processor (about 50–60 FPS standing, 35–45 turning the camera on a mid-range PC).
+The 1.0 preparation checklist is in [docs/RELEASE-1.0.md](docs/RELEASE-1.0.md).
 
 ## Layout
 

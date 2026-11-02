@@ -69,8 +69,8 @@ def icon_page(original, cells, variant):
     return encode_tex(original, page, info)
 
 
-def build(base, output, diagrams=False):
-    keyboard = keyboard_icons(base)
+def build(base, output, diagrams=False,language='en'):
+    keyboard = keyboard_icons(base,english='pt-BR' if language=='pt-BR' else language!='ja')
     with Psarc(base) as archive:
         names = {e.name: e for e in archive.entries[1:]}
         status='texture/hud/status_base.tex'
@@ -98,7 +98,7 @@ def build(base, output, diagrams=False):
             # Controls diagrams for each device (make_pad_diagrams), from the English base: the
             # PlayStation art stays the American English one already in the archive.
             from make_pad_diagrams import build_all
-            drawn = build_all(base, ('keyboard', 'xbox', 'nintendo'))
+            drawn = build_all(base, ('keyboard', 'xbox', 'nintendo'),language)
             for name in drawn['xbox']:
                 original = b''.join(archive.chunks(names[name]))
                 info = decode(original)[0]
@@ -142,5 +142,9 @@ if __name__ == '__main__':
     p.add_argument('base', type=Path)
     p.add_argument('output', type=Path)
     p.add_argument('--diagrams', action='store_true', help='controls diagrams per device (English base)')
+    p.add_argument('--language',choices=('en','pt-BR','ja'),default='en')
+    p.add_argument('--delta',type=Path,help='Read a verified translation delta over the base archive')
     a = p.parse_args()
-    build(a.base, a.output, a.diagrams)
+    from psarc import DeltaSource
+    base=DeltaSource(a.base,a.delta.read_bytes()) if a.delta else a.base
+    build(base, a.output, a.diagrams,a.language)

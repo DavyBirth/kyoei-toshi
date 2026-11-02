@@ -61,6 +61,24 @@ def copy_file(source,target):
         finally:
             if temporary.exists():temporary.unlink()
 
+def copy_reviewed_delta(record,target):
+    """Prefer a roundtrip-verified direct build over an older full preview."""
+    if not record.get('delta'):return False
+    source=ROOT/record['delta']
+    if not source.is_file() or digest(source)!=record.get('delta_sha256'):
+        raise ValueError('Reviewed language delta is missing or changed; rebuild it first')
+    if not target.exists() or digest(target)!=record['delta_sha256']:
+        target.parent.mkdir(parents=True,exist_ok=True)
+        with tempfile.NamedTemporaryFile(dir=target.parent,prefix=target.name+'.',suffix='.copying',delete=False) as stream:
+            temporary=Path(stream.name)
+        try:
+            shutil.copyfile(source,temporary)
+            if digest(temporary)!=record['delta_sha256']:raise ValueError('Reviewed delta copy differs')
+            temporary.replace(target)
+        finally:
+            if temporary.exists():temporary.unlink()
+    return True
+
 def personal_text_hits(data,tokens,text_file=False):
     """Find identifiers in text, not coincidental case-folded compressed bytes."""
     lower=data.lower();hits=[];binary_coincidences=0
@@ -115,20 +133,29 @@ def main():
     imaging=ROOT/'build/image-tools/Scripts/python.exe'
     # The whole translation (archive resources + HUD corrections) is one small
     # read-time delta over the untouched disc archive; no 6 GB English copy.
-    overlay=ROOT/'build/ui-corrections-en.kydelta';overlay.unlink(missing_ok=True)
-    subprocess.run([str(sys.executable),str(ROOT/'tools/build_ui_corrections.py'),str(english),str(overlay)],check=True)
-    delta=out/'languages/en/translation.kydelta';delta.unlink(missing_ok=True)
-    subprocess.run([str(sys.executable),str(ROOT/'tools/build_translation_delta.py'),str(out/'game/DAT/common.psarc'),
-                    str(english),str(delta),'--overlay',str(overlay)],check=True)
+    delta=out/'languages/en/translation.kydelta'
+    if not copy_reviewed_delta(preview,delta):
+        overlay=ROOT/'build/ui-corrections-en.kydelta';overlay.unlink(missing_ok=True)
+        subprocess.run([str(sys.executable),str(ROOT/'tools/build_ui_corrections.py'),str(english),str(overlay)],check=True)
+        delta.unlink(missing_ok=True)
+        subprocess.run([str(sys.executable),str(ROOT/'tools/build_translation_delta.py'),str(out/'game/DAT/common.psarc'),
+                        str(english),str(delta),'--overlay',str(overlay)],check=True)
     for obsolete in ('common.psarc','ui-corrections.kydelta'):(out/'languages/en'/obsolete).unlink(missing_ok=True)
     # Partial pt-BR preview (English fallback) when one has been built.
     portuguese=publication['languages'].get('pt-BR')
-    if portuguese and Path(portuguese['archive']).exists():
-        overlay=ROOT/'build/ui-corrections-pt-BR.kydelta';overlay.unlink(missing_ok=True)
-        subprocess.run([str(sys.executable),str(ROOT/'tools/build_ui_corrections.py'),portuguese['archive'],str(overlay)],check=True)
-        delta=out/'languages/pt-BR/translation.kydelta';delta.parent.mkdir(parents=True,exist_ok=True);delta.unlink(missing_ok=True)
-        subprocess.run([str(sys.executable),str(ROOT/'tools/build_translation_delta.py'),str(out/'game/DAT/common.psarc'),
-                        portuguese['archive'],str(delta),'--overlay',str(overlay)],check=True)
+    if portuguese and (portuguese.get('delta') or Path(portuguese['archive']).exists()):
+        subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/make_title_exit_art.py'),
+                        str(out/'game/DAT/common.psarc'),str(out/'languages/pt-BR'),'--language','pt-BR'],check=True)
+        delta=out/'languages/pt-BR/translation.kydelta'
+        if not copy_reviewed_delta(portuguese,delta):
+            overlay=ROOT/'build/ui-corrections-pt-BR.kydelta';overlay.unlink(missing_ok=True)
+            subprocess.run([str(sys.executable),str(ROOT/'tools/build_ui_corrections.py'),portuguese['archive'],str(overlay),'--language','pt-BR'],check=True)
+            delta.parent.mkdir(parents=True,exist_ok=True);delta.unlink(missing_ok=True)
+            subprocess.run([str(sys.executable),str(ROOT/'tools/build_translation_delta.py'),str(out/'game/DAT/common.psarc'),
+                            portuguese['archive'],str(delta),'--overlay',str(overlay)],check=True)
+        subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/build_prompt_pack.py'),
+                        str(out/'game/DAT/common.psarc'),str(out/'languages/pt-BR/prompts.kypack'),
+                        '--delta',str(delta),'--diagrams','--language','pt-BR'],check=True)
     for language,base in (('en',english),('ja',out/'game/DAT/common.psarc')):
         subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/build_prompt_pack.py'),
                         str(base),str(out/'languages'/language/'prompts.kypack')]+(['--diagrams'] if language=='en' else []),check=True)
@@ -139,6 +166,9 @@ def main():
     # game-styled art of the PC screens (photo mode, saves).
     subprocess.run([str(sys.executable),str(ROOT/'tools/build_eboot_text.py'),str(ROOT/'translations/binary-en.json'),
                     str(out/'languages/en/eboot-text.kytext'),'--eboot',str(game/'eboot.bin'),'--elf',str(prepared/'eboot.elf')],check=True)
+    if portuguese and Path(portuguese['archive']).exists():
+        subprocess.run([str(sys.executable),str(ROOT/'tools/build_eboot_text.py'),str(ROOT/'translations/binary-en.json'),
+                        str(out/'languages/pt-BR/eboot-text.kytext'),'--language','pt-BR','--eboot',str(game/'eboot.bin'),'--elf',str(prepared/'eboot.elf')],check=True)
     subprocess.run([str(imaging if imaging.exists() else sys.executable),str(ROOT/'tools/make_ui_art.py'),
                     str(out/'game/DAT/common.psarc'),str(out/'assets/ui-art.kyart')],check=True)
     fonts=ROOT/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts'
@@ -182,7 +212,7 @@ def main():
         if manifest.get('title')!='CUSA03562' or manifest.get('version')!='01.03':
             raise ValueError('Existing portable manifest targets another game')
         manifest['files']=[row for row in manifest['files'] if not row['path'].endswith('/keyboard-icons.kydelta') and row['path'] not in {'languages/en/common.psarc','languages/en/ui-corrections.kydelta'}]
-        prompt_paths={p.relative_to(out).as_posix() for p in (out/'languages').rglob('*') if p.suffix in {'.kypack','.kydelta'}}
+        prompt_paths={p.relative_to(out).as_posix() for p in (out/'languages').rglob('*') if p.suffix in {'.kypack','.kydelta','.kytext','.kyart'}}
         prompt_paths.add('Start on Linux.sh')
         for row in manifest['files']:
             path=out/row['path']
@@ -234,7 +264,7 @@ def main():
             if path.name!='manifest.json':records.append(dict(path=relative,bytes=path.stat().st_size,sha256=file_hash))
         if findings:raise ValueError('Privacy scan failed: '+str(sorted(set(findings))))
         (out/'manifest.json').write_text(json.dumps(dict(format='kyoei-private-portable-v1',title='CUSA03562',version='01.03',
-            languages=['ja','en'],english_entries=publication.get('entries_by_language',{}).get('en',publication.get('entries_per_language')),
+            languages=['ja','en']+(['pt-BR'] if (out/'languages/pt-BR/translation.kydelta').exists() else []),english_entries=publication.get('entries_by_language',{}).get('en',publication.get('entries_per_language')),
             english_textures=preview.get('textures'),personal_saves_included=False,
             host_configuration_included=False,privacy_scan_passed=True,original_disc_files_verified=originals_verified,
             compressed_binary_coincidences=coincidences,

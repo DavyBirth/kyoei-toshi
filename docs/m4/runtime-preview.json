@@ -688,12 +688,18 @@
           "entries": 1
         }
       ],
-      "translated_entries": 13269
+      "translated_entries": 13269,
+      "delta": "build/translation-en-rc1.kydelta",
+      "delta_sha256": "02445892fd160f587c54184ceef2071d4d4c09f4bd8ac797d162e708c86faf64",
+      "delta_bytes": 8323260,
+      "delta_translated_entries": 13269,
+      "delta_status": "editorial_review_candidate",
+      "delta_runtime_verified": false
     },
     "pt-BR": {
-      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-pt-03\\pt-BR\\common.psarc",
-      "sha256": "5bdfffcaf0f4ef21482971ff45953968aedcff8dd5058174e367e20fff5ce5df",
-      "bytes": 6352912333,
+      "archive": "G:\\kyoei-toshi-work\\translation\\runtime-preview-pt-04\\pt-BR\\common.psarc",
+      "sha256": "2b03de763208c3c1b19b6f0f3b7a10597992da7a5bd9f16f440056c789d9fcfc",
+      "bytes": 6352911306,
       "textures": 168,
       "status": "experimental_partial_translation",
       "runtime_verified": false,
@@ -1374,7 +1380,13 @@
           "entries": 1
         }
       ],
-      "translated_entries": 15578
+      "translated_entries": 15578,
+      "delta": "build/translation-pt-rc1.kydelta",
+      "delta_sha256": "ea0e874597f93f40c115dd9a077f3a419da5a2ec0c5217906503ca2f3d8d6e41",
+      "delta_bytes": 8391330,
+      "delta_translated_entries": 15578,
+      "delta_status": "editorial_review_candidate",
+      "delta_runtime_verified": false
     }
   },
   "resources": [

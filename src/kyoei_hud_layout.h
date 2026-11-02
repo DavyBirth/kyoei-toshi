@@ -18,6 +18,20 @@ static inline int kyoei_hud_measure(const KyoeiHudMetrics *metrics,const char *t
     for (size_t i=0;i<bytes;) {
         unsigned char ch=(unsigned char)text[i];
         if (ch>=128) {
+            if (ch==0xc2 && bytes-i>=2 &&
+                ((unsigned char)text[i+1]==0xaa || (unsigned char)text[i+1]==0xba)) {
+                equivalent+=1; i+=2; continue; /* Portuguese floor/ordinal labels */
+            }
+            /* Portuguese precomposed letters. Reserve a full native cell:
+             * this is conservative even when the glyph is proportional.
+             * Reject malformed UTF-8 and Latin-1 symbols rather than treating
+             * arbitrary bytes as letters. Keep the KHF1 cache compatible. */
+            if (ch==0xc3 && bytes-i>=2) {
+                unsigned char next=(unsigned char)text[i+1];
+                if (next>=0x80 && next<=0xbf && next!=0x97 && next!=0xb7) {
+                    equivalent+=1; i+=2; continue;
+                }
+            }
             /* Both audited native fonts give these existing glyphs exactly
              * one full-width advance (the star leads "★Save"). No fallback to a missing accent. */
             if (bytes-i<3 || (memcmp(text+i,"\xe2\x80\x98",3) &&

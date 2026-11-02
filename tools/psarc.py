@@ -18,6 +18,12 @@ class Entry:
     offset: int
     name: str = ''
 
+@dataclass(frozen=True)
+class DeltaSource:
+    """Explicit read-only base + verified delta, reopened for each consumer."""
+    base: Path
+    delta: bytes
+
 
 def safe_name(name):
     """Caminho relativo utilizável no Windows, sem escape ou alias."""
@@ -35,6 +41,10 @@ def safe_name(name):
 class Psarc:
     def __init__(self, path, file=None, size=None):
         # file/size read a virtual archive (e.g. base + runtime delta).
+        if isinstance(path,DeltaSource):
+            if file is not None:raise ValueError('Choose one virtual archive source')
+            from psarc_delta import Virtual
+            file=Virtual(path.base,path.delta);size=file.size;path=path.base
         self.path = Path(path)
         self.file = file or self.path.open('rb')
         try:
