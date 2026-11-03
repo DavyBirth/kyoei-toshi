@@ -15,7 +15,7 @@ from translation_names import validate_names
 from english_typography import native_english
 from build_ui_corrections import corrections
 from check_game_font_tables import glyph_rows
-from prewrap_text import PREWRAP,prewrap
+from prewrap_text import rule,prewrap
 
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE_SHA256='3a54e70d40b57562cbf350028ab8b75ee09c8143f8f1e766cc04bd81ce133966'
@@ -67,7 +67,8 @@ def main():
                 if e.get('source_text_sha256') and hashlib.sha256(s['original'].encode()).hexdigest()!=e['source_text_sha256']:
                     raise ValueError('Source text differs: '+name+' '+s['id'])
                 validate_names(s['original'],value,a.language,glossary,e.get('protected_literals',[]))
-                if name in PREWRAP:value=prewrap(value,glyphs,PREWRAP[name])
+                wrap=rule(name,s['id'])
+                if wrap:value=prewrap(value,glyphs,*wrap)
                 s['translation']=value;expected[s['id']]=value
             rebuilt=insert(data,doc);actual={s.id:s.text() for s in decode(rebuilt)[1].strings}
             if any(actual[k]!=v for k,v in expected.items()):raise ValueError('Text roundtrip differs')
