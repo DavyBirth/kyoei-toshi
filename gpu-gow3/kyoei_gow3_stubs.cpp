@@ -6,6 +6,7 @@
 #include <string>
 #include "gow3_overlay.h"
 #include "kyoei_overlay.h"
+#include "kyoei_pause_photo.h"
 #include "kyoei_overlay_gpu.h"
 extern "C" {
 #include "gz.h"
@@ -20,7 +21,7 @@ namespace Gow3Overlay {
 // vblank after the first dialog closed (~60 -> ~33 FPS).
 bool Visible() {
     const bool visible =
-        kyoei_overlay_kind() != 0 || kyoei_title_exit_state() != 0 || kyoei_photo_hud_hidden();
+        kyoei_overlay_kind() != 0 || kyoei_title_exit_state() != 0 || kyoei_photo_hud_hidden() || kyoei_pause_photo_visible();
     if (!visible) {
         kyoei_overlay_presented(kyoei_overlay_revision());
     }

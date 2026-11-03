@@ -58,14 +58,11 @@ def build(archive_path):
         read = lambda name: b''.join(archive.chunks(entries[name]))
         look = lambda name: preview(read(name))[0].convert('RGBA')
         images['option_title'] = title_bar(look(TITLE))
-        from localize_textures import regions,FONTS,REPO
+        from localize_textures import regions
         row=look('texture/hud/mmenu_selecttxt06.tex')
-        jp=REPO/'assets/fonts/NotoSansCJK-Regular.ttc'
-        if not jp.exists():jp=REPO/'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts/NotoSansCJK-Regular.ttc'
-        FONTS['pause_jp']=jp
-        for lang,label in (('en','Photo Mode'),('pt','Modo foto'),('ja','フォトモード')):
+        for lang,label in (('en','Photo Mode'),('pt','Modo foto'),('ja','Photo Mode')):
             images['pause_photo_'+lang]=regions(row,dict(resource='pause_photo',regions=[dict(
-                box=[26,3,292,38],erase='clear',text=label,size=30,font='pause_jp' if lang=='ja' else 'bold',
+                box=[26,3,292,38],erase='clear',text=label,size=30,font='bold',
                 align='left',anchor=False,text_box=[34,4,284,36],color=[255,255,255,255],
                 shadow=True,shadow_offset=[1,2],shadow_blur=1.5,shadow_color=[0,0,0,200])]))
         for key, name in PIECES.items(): images[key] = look(name)

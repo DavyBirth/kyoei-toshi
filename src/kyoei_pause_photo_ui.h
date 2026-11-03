@@ -9,7 +9,7 @@
 namespace KyoeiPausePhotoUi {
 // Same fixed menu-plane placement as the six authored native rows. Resolution
 // and aspect ratio follow HudSpace, including the swapchain's letterboxing.
-inline const ImVec2 row[4]={{1372,975},{1684,1010},{1681,1050},{1369,1015}};
+inline const ImVec2 row[4]={{1372,927},{1684,962},{1681,1002},{1369,967}};
 inline bool Inside(float x,float y){
     for(int i=0;i<4;++i){const auto a=row[i],b=row[(i+1)%4];if((b.x-a.x)*(y-a.y)-(b.y-a.y)*(x-a.x)<0)return false;}
     return true;
@@ -29,7 +29,7 @@ inline void Draw(){
     draw->AddConvexPolyFilled(p,4,selected?IM_COL32(5,12,8,220):IM_COL32(180,180,180,180));
     const char *name=KyoeiUiText::T("pause_photo_en","pause_photo_pt","pause_photo_ja");
     if(!KyoeiUiArt::DrawQuad(draw,name,p)){
-        KyoeiUiDraw::HudText(draw,hud,1406,1010,30,KyoeiUiText::T("Photo Mode","Modo foto","Photo Mode"));
+        KyoeiUiDraw::HudText(draw,hud,1406,962,30,KyoeiUiText::T("Photo Mode","Modo foto","Photo Mode"));
     }
     if(selected){draw->AddPolyline(p,4,IM_COL32(90,210,120,255),ImDrawFlags_Closed,2*hud.unit);}
 }

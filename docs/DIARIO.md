@@ -5396,3 +5396,8 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Icones: SHARE/F12 e saida pequena do jornal/Espaco adicionados; variantes dos tres controles preservadas. Suporte a atlas R8 em teste, com teste de tiling e troca de modo passando. Coordenadas dos icones agora vem da tabela nativa, com validacao pixel a pixel.
 - Pacotes privados pt/en/ja reconstruidos em build/items12-20261103, reaproveitando byte a byte os 18 registros de diagramas revisados. Nenhuma instalacao normal alterada ainda. Validacao visual em andamento; nao marcar os dois itens completos.
 - Telemetria real desta conversa em 03/11 19:57 UTC: 68% na janela curta, 95% semanal; leitura fresca e reset futuro, sem estimativa por tempo.
+
+### 03/11/2026 - escopo do launcher e verificacao da pausa
+- Davy esclareceu: manter o ingles original dos menus no idioma japones. Interface do launcher com varios idiomas e redesenho na estetica do jogo ficam para depois dos itens 1/2. Nova linha usa Photo Mode no japones.
+- Captura privada visible-pause.png confirmou a linha Modo foto abaixo de Carregar jogo. Corrigida a integracao com o filtro de visibilidade do apresentador. Navegacao revelou expiracao indevida entre atualizacoes; candidata agora verifica o estado nativo atual, sem depender de 200 ms para exibir a linha. Ainda falta validar entrada/saida e entrega na portatil.
+- Atlas RGBA dos rodapes identificado em capturas privadas e comparado pixel a pixel com o pacote: identidade exata. Investigacao de flags/uso continua; item 1 ainda nao concluido. Return to Desktop na execucao privada vinha da arte inglesa de teste; teste passou a selecionar a arte pt-BR e captura visible-title.png mostra Sair do jogo.

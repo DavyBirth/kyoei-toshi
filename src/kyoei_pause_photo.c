@@ -22,6 +22,7 @@ typedef void (ABI *Update)(void *);
 static Update original_update;
 static uint64_t now_ms(void){return GetTickCount64();}
 static uintptr_t unit_identity;
+static _Atomic uintptr_t menu_identity;
 static int read_value(uintptr_t address,void *out,size_t n){
     MEMORY_BASIC_INFORMATION info;
     if(!address || !VirtualQuery((void*)address,&info,sizeof(info)) || info.State!=MEM_COMMIT ||
@@ -37,7 +38,18 @@ static _Atomic uint64_t seen,deadline,close_until;
 static _Atomic int native_cursor,selected,swallow;
 static unsigned previous;
 static int direction;
-int kyoei_pause_photo_visible(void){uint64_t t=atomic_load(&seen);return t && now_ms()-t<200 && !atomic_load(&deadline);}
+int kyoei_pause_photo_visible(void){
+    if(atomic_load(&deadline))return 0;
+#ifdef KYOEI_PAUSE_PHOTO_TEST
+    uint64_t t=atomic_load(&seen);return t && now_ms()-t<200;
+#else
+    uintptr_t menu=atomic_load(&menu_identity);
+    if(!menu || pointer(pointer((uintptr_t)base+0x1543dd0)+0xa10)!=menu ||
+       !word(menu+0x90) || word(menu+0x298) || word(menu+0x58)!=13)return 0;
+    uintptr_t nodes=pointer(menu+0x50),last=pointer(nodes+11*8);float x=0;read_value(last+0x60,&x,4);
+    return x>=100 && x<=200 && word(menu+0x288)<=5;
+#endif
+}
 int kyoei_pause_photo_selected(void){return atomic_load(&selected);}
 void kyoei_pause_photo_cancel(void){
     int ours=atomic_exchange(&selected,0);uint64_t pending=atomic_exchange(&deadline,0);
@@ -94,11 +106,12 @@ static ABI void update(void *self){
     if(muted && muted==cursor){memcpy((void*)(cursor+0x94),&color,4);muted=0;}
     original_update(self);
     if(!kyoei_photo_hud_available() || !kyoei_photo_scene_available() ||
-       !word((uintptr_t)self+0x90) || word((uintptr_t)self+0x9c) ||
+       !word((uintptr_t)self+0x90) ||
        word((uintptr_t)self+0x298) || word((uintptr_t)self+0x58)!=13)return;
     int value=(int)word((uintptr_t)self+0x288);float x=0;
     uintptr_t last=pointer(nodes+11*8);read_value(last+0x60,&x,4);
     if(value<0 || value>5 || x<100 || x>200)return;
+    atomic_store(&menu_identity,(uintptr_t)self);
     atomic_store(&native_cursor,value);atomic_store(&seen,now_ms());
     if(atomic_load(&selected) && cursor){color=word(cursor+0x94);unsigned hidden=color&0xffffff;memcpy((void*)(cursor+0x94),&hidden,4);muted=cursor;}
 }

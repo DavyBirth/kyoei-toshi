@@ -22,3 +22,7 @@ Abaixo de "Carregar jogo" (como no Godzilla). Textura do menu: `texture/hud/mmen
 - Galeria: `tools/build_text_gallery.py` (--mails --items --intermission --item-prefix --only) + `build_localized_delta.py --extra lua/plan.luc=...`.
 - Entrada de teste: `KYOEI_TEST_INPUT` aceita `tap <tecla> <ms>` e `click <x> <y>` (frações da janela; o clique ainda não troca abas de Itens).
 - Sempre mudo (`tools/mute_test_audio.ps1`) e perfil `G:\kyoei-toshi-work\claude-test3\user`.
+
+## Depois: launcher (orientação de Davy nesta conversa)
+- Interface do launcher em varios idiomas e redesenho para combinar com a estetica do jogo. Fazer depois dos itens 1 e 2.
+- No japones, manter o padrao do jogo original, que ja tem menus em ingles; nao adicionar traducao japonesa extra do botao de sair.
