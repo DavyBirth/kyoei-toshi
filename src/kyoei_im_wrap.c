@@ -122,6 +122,46 @@ static ABI uintptr_t shorten_words(void *label, const char *text, unsigned max_c
     return original_shorten(label, text, max_chars);
 }
 
+/* Mission list preview (0xb375f0): texts over 18 characters keep 17 plus "…",
+ * via the char->byte helper 0x31ce70 called at 0xb37ad7. This helper keeps whole
+ * words that fit the same 17 full-width cells; one long word keeps the native cut. */
+static ABI unsigned mission_preview_cut(void *string, unsigned chars) {
+    const char *t = *(const char **)string; unsigned len = *(unsigned *)((char *)string + 8);
+    size_t best = 0;
+    for (size_t i = 1; t && i < len; ++i) {
+        if (t[i] != ' ' && t[i] != '\n') continue;
+        if (width(t, i) > (float)chars) break;
+        best = i;
+    }
+    while (best && strchr(" ,.:;-\n", t[best - 1])) --best;
+    if (best) return (unsigned)best;
+    unsigned at = 0;
+    for (unsigned n = 0; t && n < chars && at < len; ++n) {
+        unsigned char c = (unsigned char)t[at] & 0xf0;
+        at += c == 0xe0 ? 3 : (c == 0xc0 || c == 0xd0) ? 2 : 1;
+    }
+    return at;
+}
+static void hook_mission_preview(unsigned char *image) {
+    static const unsigned char call[5] = {0xe8, 0x94, 0x53, 0x7e, 0xff}, count[5] = {0xbe, 0x11, 0, 0, 0};
+    unsigned char *site = image + 0xb37ad7;
+    if (memcmp(site, call, 5) || memcmp(site - 8, count, 5)) { gz_log("Kyoei mission preview: signature differs (%02x %02x %02x %02x %02x | %02x %02x); native cut kept",site[0],site[1],site[2],site[3],site[4],site[-5],site[-4]); return; }
+    unsigned char *jump = NULL;
+    for (unsigned i = 0; i < 16 && !jump; ++i)
+        jump = VirtualAlloc(image + 0x5500000 + i * 0x10000, 4096, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    if (!jump) return;
+    uint64_t target = (uint64_t)(uintptr_t)mission_preview_cut;
+    jump[0] = 0x48; jump[1] = 0xb8; memcpy(jump + 2, &target, 8); jump[10] = 0xff; jump[11] = 0xe0;
+    DWORD prior, ignored;
+    int64_t distance = (int64_t)(uintptr_t)jump - (int64_t)(uintptr_t)(site + 5);
+    if (distance < INT32_MIN || distance > INT32_MAX || !VirtualProtect(jump, 4096, PAGE_EXECUTE_READ, &prior) ||
+        !VirtualProtect(site, 5, PAGE_EXECUTE_READWRITE, &prior)) return;
+    int32_t relative = (int32_t)distance; memcpy(site + 1, &relative, 4);
+    VirtualProtect(site, 5, prior, &ignored);
+    FlushInstructionCache(GetCurrentProcess(), site, 5);
+    gz_log("Kyoei mission preview: cut by width/words");
+}
+
 static uint64_t hash(const unsigned char *p, size_t n) {
     uint64_t h = UINT64_C(14695981039346656037);
     for (size_t i = 0; i < n; ++i) h = (h ^ p[i]) * UINT64_C(1099511628211);
@@ -172,6 +212,7 @@ void kyoei_im_wrap_configure(void *image_base, uint64_t size) {
     FlushInstructionCache(GetCurrentProcess(), relay, 256);
     int split_ok = hook(image, 0xac6210, UINT64_C(0xdfea76622a7ee823), relay);
     int short_ok = hook(image, 0xac78c0, UINT64_C(0x194fca4c175ee645), relay + 128);
+    hook_mission_preview(image);
     gz_log("Kyoei news text: line split %s, title cut %s, metrics %s", split_ok ? "by width/words" : "native",
            short_ok ? "by width/words" : "native", metrics_ready ? "native" : "estimated");
 }

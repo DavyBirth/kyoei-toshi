@@ -5417,3 +5417,11 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 ### 03/11/2026 — candidata dos itens 1/2 instalada na portátil (Claude)
 - Instalados na portátil: runtime build/kyoei.exe (animação/destaque da linha Modo foto), prompts.kypack pt-BR/en/ja e assets/ui-art.kyart de build/items12-20261103. Backups em data/update-backups/items12-20261103. Manifesto atualizado; launcher --check 0. Jogo não aberto pelo agente.
 - Falta Davy conferir: animação da linha Modo foto na pausa (sem destaque duplo em Carregar jogo), rodapés do jornal/Coleção e ícone do celular com teclas de teclado.
+
+### 03/11/2026 — Modo foto, Itens, Missões (Claude, após teste de Davy)
+- Causa de "não seleciona": launcher com "Photo preview" desligado; a linha era desenhada mesmo assim. Agora o modo foto é sempre ligado no launcher (caixa removida) e a linha só aparece com ele disponível.
+- Linha Modo foto: geometria medida contra as seis linhas nativas (extrapolação 2×Carregar−Opções), segue o balanço do menu (menu+0xd0/0xd4; borda esquerda 0.65 e direita 0.2 do y; ponta direita −1 em x). Erro medido <1 px em 15 capturas sincronizadas. Destaque: o cursor nativo (nó 10) é movido 48 unidades abaixo de Carregar, em vez de esconder/duplicar. Na troca de página some na hora e volta com fade (o deslize da página não é visível nos dados do menu).
+- Setas na pausa só trocam página na raiz: kyoei_pause_menu_root() (menu de seis linhas ativo). Em Itens as setas andam na grade; A/D trocam página. Conferido no jogo.
+- Missões: "St01…St18/St10前後" do eboot → pt-BR F01…, F10-1/2A/2B; inglês St10-1/2A/2B. Prévia da lista (0xb375f0: >18 caracteres → 17+"…") agora corta por largura e entre palavras (gancho na chamada 0xb37ad7 em kyoei_im_wrap.c). Visto: "F01", "Estou indo pela chuva até o...".
+- Pendente da varredura dos cortes nativos: 0xa6d9a0 e 0xb034c0 cortam em 12 caracteres (perto de DEFAULT_CMND_*: balões de ação); conferir em jogo. Faixa "Stage 01" no começo da fase ainda em inglês no pt-BR (textura).
+- Instalado na portátil (backup data/update-backups/items12b-20261103): runtime, launcher, eboot-text en/pt-BR. launcher --check 0.
