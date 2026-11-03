@@ -5346,3 +5346,8 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Kit de fontes v2 gerado: 16072 arquivos, SHA256 20212284d41552b79bd893f31f37b711d98283e0372e424539001ede4aa7ae6c. Comparacao de 15989 entradas usadas na compilacao: todas identicas.
 - O primeiro link falhou porque o CMake escolheu Debug antes do padrao local, misturando iteradores Debug/Release. Padrao RelWithDebInfo movido antes de project(); prova em pasta sem cache confirmou RelWithDebInfo. Receita explicita corrigida; recompilacao Release em andamento no log build/source-validation-build-release-20261103.log. Kit v2 ainda precisa ser substituido para incluir essa correcao.
 - ZIP atual v7 passou todos os hashes e busca de caminhos pessoais. Preparador do proprio v7 gerou os quatro arquivos runtime/out identicos aos instalados, incluindo os 19 modulos. Prova em build/public-v7-module-proof.json.
+
+### 03/11/2026 — kit de fontes v3
+- Recompilação Release a partir do kit (pasta sem cache) ligou kyoei.exe com sucesso (log build/source-validation-build-release-20261103.log).
+- Kit de fontes v3: build/Kyoei-Source-Candidate-v3-20261103.zip, 16072 arquivos, SHA256 550103e387c3cc043ece95d4831795bc2cb7e73bff161a5874a92a1143190b7f. Gerado com --dependency-cache build/source-validation-20261103/build/_deps (a pasta build/_deps local não existe mais; build/public-source-inputs NÃO é o cache certo). Comparado ao v2: mesmos nomes; só CMakeLists.txt, SOURCE-BUILD.md e source-manifest.json mudaram. Kits v1/v2 removidos.
+- Pendente: florista (Davy), publicação no GitHub ainda não feita.
