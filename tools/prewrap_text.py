@@ -11,6 +11,8 @@ from prepare_translation_catalog import TOKENS
 # resource -> list of (string-id suffix or None for all, width, break marker)
 PREWRAP = {
     'common/lua/mission_text.luc': [(None, 940, '\n')],
+    # mail body/replies: native break measured 1133-1155
+    'common/lua/Text_Mail.luc': [(None, 1090, '\n')],
     # names: '<br>' is shown literally there, a real newline breaks the line
     'common/csv/item_data.csh': [('/c25', 500, '\n'), ('/c26', 480, '<br>'), ('/c28', 480, '<br>')],
 }

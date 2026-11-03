@@ -11691,6 +11691,13 @@
           "en": "The building on the northeast corner of the intersection where the giant alien first appeared.",
           "notes": "English draft imported from audited private workspace, translate-en-0149.json:p0/k232; human editorial and runtime review pending.",
           "editorial_status": "pending"
+        },
+        {
+          "id": "p0/k63",
+          "source_text_sha256": "dc167ef84d56f68baf1b9ff0943f824743343626789c6d7415f047f7f4559a10",
+          "en": "HO",
+          "notes": "full-width sender in the original",
+          "editorial_status": "pending"
         }
       ]
     },
