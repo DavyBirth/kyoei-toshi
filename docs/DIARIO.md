@@ -5425,3 +5425,10 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Missões: "St01…St18/St10前後" do eboot → pt-BR F01…, F10-1/2A/2B; inglês St10-1/2A/2B. Prévia da lista (0xb375f0: >18 caracteres → 17+"…") agora corta por largura e entre palavras (gancho na chamada 0xb37ad7 em kyoei_im_wrap.c). Visto: "F01", "Estou indo pela chuva até o...".
 - Pendente da varredura dos cortes nativos: 0xa6d9a0 e 0xb034c0 cortam em 12 caracteres (perto de DEFAULT_CMND_*: balões de ação); conferir em jogo. Faixa "Stage 01" no começo da fase ainda em inglês no pt-BR (textura).
 - Instalado na portátil (backup data/update-backups/items12b-20261103): runtime, launcher, eboot-text en/pt-BR. launcher --check 0.
+
+### 03/11/2026 — varredura de textos fixos e cortes nativos (Claude)
+- Faixa de início/fim de fase: o gerador traduzia só o subtítulo; agora "stage" também passa por texture-labels-pt-BR ("Fase 01", "Fase 10 Parte 2A"). 40 texturas de fase refeitas; conferidas por imagem.
+- Delta pt-BR novo (build/stage-pt-20261103b): 8.672.340 bytes, SHA256 db18b60f094a7182... Comparado ao instalado: só as 40 texturas de fase e o rótulo "Moedas exigidas"→"Custo" (TC_main/TC_item_detail), que o instalado ainda não tinha.
+- Eboot: 691 textos japoneses fora da tabela; quase todos depuração/editor. Traduzidos os visíveis ao jogador: aviso de dados de jogo zerado (2), save com erro, aviso de DLC, "Dia %d", duas datas; "Stage 1…17" → "Fase N". Tabela: 306 strings. Lista completa em build/items12-20261103/eboot-untranslated.txt (privada).
+- Cortes nativos com "…": 6 rotinas. Notícias (0xac6210/0xac78c0), prévia de missões (0xb375f0) resolvidas; placas NPC (0xaea710) usam escala. Rotinas de 12 caracteres 0xa6d9a0/0xb034c0 (perto de DEFAULT_CMND_*): sem caso visto em caminhada de teste; o runtime agora registra no log "Kyoei label cut (12 chars): <texto>" para qualquer corte real.
+- Instalado na portátil (backup data/update-backups/sweep-20261103): runtime, delta pt-BR, eboot-text en/pt-BR. launcher --check 0.

@@ -21,7 +21,7 @@ def localized_table(table,language):
         if value not in labels:raise ValueError('Untranslated texture label: '+value)
         return labels[value]
     for item in result['textures']:
-        for key in ('en','heading'):
+        for key in ('en','heading','stage'):
             if key in item:item[key]=text(item[key])
         if 'paragraphs' in item:item['paragraphs']=[text(v) for v in item['paragraphs']]
         for region in item.get('regions',[]):

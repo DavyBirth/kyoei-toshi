@@ -167,6 +167,39 @@ static uint64_t hash(const unsigned char *p, size_t n) {
     for (size_t i = 0; i < n; ++i) h = (h ^ p[i]) * UINT64_C(1099511628211);
     return h;
 }
+/* 12-character label cutters 0xa6d9a0/0xb034c0 (action balloons near objects):
+ * report each distinct text they will cut, so translations can be kept short. */
+static ABI unsigned label_chars(const char *text) {
+    unsigned n = 0;
+    for (const unsigned char *p = (const unsigned char *)text; p && *p; ++p) n += (*p & 0xc0) != 0x80;
+    if (n >= 13) {
+        static uint64_t seen[64]; static unsigned count; uint64_t h = hash((const unsigned char *)text, strlen(text));
+        unsigned i = 0; while (i < count && seen[i] != h) ++i;
+        if (i == count && count < 64) { seen[count++] = h; gz_log("Kyoei label cut (12 chars): %s", text); }
+    }
+    return n;
+}
+static void hook_label_report(unsigned char *image) {
+    static const size_t sites[2] = {0xa6d9f2, 0xb03512};
+    static const unsigned char calls[2][5] = {{0xe8, 0x99, 0xf3, 0x8a, 0xff}, {0xe8, 0x79, 0x98, 0x81, 0xff}};
+    unsigned char *jump = NULL;
+    for (unsigned i = 0; i < 16 && !jump; ++i)
+        jump = VirtualAlloc(image + 0x5600000 + i * 0x10000, 4096, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    if (!jump) return;
+    uint64_t target = (uint64_t)(uintptr_t)label_chars;
+    jump[0] = 0x48; jump[1] = 0xb8; memcpy(jump + 2, &target, 8); jump[10] = 0xff; jump[11] = 0xe0;
+    DWORD prior, ignored;
+    if (!VirtualProtect(jump, 4096, PAGE_EXECUTE_READ, &prior)) return;
+    for (int k = 0; k < 2; ++k) {
+        unsigned char *site = image + sites[k];
+        int64_t distance = (int64_t)(uintptr_t)jump - (int64_t)(uintptr_t)(site + 5);
+        if (memcmp(site, calls[k], 5) || distance < INT32_MIN || distance > INT32_MAX) continue;
+        if (!VirtualProtect(site, 5, PAGE_EXECUTE_READWRITE, &prior)) continue;
+        int32_t relative = (int32_t)distance; memcpy(site + 1, &relative, 4);
+        VirtualProtect(site, 5, prior, &ignored); FlushInstructionCache(GetCurrentProcess(), site, 5);
+    }
+}
+
 static int hook(unsigned char *image, size_t entry, uint64_t expected, unsigned char *relay) {
     unsigned char *code = image + entry;
     if (hash(code, 0x80) != expected) return 0;

@@ -2957,6 +2957,144 @@
      "bytes": 4,
      "source_sha256": "10a509c12776604b81b94ade97c0a963e1fc3a7f6051c12474403a171259f228",
      "en": "St18"
+    },
+    {
+     "offset": 17378972,
+     "bytes": 7,
+     "source_sha256": "05a619cc568c73506325ff2b766896461961b051c53433b9ad29f0d6e6baddd7",
+     "en": "Stage 1"
+    },
+    {
+     "offset": 17378980,
+     "bytes": 7,
+     "source_sha256": "bc52af22d1648778ae9b83a7bbb0532b064beb07588540cb2cebdc05167738ef",
+     "en": "Stage 2"
+    },
+    {
+     "offset": 17378988,
+     "bytes": 7,
+     "source_sha256": "608eeb4141e98e3b23002baaced131031a9badfa36f0c366ffb120bfe0a12b9e",
+     "en": "Stage 3"
+    },
+    {
+     "offset": 17378996,
+     "bytes": 7,
+     "source_sha256": "a41eb046be018b7dc27df8f2eb3a7eee3914a29ee965bf5bb438bfd3a7aef616",
+     "en": "Stage 4"
+    },
+    {
+     "offset": 17379004,
+     "bytes": 7,
+     "source_sha256": "292e37e4036653ef9abe546fd8cdbbcae54eb2d787249be369d391d1feaf13c7",
+     "en": "Stage 5"
+    },
+    {
+     "offset": 17379012,
+     "bytes": 7,
+     "source_sha256": "d921dcecfc2ac958768d3d7f57f62f55b501bf62139900f8a3a4cfde3f944d37",
+     "en": "Stage 6"
+    },
+    {
+     "offset": 17379020,
+     "bytes": 7,
+     "source_sha256": "89021e6f9f94838969363f8b626b2e4c063596402a276bd7e63dabefd767e6ab",
+     "en": "Stage 7"
+    },
+    {
+     "offset": 17379028,
+     "bytes": 7,
+     "source_sha256": "15dabcbd9782ecbc548dae1b50b6d13c2429b757d9723bff36495f4452f83d5e",
+     "en": "Stage 8"
+    },
+    {
+     "offset": 17379036,
+     "bytes": 7,
+     "source_sha256": "54d4dc141892f6603cd0a8ae04e5060f15d46e34c649b5b6fa54c5e706e417cf",
+     "en": "Stage 9"
+    },
+    {
+     "offset": 17379091,
+     "bytes": 8,
+     "source_sha256": "d5ca858a8aec4e518488775c75a2ea8be74d99a24ef1ae6b43bc0d10f8804287",
+     "en": "Stage 11"
+    },
+    {
+     "offset": 17379100,
+     "bytes": 8,
+     "source_sha256": "e352f4d4591d764220eaa6cc05a1c643c19dda96cc14b7dea6f82d56a33d5071",
+     "en": "Stage 12"
+    },
+    {
+     "offset": 17379109,
+     "bytes": 8,
+     "source_sha256": "b400347ea74c04c00015572ea5e5a5f6f46690072ad601894daac38fcd4b7b1e",
+     "en": "Stage 13"
+    },
+    {
+     "offset": 17379118,
+     "bytes": 8,
+     "source_sha256": "fedcc2415f67529474b613f4179f49919cc6038ab7bd204ab0fd1e423b380562",
+     "en": "Stage 14"
+    },
+    {
+     "offset": 17379127,
+     "bytes": 8,
+     "source_sha256": "aa010b6c198336c679c7c9fe2baa5dba5d7fc31df851bd95cd5f217113fd01e7",
+     "en": "Stage 15"
+    },
+    {
+     "offset": 17379136,
+     "bytes": 8,
+     "source_sha256": "7cefd8b4d31b465366647bcba69d4d8e2d00554b30d8de01285d04cccb778fab",
+     "en": "Stage 16"
+    },
+    {
+     "offset": 17379145,
+     "bytes": 8,
+     "source_sha256": "a6a4e86c27ac51a3c2f0fd22a67b832a015207bb09858b671912b9d8b6058f16",
+     "en": "Stage 17"
+    },
+    {
+     "offset": 17381667,
+     "bytes": 183,
+     "source_sha256": "87b5ed15ba14adb4fdea1571d2dbae2ee6a4ad120668c008ac3a271f3bfa2bcb",
+     "en": "Loading clear data lets you continue with:\n・Shadow Coins held at clear\n・Shadow Coins spent on item trades"
+    },
+    {
+     "offset": 17382089,
+     "bytes": 246,
+     "source_sha256": "7126bb153491195cf9ca16e5dbc39f4b7bcae32f35281fc67a041c3bc96e68c2",
+     "en": "Loading clear data carries over:\n・Shadow Coins held at clear\n・Shadow Coins spent on item trades\n・Other colors of savior items can be traded"
+    },
+    {
+     "offset": 17378896,
+     "bytes": 75,
+     "source_sha256": "ea420ecbebc59cb899e60c48b518f010980d0d9991a56bdf616b2ada1ffe9b99",
+     "en": "This save data has an error and cannot be loaded."
+    },
+    {
+     "offset": 17378623,
+     "bytes": 272,
+     "source_sha256": "f2a4d426e8cbbac4cc39dc73a62cf8bb71a8dfab4d5f8d23dac7a0140360c399",
+     "en": "The special collaboration event download content was not found,\nso the game cannot continue.\nPlease install the special collaboration event download content."
+    },
+    {
+     "offset": 17609288,
+     "bytes": 8,
+     "source_sha256": "9928b51dcd8e89eaeef2b4c0f258323a7bd847d7fa71ea4bf1a2e32b23ca38c1",
+     "en": "Day %d"
+    },
+    {
+     "offset": 17408938,
+     "bytes": 27,
+     "source_sha256": "b2f75c7be53ca5de94cc46e68ea2832bdd60b09ed722bdd525afeca6fe39f078",
+     "en": "April 6, 2018"
+    },
+    {
+     "offset": 17409026,
+     "bytes": 27,
+     "source_sha256": "9465281705ade0b526b3b5a6cc3f893bc2989694038bf44c8f8e255ba2f2ad8f",
+     "en": "April 7, 2018"
     }
    ]
   }
