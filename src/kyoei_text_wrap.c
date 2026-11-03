@@ -41,8 +41,25 @@ static uint32_t last_break(const char *text, uint32_t start, uint32_t end) {
     return found;
 }
 
+static float wrap_inner(void *font, const char *text, uint32_t index, uint32_t length, void *state,
+                         const MeasureParams *params, MeasureOut *out);
 float kyoei_text_wrap_measure(void *font, const char *text, uint32_t index, uint32_t length, void *state,
                               const MeasureParams *params, MeasureOut *out) {
+    float result = wrap_inner(font, text, index, length, state, params, out);
+#ifndef KYOEI_TEXT_WRAP_TEST
+    static int lines = -1;
+    if (lines < 0) lines = getenv("KYOEI_WRAP_LINES") != NULL;
+    int32_t box = 0; if (params) memcpy(&box, (const unsigned char *)params + 0x10, 4);
+    if (lines && text && params && out && box > 0 && box < 300) {
+        static volatile LONG count;
+        if (InterlockedIncrement(&count) <= 4000)
+            gz_log("Kyoei wrap line: limit=%d start=%u end=%u newline=%u length=%u text=%.40s", box, params->start, out->end, out->newline, length, text);
+    }
+#endif
+    return result;
+}
+static float wrap_inner(void *font, const char *text, uint32_t index, uint32_t length, void *state,
+                         const MeasureParams *params, MeasureOut *out) {
     float width = original(font, text, index, length, state, params, out);
 #ifndef KYOEI_TEXT_WRAP_TEST
     static volatile LONG reports;
@@ -51,6 +68,24 @@ float kyoei_text_wrap_measure(void *font, const char *text, uint32_t index, uint
     if (trace && text && params && out && length>40 && out->end<length &&
         InterlockedIncrement(&reports)<=16) {
         gz_log("Kyoei wrap probe: length=%u start=%u end=%u explicit=%u index=%u",length,params->start,out->end,out->newline,index);
+    }
+    /* Box limits: 0x2e3131 compares pen x against (float)params+0x10 after scaling by params+8. */
+    static int limits = -1;
+    if (limits < 0) limits = getenv("KYOEI_WRAP_LIMITS") != NULL;
+    if (limits && text && params && params->start == 0 && length > 0) {
+        static uint64_t seen[4096]; static volatile LONG used;
+        const unsigned char *p = (const unsigned char *)params;
+        int32_t limit; float scale; memcpy(&limit, p + 0x10, 4); memcpy(&scale, p + 8, 4);
+        uint64_t key = 1469598103934665603ULL ^ (uint32_t)limit;
+        for (uint32_t i = 0; i < length && i < 64; ++i) key = (key ^ (unsigned char)text[i]) * 1099511628211ULL;
+        int fresh = 1;
+        for (LONG i = 0; i < used && i < 4096; ++i) if (seen[i] == key) { fresh = 0; break; }
+        if (fresh && used < 4096) {
+            seen[InterlockedIncrement(&used) - 1] = key;
+            char head[97]; uint32_t n = length < 96 ? length : 96; memcpy(head, text, n); head[n] = 0;
+            for (uint32_t i = 0; i < n; ++i) if (head[i] == '\n' || head[i] == '\r') head[i] = '|';
+            gz_log("Kyoei wrap limit: limit=%d scale=%.3f length=%u text=%s", limit, scale, length, head);
+        }
     }
 #endif
     if (!text || !params || !out || out->newline || out->end >= length || out->end <= params->start) return width;

@@ -406,14 +406,14 @@
         {
           "id": "p0/k193",
           "source_text_sha256": "fe68c3401adfdd6971621dd762d999d49d3014125bb685ef490bcc50ad4a2b16",
-          "en": "Yukiyanagi Building, 14th Floor",
+          "en": "Yukiyanagi Building, 14th\nFloor",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k193; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
         {
           "id": "p0/k222",
           "source_text_sha256": "1921b262398c155110d0057aba12d879685a7a10e792c3258dd519761954105b",
-          "en": "Yamabuki Building Rooftop, Mizuna City",
+          "en": "Yamabuki Building\nRooftop, Mizuna City",
           "notes": "English draft imported from audited private workspace, translate-en-0098.json:p0/k222; human editorial and runtime review pending.",
           "editorial_status": "pending"
         }
