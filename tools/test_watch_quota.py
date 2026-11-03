@@ -6,7 +6,7 @@ import unittest
 from watch_quota import ROOT,quota_state,exhausted
 
 class Quota(unittest.TestCase):
-    def read(self,primary=93,weekly=94,age=0,parent=None,cwd=None,reset=300):
+    def read(self,primary=96,weekly=96,age=0,parent=None,cwd=None,reset=300):
         now=dt.datetime.now(dt.timezone.utc)
         metadata=dict(id='main',cwd=str(cwd or ROOT),parent_thread_id=parent)
         record=dict(timestamp=(now-dt.timedelta(seconds=age)).isoformat(),payload=dict(rate_limits=dict(
