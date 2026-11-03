@@ -13,6 +13,8 @@ def localized_table(table,language):
     for item in result['textures']:
         if 'regions' in item:
             item['regions']=[r for r in item['regions'] if r.get('language',language)==language]
+    # Drop art that only changes in another language, so it is left untouched here.
+    result['textures']=[i for i in result['textures'] if 'regions' not in i or i['regions']]
     if language=='en':return result
     labels=json.loads((ROOT/'translations/texture-labels-pt-BR.json').read_text(encoding='utf8'))
     def text(value):

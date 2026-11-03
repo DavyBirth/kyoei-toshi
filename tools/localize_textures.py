@@ -17,7 +17,9 @@ _NOTO = 'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts/
 FONT = next((p for p in (REPO / _NOTO,REPO/'assets/fonts/NotoSans-Regular.ttf') if p.exists()), REPO / _NOTO)
 FONTS = {'sans': FONT,
          'bold': next((p for p in (Path('C:/Windows/Fonts/segoeuib.ttf'),FONT) if p.exists()),FONT),
-         'serif': next((p for p in (Path('C:/Windows/Fonts/cambriab.ttf'),FONT) if p.exists()),FONT)}
+         'serif': next((p for p in (Path('C:/Windows/Fonts/cambriab.ttf'),FONT) if p.exists()),FONT),
+         # Title-menu art is drawn in a Mincho face; Noto Serif CJK's Latin matches it.
+         'mincho': next((p for p in (Path('C:/Windows/Fonts/NotoSerifSC-VF.ttf'),Path('C:/Windows/Fonts/cambria.ttc'),FONT) if p.exists()),FONT)}
 
 
 def decode(data):
@@ -497,7 +499,11 @@ def regions(im, item):
                 out_lines.append(cur)
             return out_lines
         while True:
-            font = ImageFont.truetype(fontfile, size); lines = wrap(font)
+            font = ImageFont.truetype(fontfile, size)
+            if 'weight' in r:
+                try: font.set_variation_by_axes([r['weight']])
+                except (OSError, ValueError): pass  # static fallback font
+            lines = wrap(font)
             if (max(font.getlength(l) for l in lines) <= x1 - x0 and len(lines) <= r.get('max_lines', 99)) or size <= 7: break
             size -= 1
         if size < r.get('size', 20): print('shrunk', item['resource'], text, size, file=sys.stderr)
@@ -538,6 +544,7 @@ def regions(im, item):
                 for x, y, l in pos: sd.text((x + ox, y + oy), l, font=font, fill=tuple(r.get('shadow_color', [0, 0, 0, 230])), stroke_width=r.get('shadow_stroke', 0))
             out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(r.get('shadow_blur', 2))))
         for x, y, l in pos: d.text((x, y), l, font=font, fill=color)
+        if r.get('blur'): layer = layer.filter(ImageFilter.GaussianBlur(r['blur']))  # focus-glow art
         out.alpha_composite(layer)
     return out
 

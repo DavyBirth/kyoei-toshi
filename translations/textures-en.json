@@ -17773,6 +17773,1997 @@
      ]
     }
    ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_newgame.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      72
+     ],
+     "erase": "clear",
+     "text": "New Game",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      18,
+      23,
+      250,
+      49
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 3,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ]
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_newgame_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      72
+     ],
+     "erase": "clear",
+     "text": "New Game",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      18,
+      23,
+      250,
+      49
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "blur": 2.5,
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow_stroke": 3,
+     "shadow_blur": 4,
+     "shadow_strength": 2
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_loadgame.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      72
+     ],
+     "erase": "clear",
+     "text": "Load Game",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      20,
+      24,
+      250,
+      50
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 3,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ]
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_loadgame_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      72
+     ],
+     "erase": "clear",
+     "text": "Load Game",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      20,
+      24,
+      250,
+      50
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "blur": 2.5,
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow_stroke": 3,
+     "shadow_blur": 4,
+     "shadow_strength": 2
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_option.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      72
+     ],
+     "erase": "clear",
+     "text": "Option",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      22,
+      24,
+      250,
+      51
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 3,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ]
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_option_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      72
+     ],
+     "erase": "clear",
+     "text": "Option",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      22,
+      24,
+      250,
+      51
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "blur": 2.5,
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow_stroke": 3,
+     "shadow_blur": 4,
+     "shadow_strength": 2
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_collection.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      72
+     ],
+     "erase": "clear",
+     "text": "Collection",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      21,
+      23,
+      250,
+      49
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 3,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      170
+     ]
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_collection_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      256,
+      72
+     ],
+     "erase": "clear",
+     "text": "Collection",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      21,
+      23,
+      250,
+      49
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "blur": 2.5,
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow_stroke": 3,
+     "shadow_blur": 4,
+     "shadow_strength": 2
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_special.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      232,
+      116
+     ],
+     "erase": "clear",
+     "text": "Special",
+     "size": 40,
+     "font": "mincho",
+     "weight": 400,
+     "align": "center",
+     "anchor": false,
+     "text_box": [
+      20,
+      37,
+      212,
+      77
+     ],
+     "color": [
+      235,
+      235,
+      235,
+      255
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_menu_special_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      232,
+      116
+     ],
+     "erase": "clear",
+     "text": "Special",
+     "size": 40,
+     "font": "bold",
+     "weight": 700,
+     "align": "center",
+     "anchor": false,
+     "text_box": [
+      20,
+      37,
+      212,
+      77
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "blur": 2.5,
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow_stroke": 3,
+     "shadow_blur": 4,
+     "shadow_strength": 2
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_screen_PAB.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      428,
+      84
+     ],
+     "erase": "clear",
+     "text": "PRESS ANY BUTTON",
+     "size": 30,
+     "font": "bold",
+     "align": "center",
+     "anchor": false,
+     "text_box": [
+      20,
+      26,
+      408,
+      58
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 3,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ]
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_title/title_screen_PAB_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      428,
+      84
+     ],
+     "erase": "clear",
+     "text": "PRESS ANY BUTTON",
+     "size": 30,
+     "font": "bold",
+     "align": "center",
+     "anchor": false,
+     "text_box": [
+      20,
+      26,
+      408,
+      58
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "blur": 2.5,
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow_stroke": 3,
+     "shadow_blur": 4,
+     "shadow_strength": 2
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/mmenu_selecttxt01.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      26,
+      3,
+      292,
+      38
+     ],
+     "erase": "clear",
+     "text": "Item",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      34,
+      4,
+      284,
+      36
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/mmenu_selecttxt02.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      26,
+      3,
+      292,
+      38
+     ],
+     "erase": "clear",
+     "text": "Mission & Episode",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      34,
+      4,
+      284,
+      36
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/mmenu_selecttxt03.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      26,
+      3,
+      292,
+      38
+     ],
+     "erase": "clear",
+     "text": "Character",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      34,
+      4,
+      284,
+      36
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/mmenu_selecttxt04.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      26,
+      3,
+      292,
+      38
+     ],
+     "erase": "clear",
+     "text": "Collection",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      34,
+      4,
+      284,
+      36
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/mmenu_selecttxt05.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      26,
+      3,
+      292,
+      38
+     ],
+     "erase": "clear",
+     "text": "Option",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      34,
+      4,
+      284,
+      36
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/mmenu_selecttxt06.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      26,
+      3,
+      292,
+      38
+     ],
+     "erase": "clear",
+     "text": "Load Game",
+     "size": 30,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      34,
+      4,
+      284,
+      36
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      1,
+      2
+     ],
+     "shadow_blur": 1.5,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      200
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/mm01_title.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      233,
+      0,
+      309,
+      44
+     ],
+     "erase": "inpaint",
+     "text": "Item",
+     "size": 34,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      240,
+      240,
+      245,
+      255
+     ],
+     "shadow": true,
+     "dy": -1,
+     "threshold": 14,
+     "grow": 3,
+     "axis": "h",
+     "text_box": [
+      237,
+      4,
+      720,
+      40
+     ],
+     "anchor": "y",
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/menu_mission/mm02_title.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      233,
+      0,
+      526,
+      44
+     ],
+     "erase": "inpaint",
+     "text": "Mission & Episode",
+     "size": 34,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      240,
+      240,
+      245,
+      255
+     ],
+     "shadow": true,
+     "dy": -1,
+     "threshold": 14,
+     "grow": 3,
+     "axis": "h",
+     "text_box": [
+      237,
+      4,
+      720,
+      40
+     ],
+     "anchor": "y",
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/mm03_title.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      233,
+      0,
+      400,
+      44
+     ],
+     "erase": "inpaint",
+     "text": "Character",
+     "size": 34,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      240,
+      240,
+      245,
+      255
+     ],
+     "shadow": true,
+     "dy": -1,
+     "threshold": 14,
+     "grow": 3,
+     "axis": "h",
+     "text_box": [
+      237,
+      4,
+      720,
+      40
+     ],
+     "anchor": "y",
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/menu_option/mm05_title.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      233,
+      0,
+      346,
+      44
+     ],
+     "erase": "inpaint",
+     "text": "Option",
+     "size": 34,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      240,
+      240,
+      245,
+      255
+     ],
+     "shadow": true,
+     "dy": -1,
+     "threshold": 14,
+     "grow": 3,
+     "axis": "h",
+     "text_box": [
+      237,
+      4,
+      720,
+      40
+     ],
+     "anchor": "y",
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/menu_mail/mm08_title.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      233,
+      0,
+      304,
+      44
+     ],
+     "erase": "inpaint",
+     "text": "Mail",
+     "size": 34,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      240,
+      240,
+      245,
+      255
+     ],
+     "shadow": true,
+     "dy": -1,
+     "threshold": 14,
+     "grow": 3,
+     "axis": "h",
+     "text_box": [
+      237,
+      4,
+      720,
+      40
+     ],
+     "anchor": "y",
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/menu_collection/mm09_title.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      233,
+      0,
+      402,
+      44
+     ],
+     "erase": "inpaint",
+     "text": "Collection",
+     "size": 34,
+     "font": "bold",
+     "align": "left",
+     "color": [
+      240,
+      240,
+      245,
+      255
+     ],
+     "shadow": true,
+     "dy": -1,
+     "threshold": 14,
+     "grow": 3,
+     "axis": "h",
+     "text_box": [
+      237,
+      4,
+      720,
+      40
+     ],
+     "anchor": "y",
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/intermission/IM_RE_title.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      1024,
+      62
+     ],
+     "erase": "clear",
+     "text": "RESULT",
+     "size": 64,
+     "font": "bold",
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      18,
+      0,
+      900,
+      58
+     ],
+     "color": [
+      3,
+      255,
+      168,
+      255
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/intermission/IM_result_title.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      156,
+      32
+     ],
+     "erase": "clear",
+     "text": "RESULT",
+     "size": 28,
+     "font": "mincho",
+     "weight": 700,
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      2,
+      2,
+      155,
+      30
+     ],
+     "color": [
+      40,
+      50,
+      56,
+      230
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/intermission/IM_result_title_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      156,
+      32
+     ],
+     "erase": "clear",
+     "text": "RESULT",
+     "size": 28,
+     "font": "mincho",
+     "weight": 700,
+     "align": "left",
+     "anchor": false,
+     "text_box": [
+      2,
+      2,
+      155,
+      30
+     ],
+     "color": [
+      187,
+      23,
+      53,
+      230
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/pause/pause_pause.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      180,
+      68
+     ],
+     "erase": "clear",
+     "text": "Pause",
+     "size": 52,
+     "font": "mincho",
+     "weight": 400,
+     "align": "center",
+     "anchor": false,
+     "text_box": [
+      6,
+      8,
+      174,
+      58
+     ],
+     "color": [
+      235,
+      235,
+      235,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_stroke": 2,
+     "shadow_blur": 1,
+     "shadow_color": [
+      30,
+      30,
+      30,
+      230
+     ],
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_over/GO_continue.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      260,
+      64
+     ],
+     "erase": "clear",
+     "text": "Continue?",
+     "size": 40,
+     "font": "sans",
+     "align": "center",
+     "text_box": [
+      6,
+      12,
+      254,
+      52
+     ],
+     "color": [
+      222,
+      227,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_over/GO_continue_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      260,
+      64
+     ],
+     "erase": "clear",
+     "text": "Continue?",
+     "size": 40,
+     "font": "sans",
+     "align": "center",
+     "text_box": [
+      6,
+      12,
+      254,
+      52
+     ],
+     "color": [
+      16,
+      125,
+      71,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      16,
+      125,
+      71,
+      255
+     ],
+     "shadow_stroke": 3,
+     "shadow_blur": 4,
+     "shadow_strength": 2,
+     "blur": 2.5,
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_over/GO_no.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      100,
+      64
+     ],
+     "erase": "clear",
+     "text": "No",
+     "size": 34,
+     "font": "sans",
+     "align": "center",
+     "text_box": [
+      4,
+      14,
+      96,
+      50
+     ],
+     "color": [
+      222,
+      227,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_over/GO_no_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      100,
+      64
+     ],
+     "erase": "clear",
+     "text": "No",
+     "size": 34,
+     "font": "sans",
+     "align": "center",
+     "text_box": [
+      4,
+      14,
+      96,
+      50
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow_stroke": 2,
+     "shadow_blur": 4,
+     "shadow_strength": 2,
+     "blur": 1.5,
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_over/GO_yes.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      100,
+      64
+     ],
+     "erase": "clear",
+     "text": "Yes",
+     "size": 34,
+     "font": "sans",
+     "align": "center",
+     "text_box": [
+      4,
+      14,
+      96,
+      50
+     ],
+     "color": [
+      222,
+      227,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/game_over/GO_yes_f.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      100,
+      64
+     ],
+     "erase": "clear",
+     "text": "Yes",
+     "size": 34,
+     "font": "sans",
+     "align": "center",
+     "text_box": [
+      4,
+      14,
+      96,
+      50
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "shadow_stroke": 2,
+     "shadow_blur": 4,
+     "shadow_strength": 2,
+     "blur": 1.5,
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/demo_skip_icon.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      52,
+      8,
+      220,
+      48
+     ],
+     "erase": "clear",
+     "text": "Scene Skip",
+     "size": 30,
+     "font": "sans",
+     "align": "left",
+     "text_box": [
+      56,
+      12,
+      216,
+      44
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/pause/demo_skip_icon.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      52,
+      8,
+      220,
+      48
+     ],
+     "erase": "clear",
+     "text": "Scene Skip",
+     "size": 30,
+     "font": "sans",
+     "align": "left",
+     "text_box": [
+      56,
+      12,
+      216,
+      44
+     ],
+     "color": [
+      222,
+      223,
+      222,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/hud/lifebar_text.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      44,
+      8,
+      114,
+      33
+     ],
+     "erase": "inpaint",
+     "text": "EMPTY",
+     "size": 15,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      40,
+      11,
+      118,
+      30
+     ],
+     "color": [
+      230,
+      230,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/treasure_change/TC_item_new_01.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      48,
+      28
+     ],
+     "erase": "clear",
+     "text": "NEW",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      2,
+      6,
+      46,
+      22
+     ],
+     "color": [
+      239,
+      166,
+      49,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/treasure_change/TC_item_new_f_01.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      48,
+      28
+     ],
+     "erase": "clear",
+     "text": "NEW",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      2,
+      6,
+      46,
+      22
+     ],
+     "color": [
+      247,
+      211,
+      148,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false,
+     "blur": 1.5
+    }
+   ]
+  },
+  {
+   "resource": "texture/treasure_change/TC_item_detail_new_01.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      68,
+      32
+     ],
+     "erase": "clear",
+     "text": "NEW",
+     "size": 18,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      3,
+      5,
+      65,
+      26
+     ],
+     "color": [
+      239,
+      166,
+      49,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/loading/loading_text_loading.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      0,
+      0,
+      80,
+      40
+     ],
+     "erase": "clear",
+     "text": "Loading",
+     "size": 15,
+     "font": "sans",
+     "align": "center",
+     "text_box": [
+      2,
+      12,
+      78,
+      30
+     ],
+     "color": [
+      183,
+      210,
+      203,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      60,
+      200,
+      160,
+      160
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/intermission/IM_RE_cleartime_line.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      40,
+      0,
+      700,
+      69
+     ],
+     "erase": "clear",
+     "text": "CLEAR TIME",
+     "size": 62,
+     "font": "sans",
+     "align": "left",
+     "text_box": [
+      57,
+      6,
+      900,
+      66
+     ],
+     "color": [
+      0,
+      255,
+      167,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/intermission/IM_RE_result_line.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      40,
+      0,
+      700,
+      68
+     ],
+     "erase": "clear",
+     "text": "RESULT",
+     "size": 62,
+     "font": "sans",
+     "align": "left",
+     "text_box": [
+      54,
+      6,
+      800,
+      66
+     ],
+     "color": [
+      0,
+      255,
+      167,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 2,
+     "shadow_color": [
+      0,
+      0,
+      0,
+      190
+     ],
+     "language": "pt-BR",
+     "anchor": false
+    }
+   ]
+  },
+  {
+   "resource": "texture/intermission/IM_result_plate.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      300,
+      56,
+      690,
+      112
+     ],
+     "erase": "fill",
+     "text": "RESULT",
+     "size": 34,
+     "font": "mincho",
+     "weight": 400,
+     "align": "center",
+     "text_box": [
+      300,
+      68,
+      690,
+      102
+     ],
+     "color": [
+      235,
+      235,
+      235,
+      255
+     ],
+     "shadow": true,
+     "shadow_offset": [
+      0,
+      0
+     ],
+     "shadow_blur": 3,
+     "shadow_color": [
+      255,
+      255,
+      255,
+      120
+     ],
+     "language": "pt-BR",
+     "anchor": false,
+     "fill": [
+      35,
+      45,
+      46,
+      254
+     ]
+    }
+   ]
+  },
+  {
+   "resource": "texture/intermission/IM_RE_recod.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      25,
+      3,
+      121,
+      28
+     ],
+     "erase": "inpaint",
+     "text": "RECORD",
+     "size": 22,
+     "font": "bold",
+     "align": "center",
+     "text_box": [
+      25,
+      4,
+      122,
+      27
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "anchor": false,
+     "language": "pt-BR"
+    }
+   ]
+  },
+  {
+   "resource": "texture/intermission/IM_logout_button.tex",
+   "mode": "regions",
+   "regions": [
+    {
+     "box": [
+      8,
+      6,
+      156,
+      42
+     ],
+     "erase": "fill",
+     "text": "Log out",
+     "size": 32,
+     "font": "sans",
+     "align": "center",
+     "text_box": [
+      6,
+      6,
+      158,
+      42
+     ],
+     "color": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "language": "pt-BR",
+     "anchor": false,
+     "fill": [
+      46,
+      53,
+      63,
+      255
+     ]
+    }
+   ]
   }
  ]
 }

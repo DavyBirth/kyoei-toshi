@@ -23,7 +23,9 @@ class LanguageLabels(unittest.TestCase):
 
     def test_all_texture_labels_translate_without_mutating_layout(self):
         en=json.loads((ROOT/'translations/textures-en.json').read_text(encoding='utf8'))
-        pt=localized_table(en,'pt-BR');self.assertEqual(len(pt['textures']),168)
+        pt=localized_table(en,'pt-BR');self.assertEqual(len(pt["textures"]),214)
+        # Art whose only regions are Portuguese (title/pause menus) is left untouched in English.
+        self.assertEqual(len(localized_table(en,'en')['textures']),168)
         self.assertEqual(pt['language'],'pt-BR')
         for before,after in zip(en['textures'],pt['textures']):
             self.assertEqual(before['resource'],after['resource'])

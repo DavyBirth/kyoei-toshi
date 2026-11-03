@@ -7616,7 +7616,7 @@
     {
      "id": "p0/k1079",
      "source_text_sha256": "9527f79cf2d77bac1733bf1626267eef259d765019418816131c3e494b355ce2",
-     "pt-BR": "Equipou a Lanterna!\n(Aperte [i18] e vá à tela \"ITEM\"\npara desequipar itens.)",
+     "pt-BR": "Equipou a Lanterna!\n(Aperte [i18] e vá à tela \"ITENS\"\npara desequipar itens.)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -19629,7 +19629,7 @@
     {
      "id": "p0/k546",
      "source_text_sha256": "fa641b4541fd2c944c6c4783012e8c28b76f589383208f9da6d2ab9d16d432d4",
-     "pt-BR": "Experimentar o uniforme que acabou de pegar?\n(Depois, você pode trocar de roupa na tela \"ITEM\" com [i18].)",
+     "pt-BR": "Experimentar o uniforme que acabou de pegar?\n(Depois, você pode trocar de roupa na tela \"ITENS\" com [i18].)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -28516,7 +28516,7 @@
     {
      "id": "p0/k491",
      "source_text_sha256": "e8b355b8eb145ae48903c65436f86e2ca18cab630c0b962f0d83c9dac78a5c80",
-     "pt-BR": "Vestir o uniforme agora?\n(Troque de roupa quando quiser apertando [i18]\ne indo à tela \"ITEM\".)",
+     "pt-BR": "Vestir o uniforme agora?\n(Troque de roupa quando quiser apertando [i18]\ne indo à tela \"ITENS\".)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -30931,7 +30931,7 @@
     {
      "id": "p0/k1244",
      "source_text_sha256": "eee066f3b259b0229a0e0fdcb16696e6cf442d8c35bab5e48b8915b2bb03febd",
-     "pt-BR": "Sem provador por perto? Não se preocupe!\nAperte [i18] para abrir a tela \"ITEM\", que serve de guarda-roupa e provador.",
+     "pt-BR": "Sem provador por perto? Não se preocupe!\nAperte [i18] para abrir a tela \"ITENS\", que serve de guarda-roupa e provador.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -30994,7 +30994,7 @@
     {
      "id": "p0/k1262",
      "source_text_sha256": "49484acb566a3926c636de90c349c247a917efd54585d36344d4d13e0bd5a87b",
-     "pt-BR": "Você também pode apertar [i18] e escolher o celular na tela \"ITEM\"\npara reler qualquer e-mail recebido.",
+     "pt-BR": "Você também pode apertar [i18] e escolher o celular na tela \"ITENS\"\npara reler qualquer e-mail recebido.",
      "notes": "",
      "editorial_status": "pending"
     },
