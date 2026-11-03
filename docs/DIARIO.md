@@ -5374,3 +5374,10 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Confirmados em jogo: título, Opções, salvar (menu de escolha), Pausa, Itens, Missões, Personagens, Coleção, diálogo de NPC com nome.
 - Pendentes: florista e fim de jogo/resultado não alcançados em jogo; ordem do nome na tela Personagens ("Misaki Ken", nativa); rodapé da Coleção mostra ícones de PlayStation no modo teclado; manchas brancas no fundo desfocado da tela de missões (gráfico, não tradução); "★ Avenida Principal" do minimapa corta na borda (marcador nativo).
 - Instalado na portátil: pt-BR translation.kydelta 8.696.819 (SHA256 67322abbb80c1955…), eboot-text.kytext 12.787 (0da2584ee6d55e59…), en translation.kydelta reconstruído; backups em data/update-backups/ptbr-telas-20261103; manifesto atualizado; launcher --check 0.
+
+### 03/11/2026 — galeria de textos no jogo
+- tools/lua52.py: leitor/escritor próprio do bytecode Lua 5.2 (float32) do jogo; ida e volta exata nos 296 scripts. (Compilar a Lua oficial foi bloqueado pela proteção do ambiente.)
+- tools/build_text_gallery.py: altera Plan.MessageAndWaitButton (plan.luc proto 46): na 1ª mensagem da sessão mostra todas as falas da fase carregada (tipos 1,2,4–7; menus 3/10 fora), uma por tecla, e segue normal. --only PREFIXO filtra (ex.: NpcMess460 = florista, 19 falas). Vai num delta de teste separado (build_localized_delta --extra lua/plan.luc=...). Testado: galeria completa e da florista na caixa real.
+- Portátil: "Galeria de textos.cmd" (usa languages/pt-BR/gallery.kydelta, perfil data/user). Uso normal intocado.
+- Achados pela galeria: falante 花屋さん "Floricultura" → "Florista". Ícone E (próxima fala) do teclado tinha quadrado escuro: make_keyboard_icons agora refaz o brilho só dentro do disco original. prompts.kypack pt/en refeitos e instalados (backups em data/update-backups/ptbr-galeria-20261103).
+- Placas verdes sobre NPCs: são outro sistema (nativo 0xaea710), fora da galeria. Cálculo offline: dezenas de nomes de falante descritivos passariam da placa mesmo em 60% — falta confirmar em jogo qual texto a placa mostra. Davy vai levar o personagem até a florista.
