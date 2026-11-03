@@ -5408,3 +5408,8 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Davy apontou atraso/ausencia de animacao e destaque simultaneo de Carregar jogo. Corrigido codigo: visual acompanha x e alpha nativos do filho Load (medidos x1000->135); entrada aguarda estado nativo190=2. Cursor nativo permanece sem alpha durante selecao host e restaura ao sair. Compilacao final build-animation e testes de pausa/prompts passam. FALTA conferir visualmente estes dois ajustes na nova compilacao.
 - Item 1: causa dos rodapes encontrada: oito imagens possuem botoes incorporados, separados do atlas da fonte. Novo prompt_footers.py troca so essas celulas para teclado/PS americano/Xbox/Nintendo. Validacao offline das 32 variantes garante pixels fora das celulas intactos; previa footer-keys-pt.png. Pacotes pt/en:78 registros,18 diagramas byte-identicos preservados; ja:60. FALTA confirmar esses rodapes e celular F em jogo.
 - Experimento R8 e sondas/dumps GPU removidos; filtros originais da GPU restaurados. Nao eram a causa. Pacotes privados e provas em build/items12-20261103; nada desta rodada instalado na portatil normal. Nao marcar itens 1/2 completos ainda. Launcher multil?ngue/visual fica depois.
+
+
+### 03/11/2026 18:15 — desligamento por cota
+- Telemetria real da conversa principal: five_hour: 3% restantes. Limite autorizado: 3% ou menos na janela de 5 horas ou semanal.
+- Trabalho salvo em disco e checkpoint ZIP verificado em build\items12-20261103\quota. Desligamento normal solicitado, sem forçar outros aplicativos.
