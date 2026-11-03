@@ -5342,3 +5342,7 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 ### 03/11/2026 08:04 ? commit por cota semanal
 - Telemetria real desta conversa: 1% semanal restante; commit imediato solicitado por Davy.
 - Checkpoint verificado preserva tamb?m arquivos novos eleg?veis; commit inclui apenas arquivos j? versionados.
+
+- Kit de fontes v2 gerado: 16072 arquivos, SHA256 20212284d41552b79bd893f31f37b711d98283e0372e424539001ede4aa7ae6c. Comparacao de 15989 entradas usadas na compilacao: todas identicas.
+- O primeiro link falhou porque o CMake escolheu Debug antes do padrao local, misturando iteradores Debug/Release. Padrao RelWithDebInfo movido antes de project(); prova em pasta sem cache confirmou RelWithDebInfo. Receita explicita corrigida; recompilacao Release em andamento no log build/source-validation-build-release-20261103.log. Kit v2 ainda precisa ser substituido para incluir essa correcao.
+- ZIP atual v7 passou todos os hashes e busca de caminhos pessoais. Preparador do proprio v7 gerou os quatro arquivos runtime/out identicos aos instalados, incluindo os 19 modulos. Prova em build/public-v7-module-proof.json.

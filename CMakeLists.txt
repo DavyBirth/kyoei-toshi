@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.28)
-project(kyoei_native C CXX)
 set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "Build type")
+project(kyoei_native C CXX)
 if(NOT CMAKE_C_COMPILER_ID STREQUAL "Clang")
   message(FATAL_ERROR "Use Clang: the guest uses sysv_abi")
 endif()

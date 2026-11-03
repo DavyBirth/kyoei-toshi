@@ -10,7 +10,7 @@ Extraia todo o kit para uma pasta nova. Nao reaproveite CMakeCache.txt de outra
 pasta. A arvore build/_deps e build/fsr-vulkan-src contem fontes, nao saves.
 
 ```
-cmake -S . -B build -G Ninja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+cmake -S . -B build -G Ninja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=RelWithDebInfo
 cmake --build build --target kyoei -j 4
 ```
 
@@ -36,3 +36,8 @@ publicacao; incluir os fontes nao comprova que todos os prebuilts foram refeitos
 Validacao atual: configuracao em pasta nova passou apos incluir libraries.cmake
 e o auxiliar benchmark_gpu_wait.c. A compilacao completa esta em andamento;
 nao anunciar aprovacao antes do resultado final. O kit continua uma candidata.
+
+O primeiro teste encontrou Debug selecionado implicitamente pelo CMake antes
+do padrao do projeto ser aplicado. Isso misturava iteradores Debug/Release no
+link. O padrao foi movido para antes de project(); use explicitamente
+RelWithDebInfo com as bibliotecas de referencia. Novo build em andamento.
