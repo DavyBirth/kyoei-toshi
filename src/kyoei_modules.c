@@ -17,7 +17,7 @@ typedef struct {
 } ModuleInfo;
 _Static_assert(sizeof(ModuleInfo)==424 && offsetof(ModuleInfo,segments)==352, "module info ABI");
 typedef struct { char path[256]; uint64_t base; uintptr_t init, fini; int started; Symbol symbols[128]; unsigned count; ModuleInfo info; } Module;
-static Module modules[8];
+static Module modules[32]; /* libSceSecure plus one StageModule per stage */
 static unsigned count;
 static SRWLOCK lock = SRWLOCK_INIT;
 
@@ -30,7 +30,7 @@ void kyoei_modules_configure(const char *out, void *image, uint64_t size) {
     while (fgets(line, sizeof(line), file)) {
         unsigned long long base, init, address;
         if (line[0] == 'M') {
-            if (count == 8) gz_stop(21, "STOP: too many deferred modules");
+            if (count == sizeof modules / sizeof *modules) gz_stop(21, "STOP: too many deferred modules");
             current = &modules[count++];
             if (sscanf(line, "M\t%255[^\t]\t%llx\t%llx", current->path, &base, &init) != 3 || base >= size || init >= size)
                 gz_stop(21, "STOP: invalid deferred module");

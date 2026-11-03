@@ -14,6 +14,7 @@
 #include <windows.h>
 #include <limits.h>
 #include <stdlib.h>
+#include <stdio.h>
 #endif
 
 #ifdef KYOEI_TEXT_WRAP_TEST
@@ -113,9 +114,64 @@ static uint64_t code_hash(const unsigned char *bytes, size_t count) {
     for (size_t i = 0; i < count; ++i) hash = (hash ^ bytes[i]) * UINT64_C(1099511628211);
     return hash;
 }
+/* Test only (KYOEI_TEST_STAGE=<file>): when the file holds "<stage> <point>"
+ * (e.g. "209 30"), Scene.isReady 0x6068a0 (polled while a stage loads;
+ * KYOEI_TEST_HOOK overrides) calls the dev native Scene.setNextStage 0x607d00
+ * with those values once loading has run 4 s, then deletes the file. Start
+ * points: table at 0x126c720 (docs/DIARIO.md). */
+typedef int (ABI *LuaNative)(void *);
+typedef void (ABI *LuaPushInt)(void *, int64_t);
+static LuaNative test_original; static unsigned char *test_image; static const char *test_stage_file;
+static ABI int test_stage_hook(void *L) {
+    static ULONGLONG next, first;
+    ULONGLONG now = GetTickCount64();
+    if (!first) first = now;
+    if (now >= next && now - first >= 4000) { /* earlier calls are overridden by the save load */
+        next = now + 500;
+        FILE *file = fopen(test_stage_file, "rb");
+        int stage = 0, point = 0;
+        if (file) {
+            int ok = fscanf(file, "%d %d", &stage, &point) == 2; fclose(file);
+            if (ok && stage > 0) {
+                DeleteFileA(test_stage_file);
+                gz_log("Kyoei test: setNextStage(%d, %d)", stage, point);
+                LuaPushInt push = (LuaPushInt)(test_image + 0x407eb0);
+                push(L, stage); push(L, point);
+                ((LuaNative)(test_image + 0x607d00))(L);
+            }
+        }
+    }
+    return test_original(L);
+}
+static void test_stage_configure(unsigned char *image, uint64_t size) {
+    test_stage_file = getenv("KYOEI_TEST_STAGE");
+    if (!test_stage_file || !*test_stage_file || size < 0x700000) return;
+    const char *hook = getenv("KYOEI_TEST_HOOK");
+    size_t entry = hook && *hook ? (size_t)strtoull(hook, NULL, 0) : 0x6068a0;
+    unsigned char *code = image + entry;
+    static const unsigned char prologue[] = {0x55, 0x48, 0x89, 0xe5, 0x41, 0x57};
+    if (entry >= size || memcmp(code, prologue, 6)) { gz_log("Kyoei test: hook prologue differs"); return; }
+    unsigned char *relay = NULL;
+    for (unsigned i = 0; i < 16 && !relay; ++i)
+        relay = VirtualAlloc(image + 0x5300000 + i * 0x10000, 4096, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    if (!relay) return;
+    kyoei_hud_trace_relay(relay, code + 6, test_stage_hook);
+    int64_t distance = (int64_t)(uintptr_t)(relay + 32) - (int64_t)(uintptr_t)(code + 5);
+    DWORD prior, ignored;
+    if (distance < INT32_MIN || distance > INT32_MAX || !VirtualProtect(relay, 4096, PAGE_EXECUTE_READ, &prior) ||
+        !VirtualProtect(code, 6, PAGE_EXECUTE_READWRITE, &prior)) { gz_log("Kyoei test: hook unavailable"); return; }
+    test_image = image; test_original = (LuaNative)relay;
+    int32_t relative = (int32_t)distance;
+    code[0] = 0xe9; memcpy(code + 1, &relative, 4); code[5] = 0x90;
+    VirtualProtect(code, 6, prior, &ignored);
+    FlushInstructionCache(GetCurrentProcess(), relay, 46);
+    FlushInstructionCache(GetCurrentProcess(), code, 6);
+    gz_log("Kyoei test: stage hook at 0x%zx", entry);
+}
 void kyoei_text_wrap_configure(void *image, uint64_t size) {
     extern void kyoei_ui_text_configure(void *,uint64_t);
     kyoei_ui_text_configure(image,size);
+    test_stage_configure((unsigned char *)image, size);
     const char *language = getenv("KYOEI_LANGUAGE");
     if (!language || (strcmp(language, "en") && strcmp(language, "pt-BR"))) return;
     const char *setting = getenv("KYOEI_WORD_WRAP");

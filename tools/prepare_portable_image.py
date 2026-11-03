@@ -4,6 +4,7 @@ Uses the fixed Godzilla preparer without editing it. No game/firmware is
 downloaded and no guest instructions are executed.
 """
 import argparse
+import types
 import importlib
 import json
 from pathlib import Path
@@ -25,20 +26,37 @@ def validate_output(game,firmware,out):
         raise ValueError('Generated data inside the checkout must stay under build/, runtime/ or data/')
     return game,firmware,out
 
+def stage_linker(linker):
+    """Fixed-core linker adapted for one StageModule.prx per stage. Every stage exports
+    the same names; the game finds them per module (deferred.tsv E records), so later
+    duplicates stay out of the global import table instead of stopping the link."""
+    source=Path(linker.__file__).read_text(encoding='utf8')
+    old=("                if s['identity'] in exports:\n"
+         "                    raise ValueError(f'{filename}: ambiguous export')\n")
+    new=("                if s['identity'] in exports:\n"
+         "                    if 'MasterORBIS' in str(filename): continue\n"
+         "                    raise ValueError(f'{filename}: ambiguous export')\n")
+    if source.count(old)!=1:raise ValueError('Fixed core linker differs; stage modules not adapted')
+    adapted=types.ModuleType('kyoei_link_modules');adapted.__file__=linker.__file__
+    exec(compile(source.replace(old,new),linker.__file__,'exec'),adapted.__dict__)
+    return adapted
+
 def prepare_image(game,firmware,out,core_scripts=None):
     game,firmware,out=validate_output(game,firmware,out)
     scripts=Path(core_scripts or ROOT/'third_party/godzilla-core/scripts').resolve()
     for name in ('prepare.py','link_modules.py','game_check.py'):
         if not (scripts/name).is_file():raise ValueError('Missing fixed core preparation tools')
     sys.path.insert(0,str(scripts))
-    prepare=importlib.import_module('prepare');linker=importlib.import_module('link_modules')
+    prepare=importlib.import_module('prepare');linker=stage_linker(importlib.import_module('link_modules'))
     original_check=importlib.import_module('game_check')
     info=prepare.sfo((game/'sce_sys/param.sfo').read_bytes())
     if (info.get('TITLE_ID'),info.get('APP_VER'))!=(TITLE,VERSION):
         raise ValueError('Only Kyoei Toshi CUSA03562 version 01.03 is supported')
     image_hash=original_check.image_sha256(game)
     if image_hash!=IMAGE_SHA256:raise ValueError('The loaded executable image differs from the supported game')
-    deferred=('module/prx/libSceSecure.prx','module/MasterORBIS/stage201/StageModule.prx')
+    # Every stage loads its own StageModule.prx when the story reaches it.
+    stages=sorted(p.parent.name for p in (game/'module/MasterORBIS').glob('stage*/StageModule.prx'))
+    deferred=('module/prx/libSceSecure.prx',)+tuple(f'module/MasterORBIS/{s}/StageModule.prx' for s in stages)
     bundled=list(linker.DEFAULT_MODULES)+['libSceNpToolkit2.prx']
     required=[game/'sce_module'/name for name in bundled]+[game/p for p in deferred]
     required += [firmware/name for name in linker.FIRMWARE_MODULES]

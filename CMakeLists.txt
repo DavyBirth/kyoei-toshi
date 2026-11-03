@@ -280,6 +280,14 @@ foreach(REQUIRED_ADAPTER "kyoei_tls_configure(image, image_size, main_tls);" "if
     message(FATAL_ERROR "Review TLS adapter: missing integration ${REQUIRED_ADAPTER}")
   endif()
 endforeach()
+# Every stage has its own StageModule.prx (19 stages), so the linked image holds
+# 29 modules and 90 segments; both tables are sized from these limits.
+kyoei_replace_checked(KYOEI_LOADER
+  "static LinkedModule modules[16];"
+  "static LinkedModule modules[48];")
+kyoei_replace_checked(KYOEI_LOADER
+  "!segment_count || segment_count > 64 ||"
+  "!segment_count || segment_count > 256 ||")
 kyoei_replace_checked(KYOEI_LOADER
   "#include \"kyoei_tls.h\""
   "#include \"kyoei_tls.h\"\n#include \"kyoei_crash.h\"")
