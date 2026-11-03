@@ -51,7 +51,20 @@ static inline void kyoei_test_input_pump(SDL_Window *window) {
         if (fgets(line, sizeof line, file) && strchr(line, '\n')) {
             offset = ftell(file);
             char verb[16] = {0}, name[32] = {0}; int ms = 120;
-            if (sscanf(line, "%15s %31s %d", verb, name, &ms) >= 2) {
+            float cx, cy;
+            if (sscanf(line, "click %f %f", &cx, &cy) == 2) {
+                /* Fractions of the window (0..1), so tests do not depend on its size. */
+                int w = 1280, h = 720; if (window) SDL_GetWindowSize(window, &w, &h);
+                SDL_Event e{}; Uint32 id = window ? SDL_GetWindowID(window) : 0;
+                e.type = SDL_EVENT_MOUSE_MOTION; e.motion.windowID = id; e.motion.x = cx * w; e.motion.y = cy * h;
+                SDL_PushEvent(&e);
+                for (int down = 1; down >= 0; --down) {
+                    SDL_Event b{}; b.type = down ? SDL_EVENT_MOUSE_BUTTON_DOWN : SDL_EVENT_MOUSE_BUTTON_UP;
+                    b.button.windowID = id; b.button.button = SDL_BUTTON_LEFT; b.button.down = down;
+                    b.button.clicks = 1; b.button.x = cx * w; b.button.y = cy * h; b.button.timestamp = SDL_GetTicksNS();
+                    SDL_PushEvent(&b);
+                }
+            } else if (sscanf(line, "%15s %31s %d", verb, name, &ms) >= 2) {
                 SDL_Scancode code = kyoei_test_key(name);
                 if (code != SDL_SCANCODE_UNKNOWN) {
                     if (!strcmp(verb, "down")) kyoei_test_push(window, code, true);
