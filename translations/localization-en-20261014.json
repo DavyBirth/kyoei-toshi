@@ -12,7 +12,7 @@
         {
           "id": "r0/c5",
           "source_text_sha256": "39a74cfd279dcee8fdf44fc071d7609b06b6bdc95190368c8db0889f4d7967e9",
-          "en": "Riding a Horse\\nWhile riding, press [i2] to speed up and [i1] to brake\\nhard. The horse keeps running if you let go of [i2], but\\nslowly loses speed.",
+          "en": "Riding a Horse\\nWhile riding, press [i2] to speed up and [i1] to brake hard. The\\nhorse keeps running if you let go of [i2], but slowly loses speed.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r0/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -26,7 +26,7 @@
         {
           "id": "r2/c5",
           "source_text_sha256": "bd813548e3d336c87f3233e30501e8d596b6514847087f17d9ac6f26b404af2f",
-          "en": "Door Lights\\nDoors in the institute have a light next to them. Blue:\\nyou can go through. Red: you can't. Yellow: only under\\ncertain conditions.",
+          "en": "Door Lights\\nDoors in the institute have a light next to them. Blue: you can go\\nthrough. Red: you can't. Yellow: only under certain conditions.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r2/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -40,7 +40,7 @@
         {
           "id": "r4/c5",
           "source_text_sha256": "cabfe519dcc837c60c4b2d9111543a132c7b8685f48d88a1ccb6955824664f6f",
-          "en": "Observation Deck, 1F\\nTalk to people and check out everything around you. It'll\\nhelp you escape, and you'll\\nlearn the layout along the way.",
+          "en": "Observation Deck, 1F\\nTalk to people and check out everything around you. It'll\\nhelp you escape, and you'll learn the layout along the way.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r4/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -68,7 +68,7 @@
         {
           "id": "r8/c5",
           "source_text_sha256": "031dc4eb3dbff29160fd9639f2bde2be1b540a3a0e8ce95533f41a852bcdf705",
-          "en": "Hiding Well\\nMove to your next hiding spot while they have their\\nback to you. It also helps to scout out hiding spots\\nahead of time.",
+          "en": "Hiding Well\\nMove to your next hiding spot while they have their back to\\nyou. It also helps to scout out hiding spots ahead of time.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r8/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -166,7 +166,7 @@
         {
           "id": "r22/c5",
           "source_text_sha256": "dc8b5685262dde5a02a6b78e37ee564cab35aa200d7141035fea96c5f32a3e06",
-          "en": "If It Looks Dangerous...\\nYou never know what might happen near a giant\\nshadow. It's smart not to wander carelessly toward\\nanything dangerous.",
+          "en": "If It Looks Dangerous...\\nYou never know what might happen near a giant shadow. It's\\nsmart not to wander carelessly toward anything dangerous.",
           "notes": "English draft imported from audited private workspace, translate-en-0060.json:r22/c5; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },

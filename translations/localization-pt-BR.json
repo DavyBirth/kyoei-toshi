@@ -32560,7 +32560,7 @@
     {
      "id": "r0/c5",
      "source_text_sha256": "39a74cfd279dcee8fdf44fc071d7609b06b6bdc95190368c8db0889f4d7967e9",
-     "pt-BR": "Cavalgando\\nAperte [i2] para acelerar e [i1] para frear com força. Ao\\nsoltar [i2], o cavalo continua correndo, mas perde\\nvelocidade aos poucos.",
+     "pt-BR": "Cavalgando\\nAperte [i2] para acelerar e [i1] para frear com força. Ao soltar [i2],\\no cavalo continua correndo, mas perde velocidade aos poucos.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32574,21 +32574,21 @@
     {
      "id": "r2/c5",
      "source_text_sha256": "bd813548e3d336c87f3233e30501e8d596b6514847087f17d9ac6f26b404af2f",
-     "pt-BR": "Luzes nas portas\\nAs portas do instituto têm uma luz ao lado. Azul:\\npassagem livre. Vermelha: passagem bloqueada.\\nAmarela: depende de certas condições.",
+     "pt-BR": "Luzes nas portas\\nAs portas do instituto têm uma luz. Azul: livre. Vermelha:\\nbloqueada. Amarela: depende de certas condições.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r3/c5",
      "source_text_sha256": "85e1e2b0dcfb991cf746b2b79467d769ceb5e5f7b2bb9fec11a5a2ef51f7de54",
-     "pt-BR": "Mantenha a calma\\nAntes de um ataque, olhe ao redor e planeje sua rota de\\nfuga. É mais fácil do que procurar\\numa saída no meio do perigo.",
+     "pt-BR": "Mantenha a calma\\nAntes de um ataque, olhe ao redor e planeje sua rota de fuga.\\nÉ mais fácil do que procurar uma saída no meio do perigo.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r4/c5",
      "source_text_sha256": "cabfe519dcc837c60c4b2d9111543a132c7b8685f48d88a1ccb6955824664f6f",
-     "pt-BR": "Mirante: primeiro andar\\nConverse com as pessoas e examine os arredores.\\nVocê pode descobrir uma saída\\ne conhecer melhor o caminho.",
+     "pt-BR": "Mirante: primeiro andar\\nConverse com as pessoas e examine os arredores. Você\\npode descobrir uma saída e conhecer melhor o caminho.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32630,7 +32630,7 @@
     {
      "id": "r10/c5",
      "source_text_sha256": "7a36b3dc734fe86a5a4e2c85d8089dd438295638ba584f58884bf6f4d12bf681",
-     "pt-BR": "Conversando com Yuki\\nQuando estiver em segurança, converse com a Yuki.\\nVocê pode descobrir um lado\\ndela que ainda não conhece.",
+     "pt-BR": "Conversando com Yuki\\nQuando estiver em segurança, converse com a Yuki. Você\\npode descobrir um lado dela que ainda não conhece.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32679,7 +32679,7 @@
     {
      "id": "r17/c5",
      "source_text_sha256": "e602e31e45538ac3a5d7b6c67b087936727b9b6ac8c753f2cca4dee1defb243f",
-     "pt-BR": "Energia\\nA barra inferior no canto superior esquerdo mostra sua\\nenergia. Se ela acabar, você\\nnão poderá correr por um tempo.",
+     "pt-BR": "Energia\\nA barra inferior no canto superior esquerdo mostra sua\\nenergia. Se ela acabar, você não poderá correr por um tempo.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32700,7 +32700,7 @@
     {
      "id": "r20/c5",
      "source_text_sha256": "a744089af00b9174989751a238600ffe7b21c8b03fe40a99dfacc0197b4d621d",
-     "pt-BR": "Esquiva de emergência\\nQuando aparecer um ! sobre a cabeça do personagem,\\naperte [i4]. Uma esquiva pode\\ntirar você de uma enrascada.",
+     "pt-BR": "Esquiva de emergência\\nQuando aparecer um ! sobre a cabeça do personagem,\\naperte [i4]. Uma esquiva pode tirar você de uma enrascada.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -32714,14 +32714,14 @@
     {
      "id": "r22/c5",
      "source_text_sha256": "dc8b5685262dde5a02a6b78e37ee564cab35aa200d7141035fea96c5f32a3e06",
-     "pt-BR": "Parece perigoso?\\nPerto de uma sombra gigante, tudo pode acontecer.\\nTome cuidado ao se aproximar\\nde algo que pareça perigoso.",
+     "pt-BR": "Parece perigoso?\\nPerto de uma sombra gigante, tudo pode acontecer. Tome\\ncuidado ao se aproximar de algo que pareça perigoso.",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "r23/c5",
      "source_text_sha256": "060f18c3b6938ef4a84a2c3b595134b843e4525a934c1a6799cd31154b115ba2",
-     "pt-BR": "De mãos e pés amarrados\\nCom mãos e pés amarrados, não dá para fazer muita coisa, como\\nabrir portas ou examinar mesas.",
+     "pt-BR": "De mãos e pés amarrados\\nCom mãos e pés amarrados, não dá para fazer\\nmuita coisa, como abrir portas ou examinar mesas.",
      "notes": "",
      "editorial_status": "pending"
     },

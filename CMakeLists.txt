@@ -463,6 +463,11 @@ kyoei_replace_checked(KYOEI_WINDOW
   "    SDL_Event event;"
   "    KyoeiOverlay::UpdateTextInput(window);\n    SDL_Event event;")
 set(KYOEI_WINDOW "#include \"kyoei_input_mode.h\"\n${KYOEI_WINDOW}")
+# Test driver input (KYOEI_TEST_INPUT only): queue keys without needing window focus.
+set(KYOEI_WINDOW "#include \"kyoei_test_input.h\"\n${KYOEI_WINDOW}")
+kyoei_replace_checked(KYOEI_WINDOW
+  "    KyoeiOverlay::UpdateTextInput(window);\n    SDL_Event event;"
+  "    KyoeiOverlay::UpdateTextInput(window);\n    kyoei_test_input_pump(window);\n    SDL_Event event;")
 # The pad family picks the button art (kyoei_live_prompts.h) and, for Nintendo, the confirm button.
 set(KYOEI_WINDOW "#include <SDL3/SDL.h>
 #include \"kyoei_input_mode.h\"
