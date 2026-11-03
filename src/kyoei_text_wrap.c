@@ -172,6 +172,7 @@ void kyoei_text_wrap_configure(void *image, uint64_t size) {
     extern void kyoei_ui_text_configure(void *,uint64_t);
     kyoei_ui_text_configure(image,size);
     test_stage_configure((unsigned char *)image, size);
+    { extern void kyoei_im_wrap_configure(void *, uint64_t); kyoei_im_wrap_configure(image, size); }
     const char *language = getenv("KYOEI_LANGUAGE");
     if (!language || (strcmp(language, "en") && strcmp(language, "pt-BR"))) return;
     const char *setting = getenv("KYOEI_WORD_WRAP");

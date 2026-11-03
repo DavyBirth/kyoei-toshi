@@ -34,7 +34,7 @@ def message_keys(chunk):
     return out
 
 
-def patch(plan, keys, mails=(), items=()):
+def patch(plan, keys, mails=(), items=(), intermission=False):
     """Prologue run once per session: send mails, give items, then show each message."""
     root = lua52.load(plan); f = root.protos[46]
     if f.params != 2 or f.k[:1] != [b'print'] or b'SetText' not in f.k:
@@ -44,7 +44,7 @@ def patch(plan, keys, mails=(), items=()):
             if type(c) is type(v) and c == v: return i
         f.k.append(v); return len(f.k) - 1
     names = (b'KyoeiGalleryDone', b'Plan', b'window', b'SetText', b'WaitForInput', b'PauseFrame',
-             b'Mail', b'send', b'Player', b'addItem')
+             b'Mail', b'send', b'Player', b'addItem', b'InterMissionDemoStartFlag', b'StartInterMissionWithoutDemo')
     rk = {name: k(name) for name in names}
     one, ten, true = k(1.0), k(10.0), k(True)
     if max(rk.values()) >= 256 or true >= 256: raise ValueError('RK constant out of range')
@@ -89,6 +89,9 @@ def patch(plan, keys, mails=(), items=()):
 
     loop([float(m) for m in mails], call2(b'Mail', b'send'))
     loop([float(i) for i in items], call2(b'Player', b'addItem', one))
+    if intermission:   # news/shop/result of the loaded stage; returns when it closes
+        body += [E('SETTABUP', 0, K(b'InterMissionDemoStartFlag'), 256 + true),
+                 E('GETTABUP', 8, 0, K(b'StartInterMissionWithoutDemo')), E('CALL', 8, 1, 1)]
     loop(list(keys), show)
     body[2] = E('JMP', 0, sbx=len(body) - 3)               # past the gallery
     if len(f.k) >= 1 << 18: raise ValueError('too many constants')
@@ -120,7 +123,7 @@ def item_ids(chunk):
     return out
 
 
-def build(archive_path, only=(), mails=False, items=False, dialogs=True):
+def build(archive_path, only=(), mails=False, items=False, dialogs=True, intermission=False):
     with Psarc(archive_path) as archive:
         entries = {e.name: e for e in archive.entries[1:]}
         read = lambda name: b''.join(archive.chunks(entries[name]))
@@ -134,7 +137,7 @@ def build(archive_path, only=(), mails=False, items=False, dialogs=True):
         m = mail_ids(Resource(read('lua/mail_data.luc')).payload) if mails else []
         it = item_ids(Resource(read('lua/item_data.luc')).payload) if items else []
         plan = Resource(read('lua/plan.luc'))
-        return plan.rebuild(patch(plan.payload, keys, m, it)), (len(keys), len(m), len(it))
+        return plan.rebuild(patch(plan.payload, keys, m, it, intermission)), (len(keys), len(m), len(it))
 
 
 def main():
@@ -144,10 +147,11 @@ def main():
                    help='only keys starting with PREFIX (e.g. NpcMess460 for the florist)')
     p.add_argument('--mails', action='store_true', help='first send every mail in mail_data')
     p.add_argument('--items', action='store_true', help='first give one of every inventory item')
+    p.add_argument('--intermission', action='store_true', help='open the stage intermission (news, shop, result)')
     p.add_argument('--no-dialogs', action='store_true', help='skip the message walk')
     a = p.parse_args()
-    data, n = build(a.archive, a.only, a.mails, a.items, not a.no_dialogs)
-    if not any(n): raise ValueError('nothing to show')
+    data, n = build(a.archive, a.only, a.mails, a.items, not a.no_dialogs, a.intermission)
+    if not any(n) and not a.intermission: raise ValueError('nothing to show')
     a.output.parent.mkdir(parents=True, exist_ok=True); a.output.write_bytes(data)
     print(f'plan.luc with gallery: {n[0]} messages, {n[1]} mails, {n[2]} items -> {a.output}')
 
