@@ -12,7 +12,7 @@ from tex_preview import unpack_tex
 from localize_textures import decode as decode_bc3, encode_tex as encode_bc3_tex
 
 REPO = Path(__file__).resolve().parents[1]
-FONT = REPO / 'third_party/godzilla-core/third_party/shadPS4/src/imgui/renderer/fonts/NotoSans-Regular.ttf'
+from localize_textures import FONT
 
 # archive path -> keycap label ('@mouse' draws a mouse, '@arrows' an arrow cluster)
 BINDINGS = {

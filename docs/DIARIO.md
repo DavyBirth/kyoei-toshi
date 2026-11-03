@@ -5321,3 +5321,10 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Davy autorizou continuar revis?o/preparo p?blico e pediu commit imediato em 1% semanal ou menos. Substitui o desligamento semanal de 5%; prote??o de 5 horas mantida.
 - Sandbox falhou na inicializa??o; acesso local retomado por execu??o aprovada fora dele. Nenhum jogo aberto automaticamente.
 - Monitor passa a oferecer limite semanal pr?prio: checkpoint verificado e commit dos arquivos versionados, sem adicionar dados privados novos.
+
+### 03/11/2026 ? gerador de candidata publica
+- Criado tools/build_public_candidate.py: lista de entradas permitidas, launcher sem icone do disco, runtime com metadados de depuracao limpos, Python/Pillow/NumPy incluidos e isolados da conta local. Nenhum dump, firmware, save ou patch derivado entra no ZIP.
+- Testes iniciais revelaram isolamento incompleto e falta de aerolib.inl; corrigidos. Copia fixa do core preservada; so scripts realmente usados e tabela publica de simbolos sao empacotados.
+- Dependencia de normalizacao das importacoes movida para native_module_metadata; preparadores antigo/publico usam a mesma funcao. Fontes dos icones aceitam assets/fonts. Ferramentas de imagens recebem origem explicita, sem caminho privado padrao.
+- Testes: cinco do monitor, tres de conteudo/dependencias publicas, quatro de preparo de imagem, quatro de bootstrap e dois de diagramas passam. Preparacao completa do ZIP extraido em andamento; nao contar smoke test como instalacao aprovada.
+- Cota real semanal em 4%; monitor desta conversa ativo para commit em 1% ou menos. Jogo nao aberto; saves intocados.

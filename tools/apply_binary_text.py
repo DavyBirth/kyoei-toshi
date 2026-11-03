@@ -47,7 +47,7 @@ def patch(record, data):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('table', type=Path); ap.add_argument('output', type=Path)
-    ap.add_argument('--resources', type=Path, default=Path('G:/kyoei-toshi-work/m1'))
+    ap.add_argument('--resources', type=Path, required=True)
     ap.add_argument('--eboot', type=Path, required=True)
     a = ap.parse_args()
     table = json.loads(a.table.read_text(encoding='utf8')); n = 0

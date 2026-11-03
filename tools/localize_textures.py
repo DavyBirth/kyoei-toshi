@@ -545,7 +545,7 @@ def regions(im, item):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('labels', type=Path); ap.add_argument('output', type=Path)
-    ap.add_argument('--source', type=Path, default=Path('G:/kyoei-toshi-work/m1/common'))
+    ap.add_argument('--source', type=Path, required=True)
     ap.add_argument('--preview', type=Path)
     ap.add_argument('--language',choices=('en','pt-BR'),default='en')
     a = ap.parse_args()

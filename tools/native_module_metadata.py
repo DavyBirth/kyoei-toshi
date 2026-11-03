@@ -27,3 +27,22 @@ def records(base, module):
                 raise ValueError('Uncertified EH frame range')
             rows.append(f'H\t{base+p["vaddr"]:x}\t{p["memsz"]:x}\t{base+frame:x}\t{p["vaddr"]-frame:x}')
     return rows
+
+
+def normalize_imports(out):
+    path = out/'imports.tsv'
+    rows = []
+    unnamed = []
+    for index, line in enumerate(path.read_text(encoding='utf8').splitlines()):
+        fields = line.split('\t')
+        if len(fields) != 4 or fields[0] != str(index) or not fields[1] or not fields[2]:
+            raise ValueError('Tabela de importações inválida')
+        if not fields[3]:
+            fields[3] = '?'
+            unnamed.append(index)
+        if fields[1].split('#')[0] == 'fJgP+wqifno' and fields[2] == 'libSceDiscMap':
+            fields[3] = 'sceDiscMap_7C980FFB0AA27E7A'
+        rows.append('\t'.join(fields))
+    path.write_text('\n'.join(rows)+'\n', encoding='utf8')
+    return unnamed
+

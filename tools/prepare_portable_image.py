@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import sys
 from native_module_metadata import records,write_tls_sites
-from prepare_native import normalize_imports
+from native_module_metadata import normalize_imports
 
 ROOT=Path(__file__).resolve().parents[1]
 TITLE='CUSA03562'

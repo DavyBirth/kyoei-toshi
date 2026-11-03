@@ -1,0 +1,36 @@
+﻿CITY SHROUDED IN SHADOW — candidata 1.0 / review candidate
+
+PORTUGUES
+Esta pasta nao inclui o jogo, firmware, saves ou recursos extraidos.
+Requer Windows 10/11 x64, CPU com AVX2, placa/driver Vulkan e disco NTFS
+ou exFAT com espaco para uma copia do seu dump e arquivos temporarios.
+
+1. Extraia o ZIP inteiro para uma pasta onde voce possa gravar.
+2. Abra City Shrouded in Shadow.exe e escolha Preparar jogo.
+3. Selecione o dump do seu proprio disco: CUSA03562, versao 01.03.
+4. Selecione os modulos do sistema extraidos do seu proprio PS4.
+5. Aguarde a preparacao. Escolha portugues, ingles ou japones e jogue.
+
+Nenhum jogo ou firmware e baixado. Nao mova as pastas internas.
+A preparacao usa uma copia do dump; nao altera os arquivos de origem.
+Saves, configuracoes e logs ficam em data/. Preserve essa pasta ao atualizar.
+
+CANDIDATA PARA CONFERENCIA: ainda falta aprovar visualmente nomes longos
+(incluindo a florista) e carregamentos. Desempenho varia; a campanha inteira
+nao foi validada. Linux usa Wine/umu e exige verificacao propria.
+Nao publicar esta candidata antes de anexar o codigo-fonte correspondente
+e concluir a conferencia de licencas e dependencias do runtime.
+
+ENGLISH
+This folder contains no game, firmware, saves or extracted game assets.
+Requires Windows 10/11 x64, AVX2 CPU, Vulkan GPU/driver and an NTFS/exFAT
+drive with room for a copy of your owned dump and temporary setup files.
+Extract the complete ZIP, open City Shrouded in Shadow.exe, select Prepare
+game and provide your own CUSA03562 v01.03 dump and PS4 system modules.
+Choose English, Brazilian Portuguese or Japanese after setup finishes.
+No game or firmware is downloaded. Saves/settings/logs stay in data/.
+
+Review candidate: long NPC names and loading screens still need visual
+approval. Performance varies and the full campaign has not been validated.
+Publication requires corresponding source and the dependency/license audit.
+See licenses/ for the notices already collected.
