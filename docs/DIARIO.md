@@ -5337,3 +5337,8 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Configuracao independente em build/source-validation-20261103 passou apos essas duas inclusoes. Compilacao kyoei em andamento, log build/source-validation-build-20261103.log; ainda nao afirmar build aprovado.
 - Preparo completo do ZIP em build/public-install-validation-v4-20261103 segue em andamento; imagens e deltas en/pt-BR gerados, comandos pt-BR em processamento. Deltas ingles regenerado e instalado tem SHA256 identico 656d9329...; hashes completos preservados nos logs privados.
 - Telemetria real: 2% semanal; todos os arquivos novos preparados para commit. Florista segue pendente de Davy; jogo nao aberto.
+
+
+### 03/11/2026 08:04 ? commit por cota semanal
+- Telemetria real desta conversa: 1% semanal restante; commit imediato solicitado por Davy.
+- Checkpoint verificado preserva tamb?m arquivos novos eleg?veis; commit inclui apenas arquivos j? versionados.
