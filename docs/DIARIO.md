@@ -5351,3 +5351,9 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Recompilação Release a partir do kit (pasta sem cache) ligou kyoei.exe com sucesso (log build/source-validation-build-release-20261103.log).
 - Kit de fontes v3: build/Kyoei-Source-Candidate-v3-20261103.zip, 16072 arquivos, SHA256 550103e387c3cc043ece95d4831795bc2cb7e73bff161a5874a92a1143190b7f. Gerado com --dependency-cache build/source-validation-20261103/build/_deps (a pasta build/_deps local não existe mais; build/public-source-inputs NÃO é o cache certo). Comparado ao v2: mesmos nomes; só CMakeLists.txt, SOURCE-BUILD.md e source-manifest.json mudaram. Kits v1/v2 removidos.
 - Pendente: florista (Davy), publicação no GitHub ainda não feita.
+
+### 03/11/2026 — nova varredura automática da tradução (pedido de Davy)
+- Cobertura: 15.578/15.578 entradas pt-BR preenchidas; único japonês restante é intencional (letras ろ/か das tampas de bueiro, notícia 210). Sem glifo faltando na fonte principal; fonte IM já ampliada antes.
+- Cortes: simulação da quebra por palavras das legendas (1.667 de largura, 3 linhas) não acha nenhuma fala pt-BR ou en que passe de 3 linhas onde o japonês não passava. Balões da florista pt-BR (345/288/436) abaixo do maior balão japonês (494). Placas de NPC já usam escala horizontal (sem "..."). Títulos de intervalo, nomes do SpeakerTable e títulos de loja ficam mais largos que o japonês tanto em pt quanto em en; só prova visual decide.
+- Naturalidade: varredura de inglês esquecido, português europeu, "tu", calques, pontuação japonesa, espaços — sem achados reais. Corrigido Text_Stage_212 k546 "página ITENS" → tela "ITEM" (padrão das outras 4 falas). Delta pt-BR ainda NÃO refeito com essa troca.
+- validate_translation_draft.py falha por 17 entradas com ordem ocidental proposital de <P_FNAME>/<P_LNAME>; o validador compara ordem, não é defeito da tradução.
