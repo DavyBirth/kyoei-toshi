@@ -5413,3 +5413,7 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 ### 03/11/2026 18:15 — desligamento por cota
 - Telemetria real da conversa principal: five_hour: 3% restantes. Limite autorizado: 3% ou menos na janela de 5 horas ou semanal.
 - Trabalho salvo em disco e checkpoint ZIP verificado em build\items12-20261103\quota. Desligamento normal solicitado, sem forçar outros aplicativos.
+
+### 03/11/2026 — candidata dos itens 1/2 instalada na portátil (Claude)
+- Instalados na portátil: runtime build/kyoei.exe (animação/destaque da linha Modo foto), prompts.kypack pt-BR/en/ja e assets/ui-art.kyart de build/items12-20261103. Backups em data/update-backups/items12-20261103. Manifesto atualizado; launcher --check 0. Jogo não aberto pelo agente.
+- Falta Davy conferir: animação da linha Modo foto na pausa (sem destaque duplo em Carregar jogo), rodapés do jornal/Coleção e ícone do celular com teclas de teclado.
