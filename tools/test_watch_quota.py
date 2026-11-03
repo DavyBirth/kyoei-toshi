@@ -16,10 +16,10 @@ class Quota(unittest.TestCase):
             file=Path(folder)/'session.jsonl'
             file.write_text(json.dumps(dict(payload=metadata))+'\n'+json.dumps(record)+'\n',encoding='utf8')
             return quota_state(file,'main',now)
-    def test_either_real_window_below_seven_triggers(self):
-        self.assertEqual(exhausted(self.read()),['weekly'])
-        self.assertEqual(exhausted(self.read(94,93)),['five_hour'])
-        self.assertEqual(exhausted(self.read(93,93)),[])
+    def test_either_real_window_at_five_triggers(self):
+        self.assertEqual(exhausted(self.read(94,95)),['weekly'])
+        self.assertEqual(exhausted(self.read(95,94)),['five_hour'])
+        self.assertEqual(exhausted(self.read(94,94)),[])
         self.assertEqual(exhausted(self.read(100,100)),['five_hour','weekly'])
     def test_stale_reset_or_invalid_values_cannot_trigger(self):
         for state in (self.read(age=901),self.read(age=-1),self.read(reset=-1),self.read(float('nan'),float('nan'))):

@@ -44,9 +44,9 @@ def quota_state(session,thread,now=None):
         except (ValueError,KeyError,TypeError):continue
     return dict(checked_at=now.isoformat(),thread=thread,windows={})
 
-def exhausted(state,threshold=7):
+def exhausted(state,threshold=5):
     return [name for name,window in state['windows'].items()
-            if window['fresh'] and window['remaining']<threshold]
+            if window['fresh'] and window['remaining']<=threshold]
 
 def checkpoint(out):
     def git(*args):return subprocess.check_output(['git','-C',str(ROOT),*args])
@@ -85,7 +85,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--session',type=Path,required=True)
     parser.add_argument('--thread',required=True)
-    parser.add_argument('--threshold',type=float,default=7)
+    parser.add_argument('--threshold',type=float,default=5)
     parser.add_argument('--poll',type=float,default=5)
     parser.add_argument('--once',action='store_true')
     parser.add_argument('--output',type=Path,default=ROOT/'build/quota-watch-20261102')
@@ -111,13 +111,13 @@ def main():
                                   for name in state['triggered_windows'])
                 with (ROOT/'docs/DIARIO.md').open('a',encoding='utf8') as stream:
                     stream.write(f'\n\n### {dt.datetime.now():%d/%m/%Y %H:%M} — desligamento por cota\n'
-                                 f'- Telemetria real da conversa principal: {details}. Limite autorizado: menos de {args.threshold:g}% na janela de 5 horas ou semanal.\n'
-                                 '- Trabalho salvo em disco e checkpoint ZIP verificado em build/quota-watch-20261102. Desligamento normal solicitado, sem forçar outros aplicativos.\n')
+                                 f'- Telemetria real da conversa principal: {details}. Limite autorizado: {args.threshold:g}% ou menos na janela de 5 horas ou semanal.\n'
+                                 f'- Trabalho salvo em disco e checkpoint ZIP verificado em {out.relative_to(ROOT)}. Desligamento normal solicitado, sem forçar outros aplicativos.\n')
                     stream.flush();os.fsync(stream.fileno())
                 saved=checkpoint(out)
                 write_json(out/'saved.json',dict(checkpoint=str(saved),quota=state))
                 subprocess.run(['shutdown.exe','/s','/t','0','/d','p:0:0','/c',
-                                'Kyoei: trabalho salvo; cota abaixo de 7%, conforme pedido.'],check=True)
+                                f'Kyoei: trabalho salvo; cota em {args.threshold:g}% ou menos, conforme pedido.'],check=True)
                 return
         except Exception as error:
             write_json(out/'error.json',dict(at=dt.datetime.now(dt.timezone.utc).isoformat(),error=str(error)))
