@@ -5310,3 +5310,14 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Ao finalizar o pacote, detectada outra diferença da instalação deixada pelo Claude: a partida usava build/kyoei.exe atualizado, enquanto runtime/kyoei.exe da portátil ainda era anterior ao aumento das tabelas. Sincronizado com tools/update_portable_runtime.py (a partida aberta não usa esse PE); hashes dos quatro runtime/out também atualizados no manifesto. Não houve substituição de dados lidos pela partida, saves ou configurações.
 - Pacote corrigido: build/Kyoei-1.0-RC3b-Atualizacao-20261103.zip, 60.405.472 bytes, SHA256 699a92b24a453653acc5c3bd677983548bcdaef149487dcbaa0ec38ec1b6d6cf. Substitui o RC3 preliminar. Teste Windows repetido passa; Linux e launcher --check em execução. Continuar a partir dessa candidata, não da RC3 anterior.
 - Validação final da RC3b concluída: Windows e Linux TRANSLATION UPDATE PASS; launcher --check 0. RC3 preliminar e deltas experimentais de texto removidos após verificar o hash da candidata substituta. Relatório de retomada e limites da prova em docs/REVISAO-RC3-20261103.md.
+
+
+### 03/11/2026 00:59 — desligamento por cota
+- Telemetria real da conversa principal: weekly: 5% restantes. Limite autorizado: 5% ou menos na janela de 5 horas ou semanal.
+- Trabalho salvo em disco e checkpoint ZIP verificado em build\quota-watch-20261103. Desligamento normal solicitado, sem forçar outros aplicativos.
+
+
+### 03/11/2026 ? retomada e novo limite semanal
+- Davy autorizou continuar revis?o/preparo p?blico e pediu commit imediato em 1% semanal ou menos. Substitui o desligamento semanal de 5%; prote??o de 5 horas mantida.
+- Sandbox falhou na inicializa??o; acesso local retomado por execu??o aprovada fora dele. Nenhum jogo aberto automaticamente.
+- Monitor passa a oferecer limite semanal pr?prio: checkpoint verificado e commit dos arquivos versionados, sem adicionar dados privados novos.
