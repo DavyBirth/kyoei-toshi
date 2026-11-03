@@ -84,7 +84,7 @@ def commit(stage,root,assets,proof,compatibility):
             for path in (root/folder).rglob('*'):
                 if path.is_file():records.append(dict(path=path.relative_to(root).as_posix(),bytes=path.stat().st_size,sha256=digest(path)))
         keep(root/'manifest.json').write_text(json.dumps(dict(format='kyoei-private-portable-v1',title='CUSA03562',version='01.03',
-            pc_version='1.0-rc1',languages=['ja','en','pt-BR'],files=records,
+            pc_version='1.0-rc3b',languages=['ja','en','pt-BR'],files=records,
             privacy_scan_passed=False,personal_saves_copied=False),indent=2)+'\n',encoding='utf8')
         launcher=root/'City Shrouded in Shadow.exe'
         if launcher.is_file():subprocess.run([str(launcher),'--check'],cwd=root,check=True)

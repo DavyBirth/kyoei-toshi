@@ -397,7 +397,7 @@ set_target_properties(kyoei PROPERTIES LINKER_LANGUAGE CXX)
 
 # Compile adapted GPU units from the fixed snapshot locally. The
 # external cache supplies dependency headers only; no sibling sources are built.
-set(KYOEI_GPU_HEADERS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
+set(KYOEI_GPU_HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/build/_deps" CACHE PATH "GPU dependency source/header cache")
 target_include_directories(kyoei PRIVATE "${KYOEI_GPU_HEADERS}/gz_miniz-src" "${KYOEI_GPU_HEADERS}/gz_miniz-build")
 file(READ "${KYOEI_CORE}/gpu/window.cpp" KYOEI_WINDOW)
 file(READ "${KYOEI_CORE}/gpu/pad.cpp" KYOEI_PAD)

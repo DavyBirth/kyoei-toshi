@@ -1,2 +1,3 @@
 Pillow>=12,<13
 fonttools>=4.60,<5
+numpy>=2,<3

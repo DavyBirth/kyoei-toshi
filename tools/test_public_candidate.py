@@ -1,7 +1,7 @@
-﻿import tempfile
+import tempfile
 from pathlib import Path
 import unittest
-from build_public_candidate import audit,tool_closure
+from build_public_candidate import ROOT,audit,tool_closure
 
 class PublicCandidate(unittest.TestCase):
     def test_rejects_game_derivatives_profiles_and_nonportable_python(self):
@@ -15,6 +15,14 @@ class PublicCandidate(unittest.TestCase):
             root=Path(directory);(root/'LICENSE').write_bytes(b'abc')
             row=audit(root)[0]
             self.assertEqual(row['sha256'],'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad')
+    def test_production_closure_omits_private_preparer_and_uses_explicit_inputs(self):
+        tools=tool_closure(ROOT)
+        self.assertNotIn('prepare_native',tools)
+        self.assertIn('native_module_metadata',tools)
+        for name in tools:
+            text=(ROOT/'tools'/(name+'.py')).read_text(encoding='utf8')
+            for private in ('G:/kyoei-toshi-work','G:/GodzillaShadPS4PC'):
+                self.assertNotIn(private,text,name)
     def test_follows_transitive_and_function_local_imports(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);(root/'tools').mkdir()

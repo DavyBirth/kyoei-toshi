@@ -91,7 +91,9 @@ def python_runtime(target):
     (target/('python'+version+'._pth')).write_text('.\nDLLs\nLib\nLib/site-packages\n../../tools\n',encoding='ascii')
 
 
-def build(output):
+def build(output,dependency_cache):
+    dependency_cache=dependency_cache.resolve()
+    if not dependency_cache.is_dir():raise ValueError("Provide the dependency source cache for current notices")
     output=output.resolve()
     if not output.is_relative_to(ROOT/'build') or output==ROOT/'build' or output.exists():
         raise ValueError('Choose a NEW candidate directory below build/')
@@ -119,8 +121,18 @@ def build(output):
                         '/out:'+str(output/'City Shrouded in Shadow.exe'),str(ROOT/'src/kyoei_portable_launcher.cs')],check=True)
         python_runtime(output/'support/python')
         copy(ROOT/'LICENSE',output/'licenses/GPL-2.0.txt')
-        # Existing notices contain only license texts, never artwork or game resources.
-        copy_tree(ROOT/'build/City-Shrouded-in-Shadow-Portable/licenses',output/'licenses/dependencies')
+        # Read license texts directly from public source inputs, never a private installation.
+        for name in ('NotoSans-OFL.txt','NotoSansCJK-OFL.txt'):
+            copy(ROOT/'docs/release/licenses'/name,output/'licenses'/name)
+        copy(ROOT/core/'third_party/shadPS4/LICENSE',output/'licenses/shadPS4/LICENSE')
+        for folder in sorted(dependency_cache.glob('*-src')):
+            for path in folder.iterdir():
+                if path.is_file() and path.name.upper().startswith(('LICENSE','COPYING','COPYRIGHT','OFL','NOTICE')):
+                    copy(path,output/'licenses/dependencies'/folder.name/path.name)
+        fsr=ROOT/'build/fsr-vulkan-src'
+        for name in ('LICENSE.txt','NOTICE.md','UPSTREAM.md','upstream/ffx-1.1.4/sdk/LICENSE.txt'):
+            copy(fsr/name,output/'licenses/FSR-Vulkan'/name)
+        copy(ROOT/'third_party/imgui/LICENSE.txt',output/'licenses/imgui/LICENSE.txt')
         copy(ROOT/'tools/start-on-linux.sh',output/'Start on Linux.sh')
         copy(ROOT/'docs/release/INSTALL.txt',output/'README.txt')
         subprocess.run([str(output/'support/python/python.exe'),'-I','-B','-c',
@@ -150,4 +162,5 @@ def build(output):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('output',type=Path)
-    build(parser.parse_args().output)
+    parser.add_argument('--dependency-cache',type=Path,required=True)
+    args=parser.parse_args();build(args.output,args.dependency_cache)

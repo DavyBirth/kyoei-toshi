@@ -20,3 +20,12 @@ Preparação da candidata em 02/11: 138 narrações e 29 dicas de carregamento r
 Conferência curta de Davy: carregar o save perto da florista e verificar o nome inteiro; observar uma tela de carregamento e uma tela de intervalo com acentos; abrir a ajuda de controles no dispositivo usado. Isso não exige concluir uma campanha.
 
 O pacote público também precisa resolver as dependências locais do preparador (dump/firmware do próprio usuário) e da compilação, que ainda apontam para caches e pastas desta máquina. A candidata privada não comprova uma instalação pública a partir de uma pasta limpa.
+
+
+Atualizacao 03/11: gerador de candidata publica em tools/build_public_candidate.py.
+Inclui Python isolado, NumPy/Pillow, fontes OFL, tabelas de traducao e preparadores;
+recusa formatos derivados do disco e perfis. ZIP v6 gerado, com avisos AAC/FSR/ImGui
+complementados. Instrucao de instalacao em docs/release/INSTALL.txt; auditoria das
+fontes e bloqueios de compilacao em docs/release/DEPENDENCIES.md.
+O teste completo de preparo a partir do ZIP esta em andamento. Nao marcar pacote
+publico/reproducibilidade/publicacao como concluidos antes de terminar a prova.

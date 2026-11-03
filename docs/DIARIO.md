@@ -5328,3 +5328,12 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Dependencia de normalizacao das importacoes movida para native_module_metadata; preparadores antigo/publico usam a mesma funcao. Fontes dos icones aceitam assets/fonts. Ferramentas de imagens recebem origem explicita, sem caminho privado padrao.
 - Testes: cinco do monitor, tres de conteudo/dependencias publicas, quatro de preparo de imagem, quatro de bootstrap e dois de diagramas passam. Preparacao completa do ZIP extraido em andamento; nao contar smoke test como instalacao aprovada.
 - Cota real semanal em 4%; monitor desta conversa ativo para commit em 1% ou menos. Jogo nao aberto; saves intocados.
+
+### 03/11/2026 ? fontes e validacao independente
+- Geradas candidatas publicas sem usar a instalacao privada para coletar avisos. OFL das fontes agora em docs/release/licenses; AAC, FSR e ImGui incluidos. Candidata v7: 0674f09d1003f91874100177a7c5b5ef1552d0d316e0a244c8d752db04f0da3c. Ainda nao publicar.
+- CMake passa a usar build/_deps por padrao; configuracao local passou. Manifesto do bootstrap corrigido de rc1 para rc3b.
+- Fontes upstream FFmpeg 7.1.1 verificadas pelo SHA512 do port fixo; vcpkg df8bfe5 completo obtido. Nenhum jogo/firmware baixado.
+- Criado build_public_source.py. Primeira candidata de fontes: 16060 arquivos, SHA256 b40c33fadb6416606da33c4f5926f813614b49401849d2212b8064f379e93e6d. Teste limpo revelou libraries.cmake e benchmark_gpu_wait.c ausentes; gerador corrigido para lista de libs e ferramentas citadas pelo CMake. Metadados locais removidos do kit seguinte.
+- Configuracao independente em build/source-validation-20261103 passou apos essas duas inclusoes. Compilacao kyoei em andamento, log build/source-validation-build-20261103.log; ainda nao afirmar build aprovado.
+- Preparo completo do ZIP em build/public-install-validation-v4-20261103 segue em andamento; imagens e deltas en/pt-BR gerados, comandos pt-BR em processamento. Deltas ingles regenerado e instalado tem SHA256 identico 656d9329...; hashes completos preservados nos logs privados.
+- Telemetria real: 2% semanal; todos os arquivos novos preparados para commit. Florista segue pendente de Davy; jogo nao aberto.

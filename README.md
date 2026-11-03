@@ -21,6 +21,7 @@ repository holds only tools, the runtime, translations and documentation.
 Status: playable, experimental. The English text is under review. The frame rate is limited
 by the processor (about 50–60 FPS standing, 35–45 turning the camera on a mid-range PC).
 The 1.0 preparation checklist is in [docs/RELEASE-1.0.md](docs/RELEASE-1.0.md).
+The public candidate builder and its current limits are documented below.
 
 ## Layout
 
@@ -72,3 +73,17 @@ derived game data (archives, textures, extracted text). The runtime contains GPL
 **Português:** preservação, tradução e port para PC de *Kyoei Toshi*. Nada do jogo está aqui:
 tudo funciona sobre o dump do seu próprio disco. O diário do projeto (`docs/DIARIO.md`) e as
 instruções para quem trabalha nele (`AGENTS.md`) estão em português.
+
+## Public review candidate
+
+`tools/build_public_candidate.py build/Public-Candidate --dependency-cache <dependency-source-cache>`
+assembles the launcher, runtime, isolated Python/Pillow/NumPy, OFL fonts,
+translation JSON and preparation tools. It never copies the private game installation,
+game archives, firmware, saves or generated language patches into the ZIP.
+The first run asks for the user's own CUSA03562 v01.03 dump and PS4 modules.
+
+This is a review candidate, not a published 1.0. Visual checks and the delivery of
+corresponding runtime/dependency source remain pending. See
+[installation instructions](docs/release/INSTALL.txt) and
+[dependency audit](docs/release/DEPENDENCIES.md). The private RC3b updater must
+never be used as the public download.

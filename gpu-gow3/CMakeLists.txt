@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(GOW3 "${CMAKE_CURRENT_SOURCE_DIR}/../third_party/gow3-gpu")
 set(FSR_VULKAN "${CMAKE_CURRENT_SOURCE_DIR}/../build/fsr-vulkan-src") # FSR-Vulkan source (MIT)
-set(DEPS "G:/godzilla-port-codex/build/_deps" CACHE PATH "Existing GPU dependency header cache")
+set(DEPS "${CMAKE_CURRENT_SOURCE_DIR}/../build/_deps" CACHE PATH "GPU dependency source/header cache")
 find_program(GLSLANG_COMPILER NAMES glslangValidator glslang HINTS "$ENV{VULKAN_SDK}/Bin" REQUIRED)
 
 # Host shaders -> headers, same list as the GoW3 build.
