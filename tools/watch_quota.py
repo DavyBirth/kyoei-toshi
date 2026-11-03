@@ -142,6 +142,8 @@ def main():
                                  f'- Trabalho salvo em disco e checkpoint ZIP verificado em {out.relative_to(ROOT)}. Desligamento normal solicitado, sem forçar outros aplicativos.\n')
                     stream.flush();os.fsync(stream.fileno())
                 saved=checkpoint(out)
+                subprocess.run(['git','-C',str(ROOT),'add','--update'],check=True)
+                subprocess.run(['git','-C',str(ROOT),'commit','-m','Save progress before authorized quota shutdown'],check=True)
                 write_json(out/'saved.json',dict(checkpoint=str(saved),quota=state))
                 subprocess.run(['shutdown.exe','/s','/t','0','/d','p:0:0','/c',
                                 f'Kyoei: trabalho salvo; cota em {args.threshold:g}% ou menos, conforme pedido.'],check=True)

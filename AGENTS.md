@@ -32,6 +32,7 @@
 - O port do Kyoei (M6) só começa depois que o Godzilla tiver a parte gráfica funcionando (M5 de lá).
 
 ## Regras
+- Pedido mais recente de Davy nesta conversa: aos 3% reais restantes em qualquer janela, salvar progresso em commit e checkpoint verificado e solicitar desligamento normal do Windows. Substitui os limites anteriores de desligamento e commit. Nunca cortar energia fisicamente.
 - Novo pedido de Davy nesta conversa (03/11/2026): na cota semanal, salvar um commit imediatamente ao chegar a 1% ou menos, substituindo o desligamento semanal aos 5%. Usar telemetria real e recente da conversa principal; checkpoint verificado antes do commit. A regra de 5 horas permanece.
 - Atualizado por Davy em 03/11/2026: salvar o trabalho e solicitar desligamento imediato quando a telemetria real da cota de 5 horas **ou semanal** chegar a **cerca de 5% restantes** (inclui 5% exatos). Substitui a reserva anterior de 7%. Conferir conversa principal, validade e janela da telemetria; não estimar por tempo decorrido. Salvar diário e checkpoint verificado antes do desligamento normal do Windows, sem cortar energia fisicamente.
 - Pedido de Davy em 02/11/2026 para a versão 1.0 portátil pública: desempenho e campanha completa não são critérios de bloqueio. Revisar e corrigir toda a tradução, incluindo redação/narração e diagramação das telas de carregamento, fontes, imagens e pop-ups de personagens cortados com reticências (exemplo: florista). Preparar limpeza, pacote público e publicação no GitHub.

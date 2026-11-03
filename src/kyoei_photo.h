@@ -33,9 +33,14 @@ inline void ResetAdjustments() {
     const float initial=kyoei_photo_scene_initial_fov();
     if(initial>0)kyoei_photo_scene_fov(initial-kyoei_photo_scene_fov_value());
 }
+inline bool Focused(SDL_Window* window) {
+    // Three explicit test switches keep automated checks from stealing focus.
+    static const bool test_focus=std::getenv("KYOEI_TEST_INPUT") && std::getenv("KYOEI_INPUT_TEST") &&
+        std::getenv("KYOEI_TEST_PHOTO_UNFOCUSED");
+    return (SDL_GetWindowFlags(window)&SDL_WINDOW_INPUT_FOCUS) || test_focus;
+}
 inline bool Blocked(SDL_Window* window) {
-    return !(SDL_GetWindowFlags(window)&SDL_WINDOW_INPUT_FOCUS) ||
-        (SDL_GetWindowFlags(window)&SDL_WINDOW_MINIMIZED) ||
+    return !Focused(window) || (SDL_GetWindowFlags(window)&SDL_WINDOW_MINIMIZED) ||
         kyoei_overlay_kind() || kyoei_title_exit_state();
 }
 // Call each SDL poll even without events: opening a host modal restores HUD.
@@ -151,7 +156,7 @@ inline bool HandleEvent(SDL_Window* window,const SDL_Event& event) {
     }
     if(event.key.key!=SDLK_F12)return false;
     if(event.type==SDL_EVENT_KEY_DOWN && !event.key.repeat &&
-       (SDL_GetWindowFlags(window)&SDL_WINDOW_INPUT_FOCUS))pending.store(true);
+       Focused(window))pending.store(true);
     return true;
 }
 inline bool TakeRequest(){return pending.exchange(false);}

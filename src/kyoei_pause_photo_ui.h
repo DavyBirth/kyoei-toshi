@@ -22,15 +22,15 @@ inline bool HandleEvent(const SDL_Event& event){
     if(!Inside(x,y))return false;kyoei_pause_photo_request();return true;
 }
 inline void Draw(){
-    if(!kyoei_pause_photo_visible())return;
+    float offset=0,alpha=0;if(!kyoei_pause_photo_visual(&offset,&alpha))return;
     auto *draw=ImGui::GetBackgroundDrawList();const auto hud=KyoeiUiDraw::Hud();ImVec2 p[4];
-    for(int i=0;i<4;++i)p[i]=hud.P(row[i].x,row[i].y);
+    for(int i=0;i<4;++i)p[i]=hud.P(row[i].x+offset,row[i].y);
     bool selected=kyoei_pause_photo_selected()!=0;
-    draw->AddConvexPolyFilled(p,4,selected?IM_COL32(5,12,8,220):IM_COL32(180,180,180,180));
+    draw->AddConvexPolyFilled(p,4,selected?IM_COL32(5,12,8,int(220*alpha)):IM_COL32(180,180,180,int(180*alpha)));
     const char *name=KyoeiUiText::T("pause_photo_en","pause_photo_pt","pause_photo_ja");
-    if(!KyoeiUiArt::DrawQuad(draw,name,p)){
-        KyoeiUiDraw::HudText(draw,hud,1406,962,30,KyoeiUiText::T("Photo Mode","Modo foto","Photo Mode"));
+    if(!KyoeiUiArt::DrawQuad(draw,name,p,IM_COL32(255,255,255,int(255*alpha)))){
+        KyoeiUiDraw::HudText(draw,hud,1406+offset,962,30,KyoeiUiText::T("Photo Mode","Modo foto","Photo Mode"));
     }
-    if(selected){draw->AddPolyline(p,4,IM_COL32(90,210,120,255),ImDrawFlags_Closed,2*hud.unit);}
+    if(selected){draw->AddPolyline(p,4,IM_COL32(90,210,120,int(255*alpha)),ImDrawFlags_Closed,2*hud.unit);}
 }
 }

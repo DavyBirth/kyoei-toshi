@@ -48,7 +48,7 @@ def face_letter(name):
     if name.startswith('texture/text marker/talk_icon_') or name in (
             'texture/hud/cursol_nextchat.tex', 'texture/stage_clear/sc_next.tex', 'texture/hud/resalt_next.tex'):
         return 'A'
-    if 'demo_skip' in name: return 'Y'
+    if 'demo_skip' in name or name=='texture/menu_mail/mail_icon_phone.tex': return 'Y'
     if 'kaihi_batu' in name: return 'B'
     if '_o_btn' in name: return 'A'
     if '_x_btn' in name or name=='texture/intermission/x_btn.tex': return 'B'
@@ -200,6 +200,8 @@ def cursor_tags(image, family='xbox'):
 
 
 def draw(name, image, family='xbox'):
+    from prompt_footers import FOOTERS,draw as footer
+    if name in FOOTERS:return footer(name,image,family)
     # The game's font icons are redrawn whole in each pad's own shapes (make_pad_icons).
     if name.startswith('font/icon/'):
         from make_pad_icons import font_icon

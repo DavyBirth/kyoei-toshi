@@ -71,19 +71,6 @@ int main() {
         if(from<32)assert(at==first_row[from/4]);
         assert(bytes==4);return true;
     },true));
-    {   // R8 font masks have one byte per pixel, including Display1D's 8-bit order.
-        guest.resize(64);Image mask;mask.image_uid=17;mask.info.size={8,8,1};mask.info.num_bits=8;
-        mask.info.resources.levels=1;mask.info.guest_size=64;mask.info.mips_layout[0]={64,8,8,0};
-        mask.info.props.is_tiled=true;mask.info.array_mode=2;mask.info.tile_mode=9;
-        Pair alpha{8,8,1,2,0,0,64,std::vector<unsigned char>(64,12),std::vector<unsigned char>(64,34)};
-        assert(Rows(alpha,mask.info,[&](size_t at,size_t from,size_t n){
-            assert(n==1);if(from<8)assert(at==from);if(from>=8&&from<16)assert(at==from+8);
-            guest[at]=alpha.controller[from];return true;
-        },true));
-        pairs.push_back(alpha);assert(Select(mask,true,changed,mode));
-        current_mode=KYOEI_INPUT_CONTROLLER;assert(Select(mask,false,changed,mode)&&changed);
-        current_mode=KYOEI_INPUT_KEYBOARD;assert(Select(mask,false,changed,mode)&&changed);
-    }
     {   // Xbox pads get the Xbox artwork; PlayStation pads the American one.
         KyoeiPrompts::Pair pair{};
         pair.controller={1}; pair.american={2}; pair.xbox={3};

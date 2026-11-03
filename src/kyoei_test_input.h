@@ -14,7 +14,9 @@ static inline SDL_Scancode kyoei_test_key(const char *name) {
         {"enter", SDL_SCANCODE_RETURN}, {"esc", SDL_SCANCODE_ESCAPE}, {"tab", SDL_SCANCODE_TAB},
         {"space", SDL_SCANCODE_SPACE}, {"back", SDL_SCANCODE_BACKSPACE}, {"ctrl", SDL_SCANCODE_LCTRL},
         {"up", SDL_SCANCODE_UP}, {"down", SDL_SCANCODE_DOWN}, {"left", SDL_SCANCODE_LEFT}, {"right", SDL_SCANCODE_RIGHT},
-        {"f1", SDL_SCANCODE_F1}, {"f7", SDL_SCANCODE_F7}};
+        {"f1", SDL_SCANCODE_F1}, {"f7", SDL_SCANCODE_F7},
+        {"f9", SDL_SCANCODE_F9}, {"f10", SDL_SCANCODE_F10},
+        {"f11", SDL_SCANCODE_F11}, {"f12", SDL_SCANCODE_F12}};
     for (size_t i = 0; i < sizeof keys / sizeof *keys; ++i) if (!strcmp(name, keys[i].name)) return keys[i].code;
     if (strlen(name) == 1 && name[0] >= 'a' && name[0] <= 'z') return (SDL_Scancode)(SDL_SCANCODE_A + name[0] - 'a');
     if (strlen(name) == 1 && name[0] >= '1' && name[0] <= '9') return (SDL_Scancode)(SDL_SCANCODE_1 + name[0] - '1');

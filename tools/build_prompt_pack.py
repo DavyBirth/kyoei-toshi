@@ -122,7 +122,7 @@ def build(base, output, diagrams=False,language='en',legend_diagrams=False):
                 entries.append((name, encode_tex(original, drawn['keyboard'][name], info), 0))
                 xbox[name] = encode_tex(original, drawn['xbox'][name], info)
                 nintendo[name] = encode_tex(original, drawn['nintendo'][name], info)
-        packed = bytearray(b'KYPROMP4' + struct.pack('<I', len(entries)+1))
+        packed = bytearray(b'KYPROMP4' + struct.pack('<I', len(entries)))
         for name, replacement,kind in entries:
             original = originals[name]
             if name.startswith('texture/text marker/talk_icon_'):
@@ -146,15 +146,6 @@ def build(base, output, diagrams=False,language='en',legend_diagrams=False):
             if any(nt_info[k]!=info[k] for k in ('width','height','levels','storage_family','channel_layout')) or len(nt)!=len(keys):
                 raise ValueError('Nintendo prompt layouts differ: '+name)
             packed += controller + keys + us + xb + nt
-    # Font drawing also uploads the icon atlas as an R8 alpha mask. Its
-    # keyboard/controller variants must follow the same live input selection.
-    masks=[decode(data)[1].getchannel('A').tobytes() for data in
-           (page_data,icon_page(page_data,cells,keyboard),american[ICON_PAGE],xbox[ICON_PAGE],nintendo[ICON_PAGE])]
-    key_page=decode(icon_page(page_data,cells,keyboard))[1]
-    masks[1]=ImageChops.multiply(key_page.convert('L'),key_page.getchannel('A')).tobytes()
-    page=decode(page_data)[1]
-    packed += struct.pack('<7I',page.width,page.height,1,2,0,0,len(masks[0]))
-    for mask in masks:packed += mask
     output.parent.mkdir(parents=True, exist_ok=True)
     # KYPROMZ1: the pack compressed (the runtime inflates it once at start; 177 MB -> ~9 MB).
     stored = b'KYPROMZ1' + struct.pack('<Q', len(packed)) + zlib.compress(bytes(packed), 6)

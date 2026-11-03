@@ -38,6 +38,23 @@ static _Atomic uint64_t seen,deadline,close_until;
 static _Atomic int native_cursor,selected,swallow;
 static unsigned previous;
 static int direction;
+int kyoei_pause_photo_visual(float *offset,float *opacity){
+#ifdef KYOEI_PAUSE_PHOTO_TEST
+    *offset=0;*opacity=1;return kyoei_pause_photo_visible();
+#else
+    if(!base)return 0;
+    uintptr_t menu=pointer(pointer((uintptr_t)base+0x1543dd0)+0xa10);
+    if(!menu || !word(menu+0x90) || word(menu+0x58)!=13)return 0;
+    uintptr_t nodes=pointer(menu+0x50),last=pointer(nodes+11*8),text=pointer(nodes+12*8);
+    if(!(word(last+0x20)&2))return 0;
+    float x=0;read_value(last+0x60,&x,4);
+    if(!(x>=-3000 && x<=3000))return 0;
+    // The native Load row already contains the authored easing and staggering.
+    // Follow its position throughout opening/closing instead of waiting for idle.
+    *offset=x-135.f;*opacity=(word(text+0x94)>>24)/255.f;
+    return *opacity>0;
+#endif
+}
 int kyoei_pause_photo_visible(void){
     if(atomic_load(&deadline))return 0;
 #ifdef KYOEI_PAUSE_PHOTO_TEST
@@ -45,7 +62,7 @@ int kyoei_pause_photo_visible(void){
 #else
     uintptr_t menu=atomic_load(&menu_identity);
     if(!menu || pointer(pointer((uintptr_t)base+0x1543dd0)+0xa10)!=menu ||
-       !word(menu+0x90) || word(menu+0x298) || word(menu+0x58)!=13)return 0;
+       !word(menu+0x90) || word(menu+0x190)!=2 || word(menu+0x298) || word(menu+0x58)!=13)return 0;
     uintptr_t nodes=pointer(menu+0x50),last=pointer(nodes+11*8);float x=0;read_value(last+0x60,&x,4);
     return x>=100 && x<=200 && word(menu+0x288)<=5;
 #endif
@@ -103,7 +120,7 @@ void kyoei_pause_photo_test_frame(int cursor,uint64_t now){clock_ms=now;atomic_s
 static ABI void update(void *self){
     static uintptr_t muted;static unsigned color;
     uintptr_t nodes=pointer((uintptr_t)self+0x50),cursor=pointer(nodes+10*8);
-    if(muted && muted==cursor){memcpy((void*)(cursor+0x94),&color,4);muted=0;}
+    if(muted && muted==cursor && !atomic_load(&selected)){memcpy((void*)(cursor+0x94),&color,4);muted=0;}
     original_update(self);
     if(!kyoei_photo_hud_available() || !kyoei_photo_scene_available() ||
        !word((uintptr_t)self+0x90) ||
@@ -113,7 +130,7 @@ static ABI void update(void *self){
     if(value<0 || value>5 || x<100 || x>200)return;
     atomic_store(&menu_identity,(uintptr_t)self);
     atomic_store(&native_cursor,value);atomic_store(&seen,now_ms());
-    if(atomic_load(&selected) && cursor){color=word(cursor+0x94);unsigned hidden=color&0xffffff;memcpy((void*)(cursor+0x94),&hidden,4);muted=cursor;}
+    if(atomic_load(&selected) && cursor){if(muted!=cursor)color=word(cursor+0x94);unsigned hidden=color&0xffffff;memcpy((void*)(cursor+0x94),&hidden,4);muted=cursor;}
 }
 void kyoei_pause_photo_configure(void *image,uint64_t size){
     const size_t entry=0xb296b0,length=2619;

@@ -26,3 +26,6 @@ Abaixo de "Carregar jogo" (como no Godzilla). Textura do menu: `texture/hud/mmen
 ## Depois: launcher (orientação de Davy nesta conversa)
 - Interface do launcher em varios idiomas e redesenho para combinar com a estetica do jogo. Fazer depois dos itens 1 e 2.
 - No japones, manter o padrao do jogo original, que ja tem menus em ingles; nao adicionar traducao japonesa extra do botao de sair.
+
+## Retomada desta rodada
+- Candidato compilado em build/kyoei.exe; provas e pacotes em build/items12-20261103. Ler ultimo DIARIO: faltam prova visual da animacao/destaque corrigidos, rodapes/celular e instalacao normal. Entrada, PNG e saida do modo foto passaram.

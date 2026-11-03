@@ -40,6 +40,7 @@ BINDINGS = {
     'texture/treasure_change/TC_maru_01.tex': 'E',
     'texture/treasure_change/TC_batu_01.tex': 'Space',
     'texture/hud/sikaku_button.tex': 'Ctrl',
+    'texture/menu_mail/mail_icon_phone.tex': '@phone',
     # BC3 HUD/intermission prompts.
     'texture/intermission/IM_next_maru_button.tex': 'E',
     'texture/intermission/IM_next_batu_button.tex': 'Space',
@@ -74,6 +75,9 @@ def fit(draw, text, font_path, box_w, box_h):
     font = ImageFont.truetype(str(font_path), 4)
     return font, draw.textbbox((0, 0), text, font=font)
 
+
+from prompt_footers import FOOTERS
+BINDINGS.update({name: '@footer:'+name for name in FOOTERS})
 
 def keycap(w, h, label):
     W, H = w * SCALE, h * SCALE
@@ -246,6 +250,12 @@ def resalt(original_image):
 
 
 def draw(label, w, h, english, original_image=None):
+    if label.startswith('@footer:'):
+        from prompt_footers import draw as footer
+        return footer(label[8:],original_image)
+    if label == '@phone':
+        out=original_image.copy();box=(23,106,57,141);out.paste((0,0,0,0),box)
+        out.alpha_composite(keycap(34,35,'F'),(23,106));return out
     if label == '@nextchat': return face_key(original_image, face_box(original_image))
     if label == '@scnext': return face_key(original_image, face_box(original_image))
     if label == '@resalt': return resalt(original_image)
@@ -287,7 +297,10 @@ def build(archive_path, english=True):
             info, _ = unpack_tex(original)
             from tex_preview import preview
             image = draw(label, info['width'], info['height'], english, preview(original)[0].convert('RGBA'))
-            if info['storage_family'] == 13:
+            if label.startswith('@footer:'):
+                from make_american_icons import encode_patch
+                out[name] = encode_patch(original,image)
+            elif info['storage_family'] == 13:
                 info, _ = decode_bc3(original)
                 out[name] = encode_bc3_tex(original, image, info)
             else:

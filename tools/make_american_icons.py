@@ -168,8 +168,11 @@ def build(originals):
         if layout(ia)!=layout(ib) or len(pa)!=len(pb):
             raise ValueError('Face-button layouts differ: '+a)
         out[a]=originals[b];out[b]=originals[a]
+    from prompt_footers import FOOTERS,draw as footer
     for name,original in originals.items():
-        if name=='texture/hud/maru_button.tex' or name.startswith('texture/text marker/talk_icon_'):
+        if name in FOOTERS:
+            image=footer(name,preview(original)[0].convert('RGBA'),'american',dict(maru=circle,batu=cross))
+        elif name=='texture/hud/maru_button.tex' or name.startswith('texture/text marker/talk_icon_'):
             # The large native blue cross (same family as the swapped dialog buttons) keeps the
             # stroke weight and the game's cross color; the 13 px font glyph came out thin and salmon.
             image=glyph(preview(original)[0],big_cross,blue=True)

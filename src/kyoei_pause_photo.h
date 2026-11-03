@@ -6,6 +6,7 @@ extern "C" {
 void kyoei_pause_photo_configure(void *image,uint64_t size);
 int kyoei_pause_photo_input(uint32_t *buttons,unsigned stick_y);
 int kyoei_pause_photo_visible(void);
+int kyoei_pause_photo_visual(float *offset,float *opacity);
 int kyoei_pause_photo_selected(void);
 void kyoei_pause_photo_request(void);
 void kyoei_pause_photo_cancel(void);
