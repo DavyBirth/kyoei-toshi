@@ -177,6 +177,8 @@ def build(originals):
             image=glyph(preview(original)[0],big_cross,blue=True)
         elif name=='texture/hud/resalt_next.tex':
             image=ring_cross(preview(original)[0],(251.5,62.5),8.5,2.4)
+        elif name=='texture/intermission/x_btn.tex':
+            image=circle.resize(preview(original)[0].size,Image.Resampling.LANCZOS)
         elif name.startswith('texture/hud/action_kaihi_batu_'):
             image=glyph(preview(original)[0],circle,circle=True,glow=name.endswith('_2.tex'))
         else:

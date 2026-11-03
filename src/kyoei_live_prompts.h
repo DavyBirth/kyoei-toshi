@@ -82,7 +82,7 @@ inline void Load() {
         total += size_t(p.bytes) * (with_nintendo ? 5 : with_xbox ? 4 : american ? 3 : 2);
         if (!p.width || !p.height || p.width > 4096 || p.height > 4096 || !p.levels ||
             p.levels > 14 || !p.bytes || total > 256 * 1024 * 1024 ||  // controls diagrams: ~180 MB
-            (p.storage != 1 && p.storage != 13)) {
+            (p.storage != 1 && p.storage != 2 && p.storage != 13)) {
             ok = false; break;
         }
         auto part = [&](std::vector<unsigned char> &to) { to.resize(p.bytes); return read(to.data(), p.bytes); };
@@ -111,7 +111,7 @@ bool Rows(const Pair &p, const Info &info, Row row, bool guest_tiling=false) {
         auto [size, pitch, height, offset] = info.mips_layout[m];
         (void)size; (void)height;
         const uint32_t w = std::max(1u, p.width >> m), h = std::max(1u, p.height >> m);
-        const uint32_t unit = p.storage == 13 ? 16 : 4;
+        const uint32_t unit = p.storage == 13 ? 16 : p.storage == 2 ? 1 : 4;
         const uint32_t columns = p.storage == 13 ? (w + 3) / 4 : w;
         const uint32_t rows = p.storage == 13 ? (h + 3) / 4 : h;
         const uint32_t stride = (p.storage == 13 ? (std::max(pitch, w) + 3) / 4 : std::max(pitch, w)) * unit;
@@ -124,7 +124,9 @@ bool Rows(const Pair &p, const Info &info, Row row, bool guest_tiling=false) {
                 const uint32_t block_pitch=stride/unit;
                 for (uint32_t x=0;x<columns;++x) {
                     uint32_t pixel;
-                    if (unsigned(info.tile_mode)==9 && unit==4)
+                    if (unsigned(info.tile_mode)==9 && unit==1)
+                        pixel=(x&7)|((y&2)<<2)|((y&1)<<4)|((y&4)<<3);
+                    else if (unsigned(info.tile_mode)==9 && unit==4)
                         pixel=(x&3)|((y&1)<<2)|((x&4)<<1)|((y&6)<<3);
                     else if (unsigned(info.tile_mode)==13)
                         pixel=(x&1)|((y&1)<<1)|((x&2)<<1)|((y&2)<<2)|((x&4)<<2)|((y&4)<<3);
@@ -199,7 +201,7 @@ const Pair *Select(Image &image, bool dirty, bool &changed, unsigned &mode) {
         for (size_t i = 0; i < pairs.size(); ++i) {
             const Pair &p = pairs[i];
             if (!Dimensions(p,info) || info.resources.levels > p.levels ||
-                (p.storage == 13) != bool(info.props.is_block) || info.num_bits != (p.storage == 13 ? 128u : 32u)) continue;
+                (p.storage == 13) != bool(info.props.is_block) || info.num_bits != (p.storage == 13 ? 128u : p.storage == 2 ? 8u : 32u)) continue;
             bool controller=true,keyboard=true;
             bool valid = Rows(p, info, [&](size_t at, size_t from, size_t bytes) {
                 controller=controller && !std::memcmp(guest.data()+at,p.controller.data()+from,bytes);

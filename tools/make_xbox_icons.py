@@ -51,7 +51,7 @@ def face_letter(name):
     if 'demo_skip' in name: return 'Y'
     if 'kaihi_batu' in name: return 'B'
     if '_o_btn' in name: return 'A'
-    if '_x_btn' in name: return 'B'
+    if '_x_btn' in name or name=='texture/intermission/x_btn.tex': return 'B'
     for key, letter in FACE.items():
         if key in name: return letter
     raise KeyError(name)

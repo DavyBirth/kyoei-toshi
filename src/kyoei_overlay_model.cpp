@@ -555,6 +555,13 @@ bool Draw(ImDrawList *draw,const char *name,ImVec2 min,ImVec2 max,ImU32 tint) {
     draw->AddImage(atlas->TexRef,min,max,r.uv0,r.uv1,tint);
     return true;
 }
+bool DrawQuad(ImDrawList *draw,const char *name,const ImVec2 *p,ImU32 tint) {
+    const auto it=KyoeiOverlayModel::ui_art.find(name);if(it==KyoeiOverlayModel::ui_art.end())return false;
+    ImFontAtlas *atlas=ImGui::GetIO().Fonts;ImFontAtlasRect r;
+    if(!atlas->GetCustomRect(it->second.id,&r))return false;
+    draw->AddImageQuad(atlas->TexRef,p[0],p[1],p[2],p[3],r.uv0,ImVec2(r.uv1.x,r.uv0.y),r.uv1,ImVec2(r.uv0.x,r.uv1.y),tint);
+    return true;
+}
 ImVec2 Size(const char *name) {
     const auto it=KyoeiOverlayModel::ui_art.find(name);
     return it==KyoeiOverlayModel::ui_art.end()?ImVec2(0,0):ImVec2((float)it->second.w,(float)it->second.h);

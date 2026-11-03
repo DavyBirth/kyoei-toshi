@@ -5,6 +5,7 @@
 #include <SDL3/SDL.h>
 #include "kyoei_photo_hud.h"
 #include "kyoei_photo_scene.h"
+#include "kyoei_pause_photo.h"
 #include "kyoei_overlay.h"
 #include "kyoei_title_exit.h"
 #include "kyoei_input_mode.h"
@@ -39,7 +40,8 @@ inline bool Blocked(SDL_Window* window) {
 }
 // Call each SDL poll even without events: opening a host modal restores HUD.
 inline void Update(SDL_Window* window) {
-    if(Blocked(window)){adjustment_repeat.Clear();kyoei_photo_hud_restore();return;}
+    if(Blocked(window)){kyoei_pause_photo_cancel();adjustment_repeat.Clear();kyoei_photo_hud_restore();return;}
+    if(kyoei_pause_photo_take_entry())kyoei_photo_hud_toggle();
     if(!kyoei_photo_scene_available() || !kyoei_photo_hud_hidden()){adjustment_repeat.Clear();return;}
     const unsigned repeat=adjustment_repeat.Tick(SDL_GetTicksNS());
     if(repeat&1)AdjustSelected(-1);

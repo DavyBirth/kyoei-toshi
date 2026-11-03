@@ -10,6 +10,7 @@
 #include "kyoei_title_exit.h"
 #include "kyoei_photo.h"
 #include "kyoei_photo_panel.h"
+#include "kyoei_pause_photo_ui.h"
 #include "kyoei_photo_dof.h"
 #include "imgui.h"
 #include "imgui_impl_vulkan.h"
@@ -91,6 +92,7 @@ bool HandleEvent(const SDL_Event &event) {
     if (event.type==SDL_EVENT_QUIT || event.type==SDL_EVENT_WINDOW_CLOSE_REQUESTED) {
         kyoei_overlay_abort_all(); return false;
     }
+    if(KyoeiPausePhotoUi::HandleEvent(event))return true;
     // Return to Desktop answers only to the game's own inputs, like the native title items.
     if (!kyoei_overlay_kind()) return false;
     if (event.type==SDL_EVENT_TEXT_INPUT) { kyoei_overlay_text(event.text.text); return true; }
@@ -139,6 +141,7 @@ void Render(vk::CommandBuffer command,vk::ImageView view,vk::Extent2D extent) {
     ImGui_ImplVulkan_NewFrame();
     auto *draw=KyoeiOverlayModel::Draw(extent.width,extent.height,elapsed,[]{
         if(kyoei_overlay_kind())return;
+        KyoeiPausePhotoUi::Draw();
         KyoeiPhoto::DrawCaptureNotice();
         if(!kyoei_photo_hud_hidden())return;
         KyoeiPhoto::DrawCompositionGuide();

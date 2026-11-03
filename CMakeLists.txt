@@ -308,7 +308,7 @@ kyoei_replace_checked(KYOEI_LOADER
   "    gz_thread_attach_main();\n    kyoei_tls_enter();")
 kyoei_replace_checked(KYOEI_LOADER
   "#include \"kyoei_gpu_wait.h\""
-  "#include \"kyoei_gpu_wait.h\"\n#include \"kyoei_hud_trace.h\"\n#include \"kyoei_title_exit.h\"\n#include \"kyoei_text_wrap.h\"")
+  "#include \"kyoei_gpu_wait.h\"\n#include \"kyoei_hud_trace.h\"\n#include \"kyoei_title_exit.h\"\n#include \"kyoei_pause_photo.h\"\n#include \"kyoei_text_wrap.h\"")
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
   "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_hud_trace_configure(image, image_size);\n    kyoei_title_exit_configure(image, image_size);\n    kyoei_text_wrap_configure(image, image_size);")
@@ -326,7 +326,7 @@ set(KYOEI_LOADER "#include \"kyoei_photo_lights.h\"\n${KYOEI_LOADER}")
 set(KYOEI_LOADER "#include \"kyoei_photo_hud.h\"\n#include \"kyoei_photo_scene.h\"\n${KYOEI_LOADER}")
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_tls_optimize(out);"
-  "    kyoei_photo_lights_configure(image, image_size);\n    kyoei_photo_dof_configure(image, image_size);\n    kyoei_photo_save_mark_configure(image, image_size);\n    kyoei_tls_optimize(out);")
+  "    kyoei_pause_photo_configure(image, image_size);\n    kyoei_photo_lights_configure(image, image_size);\n    kyoei_photo_dof_configure(image, image_size);\n    kyoei_photo_save_mark_configure(image, image_size);\n    kyoei_tls_optimize(out);")
 kyoei_replace_checked(KYOEI_LOADER
   "    kyoei_gpu_wait_configure(image, image_size);"
   "    kyoei_gpu_wait_configure(image, image_size);\n    kyoei_photo_hud_configure(image, image_size);\n    kyoei_photo_scene_configure(image, image_size);\n    kyoei_photo_phone_configure(image, image_size);")
@@ -338,7 +338,10 @@ kyoei_replace_checked(KYOEI_LOADER
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 target_sources(kyoei PRIVATE src/kyoei_photo_dof.c src/kyoei_photo_hud.c src/kyoei_photo_scene.c src/kyoei_photo_phone.c src/kyoei_photo_save_mark.c)
-target_sources(kyoei PRIVATE src/kyoei_photo_lights.c)
+target_sources(kyoei PRIVATE src/kyoei_photo_lights.c src/kyoei_pause_photo.c)
+add_executable(test_kyoei_pause_photo src/test_kyoei_pause_photo.c src/kyoei_pause_photo.c)
+target_compile_definitions(test_kyoei_pause_photo PRIVATE KYOEI_PAUSE_PHOTO_TEST=1)
+target_compile_options(test_kyoei_pause_photo PRIVATE -UNDEBUG)
 add_executable(test_kyoei_photo_lights src/test_kyoei_photo_lights.c)
 target_include_directories(test_kyoei_photo_lights PRIVATE "${KYOEI_CORE}/src")
 target_compile_options(test_kyoei_photo_lights PRIVATE -UNDEBUG)
@@ -430,12 +433,12 @@ kyoei_replace_checked(KYOEI_PAD "        buttons |= physical_buttons;"
 kyoei_replace_checked(KYOEI_PAD
   "    if (buttons & 0x100) data.analogButtons.l2 = 255;"
   "    KyoeiPhotoControls::Apply(data,buttons);\n    if (buttons & 0x100) data.analogButtons.l2 = 255;")
-set(KYOEI_PAD "#include \"kyoei_title_exit.h\"
+set(KYOEI_PAD "#include \"kyoei_title_exit.h\"\n#include \"kyoei_pause_photo.h\"
 ${KYOEI_PAD}")
 kyoei_replace_checked(KYOEI_PAD "    if (gz_dialog_input(buttons)) {"
-  "    const int kyoei_title_consumed=kyoei_title_exit_input(buttons,data.leftStick.y);
+  "    const int kyoei_pause_consumed=kyoei_pause_photo_input(&buttons,data.leftStick.y);\n    const int kyoei_title_consumed=kyoei_title_exit_input(buttons,data.leftStick.y);
     if (kyoei_title_exit_take_quit()) { SDL_Event quit{}; quit.type=SDL_EVENT_QUIT; SDL_PushEvent(&quit); }
-    if (kyoei_title_consumed || gz_dialog_input(buttons)) {")
+    if (kyoei_pause_consumed || kyoei_title_consumed || gz_dialog_input(buttons)) {")
 kyoei_replace_checked(KYOEI_PAD
   "keyboard_axis(SDL_SCANCODE_A,SDL_SCANCODE_D,data.leftStick.x)"
   "(kyoei_prompt_pause_active()?data.leftStick.x:keyboard_axis(SDL_SCANCODE_A,SDL_SCANCODE_D,data.leftStick.x))")

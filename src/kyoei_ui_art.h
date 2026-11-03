@@ -5,6 +5,7 @@
 namespace KyoeiUiArt {
 /// Draws the named piece into `draw` (stretched to `min`..`max`). False when it is missing.
 bool Draw(ImDrawList* draw, const char* name, ImVec2 min, ImVec2 max, ImU32 tint = IM_COL32_WHITE);
+bool DrawQuad(ImDrawList* draw,const char* name,const ImVec2 *corners,ImU32 tint=IM_COL32_WHITE);
 /// Native size of the named piece (0,0 when missing).
 ImVec2 Size(const char* name);
 /// Button icon for the pad in use: "A","B","X","Y","LB","RB","DPAD",... (PlayStation or Xbox art).
