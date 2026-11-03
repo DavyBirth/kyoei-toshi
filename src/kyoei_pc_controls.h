@@ -3,11 +3,12 @@
 #pragma once
 #include <SDL3/SDL.h>
 #include "kyoei_prompt_state.h"
+#include "kyoei_pause_photo.h"
 namespace KyoeiPcControls {
 inline unsigned KeyMask(SDL_Scancode key) {
     if (kyoei_prompt_pause_active()) {
-        if (key==SDL_SCANCODE_A || (key==SDL_SCANCODE_LEFT && kyoei_prompt_pause_root())) return 0x400;
-        if (key==SDL_SCANCODE_D || (key==SDL_SCANCODE_RIGHT && kyoei_prompt_pause_root())) return 0x800;
+        if (key==SDL_SCANCODE_A || (key==SDL_SCANCODE_LEFT && kyoei_prompt_pause_root() && kyoei_pause_menu_root())) return 0x400;
+        if (key==SDL_SCANCODE_D || (key==SDL_SCANCODE_RIGHT && kyoei_prompt_pause_root() && kyoei_pause_menu_root())) return 0x800;
         if (key==SDL_SCANCODE_Q || key==SDL_SCANCODE_LSHIFT || key==SDL_SCANCODE_RSHIFT) return 0;
     }
     switch(key) {

@@ -20,9 +20,9 @@ namespace Gow3Overlay {
 // closed state: acknowledge it, or the driver kept redrawing the last frame on every idle
 // vblank after the first dialog closed (~60 -> ~33 FPS).
 bool Visible() {
-    float pause_offset=0,pause_opacity=0;
+    float pause_offset=0,pause_offset_y=0,pause_opacity=0;
     const bool visible =
-        kyoei_overlay_kind() != 0 || kyoei_title_exit_state() != 0 || kyoei_photo_hud_hidden() || kyoei_pause_photo_visual(&pause_offset,&pause_opacity);
+        kyoei_overlay_kind() != 0 || kyoei_title_exit_state() != 0 || kyoei_photo_hud_hidden() || kyoei_pause_photo_visual(&pause_offset,&pause_offset_y,&pause_opacity);
     if (!visible) {
         kyoei_overlay_presented(kyoei_overlay_revision());
     }

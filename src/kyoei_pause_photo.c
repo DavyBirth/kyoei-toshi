@@ -38,20 +38,46 @@ static _Atomic uint64_t seen,deadline,close_until;
 static _Atomic int native_cursor,selected,swallow;
 static unsigned previous;
 static int direction;
-int kyoei_pause_photo_visual(float *offset,float *opacity){
+// Page slides (L1/R1) move the native menu in its draw transform, which this hook
+// cannot read: leave with the page at once, fade back in after the slide returns.
+static _Atomic uint64_t page_left;static _Atomic int page_away;
+static uint64_t shown;static int was;
+static int away(void){if(atomic_load(&page_left))atomic_store(&page_away,1);was=0;return 0;}
+int kyoei_pause_menu_root(void){
 #ifdef KYOEI_PAUSE_PHOTO_TEST
-    *offset=0;*opacity=1;return kyoei_pause_photo_visible();
+    return 1;
 #else
+    // The six-row pause menu is the active, shown menu only on the pause root;
+    // submenus (Items, Missions...) replace it.
     if(!base)return 0;
     uintptr_t menu=pointer(pointer((uintptr_t)base+0x1543dd0)+0xa10);
     if(!menu || !word(menu+0x90) || word(menu+0x58)!=13)return 0;
+    return (word(pointer(pointer(menu+0x50)+11*8)+0x20)&2)!=0;
+#endif
+}
+int kyoei_pause_photo_visual(float *offset,float *offset_y,float *opacity){
+#ifdef KYOEI_PAUSE_PHOTO_TEST
+    *offset=0;*offset_y=0;*opacity=1;return kyoei_pause_photo_visible();
+#else
+    if(!base || !kyoei_photo_hud_available() || !kyoei_photo_scene_available())return 0;
+    uintptr_t menu=pointer(pointer((uintptr_t)base+0x1543dd0)+0xa10);
+    if(!menu || !word(menu+0x90) || word(menu+0x58)!=13)return away();
     uintptr_t nodes=pointer(menu+0x50),last=pointer(nodes+11*8),text=pointer(nodes+12*8);
-    if(!(word(last+0x20)&2))return 0;
+    if(!(word(last+0x20)&2))return away();
     float x=0;read_value(last+0x60,&x,4);
     if(!(x>=-3000 && x<=3000))return 0;
     // The native Load row already contains the authored easing and staggering.
     // Follow its position throughout opening/closing instead of waiting for idle.
-    *offset=x-135.f;*opacity=(word(text+0x94)>>24)/255.f;
+    // The whole menu also drifts (menu+0xd0/0xd4, menu-plane units); row geometry
+    // in the UI header was measured at pose (1300.7, 610).
+    float pose[2]={1300.7f,610.f};read_value(menu+0xd0,pose,8);
+    if(!(pose[0]>0 && pose[0]<1920 && pose[1]>0 && pose[1]<1080)){pose[0]=1300.7f;pose[1]=610.f;}
+    *offset=x-135.f+pose[0]-1300.7f;*offset_y=pose[1]-610.f;*opacity=(word(text+0x94)>>24)/255.f;
+    uint64_t now=now_ms(),left=atomic_load(&page_left);
+    if(left && !atomic_load(&page_away)){if(now-left<900)return 0;atomic_store(&page_away,1);was=0;}
+    if(!was){was=1;shown=now;}
+    if(atomic_load(&page_away)){float k=((float)(int64_t)(now-shown)-60.f)/140.f;
+        if(k>=1){atomic_store(&page_away,0);atomic_store(&page_left,0);}else *opacity*=k>0?k:0;}
     return *opacity>0;
 #endif
 }
@@ -104,6 +130,7 @@ int kyoei_pause_photo_input(uint32_t *buttons,unsigned stick_y){
         *buttons=now_ms()<atomic_load(&close_until)?8:0;return 0;
     }
     if(atomic_load(&swallow)){if(b||next)return 1;atomic_store(&swallow,0);}
+    if((pressed&0xc00) && kyoei_pause_photo_visible()){atomic_store(&page_left,now_ms());atomic_store(&page_away,0);atomic_store(&selected,0);}
     if(!kyoei_pause_photo_visible()){atomic_store(&selected,0);return 0;}
     if(!atomic_load(&selected)){
         if(atomic_load(&native_cursor)==5 && edge && next==1){atomic_store(&selected,1);return 1;}
@@ -118,9 +145,7 @@ int kyoei_pause_photo_input(uint32_t *buttons,unsigned stick_y){
 void kyoei_pause_photo_test_frame(int cursor,uint64_t now){clock_ms=now;atomic_store(&native_cursor,cursor);atomic_store(&seen,now);}
 #else
 static ABI void update(void *self){
-    static uintptr_t muted;static unsigned color;
     uintptr_t nodes=pointer((uintptr_t)self+0x50),cursor=pointer(nodes+10*8);
-    if(muted && muted==cursor && !atomic_load(&selected)){memcpy((void*)(cursor+0x94),&color,4);muted=0;}
     original_update(self);
     if(!kyoei_photo_hud_available() || !kyoei_photo_scene_available() ||
        !word((uintptr_t)self+0x90) ||
@@ -130,7 +155,10 @@ static ABI void update(void *self){
     if(value<0 || value>5 || x<100 || x>200)return;
     atomic_store(&menu_identity,(uintptr_t)self);
     atomic_store(&native_cursor,value);atomic_store(&seen,now_ms());
-    if(atomic_load(&selected) && cursor){if(muted!=cursor)color=word(cursor+0x94);unsigned hidden=color&0xffffff;memcpy((void*)(cursor+0x94),&hidden,4);muted=cursor;}
+    // Move the native highlight one authored row (48 units) below Load, so the
+    // seventh row gets the game's own selection frame instead of a second cursor.
+    if(atomic_load(&selected) && cursor){float y=0;uintptr_t load=pointer(nodes+11*8);
+        if(read_value(load+0x64,&y,4)){y+=48;memcpy((void*)(cursor+0x64),&y,4);}}
 }
 void kyoei_pause_photo_configure(void *image,uint64_t size){
     const size_t entry=0xb296b0,length=2619;
