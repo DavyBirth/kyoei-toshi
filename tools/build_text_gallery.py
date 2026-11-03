@@ -108,7 +108,7 @@ def mail_ids(chunk):
             if lua52.OPS[x['op']] == 'SETTABLE' and x['b'] >= 256 and f.k[x['b'] - 256] == b'id' and x['c'] >= 256]
 
 
-def item_ids(chunk):
+def item_ids(chunk, prefixes=()):
     """Inventory item ids from item_data (hair/face styles and empty slots are not items)."""
     f = lua52.load(chunk); reg = {}; out = []
     for x in map(lua52.fields, f.code):
@@ -118,12 +118,13 @@ def item_ids(chunk):
             name = f.k[x['b'] - 256] if x['b'] >= 256 else reg.get(x['b'])
             v = f.k[x['c'] - 256] if x['c'] >= 256 else reg.get(x['c'])
             if (isinstance(name, bytes) and name.startswith(b'ITEM_') and isinstance(v, float)
-                    and not re.search(rb'^ITEM_(HAIR|FACE|ALL)_|EMPTY', name)):
+                    and not re.search(rb'^ITEM_(HAIR|FACE|ALL)_|EMPTY', name)
+                    and (not prefixes or name.decode().startswith(tuple(prefixes)))):
                 out.append(int(v))
     return out
 
 
-def build(archive_path, only=(), mails=False, items=False, dialogs=True, intermission=False):
+def build(archive_path, only=(), mails=False, items=False, dialogs=True, intermission=False, item_prefix=()):
     with Psarc(archive_path) as archive:
         entries = {e.name: e for e in archive.entries[1:]}
         read = lambda name: b''.join(archive.chunks(entries[name]))
@@ -135,7 +136,7 @@ def build(archive_path, only=(), mails=False, items=False, dialogs=True, intermi
                 if key not in keys and (not only or key.decode().startswith(tuple(only))): keys.append(key)
         if not dialogs: keys = []
         m = mail_ids(Resource(read('lua/mail_data.luc')).payload) if mails else []
-        it = item_ids(Resource(read('lua/item_data.luc')).payload) if items else []
+        it = item_ids(Resource(read('lua/item_data.luc')).payload, item_prefix) if items or item_prefix else []
         plan = Resource(read('lua/plan.luc'))
         return plan.rebuild(patch(plan.payload, keys, m, it, intermission)), (len(keys), len(m), len(it))
 
@@ -148,9 +149,10 @@ def main():
     p.add_argument('--mails', action='store_true', help='first send every mail in mail_data')
     p.add_argument('--items', action='store_true', help='first give one of every inventory item')
     p.add_argument('--intermission', action='store_true', help='open the stage intermission (news, shop, result)')
+    p.add_argument('--item-prefix', action='append', default=[], help='only items whose name starts with this (e.g. ITEM_READING_)')
     p.add_argument('--no-dialogs', action='store_true', help='skip the message walk')
     a = p.parse_args()
-    data, n = build(a.archive, a.only, a.mails, a.items, not a.no_dialogs, a.intermission)
+    data, n = build(a.archive, a.only, a.mails, a.items, not a.no_dialogs, a.intermission, a.item_prefix)
     if not any(n) and not a.intermission: raise ValueError('nothing to show')
     a.output.parent.mkdir(parents=True, exist_ok=True); a.output.write_bytes(data)
     print(f'plan.luc with gallery: {n[0]} messages, {n[1]} mails, {n[2]} items -> {a.output}')
