@@ -19,7 +19,7 @@ class LanguageLabels(unittest.TestCase):
                 self.assertLessEqual(len(translated['en'].encode()),original['bytes'])
                 self.assertEqual(sorted(TOKENS.findall(original['en'])),sorted(TOKENS.findall(translated['en'])))
                 total+=1
-        self.assertEqual(total,397)
+        self.assertEqual(total,413)
 
     def test_all_texture_labels_translate_without_mutating_layout(self):
         en=json.loads((ROOT/'translations/textures-en.json').read_text(encoding='utf8'))

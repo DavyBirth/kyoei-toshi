@@ -14,6 +14,8 @@ from prepare_translation_catalog import functional_tokens
 from translation_names import validate_names
 from english_typography import native_english
 from build_ui_corrections import corrections
+from check_game_font_tables import glyph_rows
+from prewrap_text import PREWRAP,prewrap
 
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE_SHA256='3a54e70d40b57562cbf350028ab8b75ee09c8143f8f1e766cc04bd81ce133966'
@@ -44,6 +46,7 @@ def main():
     glossary=json.loads((ROOT/'translations/glossary.json').read_text(encoding='utf8'))
     with Psarc(a.original) as archive:
         entries={e.name:e for e in archive.entries[1:]}
+        glyphs=glyph_rows(b''.join(archive.chunks(entries['font/utf8all_table.csh'])))[0]
         for name,r in resources.items():
             if not name.startswith('common/'):raise ValueError('Expected a common.psarc resource')
             key=name.split('/',1)[1];data=b''.join(archive.chunks(entries[key]))
@@ -62,6 +65,7 @@ def main():
                 if e.get('source_text_sha256') and hashlib.sha256(s['original'].encode()).hexdigest()!=e['source_text_sha256']:
                     raise ValueError('Source text differs: '+name+' '+s['id'])
                 validate_names(s['original'],value,a.language,glossary,e.get('protected_literals',[]))
+                if name in PREWRAP:value=prewrap(value,glyphs,PREWRAP[name])
                 s['translation']=value;expected[s['id']]=value
             rebuilt=insert(data,doc);actual={s.id:s.text() for s in decode(rebuilt)[1].strings}
             if any(actual[k]!=v for k,v in expected.items()):raise ValueError('Text roundtrip differs')

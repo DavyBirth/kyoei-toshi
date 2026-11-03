@@ -2371,10 +2371,106 @@
      "en": "Close"
     },
     {
+     "offset": 17616295,
+     "bytes": 7,
+     "source_sha256": "96906248d0024f90f6b450b49055aef406f7f2746514da8ff7891ba48a2aac7c",
+     "en": "Stage01"
+    },
+    {
+     "offset": 17616303,
+     "bytes": 7,
+     "source_sha256": "0a52a7b996c2e307f1d62b9425ca1d53818a164206ccd8afe0ace4e97f0a53e0",
+     "en": "Stage02"
+    },
+    {
+     "offset": 17616311,
+     "bytes": 7,
+     "source_sha256": "06df6657f761327e7b4ca6c0030289bf3ba0c1a166eec3ae54f2b3cc58d80e68",
+     "en": "Stage03"
+    },
+    {
+     "offset": 17616319,
+     "bytes": 7,
+     "source_sha256": "98f1165cdc23b4c762f32399287b69dc533dc2f22818b4a8ca45811db6643429",
+     "en": "Stage04"
+    },
+    {
+     "offset": 17616327,
+     "bytes": 7,
+     "source_sha256": "3ef1f69cd1afb79aabea64f476be897685020553013df724db0e800cf2ad71ea",
+     "en": "Stage05"
+    },
+    {
+     "offset": 17616335,
+     "bytes": 7,
+     "source_sha256": "8ccc54c186413b7d261804a995f798ec3132a53b7f6cb1a7c2673389df49dcbd",
+     "en": "Stage06"
+    },
+    {
+     "offset": 17616343,
+     "bytes": 7,
+     "source_sha256": "4cf54055110b1ab72387b0055fabe7aca1760e9427a674d936754e7ba187512f",
+     "en": "Stage07"
+    },
+    {
+     "offset": 17616351,
+     "bytes": 7,
+     "source_sha256": "825ffab9737e34747608830e88d1463ea581794f832cf7ee66d233be706c0197",
+     "en": "Stage08"
+    },
+    {
+     "offset": 17616359,
+     "bytes": 7,
+     "source_sha256": "752b481478e36693d98ab8686d8684231f67531026297baccff3344fe856b1de",
+     "en": "Stage09"
+    },
+    {
      "offset": 17616367,
      "bytes": 13,
      "source_sha256": "6fb91ecdc523fabc0f1dfa7debc388240af077671eb88897c1b2c0503c8220f7",
      "en": "Stage 10-1"
+    },
+    {
+     "offset": 17616381,
+     "bytes": 7,
+     "source_sha256": "f60540ddfef252aeccfb17f1dbb55c1bd3b1fe28cb8ff2229e0497a4fbc262b5",
+     "en": "Stage11"
+    },
+    {
+     "offset": 17616389,
+     "bytes": 7,
+     "source_sha256": "6bcd5e3fb1eba315f98a9e039cfbccd6fcf6728306b042ceb4794e41cff1290b",
+     "en": "Stage12"
+    },
+    {
+     "offset": 17616397,
+     "bytes": 7,
+     "source_sha256": "9ad2ab4c29c51b7cde8b5e1eb21bdb260043d52de921aab7af882bc3166b3da1",
+     "en": "Stage13"
+    },
+    {
+     "offset": 17616405,
+     "bytes": 7,
+     "source_sha256": "5e4f84018710f246045e76a109c47404f8d0fdf6be655707d9ceca03488a174d",
+     "en": "Stage14"
+    },
+    {
+     "offset": 17616413,
+     "bytes": 7,
+     "source_sha256": "dd48ed89e7330046e27c437e27e35752ec1079e2ea69efb5e125f0d17fdc8bed",
+     "en": "Stage16"
+    },
+    {
+     "offset": 17616421,
+     "bytes": 7,
+     "source_sha256": "ea8e485fb9b88aba438b5ba68ac994b18b89dcaceb441667ed1aced2db400f27",
+     "en": "Stage15"
+    },
+    {
+     "offset": 17616429,
+     "bytes": 7,
+     "source_sha256": "714f36860bd567105088c62c0037c6e914bbde37272f24c7b4bf3ee802ef576d",
+     "en": "Stage17"
     },
     {
      "offset": 17616437,

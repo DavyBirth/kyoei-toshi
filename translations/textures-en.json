@@ -2487,7 +2487,23 @@
      "font": "bold",
      "align": "left",
      "erase": "clear",
-     "shadow": true
+     "shadow": true,
+     "language": "en"
+    },
+    {
+     "box": [
+      615,
+      0,
+      660,
+      36
+     ],
+     "text": "Exit",
+     "size": 20,
+     "font": "bold",
+     "align": "left",
+     "erase": "clear",
+     "shadow": true,
+     "language": "pt-BR"
     }
    ]
   },
@@ -2521,7 +2537,23 @@
      "font": "bold",
      "align": "left",
      "erase": "clear",
-     "shadow": true
+     "shadow": true,
+     "language": "en"
+    },
+    {
+     "box": [
+      615,
+      0,
+      660,
+      36
+     ],
+     "text": "Exit",
+     "size": 20,
+     "font": "bold",
+     "align": "left",
+     "erase": "clear",
+     "shadow": true,
+     "language": "pt-BR"
     }
    ]
   },
@@ -2555,7 +2587,23 @@
      "font": "bold",
      "align": "left",
      "erase": "clear",
-     "shadow": true
+     "shadow": true,
+     "language": "en"
+    },
+    {
+     "box": [
+      615,
+      0,
+      660,
+      36
+     ],
+     "text": "Exit",
+     "size": 20,
+     "font": "bold",
+     "align": "left",
+     "erase": "clear",
+     "shadow": true,
+     "language": "pt-BR"
     }
    ]
   },
@@ -2575,7 +2623,23 @@
      "font": "bold",
      "align": "left",
      "erase": "clear",
-     "shadow": true
+     "shadow": true,
+     "language": "en"
+    },
+    {
+     "box": [
+      615,
+      0,
+      660,
+      36
+     ],
+     "text": "Exit",
+     "size": 20,
+     "font": "bold",
+     "align": "left",
+     "erase": "clear",
+     "shadow": true,
+     "language": "pt-BR"
     }
    ]
   },
@@ -2623,7 +2687,23 @@
      "font": "bold",
      "align": "left",
      "erase": "clear",
-     "shadow": true
+     "shadow": true,
+     "language": "en"
+    },
+    {
+     "box": [
+      615,
+      0,
+      660,
+      36
+     ],
+     "text": "Exit",
+     "size": 20,
+     "font": "bold",
+     "align": "left",
+     "erase": "clear",
+     "shadow": true,
+     "language": "pt-BR"
     }
    ]
   },

@@ -17,6 +17,8 @@ def localized_binary_table(language):
         for change in record['changes']:
             key=change['en'];match=re.fullmatch(r'Start from Stage ([0-9AB-]+)',key)
             value='Começar na fase '+match[1] if match else labels.get(key)
+            short=re.fullmatch(r'Stage(\d\d)',key)  # collection headings, e.g. Stage01
+            if short:value='Fase '+short[1]
             if value is None:raise ValueError('Untranslated fixed text: '+key)
             if len(value.encode('utf8'))>change['bytes']:
                 raise ValueError(f'Portuguese exceeds {change["bytes"]}-byte slot: {key} -> {value}')
