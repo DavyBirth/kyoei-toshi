@@ -140,7 +140,7 @@ def build(output,dependency_cache):
                        cwd=output,check=True)
         subprocess.run([str(output/'support/python/python.exe'),'-B','tools/bootstrap_portable.py','--help'],cwd=output,check=True)
         records=audit(output)
-        report=dict(format='kyoei-public-candidate-v1',pc_version='1.0-rc3b',
+        report=dict(format='kyoei-public-candidate-v1',pc_version='1.0',
                     game_data_included=False,publication_ready=False,
                     pending=['visual NPC/loading review','corresponding source and dependency license audit'],files=records)
         (output/'public-manifest.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf8')

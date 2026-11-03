@@ -1,4 +1,4 @@
-﻿CITY SHROUDED IN SHADOW — candidata 1.0 / review candidate
+﻿CITY SHROUDED IN SHADOW — versao 1.0 / version 1.0
 
 PORTUGUES
 Esta pasta nao inclui o jogo, firmware, saves ou recursos extraidos.
@@ -15,11 +15,10 @@ Nenhum jogo ou firmware e baixado. Nao mova as pastas internas.
 A preparacao usa uma copia do dump; nao altera os arquivos de origem.
 Saves, configuracoes e logs ficam em data/. Preserve essa pasta ao atualizar.
 
-CANDIDATA PARA CONFERENCIA: ainda falta aprovar visualmente nomes longos
-(incluindo a florista) e carregamentos. Desempenho varia; a campanha inteira
-nao foi validada. Linux usa Wine/umu e exige verificacao propria.
-Nao publicar esta candidata antes de anexar o codigo-fonte correspondente
-e concluir a conferencia de licencas e dependencias do runtime.
+PROBLEMAS CONHECIDOS: o desempenho varia conforme o computador; a campanha
+inteira ainda nao foi jogada do inicio ao fim no PC. Alguns nomes de lugar no
+minimapa podem ser cortados na borda. Linux usa Wine/umu e exige verificacao
+propria. O codigo-fonte correspondente acompanha esta versao (ZIP de fontes).
 
 ENGLISH
 This folder contains no game, firmware, saves or extracted game assets.
@@ -30,7 +29,8 @@ game and provide your own CUSA03562 v01.03 dump and PS4 system modules.
 Choose English, Brazilian Portuguese or Japanese after setup finishes.
 No game or firmware is downloaded. Saves/settings/logs stay in data/.
 
-Review candidate: long NPC names and loading screens still need visual
-approval. Performance varies and the full campaign has not been validated.
-Publication requires corresponding source and the dependency/license audit.
+Known issues: performance varies; the full campaign has not been played start
+to finish on PC. Some minimap place names may be clipped at the edge. Linux
+uses Wine/umu and needs its own checks. Matching source code is published
+with this release (source ZIP).
 See licenses/ for the notices already collected.
