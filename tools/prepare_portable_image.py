@@ -17,6 +17,24 @@ TITLE='CUSA03562'
 VERSION='01.03'
 IMAGE_SHA256='2ae0f7932c9e6f8c2f16b2d1a92a604cdfa707bb0412b045659fb5a461833c1f'
 CORE_COMMIT='e976b59a3f056c5ea5d0ddfe1c5ef566cce2f45e'
+STAGE_NAMES=tuple(f'stage{n}' for n in range(201,219) if n!=217)+('stage210_2','stage210_3')
+
+
+def stage_paths(game):
+    paths=tuple(f'module/MasterORBIS/{name}/StageModule.prx' for name in sorted(STAGE_NAMES))
+    missing=[name for name in paths if not (Path(game)/name).is_file()]
+    if missing:raise ValueError('Missing stage modules: '+', '.join(missing))
+    return paths
+
+
+def validate_prepared_stages(out):
+    """Reject old stage201-only images before copying them to an installation."""
+    rows=(Path(out)/'deferred.tsv').read_text(encoding='utf8').splitlines()
+    found=[row.split('\t')[1] for row in rows if row.startswith('M\t') and 'MasterORBIS/' in row]
+    expected={'/app0/module/MasterORBIS/'+name+'/StageModule.prx' for name in STAGE_NAMES}
+    if set(found)!=expected or len(found)!=len(expected):
+        raise ValueError('Prepared image lacks the complete stage set; rebuild with tools/prepare_portable_image.py')
+    return len(found)
 
 def validate_output(game,firmware,out):
     game,firmware,out=(Path(p).resolve() for p in (game,firmware,out))
@@ -34,7 +52,7 @@ def stage_linker(linker):
     old=("                if s['identity'] in exports:\n"
          "                    raise ValueError(f'{filename}: ambiguous export')\n")
     new=("                if s['identity'] in exports:\n"
-         "                    if 'MasterORBIS' in str(filename): continue\n"
+         "                    if Path(filename).name == 'StageModule.prx' and Path(exports[s['identity']][2]).name == 'StageModule.prx': continue\n"
          "                    raise ValueError(f'{filename}: ambiguous export')\n")
     if source.count(old)!=1:raise ValueError('Fixed core linker differs; stage modules not adapted')
     adapted=types.ModuleType('kyoei_link_modules');adapted.__file__=linker.__file__
@@ -55,8 +73,7 @@ def prepare_image(game,firmware,out,core_scripts=None):
     image_hash=original_check.image_sha256(game)
     if image_hash!=IMAGE_SHA256:raise ValueError('The loaded executable image differs from the supported game')
     # Every stage loads its own StageModule.prx when the story reaches it.
-    stages=sorted(p.parent.name for p in (game/'module/MasterORBIS').glob('stage*/StageModule.prx'))
-    deferred=('module/prx/libSceSecure.prx',)+tuple(f'module/MasterORBIS/{s}/StageModule.prx' for s in stages)
+    deferred=('module/prx/libSceSecure.prx',)+stage_paths(game)
     bundled=list(linker.DEFAULT_MODULES)+['libSceNpToolkit2.prx']
     required=[game/'sce_module'/name for name in bundled]+[game/p for p in deferred]
     required += [firmware/name for name in linker.FIRMWARE_MODULES]
@@ -86,9 +103,11 @@ def prepare_image(game,firmware,out,core_scripts=None):
             if symbol['section'] and symbol['binding'] in (1,2) and symbol['identity']:
                 metadata.append(f'E\t{symbol["identity"][0]}\t{base+symbol["value"]:x}')
     (out/'deferred.tsv').write_text('\n'.join(metadata)+'\n',encoding='utf8')
+    stage_count=validate_prepared_stages(out)
     write_tls_sites(out);unnamed=normalize_imports(out)
     proof=dict(title=TITLE,version=VERSION,image_sha256=image_hash,core_commit=CORE_COMMIT,
-               unnamed_imports_normalized=unnamed,shared_sources_modified=False,guest_executed=False)
+               unnamed_imports_normalized=unnamed,shared_sources_modified=False,guest_executed=False,
+               stage_modules=stage_count)
     (out/'prepared.json').write_text(json.dumps(proof,indent=2)+'\n',encoding='utf8')
     return proof
 

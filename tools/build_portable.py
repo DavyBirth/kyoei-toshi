@@ -120,6 +120,8 @@ def main():
     publication=json.loads((ROOT/'docs/m4/runtime-preview.json').read_text(encoding='utf-8'))
     preview=publication['languages']['en']
     game=Path(proof['source']);prepared=Path(proof['prepared_out'])
+    from prepare_portable_image import validate_prepared_stages
+    validate_prepared_stages(prepared)
     out.mkdir(parents=True,exist_ok=True)
     for source in game.rglob('*'):
         if source.is_file():copy_file(source,out/'game'/source.relative_to(game))

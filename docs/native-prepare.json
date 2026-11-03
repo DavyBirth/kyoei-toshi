@@ -4,11 +4,12 @@
   "version": "01.03",
   "image_sha256": "2ae0f7932c9e6f8c2f16b2d1a92a604cdfa707bb0412b045659fb5a461833c1f",
   "core_commit": "e976b59a3f056c5ea5d0ddfe1c5ef566cce2f45e",
-  "prepared_out": "G:\\kyoei-toshi-work\\native-05\\out",
+  "prepared_out": "G:\\kyoei-toshi\\build\\review-20261103\\prepared-full",
   "unnamed_imports_normalized": [
     95,
     105,
     107
   ],
-  "shared_sources_modified": false
+  "shared_sources_modified": false,
+  "stage_modules": 19
 }

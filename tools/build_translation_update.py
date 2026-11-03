@@ -14,10 +14,14 @@ import zipfile
 
 from build_portable import ROOT, digest, personal_text_hits
 
-RELEASE = 'localization-reviewed-20261102-rc1'
+RELEASE = 'localization-reviewed-20261103-rc3'
 DISC_ARCHIVE_BYTES = 6346525059
 FILES = (
     'runtime/kyoei.exe',
+    'runtime/out/boot-linked.bin',
+    'runtime/out/imports.tsv',
+    'runtime/out/deferred.tsv',
+    'runtime/out/tls-sites.tsv',
     'City Shrouded in Shadow.exe',
     'languages/en/translation.kydelta',
     'languages/pt-BR/translation.kydelta',
@@ -33,13 +37,15 @@ FILES = (
 REMOVE = ('languages/en/common.psarc', 'languages/en/ui-corrections.kydelta')
 PREFIX = 'Atualizacao-Traducao/'
 
-README = '''City Shrouded in Shadow — tradução revisada, candidata à versão 1.0, 02/11/2026
+README = '''City Shrouded in Shadow — tradução revisada, candidata à versão 1.0, 03/11/2026
 
 A tradução agora é um arquivo pequeno lido por cima do jogo original.
 Este pacote troca o runtime, o launcher e os arquivos da tradução e EXCLUI
 a tradução antiga de 6 GB (languages/en/common.psarc), liberando espaço.
-Não inclui arquivos PSARC nem executáveis do PS4. Saves, configurações
-e game/ ficam intactos. Os recursos traduzidos são derivados privados.
+Não inclui arquivos PSARC. Inclui a imagem preparada PRIVADA do executável e
+dos módulos das fases do próprio dump, necessária para corrigir a passagem
+entre fases em instalações antigas. Não publicar este pacote no GitHub.
+Saves, configurações e game/ ficam intactos. Todos os derivados são privados.
 Já inclui o núcleo GoW3; serve para qualquer versão distribuída antes.
 
 1. Feche o jogo e o launcher.
@@ -75,6 +81,8 @@ def main():
     if output.exists() or not output.is_relative_to(ROOT/'build'):
         raise ValueError('Choose a new ZIP inside ignored build/')
     source = args.portable.resolve()
+    from prepare_portable_image import validate_prepared_stages
+    validate_prepared_stages(source/'runtime/out')
     accepted = []
     for path in args.runtime_update:
         with zipfile.ZipFile(path) as archive:

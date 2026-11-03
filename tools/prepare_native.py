@@ -50,10 +50,10 @@ def main():
         raise ValueError('Saída deve ser nova e ficar fora do dump e do repositório')
     sys.path.insert(0, str(CORE/'scripts'))
     prepare = importlib.import_module('prepare')
-    linker = importlib.import_module('link_modules')
+    from prepare_portable_image import stage_linker,stage_paths,validate_prepared_stages
+    linker = stage_linker(importlib.import_module('link_modules'))
     expected = {r['path']: r['sha256'] for r in inventory['files']}
-    deferred = ['module/prx/libSceSecure.prx',
-                'module/MasterORBIS/stage201/StageModule.prx']
+    deferred = ['module/prx/libSceSecure.prx',*stage_paths(game)]
     bundled = list(linker.DEFAULT_MODULES) + ['libSceNpToolkit2.prx']
     for name in ['eboot.bin', 'sce_sys/param.sfo'] + ['sce_module/'+n for n in bundled] + deferred:
         with (game/name).open('rb') as stream:
@@ -89,6 +89,7 @@ def main():
             if symbol['section'] and symbol['binding'] in (1,2) and symbol['identity']:
                 metadata.append(f'E\t{symbol["identity"][0]}\t{base+symbol["value"]:x}')
     (out/'deferred.tsv').write_text('\n'.join(metadata)+'\n', encoding='utf8')
+    validate_prepared_stages(out)
     write_tls_sites(out)
     unnamed = normalize_imports(out)
     report = dict(source=str(game), title='CUSA03562', version='01.03',
