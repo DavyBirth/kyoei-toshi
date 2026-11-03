@@ -42,7 +42,7 @@ static float width(const char *s, size_t n) {
     return w;
 }
 
-static const char *ELLIPSIS = "\xe2\x80\xa6";
+static const char *ELLIPSIS = "...";   /* Latin dots; the eboot's own "…" is mapped to "..." too */
 
 size_t kyoei_im_rewrap(const char *text, float cells, unsigned max_lines, char *out, size_t cap) {
     size_t o = 0, n = strlen(text), lines = 1;

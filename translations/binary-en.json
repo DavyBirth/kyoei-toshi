@@ -2323,6 +2323,12 @@
      "en": "Enter your family name."
     },
     {
+     "offset": 17381632,
+     "bytes": 9,
+     "source_sha256": "22c54af1ce598118c7b2fda0cfc18405eb1969cf2900df4227066c8648fe955c",
+     "en": "%s"
+    },
+    {
      "offset": 17381642,
      "bytes": 24,
      "source_sha256": "1d6a1efdc8be725495b9cf0cca3c43d59fc3ed24de4049b3372bb77f65b96206",
@@ -2831,6 +2837,12 @@
      "bytes": 15,
      "source_sha256": "bc30238ae718342277bb5f578093423884c71fdad429e91a172e60cc997ec80c",
      "en": "Status"
+    },
+    {
+     "offset": 17634401,
+     "bytes": 3,
+     "source_sha256": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5",
+     "en": "..."
     },
     {
      "offset": 17634557,
