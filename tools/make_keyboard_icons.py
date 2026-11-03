@@ -204,7 +204,18 @@ def cursor_lr(original_image, page_keys=False):
 def face_key(original_image, box):
     """Replace one face-button glyph (inside box) by an E keycap of the same height."""
     im = original_image.copy(); x0, y0, x1, y1 = box
-    im.paste(Image.new('RGBA', (x1 - x0, y1 - y0), (0, 0, 0, 0)), (x0, y0))
+    # Rebuild the radial glow under the old disc instead of cutting a square hole:
+    # each pixel takes the original glow just outside the disc, at the same angle.
+    import math
+    src, px = original_image.load(), im.load()
+    cx, cy = (x0 + x1 - 1) / 2, (y0 + y1 - 1) / 2; disc = (x1 - x0) / 2 - 5   # face_box pads 6
+    edge = disc + 2
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            if math.hypot(x - cx, y - cy) > disc: continue        # glow outside the disc stays
+            a = math.atan2(y - cy, x - cx)
+            sx, sy = round(cx + math.cos(a) * edge), round(cy + math.sin(a) * edge)
+            px[x, y] = src[min(max(sx, 0), im.width - 1), min(max(sy, 0), im.height - 1)]
     size = y1 - y0
     im.alpha_composite(keycap(size, size, 'E'), ((x0 + x1 - size) // 2, y0))
     return im

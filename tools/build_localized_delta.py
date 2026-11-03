@@ -26,6 +26,8 @@ def main():
     p.add_argument('drafts',nargs='+',type=Path)
     p.add_argument('--language',choices=('en','pt-BR'),required=True)
     p.add_argument('--textures',type=Path)
+    p.add_argument('--extra',action='append',default=[],metavar='NAME=FILE',
+                   help='test only: replace an archive entry (e.g. lua/plan.luc=gallery.luc)')
     a=p.parse_args();output=a.output.resolve()
     if not output.is_relative_to(ROOT/'build') or output.exists():raise ValueError('Choose a new private output under build/')
     with a.original.open('rb') as f:
@@ -74,6 +76,8 @@ def main():
         files=sorted(a.textures.rglob('*.tex'))
         if not files:raise ValueError('No localized textures found')
         for path in files:changed[path.relative_to(a.textures).as_posix()]=path.read_bytes()
+    for item in a.extra:
+        name,_,path=item.partition('=');changed[name]=Path(path).read_bytes()
     delta,number=build(a.original,changed);verify(a.original,delta,changed)
     output.parent.mkdir(parents=True,exist_ok=True);output.write_bytes(delta)
     report=dict(language=a.language,source_archive_sha256=SOURCE_SHA256,
