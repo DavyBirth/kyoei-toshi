@@ -5444,3 +5444,8 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Leitor: quebra de linha correta; o título (ITEM_NAME, uma linha) mostrava só a 1ª linha dos nomes pré-quebrados. Limite do nome subiu 500→520 (caixa nativa quebra em 521+) e 22 nomes de leitura pt / 14 en encurtados para caber numa linha. Visto: "Cheque de 80 Milhões".
 - Manchas brancas transitórias no fundo desfocado (leitor/missões): alguns quadros, somem sozinhas; gráfico, conhecido.
 - Instalado na portátil (backup data/update-backups/reader-20261103): deltas en/pt-BR e eboot-text. launcher --check 0.
+
+### 03/11/2026 — balão da florista (Claude)
+- Prints de Davy: minimapa ok (texto rola), GAME OVER/Continuar?/Sim/Não ok. Florista ainda "Ai, minhas ...": é o cortador de 12 caracteres 0xa6d9a0/0xb034c0 ("Ai, minhas f" = 12). O registro anterior nunca instalou (chamada não inserida por CRLF).
+- Correção: a contagem desses cortadores agora é a largura em células cheias (japonês igual; latim ~metade), então só corta acima de 12 células e o balão (dimensionado pela contagem) acompanha o texto. Log: "Kyoei NPC balloon: label 0/1 measured by width". Faixa "Fase 01" vista no jogo.
+- Runtime instalado na portátil (backup data/update-backups/reader-20261103/kyoei.exe); falta Davy ver o balão da florista.

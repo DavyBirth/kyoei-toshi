@@ -167,15 +167,19 @@ static uint64_t hash(const unsigned char *p, size_t n) {
     for (size_t i = 0; i < n; ++i) h = (h ^ p[i]) * UINT64_C(1099511628211);
     return h;
 }
-/* 12-character label cutters 0xa6d9a0/0xb034c0 (action balloons near objects):
- * report each distinct text they will cut, so translations can be kept short. */
+/* 12-character label cutters 0xa6d9a0/0xb034c0 (NPC preview balloons, e.g. the
+ * florist): count = characters, cut when >= 13 to 11 + "...". Latin letters are
+ * about half a cell, so return the width in full-width cells instead: Western
+ * lines are cut only when really wider, and the balloon (sized from the count)
+ * fits the text. Japanese counts are unchanged (one cell per character). */
 static ABI unsigned label_chars(const char *text) {
-    unsigned n = 0;
-    for (const unsigned char *p = (const unsigned char *)text; p && *p; ++p) n += (*p & 0xc0) != 0x80;
+    if (!text) return 0;
+    float cells = width(text, strlen(text));
+    unsigned n = (unsigned)(cells + .999f);
     if (n >= 13) {
         static uint64_t seen[64]; static unsigned count; uint64_t h = hash((const unsigned char *)text, strlen(text));
         unsigned i = 0; while (i < count && seen[i] != h) ++i;
-        if (i == count && count < 64) { seen[count++] = h; gz_log("Kyoei label cut (12 chars): %s", text); }
+        if (i == count && count < 64) { seen[count++] = h; gz_log("Kyoei label cut (12 cells): %s", text); }
     }
     return n;
 }
@@ -185,7 +189,7 @@ static void hook_label_report(unsigned char *image) {
     unsigned char *jump = NULL;
     for (unsigned i = 0; i < 16 && !jump; ++i)
         jump = VirtualAlloc(image + 0x5600000 + i * 0x10000, 4096, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
-    if (!jump) return;
+    if (!jump) { gz_log("Kyoei NPC balloon: no relay"); return; }
     uint64_t target = (uint64_t)(uintptr_t)label_chars;
     jump[0] = 0x48; jump[1] = 0xb8; memcpy(jump + 2, &target, 8); jump[10] = 0xff; jump[11] = 0xe0;
     DWORD prior, ignored;
@@ -193,10 +197,11 @@ static void hook_label_report(unsigned char *image) {
     for (int k = 0; k < 2; ++k) {
         unsigned char *site = image + sites[k];
         int64_t distance = (int64_t)(uintptr_t)jump - (int64_t)(uintptr_t)(site + 5);
-        if (memcmp(site, calls[k], 5) || distance < INT32_MIN || distance > INT32_MAX) continue;
+        if (memcmp(site, calls[k], 5) || distance < INT32_MIN || distance > INT32_MAX) { gz_log("Kyoei NPC balloon: label %d signature %02x %02x %02x %02x %02x", k, site[0], site[1], site[2], site[3], site[4]); continue; }
         if (!VirtualProtect(site, 5, PAGE_EXECUTE_READWRITE, &prior)) continue;
         int32_t relative = (int32_t)distance; memcpy(site + 1, &relative, 4);
         VirtualProtect(site, 5, prior, &ignored); FlushInstructionCache(GetCurrentProcess(), site, 5);
+        gz_log("Kyoei NPC balloon: label %d measured by width", k);
     }
 }
 
@@ -246,6 +251,7 @@ void kyoei_im_wrap_configure(void *image_base, uint64_t size) {
     int split_ok = hook(image, 0xac6210, UINT64_C(0xdfea76622a7ee823), relay);
     int short_ok = hook(image, 0xac78c0, UINT64_C(0x194fca4c175ee645), relay + 128);
     hook_mission_preview(image);
+    hook_label_report(image);
     gz_log("Kyoei news text: line split %s, title cut %s, metrics %s", split_ok ? "by width/words" : "native",
            short_ok ? "by width/words" : "native", metrics_ready ? "native" : "estimated");
 }
