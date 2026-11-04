@@ -11360,7 +11360,7 @@
     {
      "id": "p0/k76",
      "source_text_sha256": "1b402afdd7f50b5e4099127f508152a179aac20f1a0588b34ade6d2994e55c3d",
-     "pt-BR": "Homem que parece ser dos locatários do armazém",
+     "pt-BR": "Homem ligado ao armazém",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -11619,21 +11619,21 @@
     {
      "id": "p0/k156",
      "source_text_sha256": "1f8bcab18db2caef7e636979d712998a21c417ffb53b1699b44f60a258fca14a",
-     "pt-BR": "Olhar os medidores à esquerda. Cheiro doce",
+     "pt-BR": "Olhar os medidores à esquerda, com cheiro doce",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k158",
      "source_text_sha256": "2463202a730de8a69f88a658cce3d882a2721c0215e0fc6c1bccae918e115d52",
-     "pt-BR": "Olhar os monitores à direita. Parece não ter nada",
+     "pt-BR": "Olhar os monitores à direita, que parecem vazios",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k160",
      "source_text_sha256": "f7fe02718357ff8c48e69c0e7aa2ffe3ad8bf525974d56f7feae0182b47b8134",
-     "pt-BR": "Olhar o chão. Cheiro meio ruim",
+     "pt-BR": "Olhar o chão, que cheira meio mal",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -12067,14 +12067,14 @@
     {
      "id": "p0/k303",
      "source_text_sha256": "c367c7a22cfff4d95bd488cb59454e08e347051d3e34a64a716721512844aff7",
-     "pt-BR": "Deve ter um motivo. Deixar",
+     "pt-BR": "Ela deve ter seus motivos. Deixar",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k305",
      "source_text_sha256": "66889862cd5ed8ab6f048c9339efc68f9af2b2bf3549c208937cdcc9f2c2a05e",
-     "pt-BR": "Você adoraria levar, mas tudo bem. Deixar",
+     "pt-BR": "Até queria levar, mas fazer o quê. Deixar",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -12144,7 +12144,7 @@
     {
      "id": "p0/k324",
      "source_text_sha256": "2357b1bc4b2722688ab3d48cd70e100f31fe4eca5a56e0a1ada7faa880014823",
-     "pt-BR": "\"Buáá! Uma arma!\" (Desabar)",
+     "pt-BR": "\"Uaah! Uma arma!\" (Cair sentado)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -12172,7 +12172,7 @@
     {
      "id": "p0/k332",
      "source_text_sha256": "1a07c16e3f27c42d2f2ec2d3f6c84bf4af06965f4632c8fe2f441592a2adca79",
-     "pt-BR": "\"Buáá! U-uma arma!\" (Desabar)",
+     "pt-BR": "\"Uaah! U-uma arma!\" (Cair sentada)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -12221,7 +12221,7 @@
     {
      "id": "p0/k347",
      "source_text_sha256": "bc211ba90efed7dda3daa7a44e7deadfb5074f93024b9f319927b16b201710eb",
-     "pt-BR": "Buáá! U-uma arma!",
+     "pt-BR": "Uaah! U-uma arma!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -12662,7 +12662,7 @@
     {
      "id": "p0/k484",
      "source_text_sha256": "69397f97d6e7e535659c15db334133e5e31691212b347a0e86e795ac5109b321",
-     "pt-BR": "\"Me dar uma moto? Você tem coragem!\" (Subir)",
+     "pt-BR": "\"Me dar uma moto? Que ousadia!\" (Subir encarando)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -12683,7 +12683,7 @@
     {
      "id": "p0/k491",
      "source_text_sha256": "968a0e8dc99a7f510d3f51fcfaf6d00dcc8d4416187a0cda166b04dc4a869bca",
-     "pt-BR": "\"Me dar uma moto? Você tem coragem!\" (Subir)",
+     "pt-BR": "\"Me dar uma moto? Que ousadia!\" (Subir encarando)",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -12732,14 +12732,14 @@
     {
      "id": "p0/k506",
      "source_text_sha256": "42d4397c64de8fe330d813be0c1119573f4cdd05908cd20cad4f0d316febc634",
-     "pt-BR": "Me dar uma moto? Você tem coragem!",
+     "pt-BR": "Me dar uma moto? Que ousadia!",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k508",
      "source_text_sha256": "d93846f3f25623d57f48d6db316523090e425e5e09228f52ec9ada9a9925960b",
-     "pt-BR": "Me dar uma moto? Você tem coragem!",
+     "pt-BR": "Me dar uma moto? Que ousadia!",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -15566,7 +15566,7 @@
     {
      "id": "p0/k848",
      "source_text_sha256": "a4123b72f6cad98a4dfa39a7f22dfe108a4481013df723da14bc934cfc399b90",
-     "pt-BR": "Nunca pensei nele como salvador.\nSe é que algo, é o contrário.",
+     "pt-BR": "Nunca pensei nele como salvador.\nMuito pelo contrário.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -15594,7 +15594,7 @@
     {
      "id": "p0/k856",
      "source_text_sha256": "02ce53ff25613e3dbe52d768a8b913318ff699f6a4be4948902d426f42cfa993",
-     "pt-BR": "Nunca pensei nela como salvadora.\nSe é que algo, é o contrário.",
+     "pt-BR": "Nunca pensei nela como salvadora.\nMuito pelo contrário.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -42207,7 +42207,7 @@
     {
      "id": "p0/k400",
      "source_text_sha256": "b96510ea77394d18f7c0677ad8d3a3679725e5614404e73e4047936b88332f14",
-     "pt-BR": "Pelas notícias dessas criaturas estranhas aparecendo,\ntodas as linhas não são perigosas?",
+     "pt-BR": "Com essas criaturas estranhas aparecendo no noticiário,\nnão é perigoso pegar qualquer linha?",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -42872,7 +42872,7 @@
     {
      "id": "p0/k581",
      "source_text_sha256": "e71277dff96c0c6e6fc18d7a31a5ac2fd33720071e6d8cfa9561956c8bc7b8f5",
-     "pt-BR": "Koji Jinnai, homem filmando sem parar",
+     "pt-BR": "Homem filmando sem parar: Koji Jinnai",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -48275,14 +48275,14 @@
     {
      "id": "p0/k755",
      "source_text_sha256": "d4e326871f3936d6e6b89680821bb728e99539854dcdcb2dfafbe9d4d879ac68",
-     "pt-BR": "Risa Katsuragi",
+     "pt-BR": "\"Risa Katsuragi\"",
      "notes": "",
      "editorial_status": "pending"
     },
     {
      "id": "p0/k757",
      "source_text_sha256": "2c412ae7649fcb60a81f9553cf3e7655bade46a3815d7d8c91b1e40fc6016553",
-     "pt-BR": "Risa Kusunoki",
+     "pt-BR": "\"Risa Kusunoki\"",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -51494,7 +51494,7 @@
     {
      "id": "p0/k26",
      "source_text_sha256": "bca31cad6c6ce3c98988fbd23a2a4d5eb118df68f988b7f9aa0322c3211b6793",
-     "pt-BR": "Reiko Kamio, chefe da W&P, perdeu a vida nessas coisas estranhas.\nQue motivos a levaram a se envolver continua desconhecido.",
+     "pt-BR": "Reiko Kamio, chefe da W&P, perdeu a vida nessas coisas estranhas.\nOs motivos do envolvimento dela continuam desconhecidos.",
      "notes": "",
      "editorial_status": "pending"
     },
@@ -99527,7 +99527,7 @@
     {
      "id": "p0/k78",
      "source_text_sha256": "6ee8e58a928e228b397f092467a67fc2dcb1d47b87112971a85c10d8109bb81b",
-     "pt-BR": "Ei, isso é real! Se morrer, morreu!",
+     "pt-BR": "Ei, isso é real! Se morrer, acabou!",
      "notes": "",
      "editorial_status": "pending"
     },
