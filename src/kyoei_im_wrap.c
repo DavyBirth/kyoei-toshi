@@ -179,10 +179,12 @@ static ABI unsigned label_chars(const char *text) {
      * limit, so the original thresholds stay and only the cut point changes. */
     float cells = width(text, strlen(text));
     unsigned n = (unsigned)(cells + .999f);
-    if (n >= 13) {
+    static int log_all = -1;   /* test: KYOEI_TEST_LOG_LABELS=1 logs every balloon/tag text once */
+    if (log_all < 0) { const char *v = getenv("KYOEI_TEST_LOG_LABELS"); log_all = v && *v == '1'; }
+    if (n >= 13 || log_all) {
         static uint64_t seen[64]; static unsigned count; uint64_t h = hash((const unsigned char *)text, strlen(text));
         unsigned i = 0; while (i < count && seen[i] != h) ++i;
-        if (i == count && count < 64) { seen[count++] = h; gz_log("Kyoei label cut (12 cells): %s", text); }
+        if (i == count && count < 64) { seen[count++] = h; gz_log(n >= 13 ? "Kyoei label cut (12 cells): %s" : "Kyoei label: %s", text); }
     }
     return n;
 }
