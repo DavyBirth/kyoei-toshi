@@ -183,6 +183,45 @@ static ABI unsigned label_chars(const char *text) {
     }
     return n;
 }
+/* Balloon cut: lines up to 16 cells stay whole (thresholds 13 -> 17 cells, box
+ * after a cut 12 -> 16); longer lines keep the whole words within 15 cells,
+ * via the substring call that precedes the native "...". */
+typedef void *(ABI *Substring)(void *, void *, unsigned, unsigned);
+static Substring original_substring;
+static ABI void *balloon_substring(void *out, void *string, unsigned start, unsigned bytes) {
+    const char *t = *(const char **)string; unsigned len = *(unsigned *)((char *)string + 8);
+    size_t best = 0;
+    for (size_t i = 1; t && i < len; ++i) {
+        if (t[i] != ' ' && t[i] != '\n') continue;
+        if (width(t, i) > 15.f) break;
+        best = i;
+    }
+    while (best && strchr(" ,.:;-\n", t[best - 1])) --best;
+    return original_substring(out, string, start, best ? (unsigned)best : bytes);
+}
+static int patch_bytes(unsigned char *site, const void *expect, const void *value, size_t n) {
+    DWORD prior, ignored;
+    if (memcmp(site, expect, n) || !VirtualProtect(site, n, PAGE_EXECUTE_READWRITE, &prior)) return 0;
+    memcpy(site, value, n); VirtualProtect(site, n, prior, &ignored); FlushInstructionCache(GetCurrentProcess(), site, n);
+    return 1;
+}
+static void hook_balloon_words(unsigned char *image, unsigned char *jump) {
+    original_substring = (Substring)(image + 0x31cf70);
+    uint64_t target = (uint64_t)(uintptr_t)balloon_substring;
+    jump[0] = 0x48; jump[1] = 0xb8; memcpy(jump + 2, &target, 8); jump[10] = 0xff; jump[11] = 0xe0;
+    int ok = patch_bytes(image + 0xa6d9fa, "\x41\x83\xff\x0d", "\x41\x83\xff\x11", 4) &
+             patch_bytes(image + 0xa6da72, "\x41\xbf\x0c\x00\x00\x00", "\x41\xbf\x10\x00\x00\x00", 6) &
+             patch_bytes(image + 0xb03517, "\x83\xf8\x0d", "\x83\xf8\x11", 3);
+    static const size_t sites[2] = {0xa6da40, 0xb03560};
+    static const unsigned char calls[2][5] = {{0xe8, 0x2b, 0xf5, 0x8a, 0xff}, {0xe8, 0x0b, 0x9a, 0x81, 0xff}};
+    for (int k = 0; k < 2; ++k) {
+        int64_t distance = (int64_t)(uintptr_t)jump - (int64_t)(uintptr_t)(image + sites[k] + 5);
+        unsigned char call[5] = {0xe8}; int32_t rel = (int32_t)distance; memcpy(call + 1, &rel, 4);
+        ok &= distance >= INT32_MIN && distance <= INT32_MAX && patch_bytes(image + sites[k], calls[k], call, 5);
+    }
+    gz_log("Kyoei NPC balloon: whole words, 16 cells %s", ok ? "enabled" : "partly native");
+}
+
 static void hook_label_report(unsigned char *image) {
     static const size_t sites[2] = {0xa6d9f2, 0xb03512};
     static const unsigned char calls[2][5] = {{0xe8, 0x99, 0xf3, 0x8a, 0xff}, {0xe8, 0x79, 0x98, 0x81, 0xff}};
@@ -193,6 +232,7 @@ static void hook_label_report(unsigned char *image) {
     uint64_t target = (uint64_t)(uintptr_t)label_chars;
     jump[0] = 0x48; jump[1] = 0xb8; memcpy(jump + 2, &target, 8); jump[10] = 0xff; jump[11] = 0xe0;
     DWORD prior, ignored;
+    hook_balloon_words(image, jump + 64);
     if (!VirtualProtect(jump, 4096, PAGE_EXECUTE_READ, &prior)) return;
     for (int k = 0; k < 2; ++k) {
         unsigned char *site = image + sites[k];
