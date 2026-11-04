@@ -5462,3 +5462,10 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Davy cobrou visualização sem ele levar o personagem. build_text_gallery.py ganhou --warp-npc <NPCID> (Npc.getPos(id) → ok,x,y,z,rot; Player.setPos(x+1.5,y,z,0)) e --warp-stage <n> (visita todos os NPCID de stage_<n>_npc.luc, 3 s cada, print do nome, com Plan.TalkEnd antes para o HUD e os balões aparecerem). tools/tour_capture.py captura cada parada pelo log e aperta Enter se uma mensagem travar o tour.
 - Gatilho: examinar a máquina de bebidas (primeira mensagem). Fase 201, 127 NPCs, 53 capturas (build/items12-20261103/tour201, privado): florista "Hã? O que está..." dentro do balão; etiquetas de ação (Conversar, Ouvir a conversa, Espiar, Observar, Ouvir o que têm a dizer, Falar, Ouvir) inteiras.
 - Limite: mostra os NPCs/balões da fase atual da história; falas de outras fases (florista Lv2/Lv3) exigem ligar as flags do evento (EventFlag.Set) — próximo passo da ferramenta.
+
+## 04/11/2026 — Revisão completa do pt-BR (Claude)
+- Lido o pt-BR inteiro: diálogos de todas as fases, mails, TV, epílogo, letras, missões, objetivos, telas de carregamento, lugares, itens, notícias e documentos. Correções de naturalidade e consistência (commits f950211, 36fe13e e anterior).
+- 5 falas desalinhadas na fase 207 (k37, k262, k264, k266, k268) corrigidas; inglês conferido pelo mesmo detector: sem desalinhamento.
+- check_balloons.py: 130 balões, 0 problemas em pt-BR e en; 0 tags de cor quebradas.
+- Deltas novos construídos (privados) em build/stage-20261104b/{pt-BR,en} com eboot-text de build/items12-20261103. pt-BR SHA256 acd7baf9…39fa (15.595 entradas); en a5bd1de4…b15a (13.286).
+- NÃO instalados: o jogo estava aberto. Pendências para o Codex: instalar os deltas na portátil (backup antes, jogo fechado), revisão linha a linha do inglês, refazer os ZIPs 1.0 e atualizar SHA256 em docs/PUBLICACAO-1.0-CODEX.md, publicar no GitHub.

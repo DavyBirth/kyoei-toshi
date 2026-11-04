@@ -18,3 +18,6 @@ Pedido de Davy em 03/11/2026: publicar a 1.0 no GitHub, **repositório público 
 - Leitor e rodapé de e-mail conferidos em 03/11 (galeria). Tela de fim de jogo só em prévia offline.
 - Manchas brancas transitórias no fundo desfocado (gráfico).
 - Balões de ação de 12 caracteres: runtime registra "Kyoei label cut (12 chars)" no log se algum corte acontecer.
+
+## Atualização 04/11/2026 (Claude)
+Os ZIPs/SHA256 acima estão desatualizados. Antes de publicar: instalar build/stage-20261104b na portátil, revisar o inglês, refazer os ZIPs com tools/build_public_candidate.py e atualizar os hashes aqui. Ver DIARIO de 04/11/2026.
