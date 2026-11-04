@@ -166,7 +166,7 @@ def build(archive_path, only=(), mails=False, items=False, dialogs=True, intermi
         warp_all = []
         if warp_stage:   # every NPCID of stage_<n>_npc.luc, in file order
             f = lua52.load(Resource(read(f'lua/stage_{warp_stage}_npc.luc')).payload)
-            warp_all = [c for c in f.k if isinstance(c, bytes) and c.startswith(f'Chr{warp_stage}_'.encode())]
+            warp_all = [c for c in f.k if isinstance(c, bytes) and re.fullmatch(rb'Chr\d+_\d+', c)]
         plan = Resource(read('lua/plan.luc'))
         return plan.rebuild(patch(plan.payload, keys, m, it, intermission, warp_npc, warp_all)), (len(keys), len(m), len(it) + len(warp_all))
 
