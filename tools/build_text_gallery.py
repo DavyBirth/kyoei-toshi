@@ -34,7 +34,7 @@ def message_keys(chunk):
     return out
 
 
-def patch(plan, keys, mails=(), items=(), intermission=False):
+def patch(plan, keys, mails=(), items=(), intermission=False, warp_npc=None, warp_all=()):
     """Prologue run once per session: send mails, give items, then show each message."""
     root = lua52.load(plan); f = root.protos[46]
     if f.params != 2 or f.k[:1] != [b'print'] or b'SetText' not in f.k:
@@ -44,7 +44,8 @@ def patch(plan, keys, mails=(), items=(), intermission=False):
             if type(c) is type(v) and c == v: return i
         f.k.append(v); return len(f.k) - 1
     names = (b'KyoeiGalleryDone', b'Plan', b'window', b'SetText', b'WaitForInput', b'PauseFrame',
-             b'Mail', b'send', b'Player', b'addItem', b'InterMissionDemoStartFlag', b'StartInterMissionWithoutDemo')
+             b'Mail', b'send', b'Player', b'addItem', b'InterMissionDemoStartFlag', b'StartInterMissionWithoutDemo',
+             b'Npc', b'getPos', b'NPCID', b'setPos', b'print', b'TalkEnd', b'TalkStart') + ((warp_npc,) if warp_npc else ())
     rk = {name: k(name) for name in names}
     one, ten, true = k(1.0), k(10.0), k(True)
     if max(rk.values()) >= 256 or true >= 256: raise ValueError('RK constant out of range')
@@ -87,6 +88,31 @@ def patch(plan, keys, mails=(), items=(), intermission=False):
                  E('SELF', 8, 8, K(b'WaitForInput')), E('CALL', 8, 2, 1),
                  E('GETTABUP', 8, 0, K(b'PauseFrame')), E('LOADK', 9, bx=ten), E('CALL', 8, 2, 1)]
 
+    if warp_npc:   # test: stand the player 1.5 m beside an NPC (NPCID.<name>), e.g. Chr201_0460;
+        # Npc.getPos(id) returns ok, x, y, z, rotation
+        dx, zero = k(1.5), k(0.0)
+        if max(dx, zero) >= 256: raise ValueError('RK constant out of range')
+        body += [E('GETTABUP', 8, 0, K(b'Npc')), E('GETTABLE', 8, 8, K(b'getPos')),
+                 E('GETTABUP', 9, 0, K(b'NPCID')), E('GETTABLE', 9, 9, K(warp_npc)), E('CALL', 8, 2, 6),
+                 E('GETTABUP', 13, 0, K(b'Player')), E('GETTABLE', 13, 13, K(b'setPos')),
+                 E('ADD', 14, 9, 256 + dx), E('MOVE', 15, 10), E('MOVE', 16, 11), E('LOADK', 17, bx=zero),
+                 E('CALL', 13, 5, 1)]
+    def visit():   # NPC name in R7: print it, stand beside it, wait ~3 s for the balloon
+        nonlocal body
+        dx, zero, wait = k(1.5), k(0.0), k(180.0)
+        body += [E('GETTABUP', 8, 0, K(b'print')), E('MOVE', 9, 7), E('CALL', 8, 2, 1),
+                 E('GETTABUP', 8, 0, K(b'Npc')), E('GETTABLE', 8, 8, K(b'getPos')),
+                 E('GETTABUP', 9, 0, K(b'NPCID')), E('GETTABLE', 9, 9, 7), E('CALL', 8, 2, 6),
+                 E('TEST', 8, 0, 0), 'SKIP',
+                 E('GETTABUP', 13, 0, K(b'Player')), E('GETTABLE', 13, 13, K(b'setPos')),
+                 E('ADD', 14, 9, 256 + dx), E('MOVE', 15, 10), E('MOVE', 16, 11), E('LOADK', 17, bx=zero),
+                 E('CALL', 13, 5, 1),
+                 E('GETTABUP', 8, 0, K(b'PauseFrame')), E('LOADK', 9, bx=wait), E('CALL', 8, 2, 1)]
+    if warp_all:   # leave the talk state so the field HUD and NPC balloons show during the tour
+        body += [E('GETTABUP', 8, 0, K(b'Plan')), E('GETTABLE', 8, 8, K(b'TalkEnd')), E('CALL', 8, 1, 1)]
+    loop(list(warp_all), visit)
+    if warp_all:
+        body += [E('GETTABUP', 8, 0, K(b'Plan')), E('GETTABLE', 8, 8, K(b'TalkStart')), E('CALL', 8, 1, 1)]
     loop([float(m) for m in mails], call2(b'Mail', b'send'))
     loop([float(i) for i in items], call2(b'Player', b'addItem', one))
     if intermission:   # news/shop/result of the loaded stage; returns when it closes
@@ -124,7 +150,7 @@ def item_ids(chunk, prefixes=()):
     return out
 
 
-def build(archive_path, only=(), mails=False, items=False, dialogs=True, intermission=False, item_prefix=()):
+def build(archive_path, only=(), mails=False, items=False, dialogs=True, intermission=False, item_prefix=(), warp_npc=None, warp_stage=None):
     with Psarc(archive_path) as archive:
         entries = {e.name: e for e in archive.entries[1:]}
         read = lambda name: b''.join(archive.chunks(entries[name]))
@@ -137,8 +163,12 @@ def build(archive_path, only=(), mails=False, items=False, dialogs=True, intermi
         if not dialogs: keys = []
         m = mail_ids(Resource(read('lua/mail_data.luc')).payload) if mails else []
         it = item_ids(Resource(read('lua/item_data.luc')).payload, item_prefix) if items or item_prefix else []
+        warp_all = []
+        if warp_stage:   # every NPCID of stage_<n>_npc.luc, in file order
+            f = lua52.load(Resource(read(f'lua/stage_{warp_stage}_npc.luc')).payload)
+            warp_all = [c for c in f.k if isinstance(c, bytes) and c.startswith(f'Chr{warp_stage}_'.encode())]
         plan = Resource(read('lua/plan.luc'))
-        return plan.rebuild(patch(plan.payload, keys, m, it, intermission)), (len(keys), len(m), len(it))
+        return plan.rebuild(patch(plan.payload, keys, m, it, intermission, warp_npc, warp_all)), (len(keys), len(m), len(it) + len(warp_all))
 
 
 def main():
@@ -151,9 +181,12 @@ def main():
     p.add_argument('--intermission', action='store_true', help='open the stage intermission (news, shop, result)')
     p.add_argument('--item-prefix', action='append', default=[], help='only items whose name starts with this (e.g. ITEM_READING_)')
     p.add_argument('--no-dialogs', action='store_true', help='skip the message walk')
+    p.add_argument('--warp-npc', help='first move the player beside NPCID.<name> (e.g. Chr201_0460, the florist)')
+    p.add_argument('--warp-stage', help='visit every NPC of stage_<n>_npc.luc for ~3 s each, printing its NPCID (e.g. 201)')
     a = p.parse_args()
-    data, n = build(a.archive, a.only, a.mails, a.items, not a.no_dialogs, a.intermission, a.item_prefix)
-    if not any(n) and not a.intermission: raise ValueError('nothing to show')
+    warp = a.warp_npc.encode() if a.warp_npc else None
+    data, n = build(a.archive, a.only, a.mails, a.items, not a.no_dialogs, a.intermission, a.item_prefix, warp, a.warp_stage)
+    if not any(n) and not a.intermission and not warp: raise ValueError('nothing to show')
     a.output.parent.mkdir(parents=True, exist_ok=True); a.output.write_bytes(data)
     print(f'plan.luc with gallery: {n[0]} messages, {n[1]} mails, {n[2]} items -> {a.output}')
 
