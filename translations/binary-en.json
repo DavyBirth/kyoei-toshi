@@ -2614,7 +2614,7 @@
      "offset": 17618524,
      "bytes": 12,
      "source_sha256": "360ef9797998f438d7a5ccc554ff18cd5b23edad34673d4145e8aae46fdcad06",
-     "en": "Pick a Reply"
+     "en": "Answer"
     },
     {
      "offset": 17618549,
@@ -2632,7 +2632,7 @@
      "offset": 17618563,
      "bytes": 12,
      "source_sha256": "5dfb5809afa5a7ef811641aed38d882b1f77f8c127d21fdec9b6fd0baf5035b9",
-     "en": "Send Reply"
+     "en": "Choose"
     },
     {
      "offset": 17621409,

@@ -5437,3 +5437,10 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - INSTALL.txt passou de candidata para versão 1.0 com problemas conhecidos; pc_version 1.0.
 - build/Kyoei-1.0-Windows.zip (SHA256 1272b160c30ebff26a468bcad9b4e9af86134491e69b5630a17e9ed3a67a6adb) e build/Kyoei-1.0-Source.zip (SHA256 bb41e1f0e164035cfdee46c1abdca4bafb78864408fb3153fbff1166cf81371b). Varredura: sem formatos do jogo nem caminhos pessoais.
 - Davy decidiu: repositório público direto; o Codex publica. Instruções em docs/PUBLICACAO-1.0-CODEX.md.
+
+### 03/11/2026 — galeria: e-mail e leitor (Claude)
+- Galeria (--mails --items --item-prefix ITEM_READING_ --no-dialogs) levou ao rodapé de resposta e ao leitor. Abas internas de Itens: seta para cima + direita; cabeçalhos de categoria em linha própria.
+- Rodapé de resposta: o código põe 返信決定 nas setas e 返信選択 no E (abrir respostas e enviar). Antes "Enviar"/"Escolha" ficavam trocados; agora "Selecionar"/"Responder" (en Choose/Answer). Visto no jogo.
+- Leitor: quebra de linha correta; o título (ITEM_NAME, uma linha) mostrava só a 1ª linha dos nomes pré-quebrados. Limite do nome subiu 500→520 (caixa nativa quebra em 521+) e 22 nomes de leitura pt / 14 en encurtados para caber numa linha. Visto: "Cheque de 80 Milhões".
+- Manchas brancas transitórias no fundo desfocado (leitor/missões): alguns quadros, somem sozinhas; gráfico, conhecido.
+- Instalado na portátil (backup data/update-backups/reader-20261103): deltas en/pt-BR e eboot-text. launcher --check 0.
