@@ -5432,3 +5432,8 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Eboot: 691 textos japoneses fora da tabela; quase todos depuração/editor. Traduzidos os visíveis ao jogador: aviso de dados de jogo zerado (2), save com erro, aviso de DLC, "Dia %d", duas datas; "Stage 1…17" → "Fase N". Tabela: 306 strings. Lista completa em build/items12-20261103/eboot-untranslated.txt (privada).
 - Cortes nativos com "…": 6 rotinas. Notícias (0xac6210/0xac78c0), prévia de missões (0xb375f0) resolvidas; placas NPC (0xaea710) usam escala. Rotinas de 12 caracteres 0xa6d9a0/0xb034c0 (perto de DEFAULT_CMND_*): sem caso visto em caminhada de teste; o runtime agora registra no log "Kyoei label cut (12 chars): <texto>" para qualquer corte real.
 - Instalado na portátil (backup data/update-backups/sweep-20261103): runtime, delta pt-BR, eboot-text en/pt-BR. launcher --check 0.
+
+### 03/11/2026 — pacotes 1.0 (Claude)
+- INSTALL.txt passou de candidata para versão 1.0 com problemas conhecidos; pc_version 1.0.
+- build/Kyoei-1.0-Windows.zip (SHA256 1272b160c30ebff26a468bcad9b4e9af86134491e69b5630a17e9ed3a67a6adb) e build/Kyoei-1.0-Source.zip (SHA256 bb41e1f0e164035cfdee46c1abdca4bafb78864408fb3153fbff1166cf81371b). Varredura: sem formatos do jogo nem caminhos pessoais.
+- Davy decidiu: repositório público direto; o Codex publica. Instruções em docs/PUBLICACAO-1.0-CODEX.md.
