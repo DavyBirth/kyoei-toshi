@@ -48,8 +48,8 @@ inline unsigned char Axis(float distance,double seconds,unsigned char fallback) 
     if (distance==0) return fallback;
     // Mouse speed, rather than distance per poll, keeps sensitivity independent
     // of the SDL poll rate. This emulates the stick; the game's turn cap remains.
-    float value=float(distance/std::max(seconds,0.001)*0.09)*Sensitivity();
-    float magnitude=std::min(127.f,24.f+std::abs(value));
+    float value=float(distance/std::max(seconds,0.001)*0.09*6.0/KYOEI_MOUSE_CAMERA_SCALE)*Sensitivity();
+    float magnitude=std::min(127.f,26.f+std::abs(value)); // just past the 0.2 stick dead zone (25.4)
     return static_cast<unsigned char>(std::clamp(128+int(std::copysign(magnitude,value)),0,255));
 }
 template<class Stick> inline void Apply(Stick& stick) {

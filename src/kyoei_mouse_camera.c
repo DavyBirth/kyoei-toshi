@@ -66,7 +66,7 @@ void kyoei_mouse_camera_boost(int mouse) {
     if (cam == camera && !memcmp(now, applied, sizeof now)) return;
     if (!plausible(now)) return;
     memcpy(original, now, sizeof now);   /* new camera, or the game re-applied its data */
-    const float speed_scale = 6.f, time = 0.001f;
+    const float speed_scale = KYOEI_MOUSE_CAMERA_SCALE, time = 0.001f;
     float x = now[0] * speed_scale, y = now[5] * speed_scale;
     float v[10] = {x, time, x / time, time, x / time, y, time, y / time, time, y / time};
     for (int i = 0; i < 10; ++i) memcpy((void *)(cam + offsets[i]), &v[i], 4);

@@ -1,5 +1,8 @@
 #pragma once
 #include <stdint.h>
+/* Turn limit multiplier while the mouse is used; the mouse gain is divided by
+ * the same factor over the original x6 so slow motion keeps its precision. */
+#define KYOEI_MOUSE_CAMERA_SCALE 24.f
 #ifdef __cplusplus
 extern "C" {
 #endif
