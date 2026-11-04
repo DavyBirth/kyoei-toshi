@@ -338,7 +338,7 @@ kyoei_replace_checked(KYOEI_LOADER
 file(CONFIGURE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" CONTENT "${KYOEI_LOADER}" @ONLY)
 add_executable(kyoei ${CORE_FILES} "${CMAKE_CURRENT_BINARY_DIR}/kyoei_loader.c" src/kyoei_kernel.c src/kyoei_tls.c src/kyoei_modules.c src/kyoei_ime.c)
 target_sources(kyoei PRIVATE src/kyoei_photo_dof.c src/kyoei_photo_hud.c src/kyoei_photo_scene.c src/kyoei_photo_phone.c src/kyoei_photo_save_mark.c)
-target_sources(kyoei PRIVATE src/kyoei_photo_lights.c src/kyoei_pause_photo.c)
+target_sources(kyoei PRIVATE src/kyoei_photo_lights.c src/kyoei_pause_photo.c src/kyoei_mouse_camera.c)
 add_executable(test_kyoei_pause_photo src/test_kyoei_pause_photo.c src/kyoei_pause_photo.c)
 target_compile_definitions(test_kyoei_pause_photo PRIVATE KYOEI_PAUSE_PHOTO_TEST=1)
 target_compile_options(test_kyoei_pause_photo PRIVATE -UNDEBUG)

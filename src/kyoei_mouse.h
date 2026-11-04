@@ -7,6 +7,7 @@
 #include "kyoei_overlay.h"
 #include "kyoei_input_mode.h"
 #include "kyoei_title_exit.h"
+#include "kyoei_mouse_camera.h"
 
 // All access is on the SDL window/pad polling thread. Guest pad reads use
 // the existing bridge mutex and only see the completed pad sample.
@@ -55,6 +56,8 @@ template<class Stick> inline void Apply(Stick& stick) {
     const auto now=SDL_GetTicksNS();
     double elapsed=previous?double(now-previous)/1e9:0.008;
     previous=now;
+    // Mouse active (last input was keyboard/mouse): PC turning limits; else PS4 values.
+    kyoei_mouse_camera_boost(captured && !kyoei_overlay_kind() && kyoei_input_current_mode()==KYOEI_INPUT_KEYBOARD);
     if(captured && !kyoei_overlay_kind() && elapsed<0.1) {
         stick.x=Axis(dx,elapsed,stick.x);stick.y=Axis(dy,elapsed,stick.y);
     }

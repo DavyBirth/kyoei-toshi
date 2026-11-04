@@ -5450,3 +5450,9 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - Correção: a contagem desses cortadores agora é a largura em células cheias (japonês igual; latim ~metade), então só corta acima de 12 células e o balão (dimensionado pela contagem) acompanha o texto. Log: "Kyoei NPC balloon: label 0/1 measured by width". Faixa "Fase 01" vista no jogo.
 - Runtime instalado na portátil (backup data/update-backups/reader-20261103/kyoei.exe); falta Davy ver o balão da florista.
 - Balões de prévia (só a florista usa _Lv; 18 falas medidas): no japonês as longas também são cortadas. Agora mostram inteiras até 16 células (limiares 13→17, caixa após corte 12→16) e, acima disso, cortavam na última palavra. Davy pediu sem corte: limiares → 127 células (nunca corta), balão dimensionado pela linha mais larga. Log "whole lines (no cut) enabled". Instalado na portátil; falta Davy ver as 2 falas com quebra de linha (altura do balão).
+
+### 03/11/2026 — mouse de PC (Claude)
+- Davy: girar 360 com mouse lento. Causa: o mouse imita o analógico, preso ao limite do jogo (camera_data.luc PadSpeed 50-100°/s, aceleração/frenagem 0,3-0,5 s).
+- Câmera ativa: global 0x1386ad0 → +0x28 → +0x1f8 → +0x18; campos X +0x64c(vel.) +0x654/+0x658 (acel.) +0x65c/+0x660 (fren.), Y +0x684..+0x698 (setters 0x64c640..0x650da0).
+- src/kyoei_mouse_camera.c: com mouse em uso (modo teclado), limite ×6 (100→600°/s) e aceleração/frenagem imediatas; com controle devolve os valores originais (só desfaz o que escreveu). Log "Kyoei mouse camera: turn limit 1.745 -> 10.472". Visto no teste: aplicado, jogo normal. Sensação do giro: falta Davy confirmar.
+- Instalado na portátil.

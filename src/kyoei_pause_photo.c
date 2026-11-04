@@ -160,7 +160,9 @@ static ABI void update(void *self){
     if(atomic_load(&selected) && cursor){float y=0;uintptr_t load=pointer(nodes+11*8);
         if(read_value(load+0x64,&y,4)){y+=48;memcpy((void*)(cursor+0x64),&y,4);}}
 }
+#include "kyoei_mouse_camera.h"
 void kyoei_pause_photo_configure(void *image,uint64_t size){
+    kyoei_mouse_camera_configure(image,size);
     const size_t entry=0xb296b0,length=2619;
     if(!image || size<0x1543dd8)return;
     unsigned char *code=(unsigned char*)image+entry;uint64_t hash=UINT64_C(14695981039346656037);
