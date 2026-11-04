@@ -174,7 +174,12 @@ static uint64_t hash(const unsigned char *p, size_t n) {
  * fits the text. Japanese counts are unchanged (one cell per character). */
 static ABI unsigned label_chars(const char *text) {
     if (!text) return 0;
-    float cells = width(text, strlen(text));
+    float cells = 0;   /* widest line: the balloon is sized from this count */
+    for (const char *line = text; ; ) {
+        const char *end = strchr(line, '\n'); size_t len = end ? (size_t)(end - line) : strlen(line);
+        float w = width(line, len); if (w > cells) cells = w;
+        if (!end) break; line = end + 1;
+    }
     unsigned n = (unsigned)(cells + .999f);
     if (n >= 13) {
         static uint64_t seen[64]; static unsigned count; uint64_t h = hash((const unsigned char *)text, strlen(text));
@@ -209,9 +214,9 @@ static void hook_balloon_words(unsigned char *image, unsigned char *jump) {
     original_substring = (Substring)(image + 0x31cf70);
     uint64_t target = (uint64_t)(uintptr_t)balloon_substring;
     jump[0] = 0x48; jump[1] = 0xb8; memcpy(jump + 2, &target, 8); jump[10] = 0xff; jump[11] = 0xe0;
-    int ok = patch_bytes(image + 0xa6d9fa, "\x41\x83\xff\x0d", "\x41\x83\xff\x11", 4) &
+    int ok = patch_bytes(image + 0xa6d9fa, "\x41\x83\xff\x0d", "\x41\x83\xff\x7f", 4) &
              patch_bytes(image + 0xa6da72, "\x41\xbf\x0c\x00\x00\x00", "\x41\xbf\x10\x00\x00\x00", 6) &
-             patch_bytes(image + 0xb03517, "\x83\xf8\x0d", "\x83\xf8\x11", 3);
+             patch_bytes(image + 0xb03517, "\x83\xf8\x0d", "\x83\xf8\x7f", 3);
     static const size_t sites[2] = {0xa6da40, 0xb03560};
     static const unsigned char calls[2][5] = {{0xe8, 0x2b, 0xf5, 0x8a, 0xff}, {0xe8, 0x0b, 0x9a, 0x81, 0xff}};
     for (int k = 0; k < 2; ++k) {
@@ -219,7 +224,7 @@ static void hook_balloon_words(unsigned char *image, unsigned char *jump) {
         unsigned char call[5] = {0xe8}; int32_t rel = (int32_t)distance; memcpy(call + 1, &rel, 4);
         ok &= distance >= INT32_MIN && distance <= INT32_MAX && patch_bytes(image + sites[k], calls[k], call, 5);
     }
-    gz_log("Kyoei NPC balloon: whole words, 16 cells %s", ok ? "enabled" : "partly native");
+    gz_log("Kyoei NPC balloon: whole lines (no cut) %s", ok ? "enabled" : "partly native");
 }
 
 static void hook_label_report(unsigned char *image) {
