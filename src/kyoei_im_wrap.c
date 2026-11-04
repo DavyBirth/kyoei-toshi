@@ -174,15 +174,11 @@ static uint64_t hash(const unsigned char *p, size_t n) {
  * fits the text. Japanese counts are unchanged (one cell per character). */
 static ABI unsigned label_chars(const char *text) {
     if (!text) return 0;
-    float cells = 0;   /* widest line: the balloon is sized from this count */
-    for (const char *line = text; ; ) {
-        const char *end = strchr(line, '\n'); size_t len = end ? (size_t)(end - line) : strlen(line);
-        float w = width(line, len); if (w > cells) cells = w;
-        if (!end) break; line = end + 1;
-    }
-    /* Balloon glyphs draw wider than the menu metrics: measured on the florist
-     * ("O que está acontece" of 23 chars shown), so leave 35% room. */
-    unsigned n = (unsigned)(cells * 1.35f + .999f);
+    /* Whole text in full-width cells (a line break counts as a cell): the balloon is
+     * one fixed-width line of ~12.6 cells, the same capacity as the native 12-character
+     * limit, so the original thresholds stay and only the cut point changes. */
+    float cells = width(text, strlen(text));
+    unsigned n = (unsigned)(cells + .999f);
     if (n >= 13) {
         static uint64_t seen[64]; static unsigned count; uint64_t h = hash((const unsigned char *)text, strlen(text));
         unsigned i = 0; while (i < count && seen[i] != h) ++i;
@@ -190,9 +186,9 @@ static ABI unsigned label_chars(const char *text) {
     }
     return n;
 }
-/* Balloon cut: lines up to 16 cells stay whole (thresholds 13 -> 17 cells, box
- * after a cut 12 -> 16); longer lines keep the whole words within 15 cells,
- * via the substring call that precedes the native "...". */
+/* Balloon cut (fixed-width balloon, ~12.6 cells, verified on screen): text over
+ * 12 cells keeps the whole words within 11.5 cells, via the substring call that
+ * precedes the native "...", like the Japanese preview but between words. */
 typedef void *(ABI *Substring)(void *, void *, unsigned, unsigned);
 static Substring original_substring;
 static ABI void *balloon_substring(void *out, void *string, unsigned start, unsigned bytes) {
@@ -200,7 +196,7 @@ static ABI void *balloon_substring(void *out, void *string, unsigned start, unsi
     size_t best = 0;
     for (size_t i = 1; t && i < len; ++i) {
         if (t[i] != ' ' && t[i] != '\n') continue;
-        if (width(t, i) > 15.f) break;
+        if (width(t, i) > 11.5f) break;   /* 12.6 cells minus "..." */
         best = i;
     }
     while (best && strchr(" ,.:;-\n", t[best - 1])) --best;
@@ -216,9 +212,7 @@ static void hook_balloon_words(unsigned char *image, unsigned char *jump) {
     original_substring = (Substring)(image + 0x31cf70);
     uint64_t target = (uint64_t)(uintptr_t)balloon_substring;
     jump[0] = 0x48; jump[1] = 0xb8; memcpy(jump + 2, &target, 8); jump[10] = 0xff; jump[11] = 0xe0;
-    int ok = patch_bytes(image + 0xa6d9fa, "\x41\x83\xff\x0d", "\x41\x83\xff\x7f", 4) &
-             patch_bytes(image + 0xa6da72, "\x41\xbf\x0c\x00\x00\x00", "\x41\xbf\x10\x00\x00\x00", 6) &
-             patch_bytes(image + 0xb03517, "\x83\xf8\x0d", "\x83\xf8\x7f", 3);
+    int ok = 1;   /* native thresholds (cut at 13 cells) kept: the balloon is fixed-width */
     static const size_t sites[2] = {0xa6da40, 0xb03560};
     static const unsigned char calls[2][5] = {{0xe8, 0x2b, 0xf5, 0x8a, 0xff}, {0xe8, 0x0b, 0x9a, 0x81, 0xff}};
     for (int k = 0; k < 2; ++k) {
@@ -226,7 +220,7 @@ static void hook_balloon_words(unsigned char *image, unsigned char *jump) {
         unsigned char call[5] = {0xe8}; int32_t rel = (int32_t)distance; memcpy(call + 1, &rel, 4);
         ok &= distance >= INT32_MIN && distance <= INT32_MAX && patch_bytes(image + sites[k], calls[k], call, 5);
     }
-    gz_log("Kyoei NPC balloon: whole lines (no cut) %s", ok ? "enabled" : "partly native");
+    gz_log("Kyoei NPC balloon: cut between words at 12 cells %s", ok ? "enabled" : "partly native");
 }
 
 static void hook_label_report(unsigned char *image) {
