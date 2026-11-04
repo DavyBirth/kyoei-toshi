@@ -180,7 +180,9 @@ static ABI unsigned label_chars(const char *text) {
         float w = width(line, len); if (w > cells) cells = w;
         if (!end) break; line = end + 1;
     }
-    unsigned n = (unsigned)(cells + .999f);
+    /* Balloon glyphs draw wider than the menu metrics: measured on the florist
+     * ("O que está acontece" of 23 chars shown), so leave 35% room. */
+    unsigned n = (unsigned)(cells * 1.35f + .999f);
     if (n >= 13) {
         static uint64_t seen[64]; static unsigned count; uint64_t h = hash((const unsigned char *)text, strlen(text));
         unsigned i = 0; while (i < count && seen[i] != h) ++i;
