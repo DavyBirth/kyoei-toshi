@@ -3,8 +3,8 @@
 Pedido de Davy em 03/11/2026: publicar a 1.0 no GitHub, **repositório público direto**. O Codex faz a publicação.
 
 ## Pacotes prontos (gerados do commit atual da branch desempenho-codex)
-- build/Kyoei-1.0-Windows.zip — SHA256 1272b160c30ebff26a468bcad9b4e9af86134491e69b5630a17e9ed3a67a6adb — 1.801 arquivos, sem dados do jogo nem caminhos pessoais (verificado).
-- build/Kyoei-1.0-Source.zip — SHA256 bb41e1f0e164035cfdee46c1abdca4bafb78864408fb3153fbff1166cf81371b — 16.082 arquivos (fontes correspondentes; kit v3 já compilou Release fora do cache em 03/11).
+- build/Kyoei-1.0-Windows.zip — SHA256 725fd7a94fedd6a90196e05b79b18f9abfc51934bb1247a79cf6cfa6b2a2b360 — 1.801 arquivos, sem dados do jogo nem caminhos pessoais (verificado).
+- build/Kyoei-1.0-Source.zip — SHA256 ca1c61fcff7e3e2f7b9094a336759a2d8108bc781ca2c78b53ebafc000a2ad96 — 16.082 arquivos (fontes correspondentes; kit v3 já compilou Release fora do cache em 03/11).
 - Arquivos .sha256 ao lado de cada ZIP.
 
 ## Passos
@@ -15,6 +15,6 @@ Pedido de Davy em 03/11/2026: publicar a 1.0 no GitHub, **repositório público 
 
 ## Pendências conhecidas (não bloqueiam a 1.0, ver INSTALL)
 - Nomes de lugar do minimapa cortados na borda (marcador nativo).
-- Rodapé de resposta de e-mail (Escolha/Enviar) não conferido contra o japonês.
-- Leitor de livros e tela de fim de jogo não alcançados em teste.
+- Leitor e rodapé de e-mail conferidos em 03/11 (galeria). Tela de fim de jogo só em prévia offline.
+- Manchas brancas transitórias no fundo desfocado (gráfico).
 - Balões de ação de 12 caracteres: runtime registra "Kyoei label cut (12 chars)" no log se algum corte acontecer.
