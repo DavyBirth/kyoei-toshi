@@ -5469,3 +5469,10 @@ eview\diagrama*.png. Ressalvas: brilho ao longo da borda do controle mais fraco 
 - check_balloons.py: 130 balões, 0 problemas em pt-BR e en; 0 tags de cor quebradas.
 - Deltas novos construídos (privados) em build/stage-20261104b/{pt-BR,en} com eboot-text de build/items12-20261103. pt-BR SHA256 acd7baf9…39fa (15.595 entradas); en a5bd1de4…b15a (13.286).
 - NÃO instalados: o jogo estava aberto. Pendências para o Codex: instalar os deltas na portátil (backup antes, jogo fechado), revisão linha a linha do inglês, refazer os ZIPs 1.0 e atualizar SHA256 em docs/PUBLICACAO-1.0-CODEX.md, publicar no GitHub.
+
+## 09/11/2026 — retomada da publicação 1.0 (Codex)
+- Davy autorizou continuar a preparação e publicação. Estado inicial limpo, HEAD 3b506d3, branch desempenho-codex; nenhum remote Git configurado. Conta GitHub conectada: DavyBirth.
+- Com o jogo fechado, instalados os deltas revisados de build/stage-20261104b na portátil pessoal. Backup em build/City-Shrouded-in-Shadow-Portable/data/update-backups/review-20261109-194552, incluindo manifesto anterior. Hashes conferidos após a cópia e manifesto atualizado; launcher --check terminou com código 0. Nenhum jogo aberto e nenhum save alterado.
+- pt-BR translation.kydelta SHA256 acd7baf9a72e715a25849f84dad57baa6faad683516a317c284f6ceef7ef39fa; en a5bd1de4acdd4b65d2487f269f3cb4c21f0e9af0dc96e873b2b36651031db15a. Também atualizado eboot-text pt-BR (5131467875954ba855289af5aba4c3205c4d8fc65d819e2203d0e3092eec75f3).
+- Prova privada da instalação em build/release-20261109/installation.json. Revisão inglesa (13.286 entradas), auditoria do histórico e reconstrução dos pacotes ainda em andamento; publicação não concluída.
+- A telemetria encontrada em build/quota-watch-current pertence a 03/11 e a outra conversa; não serve para decidir desligamento nesta sessão.
