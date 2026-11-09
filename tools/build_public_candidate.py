@@ -91,7 +91,7 @@ def python_runtime(target):
     (target/('python'+version+'._pth')).write_text('.\nDLLs\nLib\nLib/site-packages\n../../tools\n',encoding='ascii')
 
 
-def build(output,dependency_cache):
+def build(output,dependency_cache,runtime=None):
     dependency_cache=dependency_cache.resolve()
     if not dependency_cache.is_dir():raise ValueError("Provide the dependency source cache for current notices")
     output=output.resolve()
@@ -112,7 +112,7 @@ def build(output,dependency_cache):
         for name in ('NotoSans-Regular.ttf','NotoSansCJK-Regular.ttc'):
             copy(ROOT/core/'third_party/shadPS4/src/imgui/renderer/fonts'/name,output/'assets/fonts'/name)
         (output/'runtime').mkdir()
-        clean_pe(ROOT/'build/kyoei.exe',output/'runtime/kyoei.exe')
+        clean_pe(runtime or ROOT/'build/kyoei.exe',output/'runtime/kyoei.exe')
         for name in ('msvcp140.dll','msvcp140_atomic_wait.dll','vcruntime140.dll','vcruntime140_1.dll'):
             copy(Path(os.environ['WINDIR'])/'System32'/name,output/'runtime'/name)
         csc=Path(os.environ['WINDIR'])/'Microsoft.NET/Framework64/v4.0.30319/csc.exe'
@@ -163,4 +163,5 @@ def build(output,dependency_cache):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('output',type=Path)
     parser.add_argument('--dependency-cache',type=Path,required=True)
-    args=parser.parse_args();build(args.output,args.dependency_cache)
+    parser.add_argument('--runtime',type=Path,help='Executable from the verified source-kit build')
+    args=parser.parse_args();build(args.output,args.dependency_cache,args.runtime)

@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.28)
 set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "Build type")
+if(CMAKE_HOST_WIN32)
+  # Long extraction paths can exceed cmd.exe's limit during dependency scanning.
+  set(CMAKE_NINJA_FORCE_RESPONSE_FILE ON CACHE BOOL "Use response files for Windows command-line limits")
+endif()
 project(kyoei_native C CXX)
 if(NOT CMAKE_C_COMPILER_ID STREQUAL "Clang")
   message(FATAL_ERROR "Use Clang: the guest uses sysv_abi")

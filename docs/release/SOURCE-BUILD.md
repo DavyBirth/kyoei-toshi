@@ -30,14 +30,12 @@ Os arquivos upstream-source/ffmpeg-n7.1.1.tar.gz e vcpkg-df8bfe5.tar.gz conserva
 as fontes upstream e a receita fixada. O cache build/_deps/gz_ffmpeg-src contem
 o workflow e ffmpeg.patch usados pelo fornecedor do prebuilt. Os outros
 build/_deps/*-src conservam as fontes das bibliotecas estaticas. A substituicao
-dessas bibliotecas e sua reproducao tambem precisam ser conferidas antes da
-publicacao; incluir os fontes nao comprova que todos os prebuilts foram refeitos.
+dessas bibliotecas pode ser estudada a partir dessas entradas. Esta validacao
+nao recompilou todos os prebuilts nem comprova reproducibilidade bit a bit.
 
-Validacao atual: configuracao em pasta nova passou apos incluir libraries.cmake
-e o auxiliar benchmark_gpu_wait.c. A compilacao completa esta em andamento;
-nao anunciar aprovacao antes do resultado final. O kit continua uma candidata.
-
-O primeiro teste encontrou Debug selecionado implicitamente pelo CMake antes
-do padrao do projeto ser aplicado. Isso misturava iteradores Debug/Release no
-link. O padrao foi movido para antes de project(); use explicitamente
-RelWithDebInfo com as bibliotecas de referencia. Novo build em andamento.
+Validacao em 09/11/2026: kit extraido em pasta nova, configuracao e compilacao
+completas do alvo kyoei passaram (RelWithDebInfo, Ninja, Clang, Vulkan SDK
+1.4.363.0). O executavel gerado e usado no pacote Windows. O teste encontrou
+o limite de comandos do Windows em caminhos longos; o CMake agora usa arquivos
+de parametros. O manifesto final confere os arquivos compilados contra o ZIP.
+Nenhuma instrucao do jogo foi executada durante essa validacao.

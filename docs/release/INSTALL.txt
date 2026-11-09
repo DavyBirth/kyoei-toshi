@@ -16,7 +16,8 @@ A preparacao usa uma copia do dump; nao altera os arquivos de origem.
 Saves, configuracoes e logs ficam em data/. Preserve essa pasta ao atualizar.
 
 PROBLEMAS CONHECIDOS: o desempenho varia conforme o computador; a campanha
-inteira ainda nao foi jogada do inicio ao fim no PC. Alguns nomes de lugar no
+inteira ainda nao foi jogada do inicio ao fim no PC. Podem aparecer manchas
+brancas passageiras em fundos desfocados. Alguns nomes de lugar no
 minimapa podem ser cortados na borda. Linux usa Wine/umu e exige verificacao
 propria. O codigo-fonte correspondente acompanha esta versao (ZIP de fontes).
 
@@ -30,7 +31,8 @@ Choose English, Brazilian Portuguese or Japanese after setup finishes.
 No game or firmware is downloaded. Saves/settings/logs stay in data/.
 
 Known issues: performance varies; the full campaign has not been played start
-to finish on PC. Some minimap place names may be clipped at the edge. Linux
+to finish on PC. Transient white spots may appear in blurred backgrounds.
+Some minimap place names may be clipped at the edge. Linux
 uses Wine/umu and needs its own checks. Matching source code is published
 with this release (source ZIP).
 See licenses/ for the notices already collected.
