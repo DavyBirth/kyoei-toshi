@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-09",
+  "clean_build_verified": true,
+  "game_executed": false,
+  "configuration": "Windows x64; Ninja; Clang; RelWithDebInfo; Vulkan SDK 1.4.363.0",
+  "build_commands": [
+    {
+      "command": [
+        "cmake",
+        "-S",
+        ".",
+        "-B",
+        "build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_C_COMPILER=clang",
+        "-DCMAKE_CXX_COMPILER=clang++",
+        "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+      ],
+      "exit_code": 0,
+      "seconds": 2.1,
+      "log": "response-configure.log",
+      "log_sha256": "2e0eb24b6491f8ce467e2c0d585eb8177cd7780006f5f3abb599811c74015445"
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "build",
+        "--target",
+        "kyoei",
+        "-j",
+        "4"
+      ],
+      "exit_code": 0,
+      "seconds": 630.3,
+      "log": "response-build.log",
+      "log_sha256": "d3d52a56e607677486ad8129cc2e22d9bd460b6ab67251e0297150bb7cdb5b48"
+    }
+  ],
+  "runtime_sha256": "4d2b05649b289fd73bd6783f5e55c1b6ea5dd4a19c7af258b9b10d68bd828b6f",
+  "compiled_input_count": 15998,
+  "compiled_inputs_sha256": "813fb966c740931a8b25f1e45b8337f4dd05553afec156e830b5102d32a3d374",
+  "scope": "Fresh extracted source kit, root CMake response-file correction applied, complete kyoei target compiled successfully. Final source kit must match these build inputs. Static reference libraries were not all rebuilt; no bit-for-bit reproducibility claim."
+}
