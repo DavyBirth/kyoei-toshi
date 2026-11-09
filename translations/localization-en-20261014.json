@@ -2097,7 +2097,7 @@
         {
           "id": "r301/c25",
           "source_text_sha256": "38f760c2a4057f0a71b2cda80cfe97f0de0edcbfcba4d8e21ace755dd1c75b5b",
-          "en": "Train Driver Uniform",
+          "en": "Train Driver's Uniform",
           "notes": "English draft imported from audited private workspace, translate-en-0113.json:r301/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2293,7 +2293,7 @@
         {
           "id": "r316/c25",
           "source_text_sha256": "c6d2498d51e3792e998fcb4c2f885825ccf50ccbdccbe588ebe70c248aed1d7d",
-          "en": "Female Police Officer Uniform",
+          "en": "Female Police Officer's Uniform",
           "notes": "English draft imported from audited private workspace, translate-en-0114.json:r316/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -2314,7 +2314,7 @@
         {
           "id": "r317/c25",
           "source_text_sha256": "4e024fc146e9d2af88aab593b8d73f1f201544e5de92ff79d8d30d459798996c",
-          "en": "Male Police Officer Uniform",
+          "en": "Male Police Officer's Uniform",
           "notes": "English draft imported from audited private workspace, translate-en-0114.json:r317/c25; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -6276,7 +6276,7 @@
         {
           "id": "p0/k47",
           "source_text_sha256": "5ef03aefd8b1e7b1c95ea7bbd89f1d8cc040caa10ffdf4463e79871c473645f3",
-          "en": "Flower Shop Woman",
+          "en": "Florist",
           "notes": "English draft imported from audited private workspace, translate-en-0048.json:p0/k47; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -8141,7 +8141,7 @@
         {
           "id": "p0/k352",
           "source_text_sha256": "4a7d3f0154788b0ee9505d516d47cbf461a6a9e0bd2bae182492e1a9c6099a8d",
-          "en": "Isn't she heavy, carrying her this whole time?",
+          "en": "You've been carrying her all this time. Isn't she heavy?",
           "notes": "English draft imported from audited private workspace, translate-en-0164.json:p0/k352; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -12302,7 +12302,7 @@
         {
           "id": "p0/k371",
           "source_text_sha256": "4995d5e5d93a23015db35cf2efa060e93a5cb250caa8afed7e4baa6669813ec7",
-          "en": "You also obtained the hugely popular novel, [#ff44ff44]\"The Tale of the Last Sword: Chapter of the Past\"[/#]!",
+          "en": "You also obtained the hugely popular novel, [#ff44ff44]\"The Tale of the Last Sword: The Past Chapter\"[/#]!",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k371; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -13296,7 +13296,7 @@
         {
           "id": "p0/k642",
           "source_text_sha256": "e25a28978415bb601d32fc35c69042d728d594d501637492c24c3ade7cb8e8d2",
-          "en": "Flower shop",
+          "en": "Florist",
           "notes": "English draft imported from audited private workspace, translate-en-0056.json:p0/k642; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -21035,7 +21035,7 @@
         {
           "id": "p0/k200",
           "source_text_sha256": "d365cd8349f3fd8defc7d70b2d892f0c058d84a3a8f94483f88c7ed637ee2e29",
-          "en": "Got a 【Blend Coffee】.",
+          "en": "Got a 【Blended Coffee】.",
           "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k200; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -21217,7 +21217,7 @@
         {
           "id": "p0/k270",
           "source_text_sha256": "4efc14f29a9818d5f159e2f9ff3e6dbe383fac4a0fc4ca302ec47bde6ef11ae9",
-          "en": "Café Iberis's blend coffee.\nIt smells amazing.",
+          "en": "Café Iberis's blended coffee.\nIt smells amazing.",
           "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k270; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -22113,7 +22113,7 @@
         {
           "id": "p0/k581",
           "source_text_sha256": "94aacd1be458fe6f55fd69e30eb95c5b53af993e82a63bcfc529d98f79a67ee5",
-          "en": "(Wait, didn't you get a blend coffee earlier...?)",
+          "en": "(Wait, didn't you get a blended coffee earlier...?)",
           "notes": "English draft imported from audited private workspace, translate-en-0144.json:p0/k581; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -32637,7 +32637,7 @@
         {
           "id": "p0/k177",
           "source_text_sha256": "243cdbdede4bb2e091463c8f574101d122e104b78d102f6d4cc486ac447041b8",
-          "en": "Listen, I need a favor! As thanks for saving you,\nI need you to come somewhere with me!",
+          "en": "Listen, I need a favor! Since I saved you,\nI need you to come somewhere with me!",
           "notes": "English draft imported from audited private workspace, translate-en-0075.json:p0/k177; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -41542,7 +41542,7 @@
         {
           "id": "p0/k139",
           "source_text_sha256": "0cf96e8b627bf1357776d9444ccccd23157e524375bdaa54f635f30dc8f3a52e",
-          "en": "\"She's so into research she made a ship change course home.\"",
+          "en": "\"She's so into research she had a ship delay its return to port.\"",
           "notes": "English draft imported from audited private workspace, translate-en-0043.json:p0/k139; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -48483,7 +48483,7 @@
         {
           "id": "p0/k439",
           "source_text_sha256": "b4454d4c5fd8c74a510ea239d47056882aaa016f7e17b2af33539debada6f381",
-          "en": "The language and customs were totally different there.\nHis was way more broken than mine, but he still talked to everyone...",
+          "en": "The language and customs were totally different there.\nHe spoke the language even less fluently than I did, but he still talked to everyone...",
           "notes": "English draft imported from audited private workspace, translate-en-0089.json:p0/k439; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -49363,7 +49363,7 @@
         {
           "id": "p0/k24",
           "source_text_sha256": "5ef03aefd8b1e7b1c95ea7bbd89f1d8cc040caa10ffdf4463e79871c473645f3",
-          "en": "Flower Shop Lady",
+          "en": "Florist",
           "notes": "English draft imported from audited private workspace, translate-en-0030.json:p0/k24; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -54087,7 +54087,7 @@
         {
           "id": "p0/k46",
           "source_text_sha256": "5ef03aefd8b1e7b1c95ea7bbd89f1d8cc040caa10ffdf4463e79871c473645f3",
-          "en": "The Flower Stand Lady",
+          "en": "The Florist",
           "notes": "English draft imported from audited private workspace, translate-en-0108.json:p0/k46; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },
@@ -55374,7 +55374,7 @@
         {
           "id": "p0/p5/k171",
           "source_text_sha256": "95ca8fccc7a85c5339cb6075ecab729bb89f58a5c8d630e4552278bbf2e70c0a",
-          "en": "Obtained a Chinese dress.",
+          "en": "Obtained a Cheongsam.",
           "notes": "English draft imported from audited private workspace, translate-en-0080.json:p0/p5/k171; human editorial and runtime review pending.",
           "editorial_status": "pending"
         },

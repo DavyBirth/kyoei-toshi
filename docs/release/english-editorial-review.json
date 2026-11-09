@@ -1,0 +1,349 @@
+{
+  "date": "2026-11-09",
+  "reviewer": "Codex (agent)",
+  "scope": "Editorial reading of all 13,286 English localization entries; repeated identical wording read once. Targeted comparisons against the owner disc dump for ambiguous meanings. Not human approval or full gameplay validation.",
+  "corrected_entries": 33,
+  "corrections": [
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/csv/item_data.csh",
+      "id": "r301/c25",
+      "before": "Train Driver Uniform",
+      "after": "Train Driver's Uniform"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/csv/item_data.csh",
+      "id": "r316/c25",
+      "before": "Female Police Officer Uniform",
+      "after": "Female Police Officer's Uniform"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/csv/item_data.csh",
+      "id": "r317/c25",
+      "before": "Male Police Officer Uniform",
+      "after": "Male Police Officer's Uniform"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/SpeakerTable.luc",
+      "id": "p0/k47",
+      "before": "Flower Shop Woman",
+      "after": "Florist"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_201.luc",
+      "id": "p0/k642",
+      "before": "Flower shop",
+      "after": "Florist"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_218.luc",
+      "id": "p0/k24",
+      "before": "Flower Shop Lady",
+      "after": "Florist"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/mission_text.luc",
+      "id": "p0/k46",
+      "before": "The Flower Stand Lady",
+      "after": "The Florist"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Heroine.luc",
+      "id": "p0/k352",
+      "before": "Isn't she heavy, carrying her this whole time?",
+      "after": "You've been carrying her all this time. Isn't she heavy?"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_201.luc",
+      "id": "p0/k371",
+      "before": "You also obtained the hugely popular novel, [#ff44ff44]\"The Tale of the Last Sword: Chapter of the Past\"[/#]!",
+      "after": "You also obtained the hugely popular novel, [#ff44ff44]\"The Tale of the Last Sword: The Past Chapter\"[/#]!"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_204.luc",
+      "id": "p0/k200",
+      "before": "Got a 【Blend Coffee】.",
+      "after": "Got a 【Blended Coffee】."
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_204.luc",
+      "id": "p0/k270",
+      "before": "Café Iberis's blend coffee.\nIt smells amazing.",
+      "after": "Café Iberis's blended coffee.\nIt smells amazing."
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_204.luc",
+      "id": "p0/k581",
+      "before": "(Wait, didn't you get a blend coffee earlier...?)",
+      "after": "(Wait, didn't you get a blended coffee earlier...?)"
+    },
+    {
+      "file": "translations\\localization-en-additions-20261014-12.json",
+      "resource": "common/lua/Text_Stage_204.luc",
+      "id": "p0/k212",
+      "before": "Yuki drank the whole 【Blend Coffee】.",
+      "after": "Yuki drank all the 【Blended Coffee】."
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_208.luc",
+      "id": "p0/k177",
+      "before": "Listen, I need a favor! As thanks for saving you,\nI need you to come somewhere with me!",
+      "after": "Listen, I need a favor! Since I saved you,\nI need you to come somewhere with me!"
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_212.luc",
+      "id": "p0/k139",
+      "before": "\"She's so into research she made a ship change course home.\"",
+      "after": "\"She's so into research she had a ship delay its return to port.\""
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/Text_Stage_215.luc",
+      "id": "p0/k439",
+      "before": "The language and customs were totally different there.\nHis was way more broken than mine, but he still talked to everyone...",
+      "after": "The language and customs were totally different there.\nHe spoke the language even less fluently than I did, but he still talked to everyone..."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261014-05.json",
+      "resource": "common/lua/Text_Stage_218.luc",
+      "id": "p0/k749",
+      "before": "\"Then was the way I treated Yuki so badly\njust your idea of fun... no, your will...?\"",
+      "after": "\"Then was the way I mistreated Yuki\njust your idea of fun... no, your will...?\""
+    },
+    {
+      "file": "translations\\localization-en-20261014.json",
+      "resource": "common/lua/stage_204_check.luc",
+      "id": "p0/p5/k171",
+      "before": "Obtained a Chinese dress.",
+      "after": "Obtained a Cheongsam."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261014-07.json",
+      "resource": "common/lua/stage_204_news_text.luc",
+      "id": "p0/k164",
+      "before": "A fire broke out at Iberis Tower in Sakura Ward, Miyato City, Miyato Prefecture, at around 9 p.m. today. Labors belonging to Platoon 2, within the Tokyo Metropolitan Police Department's Security Bureau, rescued people trapped inside.\nPublic support for the Labor unit has reportedly grown among those who previously distrusted it. However, footage shows the Labors breaking through the building's outer wall to enter, and opinion is divided over whether this was necessary.",
+      "after": "A fire broke out at Iberis Tower in Sakura Ward, Miyato City, Miyato Prefecture, at around 9 p.m. today. Labors belonging to Platoon 2 of Special Vehicles Section 2, part of the Tokyo Metropolitan Police Department's Security Bureau, rescued people trapped inside.\nPublic support for the Labor unit has reportedly grown among those who previously distrusted it. However, footage shows the Labors breaking through the building's outer wall to enter, and opinion is divided over whether this was necessary."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261014-15.json",
+      "resource": "common/lua/stage_204_news_text.luc",
+      "id": "p0/k166",
+      "before": "Labors from Platoon 2, Security Bureau, Tokyo Metropolitan Police Department, were deployed to help rescue people from the fire at the Iberis Tower Building in Sakura Ward, Miyato City, Miyato Prefecture.\nThe unit was transported to the roof by helicopter and carried out rescues using cables. However, possibly because of an operating error, a Labor damaged the building, sending debris falling to the ground.\nFortunately, nobody was injured, but nearby residents have voiced concerns about the Labor unit.",
+      "after": "Labors from Platoon 2 of Special Vehicles Section 2, part of the Tokyo Metropolitan Police Department's Security Bureau, were deployed to help rescue people from the fire at the Iberis Tower Building in Sakura Ward, Miyato City, Miyato Prefecture.\nThe unit was transported to the roof by helicopter and carried out rescues using cables. However, possibly because of an operating error, a Labor damaged the building, sending debris falling to the ground.\nFortunately, nobody was injured, but nearby residents have voiced concerns about the Labor unit."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261014-16.json",
+      "resource": "common/lua/stage_210_3_news_text.luc",
+      "id": "p0/k167",
+      "before": "Rap Version of Mai Iida's Sky for Two of Us Released",
+      "after": "Rap Version of Mai Iida's The Sky We Share Released"
+    },
+    {
+      "file": "translations\\localization-en-additions-20261014-16.json",
+      "resource": "common/lua/stage_210_3_news_text.luc",
+      "id": "p0/k168",
+      "before": "A rap version of singer-songwriter Mai Iida's Sky for Two of Us has been released.\nThe arrangement evokes an expanded world for the song.\n\nSky for Two of Us is available from Granzella Music at http://granzellamusic.jp/.",
+      "after": "A rap version of singer-songwriter Mai Iida's The Sky We Share has been released.\nThe arrangement evokes an expanded world for the song.\n\nThe Sky We Share is available from Granzella Music at http://granzellamusic.jp/."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261014-16.json",
+      "resource": "common/lua/stage_212_news_text.luc",
+      "id": "p0/k104",
+      "before": "Musician Aya Suzumura was caught in the incident during a public live broadcast of her radio program Midnight Sky Garden. The red Angel cut away the part of the building immediately above the live studio.\n\nSuzumura had planned to perform Sky for Two of Us and See You. that day, but the incident forced the show to stop. Some fans were reportedly more disappointed at not hearing her songs to the end than at being caught in the incident.\nShe reportedly promised the evacuated fans that she would perform in Miyato City again.\n\nSuzumura said, 'After talking with the staff, we considered canceling today's show. But I wanted to convey my feelings to the fans who came and the people listening, so we decided to perform. As a result, everyone was put in danger, and I am truly sorry. But I think the desire to hold a concert on a day like this matters deeply. We will finish this concert.'",
+      "after": "Musician Aya Suzumura was caught in the incident during a public live broadcast of her radio program Midnight Sky Garden. The red Angel cut away the part of the building immediately above the live studio.\n\nSuzumura had planned to perform \"The Sky We Share\" and \"See You.\" that day, but the incident forced the show to stop. Some fans were reportedly more disappointed at not hearing her songs to the end than at being caught in the incident.\nShe reportedly promised the evacuated fans that she would perform in Miyato City again.\n\nSuzumura said, 'After talking with the staff, we considered canceling today's show. But I wanted to convey my feelings to the fans who came and the people listening, so we decided to perform. As a result, everyone was put in danger, and I am truly sorry. But I think the desire to hold a concert on a day like this matters deeply. We will finish this concert.'"
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/lua/stage_210_3_news_text.luc",
+      "id": "p0/k164",
+      "before": "CD sales of promising young singer-songwriter Aya Suzumura's new song, \"I Want to Get on My Knees and Apologize,\" have reached 500,000 copies.\nThe song is about apologizing after carelessly forgetting a partner's birthday, and it has struck a chord across generations.\nThe anime \"Mari Hiraaya Won't Forgive You Even If You Grovel,\" which uses the song as its theme, also continues to draw high ratings.",
+      "after": "CD sales of promising young singer-songwriter Aya Suzumura's new song, \"I Want to Get Down on My Knees and Apologize,\" have reached 500,000 copies.\nThe song is about apologizing after carelessly forgetting a partner's birthday, and it has struck a chord across generations.\nThe anime \"Mari Hiraaya Won't Forgive You Even If You Grovel,\" which uses the song as its theme, also continues to draw high ratings."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/lua/stage_210_3_news_text.luc",
+      "id": "p0/k146",
+      "before": "The next broadcast of \"Dialogue: Midnight\" will welcome actor Mitsuya Mizusaki and author Maku Kumazawa as guests, with the theme \"I Still Want to Go Together.\" Mizusaki will even share the story of the alien he says he encountered in middle school!",
+      "after": "The next broadcast of \"Midnight Conversations\" will welcome actor Mitsuya Mizusaki and author Maku Kumazawa as guests, with the theme \"I Still Want to Go Together.\" Mizusaki will even share the story of the alien he says he encountered in middle school!"
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/lua/stage_201_news_text.luc",
+      "id": "p0/k159",
+      "before": "It has come to light that \"The Tale of the Last Sword,\" the hit novel that sold one billion copies worldwide, recently reached total sales of 1.1 billion copies.\nDiehard fans of the novel are called \"Last Sword fans,\" and fans around the world actively interact with one another.\nHoruho Sugita of Miyato City, one such Last Sword fan, said, \"I thought it would be classic fantasy, but the twists are completely unpredictable, one surprise after another in the best way. And thanks to this novel, I've made lots of Saiken friends all over the world.\"",
+      "after": "It has come to light that \"The Tale of the Last Sword,\" the hit novel that sold one billion copies worldwide, recently reached total sales of 1.1 billion copies.\nDiehard fans of the novel are called \"Last Sword fans,\" and fans around the world actively interact with one another.\nHoruho Sugita of Miyato City, one such Last Sword fan, said, \"I thought it would be classic fantasy, but the twists are completely unpredictable, one surprise after another in the best way. And thanks to this novel, I've made lots of friends who love the series all over the world.\""
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/lua/Text_Stage_204.luc",
+      "id": "p0/k858",
+      "before": "Got 【The Tale of the Last Sword: Chapter of Famine】.",
+      "after": "Got 【The Tale of the Last Sword: The Hunger Chapter】."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/lua/stage_204_news_text.luc",
+      "id": "p0/k247",
+      "before": "Do you know the term \"fire-scene thief\"? It refers to someone who steals amid the chaos of a fire or similar situation, and there was just such an incident in the Iberis Tower Building fire.\nS, who works on the 19th floor of the Iberis Tower Building, couldn't possibly finish work that day and, resigned to working late into the night, bought a Cherry Blossoms in Full Bloom bento at the nearby convenience store Clover.\nThen the fire broke out, and S left the bento behind and evacuated. When S returned to the office after the fire was out, the bento that had been on the desk was nowhere to be found.\nS says, \"If they were desperately hungry in the middle of a fire, I can't blame them, but I wish they'd at least left the money.\"",
+      "after": "Do you know the term \"disaster looter\"? It refers to someone who steals amid the chaos of a fire or similar situation, and there was just such an incident in the Iberis Tower Building fire.\nS, who works on the 19th floor of the Iberis Tower Building, couldn't possibly finish work that day and, resigned to working late into the night, bought a Full-Bloom Cherry Blossom Bento at the nearby convenience store Clover.\nThen the fire broke out, and S left the bento behind and evacuated. When S returned to the office after the fire was out, the bento that had been on the desk was nowhere to be found.\nS says, \"If they were desperately hungry in the middle of a fire, I can't blame them, but I wish they'd at least left the money.\""
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/lua/stage_213_news_text.luc",
+      "id": "p0/k192",
+      "before": "Research data has been released showing an increase in recent years in young people who cannot solve problems by thinking for themselves.\nAccording to critic Mr. Sahara, an expert on young people's circumstances, the act of \"asking when you don't know something\" seems to have turned, before anyone noticed, into \"asking even about things you could figure out by thinking.\"\n\nMr. Sahara said, \"Teaching them everything isn't the answer. Sure, it may be easy for the one asking, but it's pretty hard on the one teaching, too. And there's such a thing as the attitude of the one learning. It might be an old-fashioned way of thinking, but in the old days we were told to 'watch and steal it,' and we desperately watched and tried to learn. I wonder if young people today just don't get that.\"\n\nChanges in the environment surrounding young people may have created the current situation.",
+      "after": "Research data has been released showing an increase in recent years in young people who cannot solve problems by thinking for themselves.\nAccording to critic Mr. Sahara, an expert on young people's circumstances, the act of \"asking when you don't know something\" seems to have turned, before anyone noticed, into \"asking even about things you could figure out by thinking.\"\n\nMr. Sahara said, \"Teaching them everything isn't the answer. Sure, it may be easy for the one asking, but it's pretty hard on the one teaching, too. And there's such a thing as the attitude of the one learning. It might be an old-fashioned way of thinking, but in the old days we were told to 'watch and learn,' and we desperately watched and tried to learn. I wonder if young people today just don't get that.\"\n\nChanges in the environment surrounding young people may have created the current situation."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/lua/stage_204_news_text.luc",
+      "id": "p0/k273",
+      "before": "We'd like to introduce the night view from the observation deck of the Iberis Tower, one of the tallest skyscrapers in the country.\nThis observation deck is glass on all 360 degrees, letting you look down on the night view of Sakura Ward from every angle.\nHigh-performance binoculars are installed facing every direction, so you can gaze at distant sights and never get bored.\nThe floor's interior is refined, too, and you and your date are sure to be captivated by this gently glittering space.\nBe sure to pay a visit on your next day off.",
+      "after": "We'd like to introduce the night view from the observation deck of the Iberis Tower, one of the tallest skyscrapers in the country.\nThis observation deck has glass walls on all sides, letting you look down on the night view of Sakura Ward from every angle.\nHigh-performance binoculars are installed facing every direction, so you can gaze at distant sights and never get bored.\nThe floor's interior is refined, too, and you and your date are sure to be captivated by this gently glittering space.\nBe sure to pay a visit on your next day off."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/lua/stage_204_news_text.luc",
+      "id": "p0/k275",
+      "before": "Many of the people rescued from the Iberis Tower Building fire were visitors. Norio Nakagawa (55) is one of them.\nNorio's daughter, Sakurako Nakagawa, and her partner had told him they wanted to formally ask for his blessing to marry, and he was waiting for them at the Iberis Café on the top floor of the Iberis Tower Building.\nWhen the two didn't show up, Norio tried to contact them but couldn't get through, and just then he happened to learn on his smartphone that the Sky Garden Bridge, which Sakurako and her partner were supposed to cross, had collapsed.\n\"I opposed the marriage once. I lost my wife when Sakurako was still little... I'd actually planned to give them my blessing today... I never imagined this would happen...\"\nSo far, Sakurako's name is not among the survivors of the Sky Garden Bridge collapse.",
+      "after": "Many of the people rescued from the Iberis Tower Building fire were visitors. Norio Nakagawa (55) is one of them.\nNorio's daughter, Sakurako Nakagawa, and her partner had told him they wanted to formally ask for his blessing to marry, and he was waiting for them at the Café Iberis on the top floor of the Iberis Tower Building.\nWhen the two didn't show up, Norio tried to contact them but couldn't get through, and just then he happened to learn on his smartphone that the Sky Garden Bridge, which Sakurako and her partner were supposed to cross, had collapsed.\n\"I opposed the marriage once. I lost my wife when Sakurako was still little... I'd actually planned to give them my blessing today... I never imagined this would happen...\"\nSo far, Sakurako's name is not among the survivors of the Sky Garden Bridge collapse."
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/csv/reading_material.csh",
+      "id": "r42/c10",
+      "before": "Just then, someone shook Naran hard.\\nRegaining a sliver of consciousness, he heavily opened his eyelids. It was Keen.\\n\\n\"Naran! Are you all right?! I can't believe they got you!\"\\n\"You don't need to worry anymore. I'm finished.\"\\n\"I'll treat you right now!\"\\n\"Well, do as you like. More importantly...\"\\n\\nNaran handed the dagger at his waist to Keen.\\n\"I'm sorry, but I leave the rest to you.\"\\nWith that, Naran looked up at the sky and quietly drew his last breath.\\n\\n\"The Tale of the Last Sword, Vol. 1: The Past Chapter\" - The End",
+      "after": "Just then, someone shook Naran hard.\\nRegaining a sliver of consciousness, he struggled to open his eyes. It was Keen.\\n\\n\"Naran! Are you all right?! I can't believe they got you!\"\\n\"You don't need to worry anymore. I'm finished.\"\\n\"I'll treat you right now!\"\\n\"Well, do as you like. More importantly...\"\\n\\nNaran handed the dagger at his waist to Keen.\\n\"I'm sorry, but I leave the rest to you.\"\\nWith that, Naran looked up at the sky and quietly drew his last breath.\\n\\n\"The Tale of the Last Sword, Vol. 1: The Past Chapter\" - The End"
+    },
+    {
+      "file": "translations\\localization-en-additions-20261015-01.json",
+      "resource": "common/csv/reading_material.csh",
+      "id": "r49/c10",
+      "before": "Marlo had dragged up this memory from the depths of the depths of his mind, but he realized it didn't seem to be his own. He came from a peaceful country village, and he had never experienced war in his life. He carried a sword for self-defense, just in case, but he preferred magic.\\n\\nYet this memory certainly had a vivid sense of presence. There were many odd things about it. The memory of the girl polishing his body, the sensation of being swung around by the girl in a physical sense, the feel of tearing through human skin, and so on...\\n\"...Ah, I see. These are your memories.\"\\nSaying so, Marlo gently touched the old sword at his own waist.\\nThe silver one, who resonated with the will of the girl who had owned him, and who still thinks of her.\\n\\nAnd so, the one and his blade continue their journey.\\nThough they can't remember since when they've been traveling, or why.\\n\\n\"The Tale of the Last Sword, Vol. 8: The Recollections Chapter\" - The End",
+      "after": "Marlo had dragged up this memory from the deepest recesses of his mind, but he realized it didn't seem to be his own. He came from a peaceful country village, and he had never experienced war in his life. He carried a sword for self-defense, just in case, but he preferred magic.\\n\\nYet this memory certainly had a vivid sense of presence. There were many odd things about it. The memory of the girl polishing his body, the sensation of being swung around by the girl in a physical sense, the feel of tearing through human skin, and so on...\\n\"...Ah, I see. These are your memories.\"\\nSaying so, Marlo gently touched the old sword at his own waist.\\nThe silver one, who resonated with the will of the girl who had owned him, and who still thinks of her.\\n\\nAnd so, the man and his blade continue their journey.\\nThough they can't remember how long they've been traveling, or why.\\n\\n\"The Tale of the Last Sword, Vol. 8: The Recollections Chapter\" - The End"
+    }
+  ],
+  "files": [
+    {
+      "path": "translations/binary-en.json",
+      "sha256": "0ee9fd5e8ba00d8e4bd559330376ec79af11f73828b7e91df2c2e0d7e16653c6"
+    },
+    {
+      "path": "translations/localization-en-20261014.json",
+      "sha256": "82b3bc11e48924686c001bec6fce1e9c9ec987c21885b021176900d79489182a"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-02.json",
+      "sha256": "83e281013abe516089d3c2b430071b1ae43a145209b4a840b12d887f5c85db88"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-03.json",
+      "sha256": "8bb612a537a4c35b0d3a65af1bfa83e3adcaef9ec4a7748f7329d3bd22dcbd88"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-04.json",
+      "sha256": "e2ef2298ce1ee3072f6aef91fc4ed4d60c5f9735b047c7820cc7955c55ae7163"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-05.json",
+      "sha256": "d8c0e54a60b82a560d0e24e260e69e69dad9294f13086255bd48cdedf12c150e"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-06.json",
+      "sha256": "de95742f63246614d3f63f52b7b31063fb8cf60f1acc2354043c7a34c6f64ec6"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-07.json",
+      "sha256": "808cc833c96e8f7e0cf53dc0657e92d9e8be44773520f07fee109148dc939eaa"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-08.json",
+      "sha256": "3a3c821c42a4c431a88fbdeb9f4eb63760ab08bfa6833e8ad7bee0bcb536c47b"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-09.json",
+      "sha256": "8d8d1776952b8602b9386854ff17f95e187d82ae6f56b83d69fd0289919bfe98"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-10.json",
+      "sha256": "b6e4418dd84efd5b9de16d2b77437899b1fd114ff2834eeb772d01d4e8a3bccc"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-11.json",
+      "sha256": "b95c3f44e89dc96fee22dc37a75029ef647e6370b136264fa35069c6b8b4b939"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-12.json",
+      "sha256": "19c115a52c89324bfb030684afe7a60b8055841f19510901190d13e170e8ef87"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-13.json",
+      "sha256": "1afa9b129a4217db35a578d329ac813813a6e441dcd16c9b92013b0c7d7f1337"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-14.json",
+      "sha256": "fa93d6b36824fca9b7eecd48e8117e4eeca1d4f34e0e85358e7f4099733ce436"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-15.json",
+      "sha256": "aadac88f96402b326ffa79e3a90305c928409f0ad94ab49ba1bdf71978986e1e"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-16.json",
+      "sha256": "c4b971c9e0d3710e4509bf3486db2b4ecda7f0c3d0e362afe44077dd0ab83a1f"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-17.json",
+      "sha256": "ce5809f3250b8ec86c959163712b62b9412b35fdbcb6c0fd34dc49feb5a6a8ef"
+    },
+    {
+      "path": "translations/localization-en-additions-20261014-18.json",
+      "sha256": "6774848acaf1749feae7d76c3309ca3cbc557fbf1ca72913321a164631ed6067"
+    },
+    {
+      "path": "translations/localization-en-additions-20261015-01.json",
+      "sha256": "333ac7a29785543920aeede3f5d50dec747a6f50ffedec36929210690a7acf45"
+    },
+    {
+      "path": "translations/localization-en-additions-20261015-02.json",
+      "sha256": "b834712516b3350690362d39e69ee24596945ad04e015bc13f88538c9d9a521f"
+    },
+    {
+      "path": "translations/localization-en-additions-20261015-03.json",
+      "sha256": "43de55502cdc1aa613d13e0ecb319767a7c2fbacb482db40711df63c69987145"
+    },
+    {
+      "path": "translations/localization-en-additions-20261021-01.json",
+      "sha256": "ec9954444696941358a33f78bf2aea8ece95dd77eea33cb71fd91b0439aa9e73"
+    },
+    {
+      "path": "translations/localization-en-additions-20261024-01.json",
+      "sha256": "a6371acd77783cb447925641c3eeb0fce9e0cfca05d1e3803f4d721fa5b42f5c"
+    },
+    {
+      "path": "translations/pilot-opening.json",
+      "sha256": "4aa38cd3a5bc0bc0d8813fde0902d468801cc307d48e99c465448097947ead2b"
+    },
+    {
+      "path": "translations/pilot-street-en.json",
+      "sha256": "45cc6a8d71c4bd240cf3315924181bedd5b6889c82d6a1956c1763fdaed947e4"
+    },
+    {
+      "path": "translations/textures-en.json",
+      "sha256": "83709db25203559851f120f48c68a10369a43a70aa43ca92c5e85cc722a5449d"
+    }
+  ]
+}
